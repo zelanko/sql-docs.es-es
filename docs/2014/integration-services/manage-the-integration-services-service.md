@@ -1,5 +1,5 @@
 ---
-title: Administrar el servicio Integration Services | Microsoft Docs
+title: Administrar el servicio de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057790"
 ---
 # <a name="manage-the-integration-services-service"></a>Administrar el servicio Integration Services
     
 > [!IMPORTANT]  
->  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] admite el servicio para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
+>  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]admite el servicio para mantener la compatibilidad con versiones anteriores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]de. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
   
  Al instalar el componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se instala también el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . De forma predeterminada, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se inicia y el tipo de inicio del servicio se establece en automático. Sin embargo, también debe instalar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para usar el servicio y administrar los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] almacenados y en ejecución.  
   
 > [!NOTE]  
->  No se puede conectar a una instancia de la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] desde el [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] verzi [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Es decir, en el cuadro de diálogo **Conectar con el servidor** , no se puede escribir el nombre de un servidor en el que solamente se está ejecutando [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Sin embargo, puede modificar el archivo de configuración para el servicio y, de ese modo, administrar paquetes almacenados en una instancia de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] desde [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obtener más información, vea [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md).  
+>  No se puede conectar a una instancia del [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servicio desde la [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] versión de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Es decir, en el cuadro de diálogo **Conectar con el servidor** , no se puede escribir el nombre de un servidor en el que solamente se está ejecutando [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Sin embargo, puede modificar el archivo de configuración para el servicio y, de ese modo, administrar paquetes almacenados en una instancia de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] desde [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obtener más información, vea [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
  Solo puede instalar una única instancia del servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en un equipo. El servicio no es específico de una instancia determinada de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para realizar la conexión con el servicio se utiliza el nombre del equipo en el que se ejecuta.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "66057790"
   
 -   [Ver los eventos para el servicio Integration Services](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
-## <a name="see-also"></a>Vea también  
- [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   
- [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
+## <a name="see-also"></a>Consulte también  
+ [Servicio de Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   
+ [Configuración del servicio Integration Services &#40;servicio SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
  [Asistente para importación y exportación de SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
- [dtexec (utilidad)](packages/dtexec-utility.md)   
- [Ejecución de proyectos y paquetes](packages/run-integration-services-ssis-packages.md)  
+ [Utilidad DTExec](packages/dtexec-utility.md)   
+ [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md) (Ejecución de proyectos y paquetes)  
   
   

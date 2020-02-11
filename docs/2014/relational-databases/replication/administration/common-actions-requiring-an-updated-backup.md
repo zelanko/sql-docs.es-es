@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 184bda56568cfcedbc07183bd2be7fdde7a789e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705039"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>Acciones comunes que requieren una copia de seguridad actualizada
@@ -105,7 +105,7 @@ ms.locfileid: "62705039"
   
 -   Habilitar o deshabilitar un publicador en un publicador de distribución (en el publicador y el distribuidor).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](back-up-and-restore-replicated-databases.md)  
   

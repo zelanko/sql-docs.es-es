@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714722"
 ---
 # <a name="filter-a-trace"></a>Filtrar un seguimiento
@@ -62,9 +62,9 @@ ms.locfileid: "62714722"
   
 |Operador relacional|Símbolo del operador|Descripción|  
 |-------------------------|---------------------|-----------------|  
-|Like|Like|Especifica que los datos del evento de seguimiento deben ser como el texto escrito. Acepta varios valores.|  
+|Like|LIKE|Especifica que los datos del evento de seguimiento deben ser como el texto escrito. Acepta varios valores.|  
 |No es como|No es como|Especifica que los datos del evento de seguimiento no deben ser como el texto escrito. Acepta varios valores.|  
-|Es igual a|=|Especifica que los datos del evento de seguimiento deben ser iguales al valor escrito. Acepta varios valores.|  
+|Equals|=|Especifica que los datos del evento de seguimiento deben ser iguales al valor escrito. Acepta varios valores.|  
 |No es igual a|<>|Especifica que los datos del evento de seguimiento deben ser distintos del valor escrito. Acepta varios valores.|  
 |Mayor que|>|Especifica que los datos del evento de seguimiento deben ser mayores que el valor escrito.|  
 |Mayor o igual que|>=|Especifica que los datos del evento de seguimiento deben ser mayores o iguales que el valor escrito.|  
@@ -85,7 +85,7 @@ ms.locfileid: "62714722"
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**Duración**|=, <>, >=, \<=|  
+|**Duration**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
 |**Error**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
@@ -121,13 +121,13 @@ ms.locfileid: "62714722"
 |**RoleName**|LIKE, NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE, NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**Gravedad**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar los eventos de esta columna de datos. Para obtener más información, vea [Filtrar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
-|**Estado**|=, <>, >=, <=|  
-|**Correcto**|=, <>, >=, <=|  
+|**State**|=, <>, >=, <=|  
+|**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar los eventos de esta columna de datos. Para obtener más información, vea [Filtrar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  
@@ -137,7 +137,7 @@ ms.locfileid: "62714722"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> si el seguimiento de eventos desde el **osql** utilidad o **sqlcmd** utilidad, agregue siempre **%** a los filtros de la **TextData**  columna de datos.  
+ <sup>1</sup> si se va a hacer un seguimiento de los eventos de la utilidad **osql** o **sqlcmd** , anexe **%** siempre a los filtros de la columna de datos **TextData** .  
   
  Como mecanismo de seguridad, Seguimiento de SQL omite automáticamente del seguimiento la información de los procedimientos almacenados relacionados con la seguridad que afecten a contraseñas. Este mecanismo de seguridad no es configurable y siempre está activo, lo que impide que los usuarios, que de otra manera tendrían los permisos para realizar el seguimiento de toda la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], capturen contraseñas.  
   

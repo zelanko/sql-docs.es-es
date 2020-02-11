@@ -13,38 +13,38 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62695656"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>Propiedades del trabajo: Nuevo trabajo (página Pasos)
-  Utilice esta página para ver y organizar los pasos de trabajo para un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice esta página para ver y organizar los pasos de trabajo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para un trabajo del agente.  
   
 ## <a name="options"></a>Opciones  
  **Lista de pasos de trabajo**  
  Enumera los pasos de este trabajo.  
   
- **Mover paso**  
+ **Paso de movimiento**  
  Mueve el trabajo un paso arriba o abajo en la lista.  
   
  **Iniciar paso**  
  Seleccione el paso por el que debe comenzar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se inicie el trabajo.  
   
- **Nueva**  
+ **Nuevo**  
  Crea un nuevo paso debajo del paso de trabajo seleccionado.  
   
- **Insert**  
+ **Introducir**  
  Crea un nuevo paso encima del paso de trabajo seleccionado.  
   
- **Editar**  
+ **Edición**  
  Modifica el paso de trabajo seleccionado.  
   
  **Eliminar**  
  Elimina el paso de trabajo seleccionado. Cuando se eliminan pasos de trabajo, sus registros de salida respectivos también se eliminan de forma automática.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar trabajos](implement-jobs.md)  
   
   

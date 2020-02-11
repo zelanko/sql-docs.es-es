@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782788"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
@@ -33,7 +33,7 @@ ms.locfileid: "72782788"
   
      [Seguridad](#Security)  
   
--   **Para cambiar la pertenencia a una categoría de trabajo, utilizando:**  
+-   **Para cambiar la pertenencia de una categoría de trabajo, utilizando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72782788"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
@@ -56,13 +56,13 @@ ms.locfileid: "72782788"
   
 3.  Haga clic con el botón derecho en la carpeta **Trabajos** y seleccione **Administrar categorías de trabajos**.  
   
-4.  En el cuadro de diálogo **Administrar categorías de trabajos**_nombre_servidor_ , seleccione la categoría de trabajo que desea editar y, luego, haga clic en **Ver trabajos**.  
+4.  En el cuadro de diálogo **administrar categorías de trabajo**_SERVER_NAME_ , seleccione la categoría de trabajo que desea editar y, a continuación, haga clic en **ver trabajos**.  
   
 5.  Active la casilla **Mostrar todos los trabajos** .  
   
 6.  Para agregar un trabajo a la categoría, en la cuadrícula principal, active la casilla de la columna **Seleccionar** correspondiente al trabajo. Para quitar un trabajo de la categoría, desactive la casilla. Cuando termine, haga clic en **Aceptar**.  
   
-7.  En el cuadro de diálogo **Administrar categorías de trabajos**_nombre_servidor_ .  
+7.  Cierre el cuadro de diálogo **administrar categorías de trabajo**_SERVER_NAME_ .  
   
 ##  <a name="TSQL"></a> Usar Transact-SQL  
   
@@ -84,9 +84,9 @@ ms.locfileid: "72782788"
     GO  
     ```  
   
- Para obtener más información, [vea &#40;SP_UPDATE_JOB Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
+ Para obtener más información, vea [sp_update_job &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
- **Para cambiar la pertenencia a una categoría de trabajo**  
+ **Para cambiar la pertenencia de una categoría de trabajo**  
   
  Utilice la clase `JobCategory` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell.  

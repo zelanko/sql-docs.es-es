@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768931"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Crear un administrador de conexiones personalizado
@@ -43,7 +43,7 @@ ms.locfileid: "62768931"
  Configure ambos proyectos para firmar los ensamblados que se generarán en tiempo de compilación mediante un archivo de clave de nombre seguro.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>Aplicar el atributo DtsConnection  
- Aplique el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> a la clase que ha creado para identificarlo como un administrador de conexiones. Este atributo proporciona información en tiempo de diseño, como el nombre, la descripción y el tipo de conexión del administrador de conexiones. El <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> y `Description` propiedades corresponden a la **tipo** y `Description` las columnas mostradas en la **Agregar administrador de conexiones SSIS** cuadro de diálogo, que es que se muestran cuando configuración de conexiones para un paquete en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Aplique el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> a la clase que ha creado para identificarlo como un administrador de conexiones. Este atributo proporciona información en tiempo de diseño, como el nombre, la descripción y el tipo de conexión del administrador de conexiones. Las <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> propiedades `Description` y se corresponden con **** el tipo `Description` y las columnas que se muestran en el cuadro de diálogo **Agregar administrador de conexiones SSIS** , que se muestra al [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]configurar las conexiones para un paquete en.  
   
  Use la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> para vincular el administrador de conexiones a su interfaz de usuario personalizada. Para obtener el token de clave pública necesario para esta propiedad, puede usar **sn.exe -t** con el fin de mostrar el token de clave pública del archivo de pares de claves (.snk) que quiere usar para firmar el ensamblado de la interfaz de usuario.  
   
@@ -73,9 +73,9 @@ ConnectionManagerBase
 ## <a name="building-deploying-and-debugging-a-custom-connection-manager"></a>Generar, implementar y depurar un administrador de conexiones personalizado  
  Los pasos para generar, implementar y depurar un administrador de conexiones personalizado en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] son similares a los pasos necesarios en otros tipos de objetos personalizados. Para obtener más información, consulte [Generar, implementar y depurar objetos personalizados](../building-deploying-and-debugging-custom-objects.md).  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Programar un administrador de conexiones personalizado](coding-a-custom-connection-manager.md)   
  [Desarrollar una interfaz de usuario para un administrador de conexiones personalizado](developing-a-user-interface-for-a-custom-connection-manager.md)  
   

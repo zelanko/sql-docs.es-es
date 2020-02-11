@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c5661d490f4669968b6d8198a7565fb5e5c8c218
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484303"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de un proyecto de limpieza en un dominio
@@ -35,9 +35,9 @@ ms.locfileid: "65484303"
 ####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para importar en un dominio el conocimiento de calidad de datos obtenido durante el proceso de limpieza.  
   
-##  <a name="Import"></a> Importar valores de proyecto de limpieza  
+##  <a name="Import"></a>Importar valores de proyecto de limpieza  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra una base de conocimiento en la actividad Administración de dominios.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65484303"
   
     -   Seleccione **Agregar valores de la pestaña Nuevo** para importar los valores de la pestaña Nuevo, además de los valores de las pestañas **Correcto** y **Corregido** .  
   
-    -   Haga clic en **Aceptar**.  
+    -   Haga clic en **OK**.  
   
 6.  Vuelve a la pestaña **Valores del dominio** y aparece un mensaje que indica que la importación de los valores fue correcta. Los valores que se han importado y que, por lo tanto, son nuevos en el dominio, se mostrarán en la tabla **Valores** .  
   
@@ -66,15 +66,15 @@ ms.locfileid: "65484303"
   
 9. Para buscar una cadena específica, escríbala en el cuadro de texto **Buscar** . Haga clic en la flecha arriba o abajo para recorrer los valores que cumplen los criterios de búsqueda. Aparecerán resaltados en amarillo.  
   
-10. Haga clic en **Finalizar**.  
+10. Haga clic en **Finalizar**  
   
     > [!NOTE]  
     >  Para obtener más información sobre cómo trabajar con valores de la pestaña **Valores del dominio** , vea [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: después de importar valores de proyecto en un dominio  
+##  <a name="FollowUp"></a>Seguimiento: después de importar valores de proyecto en un dominio  
  Una vez importado en un dominio el conocimiento de calidad de datos obtenido durante el proceso de limpieza, puede realizar otras tareas de administración de dominios en el dominio y en los valores. Para más información, vea [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md).  
   
-##  <a name="Values"></a> Valores que se importarán  
+##  <a name="Values"></a>Valores que se importarán  
  Se importarán los valores siguientes desde un proyecto a un dominio:  
   
 -   Solo se importarán en el dominio los valores de cadena.  
@@ -93,7 +93,7 @@ ms.locfileid: "65484303"
   
 -   Las correcciones realizadas como resultado de una relación basada en términos de un dominio se importan como valores correctos (no como errores).  
   
-##  <a name="ValuesNot"></a> Valores que no se importarán  
+##  <a name="ValuesNot"></a>Valores que no se importarán  
  No se importarán los valores siguientes desde un proyecto a un dominio:  
   
 -   Los valores de las pestañas **Sugerido** y **No válido** de la página **Administrar y ver resultados** de la actividad **Limpieza** no se importarán.  
@@ -110,7 +110,7 @@ ms.locfileid: "65484303"
   
 -   Solo se podrán importar valores de un proyecto si la base de conocimiento se encuentra en el estado Trabajando y la ha bloqueado el usuario que realiza la importación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Limpieza de datos](../../2014/data-quality-services/data-cleansing.md)   
  [Transformación Limpieza de DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

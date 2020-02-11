@@ -1,5 +1,5 @@
 ---
-title: Transferir el Editor de tareas de procedimientos almacenados principales (página procedimientos almacenados) | Microsoft Docs
+title: Editor de la tarea transferir procedimientos almacenados principales (página procedimientos almacenados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054860"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Editor de la tarea Transferir procedimientos almacenados principales (página Procedimientos almacenados)
@@ -39,16 +39,16 @@ ms.locfileid: "66054860"
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**FailTask**|La tarea genera un error si ya existen procedimientos almacenados con el mismo nombre en la base de datos **maestra** del servidor de destino.|  
 |**Sobrescribir**|La tarea sobrescribe los procedimientos almacenados con el mismo nombre en la base de datos **maestra** del servidor de destino.|  
-|**Omitir**|La tarea omite los procedimientos almacenados con el mismo nombre que ya existen en la base de datos **maestra** del servidor de destino.|  
+|**Skip**|La tarea omite los procedimientos almacenados con el mismo nombre que ya existen en la base de datos **maestra** del servidor de destino.|  
   
  **TransferAllStoredProcedures**  
  Seleccione esta opción si todos los procedimientos almacenados definidos por el usuario de la base de datos **maestra** del servidor de origen deben copiarse al servidor de destino.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|Copie todos los procedimientos almacenados definidos por el usuario de la base de datos **maestra** .|  
 |**False**|Copie solamente los procedimientos almacenados especificados.|  
@@ -56,11 +56,11 @@ ms.locfileid: "66054860"
  **StoredProceduresList**  
  Seleccione los procedimientos almacenados definidos por el usuario de la base de datos **maestra** del servidor de origen que deben copiarse a la base de datos **maestra** de destino. Esta opción solo está disponible cuando **TransferAllStoredProcedures** se establece en **False**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
- [Editor de la tarea Transferir procedimientos almacenados principales &#40;Página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea transferir procedimientos almacenados principales &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expresiones](expressions/expressions-page.md)   
- [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)  
+ [SMO, administrador de conexiones](connection-manager/smo-connection-manager.md)  
   
   

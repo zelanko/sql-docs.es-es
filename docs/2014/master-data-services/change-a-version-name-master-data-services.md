@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e064f78efa3caacf3b21c330a54c145b8fead4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483643"
 ---
 # <a name="change-a-version-name-master-data-services"></a>Cambiar un nombre de versión (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cambie el nombre de la versión a fin de personalizarlo para su organización.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  
@@ -39,7 +39,7 @@ ms.locfileid: "65483643"
   
 4.  Presione ENTRAR.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Bloquear una versión &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)   
  [Confirmar una versión &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)   

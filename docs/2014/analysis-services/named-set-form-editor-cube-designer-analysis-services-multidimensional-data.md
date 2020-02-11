@@ -1,5 +1,5 @@
 ---
-title: Denominada Editor de formulario de conjunto (pestaña cálculos, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Editor de formulario de conjuntos con nombres (pestaña cálculos, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072350"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de conjuntos con nombres (pestaña Cálculo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -26,10 +26,10 @@ ms.locfileid: "66072350"
 >  Este panel solo se muestra en la vista de formulario.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Escriba el nombre del conjunto con nombre.  
   
- **Expresión**  
+ **Expression**  
  Expanda esta opción para ver o editar las expresiones multidimensionales (MDX) del conjunto con nombre.  
   
  Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.  
@@ -37,15 +37,15 @@ ms.locfileid: "66072350"
 > [!NOTE]  
 >  Esta opción debe contener una expresión de conjunto válida.  
   
-## <a name="see-also"></a>Vea también  
- [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+## <a name="see-also"></a>Consulte también  
+ [Realizan](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Crear conjuntos con nombre](multidimensional-models/create-named-sets.md)   
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Cálculos &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organizador de script &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Herramientas de cálculo &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulario de miembro calculado &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de script &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Cálculos &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Organizador de scripts &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Herramientas de cálculo &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulario de miembro calculado &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de scripts &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076434"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede utilizar el Asistente para dimensiones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión sin utilizar un origen de datos existente. Para ello, debe seleccionar la opción **Generar una tabla que no sea de tiempos en el origen de datos** en la página **Seleccionar método de creación** del asistente. Para crear una tabla de dimensiones en el origen de datos subyacente, debe tener permisos para crear objetos en ese origen de datos subyacente. Al definir una dimensión sin una vista del origen de datos predefinida, puede definirla desde cero o usando una plantilla de dimensiones.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede utilizar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión sin utilizar un origen de datos existente. Para ello, debe seleccionar la opción **Generar una tabla que no sea de tiempos en el origen de datos** en la página **Seleccionar método de creación** del asistente. Para crear una tabla de dimensiones en el origen de datos subyacente, debe tener permisos para crear objetos en ese origen de datos subyacente. Al definir una dimensión sin una vista del origen de datos predefinida, puede definirla desde cero o usando una plantilla de dimensiones.  
   
  El Asistente para dimensiones proporciona plantillas de dimensiones de muestra que puede usar para generar un tipo de dimensión frecuente. Puede elegir entre los siguientes tipos de dimensiones:  
   
@@ -31,15 +31,15 @@ ms.locfileid: "66076434"
   
 -   Customer  
   
--   date  
+-   Date  
   
--   Department  
+-   department  
   
 -   Destination Currency  
   
 -   Employee  
   
--   Geografía  
+-   Geography  
   
 -   Internet Sales Order Details  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66076434"
   
 -   Reseller Sales Order Details  
   
--   Reseller  
+-   Vendedor  
   
 -   Sales Channel  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66076434"
   
  Al activar la casilla **Es una dimensión variable** , el Asistente para dimensiones define los atributos indicados en la siguiente tabla:  
   
-|Attribute|Tipo|  
+|Atributo|Tipo|  
 |---------------|----------|  
 |Id. original de DVL|SCDOriginalID|  
 |Fecha finalización de DVL|SCDEndDate|  
@@ -103,7 +103,7 @@ ms.locfileid: "66076434"
 ## <a name="completing-the-dimension-wizard"></a>Completar el Asistente para dimensiones  
  En la página **Finalización del asistente** , escriba un nombre para la nueva dimensión y consulte la estructura de la dimensión. Active la casilla **Generar el esquema ahora** para iniciar el Asistente para generar esquemas después de hacer clic en **Finalizar**. En la mayoría de los casos, no se debe activar esta casilla si piensa crear objetos adicionales. Si no activa esta casilla, se puede usar el Diseñador de dimensiones para generar el esquema más adelante.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una dimensión de tiempo generando una tabla de tiempos](create-a-time-dimension-by-generating-a-time-table.md)   
  [Crear una dimensión de tiempo generando una tabla de tiempos](create-a-time-dimension-by-generating-a-time-table.md)  
   

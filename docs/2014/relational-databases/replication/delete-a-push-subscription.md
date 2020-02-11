@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75e5953d8f7ef9af1134db56f7061261eee2c0fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721434"
 ---
 # <a name="delete-a-push-subscription"></a>Eliminar una suscripción de inserción
@@ -35,12 +35,12 @@ ms.locfileid: "62721434"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Elimine una suscripción de inserción en el publicador (desde la carpeta **Publicaciones locales** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) o el suscriptor (desde la carpeta **Suscripciones locales** ). Al eliminar una suscripción no se quitan los objetos ni los datos de la suscripción, y deben quitarse manualmente.  
   
 #### <a name="to-delete-a-push-subscription-at-the-publisher"></a>Para eliminar una suscripción de inserción en el publicador  
   
-1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo del servidor.  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y luego expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -65,15 +65,15 @@ ms.locfileid: "62721434"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para eliminar una suscripción de inserción a una publicación transaccional o de instantáneas  
   
-1.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** y **@subscriber** . Especifique un valor de **all** para **@article** . (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
+1.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** y **@subscriber**. Especifique un valor de **all** para **@article**. (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
   
 2.  (Opcional) En la base de datos de suscripciones del suscriptor, ejecute [sp_subscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql) para quitar los metadatos de replicación restantes en la base de datos de suscripciones.  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Para eliminar una suscripción de inserción a una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql) especificando **@publication** , **@subscriber** y **@subscriber_db** . (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
+1.  En el publicador, ejecute [sp_dropmergesubscription &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql), **@publication**especificando, **@subscriber** y **@subscriber_db**. (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
   
-2.  En la base de datos de suscripciones del suscriptor, ejecute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql). Especifique **@publisher** , **@publisher_db** y **@publication** . Esto quita los metadatos de mezcla de la base de datos de suscripciones.  
+2.  En la base de datos de suscripciones del suscriptor, ejecute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql). Especifique **@publisher**, **@publisher_db**y **@publication**. Esto quita los metadatos de mezcla de la base de datos de suscripciones.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  En este ejemplo se elimina una suscripción de inserción a una publicación transaccional.  
@@ -91,7 +91,7 @@ ms.locfileid: "62721434"
   
 1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>y <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> .  
   
@@ -99,13 +99,13 @@ ms.locfileid: "62721434"
   
 5.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que la suscripción existe. Si el valor de esta propiedad es `false`, significa que las propiedades de suscripción del paso 2 se definieron incorrectamente o bien, que la suscripción no existe.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A>.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> .  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Para eliminar una suscripción de inserción a una publicación de combinación  
   
 1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>y <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> .  
   
@@ -113,7 +113,7 @@ ms.locfileid: "62721434"
   
 5.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que la suscripción existe. Si el valor de esta propiedad es `false`, significa que las propiedades de suscripción del paso 2 se definieron incorrectamente o bien, que la suscripción no existe.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A>.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> .  
   
 ###  <a name="PShellExample"></a> Ejemplos (RMO)  
  Las suscripciones de inserción se pueden eliminar mediante programación utilizando Replication Management Objects (RMO).  
@@ -122,8 +122,8 @@ ms.locfileid: "62721434"
   
  [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
   
-## <a name="see-also"></a>Vea también  
- [Suscribirse a publicaciones](subscribe-to-publications.md)   
- [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md)  
+## <a name="see-also"></a>Consulte también  
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  
   
   

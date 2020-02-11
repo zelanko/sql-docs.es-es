@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42538053b80565005e86e82a32b6c04bae1aa360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721481"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Características que ya no se utilizan en la replicación de SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "62721481"
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Se admite la replicación si cada extremo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en dos versiones principales de la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por tanto, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] no admite la replicación a o desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|Se admite la replicación si cada extremo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en dos versiones principales de la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por tanto, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] no admite la replicación a o desde [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con versiones anteriores de replicación](replication-backward-compatibility.md)  
   
   

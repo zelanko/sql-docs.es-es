@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2f993f699be738ea653ab0fc977fb16f84278853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662398"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain (clase de eventos)
@@ -31,10 +31,10 @@ ms.locfileid: "62662398"
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BinaryData|`image`|Identificador del recurso de bloqueo.|2|Sí|  
-|DatabaseID|`int`|Identificador de la base de datos a la que pertenece este recurso. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|Identificador de la base de datos a la que pertenece este recurso. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos a la que pertenece el recurso.|35|Sí|  
 |EventClass|`int`|Tipo de evento = 59.|27|No|  
-|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|Sin|  
+|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
 |EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 101=Tipo de recurso Bloqueo<br /><br /> 102=Tipo de recurso Intercambio|21|Sí|  
 |IntegerData|`int`|Número de interbloqueo. Los números se asignan a partir de 0 cuando se inicia el servidor y se incrementan para cada interbloqueo.|25|Sí|  
 |IntegerData2|`int`|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Sí|  
@@ -44,8 +44,8 @@ ms.locfileid: "62662398"
 |ObjectID|`int`|Id. del objeto bloqueado, si está disponible y es aplicable.|22|Sí|  
 |ObjectID2|`bigint`|Id. del objeto o entidad relacionado, si está disponible y es aplicable.|56|Sí|  
 |OwnerID|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Sí|  
-|IdSolicitud|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|Sin|  
+|RequestID|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
+|nombreDeServidor|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
@@ -53,7 +53,7 @@ ms.locfileid: "62662398"
 |TransactionID|`bigint`|Id. de la transacción asignado por el sistema.|4|Sí|  
 |Tipo|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  
   

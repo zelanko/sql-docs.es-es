@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de configuración del distribuidor | Microsoft Docs
+title: Cuadro de diálogo ' configuración del distribuidor ' | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721350"
 ---
-# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Cuadro de diálogo de configuración del distribuidor de replicación de SQL Server
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Cuadro de diálogo Replicación de SQL Server ' configuración del distribuidor '
   El cuadro de diálogo **Configuración del distribuidor** le permite cambiar la configuración de los distribuidores que se han agregado al panel izquierdo del Monitor de replicación.  
   
 ## <a name="options"></a>Opciones  
  **Conectar automáticamente cuando se inicia el Monitor de replicación**  
  Seleccione esta opción para permitir que el Monitor de replicación se conecte al distribuidor y recupere información de estado.  
   
- **Conexión**  
+ **Connection**  
  Haga clic aquí para mostrar el cuadro de diálogo **Conectar con el servidor** . Esto le permite ver y cambiar las propiedades de conexión y las credenciales que el Monitor de replicación utiliza para conectarse al distribuidor.  
   
  **Actualizar automáticamente el estado de este distribuidor y sus publicaciones**  
@@ -43,7 +43,7 @@ ms.locfileid: "62721350"
  **Nuevo grupo**  
  Haga clic aquí para crear un nuevo grupo de publicadores. Un grupo de publicadores proporciona una forma cómoda de organizar publicadores dentro del Monitor de replicación. Los grupos no afectan a la replicación de datos ni a la relación entre los servidores de una topología de replicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  
   

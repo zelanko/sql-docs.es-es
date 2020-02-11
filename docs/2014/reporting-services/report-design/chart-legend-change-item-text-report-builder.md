@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e34f0a34030dab62a876a41043dc4c4f4c86f0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106310"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>Cambiar el texto de un elemento de leyenda (Generador de informes y SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "66106310"
   
 2.  Haga clic en **Leyenda** y, en el cuadro **Texto de leyenda personalizado** , escriba una etiqueta de leyenda. La serie se actualizada con el texto especificado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Ocultar elementos de leyenda en el gráfico &#40;Generador de informes y SSRS&#41;](chart-legend-hide-items-report-builder.md)  

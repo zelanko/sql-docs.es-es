@@ -16,25 +16,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22d1b8074fb40cdd7eda3a5f57704b893242cfcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666832"
 ---
 # <a name="run-jobs"></a>Ejecutar trabajos
-  Para administrar los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede usar los procedimientos almacenados de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)], o los objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Para administrar los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede usar los procedimientos almacenados de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o [!INCLUDE[tsql](../../includes/tsql-md.md)] , o los objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
-|Describe cómo iniciar la ejecución de un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Start a Job](start-a-job.md)|  
+|**Descripción**|**Tema.**|  
+|Describe cómo iniciar la ejecución de un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Iniciar un trabajo](start-a-job.md)|  
 |Describe cómo detener un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Stop a Job](stop-a-job.md)|  
-|Describe cómo deshabilitar o habilitar un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Deshabilitar o habilitar un trabajo](disable-or-enable-a-job.md)|  
+|Describe cómo deshabilitar o habilitar un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Disable or Enable a Job](disable-or-enable-a-job.md)|  
   
-## <a name="see-also"></a>Vea también  
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+## <a name="see-also"></a>Consulte también  
+ [DBO. sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

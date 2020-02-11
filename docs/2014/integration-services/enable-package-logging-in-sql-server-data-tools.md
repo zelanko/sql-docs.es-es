@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059279"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Habilitar el registro de paquetes en SQL Server Data Tools
@@ -37,13 +37,13 @@ ms.locfileid: "66059279"
   
 4.  En la columna **Configuración**, seleccione un administrador de conexiones o haga clic en **\<Nueva conexión>** para crear un nuevo administrador de conexiones del tipo apropiado para el proveedor de registro. En función del proveedor seleccionado, utilice uno de los siguientes administradores de conexión:  
   
-    -   Para archivos de texto, utilice un administrador de conexiones de archivos. Para obtener más información, consulte [File Connection Manager](connection-manager/file-connection-manager.md).  
+    -   Para archivos de texto, utilice un administrador de conexiones de archivos. Para obtener más información, vea [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md) .  
   
     -   Para el [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], utilice un administrador de conexiones de archivos.  
   
     -   Para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilice un administrador de conexiones OLE DB. Para más información, consulte [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-    -   Para el registro de eventos de Windows no haga nada. [!INCLUDE[ssIS](../includes/ssis-md.md)] crea automáticamente el registro.  
+    -   Para el registro de eventos de Windows no haga nada. [!INCLUDE[ssIS](../includes/ssis-md.md)]crea automáticamente el registro.  
   
     -   Para archivos XML, utilice un administrador de conexiones de archivos.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "66059279"
   
 9. En la pestaña **Detalles** , haga clic en **Guardar**. Aparece el cuadro de diálogo **Guardar como** . Localice la carpeta en la que desee guardar la configuración de registro, escriba un nombre de archivo para la nueva configuración de registro y haga clic en **Guardar**.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
- [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;SSIS&#41; registro](performance/integration-services-ssis-logging.md)   
  [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

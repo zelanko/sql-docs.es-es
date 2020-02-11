@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a102991d08085f093e08a068a3d3127c9d7f7fc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666701"
 ---
-# <a name="mssqleng002627"></a>MSSQL_ENG002627
+# <a name="mssql_eng002627"></a>MSSQL_ENG002627
     
 ## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2627|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2627|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico|N/D|  
 |Texto del mensaje|Infracción de la restricción '%.*ls'. No se puede insertar una fila de clave duplicada en el objeto '%.\*ls'.|  
@@ -54,12 +54,12 @@ ms.locfileid: "62666701"
   
 -   Se está utilizando una tabla con una columna de identidad, pero la columna no está correctamente administrada.  
   
-     En la replicación de mezcla y la replicación transaccional con suscripciones actualizables, las columnas de identidad deben ser administradas automáticamente por la replicación. En la replicación transaccional de punto a punto, es necesario administrarlas manualmente. Para obtener más información, vea [Replicar columnas de identidad](publish/replicate-identity-columns.md).  
+     En la replicación de mezcla y la replicación transaccional con suscripciones actualizables, las columnas de identidad deben ser administradas automáticamente por la replicación. En la replicación transaccional de punto a punto, es necesario administrarlas manualmente. Para más información, vea [Replicar columnas de identidad](publish/replicate-identity-columns.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)   
  [Replicación de mezcla](merge/merge-replication.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
- [Suscripciones actualizables para replicación transaccional](transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

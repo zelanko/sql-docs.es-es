@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82fcf08a84a06d33c33a520ce351f6c685092a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069279"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>Seleccionar tablas y vistas (fuentes de distribución de datos) (SSAS)
@@ -27,10 +27,10 @@ ms.locfileid: "66069279"
  Para los orígenes de datos que usan la autenticación de Windows, se utilizan las credenciales del usuario actual para capturar las tablas y vistas del cuadro de diálogo en Seleccionar tablas y vistas. Para capturar los datos de los demás orígenes de datos se usan las credenciales proporcionadas en la cadena de conexión.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Dirección URL de fuente de datos**  
+ **URL de fuente de distribución de datos**  
  Muestra la dirección URL para la fuente de distribución de datos que seleccionó.  
   
- **Las tablas y vistas**  
+ **Tablas y vistas**  
  Enumera las tablas y vistas de la fuente de datos. Active la casilla situada al lado de cada tabla y vista que desee importar.  
   
  **Tabla de origen**  
@@ -42,7 +42,7 @@ ms.locfileid: "66069279"
  **Detalles del filtro**  
  Muestra el filtro de importación de datos en el cuadro de diálogo **Detalles del filtro**, cuando se ha aplicado un filtro a los datos que se están importando. Para obtener más información, vea [Detalles del filtro &#40;SSAS&#41;](filter-details-ssas.md).  
   
- **Vista previa y filtrar**  
+ **Vista previa y Filtro**  
  Muestra el cuadro de diálogo **Vista previa de la tabla seleccionada** que se usa para aplicar un filtro a los datos que se están importando. Para obtener más información, consulte [Vista previa de la tabla seleccionada &#40;SSAS&#41;](preview-selected-table-ssas.md).  
   
  **Seleccionar tablas relacionadas**  

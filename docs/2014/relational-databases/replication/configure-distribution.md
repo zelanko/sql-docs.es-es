@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721720"
 ---
 # <a name="configure-distribution"></a>Configurar la distribución
@@ -38,7 +38,7 @@ ms.locfileid: "62721720"
   
  El servidor seleccionado como distribuidor debe disponer del espacio en disco y la capacidad de proceso adecuados para la replicación y cualquier otra actividad asignada a ese servidor. Al configurar el distribuidor, debe especificar:  
   
--   Una carpeta de instantáneas que se utiliza, de manera predeterminada, para todos los publicadores que usen este distribuidor. Asegúrese de que la carpeta esté compartida y tenga establecidos los permisos adecuados. Para más información, vea [Proteger la carpeta de instantáneas](security/secure-the-snapshot-folder.md).  
+-   Una carpeta de instantáneas que se utiliza, de manera predeterminada, para todos los publicadores que usen este distribuidor. Asegúrese de que la carpeta esté compartida y tenga establecidos los permisos adecuados. Para obtener más información, vea [Proteger la carpeta de instantáneas](security/secure-the-snapshot-folder.md).  
   
 -   El nombre y la ubicación de los archivos de la base de datos de distribución. No se puede cambiar el nombre de la base de datos de distribución una vez creada. Si desea utilizar un nombre distinto para la base de datos, debe deshabilitar la distribución y volver a configurar la base de datos.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "62721720"
   
 -   El distribuidor tiene un rol más amplio en la replicación transaccional porque todas las transacciones replicadas se escriben y se leen en la base de datos de distribución.  
   
--   Las topologías de replicación de mezcla usan por lo general suscripciones de extracción, de forma que los agentes se ejecutan en cada suscriptor en lugar de ejecutarse todos en el distribuidor. Para más información, vea [Subscribe to Publications](subscribe-to-publications.md) (Suscribirse a publicaciones). En la mayoría de los casos, debe usar un distribuidor local para la replicación de mezcla.  
+-   Las topologías de replicación de mezcla usan por lo general suscripciones de extracción, de forma que los agentes se ejecutan en cada suscriptor en lugar de ejecutarse todos en el distribuidor. Para obtener más información, vea [Suscribirse a publicaciones](subscribe-to-publications.md). En la mayoría de los casos, debe usar un distribuidor local para la replicación de mezcla.  
   
  Para configurar la publicación y la distribución, vea [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
   
  Para modificar las propiedades del distribuidor y del publicador, vea [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](publish/publish-data-and-database-objects.md)   
  [Proteger el distribuidor](security/secure-the-distributor.md)  
   

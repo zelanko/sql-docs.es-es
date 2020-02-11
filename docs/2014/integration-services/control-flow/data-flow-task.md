@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832463"
 ---
 # <a name="data-flow-task"></a>tarea Flujo de datos
@@ -44,7 +44,9 @@ ms.locfileid: "62832463"
  ![Flujos de datos](../media/mw-dts-09.gif "Flujos de datos")  
   
 ## <a name="log-entries"></a>Entradas del registro  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona un conjunto de eventos de registro que están disponibles para todas las tareas. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] también proporciona entradas del registro personalizadas para numerosas tareas. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md). La tarea Flujo de datos incluye las siguientes entradas de registro personalizadas:  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona un conjunto de eventos de registro que están disponibles para todas las tareas. 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] también proporciona entradas del registro personalizadas para numerosas tareas. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md). La tarea Flujo de datos incluye las siguientes entradas de registro personalizadas:  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -64,14 +66,14 @@ ms.locfileid: "62832463"
   
  Para obtener más información sobre cómo utilizar estas entradas de registro para supervisar y mejorar el rendimiento del flujo de datos, vea uno de los temas siguientes:  
   
--   [Performance Counters](../performance/performance-counters.md)  
+-   [Contadores de rendimiento](../performance/performance-counters.md)  
   
 -   [Características de rendimiento del flujo de datos](../data-flow/data-flow-performance-features.md)  
   
 ### <a name="sample-messages-from-a-data-flow-task"></a>Mensajes de ejemplo de una tarea Flujo de trabajo  
  En la tabla siguiente se muestran mensajes de ejemplo de entradas de registro de un paquete muy sencillo. El paquete utiliza un origen OLE DB para extraer datos de una tabla, una transformación Ordenar para ordenar los datos y un destino OLE DB para escribir los datos en una tabla diferente.  
   
-|Entrada del registro|Mensajes|  
+|Entrada del registro|error de Hadoop|  
 |---------------|--------------|  
 |`BufferSizeTuning`|`Rows in buffer type 0 would cause a buffer size greater than the configured maximum. There will be only 9637 rows in buffers of this type.`<br /><br /> `Rows in buffer type 2 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`<br /><br /> `Rows in buffer type 3 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`|  
 |`OnPipelinePostEndOfRowset`|`A component will be given the end of rowset signal. : 1180 : Sort : 1181 : Sort Input`<br /><br /> `A component will be given the end of rowset signal. : 1291 : OLE DB Destination : 1304 : OLE DB Destination Input`|  
@@ -86,13 +88,13 @@ ms.locfileid: "62832463"
   
  Muchos eventos de registro escriben varias entradas, y los mensajes de un gran número de entradas del registro contienen datos complejos. Para facilitar la comprensión y comunicar el contenido de mensajes complejos, puede analizar el texto del mensaje. En función de la ubicación de los registros, puede usar instrucciones Transact-SQL o un componente de script para separar el texto complejo en columnas u otros formatos que considere más útiles.  
   
- Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185: Salida de origen de OLE DB: 1180: Ordenar: 1181: Entrada de ordenación: 76", analizado en columnas. El evento `OnPipelineRowsSent` escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
+ Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185 : Salida de origen de OLE DB : 1180 : Ordenar : 1181 : Entrada de ordenación : 76", analizado en columnas. El evento `OnPipelineRowsSent` escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
   
-|columna|Descripción|Valor|  
+|Columna|Descripción|Value|  
 |------------|-----------------|-----------|  
 |**PathID**|Valor de la propiedad `ID` de la ruta entre el origen de OLE DB y la transformación Ordenar.|1185|  
 |**PathName**|Valor de la propiedad `Name` de la ruta.|Salida de origen de OLE DB|  
-|**ComponentID**|El valor de la `ID` propiedad de la transformación Ordenar.|1180|  
+|**ComponentID**|Valor de la `ID` propiedad de la transformación ordenar.|1180|  
 |**ComponentName**|Valor de la propiedad `Name` de la transformación Ordenar.|Sort|  
 |**InputID**|Valor de la propiedad `ID` de la entrada de la transformación Ordenar.|1181|  
 |**InputName**|Valor de la propiedad `Name` de la entrada de la transformación Ordenar.|Entrada de ordenación|  

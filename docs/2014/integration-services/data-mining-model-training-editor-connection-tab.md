@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059880"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Editor de entrenamiento de modelos de minería de datos (pestaña Conexión)
@@ -27,23 +27,23 @@ ms.locfileid: "66059880"
  Para obtener más información acerca del destino de Entrenamiento del modelo de minería de datos, vea [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
 ## <a name="options"></a>Opciones  
- **Administrador de conexiones**  
+ **Connection manager**  
  Seleccione una conexión de la lista de conexiones existentes de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , o bien cree una conexión de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con el botón **Nueva** que se describe más adelante.  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear una conexión con el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** .  
   
  **Estructura de minería de datos**  
  Seleccione una estructura de la lista de estructuras de minería de datos disponibles, o bien haga clic en **Nuevo**para crear una estructura.  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear una estructura de minería de datos y un modelo de minería de datos con el **Asistente para minería de datos**.  
   
  **Modelos de minería de datos**  
  Vea la lista de modelos de minería de datos asociados a la estructura de minería de datos seleccionada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de entrenamiento de modelos de minería de datos &#40;pestaña Columnas&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [Editor de entrenamiento de modelos de minería de datos &#40;pestaña columnas&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

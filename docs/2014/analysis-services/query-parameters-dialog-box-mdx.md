@@ -1,5 +1,5 @@
 ---
-title: Consultar el cuadro de diálogo Parámetros (MDX) | Microsoft Docs
+title: Cuadro de diálogo parámetros de consulta (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070526"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Cuadro de diálogo Parámetros de consulta (MDX)
@@ -26,7 +26,7 @@ ms.locfileid: "66070526"
  **Parámetro**  
  Escriba un nombre de parámetro para empezar a crear un parámetro o modifique el nombre de un parámetro existente.  
   
- **Dimension**  
+ **Dimensión**  
  Elija una dimensión de la lista.  
   
  **Hierarchy**  
@@ -35,10 +35,10 @@ ms.locfileid: "66070526"
  **Varios valores**  
  Descripción  
   
- **Default**  
+ **Valor predeterminado**  
  Indica el valor predeterminado del parámetro, si existe. De forma predeterminada, no se asigna ningún valor.  
   
- **Otro**  
+ **Otros**  
  Utilice el botón X o la tecla Suprimir para quitar los parámetros que ya no use. Utilice las teclas de dirección para mover el parámetro resaltado hacia arriba o abajo en la lista. Las reglas siguientes se aplican para ordenar los parámetros:  
   
 -   Ámbito del parámetro.  

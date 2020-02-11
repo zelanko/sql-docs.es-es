@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación Ordenar | Microsoft Docs
+title: Editor de transformación ordenar | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055491"
 ---
 # <a name="sort-transformation-editor"></a>Editor de transformación Ordenar
@@ -30,10 +30,10 @@ ms.locfileid: "66055491"
  **Columnas de entrada disponibles**  
  Active las casillas de las columnas que desea ordenar.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de todas las columnas de entrada disponibles.  
   
- **Paso a través**  
+ **Acceso directo**  
  Permite indicar si la columna debe incluirse en la salida ordenada.  
   
  **Columna de entrada**  
@@ -54,7 +54,7 @@ ms.locfileid: "66055491"
  **Quitar filas con valores de ordenación duplicados**  
  Permite indicar si la transformación copia filas duplicadas en la salida o crea una única entrada para todos los duplicados utilizando las opciones de comparación de cadenas especificadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

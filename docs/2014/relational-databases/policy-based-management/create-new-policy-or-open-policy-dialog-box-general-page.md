@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90e7ee3b8c0ac9c77c4ef863367ff46467a35277
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705387"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Cuadro de diálogo Crear nueva directiva o Abrir directiva, página General
   Utilice este cuadro de diálogo para crear una directiva nueva de administración basada en directivas o modificar una directiva existente. Utilice las áreas **Para destinos** y **Restricción de servidor** como filtro para limitar las directivas a un subconjunto de todos los destinos posibles. Las condiciones que se usan como filtros de destino se deben definir en una faceta física y no deben contener funciones ni el operador LIKE. Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, consulte: [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Si la directiva es nueva, escriba un nombre para ella. Si la directiva ya existe, se muestra el nombre.  
   
  **Enabled**  
@@ -69,7 +69,7 @@ ms.locfileid: "62705387"
  **Restricción de servidor**  
  Seleccione los tipos de servidores que son adecuados para esta directiva. Las opciones son **Ninguno** o seleccionar una condición que filtre los servidores posibles.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  
   
   

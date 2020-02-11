@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783256"
 ---
 # <a name="delete-one-or-more-jobs"></a>Eliminar uno o más trabajos
-  En este tema se describe cómo eliminar trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server.  
+  En este tema se describe cómo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eliminar trabajos del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agente en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mediante [!INCLUDE[tsql](../../includes/tsql-md.md)], o objetos de administración de SQL Server.  
   
  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  Solo podrá eliminar los trabajos que posea, a menos que sea miembro del rol fijo de servidor **sysadmin** .  
@@ -45,7 +45,7 @@ ms.locfileid: "72783256"
   
 3.  En el cuadro de diálogo **Eliminar objeto** , confirme que el trabajo que desea eliminar está seleccionado.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 #### <a name="to-delete-multiple-jobs"></a>Para eliminar varios trabajos  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72783256"
   
 2.  Expanda **Agente SQL Server**.  
   
-3.  Haga clic con el botón derecho en **Monitor de actividad de trabajo**y haga clic en **Ver actividad de trabajo**.  
+3.  Haga clic con el botón secundario en **monitor de actividad de trabajo**y haga clic en **ver actividad de trabajo**.  
   
 4.  En Monitor de actividad de trabajo, seleccione los trabajos que desee eliminar, haga clic con el botón derecho en la selección y, luego, elija **Eliminar trabajos**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "72783256"
     GO  
     ```  
   
- Para obtener más información, [vea &#40;SP_DELETE_JOB Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql).  
+ Para obtener más información, vea [sp_delete_job &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql).  
 
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
 

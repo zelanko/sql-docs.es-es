@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075425"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definir cálculos de inteligencia de tiempo mediante el Asistente de Business Intelligence
@@ -43,7 +43,7 @@ ms.locfileid: "66075425"
   
  Se aplica la inteligencia de tiempo a los cubos que tienen una dimensión de tiempo. (Una dimensión de tiempo es una dimensión cuya propiedad `Type` se establece como `Time`). Además, los atributos de tiempo de esa dimensión también deben tener la configuración apropiada (como Years o Months) para su propiedad `Type`. La propiedad `Type` de la dimensión y sus atributos se establece correctamente si se usa el Asistente para dimensiones para crear la dimensión de tiempo.  
   
- Para agregar inteligencia de tiempo a un cubo, se usa el Asistente de Business Intelligence y se selecciona la opción **Definir la inteligencia de tiempo** de la página **Elegir mejora** . Este asistente le guiará por el proceso para seleccionar una jerarquía a la que se agrega inteligencia de tiempo y especificar los miembros de la jerarquía a los que se aplicará inteligencia de tiempo. En la última página del asistente, se pueden ver los cambios que se realizarán a la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para agregar la inteligencia de tiempo seleccionada.  
+ Para agregar inteligencia de tiempo a un cubo, se usa el Asistente de Business Intelligence y se selecciona la opción **Definir la inteligencia de tiempo** de la página **Elegir mejora** . Este asistente le guiará por el proceso para seleccionar una jerarquía a la que se agrega inteligencia de tiempo y especificar los miembros de la jerarquía a los que se aplicará inteligencia de tiempo. En la última página del asistente, puede ver los cambios que se realizarán en la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos para agregar la inteligencia de tiempo seleccionada.  
   
 ## <a name="selecting-a-time-hierarchy"></a>Seleccionar una jerarquía de tiempo  
  En la página **Elegir cálculos y jerarquía de destino** , seleccione la jerarquía de tiempo para la que se aplica la mejora de tiempo. Puede aplicar la mejora de tiempo a una sola jerarquía de tiempo cada vez que se ejecuta el Asistente de Business Intelligence. Si desea aplicar la mejora a más de una jerarquía de tiempo, se vuelve a ejecutar el asistente.  
@@ -59,20 +59,20 @@ ms.locfileid: "66075425"
 ## <a name="apply-time-views-to-members"></a>Aplicar vistas de tiempo a los miembros  
  En la página **Definir el ámbito de cálculo** , se especifican los miembros a los que se aplican las nuevas vistas de tiempo. Puede aplicar las nuevas vistas de tiempo a uno de los siguientes objetos:  
   
--   **Miembros de una dimensión de cuentas** En la página **Definir el ámbito de cálculo** , la lista **Medidas disponibles** incluye dimensiones de cuentas. Las dimensiones de cuentas tienen su propiedad `Type` configurada como `Accounts`. Si tiene una dimensión de cuentas pero esa dimensión no figura en la lista **Medidas disponibles** , puede usar el Asistente de Business Intelligence para aplicar la inteligencia de cuentas a esa dimensión. Para más información, vea [Agregar inteligencia de cuentas a una dimensión](bi-wizard-add-account-intelligence-to-a-dimension.md).  
+-   **Miembros de una dimensión de cuenta** En la página **definir el ámbito de cálculo** , la lista **medidas disponibles** incluye dimensiones de cuentas. Las dimensiones de cuentas tienen su propiedad `Type` configurada como `Accounts`. Si tiene una dimensión de cuentas pero esa dimensión no figura en la lista **Medidas disponibles** , puede usar el Asistente de Business Intelligence para aplicar la inteligencia de cuentas a esa dimensión. Para obtener más información, vea [Agregar inteligencia de cuentas a una dimensión](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
--   **Medidas** En lugar de especificar una dimensión de cuentas, puede especificar las medidas a las que se aplican las vistas de tiempo. En este caso, seleccione las vistas a las que se aplican los cálculos de tiempo seleccionados. Por ejemplo, los activos y pasivos son datos del año hasta la fecha, por lo tanto no se aplica un cálculo de Valor anual hasta la fecha a medidas de activos o pasivos.  
+-   **Medidas** de En lugar de especificar una dimensión de cuenta, puede especificar las medidas a las que se aplican las vistas de tiempo. En este caso, seleccione las vistas a las que se aplican los cálculos de tiempo seleccionados. Por ejemplo, los activos y pasivos son datos del año hasta la fecha, por lo tanto no se aplica un cálculo de Valor anual hasta la fecha a medidas de activos o pasivos.  
   
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Ver la mejora de inteligencia de tiempo  
  En la última página del Asistente de Business Intelligence, puede ver los cambios que se realizarán en la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para una mejora de inteligencia de tiempo, el asistente cambia la dimensión de tiempo seleccionada, la vista del origen de datos relacionada y el cubo asociado como se describe en la siguiente tabla.  
   
-|Object|Cambiar|  
+|Object|Change|  
 |------------|------------|  
 |Dimensión de tiempo|Agrega un atributo para cada cálculo (o vista).|  
 |Vista del origen de datos|Agrega una columna calculada en la tabla de tiempo para cada nuevo atributo en la dimensión de tiempo.|  
 |Cube|Agrega un miembro calculado que define el código de Expresiones multidimensionales (MDX) para realizar el cálculo.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear miembros calculados](create-calculated-members.md)  
   
   

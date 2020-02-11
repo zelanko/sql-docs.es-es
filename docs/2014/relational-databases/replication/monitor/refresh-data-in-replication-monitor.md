@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667241"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Actualizar datos en el Monitor de replicación
@@ -44,7 +44,7 @@ ms.locfileid: "62667241"
   
 2.  En la ventana de detalles **Suscripción \<<nombreDeSuscripción>** , haga clic en **Acción** y, a continuación, en **Actualizar automáticamente**. La frecuencia de actualización es establece con el valor que se especifique en **Frecuencia de actualización** en el cuadro de diálogo **Configuración del publicador** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación](../monitoring-replication.md)  
   
   

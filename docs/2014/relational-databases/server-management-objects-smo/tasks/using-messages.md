@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ff94bf10dee2bda0a61b573b87621fa5d3256b
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781797"
 ---
 # <a name="using-messages"></a>Usar mensajes
@@ -27,7 +27,7 @@ ms.locfileid: "72781797"
  El objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> representa los mensajes definidos por el usuario mediante programación en SMO. Los mensajes definidos por el usuario existentes se pueden detectar realizando una iteración en la colección. Los nuevos mensajes definidos por el usuario se pueden crear creando instancias de un nuevo objeto `UserDefinedMessage` y estableciendo las propiedades adecuadas.  
   
 ## <a name="examples"></a>Ejemplos  
- Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Buscar un mensaje del sistema determinado en Visual Basic  
  En el ejemplo de código se muestra cómo identificar un mensaje del sistema por número de identificador y cómo mostrar el mensaje.  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd49c3264857a92a9ca029a25894a5afdbeab381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62760990"
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>Deshabilitar restricciones CHECK con instrucciones INSERT y UPDATE
@@ -44,7 +44,7 @@ ms.locfileid: "62760990"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>Para deshabilitar una restricción CHECK para las instrucciones INSERT y UPDATE  
   

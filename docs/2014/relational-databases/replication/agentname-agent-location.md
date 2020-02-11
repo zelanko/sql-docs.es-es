@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721877"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Ubicación del agente &lt;NombreAgente&gt;
@@ -25,8 +25,8 @@ ms.locfileid: "62721877"
 > [!NOTE]  
 >  El tipo de suscripción no se puede cambiar una vez creada la suscripción.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción de extracción](create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte también  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Información general sobre los agentes de replicación](agents/replication-agents-overview.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Ejecutar el Editor de la tarea de paquete | Microsoft Docs
+title: Editor de la tarea ejecutar paquete | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059054"
 ---
 # <a name="execute-package-task-editor"></a>Editor de la tarea Ejecutar paquete
@@ -26,22 +26,22 @@ ms.locfileid: "66059054"
   
  **¿Qué desea hacer?**  
   
--   [Abrir el Editor de la tarea Ejecutar paquete](#open)  
+-   [Abrir el editor de la tarea ejecutar paquete](#open)  
   
--   [Establecer las opciones de la página General](#general)  
+-   [Establecer las opciones de la página general](#general)  
   
--   [Establecer las opciones de la página Paquete](#package)  
+-   [Establecer las opciones de la página paquete](#package)  
   
--   [Establecer las opciones de la página Enlaces de parámetro](#parameter)  
+-   [Establecer las opciones de la página enlaces de parámetros](#parameter)  
   
-##  <a name="open"></a> Abrir el Editor de la tarea Ejecutar paquete  
+##  <a name="open"></a>Abrir el editor de la tarea ejecutar paquete  
   
 1.  Abra un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] que contenga una tarea Ejecutar paquete.  
   
 2.  Haga clic con el botón derecho en la tarea en el Diseñador SSIS y, después, haga clic en **Editar**.  
   
-##  <a name="general"></a> Establecer las opciones de la página General  
- **Name**  
+##  <a name="general"></a>Establecer las opciones de la página general  
+ **Nombre**  
  Escriba un nombre único para la tarea Ejecutar paquete. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
@@ -50,8 +50,8 @@ ms.locfileid: "66059054"
  **Descripción**  
  Escriba una descripción de la tarea Ejecutar paquete.  
   
-##  <a name="package"></a> Establecer las opciones de la página Paquete  
- **ReferenceType**  
+##  <a name="package"></a>Establecer las opciones de la página paquete  
+ **Volvió**  
  Seleccione **Referencia de proyecto** para los paquetes secundarios que están en el proyecto. Seleccione **Referencia externa** para los paquetes secundarios que se encuentran fuera del paquete  
   
 > [!NOTE]  
@@ -61,20 +61,20 @@ ms.locfileid: "66059054"
  Si el paquete secundario está protegido con contraseña, tiene que proporcionar esta contraseña o hacer clic en el botón de puntos suspensivos (…) y crear una contraseña.  
   
  `ExecuteOutOfProcess`  
- Especifique si el paquete secundario se ejecuta en el proceso del paquete primario o en un proceso independiente. De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en `False`, y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en `true`, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si se establece la propiedad en `true`, no se podrá depurar el paquete si realizó únicamente una instalación de herramientas; deberá instalar el producto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para más información, vea [Instalar Integration Services](install-windows/install-integration-services.md).  
+ Especifique si el paquete secundario se ejecuta en el proceso del paquete primario o en un proceso independiente. De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea ejecutar paquete se establece `False`en y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en `true`, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si se establece la propiedad en `true`, no se podrá depurar el paquete si realizó únicamente una instalación de herramientas; deberá instalar el producto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para más información, vea [Instalar Integration Services](install-windows/install-integration-services.md).  
   
 ### <a name="referencetype-dynamic-options"></a>Opciones dinámicas de ReferenceType  
   
 #### <a name="referencetype--external-reference"></a>ReferenceType = Referencia externa  
- **Ubicación**  
+ **Location**  
  Seleccione la ubicación del paquete secundario. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**SQL Server**|Establezca la ubicación de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Sistema de archivos**|Permite establecer como ubicación el sistema de archivos.|  
   
- **Conexión**  
+ **Connection**  
  Seleccione el tipo de ubicación de almacenamiento para el paquete secundario.  
   
  **PackageNameReadOnly**  
@@ -87,24 +87,24 @@ ms.locfileid: "66059054"
 ### <a name="location-dynamic-options"></a>Opciones dinámicas de ubicación  
   
 #### <a name="location--sql-server"></a>Ubicación = SQL Server  
- **Conexión**  
- Seleccione un administrador de conexiones OLE DB de la lista o haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones.  
+ **Connection**  
+ Seleccione un administrador de conexiones OLE DB de la lista o haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [configurar el Administrador de conexiones OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Temas relacionados:** [OLE DB administrador de conexiones](connection-manager/ole-db-connection-manager.md), [configurar OLE DB administrador de conexiones](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
- **PackageName**  
+ **Nombredepaquete**  
  Escriba el nombre del paquete secundario, o bien haga clic en los puntos suspensivos (…) y, después, busque el paquete.  
   
 #### <a name="location--file-system"></a>Ubicación = Sistema de archivos  
- **Conexión**  
- Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones.  
+ **Connection**  
+ Seleccione un administrador de conexiones de archivos de la lista o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  Muestra el nombre del paquete.  
   
-##  <a name="parameter"></a> Establecer las opciones de la página Enlaces de parámetro  
+##  <a name="parameter"></a>Establecer las opciones de la página enlaces de parámetros  
  Puede pasar valores del paquete primario o del proyecto al paquete secundario. El proyecto debe utilizar el modelo de implementación del proyecto y el paquete secundario debe estar incluido en el mismo proyecto que contiene el paquete primario.  
   
  Para obtener información sobre cómo convertir un proyecto al modelo de implementación de proyectos, vea [Implementación de paquetes en el servidor de Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
@@ -112,13 +112,13 @@ ms.locfileid: "66059054"
  **Parámetro de paquete secundario**  
  Escriba o seleccione un nombre para el parámetro de paquete secundario.  
   
- **Enlazar un parámetro o variable**  
+ **Parámetro o variable de enlace**  
  Seleccione el parámetro o variable que contiene el valor que desea pasar al paquete secundario.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para asignar un parámetro o variable a un parámetro de paquete secundario.  
   
- **Quitar**  
+ **Remove**  
  Haga clic para quitar una asignación entre un parámetro o variable y un parámetro de paquete secundario.  
   
   

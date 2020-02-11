@@ -1,5 +1,5 @@
 ---
-title: Seleccione un origen de datos (Asistente para vistas de origen de datos) (Analysis Services) | Microsoft Docs
+title: Seleccionar un origen de datos (Asistente para vistas del origen de datos) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069858"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Seleccionar un origen de datos (Asistente para vistas del origen de datos) (Analysis Services)
@@ -31,15 +31,15 @@ ms.locfileid: "66069858"
 > [!NOTE]  
 >  Aun cuando es posible que se enumeren orígenes de datos de procesamiento analítico en línea (OLAP) para el proyecto, solo pueden agregarse vistas del origen de datos para orígenes de datos relacionales.  
   
- **Propiedades del origen de datos**  
+ **Propiedades de origen de datos**  
  Enumera la información del proveedor de la cadena de conexión para el origen de datos actualmente seleccionado.  
   
  **Nuevo origen de datos**  
  Abre el Asistente para orígenes de datos, en el que puede crear un nuevo origen de datos que se va a agregar al proyecto.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 de Asistente para la vista de datos origen &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para vistas del origen de datos &#40;de ayuda F1 Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Vistas del origen de datos en modelos multidimensionales](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Ayuda F1 del Asistente para origen de datos &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
+ [Asistente para orígenes de datos &#40;de ayuda F1 Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Establecer las propiedades de una ruta de acceso mediante el Editor de rutas de flujo de datos | Microsoft Docs
+title: Establecer las propiedades de una ruta de acceso mediante el editor de rutas de flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055732"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Establecer las propiedades de una ruta con el Editor de rutas de flujo de datos
@@ -32,11 +32,11 @@ ms.locfileid: "66055732"
   
 4.  En el **Editor de rutas de flujo de datos**, haga clic en **General**. A partir de este momento puede editar el nombre predeterminado de la ruta y proporcionar una descripción de la ruta. También puede modificar la propiedad PathAnnotation.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Rutas de Integration Services](data-flow/integration-services-paths.md)   
  [Flujo de datos](data-flow/data-flow.md)  
   

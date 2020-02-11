@@ -1,5 +1,5 @@
 ---
-title: Editar propiedades de plantilla de seguimiento (pestaña General) | Microsoft Docs
+title: Editar propiedades de la plantilla de seguimiento (pestaña general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064900"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Editar Propiedades de la plantilla de seguimiento (pestaña General)
@@ -34,7 +34,7 @@ ms.locfileid: "66064900"
  **Usar como plantilla predeterminada para tipo de servidor seleccionado**  
  Utilice esta plantilla como valor predeterminado en seguimientos creados para este tipo de servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modificar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  

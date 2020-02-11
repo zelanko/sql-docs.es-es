@@ -14,65 +14,65 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff1ba97de1c7698a1f2fde73b8ba8d592d8fccab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662086"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Opciones (Ayuda F1 de cuadros de diálogos)
   Esta sección contiene la Ayuda F1 de los cuadros de diálogo disponibles cuando se hace clic en **Opciones** en el menú **Herramientas** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [Opciones de &#40;diseñadores de Analysis Services diseñadores-General&#41;](options-designers-analysis-services-designers-general.md)  
+ [Opciones de &#40;diseñadores-diseñadores de Analysis Services-general&#41;](options-designers-analysis-services-designers-general.md)  
   
- [Opciones de &#40;página planes de mantenimiento de los diseñadores&#41;](options-designers-maintenance-plans-page.md)  
+ [Opciones de &#40;diseñadores: Página planes de mantenimiento&#41;](options-designers-maintenance-plans-page.md)  
   
- [Opciones de &#40;diseñadores de tabla y página diseñadores de base de datos&#41;](options-designers-table-and-database-designers-page.md)  
+ [Opciones &#40;diseñadores: Página diseñadores de tablas y bases de datos&#41;](options-designers-table-and-database-designers-page.md)  
   
- [Opciones de &#40;entorno: Página fuentes y colores&#41;](options-environment-fonts-and-colors-page.md)  
+ [Opciones &#40;entorno: página fuentes y colores&#41;](options-environment-fonts-and-colors-page.md)  
   
- [Opciones de &#40;página General del entorno&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+ [Opciones &#40;entorno: página general&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
- [Opciones de &#40;página entorno-ayuda-General&#41;](options-environment-help-general-page.md)  
+ [Opciones &#40;entorno-ayuda-página general&#41;](options-environment-help-general-page.md)  
   
- [Opciones de &#40;entorno-ayuda-página en línea&#41;](options-environment-help-online-page.md)  
+ [Opciones &#40;entorno-ayuda-página en línea&#41;](options-environment-help-online-page.md)  
   
- [Opciones de &#40;página teclado del entorno&#41;](options-environment-keyboard-page.md)  
+ [Opciones de &#40;entorno: Página teclado&#41;](options-environment-keyboard-page.md)  
   
- [Opciones de &#40;ejecución Analysis Server página General de la consulta&#41;](../../database-engine/options-query-execution-analysis-server-general-page.md)  
+ [Opciones &#40;ejecución de consulta-Analysis Server-página general&#41;](../../database-engine/options-query-execution-analysis-server-general-page.md)  
   
- [Opciones de &#40;consultas de ejecución: SQL Server: página Opciones avanzadas&#41;](../../database-engine/options-query-execution-sql-server-advanced-page.md)  
+ [Opciones &#40;ejecución de consultas: SQL Server: Página avanzadas&#41;](../../database-engine/options-query-execution-sql-server-advanced-page.md)  
   
- [Opciones de &#40;página ANSI del servidor de SQL de ejecución de consulta&#41;](../../database-engine/options-query-execution-sql-server-ansi-page.md)  
+ [Opciones &#40;ejecución de consultas-SQL Server-página ANSI&#41;](../../database-engine/options-query-execution-sql-server-ansi-page.md)  
   
- [Opciones de &#40;consultas de ejecución de SQL Server página General&#41;](../../database-engine/options-query-execution-sql-server-general-page.md)  
+ [Opciones &#40;ejecución de consulta-SQL Server-página general&#41;](../../database-engine/options-query-execution-sql-server-general-page.md)  
   
- [Opciones de &#40;página General del servidor de análisis de resultados de consulta&#41;](../../database-engine/options-query-results-analysis-server-general-page.md)  
+ [Opciones &#40;resultados de la consulta-Analysis Server-página general&#41;](../../database-engine/options-query-results-analysis-server-general-page.md)  
   
- [Opciones de &#40;consultar los resultados de SQL Server página General&#41;](../../database-engine/options-query-results-sql-server-general-page.md)  
+ [Opciones &#40;resultados de la consulta-SQL Server-página general&#41;](../../database-engine/options-query-results-sql-server-general-page.md)  
   
- [Opciones de &#40;consultar los resultados de SQL Server-página resultados a cuadrícula&#41;](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)  
+ [Opciones &#40;resultados de la consulta: SQL Server: resultados a la página de cuadrícula&#41;](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)  
   
- [Opciones de &#40;resultados de SQL Server-página resultados a texto de consulta&#41;](../../database-engine/options-query-results-sql-server-results-to-text-page.md)  
+ [Opciones &#40;resultados de la consulta: SQL Server: resultados de la página de texto&#41;](../../database-engine/options-query-results-sql-server-results-to-text-page.md)  
   
- [Opciones de &#40;página Servicios de dependencia de resultados de consulta&#41;](../../database-engine/options-query-results-and-dependency-services-page.md)  
+ [Opciones &#40;página resultados de la consulta y servicios de dependencia&#41;](../../database-engine/options-query-results-and-dependency-services-page.md)  
   
- [Opciones de &#40;Editor de texto - todos los idiomas - página General&#41;](../../database-engine/options-text-editor-all-languages-general-page.md)  
+ [Opciones &#40;editor de texto-todos los lenguajes-página general&#41;](../../database-engine/options-text-editor-all-languages-general-page.md)  
   
- [Opciones de &#40;Editor de texto - todos los idiomas-página tabulaciones&#41;](../../database-engine/options-text-editor-all-languages-tabs-page.md)  
+ [Opciones &#40;editor de texto-todos los idiomas-página tabulaciones&#41;](../../database-engine/options-text-editor-all-languages-tabs-page.md)  
   
- [Opciones de &#40;Editor de texto - página extensión de archivo&#41;](../../database-engine/options-text-editor-file-extension-page.md)  
+ [Opciones &#40;editor de texto: Página extensión de archivo&#41;](../../database-engine/options-text-editor-file-extension-page.md)  
   
- [Opciones de &#40;Editor de texto: texto sin formato - página General&#41;](../../database-engine/options-text-editor-plain-text-general-page.md)  
+ [Opciones &#40;editor de texto-texto sin formato-página general&#41;](../../database-engine/options-text-editor-plain-text-general-page.md)  
   
- [Opciones de &#40;página las pestañas del Editor de texto: texto sin formato:&#41;](../../database-engine/options-text-editor-plain-text-tabs-page.md)  
+ [Opciones &#40;editor de texto-texto sin formato-página tabulaciones&#41;](../../database-engine/options-text-editor-plain-text-tabs-page.md)  
   
- [Opciones de &#40;Editor de texto - XML - página formato&#41;](../../database-engine/options-text-editor-xml-formatting-page.md)  
+ [Opciones &#40;editor de texto-XML-Página formato&#41;](../../database-engine/options-text-editor-xml-formatting-page.md)  
   
- [Opciones de &#40;Editor de texto - XML - página General&#41;](../../database-engine/options-text-editor-xml-general-page.md)  
+ [Opciones &#40;editor de texto-XML-página general&#41;](../../database-engine/options-text-editor-xml-general-page.md)  
   
- [Opciones de &#40;Editor de texto - XML - página varios&#41;](../../database-engine/options-text-editor-xml-miscellaneous-page.md)  
+ [Opciones &#40;editor de texto-XML-Página varios&#41;](../../database-engine/options-text-editor-xml-miscellaneous-page.md)  
   
- [Opciones de &#40;página XML:Tabs: Editor de texto&#41;](../../database-engine/options-text-editor-xml-tabs-page.md)  
+ [Opciones &#40;editor de texto: XML: Página tabulaciones&#41;](../../database-engine/options-text-editor-xml-tabs-page.md)  
   
   

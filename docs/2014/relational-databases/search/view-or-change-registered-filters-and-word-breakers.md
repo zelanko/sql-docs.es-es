@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 97bf5b2f1838531c305cf663d050201d5f34ce82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010929"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Ver o cambiar los filtros y separadores de palabras registrados
@@ -98,7 +98,7 @@ ms.locfileid: "66010929"
     EXEC sp_fulltext_service 'restart_all_fdhosts';   
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer la cuenta del servicio para el selector del demonio de filtro completo](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Configurar y administrar filtros para búsquedas](configure-and-manage-filters-for-search.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](configure-and-manage-word-breakers-and-stemmers-for-search.md)  

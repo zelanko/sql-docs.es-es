@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c7a9b107a05b0645f2286f534f457d46a1b6f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771101"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extraer datos mediante el origen de XML
@@ -55,13 +55,13 @@ ms.locfileid: "62771101"
   
 8.  Para actualizar los nombres de las columnas de salida, haga clic en **Columnas** y modifique los valores en la lista **Columna de salida** .  
   
-9. Para configurar la salida de error, haga clic en **Salida de error**. Para más información, vea [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md).  
+9. Para configurar la salida de error, haga clic en **Salida de error**. Para obtener más información, vea [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md).  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Origen XML](xml-source.md)   
  [Transformaciones de Integration Services](transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](integration-services-paths.md)   

@@ -1,5 +1,5 @@
 ---
-title: Editor de origen ODBC (página salida de Error) | Microsoft Docs
+title: Editor de origen de ODBC (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057128"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Editor de origen de ODBC (página Salida de error)
@@ -38,7 +38,7 @@ ms.locfileid: "66057128"
 ### <a name="inputoutput"></a>Entrada/salida  
  Muestra el nombre del origen de datos.  
   
-### <a name="column"></a>columna  
+### <a name="column"></a>Columna  
  No se usa.  
   
 ### <a name="error"></a>Error  
@@ -60,7 +60,7 @@ ms.locfileid: "66057128"
  Use las opciones siguientes para configurar la forma en la que el origen de ODBC controla errores y truncamientos.  
   
 ### <a name="fail-component"></a>Error de componente  
- La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Éste es el comportamiento predeterminado.  
+ La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Este es el comportamiento predeterminado.  
   
 ### <a name="ignore-failure"></a>Omitir error  
  Se omite el error o el truncamiento.  
@@ -68,7 +68,7 @@ ms.locfileid: "66057128"
 ### <a name="redirect-flow"></a>Redirigir fila  
  La fila que está produciendo el error o el truncamiento se dirige a la salida de error del origen de ODBC. Para más información, consulte [ODBC Source](data-flow/odbc-source.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Editor de orígenes ODBC &#40;página Columnas&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   

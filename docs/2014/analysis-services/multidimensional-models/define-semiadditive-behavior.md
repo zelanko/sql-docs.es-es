@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075537"
 ---
 # <a name="define-semiadditive-behavior"></a>Define Semiadditive Behavior
@@ -50,9 +50,9 @@ ms.locfileid: "66075537"
   
 -   None  
   
- Esta opción no cambia las medidas con una función de agregación normal: `Sum`, `Min`, `Max`, `Count`, o `Distinct``Count`.  
+ Esta opción no cambia las medidas con una función de agregación `Sum`normal `Min`: `Max`, `Count`,, `Distinct``Count`o.  
   
- **El asistente ha detectado la "cuenta" dimensión de cuenta, que contiene miembros semiaditivos. El servidor realizará la agregación de los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
+ **El asistente ha detectado la dimensión de cuenta "cuenta", que contiene miembros de suma parcial. El servidor agregará los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
  Hace que el sistema establezca todas las medidas de un grupo de medida con una dimensión de tipo Cuenta en la función de agregación By Account; el servidor agregará los miembros de dimensión según el comportamiento de suma parcial especificado para cada tipo de cuenta.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ ms.locfileid: "66075537"
 |Average of Children|La agregación de un miembro es el promedio de sus elementos secundarios.|  
 |ByAccount|El sistema lee el comportamiento de suma parcial especificado para cada tipo de cuenta.|  
 |Count|La agregación es un recuento de miembros.|  
-|Distinct Count|La agregación es un recuento de miembros únicos.|  
+|Recuento distinto|La agregación es un recuento de miembros únicos.|  
 |First Child|El valor de miembro se evalúa como el valor de su primer elemento secundario a lo largo de la dimensión de tiempo.|  
 |FirstNonEmpty|El valor de miembro se evalúa como el valor de su primer elemento secundario a lo largo de la dimensión de tiempo que contiene datos.|  
 |LastChild|El valor de miembro se evalúa como el valor de su último elemento secundario a lo largo de la dimensión de tiempo.|  
@@ -79,7 +79,7 @@ ms.locfileid: "66075537"
 |Max|Se aplica la función de agregación máxima estándar.|  
 |Min|Se aplica la función de agregación mínima estándar.|  
 |None|No se aplican agregaciones.|  
-|SUM|Se aplica la función de suma estándar.|  
+|Sum|Se aplica la función de suma estándar.|  
   
  Cualquier comportamiento de suma parcial existente se sobrescribe cuando se completa el asistente.  
   

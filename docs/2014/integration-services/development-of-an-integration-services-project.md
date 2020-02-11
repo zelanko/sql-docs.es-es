@@ -1,5 +1,5 @@
 ---
-title: Proyecto de servicios de desarrollo de una integración | Microsoft Docs
+title: Desarrollo de un proyecto de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059462"
 ---
 # <a name="development-of-an-integration-services-project"></a>Desarrollo de un proyecto de Integration Services
-  Puede agregar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a proyectos. Para crear y trabajar con proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , debe instalar el entorno de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para obtener más información, vea [Instalar Integration Services](install-windows/install-integration-services.md).  
+  Puede agregar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a proyectos. Para crear y trabajar con proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , debe instalar el entorno de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para más información, vea [Instalar Integration Services](install-windows/install-integration-services.md).  
   
  Al crear un proyecto nuevo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el cuadro de diálogo **Nuevo proyecto** incluye una plantilla **Proyecto de Integration Services** . Esta plantilla de proyecto crea un proyecto nuevo que contiene un único paquete.  
   

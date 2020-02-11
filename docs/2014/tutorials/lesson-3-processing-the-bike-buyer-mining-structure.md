@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Procesar la estructura de minería de datos de Bike Buyer | Microsoft Docs'
+title: 'Lección 3: procesar la estructura de minería de datos Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655807"
 ---
-# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lección 3: Procesamiento de la estructura de minería de datos de Bike Buyer
-  En esta lección, usará la INSERCIÓN en instrucción y la vista vTargetMail de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de datos de ejemplo para procesar las estructuras de minería de datos y modelos de minería de datos que creó en [lección 1: Creación de la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) y [lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lección 3: Procesar la estructura de minería de datos de Bike Buyer
+  En esta lección, usará la instrucción INSERT INTO y la vista vTargetMail de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de datos de ejemplo para procesar las estructuras de minería de datos y los modelos de minería de datos creados en la [Lección 1: crear la estructura de minería de datos Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) y [Lección 2: agregar modelos de minería de datos a la estructura de minería de datos Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- Al procesar una estructura de minería de datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lee los datos de origen y genera las estructuras que admiten los modelos de minería de datos. Al procesar un modelo de minería de datos, los datos definidos por la estructura de minería de datos se pasan por el algoritmo de minería de datos que elija. El algoritmo busca tendencias y patrones y, a continuación, almacena esta información en el modelo de minería de datos. Por consiguiente, el modelo de minería de datos no contiene los datos de origen reales, sino la información descubierta por el algoritmo. Para obtener más información acerca de cómo procesar modelos de minería de datos, vea [consideraciones y requisitos de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Al procesar una estructura de minería de datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lee los datos de origen y genera las estructuras que admiten los modelos de minería de datos. Al procesar un modelo de minería de datos, los datos definidos por la estructura de minería de datos se pasan por el algoritmo de minería de datos que elija. El algoritmo busca tendencias y patrones y, a continuación, almacena esta información en el modelo de minería de datos. Por consiguiente, el modelo de minería de datos no contiene los datos de origen reales, sino la información descubierta por el algoritmo. Para obtener más información sobre el procesamiento de modelos de minería de datos, vea [requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Solamente necesita volver a procesar una estructura de minería de datos si cambia una columna de la estructura o los datos de origen. Si agrega un modelo de minería de datos a una estructura de minería de datos que ya se ha procesado, puede usar la instrucción INSERT INTO MINING MODEL para entrenar el nuevo modelo de minería de datos.  
   
 ## <a name="train-structure-template"></a>Entrenar la plantilla de la estructura  
- Para entrenar la estructura de minería de datos y sus modelos de minería de datos asociados, utilice el [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrucción. El código de la instrucción se puede dividir en las partes siguientes:  
+ Para entrenar la estructura de minería de datos y sus modelos de minería de datos asociados, utilice la instrucción [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) . El código de la instrucción se puede dividir en las partes siguientes:  
   
 -   Identificación de la estructura de minería de datos  
   
@@ -63,7 +63,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY([<datasource>],'<SELECT statement>')  
 ```  
   
- En esta lección usará `OPENQUERY` para definir los datos de origen. Para obtener información acerca de otros métodos de la definición de la consulta de origen, vea [ &#60;consulta de origen de datos&#62;](/sql/dmx/source-data-query).  
+ En esta lección usará `OPENQUERY` para definir los datos de origen. Para obtener información sobre otros métodos para definir la consulta de origen, vea [&#60;consulta de datos de origen&#62;](/sql/dmx/source-data-query).  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  En esta lección realizará la tarea siguiente:  
@@ -74,7 +74,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>Para procesar la estructura de minería de datos con INSERT INTO  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic con el botón secundario [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]en la instancia de, seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -168,15 +168,15 @@ OPENQUERY([<datasource>],'<SELECT statement>')
         FROM dbo.vTargetMail')  
     ```  
   
-6.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
+6.  En el menú **archivo** , haga clic en **Guardar DMXQuery1. DMX como**.  
   
-7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Process Bike Buyer Structure.dmx`.  
+7.  En el cuadro de diálogo **Guardar como** , vaya a la carpeta correspondiente y asigne el nombre `Process Bike Buyer Structure.dmx`al archivo.  
   
-8.  En la barra de herramientas, haga clic en el **Execute** botón.  
+8.  En la barra de herramientas, haga clic en el botón **Ejecutar** .  
   
  En la siguiente lección explorará el contenido de los modelos de minería de datos que ha agregado a la estructura de minería de datos en esta lección.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Examinar los modelos de minería de Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Lección 4: Examinar los modelos de minería de datos de Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
   
   

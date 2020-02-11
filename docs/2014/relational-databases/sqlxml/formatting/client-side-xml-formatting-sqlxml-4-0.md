@@ -1,5 +1,5 @@
 ---
-title: Formato XML en el cliente (SQLXML 4.0) | Documentos de Microsoft
+title: Formato XML del lado cliente (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89f1327a7672d7de5b480bf3b8757b0c85ff138f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012319"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Aplicación de formato XML en el cliente (SQLXML 4.0)
   En este tema se proporciona información acerca de la aplicación de formato XML del lado cliente. La aplicación de formato en el cliente se refiere a dar formato al XML en nivel intermedio.  
   
 > [!NOTE]  
->  En este tema se proporciona información adicional acerca de la forma de usar la cláusula FOR XML en el cliente y se da por sentado que está familiarizado con la cláusula FOR XML. Para obtener más información acerca de FOR XML, vea [generar XML mediante FOR XML](../../xml/for-xml-sql-server.md).  
+>  En este tema se proporciona información adicional acerca de la forma de usar la cláusula FOR XML en el cliente y se da por sentado que está familiarizado con la cláusula FOR XML. Para obtener más información acerca de FOR XML, vea [generar XML mediante for XML](../../xml/for-xml-sql-server.md).  
   
- **Importante** para usar la funcionalidad de FOR XML del lado cliente con el nuevo `xml` tipo de datos, los clientes deben usar siempre el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de datos de Native Client (SQLNCLI11) en lugar del proveedor SQLOLEDB. SQLNCLI11 es la versión más reciente del proveedor de SQL Server y entiende a la perfección los tipos de datos incluidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. El uso de FOR XML en el cliente con el proveedor SQLOLEDB hará que los tipos de datos `xml` se consideren como cadenas.  
+ **Importante** Para usar la funcionalidad FOR XML del lado cliente con el `xml` nuevo tipo de datos, los clientes deben [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usar siempre el proveedor de datos de Native Client (SQLNCLI11) en lugar del proveedor SQLOLEDB. SQLNCLI11 es la versión más reciente del proveedor de SQL Server y entiende a la perfección los tipos de datos incluidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. El uso de FOR XML en el cliente con el proveedor SQLOLEDB hará que los tipos de datos `xml` se consideren como cadenas.  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>Aplicar formato a documentos XML en el cliente  
  Cuando una aplicación cliente ejecuta la siguiente consulta:  
@@ -88,7 +88,7 @@ AS
 </ROOT>  
 ```  
   
- Dado que el **client-side-xml** atributo se establece en 1 (true) en la plantilla, el procedimiento almacenado se ejecuta en el servidor y se transforma en XML en el nivel intermedio y se devuelve para el conjunto de filas de dos columnas devuelto por el servidor el cliente. (Aquí solamente se muestra un resultado parcial.)  
+ Dado que el atributo **Client-Side-XML** se establece en 1 (true) en la plantilla, el procedimiento almacenado se ejecuta en el servidor y el conjunto de filas de dos columnas que devuelve el servidor se transforma en XML en el nivel intermedio y se devuelve al cliente. (Aquí solamente se muestra un resultado parcial.)  
   
 ```  
  <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -112,23 +112,23 @@ AS
   
 -   Compatibilidad mejorada con plantillas XML  
   
--   Propiedad SqlXmlCommand.ClientSideXml  
+-   Propiedad SqlXmlCommand. Clientsidexml,  
   
      Puede especificar el formato del lado cliente estableciendo esta propiedad de las clases administradas SQLXML en True.  
   
-## <a name="enhanced-xml-template-support"></a>Compatibilidad con plantillas XML mejorada  
- A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la plantilla XML de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ha mejorado con la adición de la **client-side-xml** atributo. Si este atributo está establecido en True, se aplica formato al XML en el cliente. Tenga en cuenta que este atributo de plantilla es idéntico en funcionalidad a la clientsidexml, SQLXMLOLEDB específicas del proveedor de propiedad.  
+## <a name="enhanced-xml-template-support"></a>Compatibilidad mejorada con plantillas XML  
+ A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]de, la plantilla XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de se ha mejorado con la adición del atributo **Client-Side-XML** . Si este atributo está establecido en True, se aplica formato al XML en el cliente. Tenga en cuenta que este atributo de plantilla es idéntico en la funcionalidad de la propiedad Clientsidexml, específica del proveedor de SQLXMLOLEDB.  
   
 > [!NOTE]  
->  Si ejecuta una plantilla XML en una aplicación ADO que usa el proveedor SQLXMLOLEDB y especifica tanto el **client-side-xml** atributo en la plantilla y el proveedor clientsidexml, propiedad, el valor especificado en el plantilla tiene prioridad.  
+>  Si ejecuta una plantilla XML en una aplicación ADO que usa el proveedor SQLXMLOLEDB y especifica el atributo **Client-Side-XML** en la plantilla y la propiedad Provider clientsidexml,, el valor especificado en la plantilla tiene prioridad.  
   
-## <a name="see-also"></a>Vea también  
- [Arquitectura de formato XML del lado cliente y servidor &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)   
- [PARA XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)   
- [Para conocer las consideraciones de seguridad XML &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [compatibilidad con tipos de datos en SQLXML 4.0 XML](../xml-data-type-support-in-sqlxml-4-0.md)   
+## <a name="see-also"></a>Consulte también  
+ [Arquitectura del formato XML del lado cliente y del lado servidor &#40;SQLXML 4,0&#41;](server-side-xml-formatting-sqlxml-4-0.md)   
+ [SQL Server &#40;FOR XML&#41;](../../xml/for-xml-sql-server.md)   
+ [Consideraciones de seguridad de FOR XML &#40;SQLXML 4,0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [Compatibilidad con tipos de datos XML en SQLXML 4,0](../xml-data-type-support-in-sqlxml-4-0.md)   
  [Clases administradas de SQLXML](../../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
- [Diferencias de aplicación de formato XML en el cliente Aplicación de formato XML del lado servidor &#40;SQLXML 4.0&#41;](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
+ [Formato XML del lado cliente y de servidor &#40;SQLXML 4,0&#41;](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
  [Objeto SqlXmlCommand &#40;clases administradas de SQLXML&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
  [Datos XML &#40;SQL Server&#41;](../../xml/xml-data-sql-server.md)  
   

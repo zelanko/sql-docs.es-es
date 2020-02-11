@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060052"
 ---
 # <a name="data-conversion-transformation-editor"></a>Editor de transformación Conversión de datos
   Use el cuadro de diálogo **Editor de transformación Conversión de datos** para seleccionar las columnas que desea convertir, seleccione el tipo de datos al que desea convertir la columna y establezca los atributos de conversión.  
   
 > [!NOTE]  
->  El `FastParse` propiedad de las columnas de salida de la transformación conversión de datos no está disponible en el **Editor de transformación conversión de datos**, pero se puede establecer utilizando la **Editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección sobre la transformación Conversión de datos en [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  La `FastParse` propiedad de las columnas de salida de la transformación conversión de datos no está disponible en el **Editor de transformación conversión de datos**, pero se puede establecer mediante el **editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección sobre la transformación Conversión de datos en [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Para obtener más información acerca de la transformación Conversión de datos, vea [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66060052"
  **Tipo de datos**  
  Seleccione en la lista un tipo de datos disponible. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
- **Longitud**  
+ **Length**  
  Establezca la longitud de la columna para los datos de cadena.  
   
  **Precisión**  
@@ -57,7 +57,7 @@ ms.locfileid: "66060052"
  **Configurar la salida de errores**  
  Especifique cómo controlar los errores de nivel de fila con el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Convertir datos en un tipo de datos diferente mediante la transformación Conversión de datos](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   

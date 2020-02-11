@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a06f177f541e6bca5eb24da5e8a709673ab7d5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710810"
 ---
 # <a name="run-queries-visual-database-tools"></a>Ejecutar consultas (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "62710810"
   
 2.  Haga clic con el botón derecho en la ventana de la consulta y elija **Ejecutar SQL** en el menú contextual.  
   
-     -o bien-  
+     O bien  
   
      Presione CTRL+R.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "62710810"
   
  Si está creando una consulta de tipo Update, Insert From, Insert Into, Delete o Make Table, el Diseñador de consultas y vistas mostrará un mensaje que le indicará el número de filas afectadas por la consulta.  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con datos en el panel de resultados &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Trabajar con datos en el panel resultados &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Flujo de datos (página General) del Editor de ruta de acceso | Microsoft Docs
+title: Editor de rutas de flujo de datos (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059962"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor de rutas de flujo de datos (página General)
@@ -27,10 +27,10 @@ ms.locfileid: "66059962"
  Utilice el nodo **General** del cuadro de diálogo **Editor de rutas de flujo de datos** para nombrar y describir la ruta, y para especificar las opciones de anotación de ruta.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Proporcione un nombre único para la ruta.  
   
- **ID**  
+ **SESIÓN**  
  El identificador de linaje de la ruta. Esta propiedad es de solo lectura.  
   
  **IdentificationString**  
@@ -48,8 +48,8 @@ ms.locfileid: "66059962"
  **SourceName**  
  Muestra la salida que es el inicio de la ruta.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de rutas de flujo de datos &#40;metadatos (página)&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de rutas de flujo de datos &#40;página de metadatos&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Editor de rutas de flujo de datos &#40;página visores de datos&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Flujo de datos](data-flow/data-flow.md)   
  [Usar anotaciones en paquetes](use-annotations-in-packages.md)  

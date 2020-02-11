@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721154"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar una suscripción transaccional sin una instantánea
@@ -46,7 +46,7 @@ ms.locfileid: "62721154"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Habilitar la inicialización con una copia de seguridad para las publicaciones transaccionales &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Programación de la replicación con Transact-SQL: [Inicializar una suscripción transaccional desde una copia de seguridad &#40;programación de la replicación con Transact-SQL&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
+-   Programación de la replicación con Transact-SQL: [Inicializar una suscripción transaccional a partir de un copia de seguridad &#40;programación de la replicación con Transact-SQL&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  Si una suscripción se inicializa sin una instantánea, la cuenta con la que se ejecuta el servicio SQL Server en el publicador debe contar con permisos de escritura en la carpeta de instantáneas en el distribuidor. Para obtener más información sobre los permisos, vea [Replication Agent Security Model](security/replication-agent-security-model.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "62721154"
   
  Para inicializar una suscripción con un método alternativo, vea [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Inicializar una suscripción](initialize-a-subscription.md)  
   
   

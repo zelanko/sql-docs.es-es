@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010368"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM
@@ -26,9 +26,9 @@ ms.locfileid: "66010368"
   
 |Instrucciones Transact-SQL|Abierto para lectura|Abierto para escritura|  
 |------------------------------|---------------------|----------------------|  
-|Instrucciones DDL que trabajan con los metadatos de la base de datos, como CREATE TABLE, CREATE INDEX, DROP TABLE y ALTER TABLE.|Permitido|Se bloquean y agotan el tiempo de espera con un error.|  
-|Instrucciones DML que trabajan con los datos que están almacenados en la base de datos, como UPDATE, DELETE e INSERT.|Permitido|Denegado|  
-|SELECT|Permitido|Permitido|  
+|Instrucciones DDL que trabajan con los metadatos de la base de datos, como CREATE TABLE, CREATE INDEX, DROP TABLE y ALTER TABLE.|Permitida|Se bloquean y agotan el tiempo de espera con un error.|  
+|Instrucciones DML que trabajan con los datos que están almacenados en la base de datos, como UPDATE, DELETE e INSERT.|Permitida|Denegado|  
+|SELECT|Permitida|Permitida|  
 |COMMIT TRANSACTION|Denegado*|Denegado*|  
 |SAVE TRANSACTION|Denegado*|Denegado*|  
 |ROLLBACK|Permitido*|Permitido*|  
@@ -61,7 +61,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### <a name="b-opening-a-filestream-blob-for-read-access"></a>b. Abrir un BLOB de FILESTREAM para acceso de lectura  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>B. Abrir un BLOB de FILESTREAM para acceso de lectura  
  En el ejemplo siguiente se muestra el efecto de abrir únicamente un archivo para acceso de lectura.  
   
 ```  
@@ -140,7 +140,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
  [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)  
   

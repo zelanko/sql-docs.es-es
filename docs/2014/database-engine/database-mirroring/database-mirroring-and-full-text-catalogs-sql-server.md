@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807303"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>Creación de reflejo de la base de datos y catálogos de texto completo (SQL Server)
@@ -55,11 +55,11 @@ ms.locfileid: "62807303"
 ## <a name="after-forcing-service"></a>Después de forzar el servicio  
  Después de forzar el servicio al servidor reflejado (con posible pérdida de datos), inicie un rastreo completo. El método que debe usar para iniciar un rastreo completo depende de si el índice de texto completo tiene seguimiento de cambios. Para obtener más información, vea "Índices de texto completo después de la conmutación por error" anteriormente en este tema.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-index-transact-sql)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../../relational-databases/indexes/indexes.md)  
+ [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../../relational-databases/indexes/indexes.md)  
   
   

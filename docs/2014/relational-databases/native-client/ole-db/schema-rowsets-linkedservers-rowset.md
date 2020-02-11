@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas LINKEDSERVERS (OLE DB) | Documentos de Microsoft
+title: Conjunto de filas LINKEDSERVERS (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667340"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Conjunto de filas LINKEDSERVERS (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "62667340"
   
  El conjunto de filas **LINKEDSERVERS** contiene las siguientes columnas.  
   
-|Nombre de columna|Indicador de tipo|Descripción|  
+|Nombre de la columna|Indicador de tipo|Descripción|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nombre de un servidor vinculado.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricante u otro nombre que identifica el tipo de almacén de datos representado por el nombre del servidor vinculado.|  
@@ -36,7 +36,7 @@ ms.locfileid: "62667340"
   
  El conjunto de filas está ordenado en SRV_NAME y se admite una restricción única en SRV_NAME.  
   
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con conjuntos de filas de esquema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+## <a name="see-also"></a>Consulte también  
+ [Compatibilidad de conjunto de filas de esquema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
   

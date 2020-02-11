@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754213"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Solucionar problemas de configuración de creación de reflejo de la base de datos (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62754213"
 |[Acceso de red](#NetworkAccess)|Explica el requisito por el que cada instancia de servidor debe poder tener acceso a los puertos de las otras instancias de servidor a través de TCP.|  
 |[Preparación de la base de datos reflejada](#MirrorDbPrep)|Resume los requisitos de preparación de la base de datos reflejada para habilitar el inicio de la creación de reflejo.|  
 |[Error en una operación de creación de archivo](#FailedCreateFileOp)|Describe cómo responder a un error en una operación de creación de archivo.|  
-|[Iniciar la creación de reflejo mediante Transact-SQL](#StartDbm)|Describe el orden necesario de las instrucciones ALTER DATABASE *nombre_base_de_datos* SET PARTNER **='***servidor_asociado***'** .|  
+|[Iniciar la creación de reflejo mediante Transact-SQL](#StartDbm)|Describe el orden necesario de las instrucciones ALTER DATABASE *nombre_base_de_datos* SET PARTNER **='***servidor_asociado***'**.|  
 |[Transacciones entre bases de datos](#CrossDbTxns)|Una conmutación automática por error podría provocar la resolución automática y posiblemente incorrecta de transacciones dudosas. Por esta razón, la creación de reflejo de la base de datos no admite transacciones entre bases de datos.|  
   
 ##  <a name="Accounts"></a> Cuentas  
@@ -51,7 +51,7 @@ ms.locfileid: "62754213"
   
 2.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como un servicio que usa la cuenta del sistema local, deben utilizarse certificados para la autenticación. Para obtener más información, vea [Usar certificados para un punto de conexión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Extremos  
+##  <a name="Endpoints"></a> Endpoints  
  Los extremos deben estar configurados correctamente.  
   
 1.  Asegúrese de que cada instancia de servidor (principal, reflejado y testigo, si existe) tiene un extremo de creación de reflejo de la base de datos. Para obtener más información, vea [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql) y, según la forma de autenticación, ya sea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) o [Usar certificados para un punto de conexión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
@@ -108,13 +108,13 @@ ms.locfileid: "62754213"
   
     ```  
   
-##  <a name="SystemAddress"></a> Dirección del sistema  
+##  <a name="SystemAddress"></a>Dirección del sistema  
  Como nombre del sistema de una instancia de servidor en una configuración de creación de reflejo de la base de datos, se puede utilizar cualquier nombre que identifique el sistema de forma inequívoca. La dirección del sistema puede ser un nombre del sistema (si los sistemas se encuentran en el mismo dominio), un nombre de dominio completo o una dirección IP (de preferencia, una dirección IP estática). Se garantiza que el uso de un nombre de dominio completo funciona correctamente. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="NetworkAccess"></a>Acceso a la red  
  Cada instancia de servidor debe tener acceso a los puertos de las demás instancias de servidor a través de TCP. Esto es especialmente importante si las instancias de servidor están en distintos dominios que no confían unos en otros (dominios que no son de confianza). Así se restringe mucho la comunicación entre las instancias de servidor.  
   
-##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
+##  <a name="MirrorDbPrep"></a>Preparación de la base de datos reflejada  
  Cuando se inicia la creación de reflejo por primera vez o se inicia de nuevo después de eliminar la creación de reflejo, compruebe que la base de datos reflejada esté preparada para esta operación.  
   
  Al crear la base de datos reflejada en el servidor reflejado, asegúrese de restaurar la copia de seguridad de la base de datos principal especificando la misma base de datos con la opción WITH NORECOVERY. Además, también deben aplicarse todas las copias de seguridad de registros creadas después de crear la copia de seguridad, de nuevo con WITH NORECOVERY.  
@@ -128,7 +128,7 @@ ms.locfileid: "62754213"
   
  Para obtener más información, vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
+##  <a name="FailedCreateFileOp"></a>No se pudo realizar la operación de creación de archivo  
  Para poder agregar un archivo sin afectar a una sesión de creación de reflejo, la ruta de acceso del archivo debe existir en ambos servidores. Por consiguiente, si mueve los archivos de base de datos al crear la base de datos reflejada, se podría producir un error en una operación posterior para agregar un archivo en la base de datos reflejada y provocar la suspensión de la creación del reflejo.  
   
  Para corregir el problema:  
@@ -141,7 +141,7 @@ ms.locfileid: "62754213"
   
  Para obtener más información, vea [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md), [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md), [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md), [Usar certificados para un punto de conexión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) o [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  
   
-##  <a name="StartDbm"></a> Iniciar la creación de reflejo mediante Transact-SQL  
+##  <a name="StartDbm"></a>Iniciar la creación de reflejo mediante Transact-SQL  
  El orden en que se emiten las instrucciones ALTER DATABASE *nombre_base_de_datos* SET PARTNER **='***servidor_asociado***'** es muy importante.  
   
 1.  La primera instrucción se debe ejecutar en el servidor reflejado. Cuando se emite la instrucción, el servidor reflejado no intenta ponerse en contacto con ninguna otra instancia de servidor. En lugar de ello, el servidor reflejado indica a su base de datos que espere a que el servidor principal se haya puesto en contacto con el servidor reflejado.  
@@ -153,7 +153,7 @@ ms.locfileid: "62754213"
 > [!NOTE]  
 >  Para obtener información sobre cómo usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para iniciar la creación de reflejo, vea [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  
   
-##  <a name="CrossDbTxns"></a> Transacciones entre bases de datos  
+##  <a name="CrossDbTxns"></a>Transacciones entre bases de datos  
  Cuando se realiza la creación de reflejo de una base de datos en modo de alta seguridad con conmutación automática por error, dicha conmutación puede generar una solución automática y posiblemente incorrecta de transacciones dudosas. Si se produce una conmutación automática por error en una base de datos cuando se está confirmando una transacción entre bases de datos, se pueden generar incoherencias lógicas entre las bases de datos.  
   
  Los tipos de transacciones entre bases de datos que pueden verse afectadas por una conmutación automática por error son:  
@@ -164,8 +164,8 @@ ms.locfileid: "62754213"
   
  Para más información, vea [Transacciones entre bases de datos no compatibles para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Seguridad de transporte para la creación de reflejo de base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
+ [Seguridad de transporte para la creación de reflejo de la base de datos y Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
   
   

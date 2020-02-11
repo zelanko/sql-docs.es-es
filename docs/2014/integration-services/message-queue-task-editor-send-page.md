@@ -1,5 +1,5 @@
 ---
-title: Editor de tareas de cola de mensajes (página Enviar) | Microsoft Docs
+title: Editor de la tarea cola de mensajes (página enviar) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057599"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Editor de la tarea Cola de mensajes (página Enviar)
@@ -28,7 +28,7 @@ ms.locfileid: "66057599"
   
 ## <a name="options"></a>Opciones  
  **UseEncryption**  
- Indica si se debe cifrar el mensaje. De manera predeterminada, es `False`.  
+ Indica si se debe cifrar el mensaje. El valor predeterminado es `False`.  
   
  **EncryptionAlgorithm**  
  Si opta por usar cifrado, especifique el nombre del algoritmo de cifrado que debe utilizarse. La tarea Cola de mensajes puede utilizar los algoritmos RC2 y RC4. El valor predeterminado es **RC2**.  
@@ -42,7 +42,7 @@ ms.locfileid: "66057599"
  **MessageType**  
  Seleccione el tipo de mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Mensaje de archivo de datos**|El mensaje se almacena en un archivo. Al seleccionar este valor se muestra la opción dinámica **DataFileMessage**.|  
 |**Mensaje de variable**|El mensaje se almacena en una variable. Al seleccionar este valor se muestra la opción dinámica **VariableMessage**.|  
@@ -64,10 +64,10 @@ ms.locfileid: "66057599"
  **StringMessage**  
  Escriba el mensaje de cadena, o bien haga clic en el botón de puntos suspensivos **(…)** y escriba el mensaje en el cuadro de diálogo **Escribir mensaje de cadena**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Cola de mensajes &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea Cola de mensajes &#40;página Recibir&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Editor de la tarea cola de mensajes &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea cola de mensajes &#40;página de recepción&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

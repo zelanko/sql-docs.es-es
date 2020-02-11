@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012733"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Elegir un idioma al crear un índice de texto completo
@@ -36,7 +36,7 @@ ms.locfileid: "66012733"
  Esta sección proporciona una introducción a los separadores de palabras y lematizadores, y explica cómo usa la búsqueda de texto completo el LCID del idioma de columna.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Introducción a los separadores de palabras y lematizadores  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores incluyen una nueva familia completa de separadores de palabras y lematizadores que son significativamente mejores que los que estaban disponibles en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y las versiones posteriores incluyen una nueva familia completa de separadores de palabras y lematizadores que son significativamente mejores que los que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]estaban disponibles anteriormente en.  
   
 > [!NOTE]  
 >  El grupo de idiomas naturales de Microsoft, Microsoft Natural Language Group (MS NLG), implementó estos nuevos componentes lingüísticos y los admite.  
@@ -49,7 +49,7 @@ ms.locfileid: "66012733"
   
 -   Seguridad  
   
-     Los nuevos separadores de palabras están habilitados de forma predeterminada en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gracias a las mejoras de seguridad de los componentes lingüísticos. Recomendamos encarecidamente que se firmen los componentes externos, como son los separadores de palabras y los filtros, con el fin de mejorar la seguridad total y la solidez de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede configurar el texto completo para comprobar que estos componentes se firman de la forma siguiente:  
+     Los nuevos separadores de palabras están habilitados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de forma predeterminada en gracias a las mejoras de seguridad de los componentes lingüísticos. Recomendamos encarecidamente que se firmen los componentes externos, como son los separadores de palabras y los filtros, con el fin de mejorar la seguridad total y la solidez de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede configurar el texto completo para comprobar que estos componentes se firman de la forma siguiente:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +61,7 @@ ms.locfileid: "66012733"
   
 -   Cobertura de una amplia lista de idiomas. Los separadores de palabras se incluyen en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] directamente y se habilitan de forma predeterminada.  
   
- Para obtener una lista de los idiomas para los que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye un separador de palabras y lematizadores, vea [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Para obtener una lista de los idiomas para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los que incluye un separador de palabras y lematizadores, vea [sys. fulltext_languages &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   
@@ -108,7 +108,7 @@ ms.locfileid: "66012733"
 ##  <a name="type"></a> Efecto del tipo de columna en la búsqueda de texto completo  
  Otra consideración en la elección del idioma se refiere al modo en que se representan los datos. En los datos que no se almacenan en la columna `varbinary(max)`, no se realiza ningún proceso de filtro especial, sino que el texto suele pasarse por el componente separador de palabras tal y como es.  
   
- Además, los separadores de palabras se han diseñado principalmente para procesar el texto escrito. Por ello, si el texto contiene algún tipo de marcado (por ejemplo, HTML), es posible que los procesos de indización y búsqueda no se realicen con gran precisión lingüística. Caso, ya que dispone de dos opciones: el preferido método es simplemente almacenar los datos de texto en `varbinary(max)` columna y para indicar su tipo de documento para poder filtrarlos. o utilizar el separador de palabras neutral y, si es posible, agregar datos de marcado (como 'br' en HTML) a las listas de palabras irrelevantes.  
+ Además, los separadores de palabras se han diseñado principalmente para procesar el texto escrito. Por ello, si el texto contiene algún tipo de marcado (por ejemplo, HTML), es posible que los procesos de indización y búsqueda no se realicen con gran precisión lingüística. En ese caso, tiene dos opciones: el método preferido es simplemente almacenar los datos de texto en `varbinary(max)` la columna e indicar su tipo de documento para que se pueda filtrar. o utilizar el separador de palabras neutral y, si es posible, agregar datos de marcado (como 'br' en HTML) a las listas de palabras irrelevantes.  
   
 > [!NOTE]  
 >  La lematización basada en el idioma no interviene cuando se especifica el idioma neutral.  
@@ -120,7 +120,7 @@ ms.locfileid: "66012733"
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   

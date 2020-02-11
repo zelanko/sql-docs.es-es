@@ -1,5 +1,5 @@
 ---
-title: Asignar conjuntos de resultados a Variables en una tarea Ejecutar SQL | Microsoft Docs
+title: Asignar conjuntos de resultados a variables en una tarea ejecutar SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057758"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Asignar conjuntos de resultados a variables en una tarea Ejecutar SQL
@@ -30,11 +30,11 @@ ms.locfileid: "66057758"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
-2.  En el **Explorador de soluciones**, haga doble clic en el paquete para abrirlo.  
+2.  En **Explorador de soluciones**, haga doble clic en el paquete para abrirlo.  
   
 3.  Haga clic en la pestaña **Flujo de control** .  
   
-4.  Si el paquete no incluye en ese momento una tarea Ejecutar SQL, agregue una al flujo de control del paquete. Para obtener más información, consulte [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Si el paquete no incluye en ese momento una tarea Ejecutar SQL, agregue una al flujo de control del paquete. Para obtener más información, vea [Agregar o eliminar una tarea o un contenedor en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md) .  
   .  
   
 5.  Haga doble clic en la tarea Ejecutar SQL.  
@@ -57,15 +57,15 @@ ms.locfileid: "66057758"
   
      En general, puede usar el nombre de columna como nombre del conjunto de resultados, o puede usar la posición ordinal de la columna en la lista de columnas como conjunto de resultados. La posibilidad de usar un nombre de columna como el nombre del conjunto de resultados depende del proveedor para el que se haya configurado la tarea. No todos los proveedores ponen los nombres de columna a disposición.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tarea Ejecutar SQL](control-flow/execute-sql-task.md)   
- [Conjuntos de resultados en la tarea Ejecutar SQL](result-sets-in-the-execute-sql-task.md)   
- [Tarea Ejecutar paquete](control-flow/execute-package-task.md)   
+ [Conjuntos de resultados en la tarea ejecutar SQL](result-sets-in-the-execute-sql-task.md)   
+ [Tarea ejecutar paquete](control-flow/execute-package-task.md)   
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   
  [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)   
- [Use los valores de Variables y parámetros de un paquete secundario](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
+ [Usar los valores de variables y parámetros en un paquete secundario](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
  [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

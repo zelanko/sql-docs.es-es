@@ -1,5 +1,5 @@
 ---
-title: Configurar la transformación comando OLE DB | Microsoft Docs
+title: Configurar la transformación comando de OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060556"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Configurar la transformación Comando de OLE DB
@@ -67,12 +67,12 @@ ms.locfileid: "66060556"
   
     -   Haga clic en **Asignaciones de columnas** y asigne las columnas de la lista **Columnas de entrada disponibles** a parámetros de la lista **Columnas de destino disponibles** .  
   
-14. Haga clic en **Aceptar**.  
+14. Haga clic en **OK**.  
   
 15. Para guardar el paquete actualizado, haga clic en **Guardar** en el menú **Archivo** .  
   
-## <a name="see-also"></a>Vea también  
- [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
+## <a name="see-also"></a>Consulte también  
+ [OLE DB la transformación de comandos](data-flow/transformations/ole-db-command-transformation.md)   
  [Transformaciones de Integration Services](data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](data-flow/integration-services-paths.md)   
  [Tarea Flujo de datos](control-flow/data-flow-task.md)  

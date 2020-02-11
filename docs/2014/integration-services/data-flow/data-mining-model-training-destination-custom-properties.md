@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70d32549bb99458b06b835240e826d15967d9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827812"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>Propiedades personalizadas del destino de entrenamiento del modelo de minería de datos
@@ -22,7 +22,7 @@ ms.locfileid: "62827812"
   
  En la tabla siguiente se describen las propiedades personalizadas del destino de aprendizaje del modelo de minería de datos. Todas las propiedades son de lectura y escritura.  
   
-|Property|Tipo de datos|Descripción|  
+|Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|Identificador único del administrador de conexiones.|  
 |ASConnectionString|String|Cadena de conexión a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
@@ -32,7 +32,7 @@ ms.locfileid: "62827812"
   
  Para más información, consulte [Data Mining Model Training Destination](data-mining-model-training-destination.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Common Properties](../common-properties.md)  
   
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1103e1715c01cfc868c59af17ee0f95fa7cedff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661689"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>Crear consultas de eliminación (Visual Database Tools)
@@ -47,8 +47,8 @@ ms.locfileid: "62661689"
   
  Al ejecutar una consulta de eliminación, no se muestra ningún resultado en el [panel Resultados](results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica cuántas filas se han eliminado.  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de consultas compatibles &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tipos de consultas admitidos &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

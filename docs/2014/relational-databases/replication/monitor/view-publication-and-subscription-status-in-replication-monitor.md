@@ -22,14 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666968"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Ver el estado de la suscripción y la publicación en el Monitor de replicación
-  En el Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones:  
+  El Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muestra información de publicaciones y suscripciones:  
   
 -   El estado de una publicación está determinado por el estado de prioridad más alto de sus suscripciones. Por ejemplo, si una suscripción a una publicación tiene un error y otra tiene un problema de rendimiento se muestra un estado de error para la publicación.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62666968"
   
 -   Suscripción expirada  
   
-     Este valor de estado se aplica a todos los tipos de replicación. Para obtener más información, consulte [establecer umbrales y advertencias en el Monitor de replicación](set-thresholds-and-warnings-in-replication-monitor.md).  
+     Este valor de estado se aplica a todos los tipos de replicación. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 -   Rendimiento crítico  
   
@@ -53,18 +53,18 @@ ms.locfileid: "62666968"
   
  **Para ver el estado de la publicación y la suscripción**  
   
--   Monitor de replicación: [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).
+-   Monitor de replicación: [ver información y realizar tareas mediante el monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).
   
   
 ## <a name="publication-status-values"></a>Valores del estado de la publicación  
  En la siguiente tabla se muestran los valores de estado de la publicación y sus iconos correspondientes en orden de prioridad.  
   
-|Estado|Icono|  
+|Status|Icono|  
 |------------|----------|  
 |Error|![Icono de la interfaz de usuario: error](../media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|  
 |Rendimiento crítico|![Icono de la interfaz de usuario: advertencia](../media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
-|Aceptar|none|  
+|Aceptar|None|  
   
 ## <a name="subscription-status-values"></a>Valores de estado de la suscripción  
  En las siguientes tablas se muestran los valores de estado de la suscripción y sus iconos correspondientes en orden de prioridad. Es posible que una suscripción tenga dos estados simultáneamente, por ejemplo **Con expiración en breve/Expirada** y **Reintentando comando con errores**, en cuyo caso se muestra el estado de prioridad más alta.  
@@ -73,19 +73,19 @@ ms.locfileid: "62666968"
   
 ### <a name="transactional-subscriptions"></a>Suscripciones transaccionales  
   
-|Estado|Icono|  
+|Status|Icono|  
 |------------|----------|  
 |Error|![Icono de la interfaz de usuario: error](../media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|  
 |Rendimiento crítico|![Icono de la interfaz de usuario: advertencia](../media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Con expiración en breve/Expirada|![Icono de la interfaz de usuario: advertencia](../media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Suscripción no inicializada|![Icono de la interfaz de usuario: advertencia](../media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
-|No está en ejecución|![Icono de la interfaz de usuario: agente de replicación detenido](../media/repl-icon-stopped.gif "Icono de la interfaz de usuario: agente de replicación detenido")|  
-|En ejecución|![Icono de la interfaz de usuario: agente de replicación en ejecución](../media/repl-icon-running.gif "Icono de la interfaz de usuario: agente de replicación en ejecución")|  
+|No está en ejecución|![Icono de la interfaz de usuario: detención del agente de replicación](../media/repl-icon-stopped.gif "Icono de la interfaz de usuario: detención del agente de replicación")|  
+|En ejecución|![Icono de la interfaz de usuario: ejecución del agente de replicación](../media/repl-icon-running.gif "Icono de la interfaz de usuario: ejecución del agente de replicación")|  
   
 ### <a name="merge-subscriptions"></a>Suscripciones de mezcla  
   
-|Estado|Icono|  
+|Status|Icono|  
 |------------|----------|  
 |Error|![Icono de la interfaz de usuario: error](../media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|  
 |Rendimiento crítico|![Icono de la interfaz de usuario: advertencia](../media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
@@ -93,21 +93,21 @@ ms.locfileid: "62666968"
 |Con expiración en breve/Expirada|![Icono de la interfaz de usuario: advertencia](../media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Suscripción no inicializada|![Icono de la interfaz de usuario: advertencia](../media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
-|Sincronizando|![Icono de la interfaz de usuario: agente de replicación en ejecución](../media/repl-icon-running.gif "Icono de la interfaz de usuario: agente de replicación en ejecución")|  
-|No se están sincronizando|![Icono de la interfaz de usuario: agente de replicación detenido](../media/repl-icon-stopped.gif "Icono de la interfaz de usuario: agente de replicación detenido")|  
+|Sincronizando|![Icono de la interfaz de usuario: ejecución del agente de replicación](../media/repl-icon-running.gif "Icono de la interfaz de usuario: ejecución del agente de replicación")|  
+|No se están sincronizando|![Icono de la interfaz de usuario: detención del agente de replicación](../media/repl-icon-stopped.gif "Icono de la interfaz de usuario: detención del agente de replicación")|  
   
 ### <a name="snapshot-subscriptions"></a>Suscripciones de instantáneas  
   
-|Estado|Icono|  
+|Status|Icono|  
 |------------|----------|  
 |Error|![Icono de la interfaz de usuario: error](../media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|  
-|Con expiración en breve/Expirado|![Icono de la interfaz de usuario: advertencia](../media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
+|Con expiración en breve/Expirada|![Icono de la interfaz de usuario: advertencia](../media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Suscripción no inicializada|![Icono de la interfaz de usuario: advertencia](../media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
-|Sincronizando|![Icono de la interfaz de usuario: agente de replicación en ejecución](../media/repl-icon-running.gif "Icono de la interfaz de usuario: agente de replicación en ejecución")|  
-|No se están sincronizando|![Icono de la interfaz de usuario: agente de replicación detenido](../media/repl-icon-stopped.gif "Icono de la interfaz de usuario: agente de replicación detenido")|  
+|Sincronizando|![Icono de la interfaz de usuario: ejecución del agente de replicación](../media/repl-icon-running.gif "Icono de la interfaz de usuario: ejecución del agente de replicación")|  
+|No se están sincronizando|![Icono de la interfaz de usuario: detención del agente de replicación](../media/repl-icon-stopped.gif "Icono de la interfaz de usuario: detención del agente de replicación")|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación](../monitoring-replication.md)  
   
   

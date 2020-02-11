@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Publicación de datos con replicación de mezcla | Microsoft Docs'
+title: 'Lección 1: Publicación de datos con la replicación de mezcla | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721178"
 ---
-# <a name="lesson-1-publishing-data-using-merge-replication"></a>Lección 1: Publicar datos con replicación de mezcla
-  En esta lección, creará una publicación de combinación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto de las tablas **Employee**, **SalesOrderHeader**y **SalesOrderDetail** en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Estas tablas están filtradas con filtros de fila con parámetros para que cada suscripción contenga una partición única de los datos. También agregará el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el Agente de mezcla a la lista de acceso a la publicación (PAL). Para realizar este tutorial, es preciso que haya finalizado el anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
+# <a name="lesson-1-publishing-data-using-merge-replication"></a>Lección 1: Publicar datos con la replicación de mezcla
+  En esta lección, creará una publicación de combinación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto de las tablas **Employee**, **SalesOrderHeader**y **SalesOrderDetail** en [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] la base de datos de ejemplo. Estas tablas están filtradas con filtros de fila con parámetros para que cada suscripción contenga una partición única de los datos. También agregará el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el Agente de mezcla a la lista de acceso a la publicación (PAL). Para realizar este tutorial, es preciso que haya finalizado el anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Para crear publicaciones y definir artículos  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62721178"
   
 21. Seleccione **Crear una instantánea inmediatamente**, desactive **Programar el Agente de instantáneas para ejecutarse**y, a continuación, haga clic en **Siguiente**.  
   
-22. En la página Seguridad del agente, haga clic en **Configuración de seguridad**, escriba \<_nombreDeEquipo>_**\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y haga clic en **Aceptar**. Haga clic en **Finalizar**.  
+22. En la página seguridad del agente, haga clic en **configuración de seguridad**, escriba \< _Machine_Name>_ **\ repl_snapshot** en el cuadro **cuenta de proceso** , proporcione la contraseña para esta cuenta y, a continuación, haga clic en **Aceptar**. Haga clic en **Finalizar**  
   
 23. En la página Finalización del asistente, escriba **AdvWorksSalesOrdersMerge** en el cuadro **Nombre de publicación** y, a continuación, haga clic en **Finalizar**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62721178"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>Para ver el estado de la generación de instantáneas  
   
-1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo del servidor y luego la carpeta **Replicación** .  
+1.  Conéctese al publicador [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en, expanda el nodo del servidor y, a continuación, expanda la carpeta **replicación** .  
   
 2.  En la carpeta Publicaciones locales, haga clic con el botón derecho en **AdvWorksSalesOrdersMerge**y luego haga clic en **Ver estado del Agente de instantáneas**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62721178"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>Para agregar el inicio de sesión del Agente de mezcla para la lista de acceso de la publicación (PAL)  
   
-1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo del servidor y luego la carpeta **Replicación** .  
+1.  Conéctese al publicador [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en, expanda el nodo del servidor y, a continuación, expanda la carpeta **replicación** .  
   
 2.  En la carpeta Publicaciones locales, haga clic con el botón derecho en **AdvWorksSalesOrdersMerge**y luego haga clic en **Propiedades**.  
   
@@ -107,12 +107,12 @@ ms.locfileid: "62721178"
   
 3.  Seleccione la página **Lista de acceso a la publicación** y haga clic en **Agregar**.  
   
-4.  En el cuadro de diálogo Agregar acceso de publicación, seleccione _<nombre_equipo>_**\repl_merge** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo Agregar acceso de publicación, seleccione _<Machine_Name>_ **\ repl_merge** y haga clic en **Aceptar**. Haga clic en **OK**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha creado correctamente la publicación de combinación. A continuación se suscribirá a esta publicación. Consulte [Lección 2: Crear una suscripción a la publicación de combinación](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
+ Ha creado correctamente la publicación de combinación. A continuación se suscribirá a esta publicación. Consulte la [Lección 2: Crear una suscripción a la publicación de combinación](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar datos publicados](publish/filter-published-data.md)   
  [Filtros de fila con parámetros](merge/parameterized-filters-parameterized-row-filters.md)   
  [Definir un artículo](publish/define-an-article.md)  

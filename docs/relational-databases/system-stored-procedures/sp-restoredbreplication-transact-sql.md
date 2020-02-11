@@ -16,10 +16,10 @@ ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 92d0b6390e630e3dea33c603bab11e8649444ab1
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70160714"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
@@ -55,13 +55,13 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_restoredbreplication** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o **dbcreator** o del esquema de la base de datos **DBO** pueden ejecutar **sp_restoredbreplication**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

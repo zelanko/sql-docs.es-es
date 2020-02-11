@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060166"
 ---
 # <a name="create-package-configurations"></a>Crear configuraciones de paquetes
@@ -73,7 +73,7 @@ ms.locfileid: "66060166"
   
  En la tabla siguiente se describen las columnas de la lista de configuraciones del cuadro de diálogo **Organizador de configuraciones de paquetes** .  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |**Nombre de la configuración**|Nombre de la configuración.|  
 |**Tipo de configuración**|Tipo de configuración.|  
@@ -112,13 +112,13 @@ ms.locfileid: "66060166"
   
 -   Artículo técnico con una [introducción a las configuraciones de paquetes de Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643), en msdn.microsoft.com  
   
--   Entrada de blog, [crear paquetes de código: configuraciones de paquetes](https://go.microsoft.com/fwlink/?LinkId=217663), en www.sqlis.com.  
+-   Entrada de blog, [crear paquetes en configuraciones de paquetes de código](https://go.microsoft.com/fwlink/?LinkId=217663), en www.sqlis.com.  
   
 -   Entrada de blog, [ejemplo de API: agregar mediante programación un archivo de configuración a un paquete](https://go.microsoft.com/fwlink/?LinkId=217664), en blogs.msdn.com.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   
- [Implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [Implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [Trabajar con variables mediante programación](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

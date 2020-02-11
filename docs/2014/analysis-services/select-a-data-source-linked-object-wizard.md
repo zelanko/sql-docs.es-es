@@ -1,5 +1,5 @@
 ---
-title: Seleccione un origen de datos (Asistente para objetos vinculados) | Microsoft Docs
+title: Seleccionar un origen de datos (Asistente para objetos vinculados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a103e3e81283badbee236d2c38e2809d36664d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069760"
 ---
 # <a name="select-a-data-source-linked-object-wizard"></a>Seleccionar un origen de datos (Asistente para objetos vinculados)
   Use la página **Seleccionar un origen de datos** para seleccionar el origen de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene los objetos desde los que se vinculará o importará.  
   
 ## <a name="options"></a>Opciones  
- **Orígenes de datos de Analysis Services**  
+ **Analysis Services orígenes de datos**  
  Seleccione el origen de datos que contiene el objeto desde el que se vinculará.  
   
- **Propiedades del origen de datos**  
+ **Propiedades de origen de datos**  
  Muestra los valores y los nombres de las propiedades importantes en el origen de datos.  
   
  **Nuevo origen de datos**  

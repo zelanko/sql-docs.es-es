@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075576"
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensiones vinculadas
@@ -30,8 +30,8 @@ ms.locfileid: "66075576"
 > [!NOTE]  
 >  Como la actualización no está disponible, la mayoría de los desarrolladores de Analysis Services copian dimensiones en lugar de vincularlas. Puede copiar dimensiones entre proyectos dentro de la misma solución. Para obtener más información, vea [Actualizar una dimensión vinculada en SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## <a name="prerequisites"></a>Requisitos previos  
- La base de datos de origen que proporciona la dimensión y la base de datos actual que la usa deben tener la misma versión y el mismo nivel de compatibilidad. Para obtener más información, consulte [establecer el nivel de compatibilidad de una base de datos multidimensionales &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ La base de datos de origen que proporciona la dimensión y la base de datos actual que la usa deben tener la misma versión y el mismo nivel de compatibilidad. Para obtener más información, vea [establecer el nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  La base de datos de origen debe estar implementada y en línea. Los servidores que publican o usan objetos vinculados deben configurarse para permitir la operación (vea la información que se incluye a continuación).  
   
@@ -55,14 +55,14 @@ ms.locfileid: "66075576"
   
 4.  En la página **Finalización del asistente** , puede obtener una vista previa de los objetos vinculados. Si vincula una dimensión que tenga el mismo nombre que una que ya existe, se anexa un número ordinal al nombre (empezando con '1' para el primer nombre duplicado). Al completar el asistente, la dimensión se agrega a la carpeta **Dimensiones** .  
   
-##  <a name="bkmk_CreateNew"></a> Crear una nueva conexión de origen de datos con una base de datos de Analysis Services  
+##  <a name="bkmk_CreateNew"></a>Crear una nueva conexión de origen de datos a una base de datos de Analysis Services  
  Use el Asistente para nuevos orígenes de datos para agregar a la conexión del proyecto información sobre la base de datos de Analysis Services que proporciona la dimensión. Puede iniciar el asistente haciendo clic en **Nuevo origen de datos** en la página Seleccionar un origen de datos del Asistente para objetos vinculados.  
   
 1.  En el Asistente para orígenes de datos, en la página Seleccionar cómo definir la conexión, haga clic en **Nuevo**.  
   
 2.  En el Administrador de conexiones, compruebe que el proveedor está establecido en **Proveedor OLE DB de Microsoft\OLE DB nativo para Analysis Services 11.0**.  
   
-3.  Escriba el nombre del servidor (use *servername*\\*nombreDeInstancia* para una instancia con nombre)<sup>1</sup> o tipo **localhost** a conectarse a un servidor de Analysis Services que se está ejecutando en el mismo equipo.  
+3.  Escriba el nombre del servidor (use *ServerName*\\*nombreDeInstancia* para una instancia con nombre)<sup>1</sup> o escriba **localhost** para conectarse a un servidor de Analysis Services que se esté ejecutando en el mismo equipo.  
   
 4.  Use la autenticación de Windows para la conexión.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "66075576"
 7.  En la página Información de suplantación, haga clic en **Utilizar la cuenta de servicio**. Haga clic en **Siguiente**y, a continuación, finalice el Asistente. La conexión que acaba de definir se seleccionará en el Asistente para objetos vinculados.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- No puede cambiar la estructura de una dimensión vinculada, de manera que no se la puede ver en la pestaña **Estructura de dimensión** del Diseñador de dimensiones. Después de procesar la dimensión vinculada, puede verla en la pestaña **Explorador** . También puede cambiar su nombre y crear una traducción del nombre.  
+ No puede cambiar la estructura de una dimensión vinculada, de manera que no se la puede ver en la pestaña **Estructura de dimensión** del Diseñador de dimensiones. Después de procesar la dimensión vinculada, puede verla en la pestaña **Explorador** . También puede cambiar su nombre y crear una traducción para el nombre.  
   
-## <a name="see-also"></a>Vea también  
- [Establecer la compatibilidad de nivel de base de datos Multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Establecer el nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Grupos de medida vinculados](linked-measure-groups.md)   
  [Relaciones de dimensión](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   

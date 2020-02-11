@@ -1,5 +1,5 @@
 ---
-title: Propiedades de la cuenta de proxy y la nueva cuenta de Proxy (pestaña entidades de seguridad) | Microsoft Docs
+title: Propiedades de cuenta de proxy y nueva cuenta de proxy (pestaña entidades de seguridad) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650226"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Propiedades de cuenta de proxy y Nueva cuenta de proxy (pestaña Entidades de seguridad)
-  Use esta página para ver o cambiar las entidades de seguridad que pueden utilizar una cuenta de proxy del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en los pasos de trabajo.  
+  Use esta página para ver o cambiar las entidades de seguridad que pueden utilizar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una cuenta de proxy del agente en los pasos de trabajo.  
   
 ## <a name="options"></a>Opciones  
  **Entidades de seguridad de la cuenta de proxy**  
  Muestra las entidades de seguridad que pueden utilizar esta cuenta de proxy.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una entidad de seguridad a la lista.  
   
- **Quitar**  
+ **Remove**  
  Quita la entidad de seguridad seleccionada de la lista.  
   
-## <a name="see-also"></a>Vea también  
- [Crear un proxy del Agente SQL Server](create-a-sql-server-agent-proxy.md)  
+## <a name="see-also"></a>Consulte también  
+ [Create a SQL Server Agent Proxy](create-a-sql-server-agent-proxy.md)  
   
   

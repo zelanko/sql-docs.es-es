@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781829"
 ---
 # <a name="using-table-and-index-partitioning"></a>Utilizar particiones de tabla e índice
@@ -33,7 +33,7 @@ ms.locfileid: "72781829"
  Cada objeto <xref:Microsoft.SqlServer.Management.Smo.Table> y <xref:Microsoft.SqlServer.Management.Smo.Index> especifica qué esquema de partición utiliza en la propiedad <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> y especifica las columnas en <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
 ## <a name="example"></a>Ejemplo  
- Para el siguiente ejemplo de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para el siguiente ejemplo de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>Configurar un esquema de partición para una tabla en Visual Basic  
  En el ejemplo de código se muestra cómo crear una función de partición y un esquema de partición para la tabla `TransactionHistory` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Las particiones se dividen por fecha con la intención de separar los registros anteriores de la tabla `TransactionHistoryArchive` .  
@@ -134,5 +134,5 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tablas e índices con particiones](../../partitions/partitioned-tables-and-indexes.md)  

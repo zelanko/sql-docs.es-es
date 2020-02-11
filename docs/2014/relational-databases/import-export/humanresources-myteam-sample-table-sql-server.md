@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011956"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabla de ejemplo HumanResources.myTeam (SQL Server)
@@ -29,12 +29,12 @@ ms.locfileid: "66011956"
   
  La tabla **myTeam** contiene las columnas siguientes.  
   
-|columna|Tipo de datos|Nulabilidad|Descripción|  
+|Columna|Tipo de datos|Nulabilidad|Descripción|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|No NULL|Clave principal para las filas. Identificador de empleado de un miembro de mi equipo.|  
-|**Name**|`nvarchar(50)`|No NULL|Nombre de un miembro de mi equipo.|  
-|**Title**|`nvarchar(50)`|Admisión de valores NULL|Cargo que tiene el empleado en mi equipo.|  
-|**Información previa**|`nvarchar(50)`|No NULL|Fecha y hora de la última actualización de la fila. (Es el valor predeterminado).|  
+|**Nombre**|`nvarchar(50)`|No NULL|Nombre de un miembro de mi equipo.|  
+|**Título**|`nvarchar(50)`|Nullable|Cargo que tiene el empleado en mi equipo.|  
+|**Información preliminar**|`nvarchar(50)`|No NULL|Fecha y hora de la última actualización de la fila. (Es el valor predeterminado).|  
   
  **Para crear HumanResources.myTeam**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66011956"
     > [!NOTE]  
     >  Estas instrucciones omiten la cuarta columna, `Background`. Tiene un valor predeterminado. Omitir esta columna hace que esta instrucción `INSERT` deje la columna en blanco.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Importar y exportar datos en bloque &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)  
   
   

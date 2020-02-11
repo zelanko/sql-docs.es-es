@@ -1,5 +1,5 @@
 ---
-title: Nombre de elemento de esquema (DTA) | Microsoft Docs
+title: Name (DTA, elemento de Schema) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01b536c24661ce223e91cbe791c70529558388ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657279"
 ---
 # <a name="name-element-for-schema-dta"></a>Name (DTA, elemento de Schema)
@@ -38,7 +38,8 @@ ms.locfileid: "62657279"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|**Tipo y longitud de los datos**|`string`, entre 1 y 255 caracteres|  
+|**Tipo y longitud de los datos**|
+  `string`, entre 1 y 255 caracteres|  
 |**Valor predeterminado**|Ninguno.|  
 |**Repetición**|Una obligatoria por elemento **Schema** .|  
   
@@ -52,7 +53,7 @@ ms.locfileid: "62657279"
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo del uso de este elemento, vea [Elemento Server &#40;DTA&#41;](server-element-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

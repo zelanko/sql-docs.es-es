@@ -17,18 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721737"
 ---
 # <a name="create-a-push-subscription"></a>Crear una suscripción de inserción
-  En este tema se describe cómo crear una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Para obtener más información sobre cómo crear una suscripción de inserción para un suscriptor que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Crear una suscripción para un suscriptor que no sea de SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md).  
+  En este tema se describe cómo crear una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Para obtener información acerca de cómo crear una suscripción de extracción[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para un suscriptor que no sea de, vea [crear una suscripción para un suscriptor que no sea de SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
   
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Cree una suscripción de inserción en el publicador o en el suscriptor con el Asistente para nuevas suscripciones. Siga las páginas del asistente para:  
   
 -   Especificar el publicador y la publicación.  
@@ -43,7 +43,7 @@ ms.locfileid: "62721737"
   
     -   Para las suscripciones a publicaciones de combinación, especifique las credenciales en la página **Seguridad del Agente de mezcla** .  
   
-     Para obtener información acerca de los permisos que necesita cada agente, vea [Modelo de seguridad del agente de replicación](security/replication-agent-security-model.md).  
+     Para obtener información sobre los permisos que necesita cada agente, vea [Modelo de seguridad del agente de replicación](security/replication-agent-security-model.md).  
   
 -   Especifique una programación de sincronización y cuándo se debe inicializar el suscriptor.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62721737"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>Para crear una suscripción de inserción desde el publicador  
   
-1.  Conéctese al publicador en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo del servidor.  
+1.  Conéctese al publicador en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y luego expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -91,25 +91,25 @@ ms.locfileid: "62721737"
   
     -   Si el valor de **allow_push** es **1**, se admiten las suscripciones de inserción.  
   
-    -   Si el valor de **allow_push** es **0**, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando **allow_push** para **@property** y `true` para **@value** .  
+    -   Si el valor de **allow_push** es **0**, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando **allow_push** para **@property** y `true` para **@value**.  
   
-2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication** , **@subscriber** y **@destination_db** . Especifique un valor **push** para **@subscription_type** . Para obtener información acerca de cómo actualizar suscripciones, vea [crear una suscripción actualizable a una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber** y **@destination_db**. Especifique un valor **push** para **@subscription_type**. Para obtener información sobre cómo actualizar suscripciones, vea [crear una suscripción actualizable a una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md) .  
   
 3.  En el publicador de la base de datos de publicaciones, ejecute [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Especifique lo siguiente:  
   
-    -   Los parámetros **@subscriber** , **@subscriber_db** y **@publication** .  
+    -   Los **@subscriber**parámetros **@subscriber_db**, y **@publication** .  
   
-    -   Los parámetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con las que se ejecuta el Agente de distribución en el distribuidor para **@job_login** y **@job_password** .  
+    -   Las [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciales de Windows con las que se ejecuta el agente de distribución **@job_login** en **@job_password**el distribuidor para y.  
   
         > [!NOTE]  
-        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por **@job_login** y **@job_password** . El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
+        >  Las conexiones realizadas mediante la autenticación integrada de Windows siempre utilizan las credenciales de Windows especificadas por **@job_login** y **@job_password**. El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
   
-    -   (Opcional) El valor **0** para **@subscriber_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** y **@subscriber_password** . Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
+    -   (Opcional) El valor **0** para **@subscriber_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** y **@subscriber_password**. Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
   
-    -   Una programación para el trabajo del Agente de distribución de esta suscripción. Para obtener más información, consulte [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   Una programación para el trabajo del Agente de distribución de esta suscripción. Para obtener más información, vea [especificar programaciones de sincronización](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>Para crear una suscripción de inserción para una publicación de combinación  
   
@@ -117,35 +117,35 @@ ms.locfileid: "62721737"
   
     -   Si el valor de **allow_push** es **1**, la publicación admite operaciones de inserción.  
   
-    -   Si el valor de **allow_push** no **1**, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **allow_push** para **@property** y `true` para **@value** .  
+    -   Si el valor de **allow_push** no es **1**, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **allow_push** para **@property** y `true` para **@value**.  
   
 2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)y especifique los siguientes parámetros:  
   
-    -   **@publication** . Éste es el nombre de la publicación.  
+    -   **@publication**. Éste es el nombre de la publicación.  
   
-    -   **@subscriber_type** . Para una suscripción de cliente, especifique **local** y para una suscripción de servidor, especifique **global**.  
+    -   **@subscriber_type**. Para una suscripción de cliente, especifique **local** y para una suscripción de servidor, especifique **global**.  
   
-    -   **@subscription_priority** . Para una suscripción de servidor, especifique una prioridad para la suscripción (de**0,00** a **99,99**).  
+    -   **@subscription_priority**. Para una suscripción de servidor, especifique una prioridad para la suscripción (de**0,00** a **99,99**).  
   
-         Para obtener más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+         Para obtener más información, vea [detección y resolución de conflictos de replicación de mezcla avanzada](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  En el publicador de la base de datos de publicaciones, ejecute [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Especifique lo siguiente:  
   
-    -   Los parámetros **@subscriber** , **@subscriber_db** y **@publication** .  
+    -   Los **@subscriber**parámetros **@subscriber_db**, y **@publication** .  
   
-    -   Las credenciales de Windows con las que se ejecuta el Agente de mezcla en el distribuidor para **@job_login** y **@job_password** .  
+    -   Las credenciales de Windows con las que se ejecuta el Agente de mezcla **@job_login** en **@job_password**el distribuidor para y.  
   
         > [!NOTE]  
-        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por **@job_login** y **@job_password** . El Agente de mezcla siempre realiza la conexión local con el distribuidor mediante la Autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
+        >  Las conexiones realizadas mediante la autenticación integrada de Windows siempre utilizan las credenciales de Windows especificadas por **@job_login** y **@job_password**. El Agente de mezcla siempre realiza la conexión local con el distribuidor mediante la Autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
   
-    -   (Opcional) El valor **0** para **@subscriber_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** y **@subscriber_password** . Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
+    -   (Opcional) El valor **0** para **@subscriber_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** y **@subscriber_password**. Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
   
-    -   (Opcional) El valor **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password** . Especifique estos valores si necesita usar Autenticación de SQL Server al conectarse al publicador.  
+    -   (Opcional) El valor **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**. Especifique estos valores si necesita usar Autenticación de SQL Server al conectarse al publicador.  
   
-    -   Una programación para el Agente de mezcla para la suscripción. Para obtener más información, consulte [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   Una programación para el Agente de mezcla para la suscripción. Para obtener más información, vea [especificar programaciones de sincronización](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  El siguiente ejemplo crea una suscripción de inserción en una publicación transaccional. Los valores de inicio de sesión y contraseña se proporcionan en tiempo de ejecución mediante variables de scripting de **sqlcmd** .  
@@ -168,13 +168,13 @@ ms.locfileid: "62721737"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication> con la conexión de publicador del paso 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>y <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve `false`, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si este método devuelve `false`, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
   
 4.  Ejecuta una operación lógica AND bit a bit (`&` en Visual C# y `And` en Visual Basic) entre la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si el resultado es <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, establezca <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> en el resultado de una operación lógica OR bit a bit (`|` en Visual C# y `Or` en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. A continuación, llame a <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar las suscripciones de inserción.  
   
-5.  Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obtener más información, consulte [Crear, modificar y eliminar bases de datos](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obtener más información, vea [crear, modificar y eliminar bases](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)de datos.  
   
-6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 7.  Establezca las siguientes propiedades de la suscripción:  
   
@@ -191,16 +191,16 @@ ms.locfileid: "62721737"
     -   Los campos <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> para proporcionar las credenciales para la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con la que se ejecuta el Agente de distribución en el distribuidor. Esta cuenta se utiliza para realizar conexiones locales al distribuidor y conexiones remotas con la autenticación de Windows.  
   
         > [!NOTE]  
-        >  No es necesario configurar <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> cuando un miembro del rol fijo de servidor `sysadmin` crea la suscripción; sin embargo, es recomendable. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para más información, consulte [Modelo de seguridad del agente de replicación](security/replication-agent-security-model.md).  
+        >  No es necesario configurar <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> cuando un miembro del rol fijo de servidor `sysadmin` crea la suscripción; sin embargo, es recomendable. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para obtener más información, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
     -   (Opcional) el valor `true` (predeterminado) para <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> para crear un trabajo del agente que se utiliza para sincronizar la suscripción. Si especifica `false`, la suscripción solo puede sincronizarse mediante programación.  
   
     -   (Opcional) configure los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> si utiliza la autenticación de SQL Server para conectarse al suscriptor.  
   
-8.  Llame al método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>.  
+8.  Llame al método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> .  
   
     > [!IMPORTANT]  
-    >  Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores proporcionados para todas las propiedades, incluido <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, se envían al distribuidor como texto simple. Debe cifrar la conexión entre el publicador y su distribuidor remoto antes de llamar al método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> . Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores proporcionados para todas las propiedades, incluido <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, se envían al distribuidor como texto simple. Debe cifrar la conexión entre el publicador y su distribuidor remoto antes de llamar al método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>Para crear una suscripción de inserción para una publicación de combinación  
   
@@ -208,13 +208,13 @@ ms.locfileid: "62721737"
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> con la conexión de publicador del paso 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>y <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve `false`, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
+3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si este método devuelve `false`, las propiedades especificadas en el paso 2 son incorrectas o la publicación no existe en el servidor.  
   
 4.  Ejecuta una operación lógica AND bit a bit (`&` en Visual C# y `And` en Visual Basic) entre la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si el resultado es <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, establezca <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> en el resultado de una operación lógica OR bit a bit (`|` en Visual C# y `Or` en Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> y <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. A continuación, llame a <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar las suscripciones de inserción.  
   
-5.  Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obtener más información, consulte [Crear, modificar y eliminar bases de datos](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obtener más información, vea [crear, modificar y eliminar bases](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)de datos.  
   
-6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 7.  Establezca las siguientes propiedades de la suscripción:  
   
@@ -231,7 +231,7 @@ ms.locfileid: "62721737"
     -   Los campos <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> de <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> para proporcionar las credenciales para la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con la que se ejecuta el Agente de mezcla en el distribuidor. Esta cuenta se utiliza para realizar conexiones locales al distribuidor y conexiones remotas con la autenticación de Windows.  
   
         > [!NOTE]  
-        >  No es necesario configurar <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> cuando un miembro del rol fijo de servidor `sysadmin` crea la suscripción; sin embargo, es recomendable. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para más información, consulte [Modelo de seguridad del agente de replicación](security/replication-agent-security-model.md).  
+        >  No es necesario configurar <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> cuando un miembro del rol fijo de servidor `sysadmin` crea la suscripción; sin embargo, es recomendable. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para obtener más información, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
     -   (Opcional) el valor `true` (predeterminado) para <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> para crear un trabajo del agente que se utiliza para sincronizar la suscripción. Si especifica `false`, la suscripción solo puede sincronizarse mediante programación.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "62721737"
 8.  Llame al método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> .  
   
     > [!IMPORTANT]  
-    >  Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores proporcionados para todas las propiedades, incluido <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, se envían al distribuidor como texto simple. Debe cifrar la conexión entre el publicador y su distribuidor remoto antes de llamar al método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> . Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores proporcionados para todas las propiedades, incluido <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, se envían al distribuidor como texto simple. Debe cifrar la conexión entre el publicador y su distribuidor remoto antes de llamar al método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ###  <a name="PShellExample"></a> Ejemplos (RMO)  
  En este ejemplo se crea una suscripción de inserción para una publicación transaccional. Las credenciales de la cuenta de Windows utilizada para ejecutar el trabajo del Agente de distribución se pasan en tiempo de ejecución.  
@@ -257,13 +257,13 @@ ms.locfileid: "62721737"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades de una suscripción de inserción](view-and-modify-push-subscription-properties.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Create a Publication](publish/create-a-publication.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Sincronizar una suscripción de inserción](synchronize-a-push-subscription.md)   
- [Suscribirse a publicaciones](subscribe-to-publications.md)   
+ [Sincronizar una suscripción de extracción](synchronize-a-push-subscription.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
  [Usar sqlcmd con variables de script](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

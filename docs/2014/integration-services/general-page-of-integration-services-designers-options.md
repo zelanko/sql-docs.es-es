@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f27ec0c9fe8078bb11a48114a3d456793271853d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768291"
 ---
 # <a name="general-page"></a>Página General
@@ -53,7 +53,7 @@ ms.locfileid: "62768291"
  **Crear el identificador del nuevo paquete**  
  Al actualizar paquetes de [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] , cree los identificadores de los paquetes nuevos para las versiones actualizadas de los paquetes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Ampliar paquetes con scripting](extending-packages-scripting/extending-packages-with-scripting.md)  
   

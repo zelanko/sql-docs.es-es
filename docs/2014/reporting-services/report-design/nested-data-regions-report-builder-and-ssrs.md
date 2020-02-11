@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 293bfe1f270d32bc64d4344c5363a0be2cd74b84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105521"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Anidar regiones de datos (Generador de informes y SSRS)
@@ -36,15 +36,15 @@ ms.locfileid: "66105521"
   
  En la lista siguiente, se describe el ámbito para las celdas de las áreas de Tablix siguientes:  
   
--   **Área de esquina de Tablix** : el ámbito son los datos de la región de datos vinculada a la región de datos Tablix, después de haber aplicado las expresiones de filtro y de ordenación para el conjunto de datos y el Tablix externo.  
+-   **Esquina del Tablix** El ámbito son los datos de la región de datos vinculada a la región de datos Tablix, después de aplicar las expresiones de filtro y de ordenación para el conjunto de datos y el Tablix externo.  
   
--   **Grupo de columnas de Tablix** : son los datos del grupo de columnas más interior, después de haber aplicado las expresiones de filtro y de ordenación para el conjunto de datos, el Tablix externo y los grupos de columnas.  
+-   **Grupo de columnas de Tablix** Los datos del grupo de columnas más interior, después de aplicar las expresiones de filtro y de ordenación para el conjunto de datos, el Tablix externo y los grupos de columnas.  
   
--   **Grupo de filas del Tablix** : son los datos del grupo de filas más interior, después de haber aplicado las expresiones de filtro y de ordenación para el conjunto de datos, el Tablix externo y los grupos de filas.  
+-   **Grupo de filas de Tablix** Se aplican los datos del grupo de filas más interior, después de las expresiones de filtro y de ordenación para el conjunto de datos, el Tablix externo y los grupos de filas.  
   
--   **Cuerpo del Tablix** : los datos del grupo más interior representado por la intersección de los grupos de filas y los grupos de columnas, después de haber aplicado las expresiones de filtro y de ordenación para el conjunto de datos, el Tablix externo, y los grupos de filas y de columnas.  
+-   **Cuerpo de Tablix** Los datos del grupo más interior representado por la intersección de grupos de filas y grupos de columnas, después de aplicar las expresiones de filtro y de ordenación para el conjunto de datos, el Tablix externo y los grupos de filas y de columnas.  
   
- Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41](tablix-data-region-areas-report-builder-and-ssrs.md).  
   
 ## <a name="nesting-a-chart-sparkline-or-data-bar-in-a-tablix"></a>Anidar un gráfico, un minigráfico o una barra de datos en un Tablix  
  Cuando se agrega un gráfico (incluido un minigráfico o una barra de datos) a una fila de encabezado o pie de grupo de columnas de Tablix, o a una celda de cuerpo de Tablix, los datos que se pasan al gráfico pertenecen al ámbito del subconjunto de datos de esa celda. De forma predeterminada, al agregar un gráfico a una celda de Tablix, el gráfico aumenta de tamaño para rellenar la celda.  
@@ -82,14 +82,14 @@ ms.locfileid: "66105521"
   
  Para más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](understanding-groups-report-builder-and-ssrs.md) y [Agregar, mover o eliminar una tabla, matriz o lista &#40;Generador de informes y SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Medidores &#40;Generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutorial: Agregar un KPI al informe &#40;Generador de informes&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

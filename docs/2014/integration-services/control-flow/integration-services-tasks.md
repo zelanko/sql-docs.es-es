@@ -27,21 +27,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f73de6a8474b6e2842de7b1caf0b882ff2b5c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831459"
 ---
 # <a name="integration-services-tasks"></a>Tareas de Integration Services
-  Las tareas son elementos de flujo de control que definen las unidades de trabajo que se realizan en un flujo de control de paquetes. Un paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consta de una o más tareas. Si el paquete contiene más de una tarea, las tareas se conectan y ordenan en el flujo de control mediante restricciones de precedencia.  
+  Las tareas son elementos de flujo de control que definen las unidades de trabajo que se realizan en un flujo de control de paquetes. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquete se compone de una o más tareas. Si el paquete contiene más de una tarea, las tareas se conectan y ordenan en el flujo de control mediante restricciones de precedencia.  
   
  También puede escribir tareas personalizadas mediante un lenguaje de programación compatible con COM, como Visual Basic, o un lenguaje de programación .NET, como C#.  
   
- El Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , la herramienta gráfica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para trabajar con paquetes, proporciona la superficie de diseño para crear flujos de control de paquetes y proporciona editores personalizados para configurar las tareas. También se puede programar el modelo de objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para crear paquetes mediante programación.  
+ El [!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador, la herramienta gráfica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para trabajar con paquetes, proporciona la superficie de diseño para crear el flujo de control de paquetes y proporciona editores personalizados para configurar las tareas. También puede programar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] modelo de objetos para crear paquetes mediante programación.  
   
 ## <a name="types-of-tasks"></a>Tipos de tareas  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye los siguientes tipos de tareas.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye los siguientes tipos de tareas.  
   
  tarea Flujo de datos  
  Tarea que ejecuta flujos de datos para extraer datos, aplicar transformaciones de nivel de columna y cargar datos.  
@@ -65,7 +66,7 @@ ms.locfileid: "62831459"
  Tareas que realizan funciones administrativas como crear copias de seguridad y reducir bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , volver a generar y reorganizar índices, y ejecutar trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Tareas personalizadas  
- Además, también puede escribir tareas personalizadas mediante un lenguaje de programación compatible con COM, como Visual Basic, o un lenguaje de programación .NET, como C#. Si quiere tener acceso a una tarea personalizada en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede crear y registrar una interfaz de usuario para la tarea. Para obtener más información, vea [Desarrollar una tarea personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
+ Además, también puede escribir tareas personalizadas mediante un lenguaje de programación compatible con COM, como Visual Basic, o un lenguaje de programación .NET, como C#. Si quiere tener acceso a una tarea personalizada en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede crear y registrar una interfaz de usuario para la tarea. Para más información, vea [Desarrollar una tarea personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="configuration-of-tasks"></a>Configuración de tareas  
  Un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede contener una tarea individual, como una tarea Ejecutar SQL que elimina registros de una tabla de base de datos cuando se ejecuta el paquete. No obstante, los paquetes suelen contener varias tareas y cada tarea se establece para ejecutarse en el contexto del flujo de control de paquete. Los controladores de eventos, que son flujos de trabajo que se ejecutan en respuesta a eventos de tiempo de ejecución, también puede tener tareas.  

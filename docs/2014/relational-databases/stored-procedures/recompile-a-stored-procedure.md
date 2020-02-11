@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721038"
 ---
 # <a name="recompile-a-stored-procedure"></a>Volver a compilar un procedimiento almacenado
-  En este tema se describe cómo volver a compilar un procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Hay tres maneras de hacerlo: `WITH RECOMPILE` opción en la definición del procedimiento o cuando se llama al procedimiento, el `RECOMPILE` sugerencia de consulta en instrucciones individuales, o mediante el `sp_recompile` procedimiento almacenado del sistema. En este tema se describe el uso de la opción WITH RECOMPILE al crear una definición de procedimiento y ejecutar un procedimiento existente. También se describe el uso del procedimiento almacenado del sistema sp_recompile para volver a compilar un procedimiento existente.  
+  En este tema se describe cómo volver a compilar un procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Hay tres maneras de hacerlo: `WITH RECOMPILE` la opción en la definición del procedimiento o cuando se llama al procedimiento, la `RECOMPILE` sugerencia de consulta en instrucciones individuales o el `sp_recompile` procedimiento almacenado del sistema. En este tema se describe el uso de la opción WITH RECOMPILE al crear una definición de procedimiento y ejecutar un procedimiento existente. También se describe el uso del procedimiento almacenado del sistema sp_recompile para volver a compilar un procedimiento existente.  
   
  **En este tema**  
   
@@ -54,15 +54,15 @@ ms.locfileid: "62721038"
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- `WITH RECOMPILE` Opción  
+ `WITH RECOMPILE`Desea  
  Si se usa esta opción cuando se crea la definición del procedimiento, se necesita el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se crea el procedimiento.  
   
  Si se usa esta opción en una instrucción EXECUTE, se necesitan permisos EXECUTE para el procedimiento. No se necesitan permisos en la propia instrucción EXECUTE, pero sí se necesitan permisos de ejecución en el procedimiento al que se hace referencia en la instrucción EXECUTE. Para obtener más información, vea [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
- `RECOMPILE` Sugerencia de consulta  
+ `RECOMPILE`Sugerencia de consulta  
  Esta característica se emplea cuando se crea el procedimiento y la sugerencia se incluye en las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] del procedimiento. Por tanto, necesita el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se va a crear el procedimiento.  
   
- `sp_recompile` Procedimiento almacenado del sistema  
+ `sp_recompile`Procedimiento almacenado del sistema  
  Necesita el permiso ALTER en el procedimiento especificado.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -113,7 +113,7 @@ GO
   
 ```  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>Para volver a compilar un procedimiento almacenado mediante sp_recompile  
+#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Para volver a compilar un procedimiento almacenado mediante sp_recompile  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -131,7 +131,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un procedimiento almacenado](../stored-procedures/create-a-stored-procedure.md)   
  [Modificar un procedimiento almacenado](../stored-procedures/modify-a-stored-procedure.md)   
  [Cambiar el nombre de un procedimiento almacenado](rename-a-stored-procedure.md)   

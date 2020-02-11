@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721137"
 ---
 # <a name="initialize-subscriptions"></a>Inicializar suscripciones
@@ -31,10 +31,10 @@ ms.locfileid: "62721137"
 > [!NOTE]  
 >  El asistente podría solicitar una conexión al distribuidor para iniciar un trabajo adecuado del Agente de distribución o el Agente de mezcla.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción de extracción](create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte también  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Inicializar una suscripción](initialize-a-subscription.md)   
+ [Initialize a Subscription](initialize-a-subscription.md)  (Inicializar una suscripción)  
  [Suscribirse a publicaciones](subscribe-to-publications.md)  
   
   

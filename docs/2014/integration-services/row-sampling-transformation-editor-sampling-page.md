@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación de muestreo (página muestreo) de filas | Microsoft Docs
+title: Editor de transformación muestreo de fila (página muestreo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30163b4d65ac6a732efb3f7c67a018f433a42ac0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056444"
 ---
 # <a name="row-sampling-transformation-editor-sampling-page"></a>Editor de transformación Muestreo de fila (página Muestreo)
@@ -42,8 +42,8 @@ ms.locfileid: "66056444"
  **Utilizar el valor de inicialización aleatorio siguiente**  
  Especifique el valor de inicialización del ejemplo para el generador de números aleatorios que utiliza la transformación para crear un ejemplo. Esto solamente se recomienda para desarrollo y pruebas. La transformación utiliza el contador de Microsoft Windows como valor de inicialización si no se especifica un valor de inicialización aleatorio.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformación Muestreo de porcentaje](data-flow/transformations/percentage-sampling-transformation.md)  
+ [Muestreo de porcentaje, transformación](data-flow/transformations/percentage-sampling-transformation.md)  
   
   

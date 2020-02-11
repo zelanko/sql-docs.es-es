@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711062"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Combinar tablas manualmente (Visual Database Tools)
@@ -42,7 +42,7 @@ ms.locfileid: "62711062"
   
  El Diseñador de consultas y vistas agrega una cláusula INNER JOIN a la instrucción SQL en el [panel SQL](sql-pane-visual-database-tools.md). Puede cambiar el tipo a una combinación externa. Para detalles, consulte [Crear combinaciones externas &#40;Visual Database Tools&#41;](create-outer-joins-visual-database-tools.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

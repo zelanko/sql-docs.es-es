@@ -1,5 +1,5 @@
 ---
-title: Agregar cuadro de diálogo nuevo origen | Microsoft Docs
+title: Cuadro de diálogo Agregar nuevo origen | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 755f2955e7bcd12ac022b29e6e4d3c7cf3aa80be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061846"
 ---
 # <a name="add-new-source-dialog-box"></a>Agregar nuevo origen, cuadro de diálogo
@@ -25,7 +25,7 @@ ms.locfileid: "66061846"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Tipos|Seleccione el tipo de origen al que desea conectarse.|  
-|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en **\<Nuevo>** para crear uno.|  
+|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en ** \<nuevo>** para crear un nuevo administrador de conexiones.|  
 |Mostrar solo elementos instalados|Especifique si desea ver solo los orígenes instalados.|  
 |Aceptar|Haga clic para guardar los cambios y a abrir los cuadros de diálogo siguientes para configurar opciones adicionales.|  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076427"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Crear una dimensión usando el Asistente para dimensiones
@@ -24,7 +24,7 @@ ms.locfileid: "66076427"
   
 ### <a name="to-create-a-new-dimension"></a>Para crear una nueva dimensión  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en **Dimensiones**y, después, haga clic en **Nueva dimensión**.  
+1.  En **Explorador de soluciones**, haga clic con el botón secundario en **dimensiones**y, a continuación, haga clic en **nueva dimensión**.  
   
 2.  En la página **Seleccionar método de creación** del Asistente para dimensiones, seleccione **Usar una tabla existente**y, a continuación, haga clic en **Siguiente**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66076427"
   
          Si la lista **Columnas de clave** contiene varias columnas de clave, debe especificar una columna de nombre que proporcione los valores de miembro al atributo clave. Para ello, puede crear un cálculo con nombre en la vista de origen de datos y utilizarlo como columna de nombre.  
   
-    5.  Haga clic en **Siguiente**.  
+    5.  Haga clic en **Next**.  
   
 4.  En la página **Seleccionar tablas relacionadas** , seleccione las tablas relacionadas que desea incluir en su dimensión y, a continuación, haga clic en **Siguiente**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66076427"
     > [!NOTE]  
     >  Puede utilizar el Diseñador de dimensiones una vez finalizado el Asistente para dimensiones para agregar, quitar o configurar atributos y jerarquías de la dimensión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una dimensión usando una tabla existente](create-a-dimension-by-using-an-existing-table.md)  
   
   

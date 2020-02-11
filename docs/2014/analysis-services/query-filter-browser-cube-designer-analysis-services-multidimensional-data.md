@@ -1,5 +1,5 @@
 ---
-title: Consulta y filtro (pestaña explorador, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Consulta y filtro (pestaña explorador, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070538"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Consulta y filtro (pestaña Explorador del Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -28,25 +28,25 @@ ms.locfileid: "66070538"
  De forma predeterminada, para conectarse al origen de datos cuando se ejecuta una consulta se utilizan las credenciales del usuario actual, no las credenciales especificadas en la página **Información de suplantación** . Sin embargo, también puede cambiar el contexto de usuario para la consulta o el informe haciendo clic en **Cambiar usuario** en la **Barra de herramientas**.  
   
 ## <a name="options"></a>Opciones  
- **Dimension**  
+ **Dimensión**  
  Seleccione la dimensión en la que segmentar el subcubo.  
   
  **Hierarchy**  
  Seleccione la jerarquía en la que segmentar el subcubo.  
   
- **Operador**  
+ **Operator**  
  Seleccione el operador que define cómo se aplica la expresión de **Expresión de filtro** en la jerarquía seleccionada. En la tabla siguiente se describen los operadores disponibles.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Equal**|Los resultados están restringidos al conjunto definido en **Expresión de filtro**.|  
+|**Sea**|Los resultados están restringidos al conjunto definido en **Expresión de filtro**.|  
 |**No igual**|Los resultados están restringidos a los miembros excluidos por el conjunto definido en **Expresión de filtro**.|  
-|**Entrada**|Los resultados están restringidos al conjunto con nombre seleccionado en **Expresión de filtro**.|  
-|**No en**|Los resultados están restringidos a los miembros excluidos por el conjunto con nombre seleccionado en **Expresión de filtro**.|  
-|**Contiene**|El resultado se restringe a los miembros cuyos nombres contienen la cadena de **Expresión de filtro**.|  
-|**Empieza por**|El resultado se restringe a los miembros cuyos nombres comienzan con la cadena de **Expresión de filtro**.|  
-|**Intervalo (inclusivo)**|El resultado se restringe al intervalo elegido en **Expresión de filtro**.|  
-|**Intervalo (exclusivo)**|El resultado se restringe a los miembros excluidos por el intervalo elegido en **Expresión de filtro**.|  
+|**De**|Los resultados están restringidos al conjunto con nombre seleccionado en **Expresión de filtro**.|  
+|**No en el**|Los resultados están restringidos a los miembros excluidos por el conjunto con nombre seleccionado en **Expresión de filtro**.|  
+|**Tuviera**|El resultado se restringe a los miembros cuyos nombres contienen la cadena de **Expresión de filtro**.|  
+|**Comienza por**|El resultado se restringe a los miembros cuyos nombres comienzan con la cadena de **Expresión de filtro**.|  
+|**Intervalo (Inclusivo)**|El resultado se restringe al intervalo elegido en **Expresión de filtro**.|  
+|**Intervalo (Exclusivo)**|El resultado se restringe a los miembros excluidos por el intervalo elegido en **Expresión de filtro**.|  
 |**MDX**|El resultado se restringe a la expresión MDX (Expresiones multidimensionales) establecida en **Expresión de filtro**.|  
   
  **Expresión de filtro**  
@@ -55,11 +55,11 @@ ms.locfileid: "66070538"
 > [!NOTE]  
 >  Este campo es un elemento de entrada de datos dinámico que cambia el aspecto para reflejar los tipos de datos necesarios para el operador seleccionado.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Explorador &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña del explorador, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Analizar en Excel &#40;pestaña del explorador, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Metadatos &#40;pestaña del explorador, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Explorador de cubos &#40;&#41; &#40;Analysis Services de datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña explorador, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analizar en Excel &#40;pestaña explorador, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Metadatos &#40;pestaña explorador, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

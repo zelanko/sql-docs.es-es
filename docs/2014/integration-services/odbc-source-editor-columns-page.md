@@ -1,5 +1,5 @@
 ---
-title: Editor de origen ODBC (página columnas) | Microsoft Docs
+title: Editor de origen de ODBC (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bfda61e5a57dabd62289f32d04d6367695b070b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057169"
 ---
 # <a name="odbc-source-editor-columns-page"></a>Editor de origen de ODBC (página Columnas)
@@ -29,7 +29,7 @@ ms.locfileid: "66057169"
   
 1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], abra el paquete [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] que tiene el origen de ODBC.  
   
-2.  En la pestaña **Flujo de datos** , haga doble clic en el origen ODBC.  
+2.  En la pestaña **Flujo de datos** , haga doble clic en el origen de ODBC.  
   
 3.  En el **Editor de origen de ODBC**, haga clic en **Columnas**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66057169"
 ### <a name="output-column"></a>Columna de salida  
  Especifique un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre especificado se muestra en el Diseñador de SSIS.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Editor de orígenes ODBC &#40;página Salida de error&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   

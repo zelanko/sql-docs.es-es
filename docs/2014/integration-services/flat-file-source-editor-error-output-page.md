@@ -1,5 +1,5 @@
 ---
-title: Editor de origen de archivo (página salida de Error) planos | Microsoft Docs
+title: Editor de origen de archivos planos (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2008ec0db5612b7ceb95fe9a8bbf970e19a31a91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058626"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>Editor de origen de archivos planos (página Salida de error)
@@ -36,7 +36,7 @@ ms.locfileid: "66058626"
  **Error**  
  Permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Temas relacionados:** [Control de errores en los datos](data-flow/error-handling-in-data.md)  
+ **Temas relacionados:** [control de errores en los datos](data-flow/error-handling-in-data.md)  
   
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
@@ -50,10 +50,10 @@ ms.locfileid: "66058626"
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de origen de archivos planos &#40;página Administrador de conexiones&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [Editor de origen de archivos planos &#40;página Columnas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Página &#40;columnas del editor de origen de archivos planos&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [Administrador de conexiones de archivos planos](connection-manager/file-connection-manager.md)  
   
   

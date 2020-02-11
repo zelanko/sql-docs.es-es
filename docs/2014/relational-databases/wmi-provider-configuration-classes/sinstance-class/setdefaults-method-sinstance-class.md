@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad13821341291a91a989297f29e1459a40de5afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720938"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Método SetDefaults (clase SInstance)
-  Establece todos los valores predeterminados para la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con la opción para sobrescribir los datos existentes.  
+  Establece todos los valores predeterminados de la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia de con la opción de sobrescribir los datos existentes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,8 +40,8 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Un [clase SInstance](sinstance-class.md) objeto que representa una instancia del servidor.  
+ *objeto*  
+ Objeto de la [clase SInstance](sinstance-class.md) que representa una instancia del servidor.  
   
 #### <a name="parameters"></a>Parámetros  
   
@@ -52,9 +52,9 @@ OverwriteAll
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor `uint32` que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

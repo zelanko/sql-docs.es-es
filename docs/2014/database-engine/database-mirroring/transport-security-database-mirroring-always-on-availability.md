@@ -1,5 +1,5 @@
 ---
-title: Seguridad de transporte para la creación de reflejo de base de datos y grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
+title: Seguridad de transporte para la creación de reflejo de la base de datos y Grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754296"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62754296"
 ##  <a name="Authentication"></a> Autenticación  
  Autenticación es el proceso de comprobar que un usuario es quien dice ser. Las conexiones entre extremos de creación de reflejo de la base de datos requieren autenticación. Las solicitudes de conexión desde un asociado o testigo, según corresponda, deben autenticarse.  
   
- El tipo de autenticación que utiliza una instancia de servidor para la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] es una propiedad del extremo de reflejo de la base de datos. Existen dos tipos de seguridad de transporte para los puntos de conexión de creación de reflejo de la base de datos: autenticación de Windows (la interfaz del proveedor de compatibilidad para seguridad (SSPI)) y la autenticación basada en certificados.  
+ El tipo de autenticación que utiliza una instancia de servidor para la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] es una propiedad del extremo de reflejo de la base de datos. Hay dos tipos de seguridad de transporte disponibles para los extremos de creación de reflejo de la base de datos: autenticación de Windows (Interfaz de proveedor de compatibilidad para seguridad (SSPI)) y autenticación basada en certificados.  
   
 ### <a name="windows-authentication"></a>Autenticación de Windows  
  En la autenticación de Windows, cada instancia de servidor inicia sesión en el otro lado mediante las credenciales de Windows de la cuenta de usuario de Windows en la que se ejecuta el proceso. La autenticación de Windows puede requerir alguna configuración manual de las cuentas de inicio de sesión, como se indica a continuación:  
@@ -46,16 +46,16 @@ ms.locfileid: "62754296"
 -   Si las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como cuenta de servicio de red, el inicio de sesión de cada cuenta de equipo host (*NombreDeDominio***\\***NombreDeEquipo$*) se debe crear en **master** en cada uno de los demás servidores, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión. Esto se debe a que una instancia de servidor que se ejecuta en la cuenta Servicio de red se autentica mediante la cuenta de dominio del equipo host.  
   
 > [!NOTE]  
->  Para obtener un ejemplo de configuración de una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows, vea [Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Para ver un ejemplo de configuración de una sesión de creación de reflejo de base de datos por medio de la autenticación de Windows, vea [Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
   
 ### <a name="certificates"></a>Certificados  
  En ciertas situaciones, como cuando las instancias de servidor no están en dominios de confianza o cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como servicio local, la autenticación de Windows no está disponible. En estos casos, en lugar de credenciales de usuario, se requieren certificados para autenticar solicitudes de conexión. El extremo de creación de reflejo de cada instancia de servidor debe configurarse con su propio certificado creado localmente.  
   
- El método de cifrado se establece al crear el certificado. Para obtener más información, vea [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md). Administre con cuidado los certificados que utilice.  
+ El método de cifrado se establece al crear el certificado. Para obtener más información, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md). Administre con cuidado los certificados que utilice.  
   
  Una instancia de servidor utiliza la clave privada de su propio certificado para establecer su identidad al establecer una conexión. La instancia de servidor que recibe la solicitud de conexión utiliza la clave pública del certificado del remitente para autenticar la identidad de éste. Por ejemplo, considere dos instancias del servidor, Server_A y Server_B. Server_A utiliza su clave privada para cifrar el encabezado de conexión antes de enviar una solicitud de conexión a Server_B. Server_B utiliza la clave pública del certificado de Server_A para descifrar el encabezado de conexión. Si el encabezado descifrado es correcto, Servidor_B sabe que el encabezado fue cifrado por Servidor_A y la conexión se autentica. Si el encabezado descifrado es incorrecto, Servidor_B sabe que la solicitud de conexión no es auténtica y rechaza la conexión.  
   
-##  <a name="DataEncryption"></a> Cifrado de datos  
+##  <a name="DataEncryption"></a>Cifrado de datos  
  De manera predeterminada, un extremo de creación de reflejo de la base de datos requiere el cifrado de datos enviados en conexiones de creación de reflejo. En este caso, solo se puede conectar el extremo a extremos que también utilicen cifrado. A menos que pueda garantizar que su red es segura, se recomienda requerir cifrado para las conexiones de creación de reflejo de la base de datos. Sin embargo, puede deshabilitar el cifrado o hacerlo compatible, pero no obligatorio. Si se deshabilita el cifrado, los datos no se cifran nunca y el extremo no se puede conectar a otro extremo que requiera cifrado. Si se admite cifrado, los datos solo se cifran si el extremo opuesto admite o requiere cifrado.  
   
 > [!NOTE]  
@@ -65,7 +65,8 @@ ms.locfileid: "62754296"
   
 |Valor ALGORITHM|Descripción|  
 |---------------------|-----------------|  
-|RC4|Especifica que el extremo debe usar el algoritmo RC4. Ésta es la opción predeterminada.<br /><br /> Nota: El algoritmo RC4 está obsoleto. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.|  
+|RC4|Especifica que el extremo debe usar el algoritmo RC4. Este es el valor predeterminado.<br /><br /> Nota: el algoritmo RC4 está en desuso. 
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.|  
 |AES|Especifica que el extremo debe usar el algoritmo AES.|  
 |AES RC4|Especifica que los dos extremos negociarán un algoritmo de cifrado con este extremo, dando preferencia al algoritmo AES.|  
 |RC4 AES|Especifica que los dos extremos negociarán un algoritmo de cifrado con este extremo, dando preferencia al algoritmo RC4.|  
@@ -80,7 +81,7 @@ ms.locfileid: "62754296"
  Para obtener más información sobre la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar el cifrado, vea [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
- **Para configurar la seguridad en el transporte para un extremo de creación de reflejo de la base de datos**  
+ **Para configurar la seguridad de transporte para un extremo de creación de reflejo de la base de datos**  
   
 -   [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -90,16 +91,16 @@ ms.locfileid: "62754296"
   
 -   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
- [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [Security Center para SQL Server Motor de base de datos y Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
- [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)   
+ [Sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
+ [Sys. dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Solución de problemas de configuración de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;eliminado](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
+ [Solucionar problemas de Grupos de disponibilidad AlwaysOn &#40;de configuración de SQL Server&#41;eliminado](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
   
   

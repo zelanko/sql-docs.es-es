@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075561"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definir consultas con nombre en una vista del origen de datos (Analysis Services)
@@ -35,13 +35,13 @@ ms.locfileid: "66075561"
   
  Las tablas y columnas a las que se hace referencia en la consulta SQL no se deben calificar o deben calificarse solo por el nombre de tabla Por ejemplo, para hacer referencia a la columna SaleAmount de una tabla, son válidos los valores `SaleAmount` o `Sales.SaleAmount` , pero `dbo.Sales.SaleAmount` genera un error.  
   
- **Nota** Cuando defina una consulta con nombre que realiza consultas en un origen de datos [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, se producirá un error en una consulta con nombre que contiene una subconsulta correlacionada y una cláusula GROUP BY. Para obtener más información, vea el artículo sobre el [error interno con una instrucción SELECT que contiene una subconsulta correlacionada y GROUP BY](https://support.microsoft.com/kb/274729) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ **Nota:** Al definir una consulta con nombre que realiza [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] consultas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un origen de datos o 7,0, se producirá un error en una consulta con nombre que contiene una subconsulta correlacionada y una cláusula Group by. Para obtener más información, vea el artículo sobre el [error interno con una instrucción SELECT que contiene una subconsulta correlacionada y GROUP BY](https://support.microsoft.com/kb/274729) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
 ## <a name="add-or-edit-a-named-query"></a>Agregar o editar una consulta con nombre  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto o conéctese a la base de datos que contiene la vista del origen de datos en que desea agregar una consulta con nombre.  
   
-2.  En el Explorador de soluciones, expanda la carpeta **Vistas del origen de datos** y luego haga doble clic en la vista del origen de datos.  
+2.  En el Explorador de soluciones, expanda la carpeta **Vistas del origen de datos** y, después, haga doble clic en la vista del origen de datos.  
   
 3.  En el panel **Tablas** o **Diagrama** , haga clic con el botón derecho en un área abierta y, después, haga clic en **Nueva consulta con nombre**.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66075561"
     > [!NOTE]  
     >  La interfaz de usuario (UI) de generación de consultas depende del origen de datos. En lugar de ver una UI gráfica, puede obtener una UI genérica, basada en texto. Puede realizar las mismas tareas con estas interfaces diferentes, pero debe hacerlo de diferente forma. Para más información, vea [Cuadro de diálogo Crear o Editar consulta con nombre &#40;Analysis Services - Datos multidimensionales&#41;](../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md).  
   
-5.  Haga clic en **Aceptar**. En el encabezado de tabla aparecerá un icono que muestra dos tablas superpuestas para indicar que la tabla ha sido reemplazada por una consulta con nombre.  
+5.  Haga clic en **OK**. En el encabezado de tabla aparecerá un icono que muestra dos tablas superpuestas para indicar que la tabla ha sido reemplazada por una consulta con nombre.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   
  [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

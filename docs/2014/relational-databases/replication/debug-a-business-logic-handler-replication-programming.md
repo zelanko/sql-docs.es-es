@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721505"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar un controlador de lógica de negocios (programación de la replicación)
-  Use un controlador de lógica de negocios para invocar la lógica de negocios personalizada cuando se sincroniza una suscripción de mezcla. Para obtener más información, vea [Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md) (Ejecutar lógica de negocios durante la sincronización de mezcla).  
+  Use un controlador de lógica de negocios para invocar la lógica de negocios personalizada cuando se sincroniza una suscripción de mezcla. Para obtener más información, consulte [Ejecutar lógica de negocios durante la sincronización de mezcla](merge/execute-business-logic-during-merge-synchronization.md).  
   
  El Reconciliador de replicación de mezcla (replrec.dll) llama al ensamblado de código administrado que contiene la lógica de negocios. En la mayoría de los casos, replrec.dll y la lógica de negocios personalizada se ejecuta en el equipo donde el Agente de mezcla se ejecuta (en el suscriptor para una suscripción de extracción o en el distribuidor para una suscripción de inserción). En el caso de la sincronización web o en el caso de un suscriptor de [!INCLUDE[ssEW](../../includes/ssew-md.md)] , el reconciliador y la lógica de negocios personalizada se ejecuta en el servidor web.  
   
@@ -81,7 +81,8 @@ ms.locfileid: "62721505"
   
 11. Suponiendo que no se establezcan otros puntos de interrupción y que se repliquen los comandos adecuados, la ejecución se detiene cuando llega al punto de interrupción en el controlador de lógica de negocios.  
   
-## <a name="see-also"></a>Vea también  
- [Implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md)  
+## <a name="see-also"></a>Consulte también  
+ [Implementar un controlador de lógica de negocios para un artículo de mezcla
+](implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

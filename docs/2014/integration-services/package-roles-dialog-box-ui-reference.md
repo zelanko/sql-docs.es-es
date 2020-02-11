@@ -1,5 +1,5 @@
 ---
-title: Referencia de interfaz de usuario del cuadro de diálogo de Roles de paquete | Microsoft Docs
+title: Referencia de la interfaz de usuario del cuadro de diálogo roles de paquete | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71eabff4c4caf79718fee8e29c675636b6034205
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056807"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Roles del paquete
-  Use el cuadro de diálogo **Roles de paquete**, disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para especificar los roles de base de datos que tienen acceso de lectura al paquete y los roles de base de datos que tienen acceso de escritura al paquete. Los roles de base de datos se aplican solo a paquetes almacenados en la base de datos **msdb** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Use el cuadro de diálogo **Roles de paquete**, disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para especificar los roles de base de datos que tienen acceso de lectura al paquete y los roles de base de datos que tienen acceso de escritura al paquete. Los roles de base de datos se aplican solo a paquetes almacenados en la base de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** database.  
   
  Para obtener más información sobre los roles de base de datos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus permisos, vea [Roles de Integration Services &#40;servicio SSIS&#41;](security/integration-services-roles-ssis-service.md).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66056807"
  **Rol de escritor**  
  Seleccione un rol de la lista.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Roles de nivel de base de datos](../relational-databases/security/authentication-access/database-level-roles.md)   
  [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   

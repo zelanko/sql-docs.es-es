@@ -23,14 +23,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727469"
 ---
 # <a name="canceling-commands-xmla"></a>Cancelar comandos (XMLA)
-  Dependiendo de los permisos administrativos del usuario que emite el comando, el [cancelar](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) de comandos en XML para Analysis (XMLA) puede cancelar un comando en una sesión, una sesión, una conexión, un proceso de servidor o en una sesión asociada o conexión.  
+  En función de los permisos administrativos del usuario que emite el comando, el comando [Cancelar](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) en XML for Analysis (XMLA) puede cancelar un comando en una sesión, una sesión, una conexión, un proceso de servidor o una sesión o conexión asociada.  
   
 ## <a name="canceling-commands"></a>Cancelar comandos  
  Un usuario puede cancelar el comando actualmente en ejecución en el contexto de la sesión explícita actual mediante el envío de un comando `Cancel` sin propiedades especificadas.  
@@ -42,26 +42,26 @@ ms.locfileid: "62727469"
  Si un usuario cancela un comando `Batch`, se cancelan todos los comandos restantes del comando `Batch` que no se hayan ejecutado aún. Si el comando `Batch` es de tipo transaccional, se revierten los comandos ejecutados con anterioridad al comando `Cancel`.  
   
 ## <a name="canceling-sessions"></a>Cancelar sesiones  
- Especificando un identificador de sesión para una sesión explícita en el [SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) propiedad de la `Cancel` de comandos, un administrador de base de datos o el administrador del servidor puede cancelar una sesión, incluido el comando actualmente en ejecución . Un administrador de bases de datos solamente puede cancelar sesiones de las bases de datos en las que tiene permisos administrativos.  
+ Al especificar un identificador de sesión para una sesión explícita en la propiedad [SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) del `Cancel` comando, un administrador de base de datos o un administrador del servidor puede cancelar una sesión, incluido el comando que se está ejecutando actualmente. Un administrador de bases de datos solamente puede cancelar sesiones de las bases de datos en las que tiene permisos administrativos.  
   
- Un administrador de bases de datos puede recuperar las sesiones activas de una base de datos especificada mediante la recuperación del conjunto de filas de esquema DISCOVER_SESSIONS. Para recuperar el conjunto de filas de esquema DISCOVER_SESSIONS, el Administrador de base de datos utiliza XMLA `Discover` método y especifica el identificador de la base de datos adecuada para la restricción de session_current_database en la [restricciones](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) propiedad de la `Discover` método.  
+ Un administrador de bases de datos puede recuperar las sesiones activas de una base de datos especificada mediante la recuperación del conjunto de filas de esquema DISCOVER_SESSIONS. Para recuperar el conjunto de filas de esquema DISCOVER_SESSIONS, el administrador de `Discover` bases de datos utiliza el método XMLA y especifica el identificador de base de datos adecuado para la columna `Discover` de restricción SESSION_CURRENT_DATABASE en la propiedad [restrictions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) del método.  
   
 ## <a name="canceling-connections"></a>Cancelar conexiones  
- Especificando un identificador de conexión en el [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) propiedad de la `Cancel` de comandos, un administrador del servidor puede cancelar todas las sesiones asociadas con una conexión determinada, incluidos todos los comandos de ejecución, y Cancelar la conexión.  
+ Al especificar un identificador de conexión en la propiedad [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) del `Cancel` comando, un administrador del servidor puede cancelar todas las sesiones asociadas a una conexión determinada, incluidos todos los comandos en ejecución, y cancelar la conexión.  
   
 > [!NOTE]  
->  Si la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no se puede ubicar y cancelar las sesiones asociadas a una conexión, como cuando el bombeo de datos abre varias sesiones al tiempo que proporciona conectividad HTTP, la instancia no puede cancelar la conexión. Si esto ocurriera durante la ejecución de un comando `Cancel`, se produce un error.  
+>  Si la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no puede localizar y cancelar las sesiones asociadas a una conexión, por ejemplo, cuando el bombeo de datos abre varias sesiones mientras proporciona conectividad http, la instancia no puede cancelar la conexión. Si esto ocurriera durante la ejecución de un comando `Cancel`, se produce un error.  
   
  Un administrador de servidor puede recuperar las conexiones activas de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante la recuperación del conjunto de filas de esquema DISCOVER_CONNECTIONS con el método `Discover` de XMLA.  
   
 ## <a name="canceling-server-processes"></a>Cancelar procesos de servidor  
- Especificando un identificador de proceso de servidor (SPID) en el [SPID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) propiedad de la `Cancel` de comandos, un administrador del servidor puede cancelar los comandos asociados a un SPID determinado.  
+ Al especificar un identificador de proceso de servidor (SPID) en la propiedad [SPID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) del `Cancel` comando, un administrador del servidor puede cancelar los comandos asociados a un SPID determinado.  
   
 ## <a name="canceling-associated-sessions-and-connections"></a>Cancelar sesiones y conexiones asociadas  
- Puede establecer el [CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla) propiedad en true para cancelar las conexiones, sesiones y comandos asociados a la conexión, sesión o SPID especificados en el `Cancel` comando.  
+ Puede establecer la propiedad [CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla) en true para cancelar las conexiones, las sesiones y los comandos asociados a la conexión, la sesión o el SPID especificado en `Cancel` el comando.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Método Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)   
- [Desarrollo con XMLA en Analysis Services](developing-with-xmla-in-analysis-services.md)  
+ [Desarrollar con XMLA en Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

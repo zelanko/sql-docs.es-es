@@ -1,5 +1,5 @@
 ---
-title: Reemplazar tabla por otra tabla del cuadro de diálogo | Microsoft Docs
+title: Reemplazar tabla por otra tabla (cuadro de diálogo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070268"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Reemplazar tabla por otra tabla (cuadro de diálogo)
@@ -28,17 +28,17 @@ ms.locfileid: "66070268"
  **Origen de datos**  
  Seleccione el origen de datos del que se recuperará la tabla.  
   
- **Grid**  
+ **Cuadrícula**  
  Muestra los objetos y el tipo de objetos disponibles en el origen de datos seleccionado que no se han incluido en la vista del origen de datos.  
   
  **Filter**  
  Escriba el filtro que quiere usar para restringir los objetos mostrados en **Cuadrícula**y luego haga clic en el botón para filtrar las tablas mostradas.  
   
- **Mostrar objetos del sistema**  
+ **Show system objects**  
  Seleccione esta opción para mostrar objetos del sistema para el origen de datos seleccionado en **Cuadrícula**.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Diseñador de vistas del origen de datos &#40;Analysis Services de datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

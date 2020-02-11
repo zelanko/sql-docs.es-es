@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710511"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Guardar diagramas de base de datos (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "62710511"
   
 ### <a name="to-save-the-database-diagram"></a>Para guardar el diagrama de base de datos  
   
-1.  Desde el **archivo** menú, elija **Guardar < *`tablename`* >** .  
+1.  En el menú **archivo** , elija **Guardar <*`tablename`* **.  
   
 2.  Si se trata de un diagrama nuevo que no se ha guardado nunca, aparecerá el cuadro de diálogo **Guardar como** . Escriba un nombre para el diagrama.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62710511"
   
 3.  Haga clic en **Sí** (en **Aceptar** si se trata de un diagrama nuevo) para actualizar la base de datos para hacer que coincida con el diagrama.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

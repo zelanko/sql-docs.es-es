@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación Búsqueda aproximada (pestaña Avanzadas) | Microsoft Docs
+title: Editor de transformación búsqueda aproximada (pestaña avanzadas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26a7efa42215f1bc456cf4a4c47b3a71c62b94e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058352"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Editor de transformación Búsqueda aproximada (pestaña Avanzadas)
@@ -27,7 +27,7 @@ ms.locfileid: "66058352"
  Para obtener más información acerca de la transformación Búsqueda aproximada, vea [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Número máximo de coincidencias por búsqueda para la salida**  
+ **Número máximo de coincidencias para la salida por búsqueda**  
  Especifique el número máximo de coincidencias que la transformación puede devolver para cada fila de entrada. El valor predeterminado es **1**.  
   
  **Umbral de similitud**  
@@ -36,9 +36,9 @@ ms.locfileid: "66058352"
  **Delimitadores de token**  
  Especifique los delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación Búsqueda aproximada &#40;pestaña Tabla de referencia&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
+ [Editor de transformación búsqueda aproximada &#40;pestaña tabla de referencia&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
  [Editor de transformación Búsqueda aproximada &#40;pestaña Columnas&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)  
   
   

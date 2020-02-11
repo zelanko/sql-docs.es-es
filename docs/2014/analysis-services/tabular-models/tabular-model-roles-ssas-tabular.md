@@ -1,5 +1,5 @@
 ---
-title: Roles de modelos tabulares (SSAS Tabular) | Microsoft Docs
+title: Roles de modelos tabulares (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066449"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>Roles de modelos tabulares (SSAS tabular)
@@ -26,6 +26,6 @@ ms.locfileid: "66066449"
   
 |Tarea|Descripción|  
 |----------|-----------------|  
-|[Administrar roles utilizando SSMS &#40;SSAS tabular&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Describe cómo crear roles, agregar y quitar miembros de un rol, cambiar permisos para un rol, y agregar, modificar o quitar los filtros de nivel de fila con DAX.|  
+|[Administrar roles mediante el uso de SSMS &#40;SSAS tabular&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Describe cómo crear roles, agregar y quitar miembros de un rol, cambiar permisos para un rol, y agregar, modificar o quitar los filtros de nivel de fila con DAX.|  
   
   

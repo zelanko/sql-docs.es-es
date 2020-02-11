@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076290"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Crear una dimensión de tiempo generando una tabla de tiempos
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede utilizar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión de tiempo cuando ninguna tabla de tiempos está disponible en la base de datos de origen. Para ello, seleccione una de las opciones siguientes en la página **Seleccionar método de creación** :  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede utilizar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión de tiempo cuando no haya ninguna tabla de tiempos disponible en la base de datos de origen. Para ello, seleccione una de las opciones siguientes en la página **Seleccionar método de creación** :  
   
--   **Generar una tabla de tiempos en el origen de datos** : seleccione esta opción cuando tenga el permiso para crear objetos en el origen de datos subyacente. A continuación, el asistente generará una tabla de tiempos y la almacenará en el origen de datos. El asistente crea entonces la dimensión de tiempo de esa tabla de tiempos.  
+-   **Generar una tabla de tiempos en el origen de datos** Seleccione esta opción cuando tenga permiso para crear objetos en el origen de datos subyacente. A continuación, el asistente generará una tabla de tiempos y la almacenará en el origen de datos. El asistente crea entonces la dimensión de tiempo de esa tabla de tiempos.  
   
--   **Generar una tabla de tiempos en el servidor** : seleccione esta opción cuando no tenga permiso para crear objetos en el origen de datos subyacente. A continuación, el asistente generará y almacenará una tabla en el servidor en lugar de realizarlo en el origen de datos. (La dimensión creada a partir de una tabla de tiempos en el servidor se denomina *dimensión de tiempo de servidor*). El asistente crea a continuación la dimensión de tiempo de servidor a partir de esa tabla.  
+-   **Generar una tabla de tiempos en el servidor** Seleccione esta opción cuando no tenga permiso para crear objetos en el origen de datos subyacente. A continuación, el asistente generará y almacenará una tabla en el servidor en lugar de realizarlo en el origen de datos. (La dimensión creada a partir de una tabla de tiempos en el servidor se denomina *dimensión de tiempo de servidor*). El asistente crea a continuación la dimensión de tiempo de servidor a partir de esa tabla.  
   
  Cuando cree una dimensión de tiempo, debe especificar los períodos de tiempo y las fechas de inicio y de finalización de la dimensión. El asistente utiliza los períodos de tiempo especificados para crear los atributos de tiempo. Al procesar la dimensión, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera y almacena los datos necesarios para admitir las fechas y períodos de tiempo especificados. El asistente usa los atributos creados para una dimensión de tiempo para recomendar las jerarquías de la dimensión. Las jerarquías reflejan las relaciones entre distintos períodos de tiempo y tienen en cuenta distintos calendarios. Por ejemplo, en una jerarquía de calendario estándar, se muestra el nivel Weeks bajo el nivel Years, pero no bajo el nivel Months, ya que las semanas se dividen de forma regular en años pero no en meses. En cambio, en una jerarquía de calendario de informes o de fabricación, las semanas se dividen de forma regular en meses, por lo que el nivel Weeks se muestra bajo el nivel Months.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "66076290"
 ## <a name="completing-the-dimension-wizard"></a>Completar el Asistente para dimensiones  
  En la página **Finalización del asistente** , podrá revisar los atributos y jerarquías creados en el asistente y asignar un nombre a la dimensión de tiempo. Haga clic en **Finalizar** para completar el asistente y crear la dimensión. Una vez haya finalizado la dimensión, podrá cambiarla con el Diseñador de dimensiones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   
  [Crear una dimensión de tipo Date](database-dimensions-create-a-date-type-dimension.md)   
  [Propiedades de la dimensión de base de datos](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Relaciones de dimensión](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Crear una dimensión mediante el uso de una tabla existente](create-a-dimension-by-using-an-existing-table.md)   
+ [Crear una dimensión usando una tabla existente](create-a-dimension-by-using-an-existing-table.md)   
  [Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

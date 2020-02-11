@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655680"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Especificar cómo se propagan los cambios para los artículos transaccionales
@@ -43,7 +43,7 @@ ms.locfileid: "62655680"
   
 -   **sp_MSdel_\<** *nombreDeTabla* **>** , que controla las eliminaciones.  
   
- El valor **\<***tablename***>** usado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario distinto.  
+ El **\< ***nombreDeTabla ***>** utilizado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario distinto.  
   
  Cualquiera de estos procedimientos se puede sustituir por un procedimiento personalizado que se especifica al agregar un artículo a una publicación. Los procedimientos personalizados se utilizan si una aplicación requiere lógica personalizada, por ejemplo al insertar datos en una tabla de auditoría cuando se actualiza una fila en el suscriptor. Para obtener más información acerca de cómo especificar procedimientos almacenados personalizados, vea los temas de procedimientos indicados anteriormente.  
   
@@ -213,7 +213,7 @@ end
 go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

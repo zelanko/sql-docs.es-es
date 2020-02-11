@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559af9cdd7e7014e114b431dddf25b09dd18dc81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771301"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Preparar para consultar datos modificados
@@ -93,7 +93,7 @@ ms.locfileid: "62771301"
         Dts.Variables["SqlDataQuery"].Value = sqlDataQuery;  
         ```  
   
-         \- o -  
+         \- O bien  
   
     -   Si está programando en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], escriba las líneas de código siguientes:  
   
@@ -195,7 +195,7 @@ ms.locfileid: "62771301"
   
 -   En la pestaña **Flujo de control** , agregue una tarea Flujo de Datos y conecte la tarea que concatenó la cadena de consulta.  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>siguiente paso  
  Después de preparar la cadena de consulta y configurar la tarea Flujo de Datos, el paso siguiente consiste en crear la función con valores de tabla que recuperará los datos modificados de la base de datos.  
   
  **Tema siguiente:** [Crear la función para recuperar los datos modificados](create-the-function-to-retrieve-the-change-data.md)  

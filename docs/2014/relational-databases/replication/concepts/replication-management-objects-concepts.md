@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721797"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -35,7 +35,7 @@ ms.locfileid: "62721797"
  [Configurar distribución](../configure-distribution.md)  
  Los temas de esta sección muestran cómo utilizar RMO para configurar la publicación y la distribución.  
   
- [Create a Publication](../publish/create-a-publication.md)  
+ [Create a Publication](../publish/create-a-publication.md) (Creación de una publicación)  
  Los temas de esta sección muestran cómo utilizar RMO para crear, eliminar y modificar las publicaciones y los artículos.  
   
  [Suscribirse a publicaciones](../subscribe-to-publications.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "62721797"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>Conectar a un servidor de replicación  
- Los objetos de programación de RMO requieren que se realice una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante una instancia de la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>. Esta conexión al servidor se efectúa independientemente de cualquier objeto de programación de RMO. A continuación, se pasa al objeto RMO durante la creación de instancias o por asignación a la <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> propiedad del objeto. De esta manera, se pueden crear y administrar los objetos de programación RMO y las instancias de objeto de conexión por separado y se puede reutilizar un objeto de conexión único con varios objetos de programación RMO. Las reglas siguientes se aplican a las conexiones a un servidor de replicación:  
+ Los objetos de programación de RMO requieren que se realice una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante una instancia de la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>. Esta conexión al servidor se efectúa independientemente de cualquier objeto de programación de RMO. A continuación, se pasa al objeto RMO durante la creación de la instancia o por asignación <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> a la propiedad del objeto. De esta manera, se pueden crear y administrar los objetos de programación RMO y las instancias de objeto de conexión por separado y se puede reutilizar un objeto de conexión único con varios objetos de programación RMO. Las reglas siguientes se aplican a las conexiones a un servidor de replicación:  
   
 -   Todas las propiedades de la conexión se definen para un objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> dado.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "62721797"
 >  Cuando varios clientes de RMO o varias instancias de un objeto de programación de RMO están teniendo acceso al mismo objeto de replicación en el servidor, se puede llamar al método `Refresh` del objeto RMO para actualizar las propiedades según el estado actual del objeto del servidor.  
   
 ### <a name="caching-property-changes"></a>Almacenar en memoria caché los cambios de propiedades  
- Cuando la propiedad <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> está establecida en <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql> todas las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] generadas por RMO se capturan para que se puedan ejecutar manualmente en un lote único utilizando alguno de los métodos de ejecución. RMO le permite almacenar en memoria caché los cambios de las propiedades y las confirma conjuntamente en un único lote utilizando el método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> del objeto. Para almacenar en caché los cambios de las propiedades, la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> del objeto debe estar establecida en `true`. Al almacenar en memoria caché los cambios de las propiedades en RMO, el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> todavía controla cuándo se envían los cambios al servidor. Para obtener más información sobre cómo almacenar en caché los cambios de las propiedades de un objeto de replicación, vea [Ver y modificar las propiedades del distribuidor y del publicador](../view-and-modify-distributor-and-publisher-properties.md).  
+ Cuando la propiedad <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> está establecida en <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql> todas las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] generadas por RMO se capturan para que se puedan ejecutar manualmente en un lote único utilizando alguno de los métodos de ejecución. RMO le permite almacenar en memoria caché los cambios de las propiedades y las confirma conjuntamente en un único lote utilizando el método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> del objeto. Para almacenar en caché los cambios de las propiedades, la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> del objeto debe estar establecida en `true`.  Al almacenar en memoria caché los cambios de las propiedades en RMO, el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> todavía controla cuándo se envían los cambios al servidor. Para obtener más información sobre cómo almacenar en caché los cambios de las propiedades de un objeto de replicación, vea [Ver y modificar las propiedades del distribuidor y del publicador](../view-and-modify-distributor-and-publisher-properties.md).  
   
 > [!IMPORTANT]  
 >  Aunque la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> permite declarar las transacciones explícitas al establecer las propiedades, tales transacciones pueden interferir con las transacciones de replicación internas, producir resultados imprevistos y no se deberían utilizar con RMO.  
@@ -185,7 +185,7 @@ ms.locfileid: "62721797"
   
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)   
  [Conceptos de la programación de replicación](replication-programming-concepts.md)  
   

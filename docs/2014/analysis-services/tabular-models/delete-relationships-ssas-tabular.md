@@ -1,5 +1,5 @@
 ---
-title: Eliminar relaciones (SSAS Tabular) | Microsoft Docs
+title: Eliminar relaciones (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067326"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Eliminar relaciones (SSAS tabular)
-  Puede eliminar las relaciones existentes utilizando el diseñador de modelos en la Vista de diagrama o utilizando el cuadro de diálogo Administrar relaciones. Para más información sobre cómo se usan las relaciones en los modelos tabulares, vea [Relaciones &#40;SSAS tabular&#41;](relationships-ssas-tabular.md).  
+  Puede eliminar las relaciones existentes utilizando el diseñador de modelos en la Vista de diagrama o utilizando el cuadro de diálogo Administrar relaciones. Para más información sobre cómo se usan las relaciones en los modelos tabulares, vea [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
   
 ## <a name="considerations-for-deleting-relationships"></a>Aspectos que se deben tener en cuenta al eliminar relaciones  
  Tenga en cuenta los siguientes problemas a la hora de decidir si va a eliminar una relación:  
@@ -51,8 +51,8 @@ ms.locfileid: "66067326"
   
 4.  En el cuadro de diálogo **Administrar las relaciones** , haga clic en **Cerrar**.  
   
-## <a name="see-also"></a>Vea también  
- [Relaciones &#40;SSAS tabular&#41;](relationships-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Relaciones &#40;&#41;tabular de SSAS](relationships-ssas-tabular.md)   
  [Crear una relación entre dos tablas &#40;SSAS tabular&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

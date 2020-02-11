@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774889"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Supervisar el trasvase de registros (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "62774889"
   
  Estas tablas se pueden consultar para supervisar el estado de una sesión de trasvase de registros. Por ejemplo, para conocer el estado del trasvase de registros, compruebe el estado y el historial del trabajo de copia de seguridad, trabajo de copia y trabajo de restauración. Puede ver el historial y los detalles de errores específicos del trasvase de registros mediante la consulta de las siguientes tablas de supervisión.  
   
-|Table|Descripción|  
+|Tabla|Descripción|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|Almacena el Id. del trabajo de alerta.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|Almacena los detalles de errores de los trabajos de trasvase de registros. Puede consultar esta tabla para ver los errores de una sesión de agente. Opcionalmente, puede ordenar los errores por la fecha y la hora en que se registraron. Cada error se registra como una secuencia de excepciones y se pueden registrar varios errores (secuencias) por sesión de agente.|  
@@ -59,7 +59,7 @@ ms.locfileid: "62774889"
 |[sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)|Recupera la configuración de la base de datos secundaria de las tablas **log_shipping_secondary**, **log_shipping_secondary_databases** y **log_shipping_monitor_secondary** .|Servidor secundario|  
 |[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql)|Este procedimiento almacenado recupera la configuración de una base de datos principal determinada en el servidor secundario.|Servidor secundario|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver el informe de trasvase de registros &#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)   
  [Tablas y procedimientos almacenados de trasvase de registros](log-shipping-tables-and-stored-procedures.md)  
   

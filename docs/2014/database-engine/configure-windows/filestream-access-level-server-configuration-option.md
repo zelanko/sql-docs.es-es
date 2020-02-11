@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90b4ec97a3ab31c93e92219b96724b75d7f86425
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782260"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level (opción de configuración del servidor)
@@ -26,14 +26,14 @@ ms.locfileid: "62782260"
 > [!NOTE]  
 >  Antes de que esta opción tenga cualquier efecto, debe estar habilitada la configuración de administración de Windows para FILESTREAM. Puede habilitar esta configuración al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o utilizando el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Valor|Definición|  
+|Value|Definición|  
 |-----------|----------------|  
 |0|Deshabilita la compatibilidad de FILESTREAM para esta instancia.|  
 |1|Habilita FILESTREAM para el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |2|Habilita FILESTREAM para el acceso de transmisión por secuencias a [!INCLUDE[tsql](../../includes/tsql-md.md)] y Win32.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configuración del motor de base de datos - Secuencia de archivo](../../sql-server/install/database-engine-configuration-filestream.md)   
- [Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
+ [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
   
   

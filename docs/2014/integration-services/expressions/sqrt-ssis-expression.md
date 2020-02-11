@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 308a74501b0b4bf7b071feae2088c1ab1b7f030c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768771"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (expresión de SSIS)
@@ -37,7 +37,7 @@ SQRT(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  SQRT devuelve un resultado NULL si el valor del argumento es NULL.  
   
  SQRT produce un error si el argumento es un valor negativo.  
@@ -66,7 +66,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  En las expresiones, los nombres de variables siempre incluyen el prefijo \@.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento de la base de datos de servidor (DTA) | Microsoft Docs
+title: Database (DTA, elemento de Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661837"
 ---
 # <a name="database-element-for-server-dta"></a>Elemento Database para servidor (DTA)
@@ -48,13 +48,13 @@ ms.locfileid: "62661837"
 |Elemento primario|[Server &#40;DTA, elemento&#41;](server-element-dta.md)|  
 |Elementos secundarios|[Name &#40;DTA, elemento de Database&#41;](name-element-for-database-dta.md)<br /><br /> [Schema &#40;DTA, elemento de Database&#41;](schema-element-for-database-dta.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este elemento tiene el nombre **DatabaseDetailsTypecomplexType** en el esquema XML del Asistente para la optimización de motor de base de datos. No confunda este elemento `Database` con el que tiene al elemento `Configuration` como raíz primaria. Para obtener más información, vea [Database &#40;DTA, elemento de Configuration&#41;](database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Ejemplo  
- Para obtener un ejemplo de uso de la `Database` elemento, vea [elemento Server &#40;DTA&#41;](server-element-dta.md).  
+ Para obtener un ejemplo de uso `Database` del elemento, vea [Server element &#40;DTA&#41;](server-element-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

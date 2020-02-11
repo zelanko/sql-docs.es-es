@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711470"
 ---
 # <a name="cursor-properties"></a>Propiedades de cursor
@@ -29,9 +29,9 @@ ms.locfileid: "62711470"
   
 -   [Cursor Concurrency &#40;ODBC&#41;](cursor-concurrency-odbc.md) (Simultaneidad de cursor [ODBC])  
   
--   [Nivel de aislamiento de transacción de cursor](cursor-transaction-isolation-level.md)  
+-   [Nivel de aislamiento de las transacciones de cursores](cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>Vea también  
- [Uso de cursores &#40;ODBC&#41;](../using-cursors-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Usar cursores &#40;&#41;ODBC](../using-cursors-odbc.md)  
   
   

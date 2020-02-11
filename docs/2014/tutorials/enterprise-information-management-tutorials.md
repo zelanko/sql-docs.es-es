@@ -11,14 +11,15 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60becb35980b896aa2c44bbc8ff0a78a81210f48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65485576"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Tutoriales de Administración de información empresarial
-  Esta sección contiene tutoriales sobre la administración de información en una empresa mediante las tecnologías de Administración de información empresarial (EIM) incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Administración de información empresarial (EIM) de la empresa proporciona una cartera de soluciones que permiten a las organizaciones confiar en la credibilidad y la coherencia de sus datos para poder tomar decisiones empresariales críticas. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dispone de las siguientes tecnologías que le ayudan a implementar soluciones de EIM en la empresa.  
+  Esta sección contiene tutoriales sobre la administración de información en una empresa mediante las tecnologías de Administración de información empresarial (EIM) incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Administración de información empresarial (EIM) de la empresa proporciona una cartera de soluciones que permiten a las organizaciones confiar en la credibilidad y la coherencia de sus datos para poder tomar decisiones empresariales críticas. 
+  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dispone de las siguientes tecnologías que le ayudan a implementar soluciones de EIM en la empresa.  
   
 -   SQL Server Integration Services (SSIS). SSIS proporciona una plataforma extensible y eficaz para la integración de datos procedentes de diversos orígenes en una solución completa de extracción, transformación y carga (ETL) que admite flujos de trabajo empresariales, un almacenamiento de datos o administración de datos maestros.  
   
@@ -26,10 +27,10 @@ ms.locfileid: "65485576"
   
 -   SQL Server Master Data Services (MDS). MDS proporciona un concentrador central de datos que garantiza que la integridad de la información y la coherencia de los datos son constantes en las distintas aplicaciones.  
   
- [Administración de información empresarial mediante SSIS, MDS y DQS &#91;Tutorial&#93;](../../2014/tutorials/enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)  
+ [Administración de información empresarial con SSIS, MDS y DQS juntos &#91;tutorial&#93;](../../2014/tutorials/enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)  
  En este tutorial, aprenderá a usar conjuntamente SSIS, MDS y DQS para implementar una solución de ejemplo de Administración de información empresaria (EIM). Primero usará DQS para crear una base de conocimiento con los datos de proveedor (metadatos), limpiar los datos de un archivo de Excel según la base de conocimiento, y buscar coincidencias en los datos para identificar y quitar duplicados en los datos. Después usará el complemento MDS para Excel con el fin de cargar los datos limpios y coincidentes en MDS. A continuación, automatizará todo el proceso mediante una solución de SSIS.  
   
-## <a name="see-also"></a>Vea también  
- [Administración de información empresarial - Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=270871)  
+## <a name="see-also"></a>Consulte también  
+ [Administración de información empresarial: Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=270871)  
   
   

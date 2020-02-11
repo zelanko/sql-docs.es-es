@@ -13,34 +13,34 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 15d27881378a88c8f4ae6d65640be6218ecd3530
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632764"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>Sys. dm_pdw_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contiene información acerca de todas las solicitudes que están activas o recientes en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Muestra una fila por solicitud o consulta.  
+  Contiene información acerca de todas las solicitudes que se encuentran [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]actualmente o que están activas recientemente en. Muestra una fila por solicitud o consulta.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|Clave para esta vista. IDENTIFICADOR numérico único asociado a la solicitud.|Único en todas las solicitudes del sistema.|  
-|session_id|**nvarchar(32)**|IDENTIFICADOR numérico único asociado a la sesión en la que se ejecutó esta consulta. Vea [Sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|status|**nvarchar(32)**|Estado actual de la solicitud.|"Running", "Suspended", "completed", "Canceled", "Failed".|  
+|request_id|**nvarchar (32)**|Clave para esta vista. IDENTIFICADOR numérico único asociado a la solicitud.|Único en todas las solicitudes del sistema.|  
+|session_id|**nvarchar (32)**|IDENTIFICADOR numérico único asociado a la sesión en la que se ejecutó esta consulta. Vea [Sys. dm_pdw_exec_sessions &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|status|**nvarchar (32)**|Estado actual de la solicitud.|"Running", "Suspended", "completed", "Canceled", "Failed".|  
 |submit_time|**datetime**|Hora a la que se envió la solicitud para su ejecución.|**Fecha** y hora válida, menor o igual que la hora actual y start_time.|  
 |start_time|**datetime**|Hora a la que se inició la ejecución de la solicitud.|NULL para las solicitudes en cola; de lo contrario, la **fecha y** hora válidas es menor o igual que la hora actual.|  
 |end_compile_time|**datetime**|Hora a la que el motor completó la compilación de la solicitud.|NULL para las solicitudes que aún no se han compilado; de lo contrario, un **valor DateTime** válido menor que start_time y menor o igual que la hora actual.|
 |end_time|**datetime**|Hora a la que se completó la ejecución de la solicitud, se produjo un error o se canceló.|Null para las solicitudes en cola o activas; de lo contrario, una **fecha y** hora válida menor o igual que la hora actual.|  
 |total_elapsed_time|**int**|Tiempo transcurrido en la ejecución desde que se inició la solicitud, en milisegundos.|Entre 0 y la diferencia entre start_time y end_time.</br></br> Si total_elapsed_time supera el valor máximo de un entero, total_elapsed_time seguirá siendo el valor máximo. Esta condición generará la advertencia "se ha superado el valor máximo".</br></br> El valor máximo en milisegundos es el mismo que 24,8 días.|  
-|etiqueta|**nvarchar(255)**|Cadena de etiqueta opcional asociada a algunas instrucciones de consulta SELECT.|Cualquier cadena que contenga "a-z", "A-Z", "0-9", "_".|  
-|error_id|**nvarchar (36)**|IDENTIFICADOR único del error asociado a la solicitud, si existe.|Vea [Sys. dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); se establece en NULL si no se produjo ningún error.|  
-|database_id|**int**|Identificador de la base de datos utilizada por el contexto explícito (por ejemplo, USE DB_X).|Vea ID en [Sys. Databases de &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|comando|**nvarchar(4000)**|Contiene el texto completo de la solicitud enviado por el usuario.|Cualquier consulta o texto de solicitud válido. Las consultas que tienen más de 4000 bytes se truncan.|  
+|label|**nvarchar(255)**|Cadena de etiqueta opcional asociada a algunas instrucciones de consulta SELECT.|Cualquier cadena que contenga "a-z", "A-Z", "0-9", "_".|  
+|error_id|**nvarchar (36)**|IDENTIFICADOR único del error asociado a la solicitud, si existe.|Vea [Sys. dm_pdw_errors &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); se establece en NULL si no se produjo ningún error.|  
+|database_id|**int**|Identificador de la base de datos utilizada por el contexto explícito (por ejemplo, USE DB_X).|Vea ID en [Sys. databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|command|**nvarchar(4000)**|Contiene el texto completo de la solicitud enviado por el usuario.|Cualquier consulta o texto de solicitud válido. Las consultas que tienen más de 4000 bytes se truncan.|  
 |resource_class|**nvarchar (20)**|Grupo de cargas de trabajo que se usa para esta solicitud. |Clases de recursos estáticos</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Clases de recursos dinámicos</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|La importancia del establecimiento de la solicitud ejecutada a las.  Esta es la importancia relativa de una solicitud en este grupo de cargas de trabajo y entre grupos de cargas de trabajo para los recursos compartidos.  La importancia especificada en el clasificador invalida la configuración de importancia del grupo de cargas de trabajo.</br>Se aplica a: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>normal (valor predeterminado)</br>above_normal</br>high|
+|importance|**nvarchar(128)**|La importancia del establecimiento de la solicitud ejecutada a las.  Esta es la importancia relativa de una solicitud en este grupo de cargas de trabajo y entre grupos de cargas de trabajo para los recursos compartidos.  La importancia especificada en el clasificador invalida la configuración de importancia del grupo de cargas de trabajo.</br>Se aplica a: Azure SQL Data Warehouse|NULL</br>bajo</br>below_normal</br>normal (valor predeterminado)</br>above_normal</br>alta|
 |group_name|**sysname** |En el caso de las solicitudes que usan recursos, group_name es el nombre del grupo de cargas de trabajo en el que se ejecuta la solicitud.  Si la solicitud no emplea recursos, group_name es NULL.</br>Se aplica a: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Para las solicitudes que usan recursos, el nombre del clasificador utilizado para asignar recursos e importancia.||
 |resource_allocation_percentage|**decimal (5, 2)**|La cantidad de recursos asignados a la solicitud.</br>Se aplica a: Azure SQL Data Warehouse|
@@ -60,6 +60,6 @@ ms.locfileid: "73632764"
 >[!WARNING]  
 >Un atacante puede usar sys. dm_pdw_exec_requests para recuperar información acerca de objetos de base de datos específicos con solo tener el permiso VIEW SERVER STATE y no tiene permiso específico de la base de datos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
- [Vistas &#40;de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos de TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754460"
 ---
 # <a name="register-mirrored-database"></a>Registrar base de datos reflejada
@@ -36,7 +36,7 @@ ms.locfileid: "62754460"
 > [!NOTE]  
 >  Para registrar bases de datos en varias instancias del servidor, una vez terminada la búsqueda de una instancia del servidor en las bases de datos deseadas, haga clic en **Aplicar**y, luego, seleccione otra instancia del servidor.  
   
- **Conectar**  
+ **Conexión**  
  Para especificar nuevas credenciales para la instancia del servidor, haga clic en **Conectar** y conéctese mediante las nuevas credenciales. Al conectarse a una instancia del servidor, el Monitor de creación de reflejo de la base de datos muestra **Esperando datos**.  
   
  **Bases de datos reflejadas**  
@@ -44,9 +44,9 @@ ms.locfileid: "62754460"
   
  La cuadrícula contiene las columnas siguientes:  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
-|**Registrar**|Comprueba cada una de las bases de datos que desee registrar. Si se supervisa actualmente una base de datos, su casilla estará activada y permanecerá deshabilitada.<br /><br /> Nota: Para eliminar del Registro una base de datos, cierre el cuadro de diálogo **Registrar base de datos reflejada**, seleccione la base de datos en el árbol de navegación y seleccione **Eliminar del Registro** en el menú **Acción**.|  
+|**Registro**|Comprueba cada una de las bases de datos que desee registrar. Si se supervisa actualmente una base de datos, su casilla estará activada y permanecerá deshabilitada.<br /><br /> Nota: Para eliminar del Registro una base de datos, cierre el cuadro de diálogo **Registrar base de datos reflejada** , seleccione la base de datos en el árbol de navegación y seleccione **Eliminar del Registro** en el menú **Acción** .|  
 |**Base de datos**|Nombre de una base de datos reflejada en la instancia del servidor seleccionada.|  
 |**Rol actual**|Rol de creación de reflejo actual de la base de datos, ya sea principal o reflejada, en la instancia del servidor seleccionada.|  
 |**Asociado (Conectar como)**|Nombre del asociado de conmutación por error de la base de datos. Se muestra entre paréntesis **Autenticación de Windows del usuario de consola** o **Autenticación de SQL Server de inicio de sesión '***\<nombre de inicio de sesión>***'** . Esta información de autenticación es la que se utiliza actualmente (si la instancia se ha agregado antes) o la que se utilizará en un futuro (si la instancia no se ha agregado al monitor).|  
@@ -61,9 +61,9 @@ ms.locfileid: "62754460"
  **Aplicar**  
  Haga clic en este botón para registrar las bases de datos seleccionadas (y guardar las credenciales para las instancias del servidor asociado) a la vez que se mantiene abierto el cuadro de diálogo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
+ [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
   

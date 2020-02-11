@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060223"
 ---
 # <a name="create-a-new-integration-services-project"></a>Crear un proyecto de Integration Services
@@ -48,10 +48,10 @@ ms.locfileid: "66060223"
     > [!NOTE]  
     >  Para ver y cambiar el complemento de control de código fuente seleccionado y para configurar el entorno de control de código fuente, haga clic en **Opciones** en el menú **Herramientas** y, después, expanda el nodo **Control de código fuente**.  
   
-8.  Haga clic en **Aceptar** para agregar la solución a **el Explorador de soluciones**r y agregar el proyecto a la solución.  
+8.  Haga clic en **Aceptar** para agregar la solución a la solución **explorar**r y agregar el proyecto a la solución.  
   
-## <a name="see-also"></a>Vea también  
- [Servicios de integración &#40;SSIS&#41; proyectos](integration-services-ssis-projects-and-solutions.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;proyectos&#41; de SSIS](integration-services-ssis-projects-and-solutions.md)   
  [Agregar o quitar un proyecto de Integration Services en una solución](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
   

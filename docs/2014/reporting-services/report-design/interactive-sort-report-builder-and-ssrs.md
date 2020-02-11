@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 02735bafde927ba110de6465c5380987ddb6b5f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105615"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Ordenación interactiva (Generador de informes y SSRS)
@@ -27,15 +27,15 @@ ms.locfileid: "66105615"
   
  Al agregar una ordenación interactiva, es necesario especificar los elementos siguientes:  
   
--   **Lo que ordenar:** ¿filas o columnas?  
+-   **Qué ordenar:** ¿filas o columnas?  
   
--   **Por lo que se va a ordenar:** ¿un campo que se muestra en una columna de una tabla? ¿Un campo que no se muestra?  
+-   **Los datos por los que se debe realizar la ordenación:** ¿un campo que se muestra en una columna de una tabla? ¿Un campo que no se muestra?  
   
--   **En qué contexto se va a ordenar:** por ejemplo, se puede ordenar por las filas asociadas a grupos de filas; por las columnas asociadas a grupos de columnas; por filas de detalles; por grupos secundarios dentro de un grupo principal; o por un grupo principal y un grupo secundario al mismo tiempo.  
+-   **El contexto en el que se va a realizar la ordenación:** por ejemplo, se puede ordenar por las filas asociadas a grupos de filas; por las columnas asociadas a grupos de columnas; por filas de detalles; por grupos secundarios dentro de un grupo primario; o por un grupo primario y un grupo secundario al mismo tiempo.  
   
 -   **El cuadro de texto al que se va a agregar el botón de ordenación:** ¿en el encabezado de columna o en el encabezado de fila de grupo?  
   
--   **Si se sincronizará la ordenación en varias regiones de datos:** puede diseñar un informe para que cuando el usuario cambie de criterio de ordenación, también se ordenen otras regiones de datos con el mismo antecesor.  
+-   **Si se debe sincronizar la ordenación para varias regiones de datos:** puede diseñar un informe de forma que, cuando el usuario alterne el criterio de ordenación, también se ordenen otras regiones de datos con el mismo antecesor.  
   
  Para obtener instrucciones paso a paso, vea [Agregar una ordenación interactiva a una tabla o una matriz &#40;Generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66105615"
   
  Para ello, debe volver a diseñar la tabla para realizar la agrupación por una expresión que combine varios campos. Por ejemplo, para un conjunto de datos con recuentos del inventario, si la tabla original está agrupada por tamaño y, a continuación, por color, puede especificar un único grupo con una expresión de grupo que sea una combinación de tamaño y color. Para obtener más información, vea [Agregar una ordenación interactiva a una tabla o una matriz &#40;Generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Agregar una ordenación interactiva a una tabla o una matriz &#40;Generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  

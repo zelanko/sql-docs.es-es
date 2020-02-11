@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666792"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
-  En este tema se describe cómo configurar el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que envíe sus mensajes de error mediante NET SEND en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  En este tema se describe [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cómo configurar el agente para que envíe sus mensajes de error mediante net send en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **En este tema**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62666792"
   
      [Seguridad](#Security)  
   
--   [Para enviar mensajes de error del Agente SQL Server utilizando SQL Server Management Studio](#SSMSProcedure)  
+-   [Para enviar mensajes de error de Agente SQL Server mediante SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -56,18 +56,18 @@ ms.locfileid: "62666792"
   
 -   Ajustar las cuotas de memoria de un proceso (SeIncreaseQuotaPrivilege)  
   
- Para obtener más información sobre los permisos de Windows necesarios para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio del agente, consulte [seleccionar una cuenta para el servicio Agente SQL Server](select-an-account-for-the-sql-server-agent-service.md) y [configurar cuentas de servicio de Windows y Permisos](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Para obtener más información acerca de los permisos de Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesarios para la cuenta de servicio del agente, consulte [seleccionar una cuenta para el servicio de Agente SQL Server](select-an-account-for-the-sql-server-agent-service.md) y [configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-send-sql-server-agent-error-messages"></a>Para enviar mensajes de error del Agente SQL Server  
   
 1.  En el **Explorador de objetos**, haga clic en el signo más para expandir el servidor que contiene el registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el que desea enviar mensajes de error mediante NET SEND.  
   
-2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **Propiedades**.  
+2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **propiedades**.  
   
-3.  En el **propiedades de agente SQL Server -** _nombre_servidor_ cuadro de diálogo **registro de errores** en el **General** , página, escriba el nombre de usuario o nombre del equipo al que desea enviar errores a los mensajes en el **destinatario de Net send** cuadro.  
+3.  En el cuadro de diálogo **propiedades de Agente SQL Server-**_SERVER_NAME_ , en **registro de errores** en la página **General** , escriba el nombre de usuario o el nombre del equipo al que desea enviar mensajes de error en el cuadro **destinatario de net send** .  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
   

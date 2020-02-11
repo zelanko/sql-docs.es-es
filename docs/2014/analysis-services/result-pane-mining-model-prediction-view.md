@@ -1,5 +1,5 @@
 ---
-title: Como resultado de panel (vista predicción de modelo de minería de datos) | Microsoft Docs
+title: Panel de resultados (vista predicción de modelo de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070176"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Panel de resultados (Vista Predicción de modelo de minería de datos)
@@ -26,18 +26,18 @@ ms.locfileid: "66070176"
  **Cambiar a vista de diseño de consulta**  
  Haga clic para cambiar entre los paneles **Diseño**, **Consulta**y **Resultado** .  
   
- **Guardar resultados de la consulta**  
+ **Guardar resultados de consulta**  
  Abre el cuadro de diálogo **Guardar resultado de consulta de minería de datos** .  
   
  **Consulta singleton**  
  Permite crear una consulta singleton. La tabla **Seleccionar tabla(s) de entrada** se reemplaza por una tabla **Entrada de consulta singleton** . Se perderán los resultados de la consulta de predicción actual si cambia a una consulta singleton.  
   
- **Actualizar los resultados de la consulta**  
+ **Actualizar el resultado de la consulta**  
  Vuelve a procesar la consulta de predicción.  
   
-## <a name="see-also"></a>Vea también  
- [Generador de consultas de predicción &#40;Minería de datos&#41;](prediction-query-builder-data-mining.md)   
- [Interfaces de consultas de minería de datos](data-mining/data-mining-query-tools.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+## <a name="see-also"></a>Consulte también  
+ [Predicción Generador de consultas &#40;de minería de datos&#41;](prediction-query-builder-data-mining.md)   
+ [Interfaces de consulta de minería de datos](data-mining/data-mining-query-tools.md)   
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

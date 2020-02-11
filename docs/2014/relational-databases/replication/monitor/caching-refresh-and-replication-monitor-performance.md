@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667373"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Almacenamiento en caché, actualización y rendimiento del Monitor de replicación
-  El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está diseñado para supervisar de manera eficaz un gran número de equipos en un sistema de producción. Las consultas que utiliza el Monitor de replicación para realizar cálculos y recopilar datos se almacenan en caché y se actualizan periódicamente. El almacenamiento en caché reduce el número de consultas y cálculos necesarios para ver diferentes páginas en el Monitor de replicación, y permite escalar la supervisión para varios usuarios.  
+  El Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está diseñado para supervisar de manera eficaz un gran número de equipos en un sistema de producción. Las consultas que utiliza el Monitor de replicación para realizar cálculos y recopilar datos se almacenan en caché y se actualizan periódicamente. El almacenamiento en caché reduce el número de consultas y cálculos necesarios para ver diferentes páginas en el Monitor de replicación, y permite escalar la supervisión para varios usuarios.  
   
  Un trabajo del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el **Actualizador de supervisión de replicación para distribución**, controla la actualización de la caché. El trabajo se ejecuta continuamente, pero la programación de actualización de la caché se basa en esperar determinado tiempo después de la actualización anterior:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62667373"
   
 -   Evite registrar un gran número de distribuidores y configurar el Monitor de replicación para que se conecte automáticamente a todos ellos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar trabajos de mantenimiento de replicación &#40;SQL Server Management Studio&#41;](../../../ssms/sql-server-management-studio-ssms.md)   
  [Supervisar la replicación](../monitoring-replication.md)  
   

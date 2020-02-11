@@ -58,13 +58,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96106fc8bc50a2a1b19c54a6970eeeb72952d82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069058"
 ---
 # <a name="data-mining-properties"></a>Propiedades de minería de datos
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de minería de datos descritas en las siguientes tablas. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **Se aplica a:** Modo de servidor multidimensional únicamente  
@@ -117,8 +118,8 @@ ms.locfileid: "66069058"
 > [!NOTE]  
 >  Además de las propiedades que definen los servicios de minería de datos disponibles en el servidor, existen propiedades de minería de datos que definen el comportamiento de algoritmos concretos. Estas propiedades se configuran al crear un modelo de minería de datos individual, no en el nivel de servidor. Para obtener más información, vea [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Vea también  
- [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Arquitectura física &#40;Analysis Services:&#41;de minería de datos](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

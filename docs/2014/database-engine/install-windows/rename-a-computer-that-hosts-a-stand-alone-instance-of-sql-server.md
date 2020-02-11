@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775014"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server
@@ -109,7 +109,7 @@ ms.locfileid: "62775014"
   
  **Nombres de alias de cliente:** la operación de cambio de nombre de equipo afectará a los alias de cliente que usen canalizaciones con nombre. Por ejemplo, si se creó un alias "PROD_SRVR" para señalar a SRVR1 y usa el protocolo de canalizaciones con nombre, el nombre de la canalización será similar a `\\SRVR1\pipe\sql\query`. Una vez cambiado el nombre del equipo, la ruta de acceso de la canalización con nombre ya no será válida. Para obtener más información sobre las canalizaciones con nombre, vea el tema sobre cómo [crear una cadena de conexión válida con canalizaciones con nombre](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
   

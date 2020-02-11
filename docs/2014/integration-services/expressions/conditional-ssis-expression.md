@@ -1,5 +1,5 @@
 ---
-title: '? : (Condicional) (Expresión de SSIS) | Microsoft Docs'
+title: '? : (Condicional) (expresión de SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769402"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Condicional) (expresión de SSIS)
@@ -44,7 +44,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Tipo de datos de *expression1* o *expression2*.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el valor *boolean_expression* se evalúa como NULL, el resultado de la expresión es NULL. Si una expresión seleccionada, *expression1* o *expression2* , es NULL, el resultado es NULL. Si la expresión seleccionada no es NULL, pero la expresión no seleccionada es NULL, el resultado será el valor de la expresión seleccionada.  
   
  Si *expression1* y *expression2* tienen el mismo tipo de datos, el resultado será ese tipo de datos. Además, las reglas siguientes se aplican a los tipos de resultado:  
@@ -55,11 +55,11 @@ boolean_expression?expression1:expression2
   
  El conjunto de expresiones, *expression1* y *expression2*, debe tener como resultado tipos de datos válidos y seguir una de estas reglas:  
   
--   **Numeric**   *expression1* y *expression2* deben ser un tipo de datos numérico. La intersección de los tipos de datos debe ser un tipo de datos numérico, tal como se especifica en las reglas para las conversiones numéricas implícitas que realiza el evaluador de expresiones. La intersección de dos tipos de datos numéricos no puede ser NULL. Para más información, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
+-   **Numeric***expression1* y *expression2* deben ser un tipo de datos numérico. La intersección de los tipos de datos debe ser un tipo de datos numérico, tal como se especifica en las reglas para las conversiones numéricas implícitas que realiza el evaluador de expresiones. La intersección de dos tipos de datos numéricos no puede ser NULL. Para más información, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
--   **Cadena** Tanto *expression1* como *expression2* deben tener un tipo de datos de cadena: DT_STR o DT_WSTR. Las dos expresiones pueden tener tipos de datos de cadena distintos. El resultado tiene el tipo de datos DT_WSTR con la longitud del argumento más largo.  
+-   **Cadena***expression1* y *expression2* deben tener un tipo de datos de cadena: DT_STR o DT_WSTR. Las dos expresiones pueden tener tipos de datos de cadena distintos. El resultado tiene el tipo de datos DT_WSTR con la longitud del argumento más largo.  
   
--   **Fecha, hora o fecha y hora** Tanto *expression1* como *expression2* se deben evaluar con uno de los siguientes tipos de datos: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
+-   **Date, Time o Date/Time***expression1* y *expression2* deben devolver uno de los siguientes tipos de datos: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
   
     > [!NOTE]  
     >  El sistema no admite comparaciones entre una expresión que devuelve un tipo de datos de hora y una expresión que devuelve un tipo de datos de fecha o de fecha/hora. El sistema genera un error.  
@@ -97,7 +97,7 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   

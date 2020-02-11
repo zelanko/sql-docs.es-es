@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735898"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Método SetDefaults (clase ServerSettings)
-  Establece todos los valores predeterminados para la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con la opción para sobrescribir los datos existentes.  
+  Establece todos los valores predeterminados de la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia de con la opción de sobrescribir los datos existentes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,8 +40,8 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Un [clase ServerSettings](serversettings-class.md) objeto que representa un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia del cliente.  
+ *objeto*  
+ Objeto de la [clase ServerSettings](serversettings-class.md) que representa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] una instancia de cliente.  
   
 #### <a name="parameters"></a>Parámetros  
   
@@ -52,9 +52,9 @@ OverwriteAll
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor u`int32` que es igual a 0 si se modificó el servicio correctamente, igual a 1 si no se admite la solicitud e igual a cualquier otro número para indicar que hubo un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

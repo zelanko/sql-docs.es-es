@@ -17,23 +17,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cdf149720e853725a7f2fc9d0c03b24ea2caf9f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013118"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Ejecutar plantillas que contienen consultas SQL (proveedor SQLXMLOLEDB)
-  En este ejemplo se muestra el uso de la propiedad específica del proveedor SQLXMLOLEDB ClientSideXML. En esta aplicación de ejemplo ADO del lado cliente, se ejecuta en el servidor una plantilla XML que consta de una consulta SQL.  
+  En este ejemplo se muestra el uso de la propiedad específica del proveedor SQLXMLOLEDB Clientsidexml,. En esta aplicación de ejemplo ADO del lado cliente, se ejecuta en el servidor una plantilla XML que consta de una consulta SQL.  
   
- Dado que el clientsidexml, propiedad se establece en True, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera un documento XML.  
+ Dado que la propiedad Clientsidexml, está establecida en true, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera un documento XML.  
   
- La plantilla XML proporciona un elemento de nivel superior de raíz única (\<raíz >) para el documento XML que se genera; por lo tanto, no se proporciona la propiedad de la raíz de xml.  
+ La plantilla XML proporciona un único elemento raíz de nivel superior (\<> raíz) para el documento XML que se genera; por lo tanto, no se proporciona la propiedad raíz de XML.  
   
  Para ejecutar plantillas XML, se debe especificar el dialecto {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   
 > [!NOTE]  
->  En el código, debe suministrarse el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para el proveedor de datos que requiere el software de cliente de red adicional para instalarse. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  En el código, debe suministrarse el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para el proveedor de datos que requiere la instalación de software cliente de red adicional. Para obtener más información, vea [requisitos del sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

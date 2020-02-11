@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Cambiar el nombre de columnas | Microsoft Docs'
+title: 'Lección 3: cambiar el nombre de las columnas | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070318"
 ---
 # <a name="lesson-3-rename-columns"></a>Lección 3: Cambiar el nombre de las columnas
@@ -25,47 +25,47 @@ ms.locfileid: "66070318"
   
  Tiempo estimado para completar esta lección: **20 minutos**  
   
-## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 2: Agregar datos](lesson-2-add-data.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 2: Agregar datos](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Cambiar el nombre de las columnas  
   
 #### <a name="to-rename-columns"></a>Para cambiar el nombre de las columnas  
   
-1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer** .  
+1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer**.  
   
      Al hacer clic en una pestaña, la tabla se activa en la ventana del diseñador de modelos.  
   
-2.  Haga doble clic en el **CustomerKey** columna nombre, a continuación, escriba `Customer  Id`, y, a continuación, presione ENTRAR.  
+2.  Haga doble clic **** en el nombre de la columna `Customer  Id`CustomerKey, escriba y, a continuación, presione Entrar.  
   
     > [!TIP]  
-    >  También puede cambiar el nombre de una columna en la **nombre de columna** propiedad en la columna **propiedades** ventana, o en la vista de diagrama.  
+    >  También puede cambiar el nombre de una columna en la propiedad **nombre de columna** en la ventana **propiedades** de la columna o en la vista de diagrama.  
   
 3.  Cambie el nombre de las columnas restantes de la tabla **Customer** , así como el de las columnas de las demás tablas, y sustituya el nombre de origen por el nombre descriptivo:  
   
-     **Tabla de clientes**  
+     **Tabla Customer**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
-    |CustomerAlternateKey|Id. alternativo del cliente|  
-    |FirstName|Nombre|  
+    |CustomerAlternateKey|Customer Alternate Id|  
+    |Nombre|Nombre de usuario|  
     |MiddleName|Segundo nombre|  
-    |LastName|Apellidos|  
+    |Apellidos|Apellido|  
     |NameStyle|Estilo del nombre|  
     |BirthDate|Birth Date|  
     |MaritalStatus|Marital Status|  
-    |EmailAddress|Email Address|  
+    |EmailAddress|Dirección de correo electrónico|  
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Hijos a su cuidado|  
-    |EnglishEducation|Education|  
+    |EnglishEducation|Educación|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Propietario de una vivienda|  
     |NumberCarsOwned|Número de vehículos en propiedad|  
     |AddressLine1|Línea de dirección 1|  
     |AddressLine2|Línea de dirección 2|  
-    |Phone|Número de teléfono|  
+    |Teléfono|Número de teléfono|  
     |DateFirstPurchase|Fecha de la primera compra|  
     |CommuteDistance|Commute Distance|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66070318"
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|date|  
+    |FullDateAlternateKey|Date|  
     |DayNumberOfWeek|Día de la semana|  
     |EnglishDayNameOfWeek|Nombre del día|  
     |DayNumberOfMonth|Día del mes|  
@@ -88,11 +88,11 @@ ms.locfileid: "66070318"
     |FiscalYear|Año fiscal|  
     |FiscalSemester|Semestre fiscal|  
   
-     **Geography**  
+     **Geográfico**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
-    |GeographyKey|Id. de geografía|  
+    |GeographyKey|Geography Id|  
     |StateProvinceCode|Código de estado o provincia|  
     |StateProvinceName|Nombre de estado o provincia|  
     |CountryRegionCode|Código de país o región|  
@@ -100,16 +100,16 @@ ms.locfileid: "66070318"
     |PostalCode|Código postal|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Product**  
+     **Producto**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
     |ProductKey|Product Id|  
-    |ProductAlternateKey|Id. alternativo del producto|  
+    |ProductAlternateKey|Product Alternate Id|  
     |ProductSubcategoryKey|Id. de subcategoría del producto|  
     |WeightUnitMeasureCode|Código de unidad de peso|  
     |SizeUnitMeasureCode|Código de unidad de tamaño|  
-    |EnglishProductName|Nombre del producto|  
+    |EnglishProductName|Nombre de producto|  
     |StandardCost|Standard Cost|  
     |FinishedGoodsFlag|Es producto final|  
     |SafetyStockLevel|Safety Stock Level|  
@@ -124,9 +124,9 @@ ms.locfileid: "66070318"
     |EnglishDescription|Descripción|  
     |StartDate|Fecha de inicio del producto|  
     |EndDate|Fecha de finalización del producto|  
-    |Estado|Estado del producto|  
+    |Status|Estado del producto|  
   
-     **Categoría de producto**  
+     **Categoría de productos**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
@@ -134,7 +134,7 @@ ms.locfileid: "66070318"
     |ProductCategoryAlternateKey|Id. alternativo de categoría del producto|  
     |EnglishProductCategoryName|Nombre de categoría del producto|  
   
-     **Subcategoría de producto**  
+     **Product Subcategory**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
@@ -143,12 +143,12 @@ ms.locfileid: "66070318"
     |EnglishProductSubcategoryName|Nombre de subcategoría del producto|  
     |ProductCategoryKey|Id. de categoría del producto|  
   
-     **Internet Sales**  
+     **Ventas por Internet**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
-    |ProductKey|Id. de producto|  
-    |CustomerKey|Id. de cliente|  
+    |ProductKey|Product Id|  
+    |CustomerKey|Customer Id|  
     |PromotionKey|Id. de promoción|  
     |CurrencyKey|Id. de moneda|  
     |SalesTerritoryKey|Sales Territory Id|  
@@ -159,18 +159,18 @@ ms.locfileid: "66070318"
     |UnitPrice|Unit Price|  
     |ExtendedAmount|Extended Amount|  
     |UnitPriceDiscountPct|Porcentaje de descuento del precio por unidad|  
-    |DiscountAmount|Discount Amount|  
+    |DiscountAmount|Importe de descuento|  
     |ProductStandardCost|Product Standard Cost|  
     |TotalProductCost|Total Product Cost|  
-    |SalesAmount|Sales Amount|  
+    |SalesAmount|Importe de ventas|  
     |TaxAmt|Tax Amt|  
     |CarrierTrackingNumber|Número de seguimiento del transportista|  
     |CustomerPONumber|Número de orden de compra del cliente|  
-    |OrderDate|Fecha de pedido|  
-    |DueDate|Fecha de vencimiento|  
-    |ShipDate|Fecha de envío|  
+    |OrderDate|Order Date|  
+    |DueDate|Due Date|  
+    |ShipDate|Ship Date|  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>siguiente paso  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 4: Marcar como tabla de fechas](lesson-3-mark-as-date-table.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_version_store (Transact-SQL) | Microsoft Docs
+title: Sys. dm_tran_version_store (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262604"
 ---
-# <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
+# <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve una tabla virtual que muestra todos los registros de versión del almacén de versiones. **Sys.dm_tran_version_store** no es eficaz ejecutar porque consulta el almacén de versiones completo y el almacén de versiones puede ser muy grande.  
+  Devuelve una tabla virtual que muestra todos los registros de versión del almacén de versiones. **Sys. dm_tran_version_store** no es eficaz para ejecutarse porque consulta todo el almacén de versiones y el almacén de versiones puede ser muy grande.  
   
  Cada registro de versión se almacena como datos binarios junto con alguna información de estado o seguimiento. Al igual que los registros en tablas de base de datos, los registros del almacén de versiones se almacenan en páginas de 8.192 bytes. Si un registro supera los 8.192 bytes, se dividirá en dos registros diferentes.  
   
- Puesto que el registro de versiones se almacena como binario, no existen problemas con las diferentes intercalaciones de bases de datos distintas. Use **sys.dm_tran_version_store** para encontrar las versiones anteriores de las filas en representación binaria como existen en el almacén de versiones.  
+ Puesto que el registro de versiones se almacena como binario, no existen problemas con las diferentes intercalaciones de bases de datos distintas. Use **Sys. dm_tran_version_store** para buscar las versiones anteriores de las filas en representación binaria tal como existen en el almacén de versiones.  
   
   
 ## <a name="syntax"></a>Sintaxis  
@@ -45,23 +45,23 @@ sys.dm_tran_version_store
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**transaction_sequence_num**|**bigint**|Número de secuencia de la transacción que genera la versión de registro.|  
-|**version_sequence_num**|**bigint**|Número de secuencia del registro de versión. Este valor es único en la transacción que genera la versión.|  
+|**transaction_sequence_num**|**BIGINT**|Número de secuencia de la transacción que genera la versión de registro.|  
+|**version_sequence_num**|**BIGINT**|Número de secuencia del registro de versión. Este valor es único en la transacción que genera la versión.|  
 |**database_id**|**int**|Id. de la base de datos del registro de versiones.|  
-|**rowset_id**|**bigint**|Id. del conjunto de filas del registro.|  
-|**status**|**tinyint**|Indica si un registro de versiones se ha dividido en dos registros. Si el valor es 0, el registro está almacenado en una página. Si el valor es 1, el registro está dividido en dos registros almacenados en dos páginas diferentes.|  
+|**rowset_id**|**BIGINT**|Id. del conjunto de filas del registro.|  
+|**estatus**|**tinyint**|Indica si un registro de versiones se ha dividido en dos registros. Si el valor es 0, el registro está almacenado en una página. Si el valor es 1, el registro está dividido en dos registros almacenados en dos páginas diferentes.|  
 |**min_length_in_bytes**|**smallint**|Longitud mínima del registro en bytes.|  
 |**record_length_first_part_in_bytes**|**smallint**|Longitud de la primera parte del registro de versiones en bytes.|  
-|**record_image_first_part**|**varbinary(8000)**|Imagen binaria de la primera parte del registro de versiones.|  
+|**record_image_first_part**|**varbinary (8000)**|Imagen binaria de la primera parte del registro de versiones.|  
 |**record_length_second_part_in_bytes**|**smallint**|Longitud de la segunda parte del registro de versiones en bytes.|  
-|**record_image_second_part**|**varbinary(8000)**|Imagen binaria de la segunda parte del registro de versiones.|  
+|**record_image_second_part**|**varbinary (8000)**|Imagen binaria de la segunda parte del registro de versiones.|  
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requieren el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere el **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se utiliza un escenario de prueba con cuatro transacciones simultáneas, identificadas con un número de secuencia de transacción (XSN), que se ejecutan en una base de datos con las opciones ALLOW_SNAPSHOT_ISOLATION y READ_COMMITTED_SNAPSHOT establecidas en ON. Se están ejecutando las siguientes transacciones:  
@@ -131,7 +131,7 @@ record_length_second_part_in_bytes record_image_second_part
   
  En la salida se muestra que XSN-57 ha creado tres versiones de fila de una tabla y que XSN-58 ha creado una versión de fila de otra tabla.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con transacciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

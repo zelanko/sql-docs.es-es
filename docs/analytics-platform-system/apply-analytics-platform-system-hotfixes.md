@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401374"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicación de las revisiones de Analytics Platform System
@@ -27,7 +27,7 @@ En este artículo se describe cómo aplicar revisiones al software de sistema de
 > [!WARNING]  
 > No aplique una revisión de Analytics Platform System mientras el dispositivo esté en uso. La aplicación de una revisión puede hacer que los nodos del dispositivo se reinicien. La revisión debe aplicarse durante una ventana de mantenimiento cuando no se usa el dispositivo.  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
 Para realizar estos pasos, necesitará:  
   
 -   Un inicio de sesión de System Analytics Platform con permisos para tener acceso a la consola de administración para supervisar el estado del dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
@@ -61,7 +61,7 @@ A diferencia de las actualizaciones de Microsoft, las revisiones del software de
   
     4.  Siga los pasos que presenta el paquete de revisiones.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Descargar y aplicar actualizaciones de Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
 [Desinstale Microsoft Updates &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
 [Desinstalación de las revisiones de Analytics Platform System &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  

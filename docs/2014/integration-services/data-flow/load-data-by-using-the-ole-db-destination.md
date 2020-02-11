@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902484"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Cargar datos mediante el destino de OLE DB
@@ -42,7 +42,7 @@ ms.locfileid: "62902484"
   
     -   **Tabla o vista** Seleccione una tabla o vista en la base de datos que contiene los datos.  
   
-    -   **Tabla o vista: carga rápida** Seleccione una tabla o una vista de la base de datos que contiene los datos y, a continuación, establezca las opciones de carga rápida: **Mantener valores de identidad**, **Mantener valores NULL**, **Bloqueo de tabla**, **Restricción CHECK**, **Filas por lote** o **Tamaño máximo de confirmación de inserción**.  
+    -   **Carga rápida de tabla o vista** Seleccione una tabla o una vista en la base de datos que contiene los datos y, después, establezca las opciones de carga rápida: **Mantener valores de identidad**, **Mantener valores NULL**, **Bloqueo de tabla**, **Restricción CHECK**, **Filas por lote**o **Tamaño máximo de confirmación de inserción**.  
   
     -   **Variable de nombre de tabla o nombre de vista** Seleccione la variable definida por el usuario que contiene el nombre de una tabla o vista en la base de datos.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "62902484"
     > [!NOTE]  
     >  El destino de OLE DB asigna automáticamente las columnas con el mismo nombre.  
   
-9. Para configurar la salida de error, haga clic en **Salida de error**. Para más información, vea [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md).  
+9. Para configurar la salida de error, haga clic en **Salida de error**. Para obtener más información, vea [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md).  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Destino de OLE DB](ole-db-destination.md)   
  [Transformaciones de Integration Services](transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](integration-services-paths.md)   

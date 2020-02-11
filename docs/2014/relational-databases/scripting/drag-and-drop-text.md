@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 287dc09bf6f534036938fc31b0a959726b56d9ef
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244897"
 ---
 # <a name="drag-and-drop-text"></a>Arrastrar y colocar texto
@@ -43,7 +43,7 @@ ms.locfileid: "75244897"
   
  Al arrastrar texto se mueve, es decir, se borra de la ubicación anterior y se mueve a la nueva ubicación. Al presionar la tecla CTRL mientras se arrastra, el texto se copia a la nueva ubicación. Sin embargo, si arrastra un objeto desde el Explorador de objetos esta norma no se cumple, ya que el nombre del objeto no se elimina del Explorador de objetos.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Navegar por código y texto](navigate-code-and-text.md)  
   
   

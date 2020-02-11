@@ -14,10 +14,10 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244120"
 ---
 # <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
@@ -30,17 +30,17 @@ ms.locfileid: "75244120"
   
  Para preparar la búsqueda de coincidencias, debe crear una directiva de coincidencia con una o varias reglas de coincidencia y ejecutar dicha directiva con los datos de ejemplo. El proceso del proyecto de búsqueda de coincidencias es independiente del proceso de la directiva de coincidencia, lo que significa que una base de conocimiento no se rellena con el conocimiento de coincidencia obtenido del proyecto de búsqueda de coincidencias. Para obtener más información acerca de cómo crear una directiva de coincidencia, vea [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe haber creado una base de conocimiento con una directiva de coincidencia que conste de una o varias reglas de coincidencia.  
   
 -   Si los datos de origen implicados en el proceso de búsqueda de coincidencias están en un archivo de Excel, es necesario tener instalado Microsoft Excel en el equipo de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . De lo contrario, no podrá seleccionar dicho archivo en la fase de asignación. Los archivos creados por Microsoft Excel pueden tener la extensión .xlsx, .xls o .csv. Si se utiliza la versión de 64 bits de Excel, solo se admitirán los archivos de Excel 2003 (.xls); los archivos de Excel 2007 o 2010 (.xlsx) no son compatibles. Si utiliza la versión de 64 bits de Excel 2007 o 2010, guarde el archivo como un archivo .xls o .csv, o instale una versión de 32 bits de Excel en su lugar.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para ejecutar un proyecto de búsqueda de coincidencias.  
   
 ##  <a name="StartingaMatchingProject"></a>Primer paso: iniciar un proyecto de búsqueda de coincidencias  

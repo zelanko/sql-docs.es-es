@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399445"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Administración de cargas de trabajo en Analytics Platform System
@@ -34,7 +34,7 @@ Por ejemplo, con las técnicas de administración de cargas de trabajo en PDW de
 Administración de cargas de trabajo  
 La *Administración de cargas de trabajo* es la capacidad de comprender y ajustar el uso de recursos del sistema para lograr el mejor rendimiento para las solicitudes simultáneas.  
   
-Clase de recursos  
+Clase de recurso  
 En PDW de SQL Server, una *clase de recurso* es un rol de servidor integrado que tiene límites asignados previamente para la memoria y la simultaneidad. PDW de SQL Server asigna recursos a las solicitudes según la pertenencia al rol de servidor de clase de recurso del inicio de sesión que envía las solicitudes.  
   
 En los nodos de proceso, la implementación de clases de recursos utiliza la característica Resource Governor en SQL Server. Para obtener más información acerca de Resource Governor, vea [Resource Governor](../relational-databases/resource-governor/resource-governor.md) en MSDN.  
@@ -58,7 +58,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>Descripciones de clases de recursos  
 En la tabla siguiente se describen las clases de recursos y sus asignaciones de recursos del sistema.  
   
-|Clase de recursos|Importancia de la solicitud|Uso máximo de memoria *|Espacios de simultaneidad (máximo = 32)|Descripción|  
+|Clase de recurso|Importancia de la solicitud|Uso máximo de memoria *|Espacios de simultaneidad (máximo = 32)|Descripción|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |default|Mediano|400 MB|1|De forma predeterminada, se permite a cada inicio de sesión una pequeña cantidad de memoria y recursos de simultaneidad para sus solicitudes.<br /><br />Cuando se agrega un inicio de sesión a una clase de recurso, la nueva clase tiene prioridad. Cuando se quita un inicio de sesión de todas las clases de recursos, el inicio de sesión vuelve a la asignación de recursos predeterminada.|  
 |MediumRC|Mediano|1200 MB|3|Ejemplos de solicitudes que podrían necesitar la clase de recursos Medium:<br /><br />Operaciones CTAS que tienen combinaciones hash de gran tamaño.<br /><br />Seleccione operaciones que necesiten más memoria para evitar el almacenamiento en caché en disco.<br /><br />Carga de datos en índices de almacén de columnas en clúster.<br /><br />Compilar, recompilar y reorganizar índices de almacén de columnas en clúster para tablas más pequeñas que tienen 10-15 columnas.|  
@@ -131,7 +131,7 @@ Instrucciones y operaciones SQL regidas por clases de recursos:
   
 -   UPDATE  
   
--   DELETE  
+-   Delete  
   
 -   RESTAURe la base de datos al restaurar en un dispositivo con más nodos de proceso.  
   
@@ -140,7 +140,7 @@ Instrucciones y operaciones SQL regidas por clases de recursos:
 ## <a name="Limits"></a>Limitaciones y restricciones  
 Las clases de recursos rigen las asignaciones de memoria y simultaneidad.  No controlan las operaciones de entrada/salida.  
   
-## <a name="Metadata"></a>Repositorio  
+## <a name="Metadata"></a>Metadatos  
 DMV que contienen información sobre las clases de recursos y los miembros de clase de recurso.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -149,9 +149,9 @@ DMV que contienen información sobre las clases de recursos y los miembros de cl
   
 DMV que contienen información sobre el estado de las solicitudes y los recursos que necesitan:  
   
--   [Sys. dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [Sys. dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
 Vistas del sistema relacionadas que se exponen desde el SQL Server DMV en los nodos de proceso. Vea [SQL Server vistas de administración dinámica](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) para obtener vínculos a estas DMV en MSDN.  
   

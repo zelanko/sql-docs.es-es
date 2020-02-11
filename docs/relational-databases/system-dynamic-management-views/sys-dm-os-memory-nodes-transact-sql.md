@@ -21,49 +21,49 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f68524b2713b9d662c9e9ed0950334ea0a94ece
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73983130"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Las asignaciones internas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan el administrador de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El seguimiento de la diferencia entre los contadores de memoria de proceso de **Sys. dm_os_process_memory** y los contadores internos puede indicar el uso de memoria de componentes externos en el espacio de memoria [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Las asignaciones internas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan el administrador de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El seguimiento de la diferencia entre los contadores de memoria de proceso de **Sys. dm_os_process_memory** y los contadores internos puede indicar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uso de memoria de componentes externos en el espacio de memoria.  
   
  Los nodos se crean por nodo de memoria de NUMA físico. Pueden ser diferentes de los nodos de CPU en **Sys. dm_os_nodes**.  
   
  Se realiza un seguimiento de las asignaciones que no se realizan directamente a través de las rutinas de asignación de memoria de Windows. La tabla siguiente proporciona información sobre asignaciones de memoria que se han realizado utilizando únicamente las interfaces de administrador de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilice el nombre **Sys. dm_pdw_nodes_os_memory_nodes**.  
+>  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_os_memory_nodes**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**memory_node_id**|**smallint**|Especifica el identificador del nodo de memoria. Relacionado con **memory_node_id** de **Sys. dm_os_memory_clerks**. No acepta valores NULL.|  
-|**virtual_address_space_reserved_kb**|**bigint**|Indica el número de reservas de dirección virtual, en kilobytes (KB), que no se han confirmado ni asignado a páginas físicas. No acepta valores NULL.|  
-|**virtual_address_space_committed_kb**|**bigint**|Especifica la cantidad de dirección virtual, en KB, que se ha confirmado o asignado a páginas físicas. No acepta valores NULL.|  
-|**locked_page_allocations_kb**|**bigint**|Especifica la cantidad de memoria física, en KB, bloqueada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No acepta valores NULL.|  
-|**single_pages_kb**|**bigint**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Cantidad de memoria confirmada, en KB, que se asigna utilizando el asignador de páginas individuales por subprocesos que se ejecutan en este nodo. Esta memoria se asigna desde el grupo de búferes. Este valor indica el nodo donde se ha producido la solicitud de las asignaciones, no la ubicación física donde se satisfizo la solicitud de asignación.|  
-|**pages_kb**|**bigint**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Especifica la cantidad de memoria confirmada, En KB, que se ha asignado desde este nodo NUMA mediante el Asignador de páginas del Administrador de memoria. No acepta valores NULL.|  
-|**multi_pages_kb**|**bigint**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Cantidad de memoria confirmada, en KB, que se asigna utilizando el asignador de páginas múltiples por subprocesos que se ejecutan en este nodo. Esta memoria se asigna desde fuera del grupo de búferes. Este valor indica el nodo donde se han producido las solicitudes de las asignaciones, no la ubicación física donde se satisfizo la solicitud de asignación.|  
-|**shared_memory_reserved_kb**|**bigint**|Especifica la cantidad de memoria compartida, en KB, que se ha reservado desde este nodo. No acepta valores NULL.|  
-|**shared_memory_committed_kb**|**bigint**|Especifica la cantidad de memoria compartida, en KB, que se ha confirmado en este nodo. No acepta valores NULL.|  
-|**cpu_affinity_mask**|**bigint**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Exclusivamente para uso interno. No acepta valores NULL.|  
-|**online_scheduler_mask**|**bigint**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Exclusivamente para uso interno. No acepta valores NULL.|  
+|**virtual_address_space_reserved_kb**|**BIGINT**|Indica el número de reservas de dirección virtual, en kilobytes (KB), que no se han confirmado ni asignado a páginas físicas. No acepta valores NULL.|  
+|**virtual_address_space_committed_kb**|**BIGINT**|Especifica la cantidad de dirección virtual, en KB, que se ha confirmado o asignado a páginas físicas. No acepta valores NULL.|  
+|**locked_page_allocations_kb**|**BIGINT**|Especifica la cantidad de memoria física, en KB, bloqueada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No acepta valores NULL.|  
+|**single_pages_kb**|**BIGINT**|**Se aplica a** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]hasta.<br /><br /> Cantidad de memoria confirmada, en KB, que se asigna utilizando el asignador de páginas individuales por subprocesos que se ejecutan en este nodo. Esta memoria se asigna desde el grupo de búferes. Este valor indica el nodo donde se ha producido la solicitud de las asignaciones, no la ubicación física donde se satisfizo la solicitud de asignación.|  
+|**pages_kb**|**BIGINT**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Especifica la cantidad de memoria confirmada, En KB, que se ha asignado desde este nodo NUMA mediante el Asignador de páginas del Administrador de memoria. No acepta valores NULL.|  
+|**multi_pages_kb**|**BIGINT**|**Se aplica a** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]hasta.<br /><br /> Cantidad de memoria confirmada, en KB, que se asigna utilizando el asignador de páginas múltiples por subprocesos que se ejecutan en este nodo. Esta memoria se asigna desde fuera del grupo de búferes. Este valor indica el nodo donde se han producido las solicitudes de las asignaciones, no la ubicación física donde se satisfizo la solicitud de asignación.|  
+|**shared_memory_reserved_kb**|**BIGINT**|Especifica la cantidad de memoria compartida, en KB, que se ha reservado desde este nodo. No acepta valores NULL.|  
+|**shared_memory_committed_kb**|**BIGINT**|Especifica la cantidad de memoria compartida, en KB, que se ha confirmado en este nodo. No acepta valores NULL.|  
+|**cpu_affinity_mask**|**BIGINT**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Exclusivamente para uso interno. No acepta valores NULL.|  
+|**online_scheduler_mask**|**BIGINT**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Exclusivamente para uso interno. No acepta valores NULL.|  
 |**processor_group**|**smallint**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Exclusivamente para uso interno. No acepta valores NULL.|  
-|**foreign_committed_kb**|**bigint**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Especifica la cantidad de memoria confirmada, en KB, desde otros nodos de memoria. No acepta valores NULL.|  
-|**target_kb** |**bigint** |**Se aplica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] y versiones posteriores, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Especifica el objetivo de memoria para el nodo de memoria, en KB. |   
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**foreign_committed_kb**|**BIGINT**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Especifica la cantidad de memoria confirmada, en KB, desde otros nodos de memoria. No acepta valores NULL.|  
+|**target_kb** |**BIGINT** |**Se aplica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] y versiones [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posteriores,.<br /><br /> Especifica el objetivo de memoria para el nodo de memoria, en KB. |   
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles Premium, requiere el permiso `VIEW DATABASE STATE` en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
-## <a name="see-also"></a>Vea también  
-  [SQL Server vistas &#40;de administración dinámica relacionadas con el sistema operativo TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+  [SQL Server vistas de administración dinámica relacionadas con el sistema operativo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

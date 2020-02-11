@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399917"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>Sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
@@ -26,13 +26,13 @@ ms.locfileid: "74399917"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|database_id|**Inter**|IDENTIFICADOR de objeto de la base de datos. Tenga en cuenta que este valor no es el mismo que un database_id de la vista [Sys. databases &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
+|database_id|**int**|IDENTIFICADOR de objeto de la base de datos. Tenga en cuenta que este valor no es el mismo que un database_id de la vista [Sys. databases &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
 |physical_name|**sysname**|El nombre físico de la base de datos en los nodos de proceso o shell. Este valor es igual que un valor de la columna physical_name de la vista [Sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
-|pdw_node_id|**Inter**|Identificador numérico único asociado al nodo.|  
+|pdw_node_id|**int**|Identificador numérico único asociado al nodo.|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-returning"></a>a. Volver  
+### <a name="a-returning"></a>A. Volver  
  La siguiente consulta devuelve el nombre y el identificador de cada base de datos de Master y el nombre de la base de datos correspondiente en cada nodo de proceso.  
   
 ```  
@@ -63,7 +63,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>c. Usar sys. pdw_nodes_pdw_physical_databases para determinar el estado de cifrado  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Usar sys. pdw_nodes_pdw_physical_databases para determinar el estado de cifrado  
  La siguiente consulta proporciona el estado de cifrado de la base de datos AdventureWorksPDW2012.  
   
 ```  
@@ -85,9 +85,9 @@ SELECT TOP 1 encryption_state
        ORDER BY (CASE encryption_state WHEN 3 THEN -1 ELSE encryption_state END) DESC;  
 ```  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   

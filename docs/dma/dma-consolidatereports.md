@@ -15,13 +15,13 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056649"
 ---
-# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluar una empresa y consolidar informes de evaluación con DMA
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluación de una empresa y consolidación de informes de evaluación con DMA.
 
 Las siguientes instrucciones paso a paso le ayudarán a usar la Data Migration Assistant para realizar una evaluación de escalado correcta para actualizar SQL Server locales o SQL Server que se ejecutan en máquinas virtuales de Azure o para migrar a Azure SQL Database.
 
@@ -71,7 +71,7 @@ Antes de ejecutar el script de PowerShell para evaluar los servidores SQL Server
 Este inventario puede estar en una de estas dos formas:
 
 - Archivo CSV de Excel
-- SQL Server tabla
+- Tabla de SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Si se usa un archivo CSV
 
@@ -92,7 +92,7 @@ Al usar un archivo CSV para importar los datos, asegúrese de que hay solo dos c
 
 Cree una base de datos denominada **EstateInventory** y una tabla denominada **DatabaseInventory**. La tabla que contiene estos datos de inventario puede tener cualquier número de columnas, siempre que existan las cuatro columnas siguientes:
 
-- ServerName
+- nombreDeServidor
 - InstanceName
 - DatabaseName
 - AssessmentFlag
@@ -138,7 +138,7 @@ Los parámetros asociados a la función dmaProcessor se describen en la tabla si
 
 |Parámetro  |Descripción |
 |---------|---------|
-|**processTo** | Ubicación en la que se procesará el archivo JSON. Los valores posibles son **SQLServer** y **AzureSQLDatabase**. |
+|**proceso** | Ubicación en la que se procesará el archivo JSON. Los valores posibles son **SQLServer** y **AzureSQLDatabase**. |
 |**serverName** | La instancia de SQL Server a la que se procesarán los datos.  Si especifica **AzureSQLDatabase** para el parámetro **processto** , incluya solo el nombre del SQL Server (no incluya. Database.Windows.net). Se le pedirán dos inicios de sesión cuando se destinen Azure SQL Database; el primero es su credencial de inquilino de Azure, mientras que el segundo es el inicio de sesión de administrador para Azure SQL Server. |
 |**CreateDMAReporting** | La base de datos provisional que se va a crear para procesar el archivo JSON.  Si la base de datos especificada ya existe y se establece este parámetro en uno, los objetos no se crean.  Este parámetro es útil para volver a crear un solo objeto que se ha quitado. |
 |**CreateDataWarehouse** | Crea el almacenamiento de datos que va a usar el informe de Power BI. |
@@ -187,9 +187,9 @@ También puede usar el script LoadWarehouse para proporcionar las instrucciones 
 Para trabajar con informes DMA, use marcadores y segmentaciones para filtrar por:
 
 - Tipos de evaluación (Azure SQL DB, Azure SQL MI, SQL local) 
-- Nombre de la instancia
+- Nombre de instancia
 - Nombre de la base de datos
-- Nombre del equipo
+- Nombre de equipo
 
 Para tener acceso a la hoja marcadores y filtros, seleccione el marcador filtros en la Página principal del informe:
 
@@ -263,7 +263,7 @@ Esta sección es la parte principal del informe, que muestra la preparación de 
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- Título
 - ObjectType
 - ImpactedObjectName
 

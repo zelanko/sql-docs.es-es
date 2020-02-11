@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb4e1011448ef4ea98179c3de49c43e66b811e3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783014"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
@@ -49,7 +49,7 @@ RETCODE bcp_colptr (
   
  Si *pdata* se establece en NULL y la columna correspondiente al campo enlazado no es un tipo de valor grande, **bcp_colptr** producirá un error.  
   
- Para obtener más información sobre los tipos de valor grande, vea [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) **.**  
+ Para obtener más información sobre los tipos de valor grande, vea [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)**.**  
   
  *idxServerCol*  
  Es la posición ordinal de la columna en la tabla de base de datos en la que se copian los datos. La primera columna de una tabla es la columna 1. La posición ordinal de una columna se notifica mediante [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
@@ -57,14 +57,14 @@ RETCODE bcp_colptr (
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La función **bcp_colptr** permite cambiar la dirección de los datos de origen de una columna determinada al copiar los datos en SQL Server con [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
  Inicialmente, el puntero a los datos de usuario se establece mediante una llamada a **bcp_bind**. Si la dirección de datos de la variable de programa cambia entre las llamadas a **bcp_sendrow**, puede llamar a **bcp_colptr** para restablecer el puntero a los datos. La siguiente llamada a **bcp_sendrow** envía los datos direccionados por la llamada a **bcp_colptr**.  
   
  Debe haber una llamada de **bcp_colptr** independiente para cada columna de la tabla cuya dirección de datos desee modificar.  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte también  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

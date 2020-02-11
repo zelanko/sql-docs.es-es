@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401298"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configuración de System Center Operations Manager (SCOM) para supervisar el sistema de análisis de plataforma
@@ -111,7 +111,7 @@ Aquí encontrará instrucciones detalladas sobre cómo realizar las tareas:
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>siguiente paso  
 Ahora que ha configurado los módulos de administración, está listo para empezar a supervisar el dispositivo. Para obtener más información, consulte [supervisión del dispositivo mediante el uso de System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
   
 <!-- MISSING LINKS ## See Also  

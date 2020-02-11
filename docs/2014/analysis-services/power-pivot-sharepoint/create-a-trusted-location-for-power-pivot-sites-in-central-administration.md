@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684082"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Crear una ubicación de confianza para los sitios PowerPivot en Administración central
@@ -22,7 +22,7 @@ ms.locfileid: "74684082"
   
   
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Debe ser administrador de servicios o de una granja para designar una dirección URL como una ubicación de confianza.  
   
  Debe conocer la dirección URL del sitio de SharePoint que contiene la Galería de PowerPivot u otra biblioteca que almacene los libros. Para obtener la dirección, abra el sitio que contiene la biblioteca, haga clic con el botón secundario en **Galería de PowerPivot**, seleccione **propiedades**y, a continuación, copie la primera parte de la dirección (URL) que contiene el nombre del servidor y la ruta de acceso del sitio.  
@@ -59,9 +59,9 @@ ms.locfileid: "74684082"
   
 10. Además, en Datos externos, en Avisar al actualizar, desactive la casilla de **Advertencia de actualización habilitada**. Al desactivar la casilla, se permite que la Galería de PowerPivot omita los mensajes de advertencia rutinarios y muestre imágenes de vista previa de un libro en su lugar.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Galería de PowerPivot](../../2014-toc/index.yml)  
  [Crear y personalizar la galería de PowerPivot](create-and-customize-power-pivot-gallery.md)   
  [Usar la galería de PowerPivot](use-power-pivot-gallery.md)  

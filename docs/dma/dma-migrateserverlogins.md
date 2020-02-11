@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: jtoland
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056477"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migre SQL Server inicios de sesión con Data Migration Assistant

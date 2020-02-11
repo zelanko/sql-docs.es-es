@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e07bd6ead9ce0dfc20249f5db50a8b0b78ba242a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832792"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de estadísticas de columnas (tarea de generación de perfiles de datos)
@@ -43,7 +43,7 @@ ms.locfileid: "62832792"
   
  Para obtener más información, vea la sección "Opciones de TableorView" en este tema.  
   
- **Column**  
+ **Columna**  
  Seleccione la columna existente de la que se va a generar un perfil. Seleccione **(\*)** para generar un perfil de todas las columnas.  
   
  Para obtener más información, vea la sección "Opciones de Column" en este tema.  
@@ -69,7 +69,7 @@ ms.locfileid: "62832792"
  **IdSolicitud**  
  Escriba un nombre descriptivo para identificar esta solicitud de perfil. Generalmente, no tiene que cambiar el valor generado automáticamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

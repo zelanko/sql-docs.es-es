@@ -17,10 +17,10 @@ ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fe76ba3926f2883e2518e255eddf0d567134f4d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70009353"
 ---
 # <a name="registry-entries-for-data-sources"></a>Entradas del registro para los orígenes de datos
@@ -37,7 +37,7 @@ ms.locfileid: "70009353"
  HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
  ```
 
- La clave que se usa depende de si el origen de datos es un origen de datos *del sistema,* que está disponible para todos los usuarios o un *origen de datos de usuario,* que solo está disponible para el usuario actual. Los orígenes de datos del sistema se almacenan en el árbol HKEY_LOCAL_MACHINE y los orígenes de datos del usuario se almacenan en el árbol HKEY_CURRENT_USER. En todos los demás aspectos, los orígenes de datos del sistema y los orígenes de datos de usuario son idénticos.  
+ La clave que se usa depende de si el origen de datos es un origen de datos *del sistema,* que está disponible para todos los usuarios o un *origen de datos de usuario,* que solo está disponible para el usuario actual. Los orígenes de datos del sistema se almacenan en el árbol de HKEY_LOCAL_MACHINE y los orígenes de datos de usuario se almacenan en el árbol de HKEY_CURRENT_USER. En todos los demás aspectos, los orígenes de datos del sistema y los orígenes de datos de usuario son idénticos.  
   
  Esta sección contiene los temas siguientes.  
   

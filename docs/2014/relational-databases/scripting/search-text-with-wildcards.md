@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243277"
 ---
 # <a name="search-text-with-wildcards"></a>Buscar texto con caracteres comodín
@@ -34,7 +34,7 @@ ms.locfileid: "75243277"
   
  En la tabla siguiente se describen los caracteres comodín disponibles en la **Lista de referencias**.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Un carácter cualquiera|?|Coincidencia con cualquier carácter individual.|  
 |Un dígito cualquiera|#|Coincidencia con cualquier dígito individual. Por ejemplo, 7# devuelve números que incluyen un 7 seguido de otro número, como 71, pero no 17.|  
@@ -42,6 +42,6 @@ ms.locfileid: "75243277"
 |Cero o más caracteres cualesquiera|*|Coincidencia con uno o más caracteres. Por ejemplo, new* devuelve cualquier texto que incluya "new", como newfile.txt.|  
 |Un carácter cualquiera del conjunto|[ ]|Coincidencia con cualquier carácter especificado en el juego de caracteres.|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Buscar y reemplazar](search-and-replace.md)   
- [Buscar texto con expresiones regulares](search-text-with-regular-expressions.md)  
+ [Buscar texto mediante expresiones regulares](search-text-with-regular-expressions.md)  

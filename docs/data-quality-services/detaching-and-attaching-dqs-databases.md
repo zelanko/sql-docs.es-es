@@ -10,10 +10,10 @@ ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 841e2991e672aa9c8a8ab74437fcd12fecdfaa2f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251678"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Separar y adjuntar bases de datos de DQS
@@ -22,20 +22,20 @@ ms.locfileid: "75251678"
 
   En este tema se describe cómo adjuntar y separar las bases de datos de DQS.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Limitations"></a>Limitaciones y restricciones  
+###  <a name="Limitations"></a> Limitaciones y restricciones  
  Para obtener una lista de las limitaciones y restricciones, vea [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Asegúrese de que no haya actividades o procesos de DQS en ejecución. Utilice la pantalla **Supervisión de actividades** para comprobarlo. Para obtener información detallada sobre cómo utilizar esta pantalla, vea [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
 -   Asegúrese de que ningún usuario haya iniciado sesión en el [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
   
 -   La cuenta de usuario de Windows debe ser miembro del rol fijo de servidor db_owner en la instancia de SQL Server para separar bases de datos de DQS.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75251678"
   
  También se pueden adjuntar bases de datos de DQS utilizando las instrucciones Transact-SQL. Para obtener más información sobre cómo adjuntar bases de datos mediante instrucciones Transact-SQL, vea [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) en [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
-## <a name="see-also"></a>Véase también  
- [Administrar bases de datos de DQS](../data-quality-services/manage-dqs-databases.md)  
+## <a name="see-also"></a>Consulte también  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

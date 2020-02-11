@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb19f95d2dc5de8f461285d84776b80e3f9fb778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101552"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint
@@ -51,7 +51,7 @@ ms.locfileid: "66101552"
   
  Si usa niveles de permisos predefinidos no tendrá que realizar ninguna acción, puesto que los permisos anteriores ya se incluyen en Control total, Diseño, Colaborar, Lectura y Acceso limitado. No obstante, si usa niveles de permisos personalizados o edita los permisos asignados a un usuario o grupo concreto, debe agregar el permiso manualmente.  
   
- El permiso "Examinar información de usuario" permite al servidor de informes devolver información acerca del usuario que creó el elemento y el usuario que lo modificó por última vez. Sin este permiso, el servidor de informes devolverá los errores siguientes. Para las operaciones de exploración, el error es: "El servidor de informes ha encontrado un error de SharePoint. ---> System.UnauthorizedAccessException: Acceso denegado". Para las operaciones de publicación, el error es: "Los permisos concedidos al usuario '\<dominio >\\< usuario\>' son insuficientes para realizar esta operación."  
+ El permiso "Examinar información de usuario" permite al servidor de informes devolver información acerca del usuario que creó el elemento y el usuario que lo modificó por última vez. Sin este permiso, el servidor de informes devolverá los errores siguientes. Para las operaciones de exploración, el error es: "El servidor de informes encontró un error de SharePoint. ---> System.UnauthorizedAccessException: acceso denegado". Para las operaciones de publicación, el error es: "Los permisos concedidos al usuario "\<dominio>\\<usuario\>" son insuficientes para realizar esta operación".  
   
 ##  <a name="permissionReports"></a> Permisos para ver y administrar informes  
  Los permisos de definición de informes se definen mediante permisos de lista de la biblioteca que contiene el informe, pero puede establecer permisos en informes individuales si desea restringir el acceso. En la siguiente tabla se proporciona una lista de las tareas y los permisos compatibles.  
@@ -81,7 +81,7 @@ ms.locfileid: "66101552"
   
 |Tarea|Permiso|  
 |----------|----------------|  
-|Iniciar el Generador de informes.|No hay permisos que se usen explícitamente para controlar el acceso para usar el Generador de informes. El Generador de informes estará disponible si se configura la integración del servidor de informes y si dispone de permiso para agregar elementos a la biblioteca. Para iniciar el Generador de informes desde el menú **Nuevo** de la biblioteca, debe registrar el tipo de contenido del Generador de informes. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca &#40;Reporting Services en modo integrado de SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
+|Iniciar el Generador de informes.|No hay permisos que se usen explícitamente para controlar el acceso para usar el Generador de informes. El Generador de informes estará disponible si se configura la integración del servidor de informes y si dispone de permiso para agregar elementos a la biblioteca. Para iniciar el Generador de informes desde el menú **Nuevo** de la biblioteca, debe registrar el tipo de contenido del Generador de informes. Para obtener más información, vea [agregar tipos de contenido del servidor de informes a una biblioteca &#40;Reporting Services en el modo integrado de SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Cargar un modelo o un origen de datos compartido.|**Agregar elementos** en la biblioteca que contendrá los archivos.|  
 |Ver un modelo o un origen de datos compartido dependiente.|**Ver elementos** en la biblioteca que contiene los archivos.<br /><br /> Si el modelo incluye la configuración de seguridad de elementos de modelo, el usuario debe tener además el permiso **Enumerar permisos** en el modelo de informe.|  
 |Generar un modelo a partir de un origen de datos compartido.|**Agregar elementos** en la biblioteca que contiene el archivo de origen de datos compartido (.rsds) a partir del cual está generando el modelo.|  
@@ -120,7 +120,7 @@ ms.locfileid: "66101552"
   
 |Tareas|Permiso|  
 |-----------|----------------|  
-|Crear un origen de datos compartido.|**Agregar elementos** en la biblioteca que contiene el origen de datos compartido. Puede crear nuevos orígenes de datos compartidos desde el menú Nuevo de una biblioteca. Para ello, debe registrar el tipo de contenido Origen de datos de informe en la biblioteca. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca &#40;Reporting Services en modo integrado de SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
+|Crear un origen de datos compartido.|**Agregar elementos** en la biblioteca que contiene el origen de datos compartido. Puede crear nuevos orígenes de datos compartidos desde el menú Nuevo de una biblioteca. Para ello, debe registrar el tipo de contenido Origen de datos de informe en la biblioteca. Para obtener más información, vea [agregar tipos de contenido del servidor de informes a una biblioteca &#40;Reporting Services en el modo integrado de SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Modificar un origen de datos compartido.|**Editar elementos** en la biblioteca que contiene el origen de datos compartido o en el propio origen de datos compartido.|  
 |Eliminar un origen de datos compartido.|**Eliminar elementos** en la biblioteca que contiene el origen de datos compartido o en el propio origen de datos compartido.|  
 |Usar un origen de datos compartido (.rsds) con un informe.|**Editar elementos** en el informe o en la biblioteca que contiene el informe. Seleccionar un origen de datos compartido forma parte del proceso de establecer las propiedades del origen de datos en un informe.|  
@@ -131,10 +131,10 @@ ms.locfileid: "66101552"
 > [!NOTE]  
 >  No existen permisos para modificar modelos de informe. Aunque se pueden crear o eliminar modelos de informe, no se pueden modificar desde un sitio de SharePoint. Para poder modificar modelos de informe, es necesario usar el Diseñador de modelos, una herramienta de creación de cliente a la que no afectan los permisos que haya establecido en SharePoint.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Uso de la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

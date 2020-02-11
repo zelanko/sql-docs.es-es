@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890761"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>Paso 1: Copia del paquete de la lección 5
+# <a name="step-1-copying-the-lesson-5-package"></a>Paso 1: copiar el paquete de la lección 5
   En esta tarea, creará una copia del paquete que ha creado en la lección 5, denominado Lesson 5.dtsx. También puede agregar al proyecto el paquete completado de la lección 5 que se incluye con el tutorial y, a continuación, copiar dicho paquete. Utilizará esta nueva copia en toda la lección 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>Para copiar el paquete de la lección 5  
@@ -38,7 +38,7 @@ ms.locfileid: "62890761"
   
 7.  En la ventana Propiedades, actualice la propiedad Nombre a Lesson 6.  
   
-8.  Haga clic en el cuadro de la propiedad ID y, a continuación, haga clic en la flecha desplegable y, a continuación, haga clic en \<generar nuevo Id. >.  
+8.  Haga clic en el cuadro de la propiedad ID., haga clic en la flecha desplegable y, a continuación, haga clic en \<generar nuevo ID>.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>Para agregar el paquete de la lección 5 completada  
   
@@ -52,9 +52,9 @@ ms.locfileid: "62890761"
   
      Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   
-    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Vaya a [Integration Services ejemplos de productos](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Haga clic en la pestaña **DOWNLOADS** .  
+    2.  Haga clic en la pestaña **descargas** .  
   
     3.  Haga clic en el archivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   

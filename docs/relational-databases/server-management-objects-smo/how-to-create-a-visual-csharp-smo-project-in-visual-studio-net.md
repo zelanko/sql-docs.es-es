@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095966"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Cómo crear un proyecto de Visual C# SMO en Visual Studio .NET
@@ -25,15 +25,15 @@ ms.locfileid: "74095966"
 
   En esta sección se describe cómo generar una aplicación de consola SMO simple.  
   
- En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres del **agente** es opcional. Úselo cuando escriba un programa que utilice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. El espacio de nombres **común** es necesario para establecer una conexión segura con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El espacio de nombres **SqlClient** se usa para procesar errores de excepción de SQL.  
+ En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres del **agente** es opcional. Úselo cuando esté escribiendo un programa que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el agente. El espacio de nombres **común** es necesario para establecer una conexión segura con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instancia de. El espacio de nombres **SqlClient** se usa para procesar errores de excepción de SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Crear un proyecto de Visual C# SMO en Visual Studio.NET  
   
-1. Iniciar Visual Studio
+1. Inicio de Visual Studio
   
 2. En el menú **archivo** , haga clic en **nuevo** y luego en **proyecto**.  Aparecerá el cuadro de diálogo **Nuevo proyecto** .   
   
-3. En el panel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **instalado** , vaya a **plantillas**\\**Visual C#** \\**Windows** y seleccione **aplicación de consola**.  
+3. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **instalado** , vaya a **plantillas**\\**Visual C#**\\**Windows** y seleccione **aplicación de consola**.  
   
 4. Opta En el cuadro de texto **nombre** , escriba el nombre de la nueva aplicación.  
 

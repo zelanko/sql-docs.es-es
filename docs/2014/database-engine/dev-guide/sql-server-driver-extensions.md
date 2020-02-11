@@ -1,5 +1,5 @@
 ---
-title: Extensiones del controlador SQL Server | Microsoft Docs
+title: Extensiones de controlador de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1cee588e7db1e219f3d2810e29bb77a68a21b7ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780846"
 ---
 # <a name="sql-server-driver-extensions"></a>Extensiones del controlador de SQL Server
@@ -26,9 +26,9 @@ ms.locfileid: "62780846"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+-   [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
-## <a name="see-also"></a>Vea también  
- [SQL Server Native Client &#40;ODBC&#41; referencia](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQL Server Native Client &#40;referencia de&#41; ODBC](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
   

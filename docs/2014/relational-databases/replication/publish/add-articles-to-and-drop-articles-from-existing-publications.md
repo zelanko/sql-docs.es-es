@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882335"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Agregar y quitar artículos de publicaciones existentes
@@ -33,7 +33,7 @@ ms.locfileid: "73882335"
  Para agregar un artículo, es necesario agregar el artículo a la publicación, crear una instantánea nueva para la publicación y sincronizar la suscripción para aplicar el esquema y los datos para el nuevo artículo.  
   
 > [!NOTE]
->  Si se agrega un artículo a una publicación de combinación y ya hay un artículo que dependa de este nuevo artículo, debe especificar un orden de procesamiento para ambos artículos con el parámetro **\@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) y [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **\@processing_order** de **sp_addmergearticle** y el valor **2** para el parámetro **\@processing_order** de **sp_changemergearticle**; asimismo, debe especificar el nombre de la tabla para el parámetro **\@article**. Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
+>  Si agrega un artículo a una publicación de combinación y un artículo existente depende del nuevo artículo, debe especificar un orden de procesamiento para ambos artículos mediante el ** \@processing_order** parámetro de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) y [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **\@processing_order** de **sp_addmergearticle** y el valor **2** para el parámetro **\@processing_order** de **sp_changemergearticle**; asimismo, debe especificar el nombre de la tabla para el parámetro **\@article**. Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
   
 1.  Agregue uno o más artículos con uno de estos métodos:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73882335"
 ## <a name="dropping-articles"></a>quitar artículos  
  Puede quitar artículos de una publicación en cualquier momento, pero debe tener en cuenta los siguientes comportamientos:  
   
--   Al quitar un artículo de una publicación no se quita el objeto de la base de datos de publicaciones ni el objeto correspondiente de la base de datos de suscripciones. Use DROP \<Object> para quitar estos objetos, si es necesario. Al quitar un artículo relacionado con otros artículos publicados a través de restricciones de clave externa, se recomienda quitar la tabla del suscriptor de forma manual o, ejecutando un script a petición, especifique un script que incluya las instrucciones DROP \<Object> apropiadas. Para obtener más información, consulte [Ejecutar scripts durante la sincronización &#40;programación de la replicación con Transact-SQL&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   Al quitar un artículo de una publicación no se quita el objeto de la base de datos de publicaciones ni el objeto correspondiente de la base de datos de suscripciones. Use DROP \<Object> para quitar estos objetos, si es necesario. Al quitar un artículo relacionado con otros artículos publicados a través de restricciones de clave externa, se recomienda quitar la tabla del suscriptor de forma manual o, ejecutando un script a petición, especifique un script que incluya las instrucciones DROP \<Object> apropiadas. Para más información, vea [Execute Scripts During Synchronization &#40;Replication Transact-SQL Programming&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md) (Ejecutar scripts durante la sincronización (programación de la replicación con Transact-SQL)).  
   
 -   En el caso de las publicaciones de combinación con un nivel de compatibilidad igual o superior a 90RTM, puede quitar artículos en cualquier momento, pero necesitará una instantánea nueva. Además:  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73882335"
   
  Como se indicó antes, en algunos casos es necesario quitar, volver a crear y sincronizar las suscripciones después de quitar un artículo. Para obtener más información, consulte [Suscribirse a publicaciones](../subscribe-to-publications.md) y [Sincronizar datos](../synchronize-data.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](publish-data-and-database-objects.md)   
  [Reinicializar suscripciones](../reinitialize-subscriptions.md)   
  [Realizar cambios de esquema en bases de datos de publicaciones](make-schema-changes-on-publication-databases.md)  

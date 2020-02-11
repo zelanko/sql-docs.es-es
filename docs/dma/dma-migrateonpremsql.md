@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056534"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Actualice SQL Server mediante el Data Migration Assistant
@@ -27,7 +27,7 @@ El Data Migration Assistant proporciona evaluaciones sin problemas de SQL Server
 
 En este artículo se proporcionan instrucciones paso a paso para actualizar SQL Server de forma local a versiones posteriores de SQL Server o a SQL Server en máquinas virtuales de Azure mediante el Data Migration Assistant.
 
-## <a name="create-a-new-migration-project"></a>Crear un nuevo proyecto de migración
+## <a name="create-a-new-migration-project"></a>Creación de un proyecto de migración
 
 1. En el panel izquierdo, seleccione **nuevo** (+) y, a continuación, el tipo de proyecto de **migración** .
 
@@ -53,7 +53,7 @@ En este artículo se proporcionan instrucciones paso a paso para actualizar SQL 
 
    ![Especificar página de origen y de destino](../dma/media/SourceTarget.png)
 
-## <a name="add-databases"></a>Agregar bases de datos
+## <a name="add-databases"></a>Adición de bases de datos
 
 1. Elija las bases de datos específicas que desea migrar. para ello, solo tiene que seleccionar las bases de datos en el panel izquierdo de la página **Agregar bases de datos** .
 
@@ -64,7 +64,7 @@ En este artículo se proporcionan instrucciones paso a paso para actualizar SQL 
    > [!NOTE]
    > Puede aplicar la configuración de migración a todas las bases de datos que va a migrar, seleccionando el servidor en el panel izquierdo. También puede configurar una base de datos individual con valores específicos seleccionando la base de datos en el panel izquierdo.
 
-    A. Especifique la **ubicación compartida a la que pueden acceder los servidores SQL de origen y de destino para la operación de copia de seguridad**. Asegúrese de que la cuenta de servicio que ejecuta la instancia de SQL Server de origen tiene privilegios de escritura en la ubicación compartida y que la cuenta de servicio de destino tiene privilegios de lectura en la ubicación compartida.
+    a. Especifique la **ubicación compartida a la que pueden acceder los servidores SQL de origen y de destino para la operación de copia de seguridad**. Asegúrese de que la cuenta de servicio que ejecuta la instancia de SQL Server de origen tiene privilegios de escritura en la ubicación compartida y que la cuenta de servicio de destino tiene privilegios de lectura en la ubicación compartida.
 
     b. Especifique la ubicación para restaurar los archivos de datos y de registro transaccionales en el servidor de destino.
 
@@ -78,11 +78,11 @@ En este artículo se proporcionan instrucciones paso a paso para actualizar SQL 
 
    ![Opción para copiar copias de seguridad de base de datos en una ubicación diferente](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. Seleccione **Siguiente**.
+5. Seleccione **Next** (Siguiente).
 
 El Data Migration Assistant realiza validaciones en las carpetas de copia de seguridad, los datos y las ubicaciones del archivo de registro. Si se produce un error en la validación, corrija las opciones y, a continuación, seleccione **siguiente**.
 
-## <a name="select-logins"></a>Seleccionar inicios de sesión
+## <a name="select-logins"></a>Selección de inicios de sesión
 
 1. Seleccione inicios de sesión específicos para la migración.
 
@@ -95,7 +95,7 @@ El Data Migration Assistant realiza validaciones en las carpetas de copia de seg
 
    ![Seleccionar inicios de sesión e iniciar la migración](../dma/media/SelectLogins.png)
 
-## <a name="view-results"></a>Vista de resultados
+## <a name="view-results"></a>Visualización de los resultados
 
 Puede supervisar el progreso de la migración en la página **ver resultados** .
 
@@ -107,7 +107,7 @@ Puede supervisar el progreso de la migración en la página **ver resultados** .
 
 2. Revise el archivo guardado para obtener más información acerca de la migración de inicio de sesión y, a continuación, compruebe los cambios.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 - [Data Migration Assistant: opciones de configuración](../dma/dma-configurationsettings.md)

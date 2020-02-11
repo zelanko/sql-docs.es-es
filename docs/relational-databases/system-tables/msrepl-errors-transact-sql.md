@@ -18,32 +18,32 @@ ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70d737e8c73d3e5b6876c2669fbafbc71bea66e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986470"
 ---
-# <a name="msreplerrors-transact-sql"></a>MSrepl_errors (Transact-SQL)
+# <a name="msrepl_errors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSrepl_errors** tabla contiene filas con información ampliada de errores de agente de distribución y agente de mezcla. Esta tabla se almacena en la base de datos de distribución.  
+  La tabla **MSrepl_errors** contiene filas con agente de distribución extendidos e información de errores agente de mezcla. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|El identificador del error.|  
+|**sesión**|**int**|IDENTIFICADOR del error.|  
 |**time**|**datetime**|Hora del error.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**source_type_id**|**int**|Id. de tipo de origen del error|  
-|**source_name**|**nvarchar(100)**|Nombre del origen del error.|  
+|**source_type_id**|**int**|IDENTIFICADOR del tipo de origen del error.|  
+|**source_name**|**nvarchar(100**|Nombre del origen del error.|  
 |**error_code**|**sysname**|Código de error.|  
 |**error_text**|**ntext**|El mensaje de error.|  
-|**xact_seqno**|**varbinary (16)**|Número de secuencia de registro de la transacción inicial del lote de ejecución erróneo. Solo lo utilizan los Agentes de distribución; se trata del número de secuencia del registro de transacciones de la primera transacción en el proceso por lotes de ejecución errónea.|  
+|**xact_seqno**|**varbinary(16)**|Número de secuencia de registro de la transacción inicial del lote de ejecución erróneo. Solo lo utilizan los Agentes de distribución; se trata del número de secuencia del registro de transacciones de la primera transacción en el proceso por lotes de ejecución errónea.|  
 |**command_id**|**int**|Id. del comando del proceso por lotes de ejecución fallida. Solo lo utilizan los Agentes de distribución, y se trata del Id. del comando del primer comando del proceso por lotes de ejecución fallida.|  
 |**session_id**|**int**|Id. de la sesión del agente en la que ocurrió el error.|  
   
-## <a name="see-also"></a>Vea también  
- [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

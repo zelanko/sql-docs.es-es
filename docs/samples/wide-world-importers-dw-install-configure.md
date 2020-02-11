@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d8768fec2f96c725a9ba4bbf91996e95de4c800a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056303"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Instalación y configuración de WideWorldImportersDW
@@ -36,7 +36,7 @@ El código fuente para volver a crear la base de datos de ejemplo está disponib
 
 [Wide-World-Importers-Source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>Instalar
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -46,11 +46,11 @@ Para restaurar una copia de seguridad en una instancia de SQL Server, puede usar
 1. Abra SQL Server Management Studio y conéctese a la instancia de SQL Server de destino.
 2. Haga clic con el botón secundario en el nodo **bases** de datos y seleccione **restaurar base de datos**.
 3. Seleccione **dispositivo** y haga clic en el botón **..** .
-4. En el cuadro de diálogo **seleccionar dispositivos de copia de seguridad**, haga clic en **Agregar**, desplácese hasta la copia de seguridad de base de datos en el sistema de archivos del servidor y seleccione la copia de seguridad. Haga clic en **Aceptar**.
+4. En el cuadro de diálogo **seleccionar dispositivos de copia de seguridad**, haga clic en **Agregar**, desplácese hasta la copia de seguridad de base de datos en el sistema de archivos del servidor y seleccione la copia de seguridad. Haga clic en **OK**.
 5. Si es necesario, cambie la ubicación de destino de los archivos de datos y de registro, en el panel **archivos** . Tenga en cuenta que se recomienda colocar los archivos de datos y de registro en unidades diferentes.
-6. Haga clic en **Aceptar**. Se iniciará la restauración de la base de datos. Una vez finalizado, tendrá la base de datos WideWorldImporters instalada en la instancia de SQL Server.
+6. Haga clic en **OK**. Se iniciará la restauración de la base de datos. Una vez finalizado, tendrá la base de datos WideWorldImporters instalada en la instancia de SQL Server.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Para importar un BacPac en un nuevo SQL Database, puede usar Management Studio.
 
@@ -60,9 +60,9 @@ Para importar un BacPac en un nuevo SQL Database, puede usar Management Studio.
 3. Haga clic con el botón secundario en el nodo **bases** de datos y seleccione **importar aplicación de capa de datos**.
 4. En la **configuración de importación** , seleccione **Importar desde el disco local** y seleccione el BacPac de la base de datos de ejemplo en el sistema de archivos.
 5. En **configuración de base de datos** , cambie el nombre de la base de datos a *WideWorldImportersDW* y seleccione la edición de destino y el objetivo de servicio que se va a usar.
-6. Haga clic en **siguiente** y en **Finalizar** para comenzar la implementación. Tardará unos minutos en completarse. Al especificar un objetivo de servicio inferior a S2, puede tardar más tiempo.
+6. Haga clic en **siguiente** y en **Finalizar** para comenzar la implementación. Esta operación tardará algunos minutos en completarse. Al especificar un objetivo de servicio inferior a S2, puede tardar más tiempo.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>Configuración
 
 [Se aplica a SQL Server 2016 (y versiones posteriores) Developer/Evaluation/Enterprise Edition]
 

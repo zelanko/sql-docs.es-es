@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479311"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Administrar particiones para una publicación de mezcla mediante filtros con parámetros
@@ -28,9 +28,9 @@ ms.locfileid: "74479311"
   
 -   **Antes de empezar:**  
   
-     [Tenida](#Recommendations)  
+     [Recomendaciones](#Recommendations)  
   
--   **Para administrar particiones para una publicación de combinación con filtros con parámetros, utilizando:**  
+-   **Para administrar particiones para una publicación de mezcla mediante filtros con parámetros con:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -38,20 +38,20 @@ ms.locfileid: "74479311"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a>Tenida  
+###  <a name="Recommendations"></a> Recomendaciones  
   
 -   Si genera un script para una topología de replicación (opción recomendada), los scripts de la publicación contienen las llamadas al procedimiento almacenado para crear particiones de datos. El script proporciona una referencia para las particiones creadas y una forma de volver a crear una o más divisiones en caso necesario. Para más información, consulte [Scripting Replication](../scripting-replication.md).  
   
 -   Cuando una publicación ha parametrizado filtros que producen suscripciones con particiones no superpuestas, y si una suscripción determinada se pierde y necesita volverse a crear, debe realizar las siguientes acciones: quitar la partición a la que se suscribió, volver a crear la suscripción y, a continuación, volver a crear la partición. Para obtener más información, consulte [Filtros de fila con parámetros](../merge/parameterized-filters-parameterized-row-filters.md). La replicación genera scripts de creación para particiones del suscriptor existentes cuando se genera un script de creación de publicación. Para más información, consulte [Scripting Replication](../scripting-replication.md).  
   
-##  <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
- Administre las particiones en la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md). En esta página puede crear y eliminar particiones, permitir a los suscriptores iniciar la generación y distribución de instantáneas, generar instantáneas para una o más particiones, y limpiar instantáneas.  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Administre las particiones en la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md). En esta página puede crear y eliminar particiones, permitir a los suscriptores iniciar la generación y distribución de instantáneas, generar instantáneas para una o más particiones, y limpiar instantáneas.  
   
 #### <a name="to-create-a-partition"></a>Para crear una partición  
   
-1.  En la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, haga clic en **Agregar**.  
+1.  En la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Agregar**.  
   
 2.  En el cuadro de diálogo **Agregar partición de datos** , escriba valores para **HOST_NAME()** y/o **SUSER_SNAME()** asociados con la partición que desea crear.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "74479311"
   
 2.  Haga clic en **Limpiar instantáneas existentes**.  
   
-##  <a name="TsqlProcedure"></a>Usar Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Para administrar mejor una publicación con filtros parametrizados, puede enumerar mediante programación las particiones existentes utilizando los procedimientos almacenados de replicación. También puede crear y eliminar particiones existentes. Se puede obtener la información siguiente sobre las particiones existentes:  
   
 -   Filtrado de una partición (mediante [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) o [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql)).  
@@ -122,7 +122,7 @@ ms.locfileid: "74479311"
   
      Este procedimiento quita también el trabajo de instantáneas y los archivos de instantáneas de la partición.  
   
-##  <a name="RMOProcedure"></a>Uso de Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Para administrar mejor una publicación con filtros parametrizados, puede crear mediante programación nuevas particiones del suscriptor, enumerar las particiones del suscriptor existentes y eliminar las particiones del suscriptor utilizando Replication Management Objects (RMO). Para obtener más información acerca de cómo particiones del suscriptor, vea [Crear una instantánea para una publicación de mezcla con filtros con parámetros](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Se puede obtener la información siguiente sobre las particiones existentes:  
   
 -   El valor y la función de filtrado en los que se basa la partición.  
@@ -133,7 +133,7 @@ ms.locfileid: "74479311"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Para ver información sobre particiones existentes  
   
-1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication>. Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creada en el paso 1.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "74479311"
   
 #### <a name="to-delete-existing-partitions"></a>Para eliminar particiones existentes  
   
-1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication>. Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creada en el paso 1.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "74479311"
   
 7.  Repita el paso 6 para cada partición que se elimina.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Filtros de fila con parámetros](../merge/parameterized-filters-parameterized-row-filters.md)   
  [Instantáneas para publicaciones de combinación con filtros con parámetros](../snapshots-for-merge-publications-with-parameterized-filters.md)  
   

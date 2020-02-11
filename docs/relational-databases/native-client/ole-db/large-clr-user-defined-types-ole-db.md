@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da389befc45fec755e65426850a7f98fd66d119e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760044"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos por el usuario de CLR grandes (OLE DB)
@@ -25,14 +25,15 @@ ms.locfileid: "73760044"
 
   En este tema se describen los cambios realizados en OLE DB en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para admitir tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) grandes.  
   
- Para obtener más información sobre la compatibilidad con UDT CLR grandes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [tipos CLR grandes definidos por el usuario](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Para obtener un ejemplo, vea [usar UDT &#40;de CLR&#41;de gran tamaño OLE DB](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Para obtener más información sobre la compatibilidad con los UDT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de CLR grandes en Native Client, vea [tipos CLR grandes definidos por el usuario](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Para obtener un ejemplo, vea [usar UDT de CLR de gran tamaño &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato de datos  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utiliza ~0 para representar la longitud de valores de tamaño ilimitado en tipos de objeto grandes (LOB). ~0 también representa el tamaño de UDT CLR superiores a 8.000 bytes.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utiliza ~0 para representar la longitud de valores de tamaño ilimitado en tipos de objeto grandes (LOB). ~0 también representa el tamaño de UDT CLR superiores a 8.000 bytes.  
   
  En la tabla siguiente se muestra la asignación de tipos de datos en parámetros y conjuntos de filas:  
   
-|Tipo de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Value|  
+|Tipos de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
 |UDT CLR|DBTYPE_UDT|BYTE[](matriz de bytes\)|132 (oledb.h)|  
   
@@ -47,7 +48,7 @@ ms.locfileid: "73760044"
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Asignar tipo de datos en ITableDefinition::CreateTable  
  Cuando se necesitan columnas UDT, ITableDefinition::CreateTable usa esta información en estructuras **DBCOLUMNDESC**:  
   
-|Tipo de datos OLE DB (*wType*)|*pwszTypeName*|Tipo de datos de SQL Server|*rgPropertySets*|  
+|Tipo de datos OLE DB (*wType*)|*pwszTypeName*|Tipos de datos de SQL Server|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
 |DBTYPE_UDT|Omitido|UDT|Debe incluir un conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.|  
   
@@ -57,7 +58,7 @@ ms.locfileid: "73760044"
 |Tipo de parámetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|"DBTYPE_UDT"|*n*|no definido|no definido|clear|  
-|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|"DBTYPE_UDT"|~0|no definido|no definido|conjunto|  
+|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|"DBTYPE_UDT"|~0|no definido|no definido|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  La información que se proporciona en la estructura DBPARAMBINDINFO debe cumplir lo siguiente:  
@@ -75,8 +76,8 @@ ms.locfileid: "73760044"
   
 |Tipo de columna|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT|*n*|NULL|NULL|Desactivar|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|~0|NULL|NULL|Establezca|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT|*n*|NULL|NULL|Borrar|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|~0|NULL|NULL|Set|DB_ALL_EXCEPT_LIKE|0|  
   
  También se definen las columnas siguientes para los UDT:  
   
@@ -92,16 +93,16 @@ ms.locfileid: "73760044"
   
 |Tipo de parámetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT|*n*|~0|~0|Desactivar|  
-|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|~0|~0|~0|Establezca|  
+|DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT|*n*|~0|~0|Borrar|  
+|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|~0|~0|~0|Set|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Conjunto de filas COLUMNS (conjuntos de filas de esquema)  
  Para los tipos UDT se devuelven los siguientes valores de columna:  
   
 |Tipo de columna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT|Desactivar|*n*|  
-|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|Establezca|0|  
+|DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT|Borrar|*n*|  
+|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|Set|0|  
   
  También se definen las siguientes columnas adicionales para los UDT:  
   
@@ -167,12 +168,12 @@ ms.locfileid: "73760044"
   
 |Versión del cliente|DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|  
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------|  
-|Resultado de|UDT|varbinary(max)|  
-|SQL Server 2008 y posterior|UDT|UDT|  
+|SQL Server 2005|UDT|varbinary(max)|  
+|SQL Server 2008 y versiones posteriores|UDT|UDT|  
   
  Cuando **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) se establece en "80", los tipos UDT grandes se muestran a los clientes del mismo modo que se muestran a los clientes de nivel inferior.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tipos definidos por el usuario de CLR grandes](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

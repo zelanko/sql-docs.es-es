@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401018"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Carga de datos con INSERT en almacenamiento de datos paralelos
@@ -124,8 +124,8 @@ En la tabla siguiente se definen las reglas y los formatos aceptados para insert
   
 |Tipo de literal|Formato|Reglas de conversión|  
 |------------|------|----------------|
-|Literal de cadena en formato de **entero**|'nnnnnnnnnnnnnn'<br /><br />Ejemplo: ' 321312313123 '| Ninguno |  
-|Literal entero|nnnnnnnnnnnnnn<br /><br />Ejemplo: 321312313123| Ninguno|  
+|Literal de cadena en formato de **entero**|'nnnnnnnnnnnnnn'<br /><br />Ejemplo: ' 321312313123 '| None |  
+|Literal entero|nnnnnnnnnnnnnn<br /><br />Ejemplo: 321312313123| None|  
 |Literal decimal|nnnnnn. nnnnn<br /><br />Ejemplo: 123344,34455|Los valores a la derecha del separador decimal se truncan.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>tipos de datos Money y smallmoney  
@@ -148,17 +148,17 @@ En la tabla siguiente se definen las reglas y los formatos aceptados para insert
   
 |Tipo de literal|Formato|Reglas de conversión|  
 |----------------|----------|--------------------|  
-|Literal de cadena|Formato: ' cadena de caracteres '<br /><br />Ejemplo: ' ABC '| Ninguno|  
-|Literal de cadena Unicode|Formato: N'character cadena '<br /><br />Ejemplo: N'abc '|  Ninguno |  
-|Literal entero|Formato: nnnnnnnnnnn<br /><br />Ejemplo: 321312313123| Ninguno |  
-|Literal decimal|Formato: nnnnnn. nnnnnnn<br /><br />Ejemplo: 12344,34455| Ninguno |  
+|Literal de cadena|Formato: ' cadena de caracteres '<br /><br />Ejemplo: ' ABC '| None|  
+|Literal de cadena Unicode|Formato: N'character cadena '<br /><br />Ejemplo: N'abc '|  None |  
+|Literal entero|Formato: nnnnnnnnnnn<br /><br />Ejemplo: 321312313123| None |  
+|Literal decimal|Formato: nnnnnn. nnnnnnn<br /><br />Ejemplo: 12344,34455| None |  
 |Literal de moneda|Formato: $nnnnnn. nnnnn<br /><br />Ejemplo: $123456,99|El símbolo de moneda no se inserta con el valor. Para insertar el símbolo de moneda, inserte el valor como un literal de cadena. Esto coincidirá con el formato de la herramienta **dwloader** , que trata todos los literales como un literal de cadena.<br /><br />No se permiten comas.<br /><br />Si el número de dígitos después del separador decimal es superior a 2, el valor se redondea al valor más próximo. Por ejemplo, el valor 123,946789 se inserta como 123,95.<br /><br />Solo se permite el estilo predeterminado 0 (sin comas y 2 dígitos después del separador decimal) cuando se usa la función CONVERT para insertar literales monetarios.|  
 
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  
 [Datos distribuidos](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
-[INTRODUCIR](../t-sql/statements/insert-transact-sql.md)  
+[INSERT](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

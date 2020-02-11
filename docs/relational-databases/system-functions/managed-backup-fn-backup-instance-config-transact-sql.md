@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_instance_config (Transact-SQL) | Microsoft Docs
+title: managed_backup. fn_backup_instance_config (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 41c689d03ebae3afe16dc51d8a47c54e923d3a82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067762"
 ---
-# <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact-SQL)
+# <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup. fn_backup_instance_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila con la configuración predeterminada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la instancia de SQL Server.  
@@ -48,7 +48,7 @@ managed_backup.fn_backup_db_config ()
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |is_smart_backup_enabled|INT|Muestra 1 cuando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada y 0 cuando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está deshabilitada.|  
 |credential_name|SYSNAME|La Credencial SQL predeterminada que se usa para autenticarse en el almacenamiento.|  
@@ -61,7 +61,7 @@ managed_backup.fn_backup_db_config ()
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Debe pertenecer a la **db_backupoperator** rol de base de datos con **ALTER ANY CREDENTIAL** permisos. El usuario no debe denegarse **VIEW ANY DEFINITION** permisos.  
+ Requiere la pertenencia al rol de base de datos **db_backupoperator** con permisos **ALTER any Credential** . No se debe denegar el permiso **View any Definition** a los usuarios.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve la configuración predeterminada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la instancia en la que se ejecuta:  

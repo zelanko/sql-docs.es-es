@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_objects_impacted_on_version_change
+title: sys.dm_db_objects_impacted_on_version_change
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73843861"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
@@ -32,9 +32,9 @@ ms.locfileid: "73843861"
 
   Esta vista del sistema con ámbito de base de datos está diseñada para proporcionar un sistema de alerta rápida que permita determinar los objetos que se verán afectados por una actualización de versión importante en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Puede utilizar la vista antes o después de la actualización para obtener una enumeración completa de los objetos afectados. Tendrá que consultar esta vista en cada base de datos para obtener una perspectiva completa de todo el servidor.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|class|valor **int** NO NULL|La clase del objeto que se verá afectado:<br /><br /> **1** = restricción<br /><br /> **7** = índices y montones|  
+|clase|valor **int** NO NULL|La clase del objeto que se verá afectado:<br /><br /> **1** = restricción<br /><br /> **7** = índices y montones|  
 |class_desc|**nvarchar (60)** NO NULL|Descripción de la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|valor **int** NO NULL|Identificador de objeto de la restricción, o identificador de objeto de la tabla que contiene el índice o el montón.|  
 |minor_id|valor **int** ACEPTA|**Null** para restricciones<br /><br /> Index_id para índices y montones|  
@@ -44,7 +44,7 @@ ms.locfileid: "73843861"
  Necesita el permiso VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra una consulta en **Sys. dm_db_objects_impacted_on_version_change** para buscar los objetos afectados por una actualización a la siguiente versión principal del servidor.  
+ En el ejemplo siguiente se muestra una consulta en **sys.dm_db_objects_impacted_on_version_change** para buscar los objetos a los que afecta una actualización a la siguiente versión principal del servidor  
   
 ```  
 SELECT * FROM sys.dm_db_objects_disabled_on_version_change;  
@@ -60,14 +60,14 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ### <a name="how-to-update-impacted-objects"></a>Cómo actualizar los objetos afectados  
  Los pasos ordenados siguientes describen la acción correctiva que se deberá realizar después de la próxima actualización de versión de servicio del mes de junio.  
   
 |Pedido de|Objeto afectado|Acción correctora|  
 |-----------|---------------------|-----------------------|  
-|1|**Índices**|Vuelva a generar todos los índices identificados por **Sys. dm_db_objects_impacted_on_version_change** por ejemplo: `ALTER INDEX ALL ON <table> REBUILD`<br />o en<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Objeto**|Todas las restricciones identificadas por **Sys. dm_db_objects_impacted_on_version_change** se deben volver a validar una vez que se vuelvan a calcular los datos Geometry y Geography de la tabla subyacente. Para las restricciones, vuelva a realizar la validación mediante ALTER TABLE. <br />Por ejemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />o en<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Índices**|Vuelva a generar todos los índices identificados por **Sys. dm_db_objects_impacted_on_version_change** por ejemplo:`ALTER INDEX ALL ON <table> REBUILD`<br />or<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Object**|Todas las restricciones identificadas por **sys.dm_db_objects_impacted_on_version_change** deben volver a validarse tras volver a calcular los datos geometry y geography de la tabla subyacente. Para las restricciones, vuelva a realizar la validación mediante ALTER TABLE. <br />Por ejemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />or<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

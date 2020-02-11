@@ -1,5 +1,5 @@
 ---
-title: Procesamiento de gráficos
+title: Procesamiento de Graph
 titleSuffix: SQL Server and Azure SQL Database
 ms.date: 06/26/2019
 ms.prod: sql
@@ -16,38 +16,38 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74096086"
 ---
-# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Procesamiento de gráficos con SQL Server y Azure SQL Database
+# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de procesamiento con SQL Server y Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece capacidades de base de datos de gráficos para modelar las relaciones varios a varios. Las relaciones de gráficos se integran en [!INCLUDE[tsql-md](../../includes/tsql-md.md)] y reciben las ventajas de usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como sistema de administración de bases de datos base.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ofrece capacidades de base de datos de gráficos para modelar relaciones varios a varios. Las relaciones de gráficos se integran en [!INCLUDE[tsql-md](../../includes/tsql-md.md)] y reciben las ventajas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de usar como sistema de administración de bases de datos base.
 
 
 ## <a name="what-is-a-graph-database"></a>¿Qué es una base de datos de grafos?  
-Una base de datos de gráficos es una colección de nodos (o vértices) y bordes (o relaciones). Un nodo representa una entidad (por ejemplo, una persona o una organización) y un borde representa una relación entre los dos nodos que conecta (por ejemplo, gustos o amigos). Tanto los nodos como los bordes pueden tener propiedades asociadas. Estas son algunas de las características que hacen que una base de datos de grafos sea única:  
--   Los bordes o las relaciones son entidades de primera clase en una base de datos de gráficos y pueden tener atributos o propiedades asociados. 
--   Un solo borde puede conectar de forma flexible varios nodos en una base de datos de grafos.
--   Puede expresar fácilmente la coincidencia de patrones y las consultas de navegación de varios saltos.
--   Puede expresar fácilmente consultas de cierre transitivo y polimórficos.
+Una base de datos de gráficos es una colección de nodos (o vértices) y bordes (o relaciones). Un nodo representa una entidad (por ejemplo, una persona o una organización) y un borde representa una relación entre los dos nodos que conecta (por ejemplo, "Me gusta" o amigos). Tanto los nodos como los bordes pueden tener propiedades asociadas. Estas son algunas características que hacen que una base de datos de grafos sea única:  
+-   Los bordes o las relaciones son entidades de primera clase en una base de datos de grafos y pueden tener atributos o propiedades asociados a ellas. 
+-   Un solo borde puede conectar flexiblemente varios nodos en una base de datos de grafos.
+-   Puede expresar fácilmente coincidencias de patrones y consultas de navegación en saltos múltiples.
+-   Puede expresar fácilmente consultas polimórficas y cierres transitivos.
 
 ## <a name="when-to-use-a-graph-database"></a>Cuándo usar una base de datos de grafos
 
-No hay nada que pueda conseguir una base de datos de gráficos, lo que no se puede lograr mediante una base de datos relacional. Sin embargo, una base de datos de gráficos puede facilitar la rápida expresión de determinados tipos de consultas. Además, con optimizaciones específicas, algunas consultas pueden funcionar mejor. La decisión de elegir una sobre la otra puede basarse en los siguientes factores:  
+No hay nada que una base de datos de grafos puede conseguir, que no se puede lograr mediante una base de datos relacional. Sin embargo, una base de datos de gráficos puede facilitar la rápida expresión de determinados tipos de consultas. Además, con optimizaciones específicas, algunas consultas pueden funcionar mejor. La decisión para elegir una u otra puede basarse en los siguientes factores:  
 -   La aplicación tiene datos jerárquicos. El tipo de texto HierarchyID se puede usar para implementar jerarquías, pero tiene algunas limitaciones. Por ejemplo, no permite almacenar varios elementos primarios para un nodo.
 -   La aplicación tiene relaciones de varios a varios complejas; a medida que la aplicación evoluciona, se agregan nuevas relaciones.
--   Debe analizar los datos y las relaciones interconectadas.
+-   Necesita analizar las relaciones y los datos interconectados.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Características de gráficos introducidas en [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Características de gráficos introducidas en[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Vamos a empezar a agregar extensiones de grafos a SQL Server para facilitar el almacenamiento y la consulta de datos de gráfico. Las siguientes características se incluyen en la primera versión. 
 
 
 ### <a name="create-graph-objects"></a>Crear objetos de gráfico
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensiones permitirán a los usuarios crear tablas de nodos o perimetrales. Tanto los nodos como los bordes pueden tener propiedades asociadas. Dado que los nodos y los bordes se almacenan como tablas, todas las operaciones que se admiten en las tablas relacionales se admiten en el nodo o la tabla perimetral. A continuación se muestra un ejemplo:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]las extensiones permitirán a los usuarios crear tablas de nodos o perimetrales. Tanto los nodos como los bordes pueden tener propiedades asociadas. Dado que los nodos y los bordes se almacenan como tablas, todas las operaciones que se admiten en las tablas relacionales se admiten en el nodo o la tabla perimetral. Aquí tiene un ejemplo:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Los nodos y los bordes se almacenan como tablas  
 
 ### <a name="query-language-extensions"></a>Extensiones de lenguaje de consulta  
-La nueva cláusula `MATCH` se incluye para admitir la búsqueda de coincidencias de patrones y la navegación de varios saltos a través del gráfico. La función `MATCH` utiliza la sintaxis de estilo ASCII-Art para la coincidencia de patrones. Por ejemplo:  
+La `MATCH` nueva cláusula se incluye para admitir la búsqueda de coincidencias de patrones y la navegación de varios saltos a través del gráfico. La `MATCH` función utiliza la sintaxis de estilo ASCII-Art para la coincidencia de patrones. Por ejemplo:  
 
 ```   
 -- Find friends of John
@@ -68,8 +68,8 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Totalmente integrado en el motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
-Las extensiones de grafos están totalmente integradas en el motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use el mismo motor de almacenamiento, metadatos, procesador de consultas, etc. para almacenar y consultar los datos del gráfico. Realizar consultas en los datos de gráfico y relacionales en una sola consulta. Combinación de funcionalidades de gráficos con otras tecnologías de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como almacén de columnas, HA, R Services, etc. La base de datos de SQL Graph también es compatible con todas las características de seguridad y cumplimiento disponibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Totalmente integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el motor 
+Las extensiones de grafos están [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] totalmente integradas en el motor. Use el mismo motor de almacenamiento, metadatos, procesador de consultas, etc. para almacenar y consultar los datos del gráfico. Realizar consultas en los datos de gráfico y relacionales en una sola consulta. Combinación de funcionalidades de gráficos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con otras tecnologías, como almacén de columnas, ha, R Services, etc. La base de datos de SQL Graph también es compatible con todas las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]características de seguridad y cumplimiento disponibles con.
  
 ### <a name="tooling-and-ecosystem"></a>Herramientas y ecosistema
 

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100339"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Acoplar el panel Datos de informe en el Diseñador de informes (SSRS)
@@ -34,16 +34,16 @@ ms.locfileid: "66100339"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>Para cambiar el panel Datos de informe de una ventana acoplada a una ventana con fichas  
   
--   Haga clic en la barra de título del panel datos de informe y, a continuación, haga clic en **fichas**.  
+-   Haga clic con el botón secundario en la barra de título del panel datos de informe y, a continuación, haga clic en **organización por pestañas**.  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>Para cambiar el panel Datos de informe de una ventana con fichas a una ventana acoplada  
   
--   Haga clic en la pestaña datos de informe y, a continuación, haga clic en **acoplable**.  
+-   Haga clic con el botón secundario en la pestaña datos de informe y haga clic en **acoplable**.  
   
      Para alternar entre los dos últimos estados de presentación, haga doble clic en la barra de título del panel Datos de informe.  
   
-## <a name="see-also"></a>Vea también  
- [Panel Datos de informe](../report-data/report-data-pane.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Panel datos de informe](../report-data/report-data-pane.md)   
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

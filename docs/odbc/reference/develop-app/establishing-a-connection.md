@@ -9,29 +9,29 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
-- SQLBrowseConnect function [ODBC], establising a connection
+- SQLBrowseConnect function [ODBC], establishing a connection
 - functions [ODBC], data source or driver connections
 - connecting to data source [ODBC], functions
 - connecting to driver [ODBC], functions
 - connection functions [ODBC]
-- SQLConnect function [ODBC], establising a connection
+- SQLConnect function [ODBC], establishing a connection
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fd8d7a68e993aa6b35897ca14a7a87c08fc8763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ef6f3d50382d810dd9df246c4d857d9467674f2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901366"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76941027"
 ---
 # <a name="establishing-a-connection"></a>Establecer una conexión
-Después de asignar identificadores de entorno y de conexión y establecer los atributos de conexión, la aplicación está lista para conectarse al origen de datos o al controlador. Hay tres funciones diferentes, que la aplicación puede usar para hacer esto: **SQLConnect** (nivel de conformidad con la interfaz de núcleo), **SQLDriverConnect** (Core), y **SQLBrowseConnect** (nivel 1). Cada uno de los tres está diseñado para usarse en un escenario diferente. Antes de conectarse, la aplicación puede determinar cuál de estas funciones es compatible con la **ConnectFunctions** palabra clave devuelto por **SQLDrivers**.  
+Después de asignar el entorno y los identificadores de conexión y establecer los atributos de conexión, la aplicación está lista para conectarse al origen de datos o al controlador. Hay tres funciones diferentes que la aplicación puede usar para ello: **SQLConnect** (nivel de conformidad de la interfaz principal), **SQLDriverConnect** (Core) y **SQLBrowseConnect** (nivel 1). Cada uno de los tres está diseñado para usarse en un escenario diferente. Antes de la conexión, la aplicación puede determinar cuál de estas funciones es compatible con la palabra clave **ConnectFunctions** devuelta por **SQLDrivers**.  
   
 > [!NOTE]  
->  Algunos controladores de limitan el número de conexiones activas que admiten. Una aplicación llama a **SQLGetInfo** con la opción SQL_MAX_DRIVER_CONNECTIONS para determinar cuántas conexiones activas que admite un controlador determinado.  
+>  Algunos controladores limitan el número de conexiones activas que admiten. Una aplicación llama a **SQLGetInfo** con la opción SQL_MAX_DRIVER_CONNECTIONS para determinar el número de conexiones activas que admite un controlador determinado.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -18,10 +18,10 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: be1b7bc97a46282e0adae2fb5679cfff0cd11dd1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74687321"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74687321"
 
   Genera un shell de comandos de Windows y lo pasa a una cadena para ejecutarlo. Los resultados se devuelven como filas de texto.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -120,7 +120,7 @@ REVERT ;
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-returning-a-list-of-executable-files"></a>a. Devolver una lista de archivos ejecutables  
+### <a name="a-returning-a-list-of-executable-files"></a>A. Devolver una lista de archivos ejecutables  
  En el siguiente ejemplo se muestra el procedimiento almacenado extendido `xp_cmdshell` ejecutando un comando de directorio.  
   
 ```  
@@ -138,7 +138,7 @@ EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck
 GO  
 ```  
   
-### <a name="c-using-return-status"></a>c. Utilizar el estado de retorno  
+### <a name="c-using-return-status"></a>C. Utilizar el estado de retorno  
  En el ejemplo siguiente, el `xp_cmdshell` procedimiento almacenado extendido también sugiere el estado de devolución. El valor del código de retorno se almacena en la variable `@result`.  
   
 ```  
@@ -170,10 +170,10 @@ SET @cmd = @var + ' > dir_out.txt';
 EXEC master..xp_cmdshell @cmd;  
 ```  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_cmdshell (opción de configuración del servidor)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
- [Configuración de área expuesta](../../relational-databases/security/surface-area-configuration.md)   
+ [Configuración de Área expuesta](../../relational-databases/security/surface-area-configuration.md)   
  [sp_xp_cmdshell_proxy_account &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

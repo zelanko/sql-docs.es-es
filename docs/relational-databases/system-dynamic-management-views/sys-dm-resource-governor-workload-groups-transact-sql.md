@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 73da0ee5a47cf5b1c7443729e2a9b71dc01d18a7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982289"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
@@ -33,39 +33,39 @@ ms.locfileid: "73982289"
   Devuelve las estadísticas del grupo de cargas de trabajo y la configuración actual en memoria del grupo de cargas de trabajo. Puede unirse esta vista con sys.dm_resource_governor_resource_pools para obtener el nombre del grupo de recursos de servidor.  
   
 > [!NOTE]  
->  Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilice el nombre **Sys. dm_pdw_nodes_resource_governor_workload_groups**.  
+>  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_resource_governor_workload_groups**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|Id. del grupo de cargas de trabajo No admite valores NULL.|  
 |name|**sysname**|Nombre del grupo de cargas de trabajo No admite valores NULL.|  
-|{1}pool_id{2}|**int**|Id. del grupo de recursos de servidor. No admite valores NULL.|  
-|external_pool_id|**int**|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR del grupo de recursos externos. No admite valores NULL.|  
+|pool_id|**int**|Id. del grupo de recursos de servidor. No admite valores NULL.|  
+|external_pool_id|**int**|**Válido para **: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR del grupo de recursos externos. No admite valores NULL.|  
 |statistics_start_time|**datetime**|Tiempo en que se restableció la colección de estadísticas para el grupo de cargas de trabajo. No admite valores NULL.|  
-|total_request_count|**bigint**|El recuento acumulado de solicitudes completadas en el grupo de cargas de trabajo. No admite valores NULL.|  
-|total_queued_request_count|**bigint**|El recuento acumulado de solicitudes en cola una vez alcanzado el límite de GROUP_MAX_REQUESTS. No admite valores NULL.|  
+|total_request_count|**BIGINT**|El recuento acumulado de solicitudes completadas en el grupo de cargas de trabajo. No admite valores NULL.|  
+|total_queued_request_count|**BIGINT**|El recuento acumulado de solicitudes en cola una vez alcanzado el límite de GROUP_MAX_REQUESTS. No admite valores NULL.|  
 |active_request_count|**int**|Recuento actual de solicitudes. No admite valores NULL.|  
 |queued_request_count|**int**|Recuento actual de solicitudes en cola. No admite valores NULL.|  
-|total_cpu_limit_violation_count|**bigint**|Recuento acumulado de solicitudes que superan el límite de CPU. No admite valores NULL.|  
-|total_cpu_usage_ms|**bigint**|Uso acumulado de la CPU en milisegundos de este grupo de cargas de trabajo. No admite valores NULL.|  
-|max_request_cpu_time_ms|**bigint**|Uso máximo de CPU, en milisegundos, para una única solicitud. No admite valores NULL.<br /><br /> **Nota:** Se trata de un valor medido, a diferencia de request_max_cpu_time_sec, que es un valor configurable. Para obtener más información, vea [Clase de eventos Umbral de la CPU superado](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
+|total_cpu_limit_violation_count|**BIGINT**|Recuento acumulado de solicitudes que superan el límite de CPU. No admite valores NULL.|  
+|total_cpu_usage_ms|**BIGINT**|Uso acumulado de la CPU en milisegundos de este grupo de cargas de trabajo. No admite valores NULL.|  
+|max_request_cpu_time_ms|**BIGINT**|Uso máximo de CPU, en milisegundos, para una única solicitud. No admite valores NULL.<br /><br /> **Nota:** Se trata de un valor medido, a diferencia de request_max_cpu_time_sec, que es un valor configurable. Para obtener más información, vea [Clase de eventos Umbral de la CPU superado](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |blocked_task_count|**int**|Contador actual de tareas bloqueadas. No admite valores NULL.|  
-|total_lock_wait_count|**bigint**|Recuento acumulado de esperas del bloqueo producidas. No admite valores NULL.|  
-|total_lock_wait_time_ms|**bigint**|Suma acumulada de tiempo transcurrido, en milisegundos, que se mantiene un bloqueo. No admite valores NULL.|  
-|total_query_optimization_count|**bigint**|El recuento acumulado de optimizaciones de consultas en este grupo de cargas de trabajo. No admite valores NULL.|  
-|total_suboptimal_plan_generation_count|**bigint**|Recuento acumulado de generaciones de planes poco óptimos producidas en este grupo de cargas de trabajo debido a la presión de memoria. No admite valores NULL.|  
-|total_reduced_memgrant_count|**bigint**|Recuento acumulado de concesiones de memoria que alcanzaron el límite máximo de tamaño de consulta. No admite valores NULL.|  
-|max_request_grant_memory_kb|**bigint**|El tamaño máximo de la concesión de memoria, en kilobytes, de una única solicitud desde que se restablecieron las estadísticas. No admite valores NULL.|  
-|active_parallel_thread_count|**bigint**|Recuento actual de uso del subproceso paralelo. No admite valores NULL.|  
+|total_lock_wait_count|**BIGINT**|Recuento acumulado de esperas del bloqueo producidas. No admite valores NULL.|  
+|total_lock_wait_time_ms|**BIGINT**|Suma acumulada de tiempo transcurrido, en milisegundos, que se mantiene un bloqueo. No admite valores NULL.|  
+|total_query_optimization_count|**BIGINT**|El recuento acumulado de optimizaciones de consultas en este grupo de cargas de trabajo. No admite valores NULL.|  
+|total_suboptimal_plan_generation_count|**BIGINT**|Recuento acumulado de generaciones de planes poco óptimos producidas en este grupo de cargas de trabajo debido a la presión de memoria. No admite valores NULL.|  
+|total_reduced_memgrant_count|**BIGINT**|Recuento acumulado de concesiones de memoria que alcanzaron el límite máximo de tamaño de consulta. No admite valores NULL.|  
+|max_request_grant_memory_kb|**BIGINT**|El tamaño máximo de la concesión de memoria, en kilobytes, de una única solicitud desde que se restablecieron las estadísticas. No admite valores NULL.|  
+|active_parallel_thread_count|**BIGINT**|Recuento actual de uso del subproceso paralelo. No admite valores NULL.|  
 |importance|**sysname**|Valor de la configuración actual de la importancia relativa de una solicitud en este grupo de cargas de trabajo. Importance es uno de los siguientes, siendo Medium el valor predeterminado: Low, Medium o High.<br /><br /> No admite valores NULL.|  
 |request_max_memory_grant_percent|**int**|Valor actual de la concesión máxima de memoria, en porcentaje, para una única solicitud. No admite valores NULL.|  
 |request_max_cpu_time_sec|**int**|Valor actual máximo de uso de CPU, en segundos, para una única solicitud. No admite valores NULL.|  
 |request_memory_grant_timeout_sec|**int**|Valor actual del tiempo de espera de concesiones de memoria, en segundos, para una única solicitud. No admite valores NULL.|  
 |group_max_requests|**int**|Valor actual del número máximo de solicitudes simultáneas. No admite valores NULL.|  
 |max_dop|**int**|Grado máximo de paralelismo para el grupo de cargas de trabajo. El valor predeterminado, 0, utiliza la configuración global. No admite valores NULL.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  Esta vista de administración dinámica muestra la configuración en memoria. Para ver los metadatos almacenados de la configuración, utilice la vista de catálogo sys.resource_governor_workload_groups.  
   
  Cuando ALTER RESOURCE GOVERNOR RESET STATISTICs se ejecuta correctamente, se restablecen los contadores siguientes: statistics_start_time, total_request_count, total_queued_request_count, total_cpu_limit_violation_count, total_cpu_usage_ms, max_request_ cpu_time_ms, total_lock_wait_count, total_lock_wait_time_ms, total_query_optimization_count, total_suboptimal_plan_generation_count, total_reduced_memgrant_count y max_request_grant_memory_kb. statistics_start_time se establece en la fecha y hora actuales del sistema, los otros contadores se establecen en cero (0).  
@@ -73,10 +73,10 @@ ms.locfileid: "73982289"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [sys.resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
+ [Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [Sys. resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

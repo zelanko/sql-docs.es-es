@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d60c6f492b0735e70a2c3103e48ad08953039adc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400868"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Administración de permisos en almacenamiento de datos paralelos
@@ -22,12 +22,12 @@ En este artículo se describen los requisitos y las opciones para administrar lo
 ## <a name="BackupRestoreBasics"></a>Aspectos básicos de los permisos de Motor de base de datos  
 Motor de base de datos permisos en PDW de SQL Server se administran en el nivel de servidor a través de inicios de sesión y en el nivel de base de datos a través de usuarios de base de datos y roles de base de datos definidos por el usuario.  
   
-**Inicios**  
+**Inicios de sesión**  
 Los inicios de sesión son cuentas de usuario individuales para iniciar sesión en el PDW de SQL Server. PDW de SQL Server admite inicios de sesión con la autenticación de Windows y la autenticación de SQL Server.  Los inicios de sesión de autenticación de Windows pueden ser usuarios o grupos de Windows de cualquier dominio en el que confíe PDW de SQL Server. SQL Server los inicios de sesión de autenticación se definen y autentican mediante PDW de SQL Server y se deben crear especificando una contraseña.  
   
 Los miembros del rol fijo de servidor **sysadmin** (como el inicio de sesión **SA** ) pueden conectarse a una base de datos sin tener que estar asignados a un usuario de base de datos. Se asignan al usuario **DBO** . El propietario de la base de datos también se asigna como el usuario **DBO** .  
   
-**Roles de servidor**  
+**Roles del servidor**  
 Hay cuatro roles de servidor especiales con un conjunto de roles preconfigurados que proporcionan un grupo práctico de permisos de nivel de servidor. Los roles de servidor **sysadmin**, **MediumRC**, **LargeRC**y **XLargeRCfixed** son los únicos roles de servidor implementados actualmente en PDW de SQL Server. El inicio de sesión **SA** es el único miembro del rol fijo de servidor **sysadmin** y no se pueden agregar inicios de sesión adicionales al rol **sysadmin** . A los inicios de sesión se les puede conceder el permiso **Control Server** , que es similar, aunque no idéntico, al rol fijo de servidor **sysadmin** . Utilice [ALTER Server role](../t-sql/statements/alter-server-role-transact-sql.md) para agregar miembros a los demás roles de servidor. PDW de SQL Server no admite roles de servidor definidos por el usuario.  
   
 **Usuarios de base de datos**  

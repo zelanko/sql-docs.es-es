@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un procedimiento almacenado (mediante la sintaxis ODBC CALL) y procesar códigos de retorno y parámetros de salida (OLE DB) | Microsoft Docs
+title: Ejecutar un procedimiento almacenado (mediante la sintaxis CALL de ODBC) y procesar códigos de retorno y parámetros de salida (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206690"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Ejecutar un procedimiento almacenado (mediante la sintaxis ODBC CALL) y procesar códigos de retorno y parámetros de salida (OLE DB)
@@ -32,7 +32,8 @@ ms.locfileid: "68206690"
   
 2.  Cree un conjunto de enlaces (uno para cada creador de parámetro) mediante una matriz de estructura DBBINDING.  
   
-3.  Cree un descriptor de acceso para los parámetros definidos mediante el uso del método `IAccessor::CreateAccessor`. `CreateAccessor` crea un descriptor de acceso a partir de una colección de enlaces.  
+3.  Cree un descriptor de acceso para los parámetros definidos mediante el uso del método `IAccessor::CreateAccessor`. 
+  `CreateAccessor` crea un descriptor de acceso a partir de una colección de enlaces.  
   
 4.  Rellene la estructura DBPARAMS.  
   
@@ -353,7 +354,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Temas de procedimientos para procesar resultados &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de procesamiento de resultados &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

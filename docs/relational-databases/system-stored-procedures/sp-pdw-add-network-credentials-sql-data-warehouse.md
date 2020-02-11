@@ -13,18 +13,18 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844410"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Esto almacena las credenciales de red en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y las asocia a un servidor. Por ejemplo, utilice este procedimiento almacenado para proporcionar a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] permisos de lectura y escritura adecuados para realizar operaciones de copia de seguridad y restauración de bases de datos en un servidor de destino, o para crear una copia de seguridad de un certificado usado para TDE.  
+  Esto almacena las credenciales [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de red en y las asocia a un servidor. Por ejemplo, utilice este procedimiento almacenado para proporcionar [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los permisos de lectura y escritura adecuados para realizar operaciones de copia de seguridad y restauración de bases de datos en un servidor de destino, o para crear una copia de seguridad de un certificado usado para TDE.  
   
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>Argumentos  
  '*target_server_name*'  
- Especifica el nombre de host o la dirección IP del servidor de destino. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] tendrá acceso a este servidor mediante las credenciales de nombre de usuario y contraseña pasadas a este procedimiento almacenado.  
+ Especifica el nombre de host o la dirección IP del servidor de destino. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]tendrá acceso a este servidor mediante las credenciales de nombre de usuario y contraseña que se pasaron a este procedimiento almacenado.  
   
  Para conectarse a través de la red InfiniBand, use la dirección IP InfiniBand del servidor de destino.  
   
@@ -60,12 +60,12 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  Se produce un error si la adición de credenciales no se realiza correctamente en el nodo de control y en todos los nodos de proceso.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Este procedimiento almacenado agrega credenciales de red a la cuenta NetworkService para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. La cuenta NetworkService ejecuta cada instancia de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nodo de control y los nodos de proceso. Por ejemplo, cuando se ejecuta una operación de copia de seguridad, el nodo de control y cada nodo de proceso utilizarán las credenciales de la cuenta NetworkService para obtener permiso de lectura y escritura en el servidor de destino.  
+ Este procedimiento almacenado agrega credenciales de red a la cuenta [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]NetworkService para. La cuenta NetworkService ejecuta cada instancia de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nodo de control y los nodos de proceso. Por ejemplo, cuando se ejecuta una operación de copia de seguridad, el nodo de control y cada nodo de proceso utilizarán las credenciales de la cuenta NetworkService para obtener permiso de lectura y escritura en el servidor de destino.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Agregar credenciales para realizar una copia de seguridad de base de datos  
- En el ejemplo siguiente se asocian las credenciales de nombre de usuario y contraseña para el usuario de dominio seattle\david con un servidor de destino que tiene una dirección IP de 10.172.63.255. El usuario seattle\david tiene permisos de lectura y escritura en el servidor de destino. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] almacenará estas credenciales y las usará para leer y escribir en el servidor de destino, según sea necesario para las operaciones de copia de seguridad y restauración.  
+ En el ejemplo siguiente se asocian las credenciales de nombre de usuario y contraseña para el usuario de dominio seattle\david con un servidor de destino que tiene una dirección IP de 10.172.63.255. El usuario seattle\david tiene permisos de lectura y escritura en el servidor de destino. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]almacenará estas credenciales y las usará para leer y escribir en el servidor de destino, según sea necesario para las operaciones de copia de seguridad y restauración.  
   
 ```  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
@@ -76,7 +76,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 > [!NOTE]  
 >  Para realizar la copia de seguridad de base de datos a través de InfiniBand, asegúrese de usar la dirección IP InfiniBand del servidor de copia de seguridad.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   

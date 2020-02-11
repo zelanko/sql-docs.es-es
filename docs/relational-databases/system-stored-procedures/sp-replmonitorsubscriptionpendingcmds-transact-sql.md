@@ -17,10 +17,10 @@ ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a493ef87ad2f980f21a99c50da1cb39dfdcda8cf
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75319998"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75319998"
 
   Devuelve información sobre el número de comandos pendientes para una suscripción a una publicación transaccional y una estimación aproximada del tiempo que requiere procesarlos. Este procedimiento almacenado devuelve una fila para cada suscripción devuelta. Este procedimiento almacenado, que se utiliza para supervisar la replicación, se ejecuta en el distribuidor en la base de datos de distribución.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,14 +58,14 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Suscripción de inserción.|  
-|**dimensional**|Suscripción de extracción|  
+|**1**|Suscripción de extracción|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**pendingcmdcount**|**Inter**|El número de comandos pendientes para la suscripción.|  
-|**estimatedprocesstime**|**Inter**|Estimación del número de segundos requeridos para enviar todos los comandos pendientes al suscriptor.|  
+|**pendingcmdcount**|**int**|El número de comandos pendientes para la suscripción.|  
+|**estimatedprocesstime**|**int**|Estimación del número de segundos requeridos para enviar todos los comandos pendientes al suscriptor.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -76,7 +76,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** en el distribuidor o los miembros del rol fijo de base de datos **db_owner** en la base de datos de distribución pueden ejecutar **sp_replmonitorsubscriptionpendingcmds**. Los miembros de la lista de acceso a la publicación para una publicación que utiliza la base de datos de distribución pueden ejecutar **sp_replmonitorsubscriptionpendingcmds** para devolver los comandos pendientes de esa publicación.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación mediante programación](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

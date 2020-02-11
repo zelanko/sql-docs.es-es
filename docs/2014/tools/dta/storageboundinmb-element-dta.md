@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460104"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB (DTA, elemento)
@@ -38,7 +38,8 @@ ms.locfileid: "63460104"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|**Tipo y longitud de los datos**|`unsignedInt`, longitud ilimitada.|  
+|**Tipo y longitud de los datos**|
+  `unsignedInt`, longitud ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
 |**Repetición**|Opcional. Solo puede utilizarse una vez para el elemento `TuningOptions`.|  
   
@@ -49,7 +50,7 @@ ms.locfileid: "63460104"
 |**Elemento primario**|[TuningOptions &#40;DTA, elemento&#41;](tuningoptions-element-dta.md)|  
 |**Elementos secundarios**|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se optimizan varias bases de datos, se tienen en cuenta las recomendaciones para todas las bases de datos sobre el cálculo del espacio. De forma predeterminada, el Asistente para la optimización de motor de base de datos asume el menor de los siguientes tamaños de almacenamiento:  
   
 -   Tres veces el tamaño actual de los datos sin procesar, lo que incluye el tamaño total de los montones y los clúster de las tablas.  
@@ -77,7 +78,7 @@ ms.locfileid: "63460104"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

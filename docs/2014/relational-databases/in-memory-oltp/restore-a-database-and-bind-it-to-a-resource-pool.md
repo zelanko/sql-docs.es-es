@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cac1e775d5cccaccca90b03104de4132e651284e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467849"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>Restaurar una base de datos y enlazarla a un grupo de recursos de servidor
@@ -59,7 +59,7 @@ RESTORE DATABASE IMOLTP_DB
 ##  <a name="monitor-the-resource-pool-performance"></a>Supervisar el rendimiento del grupo de recursos de servidor  
  Una vez que la base de datos se enlaza al grupo de recursos de servidor con nombre y se restaura con la recuperación, supervise el objeto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Estadísticas de grupo de recursos de servidor. Para obtener más información vea [Objeto SQL Server: Estadísticas de grupo de recursos de servidor](../performance-monitor/sql-server-resource-pool-stats-object.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
  [Objeto SQL Server: Estadísticas de grupo de recursos de servidor](../performance-monitor/sql-server-resource-pool-stats-object.md)   

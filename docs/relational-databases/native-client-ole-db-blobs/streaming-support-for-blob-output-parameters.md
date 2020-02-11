@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c15599e2e322eca4f1dca17ff2a46456d6852be9
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790493"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB
@@ -29,7 +29,7 @@ ms.locfileid: "73790493"
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 // blob_out_param.cpp  
@@ -510,7 +510,7 @@ _Exit:
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [BLOB y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
   

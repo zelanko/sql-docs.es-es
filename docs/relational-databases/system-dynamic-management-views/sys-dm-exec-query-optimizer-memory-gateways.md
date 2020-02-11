@@ -21,10 +21,10 @@ author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165002"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>Sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
@@ -35,12 +35,12 @@ Devuelve el estado actual de los semáforos de recursos usados para limitar la o
 |Columna|Tipo|Descripción|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|IDENTIFICADOR del grupo de recursos en Resource Governor|  
-|**Nombre**|**sysname**|Nombre de la puerta de compilación (puerta de enlace pequeña, puerta de enlace mediana, Big Gateway)|
+|**Name**|**sysname**|Nombre de la puerta de compilación (puerta de enlace pequeña, puerta de enlace mediana, Big Gateway)|
 |**max_count**|**int**|El recuento máximo configurado de compilaciones simultáneas|
 |**active_count**|**int**|El recuento activo actualmente de compilaciones en esta puerta|
 |**waiter_count**|**int**|Número de esperas en esta puerta|
-|**threshold_factor**|**bigint**|Factor de umbral que define la parte de memoria máxima utilizada por la optimización de consultas.  En el caso de la puerta de enlace pequeña, threshold_factor indica el uso máximo de memoria del optimizador en bytes para una consulta antes de que sea necesaria para obtener acceso a la puerta de enlace pequeña.  En la puerta de enlace mediana y grande, threshold_factor muestra la parte de la memoria total del servidor disponible para esta puerta. Se usa como divisor al calcular el umbral de uso de memoria para la puerta.|
-|**threshold**|**bigint**|Siguiente umbral de memoria en bytes.  La consulta es necesaria para obtener acceso a esta puerta de enlace si el consumo de memoria alcanza este umbral.  "-1" si la consulta no es necesaria para obtener acceso a esta puerta de enlace.|
+|**threshold_factor**|**BIGINT**|Factor de umbral que define la parte de memoria máxima utilizada por la optimización de consultas.  En el caso de la puerta de enlace pequeña, threshold_factor indica el uso máximo de memoria del optimizador en bytes para una consulta antes de que sea necesaria para obtener acceso a la puerta de enlace pequeña.  En la puerta de enlace mediana y grande, threshold_factor muestra la parte de la memoria total del servidor disponible para esta puerta. Se usa como divisor al calcular el umbral de uso de memoria para la puerta.|
+|**mínimo**|**BIGINT**|Siguiente umbral de memoria en bytes.  La consulta es necesaria para obtener acceso a esta puerta de enlace si el consumo de memoria alcanza este umbral.  "-1" si la consulta no es necesaria para obtener acceso a esta puerta de enlace.|
 |**is_active**|**bit**|Indica si la consulta debe pasar o no la puerta actual.|
 
 
@@ -50,7 +50,7 @@ SQL Server requiere el permiso VIEW SERVER STATE en el servidor.
 Azure SQL Database requiere el permiso VIEW DATABASE STATE en la base de datos.
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
 SQL Server usa un enfoque de puerta de enlace en capas para limitar el número de compilaciones simultáneas permitidas.  Se usan tres puertas de enlace, como pequeño, mediano y grande. Las puertas de enlace ayudan a evitar el agotamiento de los recursos de memoria generales por la memoria de compilación más grande, que requiere consumidores.
 
 Espera en una puerta de enlace como resultado de la compilación diferida. Además de los retrasos en la compilación, las solicitudes limitadas tendrán un asociado RESOURCE_SEMAPHORE_QUERY_COMPILE la acumulación del tipo de espera. El tipo de espera de RESOURCE_SEMAPHORE_QUERY_COMPILE puede indicar que las consultas usan una gran cantidad de memoria para la compilación y que se ha agotado la memoria, o bien hay suficiente memoria disponible en general, sin embargo, las unidades disponibles en una determinada se ha agotado la puerta de enlace. La salida de **Sys. dm_exec_query_optimizer_memory_gateways** se puede usar para solucionar problemas de escenarios en los que no había memoria suficiente para compilar un plan de ejecución de consulta.  
@@ -68,8 +68,8 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ```  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
- [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Cómo usar el comando DBCC MEMORYSTATUS para supervisar el uso de memoria en SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-[esperas de compilación de consultas grandes en RESOURCE_SEMAPHORE_QUERY_COMPILE en SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+de[compilación de consultas grandes en RESOURCE_SEMAPHORE_QUERY_COMPILE en SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

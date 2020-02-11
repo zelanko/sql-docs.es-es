@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810055"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>Evitar el inicio automático de una instancia de SQL Server (Administrador de configuración de SQL Server)
@@ -33,15 +33,15 @@ ms.locfileid: "62810055"
   
 1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, por último, **Administrador de configuración de SQL Server**.  
   
-2.  En el Administrador de configuración de SQL Server, expanda **Servicios**y haga clic en **SQL Server**.  
+2.  En Administrador de configuración de SQL Server, expanda **servicios**y, a continuación, haga clic en **SQL Server**.  
   
 3.  En el panel de detalles, haga clic con el botón derecho en **MSSQLServer**y, después, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de \<** _nombreDeInstancia_ **> de SQL Server**, en el cuadro **Propiedades**, establezca el valor de **Modo de inicio** en **Manual**.  
+4.  En el cuadro de diálogo **Propiedades de \<**_nombreDeInstancia_**> de SQL Server**, en el cuadro **Propiedades**, establezca el valor de **Modo de inicio** en **Manual**.  
   
-5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de \<** _nombreDeInstancia_ **> de SQL Server** y, luego, cierre el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **SQL Server \< ** _InstanceName_ **> propiedades** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a continuación, cierre Configuration Manager.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](start-stop-pause-resume-restart-sql-server-services.md)  
   
   

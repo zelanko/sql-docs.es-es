@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228179"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Supervisar y solucionar los problemas de la mezcla para los pares de archivos delta y de datos
@@ -49,6 +49,6 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  La [transición del estado del blog de los archivos de punto de comprobación de las bases de datos con tablas optimizadas para memoria describe la](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) transición de estado de los pares de archivos Delta y de datos desde el inicio hasta la recolección de elementos no utilizados.  
   
-## <a name="see-also"></a>Véase también  
- [Crear y administrar el almacenamiento de objetos con optimización para memoria](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+## <a name="see-also"></a>Consulte también  
+ [Crear y administrar el almacenamiento de objetos optimizados para memoria](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   

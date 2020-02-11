@@ -10,10 +10,10 @@ ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251650"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de conocimiento y dominios de DQS
@@ -152,6 +152,6 @@ ms.locfileid: "75251650"
 |Realizar operaciones de importación y exportación en dominios y bases de conocimiento|[Importar y exportar conocimiento](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Crear un solo dominio, una regla de dominio, relaciones basadas en términos y cambiar valores de dominio|[Administrar un dominio](../data-quality-services/managing-a-domain.md)|  
 |Crear un dominio compuesto, crear reglas para varios dominios y usar relaciones de valor|[Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md)|  
-|Usar la base de conocimiento predeterminada de DQS integrada en DQS|[Usar la base de conocimiento predeterminada de DQS](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
+|Usar la base de conocimiento predeterminada de DQS integrada en DQS|[Utilizar la base de conocimiento predeterminada de DQS](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   

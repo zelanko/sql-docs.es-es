@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253502"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lección 1: crear Azure Storage cuenta y un contenedor
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lección 1: Creación de la cuenta y el contenedor de Azure Storage
   Antes de empezar a almacenar SQL Server archivos de datos en Azure Storage, debe crear primero una cuenta de Azure Storage y un contenedor de blobs y una firma de acceso compartido. La lección 1 le guía por los pasos necesarios para iniciar sesión en Azure Portal de administración, crear una cuenta de almacenamiento, un contenedor de blobs y una firma de acceso compartido.  
   
  De forma predeterminada, solamente el dueño de la cuenta de almacenamiento puede obtener acceso a blobs, tablas y colas en esa cuenta. Para tener acceso a estos recursos mediante esta nueva mejora de SQL Server sin compartir la clave de acceso de la cuenta de almacenamiento, es necesario hacer lo siguiente:  

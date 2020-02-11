@@ -13,10 +13,10 @@ ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d3bb33d8c3a9237c96fc0bde1becba07df9a7bdc
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728839"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>Ver los errores que se producen durante el almacenamiento provisional (Master Data Services)
@@ -48,10 +48,10 @@ ms.locfileid: "73728839"
   
 4.  Ejecute la consulta. Los detalles del error se muestran en el campo **ErrorDescription** .  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
  Para obtener más información sobre mensajes de error, consulte [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Solucionar problemas del proceso de almacenamiento provisional (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

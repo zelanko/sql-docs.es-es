@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211564"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Agregar lógica comercial a los datos XML
@@ -30,8 +30,8 @@ ms.locfileid: "68211564"
   
 -   Se pueden escribir procedimientos almacenados de Transact-SQL y funciones que inicien el procesamiento en la columna XML de acuerdo con las necesidades de la empresa.  
   
-## <a name="example-applying-xsl-transformation"></a>Ejemplo: Aplicación de una transformación XSL  
- Considere una función CLR **TransformXml()** que acepta un `xml` tipo instancia y una transformación XSL almacenada en un archivo de datos, se aplica la transformación a los datos XML y, a continuación, devuelve el código XML transformado en el resultado. A continuación, se muestra una función esquemática escrita en C#:  
+## <a name="example-applying-xsl-transformation"></a>Ejemplo: Aplicar transformación XSL  
+ Considere una función CLR **TransformXml ()** que acepta una `xml` instancia de tipo de datos y una transformación XSL almacenada en un archivo, aplica la transformación a los datos XML y, a continuación, devuelve el XML transformado en el resultado. A continuación, se muestra una función esquemática escrita en C#:  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  

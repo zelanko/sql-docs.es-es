@@ -1,5 +1,5 @@
 ---
-title: Información general sobre el Asesor de actualizaciones | Microsoft Docs
+title: Información general del Asesor de actualizaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093543"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Información general sobre el Asesor de actualizaciones
@@ -29,12 +29,12 @@ ms.locfileid: "66093543"
 |-----------|-----------------|  
 |[Información general sobre el proceso de actualización](../../../2014/sql-server/install/upgrade-process-overview.md)|Describe el proceso recomendado para actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Información general sobre el Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-overview.md)|Proporciona información general sobre la nueva herramienta de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] denominada Asesor de actualizaciones.|  
-|[Ejecute el Asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|Describe cómo iniciar y ejecutar el Asistente para análisis del Asesor de actualizaciones y el Visor de informes del Asesor de actualizaciones.|  
+|[Ejecutar el asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|Describe cómo iniciar y ejecutar el Asistente para análisis del Asesor de actualizaciones y el Visor de informes del Asesor de actualizaciones.|  
 |[Utilizar los informes](../../../2014/sql-server/install/using-reports.md)|Describe cómo ver y analizar los informes generados por el Visor de informes del Asesor de actualizaciones.|  
   
-## <a name="see-also"></a>Vea también  
- [Actualizar temas de procedimientos del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
- [Actualización del Asistente para la referencia de la interfaz de usuario](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
- [Ejecute el Asesor de actualizaciones &#40;símbolo del sistema&#41;](../../../2014/sql-server/install/running-upgrade-advisor-command-prompt.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
+ [Referencia de la interfaz de usuario del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
+ [Ejecutar el asesor de actualizaciones &#40;símbolo del sistema&#41;](../../../2014/sql-server/install/running-upgrade-advisor-command-prompt.md)  
   
   

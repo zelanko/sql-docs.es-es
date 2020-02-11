@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f090cd6dbfaa0194bc02af581fc4765fca9eac0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768981"
 ---
 # <a name="developing-a-custom-destination-component"></a>Desarrollar un componente de destino personalizado
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite a los desarrolladores escribir componentes de destino personalizados que pueden conectarse a cualquier origen de datos personalizado y almacenar datos en él. Los componentes de destino personalizados resultan útiles si necesitar conectarse a orígenes de datos a los que no se puede tener acceso mediante uno de los componentes de origen existentes incluidos con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece a los desarrolladores la capacidad de escribir componentes de destino personalizados que pueden conectarse a cualquier origen de datos personalizado y almacenar datos en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] él. Los componentes de destino personalizados resultan útiles si necesitar conectarse a orígenes de datos a los que no se puede tener acceso mediante uno de los componentes de origen existentes incluidos con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Los componentes de destino tienen una o más entradas y ninguna salida. En tiempo de diseño, crean y configuran conexiones y leen metadatos de columna del origen de datos externo. Durante la ejecución, conectan a su origen de datos externo y agregan filas que se reciben de los componentes de nivel superior en el flujo de datos al origen de datos externo. Si el origen de datos externo existe antes de la ejecución del componente, el componente de destino también debe asegurarse de que los tipos de datos de las columnas que recibe el componente coinciden con los tipos de datos de las columnas en el origen de datos externo.  
   
@@ -286,7 +286,7 @@ Public Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
-## <a name="sample"></a>Ejemplo  
+## <a name="sample"></a>Muestra  
  En el ejemplo siguiente se muestra un componente de destino simple que utiliza un administrador de conexiones de archivos para guardar los datos binarios del flujo de datos en archivos. En este ejemplo no se muestran todos los métodos ni funcionalidad tratados en este tema. Muestra los métodos importantes que cada componente de destino personalizado debe invalidar, pero no contiene código para la validación en tiempo de diseño.  
   
 ```csharp  
@@ -481,10 +481,10 @@ Namespace BlobDst
 End Namespace  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
- [Developing a Custom Source Component](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  (Desarrollar un componente de origen personalizado)  
+## <a name="see-also"></a>Consulte también  
+ [Desarrollar un componente de origen personalizado](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   
  [Crear un destino con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

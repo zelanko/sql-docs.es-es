@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229397"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Descripción de Power View para modelos multidimensionales
@@ -28,7 +28,7 @@ ms.locfileid: "75229397"
   
  ![Power View para la arquitectura de modelos multidimensionales](../media/daxmd-architecture.gif "Power View para la arquitectura de modelos multidimensionales")  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  **Requisitos de servidor**  
   
 -   SQL Server 2014 Enterprise o Business Intelligence Edition con Analysis Services que se ejecuta en modo Multidimensional.  
@@ -64,7 +64,7 @@ ms.locfileid: "75229397"
 |Relación de la dimensión del cubo del grupo de medida|Relación|  
 |Perspectiva|Perspectiva|  
 |KPI|KPI|  
-|Jerarquías de usuario y elementos primarios y secundarios|Jerarquía|  
+|Jerarquías de usuario y elementos primarios y secundarios|Hierarchy|  
 |Carpeta para mostrar|Carpeta para mostrar|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>Medidas, grupos de medida y KPI  

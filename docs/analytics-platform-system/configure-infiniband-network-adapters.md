@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401294"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configuración de adaptadores de red InfiniBand para el sistema de plataforma de análisis
@@ -53,7 +53,7 @@ Necesita una cuenta de dominio de aplicación APS para iniciar sesión en el nod
   
 Necesita una cuenta de Windows en el servidor cliente que tenga permiso para configurar los adaptadores de red.  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
 En estas instrucciones se da por supuesto que el servidor cliente ya está en bastidor y está conectado a la red InfiniBand. Para obtener instrucciones sobre el montaje en bastidor y el cableado, consulte [adquirir y configurar un servidor de carga](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Notas generales  
@@ -181,6 +181,6 @@ Para satisfacer sus propios requisitos empresariales, también puede unir el ser
   
     -   MyPDW-SQLCTL01  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Adquisición y configuración de un servidor de carga](acquire-and-configure-loading-server.md)  
   

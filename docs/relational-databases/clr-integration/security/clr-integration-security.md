@@ -1,5 +1,5 @@
 ---
-title: Seguridad de la integración de CLR | Microsoft Docs
+title: Seguridad de la integración CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7cfcc3f4d65901da34152a6fce21b436750c15fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118512"
 ---
 # <a name="clr-integration-security"></a>Seguridad de la integración CLR
@@ -58,7 +58,7 @@ ms.locfileid: "68118512"
  [Dominios de aplicación y seguridad de la integración CLR](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  Describe la forma en que los ensamblados se cargan en los dominios de aplicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar ensamblados de integración CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
   
   

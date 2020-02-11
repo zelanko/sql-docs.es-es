@@ -11,10 +11,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399418"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacenamiento de datos MPP de escalabilidad horizontal
@@ -220,7 +220,7 @@ Un nuevo dispositivo de HPE o DELL incluye todas las actualizaciones más recien
 - Actualización de DDR4 DIMMs
 - Rendimiento de DIMM mejorado
 
-**Integrar**
+**Integración**
 
 - La compatibilidad con el nombre de dominio completo (FQDN) permite configurar una confianza de dominio en el dispositivo. 
 - Para usar el FQDN, debe realizar una actualización completa y participar durante la actualización. 
@@ -251,7 +251,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [sp_spaceused ()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Tablas anchas]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
-[BCP, utilidad]:/sql/tools/bcp-utility
+[bcp (utilidad)]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [ALFANUMÉRICO]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [FILAS o intervalo]:/sql/t-sql/queries/select-over-clause-transact-sql

@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245130"
 ---
 # <a name="find-results-windows"></a>Ventanas Resultados de la búsqueda
-  Las dos ventanas resultados de la búsqueda muestran las coincidencias encontradas al usar las pestañas **Buscar en archivos** o **reemplazar en archivos** del cuadro de diálogo **Buscar y reemplazar** . El comando **Opciones de resultados** de **Buscar en archivos** y **Reemplazar en archivos** le permite elegir la ventana Resultados de la búsqueda donde desea que se muestren todas las coincidencias encontradas.  
+  Las dos ventanas Resultados de la búsqueda muestran las coincidencias encontradas utilizando las pestañas **Buscar en archivos** o **Reemplazar en archivos** del cuadro de diálogo **Buscar y reemplazar** . El comando **Opciones de resultados** de **Buscar en archivos** y **Reemplazar en archivos** le permite elegir la ventana Resultados de la búsqueda donde desea que se muestren todas las coincidencias encontradas.  
   
  La ventana Resultados de la búsqueda seleccionada se abrirá automáticamente cada vez que se encuentren coincidencias. Para mostrar la ventana Resultados de la búsqueda de forma manual, haga clic en **Otras ventanas** en el menú **Ver** y, a continuación, haga clic en **Resultados de la búsqueda 1** o **Resultados de la búsqueda 2**.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "75245130"
  **marca de página + flecha arriba**  
  Se desplaza a la línea donde se ha encontrado la coincidencia seleccionada.  
   
- **Página + flecha izquierda**  
+ **página + flecha izquierda**  
  Se desplaza a la línea de la coincidencia anterior.  
   
- **Página + flecha derecha**  
+ **página + flecha derecha**  
  Se desplaza a la línea de la siguiente coincidencia.  
   
  **Borrar todo**  

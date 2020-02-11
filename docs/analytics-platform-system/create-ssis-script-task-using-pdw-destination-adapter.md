@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401218"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Crear una tarea script que use el adaptador de destino de almacenamiento de datos paralelos de SSIS
@@ -264,7 +264,7 @@ Este código de script de paquete SSIS es un ejemplo de código para usar el ada
     }  
     ```  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Cargar datos con Integration Services](load-with-ssis.md)  
 
 <!-- MISSING LINK

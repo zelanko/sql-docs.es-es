@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401174"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de línea de comandos de dwloader para almacenamiento de datos paralelos
@@ -209,7 +209,7 @@ Ejemplos:
 Si hay errores de carga, **dwloader** almacena la fila que no se pudo cargar y la descripción del error en un archivo denominado *load_failure_file_name*. Si este archivo ya existe, dwloader sobrescribirá el archivo existente. *load_failure_file_name* se crea cuando se produce el primer error. Si todas las filas se cargan correctamente, no se crea *load_failure_file_name* .  
   
 **-fh** *number_header_rows*  
-Número de líneas (filas) que se van a omitir al principio de *source_data_file_name*. El valor predeterminado es 0.  
+Número de líneas (filas) que se van a omitir al principio de *source_data_file_name*. El valor predeterminado es 0.  
   
 <variable_length_column_options>  
 Opciones de un *source_data_file_name* que tiene columnas de longitud variable delimitada por caracteres. De forma predeterminada, *source_data_file_name* contiene caracteres ASCII en columnas de longitud variable.  
@@ -224,7 +224,7 @@ Delimitador para cada campo (columna) de la fila. El delimitador de campo es uno
   
 |Nombre|Carácter de escape|Carácter Hex|  
 |--------|--------------------|-----------------|  
-|Tabulador|\t|0x09|  
+|Pestaña|\t|0x09|  
 |Retorno de carro (CR)|\r|0x0D|  
 |Avance de línea (LF)|\n|STOP|  
 |CRLF|\r\n|0x0d0x0a|  
@@ -567,7 +567,7 @@ En la tabla anterior se muestra **dwloader** mediante la carga del modo Append e
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-simple-dwloader-example"></a>a. Ejemplo de dwloader simple  
+### <a name="a-simple-dwloader-example"></a>A. Ejemplo de dwloader simple  
 En el ejemplo siguiente se muestra la iniciación del **cargador** solo con las opciones requeridas seleccionadas. Otras opciones se toman del archivo de configuración global, *loadparamfile. txt*.  
   
 Ejemplo de uso de la autenticación de SQL Server.  
@@ -666,7 +666,7 @@ A continuación se muestra un ejemplo del archivo de datos, DimAccount. txt, que
 13|3|1170|110|Deferred Taxes|Assets|+||Currency|  
 ```  
   
-### <a name="c-load-data-from-the-command-line"></a>c. Cargar datos desde la línea de comandos  
+### <a name="c-load-data-from-the-command-line"></a>C. Cargar datos desde la línea de comandos  
 El script del ejemplo B se puede reemplazar escribiendo todos los parámetros en la línea de comandos, tal y como se muestra en el ejemplo siguiente.  
   
 ```  

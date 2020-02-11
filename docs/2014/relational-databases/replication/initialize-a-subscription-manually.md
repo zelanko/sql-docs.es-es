@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721667"
 ---
 # <a name="initialize-a-subscription-manually"></a>Inicializar una suscripción manualmente
@@ -30,7 +30,7 @@ ms.locfileid: "62721667"
   
 -   Si se produce actividad en una base de datos publicada con la replicación transaccional entre el momento en que se copian los datos y el esquema en el suscriptor y el momento en que se inicializa manualmente la suscripción, es posible que los cambios que resulten de dicha actividad no se repliquen en el suscriptor.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Para inicializar manualmente una suscripción a una publicación copie el esquema (y, normalmente, los datos) en la base de datos de suscripciones. El esquema y los datos deben coincidir con la base de datos de publicaciones. A continuación, especifique que la suscripción no requiere esquema y datos en la página **Inicializar suscripciones** del Asistente para nuevas suscripciones. Para obtener más información sobre cómo utilizar este asistente, vea [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md) y [Create a Pull Subscription](create-a-pull-subscription.md).  
   
  Al sincronizar la suscripción por primera vez, los objetos y metadatos requeridos por la replicación se copian en la base de datos de suscripciones.  
@@ -48,9 +48,9 @@ ms.locfileid: "62721667"
   
 1.  Asegúrese de que el esquema y los datos existen en la base de datos de suscripciones. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication** , **@subscriber** , el nombre de la base de datos del suscriptor que contiene los datos publicados para **@destination_db** , un valor de **pull** para **@subscription_type** y un valor de **replication support only** para **@sync_type** . Para obtener más información, consulte [Create a Pull Subscription](create-a-pull-subscription.md).  
+2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber**, el nombre de la base de datos en el suscriptor que contiene los **@destination_db**datos publicados para, un valor **@subscription_type**de **pull** para y un valor de **Replication support Only** para **@sync_type**. Para obtener más información, consulte [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-3.  En el suscriptor, ejecute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Para obtener más información acerca de las suscripciones de actualización, vea [Crear una suscripción actualizable en una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+3.  En el suscriptor, ejecute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Para obtener más información acerca de las suscripciones de actualización, vea [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 4.  En el suscriptor, ejecute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Para obtener más información, consulte [Create a Pull Subscription](create-a-pull-subscription.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62721667"
   
 1.  Asegúrese de que el esquema y los datos existen en la base de datos de suscripciones. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique el nombre de la base de datos del suscriptor que contiene los datos publicados para **@destination_db** , un valor de **push** para **@subscription_type** y un valor de **replication support only** para **@sync_type** . Para obtener más información acerca de las suscripciones de actualización, vea [Crear una suscripción actualizable en una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique el nombre de la base de datos en el suscriptor que contiene los **@destination_db**datos publicados para, un valor **@subscription_type**de **inserte** para y un valor de **Replication support Only** para **@sync_type**. Para obtener más información acerca de las suscripciones de actualización, vea [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  En el publicador de la base de datos de publicaciones, ejecute [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Para obtener más información, consulte [Create a Push Subscription](create-a-push-subscription.md).  
   
@@ -70,9 +70,9 @@ ms.locfileid: "62721667"
   
 1.  Asegúrese de que el esquema y los datos existen en la base de datos de suscripciones. Esto se puede hacer restaurando una copia de seguridad de la base de datos de publicación en el suscriptor.  
   
-2.  En el publicador, ejecute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique **@publication** , **@subscriber** , **@subscriber_db** y un valor de **pull** para **@subscription_type** . Esto registra la suscripción de extracción.  
+2.  En el publicador, ejecute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique **@publication**, **@subscriber**, **@subscriber_db**y un valor de **pull** para **@subscription_type**. Esto registra la suscripción de extracción.  
   
-3.  En la base de datos del suscriptor que contiene los datos publicados, ejecute [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Especifique un valor de **none** para **@sync_type** .  
+3.  En la base de datos del suscriptor que contiene los datos publicados, ejecute [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Especifique un valor de **none** para **@sync_type**.  
   
 4.  En el suscriptor, ejecute [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Para obtener más información, consulte [Create a Pull Subscription](create-a-pull-subscription.md).  
   
@@ -82,13 +82,13 @@ ms.locfileid: "62721667"
   
 1.  Asegúrese de que el esquema y los datos existen en la base de datos de suscripciones. Esto se puede hacer restaurando una copia de seguridad de la base de datos de publicación en el suscriptor.  
   
-2.  En la base de datos de publicación del publicador, ejecute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique el nombre de la base de datos del suscriptor que contiene los datos publicados para **@subscriber_db** , un valor de **push** para **@subscription_type** y un valor de **none** para **@sync_type** .  
+2.  En la base de datos de publicación del publicador, ejecute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique el nombre de la base de datos en el suscriptor que contiene los **@subscriber_db**datos publicados para, un valor **@subscription_type**de **inserte** para y un valor de **@sync_type** **None** para.  
   
 3.  En el publicador de la base de datos de publicaciones, ejecute [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Para obtener más información, consulte [Create a Push Subscription](create-a-push-subscription.md).  
   
 4.  Inicie el Agente de mezcla para transferir los objetos de replicación y descargue los cambios más recientes del publicador. Para obtener más información, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](administration/back-up-and-restore-replicated-databases.md)   
  [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  

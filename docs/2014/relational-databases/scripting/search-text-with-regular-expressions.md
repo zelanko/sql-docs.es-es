@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243320"
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
@@ -37,7 +37,7 @@ ms.locfileid: "75243320"
   
  En la tabla siguiente se describen las expresiones regulares disponibles en la **Lista de referencias**.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Un carácter cualquiera|.|Devuelve cualquier carácter único excepto un salto de línea.|  
 |Cero o más|*|Devuelve cero o más repeticiones de la expresión anterior, realizando todas las correspondencias posibles.|  
@@ -56,11 +56,11 @@ ms.locfileid: "75243320"
 |Identificador de C/C++|:i|Devuelve la expresión ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Cadena entre comillas|:q|Devuelve la expresión (("[^"]*")&#124;('[^']\*')).|  
 |Espacio o tabulación|:b|Devuelve caracteres de espacio o tabulación.|  
-|Integer|:z|Devuelve la expresión ([0-9]+).|  
+|Entero|:z|Devuelve la expresión ([0-9]+).|  
   
  La lista de todas las expresiones regulares válidas en las operaciones de **Buscar y reemplazar** es más amplia que lo que se puede mostrar en este **Generador de expresiones**. En una cadena **Buscar** también puede insertar las expresiones regulares siguientes:  
   
-|Expresión|Sintaxis|Descripción|  
+|Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Cero o más como mínimo|@|Devuelve cero o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
 |Uno o más como mínimo|#|Devuelve una o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
@@ -80,12 +80,12 @@ ms.locfileid: "75243320"
 |Escape|\e|Unicode U+001B.|  
 |Bell|\g|Unicode U+0007.|  
 |Retroceso|\h|Unicode U+0008.|  
-|Tabulador|\t|Devuelve un carácter de tabulación, Unicode U+0009.|  
+|Pestaña|\t|Devuelve un carácter de tabulación, Unicode U+0009.|  
 |carácter Unicode|\x#### o \u####|Devuelve un carácter dado por un valor Unicode donde #### son dígitos hexadecimales. Es posible especificar un carácter fuera del plano básico multilingüe (es decir, un suplente) con el punto de código ISO 10646 o con dos puntos de código Unicode que proporcionen los valores del par suplente.|  
   
  En la tabla siguiente se muestra la sintaxis de coincidencias para propiedades estándar de caracteres Unicode. La abreviatura de dos letras es la misma que la que aparece en la base de datos de propiedades de caracteres Unicode. Éstas se pueden especificar como parte de un juego de caracteres. Por ejemplo, la expresión [:Nd:Nl:No] devuelve cualquier tipo de dígito.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Letra en mayúscula|:Lu|Devuelve cualquier letra en mayúscula. Por ejemplo, :Luhe devuelve "The" pero no "the".|  
 |Letra en minúscula|:Ll|Devuelve cualquier letra en minúscula. Por ejemplo, :Llhe devuelve "the" pero no "The".|  
@@ -120,7 +120,7 @@ ms.locfileid: "75243320"
   
  Además de las propiedades de caracteres Unicode, es posible especificar las siguientes propiedades adicionales como parte de un juego de caracteres.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Alfa|:Al|Devuelve cualquier carácter. Por ejemplo, :Alhe devuelve palabras como "The", "then" y "reached".|  
 |Numeric|:Nu|Devuelve cualquier número o dígito.|  
@@ -132,6 +132,6 @@ ms.locfileid: "75243320"
 |Katakana|:Ka|Devuelve caracteres Katakana.|  
 |Ideográfico/Han/Kanji|:Id|Devuelve caracteres ideográficos, como Han y Kanji.|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Buscar y reemplazar](search-and-replace.md)   
  [Buscar texto con caracteres comodín](search-text-with-wildcards.md)  

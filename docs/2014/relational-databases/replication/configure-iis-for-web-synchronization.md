@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a5c3b456fa650cff94d0b5809c37f7ceca8b1b71
-ms.sourcegitcommit: 961c56bb78ff46ae6eb1a2cc5d2b1262ddf7a4fa
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74706668"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para la sincronización web
@@ -80,7 +80,7 @@ ms.locfileid: "74706668"
   
     4.  Complete el Asistente para certificados de servidor web.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
  Si no puede obtener un certificado de servidor de una CA, puede especificar un certificado para comprobación. Para configurar IIS 6.0 para comprobación, instale un certificado mediante la utilidad SelfSSL. Esta utilidad está disponible en el kit de recursos de IIS 6.0. Puede descargar las herramientas del [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=5135). Para IIS 5.0, vaya a [Ayuda y soporte técnico de Microsoft](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
@@ -155,7 +155,7 @@ ms.locfileid: "74706668"
   
     1.  Escriba un alias para el directorio virtual en el cuadro **Alias** .  
   
-    2.  Escriba una ruta de acceso al directorio virtual en el cuadro **Ruta de acceso** . `websync1` Por ejemplo, si escribió en el cuadro **alias** , escriba `C:\Inetpub\wwwroot\websync1` en el cuadro **ruta de acceso** . Haga clic en **Siguiente**.  
+    2.  Escriba una ruta de acceso al directorio virtual en el cuadro **Ruta de acceso** . `websync1` Por ejemplo, si escribió en el cuadro **alias** , escriba `C:\Inetpub\wwwroot\websync1` en el cuadro **ruta de acceso** . Haga clic en **Next**.  
   
     3.  Haga clic en **Sí**en los dos cuadros de diálogo. Esto indica que desea crear una carpeta nueva y que desea copiar la DLL de la Interfaz de programación de aplicaciones para servidores de Internet (ISAPI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . .  
   
@@ -270,7 +270,7 @@ ms.locfileid: "74706668"
   
     6.  Seleccione los usuarios o grupos que no requieran acceso al directorio y, a continuación, haga clic en **Quitar**.  
   
-    7.  Haga clic en **Aceptar**.  
+    7.  Haga clic en **OK**.  
   
 4.  Cree un grupo de aplicaciones en **Administrador de Internet Information Services (IIS)**:  
   
@@ -294,7 +294,7 @@ ms.locfileid: "74706668"
   
     4.  En los campos **Nombre de usuario** y **Contraseña** , escriba la cuenta y la contraseña que creó en el paso 1.  
   
-    5.  Haga clic en **Aceptar**.  
+    5.  Haga clic en **OK**.  
   
 6.  Asocie el grupo de aplicaciones al directorio virtual que se utiliza para la sincronización web:  
   
@@ -304,7 +304,7 @@ ms.locfileid: "74706668"
   
     3.  En la pestaña **Directorio virtual** del cuadro de diálogo **\<Propiedades de <nombreDeDirectorioVirtual>**, en la lista desplegable **Grupo de aplicaciones**, seleccione el grupo de aplicaciones creado en el paso 5.  
   
-    4.  Haga clic en **Aceptar**.  
+    4.  Haga clic en **OK**.  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>Probar la conexión con replisapi.dll  
  Ejecute la sincronización web en modo de diagnóstico para probar la conexión al equipo en el que se ejecuta IIS y para asegurarse de que el certificado SSL (Capa de sockets seguros) está instalado correctamente. Para ejecutar la sincronización web en modo de diagnóstico, debe ser administrador en el equipo donde se ejecuta IIS.  
@@ -321,7 +321,7 @@ ms.locfileid: "74706668"
   
     4.  Si se utiliza un servidor proxy, active las casillas **Utilizar un servidor proxy para su LAN** y **No usar servidor proxy para direcciones locales**.  
   
-    5.  Haga clic en **Aceptar**.  
+    5.  Haga clic en **OK**.  
   
 2.  En el suscriptor, en Internet Explorer, conéctese al servidor en modo de diagnóstico agregando `?diag` a la dirección de replisapi.dll. Por ejemplo: https://server.domain.com/directory/replisapi.dll?diag.  
   
@@ -357,7 +357,7 @@ ms.locfileid: "74706668"
   
     2.  Conéctese al servidor en modo de diagnóstico. Si el certificado se ha instalado correctamente, no aparecerá el cuadro de diálogo **Alerta de seguridad** . Si se muestra este cuadro de diálogo, se producirá un error en el Agente de mezcla cuando intente conectarse al equipo en el que se ejecuta IIS. Debe asegurarse de que el certificado del servidor al que está obteniendo acceso se ha agregado al almacén de certificados del suscriptor como certificado de confianza. Para obtener más información acerca de la exportación de certificados, vea la documentación de IIS.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la sincronización Web](configure-web-synchronization.md)  
   
   

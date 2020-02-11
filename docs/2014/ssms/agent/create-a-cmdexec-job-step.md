@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798159"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Create a CmdExec Job Step
-  En este tema se explica cómo crear y definir un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que usa un programa ejecutable o un comando del sistema operativo mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server.  
+  En este tema se describe cómo crear y definir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un paso de trabajo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del agente en que usa un programa ejecutable o un comando del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] operativo mediante, o objetos de administración de SQL Server.  
   
  **En este tema**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72798159"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  De forma predeterminada, solo los miembros del rol fijo de servidor **sysadmin** pueden crear pasos de trabajo CmdExec. Estos pasos de trabajo se ejecutan en el contexto de la cuenta de servicio de Agente SQL Server salvo que el usuario **sysadmin** cree una cuenta de proxy. Los usuarios que no sean miembros del rol **sysadmin** pueden crear pasos de trabajo CmdExec si disponen de acceso a la cuenta de proxy CmdExec.  
@@ -56,7 +56,7 @@ ms.locfileid: "72798159"
   
 4.  En el cuadro de diálogo **Nuevo paso de trabajo** , escriba un nombre para el paso de trabajo en **Nombre del paso**.  
   
-5.  En la lista **Tipo** , elija **Sistema operativo (CmdExec)** .  
+5.  En la lista **Tipo** , elija **Sistema operativo (CmdExec)**.  
   
 6.  En la lista **Ejecutar como** , seleccione la cuenta e proxy con las credenciales que utilizará el trabajo. De forma predeterminada, los pasos de trabajo de CmdExec se ejecutan en el contexto de la cuenta de servicio de Agente SQL Server.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "72798159"
     GO  
     ```  
   
- Para obtener más información, [vea &#40;SP_ADD_JOBSTEP Transact-&#41; SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+ Para obtener más información, vea [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
 

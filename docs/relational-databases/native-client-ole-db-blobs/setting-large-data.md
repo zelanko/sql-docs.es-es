@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758318"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Con el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, puede establecer datos de BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
+  Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, puede establecer datos de BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
   
  El consumidor crea un objeto de almacenamiento que contiene los datos y pasa al proveedor un puntero a este objeto de almacenamiento. A continuación, el proveedor lee los datos del objeto de almacenamiento del consumidor y los escribe en la columna BLOB.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73758318"
   
 2.  Establezca las propiedades en el grupo de propiedades DBPROPSET_ROWSET de modo que el conjunto de filas sea actualizable.  
   
-3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establezca el elemento *wType* de la estructura DBBINDING en DBTYPE_IUNKNOWN y el elemento *pObject* que señale a la estructura DBOBJECT creada.  
+3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establezca el elemento *wType* de la estructura DBBINDING en DBTYPE_IUNKNOWN y el elemento *pObject* para que señale a la estructura DBOBJECT creada.  
   
 4.  Cree un descriptor de acceso utilizando la información de enlace de la matriz de estructuras DBBINDINGS.  
   
@@ -720,8 +720,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [BLOB y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+## <a name="see-also"></a>Consulte también  
+ [Blobs y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Usar tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

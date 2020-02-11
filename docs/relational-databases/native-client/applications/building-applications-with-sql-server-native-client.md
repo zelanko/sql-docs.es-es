@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad6dcaf2b22e7aa545727354f911502dcde16aa5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244217"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Generar aplicaciones con SQL Server Native Client
@@ -28,7 +28,7 @@ ms.locfileid: "75244217"
   Al desarrollar una aplicación que usa la biblioteca de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, pueden surgir algunos problemas. En los temas de esta sección se tratan muchos de estos problemas, incluyendo la actualización de MDAC a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, mediante los archivos de encabezado y biblioteca de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, y la información general de las distintas cadenas de conexión que se pueden usar con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Instalación de SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
+ [Instalar SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  Se describe cómo se instala [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, las ubicaciones en las que se instalan diversos componentes y cómo desinstalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
  [Componentes de SQL Server Native Client](../../../relational-databases/native-client/applications/components-of-sql-server-native-client.md)  
@@ -37,10 +37,10 @@ ms.locfileid: "75244217"
  [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
  Se describen los diversos tipos de cadenas de conexión que se pueden usar cuando se realiza la conexión a una base de datos a través de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- [Uso de los archivos de encabezado y biblioteca de SQL Server Native Client](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)  
+ [Utilizar los archivos de encabezado y de biblioteca de SQL Server Native Client](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)  
  Se describe cómo usar los archivos de encabezado y biblioteca de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client en una aplicación.  
   
- [Actualización de una aplicación a SQL Server Native Client desde MDAC](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
+ [Actualizar una aplicación de MDCA a SQL Server Native Client](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
  Se describen las diferencias que existen entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y MDAC, y los problemas que deberían tenerse en cuenta a la hora de realizar la actualización de MDAC a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
  [Actualización de una aplicación desde SQL Server 2005 Native Client](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
@@ -49,13 +49,13 @@ ms.locfileid: "75244217"
  [Usar ADO con SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)  
  Se describe el modo en que ADO usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para obtener acceso a la funcionalidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usarla.  
   
- [Directivas de soporte técnico para SQL Server Native Client](../../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)  
+ [Directivas de soporte con SQL Server Native Client](../../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)  
  Se describe cómo se pueden usar varios componentes de acceso a datos con versiones diferentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
  [Conexión a una Azure SQL Database con SQL Server Native Client](../../../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  Describe cómo conectarse a una base de datos de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Programación de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Temas de procedimientos de ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Temas de procedimientos de OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

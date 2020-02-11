@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: dfce2ce4a6f13a25687d668268f532893c1404e0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056287"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW el uso de características y funcionalidades SQL Server
@@ -31,11 +31,11 @@ Para habilitar el uso de polybase en la base de datos de ejemplo, asegúrese de 
 
     EXEC [Application].[Configuration_ApplyPolyBase]
 
-Se creará una tabla externa `dbo.CityPopulationStatistics` que hace referencia a un conjunto de datos público que contiene los datos de población de las ciudades del Estados Unidos, hospedado en Azure BLOB Storage. Se recomienda revisar el código del procedimiento almacenado para comprender el proceso de configuración. Si desea hospedar sus propios datos en Azure BLOB Storage y mantenerlos protegidos del acceso público general, deberá llevar a cabo pasos de configuración adicionales. La siguiente consulta devuelve los datos de ese conjunto de datos externos:
+Se creará una tabla `dbo.CityPopulationStatistics` externa que hace referencia a un conjunto de datos público que contiene los datos de población de las ciudades del Estados Unidos, hospedado en Azure BLOB Storage. Se recomienda revisar el código del procedimiento almacenado para comprender el proceso de configuración. Si desea hospedar sus propios datos en Azure BLOB Storage y mantenerlos protegidos del acceso público general, deberá llevar a cabo pasos de configuración adicionales. La siguiente consulta devuelve los datos de ese conjunto de datos externos:
 
     SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
 
-Para comprender qué ciudades pueden ser de interés para una expansión adicional, la consulta siguiente examina la tasa de crecimiento de las ciudades y devuelve las mayores 100 de las ciudades más grandes con un crecimiento significativo y donde Wide World Importers no tiene una presencia de ventas. La consulta implica una combinación entre el `dbo.CityPopulationStatistics` de la tabla remota y el `Dimension.City`de la tabla local, y un filtro que implique la `Fact.Sales`de la tabla local.
+Para comprender qué ciudades pueden ser de interés para una expansión adicional, la consulta siguiente examina la tasa de crecimiento de las ciudades y devuelve las mayores 100 de las ciudades más grandes con un crecimiento significativo y donde Wide World Importers no tiene una presencia de ventas. La consulta implica una combinación entre la tabla remota `dbo.CityPopulationStatistics` y la tabla local `Dimension.City`, y un filtro que implica la tabla `Fact.Sales`local.
 
     WITH PotentialCities
     AS
@@ -79,7 +79,7 @@ Los índices no clúster se usan sobre el índice de almacén de columnas agrupa
 
 La base de datos de ejemplo tiene un tamaño de datos limitado para facilitar la descarga e instalación del ejemplo. Sin embargo, para ver las ventajas de rendimiento reales de los índices de almacén de columnas, debería usar un conjunto de datos más grande.
 
-Puede ejecutar la siguiente instrucción para aumentar el tamaño de la tabla `Fact.Sales` insertando otras 12 millones filas de datos de ejemplo. Estas filas se insertan en el año 2012, de modo que no hay interferencias con el proceso ETL.
+Puede ejecutar la instrucción siguiente para aumentar el tamaño de la `Fact.Sales` tabla mediante la inserción de otras 12 millones filas de datos de ejemplo. Estas filas se insertan en el año 2012, de modo que no hay interferencias con el proceso ETL.
 
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
 
@@ -95,7 +95,7 @@ Para volver a crear:
 
     CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
 
-## <a name="partitioning"></a>Particiones
+## <a name="partitioning"></a>Creación de particiones
 
 (Versión completa del ejemplo)
 
@@ -103,12 +103,12 @@ El tamaño de los datos en un almacenamiento de datos puede aumentar de tamaño.
 
 Todas las tablas de hechos mayores se particionan por año. La única excepción es `Fact.Stock Holdings`, que no se basa en la fecha y tiene un tamaño de datos limitado en comparación con las demás tablas de hechos.
 
-La función de partición que se usa para todas las tablas con particiones es `PF_Date`y se `PS_Date`el esquema de partición que se está usando.
+La función de partición que se usa para todas las `PF_Date`tablas con particiones es y el esquema `PS_Date`de partición utilizado es.
 
 ## <a name="in-memory-oltp"></a>OLTP en memoria
 
 (Versión completa del ejemplo)
 
-WideWorldImportersDW usa SCHEMA_ONLY las tablas optimizadas para memoria para las tablas de almacenamiento provisional. Todas las tablas de `Integration.`*`_Staging` se SCHEMA_ONLY tablas optimizadas para memoria.
+WideWorldImportersDW usa SCHEMA_ONLY las tablas optimizadas para memoria para las tablas de almacenamiento provisional. `Integration.` * Todas `_Staging` las tablas se SCHEMA_ONLY tablas optimizadas para memoria.
 
 La ventaja de SCHEMA_ONLY tablas es que no se registran y no requieren ningún acceso a disco. Esto mejora el rendimiento del proceso ETL. Como estas tablas no se registran, su contenido se pierde si se produce un error. Sin embargo, el origen de datos sigue estando disponible, por lo que el proceso ETL simplemente se puede reiniciar si se produce un error.

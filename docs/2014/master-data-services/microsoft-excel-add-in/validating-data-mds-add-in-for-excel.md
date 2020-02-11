@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 02a788c5675a763d7285c9986eef94f3621e6a9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478808"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Validar datos (complemento MDS para Excel)
@@ -27,14 +27,14 @@ ms.locfileid: "65478808"
  En cada caso, los datos se publican en el repositorio MDS. Los datos que no son válidos se resaltan y los detalles de error se pueden mostrar en las columnas de estado.  
   
 ## <a name="when-validation-occurs"></a>Cuándo se produce la validación  
- En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], se produce la validación al publicar datos nuevos o modificados, o al aplicar manualmente las reglas de negocios.  
+ En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], la validación tiene lugar al publicar datos nuevos o modificados, o cuando las reglas de negocios se aplican manualmente.  
   
  Cuando las reglas de negocios producen un error, los datos siguen publicándose en el repositorio MDS. Cuando se produce un error en la validación de entrada, los datos no se publican en el repositorio.  
   
 ## <a name="validation-statuses"></a>Estados de validación  
  En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], son posibles los siguientes estados de validación.  
   
-|Estado|Descripción|  
+|Status|Descripción|  
 |------------|-----------------|  
 |Error|Uno o más valores de la fila no pudieron realizar la validación con las reglas de negocios definidas por un administrador MDS.|  
 |No se validaron|Los valores de la fila aún no se han validado con las reglas de negocios.|  
@@ -43,7 +43,7 @@ ms.locfileid: "65478808"
 ## <a name="input-statuses"></a>Estados de entrada  
  En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], son posibles los siguientes estados de entrada.  
   
-|Estado|Descripción|  
+|Status|Descripción|  
 |------------|-----------------|  
 |Error|Uno o más valores de la fila no cumplen los requisitos del sistema como la longitud o el tipo de datos. El valor no se actualiza en el repositorio MDS.|  
 |Nueva fila|Los valores de la fila aún no se han publicado en el repositorio MDS.|  
@@ -54,11 +54,11 @@ ms.locfileid: "65478808"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Determine qué valores no pasan las reglas de negocios definidas.|[Aplicar reglas de negocios &#40;complemento MDS para Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
-|Para ayudar a corregir los errores de validación, vea todas las transacciones que han tenido lugar para un miembro.|[Ver todas las anotaciones o transacciones de un miembro &#40;complemento MDS para Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
+|Determine qué valores no pasan las reglas de negocios definidas.|[Aplicar reglas de negocios &#40;Complemento MDS para Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
+|Para ayudar a corregir los errores de validación, vea todas las transacciones que han tenido lugar para un miembro.|[Ver todas las anotaciones o transacciones de un miembro &#40;Complemento MDS para Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Publicar datos &#40;complemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Complemento MDS para Excel de &#40;de datos de publicación&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

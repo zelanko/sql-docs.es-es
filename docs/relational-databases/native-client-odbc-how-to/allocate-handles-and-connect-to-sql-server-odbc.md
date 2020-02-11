@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ce294636c4d01a143b640126832bc6cca31ece14
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782069"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Asignar identificadores y conectarse a SQL Server (ODBC)
@@ -42,11 +42,11 @@ ms.locfileid: "73782069"
   
 7.  Opcionalmente, llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer las opciones de conexión o llame a [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) para obtener las opciones de conexión.  
   
-8.  Llame a SQLConnect para usar un origen de datos existente con el fin de conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+8.  Llame a SQLConnect para usar un origen de datos existente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]el que conectarse.  
   
-     O bien  
+     Or  
   
-     Llame a [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) para usar una cadena de conexión para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Llame a [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) para usar una cadena de conexión para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]conectarse a.  
   
      Una cadena de conexión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] completa mínima tiene uno de dos formatos:  
   
@@ -59,23 +59,23 @@ ms.locfileid: "73782069"
   
      \- O bien  
   
-     Llame a [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) varias veces de manera iterativa para compilar la cadena de conexión y conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Llame a [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) varias veces de manera iterativa para compilar la cadena de conexión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y conectarse a.  
   
-9. Opcionalmente, llame a [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) para obtener los atributos y el comportamiento del controlador para el origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+9. Opcionalmente, llame a [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) para obtener los atributos y el comportamiento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del controlador para el origen de datos.  
   
 10. Asigne y utilice las instrucciones.  
   
-11. Llame a SQLDisconnect para desconectarse de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y haga que el identificador de conexión esté disponible para una nueva conexión.  
+11. Llame a SQLDisconnect para desconectarse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y hacer que el identificador de conexión esté disponible para una nueva conexión.  
   
 12. Llame a [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) con un **HandleType** de SQL_HANDLE_DBC para liberar el identificador de conexión.  
   
 13. Llame a **SQLFreeHandle** con un **HandleType** de SQL_HANDLE_ENV para liberar el identificador del entorno.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se muestra una llamada a **SQLDriverConnect** para conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin necesidad de un origen de datos ODBC existente. Al pasar una cadena de conexión incompleta a **SQLDriverConnect**, hace que el controlador ODBC solicite al usuario que escriba la información que falta.  
+ En este ejemplo se muestra una llamada a **SQLDriverConnect** para conectarse a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de sin necesidad de un origen de datos ODBC existente. Al pasar una cadena de conexión incompleta a **SQLDriverConnect**, hace que el controlador ODBC solicite al usuario que escriba la información que falta.  
   
 ```  
 #define MAXBUFLEN   255  

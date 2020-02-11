@@ -13,10 +13,10 @@ ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: da099b6a3aca31dd0acdc82f7e2bdbdf13c7c24e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244128"
 ---
 # <a name="run-the-data-quality-client-application"></a>Ejecutar la aplicación Data Quality Client
@@ -25,14 +25,14 @@ ms.locfileid: "75244128"
 
   Ejecute [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]e inicie sesión en una instancia de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Debe haber completado la instalación del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ejecutando el archivo DQSInstaller.exe. Para obtener más información, vea [Ejecutar DQSInstaller.exe para completar la instalación del servidor de calidad de datos](../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Para poder iniciar sesión en [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], es necesario disponer de uno de los tres roles de DQS (dqs_administrator, dqs_kb_editor o dqs_kb_operator) en la base de datos DQS_MAIN.  
   
 ##  <a name="Run"></a>Ejecutar Data Quality Client  

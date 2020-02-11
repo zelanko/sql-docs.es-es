@@ -18,10 +18,10 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
 ms.openlocfilehash: eb274d4f022a182ac056c190a8626fa48e36511d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844402"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Replicación geográfica activa: sp_wait_for_database_copy_sync
@@ -31,7 +31,7 @@ ms.locfileid: "73844402"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@target_server =] ' server_name '  
+ [ @target_server = ] 'server_name'  
  Nombre del servidor de SQL Database que hospeda la base de datos secundaria activa. server_name es sysname, sin valor predeterminado.  
   
- [@target_database =] ' database_name '  
+ [ @target_database = ] 'database_name'  
  Nombre de la base de datos secundaria activa. database_name es sysname y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -61,7 +61,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>Permisos  
  Cualquier usuario de la base de datos principal puede llamar a este procedimiento almacenado del sistema. El inicio de sesión debe ser un usuario tanto en la base de datos principal como en la secundaria activa.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  Todas las transacciones confirmadas antes de una llamada **sp_wait_for_database_copy_sync** se envían a la base de datos secundaria activa.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -74,8 +74,8 @@ EXEC sys.sp_wait_for_database_copy_sync @target_server = N'ubfyu5ssyt1', @target
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Sys. dm_continuous_copy_status &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Funciones &#40;y vistas de administración dinámica de replicación geográfica Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+## <a name="see-also"></a>Consulte también  
+ [Sys. dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [Funciones y vistas de administración dinámica de replicación geográfica &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

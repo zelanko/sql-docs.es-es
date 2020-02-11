@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399766"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Desinstalación de las revisiones de Analytics Platform System 
@@ -21,7 +21,7 @@ En los pasos siguientes se describe cómo desinstalar una revisión del sistema 
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
 Para realizar estos pasos, necesitará:  
   
 -   Un inicio de sesión de System Analytics Platform con permisos para tener acceso a la consola de administración para supervisar el dispositivo.  
@@ -48,7 +48,7 @@ Para realizar estos pasos, necesitará:
     setup.exe /action="removepatch" /DomainAdminPassword="<password>"  
     ```  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Descargar y aplicar actualizaciones de Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
 [Desinstale Microsoft Updates &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
 [Aplicación de revisiones de Analytics Platform System &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  

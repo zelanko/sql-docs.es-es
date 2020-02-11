@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74542051"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -37,15 +37,15 @@ Devuelve una fila por cada elemento clasificado en la base de datos.
 
 |Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|  
-|**clase**|**Inter**|Identifica la clase del elemento en el que existe la clasificación. Siempre tendrá el valor 1 (que representa una columna).|  
+|**las**|**int**|Identifica la clase del elemento en el que existe la clasificación. Siempre tendrá el valor 1 (que representa una columna).|  
 |**class_desc**|**VARCHAR (16)**|Descripción de la clase del elemento en el que existe la clasificación. siempre tendrá el valor *OBJECT_OR_COLUMN*|  
-|**major_id**|**Inter**|Representa el identificador de la tabla que contiene la columna clasificada, que corresponde a sys. all_objects. object_id|  
-|**minor_id**|**Inter**|Representa el identificador de la columna en la que existe la clasificación, que corresponde a sys. all_columns. column_id|   
-|**rótulo**|**sysname**|La etiqueta (inteligible) asignada para la clasificación de confidencialidad|  
+|**major_id**|**int**|Representa el identificador de la tabla que contiene la columna clasificada, que corresponde a sys. all_objects. object_id|  
+|**minor_id**|**int**|Representa el identificador de la columna en la que existe la clasificación, que corresponde a sys. all_columns. column_id|   
+|**label**|**sysname**|La etiqueta (inteligible) asignada para la clasificación de confidencialidad|  
 |**label_id**|**sysname**|Identificador asociado a la etiqueta, que se puede usar en un sistema de protección de la información, como Azure Information Protection (AIP).|  
 |**information_type**|**sysname**|El tipo de información (legible) asignado para la clasificación de confidencialidad|  
 |**information_type_id**|**sysname**|IDENTIFICADOR asociado con el tipo de información, que se puede usar en un sistema de protección de la información, como Azure Information Protection (AIP).|  
-|**rank**|**Inter**|Un valor numérico del rango: <br><br>0 para ninguno<br>10 para LOW<br>20 para medio<br>30 para alta<br>40 para crítico| 
+|**criterios**|**int**|Un valor numérico del rango: <br><br>0 para ninguno<br>10 para LOW<br>20 para medio<br>30 para alta<br>40 para crítico| 
 |**rank_desc**|**sysname**|Representación textual del rango:  <br><br>NINGUNO, BAJO, MEDIO, ALTO, CRÍTICO|  
 | &nbsp; | &nbsp; | &nbsp; |
 
@@ -56,7 +56,7 @@ Devuelve una fila por cada elemento clasificado en la base de datos.
  
 ## <a name="examples"></a>Ejemplos
 
-### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>a. Enumerar todas las columnas clasificadas y su clasificación correspondiente
+### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Enumerar todas las columnas clasificadas y su clasificación correspondiente
 
 En el ejemplo siguiente se devuelve una tabla que muestra el nombre de la tabla, el nombre de la columna, la etiqueta, el ID. de etiqueta, el tipo de información, el ID. de tipo de información de cada columna clasificada de la base
 
@@ -78,12 +78,12 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso **View any Sensitivity Classification** . 
  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obtener más información, vea [configuración de visibilidad de metadatos](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[Introducción a SQL Information Protection](https://aka.ms/sqlip)
+[Clasificación y detección de datos de Azure SQL Database](https://aka.ms/sqlip)

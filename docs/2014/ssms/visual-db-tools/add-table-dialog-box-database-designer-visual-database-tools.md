@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a301857168f7da4040df0195bc25c0ab54861eb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460144"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>Agregar tabla (cuadro de diálogo, Visual Database Tools)
@@ -30,16 +30,16 @@ ms.locfileid: "63460144"
  **Actualizar**  
  Actualiza la lista de tablas para que coincidan con el estado actual de la base de datos.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega las tablas seleccionadas.  
   
 > [!NOTE]  
 >  Si desea agregar varias tablas al diagrama, puede seleccionarlas todas antes de hacer clic en **Agregar**. Como alternativa, puede hacer doble clic en cada una de las tablas que desee agregar y, luego, hacer clic en **Cerrar** cuando termine.  
   
- **Cerrar**  
+ **Close**  
  Cierra el cuadro de diálogo sin agregar más tablas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar tablas a diagramas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

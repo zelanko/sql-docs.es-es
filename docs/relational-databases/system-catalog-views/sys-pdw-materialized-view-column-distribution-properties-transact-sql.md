@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 934b1ed84aa7391ad8cf47e463dd38b37408ec00
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401663"
 ---
 # <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>Sys. pdw_materialized_view_column_distribution_properties (Transact-SQL) 
@@ -27,15 +27,15 @@ Muestra información de distribución para las columnas de una vista materializa
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|object_id|**Inter**|IDENTIFICADOR del objeto al que pertenece la columna. |  
-|column_id|**Inter**|IDENTIFICADOR de la columna.|  
+|object_id|**int**|IDENTIFICADOR del objeto al que pertenece la columna. |  
+|column_id|**int**|IDENTIFICADOR de la columna.|  
 |distribution_ordinal|**tinyint**|0 = no es una columna de distribución.</br> 1 = SQL Data Warehouse USA esta columna para distribuir la vista materializada.|
  
 ## <a name="permissions"></a>Permisos 
 
 Necesita el permiso VIEW DATABASE STATE.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Optimización del rendimiento con vista materializada](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREAR una vista MATERIALIZAda como SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   

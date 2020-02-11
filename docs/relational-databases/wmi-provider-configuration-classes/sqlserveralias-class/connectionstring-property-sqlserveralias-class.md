@@ -17,10 +17,10 @@ ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 435bb6ab0585b7f453fe035fa99be913dffbf769
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659004"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>Propiedad ConnectionString (clase SqlServerAlias)
@@ -35,11 +35,11 @@ object.ConnectionString [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Objeto de la [clase SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) que representa un alias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Cadena que especifica la cadena de conexión que se utiliza para establecer la conexión para el alias de conexión del servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   

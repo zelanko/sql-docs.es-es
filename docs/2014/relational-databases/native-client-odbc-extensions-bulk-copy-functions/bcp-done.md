@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689077"
 ---
-# <a name="bcpdone"></a>bcp_done
+# <a name="bcp_done"></a>bcp_done
   Finaliza una copia masiva de las variables de programa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realizada con [bcp_sendrow](bcp-sendrow.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -46,10 +46,10 @@ hdbc
 ## <a name="returns"></a>Devuelve  
  El número de filas guardado permanentemente después de la última llamada a [bcp_batch](bcp-batch.md) , o-1 en caso de error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Llame a **bcp_done** después de la última llamada a [bcp_sendrow](bcp-sendrow.md) o [bcp_moretext](bcp-moretext.md). Si no se llama a **a bcp_done** después de copiar todos los datos se producen errores.  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de copia masiva](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte también  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

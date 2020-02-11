@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 160731a6749b3741a68dcccafedd3499db465349
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231760"
 ---
 # <a name="date-and-time-improvements"></a>Mejoras en la fecha y la hora
@@ -50,6 +50,6 @@ ms.locfileid: "75231760"
 ### <a name="use-datetimedatetimedatetimeoffset-data-with-client-side-conversions-consistent-with-existing-conversions"></a>Usar datos de tipo date/time/datetime/datetimeoffset con conversiones de cliente coherentes con las conversiones existentes  
  El estándar ODBC describe cómo funcionan las conversiones entre los tipos date, time y timestamp existentes. Estos tipos se han ampliada de modo coherente para incluir conversiones entre todos los tipos de fecha y hora introducidos en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
-## <a name="see-also"></a>Véase también  
- [SQL Server Native Client características](sql-server-native-client-features.md)  
+## <a name="see-also"></a>Consulte también  
+ [Características de SQL Server Native Client](sql-server-native-client-features.md)  
   

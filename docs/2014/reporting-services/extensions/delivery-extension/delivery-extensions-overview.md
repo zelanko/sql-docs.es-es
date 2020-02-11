@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbc5e58b95ffb4eebc5dfa0400a566868ae5cba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165214"
 ---
 # <a name="delivery-extensions-overview"></a>Información general de las extensiones de entrega
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite a los usuarios crear y publicar informes que, una vez creados y publicados, se pueden entregar en varias ubicaciones. Además, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye varias extensiones de entrega y una API de entrega que permite a los programadores crear extensiones de entrega adicionales para extender aún más la funcionalidad de entrega en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite a los usuarios crear y publicar informes que, una vez creados y publicados, se pueden entregar en varias ubicaciones. Además, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye varias extensiones de entrega y una API de entrega que permite a los programadores crear extensiones de entrega adicionales para extender aún más la funcionalidad de entrega en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  En la tabla siguiente se enumeran las extensiones de entrega incluidas con [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -47,15 +47,15 @@ Arquitectura de extensión de entrega de Reporting Services
   
 -   Un equipo de implementación con un servidor de informes instalado.  
   
--   Un equipo de desarrollo con [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] o el Kit de desarrollo de software (SDK) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] instalado.  
+-   Un equipo de desarrollo [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] con o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] el kit de desarrollo de software (SDK) de instalado.  
   
 -   Una comprensión detallada de las características y capacidades de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], en concreto, la suscripción y la entrega.  
   
 -   Una comprensión detallada de los controles web y de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], si planea implementar su propia interfaz de usuario de suscripción para el Administrador de informes.  
   
--   Experiencia de desarrollo en un lenguaje de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Experiencia de desarrollo en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] un lenguaje como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .net.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar una extensión de entrega](../delivery-extension/implementing-a-delivery-extension.md)   
  [Biblioteca de extensiones de Reporting Services](../reporting-services-extension-library.md)  
   

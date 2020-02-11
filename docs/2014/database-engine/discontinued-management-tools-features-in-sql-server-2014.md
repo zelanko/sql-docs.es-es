@@ -1,5 +1,5 @@
 ---
-title: No incluidas herramientas de administración de las características de SQL Server 2014 | Microsoft Docs
+title: Características de herramientas de administración no incluidas en SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780354"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Características de Herramientas de administración no incluidas en SQL Server 2014
@@ -31,7 +31,7 @@ ms.locfileid: "62780354"
 ### <a name="activex-subsystem-for-sql-server-agent"></a>Subsistema ActiveX para el Agente SQL Server  
  El subsistema ActiveX para el Agente SQL Server se ha quitado en esta versión. No existe ninguna funcionalidad que lo reemplace.  
   
-### <a name="spaddtask-spdeletetask-spupdatetask"></a>sp_addtask, sp_deletetask, sp_updatetask  
+### <a name="sp_addtask-sp_deletetask-sp_updatetask"></a>sp_addtask, sp_deletetask, sp_updatetask  
  Sp_addtask, el sp_deletetask y sp_updatetask se han quitado en esta versión. No utilice esta funcionalidad en aplicaciones nuevas o actualizadas.  
   
 ### <a name="net-send-and-pager-notification"></a>NET SEND y notificación mediante buscapersonas  
@@ -44,7 +44,7 @@ ms.locfileid: "62780354"
   
  La API DACfx 3.0 y las herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no permiten leer los archivos DACPAC y BACPAC creados con las herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y las versiones de DACfx anteriores, extraer las bases de datos en archivos de DACPAC de estas versiones ni implementar las bases de datos en versiones admitidas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a través de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con versiones anteriores](../../2014/getting-started/backward-compatibility.md)  
   
   

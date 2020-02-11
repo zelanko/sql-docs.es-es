@@ -20,10 +20,10 @@ ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0446943767217050753c233b03b5b8031dddd1f7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982639"
 ---
 # <a name="sysresource_governor_resource_pools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "73982639"
 
   Devuelve la configuración del grupo de recursos de servidor almacenada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada fila de la vista determina la configuración de un grupo.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|{1}pool_id{2}|**int**|Identificador único del grupo de recursos de servidor. No admite valores NULL.|  
+|pool_id|**int**|Identificador único del grupo de recursos de servidor. No admite valores NULL.|  
 |name|**sysname**|Nombre del grupo de recursos de servidor. No admite valores NULL.|  
 |min_cpu_percent|**int**|Ancho banda de la CPU promedio garantizado para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. No admite valores NULL.|  
 |max_cpu_percent|**int**|Ancho banda de la CPU promedio máximo permitido para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. No admite valores NULL.|  
@@ -43,16 +43,16 @@ ms.locfileid: "73982639"
 |min_iops_per_volume|**int**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Las operaciones de E/S mínima por segundo (IOPS) por la configuración de volumen para este grupo. 0 = sin reserva. No puede ser null.|  
 |max_iops_per_volume|**int**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Las operaciones de E/S máxima por segundo (IOPS) por la configuración de volumen para este grupo. 0 = ilimitado. No puede ser null.|  
   
-## <a name="remarks"></a>Remarks  
- La vista de catálogo muestra los metadatos almacenados. Para ver la configuración en memoria, use la vista de administración dinámica correspondiente, [Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+## <a name="remarks"></a>Observaciones  
+ La vista de catálogo muestra los metadatos almacenados. Para ver la configuración en memoria, use la vista de administración dinámica correspondiente, [Sys. dm_resource_governor_resource_pools &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW ANY DEFINITION para ver el contenido; requiere el permiso CONTROL SERVER para cambiar el contenido.  
   
-## <a name="see-also"></a>Vea también  
- [Resource Governor vistas &#40;de catálogo de Transact&#41; -SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
- [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Resource Governor vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
- [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
+ [Sys. resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
   
   

@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798210"
 ---
 # <a name="list-job-category-information"></a>Mostrar información de categorías de trabajo
-  Cómo Mostrar información de categorías de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o Objetos de administración de SQL Server.  
+  Cómo Mostrar información de categorías de trabajo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o objetos de administración de SQL Server.  
 
   
 ##  <a name="Security"></a> Seguridad  
@@ -45,10 +45,10 @@ ms.locfileid: "72798210"
     GO  
     ```  
   
- Para obtener más información, [vea &#40;SP_HELP_CATEGORY Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
+ Para obtener más información, vea [sp_help_category &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
   
   
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
  **Para mostrar información de categorías de trabajo**  
   
- Utilice la clase `JobCategory` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell. Para obtener más información, [vea &#40;objetos de administración de SQL Server&#41; guía de programación de SMO](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
+ Utilice la clase `JobCategory` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell. Para obtener más información, vea [Objetos de administración de SQL Server &#40;SMO&#41; guía de programación](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  

@@ -13,10 +13,10 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729300"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Edición de una entidad (Master Data Services)
@@ -46,19 +46,19 @@ ms.locfileid: "73729300"
   
 6.  En el campo **Nombre de las tablas de ensayo** , escriba un nombre para la tabla de almacenamiento provisional.  
   
-7.  Para el campo **Tipo de registro de transacciones**, elija el tipo de registro de transacciones actualizado en la lista desplegable.  
+7.  Para el campo **Tipo de registro de transacciones** , elija el tipo de registro de transacciones actualizado en la lista desplegable.  
   
      Para obtener información, consulte [Cambio del tipo de registro de transacciones de entidad &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
 8.  Seleccione la casilla **Crear automáticamente los valores de código** , o anule la selección, según proceda.  
   
-     Para obtener más información, consulte [Creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
+     Para obtener más información, consulte [creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
   
 9. Seleccione la casilla **Habilitar compresión de datos** , o anule la selección, según proceda. La compresión de fila está activada de forma predeterminada.  
   
-     Para obtener más información, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
+     Para obtener más información, vea [compresión de datos](../relational-databases/data-compression/data-compression.md) .  
   
-## <a name="status"></a>Estado  
+## <a name="status"></a>Status  
  La columna de estado de la cuadrícula muestra el estado de la operación en la entidad. Al hacer clic en **Guardar entidad**, aparece la imagen siguiente, que indica que la entidad se está actualizando.  
   
  ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")  
@@ -71,7 +71,7 @@ ms.locfileid: "73729300"
   
  ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Eliminar una entidad &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401016"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carga de datos con Integration Services en el almacenamiento de datos paralelos
@@ -84,7 +84,7 @@ A continuación, los datos se asignan desde Integration Services a PDW de SQL Se
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -97,7 +97,7 @@ A continuación, los datos se asignan desde Integration Services a PDW de SQL Se
   
 PDW genera un error de validación si asigna un DT_NUMERIC o DT_DECIMAL columna de entrada que contiene un valor con una precisión mayor que 28.  
   
-**Tipos de datos no admitidos**  
+**Tipos de datos no compatibles**  
   
 PDW de SQL Server no admite los siguientes tipos de datos Integration Services:  
   
@@ -126,7 +126,7 @@ Para ejecutar un paquete de carga de Integration Services, necesita:
   
 -   Si no se usa ninguna base de datos de almacenamiento provisional, cree el permiso en la base de datos de destino. Esto es para crear una tabla temporal.  
   
-## <a name="GenRemarks"></a>Observaciones generales  
+## <a name="GenRemarks"></a>Notas generales  
 Cuando un paquete de Integration Services tiene varios destinos de PDW de SQL Server en ejecución y se termina una de las conexiones, Integration Services detiene la inserción de datos en todos los destinos de PDW de SQL Server.  
   
 ## <a name="Limits"></a>Limitaciones y restricciones  
@@ -149,9 +149,9 @@ Si el número de cargas en la cola de carga supera el máximo de cargas en cola,
 ## <a name="Locks"></a>Comportamiento de bloqueo  
 Al cargar datos con Integration Services, SQL ServerPDW utiliza bloqueos de nivel de fila para actualizar los datos de la tabla de destino. Esto significa que cada fila se bloquea para la lectura y escritura mientras se actualiza. Las filas de la tabla de destino no se bloquean mientras se cargan los datos en la tabla de ensayo.  
   
-## <a name="Examples"></a>Example  
+## <a name="Examples"></a>Ejemplos  
   
-### <a name="Walkthrough"></a>Un. Carga sencilla desde un archivo plano  
+### <a name="Walkthrough"></a>A. Carga sencilla desde un archivo plano  
 En el siguiente tutorial se muestra una carga de datos simple mediante Integration Services para cargar datos de archivo sin formato en un dispositivo PDW de SQL Server.  En este ejemplo se da por supuesto que ya se ha instalado Integration Services en el equipo cliente y que se ha instalado el PDW de SQL Server destino, tal y como se ha descrito anteriormente.  
   
 En este ejemplo, se cargará en `Orders` la tabla, que tiene el siguiente DDL. La `Orders` tabla forma parte de la `LoadExampleDB` base de datos.  
@@ -216,7 +216,7 @@ Especifique el destino para el flujo de datos.
   
 4.  Seleccione **crear una nueva conexión**.  
   
-5.  Rellene la información del servidor, el usuario, la contraseña y la base de datos de destino con información específica del dispositivo. (Los ejemplos se muestran a continuación). Después, haga clic en **Aceptar**.  
+5.  Rellene la información del servidor, el usuario, la contraseña y la base de datos de destino con información específica del dispositivo. (Los ejemplos se muestran a continuación). A continuación, haga clic en **Aceptar**.  
   
     Para conexiones de InfiniBand, **nombre de servidor**: escriba <nombre de dispositivo>-SQLCTL01, 17001.  
   
@@ -246,7 +246,7 @@ Ejecute el paquete en el equipo Integration Services.
   
 2.  El paquete se ejecutará y el progreso más los errores se mostrarán en el panel **progreso** . Use un cliente SQL para confirmar la carga o supervise la carga a través de la consola de administración de PDW de SQL Server.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Crear una tarea script que use el adaptador de destino PDW de SSIS](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
 [Diseñar e implementar paquetes (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
@@ -256,8 +256,8 @@ Ejecute el paquete en el equipo Integration Services.
 [Diseñar paquetes SSIS para el paralelismo (vídeo de SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  
 [Ejemplos de la comunidad Microsoft SQL Server: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Mejorar las cargas incrementales con la captura de datos modificados](../integration-services/change-data-capture/change-data-capture-ssis.md)  
-[Transformación dimensión de variación lenta](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
-[Tarea inserción masiva](../integration-services/control-flow/bulk-insert-task.md)  
+[Dimensión de variación lenta, transformación](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+[Inserción masiva, tarea](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

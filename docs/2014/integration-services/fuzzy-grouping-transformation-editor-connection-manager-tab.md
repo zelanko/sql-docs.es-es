@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación Agrupación aproximada (pestaña Administrador de conexiones) | Microsoft Docs
+title: Editor de transformación agrupación aproximada (pestaña administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7cfee2c2a79410d73eb6ca4da47f0fd361a24fb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058339"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>Editor de transformación Agrupación aproximada (pestaña Administrador de conexiones)
@@ -30,13 +30,13 @@ ms.locfileid: "66058339"
  Para obtener más información acerca de la transformación Agrupación aproximada, vea [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Administrador de conexiones OLE DB**  
+ **Administrador de conexiones de OLE DB**  
  Seleccione un administrador de conexiones OLE DB existente con el cuadro de lista, o bien cree una conexión con el botón **Nuevo** .  
   
- **Nueva**  
- Permite crear una conexión con el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
+ **Nuevo**  
+ Cree una conexión mediante el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identificar filas de datos similares mediante la transformación Agrupación aproximada](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

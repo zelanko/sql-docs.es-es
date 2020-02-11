@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: cd3a3e268e09e882b4e38eee6a620843fcc21a23
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: f82cf64ef78280b3c9562ae28afc71d06a03b1da
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241201"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925786"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planear la compatibilidad del explorador de Reporting Services y Power View (Reporting Services 2014)
   En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], se puede usar un explorador web para ver informes y ejecutar el Administrador de informes. No todos los exploradores admiten toda la funcionalidad de informes. En este tema se describe la compatibilidad y los requisitos de las características de administración del Administrador de informes, cómo ver informes y los controles del visor de informes en Visual Studio. En el tema también se resume la disponibilidad de características para los exploradores compatibles, los requisitos de autenticación y los requisitos de script.  
@@ -51,7 +51,7 @@ ms.locfileid: "75241201"
   
 - Para obtener más información acerca de la compatibilidad con exploradores de SharePoint 2010, vea [planear la compatibilidad con exploradores (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Explorador**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 y 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
+|**Browser**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 y 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|  
 |**Internet Explorer 10 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|  
@@ -74,7 +74,7 @@ ms.locfileid: "75241201"
   
 -   Para obtener más información acerca de la compatibilidad con exploradores de SharePoint 2013, consulte planear lahttps://technet.microsoft.com/library/cc263526(office.15).aspx) [compatibilidad con exploradores en SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (.  
   
-|**Explorador**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 y 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
+|**Browser**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 y 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|  
 |**Internet Explorer 10 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|  
@@ -101,7 +101,7 @@ ms.locfileid: "75241201"
 
  A continuación se ofrece la lista actual de exploradores y características compatibles con el visor de informes. El visor de informes admite ver informes desde el administrador de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y bibliotecas de SharePoint.  
   
-|**Explorador**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 y 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|**iOS 6 -7 para iPad**|  
+|**Browser**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 y 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|**iOS 6 -7 para iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|No compatible|No compatible|  
 |**Internet Explorer 10 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|No compatible|No compatible|  
@@ -134,9 +134,9 @@ ms.locfileid: "75241201"
 
  Los exploradores admiten esquemas de autenticación concretos que deben ser administrados por el servidor de informes para que la solicitud del cliente tenga éxito. En la tabla siguiente se identifican los tipos de autenticación predeterminados que admite cada explorador que se ejecuta en un sistema operativo Windows.  
   
-|**Tipo de explorador**|**Admite**|**Explorador predeterminado**|**Servidor predeterminado**|  
+|**Tipo de explorador**|**Es compatible con**|**Configuración predeterminada del explorador**|**Configuración predeterminada del servidor**|  
 |----------------------|------------------|-------------------------|------------------------|  
-|**Internet Explorer**|Negotiated, Kerberos, NTLM, Basic|Negociar|Sí. La configuración de autenticación predeterminada funciona con Internet Explorer.|  
+|**Internet Explorer**|Negotiated, Kerberos, NTLM, Basic|Negotiate|Sí. La configuración de autenticación predeterminada funciona con Internet Explorer.|  
 |**Firefox**|NTLM, Basic|NTLM|Sí. La configuración de autenticación predeterminada funciona con Firefox.|  
 |**Safari**|Básica|Básica|Sí. La configuración de autenticación predeterminada funciona con Safari.|  
 |**Fondo**|Negotiated, NTLM, Basic|Negotiated|Sí. La configuración de autenticación predeterminada funciona con Chrome.|  
@@ -147,7 +147,7 @@ ms.locfileid: "75241201"
   
  Si el scripting no está habilitado, verá un mensaje de error similar al siguiente al abrir un informe:  
   
-- **El explorador no admite scripts o se ha configurado para no permitir la ejecución de scripts. Haga clic aquí para ver este informe sin scripts**.  
+- **Su explorador no admite secuencias de comandos o está configurado para no admitir su ejecución. Haga clic aquí para ver este informe sin scripts**.  
   
  Si decide ver el informe prescindiendo de la compatibilidad con script, se representará en formato HTML y no incorporará funcionalidad del Visor de informes, como la barra de herramientas Informes y el mapa del documento.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "75241201"
 
  El control de servidor web ReportViewer se emplea para incrustar funcionalidad de informes en una aplicación web ASP.NET. Los controles se incluyen con Visual Studio y admiten otros exploradores y versiones de explorador que de los demás componentes descritos en este tema. El tipo de explorador utilizado para ver la aplicación determina el tipo de funcionalidad de ReportViewer que puede ofrecer en la aplicación. Use la tabla que se facilita en este tema para determinar qué exploradores admitidos están sujetos a las restricciones de la funcionalidad de informes y las plataformas admitidas.  
   
- A causa de las diferencias en los motores de representación de los exploradores admitidos, algunas características de informes avanzadas pueden mostrarse de manera diferente en distintos exploradores.  Por ejemplo, la rotación de texto.  
+ Debido a las diferencias en los motores de representación de los exploradores admitidos, algunas características de informes avanzadas pueden mostrarse de manera diferente en exploradores diferentes.  Por ejemplo, la rotación de texto.  
   
 ### <a name="scripting-requirements"></a>Requisitos de script
 
@@ -170,12 +170,12 @@ ms.locfileid: "75241201"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Explorador**|**Windows 8** y **Windows 8.1**|**Windows 7**|**Windows Server 2012** y **2012 R2**|**Windows Server 2008** y **2008 R2**|**Windows Server 2003**|**Mac OS X 10,6-10,9**|**Apunte**|  
+|**Browser**|**Windows 8** y **Windows 8.1**|**Windows 7**|**Windows Server 2012** y **2012 R2**|**Windows Server 2008** y **2008 R2**|**Windows Server 2003**|**Mac OS X 10,6-10,9**|**Notas**|  
 |**Internet Explorer 11 (para el escritorio**|Sí|Sí|Sí|No compatible|No compatible|No compatible|Internet Explorer admite el conjunto completo de características de ReportViewer.|  
 |**Internet Explorer 10 (para el escritorio)**|Sí|Sí|Sí|No compatible|No compatible|No compatible|Internet Explorer admite el conjunto completo de características de ReportViewer.|  
 |**Internet Explorer 9**|No compatible|Sí|No compatible|Sí|Sí|Sí|Internet Explorer admite el conjunto completo de características de ReportViewer.|  
-|**Internet Explorer 8.0**|No compatible|Sí|No compatible|Sí|Sí<sup>1</sup>|No compatible|Internet Explorer admite el conjunto completo de características de ReportViewer. <sup>dimensional</sup>|  
-|**Internet Explorer 7.0**|No compatible|Sí|No compatible|Sí|Sí<sup>1</sup>|No compatible|Internet Explorer admite el conjunto completo de características de ReportViewer. <sup>dimensional</sup>|  
+|**Internet Explorer 8.0**|No compatible|Sí|No compatible|Sí|Sí<sup>1</sup>|No compatible|Internet Explorer admite el conjunto completo de características de ReportViewer. <sup>1</sup>|  
+|**Internet Explorer 7.0**|No compatible|Sí|No compatible|Sí|Sí<sup>1</sup>|No compatible|Internet Explorer admite el conjunto completo de características de ReportViewer. <sup>1</sup>|  
 |**Firefox (la última versión publicada)**|Sí|Sí|Sí|Sí|Sí|No compatible|Imprimir y ampliar y reducir no se admiten.|  
 |**Safari (última versión publicada)**|No compatible|No compatible|No compatible|No compatible|No compatible|Sí|Imprimir y ampliar y reducir no se admiten.<br /><br /> El control de calendario que se usa para seleccionar fechas en un informe con parámetros está deshabilitado en este explorador. Los usuarios deben escribir las fechas que quieran usar manualmente en el área de mensajes de parámetros.|  
 |**Chrome (última versión publicada)**|Sí|Sí|Sí|Sí|Sí|No compatible|Imprimir y ampliar y reducir no se admiten.|  

@@ -1,5 +1,5 @@
 ---
-title: Errores y eventos del proveedor WMI | Microsoft Docs
+title: Eventos y errores del proveedor WMI | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5a6c9c1b30adee7b42f9424d648d33dacc52e0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780271"
 ---
 # <a name="wmi-provider-events-and-errors"></a>Errores y eventos del proveedor WMI
@@ -28,7 +28,7 @@ ms.locfileid: "62780271"
  0x8007052f  
  Error de inicio de sesión: restricción de cuenta de usuario. Razones posibles: no se admiten contraseñas en blanco, restricciones en las horas de inicio de sesión, o se ha aplicado una restricción de directiva.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos y errores del motor de base de datos](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

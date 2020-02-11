@@ -1,5 +1,5 @@
 ---
-title: GetObjectOwner y SetObjectOwner de métodos (VC ++) | Microsoft Docs
+title: Ejemplo de los métodos GetObjectOwner y SetObjectOwner (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1cf3526681095fd5d1cc1dd67b5dd16061f601b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c16536becfcea826d9cb6e6ea251517d40ad3ded
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966365"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76934637"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Ejemplo de métodos GetObjectOwner y SetObjectOwner (VC++)
-Este ejemplo se muestra el [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) y [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) métodos. Este código supone la existencia del grupo Contabilidad (vea el [grupos y usuarios de ejemplo Append y ChangePassword métodos (VC ++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) para ver cómo agregar este grupo en el sistema). El propietario de la tabla de categorías se establece en cuentas.  
+En este ejemplo se muestran los métodos [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) y [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) . Este código supone la existencia de la cuenta de grupo (vea el ejemplo de los [métodos Append y ChangePassword de grupos y usuarios (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) para ver cómo agregar este grupo al sistema). El propietario de la tabla Categories está establecido en Accounting.  
   
 ```  
 // BeginOwnersCpp.cpp  
@@ -86,7 +86,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

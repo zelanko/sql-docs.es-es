@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f032cd8a9e8d5305f4eef82f815b4f0e328756a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097424"
 ---
-# <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>Propiedad UnattendedExecutionAccount (MSReportServer_ConfigurationSetting de WMI)
+# <a name="unattendedexecutionaccount-property-wmi-msreportserver_configurationsetting"></a>Propiedad UnattendedExecutionAccount (MSReportServer_ConfigurationSetting de WMI)
   Devuelve la cuenta de usuario que el servidor de informes suplanta al realizar la ejecución desatendida de informes. Solo lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -45,9 +45,9 @@ public string UnattendedExecutionAccount;
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

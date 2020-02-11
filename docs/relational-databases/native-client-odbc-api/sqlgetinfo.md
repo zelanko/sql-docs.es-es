@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d44abf68ac843eecf51f6a4595adb1baab18a0c8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786328"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
@@ -26,7 +26,7 @@ ms.locfileid: "73786328"
 
   En la tabla se muestran los valores devueltos por **SQLGetInfo**. Estos valores pueden variar en función del número de versión del servidor conectado.  
   
- **SQLGetInfo** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es diferente de **SQLGetInfo** en el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLSRV32. DLL) cuando se llama a **SQLGetInfo** con SQL_KEYWORDS y una longitud de búfer de 0.  El controlador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client devuelve SQL_SUCCESS, pero el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve SQL_SUCCESS_WITH_INFO.  Sin embargo, cuando se llama con una longitud de búfer distinta de cero que es menor que la cadena de la palabra clave output, **SQLGetInfo** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client devuelve SQL_SUCCESS_WITH_INFO y un SQLState de 01004.  
+ **SQLGetInfo** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es diferente de **SQLGetInfo** en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC (SQLSRV32. DLL) cuando se llama a **SQLGetInfo** con SQL_KEYWORDS y una longitud de búfer de 0.  El controlador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client devuelve SQL_SUCCESS, pero el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve SQL_SUCCESS_WITH_INFO.  Sin embargo, cuando se llama con una longitud de búfer distinta de cero que es menor que la **** cadena de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la palabra clave output, SQLGetInfo en Native Client devuelve SQL_SUCCESS_WITH_INFO y un SQLSTATE de 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -51,13 +51,13 @@ ms.locfileid: "73786328"
 |SQL_COLLATION_SEQ|Secuencia de intercalación actualmente asignada para la conexión y el servidor.|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|No se admite la conversión del tipo de datos SQL_BIGINT de ODBC. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal (19,0)** como SQL_DECIMAL de tipo ODBC. Vea SQL_CONVERT_DECIMAL a continuación.|  
+|SQL_CONVERT_BIGINT|No se admite la conversión del tipo de datos SQL_BIGINT de ODBC. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el tipo de datos **decimal (19, 0)** como SQL_DECIMAL de tipo ODBC. Vea SQL_CONVERT_DECIMAL a continuación.|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|No se admite la conversión del tipo de datos SQL_TYPE_DATE de ODBC. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** como SQL_TYPE_TIMESTAMP de tipo ODBC. Vea SQL_CONVERT_TIMESTAMP a continuación.|  
+|SQL_CONVERT_DATE|No se admite la conversión del tipo de datos SQL_TYPE_DATE de ODBC. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el tipo de datos **DateTime** como SQL_TYPE_TIMESTAMP de tipo ODBC. Vea SQL_CONVERT_TIMESTAMP a continuación.|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DOUBLE|No se admite la conversión del tipo de datos SQL_DOUBLE de ODBC. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite el tipo de datos ODBC SQL_DOUBLE como SQL_FLOAT. Vea SQL_CONVERT_FLOAT a continuación.|  
+|SQL_CONVERT_DOUBLE|No se admite la conversión del tipo de datos SQL_DOUBLE de ODBC. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite el tipo de datos SQL_DOUBLE de odbc como SQL_FLOAT. Vea SQL_CONVERT_FLOAT a continuación.|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_FUNCTIONS|SQL_FN_CVT_CONVERT SQL_FN_CVT_CAST|  
 |SQL_CONVERT_INTEGER|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -68,7 +68,7 @@ ms.locfileid: "73786328"
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|No se admite la conversión del tipo de datos SQL_TYPE_TIME de ODBC. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**DateTime** como SQL_TYPE_TIMESTAMP de tipo ODBC. Vea SQL_CONVERT_TIMESTAMP a continuación.|  
+|SQL_CONVERT_TIME|No se admite la conversión del tipo de datos SQL_TYPE_TIME de ODBC. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]el tipo de datos **DateTime** como SQL_TYPE_TIMESTAMP de tipo ODBC. Vea SQL_CONVERT_TIMESTAMP a continuación.|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -127,9 +127,9 @@ ms.locfileid: "73786328"
 |SQL_LIKE_ESCAPE_CLAUSE|"Y"|  
 |SQL_LOCK_TYPES|SQL_LCK_NO_CHANGE|  
 |SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|1|  
-|SQL_MAX_BINARY_LITERAL_LEN|131072|  
+|SQL_MAX_BINARY_LITERAL_LEN|131 072|  
 |SQL_MAX_CATALOG_NAME_LEN|128|  
-|SQL_MAX_CHAR_LITERAL_LEN|131072|  
+|SQL_MAX_CHAR_LITERAL_LEN|131 072|  
 |SQL_MAX_COLUMN_NAME_LEN|128|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|16|  
 |SQL_MAX_COLUMNS_IN_INDEX|16|  
@@ -145,7 +145,7 @@ ms.locfileid: "73786328"
 |SQL_MAX_ROW_SIZE|8062|  
 |SQL_MAX_ROW_SIZE_INCLUDES_LONG|"N"|  
 |SQL_MAX_SCHEMA_NAME_LEN|128|  
-|SQL_MAX_STATEMENT_LEN|131072|  
+|SQL_MAX_STATEMENT_LEN|131 072|  
 |SQL_MAX_TABLE_NAME_LEN|128|  
 |SQL_MAX_TABLES_IN_SELECT|16|  
 |SQL_MAX_USER_NAME_LEN|128|  
@@ -209,8 +209,8 @@ ms.locfileid: "73786328"
 |SQL_UNION|SQL_U_UNION SQL_U_UNION_ALL|  
 |SQL_USER_NAME|Nombre de usuario actual.|  
   
-## <a name="see-also"></a>Vea también  
- [Función SQLGetInfo](https://go.microsoft.com/fwlink/?LinkId=59354)   
- [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQLGetInfo (función)](https://go.microsoft.com/fwlink/?LinkId=59354)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

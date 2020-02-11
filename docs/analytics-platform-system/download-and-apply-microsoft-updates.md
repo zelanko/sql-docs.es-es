@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401190"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Descargar y aplicar actualizaciones de Microsoft para el sistema de plataforma de análisis
@@ -26,7 +26,7 @@ En este tema se describe cómo descargar actualizaciones del catálogo de Micros
 >   
 > No aplique actualizaciones de Microsoft mientras el dispositivo esté en uso. La aplicación de actualizaciones puede hacer que los nodos del dispositivo se reinicien. Las actualizaciones deben aplicarse durante una ventana de mantenimiento cuando no se usa el dispositivo.  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
 Antes de realizar estos pasos, debe hacer lo siguiente:  
   
 -   Configure WSUS en el dispositivo siguiendo las instrucciones de [configuración de Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
@@ -161,7 +161,7 @@ C:\pdwinst\media\setup.exe /action="MicrosoftUpdate" /DomainAdminPassword="<pass
 C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAdminPassword="<password>"  
 ```  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Desinstale Microsoft Updates &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
 [Aplicación de revisiones de Analytics Platform System &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
 [Desinstalación de las revisiones de Analytics Platform System &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  

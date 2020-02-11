@@ -10,17 +10,17 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 302291ae42fa5fbb2f7dea94ccdb9f659379f5bc
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165826"
 ---
-# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-SQL)
+# <a name="syssp_cleanup_temporal_history-transact-sql"></a>Sys. sp_cleanup_temporal_history (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 Quita todas las filas de la tabla de historial temporal que coinciden con el período de HISTORY_RETENTION configurado dentro de una única transacción.
 
@@ -40,11 +40,11 @@ Nombre de la tabla temporal para la que se invoca la limpieza de retención.
 
 Nombre del esquema al que pertenece la tabla temporal actual.
 
-*row_count_var* [OUTPUT]
+*row_count_var* [salida]
 
 Parámetro de salida que devuelve el número de filas eliminadas. Si la tabla de historial tiene un índice de almacén de columnas agrupado, este parámetro devolverá siempre 0.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Observaciones
 
 Este procedimiento almacenado solo se puede usar con tablas temporales que tengan especificado un período de retención finito.
 Utilice este procedimiento almacenado solo si necesita limpiar inmediatamente todas las filas antiguas de la tabla de historial. Debe saber que puede tener un impacto significativo en el registro de la base de datos y en el subsistema de e/s, ya que elimina todas las filas válidas dentro de la misma transacción.

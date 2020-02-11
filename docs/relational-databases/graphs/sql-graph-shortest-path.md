@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056401"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "74056401"
 
   Especifica una condición de búsqueda para un gráfico, que se busca de forma recursiva o repetida. SHORTEST_PATH puede usarse dentro de la coincidencia con las tablas perimetrales y de nodo de Graph, en la instrucción SELECT. 
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="shortest-path"></a>Ruta más corta
 La función SHORTEST_PATH le permite encontrar:    
@@ -48,8 +48,8 @@ PARA PATH debe usarse con cualquier nombre de tabla perimetral o de nodo en la c
 ## <a name="arbitrary-length-pattern"></a>Patrón de longitud arbitraria
 Este patrón incluye los nodos y bordes que se deben atravesar repetidamente hasta que se alcance el nodo deseado o hasta que se cumpla el número máximo de iteraciones especificado en el patrón. Cada vez que se ejecuta la consulta, el resultado de la ejecución de este patrón será una colección ordenada de los nodos y los bordes recorridos a lo largo de la ruta de acceso desde el nodo de inicio hasta el nodo final. Se trata de un patrón de sintaxis de estilo de expresión regular y se admiten los siguientes dos cuantificadores de patrón:
 
-* **' + '** : Repetir el patrón 1 o más veces. Finaliza en cuanto encuentra una ruta de acceso más corta.
-* **{1, n}** : repetir el patrón 1 en ' n ' veces. Finaliza en cuanto se encuentra un más corto.
+* **' + '**: Repetir el patrón 1 o más veces. Finaliza en cuanto encuentra una ruta de acceso más corta.
+* **{1, n}**: repetir el patrón 1 en ' n ' veces. Finaliza en cuanto se encuentra un más corto.
 
 ## <a name="last_node"></a>LAST_NODE
 La función LAST_NODE () permite encadenar dos patrones de recorrido de longitud arbitraria. Se puede usar en escenarios donde:    
@@ -87,27 +87,27 @@ Para proyectar los atributos del último nodo de trazado recorrido, se puede usa
 
 **Último nodo**: el último nodo hace referencia al nodo que aparece en último lugar en la ruta de acceso recorrida, independientemente de la dirección de la flecha en el predicado de coincidencia. Por ejemplo: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Aquí el último nodo de la ruta de acceso será el último nodo P visitado. 
 
-Mientras que el último nodo es el último nodo de la ruta de acceso del gráfico de salida para este patrón: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Mientras que el último nodo es el último nodo de la ruta de acceso del gráfico de salida para este patrón:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Esta función devuelve la suma de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
 ### <a name="count"></a>COUNT
-Esta función devuelve el número de valores no NULL del atributo node/Edge deseado en la ruta de acceso. La función COUNT admite el operador '\*' con un nodo o un alias de tabla perimetral. Sin el alias de tabla perimetral o de nodo, el uso de \* es ambiguo y producirá un error.
+Esta función devuelve el número de valores no NULL del atributo node/Edge deseado en la ruta de acceso. La función COUNT admite el operador\*' ' con un nodo o un alias de tabla perimetral. Sin el alias de tabla perimetral o de nodo, el \* uso de es ambiguo y producirá un error.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
 
-### <a name="avg"></a>AVG
+### <a name="avg"></a>MEDIA
 Devuelve el promedio de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
-### <a name="min"></a>MIN
+### <a name="min"></a>MÍN
 Devuelve el valor mínimo de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
-### <a name="max"></a>MAX
+### <a name="max"></a>MÁX
 Devuelve el valor máximo de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
 shortest_path función solo se puede usar dentro de la coincidencia.     
 LAST_NODE solo se admite dentro de shortest_path.     
 No se admite la búsqueda de una ruta más corta ponderada, ni todas las rutas de acceso o todas las rutas más cortas.         
@@ -137,7 +137,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>b.  Buscar la ruta más corta de un nodo determinado a todos los demás nodos del gráfico. 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  Buscar la ruta más corta de un nodo determinado a todos los demás nodos del gráfico. 
  En el ejemplo siguiente se buscan todas las personas a las que está conectado Jacob en el gráfico y la ruta más corta a partir de Jacob a todas esas personas. 
 
  ```
@@ -208,9 +208,9 @@ FROM (
 WHERE Q.levels = 2
 ```
 
-## <a name="see-also"></a>Vea también  
- [Coincidencia (gráfico SQL)](../../t-sql/queries/match-sql-graph.md)    
- [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)  
+## <a name="see-also"></a>Consulte también  
+ [COINCIDENCIA (gráfico SQL)](../../t-sql/queries/match-sql-graph.md)    
+ [CREATE TABLE &#40;gráfico de SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Procesamiento de gráficos con SQL Server 2017)     
  

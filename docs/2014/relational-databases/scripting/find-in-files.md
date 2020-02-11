@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b3b3ccbab2d77f92fe9d28ae616939b8fa02ea4c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245173"
 ---
 # <a name="find-in-files"></a>Buscar en archivos
@@ -47,7 +47,7 @@ ms.locfileid: "75245173"
 > [!NOTE]  
 >  Si la opción **Buscar en** seleccionada hace que busque un archivo que ha desprotegido del control de código fuente, solo se buscará en la versión del archivo descargada en el equipo local.  
   
- **Buscar en**  
+ **Look in**  
  Seleccione un ámbito predefinido de búsqueda en esta lista, o use el cuadro de diálogo **Elegir carpetas de búsqueda** para escribir su propio grupo de directorios.  
   
  **Documento actual**  
@@ -65,28 +65,28 @@ ms.locfileid: "75245173"
  **Incluir subcarpetas**  
  Especifica que se buscarán las subcarpetas de la carpeta especificada en **Buscar en** . Requiere un grupo de directorios personalizados.  
   
- **Examina**  
+ **Browse**  
  Haga clic en este botón para que aparezca el cuadro de diálogo **Elegir carpetas de búsqueda** , donde puede reunir, editar, guardar y seleccionar los grupos de directorios con nombre que se van a usar en el cuadro **Buscar en** .  
   
 ## <a name="find-options"></a>Opciones de búsqueda  
  Puede expandir y contraer la sección **Opciones de búsqueda** . Pueden activarse y desactivarse las siguientes opciones.  
   
- **Coincidencia mayúscula**  
- Cuando se active esta casilla, en las ventanas Resultados de la búsqueda solo se mostrarán las instancias de la cadena especificada en **Buscar** que coincidan tanto en contenido como en el uso de mayúsculas y minúsculas. Por ejemplo, una búsqueda de **objeto** con la casilla **Coincidir mayúsculas y minúsculas** activada devolverá "mi objeto", pero no "objeto" o "objeto".  
+ **Coincidir mayúsculas y minúsculas**  
+ Cuando se active esta casilla, en las ventanas Resultados de la búsqueda solo se mostrarán las instancias de la cadena especificada en **Buscar** que coincidan tanto en contenido como en el uso de mayúsculas y minúsculas. Por ejemplo, una búsqueda de **MiObjeto** con la casilla **Coincidir mayúsculas y minúsculas** activada presentaría en los resultados "MiObjeto", pero no "miobjeto" ni "MIOBJETO".  
   
  **Solo palabras completas**  
  Cuando esta casilla se activa, las ventanas Resultados de la búsqueda solo mostrarán las instancias de la cadena especificada en **Buscar** cuyas palabras completas coincidan. Por ejemplo, una búsqueda de **MyObject** devolverá "MyObject", pero no devolverá "CMyObject" ni "MyObjectC".  
   
- **Realice**  
+ **Uso**  
  Indica cómo se interpretan los caracteres especiales especificados en los cuadros de texto **Buscar** o **Reemplazar con** . Esta opción incluye **Caracteres comodín** y **Expresiones regulares**.  
   
- **Expresiones regulares**  
+ **Regular Expressions**  
  Notaciones especiales que definen patrones de texto a partir de los cuales buscar coincidencias. Para obtener una lista, vea [Buscar texto mediante expresiones regulares](search-text-with-regular-expressions.md).  
   
- **Los caracteres comodín**  
+ **Caracteres comodín**  
  Caracteres especiales, como asteriscos (`*`) y signos de interrogación de cierre (`?`), que representan uno o varios caracteres. Para obtener una lista, vea [Buscar texto con caracteres comodín](search-text-with-wildcards.md).  
   
- **Examinar estos tipos de archivo**  
+ **Buscar en estos tipos de archivo**  
  Esta lista indica los tipos de archivos que se van a buscar en los directorios especificados en **Buscar en**. Si el campo se deja en blanco, se busca en todos los archivos de los directorios especificados en **Buscar en** .  
   
 ```  
@@ -113,7 +113,7 @@ ms.locfileid: "75245173"
  **Mostrar solo nombres de archivo**  
  Muestra una entrada por cada archivo que contiene una coincidencia de búsqueda, en lugar de una entrada por cada coincidencia en la ventana Resultados de la búsqueda 1 o Resultados de la búsqueda 2. Esta opción no está disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Mantener los archivos modificados abiertos después de reemplazar todo**  
+ **Mantener los archivos modificados abiertos después de Reemplazar todo**  
  Cuando se selecciona, deja abiertos todos los archivos en los que se han realizado reemplazos, de forma que puede deshacerlos o cambiarlos. Las restricciones de memoria pueden limitar el número de archivos que pueden permanecer abiertos después de una operación de reemplazo.  
   
 > [!CAUTION]  
@@ -122,14 +122,14 @@ ms.locfileid: "75245173"
 ## <a name="find-and-replace-views"></a>Vistas Buscar y reemplazar  
  Las pestañas de la parte superior de la ventana Buscar y reemplazar incluyen menús **Ver** . Estos menús le permiten elegir un conjunto de campos para que se muestren en el panel activo. Puede dejar la ventana Buscar y reemplazar acoplada en una ubicación adecuada y después cambiar de pestaña y de vista para realizar cualquier tipo de operación de búsqueda y reemplazo.  
   
- **Cambiar a búsqueda rápida**  
+ **Cambiar a Búsqueda rápida**  
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Búsqueda rápida** .  
   
- **Cambiar a buscar en archivos**  
+ **Cambiar a Buscar en archivos**  
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Buscar en archivos** .  
   
- **Cambiar a buscar símbolos**  
+ **Cambiar a Buscar símbolo**  
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Find in Symbols (Buscar en símbolos)** .  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

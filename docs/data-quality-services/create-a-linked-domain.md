@@ -12,10 +12,10 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3ebd6ca2702c902d25f7a73539017bd0540cc3d4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252253"
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
@@ -35,14 +35,14 @@ ms.locfileid: "75252253"
   
  Un ejemplo sería un registro que contiene los campos siguientes: Nombre del cliente, Apellidos del cliente y Nombre del padre. Imagine que asigna el nombre del cliente y el nombre del padre a un dominio Nombre, y que incluye tanto este como el dominio Apellidos en el dominio compuesto Nombre completo. El problema es que el nombre del padre se agregará al dominio compuesto sin apellidos. Pero si vincula cada uno de los dos campos de nombre a un dominio y vincula ambos dominios, podrá agregar el dominio Nombre del cliente al dominio compuesto Nombre completo, y no agregar el campo Nombre del padre a ese dominio, con lo que evitará que el Nombre del padre se agregue al dominio compuesto.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Para crear un dominio vinculado, es necesario tener una base de conocimiento y un dominio existente al que desea vincular.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio vinculado.  
   
 ##  <a name="Create"></a>Crear un dominio vinculado  

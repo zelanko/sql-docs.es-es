@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d213738b7ea2bbe846bad98620d3b4d5577133a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913230"
 ---
-# <a name="mssqlserver8994"></a>MSSQLSERVER_8994
+# <a name="mssqlserver_8994"></a>MSSQLSERVER_8994
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|8994|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|8994|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC3_MISSING_FORWARDING_ROW|  
 |Texto del mensaje|La página de fila reenviada P_ID1, zona S_ID1 debería apuntar al Id. de objeto O_ID, página de fila reenviada P_ID2, zona S_ID2. No se encontró la fila reenviada. Posible error de asignación.|  

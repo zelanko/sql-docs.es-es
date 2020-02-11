@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bb52fc5c8a3789cc945a2ea850d0849335917e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896636"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Desarrollar un componente de transformación personalizado con salidas asincrónicas
@@ -37,7 +37,7 @@ ms.locfileid: "62896636"
   
  Las columnas de los componentes de nivel superior disponibles en un componente con salidas sincrónicas están automáticamente disponibles para los componentes de nivel inferior del componente. Por tanto, un componente con salidas sincrónicas no tiene que definir ninguna columna de salida para proporcionar columnas y filas al componente siguiente. Los componentes con salidas asincrónicas, por otro lado, deben definir columnas de salida y proporcionar filas a los componentes de nivel inferior. Así, un componente con salidas asincrónicas tiene más tareas que realizar durante el tiempo de diseño y el tiempo de ejecución y el programador de componentes tiene más código que implementar.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contiene varias transformaciones con salidas asincrónicas. Por ejemplo, la transformación Ordenar requiere todas sus filas antes de poder ordenarlas y lo consigue mediante salidas asincrónicas. Después de recibir todas sus filas, las ordena y las agrega a su salida.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contiene varias transformaciones con salidas asincrónicas. Por ejemplo, la transformación Ordenar requiere todas sus filas antes de poder ordenarlas y lo consigue mediante salidas asincrónicas. Después de recibir todas sus filas, las ordena y las agrega a su salida.  
   
  En esta sección se explica en detalle cómo desarrollar transformaciones con salidas asincrónicas. Para obtener más información acerca del desarrollo de componentes de origen, vea [Desarrollar un componente de origen personalizado](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
@@ -165,7 +165,7 @@ End Sub
   
  El método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A>, al que se llama antes del método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> o el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>, es el primer método donde está disponible la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> y la primera oportunidad para localizar los índices de las columnas en los búferes de entrada y salida.  
   
-## <a name="sample"></a>Ejemplo  
+## <a name="sample"></a>Muestra  
  En el ejemplo siguiente se muestra un componente de transformación simple con salidas asincrónicas que agrega filas al búfer de salida a medida que se reciben. En este ejemplo no se muestran todos los métodos ni funcionalidad tratados en este tema. Muestra los métodos importantes que cada componente de transformación personalizado con salidas asincrónicas debe invalidar, pero no contiene código para la validación en tiempo de diseño. Además, el código de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> supone que la colección de columnas de salida incluye una columna por cada columna de la colección de columnas de entrada.  
   
 ```csharp  
@@ -318,9 +318,9 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desarrollar un componente de transformación personalizado con salidas sincrónicas](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
  [Understanding Synchronous and Asynchronous Transformations](../understanding-synchronous-and-asynchronous-transformations.md)  (Descripción de las transformaciones sincrónicas y asincrónicas)  
  [Crear una transformación asincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  

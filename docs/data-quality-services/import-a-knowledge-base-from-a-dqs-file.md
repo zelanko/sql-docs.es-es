@@ -10,10 +10,10 @@ ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: cd001817ccb5906905db1b0623d2491dd0463c07
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251565"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>Importar una base de conocimiento desde un archivo .dqs
@@ -28,14 +28,14 @@ ms.locfileid: "75251565"
   
  Al importar una base de conocimiento, puede utilizar el mismo nombre, a menos que este exista ya en la aplicación cliente, en cuyo caso deberá cambiarlo.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Para importar una base de conocimiento desde un archivo de .dqs, antes debe haberla exportado al archivo .dqs.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para importar una base de conocimiento desde un archivo de datos .dqs.  
   
 ##  <a name="Import"></a>Importar una base de conocimiento desde un archivo. DQS  
@@ -56,7 +56,7 @@ ms.locfileid: "75251565"
   
 8.  Seleccione la actividad que desea realizar y, a continuación, haga clic en **Crear**.  
   
-9. En el cuadro de diálogo **Importar base de conocimiento** , compruebe que la línea de estado indica que se ha completado la importación. Haga clic en **Aceptar**.  
+9. En el cuadro de diálogo **Importar base de conocimiento** , compruebe que la línea de estado indica que se ha completado la importación. Haga clic en **OK**.  
   
 10. Finalice las tareas de detección de conocimiento, administración de dominios o directiva de coincidencia que necesita realizar y, a continuación, haga clic en **Finalizar**.  
   

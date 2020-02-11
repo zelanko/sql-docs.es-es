@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5f0e582d0e6ca7e2087f35fa9b8e5005478d0a43
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790265"
 ---
 # <a name="preparing-commands"></a>Preparar comandos
@@ -28,7 +28,7 @@ ms.locfileid: "73790265"
 
   El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite la preparación de comandos para la ejecución múltiple y optimizada de un único comando; sin embargo, la preparación de comandos genera una sobrecarga, y no es necesario que un consumidor prepare un comando para ejecutarlo más de una vez. En general, un comando debería prepararse si va a ejecutarse más de tres veces.  
   
- Por razones de rendimiento, la preparación del comando se difiere hasta que se ejecuta el comando. Éste es el comportamiento predeterminado. Cualquier error que se produzca en el comando que se está preparando no se dará a conocer hasta que el comando se ejecute o hasta que se realice una operación de metapropiedad. Establecer la propiedad SSPROP_DEFERPREPARE de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en FALSE puede desactivar este comportamiento predeterminado.  
+ Por razones de rendimiento, la preparación del comando se difiere hasta que se ejecuta el comando. Este es el comportamiento predeterminado. Cualquier error que se produzca en el comando que se está preparando no se dará a conocer hasta que el comando se ejecute o hasta que se realice una operación de metapropiedad. Establecer la propiedad SSPROP_DEFERPREPARE de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en FALSE puede desactivar este comportamiento predeterminado.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cuando un comando se ejecuta directamente (sin prepararlo antes), se crea un plan de ejecución y se almacena en la memoria caché. Si vuelve a ejecutarse la instrucción SQL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone de un algoritmo eficaz para hacer coincidir la nueva instrucción con el plan de ejecución existente en la memoria caché, y reutiliza el plan de ejecución para esa instrucción.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73790265"
   
  Un objeto de comando tiene a lo sumo un procedimiento almacenado temporal en **tempdb**. Cualquier procedimiento almacenado temporal existente representa el texto de comando actual de un objeto de comando concreto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Comandos](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

@@ -32,7 +32,7 @@ Entre los proyectos se pueden incluir los siguientes:
   
 -   **Scripts MDX, DMX y XMLA**. Scripts MDX usados frecuentemente por el usuario. Si hace doble clic en un archivo .mdx del proyecto, el Editor abrirá el script seleccionado.  
   
--   **Misc**. This folder can be used for files that do not neatly fit into any of the other default node types, such as a text file that contains the project objectives.  
+-   **Varios**. Esta carpeta se puede usar para los archivos que no encajan en ninguno de los otros tipos de nodos predeterminados, como un archivo de texto que contenga los objetivos del proyecto.  
   
 Los proyectos también pueden estar integrados en un sistema de control de código fuente.  
   

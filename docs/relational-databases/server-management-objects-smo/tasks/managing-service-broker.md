@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e3fe187412a70956d1f4496b6c042e39edafd18c
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74094409"
 ---
 # <a name="managing-service-broker"></a>Administrar Service Broker
@@ -44,7 +44,7 @@ ms.locfileid: "74094409"
   
 -   Los objetos <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> representan una ruta de [!INCLUDE[ssSB](../../../includes/sssb-md.md)], que contiene la información de ubicación para el servicio y la base de datos en las que se define. Se requiere una ruta para la entrega del mensaje. De forma predeterminada, cada base de datos contiene una ruta que especifica la ubicación como la instancia actual de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   

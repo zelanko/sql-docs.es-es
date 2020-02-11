@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e0277959c1776dfbe9bd088c639f243ad6a2f7d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782519"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
@@ -49,12 +49,12 @@ RETCODE bcp_readfmt (
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Una vez que **bcp_readfmt** Lee los valores de formato, realiza las llamadas adecuadas a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) y [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). No es necesario que analice un archivo de formato y realice estas llamadas.  
   
  Para conservar un archivo de formato, llame a [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md). Las llamadas a **bcp_readfmt** pueden hacer referencia a los formatos guardados. Para obtener más información, vea [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
- Como alternativa, la utilidad de copia masiva (**bcp**) puede guardar los formatos de datos definidos por el usuario en archivos a los que **bcp_readfmt**puede hacer referencia. Para obtener más información acerca de la utilidad **BCP** y la estructura de los archivos de formato de datos **BCP** , vea [importación &#40;y&#41;exportación masivas de datos SQL Server](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Como alternativa, la utilidad de copia masiva (**bcp**) puede guardar los formatos de datos definidos por el usuario en archivos a los que **bcp_readfmt**puede hacer referencia. Para obtener más información acerca de la utilidad **BCP** y la estructura de los archivos de formato de datos **BCP** , vea [importación y exportación masivas de datos &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  El valor **BCPDELAYREADFMT** del parámetro *eOption* de [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) modifica el comportamiento de bcp_readfmt.  
   
@@ -106,7 +106,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte también  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

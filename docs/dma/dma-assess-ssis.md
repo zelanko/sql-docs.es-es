@@ -15,15 +15,15 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74687158"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Realización de una evaluación de migración del servicio de integración de SQL Server con Data Migration Assistant
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Para evaluar los paquetes de SQL Server Integration Service (SSIS), los componentes siguientes deben instalarse con Data Migration Assistant:
 

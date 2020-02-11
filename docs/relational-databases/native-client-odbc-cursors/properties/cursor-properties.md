@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: baa8d826718572051b1d3002bd660605cb6c44a0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784237"
 ---
 # <a name="cursor-properties"></a>Propiedades de cursor
@@ -32,9 +32,9 @@ ms.locfileid: "73784237"
   
 -   [Cursor Concurrency &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md) (Simultaneidad de cursor [ODBC])  
   
--   [Nivel de aislamiento de transacción de cursor](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
+-   [Nivel de aislamiento de las transacciones de cursores](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>Vea también  
- [Usar cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Usar cursores &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

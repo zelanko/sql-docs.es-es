@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401638"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>Sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
@@ -26,18 +26,18 @@ ms.locfileid: "74401638"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|database_id|**Inter**|IDENTIFICADOR de la base de datos física en cada nodo.|  
-|encryption_state|**Inter**|Indica si la base de datos de este nodo está cifrada o no está cifrada.<br /><br /> 0 = Ninguna clave de cifrado de la base de datos, sin cifrado<br /><br /> 1 = Sin cifrar<br /><br /> 2 = Cifrado en curso<br /><br /> 3 = Cifrado<br /><br /> 4 = Cambio de clave en curso<br /><br /> 5 = Descifrado en curso<br /><br /> 6 = cambio de protección en curso (el certificado que está cifrando la clave de cifrado de la base de datos se está cambiando).|  
-|create_date|**DateTime**|Muestra la fecha de creación de la clave de cifrado.|  
-|regenerate_date|**DateTime**|Muestra la fecha de regeneración de la clave de cifrado.|  
-|modify_date|**DateTime**|Muestra la fecha de modificación de la clave de cifrado.|  
-|set_date|**DateTime**|Muestra la fecha de aplicación de la clave de cifrado a la base de datos.|  
-|opened_date|**DateTime**|Muestra la última vez que se abrió la clave de la base de datos.|  
+|database_id|**int**|IDENTIFICADOR de la base de datos física en cada nodo.|  
+|encryption_state|**int**|Indica si la base de datos de este nodo está cifrada o no está cifrada.<br /><br /> 0 = Ninguna clave de cifrado de la base de datos, sin cifrado<br /><br /> 1 = Sin cifrar<br /><br /> 2 = Cifrado en curso<br /><br /> 3 = Cifrado<br /><br /> 4 = Cambio de clave en curso<br /><br /> 5 = Descifrado en curso<br /><br /> 6 = cambio de protección en curso (el certificado que está cifrando la clave de cifrado de la base de datos se está cambiando).|  
+|create_date|**datetime**|Muestra la fecha de creación de la clave de cifrado.|  
+|regenerate_date|**datetime**|Muestra la fecha de regeneración de la clave de cifrado.|  
+|modify_date|**datetime**|Muestra la fecha de modificación de la clave de cifrado.|  
+|set_date|**datetime**|Muestra la fecha de aplicación de la clave de cifrado a la base de datos.|  
+|opened_date|**datetime**|Muestra la última vez que se abrió la clave de la base de datos.|  
 |key_algorithm|**VARCHAR (?)**|Muestra el algoritmo utilizado por la clave.|  
-|key_length|**Inter**|Muestra la longitud de la clave.|  
+|key_length|**int**|Muestra la longitud de la clave.|  
 |encryptor_thumbprint|**varbin**|Muestra la huella digital del sistema de cifrado.|  
 |percent_complete|**impuestos**|Porcentaje completado del cambio de estado del cifrado de la base de datos. Será 0 si no hay ningún cambio de estado.|  
-|node_id|**Inter**|Identificador numérico único asociado al nodo.|  
+|node_id|**int**|Identificador numérico único asociado al nodo.|  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW SERVER STATE en el servidor.  
@@ -59,7 +59,7 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [CREAR la clave de CIFRAdo de base de datos &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   

@@ -18,21 +18,21 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759546"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Compatibilidad con conjuntos de filas de esquema (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El proveedor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de OLE DB Native Client también admite la devolución de información de esquema de un servidor vinculado al procesar [!INCLUDE[tsql](../../../includes/tsql-md.md)] las consultas distribuidas.  
+  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client también admite la devolución de información de esquema de [!INCLUDE[tsql](../../../includes/tsql-md.md)] un servidor vinculado cuando se procesan consultas distribuidas.  
   
 > [!NOTE]  
 >  Aunque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite los sinónimos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no devuelve los metadatos de los sinónimos.  
   
- En las tablas siguientes se enumeran los conjuntos de filas de esquema y las columnas de restricción admitidas por el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+ En las tablas siguientes se enumeran los conjuntos de filas de esquema y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las columnas de restricción admitidas por el proveedor de OLE DB de Native Client.  
   
 |Conjunto de filas de esquema|Columnas de restricción|  
 |-------------------|-------------------------|  
@@ -55,10 +55,10 @@ ms.locfileid: "73759546"
 ## <a name="in-this-section"></a>En esta sección  
  [Compatibilidad con consultas distribuidas en conjuntos de filas de esquema](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [LINKEDSERVERS Rowset &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [&#40;de conjunto de filas LINKEDSERVERS OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>Vea también  
- [SQL Server Native Client &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+## <a name="see-also"></a>Consulte también  
+ [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Usar tipos definidos por el usuario](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240158"
 ---
 # <a name="open-with-new-file"></a>Abrir con (Nuevo archivo)
@@ -29,10 +29,10 @@ ms.locfileid: "63240158"
  **Abrir**  
  Haga clic en **Abrir** para abrir el documento en el editor seleccionado.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en este botón para agregar un programa a la lista **Seleccione el programa que desee usar**. Puede escribir la ruta de acceso al programa en el campo **Nombre del programa** o hacer clic en **Examinar**para buscar el programa. En **Nombre descriptivo**, indique un nombre de programa para mostrar en la lista **Seleccione el programa que desee usar**.  
   
- **Quitar**  
+ **Remove**  
  Para quitar un programa, selecciónelo y haga clic en **Quitar**.  
   
  **Predeterminado**  
@@ -41,5 +41,5 @@ ms.locfileid: "63240158"
 > [!NOTE]  
 >  En la lista **Seleccione el programa que desee usar**, el nombre del editor predeterminado del tipo de archivo seleccionado aparece seguido de **(Predeterminado)** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asociar extensiones de archivo a un editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

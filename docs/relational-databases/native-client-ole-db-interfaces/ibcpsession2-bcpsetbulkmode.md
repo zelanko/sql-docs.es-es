@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 932bb271d7d38a1dfec411dca4ed5b1696ab924f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763209"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  IBCPSession2:: BCPSetBulkMode proporciona una alternativa a [IBCPSession:: BCPColFmt &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) para especificar el formato de columna. A diferencia de IBCPSession:: BCPColFmt, que establece los atributos de formato de columna individuales, IBCPSession2:: BCPSetBulkMode establece todos los atributos.  
+  IBCPSession2:: BCPSetBulkMode proporciona una alternativa a [IBCPSession:: BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) para especificar el formato de columna. A diferencia de IBCPSession:: BCPColFmt, que establece los atributos de formato de columna individuales, IBCPSession2:: BCPSetBulkMode establece todos los atributos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *property*  
+ *propiedad*  
  Constante de tipo BYTE. Vea la tabla en la sección Comentarios para obtener una lista de las constantes.  
   
  *pField*  
@@ -65,7 +65,7 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|El argumento no era válido.|  
 |**E_OUTOFMEMORY**|Error de memoria insuficiente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  IBCPSession2:: BCPSetBulkMode se puede usar para realizar una copia masiva de una consulta o una tabla. Cuando IBCPSession2::BCPSetBulkMode se usa para la copia masiva de una instrucción de consulta, es necesario realizar antes una llamada a `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` para especificar la instrucción de consulta.  
   
  Debe evitarse combinar la sintaxis de llamada RPC con la sintaxis de consulta por lotes (`{rpc func};SELECT * from Tbl`, por ejemplo) en el texto del mismo comando,  Esto hará que ICommandPrepare::P repared devuelva un error e impida la recuperación de metadatos. Utilice la sintaxis de ODBC CALL (`{call func}; SELECT * from Tbl`, por ejemplo) si necesita combinar la ejecución del procedimiento almacenado y la consulta por lotes en el texto del mismo comando.  
@@ -361,7 +361,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [OLE DB &#40;IBCPSession2&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
+## <a name="see-also"></a>Consulte también  
+ [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

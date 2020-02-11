@@ -14,23 +14,23 @@ ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925842"
 ---
 # <a name="command-streams"></a>Secuencias de comandos
-ADO siempre ha admitido la entrada del comando en el formato de cadena especificado por el **CommandText** propiedad. Como alternativa, con ADO 2.7 o posterior, también puede usar una secuencia de información para la entrada de comando mediante la asignación de la secuencia de la **CommandStream** propiedad. Puede asignar un ADO **Stream** objeto, o cualquier objeto que admite el COM **IStream** interfaz.  
+ADO siempre admite la entrada de comandos en el formato de cadena especificado por la propiedad **CommandText** . Como alternativa, con ADO 2,7 o posterior, también puede usar un flujo de información para la entrada de comandos mediante la asignación de la secuencia a la propiedad **CommandStream** . Puede asignar un objeto de **secuencia** de ADO o cualquier objeto que admita la interfaz **IStream** de com.  
   
- El contenido de la secuencia de comandos se pasa simplemente de ADO a su proveedor, por lo que el proveedor debe admitir la entrada de comando de secuencia para esta característica funcione. Por ejemplo, SQL Server admite las consultas en forma de plantillas XML o OpenXML extensiones a Transact-SQL.  
+ El contenido de la secuencia de comandos simplemente se pasa de ADO al proveedor, por lo que el proveedor debe admitir la entrada de comando por secuencia para que esta característica funcione. Por ejemplo, SQL Server admite consultas en forma de plantillas XML o extensiones OpenXML en Transact-SQL.  
   
- Dado que los detalles de la secuencia deben interpretarse el proveedor, debe especificar el dialecto del comando estableciendo el **dialecto** propiedad. El valor de **dialecto** es una cadena que contiene un GUID, que se define por el proveedor. Para obtener información acerca de los valores válidos para **dialecto** admitida por el proveedor, consulte la documentación del proveedor.  
+ Dado que el proveedor debe interpretar los detalles de la secuencia, debe especificar el dialecto del comando estableciendo la propiedad de **dialecto** . El valor de **Dialect** es una cadena que contiene un GUID, que es definido por el proveedor. Para obtener información sobre los valores válidos para el **dialecto** compatible con el proveedor, consulte la documentación del proveedor.  
   
 ## <a name="xml-template-query-example"></a>Ejemplo de consulta de plantilla XML  
- En el ejemplo siguiente se escribe en VBScript en la base de datos Northwind.  
+ El siguiente ejemplo está escrito en VBScript en la base de datos Northwind.  
   
- En primer lugar, inicializar y abrir el **Stream** objeto que se usará para contener la secuencia de la consulta:  
+ En primer lugar, inicialice y abra el objeto de **secuencia** que se utilizará para contener la secuencia de consulta:  
   
 ```  
 Dim adoStreamQuery  
@@ -38,9 +38,9 @@ Set adoStreamQuery = Server.CreateObject("ADODB.Stream")
 adoStreamQuery.Open  
 ```  
   
- El contenido de la secuencia de la consulta será una consulta de la plantilla XML.  
+ El contenido de la secuencia de consulta será una consulta de plantilla XML.  
   
- La consulta de la plantilla requiere una referencia al espacio de nombres XML identificado por la instrucción sql: prefijo de la \<SQL: > etiqueta. Una instrucción SELECT de SQL se incluye como el contenido de la plantilla XML y asigna a una variable de cadena del siguiente modo:  
+ La consulta de plantilla requiere una referencia al espacio de nombres XML identificado por el prefijo SQL \<: de la etiqueta SQL: query>. Se incluye una instrucción SELECT de SQL como contenido de la plantilla XML y se asigna a una variable de cadena de la siguiente manera:  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
@@ -55,7 +55,7 @@ adoStreamQuery.WriteText sQuery, adWriteChar
 adoStreamQuery.Position = 0  
 ```  
   
- Asignar adoStreamQuery a la **CommandStream** propiedad de ADO **comando** objeto:  
+ Asigne adoStreamQuery a la propiedad **CommandStream** de un objeto **Command** de ADO:  
   
 ```  
 Dim adoCmd  
@@ -63,13 +63,13 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- Especificar el lenguaje de comandos **dialecto**, lo que indica cómo el proveedor OLE DB de SQL Server debe interpretar la secuencia de comandos. El dialecto especificado por un GUID específico del proveedor:  
+ Especifique el **dialecto**del lenguaje de comandos, que indica cómo el SQL Server proveedor de OLE DB debe interpretar la secuencia de comandos. El dialecto especificado por un GUID específico del proveedor:  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  
 ```  
   
- Por último, ejecute la consulta y devolver los resultados a un **Recordset** objeto:  
+ Por último, ejecute la consulta y devuelva los resultados a un objeto de **conjunto de registros** :  
   
 ```  
 Set objRS = adoCmd.Execute  

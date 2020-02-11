@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a095b63f8c42709700f6f338edc409f801f8be3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098461"
 ---
-# <a name="generatedatabaseupgradescript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)
+# <a name="generatedatabaseupgradescript-method-wmi-msreportserver_configurationsetting"></a>Método GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)
   Genera un script que se puede utilizar para actualizar la base de datos del servidor de informes al esquema de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,28 +43,28 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- *Databasename*  
+ *DatabaseName*  
  Cadena que contiene el nombre de la base de datos del servidor de informes que se va a actualizar.  
   
  *ServerVersion*  
  Cadena que contiene la versión del servidor de informes.  
   
- *Script*  
+ *Manuscrit*  
  [out] Cadena que contiene el script SQL generado.  
   
- *HRESULT*  
+ *VALOR*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El script generado admite [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

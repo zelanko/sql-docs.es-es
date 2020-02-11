@@ -19,33 +19,33 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45b3d55774c4a05192f3bec9ef8bd92f89a74aa8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68207028"
 ---
 # <a name="calling-a-stored-procedure"></a>Llamar a un procedimiento almacenado
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client es compatible con la secuencia de escape ODBC CALL y la [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) instrucción para ejecutar procedimientos almacenados; la secuencia de escape ODBC CALL es el método preferido. El uso de la sintaxis ODBC permite que una aplicación recupere los códigos de retorno de los procedimientos almacenados y el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client también está optimizado para usar un protocolo originalmente desarrollado para enviar llamadas a procedimiento remoto (RPC) entre equipos que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la secuencia de escape ODBC Call y [!INCLUDE[tsql](../../includes/tsql-md.md)]la instrucción [Execute](/sql/t-sql/language-elements/execute-transact-sql) para ejecutar procedimientos almacenados; la secuencia de escape ODBC CALL es el método preferido. El uso de la sintaxis ODBC permite que una aplicación recupere los códigos de retorno de los procedimientos almacenados y el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client también está optimizado para usar un protocolo originalmente desarrollado para enviar llamadas a procedimiento remoto (RPC) entre equipos que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
   
 > [!NOTE]  
->  Al llamar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimientos almacenados mediante parámetros con nombre con ODBC (para obtener más información, consulte [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkID=209721)), los nombres de parámetro deben empezar con el '\@' caracteres. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exige esta restricción de una manera más estricta que Microsoft Data Access Components (MDAC).  
+>  Al llamar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a procedimientos almacenados mediante parámetros con nombre con ODBC (para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkID=209721)), los nombres de\@los parámetros deben empezar por el carácter ' '. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exige esta restricción de una manera más estricta que Microsoft Data Access Components (MDAC).  
   
  La secuencia de escape ODBC CALL para llamar a un procedimiento es:  
   
- {[ **? =** ]**llamar**_procedure_name_[([*parámetro*] [ **,** [*parámetro*]] ...)]}  
+ {[**? =**]**Call**_procedure_name_[([*parámetro*] [**,**[*parámetro*]]...)]}  
   
- donde *nombre_procedimiento* especifica el nombre de un procedimiento y *parámetro* especifica un parámetro de procedimiento. Los parámetros con nombre solo se admiten en instrucciones que utilizan la secuencia de escape ODBC CALL.  
+ donde *procedure_name* especifica el nombre de un procedimiento y un *parámetro* especifica un parámetro de procedimiento. Los parámetros con nombre solo se admiten en instrucciones que utilizan la secuencia de escape ODBC CALL.  
   
- Un procedimiento puede tener cero o más parámetros. También puede devolver un valor (que se indica con el marcador de parámetro opcional ?= al inicio de la sintaxis). Si un parámetro es de entrada o de entrada/salida, puede ser un literal o un marcador de parámetro. Si el parámetro es de salida, debe ser un marcador de parámetro porque se desconoce la salida. Marcadores de parámetros deben enlazarse a [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) antes de la llamada de procedimiento se ejecuta la instrucción.  
+ Un procedimiento puede tener cero o más parámetros. También puede devolver un valor (que se indica con el marcador de parámetro opcional ?= al inicio de la sintaxis). Si un parámetro es de entrada o de entrada/salida, puede ser un literal o un marcador de parámetro. Si el parámetro es de salida, debe ser un marcador de parámetro porque se desconoce la salida. Los marcadores de parámetros se deben enlazar con [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) antes de que se ejecute la instrucción de llamada de procedimiento.  
   
  Los parámetros de entrada y de entrada/salida pueden omitirse de las llamadas a procedimiento. Si se llama a un procedimiento con paréntesis pero sin ningún parámetro, el controlador indica al origen de datos que use el valor predeterminado para el primer parámetro. Por ejemplo:  
   
- {**llamar** _nombre_procedimiento_ **()** }  
+ {**call** _procedure_name_**()**}  
   
  Si el procedimiento no tiene ningún parámetro, puede producirse un error en el procedimiento. Si se llama a un procedimiento sin paréntesis, el controlador no envía ningún valor de parámetro. Por ejemplo:  
   
- {**llamar** _procedure_name_}  
+ {**call** _procedure_name_}  
   
  Pueden especificarse literales para los parámetros de entrada y de entrada/salida en llamadas a procedimiento. Por ejemplo, el procedimiento InsertOrder tiene cinco parámetros de entrada. La siguiente llamada a InsertOrder omite el primer parámetro, proporciona un literal para el segundo parámetro y usa un marcador de parámetro para el tercero, cuarto y quinto parámetro. (Los parámetros se numeran secuencialmente, comenzando por el valor 1.)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68207028"
 { CALL "master"."dbo"."sp_who" }  
 ```  
   
- No obstante, cuando el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se ejecuta con la configuración predeterminada no admite el uso de cualquier forma de identificador entrecomillado con identificadores que contienen caracteres no especificados como legales en identificadores por el estándar ISO. Por ejemplo, el controlador no puede tener acceso a un procedimiento almacenado denominado **"My.Proc"** mediante una instrucción CALL con identificadores entre comillas:  
+ No obstante, cuando el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se ejecuta con la configuración predeterminada no admite el uso de cualquier forma de identificador entrecomillado con identificadores que contienen caracteres no especificados como legales en identificadores por el estándar ISO. Por ejemplo, el controlador no puede tener acceso a un procedimiento almacenado denominado **"My. proc"** mediante una instrucción call con identificadores entre comillas:  
   
 ```  
 { CALL "MyDB"."MyOwner"."My.Proc" }  
@@ -82,7 +82,7 @@ ms.locfileid: "68207028"
 { CALL MyDB.MyOwner.My.Proc }  
 ```  
   
- El servidor genera un error que un servidor vinculado denominado **MyDB** no existe.  
+ El servidor genera un error que indica que no existe un servidor vinculado denominado **MyDB** .  
   
  Este problema no ocurre si se usan identificadores entre paréntesis; la instrucción se interpreta correctamente:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68207028"
 { CALL [MyDB].[MyOwner].[My.Table] }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar procedimientos almacenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

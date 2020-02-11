@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 61c811b25ffa94f7d635f63375dcc304339872cd
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73788695"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertar datos en parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB Native Client admite dos modelos para que el consumidor especifique los datos de las filas de parámetros con valores de tabla: un modelo de inserción y un modelo de extracción. Hay disponible un ejemplo que muestra el modelo de extracción; vea [Ejemplos de programación de datos de SQL Server](https://msftdpprodsamples.codeplex.com/).  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite dos modelos para que el consumidor especifique los datos de las filas de parámetros con valores de tabla: un modelo de inserción y un modelo de extracción. Hay disponible un ejemplo que muestra el modelo de extracción; vea [Ejemplos de programación de datos de SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
 > [!NOTE]  
 >  Una columna de parámetros con valores de tabla debe tener valores no predeterminados en todas las filas o valores predeterminados en todas las filas. No es posible tener valores predeterminados en algunas filas y en otras no. Por lo tanto, en enlaces de parámetros con valores de tabla, los únicos valores de estado permitidos en datos de columnas de conjunto de filas de parámetros con valores de tabla son DBSTATUS_S_ISNULL y DBSTATUS_S_OK. DBSTATUS_S_DEFAULT generará un error y el valor de estado enlazado se establecerá en DBSTATUS_E_BADSTATUS.  
@@ -37,7 +37,7 @@ ms.locfileid: "73788695"
   
  Si se usa IColumnsRowset:: GetColumnsRowset, habrá llamadas posteriores a los métodos IRowset:: GetNextRows, IRowset:: GetData y IRowset:: ReleaseRows en el objeto de conjunto de filas de la columna resultante.  
   
- Después de que el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client empiece a ejecutar el comando, los valores de parámetro con valores de tabla se capturarán de este objeto de conjunto de filas de parámetros con valores de tabla y se enviarán al servidor.  
+ Después de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el proveedor de OLE DB de Native Client empiece a ejecutar el comando, los valores de parámetro con valores de tabla se capturarán de este objeto de conjunto de filas de parámetros con valores de tabla y se enviarán al servidor.  
   
  El modelo de inserción requiere un trabajo mínimo por parte del consumidor pero usa más memoria que el modelo de extracción, porque todos los datos de parámetro con valores de tabla deben estar en memoria en tiempo de ejecución.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "73788695"
   
  El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client leerá una o varias filas del objeto de conjunto de filas del consumidor a la vez para admitir el comportamiento de transmisión por secuencias en parámetros con valores de tabla. Por ejemplo, el usuario puede tener los datos de conjunto de filas de parámetros con valores de tabla en el disco (no en la memoria) e implementar la funcionalidad necesaria para leer datos del disco cuando así lo requiera el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- El consumidor comunicará su formato de datos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client mediante IAccessor:: CreateAccessor en el objeto de conjunto de filas del parámetro con valores de tabla. Al leer los datos del búfer del consumidor, el proveedor comprueba que todas las columnas de escritura no predeterminadas están disponibles a través de al menos un identificador de descriptor de acceso, y usa los identificadores correspondientes para leer los datos de las columnas. Para evitar la ambigüedad, tiene que existir una correspondencia de uno a uno entre una columna de conjunto de filas de parámetros con valores de tabla y un enlace. Los enlaces duplicados a la misma columna generarán un error. Además, se espera que cada descriptor de acceso tenga el miembro *iOrdinal* de DBBindings en la secuencia. Habrá tantas llamadas a IRowset::GetData como número de descriptores de acceso por fila y el orden de las llamadas se basará en el orden del valor *iOrdinal*, de menor a mayor.  
+ El consumidor comunicará su formato de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el proveedor de OLE DB de cliente nativo mediante IAccessor:: CreateAccessor en el objeto de conjunto de filas del parámetro con valores de tabla. Al leer los datos del búfer del consumidor, el proveedor comprueba que todas las columnas de escritura no predeterminadas están disponibles a través de al menos un identificador de descriptor de acceso, y usa los identificadores correspondientes para leer los datos de las columnas. Para evitar la ambigüedad, tiene que existir una correspondencia de uno a uno entre una columna de conjunto de filas de parámetros con valores de tabla y un enlace. Los enlaces duplicados a la misma columna generarán un error. Además, se espera que cada descriptor de acceso tenga el miembro *iOrdinal* de DBBindings en la secuencia. Habrá tantas llamadas a IRowset::GetData como número de descriptores de acceso por fila y el orden de las llamadas se basará en el orden del valor *iOrdinal*, de menor a mayor.  
   
  Se espera que el proveedor implemente la mayoría de las interfaces expuestas por el objeto de conjunto de filas de parámetros con valores de tabla. El consumidor implementará un objeto de conjunto de filas con interfaces mínimas (IRowset). Debido a la agregación oculta, el objeto de conjunto de filas de parámetros con valores de tabla implementará todas las demás interfaces obligatorias del objeto de conjunto de filas.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73788695"
   
  En tiempo de ejecución, el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client volverá a llamar al objeto de conjunto de filas para capturar las filas y leer los datos de columna.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros con valores de tabla &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Usar parámetros con valores de tabla &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

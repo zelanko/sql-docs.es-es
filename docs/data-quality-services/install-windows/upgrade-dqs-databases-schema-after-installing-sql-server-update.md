@@ -12,10 +12,10 @@ ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: db5009ef7f5c9ff2a57022d30b2eb9f009fb6ab8
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75558072"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Actualizar el esquema de bases de datos DQS después de instalar SQL Server Update
@@ -33,7 +33,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 > [!NOTE]  
 >  La mayor parte de las actualizaciones de SQL Server requerirán una actualización del esquema de bases de datos DQS. Para obtener información acerca de las actualizaciones de SQL Server que requerirán una actualización al esquema de bases de datos DQS, vea el gráfico del paso 1.A en [Actualizar DQS: instalar actualizaciones acumulativas o revisiones en Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Debe haber iniciado sesión como miembro del grupo Administradores en el equipo con [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
@@ -66,8 +66,8 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
  Para obtener más acerca de cómo actualizar el esquema de bases de datos DQS tras instalar las actualizaciones de SQL Server y sobre los pasos de solución de problemas asociados, vea [Actualizar DQS: instalar actualizaciones acumulativas o revisiones en Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Actualizar ensamblados de SQLCLR después de .NET Framework Update](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
+ [Actualizar ensamblados de SQLCLR después de actualizar .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
   
   

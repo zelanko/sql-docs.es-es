@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1e966d63a2d357ad9b867e5e8bf66fbf731fc987
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246522"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Enlace y transferencia de datos de valores de columnas y parámetros con valores de tabla
@@ -93,7 +93,7 @@ ms.locfileid: "75246522"
   
 6.  Llama de nuevo a SQLParamData. Si hay parámetros de datos en ejecución entre las columnas de parámetro con valores de tabla, se identificarán con el valor *ValuePtrPtr* devuelto por SQLParamData. Cuando todos los valores de columna están disponibles, SQLParamData devolverá de nuevo el valor de *ParameterValuePtr* para el parámetro con valores de tabla y la aplicación se iniciará de nuevo.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

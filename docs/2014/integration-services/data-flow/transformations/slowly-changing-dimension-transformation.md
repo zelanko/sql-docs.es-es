@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900207"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación
@@ -64,7 +64,7 @@ ms.locfileid: "62900207"
   
  La siguiente tabla describe las salidas de la transformación y los requisitos de sus flujos de datos posteriores. Los requisitos describen el flujo de datos que crea el Asistente para dimensiones variables.  
   
-|Salida|Descripción|Requisitos de flujo de datos|  
+|Output|Descripción|Requisitos de flujo de datos|  
 |------------|-----------------|----------------------------|  
 |**Salida de actualizaciones de atributos variables**|El registro de la tabla de búsqueda se actualiza. Esta salida se usa para filas de atributos variables.|Una transformación Comando de OLE DB actualiza el registro mediante una instrucción UPDATE.|  
 |**Salida de atributo fijo**|Los valores en las filas que no deben cambiar no coinciden con los valores de la tabla de búsqueda. Esta salida se usa para filas de atributos fijos.|No se crea un flujo de datos predeterminado. Si la transformación se configura para continuar después de encontrar cambios en columnas de atributos fijos, debe crear un flujo de datos que capture estas filas.|  
@@ -89,7 +89,7 @@ ms.locfileid: "62900207"
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

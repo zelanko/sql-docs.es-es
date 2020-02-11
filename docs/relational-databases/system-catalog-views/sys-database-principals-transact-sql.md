@@ -20,12 +20,12 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc9dd813736a2cc06f3108a0b3402e4cef99815e
-ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
+ms.openlocfilehash: 32c5e56526b0e3ee06dc570e35b81bdfb4b14ce7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761165"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761849"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,20 +35,20 @@ ms.locfileid: "74761165"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Name**|**sysname**|Nombre de la entidad de seguridad, único en la base de datos.|  
-|**principal_id**|**Inter**|Id. de la entidad de seguridad, único en la base de datos.|  
+|**principal_id**|**int**|Id. de la entidad de seguridad, único en la base de datos.|  
 |**automáticamente**|**Char (1)**|Tipo de entidad de seguridad:<br /><br /> A = Rol de aplicación<br /><br /> C = Usuario asignado a un certificado<br /><br /> E = usuario externo de Azure Active Directory<br /><br /> G = Grupo de Windows<br /><br /> K = Usuario asignado a una clave asimétrica<br /><br /> R = Rol de base de datos<br /><br /> S = Usuario de SQL<br /><br /> U = Usuario de Windows<br /><br /> X = grupo externo de Azure Active Directory grupo o aplicaciones|  
 |**type_desc**|**nvarchar (60)**|Descripción del tipo de entidad de seguridad.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|Nombre que se utilizará cuando el nombre SQL no especifique un esquema. Null para entidades de seguridad que no son del tipo S, U o A.|  
-|**create_date**|**DateTime**|Hora en que se creó la entidad de seguridad.|  
-|**modify_date**|**DateTime**|Hora en que se modificó por última vez la entidad de seguridad.|  
-|**owning_principal_id**|**Inter**|Id. de la entidad de seguridad propietaria de esta entidad de seguridad. Todas las entidades de seguridad, excepto los roles de base de datos, deben pertenecer a **DBO**.|  
+|**create_date**|**datetime**|Hora en que se creó la entidad de seguridad.|  
+|**modify_date**|**datetime**|Hora en que se modificó por última vez la entidad de seguridad.|  
+|**owning_principal_id**|**int**|Id. de la entidad de seguridad propietaria de esta entidad de seguridad. De forma predeterminada, todos los roles fijos de base de datos pertenecen a **DBO** .|  
 |**Junction**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad.  NULL para SYS e INFORMATION SCHEMAS.|  
-|**is_fixed_role**|**poco**|Si es 1, esta fila representa una entrada para uno de los roles fijos de base de datos: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**Inter**|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Tipo de autenticación. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> 0: sin autenticación<br />1: autenticación de la instancia<br />2: autenticación de base de datos<br />3: autenticación de Windows|  
-|**authentication_type_desc**|**nvarchar (60)**|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Descripción del tipo de autenticación. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> NINGUNO: sin autenticación<br />INSTANCIA: autenticación de la instancia<br />BASE de datos: autenticación de base de datos<br />WINDOWS: autenticación de Windows|  
-|**default_language_name**|**sysname**|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Idioma predeterminado para esta entidad de seguridad.|  
-|**default_language_lcid**|**Inter**|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> LCID predeterminado para esta entidad de seguridad.|  
-|**allow_encrypted_value_modifications**|**poco**|**Se aplica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] y versiones [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posteriores,.<br /><br /> Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. Esto permite al usuario realizar una copia masiva de datos cifrados mediante Always Encrypted, entre tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF. |      
+|**is_fixed_role**|**bit**|Si es 1, esta fila representa una entrada para uno de los roles fijos de base de datos: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
+|**authentication_type**|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Tipo de autenticación. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> 0: sin autenticación<br />1: autenticación de la instancia<br />2: autenticación de base de datos<br />3: autenticación de Windows|  
+|**authentication_type_desc**|**nvarchar (60)**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Descripción del tipo de autenticación. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> NINGUNO: sin autenticación<br />INSTANCIA: autenticación de la instancia<br />BASE de datos: autenticación de base de datos<br />WINDOWS: autenticación de Windows|  
+|**default_language_name**|**sysname**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Idioma predeterminado para esta entidad de seguridad.|  
+|**default_language_lcid**|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> LCID predeterminado para esta entidad de seguridad.|  
+|**allow_encrypted_value_modifications**|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] y versiones [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posteriores,.<br /><br /> Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. Esto permite al usuario realizar una copia masiva de datos cifrados mediante Always Encrypted, entre tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF. |      
   
 ## <a name="remarks"></a>Observaciones  
  Las propiedades de *PasswordLastSetTime* están disponibles en todas las configuraciones admitidas de SQL Server, pero las demás propiedades solo están disponibles cuando se ejecuta SQL Server en Windows Server 2003 o posterior y se habilitan tanto CHECK_POLICY como CHECK_EXPIRATION. Consulte [Directiva de contraseñas](../../relational-databases/security/password-policy.md) para obtener más información.
@@ -121,9 +121,9 @@ JOIN sys.schemas AS s
     ON o.schema_id = s.schema_id;  
 ```  
   
-## <a name="see-also"></a>Véase también  
- [Entidades de seguridad &#40;Motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Usuarios de bases de datos independientes: creación de una base de datos portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
  [Conexión a SQL Database mediante la autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  

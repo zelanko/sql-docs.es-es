@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97805251e309132892fb94db63a308b10657daff
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73983099"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
@@ -33,45 +33,45 @@ ms.locfileid: "73983099"
   Devuelve el conjunto de todos los distribuidores de memoria activos actualmente en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilice el nombre **Sys. dm_pdw_nodes_os_memory_clerks**.  
+>  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_os_memory_clerks**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**memory_clerk_address**|**varbinary(8)**|Especifica la dirección de memoria exclusiva del distribuidor de memoria. Es la columna de clave principal. No admite valores NULL.|  
-|**tipo**|**nvarchar(60)**|Especifica el tipo de distribuidor de memoria. Cada distribuidor tiene un tipo específico, como MEMORYCLERK_SQLCLR de distribuidores de CLR. No admite valores NULL.|  
-|**Nombre**|**nvarchar(256)**|Especifica el nombre asignado internamente de este distribuidor de memoria. Un componente puede tener varios distribuidores de memoria de un tipo específico. Un componente puede optar por usar nombres específicos para identificar distribuidores de memoria del mismo tipo. No admite valores NULL.|  
+|**memory_clerk_address**|**varbinary(8**|Especifica la dirección de memoria exclusiva del distribuidor de memoria. Es la columna de clave principal. No admite valores NULL.|  
+|**automáticamente**|**nvarchar (60)**|Especifica el tipo de distribuidor de memoria. Cada distribuidor tiene un tipo específico, como MEMORYCLERK_SQLCLR de distribuidores de CLR. No admite valores NULL.|  
+|**Name**|**nvarchar(256)**|Especifica el nombre asignado internamente de este distribuidor de memoria. Un componente puede tener varios distribuidores de memoria de un tipo específico. Un componente puede optar por usar nombres específicos para identificar distribuidores de memoria del mismo tipo. No admite valores NULL.|  
 |**memory_node_id**|**smallint**|Especifica el identificador del nodo de memoria. No acepta valores NULL.|  
-|**single_pages_kb**|**bigint**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
-|**pages_kb**|**bigint**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Especifica la cantidad de memoria de página asignada en kilobytes (KB) para este distribuidor de memoria. No admite valores NULL.|  
-|**multi_pages_kb**|**bigint**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Cantidad de memoria de páginas múltiples asignada en KB. Es la cantidad de memoria asignada mediante el asignador de páginas múltiples de los nodos de memoria. Esta memoria se asigna fuera del grupo de búferes y aprovecha las ventajas del asignador virtual de los nodos de memoria. No admite valores NULL.|  
-|**virtual_memory_reserved_kb**|**bigint**|Especifica la cantidad de memoria virtual reservada por un distribuidor de memoria. No admite valores NULL.|  
-|**virtual_memory_committed_kb**|**bigint**|Especifica la cantidad de memoria virtual confirmada por un distribuidor de memoria. La cantidad de memoria confirmada debe ser siempre menor que la cantidad de memoria reservada. No admite valores NULL.|  
-|**awe_allocated_kb**|**bigint**|Especifica la cantidad de memoria en kilobytes (KB) bloqueada en la memoria física y no transferida por el sistema operativo. No admite valores NULL.|  
-|**shared_memory_reserved_kb**|**bigint**|Especifica la cantidad de memoria compartida reservada por un distribuidor de memoria. Es la cantidad de memoria reservada que van a utilizar la memoria compartida y la asignación de archivos. No admite valores NULL.|  
-|**shared_memory_committed_kb**|**bigint**|Especifica la cantidad de memoria compartida confirmada por el distribuidor de memoria. No admite valores NULL.|  
-|**page_size_in_bytes**|**bigint**|Especifica la granularidad de la asignación de páginas para este distribuidor de memoria. No admite valores NULL.|  
-|**page_allocator_address**|**varbinary(8)**|Especifica la dirección del asignador de páginas. Esta dirección es única para un distribuidor de memoria y se puede usar en **Sys. dm_os_memory_objects** para buscar objetos de memoria enlazados a este funcionario. No admite valores NULL.|  
-|**host_address**|**varbinary(8)**|Especifica la dirección de memoria del host para este distribuidor de memoria. Para obtener más información, vea [Sys. &#40;DM_OS_HOSTS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Los componentes, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, tienen acceso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos de memoria a través de la interfaz de host.<br /><br /> 0x00000000 = El distribuidor de memoria pertenece a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> No admite valores NULL.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**single_pages_kb**|**BIGINT**|**Se aplica a** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]hasta.|  
+|**pages_kb**|**BIGINT**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Especifica la cantidad de memoria de página asignada en kilobytes (KB) para este distribuidor de memoria. No admite valores NULL.|  
+|**multi_pages_kb**|**BIGINT**|**Se aplica a** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]hasta.<br /><br /> Cantidad de memoria de páginas múltiples asignada en KB. Es la cantidad de memoria asignada mediante el asignador de páginas múltiples de los nodos de memoria. Esta memoria se asigna fuera del grupo de búferes y aprovecha las ventajas del asignador virtual de los nodos de memoria. No admite valores NULL.|  
+|**virtual_memory_reserved_kb**|**BIGINT**|Especifica la cantidad de memoria virtual reservada por un distribuidor de memoria. No admite valores NULL.|  
+|**virtual_memory_committed_kb**|**BIGINT**|Especifica la cantidad de memoria virtual confirmada por un distribuidor de memoria. La cantidad de memoria confirmada debe ser siempre menor que la cantidad de memoria reservada. No admite valores NULL.|  
+|**awe_allocated_kb**|**BIGINT**|Especifica la cantidad de memoria en kilobytes (KB) bloqueada en la memoria física y no transferida por el sistema operativo. No admite valores NULL.|  
+|**shared_memory_reserved_kb**|**BIGINT**|Especifica la cantidad de memoria compartida reservada por un distribuidor de memoria. Es la cantidad de memoria reservada que van a utilizar la memoria compartida y la asignación de archivos. No admite valores NULL.|  
+|**shared_memory_committed_kb**|**BIGINT**|Especifica la cantidad de memoria compartida confirmada por el distribuidor de memoria. No admite valores NULL.|  
+|**page_size_in_bytes**|**BIGINT**|Especifica la granularidad de la asignación de páginas para este distribuidor de memoria. No admite valores NULL.|  
+|**page_allocator_address**|**varbinary(8**|Especifica la dirección del asignador de páginas. Esta dirección es única para un distribuidor de memoria y se puede usar en **Sys. dm_os_memory_objects** para buscar objetos de memoria enlazados a este funcionario. No admite valores NULL.|  
+|**host_address**|**varbinary(8**|Especifica la dirección de memoria del host para este distribuidor de memoria. Para obtener más información, vea [Sys. dm_os_hosts &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Los componentes de, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como Native Client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acceden a los recursos de memoria a través de la interfaz de host.<br /><br /> 0x00000000 = El distribuidor de memoria pertenece a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> No admite valores NULL.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos 
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles Premium, requiere el permiso `VIEW DATABASE STATE` en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  El administrador de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de una jerarquía de tres capas. En la parte inferior de la jerarquía están los nodos de memoria. El nivel intermedio incluye los distribuidores de memoria, los almacenamientos en caché de la memoria y los bloques de memoria. La capa superior incluye los objetos de memoria. Normalmente, estos objetos se utilizan para asignar memoria en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Los nodos de memoria proporcionan la interfaz y la implementación de los asignadores de nivel inferior. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solo los distribuidores de memoria tienen acceso a nodos de memoria. Los distribuidores de memoria tienen acceso a interfaces de nodos de memoria para asignar memoria. Los nodos de memoria también realizan el seguimiento de la memoria asignada utilizando el distribuidor para diagnósticos. Cada componente que asigna una cantidad de memoria importante debe crear su propio distribuidor de memoria y asignar toda su memoria utilizando las interfaces del distribuidor. Con frecuencia, los componentes crean sus distribuidores correspondientes cuando se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
- [SQL Server &#40;vistas de administración dinámica relacionadas con el sistema operativo&#41;  Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server vistas de administración dinámica relacionadas con el sistema operativo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [Sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [Sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [Sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   
   
 

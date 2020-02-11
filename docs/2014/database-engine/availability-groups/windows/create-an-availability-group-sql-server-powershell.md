@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8085fa23357c5901ed350e81410ae4d38a3005dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228799"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Crear un grupo de disponibilidad (SQL Server PowerShell)
@@ -28,16 +28,16 @@ ms.locfileid: "75228799"
 > [!NOTE]  
 >  Como alternativa al uso de cmdlets de PowerShell, puede usar el asistente Crear grupo de disponibilidad o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para obtener más información, vea [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) o [Crear un grupo de disponibilidad &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md).  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Se recomienda encarecidamente leer esta sección antes de intentar crear el primer grupo de disponibilidad.  
   
-###  <a name="PrerequisitesRestrictions"></a>Requisitos previos, restricciones y recomendaciones  
+###  <a name="PrerequisitesRestrictions"></a> Requisitos previos, restricciones y recomendaciones  
   
 -   Antes de crear un grupo de disponibilidad, compruebe que cada una de las instancias host de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reside en un nodo de clúster de conmutación por error de Windows Server (WSFC) diferente en el mismo clúster de conmutación por error de WSFC. Además, compruebe que las instancias del servidor cumplen con los otros requisitos previos de la instancia del servidor, que se cumplen todos los demás requisitos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y que es consciente de las recomendaciones. Para más información, recomendamos encarecidamente que lea [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ###  <a name="SummaryPSStatements"></a>Resumen de tareas y cmdlets de PowerShell correspondientes  
@@ -48,16 +48,16 @@ ms.locfileid: "75228799"
 |Crear extremo de creación de reflejo de la base de datos (una vez por instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Se ejecuta en cada instancia del servidor que carece de extremo de creación de reflejo de la base de datos.<br /><br /> Nota: Para modificar un punto de conexión de creación de reflejo de la base de datos existente, use `Set-SqlHadrEndpoint`.|  
 |Crear grupo de disponibilidad|Primero, utilice el cmdlet `New-SqlAvailabilityReplica` con el parámetro `-AsTemplate` para crear un objeto de réplica de disponibilidad en memoria para cada una de las dos réplicas de disponibilidad que va a incluir en el grupo de disponibilidad.<br /><br /> A continuación, cree el grupo de disponibilidad utilizando el cmdlet `New-SqlAvailabilityGroup` y haga referencia a los objetos de réplica de disponibilidad.|Se ejecuta en la instancia del servidor que va a hospedar la réplica principal inicial.|  
 |Unir la réplica secundaria al grupo de disponibilidad|`Join-SqlAvailabilityGroup`|Se ejecuta en cada una de las instancias del servidor que hospeda una réplica secundaria.|  
-|Preparar la base de datos secundaria|`Backup-SqlDatabase`etc`Restore-SqlDatabase`|Se crean las copias de seguridad de la instancia del servidor que hospeda la réplica principal.<br /><br /> Se restauran las copias de seguridad de cada una de las instancias del servidor que hospedan una réplica de secundaria mediante el parámetro de restauración `NoRecovery`. Si las rutas de acceso de archivo difieren entre equipos que hospedan la réplica principal y la réplica secundaria de destino, utilice también el parámetro de restauración `RelocateFile`.|  
+|Preparar la base de datos secundaria|`Backup-SqlDatabase` y `Restore-SqlDatabase`|Se crean las copias de seguridad de la instancia del servidor que hospeda la réplica principal.<br /><br /> Se restauran las copias de seguridad de cada una de las instancias del servidor que hospedan una réplica de secundaria mediante el parámetro de restauración `NoRecovery`. Si las rutas de acceso de archivo difieren entre equipos que hospedan la réplica principal y la réplica secundaria de destino, utilice también el parámetro de restauración `RelocateFile`.|  
 |Iniciar la sincronización de datos uniendo cada base de datos secundaria al grupo de disponibilidad|`Add-SqlAvailabilityDatabase`|Se ejecuta en cada una de las instancias del servidor que hospedan una réplica secundaria.|  
   
  **<sup>*</sup>** Para realizar una tarea determinada, cambie el directorio`cd`() a la instancia o instancias del servidor indicadas.  
   
 ###  <a name="PsProviderLinks"></a>Para configurar y usar el proveedor de SQL Server PowerShell  
   
--   [Proveedor de PowerShell de SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Obtener ayuda SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="PowerShellProcedure"></a>Uso de PowerShell para crear y configurar un grupo de disponibilidad  
   
@@ -162,10 +162,10 @@ Join-SqlAvailabilityGroup -Path "SQLSERVER:\SQL\SecondaryComputer\Instance" -Nam
 Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\AvailabilityGroups\MyAG" -Database "MyDatabase"  
 ```  
   
-##  <a name="RelatedTasks"></a>Tareas relacionadas  
+##  <a name="RelatedTasks"></a> Tareas relacionadas  
  **Para configurar una instancia del servidor para grupos de disponibilidad AlwaysOn**  
   
--   [Habilitar y deshabilitar Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [Habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
 -   [Cree un extremo de creación de reflejo de la base de datos para Grupos de disponibilidad AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
@@ -175,11 +175,11 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Cambiar el modo de conmutación por error de una réplica de disponibilidad &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error (grupos de disponibilidad AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
--   [Especifique la dirección URL del extremo al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -187,23 +187,23 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Configurar el enrutamiento de solo lectura para un grupo de disponibilidad &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [Cambiar el período de tiempo de espera de la sesión para una réplica de disponibilidad &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
+-   [Cambiar el tiempo de espera de la sesión en una réplica de disponibilidad &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
  **Para completar la configuración del grupo de disponibilidad**  
   
--   [Unir una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 -   [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 -   [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
  **Maneras alternativas de crear un grupo de disponibilidad**  
   
--   [Use el Asistente para grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usar el Asistente para grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Use el cuadro de diálogo nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 -   [Crear un grupo de disponibilidad &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
@@ -213,9 +213,9 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Solucionar problemas de una operación Add-File &#40;Grupos de disponibilidad AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a>Contenido relacionado  
+##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   **Blogs**  
+-   **Blogs:**  
   
      [Series de aprendizaje de AlwaysON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
@@ -223,21 +223,21 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [Blogs del equipo de AlwaysOn de SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server CSS](https://blogs.msdn.com/b/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
--   **Vídeos**  
+-   **Vídeos:**  
   
      [Microsoft SQL Server Code-Named "Denali", Serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de siguiente generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server “Denali”, Serie AlwaysOn, parte 2: Crear una solución esencial de alta disponibilidad utilizando AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **White**  
+-   **Notas del producto:**  
   
      [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Notas del producto de SQL Server Customer Advisory](http://sqlcat.com/)  
+     [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Véase también  
- [El extremo de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

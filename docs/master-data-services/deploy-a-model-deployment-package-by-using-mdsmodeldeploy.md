@@ -11,10 +11,10 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 3ae40a50eb9866b452efb8d387df62f8bed8fa24
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728312"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implementar un paquete de implementación de modelo mediante MDSModelDeploy
@@ -32,12 +32,12 @@ ms.locfileid: "73728312"
 > [!IMPORTANT]  
 >  Los paquetes solamente se pueden implementar en la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la que se crearon. Esto significa que los paquetes que se hayan creado en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] no se pueden implementar en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o posterior.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Administración del sistema** en el entorno de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] de destino.  
   
--   Debe existir un paquete de implementación de modelo. Para más información, consulte  [Create a Model Deployment Package by Using MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
+-   Debe existir un paquete de implementación de modelo. Para obtener más información, consulte [Crear un paquete de implementación de modelo mediante el asistente](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 -   Debe ser administrador en el entorno donde va a implementar el modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -94,7 +94,7 @@ ms.locfileid: "73728312"
   
 6.  Cuando el paquete se implementa correctamente, se muestra un mensaje que indica que "la operación de MDSModelDeploy se completó correctamente".  
   
- **Comentarios:**  
+ **Apunte**  
   
 -   Si una vista de suscripciones del paquete tiene el mismo nombre que una vista de suscripciones de un modelo existente, esta advertencia se muestra como que **se ha cambiado el nombre de la vista de suscripción del implementador** y la vista se crea como *modelname.subscriptionviewname*. Si este nombre ya se está usando, no se crea la vista de suscripciones.  
   
@@ -113,11 +113,11 @@ ms.locfileid: "73728312"
      Al actualizar un modelo, si el proceso sufre un error durante los tres primeros pasos, no continúa; sin embargo, los cambios ya realizados no se revierten. Si el proceso sufre un error en el paso 4, los miembros que se pueden actualizar se actualizan.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Los atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para obtener más información, vea:  
+ Los atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para más información, consulte:  
   
 -   [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

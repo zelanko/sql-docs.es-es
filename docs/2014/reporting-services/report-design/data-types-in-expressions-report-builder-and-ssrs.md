@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891866"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de datos en expresiones (Generador de informes y SSRS)
@@ -30,12 +30,12 @@ ms.locfileid: "68891866"
   
 |Tipo RDL|Tipos de CLR|  
 |--------------|---------------|  
-|Cadena|Predeterminado: Cadena<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Predeterminado: Boolean|  
-|Entero|Predeterminado: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Predeterminado: DateTime<br /><br /> DateTimeOffset|  
-|Float|Predeterminado: Double<br /><br /> Single, Decimal|  
-|Binary|Predeterminado: Byte[]|  
+|String|Valor predeterminado: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Valor predeterminado: Boolean|  
+|Entero|Valor predeterminado: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|DateTime|Valor predeterminado: DateTime<br /><br /> DateTimeOffset|  
+|Float|Valor predeterminado: Double<br /><br /> Single, Decimal|  
+|Binary|Valor predeterminado: Byte []|  
 |Variant|Cualquiera de los anteriores excepto Byte []|  
 |VariantArray|Matriz de Variant|  
 |Serializable|Variant o tipos marcados con Serializable o que implementan ISerializable.|  
@@ -65,10 +65,10 @@ ms.locfileid: "68891866"
   
 -   Cree un campo calculado basado en un campo de conjunto de datos de informe existente; para ello, escriba una expresión que convierta todos los datos de una columna de conjunto de resultados en una nueva columna con un tipo de datos diferente. Por ejemplo, la expresión siguiente convierte el valor entero del campo Year en un valor de cadena: `=CStr(Fields!Year.Value)`. Para obtener más información, consulte [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Compruebe si la extensión de procesamiento de datos que está usando incluye metadatos para recuperar datos que ya tienen asignado un formato. Por ejemplo, una consulta MDX de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye la propiedad extendida FORMATTED_VALUE para los valores de cubo a los que se dio formato al procesar el cubo. Para obtener más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Compruebe si la extensión de procesamiento de datos que está usando incluye metadatos para recuperar datos que ya tienen asignado un formato. Por ejemplo, una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consulta MDX incluye una FORMATTED_VALUE propiedad extendida para los valores de cubo a los que ya se ha dado formato al procesar el cubo. Para obtener más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Descripción de los tipos de datos de los parámetros  
- Los parámetros de informe deben pertenecer a uno de los cinco tipos de datos: Boolean, DateTime, Integer, Float o Text (también conocido como String). Si la consulta de conjunto de datos incluye parámetros de consulta, automáticamente se crean parámetros de informe que se vinculan a dichos parámetros de consulta. El tipo de datos predeterminado para un parámetro de informe es String. Para cambiar el tipo de datos predeterminado de un parámetro de informe, seleccione el valor adecuado en la lista desplegable **Tipo de datos** de la página **General** del cuadro de diálogo **Propiedades de parámetro de informe** .  
+ Los parámetros de informe deben pertenecer a uno de estos cinco tipos de datos: Boolean, DateTime, Integer, Float o Text (también conocido como String). Si la consulta de conjunto de datos incluye parámetros de consulta, automáticamente se crean parámetros de informe que se vinculan a dichos parámetros de consulta. El tipo de datos predeterminado para un parámetro de informe es String. Para cambiar el tipo de datos predeterminado de un parámetro de informe, seleccione el valor adecuado en la lista desplegable **Tipo de datos** de la página **General** del cuadro de diálogo **Propiedades de parámetro de informe** .  
   
 > [!NOTE]  
 >  Los parámetros de informe cuyo tipo de datos es DateTime no admiten milisegundos. Aunque sí puede crear un parámetro basado en valores que incluyen milisegundos, no puede seleccionar un valor con milisegundos en una lista desplegable de valores disponibles que contiene valores de fecha o de hora.  
@@ -116,9 +116,9 @@ ms.locfileid: "68891866"
   
     -   La expresión siguiente convierte la cadena en un valor de fecha y hora: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Si la cadena `MyDateTime.Value` tiene un ajuste UTC, la función `DateTime.Parse` primero ajusta de acuerdo con el ajuste UTC (7 a.m. - [`+08:00`] a la hora UTC de las 11 p.m. de la noche anterior). A continuación, la función `DateTime.Parse` aplica el ajuste UTC del servidor de informes local y, si fuera necesario, vuelve a ajustar la hora para adaptarla al horario de verano. Por ejemplo, en Redmond, Washington, el ajuste de la hora local adaptado al horario de verano es `[-07:00]`o 7 horas antes de las 11 p.m. El resultado es el siguiente `DateTime` valor: `2007-07-06 04:07:07 PM` (6 de julio de 2007 a las 4:07 p.m.).  
+         Si la cadena `MyDateTime.Value` tiene un ajuste UTC, la función `DateTime.Parse` primero ajusta de acuerdo con el ajuste UTC (7 a.m. - [`+08:00`] a la hora UTC de las 11 p.m. de la noche anterior). A continuación, la función `DateTime.Parse` aplica el ajuste UTC del servidor de informes local y, si fuera necesario, vuelve a ajustar la hora para adaptarla al horario de verano. Por ejemplo, en Redmond, Washington, el ajuste de la hora local adaptado al horario de verano es `[-07:00]`o 7 horas antes de las 11 p.m. El resultado es el valor `DateTime` siguiente: `2007-07-06 04:07:07 PM` (6 de julio de 2007 a las 4:07 p.m).  
   
- Para obtener más información sobre cómo convertir `DateTime` cadenas en tipos de datos, vea [analizar cadenas de fecha y hora](https://go.microsoft.com/fwlink/?LinkId=89703), [aplicar formato de fecha y hora para una referencia cultural específica](https://go.microsoft.com/fwlink/?LinkId=89704)y [elegir entre DateTime, DateTimeOffset y TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) en Sólo.  
+ Para obtener más información sobre cómo convertir `DateTime` cadenas en tipos de datos, vea [analizar cadenas de fecha y hora](https://go.microsoft.com/fwlink/?LinkId=89703), [aplicar formato de fecha y hora para una referencia cultural específica](https://go.microsoft.com/fwlink/?LinkId=89704)y [elegir entre DateTime, DateTimeOffset y TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) en MSDN.  
   
 -   Agregue un nuevo campo calculado al conjunto de datos de informe que use una expresión para extraer partes de la cadena. Para obtener más información, consulte [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68891866"
   
  Para obtener más en losformación sobre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vea [Tipos de datos en Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) en los [SQL Server Books Onlen lose](https://go.microsoft.com/fwlink/?linkid=120955).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  
   
   

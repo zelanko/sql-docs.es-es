@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771451"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Crear y editar un servicio CDC de Oracle
@@ -56,10 +56,10 @@ ms.locfileid: "62771451"
   
      Puede emplear una cuenta de Windows local o de dominio para la cuenta de servicio. En este caso, debe especificar la **Contraseña** para dicha cuenta. Esta cuenta puede ser para el host local o para una cuenta de dominio. Asegúrese de actualizar la contraseña cuando se cambie mediante Servicios locales en el Panel de control de Windows.  
   
- **Nombre del servidor**: seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino a la que quiera conectarse (por ejemplo, **\\\\<nombre_equipo>\\<nombre_instancia>**). De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
+ **Nombre del servidor**: seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino a la que quiera conectarse (por ejemplo, **\\\\<nombre_equipo>\\<nombre_instancia>** ). De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
   
  **Autenticación**  
- Seleccione una de las opciones siguientes:  
+ Seleccione uno de los siguientes:  
   
 -   **Autenticación de Windows**: si selecciona esta opción, el servicio CDC de Oracle se conecta a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino con la identidad de la cuenta de servicio. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un equipo diferente, se debe usar la autenticación de Windows con cuentas de dominio.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62771451"
   
  También se debe usar la misma contraseña maestra cuando otras instancias del mismo servicio estén configuradas en otros nodos de un clúster en una configuración de alta disponibilidad. Si pierde o modifica la contraseña maestra, será necesario volver a especificar todas las contraseñas de minería de registros almacenadas en bases de datos de la instancia CDC de Oracle desde la Consola del diseñador CDC.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo crear y editar un servicio CDC](how-to-create-and-edit-a-cdc-service.md)  
   
   

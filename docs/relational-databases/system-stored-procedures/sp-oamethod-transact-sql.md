@@ -18,10 +18,10 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252197"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -47,7 +47,7 @@ sp_OAMethod objecttoken , methodname
  *MethodName*  
  Es el nombre de método del objeto OLE al que se llamará.  
   
- **salida** ReturnValue  
+ __**salida** ReturnValue    
  Es el valor devuelto del método del objeto OLE. Si se especifica, debe ser una variable local del tipo de datos adecuado.  
   
  Si el método devuelve un valor único, especifique una variable local para *ReturnValue*, que devuelve el valor devuelto por el método en la variable local, o no especifique *ReturnValue*, que devuelve el valor devuelto por el método al cliente como un conjunto de resultados de una sola fila y una sola columna.  
@@ -64,17 +64,17 @@ sp_OAMethod objecttoken , methodname
   
 -   El método devuelve una matriz como parámetro de salida.  
   
-`[ _@parametername = ] parameter[ OUTPUT ]` es un parámetro de método. Si se especifica, el *parámetro* debe ser un valor del tipo de datos adecuado.  
+`[ _@parametername = ] parameter[ OUTPUT ]`Es un parámetro de método. Si se especifica, el *parámetro* debe ser un valor del tipo de datos adecuado.  
   
  Para obtener el valor devuelto de un parámetro de salida, el *parámetro* debe ser una variable local del tipo de datos adecuado y se debe especificar **Output** . Si se especifica un parámetro constante, o si no se especifica **Output** , se omite cualquier valor devuelto de un parámetro de salida.  
   
- Si se especifica, *parameterName* debe ser el nombre del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parámetro con nombre. Tenga en cuenta que **@** _parametername_is no es una variable local de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El signo de arroba ( **@** ) se quita y *parameterName*se pasa al objeto OLE como el nombre del parámetro. Todos los parámetros con nombre deben especificarse después de especificar todos los parámetros de posición.  
+ Si se especifica, *parameterName* debe ser el nombre del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parámetro con nombre. Tenga en **@** cuenta que _parametername_is [!INCLUDE[tsql](../../includes/tsql-md.md)] no es una variable local. Se quita el signo**@** de arroba () y *parameterName*se pasa al objeto OLE como el nombre del parámetro. Todos los parámetros con nombre deben especificarse después de especificar todos los parámetros de posición.  
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar varios parámetros.  
   
 > [!NOTE]
->  *\@ParameterName* puede ser un parámetro con nombre porque forma parte del método especificado y se pasa a través del objeto. Los demás parámetros de este procedimiento almacenado se especifican por la posición, no por el nombre.  
+>  ParameterName puede ser un parámetro con nombre porque forma parte del método especificado y se pasa a través del objeto. * \@* Los demás parámetros de este procedimiento almacenado se especifican por la posición, no por el nombre.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un valor distinto de cero (error) que es el valor entero del HRESULT devuelto por el objeto de OLE Automation.  
@@ -92,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  Cuando todos los valores de datos de una columna comparten el mismo tipo de datos, se utiliza ese tipo para toda la columna. Cuando los valores de datos de una columna utilizan tipos de datos diferentes, el tipo de datos de toda la columna se elige como se muestra a continuación.  
   
-||int|float|money|datetime|varchar|nvarchar|  
+||int|FLOAT|money|datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -101,16 +101,16 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  También puede usar **sp_OAMethod** para obtener un valor de propiedad.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol fijo de servidor **sysadmin** o al permiso Execute directamente en este procedimiento almacenado. `Ole Automation Procedures` configuración debe estar **habilitada** para utilizar cualquier procedimiento del sistema relacionado con la automatización OLE.  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o al permiso Execute directamente en este procedimiento almacenado. `Ole Automation Procedures`la configuración debe estar **habilitada** para usar cualquier procedimiento del sistema relacionado con la automatización OLE.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-calling-a-method"></a>A. Llamar a un método  
- En el ejemplo siguiente se llama al método `Connect` del objeto **SQLServer** creado previamente.  
+ En el ejemplo siguiente se `Connect` llama al método del objeto **SQLServer** creado previamente.  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -122,8 +122,8 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>b. Obtener una propiedad  
- En el ejemplo siguiente se obtiene la propiedad `HostName` (del objeto **SQLServer** creado previamente) y se almacena en una variable local.  
+### <a name="b-getting-a-property"></a>B. Obtener una propiedad  
+ En el ejemplo siguiente se `HostName` obtiene la propiedad (del objeto **SQLServer** creado previamente) y se almacena en una variable local.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -136,8 +136,8 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos &#40;almacenados de automatización OLE  Transact&#41; -SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Procedimientos almacenados de automatización OLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ejemplo de script de automatización OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

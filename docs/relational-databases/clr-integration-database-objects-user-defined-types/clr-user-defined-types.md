@@ -1,5 +1,5 @@
 ---
-title: Tipos definidos por el usuario CLR | Documentos de Microsoft
+title: Tipos definidos por el usuario CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -32,20 +32,20 @@ ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2078b11b44232b44e94191c07fca91998f2c1172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028352"
 ---
 # <a name="clr-user-defined-types"></a>Tipos definidos por el usuario de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le ofrece la capacidad para crear objetos de base de datos que se programan en un ensamblado creado en common language runtime (CLR) de .NET Framework. Los objetos de base de datos que pueden aprovechar el complejo modelo de programación que proporciona CLR incluyen desencadenadores, procedimientos almacenados, funciones, funciones de agregado y tipos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ofrece la posibilidad de crear objetos de base de datos que se programan en un ensamblado creado en el Common Language Runtime de .NET Framework (CLR). Los objetos de base de datos que pueden aprovechar el complejo modelo de programación que proporciona CLR incluyen desencadenadores, procedimientos almacenados, funciones, funciones de agregado y tipos.  
   
 > [!NOTE]  
->  La capacidad para ejecutar el código CLR se encuentra desactivada (OFF) de manera predeterminada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El CLR puede habilitarse mediante la **sp_configure** procedimiento almacenado del sistema.  
+>  La capacidad para ejecutar el código CLR se encuentra desactivada (OFF) de manera predeterminada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El CLR se puede habilitar mediante el **sp_configure** procedimiento almacenado del sistema.  
   
- A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], puede utilizar tipos definidos por el usuario (UDT) para ampliar el sistema de tipos escalares del servidor, habilitando el almacenamiento de objetos CLR en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos. Los UDT pueden contener varios elementos y presentar varios comportamientos, diferenciándose de los tipos de datos de alias adicionales que constan de un tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] único.  
+ A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]de, puede utilizar tipos definidos por el usuario (UDT) para extender el sistema de tipos escalares del servidor, lo que permite el almacenamiento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de objetos CLR en una base de datos. Los UDT pueden contener varios elementos y presentar varios comportamientos, diferenciándose de los tipos de datos de alias adicionales que constan de un tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] único.  
   
  Dado que el sistema tiene acceso a los UDT como un conjunto, su uso para los tipos de datos complejos puede causar un impacto negativo en el rendimiento. Normalmente, los datos complejos se modelan mejor mediante filas tradicionales y tablas. Los UDT en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se adaptan perfectamente a:  
   
@@ -57,16 +57,16 @@ ms.locfileid: "68028352"
   
  El proceso para desarrollar los UDT en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de los pasos siguientes:  
   
-1.  **Codificar y generar el ensamblado que define el UDT.** Los UDT se definen mediante cualquiera de los lenguajes admitidos en Common Language Runtime (CLR) de .NET Framework que generan código comprobable. Esto incluye Visual C# y Visual Basic .NET. Los datos se exponen como los campos y propiedades de una clase o estructura de .NET Framework, y los métodos de la clase o estructura definen los comportamientos.  
+1.  **Codificar y generar el ensamblado que define los UDT.** Los UDT se definen mediante cualquiera de los lenguajes admitidos en Common Language Runtime (CLR) de .NET Framework que generan código comprobable. Esto incluye Visual C# y Visual Basic .NET. Los datos se exponen como los campos y propiedades de una clase o estructura de .NET Framework, y los métodos de la clase o estructura definen los comportamientos.  
   
 2.  **Registrar el ensamblado.** Los UDT pueden implementarse a través de la interfaz de usuario de Visual Studio en un proyecto de base de datos o mediante la instrucción CREATE ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)], que copia el ensamblado que contiene la clase o estructura en una base de datos.  
   
 3.  **Crear un UDT en SQL Server.** Una vez que un ensamblado se carga en una base de datos host, use la instrucción CREATE TYPE de [!INCLUDE[tsql](../../includes/tsql-md.md)] para crear un UDT y exponer los miembros de la clase o estructura como miembros del UDT. Los UDT únicamente existen en el contexto de una base de datos única y, una vez registrados, no dependen de ninguno de los archivos externos a partir de los que se crearon.  
   
     > [!NOTE]  
-    >  Antes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], no se admitían los UDT creados a partir de los ensamblados de .NET Framework. Sin embargo, todavía puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos de alias mediante el uso de **sp_addtype**. La sintaxis CREATE TYPE se puede usar para crear los tipos de datos definidos por el usuario nativos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los UDT.  
+    >  Antes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], no se admitían los UDT creados a partir de los ensamblados de .NET Framework. Sin embargo, todavía puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los tipos de datos de alias mediante **sp_addtype**. La sintaxis CREATE TYPE se puede usar para crear los tipos de datos definidos por el usuario nativos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los UDT.  
   
-4.  **Crear tablas, variables o parámetros mediante el UDT** empezando por [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], un tipo definido por el usuario puede utilizarse como definición de columna de una tabla, como una variable en un [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes, o como un argumento de un [!INCLUDE[tsql](../../includes/tsql-md.md)] función o almacenados procedimiento.  
+4.  **Crear tablas, variables o parámetros con el UDT** A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]de, un tipo definido por el usuario se puede utilizar como la definición de columna de una tabla, como una [!INCLUDE[tsql](../../includes/tsql-md.md)] variable de un lote o como un argumento [!INCLUDE[tsql](../../includes/tsql-md.md)] de una función o un procedimiento almacenado.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Crear un tipo definido por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
@@ -78,7 +78,7 @@ ms.locfileid: "68028352"
  [Trabajar con tipos definidos por el usuario en SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
  Describe cómo crear consultas mediante los UDT.  
   
- [Acceso a tipos definidos por el usuario en ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+ [Obtener acceso a tipos definidos por el usuario en ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
  Describe cómo trabajar con los UDT mediante el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ADO.NET.  
   
   

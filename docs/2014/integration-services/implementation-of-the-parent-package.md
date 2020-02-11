@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058155"
 ---
 # <a name="implementation-of-the-parent-package"></a>Implementación del paquete primario
@@ -27,7 +27,7 @@ ms.locfileid: "66058155"
 ## <a name="listing-child-packages"></a>Listado de paquetes secundarios  
  Si implementa un proyecto que contiene un paquete primario y uno o varios paquetes secundarios en el servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , puede ver una lista de los paquetes secundarios que ejecuta el paquete primario. Cuando se ejecuta el paquete primario, se genera automáticamente un informe de **información general** para el paquete primario en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. El informe lista los paquetes secundarios ejecutados por la tarea Ejecutar paquete contenida en el paquete primario, como se muestra en la imagen siguiente.  
   
- ![Informe de información general con la lista de los paquetes secundarios](media/overviewreport-childpackagelisting.png "Informe de información general con la lista de los paquetes secundarios")  
+ ![Informe de información general que incluye una lista de los paquetes secundarios](media/overviewreport-childpackagelisting.png "Informe de información general que incluye una lista de los paquetes secundarios")  
   
  Si desea información sobre cómo acceder al informe de **información general** , vea [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   
@@ -39,9 +39,9 @@ ms.locfileid: "66058155"
  Un error en este escenario solo significa que ha habido un error en la llamada a la tarea del trabajo del Agente SQL Server remoto. Una situación en la que esto puede ocurrir es cuando el servidor remoto está inactivo y el agente no responde. No obstante, en tanto se active el agente, el paquete primario completa su tarea sin problemas.  
   
 > [!NOTE]  
->  Puede usar una tarea Ejecutar SQL que contenga una instrucción Transact-SQL de **sp_start_job N'package_name'** . Para más información, vea [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
+>  Puede usar una tarea Ejecutar SQL que contenga una instrucción Transact-SQL de **sp_start_job N'package_name'**. Para más información, vea [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
 ## <a name="debugging-environment"></a>Entorno de depuración  
- Al probar el paquete primario, utilice el entorno de depuración del diseñador ejecutándolo mediante Depurar/Iniciar depuración (F5). También puede usar la utilidad del símbolo del sistema **dtexec**. Para más información, consulte [dtexec Utility](packages/dtexec-utility.md).  
+ Al probar el paquete primario, utilice el entorno de depuración del diseñador ejecutándolo mediante Depurar/Iniciar depuración (F5). También puede usar la utilidad del símbolo del sistema **dtexec**. Para obtener más información, vea [DTExec Utility](packages/dtexec-utility.md).  
   
   

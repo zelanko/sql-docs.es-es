@@ -10,12 +10,12 @@ ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0eb37b891afc31b56d0e518ba7aa73190491e5ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 761abc52c7ef0ba974540ff0b87a57773a4badc4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107808"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918093"
 ---
 # <a name="glossary-report-builder"></a>Glosario (Generador de informes)
   
@@ -26,7 +26,7 @@ ms.locfileid: "66107808"
 |Objetos de datos ActiveX|Objetos del Modelo de objetos componentes que proporcionan acceso a los orígenes de datos. Esta API proporciona un nivel entre OLE DB y lenguajes de programación como Visual Basic, Visual Basic para Aplicaciones, páginas Active Server y Microsoft Internet Explorer Visual Basic Scripting.|  
 |informe ad hoc|Informe .rdl creado con el Generador de informes 1.0 que tiene acceso a los modelos de informe.|  
 |elemento gráfico|Área de control o estado que se adjunta al borde de un panel o ventana, por ejemplo, una barra de herramientas o regla.|  
-|agregado|Valor de resumen compuesto por varios valores individuales.|  
+|aggregate|Valor de resumen compuesto por varios valores individuales.|  
 |función de agregado|Función que realiza un cálculo con varios valores y devuelve un solo valor de resumen.|  
 |agregado de agregados|Valor de resumen que se calcula a partir de agregados, por ejemplo el valor máximo de un conjunto de sumas.|  
 |consulta de agregado|Consulta que resume información de varias filas mediante la inclusión de una función de agregado como Sum o Avg.|  
@@ -35,16 +35,16 @@ ms.locfileid: "66107808"
 |datos analíticos|En un informe, conjunto de valores numéricos que se pueden analizar. En un mapa de informe, los valores analíticos controlan el color, el tipo de marcador o el tamaño de los elementos de cada capa de mapa.|  
 |suavizado de contorno|En los gráficos, uso de un algoritmo para suavizar el contorno irregular de una línea curva.|  
 |base de datos de aplicación|Base de datos que almacena la información del usuario y del sistema de una aplicación.|  
-|argumento|Valor que proporciona información a una acción, evento, método, propiedad, función o procedimiento.|  
+|Argumento|Valor que proporciona información a una acción, evento, método, propiedad, función o procedimiento.|  
 |ensamblado|Módulo de aplicación administrada que contiene metadatos de clases y código administrado como un objeto de SQL Server, para el que se pueden crear funciones CLR, procedimientos almacenados, desencadenadores, agregados definidos por el usuario y tipos definidos por el usuario en SQL Server.|  
-|autenticación|Proceso por el que se comprueba la identidad de un usuario, equipo, proceso u otra entidad validando las credenciales proporcionadas por la entidad. Las formas comunes de credenciales son las firmas digitales, tarjetas inteligentes, datos biométricos y una combinación de nombres de usuario y contraseña.|  
-|autorización|1. La operación que verifica los permisos y derechos de acceso que se otorgan a un usuario. 2. El proceso de otorgar a una persona, proceso del equipo o dispositivo acceso a determinada información, servicios o funcionalidad.|  
+|Autenticación|Proceso por el que se comprueba la identidad de un usuario, equipo, proceso u otra entidad validando las credenciales proporcionadas por la entidad. Las formas comunes de credenciales son las firmas digitales, tarjetas inteligentes, datos biométricos y una combinación de nombres de usuario y contraseña.|  
+|authorization|1. La operación que comprueba los permisos y derechos de acceso que se otorgan a un usuario. 2. El proceso de otorgar a una persona, proceso del equipo o dispositivo acceso a determinada información, servicios o funcionalidad.|  
 |ejes|Líneas vertical y horizontal de un gráfico, que se usan para mostrar la posición de un punto.|  
 |intervalo de eje|Número de unidades entre las marcas de graduación principales de un eje del gráfico. El intervalo se calcula automáticamente, pero también se puede establecer de forma manual.|  
 |realizar copia de seguridad|Crear una copia duplicada de un programa, un disco o datos.|  
-|copia de seguridad|Colección de archivos, carpetas y otros tipos de datos que se han duplicado y almacenado en un archivo o en una o varias cintas.|  
+|backup|Colección de archivos, carpetas y otros tipos de datos que se han duplicado y almacenado en un archivo o en una o varias cintas.|  
 |tabla base|Tabla que se almacena permanentemente en una base de datos. Las referencias a las tablas base se realizan mediante vistas, cursores, instrucciones SQL y procedimientos almacenados.|  
-|lote|1. Conjunto de instrucciones SQL que se envían de forma conjunta y que se ejecutan como un grupo.  2. En Reporting Services, recopilación de llamadas a métodos SOAP en una única transacción.|  
+|lote|1. Conjunto de instrucciones SQL que se envían de forma conjunta y que se ejecutan como grupo.  2. En Reporting Services, recopilación de llamadas a métodos SOAP en una única transacción.|  
 |objeto binario grande (BLOB)|Datos binarios de tamaño excepcionalmente grande, como imágenes o pistas de audio o multimedia, almacenadas como datos digitales, o cualquier variable o columna de tabla lo suficientemente grande como para guardar estos valores.|  
 |operación bit a bit|Operación que manipula un solo bit o comprueba si el bit está activado o no.|  
 |marcador|En un informe, vínculo que salta a otro lugar del mismo informe.|  
@@ -72,13 +72,13 @@ ms.locfileid: "66107808"
 |tipo definido por el usuario CLR|Tipo de datos definido por el usuario creado en un ensamblado de SQL Server cuya implementación se define en un ensamblado creado en .NET Framework Common Language Runtime (CLR).|  
 |seguridad de acceso del código|Mecanismo proporcionado por Common Language Runtime por el que la directiva de seguridad concede permisos al código administrado. Estos permisos se aplican para ayudar a limitar las operaciones que el código podrá llevar a cabo.|  
 |collation|Conjunto de reglas que determina cómo se comparan, ordenan y presentan los datos.|  
-|colección|1. Objeto que contiene un conjunto de otros objetos. 2. En Master Data Services, agrupación jerárquica de miembros de jerarquías explícitas y otras colecciones.|  
+|collection|1. Objeto que contiene un conjunto de otros objetos. 2. En Master Data Services, agrupación jerárquica de miembros de jerarquías explícitas y otras colecciones.|  
 |reglas de color|Algoritmo que asigna colores automáticamente a cada elemento de mapa de una capa de mapa.|  
 |escala de colores|Tipo de leyenda de mapa que se usa para interpretar los colores de un mapa.|  
 |common language runtime|Motor en el núcleo de la ejecución de código administrado. El motor de tiempo de ejecución proporciona código administrado con servicios como integración entre idiomas, seguridad de acceso del código, administración de la duración de objetos y compatibilidad con la depuración y la creación de perfiles.|  
 |expresión compleja|Expresión que no se puede representar como una única referencia de campo integrado y se muestra en la superficie de diseño como <\<Expr>>.|  
 |concatenación|Combinación de dos o más cadenas o expresiones de caracteres en una sola cadena o expresión de caracteres, o combinación de dos o más cadenas o expresiones binarias en una sola cadena o expresión binaria.|  
-|concurrency|Proceso que permite a varios usuarios tener acceso a, y modificar, datos compartidos al mismo tiempo. SQL Server utiliza bloqueos para permitir a varios usuarios el acceso y la modificación de datos compartidos de forma simultánea sin tener conflictos entre sí.|  
+|simultaneidad|Proceso que permite a varios usuarios tener acceso a, y modificar, datos compartidos al mismo tiempo. SQL Server utiliza bloqueos para permitir a varios usuarios el acceso y la modificación de datos compartidos de forma simultánea sin tener conflictos entre sí.|  
 |archivo config|Véase: archivo de configuración|  
 |configuración|Cuando se refiere a una sola microcomputadora, la suma de los componentes internos y externos de un sistema, incluidos la memoria, las unidades de disco, el teclado, el vídeo y, a menudo, el hardware complementario menos crítico, como un mouse, un módem o una impresora.|  
 |archivo de configuración|Archivo que contiene especificaciones de funcionamiento para hardware o software legibles por el equipo, o que contiene información acerca de otro archivo o un usuario específico.|  
@@ -93,9 +93,9 @@ ms.locfileid: "66107808"
 |minería de datos|Proceso que consiste en analizar datos para identificar patrones o relaciones.|  
 |punto de datos|Entidad individual más pequeña de un gráfico.|  
 |extensión de procesamiento de datos|Componente de Reporting Services utilizado para recuperar los datos de informe de un origen de datos externo.|  
-|proveedor de datos|Capa de sofware que se ocupa de la comunicación entre las extensiones de datos y el software personalizado propio de cada tipo de origen de datos externo. En función del origen de datos concreto, Microsoft y otros fabricantes ofrecen diversos proveedores de datos.|  
+|proveedor de datos|Capa de software que controla la comunicación entre las extensiones de datos y el software personalizado propio de cada tipo de origen de datos externo. En función del origen de datos concreto, Microsoft y otros fabricantes ofrecen diversos proveedores de datos.|  
 |región de datos|Elemento de informe que muestra filas de datos repetidas a partir de un conjunto de datos subyacente de una tabla, matriz, lista o gráfico.|  
-|origen de datos|1. En ADO y OLE DB, ubicación de un origen de datos expuesto por un proveedor OLE DB. 2. Origen de los datos de un objeto como un cubo o una dimensión. También es la especificación de la información necesaria para obtener acceso a los datos de origen. A veces hace referencia a un objeto de ClassType clsDataSource. <br />3. En Reporting Services, tipo de origen de datos específico, cadena de conexión y credenciales que pueden guardarse por separado en un servidor de informes y compartirse entre proyectos de informes o insertarse en un archivo de definición de informe (.rdl).|  
+|origen de datos|1. En ADO y OLE DB, ubicación de un origen de datos expuesto por un proveedor OLE DB. 2. Origen de los datos de un objeto como un cubo o una dimensión. También es la especificación de la información necesaria para obtener acceso a los datos de origen. A veces hace referencia a un objeto de ClassType clsDataSource. <br />3. En Reporting Services, tipo de origen de datos específico, cadena de conexión y credenciales que pueden guardarse por separado en un servidor de informes y compartirse entre proyectos de informes o incrustarse en un archivo de definición de informe (.rdl).|  
 |nombre del origen de datos|En un informe, nombre del objeto de origen de datos.|  
 |tipo de datos|Atributo que especifica el tipo de información que se puede almacenar en una columna, parámetro o variable.|  
 |almacenamiento de datos|Base de datos estructurada específicamente para consultas y análisis.|  
@@ -112,12 +112,12 @@ ms.locfileid: "66107808"
 |script de base de datos|Colección de instrucciones utilizada para crear objetos de base de datos.|  
 |imagen enlazada a datos|Imagen que existe en una base de datos, como un campo en una base de datos que contiene imágenes.|  
 |suscripción controlada por datos|En Reporting Services, suscripción que utiliza una consulta para recuperar los datos de suscripción de un origen de datos externo en tiempo de ejecución.|  
-|conjunto de datos|1. En OLE DB para OLAP, conjunto de datos multidimensionales que son el resultado de ejecutar una instrucción SELECT de expresiones multidimensionales (MDX).   <br />2. En Reporting Services, especificación con nombre que incluye una definición de origen de datos, una definición de consulta y valores de parámetros opcionales, campos calculados e información sobre filtros e intercalación como parte de un archivo de definición de informe (.rdl). Un archivo .rdl puede tener varios conjuntos de datos.|  
+|dataset|1. En OLE DB para OLAP, conjunto de datos multidimensionales que son el resultado de ejecutar una instrucción SELECT de expresiones multidimensionales (MDX).   <br />2. En Reporting Services, especificación con nombre que incluye una definición de origen de datos, una definición de consulta y valores de parámetros opcionales, campos calculados e información sobre filtros e intercalación como parte de un archivo de definición de informe (.rdl). Un archivo .rdl puede tener varios conjuntos de datos.|  
 |DBCS|Juego de caracteres de doble byte|  
-|predeterminados|1. Valor de un dato, valor de una opción, intercalación o nombre que el sistema asigna automáticamente si un usuario no los especifica. 2. Acción que se realiza automáticamente en algunos eventos si el usuario no ha especificado la acción que se debe realizar.|  
+|default|1. Valor de un dato, valor de una opción, intercalación o nombre que el sistema asigna automáticamente si un usuario no lo especifica. 2. Acción que se realiza automáticamente en algunos eventos si el usuario no ha especificado la acción que se debe realizar.|  
 |base de datos predeterminada|Base de datos a la que se conecta automáticamente el usuario después de iniciar sesión en SQL Server.|  
 |instancia predeterminada|Instancia de SQL Server que utiliza como nombre el del equipo en que está instalada.|  
-|delimitador|1. En Transact-SQL, caracteres que indican el inicio y final de un nombre de objeto, mediante comillas dobles ("") o corchetes ([]). 2. En Integration Services y Reporting Services, caracteres que se utilizan para separar registros, campos o cadenas.|  
+|delimiter|1. En Transact-SQL, caracteres que indican el inicio y final de un nombre de objeto, mediante comillas dobles ("") o corchetes ([]). 2. En Integration Services y Reporting Services, caracteres que se utilizan para separar registros, campos o cadenas.|  
 |extensión de entrega|Componente de Reporting Services que se usa para distribuir un informe a dispositivos específicos o ubicaciones de destino.|  
 |protocolo de entrega|Conjunto de reglas de comunicación usadas para enrutar los mensajes de notificación a sistemas de entrega externos.|  
 |elemento dependiente|En un servidor de informes, elemento de catálogo de informes al pueden hacer referencia otros elementos. Por ejemplo, si la definición de informe contiene una referencia a un origen de datos compartido, el origen de datos es un elemento dependiente.|  
@@ -135,18 +135,18 @@ ms.locfileid: "66107808"
 |origen de datos incrustado|Definición de origen de datos incluida en un archivo de definición de informe. Los orígenes de datos incrustados son específicos del informe.|  
 |orígenes de datos insertados|Un origen de datos insertados es un elemento XML que representa una conexión de datos. Una única definición de informe lo contiene y utiliza.|  
 |conjunto de datos incrustado|Conjunto de datos de informe incluido en una única definición de informe o una única definición de elemento de informe.|  
-|cifrado|Método para mantener la confidencialidad de la información reservada mediante la modificación de los datos para que su formato sea ilegible.|  
-|entidad|1. En Reporting Services, una entidad es una colección lógica de elementos de modelo, incluidos campos de origen, roles, carpetas y expresiones, presentados en términos comerciales conocidos. 2. En Master Data Services, una entidad es un objeto dentro de un modelo. Cada entidad contiene miembros relacionados que se definen a través de atributos.|  
+|El cifrado|Método para mantener la confidencialidad de la información reservada mediante la modificación de los datos para que su formato sea ilegible.|  
+|Entidad|1. En Reporting Services, una entidad es una colección lógica de elementos de modelo, incluidos campos de origen, roles, carpetas y expresiones, presentados en términos comerciales conocidos. 2. En Master Data Services, una entidad es un objeto dentro de un modelo. Cada entidad contiene miembros relacionados que se definen a través de atributos.|  
 |enumeración|Conjunto fijo de valores enteros o constantes de cadena que se pueden usar para especificar el valor de algunas propiedades.|  
 |proyección Equirectangular|En un elemento de informe de mapa, proyección cilíndrica equidistante muy sencilla en la que la coordenada horizontal es la longitud y la coordenada vertical es la latitud.|  
 |registro de errores|1. En SQL Server, archivo de texto que registra la información del sistema. 2. En Integration Services, registro de errores, advertencias o eventos que pueden almacenar varios proveedores de registro, incluidos SQL Server Profiler, el registro de eventos de Windows y SQL Server.|  
 |número de estado de error|Número asociado con los mensajes de SQL Server que ayuda a los ingenieros de soporte técnico de Microsoft a encontrar la ubicación de código específica que emitió el mensaje.|  
 |carácter de escape|Carácter que se usa para indicar que otro carácter de una expresión se utiliza de forma literal y no como operador.|  
-|archivo ESRI .shp|Especificación abierta desarrollada por Environmental Systems Research Institute, Inc. (ESRI) para los datos espaciales.|  
-|archivo de forma ESRI|Especificación abierta desarrollada por Environmental Systems Research Institute, Inc. (ESRI) para los datos espaciales.|  
+|archivo ESRI .shp|Especificación abierta desarrollada por Environmental Systems Research Institute, Inc. (ESRI) para datos espaciales.|  
+|archivo de forma ESRI|Especificación abierta desarrollada por Environmental Systems Research Institute, Inc. (ESRI) para datos espaciales.|  
 |event|Cualquier incidente significativo del sistema o de una aplicación que requiere que se notifique a los usuarios o que se agregue una entrada a un registro.|  
 |controlador de eventos|1. Rutina de software que se ejecuta como respuesta a un evento. 2. En Integration Services, flujo de control que se ejecuta como respuesta a un evento en tiempo de ejecución.|  
-|expression|1. En SQL, combinación de símbolos y operadores que se evalúan en un solo valor de datos. 2. En Integration Services, combinación de literales, constantes, funciones y operadores que se evalúan en un solo valor de datos.|  
+|expresión|1. En SQL, combinación de símbolos y operadores que se evalúan en un solo valor de datos. 2. En Integration Services, combinación de literales, constantes, funciones y operadores que se evalúan en un solo valor de datos.|  
 |campo|1. Área de una ventana o registro que almacena un solo valor de datos.  2. En el Generador de informes, los campos de conjunto de datos representan los datos numéricos o no numéricos de una conexión de datos. Como ejemplos se pueden citar las cantidades de ventas, ventas totales, nombres de cliente, identificadores de base de datos, direcciones URL, imágenes y datos espaciales. Un informe puede tener tres tipos de campos: campos de conjunto de datos, campos calculados del conjunto de datos y campos integrados.|  
 |filter|1. Conjunto de criterios que controla el conjunto de registros que se devuelve como conjunto de resultados.  2. En búsqueda de texto completo, dada una extensión de archivo especificada, los filtros extraen texto de un archivo almacenado en una columna varbinary(max) o image.|  
 |expresión de filtro|Expresión usada para filtrar datos en el operador Filter.|  
@@ -163,12 +163,12 @@ ms.locfileid: "66107808"
 |datos de geografía|Tipo de datos espaciales de SQL Server que representa los datos de un sistema de coordenadas de tierra redonda, por ejemplo las coordenadas de latitud y longitud de GPS.|  
 |datos de geometría|Tipo de datos espaciales de SQL Server que admite datos planos, o euclidianos (de tierra plana).|  
 |caché de ensamblados global|Caché de código de todo el equipo que almacena los ensamblados instalados específicamente para que los compartan varias aplicaciones del equipo.|  
-|cuadrícula|Tipo de vista que muestra los datos en una tabla.|  
-|agrupar|Conjunto de datos que se agrupan en un informe.|  
+|grid|Tipo de vista que muestra los datos en una tabla.|  
+|agrupación|Conjunto de datos que se agrupan en un informe.|  
 |mapa térmico|Tipo de representación de mapa en que la intensidad del color de cada polígono se corresponde con los datos analíticos relacionados. Por ejemplos, los valores bajos de un intervalo aparecen en azul (fríos) y los valores altos en rojo (cálidos)|  
-|jerarquía|Estructura lógica de árbol que organiza los miembros de una dimensión para que cada uno de ellos tenga un miembro primario y cero o más miembros secundarios.|  
+|Jerarquía|Estructura lógica de árbol que organiza los miembros de una dimensión para que cada uno de ellos tenga un miembro primario y cero o más miembros secundarios.|  
 |alta disponibilidad|Estado de un recurso que permanece operativo y pueden usar los clientes la mayor parte del tiempo con un porcentaje muy bajo de errores que interrumpan el servicio.|  
-|HTML|Véase otro término: lenguaje de marcado de hipertexto|  
+|HTML|Véase: Lenguaje de marcado de hipertexto|  
 |Visor HTML|Interfaz de usuario formada por una barra de herramientas de informe y otros elementos de navegación usados para trabajar en un informe.|  
 |lenguaje de marcado de hipertexto|Lenguaje de marcado de texto que se usa para crear documentos para Internet. HTML define la estructura y el diseño de un documento web mediante diversas etiquetas y atributos.|  
 |identificador|Nombre de un objeto de una base de datos.|  
@@ -176,10 +176,10 @@ ms.locfileid: "66107808"
 |índice|En una base de datos relacional, objeto de base de datos que proporciona un acceso rápido a los datos de las filas de una tabla en función de valores de clave.|  
 |agregado interno|Función de agregado que otro agregado especifica como parámetro de ámbito. Por ejemplo, en =Max(Sum([Quantity]),"Tablix1"), Sum es el agregado interno.|  
 |combinación interna|Operación que recupera filas de varias tablas de origen mediante la comparación de los valores de las columnas compartidas entre las tablas de origen. Una combinación interna excluye las filas de una tabla de origen que no tienen filas coincidentes en las demás tablas de origen.|  
-|instancia|1. Copia de SQL Server que se ejecuta en un equipo. 2. Copia específica de un elemento de informe, por ejemplo un elemento de informe, subinforme, miembro dinámico o grupo.|  
+|instance|1. Copia de SQL Server que se ejecuta en un equipo. 2. Copia específica de un elemento de informe, por ejemplo un elemento de informe, subinforme, miembro dinámico o grupo.|  
 |integer|Categoría de tipo de datos numéricos que incluye los tipos de datos bigint, int, smallint y tinyint.|  
 |protocolo de seguridad de Internet|Reglas que siguen los equipos para ofrecer una comunicación privada y segura a través de redes IP (protocolo de Internet) mediante el uso de servicios de seguridad de cifrado.|  
-|IPsec|Véase otro término: protocolo de seguridad de Internet|  
+|IPsec|Véase: protocolo de seguridad de Internet|  
 |ISO|Uno de los dos organismos de estándares internacionales responsables del desarrollo de estándares de comunicaciones de datos internacionales. La Organización internacional de normalización (ISO) trabaja en estrecha colaboración con la Comisión electrotécnica internacional (CEI) con el fin de definir los estándares informáticos. Publicaron conjuntamente el estándar ISO/IEC SQL 92 para SQL.|  
 |asignación de roles de nivel de elemento|Directiva de seguridad que se aplica a un elemento en la carpeta del servidor de informes.|  
 |definición de roles de nivel de elemento|Plantilla de seguridad que define un rol usado para controlar el acceso a un elemento o la interacción con él en el espacio de nombres de las carpetas del servidor de informes.|  
@@ -188,7 +188,7 @@ ms.locfileid: "66107808"
 |KPI|Véase: indicador clave de rendimiento|  
 |campo de etiqueta|Campo de conjunto de datos de informe que identifica una etiqueta para el campo de clave correspondiente. Los parámetros y regiones de datos pueden mostrar la etiqueta de un campo de clave en lugar del valor.|  
 |latency|Período de tiempo que transcurre cuando finaliza un cambio de datos en un servidor y cuando dicho cambio aparece en otro servidor.|  
-|latitud|Coordenada de latitud como valor de grado decimal en dato del Sistema geodésico mundial (WGS 84). El intervalo válido es de -90.0 a +90.0.|  
+|latitude|Coordenada de latitud como valor de grado decimal en dato del Sistema geodésico mundial (WGS 84). El intervalo válido es de -90.0 a +90.0.|  
 |capa|En un elemento de informe de mapa, una capa especifica el tipo y la representación de un tipo único de datos espaciales. Un elemento de informe de mapa es un contenedor para varias capas.|  
 |LCID|Número que identifica una configuración regional basada en Windows.|  
 |leyenda|En un gráfico de informe, mapa o región de datos de medidor, elemento que proporciona una guía para relacionar la representación de los datos y los valores de datos subyacentes.|  
@@ -196,15 +196,15 @@ ms.locfileid: "66107808"
 |informe vinculado|Informe que hace referencia a una definición de informe existente mediante un conjunto distinto de valores o propiedades de parámetros. Un informe vinculado es un elemento del servidor de informes que proporciona un punto de acceso a un informe existente. Conceptualmente, es similar a los accesos directos a programa que se usan para ejecutar un programa o abrir un archivo.|  
 |región de datos de lista|Región de datos del diseño de un informe que se repite con cada grupo o fila del conjunto de datos de informe. Las listas se pueden utilizar para crear informes o formularios de forma libre, por ejemplo facturas, o conjuntamente con otras regiones de datos.|  
 |servidor local|1. En conexiones de SQL Server, instancia de SQL Server que se ejecuta en el mismo equipo que la aplicación. <br />2. En una instrucción Transact-SQL, cuando se resuelven referencias a objetos de base de datos, instancia de SQL Server que ejecuta la instrucción. <br />3. En consultas distribuidas de SQL Server, instancia de SQL Server que ejecuta la consulta distribuida. El servidor local tendrá acceso a cualquier servidor vinculado al que la consulta haga referencia.|  
-|configuración regional|Atributo del sistema operativo Windows que define algunos comportamientos relacionados con el idioma.|  
+|localidad|Atributo del sistema operativo Windows que define algunos comportamientos relacionados con el idioma.|  
 |identificador de configuración regional (LCID)|Número que identifica una configuración regional basada en Windows.|  
 |archivo de registro|Archivo o conjunto de archivos que contiene registros de las modificaciones realizadas en una base de datos.|  
 |nombre lógico|Nombre utilizado por SQL Server para identificar un archivo.|  
 |operadores lógicos|Operadores AND, OR y NOT. Se usan para conectar las condiciones de búsqueda en las cláusulas WHERE.|  
-|longitud|Coordenada como valor de grado decimal en dato del Sistema geodésico mundial (WGS 84). El intervalo válido es de -180.0 a +180.0.|  
+|longitude|Coordenada como valor de grado decimal en dato del Sistema geodésico mundial (WGS 84). El intervalo válido es de -180.0 a +180.0.|  
 |relación de varios a varios|Relación entre dos tablas donde las filas de cada tabla tienen varias filas coincidentes en la tabla relacionada. Por ejemplo, cada factura de venta puede tener varios productos, pero cada producto puede aparecer en varias facturas de venta.|  
 |relación de varios a uno|Relación entre dos tablas donde una fila de una tabla puede relacionarse con varias filas de otra tabla.|  
-|mapa|Elemento de informe que sirve de contenedor, para títulos, diversos tipos de leyenda y capas de mapa.|  
+|map|Elemento de informe que sirve de contenedor, para títulos, diversos tipos de leyenda y capas de mapa.|  
 |datos de mapa|Los datos de mapa constan de polígonos, líneas, puntos y mosaicos de Bing Maps.  Los datos de mapa pueden estar incrustados en un informe o importarse de archivos de forma ESRI (.shp), consultas de datos espaciales de SQL Server, o un servicio web que devuelva imágenes como mosaicos de Microsoft Bing Maps.|  
 |ventanilla de mapa|Área del mapa que se va a mostrar en el elemento de informe de mapa. Por ejemplo, en un informe puede estar incrustado un mapa de todo Estados Unidos, pero solo se muestra el área de los estados del noroeste.|  
 |marker|Símbolo que se muestra en una capa de punto de mapa en cada ubicación de punto.|  
@@ -212,9 +212,9 @@ ms.locfileid: "66107808"
 |archivo maestro|Archivo instalado con versiones anteriores de SQL Server usado para almacenar las bases de datos del sistema maestra, model y tempdb, así como los registros de transacciones, la base de datos de ejemplo pubs y el registro de transacciones.|  
 |campos coincidentes|Conjunto de los campos que se utilizan para generar una relación entre los datos analíticos y los datos espaciales.|  
 |región de datos de matriz|Región de datos del diseño de un informe que proporciona funcionalidad parecida a la de los informes de referencias cruzadas o de tabla dinámica. En tiempo de ejecución, a medida que se combinan los datos del informe y las regiones de datos, la matriz aumenta de tamaño horizontal y verticalmente en la página. Los valores de las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda.|  
-|MDX|Véase otro término: Expresiones multidimensionales (MDX)|  
+|MDX|Véase: expresiones multidimensionales (MDX)|  
 |proyección de Mercator|En un elemento de informe de mapa, proyección de mapa cilíndrica ideada por Gerardus Mercator en 1569.|  
-|metadatos|Información sobre las propiedades de datos, como el tipo de datos de una columna (numéricos, texto, etc.) o la longitud de una columna; información sobre un archivo, como su título, descripción, fecha de creación y fecha de la última modificación; información sobre la estructura de los datos o información que especifica el diseño de objetos como cubos o dimensiones.|  
+|metadata|Información sobre las propiedades de datos, como el tipo de datos de una columna (numéricos, texto, etc.) o la longitud de una columna; información sobre un archivo, como su título, descripción, fecha de creación y fecha de la última modificación; información sobre la estructura de los datos o información que especifica el diseño de objetos como cubos o dimensiones.|  
 |method|Función que lleva a cabo una acción mediante un objeto COM, como en SQL-DMO, OLE DB y Objetos de datos ActiveX (ADO).|  
 |Tipo de MIME|Formato de archivo de una imagen, por ejemplo .bmp, .gif o .jpeg.|  
 |dependencia de modelos|Relación entre dos o más modelos en la que un modelo depende de la información de otro.|  
@@ -229,10 +229,10 @@ ms.locfileid: "66107808"
 |anidamiento|Colocación de una región de datos dentro de otra, por ejemplo un minigráfico dentro de una tabla. Las regiones de datos anidadas están basadas en el mismo conjunto de datos de informe. El ámbito de los datos de la región anidada se define automáticamente mediante su posición en la región de datos primaria.|  
 |NULL|Entrada que no tiene ningún valor asignado explícitamente.|  
 |expresión numérica|Expresión que se evalúa en un número.|  
-|objeto|Uno de los componentes de una base de datos, como una tabla, índice o procedimiento almacenado.|  
-|identificador de objeto|1. Nombre exclusivo que se asigna a un objeto. 2. En Metadata Services, identificador exclusivo construido a partir de un identificador único global (GUID) y un identificador interno.|  
+|object|Uno de los componentes de una base de datos, como una tabla, índice o procedimiento almacenado.|  
+|identificador de objeto|1. Nombre exclusivo que se da a un objeto. 2. En Metadata Services, identificador exclusivo construido a partir de un identificador único global (GUID) y un identificador interno.|  
 |Origen de datos ODBC|1. Ubicación de un conjunto de datos al que se puede tener acceso mediante un controlador ODBC. 2. Definición almacenada que contiene toda la información de conexión que necesita una aplicación ODBC para conectarse al origen de datos.|  
-|controlador ODBC|Biblioteca de vínculos dinámicos (DLL) que una aplicación habilitada para ODBC, como Excel, puede utilizar para obtener acceso a un origen de datos ODBC.|  
+|Controlador ODBC|Biblioteca de vínculos dinámicos (DLL) que una aplicación habilitada para ODBC, como Excel, puede utilizar para obtener acceso a un origen de datos ODBC.|  
 |OGC|Open Geospatial Consortium|  
 |OLAP|Véase: procesamiento analítico en línea|  
 |OLE DB|Interfaz de programación de aplicaciones (API) basada en COM utilizada para tener acceso a datos. OLE DB permite tener acceso a los datos almacenados en cualquier formato para el que haya disponible un proveedor OLE DB.|  
@@ -240,37 +240,37 @@ ms.locfileid: "66107808"
 |relación de uno a varios|En bases de datos relacionales, relación entre dos tablas en la que una sola fila de la primera tabla se puede relacionar con una o más filas de la segunda, pero una fila de la segunda tabla solo se puede relacionar con una fila de la primera.|  
 |relación de uno a uno|En bases de datos relacionales, relación entre dos tablas en la que una única fila de la primera tabla solo se puede relacionar con una fila de la segunda tabla, y una fila de la segunda tabla solo se puede relacionar con una fila de la primera tabla.|  
 |procesamiento analítico en línea|Tecnología que utiliza estructuras multidimensionales para proporcionar un acceso rápido a los datos para su análisis.|  
-|operador|Signo o símbolo que especifica el tipo de cálculo que se va a realizar en una expresión. Existen operadores matemáticos, de comparación, lógicos y de referencia.|  
+|operator|Signo o símbolo que especifica el tipo de cálculo que se va a realizar en una expresión. Existen operadores matemáticos, de comparación, lógicos y de referencia.|  
 |agregado externo|Función de agregado que especifica un parámetro de ámbito que es otra función de agregado.|  
 |relleno|1. Cadena que se suele agregar cuando el último bloque de texto simple es corto. 2. Espacio asignado a una celda para crear o mantener un tamaño concreto.|  
-|página|En el Generador de informes, la página hacer referencia a la página física de papel. El tamaño del papel especificado para el informe controla cómo se representa el informe.|  
+|Page|En el Generador de informes, la página hacer referencia a la página física de papel. El tamaño del papel especificado para el informe controla cómo se representa el informe.|  
 |paleta|Conjunto de valores predefinidos o definidos por el usuario de los colores utilizados en gráficos, mapas y medidores.|  
 |parámetro|Colección global integrada en un informe que permite que los usuarios establezcan valores que pueden modificar los datos y la apariencia de los informes, y conectar los informes relacionados. Los parámetros del informe se crean automáticamente a partir de los parámetros de la consulta y de la base de datos, y manualmente por parte de los autores de informes.|  
 |informe con parámetros|Informe publicado que acepta valores de entrada mediante parámetros.|  
 |filtro de fila con parámetros|Filtro de fila disponible con la replicación de mezcla que permite restringir los datos replicados a un suscriptor basándose en una función del sistema o en una función definida por el usuario.|  
 |primario|Miembro del siguiente nivel superior de una jerarquía que está directamente relacionado con el miembro actual.|  
 |permiso|Regla asociada a un objeto que regula los usuarios que pueden tener acceso al objeto y de qué forma.|  
-|dinamización|1. Consiste en Girar filas en columnas y columnas en filas, en un explorador de datos de tablas cruzadas. 2. Elección de dimensiones del conjunto de dimensiones disponibles en una estructura de datos multidimensionales para su presentación en filas y columnas de una estructura de tablas cruzadas.|  
+|pivot|1. Proceso que consiste en girar filas en columnas y columnas en filas, en un explorador de datos de tablas cruzadas. 2. Elección de dimensiones del conjunto de dimensiones disponibles en una estructura de datos multidimensionales para su presentación en filas y columnas de una estructura de tablas cruzadas.|  
 |marcador de posición|Carácter o símbolo que se utiliza en lugar de un valor, texto u objeto real. El valor real representado por el marcador de posición es desconocido o no está disponible en el momento actual, o no se muestra por motivos de seguridad. Cuando se define una expresión simple o compleja dentro de un cuadro de texto, la representación resultante de esta expresión en la vista de diseño se conoce como marcador de posición.|  
 |datos planos|Datos que especifican puntos, líneas o áreas en un plano geométrico.|  
 |capa de polígono|En un elemento de informe de mapa, capa que muestra datos espaciales como áreas, por ejemplo regiones geográficas como los países.|  
-|precisión|Número total máximo de dígitos decimales que se pueden almacenar, tanto a la izquierda como a la derecha del separador decimal.|  
+|precision|Número total máximo de dígitos decimales que se pueden almacenar, tanto a la izquierda como a la derecha del separador decimal.|  
 |clave principal|Columna o conjunto de columnas que identifican de forma exclusiva todas las filas de una tabla.|  
 |tabla principal|Lado "uno" de dos tablas relacionadas en una relación de uno a varios.|  
 |proyección|Asignación de los datos de un sistema de coordenadas de dimensión N a un sistema de coordenadas de dimensión (N-1). Por ejemplo, la asignación de datos geográficos tridimensionales a una superficie de presentación de dos dimensiones.|  
 |página de propiedades|Cuadro de diálogo que muestra información sobre un objeto de la interfaz.|  
 |propiedad|Atributo con nombre de un control, campo u objeto de base de datos que define una de las características del objeto (como el color, el tamaño o la ubicación en pantalla) o un aspecto de su comportamiento (por ejemplo, si está oculto).|  
 |protocol|Conjunto estándar de formatos y procedimientos que permiten que los equipos intercambien información.|  
-|proveedor|1. Proveedor OLE DB. 2. Biblioteca de vínculos dinámicos (DLL) en proceso que proporciona acceso a una base de datos.|  
+|provider|1. Proveedor OLE DB. 2. Biblioteca de vínculos dinámicos (DLL) en proceso que proporciona acceso a una base de datos.|  
 |parámetros de consulta|Parámetros que se especifican en una consulta del conjunto de datos, como una consulta de Transact-SQL.|  
-|RDL|Véase otro término: lenguaje RDL (Report Definition Language)|  
-|registro|Grupo de campos, o columnas, de información relacionados que se trata como una unidad. En una base de datos relacional, un registro se suele denominar fila.|  
+|RDL|Véase: lenguaje RDL (Report Definition Language)|  
+|record|Grupo de campos, o columnas, de información relacionados que se trata como una unidad. En una base de datos relacional, un registro se suele denominar fila.|  
 |rectángulo|Elemento de informe que se puede usar como contenedor para varios elementos de informe o como elemento gráfico de un informe.|  
 |jerarquía recursiva|1. Jerarquía de datos de un único conjunto de datos de informe donde existen varios niveles jerárquicos, como puede ser la estructura de mando para las relaciones entre jefes y empleados en una jerarquía de organización. 2. En Master Data Services, una jerarquía recursiva es una jerarquía derivada que incluye una relación recursiva. Una relación recursiva existe cuando una entidad tiene un atributo basado en dominio en la propia entidad.|  
 |base de datos relacional|Base de datos o sistema de administración de bases de datos que almacena información en tablas como filas y columnas de datos y realiza búsquedas mediante los datos de columnas especificadas de una tabla para buscar datos adicionales en otra tabla.|  
 |sistema de administración de bases de datos relacionales|Sistema que organiza los datos en filas y columnas relacionadas.|  
 |OLAP relacional|Modo de almacenamiento que utiliza las tablas de una base de datos relacional para almacenar estructuras multidimensionales.|  
-|relación|1. Un vínculo entre las tablas que hace referencia a la clave principal de una tabla con una clave externa de otra tabla. La línea de la relación se representa en un diagrama de base de datos mediante una línea continua si se exige la integridad referencial entre las tablas, o una línea discontinua si no se exige la integridad referencial para las transacciones INSERT y UPDATE. Los extremos de una línea de relación muestran un símbolo de clave principal para denotar una relación de clave principal a clave externa, o muestran un símbolo de infinito para denotar el lado de clave externa de una relación de uno a varios. <br />2. En Metadata Services, una relación es una asociación entre un par de objetos, donde un objeto es un origen y el otro es un destino. La asociación se repite por cada par de objetos siguiente, de modo que el destino de una relación se convierte en el origen de la relación siguiente. De esta forma, todos los objetos de un modelo de información se asocian a través de una cadena de relaciones que se extiende desde un objeto al siguiente por todo el modelo de información.|  
+|relación|1. Vínculo entre las tablas que hace referencia a la clave principal de una tabla en una clave externa de otra tabla. La línea de la relación se representa en un diagrama de base de datos mediante una línea continua si se exige la integridad referencial entre las tablas, o una línea discontinua si no se exige la integridad referencial para las transacciones INSERT y UPDATE. Los extremos de una línea de relación muestran un símbolo de clave principal para denotar una relación de clave principal a clave externa, o muestran un símbolo de infinito para denotar el lado de clave externa de una relación de uno a varios. <br />2. En Metadata Services, una relación es una asociación entre un par de objetos, donde un objeto es un origen y el otro es un destino. La asociación se repite por cada par de objetos siguiente, de modo que el destino de una relación se convierte en el origen de la relación siguiente. De esta forma, todos los objetos de un modelo de información se asocian a través de una cadena de relaciones que se extiende desde un objeto al siguiente por todo el modelo de información.|  
 |informe representado|Informe totalmente procesado que contiene datos e información de diseño, en un formato que permite su visualización.|  
 |extensión de representación|Componente de Reporting Services que se usa para procesar el formato de salida de un informe.|  
 |extensiones de representación|Complemento que representa los informes en un formato concreto.|  
@@ -302,13 +302,13 @@ ms.locfileid: "66107808"
 |controles ReportViewer|Control de servidor web y control de Windows Forms que ofrecen procesamiento incrustado de los informes en aplicaciones ASP.NET y de Windows Forms.|  
 |resource|Cualquier elemento de una base de datos del servidor de informes que no es un informe, carpeta ni elemento de origen de datos compartido.|  
 |conjunto de resultados|Conjunto de filas devueltas por la instrucción SELECT.|  
-|role|1. Usuario o grupo al que se concede un conjunto de permisos específicos.  <br />2. En Analysis Services, un rol utiliza cuentas de seguridad de Windows para limitar el ámbito de acceso y los permisos cuando los usuarios tienen acceso a bases de datos, cubos, dimensiones y modelos de minería de datos.  <br />3. En una sesión de creación de reflejo de la base de datos, el servidor principal y el servidor reflejado tienen roles principales y reflejados complementarios. Opcionalmente, el rol de testigo la realiza una tercera instancia de servidor.|  
+|rol|1. Usuario o grupo al que se concede un conjunto de permisos específicos.  <br />2. En Analysis Services, un rol utiliza cuentas de seguridad de Windows para limitar el ámbito de acceso y los permisos cuando los usuarios tienen acceso a bases de datos, cubos, dimensiones y modelos de minería de datos.  <br />3. En una sesión de creación de reflejo de la base de datos, el servidor principal y el servidor reflejado tienen roles principales y reflejados complementarios. Opcionalmente, el rol de testigo la realiza una tercera instancia de servidor.|  
 |asignación de roles|Directiva de seguridad que determina qué usuarios y grupos pueden tener acceso a elementos específicos y pueden realizar operaciones concretas.|  
 |definición de roles|Colección con nombre de tareas que define las operaciones que puede llevar a cabo un usuario en un servidor de informes.|  
 |fila|En una tabla de SQL, una sola repetición del objeto modelado por la tabla.|  
 |función de agregado de filas|Función que genera valores de resumen, que aparecen como filas adicionales en los resultados de la consulta.|  
 |filtro de filas|Filtro que limita las filas que se van a incluir en un conjunto de datos.|  
-|identificador de fila|1. Columna o conjunto de columnas que se usan para diferenciar una fila de todas las demás filas de la tabla. 2. En un montón, puntero a la fila.|  
+|identificador de fila|1. Columna o conjunto de columnas que se usa para diferenciar una fila de todas las demás filas de la tabla. 2. En un montón, puntero a la fila.|  
 |escalar|Campo de valor único, en oposición a agregado.|  
 |agregado escalar|Función de agregado, como MIN(), MAX() o AVG(), que se especifica en una lista de columnas de instrucción SELECT que solo contiene funciones de agregado.|  
 |esquema|En el estándar SQL-92, colección de objetos de base de datos que pertenecen a un solo usuario y forman un espacio de nombres único. Un espacio de nombres es un conjunto de objetos que no pueden tener nombres duplicados.|  
@@ -321,23 +321,23 @@ ms.locfileid: "66107808"
 |Lenguaje de definición de modelos semánticos (SMDL)|Conjunto de instrucciones que describen el diseño y la información de consultas de un informe en el Generador de informes.|  
 |serie|En un gráfico, una serie esta formada por más de un punto de datos.|  
 |agregado de servidor|Valor de agregado que se calcula en el origen de datos. En función del origen de datos, los agregados de servidor se pueden tratar como datos detallados o como agregados basados en la opción InterpretSubtotalsAsDetails de conjunto de datos.|  
-|nombre de servidor|Nombre que identifica de forma exclusiva un equipo servidor en una red.|  
-|del ssDE|Objeto de Service Broker que define un nombre para una tarea o conjunto de tareas concretas, así como los contratos que pueden utilizar otros servicios para realizar esa tarea.|  
+|nombre del servidor|Nombre que identifica de forma exclusiva un equipo servidor en una red.|  
+|service|Objeto de Service Broker que define un nombre para una tarea o conjunto de tareas concretas, así como los contratos que pueden utilizar otros servicios para realizar esa tarea.|  
 |nombre principal de servicio|Nombre por el que un cliente identifica de forma exclusiva una instancia de un servicio.|  
 |origen de datos compartido|Definición del origen de datos que se guarda y administra como un archivo en un servidor de informes y a la que pueden tener acceso varios informes.|  
 |definición de origen de datos compartido|Archivo .rdl que es la definición XML de un origen de datos y que sigue el esquema shareddatasource.xsd.|  
 |definición de conjunto de datos compartido|Archivo .rcd que es la definición XML de un conjunto de datos compartido y que sigue el esquema shareddatasetdefinition.xsd.|  
 |expresión simple|Expresión que contiene una referencia a un campo único y aparece en el diseño del informe entre corchetes, por ejemplo [ProductID].|  
 |SKU|Método para identificar diferentes ediciones de un producto; además, acrónimo para la referencia de almacén (basado en el término inglés, Stock Keeping Unit, terminología comercial estándar).|  
-|segmento|Subconjunto de datos de un cubo, especificado mediante la limitación de una o más dimensiones por los miembros de la dimensión.|  
+|slice|Subconjunto de datos de un cubo, especificado mediante la limitación de una o más dimensiones por los miembros de la dimensión.|  
 |etiqueta inteligente|Una etiqueta inteligente expone las configuraciones clave directamente en la superficie de diseño para mejorar la productividad general en tiempo de diseño en Visual Studio 2005.|  
-|SMDL|Véase otro término: Lenguaje de definición de modelos semánticos (SMDL)|  
-|snapshot|Véase: instantánea de informe|  
+|SMDL|Véase: Lenguaje de definición de modelos semánticos (SMDL)|  
+|instantánea|Véase: instantánea de informe|  
 |criterio de ordenación|Conjunto de reglas de una intercalación que define cómo se evalúan los caracteres en operaciones de comparación y la secuencia en la que se ordenan.|  
 |datos espaciales|Datos que especifican las ubicaciones de objetos en una superficie plana o curva. Los datos espaciales pueden ser puntos, líneas o polígonos.|  
 |tipo de datos espaciales|Especifica datos que representan información geométrica (plana) o geográfica (geodésica).|  
-|SQL|Véase otro término: Lenguaje de consulta estructurado (SQL)|  
-|consulta SQL|Instrucción SQL, como SELECT, INSERT, UPDATE, DELETE o CREATE TABLE.|  
+|SQL|Véase: Lenguaje de consulta estructurado (SQL)|  
+|Consulta SQL|Instrucción SQL, como SELECT, INSERT, UPDATE, DELETE o CREATE TABLE.|  
 |Autenticación de SQL Server|Mecanismo para validar un intento de conexión a una instancia de SQL Server especificando un identificador de inicio de sesión y una contraseña de SQL Server.|  
 |inicio de sesión de SQL Server|Cuenta almacenada en SQL Server que permite a los usuarios conectarse a SQL Server.|  
 |Instrucción SQL|Comando SQL o Transact-SQL, como SELECT o DELETE, que realiza una acción en los datos.|  
@@ -353,23 +353,23 @@ ms.locfileid: "66107808"
 |table|1. Objeto bidimensional, compuesto por filas y columnas, que almacena los datos de una entidad modelada de una base de datos relacional. 2. En un diseño de informe, región de datos que muestra los datos en formato de columnas.|  
 |región de datos de tabla|En un diseño de informe, elemento que muestra los datos en formato de columnas.|  
 |tablix|Región de datos RDL de Reporting Services que contiene filas y columnas que se parecen a una tabla o matriz y que, posiblemente, comparte características de ambas.|  
-|tarea|Colección de permisos que constituyen una tarea (administrar informes, administrar carpetas, etc.).|  
+|task|Colección de permisos que constituyen una tarea (administrar informes, administrar carpetas, etc.).|  
 |Transact-SQL|Lenguaje que contiene los comandos que se utilizan para administrar instancias de SQL Server, crear y administrar todos los objetos de una instancia de SQL Server, e insertar, recuperar, modificar y eliminar todos los datos de las tablas de SQL Server. Transact-SQL es una extensión del lenguaje definido en los estándares SQL publicados por ISO (International Standards Organization) y ANSI (American National Standards Institute).|  
 |instancia de usuario|Instancia de SQL Server Express generada por la instancia primaria en nombre de un usuario.|  
 |eje de valores (Y)|Eje en el que se muestran los valores numéricos de un gráfico. Normalmente es el eje vertical. Excepción: en los gráficos de barras, los ejes están invertidos y los datos de agrupación se muestran en el eje Y.|  
 |expresión de valor|Expresión en MDX (Expresiones multidimensionales) que devuelve un valor. Las expresiones de valor pueden operar en conjuntos, tuplas, miembros, niveles, números o cadenas.|  
-|variable|1. En Integration Services, almacena valores que se pueden usar en scripts, expresiones y expresiones de propiedad para establecer valores de columna y las propiedades de los objetos de paquete. <br />2. Entidades definidas que son valores asignados. Una variable local se define con una instrucción DECLARE@localvariable y se le asigna un valor inicial en el lote de instrucciones, donde se declara con una instrucción SELECT o SET@localvariable.|  
+|Variable|1. En Integration Services, almacena valores que se pueden usar en scripts, expresiones y expresiones de propiedad para establecer valores de columna y las propiedades de los objetos de paquete. <br />2. Entidades definidas que son valores asignados. Una variable local se define con una instrucción DECLARE@localvariable y se le asigna un valor inicial en el lote de instrucciones, donde se declara con una instrucción SELECT o SET@localvariable.|  
 |intervalo variable|Opción de un gráfico de Reporting Services que se puede especificar para que calcule automáticamente el número óptimo de etiquetas que se pueden colocar en un eje, en función del ancho o alto del gráfico.|  
 |virtualización|En los mapas, gráficos y medidores, forma en que un usuario decide visualizar datos analíticos.|  
-|servicio web|En Reporting Services, servicio que usa el protocolo simple de acceso a objetos (SOAP) sobre HTTP y actúa como interfaz de comunicaciones entre programas cliente y el servidor de informes.|  
+|Servicio web|En Reporting Services, servicio que usa el protocolo simple de acceso a objetos (SOAP) sobre HTTP y actúa como interfaz de comunicaciones entre programas cliente y el servidor de informes.|  
 |Instrumental de administración de Windows|Interfaz que proporciona información acerca de los objetos de un entorno administrado.|  
 |WKB|Representación de datos Well Known Binary tal y como la define Open Geospatial Consortium (OGC).|  
 |WKT|Representación de datos Well Known Text tal y como la define Open Geospatial Consortium (OGC).|  
-|WMI|Véase otro término: Instrumental de administración de Windows|  
+|WMI|Véase: Instrumental de administración de Windows|  
 |eje X|Véase: eje de categorías (X)|  
 |eje Y|Véase: eje de valores (Y)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

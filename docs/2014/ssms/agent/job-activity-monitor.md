@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211378"
 ---
 # <a name="job-activity-monitor"></a>Monitor de actividad de trabajo
@@ -39,25 +39,25 @@ ms.locfileid: "68211378"
  **Última ejecución**  
  Fecha y hora en que se ejecutó el trabajo por última vez con la fecha y hora locales del servidor.  
   
- **A continuación ejecute** <sup>1</sup>  
+ **Siguiente ejecución** <sup>1</sup>  
  Fecha y hora en que se ha programado la próxima ejecución del trabajo con la fecha y hora locales del servidor.  
   
  **Categoría**  
  Categoría asignada al trabajo.  
   
  **Ejecutable**  
- **Sí** si el trabajo puede ejecutarse; **No** si el trabajo no puede ejecutarse. No puede ejecutarse un trabajo que no disponga de pasos o de un servidor de destino.  
+ **Sí** , si se puede ejecutar el trabajo; **No** si el trabajo no se puede ejecutar. No puede ejecutarse un trabajo que no disponga de pasos o de un servidor de destino.  
   
- **Programado**  
- **Sí** si se ha asignado el trabajo a una programación de trabajo; **No** si el trabajo no tiene ninguna programación.  
+ **Programada**  
+ **Sí** , si el trabajo está asignado a una programación de trabajo; **No** si el trabajo no tiene ninguna programación.  
   
- <sup>1</sup>sólo los miembros de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fijo sysadmin rol de servidor y los administradores de servidor, puede ver el grupo de valores en esta columna. Los miembros del rol SQLAgentOperatorRole no pueden ver los valores en esta columna.  
+ <sup>1</sup> Solo los miembros del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol fijo de servidor sysadmin y del grupo administradores de servidor pueden ver los valores de esta columna. Los miembros del rol SQLAgentOperatorRole no pueden ver los valores en esta columna.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>Para abrir el Monitor de actividad de trabajo  
   
 -   En el **Explorador de objetos**, expanda su servidor, expanda **Agente SQL Server**, haga clic con el botón derecho en **Monitor de actividad de trabajo**y, luego, haga clic en **Ver actividad de trabajo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actividad de trabajos de monitor](monitor-job-activity.md)  
   
   

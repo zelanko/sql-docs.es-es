@@ -15,21 +15,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209683"
 ---
 # <a name="view-resource-governor-properties"></a>Ver las propiedades del regulador de recursos
   Puede crear o configurar entidades del regulador de recursos, por ejemplo grupos de recursos de servidor y grupos de cargas de trabajo, utilizando la página Propiedades del regulador de recursos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-1.  **Antes de empezar:**  [Permisos](#Permissions)  
+1.  **Antes de empezar:**  [permisos](#Permissions)  
   
-2.  **Para ver las propiedades del regulador de recursos con:**  [Página de propiedades del regulador de recursos](#ViewRGProp)  
+2.  **Para ver Resource Governor propiedades, mediante:**  [Resource Governor página Propiedades](#ViewRGProp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
- Además de ver las propiedades de las entidades del regulador de recursos, puede realizar varias tareas de configuración mediante la página **Propiedades del regulador de recursos** . Para obtener más información, vea estos temas:  
+ Además de ver las propiedades de las entidades del regulador de recursos, puede realizar varias tareas de configuración mediante la página **Propiedades del regulador de recursos** . Para más información, consulte los temas siguientes:  
   
 -   [Habilitar el regulador de recursos](enable-resource-governor.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63209683"
 ###  <a name="Permissions"></a> Permisos  
  Para ver las propiedades del regulador de recursos se requiere el permiso VIEW SERVER STATER. Las tareas de configuración del regulador de recursos requieren el permiso CONTROL SERVER.  
   
-##  <a name="ViewRGProp"></a> Ver la página de propiedades del regulador de recursos  
+##  <a name="ViewRGProp"></a>Ver la página de propiedades de Resource Governor  
  **Para ver las propiedades del regulador de recursos con la página Propiedades del regulador de recursos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
@@ -65,7 +65,7 @@ ms.locfileid: "63209683"
   
 4.  Para guardar los cambios, haga clic en **Aceptar**.  
   
-##  <a name="RGProp"></a> Propiedades del regulador de recursos  
+##  <a name="RGProp"></a>Propiedades de Resource Governor  
  **Nombre de la función de clasificador**  
  Especifique la función clasificadora seleccionándola en la lista.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63209683"
  **Grupos de recursos de servidor**  
  Cree o cambie la configuración del grupo de recursos de servidor utilizando la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un grupo de recursos, haga clic en la fila que viene precedida por un asterisco ( **&#42;** ).  
   
- **Name**  
+ **Nombre**  
  Especifique el nombre del grupo de recursos de servidor.  
   
  **% de tiempo mínimo de CPU**  
@@ -90,12 +90,12 @@ ms.locfileid: "63209683"
  **% máximo de memoria**  
  Especifique la memoria total del servidor que puede ser utilizada por las solicitudes en este grupo de recursos de servidor. El rango es de 0 a 100. El valor predeterminado es 100.  
   
- Para obtener más información, consulte [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
+ Para obtener más información, vea [Create Resource POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  **Grupos de cargas de trabajo de grupo de recursos de servidor**  
  Cree o cambie la configuración del grupo de cargas de trabajo utilizando la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un grupo de cargas de trabajo, haga clic en la fila que viene precedida por un asterisco ( **&#42;** ).  
   
- **Name**  
+ **Nombre**  
  Especifique el nombre del grupo de cargas de trabajo  
   
  **Importancia**  
@@ -125,7 +125,7 @@ ms.locfileid: "63209683"
   
 2.  Para ver la configuración actual de las entidades del regulador de recursos, use las [Vistas de administración dinámica relacionadas con el regulador de recursos &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](resource-governor.md)   
  [Habilitar el regulador de recursos](enable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](resource-governor-resource-pool.md)   

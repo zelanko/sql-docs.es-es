@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77a061d9a4bc1b1e320cf8af01599cdc52e139f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205017"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Compatibilidad con FOR XML para tipos de datos de cadena
@@ -42,7 +42,7 @@ FOR XML AUTO;
 go  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
  <T c1="1" c2="Special character 0xD for carriage return   
@@ -60,7 +60,7 @@ after line feed" />
   
 -   Se crea la entidad &#xA para el carácter de avance de línea de la tercera fila.  
   
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con FOR XML para varios tipos de datos de SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
+## <a name="see-also"></a>Consulte también  
+ [Compatibilidad de FOR XML con varios tipos de datos de SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
   
   

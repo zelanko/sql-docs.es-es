@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193248"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Usar el modo RAW con FOR XML
@@ -33,23 +33,23 @@ ms.locfileid: "63193248"
  La opción BINARY BASE64 se debe especificar en la cláusula FOR XML para devolver los datos binarios en formato codificado en base 64. En el modo RAW, si se recuperan los datos binarios sin especificar la opción BINARY BASE64, se produce un error.  
   
 ## <a name="in-this-section"></a>En esta sección  
- Esta sección contiene los siguientes ejemplos:  
+ En esta sección se incluyen los ejemplos siguientes:  
   
--   [Ejemplo: Recuperación de información de modelos de productos como XML](example-retrieving-product-model-information-as-xml.md)  
+-   [Ejemplo: Recuperar información de modelos de productos como XML](example-retrieving-product-model-information-as-xml.md)  
   
--   [Ejemplo: Especificación de XSINIL con la directiva ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Ejemplo: Especificar XSINIL con la directiva ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Ejemplo: Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Ejemplo: solicitar esquemas como resultados con las opciones XMLDATA y XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [Ejemplo: Recuperación de datos binarios](example-retrieving-binary-data.md)  
+-   [Ejemplo: Recuperar datos binarios](example-retrieving-binary-data.md)  
   
--   [Ejemplo: Cambio del nombre del elemento &#60;row&#62;](example-renaming-the-row-element.md)  
+-   [Ejemplo: Cambiar el nombre del elemento &#60;row&#62;](example-renaming-the-row-element.md)  
   
--   [Ejemplo: Especificación de un elemento raíz para el XML generado por FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Ejemplo: Especificar un elemento raíz para el XML generado por FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Ejemplo: Consulta de columnas de tipo XML](example-querying-xmltype-columns.md)  
+-   [Ejemplo: Consultar columnas de tipo XML](example-querying-xmltype-columns.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Usar el modo AUTO con FOR XML](use-auto-mode-with-for-xml.md)   
  [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)   

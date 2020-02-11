@@ -1,5 +1,5 @@
 ---
-title: Características SQL Server Native Client | Documentos de Microsoft
+title: Características de SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225561"
 ---
 # <a name="sql-server-native-client-features"></a>Características de SQL Server Native Client
@@ -30,7 +30,7 @@ ms.locfileid: "63225561"
  Describe un cambio de comportamiento a partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client.  
   
  [Usar la creación de reflejo de bases de datos](using-database-mirroring.md)  
- Describe cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite el uso de bases de datos reflejadas, que es la capacidad para mantener una copia, o reflejo, de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos en un servidor en espera.  
+ Describe cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite el uso de bases de datos reflejadas, que es la capacidad de mantener una copia, o reflejo, de una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos en un servidor en espera.  
   
  [Realizar operaciones asincrónicas](performing-asynchronous-operations.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con operaciones asincrónicas, que es la capacidad de devolver resultados inmediatamente sin bloquear el subproceso de llamada.  
@@ -38,11 +38,11 @@ ms.locfileid: "63225561"
  [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](using-multiple-active-result-sets-mars.md)  
  Explica cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite varios conjuntos de resultados activos (MARS). MARS permite ejecutar y recibir varios conjuntos de resultados mediante una conexión a una base de datos única.  
   
- [Utilizar tipos de datos XML](using-xml-data-types.md)  
+ [Usar tipos de datos XML](using-xml-data-types.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con el tipo de datos XML, que es un tipo de datos basado en XML que se puede utilizar como un tipo de columna, un tipo de variable, un tipo de parámetro o un tipo de valor devuelto por una función.  
   
  [Usar tipos definidos por el usuario](using-user-defined-types.md)  
- Describe cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite definidas por el usuario tipos (UDT), que amplía el sistema de tipos SQL al permitirle almacenar objetos y estructuras de datos personalizadas en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos.  
+ Describe cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite tipos definidos por el usuario (UDT), que amplía el sistema de tipos SQL permitiéndole almacenar objetos y estructuras de datos personalizadas en una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos.  
   
  [Usar tipos de valor grande](using-large-value-types.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con tipos de datos de valor grande, que son tipos de datos de objetos grandes (LOB).  
@@ -57,7 +57,7 @@ ms.locfileid: "63225561"
  Explica cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite el envío de notificaciones al consumidor si se modifica el conjunto de filas.  
   
  [Realizar operaciones de copia masiva](performing-bulk-copy-operations.md)  
- Describe cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite operaciones de copia masiva que permiten la transferencia de grandes cantidades de datos dentro o fuera de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla o vista.  
+ Describe cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite operaciones de copia masiva que permiten la transferencia de grandes cantidades de datos a o desde una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla o vista.  
   
  [Utilizar el cifrado sin validación](using-encryption-without-validation.md)  
  Explica cómo utilizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para cifrar los datos enviados al servidor sin validar el certificado.  
@@ -69,7 +69,7 @@ ms.locfileid: "63225561"
  Explica la compatibilidad con los tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) grandes.  
   
  [Compatibilidad con FILESTREAM](filestream-support.md)  
- Describe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con la característica mejorada FILESTREAM.  
+ Describe la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibilidad de Native Client con la característica mejorada FileStream.  
   
  [Compatibilidad con Nombre de entidad de seguridad de servicio &#40;SPN&#41; en conexiones cliente](service-principal-name-spn-support-in-client-connections.md)  
  Explica cómo se ha ampliado la compatibilidad con los nombres principales de servicio (SPN) para habilitar la autenticación mutua en todos los protocolos.  
@@ -77,7 +77,7 @@ ms.locfileid: "63225561"
  [Compatibilidad con columnas dispersas en SQL Server Native Client](sparse-columns-support-in-sql-server-native-client.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con columnas dispersas.  
   
- [Mejoras en la fecha y la hora](date-and-time-improvements.md)  
+ [Mejoras de fecha y hora](date-and-time-improvements.md)  
  Explica la mayor compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con los tipos de datos de fecha y hora.  
   
  [Detección de metadatos](metadata-discovery.md)  
@@ -95,7 +95,7 @@ ms.locfileid: "63225561"
  [Compatibilidad de SQL Server Native Client con LocalDB](sql-server-native-client-support-for-localdb.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con la característica mejorada LocalDB.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Programación de SQL Server Native Client](../sql-server-native-client-programming.md)   
  [Temas de procedimientos de ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Temas de procedimientos de OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)   

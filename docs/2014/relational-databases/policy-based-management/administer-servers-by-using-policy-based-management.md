@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157107"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
@@ -77,7 +77,7 @@ ms.locfileid: "63157107"
         > [!IMPORTANT]  
         >  Si la opción de configuración de servidor de desencadenadores anidados está deshabilitada, **On change: prevent** no funcionará correctamente. La administración basada en directivas se basa en los desencadenadores DDL para detectar y revertir las operaciones DDL que no obedecen a las directivas que utilizan este modo de evaluación. Al quitar los desencadenadores DDL de la administración basada en directivas o deshabilitar los desencadenadores anidados, este modo de evaluación provocará un error o se comportará de forma inesperada.  
   
-    -   **Al cambiar: solo registrar**. Este modo automatizado utiliza la notificación de eventos para evaluar una directiva cuando se realiza un cambio relevante.  
+    -   **Al cambiar: solo registro**. Este modo automatizado utiliza la notificación de eventos para evaluar una directiva cuando se realiza un cambio relevante.  
   
     -   **Al programar**. Este modo automatizado utiliza un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para evaluar una directiva periódicamente.  
   
@@ -91,7 +91,8 @@ ms.locfileid: "63157107"
  Conjunto de propiedades lógicas que modelan el comportamiento o las características de ciertos tipos de destinos administrados. El número y las características de las propiedades están integrados en la faceta y solo el fabricante de la faceta las puede agregar o quitar. Un tipo de destino puede implementar una o varias facetas de administración, y uno o varios tipos de destino pueden implementar una faceta de administración. Algunas propiedades de una faceta solo se pueden aplicar a una versión concreta.  
   
  Condición de la administración basada en directivas  
- Una expresión booleana que especifica un conjunto de estados permitidos de un destino administrado mediante la administración basada en directivas con respecto a una faceta de administración. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta observar las intercalaciones al evaluar una condición. Cuando las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no coinciden exactamente con las intercalaciones de Windows, compruebe su condición para determinar el modo en que el algoritmo resuelve los conflictos.  
+ Una expresión booleana que especifica un conjunto de estados permitidos de un destino administrado mediante la administración basada en directivas con respecto a una faceta de administración. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta observar las intercalaciones al evaluar una condición. Cuando las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no coinciden exactamente con las intercalaciones de Windows, compruebe su condición para determinar el modo en que el algoritmo resuelve los conflictos.  
   
  Directiva de administración basada en directivas  
  Una condición de administración basada en directivas y el comportamiento esperado, por ejemplo, el modo de evaluación, los filtros de destino y la programación. Una directiva solo puede contener una condición. Las directivas pueden estar habilitadas o deshabilitadas. Las directivas se almacenan en la base de datos msdb.  
@@ -123,7 +124,7 @@ ms.locfileid: "63157107"
 |----------------------|-----------|  
 |Describe cómo se guardan las directivas de administración basada en directivas.|Almacenamiento de la administración basada en directivas|  
 |Describe cómo se configuran alertas para notificar los errores de directiva a los administradores de directivas.|[Configurar alertas para notificar los errores de directiva a los administradores de directivas](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)|  
-|Describe cómo se crea, consulta, modifica y elimina una condición de la administración basada en directivas.|[Crear una nueva condición de administración basada en directivas](create-a-new-policy-based-management-condition.md)<br /><br /> [Eliminar una condición de administración basada en directivas](delete-a-policy-based-management-condition.md)<br /><br /> [Ver o modificar las propiedades de una condición de administración basada en directivas](view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
+|Describe cómo se crea, consulta, modifica y elimina una condición de la administración basada en directivas.|[Crear una nueva condición de administración basada en directivas.](create-a-new-policy-based-management-condition.md)<br /><br /> [Eliminar una condición de administración basada en directivas](delete-a-policy-based-management-condition.md)<br /><br /> [Ver o modificar las propiedades de una condición de administración basada en directivas](view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
 |Describe cómo se crea, consulta, modifica y elimina una directiva de la administración basada en directivas.|[Crear una directiva de administración basada en directivas](create-a-policy-based-management-policy.md)<br /><br /> [Eliminar una directiva de administración basada en directivas](delete-a-policy-based-management-policy.md)<br /><br /> [Ver o modificar las propiedades de una directiva de administración basada en directivas](view-or-modify-the-properties-of-a-policy-based-management-policy.md)|  
 |Describe cómo se exporta e importa una directiva de la administración basada en directivas.|[Exportar una directiva de administración basada en directivas](export-a-policy-based-management-policy.md)<br /><br /> [Importar una directiva de administración basada en directivas](import-a-policy-based-management-policy.md)|  
 |Describe cómo se comprueba que una instancia de servidor, una base de datos, un objeto de servidor o un objeto de base de datos cumple la directiva.|[Evaluar una directiva de administración basada en directivas desde un objeto](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Evaluar una directiva de administración basada en directivas desde dicha directiva](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Evaluar una directiva de administración basada en directivas según una programación](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
@@ -131,7 +132,7 @@ ms.locfileid: "63157107"
 |Proporciona un conjunto de archivos de directivas que puede importar como directivas de procedimientos recomendados y describe cómo se evalúan las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos.|[Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
 |Proporciona los temas de la Ayuda F1 para el nodo **Administración de directivas** del Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nodo Administración de directivas &#40;Explorador de objetos&#41;](../../ssms/object/object-explorer.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

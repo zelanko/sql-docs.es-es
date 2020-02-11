@@ -1,5 +1,5 @@
 ---
-title: Uso de temas de procedimientos de cursores (ODBC) | Documentos de Microsoft
+title: Temas de procedimientos de uso de cursores (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c565d924b6d8ed6340d60022f9436ec5a34347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200428"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Temas de procedimientos del uso de cursores (ODBC)
@@ -24,13 +24,13 @@ ms.locfileid: "63200428"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Usar cursores &#40;ODBC&#41;](use-cursors-odbc.md)  
+-   [Usar cursores &#40;&#41;ODBC](use-cursors-odbc.md)  
   
--   [Usar el enlace del conjunto de filas &#40;ODBC&#41;](use-rowset-binding-odbc.md)  
+-   [Usar enlace de conjuntos de filas &#40;ODBC&#41;](use-rowset-binding-odbc.md)  
   
--   [Capturar y actualizar conjuntos de filas &#40;ODBC&#41;](fetch-and-update-rowsets-odbc.md)  
+-   [Capturar y actualizar conjuntos de filas &#40;&#41;ODBC](fetch-and-update-rowsets-odbc.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de ODBC](../odbc-how-to-topics.md)  
   
   

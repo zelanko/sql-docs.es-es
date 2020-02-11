@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060658"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Configurar visor de datos (pestaña Cuadrícula)
@@ -31,8 +31,8 @@ ms.locfileid: "66060658"
  **Columnas mostradas**  
  Seleccione un nombre de columna y haga clic en la flecha única para moverla a la lista **Columnas sin usar** ; haga clic en la doble flecha para mover todos los nombres de columnas a la lista **Columnas sin usar** .  
   
-## <a name="see-also"></a>Vea también  
- [Configurar visor de datos &#40;General (ficha)&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configurar visor de datos &#40;pestaña General&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Configurar visor de datos &#40;pestaña gráfico de columnas&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurar visor de datos &#40;pestaña histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
  [Configurar visor de datos &#40;pestaña gráfico de dispersión&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   

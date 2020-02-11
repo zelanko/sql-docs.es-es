@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807465"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio)
@@ -40,15 +40,15 @@ ms.locfileid: "62807465"
   
 6.  En el cuadro de diálogo **Incluir servidor testigo** , haga clic en **Sí**y, después, en **Siguiente**.  
   
-7.  En el cuadro de diálogo **Elegir los servidores para configurar** , se marcará automáticamente la casilla **Instancia del servidor testigo** . Haga clic en **Siguiente**.  
+7.  En el cuadro de diálogo **Elegir los servidores para configurar** , se marcará automáticamente la casilla **Instancia del servidor testigo** . Haga clic en **Next**.  
   
-8.  En el cuadro de diálogo **Instancia del servidor principal** , conserve las opciones existentes de puerto y extremos. Haga clic en **Siguiente**.  
+8.  En el cuadro de diálogo **Instancia del servidor principal** , conserve las opciones existentes de puerto y extremos. Haga clic en **Next**.  
   
 9. En el cuadro de diálogo **Instancia del servidor testigo** , haga clic en **Conectar**.  
   
 10. En el cuadro de diálogo **Conectar al servidor** , especifique la instancia del servidor testigo en el campo **Nombre del servidor** y use la Autenticación de Windows (opción predeterminada). Haga clic en **Conectar**.  
   
-11. Una vez que se haya establecido una conexión, en el cuadro de diálogo **Instancia del servidor testigo** se mostrará el puerto de escucha y el extremo de la creación de reflejo de la base de datos de la instancia del servidor testigo. Haga clic en **Siguiente**.  
+11. Una vez que se haya establecido una conexión, en el cuadro de diálogo **Instancia del servidor testigo** se mostrará el puerto de escucha y el extremo de la creación de reflejo de la base de datos de la instancia del servidor testigo. Haga clic en **Next**.  
   
 12. El cuadro de diálogo **Cuentas de servicio** contiene campos para las cuentas de servicio de dominio de las instancias del servidor reflejado, principal y testigo.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "62807465"
   
     -   Si la instancia del servidor testigo usa una cuenta de servicio diferente de las de los asociados, llene los campos **Principal**, **Reflejado**y **Testigo** con el nombre de la cuenta:  
   
-         *DOMAINNAME* **\\** *username*  
+         *DOMAINNAME* **\\** *nombre de usuario*  
   
          El nombre de dominio debe estar en mayúsculas.  
   
-     Haga clic en **Siguiente**.  
+     Haga clic en **Next**.  
   
 13. Si lo desea, en la pantalla de resumen **Finalización del asistente** , compruebe la configuración del testigo y haga clic en **Finalizar**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62807465"
   
      Para habilitar el testigo y cambiar la sesión al modo de alta seguridad con conmutación por error automática, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Testigo de creación de reflejo de la base de datos](database-mirroring-witness.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Propiedades de la base de datos &#40;página Creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

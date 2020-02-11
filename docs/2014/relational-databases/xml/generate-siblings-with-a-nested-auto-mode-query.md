@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287359"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generar elementos del mismo nivel con una consulta de modo AUTO anidada
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   Consulta el conjunto de filas, `SalesOrder`, especificado en la cláusula `FROM`. El resultado es un XML con uno o varios elementos <`SalesOrder`>.  
   
--   Especifica el modo `AUTO` y la directiva `TYPE` . `AUTO` transforma el resultado de la consulta en XML y el `TYPE` directiva devuelve el resultado como `xml` tipo.  
+-   Especifica el modo `AUTO` y la directiva `TYPE` . `AUTO`el modo transforma el resultado de la consulta en XML y la `TYPE` Directiva devuelve el resultado como `xml` tipo.  
   
 -   Incluye dos instrucciones `SELECT` anidadas separadas por una coma. La primera instrucción `SELECT` anidada recupera información de pedidos de ventas, encabezado y detalles, y la segunda instrucción `SELECT` anidada recupera información del vendedor.  
   
@@ -124,7 +124,7 @@ WHERE SalesOrderID=43659 or SalesOrderID=43660
 FOR XML AUTO, TYPE  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <Sales.SalesOrderHeader SalesOrderID="43659" SalesPersonID="279" CustomerID="676">  
@@ -165,7 +165,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar consultas FOR XML anidadas](use-nested-for-xml-queries.md)  
   
   

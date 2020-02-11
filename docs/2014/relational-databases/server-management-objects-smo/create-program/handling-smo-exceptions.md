@@ -1,5 +1,5 @@
 ---
-title: Controlar excepciones SMO | Microsoft Docs
+title: Control de excepciones de SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192103"
 ---
 # <a name="handling-smo-exceptions"></a>Controlar excepciones SMO
@@ -33,14 +33,14 @@ ms.locfileid: "63192103"
  Las excepciones pueden ser o generales o específicas. Las excepciones generales contienen un conjunto de excepciones específicas. Se pueden utilizar varias instrucciones `Catch` para controlar los errores anticipados y permitir que los errores restantes pasen explícitamente a código general de control de errores. Las excepciones se producen a menudo en una secuencia en cascada. Con frecuencia, una excepción SQL puede provocar una excepción SMO. La manera de detectar si es esto lo que ha sucedido consiste en utilizar la propiedad `InnerException` de forma consecutiva para determinar la excepción original que produjo la excepción final de nivel superior.  
   
 > [!NOTE]  
->  El `SQLException` excepción está declarado en el **System.Data.SqlClient** espacio de nombres.  
+>  La `SQLException` excepción se declara en el espacio de nombres **System. Data. SqlClient** .  
   
- ![Un diagrama que muestra los niveles de la que una excepción](../../../database-engine/dev-guide/media/exception-flow.gif "un diagrama que muestra los niveles de la que una excepción")  
+ ![Diagrama que muestra los niveles de los que una excepción](../../../database-engine/dev-guide/media/exception-flow.gif "Diagrama que muestra los niveles de los que una excepción")  
   
  El diagrama muestra el flujo de excepciones a través de los niveles de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) o [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) o [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Detectar una excepción en Visual Basic  
  En este ejemplo de código se muestra cómo usar la instrucción `Try...Catch...Finally` de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] para detectar una excepción SMO. Todas las excepciones SMO tienen el tipo SmoException y se enumeran en la referencia SMO. La secuencia de excepciones internas se muestra para indicar la raíz del error. Para obtener más información, vea la documentación de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  

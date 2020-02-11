@@ -13,11 +13,11 @@ ms.assetid: 942f53f8-7755-418c-b453-047b3e030156
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71e2fc3c9b7697837575e76d91dfa3ac3a2a5527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093072"
 ---
 # <a name="sqlstate"></a>SQLSTATE
-El controlador ODBC para los errores que se producen en el origen de datos, asigna el error nativo devuelto al SQLSTATE correspondiente. Para los errores que se detectan mediante el controlador o el Administrador de controladores, el controlador ODBC o el Administrador de controladores genera el SQLSTATE correspondiente.
+En el caso de los errores que se producen en el origen de datos, el controlador ODBC asigna el error nativo devuelto al SQLSTATE adecuado. En el caso de los errores detectados por el controlador o el administrador de controladores, el controlador ODBC o el administrador de controladores generan el SQLSTATE adecuado.

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921042"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "62921042"
   
     -   Registro de transacciones  
   
-    -   Páginas de asignación: Páginas de mapa de asignación (GAM) global, mapa de asignación Global compartido (SGAM) y página libre espacio páginas (PFS).  
+    -   Páginas de asignación: páginas del mapa de asignación global (GAM), páginas del mapa de asignación global compartido (SGAM) y páginas de espacio disponible en páginas (PFS).  
   
     -   Página 0 de todos los archivos de datos (la página de arranque del archivo)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62921042"
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  A partir de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite las restauraciones de páginas.  
   
 #### <a name="to-restore-pages"></a>Para restaurar páginas  
@@ -130,11 +130,11 @@ ms.locfileid: "62921042"
      **Conjuntos de copia de seguridad**  
      Esta sección muestra los conjuntos de copia de seguridad implicados en la restauración.  
   
-    |Header|Valores|  
+    |Encabezado|Valores|  
     |------------|------------|  
-    |**Name**|Nombre del conjunto de copia de seguridad.|  
-    |**Componente**|El componente de copia de seguridad: **Base de datos**, **Archivo** o **\<en blanco>** (para registros de transacciones).|  
-    |**Tipo**|El tipo de copia de seguridad realizada: **Completa**, **Diferencial** o **Registro de transacciones**.|  
+    |**Nombre**|Nombre del conjunto de copia de seguridad.|  
+    |**Componente**|Componente del que se ha realizado una copia de seguridad: **Base de datos**, **Archivo** o **\<en blanco>** (para registros de transacciones).|  
+    |**Tipo**|Tipo de copia de seguridad realizada: **Completa**, **Diferencial**o **Registro de transacciones**.|  
     |**Server**|Nombre de la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
     |**Base de datos**|Nombre de la base de datos para la operación de copia de seguridad.|  
     |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  
@@ -217,10 +217,10 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)   
- [Realizar copias de seguridad y restaurar bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)  
+ [Copia de seguridad y restauración de bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)  
   
   

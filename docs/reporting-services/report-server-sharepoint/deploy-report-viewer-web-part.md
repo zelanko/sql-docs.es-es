@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579990"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint
@@ -38,7 +38,7 @@ Siga las instrucciones que se indican a continuación para implementar manualmen
 
 **Compatibilidad con versiones de Reporting Services:**  
 * SQL Server 2008 Reporting Services (modo nativo) y posteriores.
-* Power BI Report Server
+* Power BI Report Server
 
 ## <a name="download-the-report-viewer-web-part-solution-package"></a>Descargar el paquete de solución del elemento web Visor de informes
 
@@ -102,7 +102,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
         }
 ```
 
-## <a name="remove-the-solution"></a>Quitar la solución
+## <a name="remove-the-solution"></a>Eliminación de la solución
 
 Aunque Administración central de SharePoint permite retirar una solución, no es necesario retirar el archivo **ReportViewerWebPart.wsp**, a menos que esté solucionando un problema de instalación o implementación de una revisión.
 
@@ -148,7 +148,7 @@ Los siguientes idiomas son compatibles con el elemento web:
 * Chino (simplificado - zh-HANS y zh-CHS)
 * Chino (tradicional - zh-HANS y zh-CHS)
 
-## <a name="troubleshoot"></a>Solucionar problemas
+## <a name="troubleshoot"></a>Solución de problemas
 
 * Error al desinstalar SSRS si ha configurado el modo integrado de SharePoint:
 

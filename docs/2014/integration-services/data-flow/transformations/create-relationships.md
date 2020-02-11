@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770381"
 ---
 # <a name="create-relationships"></a>Crear relaciones
@@ -31,7 +31,7 @@ ms.locfileid: "62770381"
  **Columna de entrada**  
  Seleccione las columnas de entrada disponibles de la lista.  
   
- **Columna de búsqueda**  
+ **columna de búsqueda**  
  Seleccione columnas de la lista de columnas de búsqueda disponibles.  
   
  **Tipo de asignación**  
@@ -40,7 +40,7 @@ ms.locfileid: "62770381"
  Cuando se utiliza la coincidencia aproximada, las filas se consideran duplicadas si son lo suficientemente similares en todas las columnas que tienen un tipo de coincidencia aproximada. Para obtener mejores resultados en la coincidencia aproximada, puede especificar que algunas columnas deben utilizar la coincidencia exacta en lugar de la coincidencia aproximada. Por ejemplo, si sabe que una determinada columna no tiene errores ni incoherencias, puede especificar una coincidencia exacta en esa columna, de tal modo que solo las filas que contengan valores idénticos en esta columna se consideren como posibles duplicados. Esto aumenta la precisión de la coincidencia aproximada en otras columnas.  
   
  **Marcas de comparación**  
- Para obtener más información sobre las opciones de comparación de cadenas, vea [Comparar datos de cadena](../comparing-string-data.md).  
+ Para más información sobre las opciones de comparación de cadenas, vea [Comparar datos de cadena](../comparing-string-data.md).  
   
  **Similitud mínima**  
  Establezca el umbral de similitud del nivel de columna con el control deslizante. Cuanto más se acerque el valor a 1, mayor deberá ser el parecido entre el valor de búsqueda y el valor de origen para que pueda calificarse como coincidencia. Aumentar el umbral puede mejorar la velocidad de coincidencia, ya que tendrán que tenerse en cuenta menos registros candidatos.  
@@ -48,7 +48,7 @@ ms.locfileid: "62770381"
  **Alias de salida de similitud**  
  Especifique el nombre de una nueva columna de salida que contendrá los resultados de similitud de la columna seleccionada. Si este valor se deja vacío, la columna de salida no se crea.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../integration-services-error-and-message-reference.md)   
  [Editor de transformación Búsqueda aproximada &#40;pestaña Columnas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Editor de transformación Búsqueda &#40;página Columnas&#41;](../../lookup-transformation-editor-columns-page.md)   

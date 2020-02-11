@@ -1,5 +1,5 @@
 ---
-title: dbo.syssubsystems (Transact-SQL) | Microsoft Docs
+title: DBO. syssubsystems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,35 +20,35 @@ ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3f06182f06e92ff581dd02c072b63fc10962921a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069086"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene información sobre todos los subsistemas proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles. El **syssubsystems** tabla se almacena en el **msdb** base de datos.  
+  Contiene información sobre todos los subsistemas proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles. La tabla **syssubsystems** se almacena en la base de datos **msdb** .  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|Id. del subsistema.|  
-|**subsystem**|**nvarchar(40)**|Nombre del subsistema.|  
-|**description_id**|**int**|Id. de la fila de mensaje la **sys.messages** vista de catálogo que contiene la descripción del subsistema.|  
+|**subsistema**|**nvarchar (40)**|Nombre del subsistema.|  
+|**description_id**|**int**|ID. de mensaje de la fila de la vista de catálogo **Sys. Messages** que contiene la descripción del subsistema.|  
 |**subsystem_dll**|**nvarchar(255)**|Ubicación de la DLL del subsistema.|  
 |**agent_exe**|**nvarchar(255)**|Ruta de acceso completa al archivo ejecutable que utiliza el subsistema.|  
-|**start_entry_point**|**nvarchar(30)**|Función a la que se llama cuando el subsistema se inicializa.|  
-|**event_entry_point**|**nvarchar(30)**|Función a la que se llama cuando se ejecuta un paso del subsistema.|  
-|**stop_entry_point**|**nvarchar(30)**|Función a la que se llama cuando un subsistema deja de ejecutarse.|  
+|**start_entry_point**|**nvarchar(30**|Función a la que se llama cuando el subsistema se inicializa.|  
+|**event_entry_point**|**nvarchar(30**|Función a la que se llama cuando se ejecuta un paso del subsistema.|  
+|**stop_entry_point**|**nvarchar(30**|Función a la que se llama cuando un subsistema deja de ejecutarse.|  
 |**max_worker_threads**|**int**|Número máximo de pasos simultáneos para un subsistema dado.|  
   
-## <a name="remarks"></a>Comentarios  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede tener acceso a esta tabla.  
+## <a name="remarks"></a>Observaciones  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden tener acceso a esta tabla.  
   
-## <a name="see-also"></a>Vea también  
- [dbo.sysproxysubsystem &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo.sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
- [Sys.Messages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+## <a name="see-also"></a>Consulte también  
+ [DBO. sysproxysubsystem &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [DBO. sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Impacto en el cuadro de diálogo de análisis (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo Análisis de impacto (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080749"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Análisis de impacto (Analysis Services - Datos multidimensionales)
@@ -38,7 +38,7 @@ ms.locfileid: "66080749"
  **Tipo de impacto**  
  Muestra el efecto que tiene sobre el objeto dependiente el procesamiento de los objetos del cuadro de diálogo **Proceso** . En la tabla siguiente se enumeran los posibles efectos del procesamiento y se indica si se origina una advertencia o un error.  
   
-|Impacto|de mensaje|  
+|Impacto|Message|  
 |------------|-------------|  
 |El objeto se desactivará (no se procesa)|Advertencia|  
 |El objeto podría no ser válido|Error|  
@@ -50,8 +50,8 @@ ms.locfileid: "66080749"
  **Objeto de proceso**  
  Seleccione los objetos dependientes que desea procesar en la operación de procesamiento. Los objetos dependientes que no se seleccionen deberán procesarse después de finalizar la operación de procesamiento. En caso contrario, no se podrán utilizar.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Cuadro de diálogo procesar &#40;Analysis Services - datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Cuadro de diálogo procesar &#40;Analysis Services-datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

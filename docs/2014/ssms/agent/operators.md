@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189016"
 ---
 # <a name="operators"></a>Operadores
@@ -47,13 +47,13 @@ ms.locfileid: "68189016"
  La información de contacto de un operador define cómo se va a notificar a dicho operador. Se puede notificar a los operadores mediante correo electrónico, buscapersonas o con el comando **net send** :  
   
 > [!IMPORTANT]  
->  Las opciones Buscapersonas y **net send** se quitarán del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
+>  Las opciones buscapersonas y **net send** se quitarán del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
   
--   **Notificación mediante correo electrónico**  
+-   **Notificación por correo electrónico**  
   
      La notificación por correo electrónico envía un mensaje de correo electrónico al operador. Para la notificación por correo electrónico debe proporcionar una dirección de correo electrónico al operador.  
   
--   **Notificación mediante buscapersonas**  
+-   **Notificación por buscapersonas**  
   
      Este tipo de notificación se implementa mediante el correo electrónico. Para la notificación por buscapersonas debe proporcionar una dirección de correo electrónico en la que el operador recibirá los mensajes del buscapersonas. Para establecer la notificación mediante buscapersonas, debe instalar en el servidor de correo un software que procese el correo entrante y lo convierta en mensajes de buscapersonas. El software realizar diversas acciones, entre las que se incluyen:  
   
@@ -75,12 +75,12 @@ ms.locfileid: "68189016"
   
          **CC**:  
   
-         **Para**:  
+         **A**:  
   
     > [!NOTE]  
     >  Si utiliza un sistema de localización alfanumérica de baja capacidad, puede reducir el texto enviado si excluye el texto del error de la notificación del buscapersonas. Un sistema de localización alfanumérica de baja capacidad es, por ejemplo, uno que esté limitado a 64 caracteres por página.  
   
--   **net sendnotification**  
+-   **net sendNotification**  
   
      Envía un mensaje al operador mediante el comando **net send** . Si usa **net send**, especifique el destinatario (el equipo o el usuario) de un mensaje de red.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68189016"
   
      Entre los motivos que impiden contactar con los operadores principales se incluyen el uso de direcciones de buscapersonas incorrectas y los operadores fuera de servicio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente no puede tener acceso a las tablas del sistema en la base de datos **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]El agente no puede tener acceso a las tablas del sistema en la base de datos **msdb** .  
   
      La tabla del sistema **sysnotifications** especifica las responsabilidades de los operadores respecto a las alertas.  
   
@@ -117,11 +117,11 @@ ms.locfileid: "68189016"
   
 |||  
 |-|-|  
-|**Tareas**|**Tema**|  
-|Tareas relacionadas con la creación de un operador|[Crear un operador](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|Tareas relacionadas con la asignación de alertas|[Asignar alertas a un operador](assign-alerts-to-an-operator.md)<br /><br /> [Definir la respuesta a una alerta &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Asignar alertas a un operador](assign-alerts-to-an-operator.md)|  
+|**Tareas**|**Tema.**|  
+|Tareas relacionadas con la creación de un operador|[Crear un operador](create-an-operator.md)<br /><br /> [Designar un operador para notificaciones de error](designate-a-fail-safe-operator.md)|  
+|Tareas relacionadas con la asignación de alertas|[Asignar alertas a un operador](assign-alerts-to-an-operator.md)<br /><br /> [Definir la respuesta a una alerta &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Asignar alertas a un operador](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)  
   
   

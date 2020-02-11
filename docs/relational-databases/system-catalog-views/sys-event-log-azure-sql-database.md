@@ -1,5 +1,5 @@
 ---
-title: Sys.event_log (Azure SQL Database) | Microsoft Docs
+title: Sys. event_log (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -21,90 +21,90 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061384"
 ---
-# <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
+# <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Devuelve un valor correcto [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] interbloqueos, errores de conexión y las conexiones de base de datos. Puede utilizar esta información para realizar el seguimiento de la actividad de la base de datos o solucionar problemas relacionados con esta mediante [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Devuelve las [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] conexiones de base de datos, los errores de conexión y los interbloqueos correctos. Puede utilizar esta información para realizar el seguimiento de la actividad de la base de datos o solucionar problemas relacionados con esta mediante [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 > [!CAUTION]  
-> Para las instalaciones que tienen un gran número de bases de datos o gran cantidad de inicios de sesión, actividad de sys.event_log puede causar limitaciones en el rendimiento, uso elevado de CPU y posiblemente como resultado errores de inicio de sesión. Las consultas de sys.event_log pueden contribuir al problema. Microsoft está trabajando para resolver este problema. Mientras tanto, para reducir el impacto de este problema, limitar consultas de sys.event_log. Los usuarios del complemento NewRelic SQL Server deben visitar [ajustes de rendimiento y optimización de complemento de Microsoft Azure SQL Database](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) para obtener información de configuración adicional.  
+> En el caso de las instalaciones que tienen un gran número de bases de datos o un gran número de inicios de sesión, la actividad en sys. event_log puede producir limitaciones en el rendimiento, un uso intensivo de la CPU y, posiblemente, errores de inicio de sesión. Las consultas de sys. event_log pueden contribuir al problema. Microsoft está trabajando para resolver este problema. Mientras tanto, para reducir el impacto de este problema, limite las consultas de sys. event_log. Los usuarios del complemento NewRelic SQL Server deben visitar [Microsoft Azure SQL Database ajuste del complemento & los ajustes de rendimiento](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) de la información de configuración adicional.  
   
  La vista `sys.event_log` contiene las siguientes columnas.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nombre de la base de datos. Si la conexión no se realiza correctamente y el usuario no especificó un nombre de base de datos, esta columna está en blanco.|  
 |**start_time**|**datetime2**|Fecha y hora UTC del inicio del intervalo de agregación. Para los eventos de agregado, la hora es siempre un múltiplo de 5 minutos. Por ejemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|Fecha y hora UTC del final del intervalo de agregación. Para los eventos de agregado, **End_time** es siempre exactamente 5 minutos posterior a la correspondiente **start_time** en la misma fila. Para los eventos que no se agregan, **start_time** y **end_time** igual a la fecha UTC actual y la hora del evento.|  
-|**event_category**|**nvarchar(64)**|Componente de nivel superior que generó este evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
-|**event_type**|**nvarchar(64)**|El tipo de evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
-|**event_subtype**|**int**|Subtipo del evento que se está produciendo.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
-|**event_subtype_desc**|**nvarchar(64)**|Descripción del subtipo de evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
-|**severity**|**int**|Gravedad del error. Los valores posibles son:<br /><br /> 0 = Información<br />1 = Advertencia<br />2 = Error|  
-|**event_count**|**int**|El número de veces que se produjo este evento para la base de datos especificada en el intervalo de tiempo especificado (**start_time** y **end_time**).|  
-|**description**|**nvarchar(max)**|Descripción detallada del evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
-|**additional_data**|**XML**|*Nota: Este valor siempre es NULL para Azure SQL Database V12. Consulte [ejemplos](#Deadlock) sección acerca de cómo recuperar los eventos de interbloqueo de V12.*<br /><br /> Para **interbloqueo** eventos, esta columna contiene el gráfico de interbloqueo. Esta columna es NULL para otros tipos de eventos. |  
+|**end_time**|**datetime2**|Fecha y hora UTC del final del intervalo de agregación. En el caso de los eventos agregados, **End_time** siempre es exactamente 5 minutos después de la **start_time** correspondiente de la misma fila. En el caso de los eventos que no se agregan, **start_time** y **end_time** igual a la fecha y hora UTC reales del evento.|  
+|**event_category**|**nvarchar (64)**|Componente de nivel superior que generó este evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
+|**event_type**|**nvarchar (64)**|Tipo del evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
+|**event_subtype**|**int**|Subtipo del evento que se está produciendo.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
+|**event_subtype_desc**|**nvarchar (64)**|Descripción del subtipo de evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
+|**gravedad**|**int**|Gravedad del error. Los valores posibles son:<br /><br /> 0 = Información<br />1= Advertencia<br />2 = Error|  
+|**event_count**|**int**|Número de veces que se ha producido este evento en la base de datos especificada dentro del intervalo de tiempo especificado (**start_time** y **end_time**).|  
+|**denominación**|**nvarchar(max)**|Descripción detallada del evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
+|**additional_data**|**XML**|*Nota: este valor siempre es NULL para Azure SQL Database V12. Vea la sección [ejemplos](#Deadlock) para obtener más sobre cómo recuperar eventos de interbloqueo para V12.*<br /><br /> En el caso de eventos de **interbloqueo** , esta columna contiene el grafo de interbloqueo. Esta columna es NULL para otros tipos de eventos. |  
   
-##  <a name="EventTypes"></a> Tipos de evento
+##  <a name="EventTypes"></a>Tipos de evento
 
- Los eventos registrados por cada fila de esta vista se identifican por una categoría (**event_category**), tipo de evento (**event_type**) y un subtipo (**event_subtype**). En la tabla siguiente se muestra una lista de los tipos de eventos que se recopilan en esta vista:  
+ Los eventos registrados en cada fila de esta vista se identifican mediante una categoría (**event_category**), un tipo de evento (**event_type**) y un subtipo (**event_subtype**). En la tabla siguiente se muestra una lista de los tipos de eventos que se recopilan en esta vista:  
   
- Para los eventos en el **conectividad** categoría, la información de resumen está disponible en la vista sys.database_connection_stats.  
+ En el caso de los eventos de la categoría **Conectividad** , la información de resumen está disponible en la vista sys. database_connection_stats.  
   
 > [!NOTE]  
 > Esta vista no incluye todos los posibles errores de base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que pueden producirse, solo los mostrados aquí. Es posible que en futuras versiones de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se agreguen categorías, tipos de evento y subtipos adicionales.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**gravedad**|**denominación**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
-|**conectividad**|**connection_successful**|0|**connection_successful**|0|Conectado correctamente a la base de datos.|  
-|**conectividad**|**connection_failed**|0|**invalid_login_name**|2|El nombre de inicio de sesión no es válido en esta versión de SQL Server.|  
-|**conectividad**|**connection_failed**|1|**windows_auth_not_supported**|2|Los inicios de sesión de Windows no se admiten en esta versión de SQL Server.|  
-|**conectividad**|**connection_failed**|2|**attach_db_not_supported**|2|El usuario solicitó adjuntar un archivo de base de datos que no se admite.|  
-|**conectividad**|**connection_failed**|3|**change_password_not_supported**|2|El usuario solicitó cambiar la contraseña del usuario que inicia sesión, lo que no se admite.|  
-|**conectividad**|**connection_failed**|4|**login_failed_for_user**|2|Error de inicio de sesión del usuario.|  
-|**conectividad**|**connection_failed**|5|**login_disabled**|2|El inicio de sesión se deshabilitó.|  
-|**conectividad**|**connection_failed**|6|**failed_to_open_db**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> No se pudo abrir la base de datos. Puede ser debido a que la base de datos no existe o a una falta de autenticación para abrirla.|  
-|**conectividad**|**connection_failed**|7|**blocked_by_firewall**|2|No se permite que la dirección IP del cliente tenga acceso al servidor.|  
-|**conectividad**|**connection_failed**|8|**client_close**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> Es posible que el cliente haya agotado el tiempo de espera al establecer la conexión. Intente aumentar el tiempo de espera de la conexión.|  
-|**conectividad**|**connection_failed**|9|**reconfiguration**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> Error de conexión debido a que la base de datos se estaba reconfigurando en ese momento.|  
-|**conectividad**|**connection_terminated**|0|**idle_connection_timeout**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> La conexión ha estado inactiva durante más tiempo que el umbral definido por el sistema.|  
-|**conectividad**|**connection_terminated**|1|**reconfiguration**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> La sesión se ha terminado debido a una reconfiguración de la base de datos.|  
-|**conectividad**|**throttling**|*\<código de motivo >*|**reason_code**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> Solicitud limitada.  Código de motivo de limitación:  *\<código de motivo >* . Para obtener más información, consulte [limitación del motor](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
-|**conectividad**|**throttling_long_transaction**|40549|**long_transaction**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> La sesión terminó porque tiene una transacción de larga duración. Intente reducir la transacción. Para obtener más información, consulte [los límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividad**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> La sesión ha terminado porque ha adquirido demasiados bloqueos. Intente leer o modificar menos filas en una sola transacción. Para obtener más información, consulte [los límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividad**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> La sesión ha terminado debido al uso excesivo de TEMPDB. Intente modificar la consulta para reducir el uso del espacio de la tabla temporal. Para obtener más información, consulte [los límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividad**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> La sesión ha terminado debido al excesivo uso de espacio del registro de transacciones. Intente modificar menos filas en una sola transacción. Para obtener más información, consulte [los límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividad**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: Se aplica solo a Azure SQL Database V11.*<br /><br /> La sesión ha terminado debido al uso excesivo de la memoria. Intente modificar su consulta para procesar menos filas. Para obtener más información, consulte [los límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**engine**|**deadlock**|0|**deadlock**|2|Se ha producido un interbloqueo.|  
+|**Conectividad**|**connection_successful**|0|**connection_successful**|0|Conectado correctamente a la base de datos.|  
+|**Conectividad**|**connection_failed**|0|**invalid_login_name**|2|El nombre de inicio de sesión no es válido en esta versión de SQL Server.|  
+|**Conectividad**|**connection_failed**|1|**windows_auth_not_supported**|2|Los inicios de sesión de Windows no se admiten en esta versión de SQL Server.|  
+|**Conectividad**|**connection_failed**|2|**attach_db_not_supported**|2|El usuario solicitó adjuntar un archivo de base de datos que no se admite.|  
+|**Conectividad**|**connection_failed**|3|**change_password_not_supported**|2|El usuario solicitó cambiar la contraseña del usuario que inicia sesión, lo que no se admite.|  
+|**Conectividad**|**connection_failed**|4|**login_failed_for_user**|2|Error de inicio de sesión del usuario.|  
+|**Conectividad**|**connection_failed**|5|**login_disabled**|2|El inicio de sesión se deshabilitó.|  
+|**Conectividad**|**connection_failed**|6|**failed_to_open_db**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> No se pudo abrir la base de datos. Puede ser debido a que la base de datos no existe o a una falta de autenticación para abrirla.|  
+|**Conectividad**|**connection_failed**|7|**blocked_by_firewall**|2|No se permite que la dirección IP del cliente tenga acceso al servidor.|  
+|**Conectividad**|**connection_failed**|8|**client_close**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> Es posible que el cliente haya agotado el tiempo de espera al establecer la conexión. Intente aumentar el tiempo de espera de la conexión.|  
+|**Conectividad**|**connection_failed**|9|**reconfiguración**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> Error de conexión debido a que la base de datos se estaba reconfigurando en ese momento.|  
+|**Conectividad**|**connection_terminated**|0|**idle_connection_timeout**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La conexión ha estado inactiva durante más tiempo que el umbral definido por el sistema.|  
+|**Conectividad**|**connection_terminated**|1|**reconfiguración**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión se ha terminado debido a una reconfiguración de la base de datos.|  
+|**Conectividad**|**limitación**|*\<código de motivo>*|**reason_code**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> Solicitud limitada.  Código de motivo de la limitación: * \<>de código de motivo *. Para obtener más información, consulte [limitación del motor](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40549|**long_transaction**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión terminó porque tiene una transacción de larga duración. Intente reducir la transacción. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado porque ha adquirido demasiados bloqueos. Intente leer o modificar menos filas en una sola transacción. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al uso excesivo de TEMPDB. Intente modificar la consulta para reducir el uso del espacio de la tabla temporal. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al excesivo uso de espacio del registro de transacciones. Intente modificar menos filas en una sola transacción. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al uso excesivo de la memoria. Intente modificar su consulta para procesar menos filas. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**motor**|**quedó**|0|**quedó**|2|Se ha producido un interbloqueo.|  
   
 ## <a name="permissions"></a>Permisos
 
- Los usuarios con permiso para tener acceso a la **maestro** base de datos tiene acceso de solo lectura a esta vista.  
+ Los usuarios con permiso para tener acceso a la base de datos **maestra** tienen acceso de solo lectura a esta vista.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ### <a name="event-aggregation"></a>Agregación de eventos
 
- La información de eventos de esta vista se recopila y se agrega a intervalos de 5 minutos. El **event_count** columna representa el número de veces que un determinado **event_type** y **event_subtype** se ha producido una base de datos específica dentro de un intervalo de tiempo determinado.  
+ La información de eventos de esta vista se recopila y se agrega a intervalos de 5 minutos. La columna **event_count** representa el número de veces que se ha producido un **event_type** determinado y **event_subtype** para una base de datos concreta dentro de un intervalo de tiempo determinado.  
   
 > [!NOTE]  
-> Algunos eventos, como los interbloqueos, no se agregan. Para estos eventos, **event_count** será 1 y **start_time** y **end_time** será igual a la actual fecha y hora UTC cuando se produjo el evento.  
+> Algunos eventos, como los interbloqueos, no se agregan. Para estos eventos, **event_count** será 1 y **start_time** y **end_time** serán iguales a la fecha y hora UTC reales en que se produjo el evento.  
   
  Por ejemplo, si debido a que el nombre de inicio de sesión no es válido, un usuario intenta conectarse a la base de datos Database1 siete veces entre las 11:00 y las 11:05 el 5/2/2012 (UTC) y no lo consigue, esta información está disponible en una sola fila de esta vista:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**gravedad**|**event_count**|**denominación**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
-### <a name="interval-starttime-and-endtime"></a>Start_time y end_time de intervalo  
- Un evento se incluye en un intervalo de agregación cuando se produce el evento *en* o _después_**start_time** y _antes_  **end_time** para ese intervalo. Por ejemplo, un evento que ocurra exactamente el `2012-10-30 19:25:00.0000000` solo se incluiría en el segundo intervalo que se muestra a continuación:  
+### <a name="interval-start_time-and-end_time"></a>Start_time y end_time de intervalo  
+ Se incluye un evento en un intervalo de agregación cuando el evento se produce *en* o _después_de**start_time** y _antes_de**end_time** para ese intervalo. Por ejemplo, un evento que ocurra exactamente el `2012-10-30 19:25:00.0000000` solo se incluiría en el segundo intervalo que se muestra a continuación:  
   
 ```
 start_time                    end_time  
@@ -118,14 +118,14 @@ start_time                    end_time
   
 ### <a name="data-retention"></a>Retención de datos
 
- Los datos de esta vista se conservan durante un máximo de 30 días o posiblemente menos dependiendo del número de bases de datos y el número de eventos únicos que genera cada base de datos. Para conservar esta información durante más tiempo, copie los datos en una base de datos independiente. Una vez realizada una copia inicial de la vista, las filas de esta pueden actualizarse a medida que se acumulan datos. Para mantener actualizada su copia de los datos, realice periódicamente una exploración de las filas de la tabla para ver si se ha producido un aumento del número de eventos de las filas existentes y para identificar nuevas filas (se pueden identificar filas únicas usando las horas de inicio y fin), después actualice su copia de los datos con esos cambios.  
+ Los datos de esta vista se conservan durante un máximo de 30 días, o posiblemente menos, según el número de bases de datos y el número de eventos únicos que genera cada base de datos. Para conservar esta información durante más tiempo, copie los datos en una base de datos independiente. Una vez realizada una copia inicial de la vista, las filas de esta pueden actualizarse a medida que se acumulan datos. Para mantener actualizada su copia de los datos, realice periódicamente una exploración de las filas de la tabla para ver si se ha producido un aumento del número de eventos de las filas existentes y para identificar nuevas filas (se pueden identificar filas únicas usando las horas de inicio y fin), después actualice su copia de los datos con esos cambios.  
   
 ### <a name="errors-not-included"></a>Errores no incluidos
 
  Esta vista puede no incluir toda la información de conexión y de error:  
   
-- Esta vista no incluye todos los [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errores que pueden producirse, solo los especificados en la base de datos [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) en este tema.  
-- Si hay un error del equipo en el [!INCLUDE[ssSDS](../../includes/sssds-md.md)] centro de datos, una pequeña cantidad de datos puede no aparecer en la tabla de eventos.  
+- Esta vista no incluye todos los [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errores de base de datos que podrían producirse, solo los especificados en los [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) de este tema.  
+- Si se produce un error del equipo en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] el centro de datos, es posible que falte una pequeña cantidad de datos en la tabla de eventos.  
 - Si se ha bloqueado una dirección IP a través de DoSGuard, los eventos de intento de conexión de esa dirección IP no pueden recopilarse y no aparecerán en esta vista.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -140,7 +140,7 @@ WHERE start_time >= '2011-09-25 12:00:00'
     AND end_time <= '2011-09-28 12:00:00';  
 ```
 
-La siguiente consulta devuelve todos los eventos de interbloqueo para la base de datos Database1 (solo se aplica a Azure SQL Database V11).  
+La siguiente consulta devuelve todos los eventos de interbloqueo para la base de datos Database1 (se aplica solo a Azure SQL Database V11).  
 
 ```sql
 SELECT * FROM sys.event_log
@@ -148,7 +148,7 @@ WHERE event_type = 'deadlock'
     AND database_name = 'Database1';  
 ```
 
-<a name="Deadlock"></a> La siguiente consulta devuelve todos los eventos de interbloqueo para la base de datos Database1 (se aplica solo a Azure SQL Database V12).  
+<a name="Deadlock"></a>La siguiente consulta devuelve todos los eventos de interbloqueo para la base de datos Database1 (se aplica solo a Azure SQL Database V12).  
 
 ```sql
 WITH CTE AS (  
@@ -171,9 +171,9 @@ WHERE event_type = 'throttling'
     AND end_time <= '2011-09-25 11:00:00';  
 ```
 
-### <a name="db-scoped-extended-event"></a>Eventos extendidos con ámbito de base de datos
+### <a name="db-scoped-extended-event"></a>Evento extendido de ámbito de base de BD
 
- Use el siguiente código de ejemplo para configurar la sesión de eventos extendidos (XEvent) con ámbito de base de datos:  
+ Use el siguiente código de ejemplo para configurar la sesión de eventos extendidos de ámbito de base de BD (XEvent):  
 
 ```sql
 IF EXISTS  
@@ -203,7 +203,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
     STATE = START;  
 ```
 
-### <a name="check-for-deadlock"></a>Comprobación de interbloqueo
+### <a name="check-for-deadlock"></a>Comprobar el interbloqueo
 
 Utilice la siguiente consulta para comprobar si hay un interbloqueo.  
 
@@ -228,7 +228,7 @@ WITH CTE AS (
 SELECT * FROM CTE2;  
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Eventos extendidos en Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

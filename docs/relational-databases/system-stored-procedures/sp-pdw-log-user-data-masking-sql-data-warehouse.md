@@ -12,23 +12,23 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056449"
 ---
-# <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
+# <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Use **sp_pdw_log_user_data_masking** para habilitar el enmascaramiento de usuario en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad. Enmascaramiento de datos de usuario afecta a las instrucciones en todas las bases de datos en el dispositivo.  
+  Use **sp_pdw_log_user_data_masking** para habilitar el enmascaramiento de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] del usuario en los registros de actividad. El enmascaramiento de datos de usuario afecta a las instrucciones en todas las bases de datos del dispositivo.  
   
 > [!IMPORTANT]  
->  El [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad se ve afectado por **sp_pdw_log_user_data_masking** repítalas [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad. **sp_pdw_log_user_data_masking** no afecta a los registros de transacciones de base de datos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los registros de errores.  
+>  Los [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad afectados por **sp_pdw_log_user_data_masking** son [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] determinados registros de actividad. **sp_pdw_log_user_data_masking** no afecta a los registros de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de datos ni a los registros de errores.  
   
- **En segundo plano:** En la configuración predeterminada [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad completo contienen [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y puede que en algunos casos incluyen los datos contenidos en las operaciones, como **insertar**, **actualización**, y **Seleccione** instrucciones. En el caso de un problema en el dispositivo, esto permite que el análisis de las condiciones que causó el problema sin necesidad de reproducir el problema. Con el fin de evitar que los datos de usuario que se escriben en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad, los clientes pueden elegir activar el enmascaramiento de datos de usuario mediante el uso de este procedimiento almacenado. Las instrucciones todavía se escribirán en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad, pero todos los literales de instrucciones que pueden contener datos de usuario se enmascarará; reemplazado con algunos valores constantes predefinidas.  
+ **Información general:** En, los registros [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de actividad de configuración [!INCLUDE[tsql](../../includes/tsql-md.md)] predeterminados contienen instrucciones completas y, en algunos casos, pueden incluir datos de usuario contenidos en operaciones como **Insert**, **Update**y **Select** . En caso de que se produzca un problema en el dispositivo, esto permite el análisis de las condiciones que han provocado el problema sin necesidad de reproducir el problema. Con el fin de evitar que los datos del usuario se [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] escriban en los registros de actividad, los clientes pueden optar por activar el enmascaramiento de datos del usuario mediante este procedimiento almacenado. Las instrucciones se seguirán escribiendo en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad, pero todos los literales de las instrucciones que pueden contener datos de usuario se enmascararán; reemplazado por algunos valores constantes predefinidos.  
   
- Cuando se habilita el cifrado de datos transparente en el dispositivo, enmascaramiento de los datos de usuario [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad se activa automáticamente.  
+ Cuando el cifrado de datos transparente está habilitado en el dispositivo, se activa automáticamente [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] el enmascaramiento de los datos de usuario en los registros de actividad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,41 +39,41 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-`[ @masking_mode = ] masking_mode` Determina si está habilitados el enmascaramiento de datos del usuario de registro de cifrado transparente de los datos. *masking_mode* es **int**, y puede tener uno de los siguientes valores:  
+`[ @masking_mode = ] masking_mode`Determina si está habilitado el enmascaramiento de datos de usuario del registro de cifrado de datos transparente. *masking_mode* es de **tipo int**y puede tener uno de los valores siguientes:  
   
--   0 = deshabilitado, los datos aparecen en el usuario la [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad.  
+-   0 = deshabilitado, los datos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usuario aparecen en los registros de actividad.  
   
--   1 = habilitado, el usuario las instrucciones de datos aparecen en el [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se enmascara los registros de actividad, pero los datos de usuario.  
+-   1 = habilitada, las instrucciones de datos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usuario aparecen en los registros de actividad, pero los datos del usuario se enmascaran.  
   
--   2 = las instrucciones que contiene datos de usuario no se escriben en el [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad.  
+-   2 = las instrucciones que contienen datos de usuario no se [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] escriben en los registros de actividad.  
   
- Ejecutar **sp_pdw_ log_user_data_masking** sin parámetros devuelve el estado actual del enmascaramiento de datos de usuario de registro TDE en el dispositivo como un conjunto de resultados escalares.  
+ Al ejecutar **sp_pdw_ log_user_data_masking** sin parámetros, se devuelve el estado actual del enmascaramiento de datos de usuario de registro de TDE en el dispositivo como un conjunto de resultados escalares.  
   
-## <a name="remarks"></a>Comentarios  
- Enmascaramiento de datos del usuario [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] habilita la sustitución de literales de registros de actividad con valores constantes predefinidos en **seleccione** y las instrucciones DML, ya que pueden contener datos de usuario. Establecer *masking_mode* a 1 no enmascara los metadatos, como nombres de columna o nombres de tabla. Establecer *masking_mode* para 2 ya no instrucciones con los metadatos, como nombres de columna o nombres de tabla.  
+## <a name="remarks"></a>Observaciones  
+ El enmascaramiento de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de usuario en los registros de actividad permite reemplazar literales con valores constantes predefinidos en instrucciones **Select** y DML, ya que pueden contener datos de usuario. Establecer *masking_mode* en 1 no enmascara metadatos, como nombres de columna o nombres de tabla. Si se establece *masking_mode* en 2, se quitan las instrucciones con metadatos, como nombres de columna o nombres de tabla.  
   
- Enmascaramiento de datos del usuario [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad se implementa en la siguiente manera:  
+ El enmascaramiento de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de usuario en los registros de actividad se implementa de la siguiente manera:  
   
--   TDE y datos de usuario de enmascaramiento en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad están desactivados de forma predeterminada. Las instrucciones no se enmascara automáticamente si no está habilitado el cifrado de base de datos en el dispositivo.  
+-   TDE y el enmascaramiento de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de usuario en los registros de actividad están desactivados de forma predeterminada. Las instrucciones no se enmascararán automáticamente si no está habilitado el cifrado de base de datos en el dispositivo.  
   
--   Habilitar TDE en el dispositivo automáticamente enciende el enmascaramiento de datos de usuario en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad.  
+-   Al habilitar TDE en el dispositivo, se activa automáticamente el enmascaramiento de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] datos del usuario en los registros de actividad.  
   
--   Deshabilitación de TDE no afecta a los datos de usuario de enmascaramiento en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad.  
+-   Deshabilitar TDE no afecta al enmascaramiento de datos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usuario en los registros de actividad.  
   
--   Puede habilitar explícitamente los datos de usuario de enmascaramiento en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad mediante el uso de la **sp_pdw_log_user_data_masking** procedimiento.  
+-   Puede habilitar explícitamente el enmascaramiento de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de usuario en los registros de actividad mediante el procedimiento **sp_pdw_log_user_data_masking** .  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **sysadmin** fijo de base de datos, o **CONTROL SERVER** permiso.  
+ Requiere la pertenencia al rol fijo de base de datos **sysadmin** o el permiso **Control Server** .  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente habilita en el dispositivo de enmascaramiento de datos de usuario TDE registro.  
+ En el ejemplo siguiente se habilita el enmascaramiento de datos de usuario de registro de TDE en el dispositivo.  
   
 ```  
 EXEC sp_pdw_log_user_data_masking 1;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_pdw_database_encryption para &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

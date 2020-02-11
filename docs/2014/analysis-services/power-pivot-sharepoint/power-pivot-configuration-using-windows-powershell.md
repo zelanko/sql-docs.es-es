@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782804"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Configuración de PowerPivot mediante Windows PowerShell
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] incluye cmdlets de Windows PowerShell que puede usar para configurar una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Para configurar totalmente una instalación con PowerShell es necesario usar cmdlets de SharePoint y de PowerPivot para SharePoint. Gran parte de la configuración se puede completar mediante una de las herramientas de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener más información sobre las herramientas, vea [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]incluye cmdlets de Windows PowerShell que puede usar para configurar una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Para configurar totalmente una instalación con PowerShell es necesario usar cmdlets de SharePoint y de PowerPivot para SharePoint. Gran parte de la configuración se puede completar mediante una de las herramientas de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener más información sobre las herramientas, vea [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
   
 > [!IMPORTANT]  
 >  En el caso de una granja de servidores de SharePoint 2010, debe instalarse SharePoint 2010 SP1 antes de configurar PowerPivot para SharePoint o una granja de SharePoint que use un servidor de bases de datos de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] . Si no ha instalado todavía el Service Pack, instálelo antes de empezar a configurar el servidor.  
@@ -27,7 +27,7 @@ ms.locfileid: "72782804"
  Puede crear archivos de script de Windows PowerShell (.ps1) para automatizar las tareas de configuración. Se recomienda este enfoque si se requieren pasos de instalación y configuración con script que se puedan ejecutar en cualquier servidor. Puede que se necesite un script como parte de un plan de recuperación ante desastres para volver a generar un servidor en caso de un error de hardware.  
   
 ## <a name="view-a-list-of-the-powerpivot-cmdlets-on-a-server"></a>Ver una lista de los cmdlets de PowerPivot de un servidor  
- Para ver el contenido y ejemplos de los cmdlets de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], consulte la [referencia de PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
+ Para ver el contenido y ejemplos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] los cmdlets, consulte [referencia de PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
  Para usar PowerShell con el fin de ver una lista de los cmdlets de PowerPivot:  
   
@@ -39,13 +39,13 @@ ms.locfileid: "72782804"
     Get-Help *powerpivot*  
     ```  
   
-     Debe ver una lista de cmdlets que incluyen PowerPivot en el nombre del cmdlet. Por ejemplo, `Get-PowerPivotServiceApplication`. El número de cmdlets disponibles depende de la versión de Analysis Services que está usando.  
+     Debe ver una lista de cmdlets que incluyen PowerPivot en el nombre del cmdlet. Por ejemplo: `Get-PowerPivotServiceApplication`. El número de cmdlets disponibles depende de la versión de Analysis Services que está usando.  
   
     -   10 cmdlets con el servidor de SQL Server 2012 SP1 Analysis Services configurado en modo de SharePoint, y SharePoint 2013. La versión de 2012 SP1 emplea una nueva arquitectura que permite que Analysis Server se ejecute fuera de la granja de servidores de SharePoint y necesita menos cmdlets de Windows PowerShell de administración.  
   
     -   17 cmdlets con el servidor de SQL Server 2012 Analysis Services configurado en modo de SharePoint, y SharePoint 2010.  
   
-     Si no se devuelve ningún comando en la lista o aparece un mensaje de error similar a "`get-help could not find *powerpivot* in a help file in this session.`", consulte la sección siguiente de este tema para obtener instrucciones sobre cómo habilitar los cmdlets de PowerPivot en el servidor.  
+     Si no se devuelve ningún comando en la lista o aparece un mensaje de error similar a`get-help could not find *powerpivot* in a help file in this session.`"", vea la sección siguiente de este tema para obtener instrucciones sobre cómo habilitar los cmdlets de PowerPivot en el servidor.  
   
      Todos los cmdlets tienen ayuda en pantalla. En el ejemplo siguiente se muestra cómo ver la ayuda en pantalla del cmdlet `New-PowerPivotServiceApplication`:  
   
@@ -83,6 +83,6 @@ ms.locfileid: "72782804"
 ## <a name="related-content"></a>Contenido relacionado  
  [Administración y configuración del servidor PowerPivot en Administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [Herramientas de configuración de PowerPivot](power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
  [Referencia de PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  

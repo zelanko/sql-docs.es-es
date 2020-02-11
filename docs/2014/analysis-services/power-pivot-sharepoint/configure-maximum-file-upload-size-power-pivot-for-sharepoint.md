@@ -1,5 +1,5 @@
 ---
-title: Configurar el tamaño máximo del archivo de carga (PowerPivot para SharePoint) | Microsoft Docs
+title: Configurar el tamaño máximo de carga de archivos (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071822"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Configurar el tamaño de carga máximo de archivos (PowerPivot para SharePoint)
@@ -28,7 +28,7 @@ ms.locfileid: "66071822"
   
 ### <a name="configure-maximum-file-size-for-excel-services"></a>Configurar el tamaño de archivo máximo para Servicios de Excel  
   
-1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  Haga clic en el nombre de la aplicación de Excel Services.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66071822"
   
      El valor máximo que puede especificar es 2 gigabytes (o 2047 megabytes como se especifica en Administración central).  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>Configurar el tamaño máximo de archivo para una aplicación web de SharePoint  
   
@@ -63,6 +63,6 @@ ms.locfileid: "66071822"
   
 6.  Establezca la propiedad en el mismo número o uno mayor que el Tamaño máximo del libro de Excel Services.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
   

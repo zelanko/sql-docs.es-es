@@ -18,10 +18,10 @@ ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305240"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
@@ -40,25 +40,26 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` el número de identificación del trabajo. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id`Número de identificación del trabajo. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` el nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @server_name = ] 'server'` el nombre del servidor en el que se va a dirigir el trabajo. el *servidor* es de tipo **nvarchar (30)** y su valor predeterminado es N ' (local) '. el *servidor* puede ser **(local)** para un servidor local o el nombre de un servidor de destino existente.  
+`[ @server_name = ] 'server'`Nombre del servidor en el que se va a establecer como destino el trabajo. el *servidor* es de tipo **nvarchar (30)** y su valor predeterminado es N ' (local) '. el *servidor* puede ser **(local)** para un servidor local o el nombre de un servidor de destino existente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="remarks"></a>Remarks  
- **\@automatic_post** existe en **sp_add_jobserver**, pero no aparece en argumentos. **\@automatic_post** está reservado para uso interno.  
+## <a name="remarks"></a>Observaciones  
+ automatic_post existe en **sp_add_jobserver**, pero no aparece en argumentos. ** \@** automatic_post está reservado para uso interno. ** \@**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
@@ -79,7 +80,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  En el ejemplo siguiente se asigna el trabajo `NightlyBackups` para su ejecución en el servidor local.  
   
 > [!NOTE]  
->  En este ejemplo se da por supuesto que el trabajo de `NightlyBackups` ya existe.  
+>  En este ejemplo se da `NightlyBackups` por supuesto que el trabajo ya existe.  
   
 ```  
 USE msdb ;  
@@ -90,7 +91,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>b. Asignar un trabajo para su ejecución en un servidor diferente  
+### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. Asignar un trabajo para su ejecución en un servidor diferente  
  En el ejemplo siguiente se asigna el trabajo multiservidor `Weekly Sales Backups` al servidor `SEATTLE2`.  
   
 > [!NOTE]  
@@ -106,9 +107,9 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_apply_job_to_targets &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

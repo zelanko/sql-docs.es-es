@@ -1,5 +1,5 @@
 ---
-title: El enlace de | Microsoft Docs
+title: Enlace de modo de columna | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083382"
 ---
 # <a name="column-wise-binding"></a>El enlace
-Cuando se usa el enlace, una aplicación enlaza las matrices de tres, uno o dos o en algunos casos para cada columna para el que se va a devolver datos. La primera matriz contiene los valores de datos, y la segunda matriz contiene los búferes de longitud/indicador. Valores de longitud y los indicadores pueden almacenarse en búferes independientes estableciendo los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si esto sucede, se enlaza una tercera matriz. Cada matriz contiene tantos elementos como filas en el conjunto de filas.  
+Cuando se usa el enlace de modo de columna, una aplicación enlaza uno o dos, o en algunos casos tres, matrices a cada columna para la que se van a devolver los datos. La primera matriz contiene los valores de datos y la segunda contiene búferes de longitud/indicador. Los indicadores y los valores de longitud se pueden almacenar en búferes independientes estableciendo los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si se hace esto, se enlaza una tercera matriz. Cada matriz contiene tantos elementos como filas hay en el conjunto de filas.  
   
- La aplicación declara que está usando el enlace con el atributo de instrucción SQL_ATTR_ROW_BIND_TYPE, que determina el tipo de enlace para los búferes de conjunto de filas en lugar del parámetro de conjunto de búferes. El controlador devuelve los datos para cada fila en los elementos sucesivos de cada matriz. La siguiente ilustración muestra cómo el enlace funciona.  
+ La aplicación declara que está utilizando el enlace de modo de columna con el atributo de instrucción SQL_ATTR_ROW_BIND_TYPE, que determina el tipo de enlace de los búferes del conjunto de filas en lugar de los búferes de conjuntos de parámetros. El controlador devuelve los datos para cada fila en elementos sucesivos de cada matriz. En la ilustración siguiente se muestra cómo funciona el enlace de modo de columna.  
   
- ![Columna&#45;enlace conveniente de tres columnas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![Enlace de columna&#45;de tres columnas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- Por ejemplo, el código siguiente enlaza a matrices de 10 elementos a las columnas OrderID, vendedor y el estado:  
+ Por ejemplo, el código siguiente enlaza las matrices de 10 elementos a las columnas OrderID, SalesPerson y status:  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

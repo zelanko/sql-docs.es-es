@@ -1,5 +1,5 @@
 ---
-title: Método CopyRecord (ADO) | Microsoft Docs
+title: CopyRecord (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933416"
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
-Copia una entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md) a otra ubicación.  
+Copia una entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md) en otra ubicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,38 +35,38 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parámetros  
  *Origen*  
- Opcional. Un **cadena** valor que contiene la dirección URL que especifica la entidad que se va a copiar (por ejemplo, un archivo o directorio). Si *origen* se omite o se especifica una cadena vacía, el archivo o directorio representado por el actual [registro](../../../ado/reference/ado-api/record-object-ado.md) se va a copiar.  
+ Opcional. Valor de **cadena** que contiene una dirección URL que especifica la entidad que se va a copiar (por ejemplo, un archivo o un directorio). Si se omite *source* o especifica una cadena vacía, se copiará el archivo o directorio representado por el [registro](../../../ado/reference/ado-api/record-object-ado.md) actual.  
   
  *Destino*  
- Opcional. Un **cadena** valor que contiene la dirección URL que especifica la ubicación donde *origen* se va a copiar.  
+ Opcional. Valor de **cadena** que contiene una dirección URL que especifica la ubicación donde se copiará el *origen* .  
   
- *UserName*  
- Opcional. Un **cadena** valor que contiene el identificador de usuario que, si es necesario, autoriza el acceso a *destino*.  
+ *Nombre*  
+ Opcional. Valor de **cadena** que contiene el identificador de usuario que, si es necesario, autoriza el acceso al *destino*.  
   
  *Contraseña*  
- Opcional. Un **cadena** valor que contiene la contraseña que, si es necesario, comprueba *UserName*.  
+ Opcional. Valor de **cadena** que contiene la contraseña que, si es necesario, comprueba el *nombre de usuario*.  
   
  *Opciones*  
- Opcional. Un [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) valor que tiene un valor predeterminado de **como**. Especifica el comportamiento de este método.  
+ Opcional. Un valor de [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) que tiene un valor predeterminado de **adCopyUnspecified**. Especifica el comportamiento de este método.  
   
- *Async*  
- Opcional. Un **booleano** valor que, cuando **True**, especifica que esta operación debe ser asincrónica.  
+ *Copystreamtostream*  
+ Opcional. Valor **booleano** que, cuando **es true**, especifica que esta operación debe ser asincrónica.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un **cadena** valor que normalmente devuelve el valor de *destino*. Sin embargo, el valor devuelto exacto depende del proveedor.  
+ Valor de **cadena** que normalmente devuelve el valor de *Destination*. Sin embargo, el valor exacto devuelto depende del proveedor.  
   
-## <a name="remarks"></a>Comentarios  
- Los valores de *origen* y *destino* no debe ser idéntico; en caso contrario, se produce un error de tiempo de ejecución. Al menos uno de los nombres de servidor, la ruta de acceso o el recurso debe ser diferente.  
+## <a name="remarks"></a>Observaciones  
+ Los valores de *origen* y *destino* no deben ser idénticos; de lo contrario, se produce un error en tiempo de ejecución. Al menos uno de los nombres de servidor, ruta de acceso o recurso debe ser diferente.  
   
- Todos los elementos secundarios (por ejemplo, subdirectorios) de *origen* son copian de forma recursiva a menos que **adCopyNonRecursive** se especifica. En una operación recursiva, *destino* no debe ser un subdirectorio de *origen*; en caso contrario, no se completará la operación.  
+ Todos los elementos secundarios (por ejemplo, subdirectorios) de *source* se copian de forma recursiva, a menos que se especifique **adCopyNonRecursive** . En una operación recursiva, *Destination* no debe ser un subdirectorio de *source*; de lo contrario, la operación no se completará.  
   
- Este método produce un error si *destino* identifica una entidad existente (por ejemplo, un archivo o directorio), a menos que **adCopyOverWrite** se especifica.  
+ Este método produce un error si el *destino* identifica una entidad existente (por ejemplo, un archivo o un directorio), a menos que se especifique **adCopyOverWrite** .  
   
 > [!IMPORTANT]
->  Use la **adCopyOverWrite** opción con prudencia. Por ejemplo, si especifica esta opción al copiar un archivo en un directorio le *eliminar* el directorio y reemplazarlo con el archivo.  
+>  Use la opción **adCopyOverWrite** con prudencia. Por ejemplo, si se especifica esta opción al copiar un archivo en un directorio, se *eliminará* el directorio y se reemplazará por el archivo.  
   
 > [!NOTE]
->  Las direcciones URL con el esquema http, se invocarán automáticamente el [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [absoluto y las direcciones URL relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

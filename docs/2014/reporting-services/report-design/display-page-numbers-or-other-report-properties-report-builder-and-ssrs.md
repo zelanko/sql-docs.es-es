@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106035"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Mostrar números de página u otras propiedades del informe (Generador de informes y SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66106035"
   
 -   Id. de usuario  
   
--   Lenguaje  
+-   Idioma  
   
  Para un número de página, puede desear agregar la palabra "Página" antes del número. También puede desear mostrar el número total de páginas.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66106035"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

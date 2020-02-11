@@ -1,5 +1,5 @@
 ---
-title: Importar desde un origen de datos relacionales (SSAS Tabular) | Microsoft Docs
+title: Importar desde un origen de datos relacional (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080532"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>Importar datos de un origen de datos relacionales (SSAS tabular)
-  Con el Asistente para la importación de tablas, puede importar datos desde una variedad de bases de datos relacionales. El asistente está disponible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el menú **Modelo** . Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado. Para más información sobre los proveedores y los orígenes de datos admitidos, vea [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
+  Con el Asistente para la importación de tablas, puede importar datos desde una variedad de bases de datos relacionales. El asistente está disponible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el menú **Modelo** . Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado. Para más información sobre los proveedores y los orígenes de datos admitidos, vea [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
  El Asistente para la importación de tablas permite importar datos de los orígenes de datos siguientes:  
   
@@ -58,8 +58,8 @@ ms.locfileid: "66080532"
   
 3.  Siga los pasos en el Asistente para la importación de tablas. En las páginas siguientes, podrá seleccionar tablas y vistas específicas o aplicar filtros mediante la página **Seleccionar tablas y vistas** o mediante la creación de una consulta SQL en la página **Especificar una consulta SQL** .  
   
-## <a name="see-also"></a>Vea también  
- [Importar datos &#40;SSAS tabular&#41;](import-data-ssas-tabular.md)   
- [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte también  
+ [Importar datos &#40;&#41;tabular de SSAS](import-data-ssas-tabular.md)   
+ [Orígenes de datos admitidos &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9f97b1682fa8a2e04b5f1afcc2a552a326a9e43
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242098"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generar scripts (SQL Server Management Studio)
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]proporciona dos mecanismos para generar [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. Puede crear scripts para varios objetos mediante el **Asistente generar y publicar scripts.** También puede generar un script para objetos individuales o varios objetos con el menú **Incluir como** del **Explorador de objetos**.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona dos mecanismos para generar scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Puede crear scripts para varios objetos mediante el **Asistente generar y publicar scripts.** También puede generar un script para objetos individuales o varios objetos con el menú **Incluir como** del **Explorador de objetos**.  
   
 1.  **Elegir un método:**  [Asistente generar y publicar scripts](#GenPubScriptWiz), [Explorador de objetos script como menú](#OEScriptAsMenu)  
   
@@ -27,13 +27,13 @@ ms.locfileid: "75242098"
 ## <a name="before-you-begin"></a>Antes de empezar  
  Elija el mecanismo que mejor cumpla sus requisitos.  
   
-###  <a name="GenPubScriptWiz"></a>Asistente generar y publicar scripts  
+###  <a name="GenPubScriptWiz"></a> Asistente generar y publicar scripts  
  Use el **Asistente Generar y publicar scripts** para crear un script [!INCLUDE[tsql](../../includes/tsql-md.md)] para muchos objetos. El asistente genera un script de todos los objetos de una base de datos o un subconjunto de los objetos que seleccione. El asistente dispone de muchas opciones para los scripts, como la posibilidad de incluir permisos, la intercalación, las restricciones, etc. Para obtener instrucciones acerca de cómo usar el asistente, vea [Generate and Publish Scripts Wizard](generate-and-publish-scripts-wizard.md).  
   
-###  <a name="OEScriptAsMenu"></a>Explorador de objetos menú de script como  
+###  <a name="OEScriptAsMenu"></a> Menú Incluir como del Explorador de objetos  
  Puede usar el menú **Incluir como del Explorador de objetos** para generar un script de un solo objeto, de varios objetos o de varias instrucciones para un único objeto. Puede elegir uno de varios tipos de scripts; por ejemplo crear, modificar o quitar el objeto. Puede guardar un script en una ventana del Editor de consultas, en un archivo o en el Portapapeles. El script se crea en formato Unicode.  
   
-##  <a name="ScriptSingleObject"></a>Para generar un script de un solo objeto  
+##  <a name="ScriptSingleObject"></a> Para generar un script de un solo objeto  
  **Para generar un script de un solo objeto**  
   
 1.  En el Explorador de objetos, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
@@ -42,7 +42,7 @@ ms.locfileid: "75242098"
   
 3.  Expanda la categoría del objeto. Por ejemplo, expanda el nodo **Vistas** o **Tablas** .  
   
-4.  Haga clic con el botón secundario en el objeto, seleccione **incluir \<tipo de objeto en el> como**, por ejemplo, seleccione **incluir tabla como**.  
+4.  Haga clic con el botón derecho en el objeto y vaya a **Incluir \<tipo de objeto> como**; por ejemplo, vaya a **Incluir tabla como**.  
   
 5.  Seleccione el tipo de script, como **Create to** o **Alter to**.  
   
@@ -82,6 +82,6 @@ ms.locfileid: "75242098"
   
 6.  Presione Crtl y haga clic con el botón primario en el segundo objeto que desea incluir en el script.  
   
-7.  Haga clic con el botón secundario en uno de los objetos seleccionados y seleccione el **tipo de objeto de \<script> como**.  
+7.  Haga clic con el botón derecho en uno de los objetos seleccionados y elija **Incluir \<tipo de objeto> como**.  
   
   

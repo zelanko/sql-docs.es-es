@@ -1,5 +1,5 @@
 ---
-title: Establecer la cuenta de inicio del servicio Agente SQL Server (Administrador de configuración de SQL Server) | Microsoft Docs
+title: Establecer la cuenta de inicio del servicio para Agente SQL Server (Administrador de configuración de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033692"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Establecer la cuenta de inicio del servicio para el Agente SQL Server (Administrador de configuración de SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "63033692"
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Para realizar sus funciones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente debe estar configurado para usar las credenciales de una cuenta que sea miembro de la `sysadmin` rol fijo de servidor en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cuenta debe tener los siguientes permisos de Windows:  
+ Para realizar sus funciones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el `sysadmin` agente debe configurarse para utilizar las credenciales de una cuenta que sea miembro del rol fijo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]servidor en. La cuenta debe tener los siguientes permisos de Windows:  
   
 -   Iniciar sesión como servicio (SeServiceLogonRight)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "63033692"
   
 -   Ajustar las cuotas de memoria de un proceso (SeIncreaseQuotaPrivilege)  
   
- Para obtener más información sobre los permisos de Windows necesarios para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio del agente, consulte [seleccionar una cuenta para el servicio Agente SQL Server](select-an-account-for-the-sql-server-agent-service.md) y [configurar cuentas de servicio de Windows y Permisos](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Para obtener más información acerca de los permisos de Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesarios para la cuenta de servicio del agente, consulte [seleccionar una cuenta para el servicio de Agente SQL Server](select-an-account-for-the-sql-server-agent-service.md) y [configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-set-the-service-startup-account-for-sql-server-agent"></a>Para establecer la cuenta de inicio de servicio para el Agente SQL Server  
   
@@ -65,22 +65,22 @@ ms.locfileid: "63033692"
   
 2.  Haga clic en el signo más para expandir la carpeta **Grupos de servidores locales** .  
   
-3.  Haga clic con el botón derecho en la instancia de servidor donde quiera instalar la cuenta de inicio de servicio y seleccione **Administrador de configuración de SQL Server...** .  
+3.  Haga clic con el botón secundario en la instancia de servidor en la que desea configurar la cuenta de inicio del servicio y seleccione **Administrador de configuración de SQL Server..**..  
   
-4.  En el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Sí**.  
+4.  En el cuadro de diálogo **Control de cuentas de usuario**, haga clic en **Sí**.  
   
 5.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el panel de la consola, seleccione **Servicios de SQL Server**.  
   
-6.  En el panel de detalles, haga clic con el botón secundario en **Agente SQL Server** _(server_name)_ , donde *server_name* es el nombre de la instancia del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuya cuenta de inicio de servicio desea cambiar y luego seleccione **Propiedades**.  
+6.  En el panel de detalles, haga clic con el botón secundario en **Agente SQL Server**_(SERVER_NAME)_, donde *SERVER_NAME* es el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia del agente cuya cuenta de inicio de servicio desea cambiar y seleccione **propiedades**.  
   
-7.  En el cuadro de diálogo **Propiedades**_del_ **Propiedades** , en la pestaña **Iniciar sesión** , seleccione una de las opciones siguientes en **Iniciar sesión como**:  
+7.  En el cuadro de diálogo **propiedades** de **Agente SQL Server**_(SERVER_NAME)_ , en la pestaña **iniciar sesión** , seleccione una de las opciones siguientes en **iniciar sesión como**:  
   
-    -   **Cuenta integrada**: seleccione esta opción si los trabajos solo necesitan recursos del servidor local. Para información sobre cómo elegir un tipo de cuenta integrada de Windows, consulte [Seleccionar una cuenta para el servicio del Agente SQL Server.](https://msdn.microsoft.com/library/ms191543.aspx)  
+    -   **Cuenta integrada**: Seleccione esta opción si los trabajos solo necesitan recursos del servidor local. Para información sobre cómo elegir un tipo de cuenta integrada de Windows, consulte [Seleccionar una cuenta para el servicio del Agente SQL Server](https://msdn.microsoft.com/library/ms191543.aspx).  
   
         > [!IMPORTANT]  
         >  El servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no es compatible con la cuenta del **Servicio local** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-    -   **Esta cuenta**: seleccione esta opción si los trabajos necesitan recursos de la red, incluidos recursos de aplicaciones; por ejemplo, si desea reenviar eventos a otros registros de aplicación Windows o si desea notificar a operadores mediante mensajes de correo electrónico o buscapersonas.  
+    -   **Esta cuenta**: Seleccione esta opción si los trabajos necesitan recursos a través de la red, incluidos los recursos de la aplicación. Si desea reenviar eventos a otros registros de aplicación Windows, o si desea notificar a los operadores mediante correo electrónico o buscapersonas.  
   
          Si selecciona esta opción:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63033692"
   
         2.  En el cuadro **Contraseña** , escriba la contraseña para la cuenta. Vuelva a escribir la contraseña en el cuadro **Confirmar contraseña** .  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en el botón **Cerrar** .  
   

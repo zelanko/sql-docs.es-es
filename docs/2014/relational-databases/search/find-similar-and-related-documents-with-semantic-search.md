@@ -13,31 +13,31 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011319"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>buscar documentos similares y relacionados con la búsqueda semántica
   Describe cómo buscar documentos o valores de texto similares e información acerca de su similitud o relación en columnas configuradas para la indización semántica estadística.  
   
-##  <a name="BasicsQuerySimilar"></a> Buscar documentos similares o relacionados  
+##  <a name="BasicsQuerySimilar"></a>Buscar documentos similares o relacionados  
   
-###  <a name="HowToQuerySimilar"></a> Procedimientos para: Buscar documentos similares o relacionados con SEMANTICSIMILARITYTABLE  
+###  <a name="HowToQuerySimilar"></a>Cómo: buscar documentos similares o relacionados con SEMANTICSIMILARITYTABLE  
  Para identificar documentos similares o relacionados en una columna específica, consulte la función [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
  **SEMANTICSIMILARITYTABLE** devuelve una tabla de cero, una o más filas cuyo contenido de la columna especificada es similar semánticamente al documento indicado. Se puede hacer referencia a esta función de conjunto de filas en la cláusula FROM de una instrucción SELECT como un nombre de tabla normal.  
   
- No se puede consultar en varias columnas para documentos similares. La función **SEMANTICSIMILARITYTABLE** solo recupera resultados de la misma columna que la columna de origen, que se identifica mediante el argumento **source_key**.  
+ No se puede consultar en varias columnas para documentos similares. La función **SEMANTICSIMILARITYTABLE** solo recupera resultados de la misma columna que la columna de origen, que se identifica mediante el argumento **source_key** .  
   
  Para obtener información detallada sobre los parámetros requeridos por la función **SEMANTICSIMILARITYTABLE** y sobre la tabla de resultados que devuelve, vea [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
 > [!IMPORTANT]  
 >  Las columnas de destino deben tener habilitada la indización de texto completo y semántica.  
   
-###  <a name="HowToIdentifySimilar"></a> Ejemplo: Buscar los documentos principales que son similares a otro documento  
- En el ejemplo siguiente se recuperan los 10 candidatos principales que son similares al candidato especificado por *@CandidateID* de la tabla HumanResources.JobCandidate de la base de datos de ejemplo AdventureWorks2012.  
+###  <a name="HowToIdentifySimilar"></a>Ejemplo: buscar los documentos principales que son similares a otro documento  
+ En el ejemplo siguiente se recuperan los 10 candidatos principales que son similares al candidato especificado *@CandidateID* por de la tabla humanresources. JobCandidate de la base de datos de ejemplo AdventureWorks2012.  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  
@@ -51,9 +51,9 @@ ORDER BY KEY_TBL.score DESC;
 GO  
 ```  
   
-##  <a name="BasicsQuerySimilarity"></a> Buscar información sobre cómo los documentos son similares o relacionados  
+##  <a name="BasicsQuerySimilarity"></a>Buscar información sobre el modo en que los documentos son similares o relacionados  
   
-###  <a name="HowToQuerySimilarity"></a> Procedimientos para: Obtenga información acerca de cómo los documentos son similares o relacionados con SEMANTICSIMILARITYDETAILSTABLE  
+###  <a name="HowToQuerySimilarity"></a>Cómo: buscar información sobre el modo en que los documentos son similares o relacionados con SEMANTICSIMILARITYDETAILSTABLE  
  Para obtener información sobre las frases clave que hacen que los documentos sean similares o relacionados, puede consultar la función [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
  **SEMANTICSIMILARITYDETAILSTABLE** devuelve una tabla de cero, una o más filas de frases clave comunes en dos documentos (un documento de origen y un documento coincidente) cuyo contenido es similar semánticamente. Se puede hacer referencia a esta función de conjunto de filas en la cláusula FROM de una instrucción SELECT como un nombre de tabla normal.  
@@ -63,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  Las columnas de destino deben tener habilitada la indización de texto completo y semántica.  
   
-###  <a name="HowToSimilarPhrases"></a> Ejemplo: Buscar las frases claves principales que son similares entre documentos  
+###  <a name="HowToSimilarPhrases"></a>Ejemplo: buscar las frases clave principales que son similares entre documentos  
  En el ejemplo siguiente se recuperan las 5 frases clave que tienen la máxima puntuación de similitud entre los candidatos especificados en la tabla **HumanResources.JobCandidate** de la base de datos de ejemplo AdventureWorks2012.  
   
 ```sql  

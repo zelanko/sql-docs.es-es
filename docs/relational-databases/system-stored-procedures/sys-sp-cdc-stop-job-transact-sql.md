@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_stop_job (Transact-SQL) | Microsoft Docs
+title: Sys. sp_cdc_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3c166fe18ad7fdd651f07025aa7deb6ea2f599e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905153"
 ---
-# <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
+# <a name="syssp_cdc_stop_job-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Detiene una limpieza de captura datos modificados o un trabajo de captura de la base de datos actual.  
@@ -41,7 +41,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ [ @job_type = ] 'job_type_' ]` Tipo de trabajo que desea agregar. *job_type* es **nvarchar (20)** con un valor predeterminado de **capturar**. Las entradas válidas son **capturar** y **limpieza**.  
+`[ [ @job_type = ] 'job_type_' ]`Tipo de trabajo que se va a agregar. *job_type* es de tipo **nvarchar (20)** y su valor predeterminado es **Capture**. Las entradas válidas son **Capture** y **Cleanup**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -49,7 +49,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un administrador puede utilizar sys.sp_cdc_stop_job para detener explícitamente el trabajo de captura o el trabajo de limpieza.  
   
 ## <a name="permissions"></a>Permisos  
@@ -65,8 +65,8 @@ EXEC sys.sp_cdc_stop_job @job_type = N'capture';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [DBO. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [Sys. sp_cdc_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   
   

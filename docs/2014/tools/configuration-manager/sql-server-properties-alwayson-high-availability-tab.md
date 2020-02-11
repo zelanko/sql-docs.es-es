@@ -1,5 +1,5 @@
 ---
-title: Propiedades de SQL Server (pestaña de disponibilidad AlwaysOn alta) | Microsoft Docs
+title: Propiedades de SQL Server (pestaña alta disponibilidad de AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678471"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Propiedades de SQL Server (pestaña Alta disponibilidad de AlwaysOn)
@@ -32,13 +32,13 @@ ms.locfileid: "62678471"
 -   Habilite los Grupos de disponibilidad de AlwaysOn para las distintas instancias del servidor de una en una. Después de habilitar los Grupos de disponibilidad de AlwaysOn, espere hasta que se haya reiniciado el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de habilitar la instancia del servidor siguiente.  
   
 > [!NOTE]  
->  Para más información sobre las características admitidas y sobre los requisitos previos, restricciones y recomendaciones adicionales para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], vea los Libros en pantalla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+>  Para más información sobre las características admitidas y sobre los requisitos previos, restricciones y recomendaciones adicionales para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], vea los Libros en pantalla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="dialog-options"></a>Opciones del cuadro de diálogo  
  **Nombre del clúster de conmutación por error de Windows**  
  Muestra el nombre del clúster de WSFC en el que el equipo local es un nodo.  
   
- **Habilitar los grupos de disponibilidad de AlwaysOn**  
+ **Habilitar Grupos de disponibilidad AlwaysOn**  
  Use esta casilla para habilitar o deshabilitar los Grupos de disponibilidad de AlwaysOn en esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tal como se indica a continuación:  
   
 -   Si esta casilla está los vacía, los Grupos de disponibilidad de AlwaysOn estarán deshabilitados. Para habilitar los Grupos de disponibilidad de AlwaysOn, seleccione esta casilla, haga clic en **Aceptar**y reinicie manualmente el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

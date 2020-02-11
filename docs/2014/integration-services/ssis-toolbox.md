@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766348"
 ---
 # <a name="ssis-toolbox"></a>Cuadro de herramientas de SSIS
@@ -31,7 +31,7 @@ ms.locfileid: "62766348"
   
  En el **Cuadro de herramientas de SSIS**, los componentes de flujo de control y flujo de datos están organizados en categorías.  Puede expandir y contraer las categorías para ver y puede cambiar la organización de componentes de acuerdo con sus preferencias.  Para restaurar la organización predeterminada, haga clic con el botón derecho dentro del cuadro de herramientas y, después, haga clic en **Restaurar valores predeterminados del cuadro de herramientas**.  
   
- Las categorías **Favoritos** y **Común** aparecen en el cuadro de herramientas al seleccionar las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** . La categoría **Otras tareas** aparece en el cuadro de herramientas al seleccionar las pestañas **Flujo de control** o **Controladores de eventos** . Las categorías **Otras transformaciones**, **Otros orígenes**y **Otros destinos** aparecen en el cuadro de herramientas al seleccionar la pestaña **Flujo de datos** .  
+ Las categorías **Favoritos** y **Común** aparecen en el cuadro de herramientas al seleccionar las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** . La categoría **otras tareas** aparece en el cuadro de herramientas cuando se selecciona la pestaña **flujo de control** o la pestaña controladores de **eventos** . Las **otras categorías transformaciones**, **otros orígenes**y **otros destinos** aparecen en el cuadro de herramientas al seleccionar la pestaña **flujo de datos** .  
   
  Cuando se crea un proyecto de SSIS o se abre un proyecto existente, el **Cuadro de herramientas de SSIS** se muestra automáticamente. También puede abrir el cuadro de herramientas haciendo clic en el botón Cuadro de herramientas situado en la esquina superior derecha de la superficie de diseño del paquete.  
   

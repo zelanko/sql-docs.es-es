@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099551"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
@@ -42,17 +42,17 @@ ms.locfileid: "66099551"
     > [!NOTE]  
     >  Puede utilizar varias configuraciones para cambiar rápidamente entre diferentes servidores de informes y opciones.  
   
-3.  En el **OutputPath** cuadro de texto, escriba o pegue la ruta de acceso en el sistema de archivos local para almacenar la definición de informe que se usa en la comprobación de la compilación, implementación y vista previa de informes. La ruta de acceso debe ser diferente de la que se utiliza para el proyecto y una ruta de acceso relativa que sea una carpeta secundaria bajo la ruta de acceso del proyecto.  
+3.  En el cuadro de texto **OutputPath** , escriba o pegue la ruta de acceso en el sistema de archivos local para almacenar la definición de informe utilizada en la comprobación de la compilación, la implementación y la vista previa de los informes. La ruta de acceso debe ser diferente de la que se utiliza para el proyecto y una ruta de acceso relativa que sea una carpeta secundaria bajo la ruta de acceso del proyecto.  
   
-4.  En el **ErrorLevel** cuadro de texto, escriba la gravedad de la compilación problemas que se notifican como errores. Niveles de los problemas que se producen al compilar informes, orígenes de datos u otros recursos del proyecto con una gravedad menor o igual que el valor de **ErrorLevel** se notifican como errores; en caso contrario, los problemas se notifican como advertencias. Cualquier error hará que la tarea de compilación dé un error. Los niveles de gravedad válidos abarcan de 0 a 4, ambos incluidos. El valor predeterminado es 2.  
+4.  En el cuadro de texto **ERRORLEVEL** , escriba la gravedad de los problemas de compilación que se muestran como errores. Los problemas que se producen al compilar informes, orígenes de datos u otros recursos de proyecto con un nivel de gravedad menor o igual que el valor de **ERRORLEVEL** se notifican como errores. de lo contrario, los problemas se registran como advertencias. Cualquier error hará que la tarea de compilación dé un error. Los niveles de gravedad válidos abarcan de 0 a 4, ambos incluidos. El valor predeterminado es 2.  
   
      **ErrorLevel** se puede utilizar para aumentar o disminuir la sensibilidad de la compilación. Por ejemplo, cuando se crea un informe con un mapa durante la implementación en un servidor de informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , de forma predeterminada se muestra un error y la compilación del informe genera un error. Si reduce el **ErrorLevel** , el mapa se quita del informe, se muestra una advertencia y la compilación del informe continúa.  
   
-5.  En el **StartItem** lista, seleccione un informe que se muestra en la ventana Vista previa o en una ventana del explorador cuando se ejecuta el proyecto de informe.  
+5.  En la lista **StartItem** , seleccione un informe para mostrarlo en la ventana de vista previa o en una ventana del explorador cuando se ejecute el proyecto de informe.  
   
 6.  En la lista **OverwriteDataSources** , seleccione **True** para sobrescribir el origen de datos compartido en el servidor cada vez que se publican orígenes de datos compartidos, o seleccione **False** para mantener el origen de datos en el servidor.  
   
-7.  En el **TargetServerVersion** lista, seleccione el [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] verzi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o seleccione **detectar versión** para determinar automáticamente la versión instalada en el servidor identificado por la **TargetServer URL** propiedad. El valor predeterminado es **SQL Server 2008 R2**.  
+7.  En la **lista TargetServerVersion** , seleccione la [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] versión o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o seleccione **detectar versión** para determinar automáticamente la versión instalada en el servidor identificado por la propiedad **dirección URL de TargetServer** . El valor predeterminado es **SQL Server 2008 R2**.  
   
      Utilice **TargetServerVersion** para personalizar los informes compilados, colocados en la ruta de acceso especificada en OutputPath, para la versión del servidor de informes especificada en **TargetServer URL**.  
   
@@ -80,12 +80,12 @@ ms.locfileid: "66099551"
     > [!NOTE]  
     >  Si ha seleccionado **Generar** , el Diseñador de informes genera el proyecto del informe y comprueba si existen errores antes de mostrar una vista previa o publicarlo en un servidor de informes. Si ha seleccionado **Implementar** , el Diseñador de informes publica los informes en el servidor de informes de acuerdo con las propiedades de implementación establecidas. Si no ha seleccionado **Implementar** , el Diseñador de informes muestra el informe especificado en la propiedad **StartItem** en una ventana de vista previa local.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Publicar orígenes de datos e informes](../reports/publishing-data-sources-and-reports.md)   
- [Obtener la vista previa de informes](../reports/previewing-reports.md)   
- [Diseñador de informes (Ayuda F1)](report-designer-f1-help.md)   
+ [Obtener una vista previa de informes](../reports/previewing-reports.md)   
+ [Diseñador de informes la ayuda F1](report-designer-f1-help.md)   
  [Ejemplos de dirección URL para los elementos de informe publicados en un servidor de informes en modo de SharePoint &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Páginas de propiedades del proyecto (cuadro de diálogo)](project-property-pages-dialog-box.md)   
- [Publicar informes en un servidor de informes](../reports/publishing-reports-to-a-report-server.md)  
+ [Publicación de informes en un servidor de informes](../reports/publishing-reports-to-a-report-server.md)  
   
   

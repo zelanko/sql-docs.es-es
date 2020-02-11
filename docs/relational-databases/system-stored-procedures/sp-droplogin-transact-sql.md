@@ -18,19 +18,19 @@ ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de01ffe595a636356bf5b82ed2c5540cc3f5a092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056504"
 ---
-# <a name="spdroplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
+# <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto evita el acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con ese nombre de inicio de sesión.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [Drop login](../../t-sql/statements/drop-login-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,28 +42,28 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'` Es el inicio de sesión va a quitar. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado. *inicio de sesión* ya debe existir en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @loginame = ] 'login'`Es el inicio de sesión que se va a quitar. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio de sesión* ya [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]debe existir en.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_droplogin** llama a DROP LOGIN.  
+## <a name="remarks"></a>Observaciones  
+ **sp_droplogin** llama a Drop login.  
   
- **sp_droplogin** no se puede ejecutar dentro de una transacción definida por el usuario.  
+ **sp_droplogin** no se puede ejecutar en una transacción definida por el usuario.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY LOGIN en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `DROP LOGIN` para quitar el inicio de sesión `Victoria` de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Éste es el método preferido.  
+ En el ejemplo siguiente se utiliza `DROP LOGIN` para quitar el inicio de sesión `Victoria` de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este es el método preferido.  
   
 ```  
 DROP LOGIN Victoria;  
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

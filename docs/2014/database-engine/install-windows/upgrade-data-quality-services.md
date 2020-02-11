@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775635"
 ---
 # <a name="upgrade-data-quality-services"></a>Actualizar Data Quality Services
@@ -65,7 +65,7 @@ ms.locfileid: "62775635"
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  El instalador le pregunta si desea realizar la copia de seguridad de las bases de datos DQS antes de continuar. Si aún no ha hecho copia de las bases de datos DQS, escriba `Y` o `Yes`, y, a continuación, presione ENTRAR para continuar con la actualización.  
+    4.  El instalador le pregunta si desea realizar la copia de seguridad de las bases de datos DQS antes de continuar. Si ya ha realizado una copia de seguridad de las bases de datos de `Y` DQS `Yes`, escriba o y, a continuación, presione Entrar para continuar con la actualización.  
   
     5.  Se muestra un mensaje para indicar que la actualización del esquema de las bases de datos DQS se realizó.  
   
@@ -83,12 +83,12 @@ ms.locfileid: "62775635"
   
 3.  La salida mostrará una entrada para cada actualización junto con la fecha de la actualización. El valor máximo de VERSION_ID y ASSEMBLY_VERSION de la fecha más reciente es la versión actual. Un valor 2 en la columna ESTADO indica que la actualización se ha realizado correctamente. Si se ha producido algún error, este aparecerá en la columna ERROR. He aquí una salida de ejemplo:  
   
-    |Id.|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|error|  
+    |id|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMINIO\nombreDeUsuario>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMINIO\nombreDeUsuario>|2||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Quitar objetos del servidor de calidad de datos](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Actualizar a SQL Server 2014](upgrade-sql-server.md)  

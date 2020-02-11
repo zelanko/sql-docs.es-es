@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814052"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask (opción de configuración del servidor)
@@ -59,7 +59,7 @@ ms.locfileid: "62814052"
   
  Si especifica una máscara de afinidad que intenta asignarse a una CPU inexistente, el comando RECONFIGURE envía un mensaje de error a la sesión de cliente y al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El uso de la opción RECONFIGURE WITH OVERRIDE no tiene efecto en este caso y se vuelve a enviar el mismo error de configuración.  
   
- También puede excluir la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los procesadores a los que el sistema operativo Windows 2000 o Windows Server 2003 han asignado cargas de trabajo específicas. Si establece el valor 1 para un bit que representa un procesador, el motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selecciona dicho procesador para la asignación de subprocesos. Al establecer `affinity mask` en 0 (valor predeterminado), el Microsoft Windows 2000 o Windows Server 2003, algoritmos de programación establece la afinidad del subproceso. Si establece `affinity mask` en cualquier valor distinto de cero, la afinidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta el valor como una máscara de bits que especifica los procesadores que se pueden seleccionar.  
+ También puede excluir la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los procesadores a los que el sistema operativo Windows 2000 o Windows Server 2003 han asignado cargas de trabajo específicas. Si establece el valor 1 para un bit que representa un procesador, el motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selecciona dicho procesador para la asignación de subprocesos. Cuando se establece `affinity mask` en 0 (valor predeterminado), los algoritmos de programación de Microsoft Windows 2000 o windows Server 2003 establecen la afinidad del subproceso. Si establece `affinity mask` en cualquier valor distinto de cero, la afinidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta el valor como una máscara de bits que especifica los procesadores que se pueden seleccionar.  
   
  Mediante la separación de los subprocesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se ejecuten en determinados procesadores, Microsoft Windows 2000 o Windows Server 2003 pueden evaluar mejor el control de los procesos específicos de Windows por parte del sistema. Por ejemplo, en un servidor de 8 CPU en el que se ejecutan dos instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (instancias A y B), el administrador del sistema puede utilizar la opción affinity mask para asignar el primer conjunto de 4 CPU a la instancia A y el segundo conjunto de 4 CPU a la instancia B. Para configurar más de 32 procesadores, establezca las opciones affinity mask y affinity64 mask. Estos son los valores para `affinity mask`:  
   
@@ -114,7 +114,7 @@ GO
 |127|01111111|0, 1, 2, 3, 4, 5 y 6|  
 |255|11111111|0, 1, 2, 3, 4, 5, 6 y 7|  
   
- La opción affinity mask es una opción avanzada. Si utiliza el procedimiento almacenado del sistema sp_configure para cambiar la configuración, puede cambiar `affinity mask` solo cuando **Mostrar opciones avanzadas** está establecido en 1. Después de ejecutar el comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la nueva configuración se aplica inmediatamente sin necesidad de reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ La opción affinity mask es una opción avanzada. Si usa el sp_configure procedimiento almacenado del sistema para cambiar la configuración, solo puede cambiar `affinity mask` si **Mostrar opciones avanzadas** está establecido en 1. Después de ejecutar el comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la nueva configuración se aplica inmediatamente sin necesidad de reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="non-uniform-memory-access-numa"></a>Acceso no uniforme a memoria (NUMA)  
  Cuando se utiliza el acceso no uniforme a memoria (NUMA) basado en hardware y se ha establecido affinity mask, se establecerá la afinidad de cada programador de un nodo con su propia CPU. Cuando no se establece la opción affinity mask, se establece la afinidad de cada programador con el grupo de CPU en un nodo NUMA y un programador asignado al nodo NUMA N1 puede programar trabajos en cualquier CPU del nodo, pero no en las CPU asociadas a otro nodo.  
@@ -127,10 +127,10 @@ GO
 ### <a name="startup"></a>Inicio  
  Si una máscara de afinidad especificada infringe las directivas de las licencias durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al adjuntar la base de datos, el nivel del motor completará el proceso de inicio o la operación para adjuntar o restaurar la base de datos; después, volverá a establecer en cero el valor de ejecución de sp_configure para la opción affinity mask y enviará un mensaje de error al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="reconfigure"></a>Reconfigurar  
+### <a name="reconfigure"></a>Volver a configurar  
  Si una máscara de afinidad determinada infringe las directivas de las licencias en la ejecución del comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , se envía un mensaje de error a la sesión de cliente y al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitando que el administrador de la base de datos vuelva a configurar la máscara de afinidad. En este caso no se acepta ningún comando RECONFIGURE WITH OVERRIDE.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

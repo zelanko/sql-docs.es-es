@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754418"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos).
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quórum: cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos)
   Siempre que se establece un testigo para una sesión de creación de reflejo de la base de datos, es necesario disponer de *quórum* . Quórum es una relación que existe cuando dos o más instancias de servidor en una sesión de creación de reflejo de la base de datos están conectadas entre sí. Normalmente, el quórum implica a tres instancias de servidor interconectadas. Cuando se establece un testigo, se requiere quórum para que la base de datos esté disponible. El quórum se ha diseñado para sesiones en modo de alta seguridad con conmutación automática por error y garantiza que una base de datos pertenezca a un solo asociado cada vez.  
   
  Si una instancia concreta de servidor se desconecta de una sesión de creación de reflejo, esa instancia pierde el quórum. Si no hay instancias de servidor conectadas, la sesión pierde el quórum y la base de datos no está disponible. Hay tres tipos de quórum posibles:  
@@ -41,7 +41,7 @@ ms.locfileid: "62754418"
   
  En la siguiente ilustración se muestran estos tipos de quórum.  
   
- ![Cuórums: completo; testigo y asociado; los dos asociados](../media/dbm-failovautoquorum.gif "Cuórums: completo; testigo y asociado; los dos asociados")  
+ ![Quórums: completo; testigo y asociado; los dos asociados](../media/dbm-failovautoquorum.gif "Quórums: completo; testigo y asociado; los dos asociados")  
   
  Mientras el servidor principal actual tenga quórum, este servidor posee el rol de servidor principal y continúa dando servicio a la base de datos, salvo que el propietario de la base de datos realice una conmutación por error manual. Si el servidor principal pierde el quórum, deja de ofrecer la base de datos. La conmutación automática por error puede ocurrir solamente si la base de datos principal pierde el quórum, lo que garantiza que ya no da servicio a la base de datos.  
   
@@ -55,7 +55,8 @@ ms.locfileid: "62754418"
   
  Los escenarios de quórum para el modo de alta seguridad son los siguientes:  
   
--   *Quórum completo* , que está formado por ambos asociados y el testigo.  
+-   
+  *Quórum completo* , que está formado por ambos asociados y el testigo.  
   
      Normalmente, las tres instancias de servidor participan en un cuórum tripartito llamado *cuórum completo*. En un quórum completo, los servidores principal y reflejado continúan realizando sus respectivos roles (salvo que se produzca la conmutación por error manual).  
   
@@ -101,10 +102,10 @@ ms.locfileid: "62754418"
   
  En el escenario 2, el testigo pierde el cuórum, mientras que los asociados, **Partner_A** y **Partner_B**, conservan el cuórum entre sí y la base de datos permanece en línea. A continuación, los asociados pierden también su quórum y la base de datos se queda sin conexión. Más adelante, el servidor principal, **Partner_A**, se vuelve a conectar al testigo y recupera el cuórum. El testigo confirma que **Partner_A** sigue siendo el propietario del rol principal y **Partner_A** vuelve a poner la base de datos en línea.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring Witness](database-mirroring-witness.md)   
+ [Testigo de creación de reflejo de la base de datos](database-mirroring-witness.md)   
  [Posibles errores durante la creación de reflejo de la base de datos](possible-failures-during-database-mirroring.md)   
  [Estados de creación de reflejo &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

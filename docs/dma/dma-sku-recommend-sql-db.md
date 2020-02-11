@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72586737"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificación de la SKU de Azure SQL Database/Instancia administrada adecuada para la base de datos local
@@ -29,7 +29,7 @@ Este artículo se centra en la característica de recomendaciones de SKU de Azur
 
 - Base de datos única
 - Grupos elásticos
-- instancia administrada
+- Instancia administrada
 
 La característica de recomendaciones de SKU le permite identificar el mínimo recomendado Azure SQL Database la SKU de una sola base de datos o instancia administrada en función de los contadores de rendimiento recopilados de los equipos que hospedan las bases de datos. La característica proporciona recomendaciones relacionadas con el plan de tarifa, el nivel de proceso y el tamaño máximo de los datos, así como el costo estimado al mes. También ofrece la posibilidad de aprovisionar masivamente bases de datos únicas e instancias administradas en Azure para todas las bases de datos recomendadas.
 
@@ -102,7 +102,7 @@ Además, seleccione uno de los argumentos siguientes:
     - **/AzureAuthenticationTenantId**: el inquilino de autenticación.
     - **/AzureAuthenticationClientId**: el identificador de cliente de la aplicación de AAD que se usa para la autenticación.
     - Una de las siguientes opciones de autenticación:
-      - Interactiva
+      - Interactive
         - **AzureAuthenticationInteractiveAuthentication**: establézcalo en true para una ventana emergente de autenticación.
       - Basado en certificados
         - **AzureAuthenticationCertificateStoreLocation**: se establece en la ubicación del almacén de certificados (por ejemplo, "CurrentUser").
@@ -115,7 +115,7 @@ Además, seleccione uno de los argumentos siguientes:
 
 Por último, hay un argumento opcional que puede usar para especificar las bases de datos para las que desea recomendaciones: 
 
-- **/SkuRecommendationDatabasesToRecommend**: una lista de bases de datos para las que se van a hacer recomendaciones. Los nombres de base de datos distinguen mayúsculas de minúsculas y deben (1) encontrarse en Input. csv, (2) cada una entre comillas dobles y (3) separadas por un solo espacio entre los nombres (por ejemplo,/SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3") . Omitir este parámetro garantiza que se proporcionen recomendaciones para todas las bases de datos de usuario identificadas en el archivo Input. csv.  
+- **/SkuRecommendationDatabasesToRecommend**: una lista de bases de datos para las que se van a hacer recomendaciones. Los nombres de las bases de datos distinguen mayúsculas de minúsculas y deben (1) encontrarse en Input. csv, (2) cada una de ellas entre comillas dobles y (3) separadas por un solo espacio entre los nombres (por ejemplo,/SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3"). Omitir este parámetro garantiza que se proporcionen recomendaciones para todas las bases de datos de usuario identificadas en el archivo Input. csv.  
 
 A continuación se muestran algunas invocaciones de ejemplo:
 
@@ -184,7 +184,7 @@ A continuación se muestra una descripción de cada columna del archivo de salid
 - **ExclusionReasons** : este valor está en blanco si se recomienda un nivel. Para cada nivel que no se recomienda, se proporcionan las razones por las que no se ha seleccionado.
 - **AppliedRules** : notación breve de las reglas que se aplicaron.
 
-El nivel final recomendado (es decir, **MetricType**) y el valor (es decir, **MetricValue**): se encontró donde la columna **IsTierRecommended** es true, refleja la SKU mínima necesaria para que las consultas se ejecuten en Azure con una tasa de éxito similar a la bases de datos locales. En el caso de la instancia administrada, DMA actualmente admite recomendaciones para el 8vcore que se usa con más frecuencia para 40vcore SKU. Por ejemplo, si la SKU mínima recomendada es S4 para el nivel estándar, la elección de S3 o inferior hará que las consultas agoten el tiempo de espera o no se ejecuten.
+El nivel final recomendado (es decir, **MetricType**) y el valor (es decir, **MetricValue**): se encuentra donde la columna **IsTierRecommended** es true, refleja la SKU mínima necesaria para que las consultas se ejecuten en Azure con una tasa de éxito similar a las bases de datos locales. En el caso de la instancia administrada, DMA actualmente admite recomendaciones para el 8vcore que se usa con más frecuencia para 40vcore SKU. Por ejemplo, si la SKU mínima recomendada es S4 para el nivel estándar, la elección de S3 o inferior hará que las consultas agoten el tiempo de espera o no se ejecuten.
 
 El archivo HTML contiene esta información en un formato gráfico. Proporciona un medio descriptivo para ver la recomendación final y aprovisionar la siguiente parte del proceso. En la sección siguiente se muestra más información sobre la salida HTML.
 
@@ -206,7 +206,7 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
     - **Región** : la región en la que se aprovisionan las bases de datos. Asegúrese de que la suscripción admite la región seleccionada.
     - **Nombre del servidor** : el servidor de Azure SQL Database en el que desea implementar las bases de datos. Si escribe un nombre de servidor que no existe, se creará.
     - **Nombre de usuario de administrador** : nombre de usuario del administrador del servidor.
-    - **Contraseña de administrador** : la contraseña de administrador del servidor. La contraseña debe tener al menos ocho caracteres y no más de 128 caracteres de longitud. La contraseña debe contener caracteres de tres de las siguientes categorías: Letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #,%, etc.). La contraseña no puede contener ninguna o una parte (3 + letras consecutivas) del nombre de usuario.
+    - **Contraseña de administrador** : la contraseña de administrador del servidor. La contraseña debe tener al menos ocho caracteres y no más de 128 caracteres de longitud. La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.). La contraseña no puede contener ninguna o una parte (3 + letras consecutivas) del nombre de usuario.
 
 2. Revise las recomendaciones para cada base de datos y modifique el plan de tarifa, el nivel de proceso y el tamaño máximo de los datos según sea necesario. Asegúrese de anular la selección de las bases de datos que no quiera aprovisionar actualmente.
 
@@ -224,7 +224,7 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
     - **Región** : la región en la que se aprovisionan las bases de datos. Asegúrese de que la suscripción admite la región seleccionada.
     - **Nombre de instancia** : la instancia de Azure SQL instancia administrada a la que desea migrar las bases de datos. El nombre de instancia solo puede contener letras minúsculas, números y '-', pero no puede comenzar ni terminar con '-' ni tener más de 63 caracteres.
     - **Nombre de usuario de administrador de instancia** : nombre de usuario de administrador de instancia. Asegúrese de que el nombre de inicio de sesión cumple los requisitos siguientes: es un identificador de SQL y no un nombre de sistema típico (por ejemplo, administrador, administrador, SA, raíz, dbmanager, LoginManager, etc.) o un usuario o rol de base de datos integrado (por ejemplo, DBO, invitado, público, etc.). Asegúrese de que su nombre no contenga espacios en blanco, caracteres Unicode o caracteres no alfabéticos, y que no empiece por números o símbolos. 
-    - **Contraseña de administrador de instancia** : la contraseña de administrador de la instancia. La contraseña debe tener al menos 16 caracteres y no más de 128 caracteres de longitud. La contraseña debe contener caracteres de tres de las siguientes categorías: Letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #,%, etc.). La contraseña no puede contener ninguna o una parte (3 + letras consecutivas) del nombre de usuario.
+    - **Contraseña de administrador de instancia** : la contraseña de administrador de la instancia. La contraseña debe tener al menos 16 caracteres y no más de 128 caracteres de longitud. La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.). La contraseña no puede contener ninguna o una parte (3 + letras consecutivas) del nombre de usuario.
     - **Nombre de la red virtual** : el nombre de la red virtual con la que se debe aprovisionar la instancia administrada. Escriba un nombre de red virtual existente.
     - **Nombre de subred** : el nombre de subred en el que se debe aprovisionar la instancia administrada. Escriba un nombre de subred existente.
 

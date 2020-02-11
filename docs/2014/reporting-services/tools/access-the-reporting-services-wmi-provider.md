@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efbe03a4aab65f792b352eeb5b6c5130c4c32335
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783205"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Obtener acceso al proveedor WMI de Reporting Services
@@ -34,8 +34,8 @@ ms.locfileid: "72783205"
   
 |Clase|Espacio de nombres|Descripción|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v11|Proporciona la información básica requerida para que un cliente se conecte a un servidor de informes instalado.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v11\Admin|Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.<br /><br /> **\*\* Importante \*\*** Esta clase solo está disponible con privilegios de administrador.|  
+|MSReportServer_Instance|root\microsoft\sqlserver\reportserver\ RS_*\<nombredeinstanciacodificada>* \v11|Proporciona la información básica requerida para que un cliente se conecte a un servidor de informes instalado.|  
+|MSReportServer_ConfigurationSetting|root\microsoft\sqlserver\reportserver\ RS_*\<nombredeinstanciacodificada>* \v11\Admin|Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.<br /><br /> **\*\* Importante \*\*** Esta clase solo está disponible con privilegios de administrador.|  
   
  Se crea una instancia de cada una de las clases anteriores para cada instancia del servidor de informes. Puede utilizar cualquier herramienta de Microsoft o de terceros para tener acceso a los objetos de WMI expuestos por el servidor de informes, incluidas las interfaces de programación de WMI, expuestas por .NET Framework. En este tema se describe cómo acceder y usar las instancias de clases WMI con el comando de PowerShell [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
   
@@ -86,6 +86,6 @@ $rsconfig = Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_M
 $rsconfig.GetAdminSiteUrl()  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  [Referencia de la biblioteca de proveedores WMI de Reporting Services &#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
- [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  

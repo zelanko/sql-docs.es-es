@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797964"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender una base de datos de disponibilidad (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "72797964"
   
 |Base de datos suspendida|Efecto del comando de suspensión|  
 |------------------------|-------------------------------|  
-|Base de datos secundaria|Solo la base de datos secundaria local se suspende y su estado de sincronización se pasa a NOT SYNCHRONIZED. Otras bases de datos secundarias no se ven afectadas. La base de datos suspendida deja de recibir y aplicar datos (registros) y comienza a quedar rezagada respecto de la principal base de datos principal. Las conexiones existentes en la secundaria legible siguen estando utilizables. Las nuevas conexiones a la base de datos suspendida en la secundaria legible no se permiten hasta que se reanude el movimiento de datos.<br /><br /> La base de datos principal sigue estando disponible. Si suspende cada una de las bases de datos secundarias correspondientes, la base de datos principal se queda expuesta.<br /><br /> **\*\* Importante \*\*** Mientras se suspende una base de datos secundaria, la cola de envío de la base de datos principal correspondiente acumulará registros de transacciones sin enviar. Las conexiones a la réplica secundaria devuelven los datos que estaban disponibles en el momento en que suspendió el movimiento de datos.|  
+|Base de datos secundaria|Solo la base de datos secundaria local se suspende y su estado de sincronización se pasa a NOT SYNCHRONIZED. Otras bases de datos secundarias no se ven afectadas. La base de datos suspendida deja de recibir y aplicar datos (registros) y comienza a quedar rezagada respecto de la principal base de datos principal. Las conexiones existentes en la secundaria legible siguen estando utilizables. Las nuevas conexiones a la base de datos suspendida en la secundaria legible no se permiten hasta que se reanude el movimiento de datos.<br /><br /> La base de datos principal sigue estando disponible. Si suspende cada una de las bases de datos secundarias correspondientes, la base de datos principal se queda expuesta.<br /><br /> ** \* Importante \* \* ** Mientras se suspende una base de datos secundaria, la cola de envío de la base de datos principal correspondiente acumulará las entradas del registro de transacciones sin enviar. Las conexiones a la réplica secundaria devuelven los datos que estaban disponibles en el momento en que suspendió el movimiento de datos.|  
 |Base de datos principal|La base de datos principal detiene el movimiento de datos a cada base de datos secundaria conectada. La base de datos principal continúa ejecutándose en un modo expuesto. La base de datos principal sigue disponible para los clientes y las conexiones existentes en una base de datos secundaria legible permanecen utilizables y se pueden establecer nuevas conexiones.|  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "72797964"
   
      [Seguridad](#Security)  
   
--   **Para suspender una base de datos con:**  
+-   **Para suspender una base de datos, utilizando:**  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -55,11 +55,11 @@ ms.locfileid: "72797964"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Seguimiento:** [Prevención de un registro de transacciones lleno](#FollowUp)  
+-   **Seguimiento:** [evitar un registro de transacciones lleno](#FollowUp)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Un comando SUSPEND realiza la devolución en cuanto haya sido aceptado por la réplica que hospeda la base de datos de destino, pero la suspensión real de la base de datos se produce de forma asincrónica.  
@@ -77,7 +77,7 @@ ms.locfileid: "72797964"
   
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para suspender una base de datos**  
   
 1.  En el Explorador de objetos, conéctese a la instancia de servidor que hospeda la réplica de disponibilidad en la que desea suspender una base de datos y expanda el árbol. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
@@ -102,7 +102,7 @@ ms.locfileid: "72797964"
   
 2.  Suspenda la base de datos mediante la siguiente instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr):  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* Set HADR Suspend  
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para suspender una base de datos**  
@@ -118,24 +118,24 @@ ms.locfileid: "72797964"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, vea [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de PowerShell de SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a>Seguimiento: evitar un registro de transacciones lleno  
  Normalmente, cuando se lleva a cabo un punto de comprobación automático en una base de datos, su registro de transacciones se trunca en dicho punto de comprobación después de la siguiente copia de seguridad del registro. Sin embargo, mientras una base de datos secundaria está suspendida, todas las entradas de registro actuales permanecen activas en la base de datos principal. Si el registro de transacciones se llena (bien porque alcanza su tamaño máximo o porque la instancia del servidor se queda sin espacio), la base de datos no puede realizar más actualizaciones.  
   
  Para evitar este problema, debe realizar una de las siguientes acciones:  
   
 -   Agregar más espacio del registro para la base de datos principal.  
   
--   Reanudar la base de datos secundaria antes de que el registro se llene. Para obtener más información, vea [Resume an Availability Database &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
+-   Reanudar la base de datos secundaria antes de que el registro se llene. Para obtener más información, vea [Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
   
 -   Quitar la base de datos secundaria. Para obtener más información, vea [Quitar una base de datos secundaria de un grupo de disponibilidad &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md).  
   
- **Para solucionar problemas en un registro de transacciones lleno**  
+ **Para solucionar problemas de un registro de transacciones lleno**  
   
 -   [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
@@ -143,6 +143,6 @@ ms.locfileid: "72797964"
   
 -   [Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Editor de transformación de limpieza de DQS | Microsoft Docs
+title: Cuadro de diálogo Editor de transformación limpieza de DQS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059420"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Cuadro de diálogo Editor de transformación Limpieza de DQS
@@ -47,14 +47,14 @@ ms.locfileid: "66059420"
  **Administrador de conexiones de calidad de datos**  
  Seleccione un administrador de conexiones DQS existente de la lista, o bien haga clic en **Nuevo**para crear una conexión.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones con el cuadro de diálogo **Administrador de conexiones de limpieza de DQS** . Vea [Set the options in the DQS Cleansing Connection Manager dialog box](#manager).  
   
  **Base de conocimiento de calidad de datos**  
  Seleccione una base de conocimiento de DQS existente para el origen de datos conectado. Para obtener más información acerca de la base de conocimiento de DQS, vea [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Cifrar conexión**  
- Especifique si desea cifrar la conexión, para cifrar la transferencia de datos entre el servidor DQS y [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ Especifique si desea cifrar la conexión para cifrar la transferencia de datos entre el servidor DQS y [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Dominios disponibles**  
  Enumera los dominios disponibles para la base de conocimiento seleccionada. Hay dos tipos de dominios: dominios únicos y dominios compuestos que contienen dos o más dominios únicos.  
@@ -101,17 +101,17 @@ ms.locfileid: "66059420"
  **Estandarizar salida**  
  Indica si los datos se van a generar en el formato estandarizado según el formato de salida que se haya definido para los dominios. Para más información sobre el formato estandarizado, vea [Limpieza de datos](../../2014/data-quality-services/data-cleansing.md).  
   
- **Confianza**  
+ **Confidence**  
  Indica si se debe incluir el nivel de confianza para los datos corregidos. El nivel de confianza indica el grado de certeza de DQS para la corrección o sugerencia. Para más información sobre los niveles de confianza, vea [Limpieza de datos](../../2014/data-quality-services/data-cleansing.md).  
   
  **Reason**  
  Indica si se debe incluir el motivo de la corrección de los datos.  
   
  **Datos anexados**  
- Indica si se van a generar datos adicionales que se hayan recibido de un proveedor de datos de referencia existente. Para más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+ Indica si se van a generar datos adicionales que se hayan recibido de un proveedor de datos de referencia existente. Para obtener más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
  **Esquema de datos anexados**  
- Indica si se va a generar el esquema de datos. Para obtener más información, consulte [adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ Indica si se va a generar el esquema de datos. Para obtener más información, vea [adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ##  <a name="manager"></a> Establecer las opciones en el cuadro de diálogo Administrador de conexiones de limpieza de DQS  
  **Nombre del servidor**  
@@ -128,7 +128,7 @@ ms.locfileid: "66059420"
   
 3.  Haga clic en **Agregar**.  
   
-## <a name="see-also"></a>Vea también  
- [Aplicar reglas de calidad de los datos al origen de datos](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
+## <a name="see-also"></a>Consulte también  
+ [Aplicación de reglas de calidad de los datos al origen de datos](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

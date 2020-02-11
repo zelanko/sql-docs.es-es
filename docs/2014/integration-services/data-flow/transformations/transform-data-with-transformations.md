@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770311"
 ---
 # <a name="transform-data-with-transformations"></a>Transformar datos con transformaciones
@@ -26,7 +26,7 @@ ms.locfileid: "62770311"
   
  El siguiente diagrama muestra un flujo de datos simple que tiene un origen, dos transformaciones y un destino.  
   
- ![Data flow](../../media/mw-dts-08.gif "Data flow")  
+ ![Flujo de datos](../../media/mw-dts-08.gif "flujo de datos")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ofrecen la siguiente funcionalidad:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62770311"
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tarea Flujo de datos](../../control-flow/data-flow-task.md)   
  [Flujo de datos](../data-flow.md)   
  [Conectar componentes con rutas de acceso](../../connect-components-with-paths.md)   

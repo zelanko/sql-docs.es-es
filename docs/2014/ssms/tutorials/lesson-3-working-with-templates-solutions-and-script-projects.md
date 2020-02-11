@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Trabajar con plantillas, soluciones y proyectos de Script | Microsoft Docs'
+title: 'Lección 3: Trabajar con plantillas, soluciones, proyectos de script | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753022"
 ---
-# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>Lección 3: Uso de plantillas, soluciones y proyectos de script
+# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>Lección 3: Trabajar con plantillas, soluciones, proyectos de script
   Con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede crear plantillas personalizadas, así como soluciones y proyectos de scripts.  
   
  En esta lección se incluyen los temas siguientes:  

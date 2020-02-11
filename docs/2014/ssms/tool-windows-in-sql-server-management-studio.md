@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661857"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Ventanas de herramientas de SQL Server Management Studio
@@ -25,7 +25,7 @@ ms.locfileid: "62661857"
   
 |||  
 |-|-|  
-|**Herramienta**|**Finalidad**|  
+|**Herramienta**|**Propósito**|  
 |[Explorador de objetos](object/object-explorer.md)|Examinar servidores, crear y ubicar objetos, administrar orígenes de datos y ver registros. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
 |[Explorador de soluciones](solution/solution-explorer.md)|Almacenar y organizar scripts e información de conexión relacionada en proyectos denominados Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Es posible almacenar varios Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como Soluciones y utilizar el control de código fuente para administrar los scripts a medida que evolucionan. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
 |[Explorador de plantillas](template/template-explorer.md)|Crear consultas basadas en las plantillas existentes. También es posible crear consultas personalizadas o modificar las plantillas existentes de modo que se ajusten a su situación. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
@@ -37,7 +37,7 @@ ms.locfileid: "62661857"
   
 -   Abrir una ventana del Editor SQL conectada a una base de datos específica del Explorador de objetos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

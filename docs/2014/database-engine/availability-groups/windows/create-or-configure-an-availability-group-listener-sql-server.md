@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bddf15e6469e2fd347c716e98e750c077bcc29e7
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797687"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Crear o configurar un agente de escucha del grupo de disponibilidad (SQL Server)
-  En este tema se describe cómo crear o configurar un único *agente de escucha del grupo de disponibilidad* para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  En este tema se describe cómo crear o configurar un único *agente de escucha de grupo de disponibilidad* para un grupo de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]disponibilidad [!INCLUDE[tsql](../../../includes/tsql-md.md)]AlwaysOn mediante, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]o PowerShell en.  
   
 > [!IMPORTANT]  
 >  Para crear el primer agente de escucha del grupo de disponibilidad de un grupo de disponibilidad, se recomienda encarecidamente usar [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite crear un agente de escucha directamente en el clúster de WSFC salvo cuando sea necesario, por ejemplo para crear un agente de escucha adicional.  
   
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="DoesListenerExist"></a> ¿Existe ya un agente de escucha para este grupo de disponibilidad?  
  **Para determinar si ya existe un agente de escucha para el grupo de disponibilidad**  
@@ -41,7 +41,7 @@ ms.locfileid: "72797687"
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Solo puede crear un agente de escucha por cada grupo de disponibilidad mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Normalmente, cada grupo de disponibilidad necesita un único agente de escucha. Sin embargo, algunos escenarios de clientes necesitan varios agentes de escucha para un grupo de disponibilidad.   Después de crear un agente de escucha mediante SQL Server, puede usar Windows PowerShell para los clústeres de conmutación por error o el Administrador de clústeres de conmutación por error de WSFC para crear agentes de escucha adicionales. Para obtener más información, vea [Crear un agente de escucha adicional para un grupo de disponibilidad (opcional)](#CreateAdditionalListener) más adelante en este tema.  
+-   Solo puede crear un agente de escucha por cada grupo de disponibilidad mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Normalmente, cada grupo de disponibilidad necesita un único agente de escucha. Sin embargo, algunos escenarios de clientes necesitan varios agentes de escucha para un grupo de disponibilidad.   Después de crear un agente de escucha mediante SQL Server, puede usar Windows PowerShell para los clústeres de conmutación por error o el Administrador de clústeres de conmutación por error de WSFC para crear agentes de escucha adicionales. Para obtener más información, vea [Crear un agente de escucha adicional para un grupo de disponibilidad (opcional)](#CreateAdditionalListener)más adelante en este tema.  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
  Aunque no es obligatorio, se recomienda usar una dirección IP estática si hay varias configuraciones de subred.  
@@ -68,7 +68,7 @@ ms.locfileid: "72797687"
 |Permisos|Vínculo|  
 |-----------------|----------|  
 |El nombre de objeto de clúster (CNO) del clúster de WSFC que hospeda el grupo de disponibilidad debe tener permiso para **crear objetos de equipo** .<br /><br /> En Active Directory, un CNO de forma predeterminada no tiene permiso para **crear objetos de equipo** explícitamente y puede crear diez objetos de equipo virtual (VCO). Una vez creados los 10 VCO, no podrán crearse otros adicionales. Puede evitar esto si concede el permiso de forma explícita al CNO del clúster de WSFC. Observe que los VCO para los grupos de disponibilidad que ha eliminado no son eliminados de forma automática en Active Directory y se contabilizan para el límite predeterminado de 10 VCO a menos que sean eliminados de forma manual.<br /><br /> Nota: En algunas organizaciones, la directiva de seguridad prohíbe conceder permiso para **crear objetos de equipo** a cuentas de usuario individuales.|*Steps for configuring the account for the person who installs the cluster (Pasos para configurar la cuenta para la persona que instala el clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account (Pasos para el ensayo previo de la cuenta de nombre de clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|Si su organización necesita que preconfigure la cuenta de equipo para un nombre de red virtual de agente de escucha, deberá pertenecer al grupo **Operador de cuentas** o pedir ayuda a su administrador de dominio.<br /><br /> Sugerencia: generalmente, es más sencillo no preconfigurar la cuenta del equipo para un nombre de red virtual de agente de escucha. Si puede, deje que la cuenta se cree y configure automáticamente al ejecutar el asistente para alta disponibilidad de WSFC.|*Pasos para el ensayo previo de una cuenta para un servicio o una aplicación en clúster* en la [Guía paso a paso de clúster de conmutación por error: configuran cuentas en Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
+|Si su organización necesita que preconfigure la cuenta de equipo para un nombre de red virtual de agente de escucha, deberá pertenecer al grupo **Operador de cuentas** o pedir ayuda a su administrador de dominio.<br /><br /> Sugerencia: generalmente, es más sencillo no preconfigurar la cuenta del equipo para un nombre de red virtual de agente de escucha. Si puede, deje que la cuenta se cree y configure automáticamente al ejecutar el asistente para alta disponibilidad de WSFC.|*Pasos para preconfigurar una cuenta para un servicio o aplicación en clúster* en la [Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
   
 ###  <a name="SqlPermissions"></a> Permisos de SQL Server  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72797687"
 |Para crear un agente de escucha del grupo de disponibilidad.|Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
 |Para modificar un agente de escucha del grupo de disponibilidad existente|Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 > [!TIP]  
 >  El [Asistente para nuevo grupo de disponibilidad](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) admite la creación del agente de escucha de un nuevo grupo de disponibilidad.  
@@ -119,19 +119,19 @@ ms.locfileid: "72797687"
   
  Estas son sus columnas:  
   
- **Subret**  
+ **Subred**  
  Muestra el identificador de cada subred que se agrega al agente de escucha del grupo de disponibilidad.  
   
  **Dirección IP**  
  Muestra la dirección IP de una subred determinada.  Para una subred determinada, la dirección IP es una dirección IPv4 o una dirección IPv6.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en Agregar para agregar una dirección IP estática a una subred seleccionada o a otra subred para este agente de escucha. Se abrirá el cuadro de diálogo de **Agregar dirección IP** . Para obtener más información, vea el tema de ayuda [Agregar dirección IP &#40;cuadro de diálogo - SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Quitar**  
+ **Remove**  
  Haga clic para quitar la subred seleccionada de este agente de escucha.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Haga clic para crear el agente de escucha del grupo de disponibilidad especificado.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -191,23 +191,24 @@ ms.locfileid: "72797687"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help**  en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, vea [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Para configurar y usar el proveedor de SQL Server PowerShell, vea [proveedor de SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
 ## <a name="troubleshooting"></a>Solución de problemas  
   
-###  <a name="ADQuotas"></a> No se ha podido crear un agente de escucha del grupo de disponibilidad por las cuotas de Active Directory  
- La creación de un nuevo agente de escucha del grupo de disponibilidad puede producir un error en la creación porque se ha alcanzado una cuota de Active Directory para la cuenta de equipo del nodo de clúster que participa.  Para obtener más información, vea los siguientes artículos:  
+###  <a name="ADQuotas"></a>No se pudo crear un agente de escucha del grupo de disponibilidad debido a Active Directory cuotas  
+ La creación de un nuevo agente de escucha del grupo de disponibilidad puede producir un error en la creación porque se ha alcanzado una cuota de Active Directory para la cuenta de equipo del nodo de clúster que participa.  Para más información, consulte los siguientes artículos.  
   
--   [Hipervínculo "https://support.microsoft.com/kb/307532" cómo solucionar problemas de la cuenta de servicio de Cluster Server cuando modifica objetos de equipo](https://support.microsoft.com/kb/307532)  
+-   [HYPERLINK "https://support.microsoft.com/kb/307532" cómo solucionar problemas de la cuenta de servicio de Cluster Server cuando modifica objetos de equipo](https://support.microsoft.com/kb/307532)  
   
--   [Cuotas de Active Directory de hipervínculo "https://technet.microsoft.com/library/cc904295(WS.10).aspx"](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [Hipervínculohttps://technet.microsoft.com/library/cc904295(WS.10).aspx"" Active Directory cuotas](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a> Seguimiento: después de crear un agente de escucha del grupo de disponibilidad  
+##  <a name="FollowUp"></a>Seguimiento: después de crear un agente de escucha del grupo de disponibilidad  
   
-###  <a name="MultiSubnetFailover"></a> Palabra clave MultiSubnetFailover y características asociadas  
- `MultiSubnetFailover` es una nueva palabra clave de la cadena de conexión que se usa para habilitar la conmutación por error más rápida con los grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error AlwaysOn en SQL Server 2012. Las tres subcaracterísticas siguientes se habilitan cuando se establece `MultiSubnetFailover=True` en la cadena de conexión:  
+###  <a name="MultiSubnetFailover"></a>Palabra clave MultiSubnetFailover y características asociadas  
+ 
+  `MultiSubnetFailover` es una nueva palabra clave de la cadena de conexión que se usa para habilitar la conmutación por error más rápida con los grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error AlwaysOn en SQL Server 2012. Las tres subcaracterísticas siguientes se habilitan cuando se establece `MultiSubnetFailover=True` en la cadena de conexión:  
   
 -   Conmutación por error de varias subredes más rápida a un agente de escucha de varias subredes para instancias del clúster de conmutación por error o un grupo de disponibilidad AlwaysOn.  
   
@@ -219,35 +220,36 @@ Para configurar y usar el proveedor de SQL Server PowerShell, vea [proveedor de 
   
     -   Esto sirve para agregar compatibilidad con la resolución de una instancia con nombre para instancias del clúster de conmutación por error AlwaysOn con varios extremos de subred.  
   
- **MultiSubnetFailover=True no se admite en .NET Framework 3.5 u OLEDB**  
+ **MultiSubnetFailover = true no compatible con .NET Framework 3,5 u OLEDB**  
   
- **Problema:** si la instancia del clúster de conmutación por error o el grupo de disponibilidad tiene un nombre de escucha (denominado nombre de red o punto de acceso cliente en el Administrador de clústeres de WSFC) que depende de varias direcciones IP de subredes diferentes y usa ADO.NET con .NET Framework 3.5 SP1 o SQL Native Client 11.0 OLEDB, puede que se agote el tiempo de espera de conexión en el 50 % de las solicitudes de conexión de cliente al agente de escucha de grupo de disponibilidad.  
+ **Problema:** Si el grupo de disponibilidad o la instancia de clúster de conmutación por error tiene un nombre de agente de escucha (conocido como el nombre de red o el punto de acceso de cliente en el administrador de clústeres de WSFC) en función de varias direcciones IP de distintas subredes, y usa .NET Framework ADO.NET 3.5 SP1 o SQL Native Client 11,0 OLEDB, es posible que el 50% de las solicitudes de conexión de cliente al agente  
   
- **Soluciones alternativas:** se recomienda el uso de una de las tareas siguientes.  
+ **Soluciones alternativas:** Le recomendamos que realice una de las siguientes tareas.  
   
 -   Si no tiene permiso para manipular recursos de clúster, cambie el tiempo de espera de la conexión a 30 segundos (este valor produce un tiempo de espera de TCP de 20 segundos además de un búfer de 10 segundos).  
   
-     **Ventajas**: si se produce una conmutación por error entre subredes, el tiempo de recuperación de cliente es breve.  
+     **Ventajas**: si se produce una conmutación por error entre subredes, el tiempo de recuperación del cliente es breve.  
   
-     **Inconvenientes**: la mitad de las conexiones de cliente durará más de 20 segundos.  
+     **Inconvenientes**: la mitad de las conexiones de cliente tardará más de 20 segundos  
   
 -   Si tiene permiso para manipular recursos de clúster, el enfoque más recomendado consiste en establecer el nombre de red del agente de escucha del grupo de disponibilidad en `RegisterAllProvidersIP=0`. Para obtener más información, vea "Configuración de RegisterAllProvidersIP" más adelante en esta sección.  
   
-     **Ventajas:** no necesita aumentar el valor de tiempo de espera de la conexión de cliente.  
+     **Ventajas:** No es necesario aumentar el valor de tiempo de espera de la conexión de cliente.  
   
-     **Inconvenientes:** Si se produce una conmutación por error entre subredes, el tiempo de recuperación del cliente podría ser de 15 minutos o más, según el valor de la `HostRecordTTL` y la configuración de la programación de replicación DNS/AD entre sitios.  
+     **Inconvenientes:** Si se produce una conmutación por error entre subredes, el tiempo de recuperación del cliente podría ser de 15 minutos o `HostRecordTTL` más, según la configuración y la configuración de la programación de replicación DNS/ad entre sitios.  
   
-###  <a name="RegisterAllProvidersIP"></a> Valor de RegisterAllProvidersIP  
+###  <a name="RegisterAllProvidersIP"></a>Configuración de RegisterAllProvidersIP  
  Cuando se usa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell para crear un agente de escucha del grupo de disponibilidad, el punto de acceso cliente se crea en WSFC con la propiedad `RegisterAllProvidersIP` establecida en 1 (true). El efecto de este valor de propiedad depende de la cadena de conexión de cliente, de la manera siguiente:  
   
 -   Cadenas de conexión que establecen `MultiSubnetFailover` en true  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] establece la propiedad `RegisterAllProvidersIP` en 1 para reducir el tiempo de reconexión después de una conmutación por error para los clientes cuyas cadenas de conexión de cliente especifican `MultiSubnetFailover = True`, tal como se recomienda. Tenga en cuenta que para aprovechar la característica de múltiples subredes del agente de escucha, puede que los clientes necesiten un proveedor de datos que admita la palabra clave `MultiSubnetFailover`. Para más información sobre la compatibilidad del controlador con la conmutación por error de varias subredes, vea [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
+     
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] establece la propiedad `RegisterAllProvidersIP` en 1 para reducir el tiempo de reconexión después de una conmutación por error para los clientes cuyas cadenas de conexión de cliente especifican `MultiSubnetFailover = True`, tal como se recomienda. Tenga en cuenta que para aprovechar la característica de múltiples subredes del agente de escucha, puede que los clientes necesiten un proveedor de datos que admita la palabra clave `MultiSubnetFailover`. Para más información sobre la compatibilidad del controlador con la conmutación por error de varias subredes, vea [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
-     Para obtener información sobre la agrupación en clústeres de varias subredes, vea [Agrupación en clústeres de varias subredes de SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
+     Para obtener información sobre la agrupación en clústeres de varias subredes, vea [Agrupación en clústeres de varias subredes de SQL Server&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
     > [!TIP]  
-    >  Cuando `RegisterAllProvidersIP = 1`, si ejecuta la Validación de WSFC del Asistente para configuración en el clúster de WSFC, el asistente genera el mensaje de advertencia siguiente:  
+    >  Cuando `RegisterAllProvidersIP = 1`, si ejecuta el Asistente para validar una configuración de WSFC en el clúster de WSFC, el asistente genera el mensaje de advertencia siguiente:  
     >   
     >  "La propiedad RegisterAllProviderIP para el nombre de red 'Name:<nombre_red>' está establecida en 1. Para la configuración de clúster actual, este valor debería estar establecido en 0".  
     >   
@@ -255,15 +257,15 @@ Para configurar y usar el proveedor de SQL Server PowerShell, vea [proveedor de 
   
 -   Cadenas de conexión que no establecen `MultiSubnetFailover` en true  
   
-     Cuando `RegisterAllProvidersIP = 1`, los clientes cuyas cadenas de conexión no usan =MultiSubnetFailover = True `MultiSubnetFailover = True`, experimentarán conexiones con latencia elevada. Esto se debe a que estos clientes intentan conexiones a todas las direcciones IP de forma secuencial. En cambio, si `RegisterAllProvidersIP` se cambia a 0, la dirección IP activa se registra en el punto de acceso cliente del clúster de WSFC, lo que reduce la latencia de los clientes heredados. Por lo tanto, si tiene clientes heredados que necesitan conectarse a un agente de escucha del grupo de disponibilidad y no puede usar la propiedad `MultiSubnetFailover`, se recomienda que cambie `RegisterAllProvidersIP` a 0.  
+     Cuando `RegisterAllProvidersIP = 1`, los clientes cuyas cadenas de conexión no usan =MultiSubnetFailover = True `MultiSubnetFailover = True`, experimentarán conexiones con latencia elevada. Esto se debe a que estos clientes intentan conexiones a todas las direcciones IP de forma secuencial. En cambio, si `RegisterAllProvidersIP` se cambia a 0, la dirección IP activa se registra en el punto de acceso cliente del clúster de WSFC, lo que reduce la latencia de los clientes heredados. Por lo tanto, si tiene clientes heredados que necesitan conectarse a un agente de escucha del grupo de disponibilidad `MultiSubnetFailover` y no puede usar la propiedad, `RegisterAllProvidersIP` se recomienda cambiar a 0.  
   
     > [!IMPORTANT]  
     >  Cuando se crea un agente de escucha del grupo de disponibilidad en el clúster de WSFC (GUI del Administrador de clústeres de conmutación por error), `RegisterAllProvidersIP` será 0 (false) de forma predeterminada.  
   
-###  <a name="HostRecordTTL"></a> Configuración de HostRecordTTL  
- De forma predeterminada, los clientes almacenan en caché los registros DNS del clúster durante 20 minutos.  Al reducir el valor de `HostRecordTTL`, el Período de vida (TTL), para el registro almacenado en memoria caché, los clientes heredados pueden reconectarse más rápidamente.  Sin embargo, la reducción del valor `HostRecordTTL` puede producir también mayor tráfico hacia los servidores DNS.  
+###  <a name="HostRecordTTL"></a>Configuración de HostRecordTTL  
+ De forma predeterminada, los clientes almacenan en memoria caché los registros DNS de clúster durante 20 minutos.  Al reducir el valor de `HostRecordTTL`, el Período de vida (TTL), para el registro almacenado en memoria caché, los clientes heredados pueden reconectarse más rápidamente.  Sin embargo, la reducción del valor `HostRecordTTL` puede producir también mayor tráfico hacia los servidores DNS.  
   
-###  <a name="SampleScript"></a> Script de PowerShell de ejemplo para deshabilitar RegisterAllProvidersIP y reducir TTL  
+###  <a name="SampleScript"></a>Script de PowerShell de ejemplo para deshabilitar RegisterAllProvidersIP y reducir TTL  
  En el ejemplo siguiente de PowerShell se muestra cómo configurar los parámetros de clúster `RegisterAllProvidersIP` y `HostRecordTTL` para el recurso de agente de escucha.  El registro DNS se almacenará en memoria caché durante 5 minutos en lugar del valor predeterminado de 20 minutos.  La modificación de los dos parámetros de clúster puede reducir el tiempo necesario para conectarse a la dirección IP correcta después de una conmutación por error para los clientes heredados que no pueden utilizar el parámetro `MultiSubnetFailover`.  Reemplace `yourListenerName` por el nombre del agente de escucha que va a cambiar.  
   
 ```powershell
@@ -276,7 +278,7 @@ Start-ClusterResource yourAGResource
   
  Para obtener más información sobre los tiempos de recuperación durante la conmutación por error, consulte [Client Recovery Latency During Failover](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md#DNS).  
   
-###  <a name="FollowUpRecommendations"></a> Recomendaciones de seguimiento  
+###  <a name="FollowUpRecommendations"></a>Recomendaciones de seguimiento  
  Después de crear un agente de escucha del grupo de disponibilidad:  
   
 -   Pida al administrador de red que reserve la dirección IP del agente de escucha para su uso exclusivo.  
@@ -285,22 +287,22 @@ Start-ClusterResource yourAGResource
   
 -   Anime a los desarrolladores a actualizar las cadenas de conexión de cliente para especificar `MultiSubnetFailover = True`, si es posible. Para más información sobre la compatibilidad del controlador con la conmutación por error de varias subredes, vea [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
-###  <a name="CreateAdditionalListener"></a> Crear un agente de escucha adicional para un grupo de disponibilidad (opcional)  
+###  <a name="CreateAdditionalListener"></a>Crear un agente de escucha adicional para un grupo de disponibilidad (opcional)  
  Después de crear un agente de escucha con SQL Server, puede agregar un agente de escucha adicional de la manera siguiente:  
   
 1.  Cree el agente de escucha mediante una de las herramientas siguientes:  
   
-    -   **Con el Administrador de clústeres de conmutación por error de WSFC:**  
+    -   **Usar el Administrador de clústeres de conmutación por error WSFC:**  
   
         1.  Agregue un punto de acceso de cliente y configure la dirección IP.  
   
-        2.  Ponga el agente de escucha en línea.  
+        2.  Conecte el agente de escucha.  
   
         3.  Agregue una dependencia al recurso de grupo de disponibilidad de WSFC.  
   
          Para obtener información sobre los cuadros de diálogo y las pestañas del Administrador de clústeres de conmutación por error, vea [Interfaz de usuario: complemento Administrador de clúster de conmutación por error](https://technet.microsoft.com/library/cc772502.aspx).  
   
-    -   **Con Windows PowerShell para los clústeres de conmutación por error:**  
+    -   **Usar Windows PowerShell para clústeres de conmutación por error:**  
   
         1.  Use [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) para crear un nombre de red y los recursos de dirección IP.  
   
@@ -312,7 +314,7 @@ Start-ClusterResource yourAGResource
   
 2.  Inicie la escucha de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el nuevo agente de escucha. Después de crear el agente de escucha adicional, conéctese a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal del grupo de disponibilidad y use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell para modificar el puerto de escucha.  
   
- Para obtener más información, vea [Cómo crear varios agentes de escucha para el mismo grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx) (un blog del equipo de AlwaysOn de SQL Server).  
+ Para más información, vea [Cómo crear varios agentes de escucha para el mismo grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx) (un blog del equipo de AlwaysOn de SQL Server).  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -322,11 +324,11 @@ Start-ClusterResource yourAGResource
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [How to create multiple listeners for same availability group (Cómo crear varios agentes de escucha para el mismo grupo de disponibilidad)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
+-   [Cómo crear varios agentes de escucha para el mismo grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
   
--   [Blog del equipo de AlwaysOn SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn de SQL Server: el blog del equipo de AlwaysOn oficial de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>Vea también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Agrupación en clústeres de varias subredes de SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
+ [SQL Server &#40;de agrupación en clústeres de varias subredes SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  

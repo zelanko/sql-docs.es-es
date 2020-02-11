@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056318"
 ---
 # <a name="save-copy-of-package"></a>Guardar copia del paquete
@@ -26,7 +26,7 @@ ms.locfileid: "66056318"
   
 ## <a name="options"></a>Opciones  
  **Ubicación del paquete**  
- Seleccione el tipo de ubicación de almacenamiento en que desea guardar la copia del paquete. Las siguientes opciones están disponibles:  
+ Seleccione el tipo de ubicación de almacenamiento en que desea guardar la copia del paquete. Están disponibles las siguientes opciones:  
   
  **SQL Server**  
   
@@ -46,19 +46,19 @@ ms.locfileid: "66056318"
  **Tipo de autenticación**  
  Seleccione un tipo de autenticación.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
  Si está usando la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione una contraseña.  
   
  **Ruta de acceso del paquete**  
- Escriba la ruta de acceso del paquete o haga clic en el **(...)**  y busque la carpeta donde desea almacenar el paquete.  
+ Escriba la ruta de acceso del paquete o haga clic en el botón examinar **(...)** y busque la carpeta en la que desea almacenar el paquete.  
   
  **Nivel de protección**  
- Haga clic en el **(...)**  y actualice el nivel de protección en el **nivel de protección de paquetes** cuadro de diálogo. Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Haga clic en el botón examinar **(...)** y actualice el nivel de protección en el cuadro de diálogo **nivel de protección de paquetes** . Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Guardar paquetes](save-packages.md)   

@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798203"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  En este tema se describe cómo establecer opciones de notificación en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server de modo que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda enviar a los operadores notificaciones acerca de los trabajos.  
+  En este tema se describe cómo establecer opciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] notificación en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mediante [!INCLUDE[tsql](../../includes/tsql-md.md)], o objetos de administración de SQL Server, por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo que el agente puede enviar notificaciones a los operadores acerca de los trabajos.  
   
  **En este tema**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72798203"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
@@ -58,27 +58,27 @@ ms.locfileid: "72798203"
   
 4.  Si desea enviar una notificación a un operador por **correo electrónico**, seleccione un operador en la lista y elija alguna de las siguientes opciones:  
   
-    -   **Si el trabajo tiene éxito** para notificar al operador cuando el trabajo concluye correctamente.  
+    -   **Cuando el trabajo se realiza correctamente** para notificar al operador cuando el trabajo se completa correctamente.  
   
-    -   **Si el trabajo no tiene éxito** para notificar al operador cuando el trabajo se completa de manera incorrecta.  
+    -   **Cuando se produce un error en el trabajo** para notificar al operador cuando el trabajo se completa sin éxito.  
   
-    -   **Si el trabajo termina** para notificar al operador independientemente del estado de la finalización.  
+    -   **Cuando se completa el trabajo** para notificar al operador independientemente del estado de finalización.  
   
 5.  Si desea enviar una notificación a un operador por buscapersonas, active la opción **Buscapersonas**, seleccione un operador en la lista y elija alguna de las siguientes opciones:  
   
-    -   **Si el trabajo tiene éxito** para notificar al operador cuando el trabajo concluye correctamente.  
+    -   **Cuando el trabajo se realiza correctamente** para notificar al operador cuando el trabajo se completa correctamente.  
   
-    -   **Si el trabajo no tiene éxito** para notificar al operador cuando el trabajo se completa de manera incorrecta.  
+    -   **Cuando se produce un error en el trabajo** para notificar al operador cuando el trabajo se completa sin éxito.  
   
-    -   **Si el trabajo termina** para notificar al operador independientemente del estado de la finalización.  
+    -   **Cuando se completa el trabajo** para notificar al operador independientemente del estado de finalización.  
   
 6.  Si desea enviar una notificación a un operador por envío de red, active la opción **Envío de red**, seleccione un operador en la lista y elija alguna de las siguientes opciones:  
   
-    -   **Si el trabajo tiene éxito** para notificar al operador cuando el trabajo concluye correctamente.  
+    -   **Cuando el trabajo se realiza correctamente** para notificar al operador cuando el trabajo se completa correctamente.  
   
-    -   **Si el trabajo no tiene éxito** para notificar al operador cuando el trabajo se completa de manera incorrecta.  
+    -   **Cuando se produce un error en el trabajo** para notificar al operador cuando el trabajo se completa sin éxito.  
   
-    -   **Si el trabajo termina** para notificar al operador independientemente del estado de la finalización.  
+    -   **Cuando se completa el trabajo** para notificar al operador independientemente del estado de finalización.  
   
 ##  <a name="TSQL"></a> Usar Transact-SQL  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72798203"
     GO  
     ```  
   
- Para obtener más información, [vea &#40;SP_ADD_NOTIFICATION Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
+ Para obtener más información, vea [sp_add_notification &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql).  
   
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
  **Para notificar a un operador el estado de un trabajo**  

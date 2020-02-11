@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798234"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
-  En este tema se describe cómo volver a asignar a otro usuario la propiedad de los trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  En este tema se describe cómo reasignar la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propiedad de los trabajos del agente a otro usuario.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **Antes de empezar:**  [limitaciones y restricciones](#Restrictions), [seguridad](#Security)  
   
 -   **Para asignar a otros usuarios la propiedad de un trabajo, utilizando:**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "72798234"
   
      [objetos de administración de SQL Server](#SMOProc2)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Para crear un trabajo, el usuario debe ser miembro de uno de los roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o del rol fijo de servidor **sysadmin** . Solo pueden editar el trabajo el propietario de éste o los miembros del rol **sysadmin** . Para más información sobre los roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Roles fijos de base de datos del Agente SQL Server](sql-server-agent-fixed-database-roles.md).  
@@ -50,10 +50,10 @@ ms.locfileid: "72798234"
 >  Si cambia la propiedad de un trabajo a un usuario que no es miembro del rol fijo de servidor **sysadmin** y el trabajo está ejecutando unos pasos que necesitan las cuentas de un servidor proxy (por ejemplo, la ejecución de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] ), asegúrese de que el usuario tenga acceso a ese servidor proxy o, de lo contrario, se producirán errores en el trabajo.  
   
 ####  <a name="Permissions"></a> Permisos  
- Para obtener información detallada, vea [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProc2"></a> Usar SQL Server Management Studio  
- **Para asignar a otros usuarios la propiedad de un trabajo**  
+##  <a name="SSMSProc2"></a> Uso de SQL Server Management Studio  
+ **Para conceder a otros usuarios la propiedad de un trabajo**  
   
 1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, después, expándala.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "72798234"
      La asignación de un trabajo a otro inicio de sesión no garantiza que el nuevo propietario disponga de los permisos suficientes para ejecutar el trabajo.  
   
 ##  <a name="TsqlProc2"></a> Usar Transact-SQL  
- **Para asignar a otros usuarios la propiedad de un trabajo**  
+ **Para conceder a otros usuarios la propiedad de un trabajo**  
   
 1.  En el Explorador de objetos, conéctese a una instancia del Motor de base de datos y, a continuación, expándala.  
   
 2.  En la barra de herramientas, haga clic en **Nueva consulta**.  
   
-3.  En la ventana de consulta, escriba las siguientes instrucciones que utilizan el procedimiento almacenado del sistema [Transact-SQL &#40;&#41; sp_manage_jobs_by_login](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . En el siguiente ejemplo se reasignan todos los trabajos de `danw` a `fran??oisa`.  
+3.  En la ventana de consulta, escriba las siguientes instrucciones que utilizan el sp_manage_jobs_by_login &#40;procedimiento almacenado del sistema [&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . En el siguiente ejemplo se reasignan todos los trabajos de `danw` a `fran??oisa`.  
   
     ```sql
     USE msdb ;  
@@ -87,8 +87,8 @@ ms.locfileid: "72798234"
 
 ### <a name="to-give-others-ownership-of-a-job"></a>Para asignar a otros usuarios la propiedad de un trabajo
   
-1.  Llame a la clase `Job` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para obtener código de ejemplo, vea [Scheduling Automatic Administrative Tasks in SQL Server Agent](sql-server-agent.md).  
+1.  Llame a la clase `Job` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para el código de ejemplo, consulte [Programar tareas administrativas automáticas en el Agente SQL Server](sql-server-agent.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar trabajos](implement-jobs.md)   
  [Crear trabajos](create-jobs.md)  

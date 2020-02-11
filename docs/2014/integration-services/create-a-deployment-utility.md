@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060230"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
@@ -29,7 +29,7 @@ ms.locfileid: "66060230"
   
  En la tabla siguiente se muestran las propiedades de la utilidad de implementación.  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |AllowConfigurationChange|Valor que especifica si se actualizarán las configuraciones durante la implementación.|  
 |CreateDeploymentUtility|Valor que especifica si se creará una utilidad de implementación de paquetes al generar el proyecto. Esta propiedad debe estar establecida en `True` para crear una utilidad de implementación.|  
@@ -45,24 +45,24 @@ ms.locfileid: "66060230"
   
 2.  Haga clic con el botón derecho en el proyecto y haga clic en **Propiedades**.  
   
-3.  En el cuadro de diálogo **\<nombre del proyecto> Páginas de propiedades**, haga clic en **Utilidad de implementación**.  
+3.  En el cuadro de diálogo ** \<nombre del proyecto> páginas de propiedades** , haga clic en **utilidad de implementación**.  
   
-4.  Para actualizar las configuraciones de paquetes cuando se implementan paquetes, establezca **AllowConfigurationChanges** a `True`.  
+4.  Para actualizar las configuraciones de paquetes cuando se implementan **** paquetes, `True`establezca AllowConfigurationChanges en.  
   
 5.  Establezca `CreateDeploymentUtility` en `True`.  
   
 6.  Opcionalmente, actualice la ubicación de la utilidad de implementación modificando la propiedad `DeploymentOutputPath`.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 8.  En el Explorador de soluciones, haga clic con el botón derecho en el proyecto y, después, haga clic en **Generar**.  
   
 9. Vea el progreso y los errores de la generación en la ventana **Salida** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   
  [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)   
- [Implementar los paquetes mediante la utilidad de implementación](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
- [Implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [Implementar paquetes mediante la utilidad de implementación](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
+ [Implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

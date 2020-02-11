@@ -1,5 +1,5 @@
 ---
-title: Referencia de interfaz de usuario del cuadro de diálogo de firma digital | Microsoft Docs
+title: Referencia de la interfaz de usuario del cuadro de diálogo firma digital | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059449"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Firma digital
@@ -27,13 +27,13 @@ ms.locfileid: "66059449"
  Para más información, vea [Identificar el origen de paquetes con firmas digitales](security/identify-the-source-of-packages-with-digital-signatures.md) y [Firmar un paquete mediante un certificado digital](../../2014/integration-services/sign-a-package-by-using-a-digital-certificate.md).  
   
 ## <a name="options"></a>Opciones  
- **Firmar**  
+ **Sesión**  
  Haga clic para abrir el cuadro de diálogo **Seleccionar certificado** y seleccione el certificado que quiere usar.  
   
- **Quitar**  
+ **Remove**  
  Haga clic para quitar la firma digital.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

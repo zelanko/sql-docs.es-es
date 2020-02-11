@@ -22,21 +22,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 37bb440288ccbc832d89180855566a969830e2ca
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797987"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraer una DAC de una base de datos
   Use el **Asistente para extraer aplicación de capa de datos** o un script de Windows PowerShell para extraer un paquete de aplicación de capa de datos (DAC) de una base de datos de SQL Server existente. El proceso de extracción crea un archivo de paquete DAC que contiene definiciones de los objetos de base de datos y sus elementos relacionados a nivel de instancia. Por ejemplo, un archivo de paquete DAC contiene las tablas de base de datos, procedimientos almacenados, vistas y usuarios, junto con los inicios de sesión que se asignan a los usuarios de la base de datos.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Antes de empezar:**  [limitaciones y restricciones](#LimitationsRestrictions), [permisos](#Permissions)  
   
--   **Para extraer una DAC, mediante:**  [El Asistente Extraer aplicación de capa de datos](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
+-   **Para extraer una DAC con:**  [Asistente para extraer aplicación de capa de datos](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
- Puede extraer una DAC de las bases de datos que residen en instancias de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 o posterior. Si el proceso de extracción se ejecuta en una base de datos que se implementó a partir de una DAC, solo las definiciones de los objetos de la base de datos se extraen. El proceso no hace referencia a la DAC registrada en `msdb` (**maestra** en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). El proceso de extracción no registra la definición de DAC en la instancia actual del motor de base de datos. Para obtener más información sobre el registro de una DAC, vea [Register a Database As a DAC](register-a-database-as-a-dac.md).  
+## <a name="before-you-begin"></a>Antes de empezar  
+ Puede extraer una DAC de las bases de datos que residen en instancias de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 o posterior. Si el proceso de extracción se ejecuta en una base de datos que se implementó a partir de una DAC, solo las definiciones de los objetos de la base de datos se extraen. El proceso no hace referencia a la DAC registrada `msdb` en**** (maestra [!INCLUDE[ssSDS](../../includes/sssds-md.md)]en). El proceso de extracción no registra la definición de DAC en la instancia actual del motor de base de datos. Para obtener más información sobre el registro de una DAC, vea [Register a Database As a DAC](register-a-database-as-a-dac.md).  
   
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Una DAC se puede extraer solo de una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. No puede extraer ninguna DAC si la base de datos tiene objetos que no se admiten en una DAC o usuarios contenidos. Para obtener más información acerca de los objetos admitidos por una DAC, vea [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
@@ -44,57 +44,57 @@ ms.locfileid: "72797987"
 ###  <a name="Permissions"></a> Permisos  
  La extracción de una DAC requiere al menos permisos ALTER ANY LOGIN y VIEW DEFINITION en el ámbito de la base de datos, así como permisos SELECT en **sys.sql_expression_dependencies**. La extracción de una DAC la pueden realizar los miembros del rol fijo de servidor securityadmin que sean también miembros del rol fijo de base de datos database_owner en la base de datos de la que se extrae la DAC. Los miembros del rol fijo de servidor sysadmin o de la cuenta de administrador del sistema de SQL Server integrada denominada **sa** también pueden extraer una DAC.  
   
-##  <a name="UsingDACExtractWizard"></a> Usar el Asistente de Extraer aplicación de capa de datos  
+##  <a name="UsingDACExtractWizard"></a>Usar el Asistente para extraer aplicación de capa de datos  
  **Para extraer una DAC mediante un asistente**  
   
 1.  En **Explorador de objetos**, expanda el nodo de la instancia que contiene la base de datos de la que debe extraerse la DAC.  
   
-2.  Expanda el nodo **Bases de datos** .  
+2.  Expanda el nodo **Bases de datos**.  
   
-3.  Haga clic con el botón derecho en el nodo de la base de datos del que se va a extraer la DAC, haga clic en **Tareas** y, después, seleccione **Extraer aplicación de capa de datos...** .  
+3.  Haga clic con el botón derecho en el nodo de la base de datos del que se va a extraer la DAC, haga clic en **Tareas** y, después, seleccione **Extraer aplicación de capa de datos...**.  
   
 4.  Complete los cuadros de diálogo del asistente:  
   
     1.  [Página Introducción](#Introduction)  
   
-    2.  [Seleccione Página de datos](#SelectData)  
+    2.  [Página seleccionar datos](#SelectData)  
   
-    3.  [Página Definir propiedades](#SetProperties)  
+    3.  [Página establecer propiedades](#SetProperties)  
   
-    4.  [Página Validación y resumen](#ValidateSummary)  
+    4.  [Página validación y Resumen](#ValidateSummary)  
   
-    5.  [Página Compilar paquete](#BuildPackage)  
+    5.  [Página compilar paquete](#BuildPackage)  
   
 ###  <a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para extraer una aplicación de capa de datos.  
   
  **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
   
- **Siguiente >:** avance a la página **Elegir método**.  
+ **Siguiente >** : avanza a la página **elegir método** .  
   
  **Cancelar** : termina el asistente sin extraer una aplicación de capa de datos de la base de datos.  
   
 ###  <a name="SelectData"></a>Página seleccionar datos  
  Use esta página del asistente para seleccionar los datos de referencia que desee incluir en el archivo de paquete de la aplicación de capa de datos (DAC). La inclusión de datos en el paquete DAC es opcional. El paquete DAC ya incluirá el esquema de todos los objetos de base de datos compatibles y los objetos de instancia relacionados con la base de datos  
   
- Puede incluir hasta 10 MB de datos de referencia en el archivo del paquete DAC. Pero, en cuanto a las tablas que se van a incluir en el DAC, puede que no contengan tipos de datos de objetos binarios grandes (BLOB) como **image** o **varchar(max)** . Para extraer cantidades de datos más grandes con el fin de transferirlos a otra base de datos, use SQL Server Integration Services, la utilidad de copia masiva o una de las muchas otras técnicas de migración de datos.  
+ Puede incluir hasta 10 MB de datos de referencia en el archivo del paquete DAC. Pero, en cuanto a las tablas que se van a incluir en el DAC, puede que no contengan tipos de datos de objetos binarios grandes (BLOB) como **image** o **varchar(max)**. Para extraer cantidades de datos más grandes con el fin de transferirlos a otra base de datos, use SQL Server Integration Services, la utilidad de copia masiva o una de las muchas otras técnicas de migración de datos.  
   
- **Tabla de base de datos:** active la casilla situada junto a las tablas de base de datos que contengan los datos que quiera incluir en el paquete DAC. Puede seleccionar hasta diez tablas con 10.000 filas o menos.  
+ **Tabla de base** de datos: Active la casilla situada junto a las tablas de base de datos que contienen los datos que desea incluir en el paquete DAC. Puede seleccionar hasta diez tablas con 10.000 filas o menos.  
   
-###  <a name="SetProperties"></a> Página Definir propiedades  
+###  <a name="SetProperties"></a>Página establecer propiedades  
  Use esta página del asistente para describir la aplicación de capa de datos (DAC). Estas propiedades se usan para identificar la DAC y contribuyen a diferenciarla de otras.  
   
  **Nombre:** este nombre identifica la DAC. Puede ser distinto del nombre del archivo de paquete DAC y debe describir la aplicación. Por ejemplo, si la base de datos se usa para una aplicación de finanzas, puede llamar Finanza a la DAC.  
   
- **Versión (use xx.xx.xx.xx, donde x es un número):** valor numérico que identifica la versión de la DAC. La versión de DAC se usa en Visual Studio para identificar la versión de la DAC en la que están trabajando los desarrolladores. Al implementar una DAC, la versión se almacena en la base de datos de `msdb` y se puede ver después en el nodo **aplicaciones de capa de datos** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Versión (use xx.xx.xx.xx, donde x es un número):** valor numérico que identifica la versión de la DAC. La versión de DAC se usa en Visual Studio para identificar la versión de la DAC en la que están trabajando los desarrolladores. Al implementar una DAC, la versión se almacena en la `msdb` base de datos y se puede ver después en el nodo aplicaciones de capa de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **datos** en.  
   
- **Descripción:** opcional. Describe la DAC. Al implementar una DAC, la descripción se almacena en la base de datos de `msdb` y se puede ver después en el nodo **aplicaciones de capa de datos** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ **Descripción:** opcional. Describe la DAC. Al implementar una DAC, la descripción se almacena en la `msdb` base de datos y se puede ver después en el nodo aplicaciones de capa de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **datos** en.  
   
  **Guardar en archivo de paquete DAC (incluye extensión .dacpac con nombre de archivo):** guarda la DAC en un archivo de paquete DAC, con una extensión .dacpac. Haga clic en el botón **Examinar** para especificar el nombre y la ubicación del archivo.  
   
  **Sobrescribir el archivo existente:** active esta casilla para reemplazar el archivo de paquete DAC si ya existe uno con el mismo nombre.  
   
-###  <a name="ValidateSummary"></a> Página Validación y resumen  
+###  <a name="ValidateSummary"></a>Página validación y Resumen  
  En esta página, el asistente valida que una aplicación de capa de datos (DAC) admite todos los objetos de base de datos. También comprueba las dependencias entre los objetos de base de datos para determinar el conjunto de objetos que se pueden incluir correctamente en la DAC. Tras ello, muestra el informe de validación y resume las opciones que ha seleccionado en este asistente. Para cambiar una opción, haga clic en **Anterior**. Para empezar a extraer una DAC, haga clic en **Siguiente**.  
   
 > [!NOTE]  
@@ -161,5 +161,5 @@ $extractionunit.Description = $description
 $extractionunit.Extract($dacpacPath)  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](data-tier-applications.md)  

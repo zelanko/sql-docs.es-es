@@ -25,14 +25,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728521"
 ---
 # <a name="attribute-relationships"></a>Relaciones de atributo
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], atributos dentro de una dimensión siempre se relacionan con directa o indirectamente con el atributo clave. Al definir una dimensión basada en un esquema en estrella, donde todos los atributos de la dimensión se derivan de la misma tabla relacional, se define automáticamente una relación de atributo entre el atributo clave y cada atributo no clave de la dimensión. Al definir una dimensión basada en un esquema de copo de nieve, donde los atributos de la dimensión se derivan de varias tablas relacionadas, se define automáticamente una relación de atributo del modo siguiente:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los atributos de una dimensión siempre están relacionados directa o indirectamente con el atributo clave. Al definir una dimensión basada en un esquema en estrella, donde todos los atributos de la dimensión se derivan de la misma tabla relacional, se define automáticamente una relación de atributo entre el atributo clave y cada atributo no clave de la dimensión. Al definir una dimensión basada en un esquema de copo de nieve, donde los atributos de la dimensión se derivan de varias tablas relacionadas, se define automáticamente una relación de atributo del modo siguiente:  
   
 -   Entre el atributo clave y cada atributo sin clave enlazado a columnas de la tabla principal de dimensiones.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62728521"
   
 -   Entre el atributo enlazado a la clave externa de la tabla secundaria y cada atributo no clave enlazado a las columnas de la tabla secundaria.  
   
- Sin embargo, hay una serie de razones por las que puede que desee cambiar estas relaciones de atributo predeterminadas. Por ejemplo quizás desee definir una jerarquía natural, un orden personalizado o una granularidad de dimensión basados en un atributo no clave. Para obtener más información, consulte [Dimension Attribute Properties Reference](../multidimensional-models/dimension-attribute-properties-reference.md).  
+ Sin embargo, hay una serie de razones por las que puede que desee cambiar estas relaciones de atributo predeterminadas. Por ejemplo quizás desee definir una jerarquía natural, un orden personalizado o una granularidad de dimensión basados en un atributo no clave. Para obtener más información, vea [referencia de propiedades de atributo de dimensión](../multidimensional-models/dimension-attribute-properties-reference.md).  
   
 > [!NOTE]  
 >  Las relaciones de atributo se conocen como propiedades de miembros en las Expresiones multidimensionales (MDX).  
@@ -60,7 +60,7 @@ ms.locfileid: "62728521"
   
 -   City  
   
--   País  
+-   Country  
   
 -   Region  
   
@@ -78,11 +78,11 @@ ms.locfileid: "62728521"
   
 -   El atributo City como una relación de atributo con el atributo Customer.  
   
- Para navegar por los datos del cubo, también puede crear una jerarquía definida por el usuario que no representa una jerarquía natural en los datos (que se denomina un *ad hoc* o *reporting* jerarquía). Por ejemplo, podría crear una jerarquía definida por el usuario basada en `{Age, Gender}`. Los usuarios no ven ninguna diferencia en cómo se comportan las dos jerarquías, aunque la jerarquía natural se beneficia de agregación e indizado estructuras - ocultas al usuario - esa cuenta para las relaciones naturales de los datos de origen.  
+ Para navegar por los datos del cubo, también puede crear una jerarquía definida por el usuario que no represente una jerarquía natural en los datos (que se denomina una jerarquía *ad hoc* o de *informes* ). Por ejemplo, podría crear una jerarquía definida por el usuario basada en `{Age, Gender}`. Los usuarios no ven ninguna diferencia en la forma en que se comportan las dos jerarquías, aunque la jerarquía natural se beneficia de las estructuras de agregación e indización (ocultas para el usuario) para las relaciones naturales en los datos de origen.  
   
  La propiedad `SourceAttribute` de un nivel determina qué atributo se utiliza para describir el nivel. La propiedad `KeyColumns` del atributo especifica la columna de la vista del origen de datos que proporciona los miembros. La propiedad `NameColumn` del atributo puede especificar una columna de nombre diferente para los miembros.  
   
- Para definir un nivel en una jerarquía definida por el usuario mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], **Diseñador de dimensiones** le permite seleccionar un atributo de dimensión, una columna en una tabla de dimensiones o una columna de una tabla relacionada incluidos en la vista del origen de datos para el cubo. Para obtener más información acerca de cómo crear jerarquías definidas por el usuario, consulte [jerarquías definidas por el usuario](../multidimensional-models/user-defined-hierarchies-create.md).  
+ Para definir un nivel en una jerarquía definida por el usuario [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]mediante, el **Diseñador de dimensiones** permite seleccionar un atributo de dimensión, una columna de una tabla de dimensiones o una columna de una tabla relacionada incluida en la vista del origen de datos para el cubo. Para obtener más información sobre la creación de jerarquías definidas por el usuario, vea [Crear jerarquías definidas por el usuario](../multidimensional-models/user-defined-hierarchies-create.md).  
   
  En Analysis Services, se suele hacer una suposición acerca del contenido de los miembros. Los miembros hoja no tienen descendientes y contienen datos derivados de los orígenes de datos subyacentes. Los miembros no hoja tienen descendientes y contienen datos derivados de agregaciones realizadas en miembros secundarios. En los niveles agregados, los miembros se basan en agregaciones de niveles subordinados. Por lo tanto, cuando la propiedad `IsAggregatable` está establecida en `False` en un atributo de origen de un nivel, no se deben agregar atributos agregables como niveles por encima de él.  
   
@@ -90,11 +90,11 @@ ms.locfileid: "62728521"
  La principal restricción al crear una relación de atributo consiste en asegurarse de que el atributo al que la relación de atributo hace referencia no tenga más de un valor para ningún miembro en el atributo al que pertenece la relación de atributo. Por ejemplo, si se define una relación entre un atributo City y uno State, cada ciudad solo puede relacionarse con un único estado.  
   
 ## <a name="attribute-relationship-queries"></a>Consultas de las relaciones de atributo  
- Puede usar las consultas MDX para recuperar datos de las relaciones de atributo, en formato de propiedades de miembro, por medio de la palabra clave `PROPERTIES` de la instrucción `SELECT` de MDX. Para obtener más información acerca de cómo utilizar MDX para recuperar las propiedades de miembro, vea [mediante propiedades de miembro &#40;MDX&#41;](../multidimensional-models/mdx/mdx-member-properties.md).  
+ Puede usar las consultas MDX para recuperar datos de las relaciones de atributo, en formato de propiedades de miembro, por medio de la palabra clave `PROPERTIES` de la instrucción `SELECT` de MDX. Para obtener más información sobre cómo usar MDX para recuperar propiedades de miembro, vea [usar las propiedades de miembro &#40;&#41;MDX ](../multidimensional-models/mdx/mdx-member-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Atributos y jerarquías de atributos](attributes-and-attribute-hierarchies.md)   
- [Referencia de las propiedades de los atributos de dimensión](../multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Referencia de propiedades de atributo de dimensión](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [Jerarquías de usuario](user-hierarchies.md)   
  [Propiedades de jerarquía de usuario](user-hierarchies-properties.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Agregar soluciones y proyectos al Control de código fuente | Microsoft Docs
+title: Agregar soluciones y proyectos al control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62792095"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Agregar soluciones y proyectos al control de código fuente
@@ -34,7 +34,7 @@ ms.locfileid: "62792095"
 |[Agregar soluciones al control de código fuente](../../2014/database-engine/add-solutions-to-source-control.md)|Describe los tipos de proyecto que se pueden agregar y proporciona instrucciones sobre cómo agregar una solución al control de código fuente.|  
 |[Agregar proyectos al control de código fuente](../../2014/database-engine/add-projects-to-source-control.md)|Proporciona instrucciones sobre cómo agregar un proyecto a una solución.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Abrir soluciones y proyectos desde el control de código fuente](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)  
   
   

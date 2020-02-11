@@ -10,25 +10,25 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73599248"
 ---
-# <a name="sysdm_column_encryption_enclave-transact-sql"></a>Sys. dm_column_encryption_enclave (Transact-SQL)
+# <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave (Transact-SQL)
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-Devuelve los contadores de rendimiento para el enclave seguro para Always Encrypted. Para obtener más información, consulte [Always Encrypted con enclaves seguros](../security/encryption/always-encrypted-enclaves.md).
+Devuelve los contadores de rendimiento para el enclave seguro para Always Encrypted. Para más información, consulte [Always Encrypted con enclaves seguros](../security/encryption/always-encrypted-enclaves.md).
 
-Si el enclave está configurado y se ha inicializado correctamente después del último reinicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la vista contiene exactamente una fila. Si el enclave no está configurado o no se ha inicializado correctamente, la vista no devuelve ninguna fila. 
+Si el enclave está configurado y se ha inicializado correctamente después del último reinicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, la vista contiene exactamente una fila. Si el enclave no está configurado o no se ha inicializado correctamente, la vista no devuelve ninguna fila. 
 
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |current_enclave_session_count|**int**|Número actual de sesiones de cliente que usan enclave.|  
 |current_column_encryption_key_count|**int**|Recuento de claves de cifrado de columna que el enclave contiene actualmente.|  
-|current_memory_size_kb|**bigint**|Tamaño de memoria de enclave en KB|  
-|total_evicted_session_count|**bigint**|Número total de sesiones de enclave expulsadas desde el último reinicio del servidor.|   
+|current_memory_size_kb|**BIGINT**|Tamaño de memoria de enclave en KB|  
+|total_evicted_session_count|**BIGINT**|Número total de sesiones de enclave expulsadas desde el último reinicio del servidor.|   
   
 ## <a name="permissions"></a>Permisos  
 Requiere el permiso `VIEW SERVER STATE`.   
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_column_encryption_enclave;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Configurar el tipo enclave para la opción de configuración del servidor Always Encrypted](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+## <a name="see-also"></a>Consulte también  
+ [Configuración del tipo de enclave como opción de configuración del servidor Always Encrypted](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
   
   

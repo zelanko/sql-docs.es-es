@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 01525143197146f8d4c34734d7333d651d93b840
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451833"
----
 ## <a name="info_tipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Obtener ayuda
 
 - [UserVoice: ¿Tiene sugerencias para mejorar SQL Server?](https://feedback.azure.com/forums/908035-sql-server)

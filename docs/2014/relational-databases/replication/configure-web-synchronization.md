@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721660"
 ---
 # <a name="configure-web-synchronization"></a>Configurar sincronización web
@@ -88,7 +88,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>Para aumentar el máximo de procesos de trabajo en IIS 7  
   
-1.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo del servidor y, después, haga clic en el nodo **Grupos de aplicaciones** .  
+1.  En **Administrador de Internet Information Services (IIS)** , expanda el nodo del servidor y, después, haga clic en el nodo **Grupos de aplicaciones** .  
   
 2.  Seleccione el grupo de aplicaciones asociado al sitio de sincronización web y, a continuación, haga clic en **Configuración avanzada** en el panel **Acciones** .  
   
@@ -101,7 +101,8 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
  Si utiliza un publicador por primera vez, también debe configurar un distribuidor y un recurso compartido de instantáneas. El Agente de mezcla de cada suscriptor debe tener permisos de lectura en el recurso compartido de instantáneas. Para obtener más información sobre cómo configurar la distribución, vea [Configure Distribution (Configurar la distribución)](configure-distribution.md) y [Proteger la carpeta de instantáneas](security/secure-the-snapshot-folder.md).  
   
- `gen` es una palabra reservada en los archivos XML de websync. No intente publicar tablas que contengan columnas denominadas `gen`.  
+ 
+  `gen` es una palabra reservada en los archivos XML de websync. No intente publicar tablas que contengan columnas denominadas `gen`.  
   
 ## <a name="configuring-the-subscription"></a>Configurar la suscripción  
  Después de habilitar una publicación y configurar IIS, cree una suscripción de extracción y especifique que dicha suscripción debe sincronizarse mediante IIS. La sincronización web solo puede usarse para las suscripciones de extracción.  
@@ -124,7 +125,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 -   Si se replican grandes volúmenes de datos, podría ser necesario ajustar el tamaño del lote del Agente de mezcla.  
   
- El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica mediante el -`DownloadGenerationsPerBatch` y -`UploadGenerationsPerBatch` parámetros del agente de mezcla. Para más información, consulte [Replication Merge Agent](agents/replication-merge-agent.md).  
+ El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica mediante los parámetros-`DownloadGenerationsPerBatch` y-`UploadGenerationsPerBatch` del agente de mezcla. Para más información, consulte [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Para grandes volúmenes de datos, especifique un número pequeño para cada uno de los parámetros de procesamiento por lotes. Se recomienda comenzar con un valor de 10 y optimizarlo después de acuerdo con las necesidades y el rendimiento de la aplicación. Normalmente, estos parámetros se especifican en un perfil de agente. Para obtener más información acerca de los perfiles, vea [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -144,7 +145,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
      Para obtener más información acerca de los permisos que necesitan los agentes, vea [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
--   Especifique la misma cuenta de dominio que utiliza el Agente de mezcla cuando especifique una cuenta y una contraseña en la página **Información del servidor web** del Asistente para nueva suscripción o cuando especifique valores para los parámetros **@internet_url** y **@internet_login** de [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Esta cuenta debe tener permisos de lectura en el recurso compartido de la instantánea.  
+-   Especifique la misma cuenta de dominio que la que utiliza el Agente de mezcla Cuando especifique una cuenta y una contraseña en la página **información del servidor Web** del Asistente para nueva suscripción o cuando especifique valores para **@internet_url** los **@internet_login** parámetros y de [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Esta cuenta debe tener permisos de lectura en el recurso compartido de la instantánea.  
   
 -   Cada publicación debe utilizar un directorio virtual independiente para IIS.  
   
@@ -163,7 +164,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
 > [!IMPORTANT]  
 >  El hecho de abrir puertos en el firewall puede dejar el servidor expuesto a ataques malintencionados. Asegúrese de que conoce los sistemas de firewall antes de abrir puertos. Para obtener más información, vea [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Sincronización web para la replicación de mezcla](web-synchronization-for-merge-replication.md)  
   
   

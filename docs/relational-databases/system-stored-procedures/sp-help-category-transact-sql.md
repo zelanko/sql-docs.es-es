@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304805"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -42,47 +42,47 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'` la clase sobre la que se solicita información. la *clase* es **VARCHAR (8)** y su valor predeterminado es **Job**. la *clase* puede ser uno de estos valores.  
+`[ @class = ] 'class'`Clase sobre la que se solicita información. la *clase* es **VARCHAR (8)** y su valor predeterminado es **Job**. la *clase* puede ser uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**JOB**|Proporciona información acerca de una categoría de trabajo.|  
+|**TRABAJO**|Proporciona información acerca de una categoría de trabajo.|  
 |**ONALERT**|Proporciona información acerca de una categoría de alerta.|  
 |**OPERATOR**|Proporciona información acerca de una categoría de operador.|  
   
-`[ @type = ] 'type'` el tipo de categoría para la que se solicita información. *Type* es de tipo **VARCHAR (12)** , su valor predeterminado es NULL y puede tener uno de estos valores.  
+`[ @type = ] 'type'`Tipo de categoría para la que se solicita información. *Type* es de tipo **VARCHAR (12)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**LOCAL**|Categoría de trabajo local.|  
-|**VARIOS SERVIDORES**|Categoría de trabajo multiservidor.|  
-|**NONE**|Categoría para una clase distinta de **Job**.|  
+|**LOCALIZAR**|Categoría de trabajo local.|  
+|**MULTI -SERVER**|Categoría de trabajo multiservidor.|  
+|**NINGUNA**|Categoría para una clase distinta de **Job**.|  
   
-`[ @name = ] 'name'` el nombre de la categoría para la que se solicita información. *Name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @name = ] 'name'`Nombre de la categoría para la que se solicita información. *Name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @suffix = ] suffix` especifica si la columna de **category_type** del conjunto de resultados es un identificador o un nombre. el *sufijo* es de **bit**y su valor predeterminado es **0**. **1** muestra el **category_type** como un nombre y **0** lo muestra como un identificador.  
+`[ @suffix = ] suffix`Especifica si la columna de **category_type** del conjunto de resultados es un identificador o un nombre. el *sufijo* es de **bit**y su valor predeterminado es **0**. **1** muestra el **category_type** como un nombre y **0** lo muestra como un identificador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Cuando **\@sufijo** es **0**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
+ Cuando ** \@el sufijo** es **0**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
 |**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
-|**Nombre**|**sysname**|Nombre de la categoría|  
+|**Name**|**sysname**|Nombre de la categoría|  
   
- Cuando **\@sufijo** es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
+ Cuando ** \@el sufijo** es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
 |**category_type**|**sysname**|Tipo de categoría. Uno de los **locales**, **varios servidores**o **ninguno**|  
-|**Nombre**|**sysname**|Nombre de la categoría|  
+|**Name**|**sysname**|Nombre de la categoría|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  **sp_help_category** se debe ejecutar desde la base de datos **msdb** .  
   
  Si no se especifica ningún parámetro, el conjunto de resultados proporciona información acerca de todas las categorías de trabajo.  
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>b. Devolver información de alertas  
+### <a name="b-returning-alert-information"></a>B. Devolver información de alertas  
  Este ejemplo devuelve información acerca de la categoría de alertas de replicación.  
   
 ```  
@@ -125,10 +125,10 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de ODBC (página salida de Error) | Microsoft Docs
+title: Editor de destino de ODBC (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057198"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>Editor de destinos de ODBC (página Salida de error)
@@ -39,7 +39,7 @@ ms.locfileid: "66057198"
 ### <a name="inputoutput"></a>Entrada/salida  
  Muestra el nombre del origen de datos.  
   
-### <a name="column"></a>columna  
+### <a name="column"></a>Columna  
  No se usa.  
   
 ### <a name="error"></a>Error  
@@ -61,7 +61,7 @@ ms.locfileid: "66057198"
  Use las opciones siguientes para configurar la forma en la que el destino de ODBC controla errores y truncamientos.  
   
 ### <a name="fail-component"></a>Error de componente  
- La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Éste es el comportamiento predeterminado.  
+ La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Este es el comportamiento predeterminado.  
   
 ### <a name="ignore-failure"></a>Omitir error  
  Se omite el error o el truncamiento.  
@@ -69,7 +69,7 @@ ms.locfileid: "66057198"
 ### <a name="redirect-flow"></a>Redirigir fila  
  La fila que está produciendo el error o el truncamiento se dirige a la salida de error del destino de ODBC. Para obtener más información, vea Destino de ODBC.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [Editor de destino de ODBC &#40;página Asignaciones&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   

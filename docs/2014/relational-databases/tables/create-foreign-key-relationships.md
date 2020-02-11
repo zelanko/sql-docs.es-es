@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761612"
 ---
 # <a name="create-foreign-key-relationships"></a>Crear relaciones de clave externa
@@ -30,7 +30,7 @@ ms.locfileid: "62761612"
   
      [Seguridad](#Security)  
   
--   **Para crear relaciones de clave externa mediante el uso de:**  
+-   **Para crear relaciones de clave externa mediante:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62761612"
   
 -   Las restricciones FOREIGN KEY no se exigen en tablas temporales.  
   
--   Si la clave externa se define en una columna de tipo definido por el usuario CLR, la implementación del tipo debe admitir el orden binario. Para obtener más información, consulte [CLR User-Defined Types](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+-   Si la clave externa se define en una columna de tipo definido por el usuario CLR, la implementación del tipo debe admitir el orden binario. Para obtener más información, vea [Tipos definidos por el usuario de CLR](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 -   Una columna de tipo `varchar(max)` puede participar en una restricción FOREIGN KEY solo si la clave principal a la que hace referencia se define también como tipo `varchar(max)`.  
   
@@ -67,29 +67,29 @@ ms.locfileid: "62761612"
   
  La creación de una clave externa en una tabla existente requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>Para crear una relación de clave externa en el Diseñador de tablas  
   
-1.  En el Explorador de objetos, haga clic con el botón secundario en la tabla que va a estar en el lado de la clave externa de la relación y, a continuación, haga clic en **Diseño**.  
+1.  En el Explorador de objetos, haga clic con el botón derecho en la tabla que va a estar en el lado de la clave externa de la relación y, después, haga clic en **Diseño**.  
   
      La tabla se abre en el **Diseñador de tablas**.  
   
 2.  En el menú **Diseñador de tablas** , haga clic en **Relaciones**.  
   
-3.  En el cuadro de diálogo **Relaciones de clave externa** , haga clic en **Agregar**.  
+3.  En el cuadro de diálogo **Relaciones de clave externa**, haga clic en **Agregar**.  
   
-     La relación aparece en la lista **Relación seleccionada** con un nombre proporcionado por el sistema con el formato FK_\<*tablename*>_\<*tablename*>, donde *tablename* es el nombre de la tabla de clave externa.  
+     La relación aparece en la lista **relación seleccionada** con un nombre proporcionado por el sistema con el formato FK_\<*TableName*>_\<*TableName*>, donde *TableName* es el nombre de la tabla de clave externa.  
   
 4.  Haga clic en la relación en la lista **Relación seleccionada** .  
   
-5.  Haga clic en **Especificaciones de tablas y columnas** en la cuadrícula situada a la derecha y, después, haga clic en los puntos suspensivos ( **...** ) situados a la derecha de la propiedad.  
+5.  Haga clic en **Especificaciones de tablas y columnas** en la cuadrícula situada a la derecha y, después, haga clic en los puntos suspensivos (**...**) situados a la derecha de la propiedad.  
   
 6.  En el cuadro de diálogo **Tablas y columnas** , en la lista desplegable **Clave principal** , elija la tabla que estará en el lado de la clave principal de la relación.  
   
 7.  En la cuadrícula situada debajo, elija las columnas que contribuyen a la clave principal de la tabla. En la celda de la cuadrícula adyacente situada a la izquierda de cada columna, elija la columna de clave externa correspondiente de la tabla de clave externa.  
   
-     El**Diseñador de tablas** sugerirá un nombre para la relación. Para cambiar este nombre, edite el contenido del cuadro de texto **Nombre de la relación** .  
+     **Diseñador de tablas** sugiere un nombre para la relación. Para cambiar este nombre, edite el contenido del cuadro de texto **Nombre de la relación** .  
   
 8.  Elija **Aceptar** para crear la relación.  
   

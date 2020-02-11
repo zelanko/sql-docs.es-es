@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773401"
 ---
 # <a name="undo-checkouts"></a>Deshacer desprotecciones
@@ -42,7 +42,7 @@ ms.locfileid: "62773401"
      **Vista plana**  
      Muestra los elementos como listas planas en su conexión de control de código fuente.  
   
-     **Name**  
+     **Nombre**  
      Muestra los nombres de los elementos en los que se deshará la desprotección. Los elementos aparecen con las casillas que se encuentran junto a ellos activadas. Si no desea deshacer la desprotección de un elemento, desactive su casilla.  
   
      **Opciones**  
@@ -57,7 +57,7 @@ ms.locfileid: "62773401"
      **Deshacer desprotección**  
      Anula la desprotección y descarta los cambios en el archivo desprotegido.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desproteger archivos](../../2014/database-engine/check-out-files.md)   
  [Administrar desprotecciones](../../2014/database-engine/manage-checkouts.md)  
   

@@ -10,10 +10,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71149924"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>¿Qué es SQL Server 2016 R Services?
@@ -60,7 +60,7 @@ Hay dos maneras de ejecutar scripts de R en R Services:
 
 ## <a name="r-packages"></a>Paquetes de R
 
-Además de los paquetes empresariales de Microsoft, pueden usarse plataformas y paquetes de código abierto. Los paquetes de R de código abierto más comunes están preinstalados en R Services. También se incluyen los siguientes paquetes de Microsoft R:
+Además de los paquetes de empresa de Microsoft, pueden usarse usar marcos y paquetes de código abierto. Los paquetes de R de código abierto más comunes están preinstalados en R Services. También se incluyen los siguientes paquetes de Microsoft R:
 
 | Paquete | Descripción |
 |-|-|
@@ -83,8 +83,8 @@ Además de los paquetes empresariales de Microsoft, pueden usarse plataformas y 
 
     + Inicio rápido: [Creación y ejecución de scripts de R sencillos en SQL Server](../tutorials/quickstart-r-create-script.md)
     + Inicio rápido: [Creación y entrenamiento de un modelo predictivo en R](../tutorials/quickstart-r-train-score-model.md)
-    + Tutorial: [Uso de R en T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): Exploración de datos, realización de ingeniería de características, entrenamiento e implementación de modelos, y predicciones (serie de cinco partes)
-    + Tutorial: [Uso de R Services en herramientas de R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Exploración de datos, creación de gráficos y trazados, realización de ingeniería de características, entrenamiento e implementación de modelos, y predicciones (serie de seis partes)
+    + Tutorial: [Uso de R en T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): explore datos, realice ingeniería de características, entrene e implemente modelos y haga predicciones (serie de cinco partes).
+    + Tutorial: [Uso de R Services en herramientas de R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): explore datos, cree gráficos y trazados, realice ingeniería de características, entrene e implemente modelos y haga predicciones (serie de seis partes).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

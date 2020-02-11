@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798154"
 ---
 # <a name="stop-a-job"></a>Stop a Job
-  En este tema se describe cómo detener un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un trabajo es una serie especificada de acciones que realiza el Agente SQL Server.  
+  En este tema se describe cómo detener [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un trabajo del agente. Un trabajo es una serie especificada de acciones que realiza el Agente SQL Server.  
   
--   **Antes de empezar:**  
+-   **Antes de empezar:** ,  
   
      [Limitaciones y restricciones](#Restrictions)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72798154"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -79,7 +79,7 @@ ms.locfileid: "72798154"
     GO  
     ```  
   
- Para obtener más información, [vea &#40;SP_STOP_JOB Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
+ Para obtener más información, vea [sp_stop_job &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
   
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
 

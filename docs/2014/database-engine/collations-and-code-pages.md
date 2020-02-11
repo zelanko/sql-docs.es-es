@@ -1,5 +1,5 @@
 ---
-title: Las intercalaciones y páginas de códigos | Microsoft Docs
+title: Intercalaciones y páginas de códigos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786740"
 ---
 # <a name="collations-and-code-pages"></a>Intercalaciones y páginas de códigos
+  
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] tiene restricciones en cuanto a las páginas de códigos compatibles para las columnas (var)char en las tablas optimizadas para memoria y las intercalaciones compatibles empleadas en índices y procedimientos almacenados compilados de forma nativa.  
   
  La página de códigos para un valor (var)char determina la asignación entre los caracteres y la representación de bytes que se almacena en la tabla. Por ejemplo, con la página de códigos del alfabeto Latin 1 de Windows (1252; el valor predeterminado de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), el carácter 'a' corresponde al byte 0x61.  
@@ -82,7 +83,7 @@ GO
   
 -   Todas las expresiones y operaciones de ordenación dentro de procedimientos almacenados compilados de forma nativa deben utilizar intercalaciones BIN2. La implicación es que todas las comparaciones y las operaciones de ordenación están basadas en los puntos de código Unicode de los caracteres (representaciones binarias). Por ejemplo, toda la clasificación distingue entre mayúsculas y minúsculas (la “Z” va antes de la “a”). Si fuera necesario, utilice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado para la ordenación sin distinción entre mayúsculas y minúsculas y la comparación.  
   
--   El truncamiento de los datos UTF-16 no se admite dentro de procedimientos almacenados compilados de forma nativa. Esto significa que char n (var) (*n*) los valores no se puede convertir al tipo n (var) char (*i*), si *i* < *n*, si el intercalación tiene la propiedad _SC. Por ejemplo, la siguiente vista no se admite:  
+-   El truncamiento de los datos UTF-16 no se admite dentro de procedimientos almacenados compilados de forma nativa. Esto significa que los valores n (var) Char (*n*) no se pueden convertir al tipo n (var) Char (*i*) *, si* < *n*, si la intercalación tiene _SC propiedad. Por ejemplo, la siguiente vista no se admite:  
   
     ```sql  
     -- column definition using an _SC collation  
@@ -142,7 +143,7 @@ EXEC usp_EmployeeByName 'thomas', 'John'
 EXEC usp_EmployeeByName 'thomas', 'john'  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

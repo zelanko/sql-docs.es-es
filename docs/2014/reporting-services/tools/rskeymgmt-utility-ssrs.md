@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099809"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
@@ -76,16 +76,17 @@ ms.locfileid: "66099809"
  Configura una instancia del servidor de informes remoto para compartir la base de datos del servidor de informes que la instancia del servidor de informes local usa.  
   
  **-r**  *installationID*  
- Quita la información de clave simétrica de una instancia de servidor de informes concreta y, por lo tanto, quita el servidor de informes de una implementación escalada. *installationID* es un valor de GUID que se puede encontrar en el archivo RSReportserver.config.  
+ Quita la información de clave simétrica de una instancia de servidor de informes concreta y, por lo tanto, quita el servidor de informes de una implementación escalada. 
+  *installationID* es un valor de GUID que se puede encontrar en el archivo RSReportserver.config.  
   
- `-f`  *file*  
+ `-f`  *filesystem*  
  Especifica una ruta válida al archivo que almacena una copia de seguridad de las claves simétricas.  
   
  Para **rskeymgmt -e**, la clave simétrica se escribe en el archivo especificado.  
   
  Para **rskeymgmt -a**, el valor de la clave simétrica almacenada en el archivo se aplica a la instancia del servidor de informes.  
   
- `-p`  *Contraseña*  
+ `-p`  *contraseña*  
  (Se requiere para `-f`). Especifica la contraseña que se usa para realizar una copia de seguridad o para aplicar una clave simétrica. Este valor no puede estar en blanco.  
   
  `-i`  
@@ -97,13 +98,13 @@ ms.locfileid: "66099809"
  `-n`  
  Especifica el nombre de la instancia del servidor de informes en un equipo remoto. Este argumento es opcional si ha instalado el servidor de informes en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminada (el valor predeterminado para `-n` es MSSQLSERVER). Si ha instalado el servidor de informes como una instancia con nombre, se requiere `-n`.  
   
- `-u`  *useraccount*  
+ `-u`  *cuentadeusuario*  
  Especifica la cuenta de administrador del equipo remoto que está combinando con la implementación escalada. Si no se especifica una cuenta, se usan las credenciales del usuario actual.  
   
- `-v`  *Contraseña*  
+ `-v`  *contraseña*  
  (Se requiere para `-u`). Especifica la contraseña de una cuenta de administrador del equipo remoto que desea combinar con la implementación escalada.  
   
- **-t**  *trace*  
+ **-t**  *seguimiento*  
  Registra los mensajes de error en el registro de seguimiento. Este argumento no toma ningún valor. Para obtener más información, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
 ## <a name="permissions"></a>Permisos  
@@ -147,9 +148,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Implementación de ampliación horizontal del servidor de informes se refiere a un modelo de implementación en el que varias instancias del servidor de informes comparten la misma base de datos del servidor de informes. Una base de datos del servidor de informes la puede usar cualquier instancia del servidor de informes que almacene sus claves simétricas en la base de datos. Por ejemplo, si una base de datos del servidor de informes contiene información de clave para tres instancias del servidor de informes, las tres instancias se consideran miembros de la misma implementación de ampliación horizontal.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Combinar instancias del servidor de informes en el mismo equipo  
- Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos `-u` y `-v` si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos `-u` y `-v` se utilizan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, obtendrá el siguiente error: "Las credenciales de usuario no pueden utilizarse para las conexiones locales."  
+ Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos `-u` y `-v` si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos `-u` y `-v` se utilizan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, recibirá un error que indica que las credenciales de usuario no se pueden utilizar para las conexiones locales.  
   
- El ejemplo siguiente muestra la sintaxis para crear una implementación escalada con varias instancias locales. En este ejemplo, <`initializedinstance`> es el nombre de una instancia que ya está inicializada para usar la base de datos del servidor de informes, y <`newinstance`> es el nombre de la instancia que desea agregar a la implementación:  
+ El ejemplo siguiente muestra la sintaxis para crear una implementación escalada con varias instancias locales. En este ejemplo, <`initializedinstance`> es el nombre de una instancia que ya está inicializada para usar la base de datos del servidor de `newinstance` informes y <> es el nombre de la instancia que desea agregar a la implementación:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -165,18 +166,18 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Ubicación del archivo  
- Rskeymgmt.exe se encuentra en **\<*unidad*>:\Archivos de programa\Microsoft SQL Server\110\Tools\Binn** o en **\<*unidad*>:\Archivos de programa (x86)\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
+ Rskeymgmt. exe se encuentra en la ** \< *unidad*>: \Archivos de programa\Microsoft SQL Server\110\Tools\Binn** o en la ** \< *unidad*>: \Archivos de programa (x86) \Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El servidor de informes cifra las credenciales almacenadas y la información de la conexión. Para cifrar los datos, se utiliza una clave pública y una clave simétrica. Para que el servidor de informes funcione, la base de datos debe tener claves válidas. Puede usar **rskeymgmt** para realizar una copia de seguridad de las claves, eliminarlas o restaurarlas. Si las claves no se pueden restaurar, esta herramienta proporciona un método para eliminar el contenido cifrado que ya no se pueda usar.  
   
  La utilidad **rskeymgmt** se usa para administrar el conjunto de claves que se define durante la instalación o durante la inicialización. Conecta con el servicio Servidor de informes de Windows local mediante un punto final de llamada a procedimiento remoto (RPC). El servicio Servidor de informes de Windows debe estar en ejecución para que esta utilidad funcione.  
   
  Para más información sobre las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Reporting Services servidor de informes &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

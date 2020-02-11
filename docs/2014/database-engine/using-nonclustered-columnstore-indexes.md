@@ -1,5 +1,5 @@
 ---
-title: El uso de índices de almacén de columnas no agrupado | Microsoft Docs
+title: Uso de índices de almacén de columnas no agrupados | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773797"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Usar índices no clúster de almacén de columnas
@@ -26,19 +26,19 @@ ms.locfileid: "62773797"
   
 ## <a name="contents"></a>Contenido  
   
--   [Crear un índice no agrupado de almacén de columnas](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
+-   [Crear un índice no clúster de almacén de columnas](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
   
--   [Cambiar los datos de un índice no agrupado de almacén de columnas](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
+-   [Cambiar los datos de un índice de almacén de columnas no agrupado](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
-##  <a name="load"></a> Crear un índice no agrupado de almacén de columnas  
- Para cargar datos en un índice de almacén, cargue primero los datos en una tabla tradicional de almacén de filas almacenada como un montón o agrupado de índice y, a continuación, usar [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) para crear un índice de almacén de columnas.  
+##  <a name="load"></a>Crear un índice de almacén de columnas no agrupado  
+ Para cargar datos en un índice de almacén de columnas no agrupado, cargue primero los datos en una tabla almacén tradicional almacenada como un montón o un índice clúster y, a continuación, use [crear índice de almacén de columnas &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) para crear un índice de almacén de columnas.  
   
- ![Cargar datos en un índice de almacén de columnas](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "cargar datos en un índice de almacén de columnas")  
+ ![Cargar datos en un índice de almacén de columnas](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Cargar datos en un índice de almacén de columnas")  
   
-##  <a name="change"></a> Cambiar los datos de un índice no agrupado de almacén de columnas  
+##  <a name="change"></a>Cambiar los datos de un índice de almacén de columnas no agrupado  
  Una vez creado un índice no clúster de almacén de columnas en una tabla, no puede modificar directamente los datos de esa tabla. Una consulta con INSERT, UPDATE, DELETE o MERGE generará un error y devolverá un mensaje de error. Para agregar o modificar los datos de la tabla, puede hacer lo siguiente:  
   
--   Deshabilitar el índice de almacén de columnas. Después puede actualizar los datos de la tabla. Si deshabilita el índice de almacén de columnas, puede regenerar el índice de almacén de columnas cuando termine de actualizar los datos. Por ejemplo:  
+-   Deshabilite el índice de almacén de columnas. Después puede actualizar los datos de la tabla. Si deshabilita el índice de almacén de columnas, puede regenerar el índice de almacén de columnas cuando termine de actualizar los datos. Por ejemplo:  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
@@ -46,7 +46,7 @@ ms.locfileid: "62773797"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   Quite el índice de almacén de columnas, actualizar la tabla y, a continuación, volver a crear el índice de almacén de columnas con CREATE COLUMNSTORE INDEX. Por ejemplo:  
+-   Quite el índice de almacén de columnas, actualice la tabla y, a continuación, vuelva a crear el índice de almacén de columnas con crear índice de almacén de columnas. Por ejemplo:  
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

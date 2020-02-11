@@ -1,5 +1,5 @@
 ---
-title: Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
+title: Replicación, Change Tracking, captura de datos modificados y Grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814061"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn (SQL Server)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ayuda a proporcionar alta disponibilidad y capacidades adicionales de recuperación de base de datos.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]La replicación, la captura de datos modificados (CDC) y el seguimiento de cambios ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]CT) se admiten en. 
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ayuda a proporcionar alta disponibilidad y capacidades adicionales de recuperación de base de datos.  
   
  
   
-##  <a name="Overview"></a> Información general de la replicación en grupos de disponibilidad AlwaysOn  
+##  <a name="Overview"></a>Información general sobre la replicación en Grupos de disponibilidad AlwaysOn  
   
-###  <a name="PublisherRedirect"></a> Redirección del publicador  
+###  <a name="PublisherRedirect"></a>Redirección del publicador  
  Cuando una base de datos publicada se basa en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], el distribuidor que proporciona el acceso del agente a la base de datos de publicación se configura con entradas de publicadores redirigidos. Estas entradas redirigirán el par publicador/base de datos configurado originalmente, haciendo uso de un nombre de agente de escucha del grupo de disponibilidad para conectarse al publicador y a la base de datos de publicación. Las conexiones establecidas a través del nombre de agente de escucha del grupo de disponibilidad producirán errores en la conmutación por error. Cuando se reinicia el agente de replicación después de la conmutación por error, la conexión será redirigida automáticamente al nuevo elemento principal.  
   
  En un grupo de disponibilidad AlwaysOn una base de datos secundaria no puede ser un publicador. La operación de volver a publicar no se admite cuando la replicación se combina con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -39,7 +40,7 @@ ms.locfileid: "62814061"
 > [!NOTE]  
 >  Después de la conmutación por error a una réplica secundaria, el Monitor de replicación no puede ajustar el nombre de la instancia de publicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y seguirá mostrando información de replicación bajo el nombre de la instancia principal original de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Después de la conmutación por error, el Monitor de replicación no puede especificar un token de seguimiento, aunque muestra un token de seguimiento especificado en el nuevo publicador mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-###  <a name="Changes"></a> Cambios generales en los agentes de replicación para admitir grupos de disponibilidad AlwaysOn  
+###  <a name="Changes"></a>Cambios generales en los agentes de replicación para admitir Grupos de disponibilidad AlwaysOn  
  Tres agentes de replicación se han modificado para admitir [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Los agentes de registro del LOG, de instantáneas y de mezcla se han modificado para consultar la base de datos de distribución del publicador redirigido y utilizar el nombre de agente de escucha del grupo de disponibilidad devuelto, si se ha declarado un publicador redirigido, para conectarse al publicador de la base de datos.  
   
  De forma predeterminada, cuando los agentes consultan el distribuidor para determinar si se ha redirigido el publicador original, se comprobará la idoneidad de la redirección o el destino actual antes de devolver el host redirigido al agente. Este es el comportamiento recomendado. Sin embargo, si el inicio del agente se produce con mucha frecuencia, la sobrecarga asociada al procedimiento almacenado de validación puede ser demasiado costosa. Se ha agregado un nuevo modificador de la línea de comandos, *BypassPublisherValidation*, a los agentes de registro del LOG, de instantáneas y de mezcla. Cuando se utiliza el modificador, el publicador redirigido se devuelve inmediatamente al agente y se omite la ejecución del procedimiento almacenado de validación.  
@@ -59,7 +60,7 @@ ms.locfileid: "62814061"
   
      La marca de seguimiento 1448 permite que el lector del registro de replicación avance aunque las réplicas secundarias asincrónicas no hayan confirmado la recepción de un cambio. Incluso con esta marca de seguimiento habilitada, el lector del registro espera siempre las réplicas secundarias sincrónicas. El lector del registro no irá más allá de la confirmación mínima de las réplicas secundarias sincrónicas. Esta marca de seguimiento se aplica a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], no solo a un grupo disponibilidad, una base de datos de disponibilidad o una instancia del lector de registros. Esta marca de seguimiento surte efecto inmediatamente sin necesidad de reiniciar. Se puede activar de antemano o cuando se produce un error en una réplica secundaria asincrónica.  
   
-###  <a name="StoredProcs"></a> Procedimientos almacenados que admiten AlwaysOn  
+###  <a name="StoredProcs"></a>Procedimientos almacenados que admiten AlwaysOn  
   
 -   **sp_redirect_publisher**  
   
@@ -81,10 +82,10 @@ ms.locfileid: "62814061"
   
      Este procedimiento almacenado se ejecuta siempre manualmente. El autor de la llamada debe tener el rol **sysadmin** en el distribuidor, el rol **dbowner** de la base de datos de distribución o ser miembro de la **lista de acceso a la publicación** de una publicación de la base de datos del publicador. Además, el inicio de sesión del autor de la llamada debe ser un inicio de sesión válido para todos los hosts de réplicas de disponibilidad y tener determinados privilegios en la base de datos de disponibilidad asociada a la base de datos del publicador.  
   
-###  <a name="CDC"></a> Captura de datos modificados  
+###  <a name="CDC"></a>Captura de datos modificados  
  Las bases de datos habilitadas para la captura de datos modificados (CDC) pueden aprovechar las ventajas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para asegurarse de que no solo la base de datos sigue estando disponible en caso de error, sino que los cambios en las tablas de la base de datos se siguen supervisando y depositando en las tablas de cambios de CDC. El orden en que se configuran CDC y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no es importante. Las bases de datos habilitadas para CDC se pueden agregar a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]y las bases de datos que son miembros de un grupo de disponibilidad AlwaysOn se pueden habilitar para CDC. Sin embargo, en ambos casos, la configuración de CDC se realiza siempre en la réplica principal prevista o actual. CDC usa el agente de registro del LOG y tiene las mismas limitaciones descritas en la sección **Modificaciones del Agente de registro del LOG** anteriormente en este tema.  
   
--   **Recolección de cambios para la captura de datos modificados sin replicación**  
+-   **Recopilación de cambios para la captura de datos modificados sin replicación**  
   
      Si CDC está habilitada para una base de datos pero la replicación no lo está, el proceso de captura se utiliza para recopilar cambios del registro y depositarlos en las ejecuciones de las tablas de cambios de CDC en el host de CDC como su propio trabajo del Agente SQL.  
   
@@ -96,11 +97,11 @@ ms.locfileid: "62814061"
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
--   **Recolección de cambios para la captura de datos modificados con replicación**  
+-   **Recopilación de cambios para la captura de datos modificados con replicación**  
   
      Si CDC y la replicación están habilitadas para una base de datos, el agente de registro del LOG controla el rellenado de las tablas de cambios de CDC. En este caso, las técnicas empleadas por la replicación para aprovechar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] asegurarán que los cambios continúan recopilándose del registro y depositándose en las tablas de cambios de CDC después de la conmutación por error. No es necesario realizar ninguna acción adicional para CDC en esta configuración para garantizar que las tablas de cambios se rellenarán.  
   
--   **Limpieza de la captura de datos modificados**  
+-   **Limpieza de captura de datos modificados**  
   
      Para garantizar que se produce la limpieza apropiada en la nueva base de datos principal, siempre debe crearse un trabajo de limpieza local. En el ejemplo siguiente se crea el trabajo de limpieza.  
   
@@ -109,13 +110,13 @@ ms.locfileid: "62814061"
     ```  
   
     > [!NOTE]  
-    >  Se deben crear los trabajos en todos los destinos posibles de conmutación por error antes de la conmutación por error y marcarlos como deshabilitados hasta que la réplica de disponibilidad de un host se convierta en la nueva réplica principal. Los trabajos de CDC que se ejecutan en la base de datos principal anterior también deben estar deshabilitados cuando la base de datos local se convierte en una base de datos secundaria. Para deshabilitar y habilitar trabajos, use la opción *@enabled* del procedimiento [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Para obtener más información sobre cómo crear trabajos de CDC, vea [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT).  
+    >  Se deben crear los trabajos en todos los destinos posibles de conmutación por error antes de la conmutación por error y marcarlos como deshabilitados hasta que la réplica de disponibilidad de un host se convierta en la nueva réplica principal. Los trabajos de CDC que se ejecutan en la base de datos principal anterior también deben estar deshabilitados cuando la base de datos local se convierte en una base de datos secundaria. Para deshabilitar y habilitar trabajos, use *@enabled* la opción de [sp_update_job &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Para obtener más información sobre cómo crear trabajos de CDC, vea [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
   
--   **Agregar Roles de CDC a una réplica de base de datos principal AlwaysOn**  
+-   **Agregar roles de CDC a una réplica de la base de datos principal de AlwaysOn**  
   
      Cuando se habilita una tabla para CDC, se puede asociar un rol de base de datos con la instancia de captura. Si se especifica un rol, el usuario que desea utilizar funciones con valores de tabla CDC para tener acceso a los cambios de la tabla no solo debe tener acceso de selección a las columnas de la tabla sometida a seguimiento, sino que también debe ser miembro del rol con nombre. Si no existe todavía el rol especificado, se creará. Cuando los roles de base de datos se agregan automáticamente a una base de datos principal AlwaysOn, los roles también se propagan a las bases de datos secundarias del grupo de disponibilidad.  
   
--   **Aplicaciones cliente que tienen acceso a los datos modificados de CDC y AlwaysOn**  
+-   **Aplicaciones cliente que tienen acceso a datos modificados de CDC y Always On**  
   
      Las aplicaciones cliente que usan funciones con valores de tabla (TVF) o servidores vinculados para tener acceso a datos de las tablas de cambios también necesitan poder encontrar un host de CDC apropiado después de la conmutación por error. El nombre de agente de escucha del grupo de disponibilidad es el mecanismo proporcionado por [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para permitir de forma transparente la redirección de una conexión a un host diferente. Una vez que un nombre de agente de escucha del grupo de disponibilidad está asociado a un grupo de disponibilidad, se puede utilizar en las cadenas de conexión de TCP. Se admiten dos escenarios de conexión diferentes mediante el nombre de agente de escucha del grupo de disponibilidad.  
   
@@ -138,7 +139,7 @@ ms.locfileid: "62814061"
     WHERE d.database_name = N'MyCDCDB';  
     ```  
   
--   **Redirigir la carga de consulta a una réplica secundaria legible**  
+-   **Redirigir la carga de la consulta a una réplica secundaria legible**  
   
      Aunque en muchos casos una aplicación cliente siempre deseará conectarse a la réplica principal actual, esa no es la única forma de aprovechar las ventajas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si se configura un grupo de disponibilidad para que admita réplicas secundarias legibles, también se pueden recopilar los datos modificados de nodos secundarios.  
   
@@ -156,7 +157,7 @@ ms.locfileid: "62814061"
   
      Se puede usar el nombre de agente de escucha del grupo de disponibilidad o el nombre de nodo explícito para buscar la réplica secundaria. Si se emplea el nombre de agente de escucha del grupo de disponibilidad, el acceso se dirigirá a cualquier réplica secundaria adecuada.  
   
-     Cuando `sp_addlinkedserver` se usa para crear un servidor vinculado para obtener acceso a la base de datos secundaria, la *@datasrc* parámetro se usa para el nombre de agente de escucha del grupo de disponibilidad o el nombre de servidor explícito y el *@provstr* parámetro se usa para especificar la intención de solo lectura.  
+     Cuando `sp_addlinkedserver` se usa para crear un servidor vinculado para tener acceso al secundario *@datasrc* , el parámetro se usa para el nombre del agente de escucha del grupo de disponibilidad o el *@provstr* nombre de servidor explícito, y el parámetro se usa para especificar la intención de solo lectura.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -168,11 +169,11 @@ ms.locfileid: "62814061"
     @catalog=N'MY_DB_NAME';  
     ```  
   
--   **Acceso de cliente a los datos modificados de CDC y los inicios de sesión de dominio**  
+-   **Acceso de cliente a datos de cambio de CDC e inicios de sesión de dominio**  
   
      En general, deben utilizarse inicios de sesión de dominio para el acceso de cliente a los datos modificados de bases de datos que son miembros de grupos de disponibilidad AlwaysOn. Para garantizar el acceso continuado a los datos modificados después de la conmutación por error, el usuario de dominio necesitará tener privilegios de acceso en todos los hosts que admiten réplicas del grupo de disponibilidad. Si se agrega un usuario de base de datos a una base de datos en una réplica principal y el usuario está asociado a un inicio de sesión de dominio, el usuario de base de datos se propaga a las bases de datos secundarias y continúa asociado al inicio de sesión de dominio especificado. Si el nuevo usuario de base de datos está asociado a un inicio de sesión de autenticación de SQL Server, el usuario de las bases de datos secundarias se propagará sin un inicio de sesión. Mientras que el inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asociado se puede utilizar para acceder a los datos modificados del elemento principal donde se definió originalmente el usuario de base de datos, ese nodo es el único donde sería posible el acceso. El inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no podría acceder a los datos de una base de datos secundaria ni a los de una nueva base de datos principal diferente de la base de datos original donde estaba definido el usuario de base de datos.  
   
-###  <a name="CT"></a> Seguimiento de los cambios  
+###  <a name="CT"></a>Change Tracking  
  Una base de datos habilitada para el seguimiento de cambios (CT) puede formar parte de un grupo de disponibilidad AlwaysOn. No se necesita ninguna configuración adicional. Las aplicaciones cliente de seguimiento de cambios que usan las funciones con valores de tabla (TVF) de CDC para tener acceso a los datos modificados también necesitarán poder encontrar la réplica principal después de la conmutación por error. Si la aplicación cliente se conecta mediante el nombre de agente de escucha del grupo de disponibilidad, las solicitudes de conexión siempre se dirigirán correctamente a la réplica principal actual.  
   
 > [!NOTE]  
@@ -182,39 +183,39 @@ ms.locfileid: "62814061"
 >   
 >  Para las bases de datos que son miembros de una réplica secundaria (es decir, para las bases de datos secundarias), no se admite el seguimiento de cambios. Ejecute las consultas de seguimiento de cambios en las bases de datos de la réplica principal.  
   
-##  <a name="Prereqs"></a> Requisitos previos, restricciones y consideraciones para el uso de la replicación  
+##  <a name="Prereqs"></a>Requisitos previos, restricciones y consideraciones para el uso de la replicación  
  En esta sección se describe las consideraciones para implementar la replicación con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], incluidos los requisitos previos, las restricciones y las recomendaciones.  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
   
 -   Cuando se utiliza la replicación transaccional y la base de datos de publicación está en un grupo de disponibilidad, tanto el publicador como el distribuidor deben ejecutar al menos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. El suscriptor puede utilizar un nivel inferior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Cuando se utiliza la replicación de mezcla y la base de datos de publicación está en un grupo de disponibilidad:  
   
-    -   Suscripción de inserción: El publicador y el distribuidor deben ejecutar al menos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Suscripción de inserción: tanto el publicador como el distribuidor deben ejecutar como mínimo [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Suscripción de extracción: Las bases de datos del publicador, distribuidor y suscriptor deben ser al menos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Esto se debe a que el agente de mezcla el suscriptor debe entender cómo un grupo de disponibilidad puede realizar la conmutación por error a su réplica secundaria.  
+    -   Suscripción de extracción: las bases de datos del publicador, el distribuidor y el suscriptor deben ser al menos de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Esto se debe a que el agente de mezcla el suscriptor debe entender cómo un grupo de disponibilidad puede realizar la conmutación por error a su réplica secundaria.  
   
 -   No se admite poner la base de datos de distribución en un grupo de disponibilidad.  
   
--   Las instancias del publicador cumplen todos los requisitos previos necesarios para participar en un grupo de disponibilidad AlwaysOn. Para más información, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Las instancias del publicador cumplen todos los requisitos previos necesarios para participar en un grupo de disponibilidad AlwaysOn. Para obtener más información, consulte [requisitos previos, restricciones y recomendaciones para obtener Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="restrictions"></a>Restricciones  
  Combinaciones admitidas de replicación en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 |||||  
 |-|-|-|-|  
-||**publicador**|**Distribuidor** <sup>3</sup>|**Suscriptor**|  
+||**Publicador**|**Distribuidor** <sup>3</sup>|**Suscriptor**|  
 |**Transaccional**|Sí<sup>1</sup>|No|Sí<sup>2</sup>|  
-|**P2P**|No|Sin|Sin|  
-|**Mezcla**|Sí|Sin|Sí<sup>2</sup>|  
-|**Snapshot**|Sí|Sin|Sí<sup>2</sup>|  
+|**P2P**|No|No|No|  
+|**Combinar**|Sí|No|Sí<sup>2</sup>|  
+|**Archivos**|Sí|No|Sí<sup>2</sup>|  
   
- <sup>1</sup> no incluye compatibilidad para la replicación transaccional bidireccional y recíproca.  
+ <sup>1</sup> no incluye compatibilidad con la replicación transaccional bidireccional y recíproca.  
   
- <sup>2</sup> conmutación por error a la base de datos de réplica es un procedimiento manual. No se proporciona la conmutación por error automática.  
+ <sup>2</sup> la conmutación por error a la base de datos de réplica es un procedimiento manual. No se proporciona la conmutación por error automática.  
   
- <sup>3</sup> base de datos del distribuidor no se admite para su uso con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o creación de reflejo de base de datos.  
+ <sup>3</sup> la base de datos del distribuidor no se admite [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para su uso con o la creación de reflejo de la base de datos.  
   
 ### <a name="considerations"></a>Consideraciones  
   
@@ -233,7 +234,7 @@ ms.locfileid: "62814061"
   
 -   [Preguntas más frecuentes para administradores de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **Captura de datos modificados**  
   
 -   [Habilitar y deshabilitar la captura de datos modificados &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   
@@ -241,7 +242,7 @@ ms.locfileid: "62814061"
   
 -   [Trabajar con datos modificados &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **Change tracking**  
+ **Seguimiento de cambios**  
   
 -   [Habilitar y deshabilitar el seguimiento de cambios &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   
@@ -249,15 +250,15 @@ ms.locfileid: "62814061"
   
 -   [Trabajar con el seguimiento de cambios &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
- [Los suscriptores de replicación y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
- [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidad AlwaysOn: Interoperabilidad (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Suscriptores de replicación y Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
+ [Requisitos previos, restricciones y recomendaciones para el SQL Server de &#40;de Grupos de disponibilidad AlwaysOn&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ Grupos de disponibilidad AlwaysOn: [instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) de [interoperabilidad (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Replicación de SQL Server](../../../relational-databases/replication/sql-server-replication.md)   
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)  
+ [Sys. sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)  
   
   

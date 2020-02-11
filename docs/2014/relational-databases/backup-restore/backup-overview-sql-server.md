@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175989"
 ---
-# <a name="backup-overview-sql-server"></a>Información general de copia de seguridad (SQL Server)
+# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   En este tema se presenta el componente de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La copia de seguridad de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es esencial para proteger los datos. En esta descripción se tratan los tipos y las restricciones de copia de seguridad. En el tema también se presentan los dispositivos y los medios de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **En este tema:**  
@@ -38,11 +38,11 @@ ms.locfileid: "70175989"
   
 -   [Compresión de copia de seguridad](#BackupCompression)  
   
--   [Restricciones en las operaciones de copia de seguridad en SQL Server](#Restrictions)  
+-   [Restricciones de las operaciones de copia de seguridad en SQL Server](#Restrictions)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a> Componentes y conceptos  
+##  <a name="TermsAndDefinitions"></a>Componentes y conceptos  
  realizar copia de seguridad [verbo]  
  Copia los datos o las entradas de registro de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de su registro de transacciones en un dispositivo de copia de seguridad, como un disco, para crear una copia de seguridad de datos o de registros.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "70175989"
  copia de seguridad de datos  
  Copia de seguridad de datos de una base de datos completa (copia de seguridad de base de datos), una base de datos parcial (copia de seguridad parcial) o un conjunto de archivos de datos o grupos de archivos (copia de seguridad de archivos).  
   
- [copia de seguridad de base de datos](full-database-backups-sql-server.md)  
+ [Database backup](full-database-backups-sql-server.md)  
  Copia de seguridad de una base de datos. Las copias de seguridad completas representan la base de datos completa en el momento en que finalizó la copia de seguridad. Las copias de seguridad diferenciales solo contienen los cambios realizados en la base de datos desde la copia de seguridad completa más reciente.  
   
  [copia de seguridad diferencial](full-database-backups-sql-server.md)  
@@ -86,7 +86,7 @@ ms.locfileid: "70175989"
  **Términos y definiciones de medios de copia de seguridad**  
   
  [dispositivo de copia de seguridad](backup-devices-sql-server.md)  
- Disco o dispositivo de cinta en el que se escriben las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage, y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Disco o dispositivo de cinta en el que se escriben las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage, y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [medio de copia de seguridad](media-sets-media-families-and-backup-sets-sql-server.md)  
  Una o varias cintas o archivos de disco en los que se han escrito una o varias copias de seguridad.  
@@ -104,7 +104,8 @@ ms.locfileid: "70175989"
  Varias copias (reflejos) de un conjunto de medios.  
   
 ##  <a name="BackupCompression"></a>Compresión de copia de seguridad  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y versiones posteriores admiten la compresión de copias de seguridad, y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores pueden restaurar una copia de seguridad comprimida. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+ 
+  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y versiones posteriores admiten la compresión de copias de seguridad, y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores pueden restaurar una copia de seguridad comprimida. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
 ##  <a name="Restrictions"></a>Restricciones en las operaciones de copia de seguridad en SQL Server  
  Se puede realizar la copia de seguridad mientras la base de datos está en línea y en uso. Sin embargo, existen las siguientes restricciones.  
@@ -123,7 +124,8 @@ ms.locfileid: "70175989"
  Normalmente, la copia de seguridad de registros será correcta aunque uno o varios de los archivos de datos no estén disponibles. Sin embargo, si algún archivo incluye cambios registrados de forma masiva realizados en el modelo de recuperación optimizado para cargas masivas de registros, todos los archivos deberán estar en línea para que la copia de seguridad sea correcta.  
   
 ### <a name="concurrency-restrictions-during-backup"></a>Restricciones de simultaneidad durante una copia de seguridad  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el proceso de copia de seguridad en línea para permitir que se realice la copia de seguridad de una base de datos mientras se está utilizando. Durante la copia de seguridad, se pueden realizar la mayoría de las operaciones (por ejemplo, las instrucciones INSERT, UPDATE o DELETE están permitidas durante la operación de copia de seguridad). Sin embargo, si intenta iniciar una operación de copia de seguridad durante la creación o eliminación de un archivo de la base de datos, la operación de copia de seguridad esperará hasta que la creación o eliminación haya terminado o hasta que se agote el tiempo de espera de la copia de seguridad.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el proceso de copia de seguridad en línea para permitir que se realice la copia de seguridad de una base de datos mientras se está utilizando. Durante la copia de seguridad, se pueden realizar la mayoría de las operaciones (por ejemplo, las instrucciones INSERT, UPDATE o DELETE están permitidas durante la operación de copia de seguridad). Sin embargo, si intenta iniciar una operación de copia de seguridad durante la creación o eliminación de un archivo de la base de datos, la operación de copia de seguridad esperará hasta que la creación o eliminación haya terminado o hasta que se agote el tiempo de espera de la copia de seguridad.  
   
  Las operaciones que no se pueden ejecutar durante la copia de seguridad de la base de datos o del registro de transacciones son las siguientes:  
   
@@ -142,7 +144,7 @@ ms.locfileid: "70175989"
   
 -   [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Especificar un disco o una cinta como destino de copia de seguridad &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Especifique un disco o una cinta como destino de copia de seguridad &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Eliminar un dispositivo de copia de seguridad &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
@@ -156,7 +158,7 @@ ms.locfileid: "70175989"
   
 -   [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: SQL Server copias de seguridad y restauración en Azure Blob Storage Service](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Para crear una copia de seguridad**  
   
@@ -165,7 +167,7 @@ ms.locfileid: "70175989"
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 -   [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   
@@ -179,9 +181,9 @@ ms.locfileid: "70175989"
   
 -   [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: SQL Server copias de seguridad y restauración en Azure Blob Storage Service](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Planes de mantenimiento](../maintenance-plans/maintenance-plans.md)   

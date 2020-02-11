@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809281"
 ---
 # <a name="server-properties-processors-page"></a>Propiedades del servidor (página Procesadores)
@@ -26,19 +26,19 @@ ms.locfileid: "62809281"
  **Afinidad del procesador**  
  Asigna procesadores a subprocesos específicos para eliminar las recargas de procesador y reducir la migración de subprocesos entre los procesadores. Para obtener más información, vea [affinity mask (opción de configuración del servidor)](affinity-mask-server-configuration-option.md).  
   
- **Afinidad de E/S**  
- Enlaza las E/S de disco de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un subconjunto determinado de CPU. Para obtener más información, vea [affinity I/O mask (opción de configuración del servidor)](affinity-input-output-mask-server-configuration-option.md).  
+ **Afinidad de e/s**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enlaza e/s de disco a un subconjunto especificado de CPU. Para obtener más información, vea [affinity I/O mask (opción de configuración del servidor)](affinity-input-output-mask-server-configuration-option.md).  
   
  **Establecer automáticamente máscara de afinidad de procesador para todos los procesadores**  
  Permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definir la afinidad de los procesadores.  
   
- **Establecer automáticamente máscara de afinidad de E/S para todos los procesadores**  
+ **Establecer automáticamente máscara de afinidad de e/s para todos los procesadores**  
  Permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definir la afinidad de E/S.  
   
  **Número máximo de subprocesos de trabajo**  
  0 permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecer de forma dinámica el número de subprocesos de trabajo. Este valor es el más adecuado para la mayor parte de los sistemas. No obstante, según la configuración del sistema, definir esta opción en un valor específico puede mejorar, a veces, el rendimiento. Para más información, consulte [Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo](configure-the-max-worker-threads-server-configuration-option.md).  
   
- **Aumentar la prioridad de SQL Server**  
+ **Aumentar prioridad de SQL Server**  
  Especifica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ejecutarse con una prioridad de programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows mayor que la de los demás procesos del mismo equipo. Para más información, consulte [Establecer la opción de configuración del servidor Aumento de prioridad](configure-the-priority-boost-server-configuration-option.md).  
   
  **Usar fibras de Windows (agrupación ligera)**  
@@ -50,7 +50,7 @@ ms.locfileid: "62809281"
  **Valores actuales**  
  Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

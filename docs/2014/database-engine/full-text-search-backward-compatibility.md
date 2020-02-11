@@ -15,23 +15,23 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779265"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Compatibilidad con versiones anteriores de búsqueda de texto completo
   En los temas de la sección de compatibilidad con versiones anteriores se describen los cambios del comportamiento de la búsqueda de texto completo entre las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-|Ver...|Para consultar temas sobre...|  
+|Vea...|Para temas sobre...|  
 |----------|-----------------------|  
-|[Características en desuso de búsqueda de texto completo en SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|Características de búsqueda de texto completo desusadas en esta versión.|  
-|[Características descontinuadas de la búsqueda de texto completo incluidas en SQL Server 2014](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|Características de búsqueda de texto completo que no se incluyen en esta versión.|  
+|[Características de la búsqueda de texto completo desusadas en SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|Características de búsqueda de texto completo desusadas en esta versión.|  
+|[Características de la búsqueda de texto completo no incluidas en SQL Server 2014](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|Características de búsqueda de texto completo que no se incluyen en esta versión.|  
 |[Cambios principales en la búsqueda de texto completo](breaking-changes-to-full-text-search.md)|Cambios en la búsqueda de texto completo que pueden requerir cambios en las aplicaciones.|  
 |[Cambios de comportamiento en la búsqueda de texto completo](../../2014/database-engine/behavior-changes-to-full-text-search.md)|Otros cambios de comportamiento en la búsqueda de texto completo.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](sql-server-database-engine-backward-compatibility.md)  
   
   

@@ -21,21 +21,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9a300ce29141ed0a065b4186b737c4d8c294820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768909"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plan de ejecución y asignación de búfer
   Antes de la ejecución, la tarea de flujo de datos examina sus componentes y genera un plan de ejecución para cada secuencia de componentes. En esta sección se proporcionan detalles sobre el plan de ejecución, cómo ver el plan y cómo se asignan búferes de entrada y salida en función del plan de ejecución.  
   
 ## <a name="understanding-the-execution-plan"></a>Descripción del plan de ejecución  
- Un plan de ejecución contiene subprocesos de origen y de trabajo; cada subproceso contiene listas de trabajo que especifican listas de trabajo de salida para los subprocesos de origen o listas de trabajo de entrada y salida para los subprocesos de trabajo. Los subprocesos de origen de un plan de ejecución representan los componentes de origen del flujo de datos y se identifican en el plan de ejecución mediante *SourceThread**n*, donde *n* es el número de base cero del subproceso de origen.  
+ Un plan de ejecución contiene subprocesos de origen y de trabajo; cada subproceso contiene listas de trabajo que especifican listas de trabajo de salida para los subprocesos de origen o listas de trabajo de entrada y salida para los subprocesos de trabajo. Los subprocesos de origen de un plan de ejecución representan los componentes de origen del flujo de datos y se identifican en el plan de ejecución mediante *SourceThread * * n*, donde *n* es el número de base cero del subproceso de origen.  
   
  Cada subproceso de origen crea un búfer, establece un agente de escucha y llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> en el componente de origen. Aquí es donde se inicia la ejecución y se original los datos, a medida que el componente de origen comienza a agregar filas a los búferes de salida que le proporciona la tarea de flujo de datos. Una vez que los subprocesos de origen se están ejecutando, el equilibrio de trabajo se distribuye entre subprocesos de trabajo.  
   
- Un subproceso de trabajo puede contener listas de trabajo de entrada y salida, y se identifica en el plan de ejecución como *WorkThread**n*, donde *n* es el número de base cero del subproceso de trabajo. Estos subproceso contienen listas de trabajo de salida cuando el gráfico contiene un componente con salidas asincrónicas.  
+ Un subproceso de trabajo puede contener listas de trabajo de entrada y salida y se identifica en el plan de ejecución como *WorkThread * * n*, donde *n* es el número de base cero del subproceso de trabajo. Estos subproceso contienen listas de trabajo de salida cuando el gráfico contiene un componente con salidas asincrónicas.  
   
  El plan de ejecución de ejemplo siguiente representa un flujo de datos que contiene un componente de origen conectado a una transformación con una salida asincrónica conectada a un componente de destino. En este ejemplo, WorkThread0 contiene una lista de trabajo de salida porque el componente de transformación tiene una salida asincrónica.  
   
@@ -84,6 +84,6 @@ End WorkThread1
   
  Es probable que el búfer que se proporciona a un componente contenga más columnas de las que el componente incluye en sus colecciones de columnas de entrada o salida, los desarrolladores de componentes pueden llamar al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> para localizar una columna en el búfer mediante la especificación de su valor `LineageID`.  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
   

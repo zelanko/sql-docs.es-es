@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721757"
 ---
 # <a name="replication-agent-profiles"></a>Perfiles del Agente de replicación
@@ -44,7 +44,7 @@ ms.locfileid: "62721757"
 ## <a name="snapshot-agent-profiles"></a>Perfiles del Agente de instantáneas  
  En la siguiente tabla se muestran los parámetros definidos en el perfil predeterminado del Agente de instantáneas. Para obtener más información acerca de estos parámetros, vea [Replication Snapshot Agent](replication-snapshot-agent.md).  
   
-||predeterminados|  
+||default|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -54,7 +54,7 @@ ms.locfileid: "62721757"
 ## <a name="log-reader-agent-profiles"></a>Perfiles del Agente de registro del LOG  
  En la siguiente tabla se muestran los parámetros definidos en los perfiles del Agente de registro del LOG. Cada columna de la tabla representa un perfil con nombre. Para obtener más información acerca de estos parámetros, vea [Replication Log Reader Agent](replication-log-reader-agent.md).  
   
-||predeterminados|historial detallado|  
+||default|historial detallado|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -66,7 +66,7 @@ ms.locfileid: "62721757"
 ## <a name="distribution-agent-profiles"></a>Perfiles del Agente de distribución  
  En la siguiente tabla se muestran los parámetros definidos en los perfiles del Agente de distribución. Cada columna de la tabla representa un perfil con nombre. Para obtener más información acerca de estos parámetros, vea [Replication Distribution Agent](replication-distribution-agent.md).  
   
-||predeterminados|historial detallado|Administrador de sincronización de Windows|Continuar después de errores de coherencia de datos.|Perfil de distribución para secuencias OLEDB|  
+||default|historial detallado|Administrador de sincronización de Windows|Continuar después de errores de coherencia de datos.|Perfil de distribución para secuencias OLEDB|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
@@ -76,8 +76,8 @@ ms.locfileid: "62721757"
 |**-LoginTimeout**|15|15|15|15|15|  
 |**-MaxBcpThreads**|1|1|1|1|1|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
-|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
-|**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
+|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32 768|  
+|**-PacketSize**|NULL|NULL|NULL|NULL|32 768|  
 |**-PollingInterval**|5|5|5|5|5|  
 |**-QueryTimeout**|1800|1800|1800|1800|1800|  
 |**-SkipErrors**|NULL|NULL|NULL|**-SkipErrors** 2601:2627:20598|NULL|  
@@ -87,7 +87,7 @@ ms.locfileid: "62721757"
 ## <a name="merge-agent-profiles"></a>Perfiles del Agente de mezcla  
  En la siguiente tabla se muestran los parámetros definidos en los perfiles del Agente de mezcla. Cada columna de la tabla representa un perfil con nombre. Para obtener más información acerca de estos parámetros, vea [Replication Merge Agent](replication-merge-agent.md).  
   
-||predeterminados|historial detallado|Administrador de sincronización de Windows|validación del recuento de filas|validación del recuento de filas y de la suma de comprobación|conexión lenta|grandes volúmenes entre servidores|  
+||default|historial detallado|Administrador de sincronización de Windows|validación del recuento de filas|validación del recuento de filas y de la suma de comprobación|conexión lenta|grandes volúmenes entre servidores|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
@@ -118,16 +118,16 @@ ms.locfileid: "62721757"
 ## <a name="queue-reader-agent-profiles"></a>Perfiles del Agente de lectura de cola  
  En la siguiente tabla se muestran los parámetros definidos en el perfil predeterminado del Agente de lectura de cola. Para obtener más información acerca de estos parámetros, vea [Replication Queue Reader Agent](replication-queue-reader-agent.md).  
   
-||predeterminados|  
+||default|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](replication-agent-administration.md)   
  [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)   
- [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
+ [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md)  
   
   

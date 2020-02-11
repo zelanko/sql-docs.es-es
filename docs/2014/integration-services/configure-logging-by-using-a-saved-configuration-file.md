@@ -1,5 +1,5 @@
 ---
-title: Configurar el registro mediante el uso de un archivo de configuración guardado | Microsoft Docs
+title: Configurar el registro mediante un archivo de configuración guardado | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2adc326ef2e0bb593b0532a51a9a677821ae0e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060600"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>Configurar el registro utilizando un archivo de configuración guardado
@@ -51,7 +51,7 @@ ms.locfileid: "66060600"
   
 9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

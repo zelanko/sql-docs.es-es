@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73a67105a8b70b1b55b15d894ebc13c90417d8e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769501"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (Not bit a bit) (expresión de SSIS)
@@ -38,7 +38,7 @@ ms.locfileid: "62769501"
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos de *integer_expression*.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  None  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
@@ -57,7 +57,7 @@ ms.locfileid: "62769501"
   
  1111111101010101  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   

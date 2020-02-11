@@ -1,5 +1,5 @@
 ---
-title: Objeto de cuadro de diálogo de enlace | Microsoft Docs
+title: Cuadro de diálogo enlace de objetos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072185"
 ---
 # <a name="object-binding-dialog-box"></a>Enlace de objetos (cuadro de diálogo)
@@ -56,7 +56,7 @@ ms.locfileid: "66072185"
  **Columna de origen**  
  Muestra una lista de columnas de la tabla seleccionada en **Tabla de origen**.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

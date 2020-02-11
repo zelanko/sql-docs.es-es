@@ -1,5 +1,5 @@
 ---
-title: Ayuda F1 del Visor de perfil de datos | Microsoft Docs
+title: Visor de perfil de datos ayuda de F1 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059719"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Visor de perfiles de datos (Ayuda F1)
@@ -31,13 +31,13 @@ ms.locfileid: "66059719"
  **Abrir**  
  Haga clic para buscar el archivo guardado que contiene la salida de la Tarea de generación de perfiles de datos.  
   
- Panel**Perfiles**  
+ Panel **perfiles**  
  Expanda el árbol del panel **Perfiles** para ver los perfiles que están incluidos en la salida. Seleccione un perfil para ver los resultados de ese perfil.  
   
- Panel**Mensaje**  
+ Panel de **mensajes**  
  Muestra mensajes de estado.  
   
- Panel**Obtención de detalles**  
+ Panel de **obtención de detalles**  
  Muestra las filas de datos que coinciden con un valor en la salida, si el origen de datos que usa la Tarea de generación de perfiles de datos está disponible.  
   
  Por ejemplo, si está viendo la salida de un perfil Distribución de valores de columna de una columna de estados americanos, el panel **Distribución de valor detallado** podría contener una fila para "WA". Haga doble clic en la fila en el panel **Distribución de valores detallados** para ver las filas de datos en las que el valor de la columna de estado sea "WA" en el panel de obtención de detalles.  
@@ -63,13 +63,13 @@ ms.locfileid: "66059719"
  Muestra el número de filas de la tabla o vista.  
   
 #### <a name="detailed-length-distribution-pane"></a>Panel Distribución de longitud detallado  
- **Longitud**  
+ **Length**  
  Muestra las longitudes de columna encontradas en la columna de perfiles.  
   
- **Count**  
+ **Contabiliza**  
  Muestra el número de filas en las que el valor de la columna de perfiles tiene la longitud que se muestra en la columna **Longitud** .  
   
- **Porcentaje**  
+ **Proporción**  
  Muestra el porcentaje de filas en las que el valor de la columna de perfiles tiene la longitud que se muestra en la columna **Longitud** .  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>Tipo de perfil = Perfil de proporción de columnas nulas  
@@ -91,10 +91,10 @@ ms.locfileid: "66059719"
  Muestra el número de filas de la tabla o vista.  
   
 #### <a name="pattern-distribution-pane"></a>Panel Distribución del patrón  
- **Patrón**  
+ **Ajedrez**  
  Muestra los patrones calculados para la columna de perfiles.  
   
- **Porcentaje**  
+ **Proporción**  
  Muestra el porcentaje de filas cuyos valores coinciden con el patrón que se muestra en la columna **Patrón** .  
   
 ### <a name="profile-type--column-statistics-profile"></a>Tipo de perfil = Perfil de estadísticas de columnas  
@@ -106,7 +106,7 @@ ms.locfileid: "66059719"
  **Máximo**  
  Muestra el valor máximo situado en la columna de perfiles.  
   
- **Promedio**  
+ **Aritmética**  
  Muestra el promedio de los valores que se encuentran en la columna de perfiles.  
   
  **Desviación estándar**  
@@ -125,10 +125,10 @@ ms.locfileid: "66059719"
  **Valor**  
  Muestra los distintos valores que se encuentran en la columna de perfiles.  
   
- **Count**  
+ **Contabiliza**  
  Muestra el número de filas en las que la columna de perfiles tiene el valor que se muestra en la columna **Valor** .  
   
- **Porcentaje**  
+ **Proporción**  
  Muestra el porcentaje de filas en las que la columna de perfiles tiene el valor que se muestra en la columna **Valor** .  
   
 ### <a name="profile-type--candidate-key-profile"></a>Tipo de perfil = Perfil de claves candidatas  
@@ -141,10 +141,10 @@ ms.locfileid: "66059719"
  Muestra el nivel (como porcentaje) de la columna de clave candidata o de una combinación de columnas. Un nivel de clave menor del 100% indica que hay valores duplicados.  
   
 #### <a name="key-violations-pane"></a>Panel Infracciones de clave  
- **\<columna1>, \<columna2>, etc.**  
+ **\<column1>, \<columna2>, etc.**  
  Muestra los valores duplicados que se encontraron en la columna de perfiles.  
   
- **Count**  
+ **Contabiliza**  
  Muestra el número de filas en las que la columna especificada tiene el valor que se muestra en la primera columna.  
   
 ### <a name="profile-type--functional-dependency-profile"></a>Tipo de perfil = Perfil de dependencia funcional  
@@ -156,7 +156,7 @@ ms.locfileid: "66059719"
  **Columnas dependientes**  
  Muestra la columna o columnas seleccionadas como columna dependiente. En el ejemplo en el que el mismo código postal de Estados Unidos siempre debería tener el mismo estado, el estado es la columna dependiente.  
   
- **Nivel de dependencia funcional**  
+ **Intensidad de dependencia funcional**  
  Muestra el nivel (como porcentaje) de la dependencia funcional entre las columnas. Un nivel de clave menor del 100% indica que hay casos en los que el valor determinante no determina el valor dependiente. En el ejemplo en el que el mismo código postal de Estados Unidos siempre debería tener el mismo estado, esto probablemente indica que algunos valores de estado no son válidos.  
   
 #### <a name="functional-dependency-violations-pane"></a>Panel Infracciones de dependencia funcional  
@@ -170,13 +170,13 @@ ms.locfileid: "66059719"
  **\<nombre de columna dependiente>**  
  Muestra el valor de la columna dependiente en esta infracción de la dependencia funcional.  
   
- **Recuento de soporte**  
+ **recuento de soporte**  
  Muestra el número de filas en las que el valor de columna determinante determina la columna dependiente.  
   
  **Recuento de infracciones**  
- Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Estas son las filas en las que el valor dependiente es el que se muestra en la columna **\<nombre de columna dependiente>** ).  
+ Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Estas son las filas en las que el valor dependiente es el valor que se muestra en el nombre de la ** \<columna dependiente>** columna).  
   
- **Porcentaje admitido**  
+ **porcentaje admitido**  
  Muestra el porcentaje de filas en las que el valor de columna determinante determina la columna dependiente.  
   
 ### <a name="profile-type--value-inclusion-profile"></a>Tipo de perfil = Perfil de inclusión de valores  
@@ -192,13 +192,13 @@ ms.locfileid: "66059719"
  Muestra el nivel (como porcentaje) de la superposición entre las columnas. Un nivel de clave menor que 100% indica que hay casos en los que el valor de subconjunto no se encuentra entre los valores del superconjunto.  
   
 #### <a name="inclusion-violations-pane"></a>Panel Infracciones de inclusión  
- **\<columna1>, \<columna2>, etc.**  
+ **\<column1>, \<columna2>, etc.**  
  Muestra los valores en la columna o columnas del subconjunto que no se encontraban en la columna o columnas del superconjunto.  
   
- **Count**  
+ **Contabiliza**  
  Muestra el número de filas en las que la columna especificada tiene el valor que se muestra en la primera columna.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Visor de perfil de datos](control-flow/data-profile-viewer.md)   
  [Visor y tarea de generación de perfiles de datos](control-flow/data-profiling-task-and-viewer.md)  
   

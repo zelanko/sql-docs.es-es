@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774287"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Administración de inicios de sesión y de trabajos para las bases de datos de un grupo de disponibilidad (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62774287"
   
      Las instancias de servidor que hospedan las réplicas de disponibilidad de un grupo de disponibilidad se pueden configurar de forma diferente, con letras de unidad de cinta distintas, etc. Los trabajos para cada réplica de disponibilidad deben permitir tales diferencias.  
   
-     Cabe mencionar que los trabajos de copia de seguridad pueden usar la función [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) para identificar si la réplica local es la preferida para las copias de seguridad, según las preferencias de copia de seguridad del grupo de disponibilidad. Los trabajos de copia de seguridad creados mediante el [Asistente para planes de mantenimiento](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) usan esta función de forma nativa. Para otros trabajos de copia de seguridad, se recomienda usar esta función como condición de los trabajos de copia de seguridad, de forma que solo se ejecuten en la réplica preferida. Para más información, consulte [Secundarias activas: Copia de seguridad en réplicas secundarias (grupos de disponibilidad AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Cabe mencionar que los trabajos de copia de seguridad pueden usar la función [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) para identificar si la réplica local es la preferida para las copias de seguridad, según las preferencias de copia de seguridad del grupo de disponibilidad. Los trabajos de copia de seguridad creados mediante el [Asistente para planes de mantenimiento](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) usan esta función de forma nativa. Para otros trabajos de copia de seguridad, se recomienda usar esta función como condición de los trabajos de copia de seguridad, de forma que solo se ejecuten en la réplica preferida. Para obtener más información, vea [secundarias activas: copia de seguridad en las réplicas secundarias (grupos de disponibilidad AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Inicios de sesión**  
   
@@ -65,8 +65,8 @@ ms.locfileid: "62774287"
   
 -   [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Bases de datos independientes](../relational-databases/databases/contained-databases.md)   
  [Crear trabajos](../ssms/agent/create-jobs.md)  
   

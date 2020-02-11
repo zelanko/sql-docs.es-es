@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661956"
 ---
 # <a name="objects-event-category"></a>Objetos (categoría de eventos)
@@ -35,7 +35,7 @@ ms.locfileid: "62661956"
 |[Object:Created (clase de eventos)](object-created-event-class.md)|Indica que se ha creado un objeto; por ejemplo, mediante las instrucciones CREATE INDEX, CREATE TABLE o CREATE DATABASE.|  
 |[Object:Deleted (clase de eventos)](object-deleted-event-class.md)|Indica que se ha eliminado un objeto; por ejemplo, mediante las instrucciones DROP INDEX o DROP TABLE.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../extended-events/extended-events.md)  
   
   

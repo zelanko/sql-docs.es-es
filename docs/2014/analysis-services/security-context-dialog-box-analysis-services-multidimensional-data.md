@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo contexto de seguridad (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo contexto de seguridad (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c775bc01f78af7d5d5f0dad39eb93c77348ea31d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069849"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Contexto de seguridad (Analysis Services - Datos multidimensionales)
@@ -31,14 +31,14 @@ ms.locfileid: "66069849"
   
  El dominio y el nombre de usuario o grupo utiliza el siguiente formato:  
   
- *\<Nombre de dominio >* **\\**  *\<nombre de la cuenta de usuario >*  
+ Nombre de **\\** dominio>* \<nombre de la cuenta de usuario>* * \<*  
   
  **Roles**  
  Seleccione esta opción para utilizar uno o varios roles especificados al ver los datos y metadatos del objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede seleccionar los roles que se van a utilizar si se definen varios roles en la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
- [KPI &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Explorador &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [KPI &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Explorador de cubos &#40;&#41; &#40;Analysis Services de datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

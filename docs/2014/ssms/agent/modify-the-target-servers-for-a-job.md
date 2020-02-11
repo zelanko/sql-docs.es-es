@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a97fd3892e74b16c844867f88bc7d72fedc46d20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720385"
 ---
-# <a name="modify-the-target-servers-for-a-job"></a>Modificar los servidores de destino para un trabajo
-  En este tema se describe cómo cambiar los servidoes de destino para trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
+  En este tema se describe cómo cambiar los servidores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino para los [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] trabajos del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] agente [!INCLUDE[tsql](../../includes/tsql-md.md)]en mediante o.  
   
  **En este tema**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62720385"
   
      [Seguridad](#Security)  
   
--   **Para modificar los servidores de destino para un trabajo, usando:**  
+-   **Para modificar los servidores de destino para un trabajo, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62720385"
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- De forma predeterminada, los miembros del rol fijo de servidor sysadmin pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente SQL Server en la base de datos msdb:  
+ De forma predeterminada, los miembros del rol de servidor fijo sysadmin pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente SQL Server en la base de datos msdb:  
   
 1.  `SQLAgentUserRole`  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62720385"
   
 3.  SQLAgentOperatorRole  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-the-target-servers-for-a-job"></a>Para modificar los servidores de destino para un trabajo  
   
@@ -82,9 +82,9 @@ GO
   
 ```  
   
- Para obtener más información, consulte [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql).  
+ Para obtener más información, vea [sp_add_jobserver &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración automatizada en una empresa](automated-administration-across-an-enterprise.md)  
   
   

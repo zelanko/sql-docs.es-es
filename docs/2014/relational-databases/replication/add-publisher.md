@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo "Agregar publicador"
+title: Cuadro de diálogo ' agregar publicador '
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676917"
 ---
-# <a name="sql-server-replication-add-publisher-dialog-box"></a>Cuadro de diálogo "Agregar publicador" replicación de SQL Server 
-  El cuadro de diálogo **Agregar publicador** permite agregar uno o varios publicadores en el panel izquierdo del Monitor de replicación. Después de agregar un publicador, selecciónelo en el panel izquierdo para mostrar información del publicador en el panel derecho.  
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>Replicación de SQL Server cuadro de diálogo ' agregar publicador ' 
+  El cuadro de diálogo **Agregar publicador** permite agregar uno o varios publicadores al panel izquierdo del monitor de replicación. Después de agregar un publicador, selecciónelo en el panel izquierdo para mostrar información del publicador en el panel derecho.  
   
 ## <a name="options"></a>Opciones  
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en para seleccionar el tipo de publicador que se agregará a fin de abrir el cuadro de diálogo **Conectar al servidor** . Las opciones son:  
   
--   **Agregar publicador de SQL Server...**  
+-   **Agregar SQL Server publicador...**  
   
      Conéctese al publicador mediante el cuadro de diálogo **Conectar al servidor** .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62676917"
 > [!NOTE]  
 >  El distribuidor y el publicador normalmente se ejecutan en la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero el distribuidor puede ejecutarse en otra instancia (esta configuración se conoce como distribuidor remoto).  
   
- **Quitar**  
+ **Remove**  
  Seleccione un publicador en la cuadrícula de la parte superior del cuadro de diálogo y haga clic en **Quitar** para quitar el publicador de la lista de publicadores que se van a agregar.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ ms.locfileid: "62676917"
  **Nuevo grupo**  
  Haga clic aquí para crear un nuevo grupo de publicadores. Un grupo de publicadores proporciona una forma cómoda de organizar publicadores en el Monitor de replicación. Los grupos no afectan a la replicación de datos ni a la relación entre los servidores de una topología de replicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  
   

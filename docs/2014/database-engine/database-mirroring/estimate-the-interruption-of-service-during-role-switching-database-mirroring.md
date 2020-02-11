@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874441"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos)
@@ -74,7 +74,7 @@ ms.locfileid: "70874441"
   
  ![Detección de errores y tiempo de la conmutación por error](../media/dbm-failovauto-time.gif "Detección de errores y tiempo de la conmutación por error")  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  

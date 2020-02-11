@@ -14,16 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769121"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de datos de Integration Services en las expresiones
   El evaluador de expresiones utiliza tipos de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Cuando los datos entran por primera vez en un flujo de datos de un paquete [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , el motor de flujo de datos convierte todos los datos de columna a un tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y los datos de columna ya utilizados por una expresión a un tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Las expresiones usadas en las transformaciones División condicional y Columna derivada pueden hacer referencia a columnas, ya que forman parte de un flujo de datos que incluye datos de columna.  
   
-## <a name="variables"></a>Variables  
+## <a name="variables"></a>variables  
  Las expresiones también pueden usar variables. Las variables tienen un tipo de datos Variant. El evaluador de expresiones convierte el tipo de datos de una variable de un subtipo Variant a un tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] antes de evaluar la expresión. Las variables solo pueden usar un subconjunto de los tipos de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Por ejemplo, una variable no puede usar un tipo de datos de Bloque de objetos binarios grandes (BLOB).  
   
  Para más información sobre tipos de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y sobre la asignación de tipos de datos Variant a tipos de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vea [Tipos de datos de Integration Services](../data-flow/integration-services-data-types.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "62769121"
   
  En el siguiente diagrama se muestra el tipo de resultado de las conversiones implícitas de las operaciones binarias. La intersección de la columna y la fila en esta tabla es el tipo de resultado de una operación binaria con operandos de los tipos izquierdo (From) y derecho (To).  
   
- ![Conversión de tipos de datos implícitos entre tipos de datos](../media/mw-dts-impl-conver-02.gif "Implicit data type conversion between data types")  
+ ![Conversión implícita de tipo de datos entre tipo de datos](../media/mw-dts-impl-conver-02.gif "Conversión implícita de tipo de datos entre tipo de datos")  
   
  La intersección de un entero con signo y un entero sin signo es un entero con signo posiblemente más grande que cualquiera de los argumentos.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62769121"
   
 -   [== &#40;Igual&#41; &#40;expresión de SSIS&#41;](equal-ssis-expression.md)  
   
--   [!= &#40;Diferente&#41; &#40;expresión de SSIS&#41;](unequal-ssis-expression.md)  
+-   [\!= &#40;Diferente&#41; &#40;expresión de SSIS&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;Mayor que&#41; &#40;expresión de SSIS&#41;](greater-than-ssis-expression.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62769121"
   
 -   Los argumentos pasados a funciones matemáticas deben devolver un tipo de datos numérico. Dependiendo de la función o la operación, puede ser necesario usar un tipo de datos numérico específico. Por ejemplo, la función HEX requiere un entero con o sin signo.  
   
--   Los argumentos pasados a funciones de cadena se deben evaluar con un tipo de datos de carácter: DT_STR o DT_WSTR. Por ejemplo, UPPER("flor"). Algunas funciones de cadena, como SUBSTRING, requieren argumentos enteros adicionales para la posición inicial y la longitud de la cadena.  
+-   Los argumentos pasados a funciones de cadena debe contener un tipo de datos de carácter: DT_STR o DT_WSTR. Por ejemplo, UPPER("flor"). Algunas funciones de cadena, como SUBSTRING, requieren argumentos enteros adicionales para la posición inicial y la longitud de la cadena.  
   
 -   Los argumentos pasados a funciones de fecha y hora deben contener una fecha válida. Por ejemplo, DAY(GETDATE()). Algunas funciones, como DATEADD, requieren un argumento entero adicional para el número de días que la función agrega a una fecha.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62769121"
  Los resultados de muchas operaciones y funciones tienen tipos de datos predeterminados. Pueden ser el tipo de datos del argumento o el tipo de datos al que el evaluador de expresiones convierte el resultado. Por ejemplo, el resultado de un operador lógico OR (||) es siempre un valor booleano, el resultado de la función ABS es el tipo de datos numérico del argumento y el resultado de la multiplicación es el tipo de datos numérico más pequeño que puede contener el resultado sin perder información. Para más información sobre los tipos de datos de los resultados, vea [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [utilizar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
+ [Usar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

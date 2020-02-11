@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774589"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar el trasvase de registros (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "62774589"
 ####  <a name="Permissions"></a> Permisos  
  Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-log-shipping"></a>Para configurar el trasvase de registros  
   
@@ -78,9 +78,9 @@ ms.locfileid: "62774589"
   
 8.  Tenga presente la programación de copia de seguridad que aparece en el cuadro **Programación** bajo **Trabajo de copia de seguridad**. Si desea personalizar la programación de su instalación, a continuación, haga clic en **Programar** y ajuste la programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según sus necesidades.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Al crear una configuración de trasvase de registros, puede controlar el comportamiento de la compresión de copia de seguridad de las copias de seguridad del registro eligiendo una de las opciones siguientes: **Usar la configuración de servidor predeterminada**, **Comprimir copia de seguridad** o **No comprimir copia de seguridad**. Para obtener más información, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Al crear una configuración de trasvase de registros, puede controlar el comportamiento de compresión de copia de seguridad de las copias de seguridad del registro eligiendo una de las opciones siguientes: **Usar la configuración de servidor predeterminada**, **Comprimir copia de seguridad**o **No comprimir copia de seguridad**. Para obtener más información, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. En **Instancias de servidores secundarios y bases de datos**, haga clic en **Agregar**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62774589"
   
 21. Tenga presente la programación de la restauración que aparece en el cuadro **Programación** bajo **Trabajo de restauración**. Si desea personalizar la programación de su instalación, haga clic en **Programar** y, a continuación, ajuste la programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según sus necesidades. El programa debe parecerse al de la copia de seguridad.  
   
-22. Haga clic en **Aceptar**.  
+22. Haga clic en **OK**.  
   
 23. En **Instancia del servidor de supervisión**, active la casilla **Utilizar una instancia del servidor de supervisión** y, a continuación, haga clic en **Configuración**.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "62774589"
   
 26. En **Retención de historial**, elija el período de tiempo que desea retener un registro del historial de trasvase de registros.  
   
-27. Haga clic en **Aceptar**.  
+27. Haga clic en **OK**.  
   
 28. En el cuadro de diálogo **Propiedades de la base de datos** , haga clic en **Aceptar** para comenzar el proceso de configuración.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "62774589"
   
 -   [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Tablas y procedimientos almacenados de trasvase de registros](log-shipping-tables-and-stored-procedures.md)  
   

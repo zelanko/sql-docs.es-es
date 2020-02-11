@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a135df3d3850aebdb9ac6dda08561a7fae21793f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069288"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>Seleccionar tablas relacionadas (Asistente para dimensiones)
   Use la página **Seleccionar tablas relacionadas** para incluir en la dimensión las tablas relacionadas (tablas con las que están relacionadas las tablas de dimensiones principales en la vista del origen de datos).  
   
- **Para abrir al Asistente para dimensiones**  
+ **Para abrir el Asistente para dimensiones**  
   
 -   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Dimensiones** para un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, luego, haga clic en **Nueva dimensión**.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "66069288"
  **Tablas relacionadas**  
  Seleccione una tabla para incluir la tabla relacionada en la dimensión.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para dimensiones (ayuda F1)](dimension-wizard-f1-help.md)   
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

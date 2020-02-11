@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb24a0615fcfbe2a04fa6daedbd0e08ac90875d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787872"
 ---
 # <a name="browse-for-servers-local-servers"></a>Buscar servidores (Servidores locales)
   Cuando se conecta a un componente de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y no conoce el nombre exacto del servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], en el cuadro **Nombre del servidor** , haga clic en **Buscar más**para abrir el cuadro de diálogo **Buscar servidores** .  
   
 ## <a name="options"></a>Opciones  
- **Seleccionar el servidor al que va a conectarse**  
- Indique el servidor con el que desea conectarse, haciendo clic en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se muestra en el árbol. Puede mostrar u ocultar partes de la vista de árbol, haga clic en los nodos marcados con un **+** o **-** símbolos.  
+ **Seleccione el servidor al que desea conectarse**  
+ Indique el servidor con el que desea conectarse, haciendo clic en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se muestra en el árbol. Para mostrar u ocultar partes de la vista de árbol, haga clic en los nodos marcados **+** con **-** un símbolo o.  
   
   

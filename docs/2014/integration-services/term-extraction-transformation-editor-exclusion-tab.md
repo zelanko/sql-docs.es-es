@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055230"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Editor de transformación Extracción de términos (pestaña Exclusión)
@@ -27,13 +27,13 @@ ms.locfileid: "66055230"
  Para obtener más información acerca de la transformación Extracción de términos, vea [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Utilizar términos de exclusión**  
+ **Usar términos de exclusión**  
  Esta opción indica si se excluirán términos específicos durante la extracción de términos mediante la especificación de una columna que contiene los términos de exclusión. Si desea excluir términos, debe especificar las siguientes propiedades del origen:  
   
- **Administrador de conexiones OLE DB**  
+ **Administrador de conexiones de OLE DB**  
  Permite seleccionar un administrador de conexiones OLE DB o crear una conexión haciendo clic en **Nueva**.  
   
- **Nueva**  
+ **Nuevo**  
  Crea una conexión a una base de datos mediante el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
  **Tabla o vista**  
@@ -45,10 +45,10 @@ ms.locfileid: "66055230"
  **Configurar la salida de errores**  
  Use el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) para especificar las opciones de control de errores para las filas que provocan errores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación Extracción de términos &#40;pestaña Extracción de términos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Editor de transformación Extracción de términos &#40;pestaña Avanzadas&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
- [Transformación Búsqueda de términos](data-flow/transformations/lookup-transformation.md)  
+ [Editor de transformación extracción de términos &#40;pestaña extracción de términos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Editor de transformación extracción de términos &#40;pestaña avanzadas&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [Búsqueda de términos, transformación](data-flow/transformations/lookup-transformation.md)  
   
   

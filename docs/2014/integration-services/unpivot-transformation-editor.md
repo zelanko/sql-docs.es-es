@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación Anulación de dinamización | Microsoft Docs
+title: Editor de transformación anulación de dinamización | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054837"
 ---
 # <a name="unpivot-transformation-editor"></a>Editor de transformación Anulación de dinamización
@@ -33,7 +33,7 @@ ms.locfileid: "66054837"
  **Columnas de entrada disponibles**  
  Especifique las columnas que deben pasar a ser filas mediante las casillas.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la columna de entrada disponible.  
   
  **Paso a través**  
@@ -56,13 +56,13 @@ ms.locfileid: "66054837"
   
  En el escenario Anulación de dinamización descrito en [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), los valores de dinamización se mostrarán como valores de texto en la nueva columna Product, designada en la opción **Nombre de la columna del valor de clave dinámica** , como los valores de texto **Ham**, **Soda**, **Milk**, **Beer**y **Chips**.  
   
- **Nombre de la columna del valor de clave dinámica**  
+ **Nombre de columna del valor de clave dinámica**  
  Escriba un nombre para la columna del valor de dinamización. El valor predeterminado es "Valor de clave dinámica", pero podrá elegir cualquier nombre descriptivo único.  
   
  En el escenario Anulación de dinamización descrito en [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), el Nombre de la columna del valor de clave dinámica es **Product** y designa la nueva columna **Product** en la que se anula la dinamización de las columnas **Ham**, **Soda**, **Milk**, **Beer**y **Chips** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformación dinámica](data-flow/transformations/pivot-transformation.md)  
+ [Dinámica, transformación](data-flow/transformations/pivot-transformation.md)  
   
   

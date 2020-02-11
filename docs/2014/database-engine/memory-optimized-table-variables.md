@@ -1,5 +1,5 @@
 ---
-title: Las Variables de tabla optimizado para memoria | Microsoft Docs
+title: Variables de tabla con optimización para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774434"
 ---
 # <a name="memory-optimized-table-variables"></a>Variables de tabla con optimización para memoria
@@ -36,7 +36,7 @@ ms.locfileid: "62774434"
   
 -   Se pueden usar variables de tabla para simular cursores en los procedimientos almacenados compilados de forma nativa, lo que puede ayudarle a evitar limitaciones del área expuesta en procedimientos almacenados compilados de forma nativa.  
   
- Igual que las tablas optimizadas para memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera un archivo DLL para cada tipo de tabla optimizada para memoria. (Compilación se invoca cuando se crea el tipo de tabla optimizada para memoria y no cuando se utiliza para crear las variables de tabla optimizada para memoria). Este archivo DLL incluye las funciones para obtener acceso a los índices y recuperar los datos de las variables de tabla. Cuando una variable de tabla optimizada para memoria se declara basándose en el tipo de tabla, se crea una instancia de las estructuras de tabla y de índice correspondientes al tipo de tabla en la sesión de usuario. La variable de tabla se puede usar del mismo modo que las variables de tabla basadas en disco. Puede insertar, actualizar y eliminar filas en la variable de tabla, y puede usar las variables en las consultas de [!INCLUDE[tsql](../includes/tsql-md.md)] . También puede pasar las variables a procedimientos almacenados compilados de forma nativa e interpretados, como parámetros con valores de tabla (TVP).  
+ Igual que las tablas optimizadas para memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera un archivo DLL para cada tipo de tabla optimizada para memoria. (La compilación se invoca cuando se crea el tipo de tabla optimizada para memoria y no cuando se usa para crear variables de tabla optimizada para memoria). Este archivo DLL incluye las funciones para obtener acceso a los índices y recuperar los datos de las variables de tabla. Cuando una variable de tabla optimizada para memoria se declara basándose en el tipo de tabla, se crea una instancia de las estructuras de tabla y de índice correspondientes al tipo de tabla en la sesión de usuario. La variable de tabla se puede usar del mismo modo que las variables de tabla basadas en disco. Puede insertar, actualizar y eliminar filas en la variable de tabla, y puede usar las variables en las consultas de [!INCLUDE[tsql](../includes/tsql-md.md)] . También puede pasar las variables a procedimientos almacenados compilados de forma nativa e interpretados, como parámetros con valores de tabla (TVP).  
   
  En el ejemplo siguiente se muestra un tipo de tabla optimizada para memoria del ejemplo de OLTP en memoria basado en AdventureWorks ([Ejemplo de OLTP en memoria de SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
@@ -60,7 +60,8 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  El ejemplo muestra que la sintaxis de los tipos de tabla optimizada para memoria es similar a los tipos de tabla basados en disco, con las siguientes excepciones:  
   
--   `MEMORY_OPTIMIZED=ON` indica que el tipo de tabla está optimizada para memoria.  
+-   
+  `MEMORY_OPTIMIZED=ON` indica que el tipo de tabla está optimizada para memoria.  
   
 -   El tipo debe tener al menos un índice. Como con tablas optimizadas para memoria, puede usar índices de hash e índices no clúster.  
   
@@ -186,7 +187,7 @@ GO
   
  La memoria se cuenta como parte del único consumidor de memoria PGPOOL de la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad de Transact-SQL con OLTP en memoria](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

@@ -11,26 +11,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 809420b875ebf20b45efb6b297cb198cfed8422b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990397"
 ---
-# <a name="localdberrorinternalerror"></a>LOCALDB_ERROR_INTERNAL_ERROR
+# <a name="localdb_error_internal_error"></a>LOCALDB_ERROR_INTERNAL_ERROR
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|264|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|264|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|Error inesperado en una llamada al método de API de la instancia de Local Database. Vea el registro de aplicación de Windows para obtener los detalles del error.|  
   
 ## <a name="explanation"></a>Explicación  
- Error inesperado.  
+ Se ha producido un error inesperado.  
   
 ## <a name="user-action"></a>Acción del usuario  
  Vea el registro de eventos para obtener detalles.  

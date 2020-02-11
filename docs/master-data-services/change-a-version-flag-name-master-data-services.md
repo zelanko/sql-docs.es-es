@@ -13,10 +13,10 @@ ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e8f5d441e7d129c7f39dc2d53c6b9ac4215aba9f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729718"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Cambiar el nombre de marca de una versión (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "73729718"
   
 -   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Debe disponer del permiso para tener acceso al área funcional de Administración de versiones. Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Debe disponer del permiso para tener acceso al área funcional de Administración de versiones. Para obtener más información, consulte [permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 ### <a name="to-change-a-version-flag-name"></a>Para cambiar el nombre de marca de una versión  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73729718"
   
 6.  Presione ENTRAR.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Asignar una marca a una versión &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

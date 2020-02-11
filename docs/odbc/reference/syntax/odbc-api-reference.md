@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085464"
 ---
 # <a name="odbc-api-reference"></a>Referencia de API ODBC
-Los temas de esta sección describen cada función ODBC en orden alfabético. Cada función se define como una función de lenguaje de programación de C. Las descripciones siguientes:  
+En los temas de esta sección se describe cada función ODBC en orden alfabético. Cada función se define como una función del lenguaje de programación C. Entre las descripciones se incluyen las siguientes:  
   
--   Finalidad  
+-   Propósito  
   
 -   Versión de ODBC  
   
--   Nivel de conformidad con CLI estándar  
+-   Nivel de conformidad de la CLI estándar  
   
 -   Sintaxis  
   
@@ -35,20 +35,20 @@ Los temas de esta sección describen cada función ODBC en orden alfabético. Ca
   
 -   Diagnóstico  
   
--   Comentarios sobre la implementación y uso  
+-   Comentarios sobre el uso y la implementación  
   
 -   Ejemplo de código  
   
--   Referencias a otras funciones relacionadas  
+-   Referencias a funciones relacionadas  
   
- El nivel de conformidad con CLI estándar puede ser uno de los siguientes: 92 de ISO, abra el grupo, ODBC, o en desuso. Una función etiquetada como conforme a ISO 92 también aparece en Open Group versión 1, porque Open Group es un superconjunto de ISO 92. Una función etiquetada como grupo conforme abra también aparece en ODBC 3. *x*, ya que ODBC 3. *x* es un superconjunto de la versión 1 de Open Group. Una función que se etiquetan como compatible con ODBC aparece en ninguno estándar. Una función que se etiquetan como en desuso en desuso en ODBC 3. *x*.  
+ El nivel de conformidad de la CLI estándar puede ser uno de los siguientes: ISO 92, Open Group, ODBC o deprecated. Una función etiquetada como compatible con ISO 92 también aparece en abrir Grupo versión 1, porque abrir Grupo es un supraconjunto puro de ISO 92. Una función etiquetada como compatible con grupos abiertos también aparece en ODBC 3. *x*, porque ODBC 3. *x* es un supraconjunto puro de la versión 1 del grupo abierto. Una función etiquetada como compatible con ODBC aparece en ninguna de las normas. Una función etiquetada como en desuso ha quedado en desuso en ODBC 3. *x*.  
   
- Control de información de diagnóstico se describe en el [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descripción de la función. El texto asociado con los valores de SQLSTATE se incluye para proporcionar una descripción de la condición, pero no está pensado para prescribir un texto específico.  
+ El control de la información de diagnóstico se describe en la descripción de la función [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) . El texto asociado a los valores SQLSTATE se incluye para proporcionar una descripción de la condición, pero no está pensada para prescribir texto específico.  
   
 > [!NOTE]  
->  Para obtener información acerca de las funciones ODBC específico del controlador, consulte la sección del controlador.  
+>  Para obtener información específica del controlador sobre las funciones ODBC, consulte la sección del controlador.  
   
- Esta sección contiene temas para las funciones siguientes:  
+ Esta sección contiene temas para las siguientes funciones:  
   
 -   [Función SQLAllocConnect](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   
@@ -58,7 +58,7 @@ Los temas de esta sección describen cada función ODBC en orden alfabético. Ca
   
 -   [Función SQLAllocStmt](../../../odbc/reference/syntax/sqlallocstmt-function.md)  
   
--   [Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)  
+-   [SQLBindCol (función)](../../../odbc/reference/syntax/sqlbindcol-function.md)  
   
 -   [Función SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)  
   
@@ -88,7 +88,7 @@ Los temas de esta sección describen cada función ODBC en orden alfabético. Ca
   
 -   [Función SQLDataSources](../../../odbc/reference/syntax/sqldatasources-function.md)  
   
--   [Función SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)  
+-   [SQLDescribeCol (función)](../../../odbc/reference/syntax/sqldescribecol-function.md)  
   
 -   [Función SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
   
@@ -150,13 +150,13 @@ Los temas de esta sección describen cada función ODBC en orden alfabético. Ca
   
 -   [Función SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
   
--   [Función SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)  
+-   [SQLMoreResults (función)](../../../odbc/reference/syntax/sqlmoreresults-function.md)  
   
 -   [Función SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)  
   
 -   [Función SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)  
   
--   [Función SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)  
+-   [SQLNumResultCols (función)](../../../odbc/reference/syntax/sqlnumresultcols-function.md)  
   
 -   [Función SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)  
   

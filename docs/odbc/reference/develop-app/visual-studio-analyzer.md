@@ -14,17 +14,17 @@ ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 94f7e944c53c2b4930a3c77b2866cea7b892a6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078988"
 ---
 # <a name="visual-studio-analyzer"></a>Visual Studio Analyzer
 > [!IMPORTANT]  
->  Compatibilidad con Visual Studio Analyzer se quitó a partir de Windows 8 (Visual Studio Analyzer sólo se incluyó en versiones anteriores de Visual Studio.). Para conocer una alternativa mecanismo de solución de problemas, use el seguimiento BID.  
+>  Se quitó la compatibilidad con Visual Studio Analyzer a partir de Windows 8 (Visual Studio Analyzer solo se incluía en versiones anteriores de Visual Studio). Para un mecanismo de solución de problemas alternativo, use el seguimiento de PUJAs.  
   
- Analizador de™ de Microsoft® Visual Studio proporciona una visión general de la aplicación de ODBC. El desarrollador puede evaluar, analizar y depurar la estructura, el rendimiento y las interacciones desde la perspectiva de la aplicación, en lugar de desde la perspectiva del componente o código. La información recopilada por Visual Studio Analyzer es en forma de eventos, que representa algún tipo de interacción entre dos componentes de la aplicación. Los eventos se pueden componer de llamadas de función y devuelve de funciones, como las conexiones, las consultas de base de datos y transacciones.  
+ Microsoft® Visual Studio™ Analyzer proporciona una vista de alto nivel de la aplicación ODBC. El desarrollador puede evaluar, analizar y depurar la estructura, el rendimiento y las interacciones desde la perspectiva de la aplicación, en lugar de hacerlo desde un componente o desde la perspectiva del código. La información recopilada por Visual Studio Analyzer está en forma de eventos, que representan algún tipo de interacción entre dos componentes de la aplicación. Los eventos pueden estar compuestos de llamadas a funciones y devuelven de funciones, como conexiones, consultas de base de datos y transacciones.  
   
  Esta sección contiene el siguiente tema.  
   

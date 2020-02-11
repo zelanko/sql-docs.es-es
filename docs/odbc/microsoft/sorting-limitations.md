@@ -1,5 +1,5 @@
 ---
-title: Limitaciones de ordenación | Microsoft Docs
+title: Restricciones de ordenación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 2273e058-f6a3-4fc3-875f-e506cb1015ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91e4851197dd8798641eaf400084694afe667dfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063394"
 ---
 # <a name="sorting-limitations"></a>Limitaciones de ordenación
-La longitud máxima de un criterio de ordenación en una cláusula GROUP BY, la cláusula ORDER BY, la instrucción SELECT DISTINCT o la combinación externa es 255 bytes; la longitud máxima de todas las claves de ordenación en una fila de la ordenación es 65.500 bytes.
+La longitud máxima de un criterio de ordenación en una cláusula GROUP BY, en la cláusula ORDER BY, en la instrucción SELECT DISTINCt o en una combinación externa es de 255 bytes. la longitud máxima de todos los criterios de ordenación de una fila de ordenación es de 65.500 bytes.

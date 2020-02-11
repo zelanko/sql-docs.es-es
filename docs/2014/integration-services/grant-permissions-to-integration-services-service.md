@@ -1,5 +1,5 @@
 ---
-title: Conceder permisos al servicio Integration Services | Microsoft Docs
+title: Conceder permisos para Integration Services servicio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 989db1ed792d960b7a0dca22bd82ec8b2f5aa7df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058231"
 ---
 # <a name="grant-permissions-to-integration-services-service"></a>Conceder permisos para el servicio Integration Services
@@ -24,9 +24,9 @@ ms.locfileid: "66058231"
   
 1.  Ejecute Dcomcnfg.exe. Dcomcnfg.exe proporciona una interfaz de usuario para modificar algunos valores de configuración del Registro.  
   
-2.  En el diálogo **Servicios de componentes**, expanda el nodo Servicios de componente > Equipos > Mi PC > Configuración DCOM.  
+2.  En el cuadro de diálogo **Servicios de componente**, expanda el nodo Servicios de componente > Equipos > Mi PC > Configuración DCOM.  
   
-3.  Haga clic en **Microsoft SQL Server Integration Services 12.0**y, a continuación, haga clic en **propiedades**.  
+3.  Haga clic con el botón secundario en **Microsoft SQL Server Integration Services 12,0**y, a continuación, haga clic en **propiedades**.  
   
 4.  En la pestaña **Seguridad** , haga clic en **Editar** en la sección **Permisos de inicio y activación** .  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106268"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Tipos de gráficos (Generador de informes y SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106268"
   
  Puede cambiar el tipo de gráfico después de haberlo creado. Para más información, vea [Cambiar un tipo de gráfico &#40;Generador de informes y SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Hay disponible ejemplos de muchos de estos tipos de gráficos como informes de ejemplo. Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Hay disponible ejemplos de muchos de estos tipos de gráficos como informes de ejemplo. Para obtener más información acerca de la descarga de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]informes de ejemplo, vea [generador de informes y diseñador de informes informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Tipo de gráfico|Muestra datos de proporción|Muestra datos de acciones|Muestra datos lineales|Muestra datos de varios valores|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "66106268"
 |[Minigráficos](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|![Disponible](../media/greencheck.gif "Disponible")|  
 |[Gráficos de cotizaciones &#40;Generador de informes y SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![Disponible](../media/greencheck.gif "Disponible")||![Disponible](../media/greencheck.gif "Disponible")|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  

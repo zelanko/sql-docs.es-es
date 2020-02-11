@@ -1,5 +1,5 @@
 ---
-title: Sys. DM _ _external_script_requests | Microsoft Docs
+title: Sys. dm_external_script_requests | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 33a7b546b9479add67a05f9bb7537f953fa2e9f9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68476276"
 ---
-# <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
+# <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Devuelve una fila para cada cuenta de trabajo activa que ejecuta un script externo.
@@ -34,7 +34,7 @@ Devuelve una fila para cada cuenta de trabajo activa que ejecuta un script exter
 >  
 > Esta vista de administración dinámica (DMV) solo está disponible si ha instalado y habilitado la característica que admite la ejecución de scripts externos. Para obtener más información, consulte [r Services en SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) y [Machine Learning Services (R, Python) en SQL Server 2017 y versiones posteriores](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**identificador único**|Identificador del proceso que envió la solicitud de script externo. Esto corresponde al identificador de proceso tal y como lo recibe[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|Palabra clave que representa un lenguaje de script compatible. |  
@@ -48,7 +48,7 @@ Devuelve una fila para cada cuenta de trabajo activa que ejecuta un script exter
 >   
 >  Los usuarios que ejecuten scripts externos deben tener el permiso adicional EXECUTE ANY EXTERNAL SCRIPT, sin embargo, los administradores pueden usar esta DMV sin este permiso. 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
 Esta vista se puede filtrar usando el identificador del lenguaje de script.
 
@@ -71,7 +71,7 @@ SELECT external_script_request_id
 FROM sys.dm_external_script_requests; 
 ```  
 
-Resultados  
+Results  
 
 
 external_script_request_id  |language  |degree_of_parallelism  |external_user_name  
@@ -80,10 +80,10 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
+ [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+[Sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

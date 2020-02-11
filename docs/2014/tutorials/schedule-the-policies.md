@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033507"
 ---
 # <a name="schedule-the-policies"></a>Programar las directivas
@@ -22,21 +22,21 @@ ms.locfileid: "63033507"
   
 ### <a name="to-schedule-the-best-practices-policies"></a>Para programar las directivas de prácticas recomendadas  
   
-1.  En el Explorador de objetos, expanda **administración**, expanda **administración de directivas**, expanda **directivas**, haga clic en una directiva de prácticas recomendadas y, a continuación, haga clic en  **Propiedades**.  
+1.  En Explorador de objetos, expanda **Administración**, expanda **Administración de directivas**, expanda **directivas**, haga clic con el botón secundario en una directiva de prácticas recomendadas y, a continuación, haga clic en **propiedades**.  
   
     > [!NOTE]  
-    >  Como alternativa, para ver fácilmente qué directivas están asociadas con los procedimientos recomendados y ordenar las mejores prácticas categorías, expanda **administración**, expanda **administración de directivas**y, a continuación, haga clic en **Directivas**. En el menú **Ver** , haga clic en **Detalles del Explorador de objetos**. En el **detalles del explorador de objetos** panel, haga clic en el **categoría** encabezado para ordenar las directivas por categoría. Las directivas de prácticas recomendadas tienen el prefijo **prácticas recomendadas de Microsoft**. Haga clic en la directiva que desea configurar y, a continuación, haga clic en **propiedades**.  
+    >  Como alternativa, para ver fácilmente qué directivas están asociadas a los procedimientos recomendados y ordenar las categorías de prácticas recomendadas, expanda **Administración**, expanda **Administración de directivas**y, a continuación, haga clic en **directivas**. En el menú **Ver** , haga clic en **Detalles del Explorador de objetos**. En el panel de **detalles del explorador de objetos** , haga clic en el encabezado **categoría** para ordenar las directivas por categoría. Las directivas de prácticas recomendadas tienen el prefijo **prácticas recomendadas de Microsoft**. Haga clic con el botón secundario en la Directiva que desea configurar y, a continuación, haga clic en **propiedades**.  
   
-2.  En el **General** página de la **Abrir directiva** cuadro de diálogo el **modo de evaluación** lista, haga clic en **según programación**.  
+2.  En la página **General** del cuadro de diálogo **abrir Directiva** , en la lista **modo de evaluación** , haga clic **en programación**.  
   
-3.  Junto a la **programación** cuadro, haga clic en **elegir** para especificar una programación existente o haga clic en **New** para crear una nueva programación.  
+3.  Junto al cuadro **programación** , haga clic en **elegir** para especificar una programación existente o haga clic en **nuevo** para crear una nueva programación.  
   
-4.  Después de haber configurado una programación, puede seleccionar la **habilitado** casilla de verificación junto a la parte superior de la página para habilitar la directiva programada.  
+4.  Después de configurar una programación, puede activar la casilla **habilitada** situada cerca de la parte superior de la página para habilitar la Directiva programada.  
   
 5.  Repita los pasos 1 a 4 con cada directiva que desee programar.  
   
     > [!NOTE]  
-    >  Para ver los resultados de la evaluación después de la ejecución de una directiva programada, abra el registro de historial de directivas en la instancia de destino. Para abrir el registro, haga clic en **administración de directivas**y, a continuación, haga clic en **Ver historial**.  
+    >  Para ver los resultados de la evaluación después de la ejecución de una directiva programada, abra el registro de historial de directivas en la instancia de destino. Para abrir el registro, haga clic con el botón secundario en **Administración de directivas**y, a continuación, haga clic en **Ver historial**.  
   
 ## <a name="summary"></a>Resumen  
  Configuró las directivas programadas para ejecutarse en una instancia única de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si desea implementarlas en varias instancias, continúe con la siguiente tarea de este tutorial.  

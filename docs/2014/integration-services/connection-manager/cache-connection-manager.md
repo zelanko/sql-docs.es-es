@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1026f4c20042a9aec24256238190dd1a230bda42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833608"
 ---
 # <a name="cache-connection-manager"></a>Administrador de conexiones de caché
@@ -51,7 +51,7 @@ ms.locfileid: "62833608"
   
  Para obtener más información acerca de las propiedades que puede configurar en el Diseñador [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [Editor del administrador de conexiones de caché](../cache-connection-manager-editor.md).  
   
- Para más información sobre cómo configurar un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obtener más información sobre cómo configurar un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  

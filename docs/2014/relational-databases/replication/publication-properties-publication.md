@@ -1,5 +1,5 @@
 ---
-title: 'Propiedades de publicación de replicación de SQL Server: | Microsoft Docs'
+title: Propiedades de la publicación Replicación de SQL Server-| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022453"
 ---
-# <a name="sql-server-replication-publication-properties"></a>Propiedades de la publicación de replicación de SQL Server 
-  Esta sección proporciona información sobre todas las páginas de la **propiedades de la publicación** cuadro de diálogo. 
+# <a name="sql-server-replication-publication-properties"></a>Replicación de SQL Server propiedades de la publicación 
+  En esta sección se proporciona información sobre todas las páginas del cuadro de diálogo Propiedades de la **publicación** . 
 
 ## <a name="general"></a>General
   La página **General** del cuadro de diálogo **Propiedades de la publicación** contiene información básica acerca de la publicación, incluido el nombre, la descripción y la directiva de expiración de la suscripción.  
   
 ### <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Nombre de la publicación (solo lectura).  
   
  **Base de datos**  
@@ -56,7 +56,7 @@ ms.locfileid: "63022453"
  Para más información, consulte [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
  **Nivel de compatibilidad**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores solamente, publicaciones de combinación solamente. Seleccione la versión mínima de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesaria para que los suscriptores se sincronicen con esta publicación. Existen diversas reglas asociadas a la determinación del nivel de compatibilidad.  
+ Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores; solo publicaciones de combinación. Seleccione la versión mínima de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesaria para que los suscriptores se sincronicen con esta publicación. Existen diversas reglas asociadas a la determinación del nivel de compatibilidad.  
 
 ## <a name="filter-rows"></a>Filtrar filas
 
@@ -83,8 +83,8 @@ ms.locfileid: "63022453"
  **Tablas filtradas**  
  Este panel se llena con filtros según se agregan a los artículos de la tabla en la publicación. Las tablas con filtros de fila se muestran como nodos de nivel superior en el panel. En las publicaciones de combinación, las tablas cuyo filtro se ha ampliado a filtro de combinación se muestran como nodos secundarios.  
   
- **Agregar**  
- Haga clic en **Agregar** para abrir un cuadro de diálogo que permite filtrar artículos de la tabla. Si hace clic en **Agregar** en una publicación de instantáneas o transaccional, se abre inmediatamente un cuadro de diálogo. Al hacer clic en **Agregar** para una publicación de mezcla se muestran tres opciones: **Agregar filtro**; **Agregar combinación para ampliar el filtro seleccionado**; **Generar filtros automáticamente**.  
+ **Add (Agregar)**  
+ Haga clic en **Agregar** para abrir un cuadro de diálogo que permite filtrar artículos de la tabla. Si hace clic en **Agregar** en una publicación de instantáneas o transaccional, se abre inmediatamente un cuadro de diálogo. Si hace clic en **Agregar** en una publicación de combinación, se muestran tres opciones: **Agregar filtro**, **Agregar combinación para ampliar el filtro seleccionado**y **Generar filtros automáticamente**.  
   
 -   Seleccione **Agregar filtro** para abrir el cuadro de diálogo **Agregar filtro** . Este cuadro de diálogo permite aplicar filtros de fila a un artículo de la tabla. En el cuadro de diálogo **Agregar filtro** , por ejemplo, podría especificar que una tabla con datos de cliente solamente debe contener datos de los clientes franceses cuando se replique a los suscriptores.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "63022453"
     > [!NOTE]  
     >  Cuando la replicación genera filtros automáticamente, se eliminan los filtros existentes en la publicación. Para incluir los filtros generados automáticamente y los filtros especificados manualmente, primero genere los filtros. Solo puede especificar un conjunto de filtros generados automáticamente en cada publicación.  
   
- **Editar**  
+ **Edición**  
  Seleccione un filtro de filas o un filtro de combinación en el panel de filtros y haga clic en **Editar** para abrir el cuadro de diálogo **Editar filtro** o **Editar combinación** .  
   
  **Eliminar**  
@@ -118,7 +118,7 @@ ms.locfileid: "63022453"
   
 Esta página permite:  
   
--   Establecer propiedades para entregar la instantánea mediante FTP (Protocolo de transferencia de archivos). Para obtener más información, consulte [transferir instantáneas mediante FTP](transfer-snapshots-through-ftp.md) documentación de Windows para obtener más información.  
+-   Establecer propiedades para entregar la instantánea mediante FTP (Protocolo de transferencia de archivos). Para obtener más información, vea [transferir instantáneas a través](transfer-snapshots-through-ftp.md) de la documentación de Windows FTP.  
   
     > [!NOTE]  
     >  Si realiza algún cambio en la configuración del FTP deberá generar una nueva instantánea.  
@@ -132,7 +132,7 @@ Esta página permite:
  Esta opción permite a los suscriptores usar el FTP para recuperar archivos de instantáneas, pero no les obliga a hacerlo. Si se selecciona esta opción, el Asistente para nueva suscripción establece de forma predeterminada que el suscriptor debe recuperar los archivos de instantáneas mediante el FTP. Puede cambiar esta configuración en el cuadro de diálogo **Propiedades de suscripción** . Si permite a los suscriptores tener acceso a los archivos de instantáneas mediante el FTP, debe especificar la carpeta FTP y la ubicación de los archivos de instantáneas en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación** . Al hacerlo de esta forma, el Agente de instantáneas actualiza automáticamente los archivos en la carpeta FTP cuando se genera una nueva instantánea. Si no establece la carpeta FTP como ubicación, deberá actualizar manualmente los archivos al generar nuevas instantáneas. Para obtener más información, vea [Entregar una instantánea mediante FTP](publish/deliver-a-snapshot-through-ftp.md).  
   
  **Sincronización web**  
- Solo replicación de mezcla. Active **Permitir a los suscriptores sincronizarse mediante la conexión a un servidor web**y especifique la dirección de un servidor web para permitir a los suscriptores de mezcla utilizar la sincronización web. El servidor web debe usar SSL (Capa de sockets seguros) y la dirección web debe ser completa (por ejemplo, https://server.domain.com/synchronize ). Para más información, consulte [Configure Web Synchronization](configure-web-synchronization.md).  
+ Solo replicación de mezcla. Active **Permitir a los suscriptores sincronizarse mediante la conexión a un servidor web**y especifique la dirección de un servidor web para permitir a los suscriptores de mezcla utilizar la sincronización web. El servidor web debe usar SSL (Capa de sockets seguros) y la dirección web debe ser completa (por ejemplo, https://server.domain.com/synchronize). Para más información, consulte [Configure Web Synchronization](configure-web-synchronization.md).  
 
 ## <a name="publication-access-list"></a>Lista de acceso a la publicación
 
@@ -141,10 +141,10 @@ Esta página permite:
  Cuando un suscriptor se conecta al publicador o al distribuidor y solicita acceso a la publicación, el inicio de sesión del suscriptor se compara con la información de autenticación de la PAL. Esto proporciona seguridad adicional para el publicador, ya que evita que en el inicio de sesión en el publicador o el distribuidor pueda usarse una herramienta cliente para realizar directamente modificaciones en el publicador. Para obtener más información, vea [Proteger el publicador](security/secure-the-publisher.md).  
   
 ### <a name="options"></a>Opciones  
- **Agregar**  
+ **Add (Agregar)**  
  Permite agregar una nueva entrada a la lista. Puede agregar solo aquellos nombres de inicio de sesión, cuenta o grupo que ya estén definidos tanto en el publicador como en el distribuidor. Estarán definidos en ambos servidores si se usan cuentas de dominio o si se crean cuentas locales en ambos servidores.  
   
- **Quitar**  
+ **Remove**  
  Permite quitar la entrada seleccionada de la lista.  
   
  **Quitar todo**  
@@ -153,7 +153,7 @@ Esta página permite:
 
   Esta página permite:  
   
--   Establecer propiedades para entregar la instantánea mediante FTP (Protocolo de transferencia de archivos). Para obtener más información, consulte [transferir instantáneas mediante FTP](transfer-snapshots-through-ftp.md) documentación de Windows para obtener más información.  
+-   Establecer propiedades para entregar la instantánea mediante FTP (Protocolo de transferencia de archivos). Para obtener más información, vea [transferir instantáneas a través](transfer-snapshots-through-ftp.md) de la documentación de Windows FTP.  
   
     > [!NOTE]  
     >  Si realiza algún cambio en la configuración del FTP deberá generar una nueva instantánea.  
@@ -167,7 +167,7 @@ Esta página permite:
  Esta opción permite a los suscriptores usar el FTP para recuperar archivos de instantáneas, pero no les obliga a hacerlo. Si se selecciona esta opción, el Asistente para nueva suscripción establece de forma predeterminada que el suscriptor debe recuperar los archivos de instantáneas mediante el FTP. Puede cambiar esta configuración en el cuadro de diálogo **Propiedades de suscripción** . Si permite a los suscriptores tener acceso a los archivos de instantáneas mediante el FTP, debe especificar la carpeta FTP y la ubicación de los archivos de instantáneas en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación** . Al hacerlo de esta forma, el Agente de instantáneas actualiza automáticamente los archivos en la carpeta FTP cuando se genera una nueva instantánea. Si no establece la carpeta FTP como ubicación, deberá actualizar manualmente los archivos al generar nuevas instantáneas. Para obtener más información, vea [Entregar una instantánea mediante FTP](publish/deliver-a-snapshot-through-ftp.md).  
   
  **Sincronización web**  
- Solo replicación de mezcla. Active **Permitir a los suscriptores sincronizarse mediante la conexión a un servidor web**y especifique la dirección de un servidor web para permitir a los suscriptores de mezcla utilizar la sincronización web. El servidor web debe usar SSL (Capa de sockets seguros) y la dirección web debe ser completa (por ejemplo, https://server.domain.com/synchronize ). Para más información, consulte [Configure Web Synchronization](configure-web-synchronization.md).  
+ Solo replicación de mezcla. Active **Permitir a los suscriptores sincronizarse mediante la conexión a un servidor web**y especifique la dirección de un servidor web para permitir a los suscriptores de mezcla utilizar la sincronización web. El servidor web debe usar SSL (Capa de sockets seguros) y la dirección web debe ser completa (por ejemplo, https://server.domain.com/synchronize). Para más información, consulte [Configure Web Synchronization](configure-web-synchronization.md).  
 
 ## <a name="agent-security"></a>Seguridad del agente
   La página **Seguridad del agente** del cuadro de diálogo **Propiedades de la publicación** permite obtener acceso a la configuración de las cuentas en las que se ejecutan los siguientes agentes y realizar conexiones con los equipos de una topología de replicación:  
@@ -186,10 +186,10 @@ Esta página permite:
   La página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación** le permite definir particiones de datos para publicaciones de combinación que utilizan el filtro con parámetros. Después de definir particiones, puede generar instantáneas para estas particiones, proporcionando distintos conjuntos de datos iniciales para diferentes suscriptores sobre la base de las propiedades de conexión (inicio de sesión o nombre del equipo) de los suscriptores. También puede optar por permitir que los suscriptores soliciten la entrega y la generación de instantáneas si no tienen una instantánea disponible para su partición la primera vez que realizan la sincronización. Para más información, consulte [Crear una instantánea para una publicación de mezcla con filtros con parámetros](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### <a name="options"></a>Opciones  
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en **Agregar** para definir una partición. En el cuadro de diálogo **Agregar partición de datos** , especifique valores para **HOST_NAME()** o **SUSER_SNAME()** y defina una programación para actualizar las instantáneas.  
   
- **Editar**  
+ **Edición**  
  Seleccione una partición existente en la cuadrícula y haga clic en **Editar** para editarla.  
   
  **Eliminar**  
@@ -204,7 +204,7 @@ Esta página permite:
  **Definir automáticamente una partición y generar una instantánea si es necesario cuando un suscriptor nuevo intente sincronizarse**  
  Seleccione esta opción si desea permitir que los suscriptores soliciten la generación y aplicación de instantáneas. Los suscriptores podrían solicitar esta opción si no tienen una instantánea disponible para su partición la primera vez que realizan la sincronización.  
 
-## <a name="snapshot"></a>Snapshot
+## <a name="snapshot"></a>Instantánea
 
  La página **Instantánea** del cuadro de diálogo **Propiedades de la publicación** permite establecer el formato de instantánea, la ubicación de la carpeta de instantáneas y los scripts que deben ejecutarse antes y después de aplicar la instantánea. La carpeta de instantáneas debe designarse como recurso compartido y debe disponer de los permisos necesarios para que los agentes puedan leer y escribir archivos en ella. Para obtener más información sobre cómo proteger la carpeta adecuadamente, vea [Proteger la carpeta de instantáneas](security/secure-the-snapshot-folder.md).  
   
@@ -221,7 +221,7 @@ Esta página permite:
  **Ubicación de archivos de instantánea**  
  Permite seleccionar la ubicación en la que se almacenarán los archivos de instantánea. Pueden almacenarse en la ubicación predeterminada; también pueden almacenarse en una ubicación alternativa (o en la ubicación predeterminada y en una ubicación alternativa). Los archivos almacenados en una ubicación alternativa pueden comprimirse.  
   
--   Seleccione **Poner los archivos en la carpeta predeterminada** para usar la carpeta de instantáneas predeterminada para el publicador. La ubicación de la carpeta de instantáneas se muestra en este cuadro de diálogo como de solo lectura, ya que los permisos del publicador solamente pueden cambiarse en el cuadro de diálogo **Propiedades del distribuidor** . Para obtener más información, consulte [especificar la ubicación de instantáneas predeterminada](snapshot-options.md#snapshot-folder-locations).   
+-   Seleccione **Poner los archivos en la carpeta predeterminada** para usar la carpeta de instantáneas predeterminada para el publicador. La ubicación de la carpeta de instantáneas se muestra en este cuadro de diálogo como de solo lectura, ya que los permisos del publicador solamente pueden cambiarse en el cuadro de diálogo **Propiedades del distribuidor** . Para obtener más información, vea [especificar la ubicación de instantáneas predeterminada](snapshot-options.md#snapshot-folder-locations).   
 -   Seleccione **Poner los archivos en la siguiente carpeta** para especificar una ubicación alternativa, o adicional, a la ubicación predeterminada. Escriba una ruta en el cuadro de texto o haga clic en **Examinar** para navegar a una ubicación. Seleccione **Comprimir archivos de instantánea en esta carpeta** para comprimir los archivos en la ubicación de instantáneas alternativa. La ubicación alternativa puede estar en otro servidor, en una unidad de red o en un medio extraíble, como un CD-ROM o un disco extraíble. Para obtener más información, consulte [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) y [Compressed Snapshots](compressed-snapshots.md).  
   
  **Ejecutar scripts adicionales**  
@@ -234,12 +234,12 @@ Esta página permite:
 
 
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Create a Publication](publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](publish/view-and-modify-publication-properties.md)   
  [Publicar datos y objetos de base de datos](publish/publish-data-and-database-objects.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Seguridad de replicación de SQL Server](security/view-and-modify-replication-security-settings.md)  
+ [Seguridad de Replicación de SQL Server](security/view-and-modify-replication-security-settings.md)  
  [Inicializar una suscripción con una instantánea](initialize-a-subscription-with-a-snapshot.md)   
   
   

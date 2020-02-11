@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5bffbd7ce22bf3e1e906e68e880fb76bee36c4b3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783661"
 ---
 # <a name="diagnostic-records-and-fields"></a>Registros y campos de diagnóstico
@@ -42,13 +42,13 @@ ms.locfileid: "73783661"
   
  ODBC 3. *x* admite mucha más información de diagnóstico que ODBC 2. *x*. Esta información se almacena en campos adicionales en los registros de diagnóstico recuperados mediante **SQLGetDiagField**.  
   
- El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client tiene campos de diagnóstico específicos del controlador que se pueden recuperar con **SQLGetDiagField**. Las etiquetas de estos campos específicos de controlador se definen en sqlncli.h. Utilice estas etiquetas para recuperar el estado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nivel de gravedad, el nombre de servidor, el nombre de procedimiento y el número de línea asociados a cada registro de diagnóstico. Además, SQLNCLI. h contiene definiciones de los códigos que el controlador utiliza para identificar las instrucciones Transact-SQL si una aplicación llama a **SQLGetDiagField** con *DiagIdentifier* establecido en SQL_DIAG_DYNAMIC_FUNCTION_CODE.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client tiene campos de diagnóstico específicos del controlador que se pueden recuperar con **SQLGetDiagField**. Las etiquetas de estos campos específicos de controlador se definen en sqlncli.h. Utilice estas etiquetas para recuperar el estado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nivel de gravedad, el nombre de servidor, el nombre de procedimiento y el número de línea asociados a cada registro de diagnóstico. Además, SQLNCLI. h contiene definiciones de los códigos que el controlador utiliza para identificar las instrucciones Transact-SQL si una aplicación llama a **SQLGetDiagField** con *DiagIdentifier* establecido en SQL_DIAG_DYNAMIC_FUNCTION_CODE.  
   
  El administrador de controladores ODBC procesa **SQLGetDiagField** con la información de error que almacena en caché desde el controlador subyacente. El Administrador de controladores ODBC no almacena en caché los campos de diagnóstico específicos del controlador hasta que no se ha realizado una conexión correcta. **SQLGetDiagField** devuelve SQL_ERROR si se llama para obtener campos de diagnóstico específicos del controlador antes de que se haya completado una conexión correcta. Si una función de conexión de ODBC devuelve SQL_SUCCESS_WITH_INFO, los campos de diagnóstico específicos del controlador todavía no están disponibles en la función de conexión. Puede empezar a llamar a **SQLGetDiagField** para los campos de diagnóstico específicos del controlador solo después de haber realizado otra llamada a una función ODBC después de la función de conexión.  
   
- La mayoría de los errores detectados por el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se pueden diagnosticar de forma eficaz usando únicamente la información devuelta por **SQLGetDiagRec**. En algunos casos, sin embargo, la información que devuelven los campos de diagnóstico específicos del controlador es importante para diagnosticar un error. Al codificar un controlador de errores ODBC para aplicaciones que usan el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, es una buena idea usar también **SQLGetDiagField** para recuperar al menos los campos específicos del controlador SQL_DIAG_SS_MSGSTATE y SQL_DIAG_SS_SEVERITY. Si un error determinado se puede producir en varias ubicaciones del código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indica a un ingeniero de soporte técnico de Microsoft de forma específica dónde se ha producido el error, lo que en ocasiones ayuda a diagnosticar un problema.  
+ La mayoría de los errores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detectados por el controlador ODBC de Native Client se pueden diagnosticar de forma eficaz usando únicamente la información devuelta por **SQLGetDiagRec**. En algunos casos, sin embargo, la información que devuelven los campos de diagnóstico específicos del controlador es importante para diagnosticar un error. Al codificar un controlador de errores ODBC para aplicaciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan el controlador ODBC de Native Client, se recomienda usar también **SQLGetDiagField** para recuperar al menos los campos específicos del controlador SQL_DIAG_SS_MSGSTATE y SQL_DIAG_SS_SEVERITY. Si un error determinado se puede producir en varias ubicaciones del código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indica a un ingeniero de soporte técnico de Microsoft de forma específica dónde se ha producido el error, lo que en ocasiones ayuda a diagnosticar un problema.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Controlar errores y mensajes](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

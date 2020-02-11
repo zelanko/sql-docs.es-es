@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a7c7751f317d4a56fb4aafb7085509d175f32255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074680"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
@@ -30,8 +30,8 @@ PredictNodeId(<scalar column reference>)
 ## <a name="applies-to"></a>Se aplica a  
  Una columna escalar.  
   
-## <a name="return-type"></a>Tipo devuelto  
- \<expresión escalar >  
+## <a name="return-type"></a>Tipo de valor devuelto  
+ \<> de expresión escalar  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente indica si el individuo especificado es probable que compre una bicicleta y también indica el Id. del nodo del que es más probable que forme parte.  
@@ -60,8 +60,8 @@ FROM
 WHERE NODE_UNIQUE_NAME= '00000000100'   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+## <a name="see-also"></a>Consulte también  
+ [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

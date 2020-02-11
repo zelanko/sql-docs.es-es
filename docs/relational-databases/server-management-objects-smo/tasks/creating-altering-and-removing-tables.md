@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b90e081c86aaee9fda1363185263fd6e53d4378f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095635"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Crear, modificar y quitar tablas
@@ -25,7 +25,7 @@ ms.locfileid: "74095635"
   En los objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), el objeto <xref:Microsoft.SqlServer.Management.Smo.Table> representa las tablas. En la jerarquía de objetos SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Table> se encuentra por debajo del objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, debe elegir el entorno de programación, la plantilla de programación y el lenguaje en los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, debe elegir el entorno de programación, la plantilla de programación y el lenguaje en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Crear, modificar y quitar una tabla en Visual Basic  
  En este ejemplo de código se crea una tabla que incluye varias columnas con tipos y propósitos diferentes. El código también proporciona ejemplos de cómo crear un campo de identidad, cómo crear una clave principal y cómo modificar las propiedades de la tabla.  
@@ -175,7 +175,7 @@ $tb.Drop()
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.SqlServer.Management.Smo.Table>  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124672"
 ---
-# <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
+# <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra una lista de los subsistemas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,28 +46,28 @@ sp_enum_sqlagent_subsystems
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**subsystem**|**nvarchar(40)**|Nombre del subsistema.|  
-|**description**|**nvarchar(512)**|Descripción del subsistema.|  
-|**subsystem_dll**|**nvarchar(510)**|Módulo DLL que contiene el subsistema.|  
-|**agent_exe**|**nvarchar(510)**|Módulo ejecutable utilizado por el subsistema.|  
-|**start_entry_point**|**nvarchar(30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
-|**event_entry_point**|**nvarchar(30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
-|**stop_entry_point**|**nvarchar(30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
+|**subsistema**|**nvarchar (40)**|Nombre del subsistema.|  
+|**denominación**|**nvarchar(512)**|Descripción del subsistema.|  
+|**subsystem_dll**|**nvarchar (510)**|Módulo DLL que contiene el subsistema.|  
+|**agent_exe**|**nvarchar (510)**|Módulo ejecutable utilizado por el subsistema.|  
+|**start_entry_point**|**nvarchar(30**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
+|**event_entry_point**|**nvarchar(30**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
+|**stop_entry_point**|**nvarchar(30**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
 |**max_worker_threads**|**int**|Número máximo de subprocesos que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciará para este subsistema.|  
 |**subsystem_id**|**int**|Identificador del subsistema.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este procedimiento enumera los subsistemas disponibles en la instancia.  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. A otros usuarios debe concederse el rol fijo de base de datos **SQLAgentOperatorRole** en la base de datos **msdb** .  
   
- Para obtener más información acerca de **SQLAgentOperatorRole**, consulte [Roles fijos de base de datos de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Para obtener más información sobre **SQLAgentOperatorRole**, vea [Agente SQL Server roles fijos de base de datos](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
-## <a name="see-also"></a>Vea también  
- [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Implementar la seguridad de Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)   
+ [sp_add_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
   

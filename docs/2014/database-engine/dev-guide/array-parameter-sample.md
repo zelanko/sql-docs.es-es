@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74055903"
 ---
 # <a name="array-parameter-sample"></a>Ejemplo de parámetro de matriz
   A veces resulta útil crear, actualizar o eliminar un conjunto de filas en una base de datos. Este objetivo puede conseguirse mediante distintos enfoques. Uno de ellos es pasar una matriz de información de un cliente a un procedimiento almacenado de integración CLR (Common Language Runtime) del servidor mediante un tipo CLR de datos de integración definido por el usuario. La naturaleza de los tipos de datos definidos por el usuario de este tipo limita el tamaño de los datos proporcionados al servidor a 8.000 bytes. Por lo tanto, este enfoque no resulta satisfactorio para datos grandes o complejos. Si los datos que se tratan son pequeños y sencillos, este enfoque puede ser mucho más eficaz que llamar a un procedimiento almacenado para cada fila. Al pasar una matriz, el orden de los datos se conserva en las aplicaciones donde es significativo. Este ejemplo contiene lo siguiente:  
   
-1.  El tipo de datos definido por el usuario `ContactTypeNames` . Este tipo contiene una lista de nombres de tipos de contacto deseados.  
+1.  El tipo de datos definido por el usuario `ContactTypeNames`. Este tipo contiene una lista de nombres de tipos de contacto deseados.  
   
 2.  El procedimiento almacenado `usp_EnsureContactTypeNames` implementado como método de Microsoft Visual C# o Microsoft Visual Basic. Acepta una instancia del tipo de datos definido por el usuario `ContactTypeNames` e inserta filas nuevas en la tabla `Person.ContactType` para cualquier nombre de contacto que esté incluido en la instancia del tipo de datos definido por el usuario que todavía no se encuentre en la tabla.  
   
@@ -29,7 +29,8 @@ ms.locfileid: "74055903"
 ## <a name="prerequisites"></a>Prerequisites  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://archive.codeplex.com/?p=SqlServerSamples).  
   
@@ -714,7 +715,7 @@ DROP ASSEMBLY ContactTypeNames;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

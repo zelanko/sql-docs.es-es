@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 77625b2a8b1169af90ab0573fa57a4246f81ceab
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400473"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>Nombres de base de datos reservados en almacenamiento de datos paralelos
@@ -41,7 +41,7 @@ Lista de nombres de base de datos reservada:
   
 -   DWQueue  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 <!-- MISSING LINKS 
 [Database Administration &#40;SQL Server PDW&#41;](../sqlpdw/database-administration-sql-server-pdw.md)  
 -->

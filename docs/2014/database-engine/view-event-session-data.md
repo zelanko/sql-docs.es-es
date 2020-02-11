@@ -1,5 +1,5 @@
 ---
-title: Ver datos de sesión de eventos | Microsoft Docs
+title: Ver datos de la sesión de eventos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67131794"
 ---
 # <a name="view-event-session-data"></a>Ver datos de sesiones de eventos
@@ -24,7 +24,7 @@ ms.locfileid: "67131794"
   
 -   Trabajar con datos  
   
-## <a name="view-target-data"></a>Ver los datos de destino  
+## <a name="view-target-data"></a>View Target Data (Ver datos de destino)  
  Puede mostrar los datos recopilados en el destino especificado en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="view-target-data"></a>View Target Data (Ver datos de destino)  
@@ -44,7 +44,7 @@ ms.locfileid: "67131794"
   
 -   Para un destino event_file, vea los datos del destino de archivo (archivo .XEL) mediante uno de los métodos siguientes:  
   
-    -   Usar el archivo -> Abrir en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    -   Use archivo > abrir en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
     
     -   Arrastre y coloque el archivo en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
     
@@ -54,16 +54,16 @@ ms.locfileid: "67131794"
     
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
     
-    -   Use Powershell lectura-SQLXevent en [SQLServer.XEvent módulo](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    -   Use PowerShell Read-SQLXevent en el [módulo SQLServer. XEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent).
     
-    -   Consumir XEvents mediante programación utilizando la [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    -   Consume XEvents mediante programación con [NuGet XELite](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
     
-    -   Puede ver más de uno. Archivo XEL seleccionando **combinar archivos de eventos extendidos** desde el archivo -> menú Abrir.
+    -   Puede ver más de una. Archivo XEL seleccionando **combinar archivos de eventos extendidos** en el menú archivo-> abrir.
 
 ### <a name="watching-live-data"></a>Observar datos en directo  
  Puede observar los datos en directo a medida que se capturan.  
   
--   En el Explorador de objetos, expanda los nodos **Administración**, **Eventos extendidos**y después **Sesiones** .  
+-   En Explorador de objetos, expanda los nodos **Administración**, **eventos extendidos**y **sesiones** .  
 
 -   Haga clic con el botón secundario en el nombre de sesión y, a continuación, haga clic en **Observar datos en directo** para iniciar la presentación de los datos de seguimiento.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67131794"
   
      Los eventos normalmente se muestran en 30 segundos aproximadamente. Si desea cambiar el periodo de latencia, puede cambiar **Latencia máxima de envío** en la página **Opciones avanzadas** del cuadro de diálogo **Nueva sesión** .  
      
--    Datos activos se pueden transmitir mediante el [módulo de SqlServer.XEvent PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+-    Los datos en directo se pueden transmitir mediante el [módulo de PowerShell SQLServer. XEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent).
      
 ### <a name="to-refresh-target-data"></a>Para actualizar los datos de destino  
  No se permite actualizar datos de destino para los destinos event_files:  
@@ -145,7 +145,7 @@ ms.locfileid: "67131794"
 ### <a name="aggregate-results"></a>Agregar los resultados  
  Puede ver los resultados de seguimiento y, a continuación, analizar con mayor profundidad los datos del evento agregando columnas en los resultados. Los eventos extendidos admiten cinco funciones de agregación:  
   
--   sum  
+-   Sum  
   
 -   min  
   
@@ -180,7 +180,7 @@ ms.locfileid: "67131794"
   
     -   Columnas de la tabla Utilice esta opción para buscar en todas las columnas visibles en la ventana de seguimiento.  
   
-    -   Detalles Utilice esta opción para buscar todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que se seleccionaron antes de abrir el **buscar en eventos extendidos** cuadro de diálogo.  
+    -   Detalles Utilice esta opción para buscar en todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que se seleccionaron antes de abrir el cuadro **de diálogo Buscar en eventos extendidos** .  
   
     -   *Event_column_name*. Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "67131794"
   
  Para ver el gráfico de interbloqueo:  
   
--   En el Explorador de objetos, expanda los nodos **Administración**, **Eventos extendidos**y después **Sesiones** .  
+-   En Explorador de objetos, expanda los nodos **Administración**, **eventos extendidos**y **sesiones** .  
   
 -   Haga clic con el botón secundario en la sesión que contiene el evento de interbloqueo configurado que desea ver y, a continuación, seleccione **Observar datos en directo**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "67131794"
   
  Para ver los gráficos del plan de consulta:  
   
-1.  En el Explorador de objetos, expanda los nodos **Administración**, **Eventos extendidos**y después **Sesiones** .  
+1.  En Explorador de objetos, expanda los nodos **Administración**, **eventos extendidos**y **sesiones** .  
   
 2.  Haga clic con el botón secundario en la sesión que contiene el gráfico del plan de consulta que desea ver (por ejemplo, query_post_compilation_showplan) y, a continuación, seleccione **Observar datos en directo**.  
   

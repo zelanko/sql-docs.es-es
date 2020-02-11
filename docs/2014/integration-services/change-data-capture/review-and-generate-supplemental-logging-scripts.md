@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68aa51facd21ec09be78e6ad0996131a9ee3cc5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835342"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Revisar y generar scripts de registro complementario
@@ -53,8 +53,8 @@ ms.locfileid: "62835342"
   
 2.  Asigne un nombre al archivo y haga clic en **Guardar** para guardar el archivo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo editar las propiedades de la instancia CDC](how-to-edit-the-cdc-instance-properties.md)   
- [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
+ [Credenciales de Oracle para ejecutar script](oracle-credentials-for-running-script.md)  
   
   

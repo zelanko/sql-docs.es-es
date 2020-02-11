@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e1683adfa20851d279e8b8e18a3c767db9e5810d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056270"
 ---
 # <a name="installation-and-configuration"></a>Instalación y configuración
@@ -37,7 +37,7 @@ El código fuente para volver a crear la base de datos de ejemplo está disponib
 
 [Wide-World-Importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>Instalar
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -47,11 +47,11 @@ Para restaurar una copia de seguridad en una instancia de SQL Server, puede usar
 1. Abra SQL Server Management Studio y conéctese a la instancia de SQL Server de destino.
 2. Haga clic con el botón secundario en el nodo **bases** de datos y seleccione **restaurar base de datos**.
 3. Seleccione **dispositivo** y haga clic en el botón **..** .
-4. En el cuadro de diálogo **seleccionar dispositivos de copia de seguridad**, haga clic en **Agregar**, desplácese hasta la copia de seguridad de base de datos en el sistema de archivos del servidor y seleccione la copia de seguridad. Haga clic en **Aceptar**.
+4. En el cuadro de diálogo **seleccionar dispositivos de copia de seguridad**, haga clic en **Agregar**, desplácese hasta la copia de seguridad de base de datos en el sistema de archivos del servidor y seleccione la copia de seguridad. Haga clic en **OK**.
 5. Si es necesario, cambie la ubicación de destino de los archivos de datos y de registro, en el panel **archivos** . Tenga en cuenta que se recomienda colocar los archivos de datos y de registro en unidades diferentes.
-6. Haga clic en **Aceptar**. Se iniciará la restauración de la base de datos. Una vez finalizado, tendrá la base de datos WideWorldImporters instalada en la instancia de SQL Server.
+6. Haga clic en **OK**. Se iniciará la restauración de la base de datos. Una vez finalizado, tendrá la base de datos WideWorldImporters instalada en la instancia de SQL Server.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Para importar un BacPac en un nuevo SQL Database, puede usar Management Studio.
 
@@ -63,14 +63,14 @@ Para importar un BacPac en un nuevo SQL Database, puede usar Management Studio.
 5. En **configuración de base de datos** , cambie el nombre de la base de datos a *WideWorldImporters* y seleccione la edición de destino y el objetivo de servicio que se va a usar.
 6. Haga clic en **siguiente** y en **Finalizar** para comenzar la implementación. Tardará unos minutos en completarse en P1. Si se desea un plan de tarifa inferior, se recomienda importar en una nueva base de datos P1 y, a continuación, cambiar el plan de tarifa al nivel deseado.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>Configuración
 
 ### <a name="full-text-indexing"></a>Indización de texto completo
 
 La base de datos de ejemplo puede hacer uso de la indización de texto completo. Sin embargo, esa característica no se instala de forma predeterminada con SQL Server. debe seleccionarla durante la instalación de SQL Server (está habilitada de forma predeterminada en Azure SQL DB). Por lo tanto, se requiere un paso posterior a la instalación.
 
 1. En SQL Server Management Studio, conéctese a la base de datos WideWorldImporters y abra una nueva ventana de consulta.
-2. Ejecute el siguiente comando de T-SQL para habilitar el uso de la indización de texto completo en la base de datos: `EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Ejecute el siguiente comando de T-SQL para habilitar el uso de la indización de texto completo en la base de datos:`EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit

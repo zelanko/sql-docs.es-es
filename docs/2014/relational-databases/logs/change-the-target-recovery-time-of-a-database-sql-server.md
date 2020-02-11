@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743221"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Cambiar el tiempo de recuperación de destino de una base de datos (SQL Server)
@@ -23,9 +23,9 @@ ms.locfileid: "62743221"
 > [!NOTE]  
 >  El límite superior especificado para una base de datos determinada por el valor de tiempo de recuperación de destino se puede superar si una transacción de larga duración provoca tiempos de UNDO excesivos.  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
+-   **Antes de empezar:**  [limitaciones y restricciones](#Restrictions), [seguridad](#Security)  
   
--   **Para cambiar el tiempo de recuperación de destino con:**  [SQL Server Management Studio](#SSMSProcedure) o [Transact-SQL](#TsqlProcedure)  
+-   **Para cambiar el tiempo de recuperación de destino, utilizando:**  [SQL Server Management Studio](#SSMSProcedure) o [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62743221"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para cambiar el tiempo de recuperación de destino**  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y expándala.  
@@ -57,7 +57,7 @@ ms.locfileid: "62743221"
   
 2.  Use la siguiente instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)del siguiente modo:  
   
-     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ {seconds | TIEMPO  
   
      *target_recovery_time*  
      Cuando el valor es mayor que 0 (valor predeterminado), especifica el límite superior para el tiempo de recuperación de la base de datos especificada en caso de bloqueo.  
@@ -74,7 +74,7 @@ ms.locfileid: "62743221"
     ALTER DATABASE AdventureWorks2012 SET TARGET_RECOVERY_TIME = 60 SECONDS;  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Puntos de comprobación de base de datos &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   

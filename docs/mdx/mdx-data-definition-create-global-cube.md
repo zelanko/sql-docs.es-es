@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892150"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Definición de datos de MDX: CREATE GLOBAL CUBE
 
 
-  Crea y rellena un cubo guardado de forma local basado en un subcubo de un cubo del servidor. No es necesaria una conexión al servidor para conectarse al cubo almacenado de forma local. Para obtener más información acerca de los cubos locales, vea [cubos locales &#40;Analysis Services-datos&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)multidimensionales.  
+  Crea y rellena un cubo guardado de forma local basado en un subcubo de un cubo del servidor. No es necesaria una conexión al servidor para conectarse al cubo almacenado de forma local. Para obtener más información acerca de los cubos locales, vea [cubos locales &#40;Analysis Services-&#41;de datos multidimensionales ](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -104,16 +104,16 @@ FROM source_cube_name (<param list>)
  dimension_name  
  Nombre de la dimensión del cubo local.  
   
- From \<DIM from (cláusula) >  
+ FROM \<DIM from (cláusula)>  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
  NOT_RELATED_TO_FACTS  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
- \<tipo de nivel >  
+ \<tipo de nivel>  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un cubo local se define en términos de las medidas y definiciones que lo definen. Existen dos tipos de dimensiones.  
   
 -   Dimensiones de origen: son dimensiones que formaban parte de uno o varios cubos de origen  
@@ -196,8 +196,8 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones &#40;de definición de datos MDX MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instrucción &#40;Create Session Cube MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+## <a name="see-also"></a>Consulte también  
+ [Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instrucción CREATE SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

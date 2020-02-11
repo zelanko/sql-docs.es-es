@@ -18,14 +18,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198413"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Crear una auditoría de servidor y una especificación de auditoría de servidor
-  En este tema se describe cómo crear una auditoría de servidor y una especificación de auditoría de servidor en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La*auditoría* de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica el seguimiento y registro de los eventos que se producen en el sistema. El objeto *SQL Server Audit* recopila una única instancia de acciones y grupos de acciones de nivel de servidor o de base de datos para su supervisión. La auditoría se realiza en el nivel de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es posible tener varias auditorías por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El objeto *Especificación de auditoría de servidor* pertenece a una auditoría. Puede crear una especificación de auditoría de servidor por cada auditoría, ya que ambos se crean en el ámbito de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](sql-server-audit-database-engine.md).  
+  En este tema se describe cómo crear una auditoría de servidor y una especificación de auditoría de servidor en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La*auditoría* de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica el seguimiento y registro de los eventos que se producen en el sistema. El objeto *SQL Server Audit* recopila una única instancia de acciones y grupos de acciones de nivel de servidor o de base de datos para su supervisión. La auditoría se realiza en el nivel de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es posible tener varias auditorías por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El objeto *Especificación de auditoría de servidor* pertenece a una auditoría. Puede crear una especificación de auditoría de servidor por cada auditoría, ya que ambos se crean en el ámbito de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](sql-server-audit-database-engine.md).  
   
  **En este tema**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68198413"
   
 -   Una vez creada una especificación de auditoría de servidor, las entidades de seguridad que cuenten con los permisos CONTROL SERVER o ALTER ANY SERVER AUDIT, así como la cuenta sysadmin, o las entidades de seguridad que tengan acceso explícito a la auditoría podrán ver dicha especificación.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Para crear una auditoría de servidor  
   
@@ -91,11 +91,11 @@ ms.locfileid: "68198413"
      Lista**Destino de auditoría**  
      Especifica el destino de los datos de la auditoría. Las opciones disponibles son un archivo binario, el registro de aplicación Windows o el registro de seguridad de Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no puede escribir en el registro de seguridad de Windows sin configurar valores adicionales en Windows. Para obtener más información, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](write-sql-server-audit-events-to-the-security-log.md).  
   
-     **Ruta del archivo**  
+     **Ruta de acceso del archivo**  
      Especifica la ubicación de la carpeta donde se escriben los datos de la auditoría si se ha especificado un archivo **Destino de auditoría** .  
   
      **Puntos suspensivos (...)**  
-     Se abre el **Buscar carpeta -** _nombre_servidor_ cuadro de diálogo para especificar una ruta de acceso de archivo o crear una carpeta donde se escribirá el archivo de auditoría.  
+     Abre el cuadro de diálogo **Buscar carpeta-**_SERVER_NAME_ para especificar una ruta de acceso de archivo o crear una carpeta donde se escribe el archivo de auditoría.  
   
      **Límite máximo del archivo de auditoría:**  
      **Máximo de archivos de sustitución incremental**  
@@ -128,10 +128,10 @@ ms.locfileid: "68198413"
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **Crear especificación de auditoría de servidor** .  
   
-     **Name**  
+     **Nombre**  
      El nombre de la especificación de auditoría de servidor. Se genera automáticamente al crear una nueva especificación de auditoría de servidor, pero se puede modificar.  
   
-     **Auditar**  
+     **Auditoría**  
      Nombre de una auditoría de servidor existente. Escriba el nombre de la auditoría o selecciónelo en la lista.  
   
      **Tipo de acción de auditoría**  
@@ -152,7 +152,7 @@ ms.locfileid: "68198413"
      **Puntos suspensivos (...)**  
      Abre el cuadro de diálogo **Seleccionar objetos** para buscar y seleccionar un objeto disponible, basándose en el **Nombre de objeto**especificado.  
   
-3.  Cuando termine, haga clic en **Aceptar**.  
+3.  Cuando haya terminado, haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

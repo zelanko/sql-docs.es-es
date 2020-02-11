@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fa4a428c1d1f290ceadee19d21f3b8f0b8bd942
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833852"
 ---
 # <a name="data-sources"></a>Orígenes de datos
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye un objeto de tiempo de diseño que puede usar en los paquetes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : el origen de datos.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]incluye un objeto en tiempo de diseño que puede usar en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los paquetes: el origen de datos.  
   
  Un objeto de origen de datos es una referencia a una conexión y, como mínimo, incluye una cadena de conexión y un identificador de origen de datos. También puede incluir metadatos adicionales tales como descripción, nombre, nombre de usuario y contraseña.  
   

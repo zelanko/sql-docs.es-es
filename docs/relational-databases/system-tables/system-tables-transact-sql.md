@@ -23,10 +23,10 @@ ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 292b6cdce6b2f13445e50f79c956f07eb8d33de7
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69903597"
 ---
 # <a name="system-tables-transact-sql"></a>Tablas del sistema (Transact-SQL)
@@ -42,27 +42,29 @@ ms.locfileid: "69903597"
   
 -   Instrucciones y funciones [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objetos de administración (SMO)  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objetos de administración (SMO)  
   
 -   Replication Management Objects (RMO)  
   
 -   Funciones de catálogo de API de base de datos  
   
- Estos componentes conforman una API publicado para obtener información del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[msCoName](../../includes/msconame-md.md)] mantiene la compatibilidad de estos componentes entre versiones. El formato de las tablas del sistema depende de la arquitectura interna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y puede cambiar de una versión a otra. Por tanto, puede ser necesario modificar las aplicaciones que tienen acceso directo a columnas no documentadas de las tablas del sistema para que puedan tener acceso a una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Estos componentes conforman una API publicado para obtener información del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] mantiene la compatibilidad de estos componentes entre versiones. El formato de las tablas del sistema depende de la arquitectura interna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y puede cambiar de una versión a otra. Por tanto, puede ser necesario modificar las aplicaciones que tienen acceso directo a columnas no documentadas de las tablas del sistema para que puedan tener acceso a una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  Los temas relacionados con las tablas del sistema se organizan según las siguientes áreas de características:  
   
 |||  
 |-|-|  
-|[Tablas &#40;de copia de seguridad y restauración de TRANSACT-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[Tablas de trasvase de registros &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
-|[Tablas &#40;de captura de datos modificados de TRANSACT-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)|[Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)|  
-|[Tablas &#40;de planes de mantenimiento de bases de datos TRANSACT-SQL&#41;](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)|[Tablas &#40;de Agente SQL Server TRANSACT-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)|  
-|[SQL Server tablas &#40;de eventos extendidos de TRANSACT-SQL&#41;](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)|[Sys. sysoledbusers &#40;de TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)|  
-|[Tablas &#40;de Integration Services TRANSACT-SQL&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)|[Transact &#40;-SQL de systranschemas&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
+|[Copias de seguridad y restauración de tablas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[Tablas de trasvase de registros &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
+|[Tablas de captura de datos modificados &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)|[Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)|  
+|[Tablas de planes de mantenimiento de bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)|[Tablas de Agente SQL Server &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)|  
+|[Tablas de eventos extendidos de SQL Server &#40;Transact-SQL&#41;](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)|[Sys. sysoledbusers &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)|  
+|[Tablas de Integration Services &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)|[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Vistas &#40;de compatibilidad de TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Vistas de compatibilidad &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

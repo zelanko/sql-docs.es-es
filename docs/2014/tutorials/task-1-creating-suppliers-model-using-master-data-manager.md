@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 1: Crear el modelo proveedores mediante Master Data Manager | Microsoft Docs'
+title: 'Tarea 1: creación del modelo de proveedores con Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,36 +11,36 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7515c259d8ee978f60ddd8e09ce817f133670cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481342"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Tarea 1: Creación del modelo Proveedores mediante Master Data Manager
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>TArea 1: crear el modelo Proveedores mediante Master Data Manager
   En esta tarea, creará un modelo denominado **proveedores** en MDS mediante **Master Data Manager**.  
   
-1.  Vaya a [ http://localhost/mds ](http://localhost/mds) para iniciar **Master Data Manager**. Reemplace la dirección URL si ha configurado la aplicación web con un nombre diferente o en un sitio web diferente.  
+1.  Vaya a [http://localhost/mds](http://localhost/mds) para iniciar **Master Data Manager**. Reemplace la dirección URL si ha configurado la aplicación web con un nombre diferente o en un sitio web diferente.  
   
-     ![Administrador de datos maestros - administración del sistema](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "Master Data Manager: administración del sistema")  
+     ![Administrador de datos maestros - Administración del sistema](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "Administrador de datos maestros - Administración del sistema")  
   
 2.  Haga clic en **Administración del sistema** en la sección **Tareas administrativas** .  
   
-3.  Si no ve el **Add Model** page, mantenga el mouse sobre **administrar** en la barra de menús, haga clic en **modelos**y, a continuación, haga clic en **Agregar modelo (+)** barra de herramientas botón para crear un modelo.  
+3.  Si no ve la página **Agregar modelo** , mantenga el mouse sobre **administrar** en la barra de menús, haga clic en **modelos**y, a continuación, haga clic en el botón de la barra de herramientas **Agregar modelo (+)** para crear un modelo.  
   
-     ![Administrar - menú modelos](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-02.jpg "administrar - menú modelos")  
+     ![Administrar - Menú Modelos](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-02.jpg "Administrar - Menú Modelos")  
   
-     ![Agregar botón de barra de herramientas de modelo](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-03.jpg "Agregar botón de barra de herramientas de modelo")  
+     ![Botón de la barra de herramientas Agregar modelo](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-03.jpg "Botón de la barra de herramientas Agregar modelo")  
   
-4.  Escriba **proveedores** para **nombre del modelo**.  
+4.  Escriba **Suppliers** como **nombre del modelo**.  
   
-5.  Borrar **crear entidad con el mismo nombre que el modelo** opción. Se creará una entidad más adelante mediante el **complemento MDS para Excel**.  
+5.  Desactive la opción **crear entidad con el mismo nombre que el modelo** . Posteriormente, creará una entidad con el **complemento MDS para Excel**.  
   
-     ![Página Agregar modelo](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-04.jpg "página Agregar modelo")  
+     ![Página Agregar modelo](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-04.jpg "Página Agregar modelo")  
   
-6.  Haga clic en **Guardar modelo** en la barra de herramientas.  
+6.  Haga clic en el botón **Guardar modelo** de la barra de herramientas.  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 2: Cargar datos de proveedor en MDS con el complemento MDS para Excel](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 2: cargar datos de proveedor en MDS con el complemento MDS para Excel](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

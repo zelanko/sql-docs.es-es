@@ -11,15 +11,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228469"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensiones de AdventureWorks para mostrar OLTP en memoria
     
-## <a name="overview"></a>Introducción  
+## <a name="overview"></a>Información general  
  Este ejemplo muestra la nueva característica [!INCLUDE[hek_2](../includes/hek-2-md.md)] , que forma parte de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Muestra las nuevas tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa, y se puede usar para mostrar las ventajas de rendimiento de [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
@@ -41,7 +41,7 @@ ms.locfileid: "75228469"
   
 -   [Uso de memoria y espacio en disco en el ejemplo](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a>Requisitos previos  
+##  <a name="Prerequisites"></a> Requisitos previos  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM: Evaluation, Developer o Enterprise Edition  
   
@@ -881,6 +881,6 @@ ORDER BY state, file_type
   
  En este caso, hay dos pares de archivos de punto de comprobación en el estado "under construction", lo que significa que varios pares de archivos pasaron por el estado "under construction", probablemente debido al elevado nivel de simultaneidad de la carga de trabajo. Varios subprocesos simultáneos necesitaron un nuevo par de archivos al mismo tiempo, por lo que se movió un par de "precreated" a "under construction".  
   
-## <a name="see-also"></a>Véase también  
- [&#40;de optimización en memoria de OLTP en memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+## <a name="see-also"></a>Consulte también  
+ [OLTP en memoria &#40;optimización en memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

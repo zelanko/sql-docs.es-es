@@ -1,5 +1,5 @@
 ---
-title: DISTINCT-values, función (XQuery) | Microsoft Docs
+title: Función DISTINCT-Values (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68223733"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Funciones usadas en secuencias: distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Quita valores duplicados de la secuencia especificada por *$arg*. Si *$arg* es una secuencia vacía, la función devuelve una secuencia vacía.  
+  Quita los valores duplicados de la secuencia especificada por *$arg*. Si *$arg* es una secuencia vacía, la función devuelve la secuencia vacía.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +38,18 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  Secuencia de valores atómicos.  
   
-## <a name="remarks"></a>Comentarios  
- Todos los tipos de valores atomizados que se pasan a **distinct-values()** deben ser subtipos del mismo tipo base. Tipos base aceptados son los tipos que admiten la **eq** operación. Entre estos tipos se incluyen los tres tipos base numéricos integrados, los tipos base de fecha y hora, xs:string, xs:boolean y xdt:untypedAtomic. Los valores de tipo xdt:untypedAtomic se convierten en xs:string. Si hay un mezcla de estos tipos, o si se pasan otros valores de otros tipos, se produce un error estático.  
+## <a name="remarks"></a>Observaciones  
+ Todos los tipos de valores atomizados que se pasan a **DISTINCT-Values ()** deben ser subtipos del mismo tipo base. Los tipos base aceptados son los tipos que admiten la operación **EQ** . Entre estos tipos se incluyen los tres tipos base numéricos integrados, los tipos base de fecha y hora, xs:string, xs:boolean y xdt:untypedAtomic. Los valores de tipo xdt:untypedAtomic se convierten en xs:string. Si hay un mezcla de estos tipos, o si se pasan otros valores de otros tipos, se produce un error estático.  
   
- El resultado de **distinct-values()** recibe el tipo base de los tipos pasados, como xs: String en el caso de xdt: untypedAtomic, con la cardinalidad original. Si la entrada está estáticamente vacía, se considera implícitamente vacía y se produce un error estático.  
+ El resultado de **DISTINCT-Values ()** recibe el tipo base de los tipos pasados, como XS: String en el caso de XDT: untypedAtomic, con la cardinalidad original. Si la entrada está vacía estáticamente, el vacío es implícito y se genera un error estático.  
   
  Los valores de tipo xs:string se comparan con la intercalación de punto de código Unicode predeterminada de XQuery.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Usar la función distinct-values() para quitar valores duplicados de la secuencia  
- En este ejemplo, una instancia XML que contiene los números de teléfono se asigna a un **xml** variable de tipo. La expresión XQuery especificada para esta variable utiliza la **distinct-values()** función para compilar una lista de números de teléfono que no contienen duplicados.  
+ En este ejemplo, se asigna una instancia XML que contiene números de teléfono a una variable de tipo **XML** . La expresión XQuery especificada en esta variable utiliza la función **DISTINCT-Values ()** para compilar una lista de números de teléfono que no contienen duplicados.  
   
 ```  
 declare @x xml  
@@ -64,13 +64,13 @@ select @x.query('
 ') as result  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 111-111-1111 222-222-2222    
 ```  
   
- En la consulta siguiente, se pasa una secuencia de números (1, 1, 2) a la **distinct-values()** función. A continuación, la función quita el duplicado de la secuencia y devuelve los otros dos valores.  
+ En la consulta siguiente, se pasa una secuencia de números (1, 1, 2) a la función **DISTINCT-Values ()** . A continuación, la función quita el duplicado de la secuencia y devuelve los otros dos valores.  
   
 ```  
 declare @x xml  
@@ -85,15 +85,15 @@ select @x.query('
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones:  
   
--   El **distinct-values()** función asigna valores enteros a xs: decimal.  
+-   La función **DISTINCT-Values ()** asigna valores enteros a XS: decimal.  
   
--   El **distinct-values()** función solo admite los tipos mencionados anteriormente y no admite la mezcla de tipos base.  
+-   La función **DISTINCT-Values ()** solo admite los tipos mencionados anteriormente y no admite la combinación de tipos base.  
   
--   El **distinct-values()** no se admite la función valores xs: Duration.  
+-   No se admite la función **DISTINCT-Values ()** en valores XS: Duration.  
   
 -   No se admite la opción sintáctica que proporciona una intercalación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

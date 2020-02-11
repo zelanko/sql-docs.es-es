@@ -1,5 +1,5 @@
 ---
-title: Tratar actualizaciones con errores | Microsoft Docs
+title: Tratamiento de las actualizaciones con error | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,19 +13,19 @@ ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d442a9c397ad184658f9101343e139697c9b3756
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925635"
 ---
 # <a name="dealing-with-failed-updates"></a>Tratar actualizaciones con errores
-Cuando finaliza una actualización con errores, cómo se resuelven los errores depende de la naturaleza y la gravedad de los errores y la lógica de la aplicación. Sin embargo, si la base de datos se comparte con otros usuarios, un error habitual es que otra persona modifica el campo antes de realizar. Este tipo de error se denomina un conflicto. ADO detecta esta situación y notifica un error.  
+Cuando una actualización finaliza con errores, la forma de resolver los errores depende de la naturaleza y la gravedad de los errores y de la lógica de la aplicación. Sin embargo, si la base de datos se comparte con otros usuarios, un error típico es que otra persona modifica el campo antes de hacerlo. Este tipo de error se denomina conflicto. ADO detecta esta situación e informa de un error.  
   
-## <a name="remarks"></a>Comentarios  
- Si hay errores de actualización, se capturarán en una rutina de control de errores. Filtrar el conjunto de registros con la constante adFilterConflictingRecords para que sean visibles solo las filas en conflicto. En este ejemplo, la estrategia de resolución de errores es simplemente imprimir el autor nombres y apellidos (au_fname y au_lname).  
+## <a name="remarks"></a>Observaciones  
+ Si hay errores de actualización, se capturarán en una rutina de control de errores. Filtre el conjunto de registros con la constante adFilterConflictingRecords de modo que solo estén visibles las filas en conflicto. En este ejemplo, la estrategia de resolución de errores es simplemente imprimir el nombre y los apellidos del autor (au_fname y au_lname).  
   
- El código para avisar al usuario para el conflicto de actualización tiene este aspecto:  
+ El código para avisar al usuario del conflicto de actualización tiene el siguiente aspecto:  
   
 ```  
 objRs.Filter = adFilterConflictingRecords  
@@ -36,5 +36,5 @@ Do While Not objRst.EOF
 Loop  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modo por lotes](../../../ado/guide/data/batch-mode.md)

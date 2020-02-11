@@ -18,10 +18,10 @@ ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 733e4adc69570dd98e6e0ad5448820607ade6329
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258750"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Atributos de protección del host y programación de la integración CLR
@@ -62,16 +62,16 @@ ms.locfileid: "75258750"
  [Miembros y tipos no permitidos en mscorlib.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
  Enumera los tipos y miembros en mscorlib.dll cuyos valores HPA no se permiten.  
   
- [Tipos y miembros no permitidos en System. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
+ [Disallowed Types and Members In System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
  Enumera los tipos y miembros en System.dll cuyos valores HPA no se permiten.  
   
  [Tipos y miembros no permitidos en System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
  Enumera los tipos y miembros en System.Data.dll cuyos valores HPA no se permiten.  
   
- [Tipos y miembros no permitidos en System. Core. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
+ [Tipos y miembros no permitidos en System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  Enumera los tipos y miembros en System.Core.dll cuyos valores HPA no se permiten.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de acceso del código de integración CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Restricciones del modelo de programación de la integración CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Crear un ensamblado](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  

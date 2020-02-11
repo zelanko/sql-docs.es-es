@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494014"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definir propiedades de atributo primario en una jerarquía de elementos primarios y secundarios
@@ -37,7 +37,7 @@ ms.locfileid: "69494014"
   
 3.  Seleccione el miembro **Ken J. Sánchez** .  
   
-     Observe que el nombre de nivel para este miembro es **Level 02**. (El nombre de nivel aparece después de **Nivel actual:** , justo encima del miembro **All Employees**.) En esta tarea, definirá nombres más descriptivos para cada nivel.  
+     Observe que el nombre de nivel para este miembro es **Level 02**. (El nombre de nivel aparece después de **Nivel actual:** , justo encima del miembro **All Employees** .) En esta tarea, definirá nombres más descriptivos para cada nivel.  
   
 4.  Expanda **Ken J. Sánchez** para ver los nombres de los empleados que informan a este director y, después, seleccione **Brian S. Welcker** para ver el nombre de este nivel.  
   
@@ -57,31 +57,31 @@ ms.locfileid: "69494014"
   
      En la ilustración siguiente se muestra expandida la jerarquía Employees.  
   
-10. ![Tabla dinámica que muestra la jerarquía de empleados](../../2014/tutorials/media/l4-employee-1.gif "Tabla dinámica que muestra la jerarquía de empleados")  
+10. ![Tabla dinámica que muestra la jerarquía Employees](../../2014/tutorials/media/l4-employee-1.gif "Tabla dinámica que muestra la jerarquía Employees")  
   
      Observe que las ventas realizadas por cada director del nivel 03 también se muestran en el nivel 04. Esto es así porque cada director también es un empleado de otro director. En la tarea siguiente, ocultará estos importes de ventas.  
   
 ## <a name="modifying-parent-attribute-properties-in-the-employee-dimension"></a>Modificar las propiedades de los atributos primarios en la dimensión Employee  
   
-1.  Cambie al Diseñador de dimensiones para la dimensión **Employee** .  
+1.  Cambie al diseñador de dimensiones para la dimensión **Employee** .  
   
 2.  Haga clic en la pestaña **Estructura de dimensión** , y, después, seleccione la jerarquía de atributo **Employees** en el panel **Atributos** .  
   
      Observe el icono único de este atributo. Este icono significa que el atributo es la clave principal de una jerarquía de elementos primarios y secundarios. Observe también que, en la ventana Propiedades, la propiedad **Usage** del atributo está definida como **Primaria**. Esta propiedad se estableció con el Asistente para dimensiones cuando se diseñó la dimensión. El asistente detectó automáticamente la relación de elementos primarios y secundarios.  
   
-3.  En la ventana Propiedades, haga clic en el botón de puntos suspensivos ( **...** ) de la celda de la propiedad **NamingTemplate** .  
+3.  En la ventana Propiedades, haga clic en el botón de puntos suspensivos (**...**) de la celda de la propiedad **NamingTemplate** .  
   
-     En el cuadro de diálogo **Plantilla de asignación de nombres de nivel**, debe definir la plantilla de asignación de nombres de nivel que determina los nombres de nivel de la jerarquía de elementos primarios y secundarios que se muestran a los usuarios cuando examinan los cubos.  
+     En el cuadro de diálogo **Plantilla de asignación de nombres de nivel** , debe definir la plantilla de asignación de nombres de nivel que determina los nombres de nivel de la jerarquía de elementos primarios y secundarios que se muestran a los usuarios cuando examinan los cubos.  
   
-4.  En la segunda fila, la fila **\*** , escriba **Employee Level \*** en la columna **Nombre** y después haga clic en la tercera fila.  
+4.  En la segunda fila, la **\*** fila, escriba **Employee \* LEVEL** en la columna **nombre** y, a continuación, haga clic en la tercera fila.  
   
-     Observe que, bajo **Resultado**, cada nivel ahora se denominará "Employee Level" seguido por un número que aumenta de forma secuencial.  
+     Observe que, bajo **Resultado** , cada nivel ahora se denominará "Employee Level" seguido por un número que aumenta de forma secuencial.  
   
      En la imagen siguiente se muestran los cambios realizados en el cuadro de diálogo **Plantilla de asignación de nombres de nivel** .  
   
-     ![Cuadro de diálogo plantilla de asignación de nombres de nivel](../../2014/tutorials/media/l4-namingtemplate.gif "Cuadro de diálogo plantilla de asignación de nombres de nivel")  
+     ![Cuadro de diálogo plantilla de asignación de nombres de nivel](../../2014/tutorials/media/l4-namingtemplate.gif "Cuadro de diálogo Plantilla de asignación de nombres de nivel")  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  En la ventana Propiedades del atributo **Employees** , en la celda de la propiedad **MembersWithData** , seleccione **NonLeafDataHidden** para cambiar este valor por el atributo **Employees** .  
   
@@ -101,12 +101,12 @@ ms.locfileid: "69494014"
   
      En la imagen siguiente se muestran los cambios realizados en la jerarquía Employees. Observe que Stephen Y. Jiang ya no aparece como empleado de sí mismo.  
   
-     ![Jerarquía de empleados modificada](../../2014/tutorials/media/l4-employee-2.png "Jerarquía de empleados modificada")  
+     ![Jerarquía Employees modificada](../../2014/tutorials/media/l4-employee-2.png "Jerarquía Employees modificada")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Agrupar miembros de atributo automáticamente](lesson-4-3-automatically-grouping-attribute-members.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquía de elementos primarios y secundarios](multidimensional-models/parent-child-dimension.md)   
  [Atributos en las jerarquías de elementos primarios y secundarios](multidimensional-models/parent-child-dimension-attributes.md)  
   

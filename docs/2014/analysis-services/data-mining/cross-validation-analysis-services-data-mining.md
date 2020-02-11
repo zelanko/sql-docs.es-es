@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68809855"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validación cruzada (Analysis Services - Minería de datos)
-  La *validación cruzada* es una herramienta estándar de análisis que resulta muy útil a la hora de desarrollar y ajustar modelos de minería de datos. La validación cruzada se usa después de crear una estructura de minería de datos y los modelos de minería de datos relacionados para determinar la validez del modelo.  La validación cruzada tiene las aplicaciones siguientes:  
+  La *validación cruzada* es una herramienta estándar de Analytics y es una característica importante para ayudarle a desarrollar y ajustar modelos de minería de datos. La validación cruzada se usa después de crear una estructura de minería de datos y los modelos de minería de datos relacionados para determinar la validez del modelo.  La validación cruzada tiene las aplicaciones siguientes:  
   
 -   Validar la solidez de un modelo de minería de datos determinado.  
   
@@ -46,9 +46,11 @@ ms.locfileid: "68809855"
   
     -   El número de plegamientos en los que desea crear particiones de los datos del modelo o de la estructura.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea y entrena tantos modelos como plegamientos.  
+-   
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea y entrena tantos modelos como plegamientos.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] devuelve un conjunto de medidas de precisión para cada plegamiento de cada modelo o para el conjunto de datos en conjunto.  
+-   
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] devuelve un conjunto de medidas de precisión para cada plegamiento de cada modelo o para el conjunto de datos en conjunto.  
   
 ## <a name="configuring-cross-validation"></a>Configurar la validación cruzada  
  Puede personalizar el modo de funcionamiento de la validación cruzada para controlar el número de secciones cruzadas, los modelos probados y la barra de precisión para las predicciones. Si usa los procedimientos almacenados de validación cruzada, también puede especificar el conjunto de datos que se usa para validar los modelos. Esta variedad de opciones implica que puede producir con facilidad muchos conjuntos de resultados diferentes que a continuación se deben comparar y analizar.  
@@ -60,7 +62,7 @@ ms.locfileid: "68809855"
   
  El ejemplo del diagrama muestra el uso de los datos si se especifican tres plegamientos.  
   
- ![Cómo segmenta los datos los segmentos de validación cruzada](../media/xvoverviewmain.gif "Cómo segmenta los datos los segmentos de validación cruzada")  
+ ![Cómo segmenta la validación cruzada los datos](../media/xvoverviewmain.gif "Cómo segmenta la validación cruzada los datos")  
   
  En el escenario del diagrama, la estructura de minería de datos contiene un conjunto de datos de exclusión que se usa para pruebas, pero el conjunto de datos de pruebas no se ha incluido para la validación cruzada. Como resultado, todos los datos del conjunto de datos de aprendizaje, el 70 por ciento de los datos de la estructura de minería de datos, se usan para validación cruzada. El informe de validación cruzada muestra el número total de casos usados en cada partición.  
   
@@ -82,13 +84,14 @@ ms.locfileid: "68809855"
 ### <a name="choosing-models-and-columns-to-validate"></a>Elegir los modelos y columnas para la validación  
  Al utilizar la pestaña **Validación cruzada** del Diseñador de minería de datos, debe seleccionar primero la columna de predicción de la lista. Normalmente, una estructura de minería de datos puede admitir muchos modelos de minería, de los cuales no todos utilizan la misma columna de predicción. Al ejecutar una validación cruzada, solo se podrán incluir en el informe aquellos modelos que utilicen la misma columna de predicción.  
   
- Para elegir un atributo de predicción, haga clic en **Atributo de destino** y seleccione la columna de la lista. Si el atributo de destino es una columna anidada o una columna de una tabla anidada, debe escribir el nombre de la columna anidada mediante el formato \<de nombre de tabla anidada > (clave).\< > De columna anidada. Si la única columna utilizada de la tabla anidada es la columna de clave, puede usar \<el nombre de tabla anidado > (clave).  
+ Para elegir un atributo de predicción, haga clic en **Atributo de destino** y seleccione la columna de la lista. Si el atributo de destino es una columna anidada o una columna de una tabla anidada, debe escribir el nombre de la columna anidada mediante el formato \<de nombre de tabla anidada> (clave). \<> de columna anidada. Si la única columna utilizada de la tabla anidada es la columna de clave, puede usar \<el nombre de tabla anidado> (clave).  
   
  Después de seleccionar el atributo de predicción, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prueba todos los modelos que utilizan el mismo atributo de predicción automáticamente. Si el atributo de destino contiene valores discretos, después de haber seleccionado la columna de predicción, puede escribir un estado de destino, en caso de que haya un valor concreto que desee predecir.  
   
  La selección del estado de destino afectará a las medidas que se devuelvan. Si especifica un atributo de destino (es decir, un nombre de columna) y no selecciona un valor específico que desea que el modelo prediga, el modelo se evaluará de forma predeterminada en su predicción del estado más probable.  
   
- Cuando use una validación cruzada con modelos de agrupación en clústeres, no habrá ninguna columna de predicción; en su lugar, debe seleccionar **Nº de clústeres** en el cuadro de lista **Atributo de destino** . Cuando haya seleccionado esta opción, otras opciones que no son relevantes para los modelos de agrupación en clústeres, como **Estado del destino**, se deshabilitarán. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] probará a continuación todos los modelos de agrupación en clústeres que estén asociados a la estructura de minería de datos.  
+ Cuando use una validación cruzada con modelos de agrupación en clústeres, no habrá ninguna columna de predicción; en su lugar, debe seleccionar **Nº de clústeres** en el cuadro de lista **Atributo de destino** . Cuando haya seleccionado esta opción, otras opciones que no son relevantes para los modelos de agrupación en clústeres, como **Estado del destino**, se deshabilitarán. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] probará a continuación todos los modelos de agrupación en clústeres que estén asociados a la estructura de minería de datos.  
   
 ## <a name="tools-for-cross-validation"></a>Herramientas para la validación cruzada  
  Puede utilizar la validación cruzada del Diseñador de minería de datos o puede realizar la validación cruzada ejecutando procedimientos almacenados.  
@@ -107,21 +110,21 @@ ms.locfileid: "68809855"
   
  Para cada tipo de modelo de minería de datos, agrupado o no agrupado, los procedimientos almacenados realizan la validación cruzada en dos fases independientes.  
   
- **Realizar particiones de datos y generar métricas para particiones**  
+ **Particionar datos y generar métricas para particiones**  
   
  En la primera fase, llama a un procedimiento almacenado del sistema que crea tantas particiones como especifique dentro del conjunto de datos y devuelve los resultados de precisión para cada partición. Para cada métrica, Analysis Services calcula entonces las desviaciones media y estándar para las particiones.  
   
--   [SystemGetCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetCrossValidationResults &#40;Analysis Services:&#41;de minería de datos](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
   
--   [SystemGetClusterCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetClusterCrossValidationResults &#40;Analysis Services:&#41;de minería de datos](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
   
  **Generar métricas para todo el conjunto de datos**  
   
  En la segunda fase, llama a otro conjunto de procedimientos almacenados. Estos procedimientos almacenados no crean particiones del conjunto de datos, pero generan resultados de precisión para el conjunto de datos especificados como un todo. Si ha creado particiones y ha procesado una estructura de minería de datos, puede llamar a este segundo conjunto de procedimientos almacenados para obtener los resultados.  
   
--   [SystemGetAccuracyResults &#40;Analysis Services - Minería de datos&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
+-   [SystemGetAccuracyResults &#40;Analysis Services:&#41;de minería de datos](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
   
--   [SystemGetClusterAccuracyResults &#40;Analysis Services - Minería de datos&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
+-   [SystemGetClusterAccuracyResults &#40;Analysis Services:&#41;de minería de datos](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
   
 #### <a name="defining-the-testing-data"></a>Definir los datos de prueba  
  Al ejecutar los procedimientos almacenados de validación cruzada que calculan la precisión (SystemGetAccuracyResults o SystemGetClusterAccuracyResults), puede especificar el origen de los datos que se usan para realizar pruebas durante la validación cruzada. Esta opción no está disponible en la interfaz de usuario.  
@@ -181,16 +184,16 @@ ms.locfileid: "68809855"
   
 |Temas|Vínculos|  
 |------------|-----------|  
-|Describe cómo establecer los parámetros de validación cruzada en SQL Server Development Studio.|[Pestaña Validación cruzada &#40;vista Gráfico de precisión de minería de datos&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
+|Describe cómo establecer los parámetros de validación cruzada en SQL Server Development Studio.|[Pestaña validación cruzada &#40;vista gráfico de precisión de minería de datos&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
 |Describe las métricas que proporciona la validación cruzada|[Fórmulas de validación cruzada](cross-validation-formulas.md)|  
 |Explica el formato del informe de validación cruzada y define las medidas estadísticas proporcionadas para cada tipo de modelo.|[Medidas en el informe de validación cruzada](measures-in-the-cross-validation-report.md)|  
-|Enumera los procedimientos almacenados para calcular las estadísticas de validación cruzada.|[Procedimientos almacenados de minería de datos &#40;Analysis Services - Minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
+|Enumera los procedimientos almacenados para calcular las estadísticas de validación cruzada.|[Procedimientos almacenados de minería de datos &#40;Analysis Services:&#41;de minería de datos](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
 |||  
 |Describe cómo crear un conjunto de datos de pruebas para las estructuras y los modelos relacionados.|[Conjuntos de datos de entrenamiento y de prueba](training-and-testing-data-sets.md)|  
-|Vea los ejemplos de otros tipos de gráficos de precisión.|[Matriz de clasificación &#40;Analysis Services - Minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services - Minería de datos&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services - Minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Describe los pasos para crear varios gráficos de precisión.|[Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Vea los ejemplos de otros tipos de gráficos de precisión.|[Matriz de clasificación &#40;Analysis Services:&#41;de minería de datos](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Gráfico de elevación &#40;Analysis Services:&#41;de minería de datos](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services:&#41;de minería de datos](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services de minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Describe los pasos para crear varios gráficos de precisión.|[Tareas y procedimientos de prueba y validación &#40;&#41;de minería de datos](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Pruebas y validación &#40;&#41;de minería de datos](testing-and-validation-data-mining.md)  
   
   

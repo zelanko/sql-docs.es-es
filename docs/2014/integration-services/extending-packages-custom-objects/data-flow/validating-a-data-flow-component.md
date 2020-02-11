@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7d2d611ab4292f96db13305571e8b3fa16d4702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896255"
 ---
 # <a name="validating-a-data-flow-component"></a>Validar un componente de flujo de datos
@@ -108,7 +108,7 @@ End Function
 ```  
   
 ## <a name="reinitializemetadata-method"></a>Método ReinitializeMetaData  
- El Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> siempre que se edita un componente que devuelve <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> desde su método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>. Los componentes deben contener código que detecte y corrija los problemas identificados por el componente durante la validación.  
+ El Diseñador <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> llama al método [!INCLUDE[ssIS](../../../includes/ssis-md.md)] siempre que se edita un componente que devuelve <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> desde su método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>. Los componentes deben contener código que detecte y corrija los problemas identificados por el componente durante la validación.  
   
  En el ejemplo siguiente se muestra un componente que detecta problemas durante la validación y los corrige en el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A>.  
   
@@ -189,6 +189,6 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
   

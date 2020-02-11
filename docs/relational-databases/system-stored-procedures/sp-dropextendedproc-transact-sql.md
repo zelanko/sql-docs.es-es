@@ -18,19 +18,19 @@ ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054297"
 ---
-# <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
+# <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita un procedimiento almacenado extendido.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, use la [integración con CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]En su lugar, use la [integración con CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,7 +42,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @functname = ] 'procedure'` Es el nombre del procedimiento almacenado extendido va a quitar. *procedimiento* es **nvarchar (517)** , no tiene ningún valor predeterminado.  
+`[ @functname = ] 'procedure'`Es el nombre del procedimiento almacenado extendido que se va a quitar. *procedure* es de tipo **nvarchar (** de-bajo) y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -50,15 +50,15 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- Ejecutar **sp_dropextendedproc** quita el nombre de procedimiento almacenado extendido definido por el usuario desde el [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista de catálogo y quita la entrada de la [sys.extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vista de catálogo. Este procedimiento almacenado se puede ejecutar solo en el **maestro** base de datos.  
+## <a name="remarks"></a>Observaciones  
+ Al ejecutar **sp_dropextendedproc** se quita el nombre del procedimiento almacenado extendido definido por el usuario de la vista de catálogo [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) y se quita la entrada de la vista de catálogo [Sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) . Este procedimiento almacenado solo se puede ejecutar en la base de datos **maestra** .  
   
-**sp_dropextendedproc** no quita procedimientos almacenados extendidos del sistema. En su lugar, el administrador del sistema debe denegar el permiso EXECUTE en el procedimiento almacenado extendido a la **pública** rol.  
+**sp_dropextendedproc** no quita los procedimientos almacenados extendidos del sistema. En su lugar, el administrador del sistema debe denegar el permiso EXECUTe para el procedimiento almacenado extendido al rol **Public** .  
   
- **sp_dropextendedproc** no se puede ejecutar dentro de una transacción.  
+ no se puede ejecutar **sp_dropextendedproc** dentro de una transacción.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_dropextendedproc**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_dropextendedproc**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita el procedimiento almacenado extendido `xp_hello`.  
@@ -72,9 +72,9 @@ GO
 EXEC sp_dropextendedproc 'xp_hello';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_addextendedproc &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

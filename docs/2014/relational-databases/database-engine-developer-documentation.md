@@ -1,5 +1,5 @@
 ---
-title: Guía&#39;del desarrollador (motor de base de datos) | Microsoft Docs
+title: Guía para desarrolladores&#39;(Motor de base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530948"
 ---
-# <a name="developer39s-guide-database-engine"></a>Guía&#39;del desarrollador (motor de base de datos)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un completo conjunto de herramientas para desarrollar, administrar y controlar las aplicaciones de base de datos.  
+# <a name="developer39s-guide-database-engine"></a>Guía para desarrolladores&#39;(Motor de base de datos)
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]proporciona un completo conjunto de herramientas para desarrollar, administrar y controlar las aplicaciones de base de datos.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "69530948"
  Describe la última versión de SQLXML, que aporta la misma funcionalidad que SQLXML 3.0 además de actualizaciones adicionales que dan cabida a las nuevas características introducidas en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], como el tipo de datos xml.  
   
  [Conceptos del proveedor WMI de administración de configuración](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
- Describe un nivel publicado que se utiliza con el complemento Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Microsoft Management Console (MMC) y el Administrador de configuración de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Proporciona una forma unificada de crear una interfaz con las llamadas a la API que administran las operaciones del Registro solicitadas por el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y proporciona un mejor control y manipulación de los servicios SQL seleccionados del complemento Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Describe un nivel publicado que se utiliza con el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] complemento Configuration Manager para Microsoft Management Console (MMC) y el [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager. Proporciona una forma unificada de crear una interfaz con las llamadas a la API que administran las operaciones del Registro solicitadas por el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y proporciona un mejor control y manipulación de los servicios SQL seleccionados del complemento Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Conceptos del proveedor WMI para eventos de servidor](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  Describe cómo utilizar Instrumental de administración de Windows (WMI) para supervisar los eventos de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -51,11 +51,11 @@ ms.locfileid: "69530948"
  [Programación de cuadros de mensajes de excepción](../database-engine/dev-guide/exception-message-box-programming.md)  
  Describe cómo puede utilizar la interfaz de programación del cuadro de mensajes de excepción en sus aplicaciones para proporcionar más control sobre la experiencia de mensajería, dar a los usuarios la opción de guardar el contenido de los mensajes de error para consultarlos posteriormente y obtener ayuda con los mensajes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Programación de minería de datos](../analysis-services/dev-guide/data-mining-programming.md)   
- [Guía &#40;del desarrollador Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
- [Guía &#40;del desarrollador Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [Guía &#40;del desarrollador de la replicación&#41;](replication/concepts/replication-developer-documentation.md)   
- [Guía &#40;del desarrollador Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [Guía del desarrollador &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
+ [Guía del desarrollador &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [Guía del desarrollador &#40;replicación&#41;](replication/concepts/replication-developer-documentation.md)   
+ [Guía del desarrollador &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

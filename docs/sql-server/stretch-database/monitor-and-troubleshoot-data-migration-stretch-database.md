@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843778"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Supervisión y solución de problemas de migración de datos (Stretch Database)
@@ -37,12 +37,12 @@ ms.locfileid: "73843778"
  Abra la vista de administración dinámica **sys.dm_db_rda_migration_status** para ver el número de lotes y filas de datos que se han migrado. Para obtener más información, vea [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 ##  <a name="Firewall"></a> Solución de problemas de migración de datos  
- **Las filas de la tabla habilitada para Stretch no se están migrando a Azure. ¿Cuál es el problema?**  
+ **Las filas de mi tabla habilitada para Stretch no se están migrando a Azure. ¿Cuál es el problema?**  
  Hay varios problemas que pueden afectar a la migración. Realice las siguientes comprobaciones:  
   
 -   Compruebe la conectividad de red del equipo de SQL Server.  
   
--   Compruebe que el firewall de Azure no esté impidiendo la conexión entre SQL Server y el punto de conexión remoto.  
+-   Compruebe que el firewall de Azure no esté bloqueando la conexión de SQL Server con el punto de conexión remoto.  
   
 -   Compruebe la vista de administración dinámica **sys.dm_db_rda_migration_status** para ver el estado del lote más reciente. Si se ha producido un error, compruebe los valores error_number, error_state y error_severity del lote.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "73843778"
   
     -   Para obtener más información sobre el contenido de un mensaje de error de SQL Server, vea [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).  
   
- **El firewall de Azure está bloqueando las conexiones desde mi servidor local.**  
- Puede que tenga que agregar una regla en la configuración de firewall de Azure del servidor Azure para permitir que SQL Server se comunique con el servidor de Azure remoto.  
+ **El firewall de Azure bloquea las conexiones de mi servidor local.**  
+ Es posible que tenga que agregar una regla en la configuración del Firewall de Azure para permitir que SQL Server se comunique con el servidor remoto de Azure.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar y solucionar problemas de Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+ [Administración y solución de problemas de Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
   

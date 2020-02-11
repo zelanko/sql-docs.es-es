@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45fc220eb4b3dc74e5550312c5658760b6cb699c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892171"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definir parámetros en el diseñador de consultas MDX para Analysis Services (Generador de informes y SSRS)
@@ -59,7 +59,7 @@ ms.locfileid: "68892171"
   
 2.  En la barra de herramientas, haga clic en **Diseño** para cambiar al modo de consulta.  
   
-3.  En la barra de herramientas del diseñador de consultas MDX, haga clic en **Parámetros de consulta** (![Icono del cuadro de diálogo Parámetros de consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")). Se abrirá el cuadro de diálogo Parámetros de consulta.  
+3.  En la barra de herramientas del diseñador de consultas MDX, haga clic en **parámetros de consulta** (![icono para el cuadro de diálogo parámetros de consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")). Se abrirá el cuadro de diálogo Parámetros de consulta.  
   
 4.  En la columna **Parámetro**, haga clic en **\<Escribir parámetro>** y luego escriba el nombre de un parámetro.  
   
@@ -81,8 +81,8 @@ ms.locfileid: "68892171"
   
      Para ver el conjunto de datos que proporciona los valores disponibles para el parámetro de informe, haga clic con el botón secundario en cualquier área en blanco del panel Datos de informe y, a continuación, haga clic en **Mostrar conjuntos de datos ocultos**. El panel Datos de informe muestra todos los conjuntos de datos del informe.  
   
-## <a name="see-also"></a>Vea también  
- [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services tipo de conexión para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
  [Interfaz de usuario del Diseñador de consultas MDX de Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
   
   

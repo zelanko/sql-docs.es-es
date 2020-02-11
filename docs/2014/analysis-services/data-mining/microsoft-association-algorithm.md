@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de asociación de Microsoft | Microsoft Docs
+title: Algoritmo de Asociación de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -31,18 +31,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a799f5a8aef79dec7cb951e95e6f252b3be2626
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084069"
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo de asociación de Microsoft
-  Este algoritmo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de asociación suministrado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], útil para los motores de recomendación. Un motor de recomendación recomienda productos a los clientes basándose en los elementos que ya han adquirido o en los que tienen interés. El algoritmo de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] también resulta útil para el análisis de la cesta de compra. Para obtener un ejemplo de un análisis de cesta, consulte [lección 3: Generar un escenario de cesta &#40;intermedio de Tutorial de minería de datos&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) en el Tutorial de minería de datos.  
+  Este algoritmo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de asociación suministrado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], útil para los motores de recomendación. Un motor de recomendación recomienda productos a los clientes basándose en los elementos que ya han adquirido o en los que tienen interés. El algoritmo de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] también resulta útil para el análisis de la cesta de compra. Para obtener un ejemplo de un análisis de la cesta de la compra, vea [Lección 3: generar un escenario de cesta de la compra &#40;tutorial intermedio de minería de datos&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) en el tutorial de minería de datos.  
   
  Los modelos de asociación se generan basándose en conjuntos de datos que contienen identificadores para casos individuales y para los elementos que contienen los casos. Un grupo de elementos de un caso se denomina un *conjunto de elementos*. Un modelo de asociación se compone de una serie de conjuntos de elementos y de las reglas que describen cómo estos elementos se agrupan dentro de los casos. Las reglas que el algoritmo identifica pueden utilizarse para predecir las probables compras de un cliente en el futuro, basándose en los elementos existentes en la cesta de compra actual del cliente. El siguiente diagrama muestra una serie de reglas en un conjunto de elementos.  
   
- ![Un conjunto de reglas para un modelo de asociación](../media/association.gif "un conjunto de reglas para un modelo de asociación")  
+ ![Conjunto de reglas de un modelo de asociación](../media/association.gif "Conjunto de reglas de un modelo de asociación")  
   
  Como muestra el diagrama, el algoritmo de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] puede encontrar potencialmente muchas reglas dentro de un conjunto de datos. El algoritmo usa dos parámetros, compatibilidad y probabilidad, para describir los conjuntos de elementos y las reglas que genera. Por ejemplo, si X e Y representan dos elementos que pueden formar parte de la cesta de la compra, el parámetro de soporte es el número de casos del conjunto de datos que contienen la combinación de ambos elementos, X e Y. Mediante el uso del parámetro de soporte en combinación con los parámetros *MINIMUM_SUPPORT* y *MAXIMUM_SUPPORT* definidos por el usuario, el algoritmo controla el número de conjuntos de elementos que se generan. El parámetro de probabilidad, también denominado parámetro de *confianza*, representa la fracción de casos del conjunto de datos que contiene X y que también contiene Y. Mediante el uso del parámetro de probabilidad en combinación con el parámetro *MINIMUM_PROBABILITY* , el algoritmo controla el número de reglas que se generan.  
   
@@ -59,18 +59,18 @@ ms.locfileid: "66084069"
   
  Los requisitos para un modelo de reglas de asociación son los siguientes:  
   
--   **Una columna de una sola clave** : cada modelo debe contener una columna numérica o de texto que identifique cada registro de manera única. no se permiten las claves compuestas.  
+-   **Una columna de clave única** Cada modelo debe contener una columna numérica o de texto que identifique cada registro de forma única. no se permiten las claves compuestas.  
   
--   **Una única columna de predicción** Un modelo de asociación solo puede tener una columna de predicción. Normalmente, se trata de la columna de clave de la tabla anidada, como el campo que contiene los productos que se han comprado. Los valores deben ser discretos o discretizados.  
+-   **Una sola columna de predicción** Un modelo de asociación solo puede tener una columna de predicción. Normalmente, se trata de la columna de clave de la tabla anidada, como el campo que contiene los productos que se han comprado. Los valores deben ser discretos o discretizados.  
   
--   **Columnas de entrada** Las columnas de entrada deben ser discretas. Los datos de entrada de un modelo de asociación suelen encontrarse en dos tablas. Por ejemplo, una tabla puede contener la información del cliente y la otra las compras de ese cliente. Es posible incluir estos datos en el modelo mediante el uso de una tabla anidada. Para obtener más información sobre las tablas anidadas, vea [Tablas anidadas &#40;Analysis Services - Minería de datos&#41;](nested-tables-analysis-services-data-mining.md).  
+-   **Columnas de entrada** . Las columnas de entrada deben ser discretas. Los datos de entrada de un modelo de asociación suelen encontrarse en dos tablas. Por ejemplo, una tabla puede contener la información del cliente y la otra las compras de ese cliente. Es posible incluir estos datos en el modelo mediante el uso de una tabla anidada. Para obtener más información sobre las tablas anidadas, vea [Tablas anidadas &#40;Analysis Services - Minería de datos&#41;](nested-tables-analysis-services-data-mining.md).  
   
  Para obtener información más detallada sobre los tipos de contenido y los tipos de datos compatibles con los modelos de asociación, vea la sección Requisitos de [Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md).  
   
 ## <a name="viewing-an-association-model"></a>Ver un modelo de asociación  
  Para explorar el modelo, puede utilizar el **Visor de asociación de Microsoft**. Cuando se observa un modelo de asociación, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] presenta las correlaciones desde distintos ángulos para que se puedan comprender mejor las relaciones y las reglas halladas en los datos. El panel **Conjunto de elementos** del visor proporciona un análisis detallado de las combinaciones o los conjuntos de elementos más comunes. El panel **Reglas** presenta una lista de reglas generalizadas a partir de los datos, agrega cálculos de probabilidad y clasifica las reglas según su importancia relativa. el visor de red de dependencia permite explorar visualmente cómo se conectan los diferentes elementos individuales. Para obtener más información, vea [Examinar un modelo usando el Visor de clústeres de Microsoft](browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Si desea obtener más detalles sobre cualquiera de los conjuntos de elementos y reglas, puede examinar el modelo en el [Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). El contenido almacenado para el modelo incluye el soporte para cada conjunto de elementos, una puntuación para cada regla y otras estadísticas. Para obtener más información, vea [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ Si desea obtener más detalles sobre cualquiera de los conjuntos de elementos y reglas, puede examinar el modelo en el [Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). El contenido almacenado para el modelo incluye el soporte para cada conjunto de elementos, una puntuación para cada regla y otras estadísticas. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Crear predicciones  
  Una vez procesado el modelo, puede utilizar las reglas y los conjuntos de elementos para realizar predicciones. En un modelo de asociación, una predicción indica qué elemento es probable que se produzca dada la presencia del elemento especificado, y la predicción puede incluir información como la probabilidad, el soporte o la importancia. Para obtener ejemplos de cómo crear consultas en un modelo de asociación, vea [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "66084069"
  Para obtener información general sobre cómo crear una consulta en un modelo de minería de datos, vea [Consultas de minería de datos](data-mining-queries.md).  
   
 ## <a name="performance"></a>Rendimiento  
- El proceso de crear conjuntos de elementos y contar las correlaciones puede llevar mucho tiempo. Aunque el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de reglas de asociación usa técnicas de optimización para ahorrar espacio y agilizar el procesamiento, es conveniente saber que pueden producirse problemas de rendimiento en determinadas circunstancias como las siguientes:  
+ El proceso de crear conjuntos de elementos y contar las correlaciones puede llevar mucho tiempo. Aunque el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de reglas de asociación usa técnicas de optimización para ahorrar espacio y agilizar el procesamiento, debe saber que se pueden producir problemas de rendimiento en condiciones como las siguientes:  
   
 -   El conjunto de datos es grande y tiene muchos elementos individuales.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66084069"
   
  Para minimizar el tiempo de procesamiento y reducir la complejidad de los conjuntos de elementos, se puede intentar agrupar en categorías los elementos relacionados antes de analizar los datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 -   No se admite el uso del Lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "66084069"
   
 -   Admite la creación de dimensiones de minería de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
- [Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Examinar un modelo mediante el visor de reglas de Asociación de Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services-minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Referencia técnica del algoritmo de Asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)   
  [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)  
   
   

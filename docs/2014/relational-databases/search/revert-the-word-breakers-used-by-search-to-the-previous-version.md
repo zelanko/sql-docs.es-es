@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874726"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Revertir los separadores de palabras usados por las búsquedas a la versión anterior
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala y habilita una nueva de los separadores de palabras y lematizadores para todos los idiomas admitidos por búsqueda de texto completo a excepción del coreano. En este tema se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala y habilita una versión de los separadores de palabras y lematizadores para todos los idiomas admitidos por búsqueda de texto completo, a excepción del coreano. En este tema se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
   
  En este tema no se explican los siguientes idiomas:  
   
--   **Inglés**. Para revertir o restaurar los componentes en inglés, vea [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Inglés**. Para revertir o restaurar los componentes en inglés, vea [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Danés, polaco y turco**. Se han reemplazado los separadores de palabras de terceros para danés, polaco y turco que se incluían en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -37,9 +37,9 @@ ms.locfileid: "70874726"
   
 |Archivo actual|Archivo anterior|Número de idiomas afectados|Acción de archivos|Acción de entradas del Registro|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
-|NaturalLanguage6.dll|NaturalLanguage6.dll|34|Obtenga e instale una versión anterior de NaturalLanguage6.dll, sobrescribiendo la versión actual del archivo.|No se requiere ninguna acción.<br /><br /> Las claves del Registro y los valores no han cambiado en esta versión.|  
+|NaturalLanguage6.dll|NaturalLanguage6.dll|34|Obtenga e instale una versión anterior de NaturalLanguage6.dll, sobrescribiendo la versión actual del archivo.|No es necesaria ninguna acción.<br /><br /> Las claves del Registro y los valores no han cambiado en esta versión.|  
 |(Otro nombre de archivo)|NaturalLanguage6.dll|5|Obtenga e instale una versión anterior de NaturalLanguage6.dll, sobrescribiendo la versión actual del archivo.|Cambie un conjunto de entradas del Registro para especificar la versión anterior de los componentes.|  
-|(Otro nombre de archivo)|(Otro nombre de archivo)|6|No se requiere ninguna acción.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copia la versión actual y las anteriores de los componentes en la carpeta Binn.|Cambie un conjunto de entradas del Registro para especificar la versión anterior de los componentes.|  
+|(Otro nombre de archivo)|(Otro nombre de archivo)|6|No es necesaria ninguna acción.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copia la versión actual y las anteriores de los componentes en la carpeta Binn.|Cambie un conjunto de entradas del Registro para especificar la versión anterior de los componentes.|  
   
 > [!WARNING]  
 >  Si reemplaza la versión actual del archivo NaturalLanguage6.dll con una versión distinta, el comportamiento de todos los idiomas que utilizan este archivo se verá afectado.  
@@ -56,42 +56,42 @@ ms.locfileid: "70874726"
   
  **Lista de idiomas afectados**  
   
-|Lenguaje|Abreviatura<br />utilizada en el<br />Registro|LCID|  
+|Idioma|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
 |Bengalí|ben|1093|  
-|Bulgarian|bgr|1026|  
-|Catalan|cat|1027|  
-|Spanish|esn|3082|  
-|French|fra|1036|  
+|Búlgaro|bgr|1026|  
+|Catalán|cat|1027|  
+|Español|esn|3082|  
+|Francés|fra|1036|  
 |Gujarati|guj|1095|  
-|Hebrew|heb|1037|  
+|Hebreo|heb|1037|  
 |Hindi|hin|1081|  
-|Croatian|hrv|1050|  
-|Indonesian|ind|1057|  
-|Icelandic|isl|1039|  
-|Italian|ita|1040|  
+|Croata|hrv|1050|  
+|Indonesio|ind|1057|  
+|Islandés|isl|1039|  
+|Italiano|ita|1040|  
 |Canarés|kan|1099|  
-|Lithuanian|lth|1063|  
-|Latvian|lvi|1062|  
+|Lituano|lth|1063|  
+|Letón|lvi|1062|  
 |Malayalam|mal|1100|  
 |Maratí|mar|1102|  
 |Malayo|msl|1086|  
-|Neutral|Neutral|0000|  
+|Neutra|Neutra|0000|  
 |Noruego (Bokmal)|nor|1044|  
-|Punjabi|pan|1094|  
+|Punjabi|panorámica|1094|  
 |Portugués|ptg|2070|  
-|Portuguese (Brazil) |ptb|1046|  
+|Portugués (Brasil) |ptb|1046|  
 |Rumano|rom|1048|  
-|Slovak|sky|1051|  
-|Slovenian|slv|1060|  
+|Eslovaco|sky|1051|  
+|Esloveno|slv|1060|  
 |Serbio (cirílico)|srb|3098|  
 |Serbio (latino)|srl|2074|  
-|Swedish|sve|1053|  
+|Sueco|sve|1053|  
 |Tamil|tam|1097|  
 |Telugu|tel|1098|  
-|Ukrainian|ukr|1058|  
+|Ucraniano|ukr|1058|  
 |Urdu|urd|1056|  
-|Vietnamese|vit|1066|  
+|Vietnamita|vit|1066|  
   
  La tabla anterior está ordenada alfabéticamente según la columna Abreviatura.  
   
@@ -127,13 +127,13 @@ ms.locfileid: "70874726"
   
  **Lista de idiomas afectados**  
   
-|Lenguaje|Abreviatura<br />utilizada en el<br />Registro|LCID|  
+|Idioma|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
-|Arabic|ara|1025|  
-|German|deu|1031|  
-|Japanese|jpn|1041|  
-|Dutch|nld|1043|  
-|Russian|rus|1049|  
+|Árabe|ara|1025|  
+|Alemán|deu|1031|  
+|Japonés|jpn|1041|  
+|Neerlandés|nld|1043|  
+|Ruso|rus|1049|  
   
  La tabla anterior está ordenada alfabéticamente según la columna Abreviatura.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "70874726"
     > [!WARNING]  
     >  Este cambio afecta a todos los idiomas que utilizan NaturalLanguage6.dll en la versión actual y en la anterior.  
   
-5.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+5.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\CLSID**.  
   
 6.  Siga estos pasos para agregar nuevas claves a los COM ClassID de las interfaces de separadores de palabras y lematizadores en el idioma seleccionado:  
   
@@ -164,7 +164,7 @@ ms.locfileid: "70874726"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador anterior de la tabla.  
   
-7.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\Language\\<clave_idioma>** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+7.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key **>. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 8.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras actual.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "70874726"
     > [!WARNING]  
     >  Este cambio afecta a todos los idiomas que utilizan NaturalLanguage6.dll en la versión actual y en la anterior.  
   
-3.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+3.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\CLSID**.  
   
 4.  Si las siguientes claves no existen, siga estos pasos para agregar nueva claves para los ClassID COM de las interfaces de separadores de palabras y lematizadores actuales en el idioma seleccionado:  
   
@@ -193,7 +193,7 @@ ms.locfileid: "70874726"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador actual de la tabla.  
   
-5.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\Language\\<clave_idioma>** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+5.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key **>. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 6.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras anterior.  
   
@@ -212,8 +212,8 @@ ms.locfileid: "70874726"
 |---------------|------------------|-------------|  
 |CLSID anterior|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Nombre de archivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID actual|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Ninguno|  
-|Nombre de archivo actual|MSWB7.dll|Ninguno|  
+|CLSID actual|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|Nombre de archivo actual|MSWB7.dll|None|  
   
  **Alemán (deu), LCID 1031**  
   
@@ -230,8 +230,8 @@ ms.locfileid: "70874726"
 |---------------|------------------|-------------|  
 |CLSID anterior|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Nombre de archivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID actual|04096682-6ece-4e9e-90c1-52d81f0422ed|Ninguno|  
-|Nombre de archivo actual|MsWb70011.dll|Ninguno|  
+|CLSID actual|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|Nombre de archivo actual|MsWb70011.dll|None|  
   
  **Holandés (nld), LCID 1043**  
   
@@ -256,11 +256,11 @@ ms.locfileid: "70874726"
   
  **Lista de idiomas afectados**  
   
-|Lenguaje|Abreviatura<br />utilizada en el<br />Registro|LCID|  
+|Idioma|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
-|Simplified Chinese|chs|2052|  
-|Traditional Chinese|cht|1028|  
-|Thai|tha|1054|  
+|Chino simplificado|chs|2052|  
+|Chino tradicional|cht|1028|  
+|Tailandés|tha|1054|  
 |Chino tradicional|zh-HK|3076|  
 |Chino tradicional|zh-mo|5124|  
 |Chino simplificado|zh-sg|4100|  
@@ -273,7 +273,7 @@ ms.locfileid: "70874726"
   
 1.  No elimine los archivos de la versión actual de los componentes de la carpeta Binn.  
   
-2.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\CLSID**.  
   
 3.  Siga estos pasos para agregar nuevas claves a los COM ClassID de las interfaces de separadores de palabras y lematizadores en el idioma seleccionado:  
   
@@ -285,7 +285,7 @@ ms.locfileid: "70874726"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador anterior de la tabla.  
   
-4.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\Language\\<clave_idioma>** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+4.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key **>. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 5.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras actual.  
   
@@ -297,7 +297,7 @@ ms.locfileid: "70874726"
   
 1.  No elimine los archivos de la versión anterior de los componentes de la carpeta Binn.  
   
-2.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\CLSID**.  
   
 3.  Si las siguientes claves no existen, siga estos pasos para agregar nueva claves para los ClassID COM de las interfaces de separadores de palabras y lematizadores actuales en el idioma seleccionado:  
   
@@ -309,7 +309,7 @@ ms.locfileid: "70874726"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador actual de la tabla.  
   
-4.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\Language\\<clave_idioma>** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+4.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key **>. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 5.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras anterior.  
   
@@ -346,8 +346,8 @@ ms.locfileid: "70874726"
 |---------------|------------------|-------------|  
 |CLSID anterior|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Nombre de archivo anterior|Thawbrkr.dll|Thawbrkr.dll|  
-|CLSID actual|F70C0935-6E9F-4ef1-9F06-7876536DB900|Ninguno|  
-|Nombre de archivo actual|MsWb7001e.dll|Ninguno|  
+|CLSID actual|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|Nombre de archivo actual|MsWb7001e.dll|None|  
   
  **Chino tradicional (zh-hk), LCID 3076**  
   
@@ -376,8 +376,8 @@ ms.locfileid: "70874726"
 |CLSID actual|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |Nombre de archivo actual|MsWb70804.dll|  
   
-## <a name="see-also"></a>Vea también  
- [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Cambios de comportamiento en la búsqueda de texto completo](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   

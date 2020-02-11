@@ -1,5 +1,5 @@
 ---
-title: Contenido del modelo para los modelos de regresión lineal de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Contenido del modelo de minería de datos para los modelos de regresión lineal (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,19 +15,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083643"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de regresión lineal (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Descripción de la estructura de un modelo de regresión lineal  
- Un modelo de regresión lineal tiene una estructura sumamente simple. Cada modelo tiene un único nodo primario que representa el modelo y sus metadatos y un nodo de árbol de regresión (NODE_TYPE = 25) que contiene la fórmula de regresión para cada atributo de predicción.  
+ Un modelo de regresión lineal tiene una estructura sumamente simple. Cada modelo tiene un único nodo primario que representa el modelo y sus metadatos, y un nodo de árbol de regresión (NODE_TYPE = 25) que contiene la fórmula de regresión para cada atributo de predicción.  
   
- ![Estructura del modelo de regresión lineal de](../media/modelcontentstructure-linreg.gif "estructura del modelo de regresión lineal")  
+ ![Estructura del modelo para la regresión lineal](../media/modelcontentstructure-linreg.gif "Estructura del modelo para la regresión lineal")  
   
  Los modelos de regresión lineal usan el mismo algoritmo que los árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , pero se utilizan parámetros diferentes para restringir el árbol y solo se aceptan como entradas los atributos continuos. Sin embargo, dado que los modelos de regresión lineal se basan en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , los modelos de regresión lineal se muestran utilizando el Visor de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, vea [Examinar un modelo usando el Visor de árboles de Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66083643"
 ## <a name="model-content-for-a-linear-regression-model"></a>Contenido de un modelo de regresión lineal  
  En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para la regresión lineal.  
   
- Para más información sobre las columnas de uso general en el conjunto de filas de esquema, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Para más información sobre las columnas de uso general en el conjunto de filas de esquema, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nombre de la base de datos en la que se almacena el modelo.  
@@ -47,13 +47,13 @@ ms.locfileid: "66083643"
  ATTRIBUTE_NAME  
  **Nodo raíz:** En blanco  
   
- **Nodo de regresión:** El nombre del atributo predecible.  
+ **Nodo de regresión:** Nombre del atributo de predicción.  
   
  NODE_NAME  
  Siempre lo mismo que NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
- Identificador único para el nodo dentro del modelo. Este valor no puede modificarse.  
+ Identificador único para el nodo dentro del modelo. No se puede cambiar este valor.  
   
  NODE_TYPE  
  Un modelo de regresión lineal genera los tipos de nodos siguientes:  
@@ -111,7 +111,7 @@ ms.locfileid: "66083643"
   
  **Nodo raíz:** 0  
   
- **Nodo de regresión:** Una tabla que contiene los elementos utilizados para generar la fórmula de regresión. Un nodo de regresión contiene los tipos de valores siguientes:  
+ **Nodo de regresión:** Tabla que contiene los elementos utilizados para generar la fórmula de regresión. Un nodo de regresión contiene los tipos de valores siguientes:  
   
 |VALUETYPE|  
 |---------------|  
@@ -138,17 +138,17 @@ ms.locfileid: "66083643"
  MSOLAP_NODE_SHORT_CAPTION  
  Etiqueta que se utiliza para la visualización.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Al crear un modelo utilizando el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , el motor de minería de datos crea una instancia especial de un modelo de árboles de decisión y proporciona los parámetros que restringen el árbol para contener todos los datos de entrenamiento en un único nodo. Todas las entradas continuas se marcan y evalúan como regresores potenciales, pero únicamente los que se ajusten a los datos se conservan como regresores en el modelo final. El análisis genera una única fórmula de regresión o ninguna fórmula para cada regresor.  
   
  Para ver la fórmula de regresión completa en la **Leyenda de minería de datos**, haga clic en el nodo **(Todos)** del [Visor de árboles de Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md).  
   
  Además, al crear un modelo de árboles de decisión que incluye un atributo de predicción continuo, a veces el árbol tiene nodos de regresión que comparten las propiedades de los nodos del árbol de regresión.  
   
-##  <a name="NodeDist_Regression"></a> Distribución de nodos para los atributos continuos  
+##  <a name="NodeDist_Regression"></a>Distribución de nodos para atributos continuos  
  La mayoría de la información importante en un nodo de regresión está incluida en la tabla NODE_DISTRIBUTION. En el ejemplo siguiente se muestra el diseño de la tabla NODE_DISTRIBUTION. En este ejemplo, la estructura de minería de datos de Targeted Mailing se ha utilizado para crear un modelo de regresión lineal que predice los ingresos de los clientes según su edad. La finalidad del modelo es únicamente ilustrativo, porque puede generarse con facilidad utilizando los datos y la estructura de minería de datos de ejemplo existentes de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SOPORTE TÉCNICO|PROBABILITY|varianza|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
@@ -162,7 +162,8 @@ ms.locfileid: "66083643"
 ### <a name="elements-of-the-regression-formula"></a>Elementos de la fórmula de regresión  
  La tabla NODE_DISTRIBUTION anidada contiene cada elemento de la fórmula de regresión en una fila independiente. Las dos primeras filas de datos en los resultados del ejemplo contienen información sobre el atributo de predicción, **Yearly Income**, que modela la variable dependiente. La columna SUPPORT muestra el recuento de casos de compatibilidad de los dos estados de este atributo: o bien hay disponible un valor **Yearly Income** o el valor **Yearly Income** no está.  
   
- La columna VARIANCE indica la varianza calculada del atributo de predicción. La*varianza* es una medida de la dispersión de los valores de un ejemplo, dada una distribución esperada. La varianza aquí se calcula tomando el promedio de la desviación cuadrada de la media. La raíz cuadrada de la varianza también se conoce como desviación estándar. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no proporciona la desviación estándar pero se puede calcular fácilmente.  
+ La columna VARIANCE indica la varianza calculada del atributo de predicción. La *varianza* es una medida de la diseminación de los valores en un ejemplo, dada una distribución esperada. La varianza aquí se calcula tomando el promedio de la desviación cuadrada de la media. La raíz cuadrada de la varianza también se conoce como desviación estándar. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no proporciona la desviación estándar pero se puede calcular fácilmente.  
   
  Para cada regresor se generan tres filas. Contienen el coeficiente, la ganancia de puntuación y estadísticas de regresores.  
   
@@ -180,14 +181,14 @@ ms.locfileid: "66083643"
 #### <a name="intercept"></a>Interceptar  
  Normalmente, la *intersección* (VALUETYPE = 11) o *valor residual* en una ecuación de regresión indica el valor del atributo de predicción en el punto donde el atributo de entrada es igual a 0. En muchos casos, esto podría no suceder y se podrían producir resultados poco intuitivos.  
   
- Por ejemplo, en un modelo que prediga los ingresos según la edad, es inútil obtener información sobre los ingresos a los 0 años. En la vida real, suele ser más útil saber el comportamiento en el margen con respecto a los valores medios. Por consiguiente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modifica la intersección para expresar cada regresor en una relación con la media.  
+ Por ejemplo, en un modelo que prediga los ingresos según la edad, es inútil obtener información sobre los ingresos a los 0 años. En la vida real, suele ser más útil saber el comportamiento en el margen con respecto a los valores medios. Por consiguiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , modifica la intersección para expresar cada regresor en una relación con la media.  
   
  Este ajuste es difícil de ver en el contenido del modelo de minería de datos, pero es obvio si se ve la ecuación completada en la **Leyenda de minería de datos** del **Visor de árboles de Microsoft**. La fórmula de regresión se desvía del punto 0 al punto que representa la media. Esto presenta una vista que es más intuitiva dados los datos actuales.  
   
  Por consiguiente, suponiendo que la edad media está alrededor de 45 años, la intersección (VALUETYPE = 11) para la fórmula de regresión indica los ingresos medios.  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)   
  [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md)  

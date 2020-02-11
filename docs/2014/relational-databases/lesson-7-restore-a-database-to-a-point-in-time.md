@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175429"
 ---
-# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lección 8: Restaurar una base de datos a Azure Storage
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lección 8: Restaurar una base de datos en Azure Storage
   En esta lección, aprenderá a crear un archivo de copia de seguridad localmente y, a continuación, lo restaurará en Azure Storage. Tenga en cuenta que puede tener la base de datos en el entorno local o en una máquina virtual de Azure. Para seguir esta lección, no es necesario completar las lecciones 4, 5, 6 y 7.  
   
  En esta lección se supone que ya completó los pasos siguientes:  
@@ -77,9 +77,9 @@ ms.locfileid: "70175429"
   
 4.  En la página **General** , en la sección origen de la **restauración** , haga clic en dispositivo de **origen** .  
   
-5.  Haga clic en el botón examinar del cuadro de texto dispositivo de **origen** , que abre el cuadro de diálogo **seleccionar dispositivos de copia de seguridad** .  
+5.  Haga clic en el botón Examinar del cuadro de texto **Dispositivo de origen**, que abre el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad**.  
   
-6.  En el cuadro de texto medios de copia de seguridad, seleccione **archivo**y haga clic en el botón **Agregar** para buscar el archivo de copia de seguridad (. bak). Haga clic en **Aceptar**.  
+6.  En el cuadro de texto Medios de copia de seguridad, seleccione **Archivo** y haga clic en el botón **Agregar** para buscar el archivo de copia de seguridad (.bak). Haga clic en **OK**.  
   
 7.  Haga clic en **archivos** en la primera página.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "70175429"
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
  Cuando se realice la restauración, inicie sesión en el Portal de administración. Debe poder ver los archivos .mdf y .ldf en el contenedor como sigue:  
   
@@ -97,6 +97,6 @@ ms.locfileid: "70175429"
   
  **Lección siguiente:**  
   
- [Lección 9: Restaurar una base de datos desde Azure Storage](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [Lección 9. Restaurar una base de datos desde Azure Storage](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

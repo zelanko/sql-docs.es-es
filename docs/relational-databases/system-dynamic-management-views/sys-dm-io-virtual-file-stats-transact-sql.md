@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412837"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
@@ -57,7 +57,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | ACEPTA
 
- **se aplica a:** SQL Server (a partir de 2008), Azure SQL Database
+ **SE APLICA A:** SQL Server (a partir de 2008), Azure SQL Database
 
  Identificador de la base de datos. *database_id* es de tipo int y no tiene ningún valor predeterminado. Las entradas válidas son el número de identificación de una base de datos o NULL. Cuando se especifica NULL, se devuelven todas las bases de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -65,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | ACEPTA
 
-**se aplica a:** SQL Server (a partir de 2008), Azure SQL Database
+**SE APLICA A:** SQL Server (a partir de 2008), Azure SQL Database
  
 Id. del archivo. *file_id* es de tipo int y no tiene ningún valor predeterminado. Las entradas válidas son el número de identificación de un archivo o NULL. Cuando se especifica NULL, se devuelven todos los archivos de la base de datos.  
   
@@ -78,19 +78,19 @@ Id. del archivo. *file_id* es de tipo int y no tiene ningún valor predeterminad
 |**database_name**|**sysname**|nombre de base de datos.</br></br>Por SQL Data Warehouse, es el nombre de la base de datos almacenada en el nodo que se identifica mediante pdw_node_id. Cada nodo tiene una base de datos Tempdb con 13 archivos. Cada nodo también tiene una base de datos por distribución, y cada base de datos de distribución tiene 5 archivos. Por ejemplo, si cada nodo contiene 4 distribuciones, los resultados muestran 20 archivos de base de datos de distribución por pdw_node_id. 
 |**database_id**|**smallint**|Identificador de la base de datos.|  
 |**file_id**|**smallint**|IDENTIFICADOR del archivo.|  
-|**sample_ms**|**bigint**|Número de milisegundos transcurridos desde que se inició el equipo. Esta columna se puede utilizar para comparar diferentes resultados de esta función.</br></br>El tipo de datos **** es int [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para a través de[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|**num_of_reads**|**bigint**|Número de operaciones de lectura realizadas en el archivo.|  
-|**num_of_bytes_read**|**bigint**|Número total de bytes leídos en el archivo.|  
-|**io_stall_read_ms**|**bigint**|Tiempo total, en milisegundos, que los usuarios han esperado para que se realicen las lecturas en el archivo.|  
-|**num_of_writes**|**bigint**|Número de operaciones de escritura realizadas en este archivo.|  
-|**num_of_bytes_written**|**bigint**|Número total de bytes escritos en el archivo.|  
-|**io_stall_write_ms**|**bigint**|Tiempo total, en milisegundos, que los usuarios han esperado para que se completen las escrituras en el archivo.|  
-|**io_stall**|**bigint**|Tiempo total, en milisegundos, que los usuarios han esperado para que se completen las operaciones de E/S en el archivo.|  
-|**size_on_disk_bytes**|**bigint**|Número de bytes utilizados en el disco para este archivo. En el caso de archivos dispersos, este número es el número real de bytes en el disco utilizados para las instantáneas de base de datos.|  
+|**sample_ms**|**BIGINT**|Número de milisegundos transcurridos desde que se inició el equipo. Esta columna se puede utilizar para comparar diferentes resultados de esta función.</br></br>El tipo de datos **** es int [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para a través de[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**num_of_reads**|**BIGINT**|Número de operaciones de lectura realizadas en el archivo.|  
+|**num_of_bytes_read**|**BIGINT**|Número total de bytes leídos en el archivo.|  
+|**io_stall_read_ms**|**BIGINT**|Tiempo total, en milisegundos, que los usuarios han esperado para que se realicen las lecturas en el archivo.|  
+|**num_of_writes**|**BIGINT**|Número de operaciones de escritura realizadas en este archivo.|  
+|**num_of_bytes_written**|**BIGINT**|Número total de bytes escritos en el archivo.|  
+|**io_stall_write_ms**|**BIGINT**|Tiempo total, en milisegundos, que los usuarios han esperado para que se completen las escrituras en el archivo.|  
+|**io_stall**|**BIGINT**|Tiempo total, en milisegundos, que los usuarios han esperado para que se completen las operaciones de E/S en el archivo.|  
+|**size_on_disk_bytes**|**BIGINT**|Número de bytes utilizados en el disco para este archivo. En el caso de archivos dispersos, este número es el número real de bytes en el disco utilizados para las instantáneas de base de datos.|  
 |**file_handle**|**varbinary**|Identificador de archivo de Windows para este archivo.|  
-|**io_stall_queued_read_ms**|**bigint**|No **se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latencia total de E/S introducida por la gobernanza de recursos de E/S para las lecturas. No admite valores NULL. Para obtener más información, vea [Sys. dm_resource_governor_resource_pools &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|No **se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latencia total de E/S introducida por la gobernanza de recursos de E/S para las escrituras. No admite valores NULL.|
-|**pdw_node_id**|**Inter**|**Se aplica a:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador del nodo de la distribución.
+|**io_stall_queued_read_ms**|**BIGINT**|No **se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latencia total de E/S introducida por la gobernanza de recursos de E/S para las lecturas. No admite valores NULL. Para obtener más información, vea [Sys. dm_resource_governor_resource_pools &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**BIGINT**|No **se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latencia total de E/S introducida por la gobernanza de recursos de E/S para las escrituras. No admite valores NULL.|
+|**pdw_node_id**|**int**|**Se aplica a:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador del nodo de la distribución.
  
 ## <a name="remarks"></a>Observaciones
 Los contadores se inicializan en vacío cada vez que se inicia el servicio SQL Server (MSSQLSERVER).
@@ -100,7 +100,7 @@ Los contadores se inicializan en vacío cada vez que se inicia el servicio SQL S
   
 ## <a name="examples"></a>Ejemplos  
 
-### <a name="a-return-statistics-for-a-log-file"></a>a. Devolver estadísticas para un archivo de registro
+### <a name="a-return-statistics-for-a-log-file"></a>A. Devolver estadísticas para un archivo de registro
 
 **Se aplica a:** SQL Server (a partir de 2008), Azure SQL Database
 
@@ -121,11 +121,11 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I O funciones y vistas de administración dinámica relacionadas &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [Sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
 

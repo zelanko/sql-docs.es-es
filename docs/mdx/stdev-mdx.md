@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 40af02ce74363fb1df2ae142e7665be8714d181e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036862"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
@@ -34,8 +34,8 @@ Stdev(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Comentarios  
- El **Stdev** función usa el llenado no sesgada fórmulas, mientras el [StdevP](../mdx/stdevp-mdx.md) función utiliza la fórmula de población sesgada.  
+## <a name="remarks"></a>Observaciones  
+ La función **stdev** utiliza la fórmula de llenado no sesgada, mientras que la función [StdevP](../mdx/stdevp-mdx.md) utiliza la fórmula de población sesgada.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve la desviación estándar para Internet Order Quantity evaluada en los primeros tres meses del año 2003 mediante la fórmula de población no sesgada.  
@@ -51,7 +51,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

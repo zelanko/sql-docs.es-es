@@ -20,10 +20,10 @@ ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b5ac732926ae544dbad2cc22006c45533702c3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982601"
 ---
 # <a name="sysservice_queues-transact-sql"></a>sys.service_queues (Transact-SQL)
@@ -31,12 +31,12 @@ ms.locfileid: "73982601"
 
   Contiene una fila para cada objeto de la base de datos que es una cola de servicio, con **Sys. Objects. Type** = sq.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<columnas heredadas >**||Para obtener una lista de las columnas que hereda esta vista, vea [Sys. &#40;Objects de&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<columnas heredadas>**||Para obtener una lista de las columnas que hereda esta vista, vea [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**max_readers**|**smallint**|Número máximo de lectores simultáneos permitido en la cola.|  
-|**activation_procedure**|**nvarchar(776)**|Nombre de tres partes del procedimiento de activación.|  
-|**execute_as_principal_id**|**int**|Id. de la entidad de seguridad de base de datos EXECUTE AS.<br /><br /> NULL de manera predeterminada o si EXECUTE AS CALLER.<br /><br /> IDENTIFICADOR de la entidad de seguridad especificada si EXECUTe AS SELF EXECUTe as \<principal >.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**activation_procedure**|**nvarchar(776**|Nombre de tres partes del procedimiento de activación.|  
+|**execute_as_principal_id**|**int**|Id. de la entidad de seguridad de base de datos EXECUTE AS.<br /><br /> NULL de manera predeterminada o si EXECUTE AS CALLER.<br /><br /> IDENTIFICADOR de la entidad de seguridad especificada si EXECUTe AS \<Self Execute as principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**is_activation_enabled**|**bit**|1 = La activación está habilitada.|  
 |**is_receive_enabled**|**bit**|1 = La recepción está habilitada.|  
 |**is_enqueue_enabled**|**bit**|1 = La colocación en cola está habilitada.|  
@@ -46,8 +46,8 @@ ms.locfileid: "73982601"
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  [Vistas de catálogo de objetos (Transact-SQL)]  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fceb0baa62b7998534a5b7620d2c99fd1afc1f8f
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148315"
 ---
 # <a name="using-encryption"></a>Utilizar el cifrado
@@ -38,12 +38,13 @@ ms.locfileid: "70148315"
   
  Cuando una base de datos se adjunta a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe proporcionar la contraseña para la clave maestra de base de datos o ejecutar el método <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> para hacer que una copia no cifrada de la clave maestra de base de datos esté disponible para el cifrado con la clave maestra de servicio. Se recomienda este paso para evitar la necesidad de abrir explícitamente la clave maestra de base de datos.  
   
- El método <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> regenera la clave maestra de base de datos. Si se vuelve a generar la clave maestra de base de datos, todas las claves cifradas con ella se descifran y, a continuación, vuelve a cifrarlas con la nueva clave maestra de base de datos. El método <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> quita el cifrado de la clave maestra de base de datos mediante la clave maestra de servicio. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> hace que se cifre una copia de la clave maestra utilizando la clave maestra de servicio y la almacena en la base de datos actual y en la base de datos maestra.  
+ El método <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> regenera la clave maestra de base de datos. Si se vuelve a generar la clave maestra de base de datos, todas las claves cifradas con ella se descifran y, a continuación, vuelve a cifrarlas con la nueva clave maestra de base de datos. El método <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> quita el cifrado de la clave maestra de base de datos mediante la clave maestra de servicio. 
+  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> hace que se cifre una copia de la clave maestra utilizando la clave maestra de servicio y la almacena en la base de datos actual y en la base de datos maestra.  
   
  En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Certificate> representa los certificados. El objeto <xref:Microsoft.SqlServer.Management.Smo.Certificate> tiene propiedades que especifican la clave pública, el nombre del asunto, el período de validez e información sobre el emisor. El permiso para tener acceso al certificado se controla utilizando los métodos **Grant**, **Revoke** y **Deny** .  
   
 ## <a name="example"></a>Ejemplo  
- Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Agregar un certificado en Visual C#  
  En el ejemplo de código se crea un certificado simple con una contraseña de cifrado. A diferencia de otros objetos, el método <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> tiene varias sobrecargas. La sobrecarga utilizada en el ejemplo crea un nuevo certificado con una contraseña de cifrado.  
@@ -93,7 +94,7 @@ $c.Create("pGFD4bb925DGvbd2439587y")
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Uso de claves de cifrado](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
   
   

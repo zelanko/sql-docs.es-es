@@ -16,13 +16,13 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771351"
 ---
-# <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
+# <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crea una nueva base de datos de distribución e instala el esquema del distribuidor. La base de datos de distribución almacena los procedimientos, esquema y metadatos utilizados en la replicación. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos maestra con el fin de crear la base de datos de distribución e instalar las tablas y procedimientos almacenados necesarios para habilitar la distribución de replicación.  
@@ -55,7 +55,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>Argumentos  
 `[ @database = ] database'`Es el nombre de la base de datos de distribución que se va a crear. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado. Si la base de datos especificada ya existe y no está ya marcada como base de datos de distribución, entonces los objetos necesarios para habilitar la distribución están instalados y la base de datos está marcada como base de datos de distribución. Si la base de datos especificada ya está habilitada como base de datos de distribución, se obtiene un error.  
   
-`[ @data_folder = ] 'data_folder'_`Es el nombre del directorio que se utiliza para almacenar el archivo de datos de la base de datos de distribución. *data_folder* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Si es NULL, se utiliza el directorio de datos para esa instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
+`[ @data_folder = ] 'data_folder'_`Es el nombre del directorio que se utiliza para almacenar el archivo de datos de la base de datos de distribución. *data_folder* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Si es null, se utiliza el directorio de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para esa instancia de, por `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`ejemplo,.  
   
 `[ @data_file = ] 'data_file'`Es el nombre del archivo de base de datos. *data_file* es de tipo **nvarchar (255)** y su valor predeterminado es **Database**. Si es NULL, el procedimiento almacenado crea un nombre de archivo que utiliza el nombre de la base de datos.  
   
@@ -75,32 +75,32 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode`Es el modo de seguridad que se va a utilizar al conectarse al distribuidor. *security_mode* es de **tipo int**y su valor predeterminado es 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación; **1** especifica la autenticación integrada de Windows.  
   
-`[ @login = ] 'login'`Es el nombre de inicio de sesión que se usa al conectarse al distribuidor para crear la base de datos de distribución. Esto es necesario si *security_mode* está establecido en **0**. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
+`[ @login = ] 'login'`Es el nombre de inicio de sesión que se usa al conectarse al distribuidor para crear la base de datos de distribución. Esto es necesario si *security_mode* está establecido en **0**. *login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 `[ @password = ] 'password'`Es la contraseña utilizada para conectarse al distribuidor. Esto es necesario si *security_mode* está establecido en **0**. *password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 `[ @createmode = ] createmode`*createmode* es de **tipo int**, su valor predeterminado es 1 y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**1** (predeterminado)|CREAR base de datos o usar base de datos existente y, a continuación, aplicar el archivo **instdist. SQL** para crear objetos de replicación en la base de datos de distribución.|  
+|**1** (valor predeterminado)|CREAR base de datos o usar base de datos existente y, a continuación, aplicar el archivo **instdist. SQL** para crear objetos de replicación en la base de datos de distribución.|  
 |**2**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
-`[ @deletebatchsize_xact = ] deletebatchsize_xact`Especifica el tamaño del lote que se va a usar durante la limpieza de transacciones expiradas de las tablas MSRepl_Transactions. *deletebatchsize_xact* es de **tipo int**y su valor predeterminado es 5000. Este parámetro se presentó por primera vez en SQL Server 2017, seguido de las versiones en SQL Server 2012 SP4 y SQL Server 2016 SP2.  
+`[ @deletebatchsize_xact = ] deletebatchsize_xact`Especifica el tamaño del lote que se va a usar durante la limpieza de transacciones expiradas de las tablas de MSRepl_Transactions. *deletebatchsize_xact* es de **tipo int**y su valor predeterminado es 5000. Este parámetro se presentó por primera vez en SQL Server 2017, seguido de las versiones en SQL Server 2012 SP4 y SQL Server 2016 SP2.  
 
-`[ @deletebatchsize_cmd = ] deletebatchsize_cmd`Especifica el tamaño del lote que se va a usar durante la limpieza de los comandos expirados de las tablas MSRepl_Commands. *deletebatchsize_cmd* es de **tipo int**y su valor predeterminado es 2000. Este parámetro se presentó por primera vez en SQL Server 2017, seguido de las versiones en SQL Server 2012 SP4 y SQL Server 2016 SP2. 
+`[ @deletebatchsize_cmd = ] deletebatchsize_cmd`Especifica el tamaño del lote que se va a utilizar durante la limpieza de los comandos expirados de las tablas de MSRepl_Commands. *deletebatchsize_cmd* es de **tipo int**y su valor predeterminado es 2000. Este parámetro se presentó por primera vez en SQL Server 2017, seguido de las versiones en SQL Server 2012 SP4 y SQL Server 2016 SP2. 
  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_adddistributiondb** se utiliza en todos los tipos de replicación. Sin embargo, este procedimiento almacenado se ejecuta únicamente en un distribuidor.  
   
- Debe configurar el distribuidor mediante la ejecución de [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) antes de ejecutar **sp_adddistributiondb**.  
+ Debe configurar el distribuidor ejecutando [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) antes de ejecutar **sp_adddistributiondb**.  
   
  Ejecute **sp_adddistributor** antes de ejecutar **sp_adddistributiondb**.  
   
@@ -163,11 +163,11 @@ GO
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_adddistributiondb**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurar distribución](../../relational-databases/replication/configure-distribution.md)  
   

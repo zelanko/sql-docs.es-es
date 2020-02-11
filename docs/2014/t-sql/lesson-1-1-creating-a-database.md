@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211217"
 ---
 # <a name="creating-a-database-tutorial"></a>Crear una base de datos (Tutorial)
@@ -41,9 +41,9 @@ ms.locfileid: "68211217"
 >  La palabra clave GO separa las instrucciones cuando se envían varias instrucciones en un solo lote. GO es opcional cuando el lote solo contiene una instrucción.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Crear una tabla &#40;Tutorial&#41;](lesson-1-2-creating-a-table.md)  
+ [Crear una tabla &#40;tutorial&#41;](lesson-1-2-creating-a-table.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

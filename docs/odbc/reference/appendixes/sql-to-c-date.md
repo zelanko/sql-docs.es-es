@@ -1,5 +1,5 @@
 ---
-title: 'SQL a C: Fecha | Microsoft Docs'
+title: 'SQL a C: fecha | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d282798a31ac9059ed3c1901ea01f1f3104f09c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056884"
 ---
-# <a name="sql-to-c-date"></a>SQL a C: Date
-El identificador de tipo de datos SQL de ODBC date es:  
+# <a name="sql-to-c-date"></a>SQL a C: fecha
+El identificador para el tipo de datos SQL de ODBC de fecha es:  
   
  SQL_TYPE_DATE  
   
- La siguiente tabla muestra los tipos de datos a la que se puede convertir los datos SQL de la fecha de la C de ODBC. Para obtener una explicación de las columnas y los términos de la tabla, vea [convertir datos de SQL a tipos de datos C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+ En la tabla siguiente se muestran los tipos de datos de ODBC C en los que se pueden convertir datos SQL de fecha. Para obtener una explicación de las columnas y los términos de la tabla, vea [convertir datos de SQL a tipos de datos de C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
   
 |Identificador de tipo de C|Prueba|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > longitud de bytes de caracteres<br /><br /> 11 < = *BufferLength* < = longitud de bytes de caracteres<br /><br /> *BufferLength* < 11|Datos<br /><br /> Datos truncados<br /><br /> No definido|10<br /><br /> Longitud de datos en bytes<br /><br /> No definido|N/D<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > longitud de caracteres<br /><br /> 11 < = *BufferLength* < = longitud de caracteres<br /><br /> *BufferLength* < 11|Datos<br /><br /> Datos truncados<br /><br /> No definido|10<br /><br /> Longitud de datos de caracteres<br /><br /> No definido|N/D<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Longitud de bytes de datos < = *BufferLength*<br /><br /> Longitud de bytes de datos > *BufferLength*|Datos<br /><br /> No definido|Longitud de datos en bytes<br /><br /> No definido|N/D<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|[A] ninguno|Datos|6[c]|N/D|  
-|SQL_C_TYPE_TIMESTAMP|[A] ninguno|Datos [b]|16[c]|N/D|  
+|SQL_C_CHAR|*BufferLength* > longitud de bytes de caracteres<br /><br /> 11 <= *BufferLength* <= longitud de bytes de caracteres<br /><br /> *BufferLength* < 11|data<br /><br /> Datos truncados<br /><br /> No definido|10<br /><br /> Longitud de los datos en bytes<br /><br /> No definido|N/D<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* longitud de caracteres de ><br /><br /> 11 <= *BufferLength* <= longitud de caracteres<br /><br /> *BufferLength* < 11|data<br /><br /> Datos truncados<br /><br /> No definido|10<br /><br /> Longitud de los datos en caracteres<br /><br /> No definido|N/D<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Longitud de bytes de los datos <= *BufferLength*<br /><br /> Longitud de bytes de los datos > *BufferLength*|data<br /><br /> No definido|Longitud de los datos en bytes<br /><br /> No definido|N/D<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|Ninguno [a]|data|6 [c]|N/D|  
+|SQL_C_TYPE_TIMESTAMP|Ninguno [a]|Datos [b]|16 [c]|N/D|  
   
- [a] el valor de *BufferLength* se omite para esta conversión. El controlador se da por supuesto que el tamaño de **TargetValuePtr* es el tamaño del tipo de datos C.  
+ [a] el valor de *BufferLength* se omite para esta conversión. El controlador supone que el tamaño de **TargetValuePtr* es el tamaño del tipo de datos de C.  
   
- [b] los campos de tiempo de la estructura de marca de tiempo se establecen en cero.  
+ [b] los campos de hora de la estructura de marca de tiempo se establecen en cero.  
   
- [c] trata del tamaño del tipo de datos C correspondiente.  
+ [c] es el tamaño del tipo de datos de C correspondiente.  
   
- Cuando la fecha de datos de SQL se convierte en datos de caracteres de C, la cadena resultante tiene el "*aaaa*-*mm*-*dd*" formato. Este formato no se ve afectado por la configuración de país Windows®.
+ Cuando se convierten datos de SQL de fecha en datos de caracteres C, la cadena resultante tiene el formato "*AAAA*-*mm*-*DD*". Este formato no se ve afectado por la configuración del país de Windows®.

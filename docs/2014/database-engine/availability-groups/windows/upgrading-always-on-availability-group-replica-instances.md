@@ -1,5 +1,5 @@
 ---
-title: Actualización de los servidores del grupo de disponibilidad con una pérdida de datos y tiempo de inactividad mínimo y de actualización | Microsoft Docs
+title: Actualización y actualización de servidores de grupo de disponibilidad con un tiempo de inactividad y pérdida de datos mínimos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812956"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Actualizar servidores de un grupo de disponibilidad con una pérdida de datos y un tiempo de inactividad mínimos
-  Al actualizar instancias de servidor de SQL Server 2012 a un Service Pack o una versión más reciente, puede reducir el tiempo de inactividad de un grupo de disponibilidad a solo una conmutación por error manual realizando una actualización secuencial. La actualización de las versiones de SQL Server se conoce como adaptación (upgrade) gradual; la actualización de la versión actual de SQL Server con revisiones o Service Packs se conoce como actualización (update) gradual.  
+  Al actualizar instancias de servidor de SQL Server 2012 a un Srvice Pack o una versión más reciente, puede reducir el tiempo de inactividad de un grupo de disponibilidad a solo una conmutación por error manual realizando una actualización secuencial. La actualización de las versiones de SQL Server se conoce como adaptación (upgrade) gradual; la actualización de la versión actual de SQL Server con revisiones o Service Packs se conoce como actualización (update) gradual.  
   
- Este tema limita la explicación únicamente a las adaptaciones y a las actualizaciones de SQL Server (a las que, de aquí en adelante, se hará referencia genéricamente como actualizaciones). Para relacionados con el sistema operativo actualizaciones de que se ejecutan las instancias de SQL Server de alta disponibilidad en, consulte [entre clústeres migración de grupos de disponibilidad AlwaysOn para las actualizaciones del sistema operativo](https://msdn.microsoft.com/library/jj873730.aspx)  
+ Este tema limita la explicación únicamente a las adaptaciones y a las actualizaciones de SQL Server (a las que, de aquí en adelante, se hará referencia genéricamente como actualizaciones). Para actualizaciones relacionadas con el sistema operativo en las que se ejecutan las instancias de SQL Server de alta disponibilidad, consulte [migración entre clústeres de grupos de disponibilidad AlwaysOn para actualizaciones del sistema operativo](https://msdn.microsoft.com/library/jj873730.aspx) .  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Prácticas recomendadas de las actualizaciones graduales en grupos de disponibilidad AlwasysOn  
  Las siguientes prácticas recomendadas deberían observarse al realizar actualizaciones de servidor a fin de reducir el tiempo de inactividad y la pérdida de datos en los grupos de disponibilidad:  
@@ -35,7 +35,7 @@ ms.locfileid: "62812956"
   
 -   Actualice siempre los nodos de las réplicas secundarias remotas, después los de las locales y, a continuación, el nodo de la réplica principal en último lugar.  
   
--   No se pueden realizar copias de seguridad de una base de datos que se está actualizando.  Antes de actualizar las réplicas secundarias, configure la preferencia de copia de seguridad automatizada para ejecutar las copias de seguridad solo en la réplica principal.  Antes de actualizar la réplica principal, modifique esta configuración para ejecutar las copias de seguridad solo en las réplicas secundarias.  
+-   No se pueden realizar copias de seguridad en una base de datos que está en proceso de actualización.  Antes de actualizar las réplicas secundarias, configure la preferencia de copia de seguridad automatizada para ejecutar copias de seguridad solo en la réplica primaria.  Antes de actualizar la réplica principal, modifique esta configuración para ejecutar las copias de seguridad solo en las réplicas secundarias.  
   
 -   Para impedir las conmutaciones por error no intencionadas del grupo de disponibilidad durante el proceso de actualización, quite la conmutación por error de disponibilidad de las réplicas de confirmación sincrónica antes de comenzar.  
   

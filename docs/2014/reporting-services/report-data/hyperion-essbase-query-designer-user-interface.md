@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 812c1679af046f799e06fc207a5591565682a018
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890887"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas de Hyperion Essbase
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas que permite crear consultas MDX (expresiones multidimensionales) para un origen de datos de [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] . El diseñador gráfico de consultas MDX tiene dos modos: Modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de un cubo definido en el origen de datos para crear una consulta MDX que recupere datos cuando se procese el informe.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]proporciona un diseñador gráfico de consultas para crear consultas MDX (expresiones multidimensionales) para [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] un origen de datos. El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de un cubo definido en el origen de datos para crear una consulta MDX que recupere datos cuando se procese el informe.  
   
 > [!IMPORTANT]  
 >  Los usuarios tienen acceso a los orígenes de datos cuando crean y ejecutan las consultas. Debe conceder permisos mínimos para los orígenes de datos, por ejemplo permisos de solo lectura.  
@@ -63,9 +63,9 @@ ms.locfileid: "68890887"
 |Botón|Descripción|  
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. No está disponible para este tipo de origen de datos.|  
-|**Importaciónación**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Actualizar campos del conjunto de datos](../media/rsqdicon-refreshfields.gif "Actualizar campos del conjunto de datos")|Actualiza los metadatos desde el origen de datos.|  
-|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Muestra el cuadro de diálogo **Generador de miembros calculados** . Use este cuadro de diálogo para crear o editar expresiones para un miembro calculado, incluido el establecimiento de la propiedad **Orden de resolución** .|  
+|**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Actualizar campos de conjunto de datos](../media/rsqdicon-refreshfields.gif "Actualizar campos de conjunto de datos")|Actualiza los metadatos desde el origen de datos.|  
+|![Agregar miembro calculado](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** . Use este cuadro de diálogo para crear o editar expresiones para un miembro calculado, incluido el establecimiento de la propiedad **Orden de resolución** .|  
 |![Alternar para mostrar celdas vacías](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías")|Muestra y oculta las celdas vacías del panel Datos. Esto equivale a utilizar la cláusula NON EMPTY en MDX.|  
 |![Ejecutar la consulta automáticamente](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")|Ejecuta automáticamente la consulta y muestra el resultado cada vez que se realice un cambio, por ejemplo al eliminar una columna en el panel Datos. Los resultados se mostrarán en el panel Datos.|  
 |![Eliminar](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Eliminar")|Elimina el elemento seleccionado de la consulta. Use este botón para eliminar las filas seleccionadas en el panel Filtro.|  
@@ -94,14 +94,14 @@ ms.locfileid: "68890887"
   
 -   **Editar como texto**  
   
--   **Agregar miembro calculado** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Agregar miembro calculado** (![Agregar miembro calculado](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado"))  
   
--   **Mostrar celdas vacías** (![Alternar para mostrar celdas vacías](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))  
+-   **Mostrar celdas vacías** (![alternar para mostrar celdas vacías](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))  
   
--   **Ejecución automática** (![Ejecutar la consulta automáticamente](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))  
+-   **Ejecución** automática (![ejecución automática de la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))  
   
-## <a name="see-also"></a>Vea también  
- [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Archivo de configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)  
+## <a name="see-also"></a>Consulte también  
+ [Crear un conjunto de DataSet compartido o un conjunto de &#40;incrustado Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [archivo de configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)  
   
   

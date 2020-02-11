@@ -1,5 +1,5 @@
 ---
-title: Incrustados y compartidos de conexiones de datos u orígenes de datos (generador de informes y SSRS) | Microsoft Docs
+title: Conexiones de datos u orígenes de datos incrustados y compartidos (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109272"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Conexiones de datos u orígenes de datos incrustados y compartidos (Generador de informes y SSRS)
@@ -26,15 +26,15 @@ ms.locfileid: "66109272"
   
 -   **Conexión de datos.** También conocido como *origen de datos*. Una conexión de datos consta de un nombre y propiedades de conexión, que dependen del tipo de conexión. Por cuestiones de diseño, una conexión de datos no incluye credenciales. Una conexión de datos no especifica qué datos deben recuperarse del origen de datos externo. Para ello, se especifica una consulta cuando se crea un conjunto de datos.  
   
--   **Definición de origen de datos compartido** .   Un archivo que contiene la representación XML de un origen de datos de informe. Cuando se publica un informe, sus orígenes de datos se guardan en el servidor de informes o sitio de SharePoint como definiciones de origen de datos, independientemente de la definición de informe. Por ejemplo, un administrador del servidor de informes podría actualizar la cadena de conexión o credenciales. En un servidor de informes nativo, el tipo de archivo es .rds. En un sitio de SharePoint, el tipo de archivo es .rsds.  
+-   **Definición del origen de datos.** .   Un archivo que contiene la representación XML de un origen de datos de informe. Cuando se publica un informe, sus orígenes de datos se guardan en el servidor de informes o sitio de SharePoint como definiciones de origen de datos, independientemente de la definición de informe. Por ejemplo, un administrador del servidor de informes podría actualizar la cadena de conexión o credenciales. En un servidor de informes nativo, el tipo de archivo es .rds. En un sitio de SharePoint, el tipo de archivo es .rsds.  
   
--   **Cadena de conexión** .   Una cadena de conexión es una versión de cadena de las propiedades de conexión necesarias para conectarse a un origen de datos. Las propiedades de conexión son distintas según el tipo de conexión de datos. Para obtener ejemplos, vea [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+-   **Cadena de conexión.** .   Una cadena de conexión es una versión de cadena de las propiedades de conexión necesarias para conectarse a un origen de datos. Las propiedades de conexión son distintas según el tipo de conexión de datos. Para obtener ejemplos, vea [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
--   **Origen de datos compartido.** Es un origen de datos que está disponible en un servidor de informes o sitio de SharePoint que se va a usar en varios informes.  
+-   **Origen de datos compartido.** .   Un origen de datos que está disponible en un servidor de informes o sitio de SharePoint que se va a usar en varios informes.  
   
 -   **Origen de datos incrustado.** También conocido como *origen de datos específicos del informe*. Es un origen de datos que se define en un informe y se usa solo en ese informe.  
   
--   **Credenciales.** Las credenciales son la información de autenticación que se debe proporcionar para poder tener acceso a datos externos.  
+-   **Sus.** Las credenciales son la información de autenticación que se debe proporcionar para poder tener acceso a datos externos.  
   
  La diferencia entre los orígenes de datos incrustados y compartidos es la manera en que se crean, almacenan y administran.  
   
@@ -44,19 +44,19 @@ ms.locfileid: "66109272"
 ## <a name="shared-data-sources"></a>Orígenes de datos compartidos  
  Los orígenes de datos compartidos resultan útiles cuando se poseen orígenes de datos de uso frecuente. Se recomienda que utilice los orígenes de datos compartidos tanto como sea posible. Facilitan la administración de los informes y del acceso a ellos, y ayudan a mantener una mayor seguridad en el acceso a los informes y los orígenes de datos. Si necesita un origen de datos compartido, pida a su administrador del sistema que le cree uno.  
   
- En el Generador de informes, no puede crear un origen de datos compartido. Puede ir a un origen de datos compartido y seleccionarlo en el servidor de informes. Para obtener más información, consulte [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ En el Generador de informes, no puede crear un origen de datos compartido. Puede ir a un origen de datos compartido y seleccionarlo en el servidor de informes. Para obtener más información, consulte [Conexiones de datos, orígenes de datos y cadenas de conexión](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
  En el Diseñador de informes, no puede ir a un origen de datos compartido que esté en el servidor de informes. Puede crear orígenes de datos compartidos como parte de un proyecto en el Explorador de soluciones y decidir si se han de implementar en un servidor de informes. Puede decidir usarlos solo de forma local como consecuencia de las diferencias de las credenciales necesarias del equipo o del servidor de informes. Para más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- El siguiente icono indica que existe un elemento de origen de datos compartido en la jerarquía de carpetas del servidor de informes: ![Icono de origen de datos compartido](media/hlp-16datasource.png "Icono de origen de datos compartido")  
+ El siguiente icono indica un elemento de origen de datos compartido en la jerarquía de carpetas del servidor de informes: ![icono de origen de datos compartido](media/hlp-16datasource.png "Icono de origen de datos compartido")  
   
 ## <a name="embedded-data-sources"></a>Orígenes de datos incrustados  
  Un origen de datos incrustado es una conexión de datos que se guarda en la definición de informe. La información de conexión a orígenes de datos insertados solo puede utilizarla el informe en el que se incrusta la información. Para definir y administrar los orígenes de datos insertados, utilice el cuadro de diálogo **Propiedades del origen de datos** .  
   
-##  <a name="Comparing"></a> Comparar incrustado y orígenes de datos compartidos  
+##  <a name="Comparing"></a>Comparar orígenes de datos incrustados y compartidos  
  En la tabla siguiente se resumen las diferencias entre los orígenes de datos compartidos y los incrustados:  
   
-|Descripción|Origen de datos<br /><br /> Origen de datos|Compartidos<br /><br /> Origen de datos|  
+|Descripción|Insertado<br /><br /> Origen de datos|Compartido<br /><br /> Origen de datos|  
 |-----------------|------------------------------|----------------------------|  
 |La conexión de datos se incrusta en la definición de informe.|![Disponible](media/greencheck.gif "Disponible")||  
 |El puntero a la conexión de datos en el servidor de informes se incrusta en la definición de informe.||![Disponible](media/greencheck.gif "Disponible")|  
@@ -65,13 +65,13 @@ ms.locfileid: "66109272"
 |Se requiere para los componentes||![Disponible](media/greencheck.gif "Disponible")|  
   
 ## <a name="data-source-credentials"></a>Credenciales de origen de datos  
- Las credenciales se usan para crear un origen de datos incrustado, para ejecutar una consulta o para recuperar datos durante el procesamiento del informe. El propietario del origen de datos determina el tipo de credenciales que se deben utilizar para tener acceso a los datos. Las credenciales se administran independientemente de la conexión de datos en un servidor de informes, un sitio de SharePoint o en equipo local en un entorno de creación de informes. Dependiendo del tipo de origen de datos, las credenciales se pueden guardar de forma que no se soliciten o establecerse para solicitarlas a cada usuario. Las credenciales necesarias pueden ser distintas si se va a conectar al origen de datos desde el equipo o desde el servidor de informes. Para obtener más información, consulte [especificar credenciales en Generador de informes](../../2014/reporting-services/specify-credentials-in-report-builder.md) y [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Las credenciales se usan para crear un origen de datos incrustado, para ejecutar una consulta o para recuperar datos durante el procesamiento del informe. El propietario del origen de datos determina el tipo de credenciales que se deben utilizar para tener acceso a los datos. Las credenciales se administran independientemente de la conexión de datos en un servidor de informes, un sitio de SharePoint o en equipo local en un entorno de creación de informes. Dependiendo del tipo de origen de datos, las credenciales se pueden guardar de forma que no se soliciten o establecerse para solicitarlas a cada usuario. Las credenciales necesarias pueden ser distintas si se va a conectar al origen de datos desde el equipo o desde el servidor de informes. Para obtener más información, vea [especificar credenciales en generador de informes](../../2014/reporting-services/specify-credentials-in-report-builder.md) y [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
-## <a name="see-also"></a>Vea también  
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Los conjuntos de valores integrados y compartidos &#40;Generador de informes y SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

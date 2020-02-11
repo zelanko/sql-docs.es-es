@@ -19,34 +19,34 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745724"
 ---
 # <a name="securables"></a>Elementos protegibles
   Los elementos protegibles son los recursos cuyo acceso es regulado por el sistema de autorización del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por ejemplo, una tabla es un elemento protegible. Algunos elementos protegibles pueden estar incluidos en otros, con lo que se crean jerarquías anidadas denominadas "ámbitos" que a su vez se pueden proteger. Los ámbitos protegibles son **servidor**, **base de datos**y **esquema**.  
   
-## <a name="securable-scope-server"></a>Ámbito asegurable: Servidor  
+## <a name="securable-scope-server"></a>Ámbito protegible: servidor  
  El ámbito protegible **servidor** contiene los siguientes valores que puede proteger:  
   
 -   grupo de disponibilidad  
   
--   Extremo  
+-   Punto de conexión  
   
--   Login  
+-   Inicio de sesión  
   
 -   Rol de servidor  
   
 -   Base de datos  
   
-## <a name="securable-scope-database"></a>Ámbito asegurable: Base de datos  
+## <a name="securable-scope-database"></a>Ámbito protegible: base de datos  
  El ámbito protegible **base de datos** contiene los siguientes valores que puede proteger:  
   
 -   Rol de aplicación  
   
--   Ensamblado  
+-   Assembly  
   
 -   Clave asimétrica  
   
@@ -64,19 +64,19 @@ ms.locfileid: "62745724"
   
 -   (Base de datos) Rol  
   
--   Ruta  
+-   Enrutar  
   
--   esquema  
+-   Schema  
   
 -   Lista de propiedades de búsqueda  
   
--   ssNoVersion  
+-   Servicio  
   
 -   Clave simétrica  
   
 -   Usuario  
   
-## <a name="securable-scope-schema"></a>Ámbito asegurable: esquema  
+## <a name="securable-scope-schema"></a>Ámbito protegible: esquema  
  El ámbito protegible **esquema** contiene los siguientes valores que se pueden proteger:  
   
 -   Tipo  
@@ -95,7 +95,7 @@ ms.locfileid: "62745724"
   
     -   Synonym (Sinónimo)  
   
-    -   Table  
+    -   Tabla  
   
     -   Ver  
   

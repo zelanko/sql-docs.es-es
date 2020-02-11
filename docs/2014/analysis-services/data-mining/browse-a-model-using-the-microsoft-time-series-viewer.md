@@ -1,5 +1,5 @@
 ---
-title: Examinar un modelo usando el Visor de Series temporales de Microsoft | Microsoft Docs
+title: Examinar un modelo usando el visor de series temporales de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085977"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Examinar un modelo usando el Visor de serie temporal de Microsoft
-  El Visor de series temporales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Este algoritmo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de regresión que crea modelos de minería de datos para predecir columnas continuas como las ventas de productos, en un escenario de previsión. Estos modelos de serie temporal pueden incluir información basada en algoritmos diferentes:  
+  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] visor de series temporales [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de muestra los modelos de minería de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] que se generan con el algoritmo de serie temporal de. Este algoritmo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de regresión que crea modelos de minería de datos para predecir columnas continuas como las ventas de productos, en un escenario de previsión. Estos modelos de serie temporal pueden incluir información basada en algoritmos diferentes:  
   
 -   El algoritmo ARTxp, que se optimiza para la predicción a corto plazo.  
   
@@ -39,17 +39,18 @@ ms.locfileid: "66085977"
 > [!NOTE]  
 >  Para ver información detallada sobre las ecuaciones utilizadas en el modelo y los modelos que se detectaron, utilice el Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a> Fichas del visor  
+##  <a name="BKMK_ViewerTabs"></a>Pestañas del visor  
  Cuando se explora un modelo de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el modelo aparece en la pestaña **Visor de modelos de minería de datos** del visor del diseñador de minería de datos apropiado para el modelo. El Visor de series temporales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ofrece las siguientes pestañas:  
   
--   [Modelo](#BKMK_Tree)  
+-   [Modela](#BKMK_Tree)  
   
 -   [Gráficos](#BKMK_Charts)  
   
- **Nota** : la información mostrada para el contenido del modelo y en la Leyenda de minería de datos depende del algoritmo que utiliza dicho modelo. Sin embargo, las pestañas **Modelo** y **Gráficos** son iguales independientemente de la mezcla del algoritmo.  
+ **Nota:** La información que se muestra para el contenido del modelo y en la leyenda de minería de datos depende del algoritmo que utiliza el modelo. Sin embargo, las pestañas **Modelo** y **Gráficos** son iguales independientemente de la mezcla del algoritmo.  
   
-###  <a name="BKMK_Tree"></a> Modelo  
- Al generar un modelo de serie temporal, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] presenta el modelo completado como un árbol. Si sus datos contienen varias series de casos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un árbol independiente para cada serie. Por ejemplo, quiere predecir las ventas para las regiones del Pacífico, América del Norte y Europa. Las predicciones para cada una de estas regiones son series de casos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un árbol independiente para cada una de estas series. Para ver una serie determinada, selecciónela en la lista **Árbol** .  
+###  <a name="BKMK_Tree"></a>Modela  
+ Al generar un modelo de serie temporal, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] presenta el modelo completado como un árbol. Si sus datos contienen varias series de casos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un árbol independiente para cada serie. Por ejemplo, quiere predecir las ventas para las regiones del Pacífico, América del Norte y Europa. Las predicciones para cada una de estas regiones son series de casos. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un árbol independiente para cada una de estas series. Para ver una serie determinada, selecciónela en la lista **Árbol** .  
   
  Para cada árbol, el modelo de serie temporal contiene un nodo **All** y, a continuación, lo divide en una serie de nodos que representan las estructuras periódicas detectadas por el algoritmo. Puede hacer clic en cada nodo para mostrar estadísticas como el número de casos y la ecuación.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "66085977"
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Charts"></a> Gráficos  
+###  <a name="BKMK_Charts"></a>Cartas  
  La pestaña **Gráficos** contiene un gráfico que muestra el comportamiento del atributo predicho a lo largo del tiempo, junto con cinco valores futuros predichos. El eje vertical del gráfico representa el valor de la serie y el eje horizontal representa el tiempo.  
   
 > [!NOTE]  
@@ -85,9 +86,9 @@ ms.locfileid: "66085977"
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tareas y procedimientos del visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md)   
  [Ejemplos de consultas de modelos de serie temporal](time-series-model-query-examples.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)  
   

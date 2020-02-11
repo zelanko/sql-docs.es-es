@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022393"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Glosario de términos de publicaciones de Oracle
   Debe estar familiarizado con los siguientes términos de Oracle a la hora de configurar y administrar publicaciones de Oracle. Para obtener una lista completa de términos de Oracle, vea la documentación en pantalla de Oracle.  
   
  Index Organized Tables (IOT) (Tablas organizadas de índice)  
- Tabla cuyos datos están ordenados físicamente en el disco por orden de índice; es similar a una tabla de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con un índice clúster. Una tabla IOT se replica en un suscriptor como una tabla con un índice clúster.  
+ Tabla cuyos datos están ordenados físicamente en el disco en orden de índice; es similar a una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla con un índice clúster. Una tabla IOT se replica en un suscriptor como una tabla con un índice clúster.  
   
  Instancia  
  Una base de datos Oracle está asociada con una instancia. La instancia se compone de la memoria y los procesos en segundo plano que respaldan la base de datos. Una instancia de Oracle se asigna siempre a una única base de datos, mientras que una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede contener varias bases de datos. Existen ocasiones en las que una base de datos Oracle puede tener varias instancias.  
@@ -54,10 +54,10 @@ ms.locfileid: "63022393"
  User schema (Esquema de usuario)  
  Un esquema de usuario puede considerarse como un usuario de base de datos que es propietario de un conjunto de objetos de base de datos concreto. El esquema del usuario administrativo de la replicación es propietario de todos los objetos que se crean en el proceso de replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la base de datos Oracle, con la excepción del sinónimo público **MSSQLSERVERDISTRIBUTOR** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](configure-an-oracle-publisher.md)   
- [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)  (Objetos creados en el publicador de Oracle)  
- [Non-SQL Server Publishers](non-sql-server-publishers.md)  (Publicadores que no son de SQL Server)  
- [Oracle Publishing Overview](oracle-publishing-overview.md)  
+ [Objetos creados en el publicador de Oracle](objects-created-on-the-oracle-publisher.md)   
+ [Publicadores que no son de SQL Server](non-sql-server-publishers.md)   
+ [Información general de la publicación de Oracle](oracle-publishing-overview.md)  
   
   

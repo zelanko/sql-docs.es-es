@@ -10,20 +10,21 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbbcb468a4de093b6664c71e20716ea62e2b1fc3
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637717"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76928103"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Ejemplo de manipulación de cadenas que detectan caracteres complementarios
-  Este ejemplo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el procesamiento de cadenas de caracteres complementarios. En este ejemplo se muestra la implementación de cinco funciones de cadena de Transact-SQL que proporcionan las mismas funciones de manipulación de cadenas que las funciones integradas, pero con una función adicional que reconoce caracteres complementarios para controlar cadenas de caracteres Unicode y complementarios. Las cinco funciones son Lens (), `lefts(), rights(), subs()` y `replace_s()` que son equivalentes a las funciones integradas `LEN(), LEFT(), RIGHT(), SUBSTRING()` y `REPLACE()` funciones de cadena.  
+  Este ejemplo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el procesamiento de cadenas de caracteres complementarios. En este ejemplo se muestra la implementación de cinco funciones de cadena de Transact-SQL que proporcionan las mismas funciones de manipulación de cadenas que las funciones integradas, pero con una función adicional que reconoce caracteres complementarios para controlar cadenas de caracteres Unicode y complementarios. Las cinco funciones son Lens ( `lefts(), rights(), subs()` ) y `replace_s()` las que son equivalentes a las funciones integradas `LEN(), LEFT(), RIGHT(), SUBSTRING()` y `REPLACE()` a las funciones de cadena.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -90,7 +91,7 @@ ms.locfileid: "73637717"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  A continuación se muestran las listas de código para este ejemplo.  
   
  C#  
@@ -151,7 +152,7 @@ if (length < 0)
             if ((start + length) <= 1)  
                 return (String.Empty);  
   
-// The 2 if statements below guarentee that the result will match the substring function in   
+// The 2 if statements below guarantee that the result will match the substring function in   
 // Transact-SQL which will initialize start to 1 by subtracting from the length.  
             if (start <= 0 && length > 0)  
                 length--;  
@@ -352,7 +353,7 @@ Public NotInheritable Class SurrogateStringFunction
             Return String.Empty  
         End If  
   
-        ' The 2 if statements below guarentee that the result will match the substring function in   
+        ' The 2 if statements below guarantee that the result will match the substring function in   
         ' Transact-SQL which will initialize start to 1 by subtracting from the length.  
         If start <= 0 AndAlso length > 0 Then  
             length -= 1  
@@ -685,7 +686,7 @@ USE [AdventureWorks]
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836120"
 ---
 # <a name="configure-dialog-box"></a>Cuadro de diálogo Configurar
@@ -56,10 +56,10 @@ ms.locfileid: "62836120"
  **Contenedor**  
  Muestra el objeto que contiene el parámetro.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de parámetro.  
   
- **Value**  
+ **Valor**  
  Muestra el valor del parámetro. Haga clic en los puntos suspensivos para cambiar el valor del cuadro de diálogo **Establecer valor de parámetro** .  
   
  La siguiente es una lista de las opciones de la pestaña de **Administradores de conexiones** . Use esta pestaña para cambiar los valores de las propiedades del administrador de conexiones. En el servidor SSIS se generan automáticamente parámetros para las propiedades.  
@@ -67,10 +67,10 @@ ms.locfileid: "62836120"
  **Contenedor**  
  Muestra el objeto que contiene el administrador de conexiones.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del administrador de conexiones.  
   
- **Nombre de la propiedad**  
+ **Nombre de propiedad**  
  Muestra el nombre de la propiedad del administrador de conexiones.  
   
  **Valor**  
@@ -90,12 +90,12 @@ ms.locfileid: "62836120"
  **Abrir**  
  Haga clic para abrir el cuadro de diálogo de **Propiedades del entorno** .  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una referencia a un entorno. En el cuadro de diálogo **Examinar entornos** , haga clic en un entorno y después en **Aceptar**.  
   
  Puede seleccionar un entorno contenido en cualquier carpeta del proyecto bajo el nodo de **SSISDB** .  
   
- **Quitar**  
+ **Remove**  
  Haga clic en un entorno que se muestra en el área de **Referencias** y, después, haga clic **Quitar**.  
   
   

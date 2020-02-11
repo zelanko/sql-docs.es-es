@@ -15,14 +15,14 @@ ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d88977844c415c43baa7b4b8669b7d8e13793fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920246"
 ---
 # <a name="cachesize-property-example-vb"></a>Ejemplo de la propiedad CacheSize (VB)
-Este ejemplo se usa el [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propiedad para mostrar la diferencia en el rendimiento de una operación se realiza con y sin una caché de registro de 30.  
+En este ejemplo se usa la propiedad [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar la diferencia de rendimiento de una operación realizada con y sin una caché de 30 registros.  
   
 ```  
 'BeginCacheSizeVB  
@@ -119,6 +119,6 @@ End Sub
 'EndCacheSizeVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad CacheSize (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [CacheSize (propiedad, ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

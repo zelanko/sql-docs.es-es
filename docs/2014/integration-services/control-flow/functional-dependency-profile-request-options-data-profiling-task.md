@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cab0f3edc080e6f2f174e3393548620c65f9176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831551"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de dependencia funcional (tarea de generación de perfiles de datos)
@@ -32,14 +32,14 @@ ms.locfileid: "62831551"
   
  Para el lado determinante, puede especificar una columna o un conjunto de columnas en la propiedad **DeterminantColumns** . Por ejemplo, considere una tabla de ejemplo que contenga las columnas A, B y C. Puede hacer las selecciones siguientes para la propiedad **DeterminantColumns** :  
   
--   Al seleccionar el carácter comodín **(\*)**, la tarea de generación de perfiles de datos prueba cada columna como lado determinante de la dependencia.  
+-   Al seleccionar el carácter comodín **(\*)** , la tarea de generación de perfiles de datos prueba cada columna como lado determinante de la dependencia.  
   
 -   Al seleccionar el carácter comodín **(\*)** y otra columna o columnas, la tarea de generación de perfiles de datos prueba cada combinación de columnas como lado determinante de la dependencia. Por ejemplo, considere una tabla de ejemplo que contiene las columnas A, B y C. Si especifica **(\*)** y la columna C como el valor de la propiedad **DeterminantColumns**, la tarea de generación de perfiles de datos prueba las combinaciones (A, C) y (B, C) como el lado determinante de la dependencia.  
   
- Para el lado dependiente, puede especificar una columna única o el carácter comodín **(\*)** en la propiedad **DependentColumn**. Al seleccionar **(\*)**, la tarea de generación de perfiles de datos prueba la columna o conjunto de columnas del lado determinante con cada columna.  
+ Para el lado dependiente, puede especificar una columna única o el carácter comodín **(\*)** en la propiedad **DependentColumn**. Al seleccionar **(\*)** , la tarea de generación de perfiles de datos prueba la columna o conjunto de columnas del lado determinante con cada columna.  
   
 > [!NOTE]  
->  Si selecciona **(\*)**, esta opción podría provocar un gran número de cálculos y disminuir el rendimiento de la tarea. Sin embargo, si la tarea encuentra un subconjunto que satisface el umbral para una dependencia funcional, la tarea no analiza las combinaciones adicionales. Por ejemplo, en la tabla de ejemplo descrita anteriormente, si la tarea determina que la columna C es una columna determinante, no sigue analizando los candidatos compuestos.  
+>  Si selecciona **(\*)** , esta opción podría provocar un gran número de cálculos y disminuir el rendimiento de la tarea. Sin embargo, si la tarea encuentra un subconjunto que satisface el umbral para una dependencia funcional, la tarea no analiza las combinaciones adicionales. Por ejemplo, en la tabla de ejemplo descrita anteriormente, si la tarea determina que la columna C es una columna determinante, no sigue analizando los candidatos compuestos.  
   
 ## <a name="request-properties-options"></a>Opciones de Propiedades de la solicitud  
  Para cada **Solicitud de perfil de dependencia funcional**, el panel **Propiedades de la solicitud** muestra los grupos de opciones siguientes:  
@@ -73,7 +73,7 @@ ms.locfileid: "62831551"
  Para obtener más información, vea la sección "Selección de las columnas determinante y dependiente" anteriormente en este tema.  
   
  **IsWildCard**  
- Especifica si se ha seleccionado el carácter comodín **(\*)**. Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
+ Especifica si se ha seleccionado el carácter comodín **(\*)** . Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
   
  **ColumnName**  
  Muestra el nombre de la columna seleccionada. Esta opción está en blanco si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Esta opción es de solo lectura.  
@@ -84,15 +84,15 @@ ms.locfileid: "62831551"
 > [!NOTE]  
 >  Cuando use el carácter comodín **(\*)** para **ColumnName**, **CompareOptions** es de solo lectura y se establece en el valor **Default**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Default**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
+|**Valor predeterminado**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
 |**BinarySort**|Ordena y compara los datos según los patrones de bits definidos para cada carácter. El orden binario utiliza la distinción de mayúsculas y minúsculas, y de acentos. El orden binario es también el más rápido.|  
 |**DictionarySort**|Ordena y compara los datos según el orden y las reglas de comparación definidas en los diccionarios del idioma o alfabeto asociado.|  
   
  Si selecciona **DictionarySort**, también puede seleccionar cualquier combinación de las opciones enumeradas en la tabla siguiente. De forma predeterminada, no se selecciona ninguna de estas opciones adicionales.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
 |**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "å" se considera igual que "a".|  
@@ -107,9 +107,9 @@ ms.locfileid: "62831551"
  **ThresholdSetting**  
  Especifique el valor de umbral. El valor predeterminado de esta propiedad es **Specified**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Ninguno**|No especifica un umbral. El nivel de dependencia funcional se indica independientemente de su valor.|  
+|**None**|No especifica un umbral. El nivel de dependencia funcional se indica independientemente de su valor.|  
 |**Specified**|Utilice el umbral que se especifica en **FDStrengthThreshold**. Solo se indica el nivel de dependencia funcional si es mayor que el umbral.|  
 |**Exact**|No especifica un umbral. El nivel de dependencia funcional solo se indica si la dependencia funcional entre las columnas seleccionadas es exacta.|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62831551"
  **MaxNumberOfViolations**  
  Especifique el número máximo de infracciones de la dependencia funcional que va a notificarse en la salida. El valor predeterminado de esta propiedad es 100. Esta opción se deshabilita cuando la opción **Exact** se selecciona como **ThresholdSetting**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

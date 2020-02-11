@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873619"
 ---
 # <a name="data-collector-security"></a>Seguridad del recopilador de datos
@@ -32,7 +32,7 @@ ms.locfileid: "62873619"
 ## <a name="general-security"></a>Seguridad general  
  El recopilador de datos se instala según los estándares especificados para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-### <a name="network-security"></a>Seguridad de la red  
+### <a name="network-security"></a>Seguridad de redes  
  Se puede pasar información confidencial entre las instancias de destino, la instancia relacional asociada al servidor de configuración, los conjuntos de recopilación que se están ejecutando y el servidor que hospeda el almacén de administración de datos.  
   
  Para proteger los datos que se transfieren a través de una red, se implementan mecanismos de seguridad estándar, como el cifrado de protocolos para [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,13 +48,13 @@ ms.locfileid: "62873619"
   
  Estos roles se almacenan en la base de datos msdb. De manera predeterminada, ningún usuario es miembro de estos roles de base de datos. La pertenencia de los usuarios a estos roles se debe conceder explícitamente.  
   
- Los usuarios que son miembros de la `sysadmin` rol fijo de servidor tienen acceso total a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vistas del recopilador de datos y objetos del agente. No obstante, deben agregarse explícitamente a los roles del recopilador de datos.  
+ Los usuarios que son miembros del `sysadmin` rol fijo de servidor tienen acceso total [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a los objetos del agente y a las vistas del recopilador de datos. No obstante, deben agregarse explícitamente a los roles del recopilador de datos.  
   
 > [!IMPORTANT]  
 >  Los miembros del rol db_ssisadmin y del rol dc_admin quizá puedan elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de sysadmin a los roles dc_admin y db_ssisadmin.  
   
-### <a name="dcadmin-role"></a>Rol dc_admin  
- Los usuarios asignados a la `dc_admin` rol tiene acceso de administrador completo (creación, lectura, actualización y eliminación) para la configuración del recopilador de datos en una instancia del servidor. Los miembros de este rol pueden realizar las operaciones siguientes:  
+### <a name="dc_admin-role"></a>Rol dc_admin  
+ Los usuarios asignados `dc_admin` al rol tienen acceso de administrador completo (crear, leer, actualizar y eliminar) a la configuración del recopilador de datos en una instancia de servidor. Los miembros de este rol pueden realizar las operaciones siguientes:  
   
 -   Establecer propiedades de nivel del recopilador.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "62873619"
 -   **SQLAgentUserRole**. Este rol es necesario para crear programaciones y ejecutar trabajos.  
   
     > [!NOTE]  
-    >  Los servidores proxy creados para el recopilador de datos debe conceder acceso a `dc_admin` para crearlos y utilizarlos en todos los pasos de trabajo que exijan un servidor proxy.  
+    >  Los servidores proxy creados para el recopilador de datos deben `dc_admin` conceder acceso a para crearlos y usarlos en los pasos de trabajo que requieran un proxy.  
   
--   **dc_operator**. Los miembros de `dc_admin` heredan los permisos concedidos a **dc_operator**.  
+-   **dc_operator**. Los miembros `dc_admin` de heredan los permisos concedidos a **dc_operator**.  
   
-### <a name="dcoperator-role"></a>Rol dc_operator  
+### <a name="dc_operator-role"></a>Rol dc_operator  
  Los miembros del rol **dc_operator** tienen acceso de lectura y actualización. Este rol admite tareas de operaciones relacionadas con la ejecución y configuración de conjuntos de recopilación. Los miembros de este rol pueden realizar las operaciones siguientes:  
   
 -   Iniciar o detener un conjunto de recopilación.  
@@ -94,7 +94,7 @@ ms.locfileid: "62873619"
   
  Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
-### <a name="dcproxy-role"></a>Rol dc_proxy  
+### <a name="dc_proxy-role"></a>Rol dc_proxy  
  Los miembros del rol **dc_proxy** tienen acceso de lectura a los conjuntos de recopilación y a las propiedades de nivel de recopilador. Los miembros de este rol también pueden ejecutar los trabajos que les pertenecen, así como crear pasos de trabajos que se ejecuten como una cuenta de proxy existente.  
   
  Los miembros de este rol pueden realizar las operaciones siguientes:  
@@ -124,9 +124,9 @@ ms.locfileid: "62873619"
   
  Estos roles se almacenan en la base de datos msdb. De manera predeterminada, ningún usuario es miembro de estos roles de base de datos. La pertenencia de los usuarios a estos roles se debe conceder explícitamente.  
   
- Los usuarios que son miembros de la `sysadmin` rol fijo de servidor tienen acceso total a las vistas del recopilador de datos. No obstante, deben agregarse explícitamente a los roles de la base de datos para realizar otras operaciones.  
+ Los usuarios que son miembros del `sysadmin` rol fijo de servidor tienen acceso total a las vistas del recopilador de datos. No obstante, deben agregarse explícitamente a los roles de la base de datos para realizar otras operaciones.  
   
-### <a name="mdwadmin-role"></a>Rol mdw_admin  
+### <a name="mdw_admin-role"></a>Rol mdw_admin  
  Los miembros del rol **mdw_admin** tienen acceso de lectura, escritura, actualización y eliminación al almacén de administración de datos.  
   
  Los miembros de este rol pueden realizar las operaciones siguientes:  
@@ -134,17 +134,17 @@ ms.locfileid: "62873619"
 -   Cambiar el esquema del almacén de administración de datos cuando se requiere (por ejemplo, agregando una nueva tabla cuando se instala un nuevo tipo de recopilador).  
   
     > [!NOTE]  
-    >  Donde hay un cambio de esquema, el usuario también debe ser un miembro de la `dc_admin` rol para instalar un nuevo tipo de recopilador, puesto que esta acción exige permiso para actualizar la configuración del recopilador de datos en msdb.  
+    >  Cuando hay un cambio de esquema, el usuario también debe ser miembro del `dc_admin` rol para instalar un nuevo tipo de recopilador, puesto que esta acción requiere permiso para actualizar la configuración del recopilador de datos en msdb.  
   
 -   Ejecutar trabajos de mantenimiento en el almacén de administración de datos, por ejemplo archivado o limpieza.  
   
-### <a name="mdwwriter-role"></a>Rol mdw_writer  
+### <a name="mdw_writer-role"></a>Rol mdw_writer  
  Los miembros del rol **mdw_writer** pueden cargar y escribir datos en el almacén de administración de datos. Cualquier recopilador de datos que almacene datos en el almacén de administración de datos tiene que ser miembro de este rol.  
   
-### <a name="mdwreader-role"></a>Rol mdw_reader  
+### <a name="mdw_reader-role"></a>Rol mdw_reader  
  Los miembros del rol **mdw_reader** tienen acceso de lectura al almacén de administración de datos. Dado que la finalidad de este rol es permitir solucionar problemas proporcionando acceso a datos históricos, los miembros de este rol no pueden ver otros elementos del esquema de almacén de administración de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d3f7e5829c19b79ca19783d36885f6bfd3761f7
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637886"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Instalar, desinstalar y asistencia del Generador de informes
@@ -27,7 +27,7 @@ ms.locfileid: "73637886"
 > [!NOTE]  
 >  El Generador de informes no se puede instalar en equipos basados en Itanium. Esto se aplica a las versiones independiente y [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] del Generador de informes.  
   
- Un administrador normalmente instala y configura [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], concede permiso para utilizar la versión [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] del Generador de informes y administra carpetas y permisos a los informes, los elementos de informe y los conjuntos de datos compartidos guardados en el servidor de informes. Para obtener más información acerca de la administración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Reporting Services&#41; el modo nativo del servidor &#40;de informes](report-server/reporting-services-report-server-native-mode.md) en los libros en [pantalla](https://go.microsoft.com/fwlink/?LinkId=154888) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en MSDN.Microsoft.com.  
+ Un administrador normalmente instala y configura [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], concede permiso para utilizar la versión [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] del Generador de informes y administra carpetas y permisos a los informes, los elementos de informe y los conjuntos de datos compartidos guardados en el servidor de informes. Para obtener más información [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] acerca de la administración de, vea [Reporting Services servidor de informes &#40;el modo nativo&#41;](report-server/reporting-services-report-server-native-mode.md) en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] los [libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=154888) de en MSDN.Microsoft.com.  
   
 ##  <a name="Installing"></a>Instalación de Generador de informes  
  El Generador de informes está disponible en las versiones independiente y [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Usted o el administrador deberán descargar e instalar la versión independiente en el equipo, mientras que la versión [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] se instala con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Puede descargar el Generador de informes del [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=53613).  
@@ -38,7 +38,7 @@ ms.locfileid: "73637886"
  Antes de instalar cualquiera de las dos versiones del Generador de informes, compruebe los requisitos del sistema e instale los requisitos previos.  
   
 ### <a name="system-requirements"></a>Requisitos del sistema  
- El Generador de informes exige que esté instalada en el equipo local la versión 3.5 de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Si [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] no está instalado en el equipo local al instalar el Generador de informes, se le solicitará que lo instale para poder continuar y completar la instalación.  
+ Generador de informes requiere que la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] versión 3,5 esté instalada en el equipo local. Si [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] no está instalado en el equipo local al instalar el Generador de informes, se le solicitará que lo instale para poder continuar y completar la instalación.  
   
  .NET Framework 3.5 es una aplicación gratuita. Puede descargar .NET Framework 3.5 en el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=21).  
   
@@ -51,21 +51,23 @@ ms.locfileid: "73637886"
   
  También puede realizar una instalación de línea de comandos e incluir opciones como, por ejemplo, hacer que la instalación sea silenciosa y escribir archivos de registro para la instalación. En la documentación de Windows Installer que ejecuta los archivos .msi se proporciona información sobre las opciones disponibles.  
   
- Para obtener más información, vea [instalar la versión independiente de Generador de informes &#40;generador de informes&#41;](install-windows/install-report-builder.md).  
+ Para obtener más información, vea [instalar la versión independiente de Generador de informes &#40;Generador de informes&#41;](install-windows/install-report-builder.md).  
   
  Un administrador también puede utilizar software, como Microsoft Systems Manager Server (SM), para insertar el programa en su equipo. Para obtener información sobre la forma de usar software específico para instalar el Generador de informes, consulte la documentación del software.   
   
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Instalar en el equipo la versión ClickOnce del Generador de informes  
  La versión [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] del Generador de informes se instala con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Se instala mediante instalaciones tanto en modo como en modo integrado de SharePoint de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] es una tecnología de Microsoft para implementar aplicaciones Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permite a los usuarios instalar y ejecutar una aplicación Windows, como el Generador de informes, haciendo clic un vínculo de una página web. Para obtener más información sobre la implementación de aplicaciones [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], la aplicación de [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] la seguridad de aplicaciones o la ejecución de aplicaciones [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] en la zona de Internet, consulte la sección "implementación de ClickOnce para aplicaciones Windows Forms", "seguridad en Windows Forms información general. "o" información general sobre la implementación de aplicaciones de confianza "en el sitio web de [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network en [https://developer.microsoft.com/](https://developer.microsoft.com/).  
+ 
+  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] es una tecnología de Microsoft para implementar aplicaciones Windows. 
+  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permite a los usuarios instalar y ejecutar una aplicación Windows, como el Generador de informes, haciendo clic un vínculo de una página web. Para obtener más información sobre cómo [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] implementar aplicaciones, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplicar la seguridad de aplicaciones [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] o ejecutar aplicaciones en la zona de Internet, vea los artículos "implementación de ClickOnce para aplicaciones de Windows Forms", "información general sobre la seguridad en Windows Forms" o " [!INCLUDE[msCoName](../includes/msconame-md.md)] información general sobre la implementación [https://developer.microsoft.com/](https://developer.microsoft.com/)de aplicaciones de confianza" en el sitio web de la red del Desarrollador en.  
   
  La versión [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] del Generador de informes se encuentra en el servidor de informes y se instalará en su equipo al hacer clic en el botón **Generador de informes** en Administrador de informes o en la opción **Informe del Generador de informes** del menú **Nuevo documento** de una biblioteca de SharePoint.  
   
 > [!NOTE]  
 >  Si en el menú **Nuevo documento** no aparecen las opciones **Informe del Generador de informes**, **Modelo del Generador de informes**y **Origen de datos de informe** , será necesario agregar sus tipos de contenido a la biblioteca de SharePoint.   
   
- Puede abrir el Generador de informes desde el Administrador de informes o desde una biblioteca de SharePoint. Para obtener más información acerca de cómo abrir Generador de informes, consulte [Inicio de Generador de informes &#40;generador de informes&#41;](report-builder/start-report-builder.md).  
+ Puede abrir el Generador de informes desde el Administrador de informes o desde una biblioteca de SharePoint. Para obtener más información acerca de cómo abrir Generador de informes, consulte [Inicio de Generador de informes &#40;Generador de informes&#41;](report-builder/start-report-builder.md).  
   
 ### <a name="report-builder-languages"></a>Idiomas del Generador de informes  
  El Generador de informes está disponible en 21 idiomas además del inglés. Al descargar la versión independiente del Generador de informes, elija la versión de idioma que desee instalar. Deberá repetir la descarga para cada versión de idioma que desee utilizar.  
@@ -74,36 +76,36 @@ ms.locfileid: "73637886"
   
  En la tabla siguiente se incluye información sobre las versiones de idioma disponibles.  
   
-|LCID|Language|Culture|  
+|LCID|Idioma|Referencia cultural|  
 |----------|--------------|-------------|  
 |1028|Chino (tradicional)|zh-TW|  
-|1029|Czech|cs-CZ|  
+|1029|Checo|cs-CZ|  
 |1030|Danés|da-DK|  
-|1031|German|de-DE|  
-|1032|Greek|el-GR|  
-|3082|English|es-ES|  
-|1035|Finlandés|fi-FI|  
-|1036|French|fr-FR|  
+|1031|Alemán|de-DE|  
+|1032|Griego|el-GR|  
+|1033|Inglés|en-US|  
+|1035|Finés|fi-FI|  
+|1036|Francés|fr-FR|  
 |1038|Húngaro|hu-HU|  
-|1040|Italian|it-IT|  
-|1041|Japanese|ja-JP|  
-|1042|Korean|ko-KR|  
-|1043|Dutch|nl-NL|  
-|1044|Noruego (Bokmal)|nb-NO|  
-|1045|Polish|pl-PLl|  
-|1046|Portuguese (Brazil)|pt-BR|  
-|1049|Russian|ru-RU|  
-|1053|Swedish|sv-SE|  
-|1055|Turkish|tr-TR|  
+|1040|Italiano|it-IT|  
+|1041|Japonés|ja-JP|  
+|1042|Coreano|ko-KR|  
+|1043|Neerlandés|nl-NL|  
+|1044|Noruego (bokmal)|nb-NO|  
+|1045|Polaco|pl-PLl|  
+|1046|Portugués (Brasil)|pt-BR|  
+|1049|Ruso|ru-RU|  
+|1053|Sueco|sv-SE|  
+|1055|Turco|tr-TR|  
 |2052|Chino (simplificado)|zh-CN|  
-|2070|Portuguese (Portugal)|pt-PT|  
+|2070|Portugués (Portugal)|pt-PT|  
 |3082|Español (España)|es-ES|  
   
   
 ##  <a name="Uninstalling"></a>Desinstalar Generador de informes  
  Podrá desinstalar la versión independiente del Generador de informes desde el panel de control o la línea de comandos. Esto se aplica solo a la versión independiente y del Generador de informes. No se puede desinstalar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] del Generador de informes de forma independiente. Siempre se instala o se desinstala con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- Para obtener más información, vea [desinstalar la versión independiente de &#40;generador de informes generador de informes&#41;](install-windows/uninstall-report-builder.md).  
+ Para obtener más información, vea [desinstalar la versión independiente de Generador de informes &#40;Generador de informes&#41;](install-windows/uninstall-report-builder.md).  
   
   
 ##  <a name="Supporting"></a>Compatibilidad Generador de informes  
@@ -126,7 +128,7 @@ ms.locfileid: "73637886"
   
 -   Imágenes, como imágenes de fondo y logotipos, que se pueden utilizar en diferentes informes y se almacenan fuera de los informes para facilitar su mantenimiento.  
   
- Para obtener más información, vea [ &#40;administración de contenido del servidor de&#41; informes en modo nativo de SSRS](report-server/report-server-content-management-ssrs-native-mode.md) en los libros en [pantalla](https://go.microsoft.com/fwlink/?LinkId=154888) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en MSDN.Microsoft.com.  
+ Para obtener más información, vea [Administración de contenido del servidor de informes &#40;el modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md) en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] los [libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=154888) de en MSDN.Microsoft.com.  
   
 ### <a name="permissions"></a>Permisos  
  El administrador concede permiso al servidor de informes. Como usuario del Generador de informes, deberá contar con permisos al servidor de informes para poder tener acceso a sus contenidos y funcionalidad. Por ejemplo, es posible que desee utilizar elementos de informe almacenados en el servidor de informes, actualizar informes y volver a guardarlos en el servidor de informes o ejecutar informes en el Administrador de informes. En función de sus necesidades y de las tareas que realice, el nivel de los permisos concedidos puede ser mayor o menor. Por ejemplo, los permisos con menos privilegios se conceden a los usuarios que solo necesitan abrir informes compartidos a diferencia de los usuarios que necesitan modificar un informe compartido.  
@@ -152,7 +154,7 @@ ms.locfileid: "73637886"
   
  Sin embargo, con una configuración adicional el servidor de informes está disponible para los usuarios del Generador de informes. Puede agregar direcciones URL de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a los sitios de confianza. De forma predeterminada, Internet Explorer 7.0 o posterior se ejecuta en modo protegido en Windows Vista, Windows Server 2008 y Windows 7. El modo protegido es una característica que impide que las solicitudes del explorador lleguen a los procesos de alto nivel que se ejecuten en el mismo equipo. Puede deshabilitar el modo protegido para las aplicaciones del servidor de informes agregándolas como sitios de confianza. Debe tener permiso de administrador para realizar esta modificación.  
   
- Para obtener más información sobre la configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Administrador de configuración de Reporting Services &#40;&#41; del](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en MSDN.Microsoft.com.  
+ Para obtener más información sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]la configuración de, consulte [Administrador de configuración de Reporting Services &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) de MSDN.Microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a>SQL Server de bases de datos de ejemplo  
@@ -168,20 +170,20 @@ ms.locfileid: "73637886"
   
  Las bases de datos de ejemplo no se incluyen con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y no se instalan al instalar [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] o la versión independiente del Generador de informes. En su lugar, deberá descargar las bases de datos de ejemplo de [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Todas las versiones de las bases de datos de ejemplo se descargan juntas. También puede descargar versiones anteriores de base de datos que se lanzaron con [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]y [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
   
- Para obtener información sobre los requisitos previos e instrucciones acerca de la descarga e instalación de las bases de datos de ejemplo de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , vea los apartados sobre [los requisitos previos para la instalación de bases de datos de muestra de SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=166648) y la [instalación de bases de datos de ejemplo](https://go.microsoft.com/fwlink/?LinkId=166649) de CodePlex.  
+ Para obtener información sobre los requisitos previos e instrucciones acerca de la descarga e instalación de las bases de datos de ejemplo de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , vea los apartados sobre [los requisitos previos para la instalación de bases de datos de muestra de SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=166648) y la instalación de bases de datos de ejemplo [](https://go.microsoft.com/fwlink/?LinkId=166649) de CodePlex.  
   
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="HowTo"></a>Temas de procedimientos  
  En esta sección se enumeran los procedimientos que muestran cómo instalar y desinstalar el Generador de informes.  
   
- [Instale la versión independiente de Generador de informes &#40;generador de informes&#41;](install-windows/install-report-builder.md)  
+ [Instale la versión independiente de Generador de informes &#40;Generador de informes&#41;](install-windows/install-report-builder.md)  
   
- [Desinstale la versión independiente de Generador de informes &#40;generador de informes&#41;](install-windows/uninstall-report-builder.md)  
+ [Desinstale la versión independiente de Generador de informes &#40;Generador de informes&#41;](install-windows/uninstall-report-builder.md)  
   
- [Inicio Generador de informes &#40;generador de informes&#41;](report-builder/start-report-builder.md)  
+ [Iniciar Generador de informes &#40;Generador de informes&#41;](report-builder/start-report-builder.md)  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Generador de informes en SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

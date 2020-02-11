@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 92d9eb8bb09065290c99f3cb9894208a7613b984
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784099"
 ---
 # <a name="cursor-transaction-isolation-level"></a>Nivel de aislamiento de las transacciones de cursores
@@ -29,7 +29,7 @@ ms.locfileid: "73784099"
 
   El comportamiento de bloqueo completo de cursores se basa en una interacción entre los atributos de simultaneidad y el nivel de aislamiento de transacciones establecido por el cliente. Los clientes ODBC establecen el nivel de aislamiento de transacción mediante los atributos [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION o SQL_COPT_SS_TXN_ISOLATION. El comportamiento del bloqueo de un entorno de cursor específico se determina mediante la combinación de los comportamientos de bloqueo de las opciones de simultaneidad y de nivel de aislamiento de transacción.  
   
- Los siguientes niveles de aislamiento de transacción de cursores son compatibles con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
+ El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite los siguientes niveles de aislamiento de transacción de cursor:  
   
 -   Lectura confirmada (SQL_TXN_READ_COMMITTED)  
   
@@ -41,9 +41,9 @@ ms.locfileid: "73784099"
   
 -   Instantánea (SQL_TXN_SS_SNAPSHOT)  
   
- Tenga en cuenta que la API de ODBC especifica niveles de aislamiento de transacción adicionales, pero no son compatibles con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ni con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+ Tenga en cuenta que la API de ODBC especifica niveles de aislamiento de transacción adicionales, pero [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no es [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatible con ni con el controlador ODBC de Native Client.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedades de cursor](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
   

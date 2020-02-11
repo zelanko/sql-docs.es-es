@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212005"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Crear y probar una función clasificadora definida por el usuario
@@ -27,7 +27,7 @@ ms.locfileid: "68212005"
   
  El ejemplo mostrado en el procedimiento siguiente ilustra las posibilidades para crear una función clasificadora definida por el usuario bastante compleja.  
   
- En nuestro ejemplo:  
+ En el ejemplo:  
   
 -   Se crean un grupo de recursos de servidor (pProductionProcessing) y un grupo de cargas de trabajo (gProductionProcessing) para el procesamiento de producción durante un intervalo de tiempo especificado.  
   
@@ -118,7 +118,8 @@ ms.locfileid: "68212005"
 4.  Cree la función clasificadora que utiliza las funciones de hora y los valores que se pueden evaluar con las horas en la tabla de búsqueda. Para obtener información sobre cómo usar tablas de búsqueda en una función clasificadora, vea "Procedimientos recomendados para usar tablas de búsqueda en una función clasificadora" en este tema.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] incluía un conjunto expandido de funciones y tipos de datos de fecha y hora. Para obtener más información, vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
+    >  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] incluía un conjunto expandido de funciones y tipos de datos de fecha y hora. Para obtener más información, vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  
@@ -262,16 +263,16 @@ ms.locfileid: "68212005"
         > [!WARNING]  
         >  Se aconseja encarecidamente seguir estas prácticas recomendadas. Si hay problemas que impiden seguir las prácticas recomendadas, conviene ponerse en contacto con el servicio de soporte técnico de Microsoft para poder evitar de forma proactiva cualquier problema futuro.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](resource-governor.md)   
  [Habilitar el regulador de recursos](enable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](resource-governor-resource-pool.md)   
  [Grupos de cargas de trabajo del regulador de recursos](resource-governor-workload-group.md)   
- [Configurar el regulador de recursos utilizando una plantilla](configure-resource-governor-using-a-template.md)   
- [Ver las propiedades del regulador de recursos](view-resource-governor-properties.md)   
+ [Configuración de Resource Governor mediante una plantilla](configure-resource-governor-using-a-template.md)   
+ [Ver Resource Governor propiedades](view-resource-governor-properties.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [Crear grupo de recursos de &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [Crear grupo de cargas de trabajo &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   

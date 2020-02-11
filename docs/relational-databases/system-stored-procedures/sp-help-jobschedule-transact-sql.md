@@ -18,13 +18,13 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 72e321b74f3e949030a6d599c082acf36db12687
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054913"
 ---
-# <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
+# <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información acerca de la programación de los trabajos que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utiliza para realizar actividades automatizadas.  
@@ -43,50 +43,50 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id`El número de identificación del trabajo. *job_id*es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` El nombre del trabajo. *job_name*es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo. *job_name*es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]
-> Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.
+> Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.
 
-`[ @schedule_name = ] 'schedule_name'` El nombre del elemento de programación del trabajo. *schedule_name*es **sysname**, su valor predeterminado es null.  
+`[ @schedule_name = ] 'schedule_name'`Nombre del elemento de programación del trabajo. *schedule_name*es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @schedule_id = ] schedule_id` El número de identificación del elemento de programación del trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
+`[ @schedule_id = ] schedule_id`Número de identificación del elemento de programación del trabajo. *schedule_id*es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @include_description = ] include_description` Especifica si se debe incluir la descripción de la programación en el conjunto de resultados. *include_description* es **bit**, su valor predeterminado es **0**. Cuando *include_description* es **0**, la descripción de la programación no se incluye en el conjunto de resultados. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
+`[ @include_description = ] include_description`Especifica si se debe incluir la descripción de la programación en el conjunto de resultados. *include_description* es de **bit**y su valor predeterminado es **0**. Cuando *include_description* es **0**, la descripción de la programación no se incluye en el conjunto de resultados. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Número de identificador de la programación.|  
 |**schedule_name**|**sysname**|Nombre de la programación.|  
-|**enabled**|**int**|Si la programación habilitada (**1**) o no habilitada (**0**).|  
-|**freq_type**|**int**|Valor que indica cuándo el trabajo se ejecutará.<br /><br /> **1** = una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, relativo a la **freq_interval**<br /><br /> **64** = ejecutar cuando **SQLServerAgent** se inicia el servicio.|  
-|**freq_interval**|**int**|Días cuando se ejecuta el trabajo. El valor depende del valor de **freq_type**. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Las unidades de **freq_subday_interval**. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Número de **freq_subday_type** períodos que transcurren entre cada ejecución del trabajo. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|El trabajo programado de la **freq_interval** cada mes. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**activó**|**int**|Indica si la programación está habilitada (**1**) o no (**0**).|  
+|**freq_type**|**int**|Valor que indica cuándo se va a ejecutar el trabajo.<br /><br /> **1** = una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, con respecto al **freq_interval**<br /><br /> **64** = ejecutar cuando se inicia el servicio **SQLServerAgent** .|  
+|**freq_interval**|**int**|Días en que se ejecuta el trabajo. El valor depende del valor de **freq_type**. Para obtener más información, vea [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**int**|Unidades para **freq_subday_interval**. Para obtener más información, vea [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Número de períodos de **freq_subday_type** entre cada ejecución del trabajo. Para obtener más información, vea [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**int**|Repetición del trabajo programado del **freq_interval** cada mes. Para obtener más información, vea [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Número de meses entre las ejecuciones programadas del trabajo.|  
 |**active_start_date**|**int**|Fecha en que se activó la programación.|  
 |**active_end_date**|**int**|Fecha final de la programación.|  
 |**active_start_time**|**int**|Hora del día en que se inicia la programación.|  
 |**active_end_time**|**int**|Hora del día en que termina la programación.|  
 |**date_created**|**datetime**|Fecha en que se creó la programación.|  
-|**schedule_description**|**nvarchar(4000)**|Una descripción de la programación que se deriva de los valores de **msdb.dbo.sysschedules**. Cuando *include_description* es **0**, esta columna contiene texto que indica que no se ha solicitado la descripción.|  
+|**schedule_description**|**nvarchar(4000)**|Una descripción en Inglés de la programación que se deriva de los valores de **msdb. DBO. sysschedules**. Cuando *include_description* es **0**, esta columna contiene texto que indica que no se solicitó la descripción.|  
 |**next_run_date**|**int**|Fecha en que la programación hará que se vuelva a ejecutar el trabajo.|  
 |**next_run_time**|**int**|Hora a la que la programación hará que se vuelva a ejecutar el trabajo.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
 |**job_count**|**int**|Recuento de trabajos devueltos.|  
   
-> **Nota: sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb**. **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
+> **Nota: sp_help_jobschedule** devuelve valores de las tablas del sistema **dbo. sysjobschedules** y **dbo. sysschedules** en **msdb**. **sysjobschedules** se actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
   
-## <a name="remarks"></a>Comentarios  
- Los parámetros de **sp_help_jobschedule** puede usarse solo en determinadas combinaciones. Si *schedule_id* se especifica, ni *job_id* ni *job_name* se pueden especificar. En caso contrario, el *job_id* o *job_name* parámetros se pueden usar con *schedule_name*.  
+## <a name="remarks"></a>Observaciones  
+ Los parámetros de **sp_help_jobschedule** solo se pueden utilizar en determinadas combinaciones. Si se especifica *schedule_id* , no se puede especificar ni *job_id* ni *job_name* . De lo contrario, los parámetros *job_id* o *job_name* se pueden usar con *schedule_name*.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** . Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
@@ -99,7 +99,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de **SQLAgentUserRole** solo puede ver las propiedades de las programaciones de trabajos que les pertenecen.  
+ Los miembros de **SQLAgentUserRole** solo pueden ver las propiedades de las programaciones de trabajos que les pertenecen.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -115,7 +115,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>b. Devolver la programación de un trabajo para una programación específica  
+### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>B. Devolver la programación de un trabajo para una programación específica  
  En el ejemplo siguiente se devuelve información de la programación denominada `NightlyJobs` y el trabajo denominado `RunReports`.  
   
 ```  
@@ -142,8 +142,8 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

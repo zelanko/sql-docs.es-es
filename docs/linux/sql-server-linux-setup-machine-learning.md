@@ -53,7 +53,7 @@ ls /opt/microsoft/mssql/bin
 
 Realice la desinstalación en el nivel de paquete más bajo. Los paquetes superiores que dependen de un paquete de nivel inferior se desinstalan automáticamente.
 
-  + Para la integración de R, quite **microsoft-r-open***.
+  + Para la integración de R, quite **microsoft-r-open** *.
   + Para la integración de Python, quite **mssql-mlservices-python**.
 
 Los comandos para quitar paquetes aparecen en la tabla siguiente.

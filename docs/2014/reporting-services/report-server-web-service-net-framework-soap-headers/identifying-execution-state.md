@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088090fe1572c0a7fd2f1165c7bf1cd6f7eb6839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63020252"
 ---
 # <a name="identifying-execution-state"></a>Identificar el estado de ejecución
@@ -27,7 +27,8 @@ ms.locfileid: "63020252"
   
  La administración de la sesión implica poner en correlación una solicitud HTTP con otras solicitudes anteriores generadas en la misma sesión. Sin la administración de sesiones, estas solicitudes parecen no estar relacionadas con el servicio web del servidor de informes debido a la naturaleza sin conexión y sin estado del protocolo HTTP.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no expone un concepto holístico del estado de sesión como el expuesto a través de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Sin embargo, al ejecutar los informes, el servidor de informes mantiene el estado entre las llamadas al método en forma de una **ejecución**. Una ejecución permite al usuario interactuar con el informe de varias maneras, por ejemplo al cargar el informe del servidor de informes, establecer las credenciales y los parámetros para el informe, y representar el informe.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no expone un concepto holístico del estado de sesión como el expuesto a través de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Sin embargo, al ejecutar los informes, el servidor de informes mantiene el estado entre las llamadas al método en forma de una **ejecución**. Una ejecución permite al usuario interactuar con el informe de varias maneras, por ejemplo al cargar el informe del servidor de informes, establecer las credenciales y los parámetros para el informe, y representar el informe.  
   
  Mientras se comunican con un servidor de informes, los clientes utilizan la ejecución para administrar la visualización de los informes y la navegación del usuario a otras páginas de un informe, y para mostrar u ocultar las secciones de un informe. Existe solo una ejecución para cada informe que la aplicación cliente ejecuta.  
   
@@ -57,7 +58,7 @@ ms.locfileid: "63020252"
   
  También puede administrar una sesión de informe mediante comandos de acceso URL.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Referencia técnica &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [Uso de encabezados SOAP de Reporting Services](../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  

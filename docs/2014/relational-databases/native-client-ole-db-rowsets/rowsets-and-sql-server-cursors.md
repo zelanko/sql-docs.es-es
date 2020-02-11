@@ -17,13 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68207001"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de filas y cursores de servidor de SQL Server
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve conjuntos de resultados a los consumidores mediante dos métodos:  
   
 -   Conjuntos de resultados predeterminados que:  
@@ -56,11 +57,11 @@ ms.locfileid: "68207001"
   
     -   No admiten cualquier instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que devuelva más de un único conjunto de resultados.  
   
- Los consumidores pueden solicitar distintos comportamientos de cursor en un conjunto de filas estableciendo determinadas propiedades del conjunto de filas. Si el consumidor no establece ninguna de estas propiedades de conjunto de filas o establece todas en sus valores predeterminados, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client implementa el conjunto de filas con un conjunto de resultados predeterminado. Si cualquiera de estas propiedades se establece en un valor distinto del predeterminado, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client implementa el conjunto de filas mediante un cursor de servidor.  
+ Los consumidores pueden solicitar distintos comportamientos de cursor en un conjunto de filas estableciendo determinadas propiedades del conjunto de filas. Si el consumidor no establece ninguna de estas propiedades de conjunto de filas o establece todos sus valores predeterminados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client implementa el conjunto de filas mediante un conjunto de resultados predeterminado. Si alguna de estas propiedades está establecida en un valor distinto del predeterminado, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client implementa el conjunto de filas mediante un cursor de servidor.  
   
  Las siguientes propiedades de conjunto de filas indican al proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client que use cursores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algunas propiedades pueden combinarse con otras sin ningún riesgo. Por ejemplo, un conjunto de filas que exhibe las propiedades DBPROP_IRowsetChange y DBPROP_IRowsetScroll será un conjunto de filas de marcador que exhibe un comportamiento de actualización inmediato. Otras propiedades se excluyen mutuamente. Por ejemplo, un conjunto de filas que exhibe DBPROP_OTHERINSERT no puede contener marcadores.  
   
-|Id. de propiedad|Valor|Comportamiento del conjunto de filas|  
+|Id. de propiedad|Value|Comportamiento del conjunto de filas|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas es secuencial y solamente admite desplazamiento y captura hacia delante. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY.|  
 |DBPROP_CANSCROLLBACKWARDS o DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas admite desplazamiento y captura en cualquier dirección. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY.|  
@@ -73,7 +74,7 @@ ms.locfileid: "68207001"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas solamente admite desplazamiento hacia delante. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY si existe un índice en las columnas a las que se hace referencia.<br /><br /> DBPROP_IMMOBILEROWS solo está disponible en conjuntos de filas que pueden mostrar las filas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insertadas mediante comandos en otras sesiones o por parte de otros usuarios. Si se intenta abrir un conjunto de filas con la propiedad establecida en VARIANT_FALSE en cualquier conjunto de filas para el que DBPROP_OTHERINSERT no puede ser VARIANT_TRUE, se produce un error.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas solamente admite desplazamiento hacia delante. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY a menos que esté restringido por otra propiedad.|  
   
- Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filas del proveedor OLE DB de Native Client admitidos un cursor de servidor pueden crearse fácilmente en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla base o vista utilizando la **IOpenRowset:: OpenRowset** método. Especifique la tabla o vista con su nombre, pasando los conjuntos de propiedades de conjunto de filas correspondientes en el parámetro *rgPropertySets*.  
+ Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjunto de filas de proveedor de OLE DB de cliente nativo compatible con un cursor de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede crear fácilmente en una tabla base o vista mediante el método **IOpenRowset:: OPENROWSET** . Especifique la tabla o vista con su nombre, pasando los conjuntos de propiedades de conjunto de filas correspondientes en el parámetro *rgPropertySets*.  
   
  El texto de comando que crea un conjunto de filas se restringe cuando el consumidor requiere que un cursor de servidor admita el conjunto de filas. Concretamente, el texto de comando se restringe a una única instrucción SELECT que devuelve un único resultado de conjunto de filas, o bien, a un procedimiento almacenado que implementa una única instrucción SELECT que devuelve un único resultado de conjunto de filas.  
   
@@ -85,11 +86,12 @@ ms.locfileid: "68207001"
   
  T = VARIANT_TRUE  
   
- \- = VARIANT_TRUE o VARIANT_FALSE  
+ 
+  \- = VARIANT_TRUE o VARIANT_FALSE  
   
  Para usar un tipo de modelo de cursor determinado, busque la columna correspondiente al modelo de cursor y busque todas las propiedades de conjunto de filas que tengan el valor 'T' en la columna. Establezca estas propiedades de conjunto de filas en VARIANT_TRUE para usar ese modelo de cursor específico. Las propiedades del conjunto de filas que contienen '-' como valor pueden establecerse en VARIANT_TRUE o VARIANT_FALSE.  
   
-|Propiedades de conjunto de filas o modelos de cursores|Default<br /><br /> resultado<br /><br /> set<br /><br /> (SL)|Rápido<br /><br /> solo<br /><br /> avance<br /><br /> (SL)|Estático<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
+|Propiedades de conjunto de filas o modelos de cursores|Valor predeterminado<br /><br /> result<br /><br /> set<br /><br /> (SL)|Fast (rápido)<br /><br /> solo <br /><br /> solo<br /><br /> (SL)|estática<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -144,13 +146,13 @@ ms.locfileid: "68207001"
  De la colección especificada de propiedades de conjunto de filas, obtenga un subconjunto de propiedades de los que se indicaban en las tablas anteriores. Divida estas propiedades en dos subgrupos en función del valor de marca de cada propiedad del conjunto de filas: requerido (T, F) u opcional (-). Para cada modelo de cursor, comience por la primera tabla y desplácese de izquierda a derecha. Compare los valores de las propiedades de los dos subgrupos con los valores de las propiedades correspondientes de esa columna. Se seleccionará el modelo de cursor que no presente ninguna discrepancia con las propiedades necesarias y que tenga el menor número de discrepancias con las propiedades opcionales. Si hay más de un modelo de cursor, se elegirá el que esté situado más a la izquierda.  
   
 ## <a name="sql-server-cursor-block-size"></a>Tamaño del bloque de cursor de SQL Server  
- Cuando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor admite un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filas del proveedor OLE DB de Native Client, el número de elementos de la fila controlar el parámetro de matriz de la **IRowset:: GetNextRows** o **IRowsetLocate:: GetRowsAt**  métodos define el tamaño de bloque de cursor. Las filas indicadas por los identificadores de la matriz son los miembros del bloque de cursor.  
+ Cuando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor admite un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjunto de filas de proveedor de OLE DB de Native Client, el número de elementos del parámetro de matriz de identificadores de fila de los métodos **IRowset:: GetNextRows** o **IRowsetLocate:: GetRowsAt** define el tamaño del bloque de cursor. Las filas indicadas por los identificadores de la matriz son los miembros del bloque de cursor.  
   
  En el caso de los conjuntos de filas que admiten marcadores, los identificadores de fila recuperados mediante el método **IRowsetLocate::GetRowsByBookmark** definen los miembros del bloque de cursor.  
   
  Independientemente del método usado para rellenar el conjunto de filas y formar el bloque de cursor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el bloque de cursor estará activo hasta que se ejecute el siguiente método de captura de filas en el conjunto de filas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de filas](rowsets.md)  
   
   

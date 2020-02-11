@@ -27,10 +27,10 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943383"
 ---
 # <a name="examples-using-openxml"></a>Ejemplos: Uso de OPENXML
@@ -43,7 +43,7 @@ ms.locfileid: "67943383"
  El valor *flags* proporciona una asignación predeterminada. Si no se especifica *ColPattern* en *SchemaDeclaration*, se asume la asignación especificada en *flags* . El valor *flags* se omite si se especifica *ColPattern* en *SchemaDeclaration*. La especificación *ColPattern* determina la asignación (centrada en atributos o elementos) y también el comportamiento para manejar los datos de desbordamiento y los no usados.  
   
 ### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. Ejecutar una instrucción SELECT simple con OPENXML  
- El documento XML de este ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>. La instrucción OPENXML recupera información del cliente del documento XML en un conjunto de filas de dos columnas (**CustomerID** y **ContactName**).  
+ El documento XML de este ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>. La instrucción OPENXML recupera información del cliente del documento XML en un conjunto de filas de dos columnas ( **CustomerID** y **ContactName**).  
   
  Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   
@@ -144,7 +144,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Especificar ColPattern para la asignación entre columnas del conjunto de filas y los atributos y elementos XML  
  Este ejemplo muestra cómo se especifica el patrón XPath en el parámetro opcional *ColPattern* para proporcionar una asignación entre columnas del conjunto de filas y los atributos y elementos XML.  
   
- El documento XML de este ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>. La instrucción OPENXML recupera información del cliente y del pedido del documento XML en forma de conjunto de filas (**CustomerID**, **OrderDate**, **ProdID** y **Qty**).  
+ El documento XML de este ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>. La instrucción OPENXML recupera información del cliente y del pedido del documento XML en forma de conjunto de filas (**CustomerID**, **OrderDate**, **ProdID**y **Qty**).  
   
  Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   
@@ -287,7 +287,7 @@ LILAS      Carlos Gonzlez
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. Especificar la función text() de XPath como ColPattern  
  El documento XML de este ejemplo se compone de los elementos <`Customer`> y <`Order`>. La instrucción OPENXML recupera un conjunto de filas que está compuesto por el atributo **oid** del elemento <`Order`>, el identificador del elemento primario del nodo identificado por *rowpattern* y la cadena del valor de hoja del contenido de elemento.  
   
- Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument**. Este identificador de documento se pasa a OPENXML.  
+ Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   
  La instrucción OPENXML muestra lo siguiente:  
   
@@ -344,7 +344,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. Especificar TableName en la cláusula WITH  
  Este ejemplo especifica *TableName* en la cláusula WITH, en lugar de *SchemaDeclaration*. Resulta útil si dispone de una tabla con la estructura deseada y no se requieren patrones de columnas (parámetro *ColPattern* ).  
   
- El documento XML de este ejemplo se compone de los elementos <`Customer`> y <`Order`>. La instrucción OPENXML recupera información del pedido en un conjunto de filas de tres columnas (**oid**, **date** y **amount**) del documento XML.  
+ El documento XML de este ejemplo se compone de los elementos <`Customer`> y <`Order`>. La instrucción OPENXML recupera información del pedido en un conjunto de filas de tres columnas (**oid**, **date**y **amount**) del documento XML.  
   
  Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   
@@ -406,7 +406,7 @@ O4    1996-01-20 00:00:00.000     10000.0
   
  El documento XML del ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>.  
   
- Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument**. Este identificador de documento se pasa a OPENXML.  
+ Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   
  La instrucción OPENXML muestra lo siguiente:  
   
@@ -463,7 +463,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. Especificar rowpattern con final en atributo  
- El documento XML de este ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>. La instrucción OPENXML recupera información detallada del pedido en un conjunto de filas de tres columnas (**ProductID**, **Quantity** y **OrderID**) del documento XML.  
+ El documento XML de este ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>. La instrucción OPENXML recupera información detallada del pedido en un conjunto de filas de tres columnas (**ProductID**, **Quantity**y **OrderID**) del documento XML.  
   
  Primero, para obtener un identificador de documento se llama a **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   

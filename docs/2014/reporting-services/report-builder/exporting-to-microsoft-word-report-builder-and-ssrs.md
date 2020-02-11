@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244500"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "75244500"
   
  Los informes con columnas de estilo boletín no se representan en Word. Las imágenes y los colores de fondo de página y del cuerpo del informe no se representan.  
   
-##  <a name="Pagination"></a>Expuesto  
+##  <a name="Pagination"></a> Paginación  
  Cuando el informe se abre en Word, Word repagina de nuevo el informe completo basándose en el tamaño de página. La repaginación puede hacer que se inserten saltos de página en ubicaciones en las que no se pretendía agregarlos y, en algunos casos, puede hacer que el informe exportado tenga dos saltos de página seguidos en una fila o que se agreguen páginas en blanco. Puede intentar cambiar la paginación de Word ajustando los márgenes de página.  
   
  Este representador admite solamente saltos de página lógicos.  
@@ -82,7 +82,7 @@ ms.locfileid: "75244500"
   
  Para evitar este problema, use varias ejecuciones de texto en vez de una expresión compleja cuando use expresiones en encabezados y pies de página. Las dos siguientes expresiones son equivalentes. La primera es una expresión compleja y la segunda usa ejecuciones de texto. El representador de Word solo analiza correctamente la segunda expresión.  
   
-##  <a name="Interactivity"></a>Interactividad  
+##  <a name="Interactivity"></a> Interactividad  
  En Word se admiten algunos elementos interactivos. A continuación se describen sus comportamientos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar u ocultar  
@@ -185,12 +185,12 @@ ms.locfileid: "75244500"
 ##  <a name="Differences"></a>Diferencias entre los representadores de Word y Word 2003  
  Los informes representados mediante el representador de Word o Word 2003 no se suelen distinguir visualmente. Sin embargo, puede observar pequeñas diferencias entre los dos formatos de Word o Word 2003.  
   
-##  <a name="DeviceInfo"></a>Configuración de la información del dispositivo  
+##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador si cambia la configuración de la información del dispositivo; por ejemplo, puede omitir los hipervínculos y los vínculos de obtención de detalles o expandir todos los elementos que se pueden alternar, independientemente de su estado original en el momento de generar la representación. Para obtener más información, consulte [Word Device Information Settings](../word-device-information-settings.md).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

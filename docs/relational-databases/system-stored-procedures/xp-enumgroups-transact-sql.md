@@ -18,13 +18,13 @@ ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68116770"
 ---
-# <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
+# <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Proporciona una lista de grupos locales de Microsoft Windows o una lista de grupos globales definidos en un dominio Windows especificado.  
@@ -39,26 +39,26 @@ xp_enumgroups [ 'domain_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'** *nombre_dominio* **'**  
- Es el nombre del dominio de Windows del que se va a enumerar la lista de grupos globales. *nombre_dominio* es **sysname**, su valor predeterminado es null.  
+ **'** *domain_name* **'**  
+ Es el nombre del dominio de Windows del que se va a enumerar la lista de grupos globales. *domain_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Grupo**|**sysname**|Nombre del grupo de Windows|  
-|**comment**|**sysname**|Descripción del grupo de Windows proporcionado por Windows|  
+|**agrupamiento**|**sysname**|Nombre del grupo de Windows|  
+|**Comentario**|**sysname**|Descripción del grupo de Windows proporcionado por Windows|  
   
-## <a name="remarks"></a>Comentarios  
- Si *nombre_dominio* es el nombre del equipo basado en Windows que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es no se especifica ningún nombre de dominio o que se ejecutan en, **xp_enumgroups** enumera los grupos locales del equipo que se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Observaciones  
+ Si *domain_name* es el nombre del equipo basado en Windows en el que se está [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutando una instancia de o no se especifica ningún nombre de dominio, **xp_enumgroups** enumera los grupos locales del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **xp_enumgroups** no se puede usar cuando una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en Windows 98.  
+ no se puede usar **xp_enumgroups** cuando una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de se ejecuta en Windows 98.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia a la **db_owner** rol fijo de base de datos en el **maestro** base de datos, o la pertenencia a la **sysadmin** rol fijo de servidor.  
+ Requiere la pertenencia al rol fijo de base de datos **db_owner** en la base de datos **maestra** o la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se enumeran los grupos del dominio `sales`.  
@@ -67,12 +67,12 @@ xp_enumgroups [ 'domain_name' ]
 EXEC xp_enumgroups 'sales';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_grantlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_revokelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_loginconfig &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
- [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_loginconfig &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
+ [xp_logininfo &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

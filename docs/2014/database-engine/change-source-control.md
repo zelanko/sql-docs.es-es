@@ -1,5 +1,5 @@
 ---
-title: Cambiar Control de código fuente | Microsoft Docs
+title: Cambiar control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812761"
 ---
 # <a name="change-source-control"></a>Cambiar el control de código fuente
@@ -34,7 +34,7 @@ ms.locfileid: "62812761"
  **Bind**  
  Asocie elementos seleccionados con una ubicación del servidor de control de código fuente. Por ejemplo, puede utilizar este botón para enlazar con las últimas carpetas y bases de datos conocidas del servidor de control de código fuente. Si no encuentra una base de datos o una carpeta del servidor recientes, se le indicará que especifique otras.  
   
- **Examinar**  
+ **Browse**  
  Navegue a una nueva ubicación del servidor de control de código fuente del elemento especificado.  
   
  **Columnas**  
@@ -43,13 +43,13 @@ ms.locfileid: "62812761"
  **Conectar**  
  Cree una conexión entre los elementos seleccionados y el servidor de control de código fuente.  
   
- **Conectado**  
+ **Conectó**  
  Muestra el estado de conexión de una solución o un proyecto seleccionados.  
   
- **Desconectar**  
+ **Conecto**  
  Desconecte la copia local de una solución o un proyecto del equipo de su copia maestra en la base de datos. Utilice este comando antes de dejar sin conexión el equipo del servidor de control de código fuente, por ejemplo, al trabajar sin conexión en su equipo portátil.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Acepta los cambios realizados en el cuadro de diálogo.  
   
  **Proveedor**  
@@ -61,10 +61,10 @@ ms.locfileid: "62812761"
  **Enlace del servidor**  
  Indica el enlace del elemento con un servidor de control de código fuente.  
   
- **Nombre de servidor**  
+ **Nombre del servidor**  
  Muestra el nombre del servidor de control de código fuente con el que están enlazados el proyecto o la solución correspondientes.  
   
- **Solución o proyecto**  
+ **Solución/Proyecto**  
  Muestra el nombre de cada solución y proyecto de la selección actual.  
   
  **Sort**  
@@ -76,14 +76,14 @@ ms.locfileid: "62812761"
 |**Opción**|**Descripción**|  
 |----------------|---------------------|  
 |Válido|El elemento está correctamente enlazado y conectado con la carpeta de servidor a la que pertenece.|  
-|No válido|El elemento no está correctamente enlazado o está desconectado de la carpeta a la que pertenece. Utilice el comando **Agregar a control de código fuente** en lugar de **Enlazar** para este elemento.|  
+|No válida|El elemento no está correctamente enlazado o está desconectado de la carpeta a la que pertenece. Utilice el comando **Agregar a control de código fuente** en lugar de **Enlazar** para este elemento.|  
 |Desconocido|El estado del elemento en el control de código fuente no se ha determinado todavía.|  
 |No controlado|El elemento no se ha colocado en el control de código fuente.|  
   
  **Unbind**  
  Muestra el cuadro de diálogo **Control de código fuente** para permitirle eliminar los elementos seleccionados del control de código fuente y anular definitivamente la asociación de los elementos con sus carpetas actuales.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Control de código fuente del Explorador de soluciones](../../2014/database-engine/solution-explorer-source-control.md)  
   
   

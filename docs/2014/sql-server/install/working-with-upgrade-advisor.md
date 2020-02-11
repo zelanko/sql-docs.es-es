@@ -1,5 +1,5 @@
 ---
-title: Trabajar con el Asesor de actualizaciones | Microsoft Docs
+title: Trabajar con el asesor de actualizaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090956"
 ---
 # <a name="working-with-upgrade-advisor"></a>Trabajar con el Asesor de actualizaciones
@@ -33,7 +33,7 @@ ms.locfileid: "66090956"
   
 -   Ver los resultados del análisis.  
   
- El Asesor de actualizaciones incluye un analizador y un visor. El Asistente para análisis del Asesor de actualizaciones analizará aquellos componentes que seleccione. A continuación, el analizador generará los informes personalizados sobre los problemas que debe resolver antes de poder actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Puede utilizar el Visor de informes del Asesor de actualizaciones para ver informes personalizados. Para obtener más información acerca de lo análisis del Asesor de actualizaciones detecta, consulte [resolver problemas de actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md).  
+ El Asesor de actualizaciones incluye un analizador y un visor. El Asistente para análisis del Asesor de actualizaciones analizará aquellos componentes que seleccione. A continuación, el analizador generará los informes personalizados sobre los problemas que debe resolver antes de poder actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Puede utilizar el Visor de informes del Asesor de actualizaciones para ver informes personalizados. Para obtener más información sobre qué detecta el análisis del Asesor de actualizaciones, vea [resolver problemas de actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md).  
   
  En los temas de esta sección se ofrece información general acerca de las funcionalidades del Asesor de actualizaciones, así como información acerca de cómo usar el Asesor de actualizaciones y los informes de éste.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "66090956"
 |-----------|-----------------|  
 |[Información general sobre el Asesor de actualizaciones](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|Proporciona información general acerca del proceso de actualización, el Asistente para análisis del Asesor de actualizaciones y el Visor de informes del Asesor de actualizaciones.|  
 |[Temas de procedimiento del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|Proporciona instrucciones para llevar a cabo los procedimientos más comunes del Asesor de actualizaciones.|  
-|[Actualización del Asistente para la referencia de la interfaz de usuario](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|Contiene temas que aparecerán si presiona la tecla F1 o haga clic en **ayuda** en las páginas del Asistente para actualización un análisis del Asesor de actualizaciones.|  
+|[Referencia de la interfaz de usuario del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|Contiene temas que aparecen si presiona la tecla F1 o hace clic en **ayuda** en las páginas del Asistente para análisis del Asesor de actualizaciones.|  
   
-## <a name="see-also"></a>Vea también  
- [Instalar el Asesor de actualizaciones](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
+## <a name="see-also"></a>Consulte también  
+ [Instalando el asesor de actualizaciones](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [Resolver problemas de la actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

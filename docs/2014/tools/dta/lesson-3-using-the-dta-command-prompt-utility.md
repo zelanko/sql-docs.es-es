@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Usar la utilidad de símbolo del sistema dta | Microsoft Docs'
+title: 'Lección 3: usar la utilidad del símbolo del sistema DTA | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e2881a2a118306f9d567236516f05bb29ad2d60a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186570"
 ---
-# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lección 3: Uso de la utilidad del símbolo del sistema dta
-  La utilidad del símbolo del sistema **dta** ofrece funcionalidad adicional a la del Asistente para la optimización de motor de base de datos.  
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lección 3: Usar la utilidad del símbolo del sistema dta
+  La utilidad del símbolo del sistema **DTA** ofrece funcionalidad además de la que proporciona el Asistente para la optimización de motor de base de datos.  
   
- Puede utilizar las herramientas XML que desee para crear archivos de entrada para la utilidad mediante el esquema XML del Asistente para la optimización de motor de base de datos. Este esquema se instala al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y puede encontrarse en: C:\Program archivos (x86) \Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
+ Puede utilizar las herramientas XML que desee para crear archivos de entrada para la utilidad mediante el esquema XML del Asistente para la optimización de motor de base de datos. Este esquema se instala al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se encuentra en: C:\Archivos de programa (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   
  El esquema XML del Asistente para la optimización de motor de base de datos también se encuentra disponible en línea en el [sitio web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68186570"
   
  Incluye el tema siguiente:  
   
--   Iniciar la utilidad del símbolo del sistema **dta** y optimizar una carga de trabajo  
+-   Iniciar la utilidad del símbolo del sistema **DTA** y optimizar una carga de trabajo  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Iniciar la utilidad del símbolo del sistema dta y optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md)  

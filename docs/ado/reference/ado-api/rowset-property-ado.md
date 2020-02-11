@@ -20,14 +20,14 @@ ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 922f6690679d86bdb6cdafb721e3a5ed6bb674ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917125"
 ---
 # <a name="rowset-property-ado"></a>Propiedad Rowset (ADO)
-Obtiene o establece OLE DB **conjunto de filas** objeto desde/en un **ADORecordsetConstruction** objeto. Cuando se utiliza put_Rowset, el conjunto de filas se convierte en ADO **Recordset** objeto.  
+Obtiene o establece un objeto de **conjunto de filas** OLE DB de/en un objeto **ADORecordsetConstruction** . Cuando se utiliza put_Rowset, el conjunto de filas se convierte en un objeto de **conjunto de registros** de ADO.  
   
  Lectura/escritura  
   
@@ -40,10 +40,10 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
   
 ## <a name="parameters"></a>Parámetros  
  *ppRowset*  
- Puntero a OLE DB **conjunto de filas** objeto.  
+ Puntero a un objeto de **conjunto de filas** de OLE DB.  
   
  *PRowset*  
- OLE DB **conjunto de filas** objeto.  
+ Objeto de **conjunto de filas** OLE DB.  
   
 ## <a name="return-values"></a>Valores devueltos  
  Este método de propiedad devuelve los valores HRESULT estándar, incluidos S_OK y E_FAIL.  

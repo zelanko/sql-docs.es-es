@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 68c731767a83acbd4b7df84843f2c140c5a63d3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727710"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problemas comunes con el servicio Launchpad y la ejecución de scripts externos en SQL Server
@@ -131,9 +131,9 @@ Si ha instalado y habilitado el aprendizaje automático, pero recibe este error 
 
 4. Al reiniciar el servicio se suele corregir el problema para que se puedan ejecutar los scripts de aprendizaje automático. Si el reinicio no soluciona el problema, anote la ruta de acceso y los argumentos de la propiedad **Ruta de acceso binaria** y haga lo siguiente:
 
-    A. Revise el archivo .config del iniciador y asegúrese de que el directorio de trabajo es válido.
+    a. Revise el archivo .config del iniciador y asegúrese de que el directorio de trabajo es válido.
 
-    B. Asegúrese de que el grupo de Windows que usa Launchpad puede conectarse a la instancia de SQL Server.
+    b. Asegúrese de que el grupo de Windows que usa Launchpad puede conectarse a la instancia de SQL Server.
 
     c. Si cambia alguna de las propiedades del servicio, reinicie el servicio Launchpad.
 

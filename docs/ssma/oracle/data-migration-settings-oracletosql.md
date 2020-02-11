@@ -11,47 +11,47 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 2b435b02060d32e61bc3e75054171023262a87b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264212"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Configuración de la migración de datos (SybaseToSQL)
   
 ## <a name="data-migration-settings"></a>Configuración de la migración de datos  
-**Configuración de la migración de datos** permite al usuario escribir consultas personalizadas para la migración de datos.  
+La **configuración de migración de datos** permite al usuario escribir consultas personalizadas para la migración de datos.  
   
--   Esta pestaña está disponible cuando **opciones de migración de datos ampliado** está establecido en **mostrar** y se oculta cuando el valor se establece en **ocultar** en configuración del proyecto. Para obtener más información acerca de la configuración del proyecto de migración, consulte [configuración del proyecto (migración)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
+-   Esta pestaña está disponible cuando **Opciones de migración de datos extendidos** está establecida en **Mostrar** y está oculta cuando el valor está establecido en **ocultar** en la configuración del proyecto. Para obtener más información sobre la configuración de la migración de proyectos, vea [configuración del proyecto (migración)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
   
--   Análisis de instrucciones SQL personalizada que se implementará en **configuración de migración de datos** ficha del nodo de la tabla.  
+-   El análisis de instrucciones SQL personalizadas se implementará en la pestaña **configuración de migración de datos** del nodo de tabla.  
   
--   Estos son las dos casillas de verificación disponibles en el **configuración de migración de datos** viz.:  
+-   A continuación se muestran las dos casillas disponibles en la **configuración de migración de datos** , es decir:  
   
-    1.  Truncar la tabla de SQL Server  
+    1.  Truncar SQL Server tabla  
   
-    2.  Seleccione uso personalizado  
+    2.  Usar selección personalizada  
   
-1.  **Puede truncar la tabla de SQL Server:**  
-     Esta opción permite al usuario que tiene una visión clara de los datos migrados en la base de datos de destino.  
+1.  **Truncar SQL Server tabla:**  
+     Esta opción permite que el usuario tenga una vista clara de los datos migrados en la base de datos de destino.  
   
-    -   De forma predeterminada, este cuadro de texto está activada.  
+    -   De forma predeterminada, este cuadro de texto está activado.  
   
-    -   Si este cuadro de texto está desactivada, se agregarán los datos que se migren a los datos existentes en la base de datos de destino.  
+    -   Si este cuadro de texto está desactivado, los datos migrados se agregarán a los datos existentes en la base de datos de destino.  
   
-2.  **Seleccione uso personalizado:**  
-     Esta opción permite al usuario modificar el **seleccione** instrucción presente (**seleccione** instrucción permite a los usuarios seleccionar los datos que se muestra en la base de datos de destino).  
+2.  **Usar selección personalizada:**  
+     Esta opción permite al usuario modificar la instrucción **Select** (la instrucción**Select** permite a los usuarios seleccionar los datos que se van a mostrar en la base de datos de destino).  
   
-    1.  De forma predeterminada, este cuadro de texto está desactivada.  
+    1.  De forma predeterminada, este cuadro de texto está desactivado.  
   
-    2.  Si este cuadro de texto está activada, permite a los usuarios modificar la **seleccione** instrucción presente.  
+    2.  Si este cuadro de texto está activado, permite a los usuarios modificar la instrucción **Select** .  
   
-Hay dos botones que presentes viz.:  
+Hay dos botones presentes:  
   
--   **Se aplican:** Haga clic en **aplicar** para aplicar la configuración que han cambiado.  
+-   **Aplicar:** Haga clic en **aplicar** para aplicar la configuración que ha cambiado.  
   
--   **Cancelar:** Haga clic en **cancelar** para restaurar los valores de configuración antes de que se realizan los cambios.  
+-   **Cancelar:** Haga clic en **Cancelar** para restaurar la configuración presente antes de que se realizaran los cambios.  
   
-## <a name="see-also"></a>Vea también  
-[Migrar datos de Oracle a SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
+## <a name="see-also"></a>Consulte también  
+[Migración de datos de Oracle a SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232301"
 ---
 # <a name="creating-an-assembly"></a>Crear un ensamblado
@@ -132,7 +132,7 @@ WITH PERMISSION_SET = UNSAFE;
   
  Para obtener más información sobre los permisos de cada configuración, vea [CLR Integration Security](../security/clr-integration-security.md).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Administrar ensamblados de integración CLR](managing-clr-integration-assemblies.md)   
  [Modificar un ensamblado](altering-an-assembly.md)   
  [Quitar un ensamblado](dropping-an-assembly.md)   

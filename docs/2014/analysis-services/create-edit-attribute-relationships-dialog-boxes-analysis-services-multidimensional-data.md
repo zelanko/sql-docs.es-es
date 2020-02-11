@@ -1,5 +1,5 @@
 ---
-title: Crear relación de atributo y Editar atributo relación los cuadros de diálogo (pestaña Diseñador de relación de atributos, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadros de diálogo crear relación de atributo y editar relación de atributo (pestaña diseñador de relación de los atributos, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086941"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Cuadros de diálogo Crear relación de atributo y Editar relación de atributo (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -28,7 +28,7 @@ ms.locfileid: "66086941"
   
 2.  En la barra de herramientas, haga clic en el icono Nueva relación de atributo.  
   
-     -o bien-  
+     O bien  
   
      En el diagrama de relación de los atributos o en la lista **Atributos** , haga clic con el botón derecho en un atributo y, después, haga clic en **Nueva relación de atributo**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66086941"
 2.  En el diagrama de relación de los atributos o en la lista **Relación de los atributos** , haga clic con el botón derecho en una relación de atributo y, después, haga clic en **Editar relación de atributo**.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  En el grupo **Atributo de origen** , especifica el nombre del atributo desde el que se origina la relación.  
   
  En el grupo **Atributo relacionado** , especifica el nombre del atributo al que se dirige la relación.  
@@ -51,9 +51,9 @@ ms.locfileid: "66086941"
  Especifica las columnas de clave definidas para el atributo.  
   
  **Tipo de relación**  
- Especifica el tipo de relación que se va a crear, **Flexible (puede cambiar con el tiempo)** o **Rígida (no cambiará con el tiempo)** .  
+ Especifica el tipo de relación que se va a crear, **Flexible (puede cambiar con el tiempo)** o **Rígida (no cambiará con el tiempo)**.  
   
-## <a name="see-also"></a>Vea también  
- [Relaciones de atributo &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Relaciones de atributo &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

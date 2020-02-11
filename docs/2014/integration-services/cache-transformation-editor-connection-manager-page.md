@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación de caché (página Administrador de conexiones) | Microsoft Docs
+title: Editor de transformación caché (página Administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061068"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Editor de transformación Caché (página Administrador de conexiones)
@@ -27,16 +27,16 @@ ms.locfileid: "66061068"
  Para obtener más información acerca del administrador de conexiones de caché, vea [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ## <a name="options"></a>Opciones  
- **Cache connection manager**  
+ **Administrador de conexiones de caché**  
  Seleccione un administrador de conexiones de caché existente usando la lista o cree una conexión mediante el botón **Nueva** .  
   
- **Nueva**  
+ **Nuevo**  
  Cree una nueva conexión mediante el cuadro de diálogo Administrador de conexiones de caché.  
   
- **Editar**  
+ **Edición**  
  Modifique una conexión existente.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de transformación de caché &#40;página Asignaciones&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+## <a name="see-also"></a>Consulte también  
+ [Página asignaciones del editor de transformación de caché &#40;&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

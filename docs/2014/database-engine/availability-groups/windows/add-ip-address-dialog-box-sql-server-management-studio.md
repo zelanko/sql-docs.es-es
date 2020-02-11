@@ -13,25 +13,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68bd85258bd3fd259386f020394ffb5bc70a9781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791919"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>Agregar dirección IP (cuadro de diálogo - SQL Server Management Studio)
-  En este tema de Ayuda F1 se describen las opciones del cuadro de diálogo **Agregar dirección IP** . Se accede a este cuadro de diálogo desde el cuadro de diálogo **Nuevo agente de escucha del grupo de disponibilidad** y la pestaña **Escucha** de la página **Especificar réplicas** de [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] o [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  En este tema de ayuda F1 se describen las opciones del cuadro de diálogo **Agregar dirección IP** . Se accede a este cuadro de diálogo desde el cuadro de diálogo **Nuevo agente de escucha del grupo de disponibilidad** y la pestaña **Escucha** de la página **Especificar réplicas** de [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] o [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Antes de empezar a agregar subredes un agente de escucha del grupo de disponibilidad, asegúrese de que conoce la dirección IP para cada subred y, para una dirección IPv4, la máscara de subred.  
   
-##  <a name="PageOptions"></a> Agregar las opciones de la dirección IP  
- **Subred**  
+##  <a name="PageOptions"></a>Agregar opciones de dirección IP  
+ **Subnet**  
  Utilice la lista desplegable para seleccionar una dirección de la subred que va a agregar al agente de escucha del grupo de disponibilidad. De forma predeterminada, una subred posee una dirección IPv4 como una dirección IPv6. La primera vez que use el cuadro de diálogo **Agregar dirección IP** , la lista desplegable **Subred** mostrará las dos direcciones de subred para cada subred que hospeda una réplica para el grupo de disponibilidad. Para agregar una subred dada al agente de escucha, seleccione una de sus direcciones de subred.  
   
  Después de completar el cuadro de diálogo **Agregar dirección IP** y hacer clic en **Aceptar** para agregar una dirección de subred seleccionada al agente de escucha, la lista desplegable **Subred** filtrará la dirección de subred. Todas las direcciones de subred no seleccionadas permanecerán en la lista desplegable. Asegúrese de agregar una y solo una dirección de subred por subred al agente de escucha; de lo contrario, la creación del agente de escucha producirá un error.  
   
- **Direcciones**  
+ **Corrige**  
  Utilice este campo para escribir una dirección IP estática para la dirección de subred seleccionada. Póngase en contacto con su administrador de red para esta dirección IP. Asegúrese de escribir una dirección válida para la dirección de subred seleccionada; de lo contrario, la creación del agente de escucha producirá un error.  
   
  **Dirección IPv4**  
@@ -43,7 +43,7 @@ ms.locfileid: "62791919"
  **Dirección IPv6**  
  Si ha seleccionado una dirección IPv6 de una subred, escriba aquí una dirección estática IPv6 válida.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Haga clic para agregar la subred cuya dirección ha seleccionado, junto con la dirección IP estática que ha especificado. Una fila con estos valores se agregará a la cuadrícula de subred del cuadro de diálogo **Nuevo agente de escucha del grupo de disponibilidad** o **Especificar réplicas** .  
   
 > [!IMPORTANT]  
@@ -62,8 +62,8 @@ ms.locfileid: "62791919"
 -   [Usar el Asistente para agregar una réplica al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Conectividad de cliente de AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0f5c4e9c6e153a548b00e4c273936eea018b316b
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660713"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Método SetFlag (clase ClientNetworkProtocolProperty)
@@ -36,8 +36,8 @@ object.SetFlag(BoolValue) [=]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Objeto de la [clase ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red utilizado por el cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
+ *objeto*  
+ Objeto de la [clase ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red utilizado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el cliente.  
   
 #### <a name="parameters"></a>Parámetros  
   
@@ -48,9 +48,9 @@ object.SetFlag(BoolValue) [=]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

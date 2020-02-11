@@ -16,16 +16,16 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067413"
 ---
 # <a name="data-buffer-type"></a>Tipo de búfer de datos
-El tipo de datos C de un búfer especificado por la aplicación. Con una única variable, esto ocurre cuando la aplicación asigna la variable. Con genéricos de memoria: es decir, memoria indicada por un puntero de tipo void: Esto ocurre cuando la aplicación convierte la memoria a un tipo determinado. El controlador detecta este tipo de dos maneras:  
+La aplicación especifica el tipo de datos C de un búfer. Con una sola variable, esto se produce cuando la aplicación asigna la variable. Con memoria genérica, es decir, la memoria a la que apunta un puntero de tipo void, se produce cuando la aplicación convierte la memoria en un tipo determinado. El controlador detecta este tipo de dos maneras:  
   
--   **Argumento de tipo de búfer de datos.** Búferes que utiliza para transferir datos del conjunto de resultados y de los valores de parámetro, como el búfer de enlace con *TargetValuePtr* en **SQLBindCol**, normalmente tienen un argumento de tipo asociado, como el  *TargetType* argumento en **SQLBindCol**. En este argumento, la aplicación pasa el identificador de tipo de C que corresponde al tipo de búfer. Por ejemplo, en la siguiente llamada a **SQLBindCol**, el valor SQL_C_TYPE_DATE indica al controlador que la *fecha* búfer es un SQL_DATE_STRUCT:  
+-   **Argumento de tipo de búfer de datos.** Los búferes que se usan para transferir valores de parámetros y datos del conjunto de resultados, como el búfer enlazado con *TargetValuePtr* en **SQLBindCol**, normalmente tienen un argumento de tipo asociado, como el argumento *TargetType* en **SQLBindCol**. En este argumento, la aplicación pasa el identificador de tipo de C que corresponde al tipo de búfer. Por ejemplo, en la siguiente llamada a **SQLBindCol**, el valor SQL_C_TYPE_DATE indica al controlador que el búfer de *fecha* es un SQL_DATE_STRUCT:  
   
     ```  
     SQL_DATE_STRUCT Date;  
@@ -33,9 +33,9 @@ El tipo de datos C de un búfer especificado por la aplicación. Con una única 
     SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &Date, 0, &DateInd);  
     ```  
   
-     Para obtener más información acerca de los identificadores de tipo, consulte el [tipos de datos de ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md) sección más adelante en esta sección.  
+     Para obtener más información sobre los identificadores de tipo, vea la sección [tipos de datos en ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md) , más adelante en esta sección.  
   
--   **Tipo predefinido.** Búferes utilizados para enviar y recuperar las opciones o atributos, como el búfer señalado por el *InfoValuePtr* argumento en **SQLGetInfo**, tiene un tipo fijo que depende de la opción especificada. El controlador se da por supuesto que es el búfer de datos de este tipo; es responsabilidad de la aplicación para asignar un búfer de este tipo. Por ejemplo, en la siguiente llamada a **SQLGetInfo**, el controlador se da por supuesto que el búfer es un entero de 32 bits, ya que es lo que requiere la opción SQL_STRING_FUNCTIONS:  
+-   **Tipo predefinido.** Los búferes que se usan para enviar y recuperar opciones o atributos, como el búfer señalado por el argumento *InfoValuePtr* en **SQLGetInfo**, tienen un tipo fijo que depende de la opción especificada. El controlador supone que el búfer de datos es de este tipo; es responsabilidad de la aplicación asignar un búfer de este tipo. Por ejemplo, en la siguiente llamada a **SQLGetInfo**, el controlador supone que el búfer es un entero de 32 bits porque es lo que requiere la opción SQL_STRING_FUNCTIONS:  
   
     ```  
     SQLUINTEGER StringFuncs;  
@@ -43,4 +43,4 @@ El tipo de datos C de un búfer especificado por la aplicación. Con una única 
                 NULL);  
     ```  
   
- El controlador utiliza el tipo de datos de C para interpretar los datos en el búfer.
+ El controlador utiliza el tipo de datos C para interpretar los datos del búfer.

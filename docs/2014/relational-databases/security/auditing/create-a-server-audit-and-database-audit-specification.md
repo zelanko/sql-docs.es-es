@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211983"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Crear una especificación de auditoría de servidor y de auditoría de base de datos
@@ -35,7 +35,7 @@ ms.locfileid: "68211983"
   
      [Seguridad](#Security)  
   
--   **Para crear una especificación de auditoría de servidor y de auditoría de base de datos, utilizando:**  
+-   **Para crear una auditoría de servidor y una especificación de auditoría de base de datos, use:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -58,13 +58,13 @@ ms.locfileid: "68211983"
   
 -   Después de crearse una especificación de auditoría de base de datos, podrá ser vista por las entidades de seguridad que cuenten con los permisos CONTROL SERVER o ALTER ANY DATABASE AUDIT, o por la cuenta sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Para crear una auditoría de servidor  
   
 1.  En el Explorador de objetos, expanda la carpeta **Seguridad** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría...** . Para obtener más información, consulte [Crear una auditoría de servidor y una especificación de auditoría de servidor](create-a-server-audit-and-server-audit-specification.md).  
+2.  Haga clic con el botón secundario en la carpeta **auditorías** y seleccione **nueva auditoría.**... Para obtener más información, vea [crear una auditoría de servidor y una especificación de auditoría de servidor](create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Cuando termine de seleccionar opciones, haga clic en **Aceptar**.  
   
@@ -74,14 +74,14 @@ ms.locfileid: "68211983"
   
 2.  Expanda la carpeta **Seguridad** .  
   
-3.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de base de datos** y seleccione **Nueva especificación de auditoría de base de datos...** .  
+3.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de base de datos** y seleccione **Nueva especificación de auditoría de base de datos...**.  
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **Crear especificación de auditoría de base de datos** .  
   
-     **Name**  
+     **Nombre**  
      El nombre de la especificación de auditoría de base de datos. Se genera automáticamente al crear una nueva especificación de auditoría de servidor, pero se puede modificar.  
   
-     **Auditar**  
+     **Auditoría**  
      El nombre de una auditoría de base de datos existente. Escriba el nombre de la auditoría o selecciónelo en la lista.  
   
      **Tipo de acción de auditoría**  
@@ -133,7 +133,7 @@ ms.locfileid: "68211983"
   
 2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo se crea una especificación de auditoría de base de datos denominada `Audit_Pay_Tables` que audita las instrucciones SELECT e INSERT por el usuario `dbo`, para la tabla `HumanResources.EmployeePayHistory` basándose en la auditoría de servidor definida anteriormente.  
+3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo se crea una especificación de auditoría de base de datos denominada `Audit_Pay_Tables` que audita las instrucciones SELECT e INSERT por el usuario `dbo` , para la tabla `HumanResources.EmployeePayHistory` basándose en la auditoría de servidor definida anteriormente.  
   
     ```  
     USE AdventureWorks2012 ;   

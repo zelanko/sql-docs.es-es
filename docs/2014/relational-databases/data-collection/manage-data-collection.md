@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918597"
 ---
 # <a name="manage-data-collection"></a>Administrar la recopilación de datos
@@ -35,18 +35,18 @@ ms.locfileid: "62918597"
   
 -   [Iniciar o detener un conjunto de recopilación](start-or-stop-a-collection-set.md)  
   
--   [Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento de SQL &#40;SQL Server Management Studio&#41;](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
+-   [Use SQL Server Profiler para crear un conjunto de recopilación de seguimiento de SQL &#40;SQL Server Management Studio&#41;](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
--   [Ver los registros del conjunto de recopilación &#40;SQL Server Management Studio&#41;](view-collection-set-logs-sql-server-management-studio.md)  
+-   [Ver registros de conjuntos de recopilación &#40;SQL Server Management Studio&#41;](view-collection-set-logs-sql-server-management-studio.md)  
   
 -   [Ver o cambiar las programaciones del conjunto de recopilación &#40;SQL Server Management Studio&#41;](view-or-change-collection-set-schedules-sql-server-management-studio.md)  
   
 -   [Ver un informe de conjunto de recopilación &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
 ## <a name="manage-data-collection-by-using-transact-sql"></a>Administrar la recopilación de datos mediante el uso de Transact-SQL  
- El recopilador de datos proporciona una recopilación extensa de procedimientos almacenados que puede usar para realizar cualquier tarea relacionada con el recopilador de datos. Por ejemplo, mediante el uso de [!INCLUDE[tsql](../../includes/tsql-md.md)]puede realizar las siguientes tareas:  
+ El recopilador de datos proporciona una recopilación extensa de procedimientos almacenados que puede usar para realizar cualquier tarea relacionada con el recopilador de datos. Por ejemplo, mediante el uso de [!INCLUDE[tsql](../../includes/tsql-md.md)] puede realizar las siguientes tareas:  
   
--   [Configurar parámetros para la recopilación de datos &#40;Transact-SQL&#41;](configure-data-collection-parameters-transact-sql.md)  
+-   [Configurar parámetros de recopilación de datos &#40;Transact-SQL&#41;](configure-data-collection-parameters-transact-sql.md)  
   
 -   [Habilitar o deshabilitar la recopilación de datos](data-collection.md)  
   
@@ -81,13 +81,13 @@ ms.locfileid: "62918597"
   
 |Nombre del procedimiento|Descripción|  
 |--------------------|-----------------|  
-|[sp_syscollector_run_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql)|Ejecuta una conjunto de recopilación a petición.|  
-|[sp_syscollector_start_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql)|Inicia un conjunto de recopilación.|  
-|[sp_syscollector_stop_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql)|Detiene un conjunto de recopilación.|  
-|[sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql)|Crea un conjunto de recopilación.|  
-|[sp_syscollector_delete_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collection-set-transact-sql)|Elimina un conjunto de recopilación.|  
-|[sp_syscollector_update_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collection-set-transact-sql)|Cambia la configuración de un conjunto de recopilación.|  
-|[sp_syscollector_upload_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-upload-collection-set-transact-sql)|Carga los datos del conjunto de recopilación en el almacén de administración de datos. Se trata, de hecho, de una carga a petición.|  
+|[sp_syscollector_run_collection_set &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql)|Ejecuta una conjunto de recopilación a petición.|  
+|[sp_syscollector_start_collection_set &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql)|Inicia un conjunto de recopilación.|  
+|[sp_syscollector_stop_collection_set &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql)|Detiene un conjunto de recopilación.|  
+|[sp_syscollector_create_collection_set &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql)|Crea un conjunto de recopilación.|  
+|[sp_syscollector_delete_collection_set &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collection-set-transact-sql)|Elimina un conjunto de recopilación.|  
+|[sp_syscollector_update_collection_set &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collection-set-transact-sql)|Cambia la configuración de un conjunto de recopilación.|  
+|[sp_syscollector_upload_collection_set &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-upload-collection-set-transact-sql)|Carga los datos del conjunto de recopilación en el almacén de administración de datos. Se trata, de hecho, de una carga a petición.|  
   
  **Trabajar con elementos de recopilación**  
   
@@ -95,9 +95,9 @@ ms.locfileid: "62918597"
   
 |Nombre del procedimiento|Descripción|  
 |--------------------|-----------------|  
-|[sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql)|Crea un elemento de recopilación.|  
-|[sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql)|Elimina un elemento de recopilación.|  
-|[sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql)|Actualiza un elemento de recopilación.|  
+|[sp_syscollector_create_collection_item &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql)|Crea un elemento de recopilación.|  
+|[sp_syscollector_delete_collection_item &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql)|Elimina un elemento de recopilación.|  
+|[sp_syscollector_update_collection_item &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql)|Actualiza un elemento de recopilación.|  
   
  **Trabajar con tipos de recopilador**  
   
@@ -105,23 +105,23 @@ ms.locfileid: "62918597"
   
 |Nombre del procedimiento|Descripción|  
 |--------------------|-----------------|  
-|[sp_syscollector_create_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql)|Crea un tipo de recopilador.|  
-|[sp_syscollector_update_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql)|Actualiza un tipo de recopilador.|  
-|[sp_syscollector_delete_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collector-type-transact-sql)|Elimina un tipo de recopilador.|  
+|[sp_syscollector_create_collector_type &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql)|Crea un tipo de recopilador.|  
+|[sp_syscollector_update_collector_type &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql)|Actualiza un tipo de recopilador.|  
+|[sp_syscollector_delete_collector_type &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-collector-type-transact-sql)|Elimina un tipo de recopilador.|  
   
- **Obtener información de configuración**  
+ **Obtención de información de configuración**  
   
  La tabla siguiente describe las vistas que puede usar para obtener información de configuración y datos de registro de ejecución.  
   
 |Nombre de la vista|Descripción|  
 |---------------|-----------------|  
-|[syscollector_config_store &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-config-store-transact-sql)|Obtiene la configuración del recopilador de datos.|  
-|[syscollector_collection_items &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-collection-items-transact-sql)|Obtenga información del elemento de recopilación.|  
-|[syscollector_collection_sets &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql)|Obtenga información del conjunto de recopilación.|  
-|[syscollector_collector_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-collector-types-transact-sql)|Obtenga información de tipo de recopilador.|  
-|[syscollector_execution_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-execution-log-transact-sql)|Obtenga información sobre el conjunto de recopilación y la ejecución del paquete.|  
-|[syscollector_execution_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql)|Obtenga información sobre la ejecución de la tarea.|  
-|[syscollector_execution_log_full &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-execution-log-full-transact-sql)|Obtenga información cuando el registro de ejecución está lleno.|  
+|[syscollector_config_store &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/syscollector-config-store-transact-sql)|Obtiene la configuración del recopilador de datos.|  
+|[syscollector_collection_items &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/syscollector-collection-items-transact-sql)|Obtenga información del elemento de recopilación.|  
+|[syscollector_collection_sets &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql)|Obtenga información del conjunto de recopilación.|  
+|[syscollector_collector_types &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/syscollector-collector-types-transact-sql)|Obtenga información de tipo de recopilador.|  
+|[syscollector_execution_log &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/syscollector-execution-log-transact-sql)|Obtenga información sobre el conjunto de recopilación y la ejecución del paquete.|  
+|[syscollector_execution_stats &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql)|Obtenga información sobre la ejecución de la tarea.|  
+|[syscollector_execution_log_full &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/syscollector-execution-log-full-transact-sql)|Obtenga información cuando el registro de ejecución está lleno.|  
   
  **Configurar el acceso al almacén de administración de datos**  
   
@@ -129,20 +129,20 @@ ms.locfileid: "62918597"
   
 |Nombre del procedimiento|Descripción|  
 |--------------------|-----------------|  
-|[sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql)|Especifica el nombre de la base de datos definido en la cadena de conexión para el almacén de administración de datos.|  
-|[sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql)|Especifique la instancia definida en la cadena de conexión para el almacén de administración de datos.|  
+|[sp_syscollector_set_warehouse_database_name &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql)|Especifica el nombre de la base de datos definido en la cadena de conexión para el almacén de administración de datos.|  
+|[sp_syscollector_set_warehouse_instance_name &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql)|Especifique la instancia definida en la cadena de conexión para el almacén de administración de datos.|  
   
- **Configurar el acceso al almacén de datos de administración**  
+ **Configurar el almacén de administración de datos**  
   
  La tabla siguiente describe los procedimientos almacenados que puede usar para trabajar con la configuración del almacén de administración de datos.  
   
 |Nombre del procedimiento|Descripción|  
 |--------------------|-----------------|  
-|[core.sp_create_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql)|Crea una instantánea de recopilación en el almacén de administración de datos.|  
-|[core.sp_update_data_source &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql)|Actualiza el origen de datos para la recopilación de datos.|  
-|[core.sp_add_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql)|Agrega un tipo de recopilador al almacén de administración de datos.|  
-|[core.sp_remove_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql)|Quita un tipo de recopilador del almacén de administración de datos.|  
-|[core.sp_purge_data &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql)|Elimina los datos del almacén de administración de datos.|  
+|[Core. sp_create_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql)|Crea una instantánea de recopilación en el almacén de administración de datos.|  
+|[Core. sp_update_data_source &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql)|Actualiza el origen de datos para la recopilación de datos.|  
+|[Core. sp_add_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql)|Agrega un tipo de recopilador al almacén de administración de datos.|  
+|[Core. sp_remove_collector_type &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql)|Quita un tipo de recopilador del almacén de administración de datos.|  
+|[Core. sp_purge_data &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql)|Elimina los datos del almacén de administración de datos.|  
   
  **Trabajar con paquetes de carga**  
   
@@ -150,8 +150,8 @@ ms.locfileid: "62918597"
   
 |Nombre del procedimiento|Descripción|  
 |--------------------|-----------------|  
-|[sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql)|Configura el número de intentos de carga de datos.|  
-|[sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql)|Especifica el almacenamiento temporal para los datos entre los intentos de carga.|  
+|[sp_syscollector_set_cache_window &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql)|Configura el número de intentos de carga de datos.|  
+|[sp_syscollector_set_cache_directory &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql)|Especifica el almacenamiento temporal para los datos entre los intentos de carga.|  
   
  **Trabajar con el registro de ejecución de recopilación de datos**  
   
@@ -159,18 +159,18 @@ ms.locfileid: "62918597"
   
 |Nombre del procedimiento|Descripción|  
 |--------------------|-----------------|  
-|[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql)|Elimina entradas del conjunto de recopilación del registro de ejecución.|  
+|[sp_syscollector_delete_execution_log_tree &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql)|Elimina entradas del conjunto de recopilación del registro de ejecución.|  
   
-### <a name="functions"></a>Funciones  
+### <a name="functions"></a>Functions  
  La tabla siguiente describe las funciones que puede usar para obtener información de seguimiento y ejecución.  
   
 |Nombre de función|Descripción|  
 |-------------------|-----------------|  
-|[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql)|Obtenga datos del registro de ejecución de [!INCLUDE[ssIS](../../includes/ssis-md.md)] para un paquete concreto.|  
-|[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql)|Obtenga las estadísticas de ejecución para un paquete o un conjunto de recopilación. Esta información incluye errores que están registrados.|  
-|[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql)|Obtenga los eventos que se registran cuando se usa el tipo de recopilador de Seguimiento de SQL genérico para recopilar datos.|  
+|[fn_syscollector_get_execution_details &#40;&#41;de Transact-SQL](/sql/relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql)|Obtenga datos del registro de ejecución de [!INCLUDE[ssIS](../../includes/ssis-md.md)] para un paquete concreto.|  
+|[fn_syscollector_get_execution_stats &#40;&#41;de Transact-SQL](/sql/relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql)|Obtenga las estadísticas de ejecución para un paquete o un conjunto de recopilación. Esta información incluye errores que están registrados.|  
+|[snapshots. fn_trace_getdata &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql)|Obtenga los eventos que se registran cuando se usa el tipo de recopilador de Seguimiento de SQL genérico para recopilar datos.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar un procedimiento almacenado](../stored-procedures/execute-a-stored-procedure.md)   
  [Usar SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)   
  [Recopilación de datos](data-collection.md)  

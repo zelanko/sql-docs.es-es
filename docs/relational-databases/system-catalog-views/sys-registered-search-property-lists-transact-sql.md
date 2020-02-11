@@ -1,5 +1,5 @@
 ---
-title: sys.registered_search_property_lists (Transact-SQL) | Microsoft Docs
+title: Sys. registered_search_property_lists (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,26 +22,26 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067850"
 ---
-# <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
+# <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una fila para cada lista de propiedades de búsqueda de la base de datos actual.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|Identificador de la lista de propiedades.|  
-|**name**|**sysname**|Nombre de la lista de propiedades.|  
+|**Name**|**sysname**|Nombre de la lista de propiedades.|  
 |**create_date**|**datetime**|Feche en que se creó la lista de propiedades.|  
 |**modify_date**|**datetime**|Fecha en que se modificó la lista propiedades por última vez mediante una instrucción ALTER.|  
 |**principal_id**|**int**|Propietario de la lista de propiedades.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="permissions"></a>Permisos  
@@ -60,7 +60,7 @@ SELECT property_list_id, name FROM sys.registered_search_property_lists;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   

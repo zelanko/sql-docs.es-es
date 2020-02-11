@@ -1,5 +1,5 @@
 ---
-title: En el Administrador de controladores de asignación de función | Microsoft Docs
+title: Asignación de función en el administrador de controladores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,37 +15,37 @@ ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2bfa535d4175c109e96098dd1e40e93be9521de2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069689"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>Asignación de función en el Administrador de controladores
-El Administrador de controladores es compatible con dos puntos de entrada para las funciones que toman argumentos de cadena. La función no representativa (**SQLDriverConnect**) es la forma ANSI de la función. La forma de Unicode está decorada con un *W* (**SQLDriverConnectW**.)  
+El administrador de controladores admite dos puntos de entrada para las funciones que toman argumentos de cadena. La función no representativa (**SQLDriverConnect**) es la forma ANSI de la función. El formato Unicode se decora con un *W* (**SQLDriverConnectW**).  
   
- El archivo de encabezado ODBC también admite funciones decoradas con un *A,* (**SQLDriverConnectA**) para facilitar el trabajo de aplicaciones combinadas de ANSI o Unicode. Las llamadas realizadas a la **A** funciones son en realidad llama en el punto de entrada no representativo (**SQLDriverConnect**.)  
+ El archivo de encabezado ODBC también admite funciones decoradas con un *,* (**SQLDriverConnectA**) para la comodidad de las aplicaciones ANSI/Unicode mixtas. Las llamadas realizadas a las funciones **de** son en realidad llamadas en el punto de entrada no representativo (**SQLDriverConnect**).  
   
- Si la aplicación se compila con la _UNICODE **#define**, el archivo de encabezado ODBC asignará las llamadas de función no representativos (**SQLDriverConnect**) a la versión de Unicode (**SQLDriverConnectW** .)  
+ Si la aplicación se compila con el **#define**_UNICODE, el archivo de encabezado ODBC asignará las llamadas de función no representativas (**SQLDriverConnect**) a la versión Unicode (**SQLDriverConnectW**).  
   
- El Administrador de controladores reconoce un controlador como un controlador de Unicode si **SQLConnectW** es compatible con el controlador.  
+ El administrador de controladores reconoce un controlador como un controlador Unicode si el controlador es compatible con **SQLConnectW** .  
   
- Si el controlador es un controlador de Unicode, el Administrador de controladores realiza llamadas a función como sigue:  
+ Si el controlador es un controlador Unicode, el administrador de controladores realiza las llamadas de función de la manera siguiente:  
   
--   Pasa una función sin argumentos de cadena o los parámetros directamente a través del controlador.  
+-   Pasa una función sin argumentos de cadena ni parámetros directamente a través del controlador.  
   
--   Pasa las funciones Unicode (con el *W* sufijo) directamente a través del controlador.  
+-   Pasa directamente las funciones Unicode (con el sufijo *W* ) al controlador.  
   
--   Convierte una función ANSI (con el *A* sufijo) a una función de Unicode (con el *W* sufijo) al convertir los argumentos de cadena en Unicode caracteres y pasa la función Unicode para el controlador.  
+-   Convierte una función ANSI (con el sufijo) en una función Unicode ( *con el sufijo* *W* ) convirtiendo los argumentos de cadena en caracteres Unicode y pasa la función Unicode al controlador.  
   
- Si el controlador es un controlador de ANSI, el Administrador de controladores realiza llamadas a función como sigue:  
+ Si el controlador es un controlador ANSI, el administrador de controladores realiza las llamadas de función de la manera siguiente:  
   
--   Funciones sin argumentos de cadena o los parámetros directamente a través se pasa al controlador.  
+-   Pasa funciones sin argumentos de cadena ni parámetros directamente a través del controlador.  
   
--   Convierte las funciones Unicode (con el *W* sufijo) llamada de función a un ANSI y lo pasa al controlador.  
+-   Convierte las funciones Unicode (con el sufijo *W* ) en una llamada de función ANSI y la pasa al controlador.  
   
--   Una función ANSI se pasa directamente al controlador.  
+-   Pasa una función ANSI directamente al controlador.  
   
- El Administrador de controladores está habilitada para Unicode internamente. Como resultado, se obtiene un rendimiento óptimo por una aplicación Unicode trabaja con un controlador de Unicode, porque el Administrador de controladores simplemente pasa a través de las funciones de Unicode al controlador. Cuando una aplicación ANSI está trabajando con un controlador de ANSI, el Administrador de controladores debe convertir las cadenas de ANSI a Unicode al procesamiento de algunas funciones, como **SQLDriverConnect**. Después de procesar la función, el Administrador de controladores, a continuación, debe convertir la cadena de Unicode a ANSI antes de enviar la función para el controlador de ANSI.  
+ El administrador de controladores está habilitado para Unicode internamente. Como resultado, una aplicación Unicode que trabaja con un controlador Unicode obtiene el rendimiento óptimo, ya que el administrador de controladores simplemente pasa las funciones Unicode a través del controlador. Cuando una aplicación ANSI trabaja con un controlador ANSI, el administrador de controladores debe convertir las cadenas de ANSI a Unicode al procesar algunas funciones, como **SQLDriverConnect**. Después de procesar la función, el administrador de controladores debe volver a convertir la cadena Unicode en ANSI antes de enviar la función al controlador ANSI.  
   
- Una aplicación no debe modificar o leer sus búferes de parámetros enlazados, cuando el controlador devuelve SQL_NEED_DATA o SQL_STILL_EXECUTING. El Administrador de controladores deja los búferes enlazados a ANSI hasta que el controlador devuelve SQL_SUCCESS, SQL_SUCCESS_WITH_INFO o SQL_ERROR. Una aplicación multiproceso no debe tener acceso a los valores de parámetros enlazados que otro subproceso ejecuta una instrucción SQL en. El Administrador de controladores convierte los datos de Unicode a ANSI "en contexto" y el otro subproceso podría ver datos ANSI en estos búferes mientras el controlador todavía está procesando la instrucción SQL. Las aplicaciones que se enlazan datos Unicode con un controlador de ANSI no deben enlazar dos columnas diferentes a la misma dirección.
+ Una aplicación no debe modificar ni leer sus búferes de parámetros enlazados cuando el controlador devuelve SQL_STILL_EXECUTING o SQL_NEED_DATA. El administrador de controladores deja los búferes enlazados a ANSI hasta que el controlador devuelve SQL_SUCCESS, SQL_SUCCESS_WITH_INFO o SQL_ERROR. Una aplicación multiproceso no debe obtener acceso a los valores de parámetro enlazados en los que otro subproceso está ejecutando una instrucción SQL. El administrador de controladores convierte los datos de Unicode a ANSI "in situ" y el otro subproceso podría ver datos ANSI en estos búferes mientras el controlador sigue procesando la instrucción SQL. Las aplicaciones que enlazan datos Unicode a un controlador ANSI no deben enlazar dos columnas diferentes a la misma dirección.

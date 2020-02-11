@@ -1,5 +1,5 @@
 ---
-title: Crear y ejecutar un comando Simple | Microsoft Docs
+title: Crear y ejecutar un comando simple | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,25 +14,25 @@ ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925737"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Crear y ejecutar un comando Simple
-Un comando simple es uno que no tiene parámetros y no requiere ninguna persistencia. Hay tres maneras de crear y ejecutar un comando simple.  
+Un comando simple es aquel que no tiene parámetros y no requiere persistencia. Hay tres maneras de crear y ejecutar un comando simple.  
   
--   Mediante un **comando** objeto  
+-   Usar un objeto **Command**  
   
--   Mediante un **conexión** objeto  
+-   Usar un objeto de **conexión**  
   
--   Mediante un **Recordset** objeto  
+-   Usar un objeto de **conjunto de registros**  
   
-## <a name="using-a-command-object"></a>Uso de un objeto de comando  
- Para crear un comando simple mediante una **comando** objeto, debe asignar las instrucciones para la **CommandText** propiedad de un **comando** de objeto y establecer el valor adecuado para el **CommandType** propiedad. Ejecutando el comando requiere que se asigna una conexión abierta a la **ActiveConnection** propiedad de la **comando** objeto seguida de una llamada a la **Execute** (método) en el **comando** objeto.  
+## <a name="using-a-command-object"></a>Usar un objeto Command  
+ Para crear un comando simple mediante un objeto **Command** , debe asignar la instrucción a la propiedad **CommandText** de un objeto **Command** y establecer el valor adecuado para la propiedad **CommandType** . La ejecución del comando requiere que se asigne una conexión abierta a la propiedad **ActiveConnection** del objeto **Command** , seguida de una llamada al método **Execute** en el objeto **Command** .  
   
- El fragmento de código siguiente muestra el método básico de uso de la **comando** objeto que se va a ejecutar un comando en un origen de datos. Este ejemplo utiliza un comando que devuelve filas y devuelve los resultados de la ejecución del comando como un **Recordset** objeto.  
+ En el fragmento de código siguiente se muestra el método básico para utilizar el objeto **Command** para ejecutar un comando en un origen de datos. En este ejemplo se usa un comando que devuelve filas y se devuelven los resultados de la ejecución del comando como un objeto de **conjunto de registros** .  
   
 ```  
     'BeginBasicCmd  
@@ -107,8 +107,8 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="using-a-recordset-object"></a>Uso de un objeto de conjunto de registros  
- También puede crear un comando como una cadena de texto y PA para el **abierto** método en un **Recordset** objeto, junto con el tipo de comando (adCmdText), para su ejecución. Esto se muestra en el siguiente fragmento de código.  
+## <a name="using-a-recordset-object"></a>Usar un objeto de conjunto de registros  
+ También puede crear un comando como una cadena de texto y enviarlo al método **Open** en un objeto de **conjunto de registros** , junto con el tipo de comando (adCmdText), para su ejecución. En el fragmento de código siguiente se muestra esto.  
   
 ```  
   
@@ -146,8 +146,8 @@ objRs.Close
 Set objRs = Nothing  
 ```  
   
-## <a name="using-a-connection-object"></a>Uso de un objeto de conexión  
- También puede ejecutar un comando en un objeto de conexión abierto. El ejemplo de código anterior se convierte en esto:  
+## <a name="using-a-connection-object"></a>Usar un objeto de conexión  
+ También puede ejecutar un comando en un objeto de conexión abierto. El ejemplo de código anterior ahora se convierte en:  
   
 ```  
 Const DS = "MySqlServer"  

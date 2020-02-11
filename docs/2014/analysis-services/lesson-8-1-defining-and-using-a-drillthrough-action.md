@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493821"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definir y utilizar una acción de obtención de detalles
@@ -30,13 +30,13 @@ ms.locfileid: "69493821"
   
      La siguiente imagen muestra la pestaña **Acciones** del Diseñador de cubos.  
   
-     ![Pestaña acciones del diseñador de cubos](../../2014/tutorials/media/l8-action1.gif "Pestaña acciones del diseñador de cubos")  
+     ![Pestaña Acciones del Diseñador de cubos](../../2014/tutorials/media/l8-action1.gif "Pestaña Acciones del Diseñador de cubos")  
   
 2.  En la barra de herramientas de la pestaña **Acciones** , haga clic en el botón **Nueva acción de obtención de detalles** .  
   
      Aparecerá una plantilla de Acción en blanco en el panel de información.  
   
-     ![Plantilla de acción en blanco en el panel de información](../../2014/tutorials/media/l8-action2.gif "Plantilla de acción en blanco en el panel de información")  
+     ![Plantilla Acción en blanco en el panel de visualización](../../2014/tutorials/media/l8-action2.gif "Plantilla Acción en blanco en el panel de visualización")  
   
 3.  En el cuadro **nombre** , cambie el nombre de esta acción a `Internet Sales Details Drillthrough Action`.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "69493821"
   
 6.  En la lista **Columnas devueltas** , active las casillas **Item Description** y **Order Number** y, después, haga clic en **Aceptar**. La siguiente imagen muestra la plantilla de Acción con el aspecto que debería tener en este punto del procedimiento.  
   
-     ![Cuadro columnas de obtención de detalles](../../2014/tutorials/media/l8-action3.gif "Cuadro columnas de obtención de detalles")  
+     ![Cuadro Columnas de obtención de detalles](../../2014/tutorials/media/l8-action3.gif "Cuadro Columnas de obtención de detalles")  
   
 7.  Expanda el cuadro **Propiedades adicionales** , como en la siguiente imagen.  
   
-     ![Cuadro propiedades adicionales](../../2014/tutorials/media/l8-action4.gif "Cuadro propiedades adicionales")  
+     ![Cuadro Propiedades adicionales](../../2014/tutorials/media/l8-action4.gif "Cuadro Propiedades adicionales")  
   
 8.  En el cuadro **número máximo** de filas `10`, escriba.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "69493821"
   
      Esta configuración limita el número de filas devueltas y especifica el título que aparece en el menú de la aplicación cliente. En la ilustración siguiente se muestra esta configuración en el cuadro **Propiedades adicionales** .  
   
-     ![Cuadro propiedades adicionales](../../2014/tutorials/media/l8-action5.gif "Cuadro propiedades adicionales")  
+     ![Cuadro Propiedades adicionales](../../2014/tutorials/media/l8-action5.gif "Cuadro Propiedades adicionales")  
   
 ## <a name="using-the-drillthrough-action"></a>Usar la acción de obtención de detalles  
   
@@ -104,11 +104,11 @@ ms.locfileid: "69493821"
   
     -   ShipDateKey  
   
-6.  Cambie la **propiedad nombre** del atributo **Order Date Key** a `Order Date` then, haga clic en el botón examinar de la propiedad **columna Name** y, en el cuadro de diálogo **columna de nombre** , seleccione **Date** como tabla de origen y seleccione SimpleDate como la columna de origen. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Cambie la **propiedad nombre** del atributo **Order Date Key** a `Order Date` then, haga clic en el botón examinar de la propiedad **columna Name** y, en el cuadro de diálogo **columna de nombre** , seleccione **Date** como la tabla de origen y seleccione SimpleDate como columna de origen. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Cambie la propiedad **nombre** del atributo de clave de fecha de `Due Date` **vencimiento** a y, a continuación, use el mismo método que el atributo de clave de **fecha de pedido** , cambie la propiedad de la **columna Nombre** para este atributo por **Date. SimpleDate (WCHAR).** .  
+7.  Cambie la propiedad **nombre** del atributo de **clave de fecha** de `Due Date`vencimiento a y, a continuación, use el mismo método que el atributo de **clave de fecha de pedido** y cambie la propiedad columna de **nombre** de este atributo por **Date. SimpleDate (WCHAR)**.  
   
-8.  Cambie la propiedad **nombre** del atributo **Ship Date Key** a `Ship Date`y, a continuación, cambie la propiedad **columna Name** de este atributo por **Date. SimpleDate (WCHAR)** .  
+8.  Cambie la propiedad **nombre** del atributo **Ship Date Key** a `Ship Date`y, a continuación, cambie la propiedad **columna Name** de este atributo por **Date. SimpleDate (WCHAR)**.  
   
 9. Cambie a la pestaña **Acciones** del Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -122,7 +122,7 @@ ms.locfileid: "69493821"
   
      La siguiente imagen muestra estas columnas seleccionadas.  
   
-     ![Cuadro columnas de obtención de detalles](../../2014/tutorials/media/l8-action7.gif "Cuadro columnas de obtención de detalles")  
+     ![Cuadro Columnas de obtención de detalles](../../2014/tutorials/media/l8-action7.gif "Cuadro Columnas de obtención de detalles")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Revisar la acción de obtención de detalles modificada  
   
@@ -145,8 +145,8 @@ ms.locfileid: "69493821"
 ## <a name="next-lesson"></a>Lección siguiente  
  [Lección 9: Definir perspectivas y traducciones](lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>Vea también  
- [Acciones &#40;Analysis Services-datos multidimensionales&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Acciones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Acciones en modelos multidimensionales](multidimensional-models/actions-in-multidimensional-models.md)   
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definir una relación de hechos](lesson-5-2-defining-a-fact-relationship.md)   

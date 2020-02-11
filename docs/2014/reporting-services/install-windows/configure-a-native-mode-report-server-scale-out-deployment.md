@@ -1,5 +1,5 @@
 ---
-title: Configurar una implementación de escalabilidad horizontal de servidor de informes de modo nativo (Administrador de configuración de SSRS) | Microsoft Docs
+title: Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo (SSRS Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0281a487de123adfeb3739066628694b1da17a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108898"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo (Administrador de configuración de SSRS)
 
   Reporting Services en modo nativo admite un modelo de implementación de ampliación horizontal que permite ejecutar varias instancias del servidor de informes que comparten una única base de datos del servidor de informes. Las implementaciones escaladas se utilizan para aumentar la escalabilidad de los servidores de informes para administrar más usuarios con acceso simultáneo y mayores cargas de ejecución de informes. También se pueden utilizar para dedicar servidores concretos en el procesamiento de informes interactivos o programados.  
   
- Los servidores de informes en modo de SharePoint utilizan la infraestructura de los Productos de SharePoint para la implementación escalada. La ampliación del modo de SharePoint se logra al agregar más servidores de informes en modo de SharePoint a la granja de servidores de SharePoint. Para más información sobre la implementación escalada en el modo de SharePoint, vea [Agregar un servidor de informes adicional a una granja de servidores &#40;escalado horizontal de SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+ Los servidores de informes en modo de SharePoint usan la infraestructura de productos de SharePoint para el escalado horizontal. El escalado horizontal en modo de SharePoint se realiza agregando más servidores de informes en modo de SharePoint a la granja de servidores de SharePoint. Para más información sobre la implementación escalada en el modo de SharePoint, vea [Agregar un servidor de informes adicional a una granja de servidores &#40;escalado horizontal de SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
  **Las implementaciones escaladas constan de:**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66108898"
   
  **Para planear, instalar y configurar una implementación escalada, siga estos pasos:**  
   
--   Revisión [instalar SQL Server 2014 desde el Asistente para instalación &#40;instalación&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla para obtener instrucciones sobre cómo instalar instancias del servidor de informes.  
+-   Revise [instalar SQL Server 2014 desde el Asistente para la instalación &#40;&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los libros en pantalla para obtener instrucciones sobre cómo instalar instancias del servidor de informes.  
   
 -   Si tiene previsto hospedar la implementación escalada en un clúster con equilibrio de carga de red (NLB), deberá configurar el clúster NLB antes de configurar la implementación escalada. Para más información, consulte [Configurar un servidor de informes en un clúster con equilibrio de carga de red](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -59,7 +59,8 @@ ms.locfileid: "66108898"
   
 1.  Instale una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo que hospedará las bases de datos del servidor de informes. Como mínimo, instale [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-2.  Si es necesario, habilite el servidor de informes para conexiones remotas. Algunas versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no habilitan las conexiones TCP/IP remotas ni las conexiones de canalizaciones con nombre de forma predeterminada. Para confirmar si se permiten las conexiones remotas, use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y consulte la configuración de red de la instancia de destino. Si la instancia remota es también una instancia con nombre, compruebe que el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser está habilitado y ejecutándose en el servidor de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser proporciona el número de puerto que se usa para conectarse a la instancia con nombre.  
+2.  Si es necesario, habilite el servidor de informes para conexiones remotas. Algunas versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no habilitan las conexiones TCP/IP remotas ni las conexiones de canalizaciones con nombre de forma predeterminada. Para confirmar si se permiten las conexiones remotas, use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y consulte la configuración de red de la instancia de destino. Si la instancia remota es también una instancia con nombre, compruebe que el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser está habilitado y ejecutándose en el servidor de destino. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser proporciona el número de puerto que se usa para conectarse a la instancia con nombre.  
   
 ### <a name="to-install-the-first-report-server-instance"></a>Para instalar la primera instancia del servidor de informes  
   
@@ -67,7 +68,7 @@ ms.locfileid: "66108898"
   
 2.  Inicie la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Configure la dirección URL del servicio web del servidor de informes, la dirección URL del Administrador de informes y la base de datos del servidor de informes. Para obtener más información, vea [Configurar un servidor de informes &#40;modo nativo de Reporting Services&#41;](../report-server/configure-a-report-server-reporting-services-native-mode.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Configure la dirección URL del servicio web del servidor de informes, la dirección URL del Administrador de informes y la base de datos del servidor de informes. Para más información, vea [Configurar un servidor de informes &#40;modo nativo de Reporting Services&#41;](../report-server/configure-a-report-server-reporting-services-native-mode.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Compruebe que el servidor de informes está operativo. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -91,7 +92,7 @@ ms.locfileid: "66108898"
   
     6.  En **Base de datos del servidor de informes**, seleccione la base de datos que creó para el primer servidor de informes y, a continuación, haga clic en **Siguiente**. El nombre predeterminado es ReportServer. No seleccione ReportServerTempDB; solo se usa para almacenar datos temporales al procesar los informes. Si la lista de bases de datos está vacía, repita los cuatro pasos anteriores para establecer una conexión con el servidor.  
   
-    7.  En la página Credenciales, seleccione el tipo de cuenta y las credenciales que el servidor de informes utilizará para conectarse a la base de datos del servidor de informes. Puede utilizar las mismas credenciales que para la primera instancia del servidor de informes u otras. Haga clic en **Siguiente**.  
+    7.  En la página Credenciales, seleccione el tipo de cuenta y las credenciales que el servidor de informes utilizará para conectarse a la base de datos del servidor de informes. Puede utilizar las mismas credenciales que para la primera instancia del servidor de informes u otras. Haga clic en **Next**.  
   
     8.  Haga clic en **Resumen** y, a continuación, haga clic en **Finalizar**.  
   
@@ -107,23 +108,23 @@ ms.locfileid: "66108898"
   
      ![Captura de pantalla parcial de la página Implementación escalada](../../../2014/sql-server/install/media/scaloutscreen.gif "Captura de pantalla parcial de la página Implementación escalada")  
   
-3.  En la página implementación escalada, seleccione la instancia de servidor de informes que está esperando para unirse a la implementación y haga clic en **Agregar servidor**.  
+3.  En la página implementación escalada, seleccione la instancia del servidor de informes que está esperando para unirse a la implementación y haga clic en **Agregar servidor**.  
   
     > [!NOTE]  
-    >  **Problema:** Al intentar unir una instancia de servidor de informes de Reporting Services a la implementación escalada, puede experimentar los mensajes de error similares a "Acceso denegado".  
+    >  **Problema:** Al intentar unir una instancia del servidor de informes de Reporting Services a la implementación escalada, es posible que se produzcan mensajes de error similares a "acceso denegado".  
     >   
-    >  **Solución alternativa:** Copia de seguridad de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] clave de cifrado de la primera [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de instancia y restaurar la clave en el segundo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes. A continuación, intente unir el segundo servidor a la implementación escalada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    >  **Solución alternativa:** Realice una copia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de seguridad de la clave [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de cifrado de la primera instancia y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] restáurela en el segundo servidor de informes. A continuación, intente unir el segundo servidor a la implementación escalada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  Ahora debería poder para comprobar que ambas instancias del servidor de informes están operativas. Para comprobar la segunda instancia, puede utilizar la herramienta Configuración de Reporting Services con el fin de conectarse al servidor de informes y hacer clic en la dirección URL del servicio web o en la dirección URL del Administrador de informes.  
   
  Si tiene previsto ejecutar los servidores de informes en un clúster de servidores con equilibrio de carga, son necesarios algunos pasos de configuración adicionales. Para más información, consulte [Configurar un servidor de informes en un clúster con equilibrio de carga de red](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Crear una base de datos del servidor de informes en modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar una conexión a la base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Administración de un servidor de informes en modo nativo de Reporting Services](../report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

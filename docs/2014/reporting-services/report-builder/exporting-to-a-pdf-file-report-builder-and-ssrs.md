@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107919"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportar a un archivo PDF (Generador de informes y SSRS)
   La extensión de representación en PDF representa un informe en archivos que se pueden abrir en Adobe Acrobat y en visores de PDF de otros fabricantes que admiten PDF 1.3. Aunque PDF 1.3 es compatible con Adobe Acrobat 4.0 y versiones posteriores, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite Adobe Acrobat 6 o posterior. La extensión de representación no requiere el software Adobe para representar el informe. Sin embargo, se necesitan visores de PDF, como Adobe Acrobat, para ver o imprimir un informe en formato PDF.  
   
- La extensión de representación en PDF admite caracteres ANSI y puede traducir caracteres Unicode del japonés, coreano, chino tradicional, chino simplificado, cirílico, hebreo y árabe, con ciertas limitaciones. Para obtener más información acerca de las limitaciones, consulte [exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
+ La extensión de representación en PDF admite caracteres ANSI y puede traducir caracteres Unicode del japonés, coreano, chino tradicional, chino simplificado, cirílico, hebreo y árabe, con ciertas limitaciones. Para obtener más información sobre las limitaciones, vea [exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
   
  El representador de PDF es un representador en página física y, por consiguiente, tiene un comportamiento de paginación que difiere del de otros representadores como HTML y Excel. En este tema se proporciona información específica del representador de PDF y se describen las excepciones a las reglas.  
   
@@ -65,7 +65,8 @@ ms.locfileid: "66107919"
 |`Title`|El atributo `Name` del elemento RDL `Report`.|  
 |`Author`|El elemento RDL `Author`.|  
 |`Subject`|El elemento RDL `Description`.|  
-|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|`Creator`|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|El nombre y la versión de la extensión de representación.|  
 |`CreationDate`|La hora de ejecución del informe en el formato `datetime` de PDF.|  
   
@@ -80,7 +81,7 @@ ms.locfileid: "66107919"
 ### <a name="document-map"></a>Mapa del documento  
  Si hay alguna etiqueta de mapa del documento presente en el informe, se agrega un esquema de documento al archivo PDF. Cada etiqueta de mapa del documento aparece como una entrada en el esquema de documento en el orden en el que figura en el informe. En Acrobat, solo se agrega un marcador de destino al esquema del documento si se representa la página en la que aparece.  
   
- Si solo se representa una página, no se agrega ningún esquema de documento. El mapa del documento se organiza jerárquicamente para reflejar el nivel de anidamiento del informe. En Acrobat, puede obtenerse acceso al esquema de documento debajo de la pestaña Marcadores. Haga clic en una entrada dentro del esquema de documento para que el documento se desplace a la ubicación marcada.  
+ Si solo se representa una página, no se agrega ningún esquema de documento. El mapa del documento se organiza jerárquicamente para reflejar el nivel de anidamiento del informe. El esquema del documento es accesible en Acrobat en la pestaña marcadores. al hacer clic en una entrada dentro del esquema del documento, el documento se desplaza a la ubicación marcada.  
   
 ### <a name="bookmarks"></a>Marcadores  
  No se admiten marcadores en la representación en PDF.  
@@ -93,7 +94,7 @@ ms.locfileid: "66107919"
   
   
   
-##  <a name="Compression"></a> Compresión  
+##  <a name="Compression"></a>Presi  
  La compresión de imágenes está basada en el tipo de archivo original de la imagen. La extensión de representación en PDF comprime los archivos PDF de forma predeterminada.  
   
  Para conservar la compresión de las imágenes incluidas en el archivo PDF siempre que sea posible, las imágenes JPEG se almacenan como JPEG y el resto de tipos de imagen se almacenan como BMP.  
@@ -108,7 +109,7 @@ ms.locfileid: "66107919"
   
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   

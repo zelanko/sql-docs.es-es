@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250546"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente
@@ -26,11 +26,11 @@ ms.locfileid: "63250546"
   
  Cuando un suscriptor se sincroniza con un publicador, el publicador debe evaluar los filtros del suscriptor para determinar qué filas pertenecen a la partición, o conjunto de datos, de ese suscriptor. Este proceso de determinar la pertenencia a particiones de los cambios en el publicador para cada suscriptor que recibe un conjunto de datos filtrados se denomina *evaluación de particiones*. Sin las particiones precalculadas, la evaluación de particiones debe realizarse para cada cambio efectuado en una columna filtrada del publicador desde la última vez que se ejecutó el Agente de mezcla para un suscriptor concreto, y este proceso tiene que repetirse para cada suscriptor que se sincroniza con el publicador.  
   
- No obstante, si el publicador y el suscriptor se están ejecutando en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior y utiliza particiones precalculadas, la pertenencia a particiones de todos los cambios efectuados en el publicador se calcula previamente y se mantiene en el momento en que se realizan los cambios. Como resultado, cuando un suscriptor se sincroniza con el publicador, puede empezar a descargar inmediatamente los cambios relativos a su partición sin tener que pasar por el proceso de evaluación de particiones. Esto puede producir importantes mejoras de rendimiento cuando una publicación tiene un número elevado de cambios, suscriptores o artículos.  
+ Sin embargo, si el publicador y el suscriptor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] se están ejecutando en o una versión posterior y utiliza particiones precalculadas, la pertenencia a particiones de todos los cambios en el publicador se calcula previamente y se conserva en el momento en que se realizan los cambios. Como resultado, cuando un suscriptor se sincroniza con el publicador, puede empezar a descargar inmediatamente los cambios relativos a su partición sin tener que pasar por el proceso de evaluación de particiones. Esto puede producir importantes mejoras de rendimiento cuando una publicación tiene un número elevado de cambios, suscriptores o artículos.  
   
  Además de utilizar particiones precalculadas, genere instantáneas previamente o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan. Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
- **Para utilizar particiones precalculadas**  
+ **Para usar particiones precalculadas**  
   
  Las particiones precalculadas están habilitadas de forma predeterminada en todas las publicaciones nuevas y existentes que se ajustan a las directrices indicadas anteriormente. La configuración se puede cambiar a través de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o mediante programación. Para más información, consulte [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63250546"
   
 ### <a name="database-collation"></a>Intercalación de base de datos  
   
--   Cuando se utilizan las particiones precalculadas, siempre se utiliza la intercalación de la base de datos al realizar comparaciones, en lugar de la intercalación de la tabla o columna. Considere el caso siguiente:  
+-   Cuando se utilizan las particiones precalculadas, siempre se utiliza la intercalación de la base de datos al realizar comparaciones, en lugar de la intercalación de la tabla o columna. Considere el siguiente escenario:  
   
     -   Una base de datos con una intercalación que distingue entre mayúsculas y minúsculas contiene una tabla con una intercalación que no distingue entre mayúsculas y minúsculas.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63250546"
 ## <a name="performance-of-precomputed-partitions"></a>Rendimiento de las particiones precalculadas  
  Existe un pequeño costo de rendimiento con las particiones precalculadas cuando se cargan cambios desde el suscriptor al publicador, pero la mayor parte del tiempo de procesamiento de mezcla se dedica a evaluar las particiones y descargar los cambios del publicador al suscriptor, por lo que la ganancia neta puede ser importante. La ventaja en cuanto al rendimiento variará dependiendo del número de suscriptores que se sincronicen de forma simultánea y del número de actualizaciones por sincronización que desplacen filas de una partición a otra.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Filtros de fila con parámetros](parameterized-filters-parameterized-row-filters.md)  
   
   

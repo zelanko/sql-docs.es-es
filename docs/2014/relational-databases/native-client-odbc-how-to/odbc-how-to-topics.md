@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200376"
 ---
 # <a name="odbc-how-to-topics"></a>Temas de procedimientos de ODBC
@@ -26,25 +26,25 @@ ms.locfileid: "63200376"
   
 -   [Asignar identificadores y conectarse a SQL Server &#40;ODBC&#41;](allocate-handles-and-connect-to-sql-server-odbc.md)  
   
--   [Ejecutar consultas de temas de procedimientos &#40;ODBC&#41;](execute-queries/executing-queries-how-to-topics-odbc.md)  
+-   [Temas de procedimientos de ejecución de consultas &#40;ODBC&#41;](execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [Temas de procedimientos de los resultados de procesamiento &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+-   [Temas de procedimientos de procesamiento de resultados &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
--   [Uso de temas de procedimientos de los cursores &#40;ODBC&#41;](cursors/using-cursors-how-to-topics-odbc.md)  
+-   [Temas de procedimientos de uso de cursores &#40;ODBC&#41;](cursors/using-cursors-how-to-topics-odbc.md)  
   
--   [Utilice Microsoft Coordinador de transacciones distribuidas &#40;ODBC&#41;](use-microsoft-distributed-transaction-coordinator-odbc.md)  
+-   [Usar Microsoft Coordinador de transacciones distribuidas &#40;ODBC&#41;](use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
--   [Temas de procedimientos almacenados de ejecución &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+-   [Temas de procedimientos de ejecución de procedimientos almacenados &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
--   [Administración de temas de procedimientos sobre las columnas de texto e imagen &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+-   [Temas de procedimientos de administración de columnas de texto e imagen &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
--   [Generación de perfiles de temas de procedimientos de ODBC Driver Performance &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
+-   [Temas de procedimientos de generación de perfiles de rendimiento del controlador ODBC &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   
 -   [Procesar errores de ODBC &#40;ODBC&#41;](process-odbc-errors-odbc.md)  
   
--   [Copia masiva con los temas de procedimientos de controlador SQL Server ODBC &#40;ODBC&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+-   [Temas de procedimientos de la copia masiva con el controlador ODBC de SQL Server &#40;ODBC&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

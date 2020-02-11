@@ -1,5 +1,5 @@
 ---
-title: Buscar más información sobre cliente nativo de SQL Server | Documentos de Microsoft
+title: Buscar más información SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205851"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Buscar más información sobre SQL Server Native Client
@@ -34,9 +34,9 @@ ms.locfileid: "63205851"
   
  El SDK de DAC para Windows incluye la documentación de Objetos de datos ActiveX (ADO), OLE DB y Conectividad abierta de bases de datos (ODBC).  
   
- Información adicional sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client puede encontrarlo buscando el [Microsoft Support](https://support.microsoft.com).  
+ Puede encontrar información [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicional sobre Native Client buscando en el [soporte técnico de Microsoft](https://support.microsoft.com).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Programación de SQL Server Native Client](sql-server-native-client-programming.md)  
   
   

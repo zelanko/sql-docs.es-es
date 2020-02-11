@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107173"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Elementos de informe y conjuntos de datos en el Generador de informes
@@ -56,10 +56,10 @@ ms.locfileid: "66107173"
 2.  Al salir del Generador de informes o iniciar otro informe, se le pide que guarde el informe. Si no lo guarda, la próxima vez que abra este informe y publique elementos informe, podría publicar nuevas copias de los mismos conjuntos de datos. Para evitar que se guarden varias copias de conjuntos de datos compartidos en el servidor de informes, se recomienda que guarde el informe.  
   
 > [!IMPORTANT]  
->  Para asegurarse de que usted y otros usuarios pueden seguir usando correctamente los datos de un conjunto de datos compartido, debe entender los principios básicos sobre la protección de los elementos de informe. Para más información, vea [Proteger los elementos de un conjunto de datos compartido](../security/secure-shared-dataset-items.md).  
+>  Para asegurarse de que usted y otros usuarios pueden seguir usando correctamente los datos de un conjunto de datos compartido, debe entender los principios básicos sobre la protección de los elementos de informe. Para obtener más información, vea [Proteger los elementos de un conjunto de datos compartido](../security/secure-shared-dataset-items.md).  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vista de diseño de informe &#40;Generador de informes&#41;](../report-builder/report-design-view-report-builder.md)   
  [Seguridad &#40;Generador de informes&#41;](../report-builder/security-report-builder.md)   
  [Elementos de informe &#40;Generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   

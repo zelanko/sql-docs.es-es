@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478820"
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
@@ -29,35 +29,35 @@ ms.locfileid: "65478820"
   
 -   [Configuración general](#General)  
   
--   [Configuración de la administración de versiones](#Versions)  
+-   [Configuración de administración de versiones](#Versions)  
   
--   [Configuración del almacenamiento provisional](#Staging)  
+-   [Configuración de ensayo](#Staging)  
   
--   [Configuración del Explorador](#Explorer)  
+-   [Configuración del explorador](#Explorer)  
   
 -   [Configuración del complemento para Excel](#xls)  
   
--   [Configuración de las reglas de negocios](#BusinessRules)  
+-   [Configuración de reglas de negocios](#BusinessRules)  
   
--   [Configuración de notificaciones](#Notifications)  
+-   [Configuración de notificación](#Notifications)  
   
 -   [Configuración de seguridad](#Security)  
   
--   [No se utiliza](#NotUsed)  
+-   [No se usa](#NotUsed)  
   
-##  <a name="General"></a> Configuración general  
+##  <a name="General"></a>Configuración general  
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
-|**Tiempo de espera de conexión de la base de datos**|**DatabaseConnectionTimeOut**|El número de segundos que la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] espera para que una conexión se complete. Si la conexión no se completa en este tiempo, la conexión se cancela y se devuelve un error. El valor predeterminado es **60** segundos (1 minuto).|  
-|**Tiempo de espera de conexión de un comando de base de datos**|**DatabaseCommandTimeOut**|El número de segundos que la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] espera para que un comando se complete. Si el comando no se completa dentro de este tiempo, se cancela y se devuelve un error. El valor predeterminado es **3600** segundos (60 minutos).|  
-|**Tiempo de espera del servicio web**|**ServerTimeOut**|El número de segundos que ASP.NET espera a que se complete la solicitud de una página de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Si la solicitud no se completa dentro de este tiempo, se cancela y se devuelve un error. El valor predeterminado es **120000** segundos (2000 minutos).|  
+|**Tiempo de espera de conexión de base de datos**|**DatabaseConnectionTimeOut**|El número de segundos que la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] espera para que una conexión se complete. Si la conexión no se completa en este tiempo, la conexión se cancela y se devuelve un error. El valor predeterminado es **60** segundos (1 minuto).|  
+|**Tiempo de espera de comando de base de datos**|**DatabaseCommandTimeOut**|El número de segundos que la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] espera para que un comando se complete. Si el comando no se completa dentro de este tiempo, se cancela y se devuelve un error. El valor predeterminado es **3600** segundos (60 minutos).|  
+|**Tiempo de espera del servicio Web**|**ServerTimeOut**|El número de segundos que ASP.NET espera a que se complete la solicitud de una página de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Si la solicitud no se completa dentro de este tiempo, se cancela y se devuelve un error. El valor predeterminado es **120000** segundos (2000 minutos).|  
 |**Tiempo de espera de cliente**|**ClientTimeOut**|El número de segundos de inactividad antes de que [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] vuelva a la página principal. El valor predeterminado es **300** segundos (5 minutos).|  
 |**Número de filas por lote**|**RowsPerBatch**|El número de registros que se van a recuperar en cada lote del servicio web. El valor predeterminado es **50**.|  
 ||**ApplicationName**|El texto que se muestra en los registros de eventos. El valor predeterminado es **MDM**.|  
 ||**SiteTitle**|El texto que se muestra en la barra de título del explorador web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . El valor predeterminado es **Administrador de datos maestros**.|  
   
-##  <a name="Versions"></a> Configuración de la administración de versiones  
+##  <a name="Versions"></a>Configuración de administración de versiones  
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "65478820"
   
  Para más información, vea [Versiones &#40;Master Data Services&#41;](versions-master-data-services.md).  
   
-##  <a name="Staging"></a> Configuración del almacenamiento provisional  
+##  <a name="Staging"></a>Configuración de ensayo  
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
@@ -74,41 +74,41 @@ ms.locfileid: "65478820"
   
  Para más información, vea [Importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="Explorer"></a> Configuración del Explorador  
+##  <a name="Explorer"></a>Configuración del explorador  
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
-|**Número predeterminado de miembros en la jerarquía**|**HierarchyChildNodeLimit**|En el área funcional del **Explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], el número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...** . Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
-|**Mostrar nombres en jerarquía de manera predeterminada**|**ShowNamesInHierarchy**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , determina la configuración predeterminada que se selecciona al ver jerarquías.<br /><br /> El valor predeterminado es **Sí** o **1**, que indica que se muestran el nombre y el código de cada miembro. Cambie a **No** o **2** para mostrar solo el código.|  
-|**Número de atributos basados en dominio de la lista**|**DBAListRowLimit**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. El valor predeterminado es **50**. Si hay más de 50 miembros, en su lugar se muestra un cuadro de diálogo en el que se puede buscar.|  
+|**Número de miembros de la jerarquía de forma predeterminada**|**HierarchyChildNodeLimit**|En el área funcional del Explorador[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ** de **, el número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...**. Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
+|**Mostrar nombres en jerarquía de forma predeterminada**|**ShowNamesInHierarchy**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , determina la configuración predeterminada que se selecciona al ver jerarquías.<br /><br /> El valor predeterminado es **Sí** o **1**, que indica que se muestran el nombre y el código de cada miembro. Cambie a **No** o **2** para mostrar solo el código.|  
+|**Número de atributos basados en dominio de la lista**|**DBAListRowLimit**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Internet**, el número de atributos que se muestran en una lista al hacer doble clic en un valor de atributo basado en dominio de la cuadrícula. El valor predeterminado es **50**. Si hay más de 50 miembros, en su lugar se muestra un cuadro de diálogo en el que se puede buscar.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , nivel de similitud que se usa cuando se utiliza el criterio de filtro **Coincide** . El valor predeterminado es **0.3**. Establezca el valor más próximo a **1** para devolver una coincidencia que se aproxime más al criterio de búsqueda. Establezca el valor en **1** para obtener una coincidencia exacta.|  
   
-##  <a name="xls"></a> Configuración del complemento para Excel  
+##  <a name="xls"></a>Configuración del complemento para Excel  
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 |Mostrar el complemento del texto de Excel en la página principal del sitio web|ShowAddInText|En la página principal de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , muestra un vínculo para que los usuarios puedan descargar [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].|  
 |Ruta de instalación del complemento de Excel en la página principal del sitio web|AddInURL|En la página principal de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , si se muestra el vínculo a [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] , la ubicación a la que se dirigen los usuarios al hacer clic en el vínculo.|  
   
-##  <a name="BusinessRules"></a> Configuración de las reglas de negocios  
+##  <a name="BusinessRules"></a>Configuración de reglas de negocios  
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
-|**Incrementar nuevas reglas de negocios en**|**BusinessRuleDefaultPriorityIncrement**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número en que se incrementa la prioridad de cada nueva regla de negocio. El valor predeterminado es **10**.|  
+|**Número para incrementar nuevas reglas de negocios por**|**BusinessRuleDefaultPriorityIncrement**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número en que se incrementa la prioridad de cada nueva regla de negocio. El valor predeterminado es **10**.|  
 |**Número de miembros a los que aplicar las reglas de negocios**|**BusinessRuleRealtimeMemberCount**|En el área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número máximo de miembros en la cuadrícula al que se van a aplicar las reglas de negocios. En [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], número máximo de miembros en la hoja de cálculo activa a los que se van a aplicar reglas de negocios. El valor predeterminado es **10000**.|  
   
  Para más información, vea [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md).  
   
-##  <a name="Notifications"></a> Configuración de notificaciones  
+##  <a name="Notifications"></a>Configuración de notificaciones  
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
-|**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que se usa en el vínculo en las notificaciones por correo electrónico; por ejemplo, http://constoso/mds.|  
-|**Intervalo de las notificaciones de correo electrónico**|**NotificationInterval**|La frecuencia, en segundos, con la que se envían las notificaciones de correo electrónico. El valor predeterminado es **120** segundos (2 minutos).|  
+|**Master Data Manager dirección URL para las notificaciones**|**MDMRootURL**|La dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que se usa en el vínculo en las notificaciones por correo electrónico; por ejemplo, http://constoso/mds.|  
+|**Intervalo del correo electrónico de notificación**|**NotificationInterval**|La frecuencia, en segundos, con la que se envían las notificaciones de correo electrónico. El valor predeterminado es **120** segundos (2 minutos).|  
 |**Número de notificaciones en un solo correo electrónico**|**NotificationsPerEmail**|El número máximo de problemas de validación que se enumerarán en un solo correo electrónico de notificación. Los problemas adicionales, si los hay, no se incluyen en el correo electrónico, pero están disponibles en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Nota: Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], si cambia y guarda el **Formato de correo electrónico** en la pestaña **General** del usuario.|  
-|**Expresión regular para la dirección de correo electrónico**|**EmailRegExPattern**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expresión regular que se utiliza para validar la dirección de correo electrónico escrita en la pestaña **General** del usuario. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
-|**Cuenta de Correo electrónico de base de datos**|**EmailProfilePrincipalAccount**|Muestra la cuenta de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. El perfil predeterminado es **mds_email_user**.|  
+|**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cambiando y guardando el **Formato de correo electrónico** en la pestaña **General** del usuario.|  
+|**Expresión regular para la dirección de correo electrónico**|**EmailRegExPattern**|En el [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] área funcional de **permisos de usuario y de grupo** , la expresión regular utilizada para validar la dirección de correo electrónico especificada en la pestaña **General** de un usuario. Para obtener más información acerca de las expresiones regulares, vea [elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
+|**Correo electrónico de base de datos cuenta**|**EmailProfilePrincipalAccount**|Muestra la cuenta de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. El perfil predeterminado es **mds_email_user**.|  
 |**Perfil de Correo electrónico de base de datos**|**DatabaseMailProfile**|El perfil de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. Está en blanco de forma predeterminada.|  
 ||**ValidationIssueHTML**|En formato HTML, texto que los usuarios de correo electrónico obtienen cuando una regla de negocios produce un error en la validación.|  
 ||**ValidationIssueText**|En formato de texto plano, texto que los usuarios de correo electrónico obtienen cuando una regla de negocios produce un error en la validación.|  
@@ -117,15 +117,15 @@ ms.locfileid: "65478820"
   
  Para más información, vea [Notificaciones &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md).  
   
-##  <a name="Security"></a> Configuración de seguridad  
+##  <a name="Security"></a>Configuración de seguridad  
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , frecuencia, en segundos, con que se aplican los permisos de usuario y de grupo establecidos en la pestaña **Miembros de la jerarquía** . El valor predeterminado es **3600** segundos (60 minutos).|  
   
- Para obtener más información, consulte [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
+ Para más información, vea [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="NotUsed"></a> No se utiliza  
+##  <a name="NotUsed"></a>No se usa  
  La siguiente configuración de la tabla Configuración del sistema no se usa.  
   
 -   **SecurityMode**  
@@ -144,7 +144,7 @@ ms.locfileid: "65478820"
   
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [&#40;de seguridad de objetos de base de datos Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

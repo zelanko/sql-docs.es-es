@@ -1,5 +1,5 @@
 ---
-title: Para los modelos Bayes Naive contenido del modelo de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Contenido del modelo de minería de datos para los modelos Bayes Naive (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083648"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos Bayes naive (Analysis Services - Minería de datos)
-  En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de los términos relacionados con el contenido del modelo de minería de datos, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de los términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Descripción de la estructura de un modelo Bayes naive  
  Un modelo Bayes naive tiene un nodo primario único que representa el modelo y sus metadatos, y debajo de dicho nodo, varios árboles independientes que representan los atributos de predicción seleccionados. Además de los árboles para los atributos, cada modelo contiene un nodo de estadísticas marginales (NODE_TYPE = 26) que proporciona estadísticas descriptivas sobre el conjunto de casos de entrenamiento. Para obtener más información, vea [Información en el nodo de estadísticas marginales](#bkmk_margstats).  
@@ -33,12 +33,12 @@ ms.locfileid: "66083648"
 > [!NOTE]  
 >  Dado que un modelo Bayes naive no admite tipos de datos continuos, todos los valores de las columnas de entrada se tratan como discretos o discretizados. Si lo desea, puede especificar cómo se discretiza un valor. Para obtener más información, vea [Cambiar la discretización de una columna en un modelo de minería de datos](change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- ![estructura del contenido del modelo de bayes naive](../media/modelcontentstructure-nb.gif "estructura del contenido del modelo de bayes naive")  
+ ![estructura del contenido del modelo para naive bayes](../media/modelcontentstructure-nb.gif "estructura del contenido del modelo para naive bayes")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Contenido del modelo para un modelo Bayes naive  
  En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para los modelos Bayes naive.  
   
- Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME (que no se describen aquí), o para obtener una explicación de la terminología del modelo de minería de datos, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME (que no se describen aquí), o para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nombre de la base de datos en la que se almacena el modelo.  
@@ -49,18 +49,18 @@ ms.locfileid: "66083648"
  ATTRIBUTE_NAME  
  Nombres de los atributos que corresponden a este nodo.  
   
- **Raíz del modelo** : nombre del atributo de predicción.  
+ **Raíz del modelo** Nombre del atributo de predicción.  
   
- **Estadísticas marginales** : no aplicable.  
+ **Estadísticas marginales** No aplicable  
   
- **Atributo de predicción** : nombre del atributo de predicción.  
+ **Atributo de predicción** Nombre del atributo de predicción.  
   
- **Atributo de entrada** : nombre del atributo de entrada.  
+ **Atributo de entrada** Nombre del atributo de entrada.  
   
- **Estado de atributo de entrada** : solo el nombre del atributo de entrada. Para obtener el estado, use MSOLAP_NODE_SHORT_CAPTION.  
+ **Estado de atributo de entrada** Solo el nombre del atributo de entrada. Para obtener el estado, use MSOLAP_NODE_SHORT_CAPTION.  
   
  NODE_NAME  
- Nombre del nodo.  
+ El nombre del nodo.  
   
  Esta columna contiene el mismo valor que NODE_UNIQUE_NAME.  
   
@@ -82,32 +82,32 @@ ms.locfileid: "66083648"
  NODE_CAPTION  
  Etiqueta o título asociado al nodo. Esta propiedad se usa principalmente para la presentación.  
   
- **Raíz del modelo** : en blanco.  
+ **Raíz del modelo** en blanco  
   
- **Estadísticas marginales** : en blanco.  
+ **Estadísticas marginales** en blanco  
   
- **Atributo de predicción** : nombre del atributo de predicción.  
+ **Atributo de predicción** Nombre del atributo de predicción.  
   
- **Atributo de entrada** : nombre del atributo de predicción y del atributo de entrada actual. Ej.:  
+ **Atributo de entrada** Nombre del atributo de predicción y del atributo de entrada actual. Por ejemplo:  
   
  Bike Buyer -> Age  
   
- **Estado de atributo de entrada** : nombre del atributo de predicción y del atributo de entrada actual, más el valor de la entrada. Ej.:  
+ **Estado de atributo de entrada** Nombre del atributo de predicción y del atributo de entrada actual, más el valor de la entrada. Por ejemplo:  
   
  Bike Buyer -> Age = Missing  
   
  CHILDREN_CARDINALITY  
  Número de elementos secundarios que tiene el nodo.  
   
- **Raíz del modelo** : recuento de los atributos de predicción del modelo, más 1 para el nodo de estadísticas marginales.  
+ **Raíz del modelo** Recuento de atributos de predicción en el modelo más 1 para el nodo de estadísticas marginales.  
   
- **Estadísticas marginales** : por definición, no tiene elementos secundarios.  
+ **Estadísticas marginales** Por definición no tiene elementos secundarios.  
   
- **Atributo de predicción**  : recuento de los atributos de entrada que estaban relacionados con el atributo de predicción actual.  
+ **Atributo de predicción**  Recuento de los atributos de entrada que estaban relacionados con el atributo de predicción actual.  
   
- **Atributo de entrada** : recuento de los valores discretos o discretizados para el atributo de entrada actual.  
+ **Atributo de entrada** Recuento de los valores discretos o de datos discretos del atributo de entrada actual.  
   
- **Estado de atributo de entrada** : siempre es 0.  
+ **Estado de atributo de entrada** Siempre es 0.  
   
  PARENT_UNIQUE_NAME  
  Nombre único del nodo primario. Para obtener más información sobre cómo relacionar nodos primarios y secundarios, vea [Usar nombres de nodo e identificadores](#bkmk_nodenames).  
@@ -124,34 +124,34 @@ ms.locfileid: "66083648"
  NODE_PROBABILITY  
  Probabilidad asociada a este nodo.  
   
- **Raíz del modelo** : siempre es 0.  
+ **Raíz del modelo** Siempre es 0.  
   
- **Estadísticas marginales** : siempre es 0.  
+ **Estadísticas marginales** Siempre es 0.  
   
- **Atributo de predicción**  : siempre es 1.  
+ **Atributo de predicción**  Siempre es 1.  
   
- **Atributo de entrada** : siempre es 1.  
+ **Atributo de entrada** Siempre es 1.  
   
- **Estado de atributo de entrada** : número decimal que representa la probabilidad del valor actual. Los valores de todos los estados de los atributos de entrada bajo el nodo de atributo de entrada primario suman 1.  
+ **Estado de atributo de entrada** Número decimal que representa la probabilidad del valor actual. Los valores de todos los estados de los atributos de entrada bajo el nodo de atributo de entrada primario suman 1.  
   
  MARGINAL_PROBABILITY  
  Coincide con la probabilidad del nodo.  
   
  NODE_DISTRIBUTION  
- Tabla que contiene el histograma de probabilidad del nodo. Para obtener más información vea [Tabla NODE_DISTRIBUTION](#bkmk_nodedist).  
+ Tabla que contiene el histograma de probabilidad del nodo. Para más información, vea [Tabla NODE_DISTRIBUTION](#bkmk_nodedist).  
   
  NODE_SUPPORT  
  Número de casos que admiten este nodo.  
   
- **Raíz del modelo** : recuento de todos los casos de los datos de entrenamiento.  
+ **Raíz del modelo** Recuento de todos los casos en los datos de entrenamiento.  
   
- **Estadísticas marginales** : siempre es 0.  
+ **Estadísticas marginales** Siempre es 0.  
   
- **Atributo de predicción** : recuento de todos los casos de los datos de entrenamiento.  
+ **Atributo de predicción** Recuento de todos los casos en los datos de entrenamiento.  
   
- **Atributo de entrada** : recuento de todos los casos de los datos de entrenamiento.  
+ **Atributo de entrada** Recuento de todos los casos en los datos de entrenamiento.  
   
- **Estado de atributo de entrada** : recuento de los casos de los datos de entrenamiento que solo contienen este valor concreto.  
+ **Estado de atributo de entrada** Recuento de casos en los datos de entrenamiento que solo contienen este valor concreto.  
   
  MSOLAP_MODEL_COLUMN  
  Etiqueta que se utiliza para la visualización. Normalmente, coincide con ATTRIBUTE_NAME.  
@@ -161,28 +161,28 @@ ms.locfileid: "66083648"
   
  **Raíz del modelo** Siempre es 0.  
   
- **Estadísticas marginales** : siempre es 0.  
+ **Estadísticas marginales** Siempre es 0.  
   
- **Atributo de predicción**  : siempre es 0.  
+ **Atributo de predicción**  Siempre es 0.  
   
- **Atributo de entrada** : Puntuación interestingness para el atributo de entrada actual en relación con el atributo de predicción actual.  
+ **Atributo de entrada** Puntuación de interés del atributo de entrada actual en relación con el atributo de predicción actual.  
   
- **Estado de atributo de entrada** : siempre es 0.  
+ **Estado de atributo de entrada** Siempre es 0.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Cadena de texto que representa el nombre o el valor de una columna.  
   
- **Raíz del modelo** : en blanco.  
+ **Raíz del modelo** En blanco  
   
- **Estadísticas marginales** : en blanco.  
+ **Estadísticas marginales** En blanco  
   
- **Atributo de predicción**  : nombre del atributo de predicción.  
+ **Atributo de predicción**  Nombre del atributo de predicción.  
   
- **Atributo de entrada** : nombre del atributo de entrada.  
+ **Atributo de entrada** Nombre del atributo de entrada.  
   
- **Estado de atributo de entrada** : valor o valor de datos discretos del atributo de entrada.  
+ **Estado de atributo de entrada** Valor o valor de datos discretos del atributo de entrada.  
   
-##  <a name="bkmk_nodenames"></a> Usar nombres de nodo e identificadores  
+##  <a name="bkmk_nodenames"></a>Usar nombres de nodo e identificadores  
  La denominación de los nodos en un modelo Bayes naive proporciona información adicional sobre el tipo de nodo, lo que facilita la comprensión de las relaciones entre los tipos de información del modelo. En la tabla siguiente se muestra la convención para los identificadores asignados a los distintos tipos de nodos.  
   
 |Tipo de nodo|Convención para el identificador de nodo|  
@@ -233,7 +233,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Marital Status = S|0.457504004|  
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0.542495996|  
   
-##  <a name="bkmk_nodedist"></a> Tabla NODE_DISTRIBUTION  
+##  <a name="bkmk_nodedist"></a>NODE_DISTRIBUTION tabla  
  La columna de tabla anidada, NODE_DISTRIBUTION, normalmente contiene estadísticas sobre la distribución de los valores en el nodo. En un modelo Bayes naive, esta tabla se rellena solo para los nodos siguientes:  
   
 |Tipo de nodo|Contenido de la tabla anidada|  
@@ -257,7 +257,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Resultados esperados:  
   
-|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
@@ -265,10 +265,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  En estos resultados, el valor de la columna SUPPORT le indica el recuento de clientes con el estado civil especificado que compraron una bicicleta. La columna PROBABILITY contiene la probabilidad de cada valor de atributo, calculada solo para este nodo. Para obtener definiciones generales de los términos usados en la tabla NODE_DISTRIBUTION, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_margstats"></a> Información en el nodo de estadísticas marginales  
+###  <a name="bkmk_margstats"></a>Información en el nodo de estadísticas marginales  
  En un modelo Bayes naive, la tabla anidada para el nodo de estadísticas marginales contiene la distribución de los valores para el conjunto completo de datos de entrenamiento. Por ejemplo, la tabla siguiente contiene una lista parcial de las estadísticas de la tabla anidada NODE_DISTRIBUTION para el modelo `TM_NaiveBayes`:  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SOPORTE TÉCNICO|PROBABILITY|varianza|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
@@ -287,10 +287,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Se agrega un valor `Missing` (VALUE_TYPE = 1) a cada atributo de entrada y de salida para representar valores potenciales que no estaban presentes en los datos de entrenamiento. Debe tener cuidado de distinguir entre "missing" como cadena y el valor `Missing` predeterminado. Para más información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)   
  [Consultas de minería de datos](data-mining-queries.md)   
- [Algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm.md)  
+ [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)  
   
   

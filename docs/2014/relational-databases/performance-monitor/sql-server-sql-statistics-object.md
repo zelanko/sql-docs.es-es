@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183079"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Statistics (objeto de SQL Server)
@@ -36,19 +36,20 @@ ms.locfileid: "63183079"
 |Contadores de SQLServer:SQL Statistics|Descripción|  
 |----------------------------------------|-----------------|  
 |**Intentos de parametrización automática/seg.**|Número de intentos de parametrización automática por segundo. El número total deber ser la suma de las parametrizaciones automáticas seguras, no seguras y con errores. La parametrización automática tiene lugar cuando una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta parametrizar una solicitud de [!INCLUDE[tsql](../../../includes/tsql-md.md)] reemplazando algunos literales por parámetros, de forma que se posibilita la reutilización del plan de ejecución almacenado en caché resultante en varias solicitudes parecidas. Tenga en cuenta que las parametrizaciones automáticas también se denominan parametrizaciones simples en las versiones más recientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este contador no incluye las parametrizaciones forzadas.|  
-|**Solicitudes de lotes/seg.**|Número de lotes de comandos de [!INCLUDE[tsql](../../../includes/tsql-md.md)] recibidos por segundo. Esta estadística se ve afectada por todas las restricciones (como E/S, número de usuarios, tamaño de la memoria caché, complejidad de las solicitudes, etc.). Un número alto de solicitudes de lotes significa un buen rendimiento.|  
-|**Parametrizaciones automáticas con error/seg.**|Número de intentos de parametrización automática con error por segundo. Este número debería ser bajo. Tenga en cuenta que las parametrizaciones automáticas también se denominan parametrizaciones simples en versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Parametrizaciones forzadas/seg.**|Número de parametrizaciones forzadas logradas por segundo.|  
-|**Ejecuciones de planes correctos/seg**|Número de ejecuciones de planes por segundo en los que el plan de consulta se ha generado utilizando una guía de plan.|  
-|**Ejecuciones de planes equivocados/seg**|Número de ejecuciones de planes por segundo en los que una guía de plan no se pudo aplicar al generar los planes. Se descartó la guía de plan y se utilizó la compilación normal para generar el plan ejecutado.|  
-|**Parametrizaciones automáticas seguras/seg.**|Número de intentos de parametrización automática segura por segundo. El término "segura" se refiere a la determinación de que un plan de ejecución almacenado en caché puede compartirse entre varias instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza numerosos intentos de parametrización automática; algunos son seguros y otros no. Tenga en cuenta que las parametrizaciones automáticas también se denominan parametrizaciones simples en versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto no incluye las parametrizaciones forzadas.|  
+|**Solicitudes por lotes/seg.**|Número de lotes de comandos de [!INCLUDE[tsql](../../../includes/tsql-md.md)] recibidos por segundo. Esta estadística se ve afectada por todas las restricciones (como E/S, número de usuarios, tamaño de la memoria caché, complejidad de las solicitudes, etc.). Un número alto de solicitudes de lotes significa un buen rendimiento.|  
+|**Parametrizaciones automáticas con error/s**|Número de intentos de parametrización automática con error por segundo. Este número debería ser bajo. Tenga en cuenta que las parametrizaciones automáticas también se denominan parametrizaciones simples en versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Parametrizaciones forzadas/s**|Número de parametrizaciones forzadas logradas por segundo.|  
+|**Ejecuciones de planes guiados/s**|Número de ejecuciones de planes por segundo en los que el plan de consulta se ha generado utilizando una guía de plan.|  
+|**Ejecuciones de planes no guiadas por segundo**|Número de ejecuciones de planes por segundo en los que una guía de plan no se pudo aplicar al generar los planes. Se descartó la guía de plan y se utilizó la compilación normal para generar el plan ejecutado.|  
+|**Parametrizaciones automáticas seguras/s**|Número de intentos de parametrización automática segura por segundo. El término "segura" se refiere a la determinación de que un plan de ejecución almacenado en caché puede compartirse entre varias instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] . 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza numerosos intentos de parametrización automática; algunos son seguros y otros no. Tenga en cuenta que las parametrizaciones automáticas también se denominan parametrizaciones simples en versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto no incluye las parametrizaciones forzadas.|  
 |**Velocidad de atención de SQL**|Número de atenciones por segundo. Una atención es una solicitud del cliente para finalizar la solicitud que se está ejecutando en ese momento.|  
-|**Compilaciones SQL/seg.**|Número de compilaciones SQL por segundo. Indica el número de veces que se ha especificado la ruta de acceso al código de compilación. Incluye compilaciones causadas por recompilaciones de instrucciones en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando la actividad de usuarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es estable, este valor permanece fijo.|  
-|**Recompilaciones SQL/seg.**|Número de recompilaciones de instrucciones por segundo. Cuenta el número de veces que se desencadenan las recompilaciones de instrucciones. En general, es conveniente que el número de recompilaciones sea bajo.|  
-|**Parametrizaciones automáticas no seguras/seg.**|Número de intentos de parametrización automática no segura por segundo. Por ejemplo, la consulta dispone de algunas características que impiden compartir el plan almacenado en caché. Estas parametrizaciones se designan como no seguras. Esta opción no cuenta el número de parametrizaciones forzadas.|  
+|**Compilaciones SQL/s**|Número de compilaciones SQL por segundo. Indica el número de veces que se ha especificado la ruta de acceso al código de compilación. Incluye compilaciones causadas por recompilaciones de instrucciones en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando la actividad de usuarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es estable, este valor permanece fijo.|  
+|**Recompilaciones de SQL por segundo**|Número de recompilaciones de instrucciones por segundo. Cuenta el número de veces que se desencadenan las recompilaciones de instrucciones. En general, es conveniente que el número de recompilaciones sea bajo.|  
+|**Parametrizaciones automáticas no seguras/s**|Número de intentos de parametrización automática no segura por segundo. Por ejemplo, la consulta dispone de algunas características que impiden compartir el plan almacenado en caché. Estas parametrizaciones se designan como no seguras. Esta opción no cuenta el número de parametrizaciones forzadas.|  
   
-## <a name="see-also"></a>Vea también  
- [Plan Cache (objeto de SQL Server)](sql-server-plan-cache-object.md)   
+## <a name="see-also"></a>Consulte también  
+ [SQL Server, plan cache (objeto)](sql-server-plan-cache-object.md)   
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

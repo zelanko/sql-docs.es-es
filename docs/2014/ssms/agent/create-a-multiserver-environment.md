@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192963"
 ---
 # <a name="create-a-multiserver-environment"></a>Crear un entorno multiservidor
@@ -35,15 +35,15 @@ ms.locfileid: "63192963"
 ## <a name="considerations-for-multiserver-environments"></a>Consideraciones para entornos multiservidor  
  Consulte la tabla siguiente para conocer las configuraciones de MSX/TSX admitidas.  
   
-||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 o superior**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8,0 < SP3**|**TSX = 8.0 SP3 o superior**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|Sí|Sí|No|No|Sin|No|Sin|  
-|**MSX = 8.0 &LT; SP3**|Sí|Sí|No|Sin|No|Sin|Sin|  
-|**MSX = 8.0 SP3 o superior**|Sin|Sin|Sí|Sí|Sí|Sí|Sí|  
-|**MSX = 9.0**|Sin|Sin|No|Sí|Sí|Sí|Sí|  
-|**MSX = 10.0**|Sin|Sin|Sin|Sin|Sí|Sí|Sí|  
-|**MSX = 10.5**|Sin|No|Sin|No|No|Sí|Sí|  
-|**MSX = 11.0**|Sin|Sin|No|Sin|No|Sin|Sí|  
+|**MSX = 7.0**|Sí|Sí|No|No|No|No|No|  
+|**MSX = 8,0 < SP3**|Sí|Sí|No|No|No|No|No|  
+|**MSX = 8.0 SP3 o superior**|No|No|Sí|Sí|Sí|Sí|Sí|  
+|**MSX = 9.0**|No|No|No|Sí|Sí|Sí|Sí|  
+|**MSX = 10.0**|No|No|No|No|Sí|Sí|Sí|  
+|**MSX = 10.5**|No|No|No|No|No|Sí|Sí|  
+|**MSX = 11.0**|No|No|No|No|No|No|Sí|  
   
  Considere lo siguiente cuando cree un entorno multiservidor:  
   
@@ -60,14 +60,14 @@ ms.locfileid: "63192963"
   
 |Descripción|Tema|  
 |-----------------|-----------|  
-|Describe cómo crear un servidor maestro.|[Establecer un servidor maestro](make-a-master-server.md)|  
+|Describe cómo crear un servidor maestro.|[Make a Master Server](make-a-master-server.md)|  
 |Describe cómo crear un servidor de destino.|[Establecer un servidor de destino](make-a-target-server.md)|  
 |Describe cómo dar de alta un servidor de destino en un servidor maestro.|[Dar de alta un servidor de destino en un servidor maestro](enlist-a-target-server-to-a-master-server.md)|  
 |Describe cómo dar de baja un servidor de destino en un servidor maestro.|[Dar de baja un servidor de destino desde un servidor maestro](defect-a-target-server-from-a-master-server.md)|  
-|Describe cómo dar de baja varios servidores de destino en un servidor maestro.|[Dar de baja varios servidores de destino desde un servidor maestro](defect-multiple-target-servers-from-a-master-server.md)|  
-|Describe cómo comprobar el estado de un servidor de destino.|[sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|Describe cómo dar de baja varios servidores de destino en un servidor maestro.|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
+|Describe cómo comprobar el estado de un servidor de destino.|[sp_help_targetserver &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Solucionar problemas de trabajos multiservidor que usan servidores proxy](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

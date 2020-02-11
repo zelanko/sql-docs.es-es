@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200103"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronización web para la replicación de mezcla
@@ -29,7 +29,7 @@ ms.locfileid: "63200103"
   
 -   Sincronizar datos de usuarios móviles a través de Internet  
   
--   Sincronizar datos entre bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un firewall corporativo  
+-   Sincronizar datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre bases de datos a través de un Firewall corporativo.  
   
  Por ejemplo, un representante de ventas puede utilizar la sincronización web durante sus viajes. La empresa [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]tiene representantes de ventas que viajan para visitar varias tiendas y proveedores de su región. En viajes más largos, los representantes se hospedan en hoteles y necesitan una manera cómoda de cargar datos de ventas y descargar cualquier actualización de productos al final de cada día.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63200103"
   
  En la siguiente ilustración se muestran algunos de los componentes que participan en la sincronización web para la replicación de mezcla.  
   
- ![Flujo de datos y componentes de la sincronización web](media/web-sync01.gif "Flujo de datos y componentes de la sincronización web")  
+ ![Componentes y flujo de datos de sincronización web](media/web-sync01.gif "Componentes y flujo de datos de sincronización web")  
   
  La sincronización web es una opción exclusiva de las suscripciones de extracción, por lo que un Agente de mezcla se ejecutará siempre en el suscriptor. Este Agente de mezcla puede ser el Agente de mezcla estándar, el control ActiveX del Agente de mezcla o de una aplicación que proporcione sincronización a través de Replication Management Objects (RMO). Para especificar la ubicación del equipo en el que se ejecuta IIS, use el parámetro **-InternetUrl** del Agente de mezcla.  
   
@@ -80,8 +80,8 @@ ms.locfileid: "63200103"
   
 3.  A continuación, el Agente de mezcla en el suscriptor acepta la respuesta HTTPS y aplica los cambios de descarga a la base de datos de suscripciones.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar sincronización web](configure-web-synchronization.md)   
- [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar la sincronización Web](configure-web-synchronization.md)   
+ [Topologías para la sincronización Web](topologies-for-web-synchronization.md)  
   
   

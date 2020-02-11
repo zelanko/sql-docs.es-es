@@ -1,5 +1,5 @@
 ---
-title: Aplicar filtros a los datos de prueba de modelo | Microsoft Docs
+title: Aplicar filtros a los datos de prueba del modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086144"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a los datos de prueba del modelo
   Al especificar un origen de datos externo que se va a utilizar para probar un modelo, opcionalmente puede aplicar un filtro para restringir los datos de entrada. Por ejemplo, es posible que desee probar el modelo específicamente para realizar predicciones para los clientes con a un intervalo de ingresos determinado.  
   
- Por ejemplo, en el escenario de distribución de correo directo de AdventureWorks, puede crear una expresión de filtro como la siguiente en ProspectiveBuyer, que es la tabla que contiene los datos de prueba, y restringir los casos por intervalo de ingresos:  
+ Por ejemplo, en el escenario de distribución de correo directo de AdventureWorks, puede crear una expresión de filtro como la siguiente en ProspectiveBuyer, que es la tabla que contiene los datos de prueba, y restringir los casos de prueba por intervalo de ingresos:  
   
  `[YearlyIncome] = '50000'`  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66086144"
   
 3.  En la pestaña **Selección de entrada** , en **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión**, seleccione la opción **Especificar otro conjunto de datos**.  
   
-4.  Haga clic en el botón Examinar **(...)**  para abrir un cuadro de diálogo y elegir el conjunto de datos externos.  
+4.  Haga clic en el botón examinar **(...)** para abrir un cuadro de diálogo y elija el conjunto de datos externo.  
   
 5.  Elija la tabla de casos y agregue una tabla anidada si fuera necesario. Asigne columnas del modelo a columnas del conjunto de datos externos según sea necesario. Cierre el cuadro de diálogo **Especificar asignación de columna** para guardar la definición de la tabla de origen.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "66086144"
   
 8.  Use las columnas **Operator**y **Value** para definir cómo se filtra la columna.  
   
-     **Nota** : escriba los valores sin usar comillas tipográficas.  
+     **Nota:** Escriba valores sin usar comillas.  
   
 9. Haga clic en el cuadro de texto **Y/O** y seleccione un operador lógico para definir cómo se combinan varias condiciones.  
   
-10. Si lo desea, haga clic en el botón Examinar **(...)**  a la derecha de la **valor** cuadro de texto para abrir el **filtro** diálogo cuadro y establecer las condiciones en la tabla anidada o en las columnas de tabla de casos.  
+10. Opcionalmente, haga clic en el botón examinar **(...)** a la derecha del cuadro de texto **valor** para abrir el cuadro de diálogo **filtro** y establecer las condiciones en la tabla anidada o en las columnas individuales de la tabla de casos.  
   
 11. Vea el texto que aparece en el panel **Expresión** para comprobar que las condiciones de filtro completadas son correctas.  
   
@@ -89,8 +89,8 @@ ms.locfileid: "66086144"
   
      La condición de filtro se aplica al origen de datos al crear el gráfico de precisión.  
   
-## <a name="see-also"></a>Vea también  
- [Elegir y asignar datos de prueba para el modelo](choose-and-map-model-testing-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Elegir y asignar los datos de prueba del modelo](choose-and-map-model-testing-data.md)   
  [Usar datos de tabla anidada como entrada para un gráfico de precisión](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Elegir un tipo de gráfico de precisión y establecer las opciones del gráfico](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   

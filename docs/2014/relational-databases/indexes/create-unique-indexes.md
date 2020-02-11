@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162355"
 ---
 # <a name="create-unique-indexes"></a>Crear índices únicos
@@ -94,7 +94,7 @@ ms.locfileid: "63162355"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Para crear un índice único mediante el Diseñador de tablas  
   
@@ -120,11 +120,11 @@ ms.locfileid: "63162355"
   
 11. En la cuadrícula, en **(General)** , seleccione **Es Unique** y luego **Sí** en la lista.  
   
-12. Opcional: En la cuadrícula principal, en **Diseñador de tablas**, seleccione **Omitir claves duplicadas** y, a continuación, elija **Sí** en la lista. Haga esto si desea omitir los intentos de agregar datos que crearían una clave duplicada en el índice único.  
+12. Opcional: en la cuadrícula principal, debajo de **Diseñador de tablas**, seleccione **Omitir claves duplicadas** y elija **Sí** en la lista. Haga esto si desea omitir los intentos de agregar datos que crearían una clave duplicada en el índice único.  
   
 13. Haga clic en **Cerrar**.  
   
-14. En el menú **Archivo** , haga clic en **Guardar**_table_name_.  
+14. En el menú **archivo** , haga clic en **Guardar**_TABLE_NAME_.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Crear un índice único mediante el Explorador de objetos  
   
@@ -142,9 +142,9 @@ ms.locfileid: "63162355"
   
 7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...** .  
   
-8.  En el cuadro de diálogo **Seleccionar columnas de**_nombre_de_tabla_ , active las casillas de las columnas de tabla que se van a agregar al índice único.  
+8.  En el cuadro de diálogo **seleccionar columnas de**_TABLE_NAME_ , active las casillas de las columnas de tabla que se van a agregar al índice único.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 10. En el cuadro de diálogo **Nuevo índice** , haga clic en **Aceptar**.  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63222950"
 ---
 # <a name="adding-indentation"></a>Agregar sangría
@@ -52,7 +52,7 @@ ms.locfileid: "63222950"
   
      ![Apariencia del cuadro de diálogo Pestañas](media/tabsdialog.gif "Apariencia del cuadro de diálogo Pestañas")  
   
-3.  Haga clic en **Aceptar**.  
+3.  Haga clic en **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Maximizar el Editor de consultas](lesson-2-3-maximizing-query-editor.md)  

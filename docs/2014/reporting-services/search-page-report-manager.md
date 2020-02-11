@@ -1,5 +1,5 @@
 ---
-title: Buscar página (Administrador de informes) | Microsoft Docs
+title: Página buscar (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102262"
 ---
 # <a name="search-page-report-manager"></a>Buscar (página del Administrador de informes)
@@ -31,7 +31,7 @@ ms.locfileid: "66102262"
   
 1.  Abra el Administrador de informes.  
   
-2.  En la parte superior de la página, escriba sus criterios de búsqueda en el cuadro **Buscar** . A continuación, presione Entrar o haga clic en la flecha Buscar.  
+2.  En la parte superior de la página, escriba sus criterios de búsqueda en el cuadro **Buscar**. A continuación, presione Entrar o haga clic en la flecha Buscar.  
   
 ## <a name="options"></a>Opciones  
  **Eliminar**  
@@ -40,20 +40,20 @@ ms.locfileid: "66102262"
 > [!NOTE]  
 >  Este botón solo está disponible en la vista **Detalles**. Sin embargo, puede mantener el mouse sobre un elemento y utilizar el menú para obtener acceso a la funcionalidad de eliminar en la vista **Detalles** o en la **Vista de lista**.  
   
- **Mover**  
+ **Move**  
  Haga clic para cambiar la ubicación de un elemento. Al hacerlo, se abre la página para mover elementos, en la que puede seleccionar una nueva ubicación de carpeta.  
   
 > [!NOTE]  
 >  Este botón solo está disponible en la vista **Detalles**. Sin embargo, puede desplazar el mouse sobre un elemento y utilizar el menú para obtener acceso a la funcionalidad de mover en la vista **Detalles** o en la **Vista de lista**.  
   
- Cuadro Buscar  
+ Cuadro de búsqueda  
  Escriba la totalidad o parte del nombre de un elemento que desee ubicar y, a continuación, haga clic en **Ir** para iniciar la búsqueda. La longitud máxima de una cadena de búsqueda es 128 caracteres.  
   
  En los resultados de la búsqueda, se incluyen los nombres o las descripciones de los elementos que contengan la cadena de búsqueda completa en cualquier lugar del valor de texto.  
   
  No se admiten operadores booleanos, como el signo más (+).  
   
- **Vista de detalles**  
+ **Detalles**  
  Haga clic para mostrar la página Resultados de la búsqueda en una lista que contiene información adicional sobre los elementos, como el tipo de elemento, nombre, la descripción, la carpeta en la que se encuentra y la última vez que se ejecutó. En la vista **Detalles**puede utilizar los botones **Eliminar** y **Mover** para quitar y reubicar los elementos de una carpeta.  
   
  Mantenga el mouse sobre un elemento y haga clic en la flecha de lista desplegable para abrir el menú desplegable donde podrá obtener acceso a las propiedades del elemento seleccionado y configurarlas.  
@@ -63,7 +63,7 @@ ms.locfileid: "66102262"
   
  Mantenga el mouse sobre un elemento y haga clic en la flecha de lista desplegable para abrir el menú desplegable donde podrá obtener acceso a las propiedades del elemento seleccionado y configurarlas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Propiedades de TCP / IP (pestaña de direcciones IP) | Microsoft Docs
+title: Propiedades de TCP-IP (pestaña direcciones IP) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151444"
 ---
-# <a name="tcp-ip-properties-ip-addresses-tab"></a>Propiedades de TCP / IP (pestaña de direcciones IP)
+# <a name="tcp-ip-properties-ip-addresses-tab"></a>Propiedades de TCP-IP (pestaña direcciones IP)
   Use el cuadro de diálogo **Propiedades de TCP/IP (pestaña Direcciones IP)** para configurar las opciones del protocolo TCP/IP para una dirección IP específica. Solo las opciones **Puertos dinámicos TCP** y **Puerto TCP** pueden configurarse para todas las direcciones al mismo tiempo seleccionando **IPAll**.  
   
- Los cambios surten efecto cuando se reinicia [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener información sobre cómo iniciar y detener el servicio SQL Server Browser, consulte Cómo: Iniciar y detener el servicio SQL Server Browser en los libros en línea.  
+ Los cambios surten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efecto cuando se reinicia. Para obtener información sobre cómo iniciar y detener el servicio SQL Server Browser, vea Cómo: Iniciar y detener el servicio SQL Server Browser en los libros en pantalla.  
   
 ## <a name="static-vs-dynamic-ports"></a>Puertos estáticos frente a Puertos dinámicos  
  La instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza escuchas para las conexiones entrantes en el puerto 1433. Se puede cambiar el puerto por razones de seguridad o debido a un requisito de la aplicación cliente. De forma predeterminada, las instancias con nombre (incluido SQL Server Express) se configuran para escuchar en los puertos dinámicos. Para configurar un puerto estático, deje en blanco la casilla **Puertos dinámicos TCP** y proporcione un número de puerto disponible en la casilla **Puerto TCP** . Para obtener más información acerca de cómo abrir los puertos del firewall, vea Configurar Firewall de Windows para permitir el acceso a SQL Server en los Libros en pantalla.  
@@ -51,12 +51,12 @@ ms.locfileid: "63151444"
   
  El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede escuchar en varios puertos con la misma dirección IP. Al enumerar los puertos, sepárelos con una coma siguiendo el formato 1433,1500,1501. Este campo tiene un límite de 2.047 caracteres.  
   
- Para configurar que una misma dirección IP escuche en varios puertos, el parámetro **Escuchar todo** también tiene que establecerse en **No**(en la **pestaña Protocolos** del cuadro de diálogo **Propiedades de TCP/IP** ). Para obtener más información, vea "Cómo: Configurar el motor de base de datos para escuchar en varios puertos TCP"en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+ Para configurar que una misma dirección IP escuche en varios puertos, el parámetro **Escuchar todo** también tiene que establecerse en **No**(en la **pestaña Protocolos** del cuadro de diálogo **Propiedades de TCP/IP** ). Para obtener más información, vea: "Cómo: Configurar el motor de base de datos para escuchar en varios puertos TCP" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Agregar o quitar direcciones IP  
  El Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra las direcciones IP disponibles en el momento en que se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las direcciones IP disponibles pueden cambiar cuando se agregan o se quitan tarjetas de red, cuando expira una dirección IP asignada dinámicamente, cuando se vuelve a configurar la estructura de red o cuando cambia la ubicación física del equipo, por ejemplo un equipo portátil que se conecta a la red en un edificio diferente. Para cambiar una dirección IP, edite el cuadro **Dirección IP** y, a continuación, reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Elegir un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Crear una cadena de conexión válida con TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Servicio SQL Server Browser](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478883"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Superponer permisos de usuario y de grupo (Master Data Services)
@@ -30,11 +30,11 @@ ms.locfileid: "65478883"
   
  Si un usuario es miembro de varios grupos y dichos grupos tienen acceso al Administrador de datos maestros, se aplican las siguientes reglas:  
   
--   **Denegar** invalida al resto de permisos.  
+-   **Deny** invalida todos los demás permisos.  
   
--   **Actualización** invalida **de sólo lectura**.  
+-   La **actualización** invalida las invalidaciones **de solo lectura**.  
   
- Estas reglas se aplican a las pestañas **Modelos** y **Miembros de la jerarquía** . Los permisos se resuelven para cada pestaña y, a continuación, se combinan. Para obtener más información, consulte [How Permissions Are Determined &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
+ Estas reglas se aplican a las pestañas **Modelos** y **Miembros de la jerarquía** . Los permisos se resuelven para cada pestaña y, a continuación, se combinan. Para obtener más información, consulte [Cómo se determinan los permisos &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
   
 > [!NOTE]  
 >  Puede ver la resolución de los permisos superpuestos de usuario y de grupo en la interfaz de usuario. Las pestañas **Modelos** y **Miembros de la jerarquía** tienen una lista desplegable en la que puede elegir **Vigente** para ver los permisos vigentes.  
@@ -44,26 +44,26 @@ ms.locfileid: "65478883"
   
  El usuario pertenece a Grupo 1 y Grupo 2.  
   
- El usuario tiene **de sólo lectura** permiso para la entidad Product.  
+ El usuario tiene permiso **de solo lectura** para la entidad product.  
   
  El Grupo 1 tiene el permiso **Actualizar** para la entidad Product.  
   
- Grupo 2 tiene **de sólo lectura** permiso para la entidad Product.  
+ El grupo 2 tiene permiso **de solo lectura** para la entidad product.  
   
- Resultado: el permiso vigente del usuario para la entidad Product es **Actualizar**.  
+ Resultado: el permiso vigente del usuario para la entidad Product es **Actualizar** .  
   
 ## <a name="example-2"></a>Ejemplo 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
   
  El usuario pertenece a Grupo 1 y Grupo 2.  
   
- El usuario tiene **de sólo lectura** permiso para la entidad Product.  
+ El usuario tiene permiso **de solo lectura** para la entidad product.  
   
  El Grupo 1 tiene el permiso **Actualizar** para la entidad Product.  
   
  El Grupo 2 tiene el permiso **Denegar** para la entidad Product.  
   
- Resultado: el permiso vigente del usuario para la entidad Product es **Denegar**.  
+ Resultado: el permiso vigente del usuario para la entidad Product es **Denegar** .  
   
 ## <a name="example-3"></a>Ejemplo 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -72,13 +72,13 @@ ms.locfileid: "65478883"
   
  El usuario tiene el permiso **Actualizar** para un grupo de miembros en un nodo de jerarquía.  
   
- Grupo 1 tiene **de sólo lectura** permiso a un grupo de miembros en un nodo de jerarquía.  
+ El grupo 1 tiene el permiso **solo lectura** para un grupo de miembros en un nodo de la jerarquía.  
   
- Grupo 2 tiene **de sólo lectura** permiso a un grupo de miembros en un nodo de jerarquía.  
+ El grupo 2 tiene **el permiso solo lectura** para un grupo de miembros en un nodo de la jerarquía.  
   
- Resultado: el permiso vigente del usuario para los miembros es **Actualizar**.  
+ Resultado: el permiso vigente del usuario para los miembros es **Actualizar** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo se determinan los permisos &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [Superponer permisos de modelo y de miembro &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades de estructura de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la estructura de minería de datos (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077662"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Cuadro de diálogo Propiedades de la estructura de minería de datos (Analysis Services: minería de datos)
@@ -33,7 +33,7 @@ ms.locfileid: "66077662"
 |**General**|Use la página **General** para visualizar y modificar las propiedades generales de la estructura de minería de datos. Para obtener más información sobre esta página, vea [General &#40;cuadro de diálogo Propiedades de la estructura de minería de datos&#41; &#40;Analysis Services: minería de datos&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md).|  
 |**Configuración de errores**|Use la página **Configuración de errores** para visualizar y modificar las configuraciones de errores de la estructura de minería de datos. Para obtener más información sobre esta página, vea [Configuración de errores &#40;cuadro de diálogo Propiedades de la estructura de minería de datos&#41; &#40;Analysis Services: datos multidimensionales&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

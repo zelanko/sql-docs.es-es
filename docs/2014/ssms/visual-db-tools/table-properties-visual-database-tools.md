@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204690"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propiedades de la tabla (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63204690"
  **Categoría Identidad**  
  Se expande para mostrar las propiedades **Nombre**, **Descripción**y **Esquema**.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la tabla. Para editar el nombre, escriba en el cuadro de texto.  
   
 > [!CAUTION]  
@@ -44,12 +44,12 @@ ms.locfileid: "63204690"
  Muestra el nombre del origen de datos de la tabla seleccionada.  
   
  **Descripción**  
- Muestra una descripción de la tabla seleccionada. Para ver o editar la descripción completa, haga clic en la descripción y después en el botón de puntos suspensivos **(...)** situado a la derecha de la propiedad.  
+ Muestra una descripción de la tabla seleccionada. Para ver la descripción completa o para editarla, haga clic en la descripción y, a continuación, haga clic en los puntos suspensivos **(...)** que aparecen a la derecha de la propiedad.  
   
  **Esquema**  
  Muestra el nombre del esquema al que pertenece esta tabla (solo se aplica a Microsoft SQL Server).  
   
- **Nombre de servidor**  
+ **Nombre del servidor**  
  Muestra el nombre del servidor del origen de datos.  
   
  **Categoría Diseñador de tablas**  
@@ -58,31 +58,31 @@ ms.locfileid: "63204690"
  **Columna de identidad**  
  Muestra la columna utilizada como columna de identidad de la tabla. Para cambiar la columna de identidad, elija una en la lista desplegable. Solo se mostrarán en la lista columnas de tipo de datos numérico.  
   
- **Indizable**  
+ **Indexable**  
  Muestra si la tabla puede indizarse. Si la tabla no puede indizarse, puede deberse a que no es el propietario de la tabla o a que la tabla contiene columnas con tipos de datos text, ntext o image.  
   
  **Replicado**  
  Muestra si la columna se replica en otra ubicación  
   
- **Categoría Especificación de espacio de datos normal**  
- Se expande para mostrar las propiedades de **(Tipo de espacio de datos)** , **Nombre de esquema de partición o grupo de archivos**y **Lista de columnas de particiones**.  
+ **Categoría especificación de espacio de datos normal**  
+ Se expande para mostrar las propiedades de **(Tipo de espacio de datos)**, **Nombre de esquema de partición o grupo de archivos**y **Lista de columnas de particiones**.  
   
  **(Tipo de espacio de datos)**  
  Indica si la tabla se almacena utilizando un grupo de archivos o un esquema de partición.  
   
- **Nombre de esquema de partición o grupo de archivos**  
+ **Nombre del esquema de partición o grupo de archivos**  
  Muestra el nombre del grupo de archivos o esquema de partición.  
   
  **Lista de columnas de particiones**  
  Proporciona acceso al cuadro de diálogo **Lista de columnas de particiones** .  
   
- **Columna de GUID de filas**  
+ **Columna de GUID de fila**  
  Muestra la columna utilizada por Microsoft SQL Server como columna ROWGUID de la tabla. Para cambiar la columna ROWGUID, elija una en la lista desplegable (solo se aplica a SQL Server 7.0 o posterior).  
   
- **Grupo de archivos Text/Image**  
+ **Grupo de archivos de texto o imagen**  
  Proporciona una lista desplegable en la que se puede elegir el grupo de archivos para columnas que tienen tipos de datos text o image. Si la tabla se almacena utilizando un esquema de partición, deje este campo en blanco.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñar tablas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482678"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Eliminar una fila (complemento MDS para Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "65482678"
 > [!NOTE]  
 >  Los administradores pueden reactivar miembros eliminados. Para obtener más información, consulte [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../reactivate-a-member-or-collection-master-data-services.md).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe tener permiso para el área funcional **Explorador** .  
@@ -38,7 +38,7 @@ ms.locfileid: "65482678"
   
 3.  En el cuadro de diálogo de confirmación, haga clic en **Sí**.  
   
-## <a name="see-also"></a>Vea también  
- [Publicar datos &#40;complemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Consulte también  
+ [Complemento MDS para Excel de &#40;de datos de publicación&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

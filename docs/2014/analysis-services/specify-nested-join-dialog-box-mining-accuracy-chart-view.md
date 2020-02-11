@@ -1,5 +1,5 @@
 ---
-title: Especificar combinación anidada cuadro de diálogo (vista Gráfico de precisión de minería de datos) | Microsoft Docs
+title: Cuadro de diálogo especificar combinación anidada (vista gráfico de precisión de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20106b002eba07a3eb9e2877c84dacb9a98b87b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068319"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>Especificar combinación anidada (cuadro de diálogo de la vista Gráfico de precisión de minería de datos)
@@ -31,9 +31,9 @@ ms.locfileid: "66068319"
  **Quitar relación**  
  Haga clic para eliminar una relación que seleccione en el panel **Diagrama** .  
   
-## <a name="see-also"></a>Vea también  
- [Diseñador gráfico de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Crear o editar el cuadro de diálogo relación &#40;Analysis Services - datos multidimensionales&#41;](create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Diseñador de gráficos de precisión de minería de datos &#40;&#41;de minería de datos](mining-accuracy-chart-designer-data-mining.md)   
+ [Tareas y procedimientos de prueba y validación &#40;&#41;de minería de datos](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Cuadro de diálogo crear o editar relación &#40;Analysis Services-datos multidimensionales&#41;](create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)  
   
   

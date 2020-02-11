@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Requirements | Microsoft Docs
+title: Requisitos de Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149779"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
@@ -93,13 +93,13 @@ ms.locfileid: "63149779"
   
 -   TextData  
   
--   Application Name  
+-   Nombre de la aplicación  
   
 -   LoginName  
   
 -   DatabaseName  
   
--   Id. de base de datos  
+-   Identificador de base de datos  
   
 -   HostName  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63149779"
   
 -   SPID  
   
--   Start Time  
+-   Hora de inicio  
   
 -   EndTime  
   
@@ -124,8 +124,8 @@ ms.locfileid: "63149779"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
-## <a name="operating-system-requirements"></a>Requisitos de sistema operativo  
- Los sistemas operativos admitidos para ejecutar la herramienta de administración y los servicios del controlador y el cliente son los mismos que para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre qué sistemas operativos se admiten para su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la instancia, vea [requisitos de Hardware y Software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+## <a name="operating-system-requirements"></a>Requisitos del sistema operativo  
+ Los sistemas operativos admitidos para ejecutar la herramienta de administración y los servicios del controlador y el cliente son los mismos que para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información acerca de los sistemas operativos que se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten para la instancia de, consulte [requisitos de hardware y software para la instalación de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Las características de Distributed Replay se admiten en sistemas operativos basados en x86 y en x64. Para los sistemas operativos basados en x64, solo se admite el modo Windows sobre Windows (WOW).  
   
@@ -134,8 +134,10 @@ ms.locfileid: "63149779"
   
 |Característica Distributed Replay|Instalaciones máximas por cada entorno de reproducción|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|1|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|16 (equipos físicos o virtuales)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|1|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|16 (equipos físicos o virtuales)|  
 |Herramienta de administración|Sin límite|  
   
 > [!NOTE]  
@@ -157,7 +159,7 @@ ms.locfileid: "63149779"
   
  La reproducción de eventos asociados a inicios de sesión que faltan o que son incorrectos tendrá como resultado errores de reproducción, pero la operación de reproducción continuará.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Seguridad de Distributed Replay](distributed-replay-security.md)   
  [Instalar Distributed Replay](install-distributed-replay-overview.md)  

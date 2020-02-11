@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195037"
 ---
 # <a name="open-queries-visual-database-tools"></a>Abrir consultas (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63195037"
 > [!NOTE]  
 >  De manera predeterminada, el Diseñador de consultas y vistas abre todos sus paneles (SQL, Criterios, Diagrama y Resultados), pero este comportamiento predeterminado pueden cambiarse en el cuadro de diálogo **Opciones** . Para abrir estos paneles si están cerrados, en el menú **Diseñador de consultas** , elija **Panel**y, a continuación, haga clic en el panel que desea abrir.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Guardar consultas &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
  [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  

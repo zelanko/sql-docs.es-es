@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77b858cdee3940bb797ab2bfa3929ae09ed807e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204567"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>Errores de sintaxis SQL (Visual Database Tools)
@@ -36,7 +36,7 @@ ms.locfileid: "63204567"
   
  El cuadro de diálogo muestra un mensaje con el motivo por el que no se puede analizar la instrucción SQL. Haga clic en **Aceptar** para continuar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Desarrollo, prueba y las bases de datos de producción (Visual Database Tools) | Microsoft Docs
+title: Bases de datos de desarrollo, pruebas y producción (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec879395358536485fb0d80e7ab1a2a19d4823
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316466"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Bases de datos de desarrollo, pruebas y producción (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63316466"
   
  Para ello, realice todas las modificaciones en una única sesión con la base de datos de desarrollo, cree un script de cambio de su sesión y después ejecute el script en la base de datos de prueba.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Entornos multiusuario &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

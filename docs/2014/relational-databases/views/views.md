@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191264"
 ---
 # <a name="views"></a>Vistas
@@ -48,10 +48,10 @@ ms.locfileid: "63191264"
 |Describe cómo modificar la definición de la vista.|[Modificar vistas](../views/modify-views.md)|  
 |Describe cómo modificar datos mediante una vista.|[Modificar datos mediante una vista](../views/modify-data-through-a-view.md)|  
 |Describe cómo eliminar una vista.|[Eliminar vistas](../views/delete-views.md)|  
-|Describe cómo devolver información acerca de una vista, como la definición de la vista.|[Obtener información sobre una vista](../views/get-information-about-a-view.md)|  
+|Describe cómo devolver información acerca de una vista, como la definición de la vista.|[Obtener información acerca de una vista](../views/get-information-about-a-view.md)|  
 |Describe cómo cambiar el nombre de una vista.|[Cambiar el nombre de las vistas](../views/rename-views.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear vistas sobre columnas XML](../xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)  
   

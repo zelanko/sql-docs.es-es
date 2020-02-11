@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270768"
 ---
 # <a name="securitycertificate-class"></a>Clase SecurityCertificate
-  El [clase SecurityCertificate] securitycertificate-class.md) representa un certificado de seguridad. Un certificado es una instrucción firmada digitalmente que enlaza el valor de una clave pública con la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que contiene la clave privada correspondiente. El certificado lo emite una entidad de certificación.  
+  La [clase SecurityCertificate] SecurityCertificate-class.md) representa un certificado de seguridad. Un certificado es una instrucción firmada digitalmente que enlaza el valor de una clave pública con la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que contiene la clave privada correspondiente. El certificado lo emite una entidad de certificación.  
   
- Con el securitycertificate de [clase SecurityCertificate]-class.md), puede realizar las siguientes tareas:  
+ Con [clase SecurityCertificate] SecurityCertificate-class.md), puede realizar las siguientes tareas:  
   
 -   Ver las propiedades del certificado de seguridad.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63270768"
   
 -   Comprobar la huella digital SHA para la instancia especificada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquía de cifrado](../../security/encryption/encryption-hierarchy.md)  
   
   

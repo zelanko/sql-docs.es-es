@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077419"
 ---
 # <a name="define-a-default-member"></a>Definir un miembro predeterminado
@@ -33,17 +33,17 @@ ms.locfileid: "66077419"
  Si no se especifica ningún miembro predeterminado para una jerarquía de atributo, y la jerarquía de atributo es agregable (la propiedad `IsAggregatable` del atributo está establecida como `True`), el miembro (All) es el miembro predeterminado. Si no se especifica ningún miembro predeterminado y la jerarquía de atributo no es agregable, (la propiedad `IsAggregatable` del atributo está establecida como `False`), se selecciona un miembro predeterminado del nivel superior de la jerarquía de atributo.  
   
 ## <a name="specifying-the-default-member"></a>Especificar el miembro predeterminado  
- Todos los atributos de una dimensión en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene un miembro predeterminado, que se puede especificar mediante el uso de la `DefaultMember` propiedad para un atributo. Esta configuración se utiliza para evaluar expresiones si no se incluye un atributo en una consulta. Si una consulta especifica una jerarquía en una dimensión, se omiten los miembros predeterminados de los atributos de la jerarquía. Si una consulta no especifica una jerarquía en una dimensión, el `DefaultMember` aplicará la configuración para los atributos de dimensión.  
+ Todos los atributos de una dimensión [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de tienen un miembro predeterminado, que se puede especificar mediante la `DefaultMember` propiedad de un atributo. Esta configuración se utiliza para evaluar expresiones si no se incluye un atributo en una consulta. Si una consulta especifica una jerarquía en una dimensión, se omiten los miembros predeterminados de los atributos de la jerarquía. Si una consulta no especifica una jerarquía en una dimensión, la configuración `DefaultMember` de los atributos de la dimensión surte efecto.  
   
- Si el `DefaultMember` configuración de un atributo está vacío y su `IsAggregatable` propiedad está establecida en `True`, el miembro predeterminado es el miembro All. Si el `IsAggregatable` propiedad está establecida en `False`, el miembro predeterminado es el primer miembro del primer nivel visible.  
+ Si el `DefaultMember` valor de un atributo está en blanco y `IsAggregatable` su propiedad está establecida `True`en, el miembro predeterminado es el miembro ALL. Si la `IsAggregatable` propiedad se establece en `False`, el miembro predeterminado es el primer miembro del primer nivel visible.  
   
- El `DefaultMember` configuración para un atributo se aplica a todas las jerarquías en las que interviene el atributo. No puede utilizar configuraciones diferentes para jerarquías distintas de una dimensión. Por ejemplo, si el miembro [1998] es el miembro predeterminado para el atributo [Year], esta configuración se aplica en todas las jerarquías de la dimensión. El `DefaultMember` configuración en este caso no puede ser [1998] en una jerarquía y [1997] en una jerarquía distinta.  
+ La `DefaultMember` configuración de un atributo se aplica a todas las jerarquías en las que participa el atributo. No puede utilizar configuraciones diferentes para jerarquías distintas de una dimensión. Por ejemplo, si el miembro [1998] es el miembro predeterminado para el atributo [Year], esta configuración se aplica en todas las jerarquías de la dimensión. En `DefaultMember` este caso, la configuración no puede ser [1998] en una jerarquía y [1997] en una jerarquía diferente.  
   
- Si se define un miembro predeterminado en un nivel específico de una jerarquía que no se agrega de forma natural, deberán definirse los miembros predeterminados de todos los niveles superiores a dicho nivel de la jerarquía. Por ejemplo, en la jerarquía All-países-clima, no se puede definir a un miembro predeterminado para Climate a menos que defina a un miembro predeterminado para Countries. En caso contrario se producirían errores en tiempo de consulta.  
+ Si se define un miembro predeterminado en un nivel específico de una jerarquía que no se agrega de forma natural, deberán definirse los miembros predeterminados de todos los niveles superiores a dicho nivel de la jerarquía. Por ejemplo, en la jerarquía All-countries-clima, no se puede definir un miembro predeterminado para clima a menos que defina un miembro predeterminado para países. En caso contrario se producirían errores en tiempo de consulta.  
   
- Si los niveles de una jerarquía se agregan de forma natural, podrá definirse un miembro predeterminado para los atributos de la jerarquía con independencia de los demás atributos de la jerarquía. Por ejemplo, en la jerarquía provincia país-región-ciudad, puede definir a un miembro predeterminado para City, como [City]. [Montreal] sin definir el miembro predeterminado para Province o Country.  
+ Si los niveles de una jerarquía se agregan de forma natural, podrá definirse un miembro predeterminado para los atributos de la jerarquía con independencia de los demás atributos de la jerarquía. Por ejemplo, en la jerarquía Country-provincia-City, puede definir un miembro predeterminado para City, como [City]. [Montreal] sin definir el miembro predeterminado para el estado o para el país.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar el nivel &#40;All&#41; para las jerarquías de atributo](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar el nivel de&#41; &#40;para las jerarquías de atributo](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

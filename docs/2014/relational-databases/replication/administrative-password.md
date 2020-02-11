@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186953"
 ---
 # <a name="administrative-password"></a>Contraseña administrativa
@@ -26,10 +26,10 @@ ms.locfileid: "63186953"
  **Contraseña**  
  Escriba la contraseña para la conexión entre el publicador y el distribuidor remoto.  
   
- **Confirmar contraseña**  
+ **Confirm Password**  
  Vuelva a escribir la contraseña para confirmar que es correcta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](publish/publish-data-and-database-objects.md)   
  [Configurar la publicación y la distribución](configure-publishing-and-distribution.md)   
  [Create a Publication](publish/create-a-publication.md)   

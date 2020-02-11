@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150604"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Especificar el comportamiento de parametrización de consultas por medio de guías de plan
@@ -53,7 +53,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  Cree la guía de plan en la consulta con parámetros, especificando la sugerencia de consulta PARAMETERIZATION FORCED.  
   
     > [!IMPORTANT]  
-    >  Como parte de la parametrización de una consulta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un tipo de datos a los parámetros que reemplazan a los valores literales, dependiendo del valor y el tamaño del literal. El mismo proceso se produce con los valores literales constantes pasados al parámetro de salida **@stmt** de **sp_get_query_template**. Dado que el tipo de datos especificado en el argumento **@params** de **sp_create_plan_guide** debe coincidir con el de la consulta para la que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]crea parámetros, es posible que necesite crear más de una guía de plan para cubrir el rango completo de posibles valores de parámetros para la consulta.  
+    >  Como parte de la parametrización de una consulta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un tipo de datos a los parámetros que reemplazan a los valores literales, dependiendo del valor y el tamaño del literal. El mismo proceso se produce en el valor de los literales de constante pasados **@stmt** al parámetro de salida de **sp_get_query_template**. Dado que el tipo de datos especificado **@params** en el argumento de **sp_create_plan_guide** debe coincidir con el de la consulta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que tenga que crear más de una guía de plan para cubrir el intervalo completo de posibles valores de parámetro de la consulta.  
   
  El siguiente script puede utilizarse para obtener la consulta con parámetros y, a continuación, crear una guía de plan en ella.  
   

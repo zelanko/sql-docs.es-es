@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151527"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lección 1: Navegación básica en SQL Server Management Studio
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es una herramienta eficaz y flexible. No obstante, los nuevos usuarios de Microsoft Visual Studio a veces tienen dificultades a la hora de encontrar el modo más rápido de llegar a la función adecuada. Esta lección muestra la forma en que las ventanas interaccionan entre sí para presentar una superficie de diseño que haga más fácil su trabajo. Al final de esta lección, habrá aprendido a quitar ventanas no deseadas, abrir con rapidez las ventanas que contienen la información que necesita y configurar la superficie predeterminada para que dé cabida al trabajo que realiza de forma habitual.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es una herramienta eficaz y flexible. No obstante, los nuevos usuarios de Microsoft Visual Studio a veces tienen dificultades a la hora de encontrar el modo más rápido de llegar a la función adecuada. Esta lección muestra la forma en que las ventanas interaccionan entre sí para presentar una superficie de diseño que haga más fácil su trabajo. Al final de esta lección, habrá aprendido a quitar ventanas no deseadas, abrir con rapidez las ventanas que contienen la información que necesita y configurar la superficie predeterminada para que dé cabida al trabajo que realiza de forma habitual.  
   
  En esta lección se incluyen los temas siguientes:  
   
@@ -30,7 +30,7 @@ ms.locfileid: "63151527"
   
 -   Mostrar la ventana Documento  
   
--   Que muestra la página de detalles del explorador de objetos  
+-   Mostrar la página de detalles del Explorador de objetos  
   
 -   Seleccionar el esquema de métodos abreviados de teclado  
   

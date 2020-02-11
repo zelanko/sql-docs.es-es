@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184446"
 ---
 # <a name="sequence-properties-general-page"></a>Propiedades de secuencia (página General)
@@ -45,7 +45,8 @@ ms.locfileid: "63184446"
 |`int`|De -2.147.483.648 a 2.147.483.647|  
 |`bigint`|De -9.223.37.,036.854.775.808 a 9.223.372.036.854.775.807|  
   
--   `decimal` o `numeric` con una escala de 0.  
+-   
+  `decimal` o `numeric` con una escala de 0.  
   
 -   Cualquier tipo de datos definido por el usuario (tipo de alias) que se base en estos tipos.  
   
@@ -64,7 +65,7 @@ ms.locfileid: "63184446"
  **Valor máximo**  
  Especifica los límites del objeto de secuencia. El valor máximo predeterminado para un nuevo objeto de secuencia es el valor máximo del tipo de datos del objeto de secuencia.  
   
- **La secuencia de ciclos se reiniciará al llegar al límite**  
+ **La secuencia de ciclos se reiniciará al alcanzar el límite**  
  Seleccione el objeto de secuencia para permitir el reinicio a partir del valor mínimo (o máximo para objetos de secuencia descendente) cuando se supere su valor mínimo o máximo.  
   
 > [!NOTE]  
@@ -77,7 +78,8 @@ ms.locfileid: "63184446"
   
 -   Sin memoria caché: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no almacenará en la memoria caché los números de secuencia.  
   
--   Memoria caché con tamaño: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] almacenará en la memoria caché los valores de secuencia. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza el seguimiento del valor actual y del número de valores que queden en la memoria caché. Por consiguiente, la cantidad de memoria necesaria para almacenar la memoria caché siempre es dos veces la del tipo de datos del objeto de secuencia  
+-   Memoria caché con tamaño: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] almacenará en la memoria caché los valores de secuencia. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza el seguimiento del valor actual y del número de valores que queden en la memoria caché. Por consiguiente, la cantidad de memoria necesaria para almacenar la memoria caché siempre es dos veces la del tipo de datos del objeto de secuencia  
   
  Cuando se crea con la opción CACHE, un cierre inesperado, como un error de alimentación, puede perder los números de secuencia de la memoria caché.  
   
@@ -86,7 +88,7 @@ ms.locfileid: "63184446"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso **CREATE SEQUENCE**, **ALTER**o **CONTROL** en el SCHEMA.  
   
-## <a name="see-also"></a>Vea también  
- [sys.sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
+## <a name="see-also"></a>Consulte también  
+ [Sys. sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

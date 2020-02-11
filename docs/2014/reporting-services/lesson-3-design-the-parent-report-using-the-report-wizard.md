@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Diseñar el informe primario usando el Asistente para informes | Microsoft Docs'
+title: 'Lección 3: Diseñar el informe primario mediante el Asistente para informes | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108475"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lección 3: Diseño del informe primario usando el Asistente para informes
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lección 3: Diseñar el informe primario usando el Asistente para informes
   Después de crear una conexión de datos y una tabla de datos para el informe primario, el paso siguiente consiste en diseñar dicho informe usando el Asistente para informes del Diseñador de informes. Para más información sobre el Diseñador de informes, vea [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>Para diseñar el informe primario usando el Asistente para informes  
@@ -26,22 +26,22 @@ ms.locfileid: "66108475"
   
 2.  Haga clic con el botón derecho en el sitio web y seleccione **Agregar nuevo elemento**.  
   
-3.  En el **Agregar nuevo elemento** cuadro de diálogo, seleccione **Asistente para informes**, escriba un nombre para el archivo de informe y, a continuación, haga clic en **agregar**.  
+3.  En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Asistente para informes**, escriba un nombre para el archivo de informe y, a continuación, haga clic en **Agregar**.  
   
      Así se inicia el Asistente para informes.  
   
-4.  En el **las propiedades del conjunto de datos** página, en el **origen de datos** cuadro, seleccione el **DataSet1** que creó en [lección 2: Definir una conexión de datos y una tabla de datos para el informe primario](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  En la página **Propiedades de conjunto de datos** , en el cuadro **Origen de datos** , seleccione el **DataSet1** que creó en la [Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
     El cuadro **Conjuntos de datos disponibles** se actualiza automáticamente con la **DataTable** que creó anteriormente.  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
 6.  En la página **Organizar campos** , haga lo siguiente:  
   
     1.  Arrastre **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**y **ReorderLevel** desde **Campos disponibles** hasta el cuadro **Valores** .  
   
-    2.  Haga clic en la flecha situada junto a **SUM (ProductID)** , **SUM (safetystocklevel)** , **SUM (ReorderLevel)** y desactive el **suma** selección.  
+    2.  Haga clic en la flecha situada junto a **SUM (ProductID)**, **SUM (SafetyStockLevel)**, **SUM (ReorderLevel)** y desactive la selección de **suma** .  
   
-7.  Haga clic en **siguiente** dos veces y, a continuación, haga clic en **finalizar** para cerrar el **Asistente para informes**.  
+7.  Haga clic en **siguiente** dos veces y, a continuación, haga clic en **Finalizar** para cerrar el **Asistente para informes**.  
   
      Ahora ha creado el archivo .rdlc. El archivo se abre en el Diseñador de informes. El Tablix que se diseñó se muestra en la superficie de diseño.  
   

@@ -1,5 +1,5 @@
 ---
-title: Cómo consultas y vistas representa combinaciones el diseñador (Visual Database Tools) | Microsoft Docs
+title: Cómo representa combinaciones el diseñador de consultas y vistas (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155266"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Cómo representa combinaciones el Diseñador de consultas y vistas (Visual Database Tools)
@@ -31,7 +31,7 @@ ms.locfileid: "63155266"
   
  Si las tablas están combinadas mediante más de una condición de combinación, el Diseñador de consultas y vistas muestra varias líneas de combinación, como en el ejemplo siguiente:  
   
- ![Tablas combinadas mediante más de una condición de combinación](../../database-engine/media//dv3w9n1.gif "Tablas combinadas mediante más de una condición de combinación")  
+ ![Tablas combinadas usando más de una condición de combinación](../../database-engine/media//dv3w9n1.gif "Tablas combinadas usando más de una condición de combinación")  
   
  Si no se muestran las columnas de datos combinadas (por ejemplo, el rectángulo que representa la tabla o el objeto con estructura de tabla está minimizado o la combinación incluye una expresión), el Diseñador de consultas coloca la línea de combinación en la barra de título del rectángulo que representa la tabla o el objeto con estructura de tabla.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63155266"
   
  Los símbolos situados en los extremos de la línea de combinación indican el tipo de combinación. La tabla siguiente muestra los tipos de combinaciones y los iconos que aparecen en los extremos de la línea de combinación.  
   
-|**Icono situado en los extremos de la línea de combinación**|**Tipo de combinación**|  
+|**Icono de los extremos de la línea de combinación**|**Tipo de combinación**|  
 |-----------------------------------|----------------------|  
 |![Icono de Visual Database Tools](../../database-engine/media//dv3wbim.gif "Icono de Visual Database Tools")|Combinación uno a uno.|  
 |![Icono de Visual Database Tools](../../database-engine/media//dv3wbin.gif "Icono de Visual Database Tools")|Combinación uno a varios.|  
@@ -58,7 +58,7 @@ ms.locfileid: "63155266"
   
  Las opciones de sintaxis para combinar tablas incluyen:  
   
--   **Calificador JOIN para la cláusula FROM**.   Las palabras clave INNER y OUTER especifican el tipo de combinación. Esta sintaxis es estándar para SQL ANSI 92.  
+-   **Calificador join para la cláusula FROM**.   Las palabras clave INNER y OUTER especifican el tipo de combinación. Esta sintaxis es estándar para SQL ANSI 92.  
   
      Por ejemplo, si combina las tablas `publishers` y `pub_info` según la columna `pub_id` de cada tabla, la instrucción SQL resultante podría tener el siguiente aspecto:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63155266"
   
      Si crea una combinación externa, aparecen las palabras LEFT OUTER o RIGHT OUTER en lugar de la palabra INNER.  
   
--   **La cláusula WHERE compara columnas de ambas tablas**.   Aparecerá una cláusula WHERE si la base de datos no admite la sintaxis JOIN, o si la especificó el usuario. Si la combinación se crea en la cláusula WHERE, ambos nombres de tabla aparecen en la cláusula FROM.  
+-   La **cláusula WHERE compara columnas de ambas tablas**.   Aparecerá una cláusula WHERE si la base de datos no admite la sintaxis JOIN, o si la especificó el usuario. Si la combinación se crea en la cláusula WHERE, ambos nombres de tabla aparecen en la cláusula FROM.  
   
      Por ejemplo, la instrucción siguiente combina las tablas `publishers` y `pub_info` .  
   
@@ -80,8 +80,8 @@ ms.locfileid: "63155266"
     WHERE publishers.pub_id = pub_info.pub_id  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Consultas con combinaciones &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [Cuadro de diálogo Combinar &#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   
   

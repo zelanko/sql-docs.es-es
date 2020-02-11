@@ -1,5 +1,5 @@
 ---
-title: Registrar consultas de larga ejecución (ODBC) | Documentos de Microsoft
+title: Registrar consultas de ejecución prolongada (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,37 +13,37 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200353"
 ---
 # <a name="log-long-running-queries-odbc"></a>Registrar consultas de ejecución prolongada (ODBC)
   En este ejemplo se muestran las opciones específicas del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar consultas de larga duración. Cuando se ejecuta, este ejemplo crea Odbcqry.log, que contiene una lista de las consultas cuya ejecución supera un intervalo establecido por la aplicación. Este ejemplo no es compatible con IA64. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Para registrar las consultas de ejecución prolongada mediante el Administrador de ODBC  
   
-1.  En **Panel de Control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. (Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema).  
+1.  En el **Panel de control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. (Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema).  
   
-2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** ficha.  
+2.  Haga clic en la pestaña **DSN de usuario**, **DSN de sistema**o DSN de **archivo** .  
   
 3.  Haga clic en el origen de datos para el que desea registrar las consultas de ejecución prolongada.  
   
-4.  Haga clic en **configurar**.  
+4.  Haga clic en **Configurar**.  
   
-5.  En el Microsoft SQL Server Configure DSN Wizard, vaya a la página con **guardar consultas de larga ejecución en el archivo de registro**.  
+5.  En el Asistente para configurar DSN de Microsoft SQL Server, vaya a la página con **guardar las consultas de ejecución prolongada en el archivo de registro**.  
   
-6.  Seleccione **guardar consultas de larga ejecución en el archivo de registro**. En el cuadro, coloque el nombre del archivo donde se deben registrar las consultas de ejecución prolongada. Si lo desea, haga clic en **examinar** para examinar el sistema de archivos para el registro de consultas.  
+6.  Seleccione **guardar las consultas de ejecución prolongada en el archivo de registro**. En el cuadro, coloque el nombre del archivo donde se deben registrar las consultas de ejecución prolongada. Opcionalmente, haga clic en **examinar** para buscar el registro de consultas en el sistema de archivos.  
   
-7.  Establezca un intervalo de tiempo de espera de consulta, en milisegundos, en el **tiempo máximo de consulta (milisegundos)** cuadro.  
+7.  Establezca un intervalo de tiempo de espera de consulta, en milisegundos, en el cuadro **tiempo de consulta largo (milisegundos)** .  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Para registrar los datos de las consultas de ejecución prolongada mediante programación  
   
-1.  Llame a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG y la ruta de acceso y el nombre completo del archivo de registro de consultas de larga ejecución. Por ejemplo:  
+1.  Llame a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG y la ruta de acceso completa y el nombre de archivo del archivo de registro de consultas de ejecución prolongada. Por ejemplo:  
   
     ```  
     C:\\Odbcqry.log  
@@ -51,12 +51,12 @@ ms.locfileid: "63200353"
   
 2.  Llame a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_INTERVAL y establézcalo en el intervalo de tiempo de espera, en milisegundos.  
   
-3.  Llame a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY y SQL_PERF_START para iniciar el registro de consultas de larga ejecución.  
+3.  Llame a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY y SQL_PERF_START para iniciar el registro de consultas de ejecución prolongada.  
   
-4.  Llame a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY y SQL_PERF_STOP para detener el registro de consultas de larga ejecución.  
+4.  Llame a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY y SQL_PERF_STOP para detener el registro de consultas de ejecución prolongada.  
   
 ## <a name="example"></a>Ejemplo  
- Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la Página principal de [ejemplos y proyectos](https://go.microsoft.com/fwlink/?LinkID=85384) de la comunidad de Microsoft SQL Server). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
@@ -215,7 +215,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Generación de perfiles de temas de procedimientos de ODBC Driver Performance &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de generación de perfiles de rendimiento del controlador ODBC &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482660"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>Archivos de consulta de acceso directo (complemento MDS para Excel)
@@ -37,7 +37,7 @@ ms.locfileid: "65482660"
   
  Cuando se abre un archivo de consulta de acceso directo con esta aplicación, se le pedirá que realice una conexión "segura", lo que significa que confía en el contenido de esta ubicación. Cada vez que se marca una conexión como segura, se agrega a una lista. Si desea desactivar esta lista, abra el cuadro de diálogo **Configuración** y, en la sección **Servidores agregados a la lista segura** , haga clic en **Borrar todo**.  
   
- La ubicación predeterminada para la aplicación es *unidad*: \Program Files\Microsoft SQL Server\120\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
+ La ubicación predeterminada de la aplicación es *unidad*: \Archivos de Programa\microsoft SQL Server\120\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
   
  Hay dos maneras de abrir los archivos de consulta de acceso directo: puede importarlos o puede hacer doble clic en ellos para que se abran automáticamente.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "65482660"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Guardar el contenido de la hoja de cálculo activa como un archivo de consulta de acceso directo.|[Guardar un archivo de consulta de acceso directo &#40;complemento MDS para Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Enviar por correo electrónico un archivo de consulta de acceso directo que representa el contenido de la hoja de cálculo activa.|[Enviar por correo electrónico un archivo de consulta de acceso directo &#40;complemento MDS para Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Guardar el contenido de la hoja de cálculo activa como un archivo de consulta de acceso directo.|[Guardar un archivo de consulta de acceso directo &#40;Complemento MDS para Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Enviar por correo electrónico un archivo de consulta de acceso directo que representa el contenido de la hoja de cálculo activa.|[Enviar por correo electrónico un archivo de consulta de acceso directo &#40;Complemento MDS para Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Conexiones &#40;complemento MDS para Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Conexiones &#40;Complemento MDS para Excel&#41;](connections-mds-add-in-for-excel.md)  
   
 -   [Complemento Master Data Services para Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Seguridad &#40;Master Data Services&#41;](../security-master-data-services.md)  
+-   [Master Data Services de &#40;de seguridad&#41;](../security-master-data-services.md)  
   
   

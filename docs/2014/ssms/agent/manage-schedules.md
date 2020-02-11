@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255070"
 ---
 # <a name="manage-schedules"></a>Administrar programaciones
-  Le permite ver y cambiar propiedades para la programación del trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Permite ver y cambiar las propiedades de las [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programaciones de trabajos del agente.  
   
 ## <a name="options"></a>Opciones  
  **Programaciones disponibles**  
  Muestra las programaciones disponibles para este usuario. Tenga en cuenta que un trabajo y una programación deben tener el mismo propietario. Por lo tanto, esta lista solo incluye programaciones que pertenecen al propietario del trabajo.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la programación.  
   
  **Enabled**  
@@ -38,7 +38,7 @@ ms.locfileid: "63255070"
  **Trabajos en programación**  
  Muestra los números de los trabajos adjuntados a la programación. Haga clic en un número para ver las propiedades del trabajo.  
   
- **Nueva**  
+ **Nuevo**  
  Haga clic en este botón para crear una programación nueva.  
   
  **Eliminar**  
@@ -47,7 +47,7 @@ ms.locfileid: "63255070"
  **Propiedades**  
  Haga clic en este botón para cambiar las propiedades de la programación seleccionada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y adjuntar programaciones a trabajos](create-and-attach-schedules-to-jobs.md)  
   
   

@@ -19,19 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150730"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reducir la carga de optimización del servidor de producción
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] se basa en el optimizador de consultas para analizar una carga de trabajo y realizar recomendaciones de optimización. La realización de este análisis en el servidor de producción le agrega carga y puede perjudicar su rendimiento durante la sesión de optimización. Puede reducir el efecto en la carga del servidor durante una sesión de optimización utilizando un servidor de pruebas además del servidor de producción.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]El Asistente para la optimización de se basa en el optimizador de consultas para analizar una carga de trabajo y realizar recomendaciones de optimización. La realización de este análisis en el servidor de producción le agrega carga y puede perjudicar su rendimiento durante la sesión de optimización. Puede reducir el efecto en la carga del servidor durante una sesión de optimización utilizando un servidor de pruebas además del servidor de producción.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Cómo utiliza el Asistente para la optimización de motor de base de datos un servidor de prueba  
  El modo tradicional de utilizar un servidor de prueba consiste en copiar todos los datos del servidor de producción al servidor de prueba, optimizar el servidor de prueba y luego implementar la recomendación en el servidor de producción. Este proceso elimina el impacto negativo de rendimiento que sufriría el servidor de producción, pero no es la solución idónea. Por ejemplo, cuando sea necesario copiar grandes volúmenes de datos del servidor de producción al de prueba, el consumo de tiempo y recursos se dispara. Además, el hardware del servidor de prueba no suele ser tan eficaz como el hardware implementado en los servidores de producción. El proceso de optimización se basa en el optimizador de consultas y las recomendaciones que éste genera se basan en parte del hardware subyacente. Si el hardware del servidor de pruebas no es idéntico al del servidor de producción, disminuirá la calidad de las recomendaciones que efectúe el Asistente para la optimización de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .  
   
- Para evitar estos problemas, el Asistente para la optimización de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] lleva a cabo la optimización de una base de datos en un servidor de producción procediendo a la descarga de gran parte de la carga de optimización en el servidor de prueba. Esto lo realiza gracias a la información de configuración del hardware del servidor de producción y sin tener que copiar los datos de dicho servidor al de prueba. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] no copia datos reales del servidor de producción al servidor de prueba. Solo copia los metadatos y las estadísticas que necesita.  
+ Para evitar estos problemas, el Asistente para la optimización de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] lleva a cabo la optimización de una base de datos en un servidor de producción procediendo a la descarga de gran parte de la carga de optimización en el servidor de prueba. Esto lo realiza gracias a la información de configuración del hardware del servidor de producción y sin tener que copiar los datos de dicho servidor al de prueba. 
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] no copia datos reales del servidor de producción al servidor de prueba. Solo copia los metadatos y las estadísticas que necesita.  
   
  Los siguientes pasos describen el proceso de optimización de una base de datos en un servidor de prueba:  
   
@@ -45,11 +46,14 @@ ms.locfileid: "63150730"
   
      Durante el proceso de optimización, el Asistente para la optimización de motor de base de datos crea una base de datos de shell en el servidor de prueba. Para crear y optimizar esta base de datos, el Asistente para la optimización de motor de base de datos efectúa llamadas al servidor de producción para poder llevar a cabo los pasos que se indican a continuación:  
   
-    1.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] importa los metadatos de la base de datos de producción en la base de datos de shell del servidor de pruebas. Los metadatos incluyen tablas vacías, índices, vistas, procedimientos almacenados, desencadenadores, etc. Este paso permite ejecutar las consultas de carga de trabajo en la base de datos de shell del servidor de prueba.  
+    1.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] importa los metadatos de la base de datos de producción en la base de datos de shell del servidor de pruebas. Los metadatos incluyen tablas vacías, índices, vistas, procedimientos almacenados, desencadenadores, etc. Este paso permite ejecutar las consultas de carga de trabajo en la base de datos de shell del servidor de prueba.  
   
-    2.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] importa las estadísticas del servidor de producción para que el optimizador de consultas pueda optimizar con precisión las consultas en el servidor de prueba.  
+    2.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] importa las estadísticas del servidor de producción para que el optimizador de consultas pueda optimizar con precisión las consultas en el servidor de prueba.  
   
-    3.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] importa los parámetros de hardware y especifica el número de procesadores y memoria disponible del servidor de producción a fin de suministrar al optimizador de consultas la información que requiere para generar un plan de consulta.  
+    3.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] importa los parámetros de hardware y especifica el número de procesadores y memoria disponible del servidor de producción a fin de suministrar al optimizador de consultas la información que requiere para generar un plan de consulta.  
   
 3.  Una vez que el Asistente para la optimización de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ha terminado de ajustar la base de datos de shell del servidor de pruebas, genera una recomendación de optimización.  
   
@@ -57,7 +61,7 @@ ms.locfileid: "63150730"
   
  La siguiente ilustración representa el escenario de los servidores de prueba y producción:  
   
- ![Uso del servidor de prueba del Asistente para la optimización de motor de base de datos](../../database-engine/media/testsvr.gif "Uso del servidor de prueba del Asistente para la optimización de motor de base de datos")  
+ ![Uso del servidor de prueba del Asistente para la optimización del motor de base de datos](../../database-engine/media/testsvr.gif "Uso del servidor de prueba del Asistente para la optimización del motor de base de datos")  
   
 > [!NOTE]  
 >  La característica de optimización del servidor de prueba no se admite en la interfaz gráfica de usuario (GUI) del Asistente para la optimización de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .  
@@ -92,8 +96,8 @@ ms.locfileid: "63150730"
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Consideraciones acerca del uso de servidores de prueba](considerations-for-using-test-servers.md)   
+## <a name="see-also"></a>Consulte también  
+ [Consideraciones sobre el uso de servidores de prueba](considerations-for-using-test-servers.md)   
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](database-engine-tuning-advisor.md)  
   
   

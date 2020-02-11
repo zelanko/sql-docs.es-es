@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100868"
 ---
 # <a name="data-driven-subscriptions"></a>suscripciones controladas por datos
@@ -44,9 +44,9 @@ ms.locfileid: "66100868"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>Requisitos para usar suscripciones controladas por datos  
  La funcionalidad de las suscripciones controladas por datos no está disponible en todas las ediciones. También existen limitaciones en cuanto a las clases de orígenes de datos que se pueden emplear para recuperar datos de suscripción en tiempo de ejecución. En la lista siguiente se ofrece más información acerca de los requisitos:  
   
--   Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la funcionalidad de suscripción controlada por datos, consulte [Características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+-   Para obtener más información sobre las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de que admiten la funcionalidad de suscripción controlada por datos, vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
--   Para los datos de suscripciones, elija un origen de datos que pueda proporcionar información de esquema al servidor de informes. Los ejemplos de tipos de origen de datos compatibles incluyen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los datos relacionales, Oracle, bases de datos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] empaquetan datos, orígenes de datos ODBC y orígenes de datos OLE DB. Para más información sobre los requisitos del origen de datos de suscriptores, vea [Usar un origen de datos externo para obtener información de los suscriptores &#40;suscripción controlada por datos&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+-   Para los datos de suscripciones, elija un origen de datos que pueda proporcionar información de esquema al servidor de informes. Entre los ejemplos de tipos de orígenes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos admitidos se [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluyen datos relacionales [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , Oracle, bases de datos, datos de paquete, orígenes de datos ODBC y orígenes de datos de OLE DB. Para más información sobre los requisitos del origen de datos de suscriptores, vea [Usar un origen de datos externo para obtener información de los suscriptores &#40;suscripción controlada por datos&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Trabajar con suscripciones controladas por datos  
  Los siguientes temas proporcionan más información sobre las suscripciones controladas por datos.  
@@ -54,13 +54,13 @@ ms.locfileid: "66100868"
 |Temas|Descripción|  
 |------------|-----------------|  
 |[Crear, modificar y eliminar una suscripción controlada por datos](data-driven-subscriptions.md)|Explica cómo crear, modificar o eliminar una suscripción controlada por datos.|  
-|[Usar un origen de datos externo para obtener información de los suscriptores &#40;suscripción controlada por datos&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Proporciona información sobre los orígenes de datos que puede utilizar para una suscripción controlada por datos.|  
-|[Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Proporciona instrucciones paso a paso para aprender a crear una suscripción controlada por datos.|  
+|[Usar un origen de datos externo para los datos de suscriptor &#40;suscripción controlada por datos&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Proporciona información sobre los orígenes de datos que puede utilizar para una suscripción controlada por datos.|  
+|[Crear una suscripción controlada por datos &#40;tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Proporciona instrucciones paso a paso para aprender a crear una suscripción controlada por datos.|  
 |[Informes almacenados en caché &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|Describe cómo utilizar el Proveedor de entrega NULL con una suscripción controlada por datos para cargar previamente la memoria caché.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Página Crear suscripción controlada por datos &#40;Administrador de informes&#41;](../create-data-driven-subscription-page-report-manager.md)   
- [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](../report-server/preload-the-cache-report-manager.md)  
+ [Página crear suscripción controlada por datos &#40;Administrador de informes&#41;](../create-data-driven-subscription-page-report-manager.md)   
+ [Cargar previamente el Administrador de informes de &#40;de caché&#41;](../report-server/preload-the-cache-report-manager.md)  
   
   

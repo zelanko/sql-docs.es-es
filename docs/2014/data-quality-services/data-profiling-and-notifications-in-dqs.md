@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 53fbe246db44b8aaa1dfda1e79d543f063919ede
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480802"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Generación de perfiles de datos y notificaciones de DQS
@@ -30,7 +30,7 @@ ms.locfileid: "65480802"
   
  La generación de perfiles le permite utilizar Data Quality Services no solo para la detección de conocimiento, la limpieza y la búsqueda de coincidencias, sino también como herramienta de análisis. Puede crear una base de conocimiento para el análisis, y ejecutar la detección de conocimiento utilizando dicha base de conocimiento para determinar, a partir de las estadísticas de la generación de perfiles, si esta satisface sus necesidades de detección, limpieza y búsqueda de coincidencias.  
   
-##  <a name="How"></a> Cómo funciona la generación de perfiles  
+##  <a name="How"></a>Cómo funciona la generación de perfiles  
  La generación de perfiles no mide la calidad de la base de conocimiento. Mide la calidad de los datos de origen. La generación de perfiles le proporciona estadísticas que indican el efecto de la operación específica que está realizando en la administración del conocimiento o en un proyecto de calidad de datos en los datos de origen. La generación de perfiles está siempre en el contexto de la actividad específica que se está realizando. Puede hacer clic en la pestaña de generación de perfiles de una pantalla para mostrar datos sobre la generación de perfiles sin abandonar la fase de la actividad que está realizando. La tabla de generación de perfiles se rellena en tiempo real mientras se realiza el proceso, permitiéndole evaluar las tareas de calidad de los datos al mismo tiempo que las lleva a cabo. Puede determinar si los datos de origen tienen mejor calidad después de la limpieza o la eliminación de datos duplicados, y en qué grado.  
   
  Todos los números procedentes de la generación de perfiles hacen referencia al número de repeticiones de un valor, y en muchos casos al porcentaje del total, a excepción de las métricas de unicidad. Las métricas de unicidad hacen referencia al número absoluto de valores, independientemente del número de repeticiones de estos.  
@@ -47,7 +47,7 @@ ms.locfileid: "65480802"
   
  DQS no proporciona estadísticas sobre la generación de perfiles para la actividad Administración de dominios.  
   
-##  <a name="Activity"></a> Generar perfiles de datos por actividad  
+##  <a name="Activity"></a>Generar perfiles de datos por actividad  
  La generación de perfiles de DQS utiliza dimensiones de calidad de datos estándar para representar la calidad de los datos: integridad (la medida en la que están presentes los datos), precisión (la medida en la que los datos se pueden utilizar para su uso previsto) y unicidad (la medida en la que distintos valores representan entidades diferentes). De forma predeterminada, los valores NULL y los valores vacíos se consideran como ausentes, por lo que reducen el porcentaje de integridad; sin embargo, también es posible definir otros valores equivalentes a NULL, en cuyo caso también se considerarán como ausentes.  
   
  La generación de perfiles le proporciona las estadísticas necesarias para evaluar los procesos, pero debe saber cómo interpretarlas. Para ello, examínelas columna por columna.  
@@ -66,21 +66,21 @@ ms.locfileid: "65480802"
   
 -   [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md)  
   
--   [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Limpiar datos mediante el conocimiento de&#41; interno de DQS &#40;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md)  
   
 -   [Ejecutar un proyecto de coincidencia](../../2014/data-quality-services/run-a-matching-project.md)  
   
-##  <a name="Monitoring"></a> Generar perfiles de datos en la supervisión de actividades  
+##  <a name="Monitoring"></a>Generación de perfiles de datos en la supervisión de actividades  
  La información sobre la generación de perfiles para las actividades Detección de conocimiento, Directiva de coincidencia, Coincidencia y Limpieza no solo está disponible en las páginas de actividades de Data Quality Client, sino también en la supervisión de actividades. La supervisión de la actividad le proporciona información general sobre las actividades actuales y las anteriores. Además de las propiedades y los procesos de cálculo relacionados con las actividades, también puede ver la información sobre la generación de perfiles generada para cada actividad en una ubicación. Seleccione una actividad en la tabla de actividades para mostrar los resultados de la generación de perfiles en una tabla que aparecerá debajo. También puede exportar los resultados de la generación de perfiles. Para obtener más información, consulte [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
-##  <a name="Notifications"></a> Notificaciones  
+##  <a name="Notifications"></a>Notificaciones  
  Además de recopilar y mostrar estadísticas y métricas importantes mediante la generación de perfiles, DQS generará notificaciones (si están habilitadas) que le indicarán cuándo puede realizar una acción basándose en las estadísticas de generación de perfiles mostradas. DQS utiliza notificaciones para resaltar hechos importantes sobre el origen de datos, y para mostrar la eficacia de la actividad actual en relación con el propósito para el que se ha ejecutado. Las notificaciones proporcionan sugerencias y recomendaciones que indican una condición, y le sugieren cómo mejorar una actividad de detección de conocimiento, de limpieza de datos o de búsqueda de coincidencias de datos.  
   
  Las notificaciones de DQS se utilizan para plantear una cuestión que puede interesarle, o para solucionar un posible problema. Lo que haga con la información de la notificación dependerá de lo relevante que sea para sus propósitos. Por ejemplo, imagine que DQS envía una notificación cuando la limpieza de datos no genera ningún valor corregido ni sugerido, mientras la integridad y la precisión son del 100%. Esta notificación indicaría que es posible que no sea necesario ejecutar la actividad. No obstante, usted será el que decida si debe ejecutarse o no.  
   
- Las notificaciones se indican mediante una información sobre herramientas con un signo de exclamación en la pestaña **Generación de perfiles** . Las estadísticas asociadas con la notificación están coloreadas en rojo para indicar la justificación estadística para la notificación.  
+ Las notificaciones se indican mediante una información sobre herramientas con un signo de exclamación en la pestaña **generación de perfiles** . las estadísticas asociadas a la notificación están coloreadas en rojo para indicar la justificación estadística de la notificación.  
   
  Puede habilitar (el valor predeterminado) o deshabilitar las notificaciones en la pestaña **Configuración general** de la sección **Administración** de la página de inicio de Data Quality Client. Si se deshabilitan las notificaciones, la información sobre herramientas no se muestra y las estadísticas no se colorean en rojo. El hecho de deshabilitar de las notificaciones no conlleva ninguna mejora significativa del rendimiento. La generación de perfiles seguirá siendo operativa aunque se deshabiliten las notificaciones.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65480802"
   
 -   [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md)  
   
--   [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [Limpiar datos mediante el conocimiento de&#41; interno de DQS &#40;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md)  
   

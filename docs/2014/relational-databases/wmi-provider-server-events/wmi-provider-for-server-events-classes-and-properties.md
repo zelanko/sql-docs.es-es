@@ -1,5 +1,5 @@
 ---
-title: Proveedor WMI para eventos de servidor clases y propiedades | Microsoft Docs
+title: Proveedor WMI para las clases y propiedades de eventos de servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 24624a5071bad5403afc15259d97754a7feffdcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288492"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Proveedor WMI de clases y propiedades de eventos de servidor
@@ -26,23 +26,23 @@ ms.locfileid: "63288492"
   
  Para saber qué propiedades se puede consultar desde un evento o grupo de eventos, consulte el esquema de eventos. De forma predeterminada, el esquema de eventos se instala en el directorio siguiente: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- Como alternativa, puede hacer referencia al esquema de eventos publicado en [ https://schemas.microsoft.com/sqlserver ](https://go.microsoft.com/fwlink/?linkid=43100).  
+ Como alternativa, puede hacer referencia al esquema de eventos publicado en [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Por ejemplo, haciendo referencia al evento ALTER_DATABASE, sabrá que su evento primario es DDL_SERVER_LEVEL_EVENTS y que sus propiedades son `TSQLCommand` y `DatabaseName`. El evento también hereda las propiedades `SQLInstance`, `PostTime`, `ComputerName`, `SPID` y `LoginName`. El evento no tiene ningún evento secundario.  
   
 > [!NOTE]  
->  Los procedimientos almacenados del sistema que realizan operaciones similares a DDL también pueden activar notificaciones de eventos. Pruebe las notificaciones de eventos para determinar su respuesta a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, la instrucción CREATE TYPE y **sp_addtype** procedimiento almacenado activarán una notificación de eventos que se crea en un evento CREATE_TYPE. Para obtener más información, consulte[eventos DDL](../../relational-databases/triggers/ddl-events.md).  
+>  Los procedimientos almacenados del sistema que realizan operaciones similares a DDL también pueden activar notificaciones de eventos. Pruebe las notificaciones de eventos para determinar su respuesta a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, la instrucción CREATE TYPE y **sp_addtype** procedimiento almacenado activarán una notificación de eventos que se crea en un evento de CREATE_TYPE. Para obtener más información, vea[eventos DDL](../../relational-databases/triggers/ddl-events.md).  
   
- **Eventos de lenguaje de definición de datos y grupos de eventos**  
+ **Eventos y grupos de eventos del Lenguaje de definición de datos**  
   
- ![Proveedor WMI para eventos evento árbol](../../../2014/database-engine/dev-guide/media/sql-wmi-ddl-events-ktm.gif "del proveedor WMI de árbol de eventos de los eventos de servidor")  
+ ![Árbol de eventos del proveedor WMI de eventos de servidor](../../../2014/database-engine/dev-guide/media/sql-wmi-ddl-events-ktm.gif "Árbol de eventos del proveedor WMI de eventos de servidor")  
   
- **Grupos de eventos y eventos de seguimiento**  
+ **Eventos y grupos de eventos de seguimiento**  
   
- ![Y grupos de eventos de seguimiento](../../../2014/database-engine/dev-guide/media/sql-wmi-trc-all-events.gif "y grupos de eventos de seguimiento")  
+ ![Eventos y grupos de eventos de seguimiento](../../../2014/database-engine/dev-guide/media/sql-wmi-trc-all-events.gif "Eventos y grupos de eventos de seguimiento")  
   
-## <a name="see-also"></a>Vea también  
- [Proveedor WMI para conocer los conceptos de los eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
+## <a name="see-also"></a>Consulte también  
+ [Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [Usar WQL con el proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   
   

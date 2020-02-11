@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060710"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Configurar visor de datos (pestaña Histograma)
@@ -28,8 +28,8 @@ ms.locfileid: "66060710"
  **Columna visualizada**  
  Seleccione una columna para visualizarla como un histograma.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar visor de datos &#40;General (ficha)&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configurar visor de datos &#40;pestaña General&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Configurar visor de datos &#40;pestaña gráfico de columnas&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurar visor de datos &#40;pestaña cuadrícula&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [Configurar visor de datos &#40;pestaña gráfico de dispersión&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   

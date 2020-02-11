@@ -1,5 +1,5 @@
 ---
-title: Administrar tamaños de lote de copia masiva | Documentos de Microsoft
+title: Administrar tamaños de lote de copia masiva | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07f87bf0f231419e4f1345369211ba6ceebf1d12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199173"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Administrar tamaños de lote de copia masiva
@@ -35,18 +35,18 @@ ms.locfileid: "63199173"
   
 -   Si no especifica TABLOCK, limite los tamaños de lote a un número menor que 1.000 filas.  
   
- Cuando copia masiva se realiza desde un archivo de datos, el tamaño del lote se especifica mediante una llamada a **bcp_control** con la opción BCPBATCH antes de llamar a [bcp_exec](../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md). Cuando realice una copia masiva desde variables de programa utilizando [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) y [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), el tamaño del lote se controla mediante una llamada a [bcp_batch](../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) después de llamar a [bcp_ sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x* veces, donde *x* es el número de filas en un lote.  
+ Cuando se realiza una copia masiva desde un archivo de datos, el tamaño del lote se especifica mediante una llamada a **bcp_control** con la opción BCPBATCH antes de llamar a [bcp_exec](../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md). Cuando se realiza una copia masiva desde variables de programa mediante [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) y [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), el tamaño del lote se controla mediante una llamada a [bcp_batch](../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) después de llamar a [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x* veces, donde *x* es el número de filas de un lote.  
   
- Además de especificar el tamaño de una transacción, los lotes también afectan al envío de las filas al servidor a través de la red. Funciones de copia masiva suelen almacenar en caché las filas de **bcp_sendrow** hasta que se rellena un paquete de red y, a continuación, enviar el paquete completo al servidor. Cuando una aplicación llama **bcp_batch**, sin embargo, el paquete actual se envía al servidor independientemente de si se ha rellenado. La utilización de un tamaño de lote muy bajo puede reducir el rendimiento si da lugar al envío de numerosos paquetes parcialmente rellenados al servidor. Por ejemplo, al llamar a **bcp_batch** después de cada **bcp_sendrow** hace que cada fila se envían en un paquete independiente y, a menos que las filas sean muy grandes, desperdicia espacio en cada paquete. El tamaño predeterminado de los paquetes de red de SQL Server es 4 KB, aunque una aplicación puede cambiar el tamaño mediante una llamada a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) especificando el atributo SQL_ATTR_PACKET_SIZE.  
+ Además de especificar el tamaño de una transacción, los lotes también afectan al envío de las filas al servidor a través de la red. Las funciones de copia masiva suelen almacenar en caché las filas de **bcp_sendrow** hasta que se rellene un paquete de red y, a continuación, enviar el paquete completo al servidor. Sin embargo, cuando una aplicación llama a **bcp_batch**, el paquete actual se envía al servidor independientemente de si se ha rellenado. La utilización de un tamaño de lote muy bajo puede reducir el rendimiento si da lugar al envío de numerosos paquetes parcialmente rellenados al servidor. Por ejemplo, la llamada a **bcp_batch** después de cada **bcp_sendrow** hace que cada fila se envíe en un paquete independiente y, a menos que las filas sean muy grandes, desperdicia espacio en cada paquete. El tamaño predeterminado de los paquetes de red para SQL Server es 4 KB, aunque una aplicación puede cambiar el tamaño mediante una llamada a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) que especifique el atributo de SQL_ATTR_PACKET_SIZE.  
   
- Otro efecto secundario de lotes es que cada lote se considera un conjunto hasta que se completa con de resultados pendiente **bcp_batch**. Si se intenta ninguna otra operación en un identificador de conexión mientras un lote está pendiente, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client emite un error con SQLState = "HY000" y una cadena de mensaje de error:  
+ Otro efecto secundario de los lotes es que cada lote se considera un conjunto de resultados pendiente hasta que se completa con **bcp_batch**. Si se intenta realizar cualquier otra operación en un identificador de conexión mientras un lote está pendiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el controlador ODBC de Native Client emite un error con SQLSTATE = "HY000" y una cadena de mensaje de error de:  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  
 results for another hstmt."  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar operaciones de copia masiva &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)   
  [Importar y exportar datos en bloque &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)  
   

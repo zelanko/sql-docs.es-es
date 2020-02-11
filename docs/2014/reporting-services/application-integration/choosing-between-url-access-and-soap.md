@@ -16,19 +16,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 070d37a1e6ca210694d16ab593e9de40882611f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192985"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Elegir entre el acceso URL y SOAP
-  Integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en aplicaciones personalizadas puede resultar complicado. El reto, sin embargo, no es la complejidad del modelo de programación o API, sino las muchas maneras posibles de integrarlo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se diseñó desde el principio como una plataforma para programadores y, como tal, se ha creado teniendo en mente la flexibilidad de la programación. Con la flexibilidad viene la necesidad de tomar decisiones importantes sobre cómo integrar la funcionalidad de la administración y navegación en informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones empresariales existentes.  
+  Integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en aplicaciones personalizadas puede resultar complicado. El reto, sin embargo, no es la complejidad del modelo de programación o API, sino las muchas maneras posibles de integrarlo. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se diseñó desde el principio como una plataforma para programadores y, como tal, se ha creado teniendo en mente la flexibilidad de la programación. Con la flexibilidad viene la necesidad de tomar decisiones importantes sobre cómo integrar la funcionalidad de la administración y navegación en informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones empresariales existentes.  
   
- ![Escenarios de programación de Reporting Services](../../../2014/reporting-services/media/bk-ext-04.gif "escenarios de programación de Reporting Services")  
+ ![Escenarios de programación de Reporting Services](../../../2014/reporting-services/media/bk-ext-04.gif "Escenarios de programación de Reporting Services")  
 La programación de Reporting Services admite una amplia variedad de escenarios.  
   
- Hay dos formas de integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en aplicaciones personalizadas: Acceso URL y la API de SOAP de Reporting Services. Cuál usar depende de varios factores. En algunos casos, integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones empresariales personalizadas requiere el uso tanto del acceso URL como de SOAP. Debería formular las preguntas siguientes:  
+ Hay dos maneras de integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones personalizadas: el acceso URL y la API SOAP de Reporting Services. Cuál usar depende de varios factores. En algunos casos, integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones empresariales personalizadas requiere el uso tanto del acceso URL como de SOAP. Debería formular las preguntas siguientes:  
   
 -   ¿Qué tipo de funcionalidad de informes empresariales requieren usted o sus usuarios finales? ¿Necesita una manera simple de iniciar y navegar por los informes, o más características avanzadas de administración de servidores de informes con la solución empresarial personalizada?  
   
@@ -41,7 +42,7 @@ La programación de Reporting Services admite una amplia variedad de escenarios.
   
  Para más información sobre la barra de herramientas de informes, vea [Visor HTML y la barra de herramientas del informe](../html-viewer-and-the-report-toolbar.md).  
   
- Para obtener más información acerca del acceso URL, vea [acceso URL &#40;SSRS&#41;](../url-access-ssrs.md).  
+ Para obtener más información sobre el acceso URL, vea [acceso url &#40;SSRS&#41;](../url-access-ssrs.md).  
   
  El acceso URL es útil para ver los informes, pero no proporciona la funcionalidad de administración de espacios de nombres e informes que puede ser esencial para cualquier escenario con informes empresariales. En este caso, se recomienda la variada y completa funcionalidad de la API SOAP de Reporting Services. Con la API SOAP, puede administrar e implementar informes, crear calendarios, configurar las propiedades del servidor, administrar el espacio de nombres del servidor de informes, crear suscripciones, etcétera. La API SOAP expone el conjunto completo de funcionalidad de administración en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. La API SOAP también puede habilitar la visualización y navegación en los informes a través del método <xref:ReportExecution2005.ReportExecutionService.Render%2A> de la API. Sin embargo, al ver los informes a través de la API SOAP, no se habilita la funcionalidad de vista integrada de la barra de herramientas de informe, ni se administra automáticamente la interactividad de los informes que el acceso URL proporciona.  
   
@@ -51,10 +52,10 @@ La programación de Reporting Services admite una amplia variedad de escenarios.
   
  Para obtener un ejemplo de cómo combinar el acceso URL y el servicio web para proporcionar informes integrados, vea [SQL Server Reporting Services Product Samples (Ejemplos del producto SQL Server Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Vea también  
- [Integración de Reporting Services en las aplicaciones](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Integración de Reporting Services con SOAP](../application-integration/integrating-reporting-services-using-soap.md)   
- [Integración de Reporting Services con el acceso URL](../application-integration/integrating-reporting-services-using-url-access.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integración de Reporting Services en aplicaciones](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
+ [Integración de Reporting Services mediante SOAP](../application-integration/integrating-reporting-services-using-soap.md)   
+ [Integración de Reporting Services mediante el acceso URL](../application-integration/integrating-reporting-services-using-url-access.md)   
  [Referencia técnica &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

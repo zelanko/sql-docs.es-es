@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151505"
 ---
 # <a name="summary-basic-navigation"></a>Resumen: Navegación básica
@@ -31,6 +31,6 @@ ms.locfileid: "63151505"
 -   Ajuste la opción **Al iniciar el sistema** para personalizar el diseño predeterminado.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Escribir Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [Lección 2: Escribir Transact-SQL](lesson-2-writing-transact-sql.md)  
   
   

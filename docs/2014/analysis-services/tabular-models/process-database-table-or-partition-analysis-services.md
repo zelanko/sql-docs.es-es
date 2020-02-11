@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea2d05c2862445737ea544fdab9c4ca8fc5e6c76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066848"
 ---
 # <a name="process-database-table-or-partition"></a>Procesar base de datos, tabla o partición
-  Las tareas de este tema describen cómo procesar una base de datos de modelo tabular, una tabla o particiones manualmente mediante el **proceso \<objeto >** cuadro de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Las tareas de este tema describen cómo procesar una base de datos de modelo tabular, una tabla o particiones manualmente mediante el cuadro de diálogo **procesar \<objeto>** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Para obtener más información sobre el procesamiento de modelos tabulares, vea [Procesar datos &#40;SSAS tabular&#41;](../process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_process_tasks"></a> Tareas  
   
-###  <a name="bkmk_process_db"></a> Para procesar una base de datos  
+###  <a name="bkmk_process_db"></a>Para procesar una base de datos  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la base de datos que quiere procesar y, después, haga clic en **Procesar base de datos**.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66066848"
   
 3.  En la columna de casilla **Procesar** , seleccione las particiones que desea procesar con el modo seleccionado y haga clic en **Aceptar**.  
   
-###  <a name="bkmk_process_table"></a> Para procesar una tabla  
+###  <a name="bkmk_process_table"></a>Para procesar una tabla  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en la base de datos de modelo tabular que contiene la tabla que quiere procesar, expanda el nodo **Tablas** , haga clic con el botón derecho en la tabla que quiere procesar y, después, haga clic en **Procesar tabla**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66066848"
   
 3.  En la columna de casilla de tabla, compruebe la tabla y, opcionalmente, seleccione cualquier tabla adicional que desee procesar; a continuación, haga clic en **Aceptar**.  
   
-###  <a name="bkmk_process_partition"></a> Para procesar una o más particiones  
+###  <a name="bkmk_process_partition"></a>Para procesar una o más particiones  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la tabla que tiene las particiones que quiere procesar y, después, haga clic en **Particiones**.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "66066848"
     |**Proceso completo**|Procesa un objeto de partición y todos los objetos que contiene. Cuando se ejecuta Proceso completo en un objeto que ya se ha procesado, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quita todos los datos del objeto y, a continuación, lo procesa. Este tipo de procesamiento es necesario cuando se ha realizado un cambio estructural en un objeto.|  
     |**Procesar datos**|Carga datos en una partición o en una tabla sin volver a generar las jerarquías o las relaciones, ni volver a calcular las columnas calculadas y las medidas.|  
     |**Procesar borrado**|Quita todos los datos de una partición.|  
-    |**Procesar adición**|Actualiza la partición con nuevos datos de forma incremental.|  
+    |**Agregar proceso**|Actualiza la partición con nuevos datos de forma incremental.|  
   
 4.  En la columna de casilla **Procesar** , seleccione las particiones que desea procesar con el modo seleccionado y haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Particiones de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-partitions-ssas-tabular.md)   
  [Crear y administrar particiones de modelos tabulares &#40;SSAS tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   

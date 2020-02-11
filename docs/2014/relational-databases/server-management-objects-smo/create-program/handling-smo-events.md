@@ -1,5 +1,5 @@
 ---
-title: Controlar eventos SMO | Documentos de Microsoft
+title: Controlar eventos SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191923"
 ---
 # <a name="handling-smo-events"></a>Controlar eventos SMO
@@ -35,9 +35,9 @@ ms.locfileid: "63191923"
 ## <a name="event-subscription"></a>Suscripción a eventos  
  Administra los eventos escribiendo una clase de controlador de eventos, creando una instancia de él, asignando el controlador de eventos al objeto primario y suscribiéndose a continuación al evento.  
   
- Una clase de controlador de eventos se debe escribir para administrar los eventos. La clase de controlador de eventos puede contener más de una función de controlador de eventos y se debe instalar para los eventos que se van a administrar. Las funciones de controlador de eventos reciben información acerca del evento de la *ServerEventNotificatificationArgs* parámetro que puede utilizarse para presentar información sobre el evento.  
+ Una clase de controlador de eventos se debe escribir para administrar los eventos. La clase de controlador de eventos puede contener más de una función de controlador de eventos y se debe instalar para los eventos que se van a administrar. Las funciones de controlador de eventos reciben información sobre el evento del parámetro *ServerEventNotificatificationArgs* que se puede usar para notificar información sobre el evento.  
   
- Se enumeran los tipos de sucesos del servidor y la base de datos que pueden controlarse en el <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> clase y la <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>clase.  
+ Los tipos de eventos de base de datos y de servidor que se pueden controlar <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> se enumeran <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>en la clase y en la clase.  
   
 ## <a name="example"></a>Ejemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

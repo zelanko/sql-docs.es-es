@@ -1,5 +1,5 @@
 ---
-title: Proveedor WMI de clases de administración de configuración | Microsoft Docs
+title: Proveedor WMI para clases de administración de configuración | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b83388ff3be4c8cfdfec72968230f957358b1960
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288423"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Proveedor WMI para las clases de administración de configuración
@@ -55,7 +55,7 @@ ms.locfileid: "63288423"
   
  [Clase SInstance](sinstance-class/sinstance-class.md)  
   
- [Clase SqlErrorLogEvent](sqlerrorlogevent-class.md)  
+ [SqlErrorLogEvent, clase](sqlerrorlogevent-class.md)  
   
  [Clase SqlErrorLogFile](sqlerrorlogfile-class.md)  
   

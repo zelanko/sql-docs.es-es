@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183019"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>Objeto SQL Server: Estadísticas de grupo de recursos de servidor
@@ -25,7 +25,7 @@ ms.locfileid: "63183019"
   
  Cada grupo de recursos de servidor activo crea una instancia del objeto de rendimiento SQLServer:Estadísticas de grupo de recursos de servidor que tiene el mismo nombre que el grupo de recursos de servidor del regulador de recursos. En la tabla siguiente se describen los contadores admitidos en esta instancia.  
   
-|Nombre de contador|Descripción|  
+|Nombre del contador|Descripción|  
 |------------------|-----------------|  
 |% de uso de CPU|El uso de ancho banda de CPU por parte de todas las solicitudes en todos los grupos de cargas de trabajo pertenecientes a este grupo. Este número se mide en relación al equipo y se normaliza respecto a todas las CPUs del sistema. Este valor cambiará a medida que la cantidad de CPU disponible para el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] varíe. No se normaliza respecto a lo que el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recibe.|  
 |% objetivo de uso de CPU|Valor de destino del porcentaje de uso de CPU para el grupo de recursos de servidor según la configuración del grupo de recursos de servidor y la carga del sistema.|  
@@ -43,14 +43,14 @@ ms.locfileid: "63183019"
 |Memoria de destino (KB)|Cantidad de destino, en kilobytes (KB), de memoria que el grupo de recursos de servidor trata de obtener en función de la configuración del grupo de recursos de servidor y el estado del servidor.|  
 |E/S de lectura de disco/s|Número de operaciones de lectura del disco en el último segundo.|  
 |E/S de lectura de disco limitadas/s|Número de operaciones de lectura limitadas en el último segundo.|  
-|Bytes de lectura de disco/s|Número de bytes leídos del disco en el último segundo.|  
+|Bytes de lectura de disco/s |Número de bytes leídos del disco en el último segundo.|  
 |Promedio de E/S de lectura de disco (ms)|Tiempo promedio, en milisegundos, de una operación de lectura del disco.|  
 |E/S de escrituras en disco/s|Número de operaciones de escritura en el disco en el último segundo.|  
 |E/S de escritura en disco limitadas/s|Número de operaciones de escritura limitadas en el último segundo.|  
-|Bytes de escritura en disco/s|Número de bytes escritos en el disco en el último segundo.|  
+|  Bytes de escritura en disco/s|Número de bytes escritos en el disco en el último segundo.|  
 |Promedio de escrituras en disco (ms)|Tiempo promedio, en milisegundos, de una operación de escritura en el disco.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [Objeto SQL Server: Estadísticas de grupo de cargas de trabajo](sql-server-workload-group-stats-object.md)   
  [Regulador de recursos](../resource-governor/resource-governor.md)  

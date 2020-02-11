@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63301730"
 ---
 # <a name="operator-properties-history-page"></a>Propiedades del operador (página Historial)
@@ -29,10 +29,10 @@ ms.locfileid: "63301730"
  **Por buscapersonas**  
  Intentos de notificación más recientes por correo buscapersonas, o **(Nunca se notificó mediante buscapersonas)** si este operador no ha recibido nunca una notificación por buscapersonas.  
   
- **Por NET SEND**  
+ **Por net send**  
  Intentos de notificación más recientes realizados mediante net send, o **(Nunca se notificó mediante el comando net send)** si este operador no ha recibido nunca una notificación mediante net send.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Operadores](operators.md)  
   
   

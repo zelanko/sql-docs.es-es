@@ -1,5 +1,5 @@
 ---
-title: Base de datos de cuadro de diálogo de propiedades (SSAS - Multidimensional) | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la base de datos (SSAS-multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082319"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Propiedades de la base de datos (cuadro de diálogo) (SSAS: multidimensional)
@@ -26,19 +26,19 @@ ms.locfileid: "66082319"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Name**|Escriba un nombre para cambiar el nombre de la base de datos.|  
-|**ID**|Muestra el identificador de la base de datos.|  
+|**Nombre**|Escriba un nombre para cambiar el nombre de la base de datos.|  
+|**SESIÓN**|Muestra el identificador de la base de datos.|  
 |**Descripción**|Escriba una descripción para cambiar la descripción de la base de datos.|  
-|**Marca de tiempo de creación**|Muestra la fecha y hora en que se creó la base de datos.|  
+|**Crear marca de tiempo**|Muestra la fecha y hora en que se creó la base de datos.|  
 |**Última actualización de esquema**|Muestra la fecha y hora en que se actualizaron por última vez los metadatos de la base de datos.|  
 |**Última actualización**|Muestra la fecha y hora en que se actualizaron por última vez los datos de la base de datos.|  
-|**Información de suplantación de origen de datos**|Seleccione la información de suplantación que utilizará la base de datos para conectarse a los orígenes de datos contenidos en la base de datos e interactuar con estos. Los valores válidos incluyen los siguientes:<br /><br /> **ImpersonateAccount** (use un nombre de usuario y una contraseña de Windows específicos).<br /><br /> **ImpersonateService** (use la cuenta de servicio).<br /><br /> **ImpersonateCurrentUser** (use las credenciales del usuario actual).<br /><br /> **Default** (use la cuenta de servicio para las operaciones MOLAP y el usuario actual para la minería de datos).<br /><br /> Aunque es posible establecer la configuración de la suplantación del origen de datos en el nivel de base de datos, esto solo afectará a aquellos orígenes de datos que especifiquen **Heredar** en la configuración de suplantación. La configuración de suplantación especificada directamente en el origen de datos invalidará siempre a la configuración especificada en el nivel de base de datos.<br /><br /> Al elegir una opción de suplantación, tenga en cuenta los tipos de operaciones que deberán admitirse. Algunas operaciones, tales como el procesamiento, no pueden realizarse.|  
+|**Información de suplantación de origen de datos**|Seleccione la información de suplantación que utilizará la base de datos para conectarse a los orígenes de datos contenidos en la base de datos e interactuar con estos. Los valores válidos incluyen los siguientes:<br /><br /> **ImpersonateAccount** (usar un nombre de usuario y una contraseña de Windows específicos).<br /><br /> **ImpersonateService** (usar la cuenta de servicio).<br /><br /> **ImpersonateCurrentUser** (usar las credenciales del usuario actual).<br /><br /> **Predeterminado** (utilice la cuenta de servicio para las operaciones MOLAP y el usuario actual para la minería de datos).<br /><br /> Aunque es posible establecer la configuración de la suplantación del origen de datos en el nivel de base de datos, esto solo afectará a aquellos orígenes de datos que especifiquen **Heredar** en la configuración de suplantación. La configuración de suplantación especificada directamente en el origen de datos invalidará siempre a la configuración especificada en el nivel de base de datos.<br /><br /> Al elegir una opción de suplantación, tenga en cuenta los tipos de operaciones que deberán admitirse. Algunas operaciones, tales como el procesamiento, no pueden realizarse.|  
 |**Procesado por última vez**|Muestra la fecha y hora en que se procesó por última vez la base de datos.|  
 |**Tamaño estimado**|Muestra el tamaño estimado de la base de datos.|  
 |**Ubicación de almacenamiento**|Especifica la ubicación de la base de datos. Si la base de datos se encuentra en el directorio de datos predeterminado, este valor estará vacío.|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Bases de datos de modelos multidimensionales &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

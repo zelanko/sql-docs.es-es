@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150749"
 ---
 # <a name="monitor-sql-server-components"></a>Supervisar los componentes de SQL Server
@@ -82,9 +82,10 @@ ms.locfileid: "63150749"
   
 -   Utilidad de reproducción distribuida  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Monitor de actividad  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Monitor de actividad  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plan de presentación gráfico de  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plan de presentación gráfico de  
   
 -   Procedimientos almacenados  
   
@@ -120,11 +121,13 @@ ms.locfileid: "63150749"
   
 3.  Guarde los datos de eventos capturados.  
   
-     Al guardar datos de eventos capturados, puede analizarlos posteriormente e incluso volver a reproducirlos mediante la utilidad de reproducción distribuida de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Los datos de eventos capturados se guardan en un archivo que se puede volver a cargar en la herramienta con que se creó para análisis. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite guardar los datos de eventos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El almacenamiento de los datos de eventos capturados es importante cuando se crea una línea base de rendimiento. Los datos de la línea base de rendimiento se guardan y se utilizan, al comparar datos de eventos capturados recientemente, a fin de determinar si el rendimiento es óptimo. Para obtener más información, vea [Plantillas y permisos de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
+     Al guardar datos de eventos capturados, puede analizarlos posteriormente e incluso volver a reproducirlos mediante la utilidad de reproducción distribuida de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Los datos de eventos capturados se guardan en un archivo que se puede volver a cargar en la herramienta con que se creó para análisis. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite guardar los datos de eventos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El almacenamiento de los datos de eventos capturados es importante cuando se crea una línea base de rendimiento. Los datos de la línea base de rendimiento se guardan y se utilizan, al comparar datos de eventos capturados recientemente, a fin de determinar si el rendimiento es óptimo. Para obtener más información, vea [Plantillas y permisos de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
   
 4.  Cree plantillas de seguimiento que contengan la configuración especificada para capturar los eventos.  
   
-     Las plantillas de seguimiento incluyen especificaciones acerca de los eventos, los datos de eventos y los filtros que se utilizarán para capturar datos. Puede utilizar estas plantillas para supervisar más tarde un conjunto específico de eventos, sin necesidad de volver a definir los eventos, los datos de los eventos ni los filtros. Por ejemplo, si desea supervisar a menudo el número de interbloqueos, y los usuarios implicados en estos interbloqueos, puede crear una plantilla que defina estos eventos, los datos y los filtros de eventos, guardar la plantilla y volver a aplicar el filtro la próxima vez que desee supervisar los interbloqueos. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa las plantillas de seguimiento con este fin. Para obtener más información, vea [Configurar los valores predeterminados de definición de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) y [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md).  
+     Las plantillas de seguimiento incluyen especificaciones acerca de los eventos, los datos de eventos y los filtros que se utilizarán para capturar datos. Puede utilizar estas plantillas para supervisar más tarde un conjunto específico de eventos, sin necesidad de volver a definir los eventos, los datos de los eventos ni los filtros. Por ejemplo, si desea supervisar a menudo el número de interbloqueos, y los usuarios implicados en estos interbloqueos, puede crear una plantilla que defina estos eventos, los datos y los filtros de eventos, guardar la plantilla y volver a aplicar el filtro la próxima vez que desee supervisar los interbloqueos. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa las plantillas de seguimiento con este fin. Para obtener más información, vea [Configurar los valores predeterminados de definición de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) y [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md).  
   
 5.  Analice los datos de eventos capturados.  
   

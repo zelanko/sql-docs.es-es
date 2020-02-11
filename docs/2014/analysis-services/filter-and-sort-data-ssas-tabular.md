@@ -1,5 +1,5 @@
 ---
-title: Filtrar y ordenar datos (SSAS Tabular) | Microsoft Docs
+title: Filtrar y ordenar datos (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081262"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Filtrar y ordenar datos (SSAS tabular)
@@ -26,7 +26,7 @@ ms.locfileid: "66081262"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Ordenar datos en una tabla &#40;Tabular de SSAS&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)ordenar datos en una tabla|En las tareas de este tema se describe cómo ordenar los datos de una tabla por letras o números.|  
-|[Filtrar datos en una tabla &#40;Tabular de SSAS&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|En las tareas de este tema se describe cómo aplicar filtros personalizados para controlar la manera en que se muestran las filas.|  
+|[Ordenar datos en una tabla &#40;SSAS tabular&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md) Ordenar datos en una tabla|En las tareas de este tema se describe cómo ordenar los datos de una tabla por letras o números.|  
+|[Filtrar datos en una tabla &#40;&#41;tabular de SSAS](tabular-models/filter-data-in-a-table-ssas-tabular.md)|En las tareas de este tema se describe cómo aplicar filtros personalizados para controlar la manera en que se muestran las filas.|  
   
   

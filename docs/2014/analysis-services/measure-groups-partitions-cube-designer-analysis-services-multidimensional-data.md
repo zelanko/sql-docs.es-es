@@ -1,5 +1,5 @@
 ---
-title: (Pestaña particiones, Diseñador de cubos) de grupos de medida (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Grupos de medida (pestaña particiones, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077909"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Grupos de medida (pestaña Particiones, Diseñador de cubos) (Analysis Services - Datos multidimensional)
@@ -26,7 +26,7 @@ ms.locfileid: "66077909"
  **Particiones**  
  Muestra una cuadrícula que contiene la lista de particiones compatibles con el grupo de medida seleccionado. La cuadrícula contiene las columnas siguientes:  
   
- **(Ordinal)**  
+ **Números**  
  Muestra la posición ordinal de la partición dentro del grupo de medida.  
   
  Haga clic para seleccionar toda la fila para la partición.  
@@ -34,12 +34,12 @@ ms.locfileid: "66077909"
  **Nombre de partición**  
  Escriba el nombre de la partición seleccionada.  
   
- **Source**  
+ **Origen**  
  Escriba el nombre de la tabla (para enlace de tablas) o la consulta (para enlace de consultas) que proporciona los datos de la tabla de hechos para la partición seleccionada.  
   
  Haga clic en el botón **...** para ver el cuadro de diálogo **Origen de la partición** y defina el origen de la partición seleccionada.  
   
- **Agregación**  
+ **Concentrado**  
  Muestra el modo de agregación y el modo de almacenamiento de la partición. El modo de almacenamiento se muestra primero: el procesamiento analítico en línea relacional (ROLAP), el procesamiento analítico en línea multidimensional (MOLAP) o el procesamiento analítico en línea híbrido (HOLAP). El modo de agregación se muestra como un porcentaje de la optimización solicitada, como una medida del espacio solicitado o utilizado, o como el número de agregaciones creadas. Haga clic en el botón **...** para ver el **Asistente para diseñar agregaciones** y defina el diseño de agregaciones de la partición especificada.  
   
  **Descripción**  
@@ -64,14 +64,14 @@ ms.locfileid: "66077909"
 |------------|----------------|  
 |**Agregar Business Intelligence**|Haga clic en esta opción para mostrar el **Asistente de Business Intelligence** y agregar características de Business Intelligence al cubo. Para obtener más información sobre el **Asistente de Business Intelligence**, vea [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md).|  
 |**Nueva partición**|Haga clic para ver el **Asistente para particiones** y crear una nueva partición en el grupo de medida seleccionado.|  
-|**Cambiar el nombre de partición**|Seleccione esta opción para cambiar el nombre de la partición seleccionada.|  
+|**Cambiar nombre de partición**|Seleccione esta opción para cambiar el nombre de la partición seleccionada.|  
 |**Eliminar**|Haga clic para mostrar el cuadro de diálogo **Eliminar objetos** y eliminar la acción seleccionada.<br /><br /> Nota: Esta opción está deshabilitada si se ha seleccionado una partición de reescritura.|  
 |**Diseñar agregaciones**|Haga clic en esta opción para mostrar el **Asistente para diseñar agregaciones** y crear un diseño de agregaciones para la partición seleccionada.<br /><br /> Nota: Esta opción está deshabilitada si se ha seleccionado una partición de reescritura.|  
 |**Configuración de almacenamiento**|Haga clic para ver el cuadro de diálogo **Configuración de almacenamiento** y especifique el modo de almacenamiento, el almacenamiento en caché automático y la configuración de notificación para la partición seleccionada.|  
 |**Configuración de reescritura**|Haga clic para mostrar el cuadro de diálogo **Enable/Disable Writeback** (Habilitar/Deshabilitar reescritura) y especifique la configuración de reescritura para el grupo de medida que contiene la partición seleccionada.|  
 |**Optimización basada en uso**|Haga clic para mostrar el **Asistente para optimización basada en el uso** y cree un diseño de agregaciones basado en los patrones de uso existentes para la partición seleccionada.<br /><br /> Nota: Esta opción está deshabilitada si se ha seleccionado una partición de reescritura.|  
-|**Procesar**|Haga clic para mostrar el cuadro de diálogo **Proceso** y procese la partición seleccionada.|  
-|**Copiar**|Esta opción está deshabilitada.|  
+|**Proceso**|Haga clic para mostrar el cuadro de diálogo **Proceso** y procese la partición seleccionada.|  
+|**Copy**|Esta opción está deshabilitada.|  
 |**Pegar**|Esta opción está deshabilitada.|  
 |**Propiedades**|Seleccione esta opción para mostrar la ventana **Propiedades** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para la partición seleccionada.|  
   

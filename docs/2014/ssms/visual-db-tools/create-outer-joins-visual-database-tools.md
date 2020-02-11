@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184309"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Crear combinaciones externas (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63184309"
   
 1.  Cree la combinación, ya sea automática o manualmente. Para detalles, consulte [Combinar tablas automáticamente &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) o [Combinar tablas manualmente &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
-2.  Seleccione la línea de combinación en el panel Diagrama y, a continuación, desde el **Diseñador de consultas** menú, elija **seleccionar todas las filas de \<tablename >** , seleccione el comando que incluye la tabla cuyo adicional filas que van a incluir.  
+2.  Seleccione la línea de combinación en el panel Diagrama y, a continuación, en el menú **Diseñador de consultas** , elija **seleccionar todas las filas \<de TableName>**, seleccionando el comando que incluye la tabla cuyas filas adicionales desea incluir.  
   
     -   Elija la primera tabla para crear una combinación externa izquierda.  
   
@@ -57,8 +57,8 @@ FROM employee LEFT OUTER JOIN jobs
 WHERE (jobs.job_id IS NULL)  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Consultas con combinaciones &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [Cuadro de diálogo Combinar &#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   
   

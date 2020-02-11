@@ -1,5 +1,5 @@
 ---
-title: Alias de columna en la cláusula ORDER BY no pueden ir precedidos de alias de tabla | Microsoft Docs
+title: Los alias de columna en la cláusula ORDER BY no pueden ir precedidos por un alias de tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096317"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>El alias de tabla no puede asignar un prefijo a los alias de columna de la cláusula ORDER BY
@@ -36,9 +36,10 @@ FROM Person.Contact p
 ORDER BY p.l  
 ```  
   
- [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] no interpreta `p.l` en la cláusula `ORDER BY` como una columna válida de la tabla.  
+ 
+  [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] no interpreta `p.l` en la cláusula `ORDER BY` como una columna válida de la tabla.  
   
-### <a name="exception"></a>Excepción  
+### <a name="exception"></a>Exception  
  Si el alias de columna con prefijo que se especifica en la cláusula ORDER BY es un nombre de columna válido de la tabla especificada, la consulta se ejecutará sin errores; en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la semántica de la instrucción podría ser diferente. Por ejemplo, el alias de columna (`id`) especificado en la siguiente instrucción es un nombre de columna válido de la tabla `sysobjects`. En [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], cuando se ejecuta la instrucción, se realiza la operación `CAST` una vez ordenado el conjunto de resultados. Esto significa que la columna `name` se utiliza en la operación de ordenación. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la operación `CAST` se produce antes de la operación de ordenación. Esto significa que la columna `id` de la tabla se utiliza en la operación de ordenación y devuelve el conjunto de resultados con un orden diferente al esperado.  
   
 ```  
@@ -70,8 +71,8 @@ FROM Person.Contact p
 ORDER BY p.LastName  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085846"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Elegir y asignar datos de entrada para una consulta de predicción
@@ -28,7 +28,7 @@ ms.locfileid: "66085846"
 > [!WARNING]  
 >  No puede agregar columnas nuevas ni asignar columnas que se encuentren en una vista del origen de datos diferente. La vista del origen de datos que seleccione debe contener todas las columnas que necesite para la consulta de predicción.  
   
- Una vez identificadas las tablas que contienen los datos que va a usar para las predicciones, deberá asignar las columnas de los datos externos a las columnas del modelo de minería de datos. Por ejemplo, si el modelo predice los hábitos de compra de los clientes basándose en datos demográficos y respuestas de encuestas, los datos de entrada deben contener información que se corresponda generalmente con lo que se encuentra en el modelo. No es necesario que haya datos coincidentes para todas y cada una de las columnas, pero a cuántas más columnas pueda asignar datos, mejor. Si intenta asignar columnas que tienen tipos de datos diferentes, es posible que obtenga un error. En ese caso, podría definir un cálculo con nombre en la vista del origen de datos para convertir los nuevos datos de las columnas al tipo de datos requerido por el modelo. Para más información, vea [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ Una vez identificadas las tablas que contienen los datos que va a usar para las predicciones, deberá asignar las columnas de los datos externos a las columnas del modelo de minería de datos. Por ejemplo, si el modelo predice los hábitos de compra de los clientes basándose en datos demográficos y respuestas de encuestas, los datos de entrada deben contener información que se corresponda generalmente con lo que se encuentra en el modelo. No es necesario que haya datos coincidentes para todas y cada una de las columnas, pero a cuántas más columnas pueda asignar datos, mejor. Si intenta asignar columnas que tienen tipos de datos diferentes, es posible que obtenga un error. En ese caso, podría definir un cálculo con nombre en la vista del origen de datos para convertir los nuevos datos de las columnas al tipo de datos requerido por el modelo. Para obtener más información, vea [definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
  Al elegir los datos que se van a usar para la predicción, es posible que algunas de las columnas del origen de datos seleccionado se asignen automáticamente a las columnas del modelo de minería de datos, basándose en la similitud de los nombres y el tipo de datos coincidentes. Puede usar el cuadro de diálogo **Modificar asignación** de la pestaña **Predicción de modelo de minería de datos** para cambiar las columnas que se han asignado, eliminar las asignaciones inapropiadas o crear nuevas asignaciones para las columnas existentes. La superficie de diseño **Predicción de modelo de minería de datos** también admite la edición de tipo arrastrar y colocar para las conexiones.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66085846"
   
 3.  En **Nombre de tabla o vista**, seleccione la tabla que contiene los datos que quiere usar para probar los modelos.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
      Las columnas de la estructura de minería de datos se asignarán automáticamente a las columnas que tengan el mismo nombre en la tabla de entrada.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66085846"
   
 4.  Seleccione una columna nueva en la lista de columnas disponibles del origen de datos externo. Seleccione el elemento en blanco en la lista para eliminar la asignación de columnas.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
      Las nuevas asignaciones de columnas se muestran en el diseñador.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66085846"
   
 3.  Haga clic en **Quitar relación**.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
      La relación entre la tabla de casos y la tabla anidada se ha eliminado.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66085846"
   
      Si ya existe una relación, las columnas del modelo de minería de datos se asignan automáticamente a las columnas que tienen el mismo nombre en la tabla de entrada. Puede modificar la relación entre la tabla anidada y la tabla de casos haciendo clic en **Modificar combinación**, que abre el cuadro de diálogo **Crear relación** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Consultas de predicción &#40;minería de datos&#41;](prediction-queries-data-mining.md)  
   
   

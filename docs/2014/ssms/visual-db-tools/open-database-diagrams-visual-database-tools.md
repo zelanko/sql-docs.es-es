@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254472"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Abrir diagramas de base de datos (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63254472"
   
 2.  Haga doble clic en el nombre del diagrama de base de datos que desea abrir.  
   
-     -o bien-  
+     O bien  
   
      Haga clic con el botón derecho en el nombre del diagrama de base de datos que desea abrir y, luego, elija **Diagrama de base de datos de diseño**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63254472"
 > [!NOTE]  
 >  Solo el propietario del diagrama o un miembro del rol db_owner de la base de datos puede abrir el diagrama.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Descripción de la propiedad de un diagrama de base de datos &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  
   

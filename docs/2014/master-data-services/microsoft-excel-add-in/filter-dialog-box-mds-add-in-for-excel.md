@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482566"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Cuadro de diálogo Filtrar (Complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use el cuadro de diálogo **Filtro** para restringir la lista de datos administrados por MDS antes de cargarla en Excel.  
   
- Este cuadro de diálogo contiene tres secciones: **Columnas**, **filas**, y **resumen**.  
+ Este cuadro de diálogo contiene tres secciones: **Columnas**, **Filas**, y **Resumen**.  
   
 ## <a name="columns"></a>Columnas  
  Use la sección **Columnas** para determinar los atributos (columnas) que quiere mostrar en Excel.  
@@ -31,7 +31,7 @@ ms.locfileid: "65482566"
 |Jerarquía explícita|Si elige el tipo de atributo **Consolidado** , elija la jerarquía a la que pertenecen los miembros consolidados. Para obtener más información, consulte [Jerarquías explícitas &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md).|  
 |Grupos de atributos|Los grupos de atributos son una manera de agrupar subconjuntos de atributos. Elija un grupo de atributos si desea mostrar un subconjunto de atributos disponibles. Para obtener más información sobre los grupos de atributos, consulte [Grupos de atributos &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md).|  
 |Seleccionar todo|Haga clic para seleccionar todos los atributos mostrados en la lista.|  
-|Borrar todo|Haga clic para borrar los atributos seleccionados mostrados en la lista.<br /><br /> Nota: No puede borrar **Nombre** ni **Código**.|  
+|Borrar todo|Haga clic para borrar los atributos seleccionados mostrados en la lista.<br /><br /> Nota: no se puede borrar **el nombre y el** **código**.|  
 |Flecha arriba|Haga clic para mover el atributo seleccionado hacia arriba en la lista. El orden de arriba a abajo corresponde al orden de izquierda a derecha en el que se muestran las columnas en la hoja.|  
 |Flecha abajo|Haga clic para mover el atributo seleccionado hacia abajo en la lista. El orden de arriba a abajo corresponde al orden de izquierda a derecha en el que se muestran las columnas en la hoja.|  
   
@@ -40,13 +40,13 @@ ms.locfileid: "65482566"
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
-|Attribute|Muestra un atributo por el que desea filtrar. Si no aparece ningún atributo, se debe a que no se han agregado.<br /><br /> Nota: Puede filtrar por los atributos que no va a mostrar en la hoja de cálculo.|  
-|Operador|Muestra los operadores correspondientes al tipo de atributo que estaba seleccionado. Para obtener más información, consulte [Operadores de filtro &#40;Master Data Services&#41;](../filter-operators-master-data-services.md).|  
+|Atributo|Muestra un atributo por el que desea filtrar. Si no aparece ningún atributo, se debe a que no se han agregado.<br /><br /> Nota: Puede filtrar los atributos que no tiene previsto mostrar en la hoja de cálculo.|  
+|Operator|Muestra los operadores correspondientes al tipo de atributo que estaba seleccionado. Para obtener más información, consulte [Operadores de filtro &#40;Master Data Services&#41;](../filter-operators-master-data-services.md).|  
 |Criterios|Los criterios por los que desea filtrar.|  
 |Resumen de actualización|Cuando trabaje con conjuntos de datos grandes, haga clic para actualizar la sección **Resumen** con detalles de la cantidad de datos que se cargarán.|  
-|Agregar|Al hacer clic en un atributo en la sección **Columnas** y, a continuación, hacer clic en **Agregar**, se agrega un atributo a la lista de filtros.|  
+|Sumar|Al hacer clic en un atributo en la sección **Columnas** y, a continuación, hacer clic en **Agregar**, se agrega un atributo a la lista de filtros.|  
 |Quitar todo|Quita todos los filtros de la lista.|  
-|Quitar|Quita el filtro seleccionado de la lista.|  
+|Remove|Quita el filtro seleccionado de la lista.|  
   
 ## <a name="summary"></a>Resumen  
  Use la sección **Resumen** para ver los detalles de la cantidad de datos que se cargarán, antes de cargarlos.  
@@ -59,8 +59,8 @@ ms.locfileid: "65482566"
 |Filas|El número de filas que se cargan en Excel, basado en los filtros aplicados en la sección **Filas** .|  
 |Columnas|El número de columnas que se cargarán en Excel, en función de los atributos seleccionados en la sección **Columnas** .|  
   
-## <a name="see-also"></a>Vea también  
- [Filtrar datos antes de cargarlos &#40;complemento MDS para Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
- [Cargando datos &#40;complemento MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Consulte también  
+ [Filtre los datos antes de cargar &#40;Complemento MDS para Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
+ [Cargando datos &#40;Complemento MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

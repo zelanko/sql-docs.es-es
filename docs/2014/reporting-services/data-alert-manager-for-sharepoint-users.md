@@ -14,13 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8382bfd231c87c1a0c1ea1d2f326cffaf327b202
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109521"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Administrador de alertas de datos para los usuarios de SharePoint
+  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona el Administrador de alertas de datos para que los trabajadores de la información administren las alertas de datos. Pueden ver la información sobre las alertas que crearon, eliminar alertas, abrir definiciones de alertas para su edición y ejecutar alertas a petición. Pueden optar por ver las alertas de un único informe o de todos los informes. La imagen siguiente muestra las características disponibles para los trabajadores de la información en el Administrador de alertas de datos.  
   
  ![Características del Administrador de alertas para los usuarios de SharePoint](media/rs-alertmanageriw.gif "Características del Administrador de alertas para los usuarios de SharePoint")  
@@ -34,35 +35,35 @@ ms.locfileid: "66109521"
 > [!NOTE]  
 >  Para poder utilizar las características de alertas de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , un administrador debe otorgarle permisos. Para más información sobre los permisos necesarios, vea [Alertas de datos de Reporting Services](../ssms/agent/alerts.md).  
   
-##  <a name="ViewingAlerts"></a> Ver información de alertas de datos  
+##  <a name="ViewingAlerts"></a>Ver información de alertas de datos  
  Puede ver una lista de las alertas de datos que creó en el Diseñador de alertas de datos. Para abrir el Administrador de alertas de datos, haga clic con el botón secundario en un informe publicado en una biblioteca de SharePoint. En la imagen siguiente se muestra la opción **Administrar alertas de datos** del menú contextual del informe.  
   
  ![Abrir el Administrador de alertas desde el menú contextual del informe](media/rs-openalertmanager.gif "Abrir el Administrador de alertas desde el menú contextual del informe")  
   
- El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del creador de la definición de la alerta, el número de veces que se envió el mensaje de alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado de la última alerta. Si el mensaje de alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para más información,vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
+ El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del creador de la definición de la alerta, el número de veces que se envió el mensaje de alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado de la última alerta. Si el mensaje de alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para obtener más información, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
   
  En la tabla siguiente se muestran datos de ejemplo de una tabla del Administrador de alertas de datos. Cuando se produce un error, el mensaje de error y el identificador de la entrada del registro (un GUID) se incluyen en el campo **Estado** de la tabla.  
   
-|Nombre de la alerta|Nombre del informe|Creado por|Alertas enviadas|Última ejecución|Modificado por última vez|Estado|  
+|Nombre de la alerta|Nombre del informe|Creado por|Alertas enviadas|Última ejecución|Modificado por última vez|Status|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|La última alerta se ejecutó correctamente y se envió.|  
 |UnitsSold|ProductsSalesByQTR|Lauren Johnson|2|7/1/2011|6/28/2011|La última alerta se ejecutó correctamente, pero los datos no se modificaron y no se envió la alerta.|  
 |TopPromotion|PromotionTracking|Lauren Johnson|0||5/23/2011|Alerta creada.|  
   
   
-##  <a name="DeleteAlerts"></a> Eliminar alertas de datos  
- Las definiciones de alertas se eliminan desde el Administrador de alertas de datos. Como trabajador de la información puede eliminar las definiciones de alerta que haya creado. No puede eliminar las definiciones de alerta creadas por otras personas. Para más información,vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
+##  <a name="DeleteAlerts"></a>Eliminar alertas de datos  
+ Las definiciones de alertas se eliminan desde el Administrador de alertas de datos. Como trabajador de la información puede eliminar las definiciones de alerta que haya creado. No puede eliminar las definiciones de alerta creadas por otras personas. Para obtener más información, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
   
- Cuando elimina una definición alerta, esta se elimina permanentemente. Si solo desea pausar los mensajes de alerta, debe cambiar el patrón de periodicidad o la fecha de inicio o finalización en la definición de la alerta. Para más información, vea [Modificar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md).  
+ Cuando elimina una definición alerta, esta se elimina permanentemente. Si solo desea pausar los mensajes de alerta, debe cambiar el patrón de periodicidad o la fecha de inicio o finalización en la definición de la alerta. Para obtener más información, vea [Modificar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md).  
   
   
   
-##  <a name="EditAlerts"></a> Editar alertas de datos  
+##  <a name="EditAlerts"></a>Editar alertas de datos  
  Como trabajador de la información, puede abrir sus definiciones de alerta para editarlas en el Administrador de alertas de datos. Puede editar las definiciones de alertas que ha creado, pero no las creadas por otras personas. Al hacer clic con el botón derecho en la definición de la alerta y hacer clic en **Editar** , se abre el Diseñador de alertas de datos con la definición de la alerta. Para más información, vea [Diseñador de alertas de datos](../../2014/reporting-services/data-alert-designer.md) y [Modificar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md).  
   
   
   
-##  <a name="RunAlerts"></a> Ejecutar alertas de datos  
+##  <a name="RunAlerts"></a>Ejecutar alertas de datos  
  El Administrador de alertas de datos incluye información sobre la última vez que el servicio de alertas procesó la definición de alerta de datos y el número de veces que se ha enviado el mensaje de alerta de datos. Puede ejecutar y enviar el mensaje de alerta inmediatamente en lugar de esperar a la hora de programación especificada. Cuando se ejecuta una alerta desde el Administrador de alertas de datos, la programación de la alerta se sobrescribe y el procesamiento de la definición de alerta se inicia en un período comprendido entre uno y cinco minutos, en función del tiempo necesario para ejecutar el informe y de cómo de ocupado esté el servidor de informes cuando elija ejecutar la alerta. Sin embargo, si especificó que el mensaje se envíe únicamente si cambian los resultados y los resultados no han cambiado, no se crea ni envía ningún mensaje. Para obtener más información, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
   
 > [!NOTE]  
@@ -75,13 +76,13 @@ ms.locfileid: "66109521"
   
 -   [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Modificación de una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md)  
+-   [Modificar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md)  
   
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñador de alertas de datos](../../2014/reporting-services/data-alert-designer.md)   
- [Crear una alerta de datos en el Diseñador de alertas de datos](create-a-data-alert-in-data-alert-designer.md)   
+ [Crear una alerta de datos en el diseñador de alertas de datos](create-a-data-alert-in-data-alert-designer.md)   
  [Alertas de datos de Reporting Services](../ssms/agent/alerts.md)  
   
   

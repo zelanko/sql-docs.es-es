@@ -1,5 +1,5 @@
 ---
-title: Índice de elemento (DTA) | Microsoft Docs
+title: Index (DTA, elemento) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63229005"
 ---
 # <a name="index-element-dta"></a>Index, elemento (DTA)
@@ -45,10 +45,10 @@ ms.locfileid: "63229005"
 |`Online`|`boolean`|Opcional. Especifica un índice que puede realizar operaciones mientras el servidor está en línea, lo que exige espacio temporal en disco. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Online="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".<br /><br /> Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).|  
 |`IndexSizeInMB`|`double`|Opcional. Especifica el tamaño máximo del índice en megabytes, por ejemplo:<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> Sin valor predeterminado.|  
 |`NumberOfRows`|`integer`|Opcional. Simula diferentes tamaños de índice, lo que simula de forma eficaz diferentes tamaños de tabla, por ejemplo:<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> Sin valor predeterminado.|  
-|`QUOTED_IDENTIFIER`|`boolean`|Opcional. Hace que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siga las reglas de ISO en cuanto a las comillas delimitadoras de identificadores y cadenas literales. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).|  
+|`QUOTED_IDENTIFIER`|`boolean`|Opcional. Hace [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que siga las reglas ISO con respecto a las comillas delimitadoras de identificadores y cadenas literales. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;&#41;de Transact-SQL ](/sql/t-sql/statements/set-quoted-identifier-transact-sql).|  
 |`ARITHABORT`|`boolean`|Opcional. Cancela una consulta cuando se produce un error de desbordamiento o división por cero durante su ejecución. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).|  
 |`CONCAT_NULL_YIELDS_`<br /><br /> `NULL`|`boolean`|Opcional. Determina si los resultados de la concatenación se tratan como valor NULL o como cadena vacía. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).|  
-|`ANSI_NULLS`|`boolean`|Opcional. Especifica el comportamiento conforme a ISO de los operadores de comparación Es igual a (=) y No es igual a (<>) cuando se utilizan con valores NULL. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).|  
+|`ANSI_NULLS`|`boolean`|Opcional. Especifica el comportamiento conforme a ISO de los operadores de comparación Es igual a (=) y No es igual a (<>) cuando se utilizan con valores NULL. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_NULLS &#40;&#41;de Transact-SQL ](/sql/t-sql/statements/set-ansi-nulls-transact-sql).|  
 |`ANSI_PADDING`|`boolean`|Opcional. Controla el modo en que una columna almacena valores inferiores a su tamaño definido. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_PADDING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).|  
 |`ANSI_WARNINGS`|`boolean`|Opcional. Especifica el comportamiento estándar de ISO para diversas condiciones de error. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).|  
 |`NUMERIC_ROUNDABORT`|`boolean`|Opcional. Especifica el nivel de informes de error generados cuando el redondeo en una expresión produce pérdida de precisión. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar desactivado.<br /><br /> La sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).|  
@@ -65,13 +65,13 @@ ms.locfileid: "63229005"
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Create &#40;DTA, elemento&#41;](create-element-dta.md)<br /><br /> `Drop` elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
-|**Elementos secundarios**|[Name &#40;DTA, elemento de Index&#41;](name-element-for-index-dta.md)<br /><br /> [Column &#40;DTA, elemento de Index&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> `PartitionColumn` elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> [Filegroup &#40;DTA. elemento de Index&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> `PercentUsage` elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
+|**Elemento primario**|[Create Element &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop`Element. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
+|**Elementos secundarios**|[Elemento Name para index &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Elemento Column para index &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme`Element. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> `PartitionColumn`Element. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> [Elemento filegroup para index &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences`Element. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> `PercentUsage`Element. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

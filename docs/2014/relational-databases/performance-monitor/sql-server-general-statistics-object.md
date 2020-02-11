@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250640"
 ---
 # <a name="sql-server-general-statistics-object"></a>General Statistics (objeto de SQL Server)
@@ -29,27 +29,27 @@ ms.locfileid: "63250640"
 |--------------------------------------------|-----------------|  
 |**Tablas temporales activas**|Número de tablas o variables de tabla temporales en uso.|  
 |**Restablecimientos de conexión/s**|Número total de inicios de sesión comenzados desde el grupo de conexiones.|  
-|**Notificaciones de eventos que se quitarán con retraso**|Número de notificaciones de eventos que esperan a que un subproceso del sistema las quite.|  
+|**Eliminación diferida de notificaciones de eventos**|Número de notificaciones de eventos que esperan a que un subproceso del sistema las quite.|  
 |**Solicitudes HTTP autenticadas**|Número de solicitudes HTTP autenticadas iniciadas por segundo.|  
 |**Conexiones lógicas**|Número de conexiones lógicas con el sistema.<br /><br /> La principal finalidad de las conexiones lógicas es dar servicio a varias solicitudes de conjuntos de resultados activos múltiples (MARS). En las solicitudes MARS, cada vez que una aplicación establece una conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede haber varias conexiones lógicas que correspondan a una conexión física.<br /><br /> Cuando no se usa MARS, la relación entre conexiones físicas y lógicas es 1:1. Por tanto, cada vez que una aplicación establece una conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las conexiones lógicas aumentarán en 1.|  
 |**Inicios de sesión/seg.**|Número total de inicios de sesión por segundo. No se incluyen las conexiones agrupadas.|  
 |**Cierres de sesión/seg.**|Número total de cierres de sesión iniciados por segundo.|  
 |**Interbloqueos de Mars**|Número de interbloqueos de Mars detectados.|  
-|**Velocidad de esperas no atómicas**|Número de esperas no atómicas por segundo.|  
+|**Velocidad de Yield no atómica**|Número de esperas no atómicas por segundo.|  
 |**Procesos bloqueados**|Número de los procesos bloqueados actualmente.|  
 |**Solicitudes SOAP vacías**|Número de solicitudes SOAP vacías iniciadas por segundo.|  
-|**Llamadas de métodos SOAP**|Número de llamadas de métodos SOAP iniciadas por segundo.|  
+|**Invocaciones de métodos SOAP**|Número de llamadas de métodos SOAP iniciadas por segundo.|  
 |**Solicitudes de inicio de sesión SOAP**|Número de solicitudes de inicio de sesión SOAP iniciadas por segundo.|  
 |**Solicitudes de finalización de sesión SOAP**|Número de solicitudes de finalización de sesión SOAP iniciadas por segundo.|  
 |**Solicitudes SOAP SQL**|Número de solicitudes SOAP SQL iniciadas por segundo.|  
 |**Solicitudes SOAP WSDL**|Número de solicitudes de lenguaje de descripción de servicios web SOAP iniciadas por segundo.|  
 |**Velocidad de creación de tablas temporales**|Número de tablas o variables de tabla temporales creadas por segundo.|  
-|**Tablas temporales que destruir**|Número de tablas y variables de tablas temporales en espera de que destruya el subproceso de sistema de limpieza.|  
-|**Cola de notificación de eventos de seguimiento**|Número de instancias de notificación de eventos de seguimiento que esperan en la cola interna para ser enviados a través de Service Broker.|  
-|**Transacciones**|Número de altas de transacciones (locales, DTC y enlazadas juntas).|  
+|**Tablas temporales para destrucción**|Número de tablas y variables de tablas temporales en espera de que destruya el subproceso de sistema de limpieza.|  
+|**Cola de notificaciones de eventos de seguimiento**|Número de instancias de notificación de eventos de seguimiento que esperan en la cola interna para ser enviados a través de Service Broker.|  
+|**Transactions**|Número de altas de transacciones (locales, DTC y enlazadas juntas).|  
 |**Conexiones de usuario**|Cuenta el número de usuarios actualmente conectados a SQL Server.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

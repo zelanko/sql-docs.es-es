@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Agregar una referencia Web | Microsoft Docs'
+title: 'Lección 2: agregar una referencia Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,48 +11,49 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316008"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>Lección 2: Adición de una referencia web
+# <a name="lesson-2-adding-a-web-reference"></a>Lección 2: agregar una referencia web
   Se llama detección de servicios web al proceso por el que un cliente busca un servicio web y obtiene la descripción del servicio. El proceso de detección de servicios web en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] conlleva la interrogación de un sitio web de acuerdo con un algoritmo predeterminado. El objetivo del proceso es encontrar la descripción del servicio, que es un documento XML que utiliza el Lenguaje de descripción de servicios web (WSDL).  
   
  En la descripción del servicio, se explican los servicios disponibles y la forma de interactuar con ellos. Sin una descripción del servicio, no se puede interactuar con el servicio web mediante programación.  
   
- La aplicación debe disponer de un método para comunicarse con el servicio web y buscarlo en tiempo de ejecución. Esto se consigue agregando al proyecto una referencia del servicio web, porque se genera una clase proxy que sirve de interfaz con el servicio web y proporciona una representación local del servicio web. Para obtener más información, vea "Cómo: Generar un Proxy de servicio Web XML"en su [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentación.  
+ La aplicación debe disponer de un método para comunicarse con el servicio web y buscarlo en tiempo de ejecución. Esto se consigue agregando al proyecto una referencia del servicio web, porque se genera una clase proxy que sirve de interfaz con el servicio web y proporciona una representación local del servicio web. Para obtener más información, vea el tema sobre generación de un proxy de servicio web XML en la documentación de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ### <a name="to-add-a-web-reference"></a>Para agregar una referencia web  
   
-1.  En el **proyecto** menú, haga clic en **Add Service Reference**.  
+1.  En el menú **proyecto** , haga clic en **Agregar referencia de servicio**.  
   
-2.  En el **Add Service Reference** cuadro de diálogo, haga clic en **avanzadas**.  
+2.  En el cuadro de diálogo **Agregar referencia de servicio** , haga clic en **Opciones avanzadas**.  
   
-3.  En el **configuración de referencia de servicio** cuadro de diálogo, haga clic en **Agregar referencia Web**.  
+3.  En el cuadro de diálogo **configuración de referencia de servicio** , haga clic en **Agregar referencia Web**.  
   
-4.  En el **URL** cuadro de la **Agregar referencia Web** cuadro de diálogo, escriba la dirección URL para obtener la descripción del servicio Web del servidor de informes, como http://localhost/reportserver/reportservice2010.asmx. A continuación, haga clic en el **vaya** botón para recuperar información sobre el servicio Web.  
+4.  En el cuadro **dirección URL** del cuadro de diálogo **Agregar referencia Web** , escriba la dirección URL para obtener la descripción del servicio Web del servidor de informes, http://localhost/reportserver/reportservice2010.asmxcomo. A continuación, haga clic en el botón **ir** para recuperar información sobre el servicio Web.  
   
-     \- o -  
+     \- O bien  
   
-     Si el servicio Web del servidor de informes existe en el equipo local, haga clic en el **servicios Web en el equipo local** vínculo en el panel explorador. A continuación, haga clic en el vínculo del servicio web ReportService2010 de la lista proporcionada.  
+     Si el servicio Web del servidor de informes existe en el equipo local, haga clic en el vínculo **servicios web del equipo local** en el panel explorador. A continuación, haga clic en el vínculo del servicio web ReportService2010 de la lista proporcionada.  
   
-5.  En el **nombre de referencia Web** cuadro, cambie el nombre de la referencia Web a ReportService2010, que es el espacio de nombres que se va a utilizar para esta referencia Web.  
+5.  En el cuadro **nombre de referencia Web** , cambie el nombre de la referencia Web a ReportService2010, que es el espacio de nombres que va a utilizar para esta referencia Web.  
   
 6.  Haga clic en **Agregar referencia** para agregar una referencia Web para el servicio Web de destino.  
   
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] descarga la descripción del servicio y genera una clase proxy que sirve de interfaz entre la aplicación y el servicio web del servidor de informes. También necesitará agregar una referencia al espacio de nombres <xref:System.Web.Services> para que su referencia web funcione.  
+     
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] descarga la descripción del servicio y genera una clase proxy que sirve de interfaz entre la aplicación y el servicio web del servidor de informes. También necesitará agregar una referencia al espacio de nombres <xref:System.Web.Services> para que su referencia web funcione.  
   
-7.  En el menú proyecto, haga clic en **Agregar referencia**.  
+7.  En el menú Proyecto, haga clic en **Agregar referencia**.  
   
-8.  En el **Agregar referencia** cuadro de diálogo el **.NET** ficha, seleccione **System.Web.Services**, a continuación, haga clic en **Aceptar**.  
+8.  En el cuadro de diálogo **Agregar referencia** , en la pestaña **.net** , seleccione **System. Web. Services**y, a continuación, haga clic en **Aceptar**.  
   
  Para más información, vea [Acceso a la API de SOAP](../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servicio web del servidor de informes](../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Lección 3: Obtener acceso al servicio Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
- [Acceso a Report Server Web Service mediante Visual Basic o Visual C&#35; &#40;Tutorial de SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Lección 3: acceso al servicio Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
+ [Obtener acceso al servicio Web del servidor de informes mediante el tutorial de Visual Basic o Visual C&#35; &#40;SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

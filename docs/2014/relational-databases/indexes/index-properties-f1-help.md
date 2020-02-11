@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161909"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
@@ -30,20 +30,20 @@ ms.locfileid: "63161909"
   
  **En este tema:**  
   
- [Propiedades del índice (página General)](#General)  
+ [Propiedades del índice (página general)](#General)  
   
- [Cuadro de diálogo Seleccionar columnas de (índice)](#Columns)  
+ [Cuadro de diálogo Seleccionar columnas (índice)](#Columns)  
   
- [Propiedades del índice (página Almacenamiento)](#Storage)  
+ [Propiedades del índice (página almacenamiento)](#Storage)  
   
- [Propiedades del índice (página Espacial)](#Spatial)  
+ [Propiedades del índice (página espacial)](#Spatial)  
   
- [Propiedades del índice (página Filtro)](#Filter)  
+ [Propiedades del índice (página filtro)](#Filter)  
   
-##  <a name="General"></a> Propiedades del índice (página General)  
+##  <a name="General"></a>Propiedades del índice (página general)  
  Use la página General para ver o modificar las propiedades del índice para la tabla o vista seleccionada. Las opciones para cada página pueden cambiar según el tipo de índice seleccionado.  
   
- **Nombre de la tabla**  
+ **Nombre de tabla**  
  Muestra el nombre de la tabla o vista en la que se ha creado el índice. Este campo es de solo lectura. Para seleccionar una tabla diferente, cierre la página Propiedades del índice, seleccione la tabla correcta y vuelva a abrir la página Propiedades del índice.  
   
  Los índices espaciales no se pueden especificar en vistas indizadas. Los índices espaciales solo se pueden definir para una tabla que tenga una clave principal. El número máximo de columnas de clave principal en la tabla es de 15. El tamaño por fila combinado de las columnas de clave principal está limitado a un valor máximo de 895 bytes.  
@@ -52,11 +52,11 @@ ms.locfileid: "63161909"
  Muestra el nombre del índice. Este campo es de solo lectura para un índice existente. Si está creando un nuevo índice, escriba el nombre del índice.  
   
  **Tipo de índice**  
- Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **Clúster**, **Nonclustered**, **XML principal**, **XML secundario**, **espacial**, **en clúster almacén de columnas**, o **Nonclustered Columnstore**.  
+ Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **Clúster**, **No agrupado**, **XML principal**, **XML secundario**, **Espacial**o **Almacén de columnas en clúster**o **Almacén de columnas no clúster**.  
   
- **Nota** : solo se permite un índice clúster por tabla. Solo se permite un índice de almacén de columnas optimizado de memoria one xVelocity por tabla.  
+ **Nota:** Solo se permite un índice clúster para cada tabla. Solo se permite un índice de almacén de columnas optimizado de memoria one xVelocity por tabla.  
   
- **Único**  
+ **Espeficarse**  
  Si selecciona esta casilla, el índice será único. No está permitido que dos filas tengan el mismo valor de índice. De forma predeterminada, esta casilla no está activada. Cuando se modifica un índice existente, la creación de índice generará un error si dos filas tienen el mismo valor. En las columnas donde se permite NULL, un índice único admite un valor NULL.  
   
  Si selecciona **Espacial** en el campo **Tipo de índice** , la casilla **Único** aparece atenuada.  
@@ -68,7 +68,7 @@ ms.locfileid: "63161909"
   
  Un índice espacial solo se puede definir en una única columna que contenga un tipo de datos espaciales (una *columna espacial*).  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la columna que participa en la clave de índice.  
   
  **Criterio de ordenación**  
@@ -92,10 +92,10 @@ ms.locfileid: "63161909"
  **Permitir valores NULL**  
  Muestra si la columna que participa en la clave de índice permite almacenar valores NULL en la columna de vista o tabla.  
   
- **Agregar**  
- Agrega una columna a la clave de índice. Seleccione columnas de tabla del cuadro de diálogo **Seleccionar columnas de** *\<nombre de tabla>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
+ **Add (Agregar)**  
+ Agrega una columna a la clave de índice. Seleccione las columnas de la tabla en el cuadro de diálogo **seleccionar columnas de nombre de** * \<tabla>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
   
- **Quitar**  
+ **Remove**  
  Quita la columna seleccionada de la clave de índice.  
   
  **Subir**  
@@ -108,15 +108,15 @@ ms.locfileid: "63161909"
  Haga clic en **Agregar** para seleccionar columnas para el índice de almacén de columnas. Para conocer las limitaciones de un índice de almacén de columnas, vea [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
  **Columnas incluidas**  
- Incluye columnas sin clave en el índice no clúster. Esta opción le permite superar los límites actuales del índice relativos al tamaño total de una clave de índice y el número máximo de columnas que participan en una clave de índice agregando columnas como columnas sin clave en el nivel hoja del índice no clúster. Para obtener más información, vea [Crear índices con columnas incluidas](create-indexes-with-included-columns.md).  
+ Incluye columnas sin clave en el índice no clúster. Esta opción le permite superar los límites actuales del índice relativos al tamaño total de una clave de índice y el número máximo de columnas que participan en una clave de índice agregando columnas como columnas sin clave en el nivel hoja del índice no clúster. Para obtener más información, vea [crear índices con columnas incluidas](create-indexes-with-included-columns.md) .  
   
-##  <a name="Columns"></a> Cuadro de diálogo Seleccionar columnas de (índice)  
+##  <a name="Columns"></a>Cuadro de diálogo Seleccionar columnas (índice)  
  Use esta página para agregar columnas a la página General de **Propiedades del índice** cuando cree o modifique un índice.  
   
  **casilla**  
  Seleccione esta opción para agregar columnas.  
   
- **Name**  
+ **Nombre**  
  Nombre de la columna.  
   
  **Tipo de datos**  
@@ -128,16 +128,16 @@ ms.locfileid: "63161909"
  **Identidad**  
  Muestra **Sí** para columnas de identidad y **No** cuando la columna no es una columna de identidad.  
   
- **Allow Nulls**  
+ **Permitir valores NULL**  
  Muestra **Sí** cuando la definición de la tabla permite valores NULL para la columna. Muestra **No** cuando la definición de la tabla no permite valores NULL para la columna.  
   
-##  <a name="Storage"></a> Opciones de la página Almacenamiento  
+##  <a name="Storage"></a>Opciones de la página de almacenamiento  
  Utilice esta página para ver o modificar las propiedades del grupo de archivos o del esquema de partición para el índice seleccionado. Solo muestra las opciones relacionadas con el tipo de índice.  
   
- **Grupo de archivos**  
+ **Prima**  
  Almacena el índice en el grupo de archivos especificado. En la lista solo se muestran los grupos de archivos (fila) estándar. La selección de lista predeterminada es el grupo de archivos PRIMARY de la base de datos. Para más información, consulte [Database Files and Filegroups](../databases/database-files-and-filegroups.md).  
   
- **Grupo de archivos de flujo de archivos**  
+ **Grupo de archivos FileStream**  
  Especifica el grupo de archivos para los datos FILESTREAM. En esta lista solo se muestran los grupos de archivos FILESTREAM. La selección de lista predeterminada es el grupo de archivos PRIMARY FILESTREAM. Para obtener más información, vea [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md).  
   
  **Esquema de partición**  
@@ -145,42 +145,42 @@ ms.locfileid: "63161909"
   
  La opción de esquema de partición no estará disponible si no hay ningún esquema de partición en la base de datos.  
   
- **Esquema de partición Filestream**  
+ **Esquema de partición de FileStream**  
  Especifica el esquema de partición de los datos FILESTREAM. El esquema de partición debe ser simétrico al esquema especificado en la opción **Esquema de partición** .  
   
  Si no tiene particiones, el campo está en blanco.  
   
- **Parámetro del esquema de partición**  
+ **Parámetro de esquema de partición**  
  Muestra el nombre de la columna que participa en el esquema de partición.  
   
- **Columna de la tabla**  
+ **Columna de tabla**  
  Seleccione la tabla o vista que se asignará al esquema de partición.  
   
- **Tipo de datos de la columna**  
+ **Tipo de datos de columna**  
  Muestra información de tipo de datos de la columna.  
   
 > [!NOTE]  
 >  Si la columna de tabla es una columna calculada, **Tipo de datos de la columna** mostrará "columna calculada".  
   
- **Permitir procesamiento en línea de instrucciones DML al mover el índice**  
+ **Permitir el procesamiento en línea de instrucciones DML al mover el índice**  
  Permite a los usuarios obtener acceso a los datos de la tabla subyacente o del índice clúster, así como a todos los índices no clúster asociados durante las operaciones de índice. Para más información, consulte [Perform Index Operations Online](perform-index-operations-online.md).  
   
 > [!NOTE]  
 >  Esta opción no estará disponible para los índices XML ni cuando el índice sea un índice clúster deshabilitado.  
   
- **Establecer grado máximo de paralelismo**  
+ **Establecer el grado máximo de paralelismo**  
  Limita el número de procesadores que se van a utilizar durante la ejecución de planes paralelos. El valor predeterminado es 0, que utiliza el número real de CPU disponibles. Si el valor se establece en 1, se suprime la generación de planes paralelos; si el valor se establece en un número mayor que 1, se restringe el número máximo de procesadores que se utilizan en la ejecución de una única consulta. Esta opción solo está disponible si el cuadro de diálogo está en los estados **Volver a generar** o **Volver a crear** . Para más información, consulte [Establecer la opción Grado máximo de paralelismo para lograr un rendimiento óptimo](../policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Si especifica un valor superior al número de CPU disponibles, se utilizará el número real de CPU disponibles.  
   
-##  <a name="Spatial"></a> Opciones de índice de la página Espacial  
+##  <a name="Spatial"></a>Opciones de índice de página espacial  
  Use la página **Espacial** para ver o especificar los valores de las propiedades espaciales. Para obtener más información, vea [Datos espaciales &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ### <a name="bounding-box"></a>Cuadro de límite  
  El *cuadro de límite* es el perímetro de la cuadrícula de nivel superior de un plano geométrico. Los parámetros de cuadro de límite solo existen en la teselación de cuadrícula de geometría. Estos parámetros no están disponibles si **Esquema de teselación** es **Cuadrícula de geografía**.  
   
- El panel muestra la **( *`X-min`* , *`Y-min`* )** y **( *`X-max`* , *`Y-max`* )** las coordenadas del rectángulo. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo `geometry`, deberá especificar los valores de las coordenadas.  
+ El panel muestra las **coordenadas*`X-min`*(*`Y-min`*,)** y ***`X-max`*(*`Y-max`*,)** del cuadro de límite. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo `geometry`, deberá especificar los valores de las coordenadas.  
   
  `X-min`  
  La coordenada x de la esquina inferior izquierda del cuadro de límite.  
@@ -202,13 +202,13 @@ ms.locfileid: "63161909"
  Especifica el esquema de teselación de cuadrícula de geometría, que se aplica a una columna del tipo de datos `geometry`.  
   
  **Cuadrícula automática de geometría**  
- Esta opción está habilitada para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando el nivel de compatibilidad de base de datos se ha establecido en 110 o superior.  
+ Esta opción está habilitada para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]cuando el nivel de compatibilidad de base de datos se ha establecido en 110 o superior.  
   
  **Cuadrícula de geografía**  
  Especifica el esquema de teselación de cuadrícula de geografía, que se aplica a una columna del tipo de datos **geography** .  
   
  **Cuadrícula automática de geografía**  
- Esta opción está habilitada para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando el nivel de compatibilidad de base de datos se ha establecido en 110 o superior.  
+ Esta opción está habilitada para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]cuando el nivel de compatibilidad de base de datos se ha establecido en 110 o superior.  
   
  Para obtener información sobre el modo en que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementa la teselación, vea [Datos espaciales &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
@@ -218,7 +218,7 @@ ms.locfileid: "63161909"
  En el nivel superior, si un objeto abarca más celdas de las especificadas mediante *n*, la indexación usa tantas celdas como sean necesarias para proporcionar una teselación de nivel superior completa. En tales casos, un objeto podría recibir más celdas de las especificadas. En este caso, el número máximo es la cantidad de celdas generadas por la cuadrícula de nivel superior, que depende de la densidad de **Nivel 1** .  
   
 ### <a name="grids"></a>Cuadrículas  
- Este panel muestra la densidad de la cuadrícula en cada nivel del esquema de la teselación. La densidad se especifica como **Baja**, **Media**o **Alta**. El valor predeterminado es **Media**. **Baja** representa una cuadrícula de 4 x 4 (16 celdas), **Media** representa una cuadrícula de 8 x 8 (64 celdas) y **Alta** representa una cuadrícula de 16 x 16 (256 celdas). Estas opciones no están disponibles cuando se eligen las opciones de teselación **Cuadrícula automática de geometría** o **Cuadrícula automática de geografía** .  
+ Este panel muestra la densidad de la cuadrícula en cada nivel del esquema de la teselación. La densidad se especifica como **Baja**, **Media**o **Alta**. El valor predeterminado es **Media**. **Low** representa una cuadrícula 4x4 (16 celdas), **Medium** representa una cuadrícula de 8 x 8 (64 celdas) y **alta** representa una cuadrícula de 16x16 (256 celdas). Estas opciones no están disponibles cuando se eligen las opciones de teselación **Cuadrícula automática de geometría** o **Cuadrícula automática de geografía** .  
   
  **Nivel 1**  
  La densidad de la cuadrícula del primer nivel (superior).  
@@ -232,13 +232,13 @@ ms.locfileid: "63161909"
  **Nivel 4**  
  La densidad de la cuadrícula del cuarto nivel.  
   
-##  <a name="Filter"></a> Página Filtro  
+##  <a name="Filter"></a>Página filtro  
  Use esta página para especificar el predicado de filtro para un índice filtrado. Para obtener más información, consulte [Create Filtered Indexes](create-filtered-indexes.md).  
   
  **Expresión de filtro**  
- Define qué filas de datos para incluir en el índice filtrado. Por ejemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ Define qué filas de datos para incluir en el índice filtrado. Por ejemplo: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer opciones de índice](set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
  [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  

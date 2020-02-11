@@ -20,35 +20,35 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200003"
 ---
 # <a name="mapping-data-types-odbc"></a>Asignar tipos de datos (ODBC)
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignaciones de controlador ODBC de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos SQL a tipos de datos SQL de ODBC. En las secciones siguientes se describen los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL y los tipos de datos ODBC SQL a los que se asignan. También se tratan los tipos de datos ODBC SQL y sus tipos de datos ODBC C correspondientes, así como las conversiones compatibles y predeterminadas.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna tipos de datos SQL a tipos de datos SQL de ODBC. En las secciones siguientes se describen los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL y los tipos de datos ODBC SQL a los que se asignan. También se tratan los tipos de datos ODBC SQL y sus tipos de datos ODBC C correspondientes, así como las conversiones compatibles y predeterminadas.  
   
 > [!NOTE]  
->  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** tipo de datos asigna al tipo de datos SQL_BINARY o SQL_VARBINARY ODBC porque los valores de **marca de tiempo** columnas no son **datetime** valores, pero **binary (8)** o **varbinary (8)** valores que indican la secuencia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actividad en la fila. Si el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client encuentra un valor SQL_C_WCHAR (Unicode) con un número impar de bytes, se trunca el byte impar final.  
+>  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos **timestamp** se asigna al tipo de datos SQL_BINARY o SQL_VARBINARY ODBC porque los valores de las columnas **timestamp** no son valores **DateTime** , sino valores **binarios (8)** o **varbinary (8)** que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indican la secuencia de actividad de la fila. Si el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client encuentra un valor SQL_C_WCHAR (Unicode) con un número impar de bytes, se trunca el byte impar final.  
   
-## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>Administrar tipos de datos sql_variant en ODBC  
- El **sql_variant** columna tipo de datos puede contener ninguno de los tipos de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] excepto objetos grandes (LOB), como **texto**, **ntext**, y  **imagen**. Por ejemplo, podría contener la columna **smallint** valores para algunas filas, **float** valores en otras filas y **char/nchar** valores en el resto.  
+## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>Administrar tipos de datos sql_variant en ODBC  
+ La columna tipo de datos **sql_variant** puede contener cualquiera de los tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de, excepto los objetos grandes (LOB), como **Text**, **ntext**e **Image**. Por ejemplo, la columna puede contener valores **smallint** para algunas filas, valores **float** para otras filas y valores **CHAR/NCHAR** en el resto.  
   
- El **sql_variant** tipo de datos es similar a la **Variant** tipo de datos en Microsoft Visual Basic??.  
+ El tipo de datos **sql_variant** es similar al tipo de datos **variant** de Microsoft Visual Basic??.  
   
 ### <a name="retrieving-data-from-the-server"></a>Recuperar datos del servidor  
- ODBC no tiene un concepto de tipos variant, limitar el uso de la **sql_variant** tipo de datos con un controlador ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si se especifica el enlace, el **sql_variant** tipo de datos debe estar enlazado a uno de los tipos de datos ODBC documentados. **SQL_CA_SS_VARIANT_TYPE**, un nuevo atributo específico para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, devuelve el tipo de datos de una instancia en el **sql_variant** columna para el usuario.  
+ ODBC no tiene un concepto de tipos Variant, lo que limita el uso del tipo de datos **sql_variant** con un controlador ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si se especifica Binding, el tipo de datos **sql_variant** debe estar enlazado a uno de los tipos de datos ODBC documentados. **SQL_CA_SS_VARIANT_TYPE**, un nuevo atributo específico del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, devuelve el tipo de datos de una instancia de la columna **sql_variant** al usuario.  
   
- Si se especifica ningún enlace, el [SQLGetData](../native-client-odbc-api/sqlgetdata.md) función puede utilizarse para determinar el tipo de datos de una instancia en el **sql_variant** columna.  
+ Si no se especifica ningún enlace, la función [SQLGetData](../native-client-odbc-api/sqlgetdata.md) se puede utilizar para determinar el tipo de datos de una instancia en la columna **sql_variant** .  
   
- Para recuperar **sql_variant** datos, siga estos pasos.  
+ Para recuperar los datos de **sql_variant** siga estos pasos.  
   
 1.  Llame a **SQLFetch** para colocar en la fila recuperada.  
   
-2.  Llame a **SQLGetData**, especificando SQL_C_BINARY como el tipo y 0 para la longitud de datos. Esto obliga al controlador para leer el **sql_variant** encabezado. El encabezado proporciona el tipo de datos de la instancia en el **sql_variant** columna. **SQLGetData** devuelve el tamaño (en bytes) del valor.  
+2.  Llame a **SQLGetData**, especificando SQL_C_BINARY para el tipo y 0 para la longitud de los datos. Esto obliga al controlador a leer el encabezado **sql_variant** . El encabezado proporciona el tipo de datos de esa instancia en el **sql_variant** columna. **SQLGetData** devuelve el tamaño (en bytes) del valor.  
   
-3.  Llame a [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) especificando **SQL_CA_SS_VARIANT_TYPE** como su valor de atributo. Esta función devolverá el tipo de datos C de la instancia en el **sql_variant** columna al cliente.  
+3.  Llame a [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) especificando **SQL_CA_SS_VARIANT_TYPE** como su valor de atributo. Esta función devolverá el tipo de datos C de la instancia de de la columna **sql_variant** al cliente.  
   
  A continuación se incluye un segmento de código que muestra los pasos anteriores.  
   
@@ -83,12 +83,12 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 }  
 ```  
   
- Si el usuario crea el enlace mediante [SQLBindCol](../native-client-odbc-api/sqlbindcol.md), el controlador lee los metadatos y los datos. A continuación, el controlador convierte los datos al tipo ODBC adecuado especificado en el enlace.  
+ Si el usuario crea el enlace mediante [SQLBindCol](../native-client-odbc-api/sqlbindcol.md), el controlador Lee los metadatos y los datos. A continuación, el controlador convierte los datos al tipo ODBC adecuado especificado en el enlace.  
   
 ### <a name="sending-data-to-the-server"></a>Enviar datos al servidor  
- **SQL_SS_VARIANT**, un nuevo tipo de datos específicos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, se usa para los datos enviados a un **sql_variant** columna. Al enviar datos al servidor mediante parámetros (por ejemplo, INSERT INTO NombreDeTabla VALUES (?,?)), [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) se usa para especificar la información de parámetros, incluido el tipo de C y la correspondiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client convertirá el tipo de datos C en uno de los adecuados **sql_variant** subtipos.  
+ **SQL_SS_VARIANT**, se utiliza un nuevo tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] específico del controlador ODBC de Native Client para los datos enviados a una columna **sql_variant** . Al enviar datos al servidor mediante parámetros (por ejemplo, INSERT INTO TableName VALUEs (?,?)), [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) se usa para especificar la información de parámetros, incluido el tipo C y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el tipo correspondiente. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client convertirá el tipo de datos C en uno de los subtipos **sql_variant** adecuados.  
   
-## <a name="see-also"></a>Vea también  
- [Procesar resultados &#40;ODBC&#41;](processing-results-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Procesar los resultados &#40;ODBC&#41;](processing-results-odbc.md)  
   
   

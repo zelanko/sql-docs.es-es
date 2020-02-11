@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a7b3c15af012675bfccecad7e8f74f99882fed11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480833"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de conocimiento y dominios de DQS
@@ -36,9 +36,9 @@ ms.locfileid: "65480833"
   
  La ilustración siguiente muestra los diferentes componentes de una base de conocimiento y un dominio de DQS:  
   
- ![Base de conocimiento y dominios en DQS](../../2014/data-quality-services/media/dqs-knowledgebasesanddomains.gif "Base de conocimiento y dominios en DQS")  
+ ![Bases de conocimiento y dominios en DQS](../../2014/data-quality-services/media/dqs-knowledgebasesanddomains.gif "Bases de conocimiento y dominios en DQS")  
   
-##  <a name="How"></a> Cómo crear y generar una base de conocimiento de DQS  
+##  <a name="How"></a>Cómo crear y generar una base de conocimiento de DQS  
  Generar una base de conocimiento de DQS conlleva los siguientes procesos y componentes:  
   
  **Detección de conocimiento**  
@@ -53,7 +53,7 @@ ms.locfileid: "65480833"
  **Directiva de coincidencia**  
  Directiva que define cómo procesa DQS los registros para identificar las posibles repeticiones y la ausencia de coincidencias, que se integra en la base de conocimiento en los procesos asistidos por PC y en los procesos interactivos.  
   
-##  <a name="Discovery"></a> Detección de conocimiento  
+##  <a name="Discovery"></a>Detección de conocimiento  
  La creación de la base de conocimiento es un proceso inicialmente asistido por PC. La actividad de detección de conocimiento genera la base de conocimiento; para ello, analiza una muestra de datos para ver si cumplen los criterios de calidad de los datos, buscando incoherencias y errores de sintaxis en los datos, aplicando reglas de dominio y proponiendo cambios en los datos. Este análisis se basa en los algoritmos integrados en DQS.  
   
  El administrador de datos prepara el proceso vinculando una base de conocimiento a una tabla o vista de base de datos de SQL Server que contiene datos de ejemplo similares a los datos que la base de conocimiento utilizará para el análisis. A continuación, el administrador de datos asigna un dominio de la base de conocimiento a cada columna de los datos de ejemplo que se van a analizar. Un dominio puede tratarse de un solo dominio que se asigna a un único campo o puede ser un dominio compuesto formado de varios dominios únicos donde cada uno de ellos se asigna a parte de los datos en un solo campo (vea el tema"Dominios compuestos" a continuación). Cuando se ejecute la detección de conocimiento, DQS extraerá información sobre la calidad de datos de los datos de ejemplo y la situará en los dominios de la base de conocimiento. Cuando haya ejecutado el análisis de detección del conocimiento, tendrá una base de conocimiento con la que puede corregir datos.  
@@ -67,7 +67,7 @@ ms.locfileid: "65480833"
   
  Puede, no obstante, controlar el uso de mayúsculas y minúsculas en los valores que exporta en los resultados de la limpieza. Para ello, establezca la propiedad de dominio **Dar formato a la salida para** (vea [Establecer las propiedades de dominio](../../2014/data-quality-services/set-domain-properties.md)) y active la casilla **Estandarizar salida** al exportar los resultados de la limpieza (vea [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="Domains"></a> Administración de dominios  
+##  <a name="Domains"></a>Administración de dominios  
  La administración de dominios permite al administrador de datos cambiar y aumentar de forma interactiva los metadatos generados por la actividad de detección de conocimiento asistido por PC. Cada cambio que realice es para un dominio de la base de conocimiento. En la actividad de administración de dominios, puede hacer lo siguiente:  
   
 -   Crear un nuevo dominio. El nuevo dominio se puede vincular a un dominio existente o copiarlo a partir de este.  
@@ -136,7 +136,7 @@ ms.locfileid: "65480833"
   
  Se puede realizar la búsqueda de coincidencias en los dominios únicos que componen el dominio compuesto, pero no en el dominio compuesto en sí.  
   
-##  <a name="Matching"></a> Coincidencia de datos  
+##  <a name="Matching"></a>Coincidencia de datos  
  Además de realizar cambios manuales en una base de conocimiento mediante la administración de dominios, puede agregar conocimiento coincidente a una base de conocimiento. Al objeto de preparar a DQS para el proceso de eliminación de datos duplicados, debe crear una directiva de búsqueda de coincidencias que vaya a usar DQS para calcular la probabilidad de encontrar coincidencias. La directiva incluye una o varias reglas de búsqueda de coincidencias que crea el administrador de datos para identificar cómo DQS debe comparar filas de datos. El administrador de datos determina qué campos de datos en la fila se deben comparar y el peso que debe tener cada campo en la comparación. El administrador de datos también determinará cuán alta será la probabilidad para que se identifique como coincidencia. DQS agrega las reglas de búsqueda de coincidencias a la base de conocimiento para su uso en el desarrollo de la actividad de búsqueda de coincidencias en el proyecto de calidad de datos.  
   
  Para obtener más información acerca de la base de conocimiento y la búsqueda de coincidencias, vea [Coincidencia de datos](../../2014/data-quality-services/data-matching.md).  
@@ -146,10 +146,10 @@ ms.locfileid: "65480833"
   
 |||  
 |-|-|  
-|Crear, abrir, agregar conocimiento y llevar a cabo la detección en una base de conocimiento|[Compilar una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Crear, abrir, agregar conocimiento y llevar a cabo la detección en una base de conocimiento|[Crear una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
 |Realizar operaciones de importación y exportación en dominios y bases de conocimiento|[Importar y exportar conocimiento](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
 |Crear un solo dominio, una regla de dominio, relaciones basadas en términos y cambiar valores de dominio|[Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md)|  
 |Crear un dominio compuesto, crear reglas para varios dominios y usar relaciones de valor|[Administrar un dominio compuesto](../../2014/data-quality-services/managing-a-composite-domain.md)|  
-|Usar la base de conocimiento predeterminada de DQS integrada en DQS|[Usar la base de conocimiento predeterminada de DQS](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)|  
+|Usar la base de conocimiento predeterminada de DQS integrada en DQS|[Utilizar la base de conocimiento predeterminada de DQS](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   

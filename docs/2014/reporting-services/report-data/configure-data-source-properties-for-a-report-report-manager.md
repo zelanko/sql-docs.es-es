@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107421"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Configurar propiedades de origen de datos para un informe (Administrador de informes)
@@ -30,17 +30,17 @@ ms.locfileid: "66107421"
   
 2.  En el Administrador de informes, navegue hasta la página **Contenido** . Navegue al informe para el que desee configurar un origen de datos específico y abra el informe.  
   
-3.  Haga clic en la pestaña **Propiedades** . Se abre la página de propiedades **General**.  
+3.  Haga clic en la pestaña **propiedades** . Se abre la página de propiedades **General** .  
   
-4.  Haga clic en la pestaña **Orígenes de datos** . Esto abre la página de propiedades Origen de datos del informe.  
+4.  Haga clic en la pestaña **orígenes de datos** . Se abrirá la página Propiedades del origen de datos del informe.  
   
 5.  Haga clic en **Un origen de datos personalizado** para especificar información de conexión a un origen de datos dentro del informe.  
   
 6.  En la lista **Tipo de conexión** , especifique la extensión de procesamiento de datos que se utiliza para procesar datos desde el origen de datos.  
   
-7.  En **Cadena de conexión**, especifique la cadena de conexión que usa el servidor de informes para conectarse al origen de datos. Se recomienda que no especifique credenciales en la cadena de conexión.  
+7.  En **cadena de conexión**, especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. Se recomienda que no especifique credenciales en la cadena de conexión.  
   
-     En el ejemplo siguiente, se muestra una cadena de conexión para establecer conexión con la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] local:  
+     En el ejemplo siguiente se muestra una cadena de conexión para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] la base de datos local:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -58,12 +58,12 @@ ms.locfileid: "66107421"
   
  Para obtener más información sobre cómo configurar credenciales, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md). Para más información sobre la cuenta de ejecución desatendida, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a>Vea también  
- [Contenido &#40;página del Administrador de informes&#41;](../contents-page-report-manager.md)   
- [Nuevo origen de datos &#40;página del Administrador de informes&#41;](../new-data-source-page-report-manager.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrador de informes de &#40;de página de contenido&#41;](../contents-page-report-manager.md)   
+ [Nueva página de origen de datos &#40;Administrador de informes&#41;](../new-data-source-page-report-manager.md)   
  [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Administrar orígenes de datos de informe](manage-report-data-sources.md)   
  [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](../data-sources-properties-page-report-manager.md)  
+ [Página de propiedades orígenes de datos &#40;Administrador de informes&#41;](../data-sources-properties-page-report-manager.md)  
   
   

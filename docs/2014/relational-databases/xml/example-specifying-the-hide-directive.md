@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificación de la directiva HIDE | Microsoft Docs'
+title: 'Ejemplo: Especificar la directiva HIDE | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287738"
 ---
-# <a name="example-specifying-the-hide-directive"></a>Ejemplo: Especificación de la directiva HIDE
+# <a name="example-specifying-the-hide-directive"></a>Ejemplo: Especificar la directiva HIDE
   En este ejemplo se muestra el uso de la directiva **HIDE** . Esta directiva es útil cuando se desea que la consulta devuelva un atributo para ordenar las filas de la tabla universal devuelta por la consulta, pero no se desea que ese atributo aparezca en el documento XML resultante.  
   
  Esta consulta genera este XML:  
@@ -67,7 +67,7 @@ FOR XML EXPLICIT
 go  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  
@@ -81,7 +81,7 @@ go
 </ProductModel>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

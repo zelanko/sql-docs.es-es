@@ -1,5 +1,5 @@
 ---
-title: Método ReadText | Microsoft Docs
+title: Método READTEXT | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6c174d2e6a659a3b9da8f89816b5bdf90342416
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917373"
 ---
 # <a name="readtext-method"></a>Método ReadText
-Lee un número de caracteres de un texto especificado [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
+Lee el número especificado de caracteres de un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) de texto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,21 +35,21 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Parámetros  
  *NumChars*  
- Opcional. Un **largo** valor que especifica el número de caracteres que se va a leer el archivo, o un [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valor. El valor predeterminado es **adReadAll**.  
+ Opcional. Valor de **tipo Long** que especifica el número de caracteres que se van a leer del archivo, o un valor [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) . El valor predeterminado es **adReadAll**.  
   
 ## <a name="return-value"></a>Valor devuelto  
- El **ReadText** método lee un número especificado de caracteres, una línea completa o la totalidad de la secuencia desde un **Stream** de objetos y devuelve la cadena resultante.  
+ El método **READTEXT** Lee un número especificado de caracteres, una línea completa o toda la secuencia de un objeto de **secuencia** y devuelve la cadena resultante.  
   
-## <a name="remarks"></a>Comentarios  
- Si *NumChar* es mayor que el número de caracteres restante en la secuencia, se devuelven solo los caracteres restantes. La cadena de lectura no se rellena para que coincida con la longitud especificada por *NumChar*. Si no hay ningún carácter restante para leer, se devuelve una variante cuyo valor es null. **ReadText** no se puede usar para leer hacia atrás.  
+## <a name="remarks"></a>Observaciones  
+ Si *NumChar* es mayor que el número de caracteres que quedan en la secuencia, solo se devuelven los caracteres restantes. La lectura de la cadena no se rellena para que coincida con la longitud especificada por *NumChar*. Si no quedan caracteres para leer, se devuelve una variante cuyo valor es NULL. **READTEXT** no se puede usar para leer hacia atrás.  
   
 > [!NOTE]
->  El **ReadText** método se utiliza con secuencias de texto ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**). Para secuencias binarias (**tipo** es **adTypeBinary**), utilice [lectura](../../../ado/reference/ado-api/read-method.md).  
+>  El método **READTEXT** se usa con secuencias de texto (el[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**). En el caso de secuencias binarias (el**tipo** es **adTypeBinary**), utilice [Read](../../../ado/reference/ado-api/read-method.md).  
   
- Las consultas que producen una gran cantidad de datos XML devueltos a través de la **ReadText** método del objeto Stream de objeto de datos ActiveX (ADO) puede tardar mucho tiempo en ejecutarse; si esto se realiza en un componente COM + que se invoca desde una Página ASP, la sesión del usuario puede agotar el tiempo. ADO convierte datos del objeto Stream de codificación UTF-8 a Unicode; la reasignación de memoria frecuentes implicada en la conversión de una gran cantidad de datos a la vez es bastante lenta. Para resolver, realizar llamadas repetidas a la **ReadText** método de ADO, el objeto command y especifique un número menor de caracteres. Las pruebas han demostrado que un valor equivalente a 128K (131.072) es óptimo. Tiempo de respuesta disminuye a medida que se reduce este valor. Para obtener más información, consulte el artículo de Knowledge Base 280067, "PRB: Recuperar documentos XML muy grandes de SQL Server 2000 mediante el método ReadText del objeto stream de ADO puede resultar lento", en Microsoft Knowledge Base en https://support.microsoft.com.  
+ Las consultas que generan una gran cantidad de datos XML que se devuelven a través del método **READTEXT** del objeto de secuencia de objetos de datos ActiveX (ADO) pueden tardar mucho tiempo en ejecutarse; Si esto se hace en un componente de COM+ que se invoca desde una página ASP, la sesión del usuario puede agotar el tiempo de espera. ADO convierte los datos de objetos de secuencia de la codificación UTF-8 a Unicode; la reasignación de memoria frecuente implicada en la conversión de una gran cantidad de datos a la vez es bastante lenta. Para resolverlo, realice llamadas repetidas al método **READTEXT** del objeto de comando de ADO y especifique un número menor de caracteres. Las pruebas han demostrado que un valor equivalente a 128K (131.072) es óptimo. El tiempo de respuesta disminuye a medida que se reduce este valor. Para obtener más información, vea el artículo 280067 de Knowledge base, "PRB: recuperar documentos XML de gran tamaño de SQL Server 2000 mediante el método READTEXT de ADO Stream Object puede ser lento", en https://support.microsoft.comMicrosoft Knowledge base en.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Método Read](../../../ado/reference/ado-api/read-method.md)

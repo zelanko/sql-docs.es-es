@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54ab01033fc65f829f2a06bb5cbad8fc9e4d08f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480179"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Agregar varias condiciones a una regla de negocios (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "65480179"
 > [!NOTE]  
 >  Si crea una regla de negocio que usa el operador **OR** , considere crear una regla distinta para cada instrucción condicional que se pueda evaluar de forma independiente. A continuación, puede excluir las reglas según sea necesario, proporcionando más flexibilidad y facilitando la solución de problemas.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -44,7 +44,7 @@ ms.locfileid: "65480179"
   
 4.  En la lista **Entidad** , seleccione una entidad.  
   
-5.  Desde el **tipo de miembro** lista, seleccione un tipo de miembro.  
+5.  En la lista **tipo de miembro** , seleccione un tipo de miembro.  
   
 6.  En la lista **Atributo** , seleccione un atributo o deje el valor predeterminado de **Todos**.  
   
@@ -52,26 +52,26 @@ ms.locfileid: "65480179"
   
 8.  Haga clic en **Editar regla de negocios seleccionada**.  
   
-9. En el **componentes** panel, expanda el **operadores lógicos** nodo.  
+9. En el panel **componentes** , expanda el nodo **operadores lógicos** .  
   
-10. Haga clic en **AND** o **OR** y arrástrelo hasta el **IF** del panel **AND** etiqueta.  
+10. Haga clic en **and** u **or** y arrástrelo a la etiqueta **y** del panel **If** .  
   
 11. En el panel **Componentes** , expanda el nodo **Condiciones** .  
   
-12. Haga clic en una condición y arrástrela hasta **IF** panel, a la **AND** o **OR** etiqueta del paso 10.  
+12. Haga clic en una condición y arrástrela **hasta la** etiqueta **y** o **o** desde el paso 10.  
   
-13. En el **atributos** panel, haga clic en un atributo y arrástrelo hasta el **Editar condición** del panel **Seleccionar atributo** etiqueta.  
+13. En el panel **atributos** , haga clic en un atributo y arrástrelo hasta la etiqueta **seleccionar atributo** del panel **Editar condición** .  
   
-14. En el **Editar condición** panel, complete los campos obligatorios.  
+14. En el panel **Editar condición** , complete los campos obligatorios.  
   
 15. En el panel **Editar acción** , haga clic en **Guardar elemento**.  
   
-16. Opcionalmente, para agregar más condiciones, desde el **componentes** panel, arrastre **AND** o **OR** a cualquier **AND** o **OR**en el **IF** panel. A continuación, siga los pasos 13-15.  
+16. Opcionalmente, para agregar más condiciones, en el panel **componentes** , arrastre **and** u **or** a **and** u or **en el** panel **If** . A continuación, siga los pasos 13-15.  
   
     > [!TIP]  
-    >  Para eliminar una condición, haga clic en el nombre de la condición y, en el **Editar condición** panel, haga clic en **de eliminación de elemento**.  
+    >  Para eliminar una condición, haga clic en el nombre de la condición y, en el panel **Editar condición** , haga clic en **Eliminar elemento**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Cambiar el nombre de una regla de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Configurar reglas de negocios para enviar notificaciones &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  

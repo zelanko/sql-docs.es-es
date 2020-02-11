@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eccb3ea2ec046a84a2735c310c8b80c5e88cf96e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480350"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Administrar usuarios de DQS en SSMS
@@ -27,7 +27,7 @@ ms.locfileid: "65480350"
 ####  <a name="Permissions"></a> Permisos  
  Para crear el inicio de sesión de SQL y concederle los roles de DQS adecuados, debe usarse una cuenta de usuario de Windows que sea miembro del rol fijo de servidor adecuado (como securityadmin, serveradmin o sysadmin).  
   
-##  <a name="GrantRoles"></a> Crear un inicio de sesión SQL y el rol de DQS de concesión  
+##  <a name="GrantRoles"></a>Crear un inicio de sesión de SQL y conceder el rol de DQS  
   
 1.  Inicie Microsoft SQL Server Management Studio.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65480350"
   
 5.  Después de validar el usuario, haga clic en la página **Asignación de usuarios** en el panel izquierdo.  
   
-6.  En el panel derecho, active la casilla de la columna **Asignar** para la base de datos **DQS_MAIN** y, después, active la casilla **dqs_administrator**, **dqs_kb_editor** o **dqs_kb_operator** en el panel  **Pertenencia al rol de la base de datos para: DQS_MAIN**, según el nivel de acceso necesario para el usuario.  
+6.  En el panel derecho, active la casilla en la columna **Asignar** para la base de datos **DQS_MAIN** y, después, active la casilla **dqs_administrator**, **dqs_kb_editor**o **dqs_kb_operator** en el panel **Pertenencia al rol de base de datos para: DQS_MAIN** , dependiendo del nivel de acceso necesario para el usuario.  
   
 7.  En el cuadro de diálogo **Inicio de sesión - Nuevo**, haga clic en **Aceptar** para aplicar los cambios.  
   

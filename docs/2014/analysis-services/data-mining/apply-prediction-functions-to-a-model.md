@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086136"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funciones de predicción a un modelo
   Para crear una consulta de predicción, antes debe seleccionar el modelo de minería de datos en el que se basará la consulta. Puede seleccionar cualquier modelo de minería de datos que esté incluido en el proyecto actual.  
   
- Cuando haya seleccionado un modelo, agregue una *función de predicción* a la consulta. Es importante comprender que las funciones de predicción se usan para muchos propósitos: Sí, puede predecir valores, pero también puede obtener estadísticas relacionadas, así como información que se usó para generar la predicción. Las funciones de predicción pueden devolver los siguientes tipos de valores:  
+ Cuando haya seleccionado un modelo, agregue una *función de predicción* a la consulta. Se trata de una importación para comprender que las funciones de predicción se usan para muchos propósitos: sí, puede predecir valores, pero también puede obtener estadísticas relacionadas, así como la información que se usó para generar la predicción. Las funciones de predicción pueden devolver los siguientes tipos de valores:  
   
 -   El nombre del atributo de predicción y el valor que se predice.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66086136"
   
     |||  
     |-|-|  
-    |**\<nombre del modelo >**|Seleccione esta opción para incluir los valores del modelo de minería de datos en la salida. Solo puede agregar nuevas columnas de predicción.<br /><br /> Cuando se agrega una columna del modelo, el resultado devuelto es la lista de valores no distintivos de esa columna.<br /><br /> Las columnas que agrega con esta opción se incluyen en la parte SELECT de la instrucción DMX resultante.|  
-    |**Prediction Function**|Seleccione esta opción para examinar una lista de funciones de predicción.<br /><br /> Los valores o funciones que seleccione se agregan a la parte SELECT de la instrucción DMX resultante.<br /><br /> La lista de funciones de predicción no se filtra ni se restringe por el tipo de modelo que ha seleccionado. Por consiguiente, si tiene alguna duda sobre si la función se admite para el tipo actual del modelo, basta con agregar la función a la lista y verla si hay un error.<br /><br /> Los elementos de lista que van precedidos por $ (como $AdjustedProbability) representan las columnas de la tabla anidada que se genera cuando se utiliza la función `PredictHistogram`. Estos son los métodos abreviados que puede usar para devolver una columna y no una tabla anidada.|  
+    |**\<nombre del modelo>**|Seleccione esta opción para incluir los valores del modelo de minería de datos en la salida. Solo puede agregar nuevas columnas de predicción.<br /><br /> Cuando se agrega una columna del modelo, el resultado devuelto es la lista de valores no distintivos de esa columna.<br /><br /> Las columnas que agrega con esta opción se incluyen en la parte SELECT de la instrucción DMX resultante.|  
+    |**función de predicción**|Seleccione esta opción para examinar una lista de funciones de predicción.<br /><br /> Los valores o funciones que seleccione se agregan a la parte SELECT de la instrucción DMX resultante.<br /><br /> La lista de funciones de predicción no se filtra ni se restringe por el tipo de modelo que ha seleccionado. Por consiguiente, si tiene alguna duda sobre si la función se admite para el tipo actual del modelo, basta con agregar la función a la lista y verla si hay un error.<br /><br /> Los elementos de lista que van precedidos por $ (como $AdjustedProbability) representan las columnas de la tabla anidada que se genera cuando se utiliza la función `PredictHistogram`. Estos son los métodos abreviados que puede usar para devolver una columna y no una tabla anidada.|  
     |**Expresión personalizada**|Seleccione esta opción para escribir una expresión personalizada y asignar después un alias a la salida.<br /><br /> La expresión personalizada se agrega a la parte SELECT de la consulta de predicción resultante DMX.<br /><br /> Esta opción es útil si desea agregar el texto de la salida a cada fila, llamar a funciones de VB o llamar a procedimientos almacenados personalizados.<br /><br /> Para más información sobre cómo usar funciones de Excel y VBA desde DMX, vea [Funciones de VBA en MDX y DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Después de agregar cada función o expresión, cambie a la vista DMX para ver cómo se agrega la función dentro de la instrucción DMX.  
@@ -76,7 +76,7 @@ ms.locfileid: "66086136"
     > [!WARNING]  
     >  El generador de consultas de predicción no valida el DMX hasta que haga clic en **Resultados**. A menudo, encontrará que la expresión que genera el generador de consultas DMX es no válida. Algunas de las causas habituales son que se hace referencia a una columna que no está relacionada con la columna de predicción o bien que se intenta predecir una columna de una tabla anidada, lo que requiere una instrucción sub-SELECT. En este momento puede cambiar a la vista DMX y continuar modificando la instrucción.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Ejemplo: Crear una consulta en un modelo de agrupación en clústeres  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Ejemplo: crear una consulta en un modelo de clústeres  
   
 1.  Si no tiene un modelo de clústeres disponible para crear esta consulta de ejemplo, cree el modelo, [TM_Clustering], con el [Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md).  
   
@@ -92,9 +92,9 @@ ms.locfileid: "66086136"
   
 5.  En la cuadrícula de la consulta, en **Origen**, seleccione el modelo de minería de datos TM_Clustering y agregue la columna [Bike Buyer].  
   
-6.  Para **origen**, seleccione **función de predicción**y agregue la función `Cluster`.  
+6.  En **origen**, seleccione **función de predicción**y agregue la función `Cluster`.  
   
-7.  Para **origen**, seleccione **función de predicción**, agregue la función `PredictSupport`y arrastre la columna del modelo [Bike Buyer] en el **criterios o argumento** cuadro. Escriba **Support** en la columna **Alias** .  
+7.  En **origen**, seleccione **función de predicción**, agregue la función `PredictSupport`,, y arrastre la columna modelo [Bike Buyer] al cuadro **criterios o argumento** . Escriba **Support** en la columna **Alias** .  
   
      Copie la expresión que represente la función de predicción y la referencia de columna del cuadro **Criterios y argumento** .  
   
@@ -118,13 +118,13 @@ ms.locfileid: "66086136"
   
      En la tabla siguiente se muestran los resultados esperados:  
   
-    |Bike Buyer|$Cluster|Support|CEILING|  
+    |Bike Buyer|$Cluster|SOPORTE TÉCNICO|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|Clúster 8|954|953.948638926372|  
   
- Si desea agregar otras cláusulas en otra parte en la instrucción: por ejemplo, si desea agregar una cláusula WHERE: no se puede agregar mediante el uso de la cuadrícula; en primer lugar debe cambiar a la vista DMX.  
+ Si desea agregar otras cláusulas en otra parte de la instrucción, por ejemplo, si desea agregar una cláusula WHERE, no puede agregarla mediante la cuadrícula; primero debe cambiar a la vista DMX.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Consultas de minería de datos](data-mining-queries.md)  
   
   

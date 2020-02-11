@@ -16,16 +16,16 @@ ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 27c10f9d5fa04ae449bdcca84891f0f28376eeb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075697"
 ---
-# <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
+# <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Marca una suscripción de mezcla para reinicializarla la próxima vez que se ejecute el Agente de mezcla. Este procedimiento almacenado se ejecuta en la base de datos de publicación del publicador.  
+  Marca una suscripción de mezcla para reinicializarla la próxima vez que se ejecute el Agente de mezcla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,21 +40,21 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **todas**.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **All**.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es **todas**.  
+`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es **All**.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos del suscriptor. *subscriber_db* es **sysname**, su valor predeterminado es **todas**.  
+`[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos del suscriptor. *subscriber_db* es de **tipo sysname y su**valor predeterminado es **All**.  
   
-`[ @upload_first = ] 'upload_first'` Especifica si se cargan los cambios en el suscriptor antes de reinicializar la suscripción. *upload_first* es **nvarchar (5)** , su valor predeterminado es False. Si **true**, los cambios se cargan antes de reinicializar la suscripción. Si **false**, no se cargan los cambios.  
+`[ @upload_first = ] 'upload_first'`Indica si se cargan los cambios en el suscriptor antes de que se reinicialice la suscripción. *upload_first* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si **es true**, los cambios se cargan antes de que se reinicialice la suscripción. Si **es false**, los cambios no se cargan.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_reinitmergesubscription** se utiliza en la replicación de mezcla.  
   
- **sp_reinitmergesubscription** pueden llamarse desde el publicador para reinicializar las suscripciones de mezcla. También se recomienda volver a ejecutar el Agente de instantáneas.  
+ se puede llamar a **sp_reinitmergesubscription** desde el publicador para reinicializar las suscripciones de mezcla. También se recomienda volver a ejecutar el Agente de instantáneas.  
   
  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
   
@@ -65,9 +65,9 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_reinitmergesubscription**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_reinitmergesubscription**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

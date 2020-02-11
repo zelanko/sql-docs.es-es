@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211204"
 ---
 # <a name="creating-a-login"></a>Crear un inicio de sesión
@@ -26,7 +26,7 @@ ms.locfileid: "68211204"
   
 ### <a name="to-create-a-new-windows-account"></a>Para crear una cuenta de Windows nueva  
   
-1.  Haga clic en **iniciar**, haga clic en **ejecutar**, en el **abrir** , escriba `%SystemRoot%\system32\compmgmt.msc /s`y, a continuación, haga clic en **Aceptar** para abrir el programa de administración de equipos.  
+1.  Haga clic en **Inicio**, haga clic en **Ejecutar**, en el `%SystemRoot%\system32\compmgmt.msc /s`cuadro **abrir** , escriba y, a continuación, haga clic en **Aceptar** para abrir el programa administración de equipos.  
   
 2.  En **Herramientas del sistema**, expanda **Usuarios y grupos locales**, haga clic con el botón derecho en **Usuarios**y luego haga clic en **Nuevo usuario**.  
   
@@ -36,7 +36,8 @@ ms.locfileid: "68211204"
   
 ### <a name="to-create-a-login"></a>Para crear un inicio de sesión  
   
-1.  En una ventana del Editor de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], escriba y ejecute el siguiente código reemplazando `computer_name` con el nombre del equipo. `FROM WINDOWS` indica que Windows autenticará al usuario. El argumento opcional `DEFAULT_DATABASE` conecta `Mary` con la base de datos `TestData` , a menos que la cadena de conexión indique otra base de datos. Esta instrucción introduce el punto y coma como una terminación opcional de una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] .  
+1.  En una ventana del Editor de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], escriba y ejecute el siguiente código reemplazando `computer_name` con el nombre del equipo. 
+  `FROM WINDOWS` indica que Windows autenticará al usuario. El argumento opcional `DEFAULT_DATABASE` conecta `Mary` con la base de datos `TestData` , a menos que la cadena de conexión indique otra base de datos. Esta instrucción introduce el punto y coma como una terminación opcional de una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
     ```  
     CREATE LOGIN [computer_name\Mary]  
@@ -53,8 +54,8 @@ ms.locfileid: "68211204"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Conceder acceso a una base de datos](lesson-2-2-granting-access-to-a-database.md)  
   
-## <a name="see-also"></a>Vea también  
- [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [CREAR inicio de sesión &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [Elegir un modo de autenticación](../relational-databases/security/choose-an-authentication-mode.md)  
   
   

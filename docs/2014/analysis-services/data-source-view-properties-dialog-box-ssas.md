@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades (SSAS) de la vista del origen de datos | Microsoft Docs
+title: Cuadro de diálogo Propiedades de vista del origen de datos (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082497"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Propiedades de vista del origen de datos (cuadro de diálogo) (SSAS)
@@ -26,10 +26,10 @@ ms.locfileid: "66082497"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Name**|Muestra el nombre de la vista del origen de datos.|  
-|**ID**|Muestra el identificador de la vista del origen de datos.|  
+|**Nombre**|Muestra el nombre de la vista del origen de datos.|  
+|**SESIÓN**|Muestra el identificador de la vista del origen de datos.|  
 |**Descripción**|Muestra la descripción de la vista del origen de datos.|  
-|**Marca de tiempo de creación**|Muestra la fecha y la hora de creación de la vista del origen de datos.|  
+|**Crear marca de tiempo**|Muestra la fecha y la hora de creación de la vista del origen de datos.|  
 |**Última actualización de esquema**|Muestra la fecha y la hora de la última actualización de los metadatos de la vista del origen de datos.|  
 |**Origen de datos principal**|Muestra el nombre del origen de datos principal asociado con la vista del origen de datos.|  
   

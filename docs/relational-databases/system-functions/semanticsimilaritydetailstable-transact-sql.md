@@ -18,10 +18,10 @@ ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067739"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
@@ -47,7 +47,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ```  
   
 ##  <a name="Arguments"></a> Argumentos  
- **table**  
+ **cuadro**  
  Nombre de una tabla con indización de texto completo y semántica habilitada.  
   
  Este nombre puede ser un nombre de una a cuatro partes, pero no se permite un nombre de servidor remoto.  
@@ -71,13 +71,13 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Tabla devuelta  
  En la tabla siguiente se describe la información sobre las frases clave que devuelve esta función de conjunto de filas.  
   
-|Column_name|Type|Descripción|  
+|Column_name|Tipo|Descripción|  
 |------------------|----------|-----------------|  
-|**keyphrase**|**NVARCHAR**|Frase clave que contribuye a la similitud entre el documento de origen y el documento coincidente.|  
-|**score**|**REAL**|Valor relativo de esta frase clave en su relación con todas las demás frases clave que son similares entre los dos documentos.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una ponderación mayor y 1.0 es la puntuación perfecta.|  
+|**frase clave**|**NVARCHAR**|Frase clave que contribuye a la similitud entre el documento de origen y el documento coincidente.|  
+|**carácter**|**IMPUESTOS**|Valor relativo de esta frase clave en su relación con todas las demás frases clave que son similares entre los dos documentos.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una ponderación mayor y 1.0 es la puntuación perfecta.|  
   
 ## <a name="general-remarks"></a>Notas generales  
- Para obtener más información, consulte [buscar documentos similares y relacionados con la búsqueda semántica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+ Para obtener más información, vea [buscar documentos similares y relacionados con la búsqueda semántica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadatos  
  Para obtener información y estado sobre la extracción y el rellenado de similitud semánticos, consulte las siguientes vistas de administración dinámica:  
@@ -92,7 +92,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  Necesita permisos SELECT en la tabla base en la que se crearon los índices semánticos y de texto completo.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se recuperan las 5 frases clave que tenían la máxima puntuación de similitud entre los candidatos especificados en **HumanResources.JobCandidate** tabla de la base de datos de ejemplo AdventureWorks2012. El @CandidateId y @MatchedID variables representan valores de la columna de clave del índice de texto completo.  
+ En el ejemplo siguiente se recuperan las 5 frases clave que tenían la máxima puntuación de similitud entre los candidatos especificados en la tabla **humanresources. JobCandidate** de la base de datos de ejemplo AdventureWorks2012. Las @CandidateId variables @MatchedID y representan los valores de la columna de clave del índice de texto completo.  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

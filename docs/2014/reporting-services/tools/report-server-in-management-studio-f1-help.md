@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100074"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Servidor de informes en Management Studio ayuda F1
@@ -24,9 +24,9 @@ ms.locfileid: "66100074"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Cancelar trabajos del servidor de informes](cancel-report-server-jobs-management-studio.md)  
+-   [Cancelación de trabajos del servidor de informes](cancel-report-server-jobs-management-studio.md)  
   
--   [Eliminar elementos del catálogo](delete-catalog-items-management-studio.md)  
+-   [Eliminación de elementos del catálogo](delete-catalog-items-management-studio.md)  
   
 -   [Página Propiedades del trabajo](job-properties-management-studio.md)  
   
@@ -56,8 +56,8 @@ ms.locfileid: "66100074"
   
 -   [Propiedades de rol de usuario](user-role-properties-management-studio.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de características (Reporting Services)](../feature-reference-reporting-services.md)   
- [Introducción a SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
+ [Presentación de SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
   

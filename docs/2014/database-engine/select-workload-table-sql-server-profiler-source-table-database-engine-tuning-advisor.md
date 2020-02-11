@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - Asesor de optimización de motor de base de datos de tabla origen - Seleccionar tabla de carga de trabajo | Microsoft Docs
+title: SQL Server Profiler-Asistente para la optimización de motor de base de datos de tabla de origen-seleccionar tabla de carga de trabajo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088879"
 ---
-# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>-Asistente para la optimización el motor de base de datos de tabla origen - carga de trabajo seleccione tabla de SQL Server Profiler
+# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>Tabla de SQL Server Profiler de origen-Asistente para la optimización de motor de base de datos-seleccionar tabla de carga de trabajo
   El Asistente para la optimización de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] y el [!INCLUDE[ssDE](../includes/ssde-md.md)] de Microsoft utilizan este cuadro de diálogo para seleccionar las tablas.  
   
  En [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], use el cuadro de diálogo **Tabla de origen** a fin de especificar una tabla de origen para una tabla de seguimiento. Esta última es una tabla desde la que se carga un seguimiento y su contenido se ve y usa para reproducir el seguimiento.  
@@ -42,7 +42,7 @@ ms.locfileid: "66088879"
  **Table**  
  Especifica el nombre de la tabla de seguimiento desde la que debe leerse el seguimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guardar los resultados de un seguimiento en una tabla &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  

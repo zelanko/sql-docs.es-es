@@ -1,5 +1,5 @@
 ---
-title: Campo (ADO - sintaxis WFC) | Microsoft Docs
+title: Field (ADO-sintaxis WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 583e6de7dc8c3ea05d61dda53c3e630d05e4d5f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918749"
 ---
 # <a name="field-ado---wfc-syntax"></a>Campo (ADO - sintaxis WFC)
-## <a name="package-commswfcdata"></a>paquete com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>paquete com. ms. wfc. Data  
   
 ### <a name="methods"></a>Métodos  
   
@@ -44,7 +44,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- (Para obtener más información, consulte la documentación de la interfaz com.ms.wfc.data.IDataFormat).  
+ (Para obtener más información, vea la documentación de la interfaz com. ms. wfc. Data. IDataFormat).  
   
 ```  
 public int getDefinedSize()  
@@ -63,14 +63,14 @@ public void setValue(Variant value)
 public AdoProperties getProperties()  
 ```  
   
-### <a name="field-accessor-methods"></a>Métodos de descriptor de acceso de campo  
- El [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad de un [campo](../../../ado/reference/ado-api/field-object.md) objeto Obtiene o establece el contenido de ese objeto. El contenido se representa como una variante, un tipo de objeto que se puede asignar un valor y cualquiera de varios tipos de datos.  
+### <a name="field-accessor-methods"></a>Métodos descriptores de acceso de campo  
+ La propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) de un objeto de [campo](../../../ado/reference/ado-api/field-object.md) obtiene o establece el contenido de ese objeto. El contenido se representa como una variante, un tipo de objeto al que se puede asignar un valor y cualquiera de los distintos tipos de datos.  
   
- ADO y WFC implementa el **valor** propiedad con el **getValue** método, que devuelve un objeto VARIANT; y la **setValue** método, que toma un tipo VARIANT como argumento. Tipos Variant son muy eficaces en algunos lenguajes, como Microsoft Visual Basic.  
+ ADO/WFC implementa la propiedad **Value** con el método **GetValue** , que devuelve un objeto Variant. y el método **SetValue** , que toma una variante como argumento. Las variantes son muy eficaces en algunos lenguajes, como Microsoft Visual Basic.  
   
- Además el **valor** propiedad, ADO y WFC proporciona *descriptor de acceso* métodos que usan tipos de datos de Java para obtener y establecer el contenido de **campo** objetos. La mayoría de estos métodos tiene nombres de la forma **obtener**_DataType_ o **establecer**_DataType_.  
+ Además de la propiedad **Value** , ADO/wfc proporciona métodos de *descriptor de acceso* que utilizan tipos de datos de Java para obtener y establecer el contenido de los objetos de **campo** . La mayoría de estos métodos tienen nombres con el formato **Get**_DataType_ o **set**_DataType_.  
   
- Existen dos excepciones notables: Uno de los **getObject** métodos devuelve un objeto convertido en una clase especificada. No hay ningún **getNull** propiedad; en su lugar, hay una **isNull** propiedad que devuelve un valor booleano que indica si el campo es null.  
+ Hay dos excepciones destacadas: uno de los métodos **GetObject** devuelve un objeto convertido en una clase especificada. No hay ninguna propiedad **getNull** ; en su lugar, hay una propiedad **IsNull** que devuelve un valor booleano que indica si el campo es NULL.  
   
 ```  
 public native boolean getBoolean();  
@@ -98,5 +98,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)

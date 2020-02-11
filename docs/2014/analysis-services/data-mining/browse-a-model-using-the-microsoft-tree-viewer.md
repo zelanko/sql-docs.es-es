@@ -1,5 +1,5 @@
 ---
-title: Examinar un modelo usando el Visor de árboles de Microsoft | Microsoft Docs
+title: Examinar un modelo usando el visor de árboles de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,19 +24,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085937"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Examinar un modelo usando el Visor de árboles de Microsoft
-  El Visor de árboles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los árboles de decisión que se generan con el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo del árbol de decisión híbrido que admite clasificación y regresión. Por consiguiente, también puede usar este visor para ver modelos basados en el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] se usa para el modelo de predicción de los atributos discretos y continuos. Para obtener más información acerca de este algoritmo, vea [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md).  
+  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] visor de árbol [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de muestra los árboles de decisión que se [!INCLUDE[msCoName](../../includes/msconame-md.md)] generan con el algoritmo de árboles de decisión de. El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo del árbol de decisión híbrido que admite clasificación y regresión. Por consiguiente, también puede usar este visor para ver modelos basados en el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] se usa para el modelo de predicción de los atributos discretos y continuos. Para obtener más información acerca de este algoritmo, vea [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md).  
   
 > [!NOTE]  
 >  Para ver información detallada sobre las ecuaciones utilizadas en el modelo y los modelos que se detectaron, utilice el Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_TabsPanes"></a> Fichas del visor  
+##  <a name="BKMK_TabsPanes"></a>Pestañas del visor  
  Cuando se explora un modelo de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el modelo aparece en la pestaña **Visor de modelos de minería de datos** del visor del diseñador de minería de datos apropiado para el modelo. El Visor de árboles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] incluye los siguientes paneles y pestañas:  
   
 -   [Árbol de decisión](#BKMK_DecisionTree)  
@@ -45,7 +45,7 @@ ms.locfileid: "66085937"
   
 -   [Leyenda de minería de datos](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a> Árbol de decisión  
+###  <a name="BKMK_DecisionTree"></a>Árbol de decisión  
  Cuando se genera un modelo de árbol de decisión, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un árbol independiente por cada atributo de predicción. Puede ver un árbol individual seleccionándolo en la lista **Árbol** de la pestaña **Árbol de decisión** del visor.  
   
  Un árbol de decisión está compuesto por una serie de divisiones, con la división más importante, determinada por el algoritmo, a la izquierda del visor en el nodo **Todos** . Las divisiones adicionales se muestran a la derecha. La división del nodo **Todos** es la más importante, ya que contiene la condición más determinante de división del conjunto de datos y, por lo tanto, la que ocasiona la primera división.  
@@ -75,7 +75,7 @@ ms.locfileid: "66085937"
   
  [Volver al principio](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a> Red de dependencias  
+###  <a name="BKMK_DependencyNetwork"></a>Red de dependencias  
  La **Red de dependencias** muestra las dependencias entre los atributos de entrada y los atributos de predicción del modelo. El control deslizante de la izquierda del visor se comporta como un filtro que está asociado a la importancia de las dependencias. Si desplaza el control deslizante hacia abajo, solamente se muestran en el visor los vínculos de mayor importancia.  
   
  Cuando se selecciona un nodo, el visor resalta las dependencias específicas de dicho nodo. Por ejemplo, si elige un nodo de predicción, el visor también resalta cada uno de los nodos que ayudan a predecir el nodo de predicción.  
@@ -86,7 +86,7 @@ ms.locfileid: "66085937"
   
  [Volver al principio](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a> Leyenda de minería de datos  
+###  <a name="BKMK_MiningLegend"></a>Leyenda de minería de datos  
  La **Leyenda de minería de datos** muestra la siguiente información al seleccionar un nodo en el modelo de árbol de decisión:  
   
 -   El número de casos del nodo, dividido en los estados del atributo de predicción.  
@@ -103,10 +103,10 @@ ms.locfileid: "66085937"
   
  [Volver al principio](#BKMK_TabsPanes)  
   
-## <a name="see-also"></a>Vea también  
- [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
- [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm.md)   
+ [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](../mining-model-viewers-data-mining-model-designer.md)   
+ [Tareas y procedimientos del visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)  
   

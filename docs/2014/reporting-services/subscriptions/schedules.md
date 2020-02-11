@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12096cd9269718f9eb75ca4fcbd1dbc11e25e6c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100750"
 ---
 # <a name="schedules"></a>Programaciones
@@ -29,25 +29,25 @@ ms.locfileid: "66100750"
   
  En este tema:  
   
--   [Lo que puede hacer con las programaciones](#bkmk_whatyoucando)  
+-   [Qué puede hacer con las programaciones](#bkmk_whatyoucando)  
   
 -   [Comparar programaciones compartidas y específicas del informe](#bkmk_compare)  
   
 -   [Configurar los orígenes de datos](#bkmk_configuredatasources)  
   
--   [Store credenciales y cuentas de procesamiento](#bkmk_credentials)  
+-   [Almacenar credenciales y cuentas de procesamiento](#bkmk_credentials)  
   
--   [Programación y funcionamiento del procesador de entrega](#bkmk_how_scheduling_works)  
+-   [Cómo funciona el procesamiento de entrega y programación](#bkmk_how_scheduling_works)  
   
 -   [Dependencias de servidor](#bkmk_serverdependencies)  
   
--   [Efectos de detener al Agente SQL Server](#bkmk_stoppingagent)  
+-   [Efectos de detener el Agente SQL Server](#bkmk_stoppingagent)  
   
 -   [Efectos de detener el servicio del servidor de informes](#bkmk_stoppingservice)  
   
   
 ##  <a name="bkmk_whatyoucando"></a> Qué puede hacer con las programaciones  
- Puede usar el Administrador de informes en modo nativo y las páginas de administración de sitios de SharePoint en modo de SharePoint para crear y administrar programaciones. Puede hacer lo siguiente:  
+ Puede usar el Administrador de informes en modo nativo y las páginas de administración de sitios de SharePoint en modo de SharePoint para crear y administrar programaciones. Puede:  
   
 -   Programar la entrega del informe mediante una suscripción estándar o controlada por datos.  
   
@@ -93,10 +93,10 @@ ms.locfileid: "66100750"
 ##  <a name="bkmk_credentials"></a> Almacenar credenciales y cuentas de procesamiento  
  El modo que adopte para trabajar con las programaciones dependerá de las tareas de su asignación de roles. Si usa roles predefinidos, los usuarios que son administradores de contenido y administradores del sistema pueden crear y administrar cualquier programación. Si utiliza asignaciones de roles personalizados, deberán incluir tareas compatibles con operaciones programadas.  
   
-|Para|Incluya estas tareas|Roles predefinidos en modo nativo|Grupos en modo de SharePoint|  
+|Para hacer esto|Incluya estas tareas|Roles predefinidos en modo nativo|Grupos en modo de SharePoint|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |Crear, modificar o eliminar programaciones compartidas|Administrar programaciones compartidas|Administrador del sistema|Propietarios|  
-|Seleccionar programaciones compartidas|Ver programaciones compartidas|Usuario del sistema|Miembros|  
+|Seleccionar programaciones compartidas|Ver programaciones compartidas|Usuario del sistema|Members|  
 |Crear, modificar o eliminar programaciones específicas del informe en una suscripción definida por el usuario|Administrar suscripciones individuales|Explorador, Generador de informes, Mis informes, Administrador de contenido|Visitantes, Miembros|  
 |Crear, modificar o eliminar programaciones específicas del informe para todo el resto de operaciones programadas|Administrar historial de informe, Administrar todas las suscripciones y Administrar informes|Administrador de contenido|Propietarios|  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66100750"
  Reporting Services mantiene una cola de eventos para todas las operaciones programadas. La sondea a intervalos regulares para detectar nuevos eventos. De forma predeterminada, la cola se recorre a intervalos de 10 segundos. Es posible cambiar el intervalo si se modifican los valores de configuración `PollingInterval`, `IsNotificationService` e `IsEventService` del archivo RSReportServer.config. El modo de SharePoint también usa el archivo RSreporserver.config para estas configuraciones y los valores se aplican a todas las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Dependencias de servidor  
- El Procesador de entrega y programación requiere que se hayan iniciado el servicio del servidor de informes y el Agente SQL Server. La característica procesador de entrega y programación debe habilitarse a través de la `ScheduleEventsAndReportDeliveryEnabled` propiedad de la **configuración de área expuesta para Reporting Services** faceta de administración basada en directivas. Tanto el Agente SQL Server como el servicio del servidor de informes deben estar en ejecución para que se puedan realizar las operaciones programadas.  
+ El Procesador de entrega y programación requiere que se hayan iniciado el servicio del servidor de informes y el Agente SQL Server. La característica de procesamiento de entrega y programación debe habilitarse `ScheduleEventsAndReportDeliveryEnabled` mediante la propiedad de la faceta **configuración de área expuesta para Reporting Services** en la administración basada en directivas. Tanto el Agente SQL Server como el servicio del servidor de informes deben estar en ejecución para que se puedan realizar las operaciones programadas.  
   
 > [!NOTE]  
 >  Se puede utilizar la faceta **Configuración de área expuesta para Reporting Services** con el fin de detener las operaciones programadas de manera temporal o permanente. Aunque puede crear e implementar extensiones de entrega personalizadas, el Procesador de entrega y programación en sí mismo no es extensible. No se puede cambiar el modo en que administra eventos y notificaciones. Para obtener más información acerca de cómo desactivar características, vea la sección **Eventos programados y entrega programada** de [Turn Reporting Services Features On or Off](../report-server/turn-reporting-services-features-on-or-off.md).  
@@ -142,7 +142,7 @@ ms.locfileid: "66100750"
 ###  <a name="bkmk_stoppingservice"></a> Efectos de detener el servicio del servidor de informes  
  Si se detiene el servicio del servidor de informes, el Agente SQL Server sigue agregando solicitudes de procesamiento de informes a la cola. La información de estado del Agente SQL Server indica que el trabajo concluyó correctamente. No obstante, puesto que se ha detenido el servicio del servidor de informes, en realidad no se produce el procesamiento de informes. Las solicitudes se siguen acumulando en la cola hasta que se reinicia el servicio del servidor de informes. Una vez reiniciado este servicio, todas las solicitudes de procesamiento de informes existentes en la cola se procesan por orden.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear, modificar y eliminar instantáneas del historial de informes](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   

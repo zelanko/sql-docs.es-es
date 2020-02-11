@@ -23,14 +23,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 71c462baf00d4129b4efaea0eb39b3a08e6c7ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261879"
 ---
 # <a name="replication-publishing-model-overview"></a>Información general del modelo de publicación de replicación
-  La replicación utiliza una metáfora del sector editorial para representar los componentes de una topología de replicación, que incluyen el publicador, el distribuidor, los suscriptores, las publicaciones, los artículos y las suscripciones. Resulta útil pensar en la replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como si fuera una revista:  
+  La replicación utiliza una metáfora del sector editorial para representar los componentes de una topología de replicación, que incluyen el publicador, el distribuidor, los suscriptores, las publicaciones, los artículos y las suscripciones. Resulta útil pensar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la replicación en términos de una revista:  
   
 -   El publicador (editor) de una revista produce una o más publicaciones.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "63261879"
   
  ![Componentes de replicación y flujo de datos](../media/replintro1.gif "Componentes de replicación y flujo de datos")  
   
-## <a name="publisher"></a>publicador  
+## <a name="publisher"></a>Publicador  
  El publicador es una instancia de base de datos que permite que los datos estén disponibles para otras ubicaciones a través de la replicación. El publicador puede tener una o más publicaciones, cada una de las cuales representa un conjunto de objetos y datos relacionados lógicamente para replicar.  
   
-## <a name="distributor"></a>Distribuidor  
+## <a name="distributor"></a>Distribuidor.  
  El distribuidor es una instancia de base de datos que funciona como almacén para datos específicos de replicación asociados con uno o más publicadores. Cada publicador está asociado con una sola base de datos (conocida como la base de datos de distribución) en el distribuidor. La base de datos de distribución almacena los datos de estado de la replicación, metadatos acerca de la publicación y, en algunos casos, funciona como cola para los datos que se transfieren del publicador a los suscriptores. En muchos casos, una sola instancia de servidor de bases de datos funciona como publicador y como distribuidor Esto se conoce como un *distribuidor local*. Cuando el publicador y el distribuidor se configuran en instancias distintas del servidor de bases de datos, el distribuidor se denomina un *distribuidor remoto*.  
   
 ## <a name="subscribers"></a>Suscriptores  
@@ -61,12 +61,12 @@ ms.locfileid: "63261879"
 ## <a name="publication"></a>Publicación  
  Una publicación es un conjunto de uno o más artículos de una base de datos. La agrupación de varios artículos en una publicación permite especificar más fácilmente un conjunto de objetos y datos de bases de datos relacionados lógicamente, que se replican como una unidad.  
   
-## <a name="subscription"></a>Suscripción  
+## <a name="subscription"></a>Subscription  
  Una suscripción es una solicitud de una copia de una publicación que se entrega a un suscriptor. La suscripción define qué publicación se recibirá, dónde y cuándo. Hay dos tipos de suscripciones: de inserción y de extracción. Para más información sobre las suscripciones de inserción y de extracción, vea [Suscribirse a publicaciones](../subscribe-to-publications.md).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre los agentes de replicación](../agents/replication-agents-overview.md)   
- [Types of Replication](../types-of-replication.md)   
- [Configurar la replicación para grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) [mantener una base de datos de publicación AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Replication Agents Overview](../agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
+ [Tipos de replicación](../types-of-replication.md)   
+ [Configurar la replicación para grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) [mantener una base de datos de publicación de alwayson &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
   

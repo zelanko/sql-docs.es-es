@@ -1,5 +1,5 @@
 ---
-title: Gráfico de elevación (Analysis Services - minería de datos) | Microsoft Docs
+title: Gráfico de elevación (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64783573ee24c5d0224393237fdac94044a1dbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084311"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
-  Un **gráfico de elevación** gráficamente representa la mejora que un modelo de minería de datos proporciona cuando se compara con una estimación aleatoria, y mide el cambio en términos de un *elevación* puntuación. Al comparar las puntuaciones de elevación para las distintas partes del conjunto de datos y para los distintos modelos, puede determinar qué modelo es mejor, y qué porcentaje de los casos del conjunto de datos se beneficiaría de aplicar las predicciones del modelo.  
+  Un **gráfico de elevación** representa gráficamente la mejora que proporciona un modelo de minería de datos en comparación con una estimación aleatoria y mide el cambio en términos de una puntuación de *elevación* . Al comparar las puntuaciones de mejora de las distintas partes del conjunto de datos y para los distintos modelos, puede determinar qué modelo es mejor y qué porcentaje de los casos del conjunto de datos se beneficiaría de aplicar las predicciones del modelo.  
   
  Con un gráfico de mejora respecto al modelo predictivo, puede comparar la precisión de las predicciones para varios modelos que tienen el mismo atributo de predicción. También puede evaluar la exactitud de la predicción para un único resultado (un único valor del atributo de predicción) o para todos los resultados (todos los valores del atributo especificado).  
   
  Un gráfico de beneficios es un tipo de gráfico relacionado que contiene la misma información que un gráfico de mejora respecto al modelo predictivo, pero que también muestra el aumento proyectado en los beneficios asociado al uso de cada modelo.  
   
-##  <a name="bkmk_Top"></a> Descripción del gráfico de mejora respecto al modelo predictivo  
+##  <a name="bkmk_Top"></a>Descripción del gráfico de elevación  
  Puede resultar difícil entender los gráficos de mejora respecto al modelo predictivo como concepto abstracto. Por consiguiente, para ilustrar el uso de las herramientas del gráfico de mejora respecto al modelo predictivo y la información del gráfico, en esta sección se muestra un escenario en el que se usa un gráfico de mejora respecto al modelo predictivo para calcular la respuesta a una campaña de envío de correo directo.  
   
  El departamento de marketing de este escenario sabe que las campañas de correo suelen tener más o menos una tasa de respuesta del 10 por ciento. Tienen una lista de 10.000 clientes potenciales almacenada en una tabla de la base de datos. Según el índice típico de respuesta, normalmente pueden esperar que solo respondan unos 1.000 clientes potenciales. Sin embargo, el dinero presupuestado para el proyecto no es suficiente para llegar a los 10.000 clientes de la base de datos, y desean mejorar la tasa de respuesta. Para este escenario, supongamos que el presupuesto solo les permite enviar un anuncio a 5.000 clientes. El departamento de marketing tiene dos opciones:  
@@ -40,7 +40,7 @@ ms.locfileid: "66084311"
   
 -   Usar un modelo de minería de datos para dirigirse a los 5.000 clientes con mayores probabilidades de respuesta.  
   
- Mediante un gráfico de mejora respecto al modelo predictivo, puede comparar los resultados esperados de ambas opciones. Por ejemplo, si la compañía seleccionara de forma aleatoria 5.000 clientes, podrían esperar recibir solo 500 respuestas, según la tasa de respuesta típica. La línea *aleatoria* del gráfico de mejora respecto al modelo predictivo representa esta situación. Sin embargo, si el departamento de marketing usara un modelo de minería de datos para dirigir la distribución de correo, podría esperar un mejor índice de respuesta debido a que el modelo identificaría los clientes que tienen más probabilidades de responder. Si el modelo fuera perfecto, crearía predicciones infalibles y la empresa podría esperar recibir 1.000 respuestas con solo enviar la distribución de correo a los 1.000 clientes potenciales recomendados por el modelo. La línea *ideal* del gráfico de mejora respecto al modelo predictivo representa esta situación.  
+ Mediante un gráfico de mejora respecto al modelo predictivo, puede comparar los resultados esperados de ambas opciones. Por ejemplo, si la compañía seleccionara de forma aleatoria 5.000 clientes, podrían esperar recibir solo 500 respuestas, según la tasa de respuesta típica. Este escenario es lo que representa la línea *aleatoria* del gráfico de elevación. Sin embargo, si el departamento de marketing usara un modelo de minería de datos para dirigir la distribución de correo, podría esperar un mejor índice de respuesta debido a que el modelo identificaría los clientes que tienen más probabilidades de responder. Si el modelo fuera perfecto, crearía predicciones infalibles y la empresa podría esperar recibir 1.000 respuestas con solo enviar la distribución de correo a los 1.000 clientes potenciales recomendados por el modelo. La línea *ideal* del gráfico de mejora respecto al modelo predictivo representa esta situación.  
   
  La realidad es que el modelo de minería de datos probablemente se sitúa entre estos dos extremos, entre una estimación aleatoria y una predicción perfecta. Cualquier mejora con respecto a la estimación aleatoria se considera una "mejora respecto al modelo predictivo".  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66084311"
   
  Este gráfico contiene varios modelos basados en los mismos datos. Uno de ellos se ha personalizado para dirigirse a clientes concretos. Puede personalizar un modelo agregando filtros para los datos usados para entrenarlo. Este filtro restringe los casos que se usan tanto en el entrenamiento como en la evaluación a los clientes menores de 30 años. Observe que un efecto del filtrado es que el modelo básico y el modelo filtrado usan conjuntos de datos distintos, por lo que el número de casos usados para la evaluación en el gráfico de mejora respecto al modelo predictivo también es diferente. Es importante recordar este punto al interpretar los resultados de predicción y otras estadísticas.  
   
- ![elevación del gráfico que muestra dos modelos](../media/newliftchart-tm30-30.gif "elevación del gráfico que muestra dos modelos")  
+ ![gráfico de elevación en el que se muestran dos modelos](../media/newliftchart-tm30-30.gif "gráfico de elevación en el que se muestran dos modelos")  
   
  El eje X del gráfico representa el porcentaje del conjunto de datos de prueba que se usa para comparar las predicciones. El eje Y del gráfico representa el porcentaje de valores de predicción.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "66084311"
   
  La **Leyenda de minería de datos** también contiene puntuaciones y estadísticas que ayudan a interpretar el gráfico. Estos resultados representan la exactitud del modelo en la línea gris, que en este escenario está situada para que incluya el 30 por ciento de los casos de prueba totales.  
   
-|Serie y modelo|Puntuación|Población de destino|Probabilidad de predicción|  
+|Serie y modelo|Score|Población de destino|Probabilidad de predicción|  
 |-----------------------|-----------|-----------------------|-------------------------|  
 |Correo destinado a todos|0.71|47,40 %|61,38 %|  
 |Correo destinado a menores de 30|0.85|51,81 %|46.62 %|  
 |Modelo de estimación aleatoria||31.00 %||  
-|Modelo ideal para: Correo destinado a todos||62.48 %||  
-|Modelo ideal para: Correo destinado a menores de 30||65.28 %||  
+|Modelo ideal para: correo destinado a todos||62.48 %||  
+|Modelo ideal para: correo destinado a menores de 30||65.28 %||  
   
  [Volver al principio](#bkmk_Top)  
   
@@ -91,11 +91,11 @@ ms.locfileid: "66084311"
   
  El eje X es el mismo que en el gráfico con la columna de predicción especificada, pero ahora el eje Y representa el porcentaje de predicciones correctas. Por consiguiente, la línea ideal es la línea diagonal, que muestra que en el 50 por ciento de los datos, el modelo predice correctamente el 50 por ciento de los casos, el máximo que se puede esperar.  
   
- ![Elevación de predicciones correctas de gráfico que muestra](../media/lift1.gif "gráfico de elevación Mostrar predicciones correctas")  
+ ![Gráfico de elevación en el que se muestran predicciones correctas](../media/lift1.gif "Gráfico de elevación en el que se muestran predicciones correctas")  
   
  Puede hacer clic en el gráfico para mover la barra gris vertical y la **Leyenda de minería de datos** muestra el porcentaje de casos total y el porcentaje de casos que se predijeron correctamente. Por ejemplo, si coloca la barra deslizante gris en la marca del 50 por ciento, la **Leyenda de minería de datos** muestra las puntuaciones de precisión siguientes. Estas cifras se basan en el modelo TM_Decision Tree creado en el Tutorial básico de minería de datos.  
   
-|Serie, Modelo|Puntuación|Población de destino|Probabilidad de predicción|  
+|Serie, Modelo|Score|Población de destino|Probabilidad de predicción|  
 |-------------------|-----------|-----------------------|-------------------------|  
 |TM_Decision Tree|0.77|40.50 %|72.91 %|  
 |Modelo ideal||50.00%||  
@@ -116,7 +116,7 @@ ms.locfileid: "66084311"
 ### <a name="related-content"></a>Contenido relacionado  
  [Volver al principio](#bkmk_Top)  
   
-## <a name="see-also"></a>Vea también  
- [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Pruebas y validación &#40;&#41;de minería de datos](testing-and-validation-data-mining.md)  
   
   

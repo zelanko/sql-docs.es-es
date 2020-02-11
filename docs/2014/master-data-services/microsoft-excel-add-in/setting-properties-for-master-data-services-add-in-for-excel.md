@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a041133bf26865404da6a883992176b19e837c78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479067"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Establecer propiedades para el complemento Master Data Services para Excel
@@ -26,17 +26,17 @@ ms.locfileid: "65479067"
   
 ||||  
 |-|-|-|  
-|Pestaña y sección|Parámetro|Descripción|  
-|Configuración: Publicar|Mostrar el cuadro de diálogo **Publicar y anotar** al publicar|Seleccione esta opción para mostrar el cuadro de diálogo **Publicar y anotar** después de hacer clic en **Publicar**; esto le permitirá especificar una sola anotación para todos los cambios o una para cada cambio.<br /><br /> Anule la selección de esta opción si desea que el proceso de publicación se inicie sin mostrar el cuadro de diálogo **Publicar y anotar** . No tendrá la oportunidad de especificar ninguna anotación.|  
-|Configuración: Versión|Selección de versión|Seleccione la versión de los datos maestros que se cargarán en el complemento de Excel. Puede ser:<br /><br /> **Ninguno** para que no haya ninguna versión predeterminada<br /><br /> **Más antiguo** para usar como versión predeterminada la más antigua o **Más reciente** para usar como versión predeterminada la más reciente.|  
-|Configuración: Registro|Activar el registro detallado|Habilitar el registro para el proceso de carga de datos maestros desde MDS en el complemento de Excel, que se registra el resultado de todos los comandos en el servicio.|  
+|Pestaña y sección|Configuración|Descripción|  
+|Configuración: Publicación|Mostrar el cuadro de diálogo **Publicar y anotar** al publicar|Seleccione esta opción para mostrar el cuadro de diálogo **Publicar y anotar** después de hacer clic en **Publicar**; esto le permitirá especificar una sola anotación para todos los cambios o una para cada cambio.<br /><br /> Anule la selección de esta opción si desea que el proceso de publicación se inicie sin mostrar el cuadro de diálogo **Publicar y anotar** . No tendrá la oportunidad de especificar ninguna anotación.|  
+|Configuración: Versión|Selección de versión|Seleccione la versión de los datos maestros que se cargarán en el complemento de Excel. Puede ser:<br /><br /> **Ninguno** para que la versión no tenga como valor predeterminado ninguna versión<br /><br /> Es **más antiguo** que el valor predeterminado de la versión más antigua **más reciente** para la versión más reciente.|  
+|Configuración: Registro|Activar el registro detallado|Habilitar el registro para el proceso de carga de datos maestros desde MDS en el complemento de Excel, de modo que se registre el resultado de cada comando en el servicio.|  
 |Configuración: Tamaño de lotes|Número de celdas para cargar|Seleccione cuántos miles de celdas se incluirán en cada lote que se cargue desde el servidor de MDS en Excel. El valor predeterminado es 50.000 celdas.|  
 |Configuración: Tamaño de lotes|Número de celdas para publicar|Seleccione cuántos miles de celdas se publicarán en cada lote que Excel devuelva al servidor. El valor predeterminado es 50.000 celdas.|  
 |Configuración: Servidores agregados a la lista segura|Borrar todo|Haga clic en esta opción para borrar la lista de conexiones que se designaron como seguras cuando se abrió el archivo de consulta de acceso directo asociado.|  
 |Datos: Filtros|Mostrar advertencia de filtro para grandes conjuntos de datos|Haga clic en esta opción para mostrar una advertencia si el conjunto de datos que se va a cargar desde MDS en Excel supera el número máximo de filas o columnas.|  
 |Datos: Filtros|Número máximo de filas|Seleccione el umbral para el número de filas que se cargarán, superado el cual se mostrará una advertencia de filtro.|  
 |Datos: Filtros|Máximo de columnas|Seleccione el umbral para el número de columnas que se cargarán, superado el cual se mostrará una advertencia de filtro.|  
-|Datos: Formato de celda|Cambiar el color cuando: Cambio de los valores de atributo|Haga clic en esta opción si desea que el color de una celda cambie si cambia el valor de atributo de dicha celda al actualizar la tabla del complemento de Excel con nuevos datos procedentes del repositorio de MDS.|  
-|Datos: Formato de celda|Cambiar el color cuando: Se agregan miembros|Haga clic para especificar que el color de las celdas de una fila cambie si se agrega un nuevo miembro a la fila al actualizar la tabla del complemento de Excel con nuevos datos procedentes del repositorio de MDS.|  
+|Datos: Formato de celda|Cambiar el color de la celda cuando: Cambio de valores de atributo|Haga clic en esta opción si desea que el color de una celda cambie si cambia el valor de atributo de dicha celda al actualizar la tabla del complemento de Excel con nuevos datos procedentes del repositorio de MDS.|  
+|Datos: Formato de celda|Cambiar el color de la celda cuando: Los miembros se agregan|Haga clic para especificar que el color de las celdas de una fila cambie si se agrega un nuevo miembro a la fila al actualizar la tabla del complemento de Excel con nuevos datos procedentes del repositorio de MDS.|  
   
   

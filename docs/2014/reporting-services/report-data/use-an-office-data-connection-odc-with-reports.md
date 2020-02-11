@@ -1,5 +1,5 @@
 ---
-title: Usar una conexión de datos de Office (.odc) con informes (Reporting Services en modo integrado de SharePoint) | Microsoft Docs
+title: Usar una conexión de datos de Office (. odc) con informes (Reporting Services en el modo integrado de SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106959"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Usar una conexión de datos de Office (.odc) con informes (Reporting Services en el modo integrado de SharePoint)
-  En escenarios limitados, puede usar un archivo de conexión de datos de Office (.odc) existente para proporcionar información de conexión a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Al crear un origen de datos compartido, puede usarse un archivo .odc en lugar de un archivo .rsds. El servidor de informes usa un archivo .odc de la misma forma que usa un archivo .rsds; lee el archivo para el tipo de origen de datos, una cadena de conexión y la información de credenciales.  
+  En escenarios limitados, puede usar un archivo de conexión de datos de Office (.odc) existente para proporcionar información de conexión a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Al crear un origen de datos compartido, puede usarse un archivo .odc en lugar de un archivo .rsds. El servidor de informes usa un archivo .odc de la misma forma que usa un archivo .rsds; lee el archivo para el tipo de origen de datos, una cadena de conexión y la información de credenciales.  
   
  No todos los archivos .odc pueden utilizarse con un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La extensión de procesamiento de datos y las características del informe y del archivo .odc determinan si puede usarse un archivo .odc:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66106959"
   
 4.  Seleccione **Proveedor Microsoft OLE DB para SQL Server**y, a continuación, haga clic en **Siguiente**.  
   
-5.  Escriba el nombre del servidor (de forma predeterminada, es el nombre de red del equipo) y una cuenta de usuario que tenga permisos de base de datos e inicio de sesión válidos. Haga clic en **Siguiente**.  
+5.  Escriba el nombre del servidor (de forma predeterminada, es el nombre de red del equipo) y una cuenta de usuario que tenga permisos de base de datos e inicio de sesión válidos. Haga clic en **Next**.  
   
 6.  Seleccione una base de datos y, a continuación, haga clic en **Aceptar** para cerrar el cuadro de diálogo **Vínculo de datos** .  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66106959"
   
      Si intenta seguir estos pasos con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y los informes de ejemplo, tenga en cuenta que solo funcionará el informe Company Sales en un archivo .odc. Los otros informes de ejemplo contienen parámetros de consulta y características que no funcionan con el proveedor OLE DB. Sin embargo, puede hacer que los informes funcionen con el proveedor OLE DB modificándolos primero en el Diseñador de informes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

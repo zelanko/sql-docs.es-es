@@ -15,16 +15,16 @@ ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d97f655c89c07f7866fbdee6aab236f942b5499c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921686"
 ---
 # <a name="activecommand-property-example-vb"></a>Ejemplo de la propiedad ActiveCommand (VB)
-Este ejemplo se muestra el [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propiedad.  
+En este ejemplo se muestra la propiedad [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
   
- Una subrutina se le asigna un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) cuyo **ActiveCommand** propiedad se utiliza para mostrar el texto del comando y los parámetros que creó el **Recordset**.  
+ A una subrutina se le asigna un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) cuya propiedad **ActiveCommand** se usa para mostrar el texto del comando y el parámetro que creó el **conjunto de registros**.  
   
 ```  
 'BeginActiveCommandVB  
@@ -90,11 +90,11 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- El **ActiveCommandXprint** rutina tiene sólo un **Recordset** de objeto, que imprimir el texto de comando y los parámetros que creó el **Recordset**. Esto puede realizarse porque la **Recordset** del objeto **ActiveCommand** propiedad da como resultado asociado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
+ La rutina **ActiveCommandXprint** solo recibe un objeto de **conjunto de registros** , pero debe imprimir el texto del comando y el parámetro que creó el conjunto de **registros**. Esto se puede hacer porque la propiedad **ActiveCommand** del objeto de **conjunto de registros** produce el objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) asociado.  
   
- El **comando** del objeto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propiedad da como resultado el comando con parámetros que creó el **Recordset**. El **comando** del objeto [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección genera el valor que se ha sustituido por marcador de posición de parámetro del comando (" **?** ").  
+ La propiedad [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) del objeto de **comando** produce el comando con parámetros que creó el **conjunto de registros**. La colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) del objeto **Command** produce el valor que se sustituyó por el marcador de posición de parámetro del comando ("**?**").  
   
- Por último, se imprimen un mensaje de error o el nombre del autor y ID.  
+ Por último, se imprimen un mensaje de error o el nombre e identificador del autor.  
   
 ```  
 'BeginActiveCommandPrintVB  
@@ -120,7 +120,7 @@ End Sub
 'EndActiveCommandPrintVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Command (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

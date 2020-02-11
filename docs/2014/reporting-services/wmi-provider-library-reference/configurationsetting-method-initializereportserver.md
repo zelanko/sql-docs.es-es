@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098344"
 ---
-# <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>Método InitializeReportServer (WMI MSReportServer_ConfigurationSetting)
+# <a name="initializereportserver-method-wmi-msreportserver_configurationsetting"></a>Método InitializeReportServer (WMI MSReportServer_ConfigurationSetting)
   Inicializa la instancia del servicio de informes especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,7 +44,7 @@ public void InitializeReportServer(string InstallationID,
  *InstallationID*  
  Cadena utilizada para cifrar la clave de cifrado antes de devolverse.  
   
- *HRESULT*  
+ *VALOR*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
  *ExtendedErrors[]*  
@@ -53,19 +53,19 @@ public void InitializeReportServer(string InstallationID,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se llama a este método, la clave de cifrado que tiene acceso a la información segura de la base de datos del servidor de informes se cifra utilizando la clave pública del servidor de informes identificada por *InstallationID*.  
   
  La clave pública del servidor de informes especificado se debe haber escrito previamente en la base de datos del servidor de informes.  
   
  Se debe llamar al método *InitializeReportServer* en un servidor de informes que ya tenga acceso a la información segura para que pueda descifrar la clave de cifrado. A continuación, la clave de cifrado cifrada resultante se almacena en la base de datos del servidor de informes.  
   
- Si el servidor de informes [IsInitialized](configurationsetting-property-isinitialized.md) propiedad está establecida en `true` cuando se llama al método InitializeReportServer, el método devuelve valores correctos sin intentar cifrar la clave de cifrado.  
+ Si la propiedad [IsInitialized](configurationsetting-property-isinitialized.md) del servidor de informes se establece `true` en cuando se llama al método InitializeReportServer, el método devuelve SUCCESS sin intentar cifrar la clave de cifrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

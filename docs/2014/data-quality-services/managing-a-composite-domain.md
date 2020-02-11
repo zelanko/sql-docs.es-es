@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eef4cc29bdcda107bba55ceab14aa7984fc420a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480393"
 ---
 # <a name="managing-a-composite-domain"></a>Administrar un dominio compuesto
@@ -33,13 +33,13 @@ ms.locfileid: "65480393"
 |Cuando se asignan datos complejos a un dominio compuesto, dichos datos se pueden analizar basándose tanto en el conocimiento como en un delimitador. DQS intentará primero utilizar su conocimiento sobre los dominios individuales para determinar la pertenencia de las partes de la cadena compleja a dichos dominios.|[Crear un dominio compuesto](../../2014/data-quality-services/create-a-composite-domain.md)|  
 |Adjuntar un servicio de datos de referencia, como un servicio que administre los datos de direcciones, a un dominio compuesto.|[Adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Crear una regla entre dominios cuando el valor de un dominio individual de un dominio compuesto afecta al valor de otro.|[Crear una regla entre dominios](../../2014/data-quality-services/create-a-cross-domain-rule.md)|  
-|Identificar combinaciones de valores para que DQS pueda informar sobre su frecuencia.|[Usar relaciones de valor en un dominio compuesto](../../2014/data-quality-services/use-value-relations-in-a-composite-domain.md)|  
+|Identificar combinaciones de valores para que DQS pueda informar sobre su frecuencia.|[Utilizar relaciones de valor en un dominio compuesto](../../2014/data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Compilar una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Crear una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
 |Importar conocimiento en una base de conocimiento o exportarlo desde esta.|[Importar y exportar conocimiento](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
 |Crear un dominio individual y agregarle conocimiento.|[Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md)|  
   

@@ -1,5 +1,5 @@
 ---
-title: Niveles de compatibilidad | Microsoft Docs
+title: Niveles de cumplimiento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 507d23e6f7a344e9d3fe4a17cf34903235803426
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083174"
 ---
 # <a name="conformance-levels"></a>Niveles de compatibilidad
-Controladores ODBC, asigne a la aplicación acceso a diversos orígenes de datos. Cada controlador permite determinar en tiempo de ejecución qué funcionalidades ODBC y qué gramática SQL el controlador a la aplicación y es compatible con cada origen de datos. Esto no es un requisito de las aplicaciones diseñadas para trabajar con un solo controlador o un pequeño, que se conoce el conjunto de controladores, porque simplemente se pueden escribir estas aplicaciones a las capacidades de ese controlador o controladores. Para ayudar a las aplicaciones detectar controlador y las capacidades del origen de datos, existen dos áreas de conformidad: la interfaz ODBC y la gramática SQL.  
+Los controladores ODBC proporcionan a la aplicación acceso a diversos orígenes de datos. Cada controlador permite a la aplicación determinar en tiempo de ejecución Qué capacidades de ODBC y qué gramática de SQL admite el controlador y cada origen de datos. Esto no es un requisito de las aplicaciones diseñadas para trabajar con un único controlador o un conjunto pequeño de controladores conocidos, ya que estas aplicaciones se pueden escribir simplemente en las capacidades de ese controlador o controladores. Para ayudar a las aplicaciones a detectar capacidades de controlador y de origen de datos, hay disponibles dos áreas de conformidad: la interfaz ODBC y la gramática de SQL.  
   
  Esta sección contiene los temas siguientes.  
   

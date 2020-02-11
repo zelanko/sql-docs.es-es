@@ -1,5 +1,5 @@
 ---
-title: Pruebas y validación tareas y procedimientos (minería de datos) | Microsoft Docs
+title: Tareas y procedimientos de prueba y validación (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082871"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tareas y procedimientos de prueba y validación (minería de datos)
@@ -39,7 +39,7 @@ ms.locfileid: "66082871"
   
  Los primeros tres gráficos utilizan la pestaña **Selección de entrada** para definir los datos que se utilizan para generar el gráfico.  
   
- El gráfico de validación cruzada se crea usando las entradas adicionales, disponibles en la pestaña **Validación cruzada** . Para obtener más información, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](cross-validation-analysis-services-data-mining.md).  
+ El gráfico de validación cruzada se crea mediante entradas adicionales, disponibles en la pestaña **validación cruzada** . Para obtener más información, consulte [&#40;de la validación cruzada Analysis Services-Data Mining&#41;](cross-validation-analysis-services-data-mining.md).  
   
  Para obtener más información sobre cómo usar el gráfico de precisión de minería de datos, vea [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md).  
   

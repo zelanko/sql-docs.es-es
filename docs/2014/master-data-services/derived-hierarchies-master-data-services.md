@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: af5bbc51420d8f32144bc91f687ae58b86d10d52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479402"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Jerarquías derivadas (Master Data Services)
@@ -53,7 +53,7 @@ ms.locfileid: "65479402"
   
  Le estructura de jerarquía muestra cómo se agrupan los miembros. La entidad con el mayor número de miembros está en la parte inferior.  
   
- ![Jerarquía derivada de la estructura del modelo](../../2014/master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Jerarquía derivada de la estructura del modelo")  
+ ![Jerarquía derivada de la estructura de modelo](../../2014/master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Jerarquía derivada de la estructura de modelo")  
   
  En una jerarquía derivada, puede resaltar la relación entre Product y Subcategory y posteriormente entre Subcategory y Category. Cuando vea los miembros en esta jerarquía, cada nivel en el árbol contendrá los miembros de la misma entidad.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "65479402"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear una nueva jerarquía derivada.|[Crear una jerarquía derivada &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Crear una nueva jerarquía derivada.|[Cree una jerarquía derivada &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Ocultar o eliminar niveles en una jerarquía derivada existente.|[Ocultar o eliminar niveles en una jerarquía derivada &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
 |Cambiar el nombre de una jerarquía derivada existente.|[Cambiar el nombre de una jerarquía derivada &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Eliminar una jerarquía derivada existente.|[Eliminar una jerarquía derivada &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
@@ -78,7 +78,7 @@ ms.locfileid: "65479402"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Atributos basados en dominios &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Atributos basados en dominio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

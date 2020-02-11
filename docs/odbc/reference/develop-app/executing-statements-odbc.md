@@ -1,5 +1,5 @@
 ---
-title: Ejecución de instrucciones ODBC | Microsoft Docs
+title: Ejecutar instrucciones ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71f99fadf1b4a0885dd1615de781cbc393c6da33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069942"
 ---
 # <a name="executing-statements-odbc"></a>Ejecución de instrucciones (ODBC)
-Las aplicaciones ODBC realizan casi todos los accesos de base de datos mediante la ejecución de instrucciones SQL. La secuencia general de eventos es asignar un identificador de instrucción, establezca los atributos de instrucción, ejecute la instrucción, recuperar los resultados y liberar el identificador de instrucción.  
+Las aplicaciones ODBC realizan casi todo el acceso a la base de datos ejecutando instrucciones SQL. La secuencia general de eventos consiste en asignar un identificador de instrucción, establecer los atributos de instrucción, ejecutar la instrucción, recuperar los resultados y liberar el identificador de instrucción.  
   
  Esta sección contiene los temas siguientes.  
   

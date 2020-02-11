@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105500"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Usar operadores en expresiones (Generador de informes y SSRS)
@@ -26,34 +26,35 @@ ms.locfileid: "66105500"
 ### <a name="arithmetic"></a>Aritméticos  
  Los operadores aritméticos realizan operaciones matemáticas entre dos términos numéricos de una expresión.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |^|Eleva un número a la potencia de otro número.|  
 |*|Multiplica dos números.|  
 |/|Divide dos números y devuelve un resultado de coma flotante.|  
-|\|Divide dos números y devuelve un resultado de número entero.|  
+|
+  \|Divide dos números y devuelve un resultado de número entero.|  
 |Mod|Devuelve el resto entero de una división. Por ejemplo, 7 Mod 5 = 2 porque el resto de 7 dividido entre 5 es 2.|  
 |+|Suma dos números.|  
 |-|Devuelve la diferencia entre dos números o indica el valor negativo de un término numérico.|  
   
-### <a name="comparison"></a>Comparación  
+### <a name="comparison"></a>De comparación  
  Los operadores de comparación comprueban si dos expresiones son iguales.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |<|Menor que.|  
 |\<=|Menor o igual que.|  
 |>|Mayor que.|  
 |>=|Mayor o igual que.|  
 |=|Igual que.|  
-|<>|No es igual a.|  
-|Like|Determina si una cadena de caracteres específica coincide con un patrón especificado. Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en la cadena de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena. El uso de caracteres comodín hace que el operador LIKE sea más flexible que los operadores de comparación de cadenas = y !=.<br /><br /> La siguiente muestra los caracteres que pueden utilizarse como caracteres comodín:<br /><br /> **%** : Cualquier cadena de cero o más caracteres.<br /><br /> **_** : Cualquier carácter individual.<br /><br /> **[ ]** : Cualquier carácter individual dentro del intervalo especificado (por ejemplo, [a-f]) o conjunto (por ejemplo, [aeiou]).<br /><br /> **[^]** : Cualquier carácter individual fuera del intervalo especificado (por ejemplo, [^ a-f]) o conjunto (por ejemplo, [^ aeiou]).|  
+|<>|Diferente de.|  
+|Like|Determina si una cadena de caracteres específica coincide con un patrón especificado. Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en la cadena de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena. El uso de caracteres comodín hace que el operador LIKE sea más flexible que los operadores de comparación de cadenas = y !=.<br /><br /> A continuación se enumeran los caracteres que se pueden usar como caracteres comodín:<br /><br /> **%**: Cualquier cadena de cero o más caracteres.<br /><br /> **_**: Cualquier carácter individual.<br /><br /> **[]**: Cualquier carácter individual del intervalo especificado (por ejemplo, [a-f]) o conjunto (por ejemplo, [aeiou]).<br /><br /> **[^]**: Cualquier carácter individual que no esté dentro del intervalo especificado (por ejemplo, [^ a-f]) o establecido (por ejemplo, [^ aeiou]).|  
 |Is|Compara dos referencias a objeto.|  
   
 ### <a name="string-concatenation"></a>Concatenación de cadenas  
  Los operadores de concatenación de cadenas anexan la segunda cadena a la primera en una expresión. Para las demás operaciones de cadena, use las funciones integradas.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |&|Concatena dos cadenas|  
 |+|Concatena dos cadenas|  
@@ -61,11 +62,11 @@ ms.locfileid: "66105500"
 ### <a name="logical-and-bitwise"></a>Lógicos y bit a bit  
  Los operadores lógicos y bit a bit realizan manipulaciones lógicas entre dos términos enteros de una expresión.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |And|Realiza una conjunción lógica entre dos expresiones booleanas o una conjunción bit a bit entre dos expresiones numéricas.|  
 |Not|Realiza una negación lógica de una expresión booleana o una negación bit a bit de una expresión numérica.|  
-|o bien|Realiza una disyunción lógica entre dos expresiones booleanas o una disyunción bit a bit entre dos valores numéricos.|  
+|Or|Realiza una disyunción lógica entre dos expresiones booleanas o una disyunción bit a bit entre dos valores numéricos.|  
 |Xor|Realiza una operación de exclusión lógica entre dos expresiones booleanas o una exclusión bit a bit entre dos expresiones numéricas.|  
 |AndAlso|Realiza una conjunción lógica entre dos expresiones.|  
 |OrElse|Realiza una disyunción lógica entre dos expresiones.|  
@@ -73,12 +74,12 @@ ms.locfileid: "66105500"
 ### <a name="bit-shift"></a>Desplazamiento de bits  
  Los operadores de desplazamiento de bits realizan manipulaciones de bits entre dos términos enteros de una expresión.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |<\<|Realiza un desplazamiento aritmético a la izquierda en un patrón de bits.|  
 |>>|Realiza un desplazamiento aritmético a la derecha en un patrón de bits.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresión (cuadro de diálogo)](../expression-dialog-box.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

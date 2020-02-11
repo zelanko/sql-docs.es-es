@@ -15,16 +15,16 @@ ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb1bda7808b8875da5982b70e749f45ec15e5958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919345"
 ---
 # <a name="createrecordset-method-example-vb"></a>Ejemplo del método CreateRecordset (VB)
-Puede crear un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto y especifique la información de columna. A continuación, puede insertar datos en el **Recordset** objeto; los búferes de conjunto de filas subyacente las inserciones.  
+Puede crear un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) y especificar la información de la columna. A continuación, puede insertar datos en el objeto de **conjunto de registros** . el conjunto de filas subyacente almacena en búfer las inserciones.  
   
- El ejemplo de código siguiente muestra cómo definir un **Recordset** utilizando el [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto. También puede hacer esto con el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
+ En el ejemplo de código siguiente se muestra cómo definir un **conjunto de registros** mediante el objeto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) . También puede hacer esto con el [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
 ```  
 'BeginRsDefineShapeVB  

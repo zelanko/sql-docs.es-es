@@ -1,5 +1,5 @@
 ---
-title: Calcula las columnas (SSAS Tabular) | Microsoft Docs
+title: Columnas calculadas (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284887"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Columnas calculadas (SSAS tabular)
-  En los modelos tabulares, las columnas calculadas le permiten agregar nuevos datos al modelo. En lugar de pegar o importar los valores en la columna, cree una fórmula DAX que define los valores de nivel de fila de la columna. A continuación, la columna calculada se puede utilizar en un informe, una tabla dinámica o un gráfico dinámico como cualquier otra columna.  
+  En los modelos tabulares, las columnas calculadas le permiten agregar nuevos datos al modelo. En lugar de pegar o importar valores en la columna, se crea una fórmula DAX que define los valores de nivel de fila de la columna. A continuación, la columna calculada se puede utilizar en un informe, una tabla dinámica o un gráfico dinámico como cualquier otra columna.  
   
 > [!NOTE]  
 >  Las columnas calculadas no se admiten en los modelos tabulares en el modo DirectQuery. Para más información, vea [Modo DirectQuery &#40;SSAS tabular&#41;](directquery-mode-ssas-tabular.md).  
   
  Secciones de este tema:  
   
--   [Ventajas](#bkmk_understanding)  
+-   [Privilegios](#bkmk_understanding)  
   
--   [Cambiar el nombre de una columna calculada](#bkmk_naming)  
+-   [Asignar un nombre a una columna calculada](#bkmk_naming)  
   
 -   [Rendimiento de las columnas calculadas](#bkmk_perf)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67284887"
   
  Esta fórmula extrae el mes de la columna StartDate. A continuación, calcula el valor del fin de mes de cada fila de la tabla. El segundo parámetro especifica el número de meses antes o después del mes en StartDate; en este caso, 0 significa el mismo mes. Por ejemplo, si el valor de la columna StartDate es 6/1/2001, el valor de la columna calculada será 6/30/2001.  
   
-##  <a name="bkmk_naming"></a> Cambiar el nombre de una columna calculada  
+##  <a name="bkmk_naming"></a>Asignar un nombre a una columna calculada  
  De forma predeterminada, las columnas calculadas nuevas se agregan a la derecha de las demás columnas de la tabla y reciben automáticamente el nombre predeterminado **CalculatedColumn1**, **CalculatedColumn2**, etc. Para crear una nueva columna entre dos columnas existentes, también puede hacer clic con el botón secundario en una columna y, a continuación, hacer clic en Insertar columna. Puede reorganizar columnas de la misma tabla haciendo clic y arrastrando, así como cambiar su nombre una vez creadas; sin embargo, debe tener en cuenta las restricciones siguientes respecto a los cambios en columnas calculadas:  
   
 -   Cada nombre de columna deben ser único en una tabla.  
@@ -62,7 +62,7 @@ ms.locfileid: "67284887"
   
 -   Algunos caracteres no se pueden usar en los nombres de columnas. Para obtener más información, vea los requisitos de denominación en [DAX Syntax Specification for PowerPivot](/dax/dax-syntax-reference).  
   
-##  <a name="bkmk_perf"></a> Rendimiento de las columnas calculadas  
+##  <a name="bkmk_perf"></a>Rendimiento de las columnas calculadas  
  La fórmula para una columna calculada puede consumir más recursos que la fórmula para una medida. Uno de los motivos para ello es que el resultado de una columna calculada siempre se calcula para cada fila de una tabla, mientras que una medida solo se calcula para las celdas definidas por el filtro utilizado en un informe, una tabla dinámica o un gráfico dinámico. Por ejemplo, una tabla con un millón de filas siempre tendrá una columna calculada con un millón de resultados y un efecto correspondiente en el rendimiento. Sin embargo, una tabla dinámica generalmente filtra los datos aplicando encabezados de columnas y de filas; por consiguiente, una medida solo se calcula para el subconjunto de datos en cada celda de la tabla dinámica.  
   
  Una fórmula depende de los objetos a los que se hacen referencia en la fórmula, como otras columnas o expresiones que evalúan valores. Por ejemplo, una columna calculada que está basada en otra columna o un cálculo que contiene una expresión con una referencia de columna no se puede evaluar hasta que se evalúe la otra columna. De forma predeterminada, la actualización automática está habilitada en los libros; por consiguiente, tales dependencias pueden afectar a rendimiento mientras los valores y las fórmulas se actualizan.  
@@ -81,11 +81,11 @@ ms.locfileid: "67284887"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Crear una columna calculada &#40;SSAS tabular&#41;](ssas-calculated-columns-create-a-calculated-column.md)|En las tareas de este tema se describe cómo agregar una nueva columna calculada a una tabla.|  
+|[Crear una columna calculada &#40;&#41;tabular de SSAS](ssas-calculated-columns-create-a-calculated-column.md)|En las tareas de este tema se describe cómo agregar una nueva columna calculada a una tabla.|  
   
-## <a name="see-also"></a>Vea también  
- [Definir tablas y columnas &#40;SSAS tabular&#41;](tables-and-columns-ssas-tabular.md)   
- [Medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)   
- [Cálculos &#40;SSAS tabular&#41;](calculations-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tablas y columnas &#40;SSAS tabular&#41;](tables-and-columns-ssas-tabular.md)   
+ [Medidas &#40;&#41;tabular de SSAS](measures-ssas-tabular.md)   
+ [Cálculos &#40;&#41;tabular de SSAS](calculations-ssas-tabular.md)  
   
   

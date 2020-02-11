@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5625e65b1da45e05002b540774f441f2deabd3f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260947"
 ---
 # <a name="create-a-user-defined-event"></a>Crear un evento definido por el usuario
@@ -60,25 +60,25 @@ ms.locfileid: "63260947"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
- **Para crear el mensaje de error de un evento definido por el usuario**  
+ **Para crear un mensaje de error de evento definido por el usuario**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)  
   
- **Para modificar el mensaje de error de un evento definido por el usuario**  
+ **Para modificar un mensaje de error de evento definido por el usuario**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
- **Para eliminar el mensaje de error de un evento definido por el usuario**  
+ **Para eliminar un mensaje de error de evento definido por el usuario**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql)  
   
- **Para deshabilitar o volver a activar una alerta**  
+ **Para deshabilitar o reactivar una alerta**  
   
 -   [SQL Server Management Studio](disable-or-reactivate-an-alert.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
-## <a name="see-also"></a>Vea también  
- [sp_update_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
+## <a name="see-also"></a>Consulte también  
+ [sp_update_alert &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
   

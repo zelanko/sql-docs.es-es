@@ -1,5 +1,5 @@
 ---
-title: Crear instrucciones SQL para cursores | Documentos de Microsoft
+title: Crear instrucciones SQL para cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68207082"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Crear instrucciones SQL para cursores
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client utiliza cursores de servidor para implementar la funcionalidad de cursor que se define en la especificación de ODBC. Una aplicación ODBC controla el comportamiento del cursor utilizando [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) establecer distintos atributos de instrucción. Éstos son los atributos y sus valores predeterminados.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client utiliza cursores de servidor para implementar la funcionalidad de cursor definida en la especificación ODBC. Una aplicación ODBC controla el comportamiento del cursor mediante el uso de [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) para establecer distintos atributos de instrucción. Éstos son los atributos y sus valores predeterminados.  
   
-|Atributo|Default|  
+|Atributo|Valor predeterminado|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -35,7 +35,7 @@ ms.locfileid: "68207082"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- Cuando estas opciones se establecen en sus valores predeterminados en el momento en que se ejecuta una instrucción SQL, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no utiliza un cursor de servidor para implementar el conjunto de resultados; en su lugar, usa un conjunto de resultados predeterminado. Si cualquiera de estas opciones se modifica el valor predeterminado en el momento en que se ejecuta una instrucción SQL, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client intenta usar un cursor de servidor para implementar el conjunto de resultados.  
+ Cuando estas opciones se establecen en sus valores predeterminados en el momento en que se ejecuta una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucción SQL, el controlador ODBC de Native Client no utiliza un cursor de servidor para implementar el conjunto de resultados. en su lugar, utiliza un conjunto de resultados predeterminado. Si alguna de estas opciones se cambia con respecto a sus valores predeterminados en el momento en que se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL, el controlador ODBC de Native Client intenta usar un cursor de servidor para implementar el conjunto de resultados.  
   
  Los conjuntos de resultados predeterminados admiten todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. No hay ninguna restricción con respecto a los tipos de instrucciones SQL que pueden ejecutarse cuando se utiliza un conjunto de resultados predeterminado.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68207082"
   
  Los cursores de servidor no admiten los siguientes tipos de instrucciones:  
   
--   Lotes  
+-   Instancias de Batch  
   
      Instrucciones SQL generadas a partir de dos o más instrucciones SQL SELECT individuales como, por ejemplo:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68207082"
   
      Instrucciones SQL que contienen las palabras clave FOR BROWSE o INTO.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si se ejecuta una instrucción SQL que se ajusta a alguna de estas condiciones con un cursor de servidor, el cursor de servidor se convierte de forma implícita en un conjunto de resultados predeterminado. Después de **SQLExecDirect** o **SQLExecute** devuelve SQL_SUCCESS_WITH_INFO, el cursor de atributos se establecerá la configuración predeterminada.  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si se ejecuta una instrucción SQL que se ajusta a alguna de estas condiciones con un cursor de servidor, el cursor de servidor se convierte de forma implícita en un conjunto de resultados predeterminado. Después de que **SQLExecDirect** o **SQLExecute** devuelva SQL_SUCCESS_WITH_INFO, los atributos de cursor se devolverán a su configuración predeterminada.  
   
  Las instrucciones SQL que no se ajustan a las categorías anteriores pueden ejecutarse con cualquier valor de atributo de instrucción; funcionan igual de bien con un conjunto de resultados predeterminado que con un cursor de servidor.  
   
@@ -73,7 +73,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- Pueden llamar las aplicaciones ODBC que recibe este mensaje [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md) para determinar la configuración actual del cursor.  
+ Las aplicaciones ODBC que reciben este mensaje pueden llamar a [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md) para determinar la configuración actual del cursor.  
   
  Un intento de ejecutar un procedimiento con varias instrucciones SELECT cuando se utilizan los cursores de servidor genera el error siguiente:  
   
@@ -99,7 +99,7 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
   
  Las aplicaciones ODBC que reciben estos errores deben restablecer todos los atributos de instrucción de cursor a sus valores predeterminados antes de intentar ejecutar la instrucción.  
   
-## <a name="see-also"></a>Vea también  
- [Ejecución de consultas &#40;ODBC&#41;](executing-queries-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Ejecutar consultas &#40;&#41;ODBC](executing-queries-odbc.md)  
   
   

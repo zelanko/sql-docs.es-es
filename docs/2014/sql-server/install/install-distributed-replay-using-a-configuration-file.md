@@ -1,5 +1,5 @@
 ---
-title: Instalar Distributed Replay utilizando un archivo de configuración | Microsoft Docs
+title: Instalar Distributed Replay mediante un archivo de configuración | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9db8127a9a43478d891d5955190bd594fb6647b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094577"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>Instalar Distributed Replay utilizando un archivo de configuración
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite generar un archivo de configuración basado en la entrada de usuario y en la configuración predeterminada del sistema. Si especifica que desea que se instalen las herramientas de administración, puede utilizar el archivo de configuración para implementar los tres componentes de Distributed Replay (herramienta de administración, controlador de Distributed Replay y cliente Distributed Replay). Admite la instalación, reparación y desinstalación de los componentes de Distributed Replay.  
   
  El programa de instalación admite el uso del archivo de configuración solamente a través de la línea de comandos. A continuación se indica el orden de procesamiento de los parámetros cuando se usa el archivo de configuración:  
@@ -26,7 +27,7 @@ ms.locfileid: "66094577"
   
 -   Los valores de línea de comandos sobrescriben los valores del archivo de configuración.  
   
- Para obtener más información sobre cómo usar un archivo de configuración, consulte [instalar SQL Server 2014 mediante un archivo de configuración](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
+ Para obtener más información sobre cómo usar un archivo de configuración, consulte [instalación de SQL Server 2014 mediante un archivo de configuración](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
   
 > [!IMPORTANT]  
 >  Después de instalar Distributed Replay, debe crear las reglas de firewall en los equipos cliente y de controlador, y conceder a cada equipo cliente permisos en el servidor de destino. Para obtener más información, vea [Completar los pasos posteriores a la instalación](../../tools/distributed-replay/complete-the-post-installation-steps.md).  

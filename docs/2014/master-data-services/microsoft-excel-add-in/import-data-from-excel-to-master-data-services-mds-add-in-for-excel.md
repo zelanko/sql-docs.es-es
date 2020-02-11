@@ -1,5 +1,5 @@
 ---
-title: Publicar datos de Excel en MDS (complemento MDS para Excel) | Microsoft Docs
+title: Publicar datos de Excel en MDS (Complemento MDS para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478802"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Publicar datos de Excel en MDS (complemento MDS para Excel)
@@ -24,7 +24,7 @@ ms.locfileid: "65478802"
 >  -   Al publicar los cambios, se eliminan los comentarios de las celdas administradas por MDS.  
 > -   Una fórmula no se admite en una celda administrada por MDS. Una fórmula en una celda administrada por MDS se trata como un valor de texto.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -47,10 +47,10 @@ ms.locfileid: "65478802"
 >  Si agrega nuevos miembros (filas) en la hoja de cálculo y no puede publicarlos correctamente en el repositorio MDS, es posible que no tenga el permiso **Actualizar** para todos los atributos de la hoja de cálculo. En la pestaña **Revisar** , en el grupo **Cambios** , haga clic en **Desproteger hoja** e intente publicarla de nuevo.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Aplicar reglas de negocios &#40;complemento MDS para Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [Aplicar reglas de negocios &#40;Complemento MDS para Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Vea también  
- [Publicar datos &#40;complemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
- [Validar datos &#40;complemento MDS para Excel&#41;](validating-data-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Consulte también  
+ [Complemento MDS para Excel de &#40;de datos de publicación&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
+ [Validar datos &#40;Complemento MDS para Excel&#41;](validating-data-mds-add-in-for-excel.md)  
   
   

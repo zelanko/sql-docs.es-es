@@ -1,5 +1,5 @@
 ---
-title: Información general de esquemas y datos multidimensionales | Microsoft Docs
+title: Información general de los esquemas y datos multidimensionales | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,30 +13,30 @@ ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923187"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Información general de esquemas y datos multidimensionales
-## <a name="understanding-multidimensional-schemas"></a>Esquemas multidimensionales  
- El objeto de metadatos central en ADO MD es el *cubo*, que consta de un conjunto estructurado de dimensiones relacionadas, jerarquías, niveles y miembros.  
+## <a name="understanding-multidimensional-schemas"></a>Descripción de los esquemas multidimensionales  
+ El objeto de metadatos central de ADO MD es el *cubo*, que consta de un conjunto estructurado de dimensiones, jerarquías, niveles y miembros relacionados.  
   
- Un *dimensión* es una categoría independiente de los datos de la base de datos multidimensional, derivado de las entidades empresariales. Normalmente, una dimensión contiene los elementos que se usará como criterio de consulta para las medidas de la base de datos.  
+ Una *dimensión* es una categoría independiente de datos de la base de datos multidimensional, derivada de las entidades empresariales. Una dimensión normalmente contiene elementos que se usarán como criterios de consulta para las medidas de la base de datos.  
   
- Un *jerarquía* es una ruta de acceso de agregación de una dimensión. Una dimensión puede tener varios niveles de granularidad, con relaciones de elementos primarios y secundarios. Una jerarquía define cómo se relacionan estos niveles.  
+ Una *jerarquía* es una ruta de agregación de una dimensión. Una dimensión puede tener varios niveles de granularidad, que tienen relaciones de elementos primarios y secundarios. Una jerarquía define cómo se relacionan estos niveles.  
   
- Un *nivel* es un paso de agregación de una jerarquía. Para las dimensiones con varias capas de información, cada capa es un nivel.  
+ Un *nivel* es un paso de agregación en una jerarquía. En el caso de las dimensiones con varios niveles de información, cada capa es un nivel.  
   
- Un *miembro* es un elemento de datos en una dimensión. Normalmente, crea un título o describir una medida de la base de datos con los miembros.  
+ Un *miembro* es un elemento de datos de una dimensión. Normalmente, se crea un título o se describe una medida de la base de datos mediante miembros.  
   
- Los cubos se representan mediante [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objetos de ADO MD. Las dimensiones, jerarquías, niveles y miembros también se representan mediante sus objetos ADO MD correspondientes: [Dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md), y [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+ Los cubos se representan mediante objetos [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) en ADO MD. Las dimensiones, las jerarquías, los niveles y los miembros también se representan mediante sus objetos de ADO MD correspondientes: [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md)y [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
   
 ### <a name="dimensions"></a>Dimensions  
- Las dimensiones de un cubo dependen de sus entidades empresariales y los tipos de datos que se quieran modelar en la base de datos. Normalmente, cada dimensión es un punto de entrada independiente o un mecanismo para seleccionar datos.  
+ Las dimensiones de un cubo dependen de las entidades empresariales y los tipos de datos que se van a modelar en la base de datos. Normalmente, cada dimensión es un punto de entrada independiente o un mecanismo para seleccionar los datos.  
   
- Por ejemplo, un cubo que contiene los datos de ventas tiene las cinco dimensiones siguientes: Empleado de ventas, geografía, tiempo, productos y medidas. La dimensión de medidas contiene valores de datos de ventas reales, mientras que las otras dimensiones representan formas de clasificar y agrupar los valores de datos de ventas.  
+ Por ejemplo, un cubo que contiene datos de ventas tiene las cinco dimensiones siguientes: vendedor, geografía, hora, productos y medidas. La dimensión Measures contiene valores de datos de ventas reales, mientras que las demás dimensiones representan maneras de categorizar y agrupar los valores de los datos de ventas.  
   
  La dimensión Geography tiene el siguiente conjunto de miembros:  
   
@@ -51,25 +51,25 @@ Hamburg, Munich, Stuttgart}
 ```  
   
 ### <a name="hierarchies"></a>Jerarquías  
- Las jerarquías definen las formas en el que los niveles de una dimensión pueden ser "acumular" o agrupados. Una dimensión puede tener más de una jerarquía. Existe una jerarquía natural en la dimensión Geography:  
+ Las jerarquías definen las formas en las que los niveles de una dimensión se pueden "acumular" o agrupar. Una dimensión puede tener más de una jerarquía. Existe una jerarquía natural en la dimensión Geography:  
   
 ### <a name="levels"></a>Niveles  
- En la dimensión Geography de ejemplo se ilustran en la figura anterior, cada cuadro representa un nivel de la jerarquía.  
+ En la dimensión de geografía de ejemplo que se muestra en la ilustración anterior, cada cuadro representa un nivel en la jerarquía.  
   
- Cada nivel tiene un conjunto de miembros, como sigue:  
+ Cada nivel tiene un conjunto de miembros, como se indica a continuación:  
   
--   El mundo `= {All}`  
+-   El mundo`= {All}`  
   
--   Continentes `= {North America, Europe}`  
+-   Continentes`= {North America, Europe}`  
   
--   Países `= {Canada, USA, UK, Germany}`  
+-   Countrie`= {Canada, USA, UK, Germany}`  
   
--   Regiones `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   Zonas`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   Ciudades `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   Cities`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Miembros  
- Los miembros del nivel de hoja de una jerarquía no tienen elementos secundarios y los miembros del nivel raíz no tienen ningún elemento primario. Todos los demás miembros tienen al menos un elemento primario y al menos un elemento secundario. Por ejemplo, un recorrido del árbol de jerarquía de la dimensión Geography parcial da como resultado las siguientes relaciones de elementos primarios y secundarios:  
+### <a name="members"></a>Members  
+ Los miembros del nivel hoja de una jerarquía no tienen elementos secundarios y los miembros del nivel raíz no tienen ningún elemento primario. Todos los demás miembros tienen al menos un elemento primario y al menos un elemento secundario. Por ejemplo, un recorrido parcial del árbol de jerarquía de la dimensión Geography produce las siguientes relaciones de elementos primarios y secundarios:  
   
 -   `{All} (parent of) {Europe, North America}`  
   
@@ -79,13 +79,13 @@ Hamburg, Munich, Stuttgart}
   
 -   `{USA-NW} (parent of) {Boise, Seattle}`  
   
- Los miembros se pueden consolidar a lo largo de una o varias jerarquías por dimensión. Considere la posibilidad de una dimensión de tiempo donde desde el nivel de días de acumulación para el nivel de año de dos formas:  
+ Los miembros se pueden consolidar en una o más jerarquías por dimensión. Considere una dimensión de tiempo en la que hay dos maneras de acumular el nivel de año en el nivel de días:  
   
- Este ejemplo también muestra otra característica: Algunos miembros del nivel semana de la jerarquía de la semana del año no aparecen en cualquier nivel de la jerarquía de trimestre del año. Por lo tanto, no necesita incluir a todos los miembros de una dimensión de una jerarquía.  
+ En este ejemplo también se muestra otra característica: algunos miembros del nivel semana de la jerarquía del año de la semana no aparecen en ningún nivel de la jerarquía del año. Por lo tanto, una jerarquía no necesita incluir todos los miembros de una dimensión.  
   
-## <a name="see-also"></a>Vea también  
- [Modelo de objetos ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+## <a name="see-also"></a>Consulte también  
+ [Modelo de objetos de ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Programar con ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Usar ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [Trabajo con datos multidimensionales](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

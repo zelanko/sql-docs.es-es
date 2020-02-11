@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245931"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
@@ -31,7 +31,7 @@ ms.locfileid: "63245931"
   
      [Seguridad](#Security)  
   
--   **Para ver información de pasos de trabajo, utilizando:**  
+-   **Para ver la información de los pasos de trabajo, utilizando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -45,11 +45,11 @@ ms.locfileid: "63245931"
 ####  <a name="Permissions"></a> Permisos  
  Puede ver únicamente los pasos de trabajo de su propiedad, a menos que sea miembro del rol fijo de servidor **sysadmin** . Los miembros de este rol pueden ver todos los trabajos y detalles de pasos de trabajo.  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-job-step-information"></a>Para ver información de pasos de trabajo  
   
-1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
+1.  En **Explorador de objetos,** Conéctese a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
   
 2.  Expanda **Agente SQL Server**, **Trabajos**, haga clic con el botón derecho en el trabajo que contiene el paso de trabajo que desea ver y haga clic en **Propiedades**.  
   

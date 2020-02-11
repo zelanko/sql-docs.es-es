@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478510"
 ---
 # <a name="transactions-master-data-services"></a>Transacciones (Master Data Services)
@@ -56,7 +56,7 @@ ms.locfileid: "65478510"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Deshacer una acción invirtiendo una transacción (solo administradores).|[Invertir una transacción &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Deshacer una acción invirtiendo una transacción (solo administradores).|[Invertir un Master Data Services de &#40;de transacciones&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

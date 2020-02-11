@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f78dba913c4daa1c2e47682b282721b5f0fe27d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260691"
 ---
 # <a name="report-history-methods"></a>Métodos de historial de informes
@@ -34,7 +34,7 @@ ms.locfileid: "63260691"
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryLimit%2A>|Especifica cuántas instantáneas de un elemento retiene el servidor de informes.|  
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|Establece opciones del historial de elementos que especifican cuándo se crea una instantánea del historial de elementos para un elemento de catálogo especificado.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../report-server-web-service.md)   
  [Métodos del servicio web del servidor de informes](report-server-web-service-methods.md)   

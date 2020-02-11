@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069692"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Seleccionar calendarios (Asistente para dimensiones)
@@ -35,7 +35,7 @@ ms.locfileid: "66069692"
 > [!NOTE]  
 >  Esta opción solo está disponible si se ha seleccionado **Calendario fiscal** .  
   
- **Convención de nomenclatura de calendario fiscal**  
+ **Convención de nomenclatura del año fiscal**  
  Seleccione la convención de nomenclatura usada por el calendario fiscal. Seleccione **Nombre del año natural** o **Nombre del año natural +1**.  
   
 > [!NOTE]  
@@ -58,10 +58,10 @@ ms.locfileid: "66069692"
   
  En la tabla siguiente se enumeran las opciones disponibles para la semana por patrón mensual.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Semana 445**|El primer mes del trimestre tiene 4 semanas, el segundo mes tiene 4 semanas y el tercero tiene 5 semanas.|  
-|**Semana 454**|El primer mes del trimestre tiene 4 semanas, el segundo mes tiene 5 semanas y el tercero tiene 4 semanas.|  
+|**Week 445**|El primer mes del trimestre tiene 4 semanas, el segundo mes tiene 4 semanas y el tercero tiene 5 semanas.|  
+|**Week 454**|El primer mes del trimestre tiene 4 semanas, el segundo mes tiene 5 semanas y el tercero tiene 4 semanas.|  
 |**Semana 544**|El primer mes del trimestre tiene 5 semanas, el segundo mes tiene 4 semanas y el tercero tiene 4 semanas.|  
   
  **Calendario de fabricación**  
@@ -82,9 +82,9 @@ ms.locfileid: "66069692"
  **Calendario ISO 8601**  
  Seleccione esta opción para crear una jerarquía de tiempo basada en el calendario ISO 8601.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para dimensiones (ayuda F1)](dimension-wizard-f1-help.md)   
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

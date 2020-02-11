@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método NextRecordset (VC ++) | Microsoft Docs
+title: Ejemplo del método NextRecordset (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec37df7c37c8117dfdda99faabd746ccd8c3d69f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932024"
 ---
 # <a name="nextrecordset-method-example-vc"></a>Ejemplo del método NextRecordset (VC ++)
-Este ejemplo se usa el [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) método para ver los datos en un conjunto de registros que se utiliza una instrucción compuesta formada por tres independiente **seleccione** instrucciones.  
+En este ejemplo se usa el método [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) para ver los datos de un conjunto de registros que usa una instrucción de comando compuesta formada por tres instrucciones **Select** independientes.  
   
 ```  
 // BeginNextRecordsetCpp.cpp  
@@ -138,5 +138,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Método NextRecordset (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)

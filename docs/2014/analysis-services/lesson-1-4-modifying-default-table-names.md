@@ -1,5 +1,5 @@
 ---
-title: Modificar los nombres de tabla predeterminados | Microsoft Docs
+title: Modificar nombres de tabla predeterminados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079232"
 ---
 # <a name="modifying-default-table-names"></a>Modificar los nombres de tabla predeterminados
@@ -33,11 +33,11 @@ ms.locfileid: "66079232"
   
      Es más fácil cambiar las propiedades de cada tabla en la vista del origen de datos cuando la ventana Propiedades permanece abierta. Si no fija la ventana abierta mediante el botón **Ocultar automáticamente** , la ventana se cerrará al hacer clic en un objeto distinto del panel **Diagrama** .  
   
-3.  Cambiar el **FriendlyName** propiedad para el **FactInternetSales** objeto *`InternetSales`* .  
+3.  Cambie la propiedad **FriendlyName** del objeto **FactInternetSales** a *`InternetSales`*.  
   
      Al hacer clic fuera de la celda de la propiedad **FriendlyName** , se aplica el cambio. En la siguiente lección, definirá un grupo de medida que se basa en esta tabla de hechos. El nombre de la tabla de hechos será InternetSales en lugar de FactInternetSales debido al cambio realizado en esta lección.  
   
-4.  Haga clic en **DimProduct** en el panel **Tablas** . En la ventana Propiedades, cambie la **FriendlyName** propiedad *`Product`* .  
+4.  Haga clic en **DimProduct** en el panel **Tablas** . En el ventana Propiedades, cambie la propiedad **FriendlyName** a *`Product`*.  
   
 5.  Cambie la propiedad **FriendlyName** de cada una de las tablas restantes en la vista del origen de datos del mismo modo, para eliminar el prefijo "**Dim**".  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66079232"
 7.  En el menú **Archivo** , o en la barra de herramientas de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en **Guardar todo** para guardar los cambios que ha realizado hasta este momento en el proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Si lo desea, puede detener aquí el tutorial y reanudarlo más tarde.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
+ [Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Cambiar las propiedades de una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   

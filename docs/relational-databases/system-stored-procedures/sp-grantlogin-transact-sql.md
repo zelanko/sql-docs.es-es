@@ -18,20 +18,20 @@ ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: a32826266a9e844b01b455116e18ae821f71e9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055308"
 ---
-# <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
+# <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [Create login](../../t-sql/statements/create-login-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,30 +42,30 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'` Es el nombre de un grupo o usuario de Windows. El usuario de Windows o grupo debe calificarse con un nombre de dominio de Windows en el formulario *dominio*\\*usuario*; por ejemplo, **London\Joeb**. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @loginame = ] 'login'`Es el nombre de un usuario o grupo de Windows. El usuario o grupo de Windows se debe calificar con un nombre de dominio de Windows con el formato *dominio*\\*usuario*; por ejemplo, **London\Joeb**. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_grantlogin** llama a CREATE LOGIN, que admite opciones adicionales. Para obtener información sobre cómo crear los inicios de sesión de SQL Server, vea [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
+## <a name="remarks"></a>Observaciones  
+ **sp_grantlogin** llama a Create login, que admite opciones adicionales. Para obtener información sobre cómo crear inicios de sesión de SQL Server, vea [Create LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
- **sp_grantlogin** no se puede ejecutar dentro de una transacción definida por el usuario.  
+ **sp_grantlogin** no se puede ejecutar en una transacción definida por el usuario.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY LOGIN en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se usa `CREATE LOGIN` para crear un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión para el usuario de Windows `Corporate\BobJ.` éste es el método preferido.  
+ En el ejemplo siguiente `CREATE LOGIN` se usa para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crear un inicio de sesión `Corporate\BobJ.` para el usuario de Windows. este es el método preferido.  
   
 ```sql
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREAR inicio de sesión &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Opciones de consulta (página ANSI) de ejecución | Microsoft Docs
+title: Ejecución de opciones de consulta (página ANSI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089078"
 ---
 # <a name="query-options-execution-ansi-page"></a>Ejecución de Opciones de consulta (página ANSI)
-  Use esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ejecutará las consultas usando todos o parte de los valores de configuración especificados en el estándar ISO (ANSI).  
+  Use esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ejecutará las consultas utilizando todos o parte de los valores de configuración especificados en el estándar ISO (ANSI).  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **SET ANSI_DEFAULTS**  
+ **ESTABLECER ANSI_DEFAULTS**  
  Selecciona todos los valores de configuración ISO predeterminados. Este cuadro no está disponible de forma predeterminada, ya que solo se configuran algunos valores ISO.  
   
  **SET QUOTED_IDENTIFIER**  
@@ -53,7 +53,7 @@ ms.locfileid: "66089078"
  **SET ANSI_NULLS**  
  Especifica el comportamiento conforme a ISO de los operadores de comparación Es igual a (`=`) y No es igual a (`<>`) cuando se utilizan con valores NULL. Cuando la opción **SET ANSI_NULLS** está seleccionada, todas las comparaciones con un valor NULL se evalúan como UNKNOWN, el comportamiento conforme a ISO. Si **SET ANSI_NULLS** no se selecciona, las comparaciones de los datos con un valor NULL se evalúan como TRUE si el valor de datos es NULL. Esta opción está activada de forma predeterminada.  
   
- **Valores predeterminados**  
+ **Restablecer valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

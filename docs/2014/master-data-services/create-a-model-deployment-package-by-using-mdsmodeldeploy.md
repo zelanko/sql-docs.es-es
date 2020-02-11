@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480005"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Crear un paquete de implementación de modelo mediante MDSModelDeploy
@@ -26,8 +26,8 @@ ms.locfileid: "65480005"
   
  Si desea implementar un paquete que solo contiene objetos de modelo, puede usar en su lugar el Asistente para la implementación de modelos en la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Para obtener más información, consulte [Crear un paquete de implementación de modelo mediante el asistente](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Esta versión de la herramienta MDSModelDeploy no puede usar más de gigabytes (GB) de memoria. Al crear o implementar modelos grandes mediante **objetos y datos de modelo** opción, puede experimentar errores de "Stream era demasiado larga" o "memoria insuficiente". Para resolver este problema, utilice para implementar los datos; de ensayo de MDS o actualizar a 2016 MDS o una versión posterior, que incluye la versión actualizada de la herramienta MDSModelDeploy.
-## <a name="prerequisites"></a>Requisitos previos  
+> Esta versión de la herramienta MDSModelDeploy no puede usar más de gigabytes (GB) de memoria. Al crear o implementar modelos grandes con la opción de **datos y objetos del modelo** , puede experimentar errores de "memoria insuficiente" o "flujo demasiado largo". Para resolver este problema, use el almacenamiento provisional de MDS para implementar los datos. o actualice a MDS 2016 o una versión posterior, que incluye la versión actualizada de la herramienta MDSModelDeploy.
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 1.  Los permisos básicos necesarios para ejecutar la herramienta de MDSModelDeploy son los siguientes:  
@@ -62,11 +62,11 @@ ms.locfileid: "65480005"
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Para crear un paquete de implementación de modelo mediante MDSModelDeploy  
   
-1.  Abra un símbolo del sistema.  
+1.  Abra el símbolo del sistema.  
   
 2.  Navegue a la ubicación de MDSModelDeploy.exe.  
   
-    -   Si MDS se instaló en la ubicación predeterminada, el archivo está en *unidad*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
+    -   Si MDS se instaló en la ubicación predeterminada, el archivo se encuentra en *unidad*: \Archivos de Programa\microsoft SQL Server\120\Master Data Services\Configuration.  
   
     -   Si MDS no se instaló en la ubicación predeterminada, busque en el equipo local MDSModelDeploy.exe.  
   
@@ -98,8 +98,8 @@ ms.locfileid: "65480005"
   
 -   [Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## <a name="see-also"></a>Vea también  
- [Opciones de la implementación de modelos &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Opciones de implementación de modelos &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
  [Implementar modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

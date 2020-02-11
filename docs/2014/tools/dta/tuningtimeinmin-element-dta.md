@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268159"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin (DTA, elemento)
@@ -38,7 +38,8 @@ ms.locfileid: "63268159"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|**Tipo y longitud de los datos**|`unsignedInt`, longitud ilimitada.|  
+|**Tipo y longitud de los datos**|
+  `unsignedInt`, longitud ilimitada.|  
 |**Valor predeterminado**|480 minutos (8 horas).|  
 |**Repetición**|Obligatoria a menos que se haya especificado un valor para el elemento `NumberOfEvents`.|  
   
@@ -66,7 +67,7 @@ ms.locfileid: "63268159"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

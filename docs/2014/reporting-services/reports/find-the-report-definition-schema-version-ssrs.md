@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102646"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Buscar la versión del esquema de definición de informe (SSRS)
   Un archivo de definición de informe especifica el espacio de nombres RDL para la versión del esquema de definición de informe que se utiliza para validar el archivo rdl. Cuando se abre un archivo .rdl en un entorno de creación de informes, como por ejemplo, el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o el Generador de informes, si el informe se ha creado para un espacio de nombres anterior, se crea automáticamente un archivo de copia de seguridad y se actualiza el informe al espacio de nombres actual. Si se guarda la definición de informe actualizada, se ha guardado el archivo .rdl convertido. Esta es la única manera para actualizar una definición de informe. La definición de informe en sí misma no se actualiza en un servidor de informes. El informe de compilación se actualiza en un servidor de informes. Para más información, consulte [Upgrade Reports](../install-windows/upgrade-reports.md).  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Procedimientos: Identificar la versión de esquema RDL de un informe  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Identificar la versión de esquema RDL de un informe  
   
 1.  Abra el archivo .rdl de informe en una aplicación como Bloc de notas o XML Notepad 2007 en la que pueda ver el xml.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66102646"
   
      La dirección URL siguiente especifica el espacio de nombres para la definición de informe: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Procedimientos: Identificar la versión de esquema RDL del Diseñador de informes  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Identificar la versión de esquema RDL del Diseñador de informes  
   
 1.  Abra un proyecto nuevo. La versión del proyecto que elija determina la versión del esquema RDL. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se admite más de una versión de esquema. Para obtener más información, vea [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41; (Implementación y compatibilidad de versiones en SQL Server Data Tools &#40;SSRS&#41;)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66102646"
   
      La dirección URL siguiente especifica el espacio de nombres para la definición de informe: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Procedimientos: Identificar la versión de esquema RDL en el servidor de informes  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Identificar la versión de esquema RDL en el servidor de informes  
   
 -   En el Administrador de informes, escriba la siguiente dirección URL para el servidor de informes. Por ejemplo, la dirección URL siguiente especifica un servidor de informes en el equipo local:  
   
@@ -80,8 +80,8 @@ ms.locfileid: "66102646"
   
      La dirección URL siguiente especifica el espacio de nombres para la definición de informe: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-## <a name="see-also"></a>Vea también  
- [Upgrade Reports](../install-windows/upgrade-reports.md)   
- [Report Definition Language &#40;SSRS&#41;](report-definition-language-ssrs.md)  
+## <a name="see-also"></a>Consulte también  
+ [Actualizar informes](../install-windows/upgrade-reports.md)   
+ [Lenguaje RDL (Report Definition Language) &#40;SSRS&#41;](report-definition-language-ssrs.md)  
   
   

@@ -15,14 +15,14 @@ ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac48cd3397905a3ab0d14d65006cbd4a7656555b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920267"
 ---
 # <a name="cachesize-property-example-jscript"></a>Ejemplo de la propiedad CacheSize (JScript)
-Este ejemplo se usa el [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propiedad para mostrar la diferencia en el rendimiento de una operación se realiza con y sin una caché de registro de 30. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **CacheSizeJS.asp**.  
+En este ejemplo se usa la propiedad [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar la diferencia de rendimiento de una operación realizada con y sin una caché de 30 registros. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **CacheSizeJS. asp**.  
   
 ```  
 <!-- BeginCacheSizeJS -->  
@@ -148,6 +148,6 @@ body {
 <!-- EndCacheSizeJS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad CacheSize (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [CacheSize (propiedad, ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

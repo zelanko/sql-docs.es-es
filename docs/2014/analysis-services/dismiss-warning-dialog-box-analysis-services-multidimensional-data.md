@@ -1,5 +1,5 @@
 ---
-title: Descartar el cuadro de diálogo de advertencia (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo descartar ADVERTENCIA (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081640"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Descartar advertencia (Analysis Services - Datos multidimensionales)
@@ -35,7 +35,7 @@ ms.locfileid: "66081640"
  **Comentarios (opcional)**  
  Escriba una explicación de por qué está descartando la advertencia. El comentario aparecerá en la columna **Comentario** de la tabla **Advertencias descartadas** de la pestaña **Advertencias** del Diseñador de bases de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Advertencias &#40;Diseñador de la base de datos&#41; &#40;Analysis Services - datos multidimensionales&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [ADVERTENCIAS &#40;diseñador de bases de datos&#41; &#40;Analysis Services de datos multidimensionales&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

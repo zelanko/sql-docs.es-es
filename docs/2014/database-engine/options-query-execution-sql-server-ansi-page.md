@@ -1,5 +1,5 @@
 ---
-title: Opciones (página de servidor ANSI SQL de ejecución de consulta) | Microsoft Docs
+title: Opciones (ejecución de consultas-SQL Server-página ANSI) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089379"
 ---
-# <a name="options-query-execution-sql-server-ansi-page"></a>Opciones (página de servidor ANSI SQL de ejecución de consulta)
-  Conjuntamente, estas opciones SET del estándar ANSI (ISO) definen el entorno de procesamiento de consultas durante la consulta del usuario, la ejecución de un desencadenador o un procedimiento almacenado. Sin embargo, estas opciones SET no son todas las necesarias para ajustarse al estándar ISO. Utilice esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ejecutará las consultas utilizando todos o parte de los valores de configuración especificados en el estándar ISO. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o haga clic con el botón derecho en la ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y seleccione **Opciones de consulta**. En el cuadro de diálogo **Opciones de consulta** , en **Ejecución**, haga clic en **ANSI**.  
+# <a name="options-query-execution-sql-server-ansi-page"></a>Opciones (ejecución de consultas-SQL Server-página ANSI)
+  Conjuntamente, estas opciones SET del estándar ANSI (ISO) definen el entorno de procesamiento de consultas durante la consulta del usuario, la ejecución de un desencadenador o un procedimiento almacenado. Sin embargo, estas opciones SET no son todas las necesarias para ajustarse al estándar ISO. Use esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ejecutará las consultas utilizando todos o parte de los valores de configuración especificados en el estándar ISO. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **consulta** o haga clic con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el botón secundario en la ventana de consulta y seleccione **Opciones de consulta**. En el cuadro de diálogo **Opciones de consulta** , en **Ejecución**, haga clic en **ANSI**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **SET ANSI_DEFAULTS**  
+ **ESTABLECER ANSI_DEFAULTS**  
  Active esta casilla para seleccionar todos los valores de configuración predeterminados ISO. No todas las opciones ISO están seleccionadas de forma predeterminada.  
   
  **SET QUOTED_IDENTIFIER**  
@@ -53,7 +53,7 @@ ms.locfileid: "66089379"
  **SET ANSI_NULLS**  
  -   Especifica el comportamiento conforme a ISO de los operadores de comparación Es igual a (=) y No es igual a (<>) cuando se utilizan con valores NULL. Cuando la opción SET ANSI_NULLS está seleccionada, todas las comparaciones con un valor NULL se evalúan como UNKNOWN, el comportamiento conforme a ISO. Cuando la opción SET ANSI_NULLS no está seleccionada, la comparación de cualquier dato con un valor NULL se evalúa como TRUE. Esta casilla está activada de forma predeterminada.  
   
- **Valores predeterminados**  
+ **Restablecer valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Verify a PowerPivot para SharePoint | Microsoft Docs
+title: Comprobar una instalación de PowerPivot para SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079866"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Comprobar una instalación de PowerPivot para SharePoint
   Una instancia de PowerPivot para SharePoint que instale en una granja de servidores de SharePoint se administra a través de Administración central de SharePoint. Como mínimo, puede comprobar las páginas de Administración central y de sitios de SharePoint para comprobar que están disponibles los componentes de servidor y las características de PowerPivot. Sin embargo, para comprobar una instalación por completo, debe tener un libro PowerPivot que pueda publicar en SharePoint y al que pueda tener acceso desde una biblioteca. Para realizar la prueba, puede publicar un libro de ejemplo que contenga datos PowerPivot y usarlo para confirmar que la integración de SharePoint está configurada correctamente.  
   
-##  <a name="verifyinstall"></a> Comprobar la integración de Administración central  
+##  <a name="verifyinstall"></a>Comprobar la integración de administración central  
  Para comprobar la integración de PowerPivot con Administración central, haga lo siguiente:  
   
-1.  En el menú Inicio, haga clic en **todos los programas**, abra productos de Microsoft SharePoint 2010 y haga clic en **SharePoint 2010 Central Administration**.  
+1.  En el menú Inicio, haga clic en **todos los programas**, abra productos de Microsoft SharePoint 2010 y, a continuación, haga clic en **Administración Central de SharePoint 2010**.  
   
 2.  Escriba su nombre de usuario y contraseña, y a continuación haga clic en **Aceptar**.  
   
      Si lo desea, puede modificar la configuración del explorador para no tener que escribir un nombre de usuario y una contraseña cada vez que abra Administración central. Para agregar la Administración central como un sitio de confianza, haga lo siguiente.  
   
-    1.  En Internet Explorer, en el menú Herramientas, haga clic en **Opciones de Internet**.  
+    1.  En Internet Explorer, en el menú herramientas, haga clic en **Opciones de Internet**.  
   
     2.  En la pestaña Seguridad, en la sección **Seleccione una zona para ver o cambiar la configuración de seguridad** , haga clic en Sitios de confianza y, a continuación, haga clic en Sitios.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66079866"
   
     4.  En **Agregar este sitio web a la zona**, escriba la dirección URL a su sitio y, a continuación, haga clic en **Agregar**.  
   
-    5.  Haga clic en **Cerrar**y, a continuación, en **Aceptar**.  
+    5.  Haga clic en **cerrar**y, a continuación, en **Aceptar**.  
   
         > [!NOTE]  
         >  La documentación de la instalación de SharePoint incluye instrucciones adicionales para trabajar con los errores del servidor proxy y deshabilitar la Configuración de seguridad mejorada de Internet Explorer para poder descargar e instalar las actualizaciones. Para obtener más información, vea la sección **Realizar tareas adicionales** en [Implementar un único servidor con SQL Server](https://go.microsoft.com/fwlink/?LinkId=177754) en el sitio web de Microsoft.  
@@ -50,27 +50,27 @@ ms.locfileid: "66079866"
   
 6.  Compruebe que se hayan iniciado **SQL Server Analysis Services** y **Servicio de sistema de SQL Server PowerPivot** .  
   
-7.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+7.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 8.  Haga clic en **aplicación de servicio PowerPivot predeterminada** para abrir el panel de administración de PowerPivot para esta aplicación. Al usarse por primera vez, el panel tarda varios minutos en cargarse.  
   
-     Como alternativa, haga clic en el espacio vacío junto a **aplicación de servicio PowerPivot predeterminada** para seleccionar la fila y haga clic en **propiedades** para ver las opciones de configuración para esta aplicación de servicio. Puede modificar la configuración y las propiedades de aplicación para cambiar la configuración del servidor. Para obtener más información sobre estas opciones, consulte [crear y configurar una aplicación de servicio PowerPivot en Administración Central](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
+     O bien, haga clic en el espacio vacío junto a **aplicación de servicio PowerPivot predeterminada** para seleccionar la fila y haga clic en **propiedades** para ver la configuración de esta aplicación de servicio. Puede modificar la configuración y las propiedades de aplicación para cambiar la configuración del servidor. Para obtener más información acerca de esta configuración, vea [crear y configurar una aplicación de servicio PowerPivot en administración central](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
 ## <a name="verify-integration-at-the-site-level"></a>Comprobar la integración en el nivel de sitio  
  Para comprobar la integración de PowerPivot con un sitio de SharePoint, haga lo siguiente:  
   
-1.  En un explorador, abra la aplicación web que ha creado. Si usa los valores predeterminados, puede especificar http://\<el nombre del equipo > en la dirección URL.  
+1.  En un explorador, abra la aplicación web que ha creado. Si ha usado los valores predeterminados, puede\<especificar http://el nombre del equipo> en la dirección URL.  
   
 2.  Compruebe que el acceso a datos y las características de procesamiento de PowerPivot están disponibles en la aplicación. Para ello, compruebe la presencia de plantillas de biblioteca proporcionadas por PowerPivot:  
   
-    1.  En acciones del sitio, haga clic en **más opciones...** .  
+    1.  En acciones del sitio, haga clic en **más opciones..**.  
   
-    2.  En las bibliotecas, debería ver **biblioteca de fuentes de datos** y **Galería de PowerPivot**. La característica PowerPivot proporciona estas plantillas de biblioteca, que estarán visibles en la lista Bibliotecas si la característica está integrada correctamente.  
+    2.  En bibliotecas, debería ver **biblioteca de fuentes** de distribución de datos y Galería de **PowerPivot**. La característica PowerPivot proporciona estas plantillas de biblioteca, que estarán visibles en la lista Bibliotecas si la característica está integrada correctamente.  
   
 ## <a name="verify-data-access-on-the-server"></a>Comprobar el acceso a datos en el servidor  
  Para comprobar el acceso a datos PowerPivot en el servidor, haga lo siguiente:  
   
-1.  [Descargue](https://go.microsoft.com/fwlink/?LinkID=219108) el ejemplo de datos Picnic que acompaña a un tutorial de Reporting Services. Utilizará el libro de ejemplo de esta descarga para comprobar el acceso a datos PowerPivot. Extraiga los archivos.  
+1.  [Descargue](https://go.microsoft.com/fwlink/?LinkID=219108) el ejemplo de datos picnic que acompaña a un tutorial de Reporting Services. Utilizará el libro de ejemplo de esta descarga para comprobar el acceso a datos PowerPivot. Extraiga los archivos.  
   
 2.  Cargue el libro de Excel (.xlsx) en Documentos compartidos. El libro contiene los datos PowerPivot incrustados.  
   
@@ -86,12 +86,12 @@ ms.locfileid: "66079866"
   
 7.  En Tipo de servidor, seleccione **Analysis Services**.  
   
-8.  En el nombre del servidor, escriba  **\<nombre del servidor > \powerpivot**, donde  **\<server-name >** es el nombre del equipo que tiene la instalación de PowerPivot para SharePoint.  
+8.  En nombre del servidor, escriba ** \<el nombre del servidor> \powerpivot**, donde ** \<nombre** del servidor>es el nombre del equipo que tiene la PowerPivot para SharePoint instalación.  
   
 9. Haga clic en **Conectar**. De este modo se comprueba que el servidor de Analysis Services está disponible.  
   
-10. En el Explorador de objetos, puede hacer clic en **bases de datos** para ver la lista de archivos de datos de PowerPivot que se cargan.  
+10. En Explorador de objetos, puede hacer clic en **bases** de datos para ver la lista de archivos de datos PowerPivot que se cargan.  
   
-11. En el sistema de archivos del equipo, compruebe la siguiente carpeta para determinar si hay archivos almacenados en la memoria caché del disco. La presencia de archivos almacenados en caché es una prueba más de que la implementación está operativa. Para ver la memoria caché de archivos, vaya a la \<unidad >: \Program Files\Microsoft SQL Server\MSAS11. Carpeta de aplicación de servicio PowerPivot POWERPIVOT\OLAP\Backup\Sandboxes\Default. Cada base de datos de la memoria caché está almacenada en su propia carpeta, con una convención de nomenclatura basada en GUID para asegurarse de que tiene un nombre único.  
+11. En el sistema de archivos del equipo, compruebe la siguiente carpeta para determinar si hay archivos almacenados en la memoria caché del disco. La presencia de archivos almacenados en caché es una prueba más de que la implementación está operativa. Para ver la memoria caché de archivos, vaya \<a la unidad>: \Archivos de Programa\microsoft SQL Server\MSAS11. POWERPIVOT\OLAP\Backup\Sandboxes\Default carpeta de aplicación de servicio PowerPivot. Cada base de datos de la memoria caché está almacenada en su propia carpeta, con una convención de nomenclatura basada en GUID para asegurarse de que tiene un nombre único.  
   
   

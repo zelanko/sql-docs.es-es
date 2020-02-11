@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083108"
 ---
 # <a name="process-a-mining-structure"></a>Procesar una estructura de minería de datos
@@ -28,7 +28,7 @@ ms.locfileid: "66083108"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA: Process, comando  
+-   XMLA: comando Process  
   
  Para obtener información sobre cómo procesar modelos individuales, vea [Procesar un modelo de minería de datos](process-a-mining-model.md).  
   
@@ -38,15 +38,15 @@ ms.locfileid: "66083108"
   
      Si ha realizado cambios en la estructura, se le pedirá que vuelva a implementar la estructure antes de procesar los modelos. Haga clic en **Sí**.  
   
-2.  Haga clic en **ejecutar** en el **procesando estructura de minería de datos - \<estructura >** cuadro de diálogo.  
+2.  Haga clic en **Ejecutar** en el cuadro de diálogo **procesando>estructura \<de minería de datos** .  
   
      Se abre el cuadro de diálogo **Progreso del proceso** para mostrar los detalles del procesamiento del modelo.  
   
 3.  Haga clic en **Cerrar** en el cuadro de diálogo **Progreso del proceso** cuando el procesamiento de los modelos se haya completado.  
   
-4.  Haga clic en **cerrar** en el **procesando estructura de minería de datos - \<estructura >** cuadro de diálogo.  
+4.  Haga clic en **cerrar** en el cuadro de diálogo **procesando>estructura \<de minería de datos** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md)  
   
   

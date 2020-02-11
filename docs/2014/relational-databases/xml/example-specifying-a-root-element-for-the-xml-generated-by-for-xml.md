@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificación de un elemento raíz para el XML generado por FOR XML | Microsoft Docs'
+title: 'Ejemplo: Especificar un elemento raíz para el XML generado por FOR XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b1a4ecc9cfbe0f9f8b793cddc788baf81a2200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288374"
 ---
-# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Ejemplo: Especificación de un elemento raíz para el XML generado por FOR XML
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Ejemplo: Especificar un elemento raíz para el XML generado por FOR XML
   Al especificar la opción `ROOT` en la consulta `FOR XML` , puede solicitar un solo elemento de nivel superior para el XML resultante, como se muestra en esta consulta. El argumento especificado para la directiva `ROOT` proporciona el nombre del elemento raíz.  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,7 +35,7 @@ FOR XML RAW, ROOT('MyRoot')
 go  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <MyRoot>  
@@ -45,7 +45,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo RAW con FOR XML](use-raw-mode-with-for-xml.md)  
   
   

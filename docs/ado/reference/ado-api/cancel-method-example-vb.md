@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método (VB) Cancel | Microsoft Docs
+title: Ejemplo del método CANCEL (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4274c51be7bc2d94ca26312b246176bd58d197f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920183"
 ---
 # <a name="cancel-method-example-vb"></a>Ejemplo del método Cancel (VB)
-Este ejemplo se usa el [cancelar](../../../ado/reference/ado-api/cancel-method-ado.md) método para cancelar un comando que se ejecuta en un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto si la conexión está ocupada.  
+En este ejemplo se usa el método [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) para cancelar un comando que se ejecuta en un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) si la conexión está ocupada.  
   
 ```  
 'BeginCancelVB  
@@ -102,6 +102,6 @@ End Sub
 'EndCancelVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Cancel (método) (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [CANCEL (método) (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

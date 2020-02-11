@@ -1,5 +1,5 @@
 ---
-title: Tipos de Cursor desplazable | Microsoft Docs
+title: Tipos de cursor desplazables | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061636"
 ---
 # <a name="scrollable-cursor-types"></a>Tipos de Cursor desplazable
-Los cuatro tipos de cursores desplazables son estáticos, dinámicos, cursores controlados por y mixto. Los cursores estáticos detectan pocos o ningún cambio, pero son relativamente económicas implementar. Los cursores dinámicos detectan todos los cambios, pero son costosos de implementar. Cursores mixtos y controlado por encuentran entre, detectar la mayoría de los cambios, pero con un consumo menor que los cursores dinámicos.  
+Los cuatro tipos de cursores desplazables son estáticos, dinámicos, controlados por conjunto de claves y mixtos. Los cursores estáticos detectan pocos cambios o ningún cambio, pero son relativamente baratas de implementar. Los cursores dinámicos detectan todos los cambios pero son caros de implementar. Los cursores mixtos y controlados por conjunto de claves se encuentran entre y detectan la mayoría de los cambios, pero con menos gastos que los cursores dinámicos.  
   
  Los siguientes términos se usan para definir las características de cada tipo de cursor desplazable:  
   
--   **Propias actualizaciones, eliminaciones e inserciones.** Las actualizaciones, eliminaciones e inserciones realizadas a través del cursor, ya sea con una llamada a **SQLBulkOperations** o **SQLSetPos** o con una posición instrucción update o delete.  
+-   **Propias actualizaciones, eliminaciones e inserciones.** Actualizaciones, eliminaciones e inserciones realizadas a través del cursor, ya sea con una llamada a **SQLBulkOperations** o **SQLSetPos** o con una instrucción UPDATE o DELETE posicionada.  
   
--   **Otros actualiza, elimina y se inserta.** Las actualizaciones, eliminaciones y las inserciones no realizadas por el cursor, las realizadas por otras operaciones en la misma transacción incluidas, aquellos realizados a través de otras transacciones y los realizados por otras aplicaciones.  
+-   **Otras actualizaciones, eliminaciones e inserciones.** Actualizaciones, eliminaciones e inserciones no realizadas por el cursor, incluidas las realizadas por otras operaciones en la misma transacción, las realizadas a través de otras transacciones y las realizadas por otras aplicaciones.  
   
--   **Pertenencia.** El conjunto de filas del conjunto de resultados.  
+-   **Membresía.** Conjunto de filas del conjunto de resultados.  
   
--   **Orden.** El orden en que se devuelven las filas del cursor.  
+-   **Orden.** El orden en el que el cursor devuelve las filas.  
   
--   **valores.** Los valores de cada fila del conjunto de resultados.  
+-   **Valor.** Los valores de cada fila del conjunto de resultados.  
   
- Para obtener información acerca de cómo actualizar, eliminar e insertar datos, vea [Introducción a la actualización datos](../../../odbc/reference/develop-app/updating-data-overview.md).  
+ Para obtener información sobre cómo actualizar, eliminar e insertar datos, vea [información general](../../../odbc/reference/develop-app/updating-data-overview.md)sobre la actualización de datos.  
   
  Esta sección contiene los temas siguientes.  
   

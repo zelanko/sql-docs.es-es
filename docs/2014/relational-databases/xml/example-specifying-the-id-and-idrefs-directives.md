@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificación de las directivas ID e IDREFS | Microsoft Docs'
+title: 'Ejemplo: Especificar las directivas ID e IDREFS | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288874"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>Ejemplo: Especificación de las directivas ID e IDREFS
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>Ejemplo: Especificar las directivas ID e IDREFS
   El atributo de un elemento se puede especificar como un atributo de tipo `ID` y el atributo `IDREFS` puede usarse para hacer referencia a él. De esta forma se habilitan vínculos dentro de los documentos; esto es similar a las relaciones entre la clave principal y la clave externa en las bases de datos relacionales.  
   
  Este ejemplo ilustra cómo se pueden usar las directivas `ID` e `IDREFS` para crear atributos de tipos `ID` e `IDREFS`. Dado que los identificadores no pueden contener valores enteros, los valores ID de este ejemplo se convierten. Dicho de otro modo, se realiza una conversión de tipos. Para los valores ID se utilizan prefijos.  
@@ -77,7 +77,7 @@ INNER JOIN Sales.SalesOrderHeader AS SOH
 FOR XML EXPLICIT;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

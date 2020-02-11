@@ -1,5 +1,5 @@
 ---
-title: Los valores que faltan (Analysis Services - minería de datos) | Microsoft Docs
+title: Faltan valores (Analysis Services minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083357"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Minería de datos)
@@ -42,29 +42,29 @@ ms.locfileid: "66083357"
 ## <a name="calculation-of-the-missing-state"></a>Cálculo del estado ausente  
  Para el algoritmo de minería de datos, los valores ausentes son informativos. En las tablas de casos, `Missing` es un estado tan válido como cualquier otro. Es más, un modelo de minería de datos puede usar otros valores para predecir la ausencia de un valor. En otras palabras, la ausencia de un valor no es un error.  
   
- Cuando se crea un modelo de minería de datos, un `Missing` estado se agrega automáticamente al modelo para todas las columnas discretas. Por ejemplo, si la columna de entrada [Sexo] contiene dos posibles valores, Hombre y Mujer, automáticamente se agrega un tercer valor para representar el valor `Missing`, y el histograma que muestra la distribución de todos los valores de la columna siempre incluirá el recuento de los casos con valores `Missing`. Si en la columna Sexo no hay ningún valor ausente, el histograma muestra que el estado Missing aparece en 0 casos.  
+ Al crear un modelo de minería de datos `Missing` , se agrega automáticamente un estado al modelo para todas las columnas discretas. Por ejemplo, si la columna de entrada [Sexo] contiene dos posibles valores, Hombre y Mujer, automáticamente se agrega un tercer valor para representar el valor `Missing`, y el histograma que muestra la distribución de todos los valores de la columna siempre incluirá el recuento de los casos con valores `Missing`. Si en la columna Sexo no hay ningún valor ausente, el histograma muestra que el estado Missing aparece en 0 casos.  
   
- La inclusión del estado `Missing` de forma predeterminada está justificada si cree probable que los datos no dispongan de ejemplos de todos los valores posibles y no desea que el modelo excluya la posibilidad solo porque no existe ningún ejemplo en los datos. Por ejemplo, si los datos de ventas de una tienda muestran que todos los clientes que compraron un determinado producto resultaron ser mujeres, probablemente no desee crear un modelo que prediga que únicamente las mujeres podrán adquirir el producto. En su lugar, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega un marcador de posición para el valor desconocido adicional, denominado `Missing`, como una manera de acomodar posibles otros Estados.  
+ La inclusión del estado `Missing` de forma predeterminada está justificada si cree probable que los datos no dispongan de ejemplos de todos los valores posibles y no desea que el modelo excluya la posibilidad solo porque no existe ningún ejemplo en los datos. Por ejemplo, si los datos de ventas de una tienda muestran que todos los clientes que compraron un determinado producto resultaron ser mujeres, probablemente no desee crear un modelo que prediga que únicamente las mujeres podrán adquirir el producto. En su lugar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , agrega un marcador de posición para el valor desconocido `Missing`adicional, denominado, como una forma de acomodar posibles otros Estados.  
   
  Por ejemplo, la tabla siguiente muestra la distribución de valores para el nodo (Todos) del modelo de árbol de decisión creado para el tutorial de Bike Buyer. En el ejemplo, la columna [Bike Buyer] es el atributo de predicción, donde 1 indica "Sí" y 0 indica "No".  
   
-|Valor|Casos|  
+|Value|Casos|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
 |Missing|0|  
   
- Esta distribución muestra que aproximadamente la mitad de los clientes han comprado una bicicleta, y la otra mitad no lo ha hecho. Este conjunto de datos concreto es muy limpio; por consiguiente, cada caso tiene un valor en la columna [Bike Buyer] y el recuento de valores `Missing` es 0. Sin embargo, si un caso tuviera un valor null en el campo [Bike Buyer], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consideraría esa fila como un caso con un `Missing` valor.  
+ Esta distribución muestra que aproximadamente la mitad de los clientes han comprado una bicicleta, y la otra mitad no lo ha hecho. Este conjunto de datos concreto es muy limpio; por consiguiente, cada caso tiene un valor en la columna [Bike Buyer] y el recuento de valores `Missing` es 0. Sin embargo, si un caso tuviera un valor null en el campo [Bike Buyer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ], contaría esa fila como un caso `Missing` con un valor.  
   
  Si la entrada es una columna continua, el modelo tabula dos posibles estados para el atributo: `Existing` y `Missing`. En otras palabras, o la columna contiene un valor de algún tipo de datos numéricos o no contiene ningún valor. Para los casos que tienen un valor, el modelo calcula la media, la desviación estándar y otras estadísticas significativas. Para los casos que no tienen ningún valor, el modelo proporciona un recuento de los valores `Missing` y ajusta las predicciones de la forma apropiada. El método para ajustar la predicción difiere dependiendo del algoritmo y se describe en la sección siguiente.  
   
 > [!NOTE]  
->  Para los atributos de una tabla anidada, los valores ausentes no son informativos. Por ejemplo, si un cliente no ha comprado un producto, la tabla anidada **Productos** no tendrá ninguna fila para dicho producto y el modelo de minería no creará ningún atributo para el producto ausente. Sin embargo, si le interesan los clientes que no han comprado determinados productos, puede crear un modelo cuyo filtro esté basado en la inexistencia de los productos en la tabla anidada, usando para ello una instrucción NOT EXISTS en el filtro del modelo. Para más información, vea [Aplicar un filtro a un modelo de minería de datos](apply-a-filter-to-a-mining-model.md).  
+>  Para los atributos de una tabla anidada, los valores ausentes no son informativos. Por ejemplo, si un cliente no ha comprado un producto, la tabla anidada **Productos** no tendrá ninguna fila para dicho producto y el modelo de minería no creará ningún atributo para el producto ausente. Sin embargo, si le interesan los clientes que no han comprado determinados productos, puede crear un modelo cuyo filtro esté basado en la inexistencia de los productos en la tabla anidada, usando para ello una instrucción NOT EXISTS en el filtro del modelo. Para obtener más información, vea [Aplicar un filtro a un modelo de minería de datos](apply-a-filter-to-a-mining-model.md).  
   
 ## <a name="adjusting-probability-for-missing-states"></a>Ajustar la probabilidad para los estados ausentes  
  Además de contar los valores, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcula la probabilidad de cualquier valor en el conjunto de datos. Esto también se aplica al valor `Missing`. Por ejemplo, la tabla siguiente muestra las probabilidades para los casos del ejemplo anterior:  
   
-|Valor|Casos|Probabilidad|  
+|Value|Casos|Probabilidad|  
 |-----------|-----------|-----------------|  
 |0|9296|50,55 %|  
 |1|9098|49,42 %|  
@@ -108,13 +108,13 @@ ms.locfileid: "66083357"
   
 |Tareas|Vínculos|  
 |-----------|-----------|  
-|Agregar marcas a columnas del modelo individuales para controlar la administración de los valores ausentes|[Ver o cambiar marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)|  
+|Agregar marcas a columnas del modelo individuales para controlar la administración de los valores ausentes|[Ver o cambiar las marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)|  
 |Establecer propiedades en un modelo de minería de datos para controlar la administración de los valores ausentes|[Cambiar las propiedades de un modelo de minería de datos](change-the-properties-of-a-mining-model.md)|  
 |Obtenga información acerca de cómo especificar las marcas de modelado en DMX|[Marcas de modelado &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Modificar la forma en la que la estructura de minería de datos administra los valores ausentes|[Cambiar las propiedades de una estructura de minería de datos](change-the-properties-of-a-mining-structure.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
+ [Marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)  
   
   

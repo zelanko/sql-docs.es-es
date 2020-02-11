@@ -1,5 +1,5 @@
 ---
-title: Sys.edge_constraints (Transact-SQL) | Microsoft Docs
+title: Sys. edge_constraints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/17/2018
 ms.prod: sql
@@ -21,32 +21,32 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dc2e47c49dc9d639489426fceab0b848c9def3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079325"
 ---
-# <a name="sysedgeconstraints-transact-sql"></a>Sys.edge_constraints (Transact-SQL)
+# <a name="sysedge_constraints-transact-sql"></a>Sys. edge_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Contiene una fila por cada objeto que es una restricción perimetral. 
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<Las columnas que se heredan de sys.objects >**||Para obtener una lista de columnas que hereda esta vista, consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|**is_disabled**|**bit**|1 = edge se deshabilita la restricción.<br /><br /> 0 = edge restricción está habilitada.|  
-|**is_not_trusted**|**bit**|1 = restricción no ha sido comprobada por el sistema de edge.<br /><br /> 0 = edge restricción ha sido comprobada por el sistema.|  
-|**delete_referential_action**|**tinyint**|Acción referencial que se ha definido en esta restricción perimetral.<br /><br />0 no = ninguna acción.|  
-|**delete_referential_action_desc**|**nvarchar(60)**|Descripción de la acción referencial que se ha definido en esta restricción perimetral.<br /><br />NO_ACTION|  
-|**is_system_named**|**bit**|1 = nombre de la restricción se ha generado por el sistema de edge.<br /><br />0 = el usuario proporcionó el nombre de restricción de edge.|  
+|**\<Columnas heredadas de sys. Objects>**||Para obtener una lista de las columnas que hereda esta vista, vea [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**is_disabled**|**bit**|1 = la restricción perimetral está dessangrada.<br /><br /> 0 = la restricción perimetral está habilitada.|  
+|**is_not_trusted**|**bit**|1 = el sistema no ha comprobado la restricción perimetral.<br /><br /> 0 = el sistema ha comprobado la restricción perimetral.|  
+|**delete_referential_action**|**tinyint**|Acción referencial que se definió en esta restricción perimetral.<br /><br />0 = ninguna acción.|  
+|**delete_referential_action_desc**|**nvarchar (60)**|Descripción de la acción referencial que se definió en esta restricción perimetral.<br /><br />NO_ACTION|  
+|**is_system_named**|**bit**|1 = el sistema generó el nombre de la restricción perimetral.<br /><br />0 = el usuario proporcionó el nombre de la restricción perimetral.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

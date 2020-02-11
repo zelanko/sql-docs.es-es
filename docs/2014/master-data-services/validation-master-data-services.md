@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 78433a93f4b9ce60393f6cdf9c8c128ec5011387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481324"
 ---
 # <a name="validation-master-data-services"></a>Validación (Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "65481324"
 |---------------------|-----------------------------|--------------------|---------------------------------------------------|-------------------------------------------|------------------------------------------|  
 |Validación de la regla de negocios|Un administrador de MDS|Automáticamente cuando un usuario agrega o edita datos.<br /><br /> Manualmente cuando un usuario aplica reglas de negocios.<br /><br /> Manualmente cuando un administrador en el área funcional **Administración de versiones** de la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] valida una versión comparándola con las reglas de negocios.|Errores de validación|ValidationStatus|Sí|  
 |Validación del tipo de datos y el contenido|Un administrador de MDS, al crear objetos de modelo (por ejemplo, la longitud o el tipo de datos de un atributo)|Automáticamente cuando un usuario agrega o edita datos|Errores de entrada|InputStatus|No|  
-|Validación del tipo de datos y el contenido|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o bien [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Automáticamente cuando un usuario agrega o edita datos|Errores de entrada|InputStatus|Sin|  
+|Validación del tipo de datos y el contenido|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]de[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Automáticamente cuando un usuario agrega o edita datos|Errores de entrada|InputStatus|No|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -36,9 +36,9 @@ ms.locfileid: "65481324"
 |Crear reglas de negocios y publicarlas para validar los datos con ellas.|[Crear y publicar una regla de negocios &#40;Master Data Services&#41;](create-and-publish-a-business-rule-master-data-services.md)|  
 |Validar una versión de datos según las reglas de negocios. Solo los administradores.|[Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)|  
 |Validar subconjuntos específicos de datos según las reglas de negocios. Todos los usuarios con permiso en el área funcional **Explorador** .|[Validar miembros específicos con las reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|Validar subconjuntos específicos de datos según las reglas de negocios. Todos los usuarios con permiso en el área funcional **Explorador** que usen [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].|[Aplicar reglas de negocios &#40;complemento MDS para Excel&#41;](microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
+|Validar subconjuntos específicos de datos según las reglas de negocios. Todos los usuarios con permiso en el área funcional **Explorador** que usen [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].|[Aplicar reglas de negocios &#40;Complemento MDS para Excel&#41;](microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

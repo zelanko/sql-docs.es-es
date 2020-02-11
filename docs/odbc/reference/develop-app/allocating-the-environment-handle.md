@@ -1,5 +1,5 @@
 ---
-title: Asignar el identificador de entorno | Microsoft Docs
+title: Asignando el identificador de entorno | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077183"
 ---
 # <a name="allocating-the-environment-handle"></a>Asignar el identificador de entorno
-La primera tarea para cualquier aplicación ODBC es cargar el Administrador de controladores cómo hacerlo depende del sistema operativo. Por ejemplo, en un equipo que ejecuta Microsoft® Windows NT® Server o Windows 2000 Server, Windows NT Workstation o Windows 2000 Professional o Microsoft Windows® 95/98, la aplicación o se vincula a la biblioteca del Administrador de controladores o llamadas  **LoadLibrary** para cargar la DLL del Administrador de controladores.  
+La primera tarea para cualquier aplicación ODBC es cargar el administrador de controladores. la forma de hacerlo depende del sistema operativo. Por ejemplo, en un equipo que ejecuta Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT Workstation/Windows 2000 Professional o Microsoft Windows® 95/98, la aplicación se vincula a la biblioteca del administrador de controladores o llama a **LoadLibrary** para cargar el archivo DLL del administrador de controladores.  
   
- La tarea siguiente, que debe realizarse antes de que una aplicación puede llamar a cualquier otra función ODBC, consiste en inicializar el entorno de ODBC y asignar un identificador de entorno, como sigue:  
+ La siguiente tarea, que debe realizarse antes de que una aplicación pueda llamar a cualquier otra función ODBC, es inicializar el entorno ODBC y asignar un identificador de entorno, como se indica a continuación:  
   
-1.  La aplicación declara una variable de tipo SQLHENV. A continuación, llama **SQLAllocHandle** y pasa la dirección de esta variable y la opción de SQL_HANDLE_ENV. Por ejemplo:  
+1.  La aplicación declara una variable de tipo SQLHENV. A continuación, llama a **SQLAllocHandle** y pasa la dirección de esta variable y la opción SQL_HANDLE_ENV. Por ejemplo:  
   
     ```  
     SQLHENV henv1;  
@@ -38,12 +38,12 @@ La primera tarea para cualquier aplicación ODBC es cargar el Administrador de c
     SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv1);  
     ```  
   
-2.  El Administrador de controladores asigna una estructura para almacenar información sobre el entorno y devuelve el identificador de entorno en la variable.  
+2.  El administrador de controladores asigna una estructura en la que almacenar información sobre el entorno y devuelve el identificador de entorno en la variable.  
   
- El Administrador de controladores no llama a **SQLAllocHandle** en el controlador en este tiempo ya que no sabe qué controlador para llamar a. Retrasa la llamada **SQLAllocHandle** en el controlador hasta que la aplicación llama a una función para conectarse a un origen de datos. Para obtener más información, consulte [rol del Administrador de controladores en el proceso de conexión](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md), más adelante en esta sección.  
+ En este momento, el administrador de controladores no llama a **SQLAllocHandle** en el controlador porque no sabe a qué controlador debe llamar. Retrasa la llamada a **SQLAllocHandle** en el controlador hasta que la aplicación llama a una función para conectarse a un origen de datos. Para obtener más información, vea [rol del administrador de controladores en el proceso de conexión](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md), más adelante en esta sección.  
   
- Cuando haya terminado la aplicación mediante ODBC, libera el identificador del entorno con **SQLFreeHandle**. Tras liberar el entorno, es un error de programación de aplicaciones para usar el identificador del entorno en una llamada a una función ODBC; Si lo hace por lo que tiene consecuencias indefinidas, pero probablemente irrecuperables.  
+ Cuando la aplicación ha terminado de usar ODBC, libera el identificador del entorno con **SQLFreeHandle**. Después de liberar el entorno, se trata de un error de programación de la aplicación para usar el identificador del entorno en una llamada a una función ODBC. Si lo hace, tendrá consecuencias indefinidas pero probablemente graves.  
   
- Cuando **SQLFreeHandle** se llama, las versiones de controlador, la estructura se usa para almacenar información sobre el entorno. Tenga en cuenta que **SQLFreeHandle** no se puede llamar para un identificador de entorno hasta después de haberse liberados todos los identificadores de conexión de ese identificador de entorno.  
+ Cuando se llama a **SQLFreeHandle** , el controlador libera la estructura usada para almacenar información sobre el entorno. Tenga en cuenta que no se puede llamar a **SQLFreeHandle** para un identificador de entorno hasta que se hayan liberado todos los identificadores de conexión de ese controlador de entorno.  
   
- Para obtener más información sobre el identificador de entorno, consulte [controla el entorno](../../../odbc/reference/develop-app/environment-handles.md).
+ Para obtener más información sobre el identificador de entorno, consulte [controladores de entorno](../../../odbc/reference/develop-app/environment-handles.md).

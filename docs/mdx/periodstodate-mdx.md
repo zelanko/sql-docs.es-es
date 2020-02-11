@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055631"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
@@ -34,19 +34,20 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Comentarios  
- Dentro del ámbito del nivel especificado, el **PeriodsToDate** función devuelve el conjunto de periodos del mismo nivel que el miembro especificado, empezando por el primer período y finalizando con el miembro especificado.  
+## <a name="remarks"></a>Observaciones  
+ Dentro del ámbito del nivel especificado, la función **PeriodsToDate** devuelve el conjunto de períodos del mismo nivel que el miembro especificado, empezando por el primer período y finalizando con el miembro especificado.  
   
--   Si se especifica un nivel, el miembro actual de la jerarquía se infiere *jerarquía*. **CurrentMember**, donde *jerarquía*es la jerarquía del nivel especificado.  
+-   Si se especifica un nivel, el miembro actual de la jerarquía es una *jerarquía*inferido. **CurrentMember**, donde *Hierarchy*es la jerarquía del nivel especificado.  
   
 -   Si no se especifican ni un nivel ni un miembro, el nivel es el nivel primario del miembro actual de la primera jerarquía de la primera dimensión de tipo Time del grupo de medida.  
   
- `PeriodsToDate( Level_Expression, Member_Expression )` es funcionalmente equivalente a la siguiente expresión MDX:  
+ 
+  `PeriodsToDate( Level_Expression, Member_Expression )` es funcionalmente equivalente a la siguiente expresión MDX:  
   
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve la suma de los `Measures.[Order Quantity]` miembro, se agregan durante los primeros ocho meses del año 2003 incluidos en el `Date` dimensión, desde el **Adventure Works** cubo.  
+ En el ejemplo siguiente se devuelve la suma `Measures.[Order Quantity]` del miembro, agregada durante los primeros ocho meses del año 2003 que se encuentran en la `Date` dimensión, del cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -84,8 +85,8 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
+## <a name="see-also"></a>Consulte también  
+ [&#40;MDX&#41;](../mdx/topcount-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

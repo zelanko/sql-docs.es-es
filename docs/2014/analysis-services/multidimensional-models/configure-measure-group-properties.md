@@ -1,5 +1,5 @@
 ---
-title: Configurar las propiedades del grupo de medida | Microsoft Docs
+title: Configurar propiedades de grupo de medida | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7571457847d8ffb0388608b7d634cc19261a609
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076670"
 ---
 # <a name="configure-measure-group-properties"></a>Configurar las propiedades de los grupos de medida
@@ -25,7 +25,7 @@ ms.locfileid: "66076670"
 ## <a name="measure-group-properties"></a>Propiedades de los grupos de medida  
  Las propiedades de los grupos de medida determinan el comportamiento de todo el grupo de medida y establecen los comportamientos predeterminados de ciertas propiedades de medidas dentro de un grupo de medida.  
   
-|Property|Definición|  
+|Propiedad|Definición|  
 |--------------|----------------|  
 |`AggregationPrefix`|Se aplica al almacenamiento ROLAP. Asigna un prefijo común a las vistas indizadas en SQL Server, que se usa para almacenar agregaciones para las particiones asociadas con este grupo de medida.|  
 |`DataAggregation`|Esta propiedad se reserva para uso futuro y actualmente no tiene ningún efecto. Por lo tanto, se recomienda que no modifique esta configuración.|  
@@ -34,7 +34,7 @@ ms.locfileid: "66076670"
 |`EstimatedRows`|Especifica el número estimado de filas de la tabla de hechos.|  
 |`EstimatedSize`|Especifica el tamaño estimado (en bytes) del grupo de medida.|  
 |`ID`|Especifica el identificador del objeto.|  
-|`IgnoreUnrelatedDimensions`|Determina si las dimensiones no relacionadas están forzadas a su nivel superior cuando los miembros de las dimensiones que no están relacionadas con el grupo de medida se incluyen en una consulta. Valor predeterminado es `True`.|  
+|`IgnoreUnrelatedDimensions`|Determina si las dimensiones no relacionadas están forzadas a su nivel superior cuando los miembros de las dimensiones que no están relacionadas con el grupo de medida se incluyen en una consulta. La configuración predeterminada `True`es.|  
 |`Name`|Nombre de la medida. Esta propiedad es de solo lectura.|  
 |`ProactiveCaching`|Valores de control de errores configurables para controlar las claves duplicadas, las claves desconocidas, las claves NULL, los límites de error, las acciones tras la detección de errores y el archivo de registro de errores.|  
 |`ProcessingMode`|Indica si la indización y la agregación se deben producir durante o después del procesamiento. Las opciones son Regular y LazyAggregations. LazyAggregations puede usarse para ejecutar la agregación como una tarea en segundo plano.|  

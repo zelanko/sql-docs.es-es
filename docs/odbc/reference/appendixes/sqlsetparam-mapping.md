@@ -14,14 +14,14 @@ ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c8d2d567f899c30dfe91cd35445956cd6214da9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125550"
 ---
 # <a name="sqlsetparam-mapping"></a>Asignación de SQLSetParam
-**SQLSetParam** continúa asignarse en la parte superior de **SQLBindParameter** como en ODBC 2. *x*. Aunque es conceptualmente similar a **SQLBindParam**, no se asigna el Administrador de controladores **SQLSetParam** a **SQLBindParam**. Esto es porque cierto 2 de ODBC existente. *x* controladores utilizan el valor especial de *BufferLength* (SQL_SETPARAM_VALUE_MAX) que el Administrador de controladores que se genera cuando se asigna **SQLSetParam** en la parte superior de  **SQLBindParameter** para determinar cuando se llama mediante un 1. *x* aplicación ODBC.  
+**SQLSetParam** se sigue asignando en la parte superior de **SQLBindParameter** , como en ODBC 2. *x*. Aunque es conceptualmente similar a **SQLBindParam**, el administrador de controladores no asigna **SQLSetParam** a **SQLBindParam**. Esto se debe a que hay ODBC 2 existente. los controladores *x* usan el valor especial de *BufferLength* (SQL_SETPARAM_VALUE_MAX) que genera el administrador de controladores cuando asigna **SQLSetParam** en la parte superior de **SQLBindParameter** para determinar cuándo lo llama un 1. aplicación ODBC *x* .  
   
  Una llamada a  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68125550"
 SQLSetParam(hstmt, ipar, fCType, fSqlType, cbColDef, ibScale, rgbValue, pcbValue)  
 ```  
   
- se producirá lo siguiente:  
+ dará como resultado lo siguiente:  
   
 ```  
 SQLBindParameter(StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, ColumnSize, DecimalDigits, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr)  

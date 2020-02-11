@@ -1,5 +1,5 @@
 ---
-title: Asignación de origen y los tipos de datos de destino (AccessToSQL) | Microsoft Docs
+title: Asignar tipos de datos de origen y de destino (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,80 +16,80 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907160"
 ---
-# <a name="mapping-source-and-target-data-types-accesstosql"></a>Asignación de origen y los tipos de datos de destino (AccessToSQL)
-Tipos de base de datos de acceso difieren de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos base de datos. Al convertir objetos de base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, debe especificar cómo se asignan los tipos de datos de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en los procedimientos siguientes.  
+# <a name="mapping-source-and-target-data-types-accesstosql"></a>Asignación de tipos de datos de origen y de destino (AccessToSQL)
+Los tipos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de Access se diferencian de los tipos Al convertir objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Access en objetos de, debe especificar cómo se asignan los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipos de datos de a. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en los procedimientos siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
 SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para obtener la lista de asignaciones predeterminadas, vea [configuración del proyecto (asignación de tipos)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
   
 ## <a name="customizing-data-type-mappings"></a>Personalizar asignaciones de tipos de datos  
-Mediante el uso de la **configuración del proyecto** cuadro de diálogo, puede personalizar cómo se asignan los tipos de todas las bases de datos y objetos de base de datos en un proyecto. Las asignaciones de tipos para un proyecto se aplican a todas las bases de datos y objetos de base de datos que no tiene asignaciones de tipos personalizado.  
+Mediante el cuadro de diálogo **configuración del proyecto** , puede personalizar cómo se asignan los tipos para todas las bases de datos y los objetos de base de datos de un proyecto. Las asignaciones de tipos de un proyecto de se aplican a todas las bases de datos y a los objetos de base de datos que no tienen asignaciones de tipo personalizadas.  
   
-También puede personalizar la asignación de tipos de datos en el nivel de base de datos o tabla.  
+También puede personalizar la asignación de tipos de datos en el nivel de base de datos o de tabla.  
   
-El siguiente procedimiento muestra cómo asignar tipos de datos en el proyecto, la base de datos o el nivel de objeto de base de datos.  
+En el procedimiento siguiente se muestra cómo asignar tipos de datos en el nivel de proyecto, base de datos u objeto de base de datos.  
   
 **Para asignar tipos de datos**  
   
-1.  Para personalizar la asignación de tipos de datos para todo el proyecto, abra el **configuración del proyecto** cuadro de diálogo:  
+1.  Para personalizar la asignación de tipos de datos para todo el proyecto, abra el cuadro de diálogo **configuración del proyecto** :  
   
-    1.  En el **herramientas** menú, seleccione **configuración del proyecto**.  
+    1.  En el menú **herramientas** , seleccione **configuración del proyecto**.  
   
-    2.  En el panel izquierdo, seleccione **Type Mapping**.  
+    2.  En el panel izquierdo, seleccione **asignación de tipos**.  
   
-        El gráfico de asignación de tipo y los botones aparecen en el panel derecho.  
+        El gráfico de asignación de tipos y los botones aparecen en el panel derecho.  
   
-    O bien, para personalizar la asignación de tipos de datos en el nivel de base de datos o tabla, seleccione la tabla o base de datos en el panel Explorador de metadatos de acceso:  
+    O bien, para personalizar la asignación de tipos de datos en el nivel de base de datos o de tabla, seleccione la base de datos o tabla en el panel Explorador de metadatos de acceso:  
   
-    1.  En el panel Explorador de metadatos de acceso, expanda **acceso de metabase**y, a continuación, expanda **bases de datos**.  
+    1.  En el panel Explorador de metadatos de Access, expanda **Access-metabase**y, a continuación, expanda **bases**de datos.  
   
-    2.  Seleccione la base de datos o una tabla para el que desea personalizar la asignación de tipos de datos.  
+    2.  Seleccione la base de datos o la tabla para la que desea personalizar la asignación de tipos de datos.  
   
-    3.  En el panel derecho, haga clic en **Type Mapping**.  
+    3.  En el panel derecho, haga clic en **asignación de tipos**.  
   
-2.  Para agregar una nueva asignación, realice lo siguiente:  
+2.  Para agregar una nueva asignación, haga lo siguiente:  
   
-    1.  En el panel de asignación de tipo, haga clic en **agregar**.  
+    1.  En el panel asignación de tipos, haga clic en **Agregar**.  
   
-    2.  En el **nueva asignación de tipo** cuadro de diálogo **tipo de origen**, seleccione el tipo de datos de acceso para asignar.  
+    2.  En el cuadro de diálogo **nueva asignación de tipos** , en **tipo de origen**, seleccione el tipo de datos de acceso que se va a asignar.  
   
-    3.  Si el tipo requiere una longitud, especifique las longitudes de datos mínimo y máximo para la asignación seleccionando la **desde** y **a** casillas de verificación y, a continuación, escriba los valores.  
+    3.  Si el tipo requiere una longitud, especifique las longitudes de datos mínima y máxima para la asignación; para ello, active las casillas **desde** y **hasta** y, a continuación, escriba los valores.  
   
-        Esto le permite personalizar la asignación de datos para los valores más pequeños y más grandes del mismo tipo de datos.  
+        Esto le permite personalizar la asignación de datos para valores más pequeños y mayores del mismo tipo de datos.  
   
-    4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  
+    4.  En **tipo de destino**, seleccione el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos de destino.  
   
-        Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplazar con** cuadro y, a continuación, haga clic en **Aceptar**.  
+        Algunos tipos requieren una longitud de tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
-3.  Para editar una asignación de tipos de datos, realice lo siguiente:  
+3.  Para editar una asignación de tipo de datos, haga lo siguiente:  
   
-    1.  En el panel de asignación de tipo, haga clic en **editar**.  
+    1.  En el panel asignación de tipos, haga clic en **Editar**.  
   
-    2.  En el **lista de asignación de tipo** cuadro de diálogo **tipo de origen**, seleccione el tipo de datos de acceso para asignar.  
+    2.  En el cuadro de diálogo **lista de asignación de tipos** , en tipo de **origen**, seleccione el tipo de datos de acceso que se va a asignar.  
   
-    3.  Si el tipo requiere una longitud, especifique las longitudes de datos mínimo y máximo para la asignación seleccionando la **desde** y **a** casillas de verificación y, a continuación, escriba los valores.  
+    3.  Si el tipo requiere una longitud, especifique las longitudes de datos mínima y máxima para la asignación; para ello, active las casillas **desde** y **hasta** y, a continuación, escriba los valores.  
   
-        Esto le permite personalizar la asignación de datos para los valores más pequeños y más grandes del mismo tipo de datos.  
+        Esto le permite personalizar la asignación de datos para valores más pequeños y mayores del mismo tipo de datos.  
   
-    4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  
+    4.  En **tipo de destino**, seleccione el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos de destino.  
   
-        Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplazar con** cuadro y, a continuación, haga clic en **Aceptar**.  
+        Algunos tipos requieren una longitud de tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
-4.  Para quitar una asignación de tipos de datos, realice lo siguiente:  
+4.  Para quitar una asignación de tipo de datos, haga lo siguiente:  
   
-    1.  En el panel de asignación de tipos, seleccione la fila en la lista de asignación de tipo que contiene la asignación de tipos de datos que desea quitar.  
+    1.  En el panel asignación de tipos, seleccione la fila de la lista asignación de tipos que contiene la asignación de tipo de datos que desea quitar.  
   
     2.  Haga clic en **Quitar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-El siguiente paso del proceso de migración es [convertir objetos de base de datos de acceso a objetos de SQL Server](converting-access-database-objects-accesstosql.md)  
+El siguiente paso del proceso de migración es [convertir los objetos de base de datos de Access en objetos de SQL Server](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

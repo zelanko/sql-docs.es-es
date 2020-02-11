@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9478564d6fde6596fe6f407bb9a9a2b389b2a1d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480997"
 ---
 # <a name="create-a-cross-domain-rule"></a>Crear una regla entre dominios
@@ -25,7 +25,7 @@ ms.locfileid: "65480997"
   
  La cláusula If de una regla entre dominios se define para uno de los dominios individuales del dominio compuesto y la cláusula Then para otro distinto. Se debe definir cada una de las cláusulas para un dominio individual distinto. Una regla entre dominios debe estar relacionada con varios dominios individuales; no es posible definir una regla de dominio simple (solo para un dominio individual) para un dominio compuesto. Para ello, deberá definir una regla de dominio para un dominio individual. Cada una de las cláusulas If y Then puede contener una o varias condiciones.  
   
- Una regla entre dominios que tenga condiciones definitivas aplicará la lógica de la regla a los sinónimos del valor en las condiciones, así como a los propios valores. Las condiciones definitivas para las cláusulas If y Then son El valor es igual a, El valor no es igual a, El valor está en o El valor no está en. Por ejemplo, imagine que tiene la siguiente regla entre dominios para un dominio compuesto: "Para «Ciudad», si Valor es igual a «Los Ángeles», entonces para «Estado», el Valor es igual a «California»". Si "Los Angeles" y "LA" son sinónimos, esta regla dará un resultado correcto para "Los Angeles CA" y "LA CA", y un error para "Los Angeles WA" y "LA WA".  
+ Una regla entre dominios que tenga condiciones definitivas aplicará la lógica de la regla a los sinónimos del valor en las condiciones, así como a los propios valores. Las condiciones definitivas para las cláusulas If y Then son El valor es igual a, El valor no es igual a, El valor está en o El valor no está en. Por ejemplo, imagine que dispone de la siguiente regla entre dominios para un dominio compuesto: "Para "City", si el valor es igual a "Los Angeles", entonces para "State", el valor es igual a "CA"". Si "Los Angeles" y "LA" son sinónimos, esta regla dará un resultado correcto para "Los Angeles CA" y "LA CA", y un error para "Los Angeles WA" y "LA WA".  
   
  Además de permitirle conocer la validez de una regla entre dominios, la cláusula *Then* definitiva **El valor es igual a**de una regla entre dominios también corrige los datos durante la actividad de limpieza de datos. Para obtener más información, vea [Data Correction using Definitive Cross-Domain Rules](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) en [Cleanse Data in a Composite Domain](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
@@ -41,9 +41,9 @@ ms.locfileid: "65480997"
 ####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear una regla entre dominios.  
   
-##  <a name="Create"></a> Crear reglas entre dominios  
+##  <a name="Create"></a>Crear reglas entre dominios  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra o cree una base de conocimiento. Seleccione **Administración de dominios** como actividad y, a continuación, haga clic en **Abrir** o en **Crear**. Para obtener más información, consulte [Crear una base de conocimiento](../../2014/data-quality-services/create-a-knowledge-base.md) o [Abrir una base de conocimiento](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65480997"
   
 9. Continúe con el procedimiento de prueba descrito a continuación.  
   
-##  <a name="Test"></a> Probar reglas entre dominios  
+##  <a name="Test"></a>Probar reglas entre dominios  
   
 1.  Pruebe la regla entre dominios de la manera siguiente:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65480997"
   
 2.  Cuando haya terminado de definir las reglas entre dominios, haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: después de crear una regla entre dominios  
+##  <a name="FollowUp"></a>Seguimiento: después de crear una regla entre dominios  
  Una vez creada una regla entre dominios, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

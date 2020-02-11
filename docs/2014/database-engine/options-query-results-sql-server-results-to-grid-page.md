@@ -1,5 +1,5 @@
 ---
-title: Opciones (resultados de SQL Server-resultados de la consulta a la página de cuadrícula) | Microsoft Docs
+title: Opciones (resultados de la consulta-SQL Server-resultados a la página de cuadrícula) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089312"
 ---
-# <a name="options-query-results-sql-server-results-to-grid-page"></a>Opciones (resultados de SQL Server-resultados de la consulta a la página de cuadrícula)
-  Utilice esta página para especificar las opciones de visualización de un conjunto de resultados de consulta en formato de cuadrícula. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o haga clic con el botón derecho en la ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y seleccione **Opciones de consulta**. En la página izquierda del cuadro de diálogo **Opciones de consulta** , en **Resultados**, haga clic en **Cuadrícula**.  
+# <a name="options-query-results-sql-server-results-to-grid-page"></a>Opciones (resultados de la consulta-SQL Server-resultados a la página de cuadrícula)
+  Utilice esta página para especificar las opciones de visualización de un conjunto de resultados de consulta en formato de cuadrícula. Los cambios en estas opciones solo se aplican [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a las nuevas consultas. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **consulta** o haga clic con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el botón secundario en la ventana de consulta y seleccione **Opciones de consulta**. En la página izquierda del cuadro de diálogo **Opciones de consulta** , en **Resultados**, haga clic en **Cuadrícula**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Incluir la consulta en el conjunto de resultados**  
@@ -32,7 +32,7 @@ ms.locfileid: "66089312"
  **Descartar resultados tras la ejecución**  
  Evita que los resultados de la consulta se muestren en el panel de revisiones. Dichos resultados se descartan inmediatamente tras la ejecución. Especifique esta opción si desea reducir el uso de memoria.  
   
- **Mostrar resultados en otra pestaña**  
+ **Mostrar los resultados en una pestaña independiente**  
  Seleccione esta casilla para mostrar el conjunto de resultados en una nueva pestaña y no en la parte inferior de la ventana del documento de consulta.  
   
  **Cambiar a la pestaña de resultados tras ejecutar la consulta**  
@@ -50,7 +50,7 @@ ms.locfileid: "66089312"
   
  Seleccione **1 MB**, **2 MB**o **5 MB**. Seleccione **Ilimitados** para recuperar todos los caracteres.  
   
- **Valores predeterminados**  
+ **Restablecer valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

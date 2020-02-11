@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083098"
 ---
 # <a name="process-a-mining-model"></a>Procesar un modelo de minería de datos
@@ -38,13 +38,13 @@ ms.locfileid: "66083098"
   
      Si ha realizado cambios a la estructura de minería de datos, se le pedirá que vuelva a implementar la estructura antes de procesar el modelo. Haga clic en **Sí**.  
   
-3.  En el **procesando modelo de minería de datos - \<modelo >** cuadro de diálogo, haga clic en **ejecutar**.  
+3.  En el cuadro de diálogo **procesando>de modelo de \<minería de datos** , haga clic en **Ejecutar**.  
   
      Se abre el cuadro de diálogo **Progreso del proceso** para mostrar información acerca del procesamiento del modelo.  
   
 4.  Una vez que haya finalizado el procesamiento del modelo correctamente, haga clic en **Cerrar** en el cuadro de diálogo **Progreso del proceso** .  
   
-5.  Haga clic en **cerrar** en el **procesando modelo de minería de datos - \<modelo >** cuadro de diálogo.  
+5.  Haga clic en **cerrar** en el cuadro de diálogo **procesando modelo de minería de datos \<:>del modelo** .  
   
  Solo se han procesado la estructura y el modelo de minería de datos seleccionado.  
   
@@ -54,17 +54,17 @@ ms.locfileid: "66083098"
   
 2.  Si ha realizado cambios a la estructura de minería de datos, se le pedirá que vuelva a implementar la estructura antes de procesar los modelos. Haga clic en **Sí**.  
   
-3.  En el **procesando estructura de minería de datos - \<estructura >** cuadro de diálogo, haga clic en **ejecutar**.  
+3.  En el cuadro de diálogo **procesando>estructura \<de minería de datos** , haga clic en **Ejecutar**.  
   
 4.  Se abre el cuadro de diálogo **Progreso del proceso** para mostrar información acerca del procesamiento del modelo.  
   
 5.  Una vez que haya finalizado el procesamiento de todos los modelos correctamente, haga clic en **Cerrar** en el cuadro de diálogo **Progreso del proceso** .  
   
-6.  Haga clic en **cerrar** en el **procesamiento \<modelo >** cuadro de diálogo.  
+6.  Haga clic en **cerrar** en el cuadro de diálogo **>del modelo de procesamiento \<** .  
   
  Se han procesado la estructura y todos los modelos de minería de datos asociados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)  
   
   

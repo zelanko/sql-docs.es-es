@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b33cfe47cebba4c24c90ad41ce1b218192d128f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255327"
 ---
 # <a name="validate-all-subscriptions"></a>Validar todas las suscripciones
@@ -33,7 +33,7 @@ ms.locfileid: "63255327"
  **Comprobar los recuentos de filas y comparar las sumas de comprobación para comprobar los datos de las filas**  
  Además de llevar a cabo un recuento de filas en el publicador y en el suscriptor, se calcula una suma de comprobación de todos los datos utilizando el algoritmo binario de suma de comprobación. Si el número de filas da un error, no se lleva a cabo la suma de comprobación. Esta opción no es válida para [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Validar datos replicados](validate-data-at-the-subscriber.md)  
   
   

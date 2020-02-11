@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 1 (requisito previo): Quitar datos de proveedor en MDS | Microsoft Docs'
+title: 'Tarea 1 (requisito previo): eliminación de los datos de proveedor en MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 84c0acceb4953b819cb5696c4ef90c39e4376846
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481224"
 ---
-# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tarea 1 (requisito previo): Eliminación de datos de proveedor en MDS
+# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tarea 1 (requisito previo): quitar datos de proveedor en MDS
   En esta tarea, quitará los datos de proveedor almacenados en MDS. En la lección anterior cargó los datos manualmente mediante el **complemento MDS para Excel** . El paquete de SSIS que cree en esta lección cargará los datos en MDS automáticamente. Por tanto, antes de probar el paquete de SSIS, necesita quitar los datos de proveedor de MDS, quitar la jerarquía derivada, quitar las entidades Proveedor y Estado, y crear la entidad Proveedor sin datos.  
   
-1.  Iniciar **Master Data Manager** yendo a **http://localhost/MDS** o el sitio Web y la aplicación que especificó al configurar MDS. Si dejó **Master Data Manager** abierto, haga clic en **SQL Server 2012 Master Data Services** en la parte superior para cambiar a la **página principal**.  
+1.  Inicie **Master Data Manager** navegando hasta **http://localhost/MDS** o el sitio web y la aplicación que especificó al configurar MDS. Si dejó **Master Data Manager** abierto, haga clic en **SQL Server 2012 Master Data Services** en la parte superior para cambiar a la **página principal**.  
   
 2.  Haga clic en **Administración del sistema** en la sección **Tareas administrativas** .  
   
@@ -40,7 +40,7 @@ ms.locfileid: "65481224"
   
 10. Cambie a la ventana de Excel que tiene abierto el archivo **Cleansed and Matched Suppliers.xls** . Cambie a la pestaña **Hoja1** en la parte inferior.  
   
-11. Seleccione solo la **primera fila con encabezados**. No seleccione ninguna otra fila. Para crear las entidades basándose en las columnas de Excel, pero no desea cargar los datos. Por tanto, solo selecciona la primera fila con los encabezados.  
+11. Seleccione solo la **primera fila con encabezados**. No seleccione ninguna otra fila. Desea crear las entidades basadas en las columnas de Excel pero no desea cargar ningún dato. Por tanto, solo selecciona la primera fila con los encabezados.  
   
 12. Haga clic en **Datos maestros** en la barra de menús.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "65481224"
   
     1.  Seleccione **Crear una nueva conexión**y haga clic en el botón **Nuevo** .  
   
-    2.  En el cuadro de diálogo Agregar nueva conexión, escriba **servidor MDS Local** para **descripción** y **http://localhost/MDS** para **dirección del servidor MDS**, y haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+    2.  En el cuadro de diálogo Agregar nueva conexión, escriba **servidor MDS local** para **Descripción** y **http://localhost/MDS** para **dirección del servidor MDS**, y haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-15. En **administrar conexiones** cuadro de diálogo, seleccione **servidor MDS Local** (http://localhost/MDS), haga clic en **probar** para probar la conexión. Haga clic en **Aceptar** en el cuadro de mensaje.  
+15. En el cuadro de diálogo **Administrar conexiones** , seleccione **servidor MDS local** (http://localhost/MDS), haga clic en **probar** para probar la conexión. Haga clic en **Aceptar** en el cuadro de mensaje.  
   
 16. Haga clic en **Conectar** para establecer una conexión con el servidor MDS.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65481224"
   
 22. Haga clic en **Explorador**. Observe que se crea la entidad **Proveedor** con todos los atributos **sin ningún valor**.  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 2 &#40;opcional&#41;: Creación de una vista de suscripciones de MDS con Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 2 &#40;&#41; opcional: crear una vista de suscripciones de MDS con Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

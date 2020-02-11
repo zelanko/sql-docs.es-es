@@ -1,5 +1,5 @@
 ---
-title: Jerarquías (pestaña estructura de dimensión, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Jerarquías (pestaña estructura de dimensión, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080786"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Jerarquías (pestaña Estructura de dimensión, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -30,7 +30,7 @@ ms.locfileid: "66080786"
   
 -   Mostrar u ocultar las relaciones de atributo haciendo clic en la flecha que se encuentra junto al nombre de nivel.  
   
- **Para mostrar el panel de jerarquías**  
+ **Para mostrar el panel Jerarquías**  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, a continuación, abra la dimensión que desea.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "66080786"
  **Jerarquías**  
  Muestra las jerarquías creadas. Dentro de cada jerarquía se encuentran los atributos que constituyen los niveles de la jerarquía. También se muestran las relaciones de atributo pero son de solo lectura.  
   
-## <a name="see-also"></a>Vea también  
- [Estructura de dimensión &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Atributos &#40;pestaña estructura de dimensión, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [Vista del origen de datos &#40;pestaña estructura de dimensión, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña estructura de dimensión, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Estructura de dimensión &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Atributos &#40;pestaña estructura de dimensión, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Vista del origen de datos &#40;pestaña estructura de dimensión, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña estructura de dimensión, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

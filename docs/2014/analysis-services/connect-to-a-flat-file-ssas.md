@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087360"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Conectarse a un archivo plano (SSAS)
@@ -31,16 +31,16 @@ ms.locfileid: "66087360"
  **Nombre descriptivo de la conexión**  
  Escriba un nombre único para esta conexión de origen de datos. Este campo es obligatorio.  
   
- **Ruta del archivo**  
+ **Ruta de acceso del archivo**  
  Especifique la ruta de acceso completa del archivo.  
   
- **Examinar**  
+ **Browse**  
  Navegue a una ubicación donde haya un archivo.  
   
  **Separador de columnas**  
  Seleccione los delimitadores de columna disponibles en la lista. Elija un delimitador que no sea probable encontrar en el texto.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Tabulador (t)|Un tabulador (t) separa las columnas.|  
 |Coma (,)|Las columnas se separan mediante una coma (,).|  
@@ -52,7 +52,7 @@ ms.locfileid: "66087360"
  **Avanzadas**  
  Especifique las opciones de configuración regional y codificación para el archivo plano.  
   
- **Usar la primera fila como encabezados de columna**  
+ **Usar primera fila como encabezados de columna**  
  Especifique si utilizar la primera fila de datos como encabezados de columna de la tabla de destino.  
   
  **Vista previa de datos**  
@@ -63,7 +63,7 @@ ms.locfileid: "66087360"
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Casilla de verificación en el encabezado de columna**|Active la casilla para incluir la columna en la importación de datos. Desactive la casilla para quitar la columna de la importación de datos.|  
+|**Casilla en el encabezado de columna**|Active la casilla para incluir la columna en la importación de datos. Desactive la casilla para quitar la columna de la importación de datos.|  
 |**Botón de flecha abajo en el encabezado de columna**|Ordene y filtre los datos de la columna.|  
   
  **Borrar filtros de fila**  

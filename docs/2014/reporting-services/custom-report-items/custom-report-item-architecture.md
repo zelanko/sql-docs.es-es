@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a053eb55547da9030eebe9036667cca2e14606f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264966"
 ---
 # <a name="custom-report-item-architecture"></a>Arquitectura de elementos de informe personalizados
@@ -25,16 +25,16 @@ ms.locfileid: "63264966"
 ## <a name="the-run-time-component"></a>Componente en tiempo de ejecución  
  El procesador de informes llama en tiempo de ejecución al componente de tiempo de ejecución para un elemento de informe personalizado. El componente de tiempo de ejecución acepta los datos que pasa en tiempo de ejecución el procesador del informe, procesa estos datos y devuelve una imagen que contiene el elemento de informe personalizado representado.  
   
- ![Componente en tiempo de ejecución del elemento de informe personalizado](../../../2014/reporting-services/media/customreportitemrun-timecomponentarchitecture.gif "Componente en tiempo de ejecución del elemento de informe personalizado")  
+ ![Componente de tiempo de ejecución de elemento de informe personalizado](../../../2014/reporting-services/media/customreportitemrun-timecomponentarchitecture.gif "Componente de tiempo de ejecución de elemento de informe personalizado")  
   
 ## <a name="the-design-time-component"></a>Componente de tiempo de diseño  
  El componente de tiempo de diseño permite definir y manipular el elemento de informe personalizado en la interfaz del Diseñador de informes en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. El componente de tiempo de diseño está compuesto de varios subcontroles que controlan la apariencia y las propiedades del elemento de informe personalizado en el entorno de diseño.  
   
- ![Componente en tiempo de diseño del elemento de informe personalizado](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "Componente en tiempo de diseño del elemento de informe personalizado")  
+ ![Componente de tiempo de diseño de elemento de informe personalizado](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "Componente de tiempo de diseño de elemento de informe personalizado")  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación de un componente de tiempo de ejecución de elemento de informe personalizado](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Creación de un componente de tiempo de diseño de elemento de informe personalizado](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Cómo: Implementar un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Crear un componente de tiempo de diseño de elemento de informe personalizado](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [Implementación de un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

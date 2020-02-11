@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 442c8ffca93052235db69394ed71ad2ff3157dfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316209"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>Borrar el contenido de una ventana de seguimiento (SQL Server Profiler)
@@ -31,7 +31,7 @@ ms.locfileid: "63316209"
   
      Se quitará el contenido de la ventana de seguimiento. Tenga en cuenta que si se ha guardado el archivo o la tabla de seguimiento, el contenido del archivo o la tabla permanecerá intacto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

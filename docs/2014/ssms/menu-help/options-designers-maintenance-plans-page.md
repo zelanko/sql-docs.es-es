@@ -1,5 +1,5 @@
 ---
-title: Opciones (página de planes de mantenimiento de los diseñadores) | Microsoft Docs
+title: Opciones (diseñadores-página planes de mantenimiento) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283178"
 ---
-# <a name="options-designers-maintenance-plans-page"></a>Opciones (página de planes de mantenimiento de los diseñadores)
+# <a name="options-designers-maintenance-plans-page"></a>Opciones (diseñadores-página planes de mantenimiento)
   Utilice el cuadro de diálogo **Opciones** para determinar el comportamiento predeterminado del diseñador cuando se agregan nuevas formas a la superficie de diseño. En el menú **Herramientas** , haga clic en **Opciones**, expanda **Diseñadores**y seleccione **Planes de mantenimiento**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  

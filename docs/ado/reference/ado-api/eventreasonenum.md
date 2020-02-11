@@ -16,53 +16,53 @@ ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918873"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
-Especifica el motivo por el que se produjo un evento que se produzca.  
+Especifica la razón por la que se produjo un evento.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|Una operación de agrega un nuevo registro.|  
-|**adRsnClose**|9|Una operación cerró el **Recordset**.|  
-|**adRsnDelete**|2|Una operación de elimina un registro.|  
-|**adRsnFirstChange**|11|Una operación realiza el primer cambio en un registro.|  
-|**adRsnMove**|10|Una operación de mover el puntero de registro dentro de la **Recordset**.|  
-|**adRsnMoveFirst**|12|Una operación de mover el puntero de registro en el primer registro de la **Recordset**.|  
-|**adRsnMoveLast**|15|Una operación de mover el puntero de registro al último registro en el **Recordset**.|  
-|**adRsnMoveNext**|13|Una operación de mover el puntero de registro al registro siguiente en el **Recordset**.|  
-|**adRsnMovePrevious**|14|Una operación de mover el puntero de registro al registro anterior en el **Recordset**.|  
-|**adRsnRequery**|7|Una operación vuelve a consultar el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
-|**adRsnResynch**|8|Una operación de volver a sincronizar la **Recordset** con la base de datos.|  
-|**adRsnUndoAddNew**|5|Una operación de revertir la adición de un nuevo registro.|  
-|**adRsnUndoDelete**|6|La eliminación de un registro puede revertir una operación.|  
-|**adRsnUndoUpdate**|4|Una operación de revertir la actualización de un registro.|  
-|**adRsnUpdate**|3|Una operación actualiza un registro existente.|  
+|**adRsnAddNew**|1|Una operación agregó un nuevo registro.|  
+|**adRsnClose**|9|Una operación cerró el **conjunto de registros**.|  
+|**adRsnDelete**|2|Una operación eliminó un registro.|  
+|**adRsnFirstChange**|11|Una operación realizó el primer cambio en un registro.|  
+|**adRsnMove**|10|Una operación ha despasado el puntero de registro en el **conjunto de registros**.|  
+|**adRsnMoveFirst**|12|Una operación ha pasado el puntero de registro al primer registro del **conjunto de registros**.|  
+|**adRsnMoveLast**|15|Una operación ha pasado el puntero de registro al último registro del **conjunto de registros**.|  
+|**adRsnMoveNext**|13|Una operación ha pasado el puntero de registro al siguiente registro del **conjunto de registros**.|  
+|**adRsnMovePrevious**|14|Una operación ha pasado el puntero de registro al registro anterior del **conjunto de registros**.|  
+|**adRsnRequery**|7|Una operación volvió a consultar el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|**adRsnResynch**|8|Una operación vuelve a sincronizar el **conjunto de registros** con la base de datos.|  
+|**adRsnUndoAddNew**|5|Una operación invirtió la adición de un nuevo registro.|  
+|**adRsnUndoDelete**|6|Una operación invirtió la eliminación de un registro.|  
+|**adRsnUndoUpdate**|4|Una operación invirtió la actualización de un registro.|  
+|**adRsnUpdate**|3|Una operación actualizó un registro existente.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
+ Paquete: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
-|AdoEnums.EventReason.ADDNEW|  
-|AdoEnums.EventReason.CLOSE|  
-|AdoEnums.EventReason.DELETE|  
-|AdoEnums.EventReason.FIRSTCHANGE|  
-|AdoEnums.EventReason.MOVE|  
-|AdoEnums.EventReason.MOVEFIRST|  
-|AdoEnums.EventReason.MOVELAST|  
-|AdoEnums.EventReason.MOVENEXT|  
-|AdoEnums.EventReason.MOVEPREVIOUS|  
-|AdoEnums.EventReason.REQUERY|  
-|AdoEnums.EventReason.RESYNCH|  
-|AdoEnums.EventReason.UNDOADDNEW|  
-|AdoEnums.EventReason.UNDODELETE|  
-|AdoEnums.EventReason.UNDOUPDATE|  
-|AdoEnums.EventReason.UPDATE|  
+|AdoEnums. EventReason. ADDNEW|  
+|AdoEnums. EventReason. CLOSE|  
+|AdoEnums. EventReason. DELETE|  
+|AdoEnums. EventReason. FIRSTCHANGE|  
+|AdoEnums. EventReason. MOVE|  
+|AdoEnums. EventReason. MOVEFIRST|  
+|AdoEnums. EventReason. MoveLast|  
+|AdoEnums. EventReason. MOVENEXT|  
+|AdoEnums. EventReason. MOVEPREVIOUS|  
+|AdoEnums. EventReason. Requery|  
+|AdoEnums. EventReason. resincronizar|  
+|AdoEnums. EventReason. UNDOADDNEW|  
+|AdoEnums. EventReason. UNDODELETE|  
+|AdoEnums. EventReason. UNDOUPDATE|  
+|AdoEnums. EventReason. UPDATE|  
   
 ## <a name="applies-to"></a>Se aplica a  
   

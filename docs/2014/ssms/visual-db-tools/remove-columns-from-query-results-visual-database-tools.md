@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253510"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Quitar columnas de los resultados de una consulta (Visual Database Tools)
@@ -34,15 +34,15 @@ ms.locfileid: "63253510"
   
 -   En el panel **Criterios**, desactive la casilla de la columna **Resultados** de la columna de datos que desea quitar. (Si desea volver a agregar la columna a los resultados de la consulta, puede activar de nuevo la columna **Resultados** ).  
   
-     -o bien-  
+     O bien  
   
 -   Quite la columna de la lista de resultados del [panel SQL](sql-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar columnas a las consultas &#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
  [Quitar columnas de las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Ordenar y agrupar los resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [Resumir los resultados de consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -16,13 +16,13 @@ ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 08a62e26c130b3753c90cfe05f7e4077ef86d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075712"
 ---
-# <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
+# <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Marca una suscripción de extracción de mezcla para reinicializarla la próxima vez que se ejecute el Agente de mezcla. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
@@ -40,18 +40,18 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, con un valor predeterminado es ALL.  
+`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es ALL.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, con un valor predeterminado es ALL.  
+`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es ALL.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, con un valor predeterminado es ALL.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es ALL.  
   
-`[ @upload_first = ] 'upload_first'` Especifica si se cargan los cambios en el suscriptor antes de reinicializar la suscripción. *upload_first* es **nvarchar (5)** , su valor predeterminado es False. Si **true**, los cambios se cargan antes de reinicializar la suscripción. Si **false**, no se cargan los cambios.  
+`[ @upload_first = ] 'upload_first'`Indica si se cargan los cambios en el suscriptor antes de que se reinicialice la suscripción. *upload_first* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si **es true**, los cambios se cargan antes de que se reinicialice la suscripción. Si **es false**, los cambios no se cargan.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_reinitmergepullsubscription** se utiliza en la replicación de mezcla.  
   
  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
@@ -63,9 +63,9 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_reinitmergepullsubscription**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_reinitmergepullsubscription**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reinicializar una suscripción](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

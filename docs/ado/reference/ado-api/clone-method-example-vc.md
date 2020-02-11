@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método (VC ++) Clone | Microsoft Docs
+title: Ejemplo del método Clone (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecdbf24ea70da0e16d05e4d866c0b2f0f9470c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919976"
 ---
 # <a name="clone-method-example-vc"></a>Ejemplo del método Clone (VC ++)
-Este ejemplo se usa el [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear copias de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y permite al usuario, a continuación, colocar el puntero de registro de cada copia de forma independiente.  
+En este ejemplo se usa el método [Clone](../../../ado/reference/ado-api/clone-method-ado.md) para crear copias de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) y, a continuación, se permite al usuario colocar el puntero de registro de cada copia de forma independiente.  
   
 ```  
 // BeginCloneCpp.cpp  
@@ -219,5 +219,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

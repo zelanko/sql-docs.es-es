@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0f79a5b61fc7526d87772c6b07c8a217b1baf60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089800"
 ---
 # <a name="select-template-name"></a>Seleccionar nombre de plantilla
@@ -31,7 +31,7 @@ ms.locfileid: "66089800"
  **Nombre de plantilla**  
  Escriba un nombre de plantilla nuevo o seleccione un nombre de plantilla de la lista. Si exporta una plantilla, solo podrá seleccionar un nombre de plantilla de la lista.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modificar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
  [Exportar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)  
   

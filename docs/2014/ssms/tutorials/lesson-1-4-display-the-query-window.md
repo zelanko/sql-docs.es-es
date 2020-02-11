@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63281991"
 ---
 # <a name="display-the-query-window"></a>Mostrar la ventana Consulta
@@ -26,7 +26,7 @@ ms.locfileid: "63281991"
   
 1.  En la barra de herramientas principal, haga clic en **Consulta de motor de base de datos**. En el cuadro de diálogo **Conectar al motor de base de datos** , haga clic en **Conectar**.  
   
-2.  En el Explorador de objetos, haga clic con el botón secundario en el servidor y, después, en **Nueva consulta**. En este caso, el Editor de consultas utiliza la información de conexión del servidor registrado.  
+2.  En Explorador de objetos, haga clic con el botón secundario en el servidor y haga clic en **nueva consulta**. En este caso, el Editor de consultas utiliza la información de conexión del servidor registrado.  
   
      Observe que las ventanas aparecen como ventanas con fichas a la derecha del Explorador de objetos.  
   

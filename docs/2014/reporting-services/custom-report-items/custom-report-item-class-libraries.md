@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264892"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de clases de elemento de informe personalizado
@@ -63,7 +63,7 @@ ms.locfileid: "63264892"
 |`OnPaint`|Se le llama como respuesta al evento `Paint`.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Este es el atributo utilizado para identificar el tipo del elemento de informe personalizado. El nombre debe coincidir con el valor de la <`Name`> atributo de la `ReportItem` elemento en el archivo de configuración del Diseñador de informes.  
+ Este es el atributo utilizado para identificar el tipo del elemento de informe personalizado. El nombre debe coincidir con el valor del `Name` atributo <> del `ReportItem` elemento en el archivo de configuración diseñador de informes.  
   
 #### <a name="public-methods"></a>Métodos públicos  
   
@@ -121,7 +121,7 @@ ms.locfileid: "63264892"
 |`EditValue`|Invoca el editor de expresiones, inicializado con el valor del objeto determinado.|  
   
 ### <a name="microsoftreportdesignerifieldsdataobject"></a>Microsoft.ReportDesigner.IFieldsDataObject  
- Esta clase es una colección de campos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y se utiliza para admitir los eventos arrastrar y colocar en el entorno de diseño. Se hereda de `IReportItemDataObject`.  
+ Esta clase es una colección de campos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y se utiliza para admitir los eventos arrastrar y colocar en el entorno de diseño. Hereda de `IReportItemDataObject`.  
   
 #### <a name="public-properties"></a>Propiedades públicas  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63264892"
 |`DataSetName`|El nombre del conjunto de datos que contiene los campos que se van a quitar.|  
 |`Fields`|La colección de campos (`Microsoft.ReportDesigner.Field`) que se va a quitar.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Lenguaje RDL (Report Definition Language) &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Creación de un componente de tiempo de ejecución de elemento de informe personalizado](creating-a-custom-report-item-run-time-component.md)   
  [Creación de un componente de tiempo de diseño de elemento de informe personalizado](creating-a-custom-report-item-design-time-component.md)  

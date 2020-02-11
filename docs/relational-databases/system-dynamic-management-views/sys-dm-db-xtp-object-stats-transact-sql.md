@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e14d5162c15f38cf741ceead94c2bacb230c42a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043173"
 ---
-# <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Indica el número de filas afectadas por operaciones en cada uno de los objetos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] desde el último reinicio de la base de datos. Las estadísticas se actualizan cuando se ejecuta la operación, independientemente de si la transacción se confirma o se revirtió.  
@@ -40,20 +40,20 @@ ms.locfileid: "68043173"
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|object_id|**bigint**|Id. del objeto.|  
-|row_insert_attempts|**bigint**|Número de filas insertadas en la tabla desde el último reinicio de la base de datos por las transacciones confirmadas y anuladas.|  
-|row_update_attempts|**bigint**|Número de filas actualizadas en la tabla desde el último reinicio de la base de datos por las transacciones confirmadas y anuladas.|  
-|row_delete_attempts|**bigint**|Número de filas eliminadas de la tabla desde el último reinicio de la base de datos por las transacciones confirmadas y anuladas.|  
-|write_conflicts|**bigint**|Número de conflictos de escritura que se produjeron desde el último reinicio de la base de datos.|  
-|unique_constraint_violations|**bigint**|Número de infracciones de la restricción UNIQUE que se han producido desde el último reinicio de la base de datos.|  
-|object_address|**varbinary(8)**|Exclusivamente para uso interno.|  
+|object_id|**BIGINT**|Id. del objeto.|  
+|row_insert_attempts|**BIGINT**|Número de filas insertadas en la tabla desde el último reinicio de la base de datos por las transacciones confirmadas y anuladas.|  
+|row_update_attempts|**BIGINT**|Número de filas actualizadas en la tabla desde el último reinicio de la base de datos por las transacciones confirmadas y anuladas.|  
+|row_delete_attempts|**BIGINT**|Número de filas eliminadas de la tabla desde el último reinicio de la base de datos por las transacciones confirmadas y anuladas.|  
+|write_conflicts|**BIGINT**|Número de conflictos de escritura que se produjeron desde el último reinicio de la base de datos.|  
+|unique_constraint_violations|**BIGINT**|Número de infracciones de la restricción UNIQUE que se han producido desde el último reinicio de la base de datos.|  
+|object_address|**varbinary(8**|Exclusivamente para uso interno.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos actual.  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

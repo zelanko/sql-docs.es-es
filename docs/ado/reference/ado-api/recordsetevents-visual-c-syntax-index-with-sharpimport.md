@@ -1,5 +1,5 @@
 ---
-title: 'RecordsetEvents (Visual C++ índice de sintaxis con #import) | Microsoft Docs'
+title: 'RecordsetEvents (índice de sintaxis de Visual C++ con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd512cbb01ace33bad275981be4c895591cd229d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917322"
 ---
-# <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents (Visual C++ índice de sintaxis con #import)
-## <a name="events"></a>Events  
+# <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents (índice de sintaxis de Visual C++ con #import)
+## <a name="events"></a>Eventos  
   
 ```  
 HRESULT WillChangeField( long cFields, const  

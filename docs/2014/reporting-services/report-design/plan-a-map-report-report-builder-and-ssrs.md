@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105466"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planear un informe de mapa (Generador de informes y SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66105466"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a> Especificar el propósito del mapa  
+##  <a name="MapPurpose"></a>Especificar el propósito del mapa  
  Un diseño de informe apropiado proporciona información que ayuda a los usuarios a tomar medidas para resolver los problemas. Para crear una presentación de mapa útil y fácilmente entendible, decida qué cuestiones desea que el mapa ayude a responder. Por ejemplo, en un mapa puede visualizar los tipos siguientes de datos para identificar oportunidades de mercado:  
   
 -   Ventas relativas de cada almacén.  
@@ -38,7 +38,7 @@ ms.locfileid: "66105466"
   
  
   
-##  <a name="Data"></a> Especificar los datos espaciales y analíticos  
+##  <a name="Data"></a>Especificar los datos espaciales y analíticos  
  Debe especificar qué datos espaciales y analíticos necesita.  
   
  Los datos analíticos pueden proceder de un conjunto de datos de informe, de los datos de ejemplo de un mapa de la galería de mapas o de los datos analíticos incluidos con los datos espaciales en un archivo de forma ESRI.  
@@ -77,7 +77,7 @@ ms.locfileid: "66105466"
   
  Los datos espaciales deben contener los campos siguientes:  
   
--   **Spatial data.** Campo de datos espaciales que tiene los conjuntos de coordenadas que definen cada punto, línea o polígono.  
+-   **Datos espaciales.** Campo de datos espaciales que tiene los conjuntos de coordenadas que definen cada punto, línea o polígono.  
   
 -   **Campos coincidentes.** Uno o varios campos que identifican de forma única cada campo de datos espaciales. Por ejemplo, para un punto de ubicación de un almacén, podría utilizar el nombre del almacén. Si el nombre del almacén no es único en los datos espaciales, podría incluir el nombre de la ciudad además del almacén.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66105466"
   
 
   
-##  <a name="MapType"></a> Elegir un tipo de mapa  
+##  <a name="MapType"></a>Elegir un tipo de mapa  
  Al ejecutar el Asistente para mapas, agrega al informe un mapa y la primera capa de mapa. El asistente le permite agregar uno de los tipos siguientes de mapas a un informe:  
   
 -   Un mapa básico que muestra las ubicaciones sin datos analíticos asociados.  
@@ -111,14 +111,14 @@ ms.locfileid: "66105466"
   
 |Icono del asistente|Estilo de la capa|Tipo de capa|Descripción y opciones|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa básico|Polygon|Mapa que solo muestra áreas, por ejemplo territorios de ventas.<br /><br /> Opciones: Varíe el color por paleta o utilice un único color. Una paleta es un conjunto predefinido de colores. Cuando se han asignado todos los colores de una paleta, se asignan las sombras de los colores.|  
+|![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa básico|Polygon|Mapa que solo muestra áreas, por ejemplo territorios de ventas.<br /><br /> Opciones: varíe el color según la paleta o utilice un único color. Una paleta es un conjunto predefinido de colores. Cuando se han asignado todos los colores de una paleta, se asignan las sombras de los colores.|  
 |![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mapa analítico de color|Polygon|Mapa que muestra los datos analíticos mediante la variación del color, por ejemplo los datos de ventas por área.|  
-|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de burbujas|Polygon|Mapa que muestra los datos analíticos variando el tamaño de burbuja centrada en las áreas, por ejemplo los datos de ventas por área.<br /><br /> Opciones: Variar los colores del área según un segundo campo analítico y especifique las reglas de color.|  
-|![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de líneas básico|Línea|Mapa que muestra únicamente líneas, por ejemplo las rutas de entrega.<br /><br /> Opciones: Varíe el color por paleta o utilice un único color.|  
-|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mapa de líneas analítico|Línea|Mapa que varía el color y ancho de las líneas, por ejemplo el número de paquetes entregados y las métricas de tiempo por ruta.<br /><br /> Opciones: Varíe el ancho de línea con un campo analítico, varíe el color de línea con un segundo campo analítico y especifique las reglas de color.|  
-|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de marcadores básico|Punto|Mapa que muestra un marcador en cada ubicación, por ejemplo las ciudades.<br /><br /> Opciones: Varíe el color por paleta o utilice un único color y cambiar el estilo de marcador.|  
-|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Mapa de marcadores de burbuja|Punto|Mapa que muestra una burbuja para cada ubicación y varía el tamaño de burbuja mediante un campo de datos analíticos, por ejemplo los datos de ventas por ciudad.<br /><br /> Opciones: Varíe el color de burbujas con un segundo campo analítico y especifique las reglas de color.|  
-|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Mapa de marcadores analítico|Punto|Mapa que muestra un marcador en cada ubicación y varía el color, el tamaño y el tipo de los marcadores según datos analíticos, por ejemplo los productos de mayores ventas, el intervalo de ganancia y la estrategia de descuentos.<br /><br /> Opciones: Varíe el tipo de marcador con un campo analítico, varíe el tamaño de marcador con un segundo campo analítico, varíe el color de marcador con un tercer campo analítico y especifique las reglas de color.|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de burbujas|Polygon|Mapa que muestra los datos analíticos variando el tamaño de burbuja centrada en las áreas, por ejemplo los datos de ventas por área.<br /><br /> Opciones: varíe los colores del área según un segundo campo analítico y especifique reglas de color.|  
+|![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de líneas básico|Línea|Mapa que muestra únicamente líneas, por ejemplo las rutas de entrega.<br /><br /> Opciones: varíe el color según la paleta o utilice un único color.|  
+|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mapa de líneas analítico|Línea|Mapa que varía el color y ancho de las líneas, por ejemplo el número de paquetes entregados y las métricas de tiempo por ruta.<br /><br /> Opciones: varíe el ancho de línea con un campo analítico, varíe el color de línea con un segundo campo analítico y especifique las reglas de color.|  
+|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de marcadores básico|Punto|Mapa que muestra un marcador en cada ubicación, por ejemplo las ciudades.<br /><br /> Opciones: varíe el color por paleta o utilice un único color y cambie el estilo de marcador.|  
+|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Mapa de marcadores de burbuja|Punto|Mapa que muestra una burbuja para cada ubicación y varía el tamaño de burbuja mediante un campo de datos analíticos, por ejemplo los datos de ventas por ciudad.<br /><br /> Opciones: varíe el color de las burbujas con un segundo campo analítico y especifique las reglas de color.|  
+|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Mapa de marcadores analítico|Punto|Mapa que muestra un marcador en cada ubicación y varía el color, el tamaño y el tipo de los marcadores según datos analíticos, por ejemplo los productos de mayores ventas, el intervalo de ganancia y la estrategia de descuentos.<br /><br /> Opciones: varíe el tipo de los marcadores con un campo analítico, varíe el tamaño de los marcadores con un segundo campo analítico, varíe el color de los marcadores con un tercer campo analítico y especifique las reglas de color.|  
   
  Después de agregar un mapa con el Asistente para mapas, puede crear capas adicionales o cambiar las opciones de una capa utilizando el Asistente para capas. Para más información sobre los asistentes, vea [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66105466"
   
  
   
-##  <a name="Legend"></a> Planear las leyendas  
+##  <a name="Legend"></a>Plan de leyendas  
  Para ayudar a los usuarios a interpretar un mapa, puede agregar varias leyendas de mapa, una escala de colores y una escala de distancia. Al diseñar un mapa, planee donde desea que se muestren las leyendas. Puede especificar la información siguiente sobre cada leyenda:  
   
 -   **Ubicación de la leyenda.** Por ejemplo, las leyendas se pueden mostrar dentro o fuera de la ventanilla, y en 12 ubicaciones discretas en relación con la ventanilla.  
@@ -145,7 +145,7 @@ ms.locfileid: "66105466"
   
 
   
-##  <a name="Embedding"></a> Equilibrar el tamaño de la definición de informe y el tiempo de procesamiento del informe  
+##  <a name="Embedding"></a>Equilibrar el tamaño de la definición de informe y el tiempo de procesamiento del informe  
  Un buen diseño de informe para mapas requiere que equilibre las opciones que controlan el rendimiento del informe y el tamaño de su definición. Los elementos de un mapa que se basan en datos espaciales, o mosaicos de Bing Maps, pueden ser estáticos e incrustarse en la definición de informe, o dinámicos y crearse cada vez que se procesa el mismo. Debe evaluar las ventajas comparativas de los datos de mapas estáticos y dinámicos, y encontrar el equilibrio que resulte apropiado en sus circunstancias. Considere la información siguiente para tomar esta decisión:  
   
 -   Los elementos de mapa incrustados pueden aumentar considerablemente el tamaño de la definición de informe, pero reducen el tiempo necesario para ver el mapa en el informe. El servidor de informes podría tener límites de tamaño que haya que mantener.  
@@ -160,10 +160,10 @@ ms.locfileid: "66105466"
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../tutorial-map-report-report-builder.md)   
+ [Tutorial: Generador de informes de &#40;de informes de mapa&#41;](../tutorial-map-report-report-builder.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de informes: informes de mapa &#40;Generador de informes y SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

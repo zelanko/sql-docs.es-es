@@ -1,5 +1,5 @@
 ---
-title: Opciones (página General del entorno) | Microsoft Docs
+title: Opciones (entorno-página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,34 +13,34 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188502"
 ---
 # <a name="options-environment-general-page"></a>Opciones (Entorno - Página General)
-  Use el cuadro de diálogo **Opciones** para configurar las acciones de inicio de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , opciones generales de administración de ventanas y otros valores de configuración generales. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** y haga clic en **General**.  
+  Use el cuadro de diálogo **Opciones** para configurar las acciones de inicio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , opciones generales de administración de ventanas y otros valores de configuración generales. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** y haga clic en **General**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Al iniciar**  
  Seleccione la acción que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] debe llevar a cabo una vez que se ha iniciado. Las opciones son:  
   
--   **Abrir el Explorador de objetos** : solicita una conexión y abre el Explorador de objetos.  
+-   **Abra explorador de objetos** solicita una conexión y, a continuación, abre explorador de objetos.  
   
--   **Abrir nueva ventana de consulta** : solicita una conexión y abre el Editor de consultas de SQL.  
+-   **Abrir nueva ventana de consulta** solicita una conexión y, a continuación, abre el editor de consultas de SQL.  
   
--   **Abrir el Explorador de objetos y una nueva ventana de consulta** : solicita una conexión y abre el Explorador de objetos y el Editor de consultas de SQL con dicha conexión.  
+-   **Abra explorador de objetos y los nuevos** mensajes de consulta para una conexión y, a continuación, abra explorador de objetos y el editor de consultas de SQL con esa conexión.  
   
--   **Abrir entorno vacío** : abre [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sin ninguna ventana del Editor de consultas de SQL y sin conectar el Explorador de objetos a un servidor.  
+-   **Abrir entorno vacío** se [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] abre sin una ventana del editor de consultas de SQL y sin conectar explorador de objetos a un servidor.  
   
- **Ocultar objetos del sistema en el Explorador de objetos**  
+ **Ocultar objetos del sistema en Explorador de objetos**  
  Seleccione esta casilla para eliminar de la vista de árbol del Explorador de objetos las bases de datos del sistema, las tablas del sistema, las vistas del sistema y los procedimientos almacenados del sistema. Las funciones del sistema y los tipos de datos del sistema no se ocultan. Esta opción solo se aplica a instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no afecta a los servidores que ya están conectados en el Explorador de objetos.  
   
 ## <a name="environment-layout"></a>Diseño del entorno  
  Para poder pasar del modo organizado por pestañas al modo de interfaz de múltiples documentos (MDI), debe cerrar y volver a abrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **Organización por pestañas**  
+ **Documentos con pestañas**  
  Seleccione esta opción para mostrar ventanas de documentos que estén agrupadas por pestañas en los editores. Las ventanas organizadas por pestañas son de gran utilidad para organizar los documentos y pasar de un documento abierto a otro.  
   
  **Entorno MDI**  
@@ -50,11 +50,11 @@ ms.locfileid: "68188502"
  **El botón Cerrar afecta solo a la pestaña activa**  
  Si esta casilla está seleccionada, solo se cierra la ventana de herramientas activa, no todas las ventanas del conjunto de ventanas acopladas. De forma predeterminada, esta casilla está activada.  
   
- **El botón Ocultar automáticamente afecta solo a la pestaña activa**  
+ **Ocultar automáticamente botón afecta solo a la pestaña activa**  
  Si esta casilla está seleccionada, solo se oculta automáticamente la ventana de herramientas activa, no todas las ventanas del conjunto de ventanas acopladas. De forma predeterminada, esta casilla no está activada.  
   
 ## <a name="display"></a>Pantalla  
- **Mostrar n archivos de la lista de archivos recientes**  
+ **Mostrar n archivos en la lista de usados recientemente**  
  Personaliza el número de proyectos y archivos recientes que aparecen en el menú **Archivo** . Escriba un número entre 1 y 24. El valor predeterminado es 4. Esta es una manera fácil de recuperar los proyectos de script y los proyectos de archivos y script usados recientemente.  
   
   

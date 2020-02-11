@@ -14,16 +14,16 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924691"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Pasar parámetros a un comando con nombre
-Al igual que el resultado del comando se pasa como un *out* variable del comando con nombre, parámetros sido para un comando con parámetros puede pasado como *en* variables para el comando con nombre.  
+Del mismo modo que el resultado del comando se pasa como una variable *out* del comando con nombre, los parámetros de un comando con parámetros se pueden pasar como *variables al* comando con nombre.  
   
- El siguiente código en el ejemplo se intenta recuperar todos los pedidos realizados por el cliente cuya **CustomerID** es "ALKFI" de la base de datos Northwind. El valor de **CustomerID** se proporciona en el momento cuando se llama el comando con nombre.  
+ En el ejemplo de código siguiente se intenta recuperar todos los pedidos realizados por el cliente cuyo **CustomerID** es "ALKFI" de la base de datos Northwind. El valor de **CustomerID** se proporciona en el momento en que se llama al comando con nombre.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -76,13 +76,13 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- Tenga en cuenta que todos los parámetros de entrada deben preceder a cualquier variable de salida y los tipos de datos de parámetros deben coincidir o se pueden convertir a los de los campos correspondientes. La instrucción siguiente:  
+ Observe que todos los parámetros de entrada deben preceder a cualquier variable de salida y los tipos de datos de los parámetros deben coincidir o se pueden convertir en los de los campos correspondientes. La instrucción siguiente:  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -se producirá un error de tipos de datos no coincidentes, porque el parámetro de entrada necesario es de un **cadena** tipo, no de un **entero** tipo.  
+ -producirá un error de tipos de datos no coincidentes, porque el parámetro de entrada necesario es de un tipo de **cadena** , no de un tipo **entero** .  
   
  La siguiente llamada:  
   
@@ -90,7 +90,7 @@ objConn.GetOrdersOf 12345, objRs
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- -es válido, pero dará como resultado un conjunto porque ningún registro de este tipo existe en la base de datos de resultados vacío.  
+ : es válido, pero producirá un conjunto de resultados vacío porque no hay registros en la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

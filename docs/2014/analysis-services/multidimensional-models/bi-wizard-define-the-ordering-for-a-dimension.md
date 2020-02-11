@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076858"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>Definir la ordenación en una dimensión
@@ -35,7 +35,7 @@ ms.locfileid: "66076858"
 ## <a name="specifying-ordering"></a>Especificar el orden  
  En la segunda página **Especificar el orden de los atributos** del asistente, se especifica de qué manera se ordenan todos los atributos de la dimensión.  
   
- En la columna **Atributo de orden** , se puede cambiar el atributo utilizado para aplicar el orden. Si el atributo que desea usar para ordenar los miembros no está en la lista, desplácese hacia abajo en la lista y, a continuación, seleccione  **\<nuevo atributo... >** para abrir el **seleccionar una columna** cuadro de diálogo, donde puede Seleccione una columna en una tabla de dimensiones. Al seleccionar una columna mediante el cuadro de diálogo **Seleccionar una columna** se crea un atributo adicional con el que se ordenan los miembros de un atributo.  
+ En la columna **Atributo de orden** , se puede cambiar el atributo utilizado para aplicar el orden. Si el atributo que desea usar para ordenar los miembros no se encuentra en la lista, desplácese hacia abajo en la lista y, a continuación, seleccione ** \<nuevo atributo... >** para abrir el cuadro de diálogo **seleccionar una columna** , donde puede seleccionar una columna de una tabla de dimensiones. Al seleccionar una columna mediante el cuadro de diálogo **Seleccionar una columna** se crea un atributo adicional con el que se ordenan los miembros de un atributo.  
   
  En la columna **Criterios** , puede seleccionar si ordena los miembros del atributo por **Clave** o **Nombre**.  
   

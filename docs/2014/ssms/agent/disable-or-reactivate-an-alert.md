@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 638ce62d8dd12764681c2b65a271d9ae13bb5d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189342"
 ---
-# <a name="disable-or-reactivate-an-alert"></a>Deshabilitar o volver a activar una alerta
-  En este tema se describe cómo deshabilitar o volver a activar una alerta del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="disable-or-reactivate-an-alert"></a>Disable or Reactivate an Alert
+  En este tema se describe cómo deshabilitar o volver [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a activar una [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] alerta del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] agente [!INCLUDE[tsql](../../includes/tsql-md.md)]en mediante o.  
   
  **En este tema**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68189342"
 ####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden editar la información de una alerta. A otros usuarios debe concederse el rol fijo de base de datos **SQLAgentOperatorRole** en la base de datos **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-or-reactivate-an-alert"></a>Para deshabilitar o volver a activar una alerta  
   
@@ -84,6 +84,6 @@ ms.locfileid: "68189342"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_update_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql).  
+ Para obtener más información, vea [sp_update_alert &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql).  
   
   

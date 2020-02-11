@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104630"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Cuadros de texto (Generador de informes y SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66104630"
 > [!NOTE]  
 >  Si arrastra un valor de campo de un conjunto de datos de informe directamente hasta la superficie de diseño del informe, o hasta un cuadro de texto situado en la superficie de diseño del informe, al ejecutar el informe solamente verá el primer valor del conjunto de resultados. Para ver todos los valores de un campo, deberá arrastrar dicho campo hasta una celda de una tabla o matriz. Así, al ejecutar el informe, verá todos los valores en ese campo.  
   
- Para mostrar texto repetido en un diseño de forma libre, coloque un cuadro de texto en una región de datos de la lista. Use una lista si desea repetir un formato para varios valores, por ejemplo, un formato de factura de cliente que se repite una vez para cada cliente. Para obtener más información, consulte [enumera &#40;generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ Para mostrar texto repetido en un diseño de forma libre, coloque un cuadro de texto en una región de datos de la lista. Use una lista si desea repetir un formato para varios valores, por ejemplo, un formato de factura de cliente que se repite una vez para cada cliente. Para obtener más información, vea [las listas &#40;generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  Use un contenedor de rectángulo si desea controlar el diseño del cuadro de texto y los espacios en blanco que aparecen debajo del último cuadro de texto. Para más información, vea [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66104630"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a> Aumentar y disminuir el tamaño de un cuadro de texto  
+##  <a name="GrowShrinkTextBox"></a>Aumentar y reducir un cuadro de texto  
  De manera predeterminada, los cuadros de texto tienen un tamaño fijo. Puede permitir que un cuadro de texto se reduzca o se expanda verticalmente según su contenido. Para más información, vea [Permitir que un cuadro de texto aumente o se reduzca &#40;Generador de informes y SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="orienting-a-text-box"></a>Orientar un cuadro de texto  
@@ -53,10 +53,10 @@ ms.locfileid: "66104630"
   
  La orientación se establece en el cuadro de texto y se aplica a todo el texto del cuadro. No puede especificar una orientación diferente para las partes del cuadro de texto.  
   
- Para empezar rápidamente con el cambio de orientación del texto, vea la sección sobre cómo girar texto en el [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../tutorial-format-text-report-builder.md). Para obtener más información, consulte [establecer orientación del cuadro de texto &#40;generador de informes y SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
+ Para empezar a trabajar rápidamente con el cambio de la orientación del texto, consulte la sección sobre cómo girar texto en el [Tutorial: dar formato al texto &#40;Generador de informes&#41;](../tutorial-format-text-report-builder.md). Para obtener más información, vea [establecer la orientación del cuadro de texto &#40;generador de informes y SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Agregar, mover o eliminar un cuadro de texto &#40;Generador de informes y SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+ [Agregar, quitar o eliminar un cuadro de texto &#40;Generador de informes y SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66104630"
   
  [Permitir que un cuadro de texto aumente o se reduzca &#40;Generador de informes y SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   

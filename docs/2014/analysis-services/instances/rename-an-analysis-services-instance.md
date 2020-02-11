@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079623"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Cambiar el nombre de una instancia de Analysis Services
-  Puede cambiar el nombre de una instancia existente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando el **cambiar el nombre de instancia** cuadro de diálogo.  
+  Puede cambiar el nombre de una instancia existente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de mediante el cuadro de diálogo **cambiar nombre de instancia** .  
   
 > [!IMPORTANT]  
 >  Cuando se cambia el nombre de la instancia, la herramienta Cambiar nombre de instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecuta con privilegios elevados, actualizando el nombre de servicio de Windows, las cuentas de seguridad y las entradas de Registro asociados a esa instancia. Para garantizar que estas acciones se realizan, asegúrese de ejecutar esta herramienta como administrador del sistema local.  
@@ -35,7 +35,7 @@ ms.locfileid: "66079623"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Para cambiar el nombre de una instancia de Analysis Services  
   
-1.  Iniciar el **cambiar el nombre de instancia** herramienta, **asinstancerename.exe**, desde C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Inicie la herramienta **cambiar nombre de instancia** , **asinstancerename. exe**, en C:\Archivos de programa\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
   
 2.  En el cuadro de diálogo **Cambiar nombre de instancia** , seleccione en la lista **Instancia cuyo nombre se cambiará** la instancia cuyo nombre desea cambiar.  
   
@@ -57,22 +57,22 @@ ms.locfileid: "66079623"
   
      Será necesario actualizar un inicio de sesión o los permisos de archivo de base de datos si ha utilizado una cuenta virtual para aprovisionar el servicio. Las cuentas virtuales se basan en el nombre de instancia, por lo que si cambia el nombre de la instancia, la cuenta virtual también se actualiza al mismo tiempo. Esto significa que los inicios de sesión o permisos anteriores creados para la instancia anterior ya no son válidos.  
   
-     En el ejemplo siguiente se propociona una ilustración. Supongamos que ha instalado a un servidor de modo tabular como una instancia denominada "Tabular" utilizando la cuenta virtual predeterminada, lo que resulta en la siguiente configuración:  
+     En el ejemplo siguiente se propociona una ilustración. Supongamos que ha instalado un servidor en modo tabular como una instancia denominada "tabular" mediante la cuenta virtual predeterminada, lo que da lugar a la siguiente configuración:  
   
-    1.  Nombre de instancia = \<servidor > \TABULAR  
+    1.  Nombre de instancia \<= servidor> \tabular  
   
     2.  Nombre de servicio = MSOLAP$TABULAR  
   
     3.  Cuenta virtual = NT Service\ MSOLAP$TABULAR  
   
-     Ahora supongamos que cambiar el nombre de la instancia a "TAB2". Como consecuencia del cambio de nombre, la configuración podría tener ahora el siguiente aspecto:  
+     Ahora Supongamos que cambia el nombre de la instancia a "TAB2". Como consecuencia del cambio de nombre, la configuración podría tener ahora el siguiente aspecto:  
   
-    1.  Nombre de instancia = \<servidor > \TAB2  
+    1.  Nombre de instancia \<= servidor> \tab2  
   
     2.  Nombre de servicio = MSOLAP$TAB2  
   
     3.  Cuenta virtual = NT Service\ MSOLAP$TAB2  
   
-     Como puede ver, los permisos de base de datos y el archivo que se concedieron anteriormente a "NT Service\ MSOLAP$ TABULAR" ya no son válidos. Para garantizar que las tareas y las operaciones realizadas por el servicio se ejecutan como antes, ahora tendría debe conceder permisos de base de datos y el archivo nuevo a "NT Service\ MSOLAP$ TAB2".  
+     Como puede ver, los permisos de archivos y bases de datos que se concedieron anteriormente a "NT Service \ MSOLAP $ TABULAr" ya no son válidos. Para asegurarse de que las tareas y las operaciones realizadas por el servicio se ejecuten como antes, ahora tendría que conceder nuevos permisos de base de datos y de archivo a "NT Service \ MSOLAP $ TAB2".  
   
   

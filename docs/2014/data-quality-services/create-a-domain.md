@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480960"
 ---
 # <a name="create-a-domain"></a>Crear un dominio
@@ -34,9 +34,9 @@ ms.locfileid: "65480960"
 ####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio.  
   
-##  <a name="Discovery"></a> Crear un dominio en la actividad Detección de conocimiento  
+##  <a name="Discovery"></a>Crear un dominio en la actividad detección de conocimiento  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Abrir base de conocimiento** y seleccione una base de conocimiento, o haga clic en **Nueva base de conocimiento** y especifique las propiedades para la nueva base de conocimiento.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65480960"
   
 5.  En la tabla **Asignaciones** , seleccione una columna de origen en la lista desplegable para la columna **Columna de origen** de una fila vacía. Si no existe ningún dominio correspondiente, haga clic en el icono **Crear un dominio** .  
   
-##  <a name="DomainManagement"></a> Crear un dominio en la actividad Administración de dominios  
+##  <a name="DomainManagement"></a>Crear un dominio en la actividad administración de dominios  
   
 1.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Abrir base de conocimiento** y seleccione una base de conocimiento, o haga clic en **Nueva base de conocimiento** y especifique las propiedades para la nueva base de conocimiento.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65480960"
   
 3.  En la página **Administración de dominios** , haga clic en el icono **Crear un dominio** situado sobre la lista de dominios.  
   
-##  <a name="Properties"></a> Establecer las propiedades de dominio  
+##  <a name="Properties"></a>Establecer propiedades de dominio  
   
 1.  En el cuadro de diálogo **Crear dominio** , escriba un nombre que sea único en la base de conocimiento y una descripción con una longitud máxima de 256 caracteres.  
   
@@ -85,11 +85,11 @@ ms.locfileid: "65480960"
   
 8.  Si el tipo de datos es **Cadena**, seleccione **Deshabilitar algoritmos de error de sintaxis** para rellenar el dominio sin comprobar la existencia de errores de sintaxis en los valores de cadena.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 10. Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de crear un dominio  
+##  <a name="FollowUp"></a>Seguimiento: después de crear un dominio  
  Una vez creado el dominio, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

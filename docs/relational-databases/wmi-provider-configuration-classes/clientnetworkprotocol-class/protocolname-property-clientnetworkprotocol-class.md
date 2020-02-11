@@ -18,10 +18,10 @@ ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: beb51ea7270fdbeb96dc858c2ef4e65c386726ff
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660238"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>Propiedad ProtocolName (clase ClientNetworkProtocol)
@@ -36,15 +36,15 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  A [clase ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa el protocolo de red utilizado por el cliente de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el nombre del Protocolo de red del cliente actual al que hace referencia el [método SetOrderValue (clase ClientNetworkProtocol)](https://technet.microsoft.com/library/ms179295.aspx).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
- [Configuración de protocolos de red de cliente y bibliotecas de red](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

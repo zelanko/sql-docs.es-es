@@ -15,19 +15,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831877"
 ---
 # <a name="execute-process-task"></a>Tarea Ejecutar proceso
-  La tarea Ejecutar proceso ejecuta una aplicación o un archivo por lotes como parte de un flujo de trabajo de paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Aunque puede utilizar la tarea Ejecutar proceso para abrir cualquier aplicación estándar, como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o [!INCLUDE[ofprword](../../includes/ofprword-md.md)], normalmente la utilizará para ejecutar aplicaciones empresariales o archivos por lotes que trabajen con un origen de datos. Por ejemplo, puede utilizar la tarea Ejecutar proceso para expandir un archivo de texto comprimido. Una vez hecho esto, el paquete puede usar el archivo de texto como origen de datos para el flujo de datos. Otro ejemplo sería utilizar la tarea Ejecutar proceso para ejecutar una aplicación de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizada que genera un informe de ventas diario. Se puede adjuntar este informe a una tarea Enviar correo para reenviarlo a una lista de distribución.  
+  La tarea ejecutar proceso ejecuta una aplicación o un archivo por lotes como parte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de un flujo de trabajo del paquete. Aunque puede utilizar la tarea Ejecutar proceso para abrir cualquier aplicación estándar, como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o [!INCLUDE[ofprword](../../includes/ofprword-md.md)], normalmente la utilizará para ejecutar aplicaciones empresariales o archivos por lotes que trabajen con un origen de datos. Por ejemplo, puede utilizar la tarea Ejecutar proceso para expandir un archivo de texto comprimido. Una vez hecho esto, el paquete puede usar el archivo de texto como origen de datos para el flujo de datos. Otro ejemplo sería utilizar la tarea Ejecutar proceso para ejecutar una aplicación de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizada que genera un informe de ventas diario. Se puede adjuntar este informe a una tarea Enviar correo para reenviarlo a una lista de distribución.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye otras tareas que realizan operaciones de flujo de trabajo, como ejecutar paquetes. Para obtener más información, consulte [Execute Package Task](execute-package-task.md).  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye otras tareas que realizan operaciones de flujo de trabajo, como ejecutar paquetes. Para obtener más información, consulte [Execute Package Task](execute-package-task.md).  
   
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>Entradas del registro personalizadas disponibles en la tarea Ejecutar proceso  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea Ejecutar proceso. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea Ejecutar proceso. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -39,9 +40,9 @@ ms.locfileid: "62831877"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea Ejecutar proceso &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea ejecutar proceso &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea Ejecutar proceso &#40;página Procesar&#41;](../execute-process-task-editor-process-page.md)  
+-   [Editor de la tarea ejecutar proceso &#40;página procesar&#41;](../execute-process-task-editor-process-page.md)  
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
@@ -60,7 +61,7 @@ ms.locfileid: "62831877"
   
  Puede usar una expresión para establecer diversas propiedades de la tarea Ejecutar proceso.  
   
- Cuando se usa el **StandardInputVariable** propiedad para configurar la tarea Ejecutar proceso para proporcionar la entrada, llame a la `Console.ReadLine` método desde la aplicación para leer la entrada. Para obtener más información, vea el tema [Console.ReadLine (Método)](https://go.microsoft.com/fwlink/?LinkId=129201), en la Biblioteca de clases de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Cuando use la propiedad **StandardInputVariable** para configurar la tarea ejecutar proceso para proporcionar la entrada, llame al `Console.ReadLine` método desde la aplicación para leer la entrada. Para obtener más información, vea el tema [Console.ReadLine (Método)](https://go.microsoft.com/fwlink/?LinkId=129201), en la Biblioteca de clases de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Cuando use la propiedad **Argumentos** para configurar la tarea Ejecutar proceso con el fin de proporcionar la entrada, realice uno de los pasos siguientes para obtener los argumentos:  
   
@@ -86,7 +87,7 @@ ms.locfileid: "62831877"
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](integration-services-tasks.md)   
  [Flujo de control](control-flow.md)  
   

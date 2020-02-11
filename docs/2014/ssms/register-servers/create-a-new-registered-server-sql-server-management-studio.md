@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: cce885929deff7484a4e068bf06ac3b39dbb3062
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244670"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Crear un servidor registrado (SQL Server Management Studio)
@@ -38,7 +38,7 @@ ms.locfileid: "75244670"
   
      Los Servidores de administración central almacenan los registros de servidor en el Servidor de administración central en lugar de en el sistema de archivos. Los Servidores de administración central y los servidores secundarios registrados únicamente se pueden registrar utilizando la autenticación de Windows. Una vez registrado un Servidor de administración central, sus servidores registrados asociados se mostrarán automáticamente. Para obtener más información sobre los Servidores de administración central, vea [Administrar varios servidores mediante Servidores de administración central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] no se pueden designar como Servidores de administración central.  
   
-##  <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>Para registrar automáticamente las instancias de servidor locales  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75244670"
      Cuando se registra un servidor desde Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y coincide con el tipo de servidor que se muestra en el panel Servidores registrados. Para registrar un tipo de servidor diferente, haga clic en **Motor de base de datos**, **Analysis Server**, **Reporting Services**o **Integration Services** en la barra de herramientas de **Servidores registrados** antes de empezar a registrar un nuevo servidor.  
   
      **Nombre del servidor**  
-     Seleccione la instancia de servidor que se va a registrar en el formato\\: * \<ServerName>*[*\<nombreDeInstancia>*].  
+     Seleccione la instancia del servidor que se va a registrar en el formato *\<nombreDelServidor>* [\\ *\<nombreDeInstancia>* ].  
   
      **Autenticación**  
      Están disponibles dos modos de autenticación cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -60,16 +60,16 @@ ms.locfileid: "75244670"
      **Autenticación de Windows**  
      El modo de autenticación de Windows permite al usuario conectarse mediante una cuenta de usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-     **Autenticación SQL Server**  
+     **Autenticación de SQL Server**  
      Cuando un usuario se conecta con un nombre y una contraseña de inicio de sesión específicos desde una conexión que no es de confianza, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza la autenticación y comprueba si se ha configurado una cuenta de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y si la contraseña especificada coincide con la que se ha almacenado anteriormente. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tiene configurada una cuenta de inicio de sesión, la autenticación no se realizará correctamente y el usuario recibirá un mensaje de error.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]Para obtener más información, consulte [elegir un modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md).  
+    >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Para obtener más información, vea [Elegir un modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md).  
   
      **Nombre de usuario**  
      Muestra el nombre de usuario actual con el que se conecta. Esta opción de solo lectura únicamente está disponible si ha seleccionado la autenticación de Windows para conectarse. Para cambiar **Nombres de usuario**, inicie una sesión en el equipo como un usuario distinto.  
   
-     **Inicio**  
+     **Inicio de sesión**  
      Escriba el inicio de sesión con el que va a conectarse. Esta opción solo está disponible si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse.  
   
      **Contraseña**  
@@ -87,7 +87,7 @@ ms.locfileid: "75244670"
      **Descripción del servidor registrado**  
      Escriba una descripción opcional del servidor.  
   
-     **Muestre**  
+     **Test**  
      Haga clic para probar la conexión al servidor seleccionado en **Nombre del servidor**.  
   
      **Guardar**  
@@ -100,8 +100,8 @@ ms.locfileid: "75244670"
   
  Para ejecutar las consultas con todos los servidores que se registran con un Servidor de administración central, expanda el servidor, haga clic con el botón derecho en el grupo de servidores, haga clic en **Conectar**y, después, haga clic en **Nueva consulta**. Cuando las consultas se ejecuten en la nueva ventana del Editor de consultas, ejecutarán con todos los servidores del grupo de servidores, utilizando la información de conexión almacenada y el contexto de autenticación de Windows del usuario.  
   
-## <a name="see-also"></a>Véase también  
- [Ocultar objetos del sistema en Explorador de objetos](../object/hide-system-objects-in-object-explorer.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ocultar objetos del sistema en el Explorador de objetos](../object/hide-system-objects-in-object-explorer.md)   
  [Exportar información de servidores registrados &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [Importar información de servidores registrados &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)  
   

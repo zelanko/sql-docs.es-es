@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493792"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definir y examinar KPI
@@ -59,15 +59,15 @@ ms.locfileid: "69493792"
   
      La siguiente imagen muestra la pestaña **KPI** del Diseñador de cubos.  
   
-     ![Pestaña KPI del diseñador de cubos](../../2014/tutorials/media/l7-kpi-1.gif "Pestaña KPI del diseñador de cubos")  
+     ![Pestaña KPIs del Diseñador de cubos](../../2014/tutorials/media/l7-kpi-1.gif "Pestaña KPIs del Diseñador de cubos")  
   
 2.  En la barra de herramientas de la pestaña **KPI** , haga clic en el botón **Nuevo KPI** .  
   
      En el panel de información aparecerá una plantilla de KPI en blanco, como en la siguiente imagen.  
   
-     ![Plantilla de KPI en blanco en el panel de información](../../2014/tutorials/media/l7-kpi-2.gif "Plantilla de KPI en blanco en el panel de información")  
+     ![Plantilla KPI en blanco en el panel de información](../../2014/tutorials/media/l7-kpi-2.gif "Plantilla KPI en blanco en el panel de información")  
   
-3.  En el cuadro **nombre** , escriba `Reseller Revenue` y, a continuación, seleccione **reseller sales** en la lista **grupo de medida asociado** .  
+3.  En el cuadro **nombre** , escriba `Reseller Revenue`y, a continuación, seleccione **reseller sales** en la lista **grupo de medida asociado** .  
   
 4.  En la pestaña **Metadatos** del panel **Herramientas de cálculo** , expanda **Medidas**, **Reseller Sales**y, después, arrastre la medida **Reseller Sales-Sales Amount** al cuadro **Expresión de valor** .  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69493792"
   
 1.  Haga clic en el botón **Vista de formulario** de la barra de herramientas de la pestaña **KPI** y, después, haga clic en el botón **Nuevo KPI** .  
   
-2.  En el cuadro **nombre** , escriba `Product Gross Profit Margin` y, a continuación, compruebe que **\<All >** aparece en la lista **grupo de medida asociado** .  
+2.  En el cuadro **nombre** , escriba `Product Gross Profit Margin`y, a continuación, compruebe que ** \<todos los>** aparecen en la lista **grupo de medida asociado** .  
   
 3.  En la pestaña **Metadatos** del panel **Herramientas de cálculo** , arrastre la medida **Total GPM** al cuadro **Expresión de valor** .  
   
@@ -261,7 +261,7 @@ ms.locfileid: "69493792"
   
 2.  Cuando la implementación se haya completado correctamente, haga clic en **Volver a conectar** en la barra de herramientas de la pestaña **KPI** y, después, haga clic en **Vista de explorador**.  
   
-     Aparece el KPI `Product Gross Profit Margin` y muestra el valor de KPI del **tercer trimestre de 2007** y del territorio de ventas **Norteamérica** .  
+     Aparece `Product Gross Profit Margin` el KPI y muestra el valor de KPI del **tercer trimestre 2007** y el **Norteamérica** territorio de ventas.  
   
 3.  En el panel **Filtro** , seleccione **Product** en la lista **Dimensión** , seleccione **Category** en la lista **Jerarquía** , seleccione **Igual** en la lista **Operador** y **Bikes** en la lista **Expresión de filtro** y, después, haga clic en **Aceptar**.  
   

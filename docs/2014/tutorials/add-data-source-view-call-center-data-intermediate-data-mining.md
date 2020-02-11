@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68888685"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Agregar una vista del origen de datos para datos del centro de llamadas (Tutorial intermedio de minería de datos)
@@ -30,7 +30,7 @@ ms.locfileid: "68888685"
   
      Se abrirá el Asistente para vistas del origen de datos.  
   
-2.  En la página **Asistente para vistas del origen de datos** , haga clic en **Siguiente**.  
+2.  En la página inicial del **Asistente para orígenes de datos**, haga clic en **Siguiente**.  
   
 3.  En la página **seleccionar un origen de datos** , en **orígenes de datos relacionales**, seleccione el origen de [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] datos. Si no tiene este origen de datos, vea [tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md). Haga clic en **Next**.  
   
@@ -56,38 +56,38 @@ ms.locfileid: "68888685"
   
     |||  
     |-|-|  
-    |**Nombre de columna**|DayOfWeek|  
+    |**Nombre de la columna**|DayOfWeek|  
     |**Descripción**|Obtiene el día de la semana en la tabla DimDate|  
-    |**Expresión**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
+    |**Expression**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
      Para comprobar que la expresión crea los datos que necesita, haga clic con el botón secundario en la tabla **FactCallCenter**y, a continuación, seleccione **explorar datos**.  
   
 9. Dedique un minuto a revisar los datos disponibles, para entender cómo se usan en la minería de datos:  
   
-|Nombre de columna|Contiene|  
+|Nombre de la columna|Contiene|  
 |-----------------|--------------|  
 |FactCallCenterID|Una clave arbitraria que se creó cuando se importaron los datos al almacenamiento de datos.<br /><br /> Esta columna identifica los registros únicos y debe usarse como clave de caso para el modelo de minería de datos.|  
 |DateKey|La fecha de la operación en el centro de llamadas, expresada como un entero. Las claves de fecha se usan a menudo en los almacenamientos de datos, pero puede que desee obtener la fecha con formato de fecha y hora si va a agrupar los valores por fecha.<br /><br /> Observe que las fechas no son únicas, ya que el proveedor facilita un informe independiente para cada turno de cada día de trabajo.|  
 |WageType|Indica si el día era un día de la semana, un fin de semana o un día festivo.<br /><br /> Es posible que haya una diferencia en la calidad del servicio de atención al cliente en los fines de semana y los días de la semana, por lo que usará esta columna como una entrada.|  
-|Shift|Indica el turno para el que se registran las llamadas. Este centro de llamadas divide el día laborable en cuatro turnos: AM, PM1, PM2 y medianoche.<br /><br /> Es posible que el turno afecte a la calidad del servicio al cliente; por eso usará esto como entrada.|  
+|Shift|Indica el turno para el que se registran las llamadas. Este centro de llamadas divide su jornada laboral en cuatro turnos: uno por la mañana (AM), dos por la tarde (PM1 y PM2) y uno por la noche (Midnight).<br /><br /> Es posible que el turno afecte a la calidad del servicio al cliente; por eso usará esto como entrada.|  
 |LevelOneOperators|Indica el número de operadores de nivel 1 en el arancel.<br /><br /> Los empleados de centro de llamadas comienzan en el nivel 1, de modo que estos empleados tienen menos experiencia.|  
 |LevelTwoOperators|Indica el número de operadores de nivel 2 en servicio.<br /><br /> Un empleado debe registrar un número determinado de horas de servicio para calificar como operador de nivel 2.|  
 |TotalOperators|Número total de operadores presentes durante el turno.|  
 |Calls|Número de llamadas recibidas durante el turno.|  
 |AutomaticResponses|Número de llamadas procesadas por completo de forma automática (sistema de respuesta de voz interactiva o IVR).|  
-|Orders|Número de pedidos resultantes de las llamadas.|  
+|Pedidos|Número de pedidos resultantes de las llamadas.|  
 |IssuesRaised|Número de incidencias que requieren seguimiento y que se generaron a través de llamadas.|  
 |AverageTimePerIssue|Promedio de tiempo que se tarda en atender una llamada entrante.|  
-|ServiceGrade|Una métrica que indica la calidad de servicio general, medida como la *tasa* de abandono para todo el turno. Cuanto más alta es la tasa de abandono, más probabilidades hay de que los clientes no estén satisfechos y de que se pierdan posibles pedidos.|  
+|ServiceGrade|Una métrica que indica la calidad de servicio general, medida como la *tasa de abandono* para todo el turno. Cuanto más alta es la tasa de abandono, más probabilidades hay de que los clientes no estén satisfechos y de que se pierdan posibles pedidos.|  
   
- Tenga en cuenta que los datos incluyen cuatro columnas diferentes basadas en una sola columna de fecha `WageType`:, DayOfWeek `Shift`, y `DateKey`. Normalmente en la minería de datos no es aconsejable usar varias columnas derivadas de los mismos datos, ya que los valores están demasiado correlacionados entre sí y pueden ocultar otros patrones.  
+ Tenga en cuenta que los datos incluyen cuatro columnas diferentes basadas en una sola columna de fecha `WageType`: ****, DayOfWeek `Shift`, y `DateKey`. Normalmente en la minería de datos no es aconsejable usar varias columnas derivadas de los mismos datos, ya que los valores están demasiado correlacionados entre sí y pueden ocultar otros patrones.  
   
- Sin embargo, no usaremos `DateKey` en el modelo porque contiene demasiados valores únicos. No hay ninguna relación directa entre `Shift` y `WageType` DayOfWeek, y y **DayOfWeek** solo se relacionan parcialmente. Si le preocupa que los datos sean colineales, podría crear la estructura con todas las columnas disponibles y, a continuación, omitir varias columnas en cada modelo y probar el efecto.  
+ Sin embargo, no usaremos `DateKey` en el modelo porque contiene demasiados valores únicos. No hay ninguna relación directa entre `Shift` y **DayOfWeek**, y `WageType` y **DayOfWeek** solo se relacionan parcialmente. Si le preocupa que los datos sean colineales, podría crear la estructura con todas las columnas disponibles y, a continuación, omitir varias columnas en cada modelo y probar el efecto.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Crear un tutorial de minería de datos &#40;intermedio de modelo y estructura de red neuronal&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [Crear un modelo y una estructura de red neuronal &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

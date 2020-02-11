@@ -11,21 +11,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e92db0cc41e57d0d8233b83efef0914ded4213e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990385"
 ---
-# <a name="localdberrorinvalidparameter"></a>LOCALDB_ERROR_INVALID_PARAMETER
+# <a name="localdb_error_invalid_parameter"></a>LOCALDB_ERROR_INVALID_PARAMETER
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|257|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|257|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|El parámetro del método de API de la instancia de Local Database es incorrecto. Consulte la documentación de la API.|  
   

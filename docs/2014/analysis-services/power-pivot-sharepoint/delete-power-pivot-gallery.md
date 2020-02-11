@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d69bac2879b2d93c44e15c58f9ba44396d99988
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683688"
 ---
 # <a name="delete-powerpivot-gallery"></a>Eliminar la Galería de PowerPivot
@@ -49,7 +49,7 @@ ms.locfileid: "74683688"
   
 5.  En Permisos y Administración, haga clic en **Eliminar esta biblioteca**.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Galería de PowerPivot](../../2014-toc/index.yml)  
   
   

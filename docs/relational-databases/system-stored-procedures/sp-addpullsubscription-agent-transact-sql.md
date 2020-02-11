@@ -16,10 +16,10 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028952"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
@@ -105,7 +105,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Si se especifica un valor para este parámetro, se devuelve un mensaje de advertencia, pero el valor se pasa por alto.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor. se requiere *subscriber_password* si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL. Si se utiliza una contraseña de suscriptor, se cifra automáticamente.  
+`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor. *subscriber_password* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL. Si se utiliza una contraseña de suscriptor, se cifra automáticamente.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Si se especifica un valor para este parámetro, se devuelve un mensaje de advertencia, pero el valor se pasa por alto.  
@@ -119,9 +119,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'`Es el inicio de sesión del distribuidor que se va a utilizar al conectarse a un distribuidor durante la sincronización. se requiere *distributor_login* si *distributor_security_mode* está establecido en **0**. *distributor_login* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @distributor_login = ] 'distributor_login'`Es el inicio de sesión del distribuidor que se va a utilizar al conectarse a un distribuidor durante la sincronización. *distributor_login* es necesario si *distributor_security_mode* está establecido en **0**. *distributor_login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @distributor_password = ] 'distributor_password'`Es la contraseña del distribuidor. se requiere *distributor_password* si *distributor_security_mode* está establecido en **0**. *distributor_password* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @distributor_password = ] 'distributor_password'`Es la contraseña del distribuidor. *distributor_password* es necesario si *distributor_security_mode* está establecido en **0**. *distributor_password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura. Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
@@ -130,13 +130,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el Agente de distribución. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
-|**2** (predeterminado)|A petición|  
-|**4**|Cada día|  
-|**8**|Programación semanal|  
-|**16**|Programación mensual|  
+|**2** (valor predeterminado)|A petición|  
+|**4**|Diariamente|  
+|**203**|Semanal|  
+|**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
 |**128**|Periódica|  
@@ -148,24 +148,24 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha del Agente de distribución. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1** (predeterminado)|Primero|  
-|**2**|Second|  
+|**1** (valor predeterminado)|Primero|  
+|**2**|Segundo|  
 |**4**|Tercero|  
-|**8**|Cuarto|  
-|**16**|Último|  
+|**203**|Cuarto|  
+|**dieciséi**|Último|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es **1**.  
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1** (predeterminado)|Una vez|  
-|**2**|Second|  
+|**1** (valor predeterminado)|Una sola vez|  
+|**2**|Segundo|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**203**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es **1**.  
   
@@ -177,7 +177,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @active_end_date = ] active_end_date`Es la fecha en la que el Agente de distribución deja de estar programado, con el formato AAAAMMDD. *active_end_date* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT`Es el identificador de la Agente de distribución para este trabajo. *distribution_jobid* es **binario (16)** , su valor predeterminado es NULL y es un parámetro de salida.  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT`Es el identificador de la Agente de distribución para este trabajo. *distribution_jobid* es **binario (16)**, su valor predeterminado es NULL y es un parámetro de salida.  
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password`Ya no se admite la configuración de *encrypted_distributor_password* . Si se intenta establecer este parámetro de **bits** en **1** se producirá un error.  
   
@@ -197,7 +197,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @use_ftp = ] 'use_ftp'`Especifica el uso de FTP en lugar del protocolo regular para recuperar las instantáneas. *use_ftp* es de tipo **nvarchar (5)** y su valor predeterminado es false.  
   
-`[ @publication_type = ] publication_type`Especifica el tipo de replicación de la publicación. *publication_type* es de **tinyint** y su valor predeterminado es **0**. Si es **0**, la publicación es un tipo de transacción. Si es **1**, la publicación es un tipo de instantánea. Si es **2**, la publicación es un tipo de combinación.  
+`[ @publication_type = ] publication_type`Especifica el tipo de replicación de la publicación. *publication_type* es de **tinyint** con un valor predeterminado de **0**. Si es **0**, la publicación es un tipo de transacción. Si es **1**, la publicación es un tipo de instantánea. Si es **2**, la publicación es un tipo de combinación.  
   
 `[ @dts_package_name = ] 'dts_package_name'`Especifica el nombre del paquete DTS. *dts_package_name* es de **tipo sysname y su** valor predeterminado es NULL. Por ejemplo, para especificar un paquete de `DTSPub_Package`, el parámetro sería `@dts_package_name = N'DTSPub_Package'`.  
   
@@ -212,7 +212,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
->  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Si establece *remote_agent_activation* en un valor distinto de **false** , se generará un error.  
+>  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Si se establece *remote_agent_activation* en un valor distinto de **false** , se generará un error.  
   
 `[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
@@ -230,7 +230,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_addpullsubscription_agent** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
 ## <a name="example"></a>Ejemplo  
@@ -239,13 +239,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addpullsubscription_agent**.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
- [Transact &#40;-SQL de sp_addpullsubscription&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [Transact &#40;-SQL de sp_helppullsubscription&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_addpullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_droppullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

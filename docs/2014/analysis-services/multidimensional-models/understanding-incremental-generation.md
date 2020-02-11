@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811061"
 ---
 # <a name="understanding-incremental-generation"></a>Descripción de la generación incremental
   Tras la generación del esquema inicial, es posible cambiar las definiciones de cubo y de dimensión mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y volver a ejecutar el Asistente para generar esquemas. El asistente actualiza el esquema de la base de datos del área de asunto y de la vista de origen de datos asociada para reflejar los cambios y conservar los datos que existen actualmente en las tablas que se van a volver a generar, en la medida de lo posible. Si las tablas han cambiado tras la generación inicial, el Asistente para generar esquemas conservará en la medida de lo posible los cambios siguiendo estas reglas:  
   
--   Si la tabla se generó anteriormente utilizando el asistente, entonces se sobrescribirá. Para evitar que se sobrescriba una tabla generada con el asistente, debe cambiarse la propiedad `AllowChangesDuringGeneration` de la tabla en la vista de origen de datos a `false`. Al asumir el control de una tabla, ésta recibe el mismo tratamiento que una tabla definida por el usuario y no se ve afectada por la regeneración. Tras quitar una tabla de la generación, puede cambiarse más adelante la propiedad `AllowChangesDuringGeneration` de la tabla en la vista de origen de datos a `true` y volver a abrir la tabla para que tengan efecto los cambios realizados por el asistente. Para obtener más información, vea [Cambiar las propiedades de una vista del origen de datos &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md).  
+-   Si la tabla se generó anteriormente utilizando el asistente, entonces se sobrescribirá. Para evitar que se sobrescriba una tabla generada con el asistente, debe cambiarse la propiedad `AllowChangesDuringGeneration` de la tabla en la vista de origen de datos a `false`. Al asumir el control de una tabla, ésta recibe el mismo tratamiento que una tabla definida por el usuario y no se ve afectada por la regeneración. Tras quitar una tabla de la generación, puede cambiarse más adelante la propiedad `AllowChangesDuringGeneration` de la tabla en la vista de origen de datos a `true` y volver a abrir la tabla para que tengan efecto los cambios realizados por el asistente. Para más información, vea [Cambiar las propiedades de una vista del origen de datos &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md).  
   
 -   Si se ha agregado una tabla a la vista de origen de datos o a la base de datos subyacente por un medio distinto del asistente, no se sobrescribe la tabla.  
   
@@ -83,8 +83,8 @@ ms.locfileid: "68811061"
   
  Por otra parte, no se generarán errores si se cambia la cadena de conexión de origen de datos a una base de datos distinta de la generación anterior. Se utilizará la nueva base de datos y no se realizarán cambios en la base de datos anterior.  
   
-## <a name="see-also"></a>Vea también  
- [Administrar los cambios de las vistas del origen de datos y los orígenes de datos](manage-changes-to-data-source-views-and-data-sources.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrar los cambios en las vistas del origen de datos y los orígenes de datos](manage-changes-to-data-source-views-and-data-sources.md)   
  [Asistente para generar esquemas &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

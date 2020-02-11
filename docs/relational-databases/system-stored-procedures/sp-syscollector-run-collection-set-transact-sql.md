@@ -19,10 +19,10 @@ ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3807a53921572bbe20b4c459bff34958cbb42001
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304997"
 ---
 # <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
@@ -46,17 +46,17 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collection_set_id = ] collection_set_id` es el identificador local único para el conjunto de recopilación. *collection_set_id* es de **tipo int** y debe tener un valor si *el nombre* es NULL.  
+`[ @collection_set_id = ] collection_set_id`Es el identificador local único para el conjunto de recopilación. *collection_set_id* es de **tipo int** y debe tener un valor si *el nombre* es NULL.  
   
-`[ @name = ] 'name'` es el nombre del conjunto de recopilación. *Name* es de **tipo sysname** y debe tener un valor si *collection_set_id* es NULL.  
+`[ @name = ] 'name'`Es el nombre del conjunto de recopilación. *Name* es de **tipo sysname** y debe tener un valor si *collection_set_id* es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  *Collection_set_id* o *Name* deben tener un valor, ambos no pueden ser null.  
   
- Este procedimiento iniciará los trabajos de recopilación y carga para el conjunto de recopilación especificado e iniciará inmediatamente el trabajo del agente de recopilación si el conjunto de recopilación tiene su **\@collection_mode** establecido en sin almacenamiento en caché (1). Para obtener más información, [vea &#40;SP_SYSCOLLECTOR_CREATE_COLLECTION_SET Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Este procedimiento iniciará los trabajos de recopilación y carga para el conjunto de recopilación especificado e iniciará inmediatamente el trabajo del agente de recopilación si el conjunto de recopilación tiene su ** \@collection_mode** establecido en sin almacenamiento en caché (1). Para obtener más información, vea [sp_syscollector_create_collection_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set también se puede utilizar para ejecutar un conjunto de recopilación que no tenga una programación.  
   
@@ -72,7 +72,7 @@ GO
 EXEC sp_syscollector_run_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)  
   

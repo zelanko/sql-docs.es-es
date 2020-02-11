@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727408"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de R Services: resultados y recursos
@@ -92,12 +92,12 @@ En esta sección se comparan los resultados de antes y después de cada una de l
 
 En la primera prueba se ha comparado el uso de compresión y una tabla en columnas para reducir el tamaño de los datos.
 
-| Nombre de la tabla            | Filas     | Reservado   | data       | index_size | No utilizado  | % Saving (reserved) |
+| Nombre de la tabla            | Filas     | Reserved   | data       | index_size | No utilizado  | % Saving (reserved) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 KB | 2 972 160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 KB  | 623 744 KB  | 1352 KB    | 688 KB  | 79 %                 |
 | *airlineWithRowComp*  | 10 000 000 | 1 262 520 KB | 1 258 880 KB | 2552 KB    | 1088 KB | 58 %                 |
-| *airlineColumnar*     | 9 999 999  | 201 992 KB  | 201 624 KB  | n/d        | 368 KB  | 93 %                 |
+| *airlineColumnar*     | 9 999 999  | 201 992 KB  | 201 624 KB  | N/D        | 368 KB  | 93 %                 |
 
 **Conclusiones**
 
@@ -216,7 +216,7 @@ Esta prueba evaluó las ventajas de rendimiento que supone el uso de un almacén
 
 | Nombre de la tabla         | Nombre de la prueba | Promedio de tiempo |
 |--------------------|-----------|--------------|
-| *airlineWithIndex* | RowStore  | 4,67         |
+| *airlineWithIndex* | RowStore  | 4.67         |
 | *airlineColumnar*  | ColStore  | 4,555        |
 
 **Conclusiones**
@@ -238,7 +238,7 @@ En la tabla, los factores *DayOfWeek* se almacenan como cadena.
 | CubeArgEffect | `cube = F`     | 1        | 91,0725      | 9,959204                        |
 |               |                | 4        | 44,09        | 9,959204                        |
 |               | `cube = T`     | 1        | 21,1125      | 9,959204                        |
-|               |                | 4        | 8,08         | 9,959204                        |
+|               |                | 4        | 8.08         | 9,959204                        |
 
 **Conclusiones**
 
@@ -268,8 +268,8 @@ Los resultados de la prueba muestran el tiempo necesario para guardar el modelo 
 
 | Nombre de la tabla | Nombre de la prueba | Promedio de tiempo (en entrenar el modelo) | Tiempo en guardar/cargar el modelo|
 |------------|------------|------------|------------|
-| airline    | SaveModel| 21,59| 2,08|
-| airline    | LoadModelAndPredict | | 2,09 (tiempo de la predicción incluido) |
+| aerolínea    | SaveModel| 21,59| 2,08|
+| aerolínea    | LoadModelAndPredict | | 2,09 (tiempo de la predicción incluido) |
 
 **Conclusiones**
 
@@ -307,7 +307,7 @@ Se usó el siguiente proceso para crear esta configuración:
 
 6. Se actualizó la configuración de Resource Governor para usar la función con los grupos de cargas de trabajo adecuados.
 
-### <a name="results"></a>Resultado
+### <a name="results"></a>Results
 
 La configuración que tuvo el mejor rendimiento en el estudio de comparación de currículos es la siguiente:
 
@@ -400,10 +400,10 @@ Los siguientes vínculos enlazan con información, herramientas y scripts que se
 
 ## <a name="other-articles-in-this-series"></a>Otros artículos de esta serie
 
-[Optimización del rendimiento de R: introducción](sql-server-r-services-performance-tuning.md)
+[Optimización del rendimiento de R: introducción](sql-server-r-services-performance-tuning.md)
 
-[Optimización del rendimiento de R: configuración de SQL Server](sql-server-configuration-r-services.md)
+[Optimización del rendimiento de R: configuración de SQL Server](sql-server-configuration-r-services.md)
 
-[Optimización del rendimiento de R: optimización de datos y de código de R](r-and-data-optimization-r-services.md)
+[Optimización del rendimiento de R: optimización de datos y de código de R](r-and-data-optimization-r-services.md)
 
 [Optimización del rendimiento: resultados de casos prácticos](performance-case-study-r-services.md)

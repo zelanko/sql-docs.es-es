@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9844746d6887c14e5524ed54c39e2de7e0375eb1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73723802"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: Desarrollo de SQL para científicos de datos de R
@@ -41,7 +41,7 @@ Como el tutorial está diseñado para presentar [!INCLUDE[rsql_productname](../.
 
 Se recomienda realizar este tutorial en una estación de trabajo de cliente. Debe poder conectarse en la misma red a un equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con SQL Server y el lenguaje R habilitados. Para obtener instrucciones sobre la configuración de la estación de trabajo, vea [Configuración de un cliente de ciencia de datos para el desarrollo en R](../r/set-up-a-data-science-client.md).
 
-Como alternativa, puede ejecutar el tutorial en un equipo que tenga tanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como un entorno de desarrollo de R, pero esta configuración es desaconsejable en un entorno de producción. Si necesita poner el cliente y el servidor en el mismo equipo, asegúrese de instalar un segundo conjunto de bibliotecas de Microsoft R para enviar scripts de R desde un cliente "remoto". No use las bibliotecas de R que están instaladas en los archivos de programa de la instancia de SQL Server. Concretamente, si usa un equipo, necesita tener la biblioteca RevoScaleR en ambas ubicaciones para admitir las operaciones de cliente y de servidor.
+Como alternativa, puede ejecutar el tutorial en un equipo que tenga tanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como un entorno de desarrollo de R, pero esta configuración es desaconsejable en un entorno de producción. Si necesita colocar el cliente y el servidor en el mismo equipo, asegúrese de instalar un segundo conjunto de bibliotecas de Microsoft R para enviar scripts de R desde un cliente "remoto". No use las bibliotecas de R que están instaladas en los archivos de programa de la instancia de SQL Server. Concretamente, si usa un equipo, necesita tener la biblioteca RevoScaleR en ambas ubicaciones para admitir las operaciones de cliente y de servidor.
 
 + C:\Archivos de programa\Microsoft\R Client\R_SERVER\library\RevoScaleR 
 + C:\Archivos de programa\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR

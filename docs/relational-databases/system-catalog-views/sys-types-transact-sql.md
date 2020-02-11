@@ -1,5 +1,5 @@
 ---
-title: Sys.Types (Transact-SQL) | Microsoft Docs
+title: Sys. Types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095571"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
@@ -33,32 +33,32 @@ ms.locfileid: "68095571"
 
   Contiene una fila por cada tipo del sistema y definido por el usuario.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nombre del tipo. Es exclusivo en el esquema.|  
+|**Name**|**sysname**|Nombre del tipo. Es exclusivo en el esquema.|  
 |**system_type_id**|**tinyint**|Id. del tipo del sistema interno del tipo.|  
-|**user_type_id**|**int**|Id. del tipo. Es único en la base de datos. Tipos de datos del sistema, **user_type_id** = **system_type_id**.|  
+|**user_type_id**|**int**|Id. del tipo. Es único en la base de datos. En el caso de los tipos de datos del sistema, **user_type_id** = **system_type_id**.|  
 |**schema_id**|**int**|Id. del esquema al que pertenece el tipo.|  
 |**principal_id**|**int**|Id. del propietario individual si es distinto al propietario del esquema. De forma predeterminada, los objetos contenidos en el esquema pertenecen al propietario del esquema. No obstante, es posible especificar un propietario alternativo mediante la instrucción ALTER AUTHORIZATION para cambiar la propiedad.<br /><br /> Si no hay un propietario alternativo individual, el valor es NULL.|  
-|**max_length**|**smallint**|Longitud máxima del tipo, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , o **xml**.<br /><br /> Para **texto** columnas, el **max_length** valor será 16.|  
+|**max_length**|**smallint**|Longitud máxima del tipo, en bytes.<br /><br /> -1 = el tipo de datos de la columna es **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)** o **XML**.<br /><br /> En el caso de las columnas de **texto** , el valor de **max_length** será 16.|  
 |**precisión**|**tinyint**|Precisión máxima del tipo si está basado en numerales; de lo contrario, es 0.|  
 |**scale**|**tinyint**|Escala máxima del tipo si está basado en numerales; de lo contrario, es 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación del tipo si está basado en caracteres; de lo contrario, es NULL.|  
 |**is_nullable**|**bit**|El tipo admite valores NULL.|  
 |**is_user_defined**|**bit**|1 = Tipo definido por el usuario.<br /><br /> 0 = tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**is_assembly_type**|**bit**|1 = La implementación del tipo está definida en un ensamblado CLR.<br /><br /> 0 = El tipo está basado en un tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**default_object_id**|**int**|Id. del valor predeterminado independiente que está enlazado al tipo mediante el uso de [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md).<br /><br /> 0 = No hay valor predeterminado.|  
-|**rule_object_id**|**int**|Id. de la regla independiente que está enlazada al tipo mediante el uso de [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md).<br /><br /> 0 = No hay regla.|  
+|**default_object_id**|**int**|IDENTIFICADOR del valor predeterminado independiente que está enlazado al tipo mediante [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md).<br /><br /> 0 = No hay valor predeterminado.|  
+|**rule_object_id**|**int**|IDENTIFICADOR de la regla independiente enlazada al tipo mediante [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md).<br /><br /> 0 = No hay regla.|  
 |**is_table_type**|**bit**|Indica que el tipo es una tabla.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Vistas de catálogo de tipos escalares &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

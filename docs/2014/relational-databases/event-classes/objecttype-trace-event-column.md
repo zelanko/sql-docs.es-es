@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028382"
 ---
 # <a name="objecttype-trace-event-column"></a>Columna de evento de seguimiento ObjectType
@@ -29,7 +29,7 @@ ms.locfileid: "63028382"
   
 ## <a name="object-type-column-values"></a>Valores de la columna Object Type  
   
-|Valor|Definición|  
+|Value|Definición|  
 |-----------|----------------|  
 |8259|Restricción CHECK|  
 |8260|Valor predeterminado (restricción o independiente)|  
@@ -46,8 +46,8 @@ ms.locfileid: "63028382"
 |16975|Object|  
 |17222|Catálogo de texto|  
 |17232|Procedimiento almacenado de CLR|  
-|17235|esquema|  
-|17475|Credencial|  
+|17235|Schema|  
+|17475|Credential:|  
 |17491|Evento de DDL|  
 |17741|Evento de administración|  
 |17747|Evento de seguridad|  
@@ -65,8 +65,8 @@ ms.locfileid: "63028382"
 |19283|ObfusKey|  
 |19521|Inicio de sesión de clave asimétrica|  
 |19523|Inicio de sesión de certificado|  
-|19538|Rol|  
-|19539|Inicio de sesión de SQL|  
+|19538|Role|  
+|19539|Inicio de sesión SQL|  
 |19543|Inicio de sesión de Windows|  
 |20034|Enlace de servicio remoto|  
 |20036|Notificación de evento en base de datos|  
@@ -82,9 +82,9 @@ ms.locfileid: "63028382"
 |20821|Restricción única|  
 |21057|Rol de aplicación|  
 |21059|Certificado|  
-|21075|Servidor|  
+|21075|Server|  
 |21076|Desencadenador de Transact-SQL|  
-|21313|Ensamblado|  
+|21313|Assembly|  
 |21318|Función escalar de CLR|  
 |21321|Función escalar SQL insertada|  
 |21328|Esquema de partición|  
@@ -103,7 +103,7 @@ ms.locfileid: "63028382"
 |22611|XMLSchema|  
 |22868|Tipo|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Requisitos de la aplicación Web
+title: Requisitos de la aplicación web
 ms.custom: ''
 ms.date: 02/13/2017
 ms.prod: sql
@@ -13,21 +13,24 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 851452cd5170abb6328210ecb35bd95b2bb951a3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728090"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos de la aplicación web (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] es una aplicación web hospedada por Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona únicamente en Internet Explorer (IE) 9 o posterior. No se admiten IE 8 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.  
-
-**Para obtener instrucciones sobre cómo instalar y configurar IIS**, vea [Instalación y configuración de IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
   
- Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para crear y configurar la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] configura IIS en el equipo local, de modo que es lo mejor para las tareas iniciales de configuración web. Por ejemplo, configure un entorno de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] con una aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] única, o bien configure la primera aplicación web en una implementación escalada de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Utilice las herramientas de IIS para realizar tareas más complejas, como configurar varios servidores web en una implementación escalada.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] es una aplicación web hospedada por Internet Information Services (IIS). 
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona únicamente en Internet Explorer (IE) 9 o versiones posteriores. No se admiten IE 8 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.  
+
+**Para obtener instrucciones sobre cómo instalar y configurar IIS**, vea [instalar y configurar IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
+  
+ Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para crear y configurar la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . 
+  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] configura IIS en el equipo local, de modo que es lo mejor para las tareas iniciales de configuración web. Por ejemplo, configure un entorno de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] con una aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] única, o bien configure la primera aplicación web en una implementación escalada de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Utilice las herramientas de IIS para realizar tareas más complejas, como configurar varios servidores web en una implementación escalada.  
   
 > [!NOTE]  
 >  Cualquier equipo en el que instale los componentes de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] debe tener las licencias pertinentes. Para obtener más información, consulte el Contrato de licencia para el usuario final (CLUF).  
@@ -40,18 +43,18 @@ ms.locfileid: "73728090"
 -   [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
- Para trabajar en la aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , Silverlight 5 debe estar instalado en el equipo cliente. Si no tiene la versión necesaria de Silverlight, se le pedirá que la instale cuando navegue a un área de la aplicación web que la necesite. Puede instalar Silverlight 5 desde [aquí](https://go.microsoft.com/fwlink/?LinkId=243096).  
+ Para trabajar en la aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , Silverlight 5 debe estar instalado en el equipo cliente. Si no tiene la versión necesaria de Silverlight, se le pedirá que la instale cuando navegue a un área de la aplicación web que la necesite. Puede instalar Silverlight 5 [aquí](https://go.microsoft.com/fwlink/?LinkId=243096).  
   
 ### <a name="role-and-role-services"></a>Rol y servicios del rol  
  En Windows Server 2012 o Windows Server 2012 R2, puede usar el **Administrador del servidor**, que está disponible en Microsoft Management Console (MMC), para instalar el rol **Servidor web (IIS)** y los servicios de rol necesarios.  
  
  
 > [!IMPORTANT]  
->La**compresión de contenido dinámico** está habilitada de manera predeterminada. Esto disminuye considerablemente el tamaño de la respuesta xml y reduce la E/S de red, aunque el uso de CPU aumenta.  Para obtener más información, vea **[CTP 2.0] Rendimiento mejorado** in [What's New in Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
+>La **compresión de contenido dinámico** está habilitada de forma predeterminada. Esto disminuye considerablemente el tamaño de la respuesta xml y reduce la E/S de red, aunque el uso de CPU aumenta.  Para obtener más información, vea **[CTP 2.0] Rendimiento mejorado** in [Novedades en Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Herramientas de administración web<br /><br /> Consola de administración de IIS<br /><br /> Servicios de World Wide Web<br /><br /> Desarrollo de aplicaciones<br /><br /> Extensibilidad de .NET<br /><br /> Extensibilidad de .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensiones ISAPI<br /><br /> Filtros ISAPI<br /><br /> Características HTTP comunes<br /><br /> Documento predeterminado<br /><br /> Examen de directorios<br /><br /> Errores HTTP<br /><br /> Contenido estático<br /><br /> [Nota: no instale Publicación en WebDAV]<br /><br /> Estado y diagnóstico<br /><br /> Registrar HTTP<br /><br /> Monitor de solicitudes<br /><br /> Rendimiento<br /><br /> Compresión de contenido estático<br /><br /> Seguridad<br /><br /> Filtro de solicitudes<br /><br /> Autenticación de Windows|  
+|Internet Information Services<br /><br /> Herramientas de administración web<br /><br /> Consola de administración de IIS<br /><br /> Servicios de World Wide Web<br /><br /> Desarrollo de aplicaciones<br /><br /> Extensibilidad de .NET<br /><br /> Extensibilidad de .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensiones ISAPI<br /><br /> Filtros de ISAPI<br /><br /> Características HTTP comunes<br /><br /> Documento predeterminado<br /><br /> Examen de directorios<br /><br /> Errores HTTP<br /><br /> Contenido estático<br /><br /> [Nota: no instale Publicación en WebDAV]<br /><br /> Estado y diagnóstico<br /><br /> Registrar HTTP<br /><br /> Monitor de solicitudes<br /><br /> Rendimiento<br /><br /> Compresión de contenido estático<br /><br /> Seguridad<br /><br /> Filtro de solicitudes<br /><br /> Autenticación de Windows|  
   
 ### <a name="features"></a>Características 
  En Windows Server 2012 y Windows Server 2012 R2, puede usar **Administrador del servidor** para instalar las siguientes características necesarias.  
@@ -75,12 +78,12 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
 |Tipo|Descripción|  
 |----------|-----------------|  
 |Cuenta de Windows|Debe iniciar sesión en el equipo servidor web con una cuenta de Windows que tenga permiso para configurar roles de Windows, servicios de rol y características, y para crear y administrar grupos de aplicaciones, sitios web y aplicaciones web en IIS, en el equipo local.|  
-|Cuenta de servicio|Cuando cree la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] en [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], debe especificar una identidad para el grupo de aplicaciones en el que se ejecute la aplicación. Esta cuenta puede ser diferente de la cuenta de servicio que se especificó cuando se creó la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Esta identidad debe ser una cuenta de usuario de dominio y se agrega al rol de la base de datos mds_exec en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para tener acceso a las bases de datos. Para más información, vea [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Esta cuenta también se agrega a un grupo de Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, que es el permiso concedido al directorio de compilación temporal, **MDSTempDir**, en el sistema de archivos. Para obtener más información, vea [Permisos de carpetas y archivos&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
+|Cuenta de servicio|Cuando cree la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] en [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], debe especificar una identidad para el grupo de aplicaciones en el que se ejecute la aplicación. Esta cuenta puede ser diferente de la cuenta de servicio que se especificó cuando se creó la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Esta identidad debe ser una cuenta de usuario de dominio y se agrega al rol de la base de datos mds_exec en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para tener acceso a las bases de datos. Para más información, vea [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Esta cuenta también se agrega a un grupo de Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], **MDS_ServiceAccounts**, que es el permiso concedido al directorio de compilación temporal, **MDSTempDir**, en el sistema de archivos. Para obtener más información, vea [Permisos de carpetas y archivos&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
- [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [Página Configuración web &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Cree una aplicación Web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
+ [Página de configuración Web &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

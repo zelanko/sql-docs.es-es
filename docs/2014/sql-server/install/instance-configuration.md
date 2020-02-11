@@ -1,5 +1,5 @@
 ---
-title: Configuración de la instancia | Microsoft Docs
+title: Configuración de instancia | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2016
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68190964"
 ---
 # <a name="instance-configuration"></a>Configuración de instancia
@@ -29,12 +29,13 @@ ms.locfileid: "68190964"
   
  La instancia puede ser una instancia predeterminada o una instancia con nombre. El nombre de instancia predeterminado es MSSQLSERVER. Para realizar una conexión, no es necesario que un cliente especifique el nombre de la instancia. La instancia con nombre queda determinada por el usuario durante la instalación. Puede instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como una instancia con nombre sin instalar primero la instancia predeterminada. Al mismo tiempo, solo una instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independientemente de la versión, puede ser la instancia predeterminada.  
   
- **¡Alerta!** Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, puede especificar el nombre de instancia cuando complete una instancia preparada en la página **Configuración de instancia**. Puede optar por configurar la instancia preparada que está completando como una instancia predeterminada si no existe una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo.  
+ **OnAlert!** Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, puede especificar el nombre de instancia cuando complete una instancia preparada en la página **Configuración de instancia**. Puede optar por configurar la instancia preparada que está completando como una instancia predeterminada si no existe una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo.  
   
 ## <a name="multiple-instances"></a>Instancias múltiples  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un solo servidor o procesador, pero solo una puede ser la predeterminada. Todas las demás deben ser instancias con nombre. Un equipo puede ejecutar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simultáneamente y cada instancia se ejecuta independientemente de las otras instancias.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un solo servidor o procesador, pero solo una puede ser la predeterminada. Todas las demás deben ser instancias con nombre. Un equipo puede ejecutar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simultáneamente y cada instancia se ejecuta independientemente de las otras instancias.  
   
- Para obtener más información, consulte [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ Para obtener más información, vea [Especificaciones de capacidad máxima para SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ## <a name="options"></a>Opciones  
  Solo instancias de clústeres de conmutación por error: especifique el nombre de red en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este nombre identifica la instancia en clúster de conmutación por error en la red.  
@@ -57,7 +58,7 @@ ms.locfileid: "68190964"
   
 -   Los nombres no pueden comenzar ni terminar por un guión bajo (_).  
   
--   Los nombres de instancia no pueden contener el término "Default" ni otras palabras clave reservadas. Si se utiliza una palabra clave reservada en un nombre de instancia, se producirá un error en el programa de instalación. Para obtener más información, vea [Palabras clave reservadas &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
+-   Los nombres de instancia no pueden contener el término "Default" ni otras palabras clave reservadas. Si se utiliza una palabra clave reservada en un nombre de instancia, se producirá un error en el programa de instalación. Para obtener más información, vea [palabras clave reservadas &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
   
 -   Si especifica MSSQLServer como nombre de instancia, se creará una instancia predeterminada.  
   
@@ -71,12 +72,12 @@ ms.locfileid: "68190964"
   
 -   En los nombres de instancia no se permiten espacios insertados ni otros caracteres especiales. Tampoco se permiten la barra diagonal inversa (\\), la coma (,), los dos puntos (:), el punto y coma (;), la comilla simple ('), el símbolo Y comercial (&), el guion (-) ni la arroba (@).  
   
--   **Se pueden usar únicamente caracteres que son válidos en la página de códigos actual de Windows en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los nombres de instancia. Si se usa un carácter Unicode no admitido, se producirá un error de instalación.**  
+-   **En los nombres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia solo se pueden usar caracteres que sean válidos en la página de códigos actual de Windows. Si se utiliza un carácter Unicode no admitido, se producirá un error en el programa de instalación.**  
   
  **Instancias y características detectadas**  
  Vea una lista de las instancias y los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados en el equipo en el que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Id. de instancia** : de manera predeterminada, el nombre de instancia se usa como identificador de la instancia. Se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Con una instancia predeterminada, el nombre y el identificador serían MSSQLSERVER. Para usar un identificador de instancia no predeterminado, especifíquelo en el campo **Id. de instancia** .  
+ **ID** . de instancia: de forma predeterminada, el nombre de instancia se usa como identificador de instancia. Se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Con una instancia predeterminada, el nombre y el identificador serían MSSQLSERVER. Para usar un identificador de instancia no predeterminado, especifíquelo en el campo **ID** . de instancia.  
   
 > [!IMPORTANT]  
 >  Con SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el identificador de instancia que se muestra en esta página es el identificador de instancia especificado durante el paso de preparación de la imagen en el proceso SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No podrá especificar un identificador de instancia diferente durante el paso para completar la imagen.  
@@ -84,7 +85,7 @@ ms.locfileid: "68190964"
 > [!NOTE]  
 >  No se admiten identificadores de instancia que comiencen por un guión bajo (_) o que contengan el signo de almohadilla (#) o el signo de dólar ($).  
   
- Para obtener más información sobre los directorios, las ubicaciones de archivos y los nombres de identificador de instancia, vea [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
+ Para obtener más información acerca de los directorios, las ubicaciones de archivos y los nombres de IDENTIFICADOres de instancia, vea [ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
   
  Todos los componentes de una instancia determinada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se administran como una unidad. Todos los Service Pack y actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplicarán a cada componente de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -96,10 +97,11 @@ ms.locfileid: "68190964"
   
 -   **Misma configuración de idioma**  
   
--   **Mismo estado de clúster**  
+-   **Mismo estado en clúster**  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no detecta los clústeres.  
+    >  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no detecta los clústeres.  
   
 -   **Mismo sistema operativo**  
   

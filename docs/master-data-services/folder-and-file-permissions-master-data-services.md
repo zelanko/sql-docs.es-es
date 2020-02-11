@@ -15,10 +15,10 @@ ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2e125f1dc6b4cb9f30a69c7410c5c404b38d42ba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728199"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Permisos de carpetas y archivos (Master Data Services)
@@ -39,8 +39,8 @@ ms.locfileid: "73728199"
 |---------------------------|-----------------|  
 |CREATOR OWNER|Permisos especiales|  
 |SYSTEM|Permisos especiales|  
-|Administradores de|Permisos especiales|  
-|Usuarios|Lectura y ejecución, mostrar contenido de carpetas, lectura|  
+|Administradores|Permisos especiales|  
+|Users|Lectura y ejecución, mostrar contenido de carpetas, lectura|  
 |TrustedInstaller|Mostrar contenido de carpetas, permisos especiales|  
   
 ## <a name="explicit-permissions"></a>Permisos explícitos  
@@ -51,7 +51,7 @@ ms.locfileid: "73728199"
 |Nombre de grupo o cuenta|Permisos|  
 |---------------------------|-----------------|  
 |SYSTEM|Modificar, lectura y ejecución, mostrar contenido de carpetas, lectura, escritura|  
-|Administradores de|Modificar, lectura y ejecución, mostrar contenido de carpetas, lectura, escritura|  
+|Administradores|Modificar, lectura y ejecución, mostrar contenido de carpetas, lectura, escritura|  
 |MDS_ServiceAccounts|Modificar, lectura y ejecución, mostrar contenido de carpetas, lectura, escritura|  
   
 ###### <a name="webconfig-permissions"></a>Permisos de Web.config  
@@ -59,12 +59,12 @@ ms.locfileid: "73728199"
 |Nombre de grupo o cuenta|Permisos|  
 |---------------------------|-----------------|  
 |SYSTEM|Control total, modificar, lectura y ejecución, lectura, escritura|  
-|Administradores de|Control total, modificar, lectura y ejecución, lectura, escritura|  
+|Administradores|Control total, modificar, lectura y ejecución, lectura, escritura|  
 |MDS_ServiceAccounts|Lectura y ejecutar, lectura|  
   
  Para obtener más información sobre el contenido del archivo Web.config de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], consulte [Referencia de la configuración web &#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   

@@ -11,21 +11,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e663d99b799bdfaeedecfd9324222a6f01f6aa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127777"
 ---
-# <a name="localdberrorwaittimeout"></a>LOCALDB_ERROR_WAIT_TIMEOUT
+# <a name="localdb_error_wait_timeout"></a>LOCALDB_ERROR_WAIT_TIMEOUT
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|277|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|277|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|Se agotó el tiempo de espera en el método de la API de la instancia de Local Database.|  
   

@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096128"
 ---
 # <a name="hadoop-connection-manager"></a>Administrador de conexiones de Hadoop
@@ -60,7 +60,7 @@ ms.locfileid: "74096128"
   
     5.  Si selecciona la autenticación **Kerberos** , escriba los valores **Password** (Contraseña) y **Domain**(Dominio) del usuario.  
   
-5.  Haga clic en **Probar conexión**. (Solo se prueba la conexión habilitada).  
+5.  Seleccione **Test Connection** (Probar conexión). (Solo se prueba la conexión habilitada).  
   
 6.  Seleccione **Aceptar** para cerrar el cuadro de diálogo.  
 
@@ -90,7 +90,7 @@ En el equipo SSIS:
 
     Después de ejecutar estos comandos, reinicie el equipo.
 
-2.  Compruebe la configuración con el comando **Ksetup**. La salida debería ser similar a la del siguiente ejemplo:
+2.  Compruebe la configuración con el comando **Ksetup**. La salida debe tener un aspecto similar al siguiente ejemplo:
 
     ```
     C:> Ksetup
@@ -152,7 +152,7 @@ En el servidor KDC:
 
     Reinicie el servicio KDC después de la configuración.
 
-2.  Prepare una entidad de seguridad denominada **krbtgt/REALM.COM\@AD.COM** en el servidor KDC. Use el siguiente comando:
+2.  Prepare una entidad de seguridad denominada **krbtgt/REALM.COM\@AD.COM** en el servidor KDC. Use el comando siguiente:
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -206,7 +206,7 @@ Ejecute los siguientes comandos **Ksetup** para agregar una entrada de dominio K
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tarea de Hive de Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Tarea de Pig con Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Tarea Sistema de archivos de Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  

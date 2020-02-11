@@ -14,10 +14,10 @@ ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729222"
 ---
 # <a name="hierarchies-master-data-services"></a>Jerarquías (Master Data Services)
@@ -40,7 +40,7 @@ ms.locfileid: "73729222"
   
 -   Jerarquías irregulares a partir de una entidad única, que se denominan jerarquías explícitas. Para obtener más información, consulte [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md).  
   
--   Jerarquías basadas en el nivel a partir de varias entidades, basándose en las relaciones existentes entre las entidades y sus atributos, que se denominan jerarquías derivadas. Para obtener más información, consulte [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
+-   Jerarquías basadas en el nivel a partir de varias entidades, basándose en las relaciones existentes entre las entidades y sus atributos, que se denominan jerarquías derivadas. Para obtener más información, consulte [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
   
 > [!NOTE]  
 >  Todos los miembros de una jerarquía deben estar dentro del mismo modelo.  
@@ -53,14 +53,14 @@ ms.locfileid: "73729222"
 ## <a name="hierarchy-example"></a>Ejemplo de jerarquía  
  En el ejemplo siguiente, los miembros de Product se agrupan según los miembros de la subcategoría.  
   
- ![Ejemplo de jerarquía agrupada por Subcategoría](../master-data-services/media/mds-conc-hierarchy.gif "Ejemplo de jerarquía agrupada por Subcategoría")  
+ ![Ejemplo de jerarquía agrupada por subcategoría](../master-data-services/media/mds-conc-hierarchy.gif "Ejemplo de jerarquía agrupada por subcategoría")  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear una jerarquía explícita.|[Crear una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Crear una jerarquía derivada.|[Crear una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Crear una jerarquía explícita.|[Cree una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Crear una jerarquía derivada.|[Cree una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Ocultar o eliminar niveles en una jerarquía derivada existente.|[Ocultar o eliminar niveles en una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  

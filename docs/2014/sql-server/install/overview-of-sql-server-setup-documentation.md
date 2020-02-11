@@ -1,5 +1,5 @@
 ---
-title: Información general de la documentación del programa de instalación SQL Server | Microsoft Docs
+title: Información general de la documentación de instalación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093558"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Información general de la documentación de instalación de SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "66093558"
   
      Describe las opciones para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [Instalar las características de BI de SQL Server 2014](install-sql-server-business-intelligence-features.md)  
+-   [Instalar las características de SQL Server 2014 BI](install-sql-server-business-intelligence-features.md)  
   
      Describe las opciones para instalar las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que forman parte de la plataforma de Microsoft BI, que incluyen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y varias aplicaciones cliente usadas para crear o trabajar con datos analíticos.  
   

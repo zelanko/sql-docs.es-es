@@ -16,13 +16,13 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771342"
 ---
-# <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
+# <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crea un trabajo de agente que genera una instantánea de datos filtrados para una publicación con filtros de fila con parámetros. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación. Lo utiliza el administrador para crear manualmente trabajos de instantáneas de datos filtrados para los suscriptores.  
@@ -75,13 +75,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con que se programa el trabajo de instantáneas de datos filtrados. *frequency_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4** (valor predeterminado)|Cada día|  
-|**8**|Programación semanal|  
-|**16**|Programación mensual|  
+|**4** (valor predeterminado)|Diariamente|  
+|**203**|Semanal|  
+|**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
 |**128**|Periódica|  
@@ -90,34 +90,34 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 |Valor de *frequency_type*|Efecto en *frequency_interval*|  
 |--------------------------------|-------------------------------------|  
-|**1**|*frequency_interval* no se utiliza.|  
+|**1**|*frequency_interval* no se usa.|  
 |**4** (valor predeterminado)|Cada *frequency_interval* días, con un valor predeterminado de Daily.|  
-|**8**|*frequency_interval* es uno o más de los siguientes (combinados con un [ &#124; &#40;operador lógico&#41; &#40;OR bit a&#41; bit de Transact-SQL](../../t-sql/language-elements/bitwise-or-transact-sql.md) ):<br /><br /> **1** = Domingo &#124; **2** = lunes &#124; **4** = martes &#124; **8** = miércoles &#124; **16** = jueves &#124; **32** = viernes &#124; **64** = sábado|  
-|**16**|En el día *frequency_interval* del mes.|  
-|**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = Domingo &#124; **2** = lunes &#124; **3** = martes &#124; **4** = miércoles &#124; **5** = jueves &#124; **6** = viernes &#124; **7** = sábado &#124; **8** = día &#124; **9** = día &#124; de la semana **10** = día del fin de semana|  
-|**64**|*frequency_interval* no se utiliza.|  
-|**128**|*frequency_interval* no se utiliza.|  
+|**203**|*frequency_interval* es uno o más de los siguientes (combinados con un [&#124; &#40;operador lógico OR bit a bit&#41; &#40;de TRANSACT-&#41;SQL](../../t-sql/language-elements/bitwise-or-transact-sql.md) ):<br /><br /> **1** = Domingo &#124; **2** = lunes &#124; **4** = martes &#124; **8** = miércoles &#124; **16** = jueves &#124; **32** = viernes &#124; **64** = sábado|  
+|**dieciséi**|En el *frequency_interval* día del mes.|  
+|**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = Domingo &#124; **2** = lunes &#124; **3** = martes &#124; **4** = miércoles &#124; **5** = jueves &#124; **6** = viernes &#124; **7** = sábado &#124; **8** = día &#124; **9** = día de la semana &#124; **10** = día del fin de semana|  
+|**64**|*frequency_interval* no se usa.|  
+|**128**|*frequency_interval* no se usa.|  
   
 `[ @frequency_subday = ] frequency_subday`Especifica las unidades para *frequency_subday_interval*. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
-|**2**|Second|  
+|**1**|Una sola vez|  
+|**2**|Segundo|  
 |**4** (valor predeterminado)|Minute|  
-|**8**|Hour|  
+|**203**|Hour|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Es el número de períodos de *frequency_subday* que se producen entre cada ejecución del trabajo. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es 5.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Es el número de períodos *frequency_subday* que se producen entre cada ejecución del trabajo. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es 5.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la aparición del trabajo de instantáneas de datos filtrados en cada mes. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1** (predeterminado)|Primero|  
-|**2**|Second|  
+|**1** (valor predeterminado)|Primero|  
+|**2**|Segundo|  
 |**4**|Tercero|  
-|**8**|Cuarto|  
-|**16**|Último|  
+|**203**|Cuarto|  
+|**dieciséi**|Último|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es 0.  
   
@@ -131,16 +131,16 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Tipo de cursor  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Identifica el trabajo de instantánea de datos filtrados en la tabla del sistema [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) .|  
+|**sesión**|**int**|Identifica el trabajo de instantánea de datos filtrados en la tabla del sistema [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) .|  
 |**dynamic_snapshot_jobname**|**sysname**|Nombre del trabajo de instantáneas de datos filtrados.|  
-|**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica de forma única [!INCLUDE[msCoName](../../includes/msconame-md.md)] el trabajo del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente en el distribuidor.|  
+|**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica de forma única [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el trabajo del agente en el distribuidor.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_adddynamicsnapshot_job** se utiliza en la replicación de mezcla para las publicaciones que usan un filtro con parámetros.  
   
 ## <a name="example"></a>Ejemplo  
@@ -149,10 +149,10 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_adddynamicsnapshot_job**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una instantánea para una publicación de combinación con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
- [sp_helpdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
+ [sp_dropdynamicsnapshot_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
+ [sp_helpdynamicsnapshot_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   
   

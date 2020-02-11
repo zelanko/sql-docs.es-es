@@ -15,10 +15,10 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245463"
 ---
 # <a name="monitor-dqs-activities"></a>Supervisar las actividades de DQS
@@ -27,14 +27,14 @@ ms.locfileid: "75245463"
 
   En este tema se describe cómo supervisar de forma centralizada las actividades siguientes en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): detección de conocimiento, administración de dominios, directiva de coincidencia, limpieza de datos, coincidencia de datos y limpieza SSIS.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="LimitationsRestrictions"></a>Limitaciones y restricciones  
+###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Solo los usuarios que dispongan del rol dqs_administrator en la base de datos DQS_Main pueden terminar una actividad o detener un proceso dentro de una actividad.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
   
 -   Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para ver las actividades de DQS.  
   

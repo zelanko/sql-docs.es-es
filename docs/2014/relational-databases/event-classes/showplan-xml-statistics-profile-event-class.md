@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea60aef999f871f28e21839ce0d7808aad0727b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63053082"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile, clase de eventos
-  La clase de eventos Showplan XML Statistics Profile se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. Incluya la clase de eventos Showplan XML Statistics Profile para identificar los operadores de Showplan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  La clase de eventos SHOWPLAN XML Statistics Profile [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se produce cuando ejecuta una instrucción SQL. Incluya la clase de eventos SHOWPLAN XML Statistics Profile Profile para identificar los operadores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SHOWPLAN en.  
   
  La clase de eventos Showplan XML Statistics Profile muestra datos completos de tiempo de compilación, por lo que los seguimientos que contienen esta clase de eventos pueden producir una importante sobrecarga en el rendimiento. Para minimizar la sobrecarga, limite el uso de esta clase de evento a los seguimientos que supervisen problemas específicos durante periodos breves.  
   
@@ -35,10 +35,10 @@ ms.locfileid: "63053082"
 |ApplicationName|`nvarchar`|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |BinaryData|`image`|Costo estimado de la consulta.|2|No|  
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|9|Sí|  
-|DatabaseID|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|Clase de eventos|`int`|Tipo de evento = 146.|27|Sin |  
-|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|Sin |  
+|Clase de eventos|`int`|Tipo de evento = 146.|27|No|  
+|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IntegerData|`int`|Número estimado de filas devueltas.|25|Sí|  
@@ -51,8 +51,8 @@ ms.locfileid: "63053082"
 |ObjectID|`int`|Identificador del objeto asignado por el sistema.|22|Sí|  
 |ObjectName|`nvarchar`|Nombre del objeto al que se hace referencia.|34|Sí|  
 |ObjectType|`int`|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
-|IdSolicitud|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|Sin |  
+|RequestID|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
+|nombreDeServidor|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
@@ -60,7 +60,7 @@ ms.locfileid: "63053082"
 |TransactionID|`bigint`|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|`bigint`|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Referencia de operadores lógicos y físicos del plan de presentación](../showplan-logical-and-physical-operators-reference.md)  

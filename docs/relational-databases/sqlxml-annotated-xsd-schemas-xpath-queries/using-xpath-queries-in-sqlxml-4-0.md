@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcfafc014fe9a9b494c79c879caa7d272fbc7903
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247099"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Utilizar consultas XPath en SQLXML 4.0
@@ -43,7 +43,7 @@ ms.locfileid: "75247099"
  [Tipos de datos de XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
  Describe tipos de datos XPath, que son significativamente diferentes de los de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y XSD.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Formato XML del lado cliente &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

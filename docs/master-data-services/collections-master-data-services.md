@@ -14,10 +14,10 @@ ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19a9d925b07b83e5ed26b73484cea955773364c6
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728605"
 ---
 # <a name="collections-master-data-services"></a>Colecciones (Master Data Services)
@@ -39,15 +39,15 @@ ms.locfileid: "73728605"
  Al crear una colección, aparecerá automáticamente como el propietario. Si es administrador, puede crear otros atributos para la colección según sea necesario.  
   
 ## <a name="subscription-views-for-collections"></a>Vistas de suscripciones para colecciones  
- Hay dos tipos de vistas de suscripciones que muestran colecciones. El formato **Atributos de colección** muestra una lista de colecciones y todos los atributos relacionados con las colecciones (como la descripción o el propietario). El formato **Colecciones** muestra todos los miembros en todas las colecciones, junto con cada ponderación y criterio de ordenación de los miembros. Para obtener más información, consulte [Overview: Exporting Data &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md).  
+ Hay dos tipos de vistas de suscripciones que muestran colecciones. El formato **Atributos de colección** muestra una lista de colecciones y todos los atributos relacionados con las colecciones (como la descripción o el propietario). El formato **Colecciones** muestra todos los miembros en todas las colecciones, junto con cada ponderación y criterio de ordenación de los miembros. Para obtener más información, consulte [Información general: exportar datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md).  
   
  Si establece valores de ponderación para los miembros específicos de una colección, estos valores estarán disponibles en las vistas de suscripción relacionadas.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear una nueva colección.|[Crear una colección &#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
+|Crear una nueva colección.|[Cree una colección &#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
 |Agregar miembros a una colección existente.|[Agregar miembros a una colección &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cf5f597b739f4fd121d1c4174039dae5379122f0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73768269"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copiar datos de forma masiva mediante IRowsetFastLoad (OLE DB)
@@ -30,12 +30,12 @@ ms.locfileid: "73768269"
   
  El consumidor notifica a SQLOLEDB su necesidad de realizar una copia masiva estableciendo la propiedad SSPROP_ENABLEFASTLOAD específica del proveedor SQLOLEDB en VARIANT_TRUE. Con la propiedad establecida en el origen de datos, el consumidor crea una sesión SQLOLEDB. La nueva sesión permite al consumidor acceder a **IRowsetFastLoad**.  
   
- Hay disponible un ejemplo completo donde se muestra el uso de **IRowsetFastLoad** para la copia masiva de los registros en una tabla. En este ejemplo, se agregan 10 registros a la tabla **IRFLTable**. Es necesario crear la tabla **IRFLTable** en la base de datos.  
+ Hay disponible un ejemplo completo donde se muestra el uso de **IRowsetFastLoad** para la copia masiva de los registros en una tabla. En este ejemplo, se agregan 10 registros a la tabla **IRFLTable**. Debe crear la tabla **IRFLTable** en la base de datos.  
   
  Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>Para realizar una copia masiva de datos en una tabla de SQL Server  
   

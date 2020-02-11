@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 026c588f2fc35a6cb256a63046ad91e5d1b5641a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830252"
 ---
 # <a name="select-a-package"></a>Seleccionar un paquete
@@ -28,7 +28,7 @@ ms.locfileid: "62830252"
  **Ubicación**  
  Especifique la ubicación del paquete. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Establezca la ubicación de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La selección de este valor muestra las opciones dinámicas, **Servidor**, **Utilizar autenticación de Windows**, **Utilizar autenticación de SQL Server**, **Nombre de usuario**y **Contraseña**.|  
 |Archivo DTSX|Establezca la ubicación de un archivo DTSX. La selección de este valor muestra la opción dinámica **Nombre de archivo**.|  
@@ -48,7 +48,7 @@ ms.locfileid: "62830252"
  **Utilizar autenticación de SQL Server**  
  Haga clic en esta opción para usar la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si está usando la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , proporcione un nombre de usuario para usarlo cuando inicie sesión en el servidor.  
   
  **Contraseña**  
@@ -58,7 +58,7 @@ ms.locfileid: "62830252"
  **Nombre de archivo**  
  Proporcione la ruta de acceso a un paquete, o bien haga clic en el botón Examinar **(…)** y busque el paquete.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tarea Cola de mensajes](message-queue-task.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727677"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Extensión del lenguaje Python en SQL Server
@@ -37,7 +37,7 @@ Los paquetes de Python que Microsoft agrega para cargas de trabajo paralelas y d
 
 | Biblioteca | Descripción |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Admite objetos de origen de datos y la exploración, manipulación, transformación y visualización de datos. Admite la creación de contextos de proceso remotos, así como varios modelos de Machine Learning escalables, como **rxLinMod**. Para más información, vea [Módulo revoscalepy en SQL Server](../python/ref-py-revoscalepy.md).  |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Admite objetos de origen de datos y la exploración, manipulación, transformación y visualización de datos. Admite la creación de contextos de proceso remotos, así como varios modelos de aprendizaje automático escalables, como **rxLinMod**. Para más información, vea [Módulo revoscalepy en SQL Server](../python/ref-py-revoscalepy.md).  |
 | [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contiene algoritmos de Machine Learning que se han optimizado para ser más rápidos y precisos, así como transformaciones en línea para trabajar con texto e imágenes. Para más información, vea [Módulo microsoftml en SQL Server](../python/ref-py-microsoftml.md). |
 
 Microsoftml y revoscalepy están estrechamente ligados; así, los orígenes de datos usados en microsoftml se definen como objetos de revoscalepy. Las limitaciones de contexto de proceso de revoscalepy se trasladan a microsoftml; es decir, todas las funciones están disponibles para las operaciones locales, pero cambiar a un contexto de proceso remoto requiere RxInSqlServer.
@@ -52,7 +52,7 @@ Entre los contextos de proceso admitidos se incluyen el contexto de proceso loca
 
 El contexto de proceso local, como cabría esperar, incluye la ejecución de código de Python en el mismo servidor que la instancia del motor de base de datos, con código dentro de T-SQL o insertado en un procedimiento almacenado. También se puede ejecutar el código desde un IDE de Python local y hacer que el script se ejecute en el equipo de SQL Server, mediante la definición de un contexto de proceso remoto.
 
-## <a name="execution-architecture"></a>Arquitectura de ejecución
+## <a name="execution-architecture"></a>Arquitectura de la ejecución
 
 En los siguientes diagramas se describe la interacción de los componentes de SQL Server con el runtime de Python en cada uno de los escenarios admitidos: la ejecución de un script en la base de datos y la ejecución de forma remota desde un terminal de Python, usando un contexto de proceso de SQL Server.
 

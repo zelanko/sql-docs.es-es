@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827566"
 ---
 # <a name="define-a-state-variable"></a>Definir una variable de estado
@@ -84,8 +84,8 @@ ms.locfileid: "62827566"
   
  Si no usa la tarea Control CDC con la persistencia automática de estado, debe cargar el valor de la variable del almacenamiento persistente donde se guardó su valor la última vez que el paquete se ejecutó y escribirlo de nuevo en el almacenamiento persistente cuando procesamiento del intervalo de procesamiento actual se complete.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CDC Control Task](../control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../cdc-control-task-editor.md)  
+ [Editor de la tarea Control CDC](../cdc-control-task-editor.md)  
   
   

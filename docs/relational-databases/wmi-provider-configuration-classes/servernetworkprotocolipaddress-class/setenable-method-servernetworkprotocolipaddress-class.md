@@ -18,10 +18,10 @@ ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f5b002d205ea7077fded8c2d253e78017536b753
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659388"
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>Método SetEnable (clase ServerNetworkProtocolIPAddress)
@@ -36,15 +36,15 @@ object.SetEnable()
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  A [clase ServerNetworkProtocolIPAdress](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) que representa una dirección IP del protocolo de red en la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
- [Configuración de protocolos de red de servidor y bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

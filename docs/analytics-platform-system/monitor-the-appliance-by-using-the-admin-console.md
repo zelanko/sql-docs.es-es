@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400943"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Supervisar el dispositivo con la consola de administración-Analytics Platform System
@@ -31,7 +31,7 @@ Muestra la topología del dispositivo con indicadores que muestran el estado de 
   
 Muestra alertas de hardware y software.  
   
-Supervisión del rendimiento  
+Monitor de rendimiento  
 Muestra gráficos del monitor de rendimiento.  
   
 **Almacenamiento de datos paralelos**  
@@ -61,7 +61,7 @@ Muestra una lista de bloqueos de recursos de PDW y su estado actual.
 Storage  
 Resume el uso del almacenamiento de PDW.  
   
-Supervisión del rendimiento  
+Monitor de rendimiento  
 Muestra gráficos del monitor de rendimiento de PDW.  
  
 > [!NOTE]  
@@ -91,6 +91,6 @@ La consola de administración de proporciona la capacidad de supervisar lo sigui
 |Supervise la información adicional para las cargas, copias de seguridad y restauraciones.|Haga clic en **cargas** o **copias de seguridad/restauraciones**.|  
 |Información de rendimiento|Haga clic en **monitor de rendimiento**.|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Supervisión de dispositivos &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

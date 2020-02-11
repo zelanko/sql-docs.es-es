@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL) | Microsoft Docs
+title: Sys. sp_xtp_checkpoint_force_garbage_collection (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b230fb659b41f16541fd841f1ff8b6f03d19cee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120035"
 ---
-# <a name="sysspxtpcheckpointforcegarbagecollection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
+# <a name="syssp_xtp_checkpoint_force_garbage_collection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Marca los archivos de origen utilizados en la operación de mezcla con el número de secuencia de registro (LSN) después del cual no son necesarios y pueden ser eliminados por el recolector de elementos no utilizados. Además, mueve los archivos cuyo LSN asociado es inferior al punto de truncamiento de registro a la recolección de elementos no utilizados FILESTREAM.  
@@ -48,7 +48,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>Tipo de cursor  
  Una fila devuelta contiene la siguiente información:  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |num_collected_items|Indica el número de archivos que se han movido a la recolección de elementos no utilizados FILESTREAM. Estos son los archivos cuyo número de secuencia de registro (LSN) es menor que el LSN del punto de truncamiento del registro|  
 |num_marked_for_collection_items|Indica el número de archivos delta o de datos cuyo LSN se ha actualizado con el blockID de registro del LSN de fin de registro.|  
@@ -63,7 +63,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 exec [sys].[sp_xtp_checkpoint_force_garbage_collection] hkdb1  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

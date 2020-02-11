@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_cached_plans (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_cached_plans (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -21,41 +21,41 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68263942"
 ---
-# <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
+# <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada plan de consulta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena en caché para agilizar la ejecución. Puede usar esta vista de administración dinámica para ver los planes de consulta almacenados en caché, el texto de las consultas almacenadas en caché, la cantidad de memoria que ocupan los planes y el contador de reutilización de los planes almacenados en caché.  
   
- En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, cada fila que contiene datos que no pertenecen al inquilino conectado se filtra. Además, los valores de las columnas **memory_object_address** y **pool_id** se filtran; el valor de columna se establece en NULL.  
+ En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, se filtran todas las filas que contienen datos que no pertenecen al inquilino conectado. Además, los valores de las columnas **memory_object_address** y **pool_id** se filtran; el valor de la columna se establece en NULL.  
   
 > [!NOTE]  
->  Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_exec_cached_plans**.  
+>  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_exec_cached_plans**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|Identificador del depósito de hash en el que se almacena en caché la entrada. El valor indica un intervalo comprendido entre 0 y el tamaño de la tabla hash para el tipo de caché.<br /><br /> En la memoria caché de planes SQL y planes de objetos, el tamaño de la tabla hash puede ser de hasta 10007 en sistemas de 32 bits y de hasta 40009 en sistemas de 64 bits. En la memoria caché de árboles enlazados, el tamaño de la tabla hash puede ser de hasta 1009 en sistemas de 32 bits y de hasta 4001 en sistemas de 64 bits. En la memoria caché de procedimientos almacenados extendidos, el tamaño de la tabla hash puede ser de hasta 127 en sistemas de 32 y de 64 bits.|  
-|refcounts|**int**|Número de objetos de caché que hacen referencia a este objeto de caché. **RefCounts** debe ser al menos 1 para una entrada en la memoria caché.|  
+|refcounts|**int**|Número de objetos de caché que hacen referencia a este objeto de caché. **RefCounts** debe ser al menos 1 para que haya una entrada en la memoria caché.|  
 |usecounts|**int**|Número de veces que se ha buscado el objeto de caché. Este número no se incrementa cuando las consultas con parámetros encuentran un plan en la memoria caché. Se puede incrementar varias veces cuando se utiliza un plan de representación.|  
 |size_in_bytes|**int**|Número de bytes consumidos por el objeto de caché.|  
-|memory_object_address|**varbinary(8)**|Dirección de memoria de la entrada de caché. Este valor se puede usar con [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) para obtener el análisis de la memoria del plan almacenado en caché y con [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)para obtener el costo de almacenamiento en caché la entrada.|  
-|cacheobjtype|**nvarchar(34)**|Tipo del objeto en la memoria caché. El valor puede ser uno de los siguientes:<br /><br /> Plan compilado<br /><br /> Código auxiliar del plan compilado<br /><br /> Árbol de análisis<br /><br /> Procedimiento extendido<br /><br /> Función compilada CLR<br /><br /> Procedimiento compilado CLR|  
-|objtype|**nvarchar(16)**|Tipo de objeto. A continuación se muestran los valores posibles y sus correspondientes descripciones.<br /><br /> Procedimiento: Procedimiento almacenado<br />Preparado: Instrucción preparada<br />Ad hoc: Consulta ad hoc. Hace referencia a [!INCLUDE[tsql](../../includes/tsql-md.md)] enviada como eventos de lenguaje mediante **osql** o **sqlcmd** en lugar de como llamadas a procedimiento remoto.<br />ReplProc: Procedimiento de filtro de replicación<br />Desencadenador: Desencadenador<br />Vista: Ver<br />Predeterminado: Default<br />UsrTab: Tabla de usuario<br />SysTab: Tabla del sistema<br />Comprobar: Restricción CHECK<br />Regla: Regla|  
-|plan_handle|**varbinary(64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con las siguientes funciones de administración dinámica:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
+|memory_object_address|**varbinary(8**|Dirección de memoria de la entrada de caché. Este valor se puede usar con [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) para obtener el análisis de la memoria del plan almacenado en caché y con [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md) para obtener el costo de almacenar en caché la entrada.|  
+|cacheobjtype|**nvarchar (34)**|Tipo del objeto en la memoria caché. El valor puede ser uno de los siguientes:<br /><br /> Plan compilado<br /><br /> Código auxiliar del plan compilado<br /><br /> Árbol de análisis<br /><br /> Procedimiento extendido<br /><br /> Función compilada CLR<br /><br /> Procedimiento compilado CLR|  
+|objtype|**nvarchar (16)**|Tipo de objeto. A continuación se muestran los valores posibles y sus descripciones correspondientes.<br /><br /> Proc: procedimiento almacenado<br />Preparada: instrucción preparada<br />Adhoc: consulta ad hoc. Hace referencia [!INCLUDE[tsql](../../includes/tsql-md.md)] a enviado como eventos de lenguaje mediante **osql** o **sqlcmd** en lugar de como llamadas a procedimiento remoto.<br />ReplProc: Replication-Filter-procedure<br />Desencadenador: desencadenador<br />Vista: ver<br />Valor predeterminado: predeterminado<br />UsrTab: tabla de usuario<br />SysTab: tabla del sistema<br />Comprobar: restricción CHECK<br />Regla: regla|  
+|plan_handle|**varbinary (64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con las siguientes funciones de administración dinámica:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|El identificador del grupo de recursos de servidor considerado para este uso de memoria del plan.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
  <sup>1</sup>  
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requieren el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere el **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="examples"></a>Ejemplos  
   
@@ -71,7 +71,7 @@ ORDER BY usecounts DESC;
 GO  
 ```  
   
-### <a name="b-returning-query-plans-for-all-cached-triggers"></a>b. Devolver los planes de consulta de todos los desencadenadores almacenados en caché  
+### <a name="b-returning-query-plans-for-all-cached-triggers"></a>B. Devolver los planes de consulta de todos los desencadenadores almacenados en caché  
  En el ejemplo siguiente se devuelven los planes de consulta de todos los desencadenadores almacenados en caché.  
   
 ```sql  
@@ -83,7 +83,7 @@ GO
 ```  
   
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>C. Devolver las opciones SET con las que se compiló el plan  
- En el ejemplo siguiente se devuelven las opciones SET con las que se compiló el plan. El `sql_handle` de también se devuelve el plan. El operador PIVOT se usa al resultado de la `set_options` y `sql_handle` atributos como columnas en lugar de como filas. Para obtener más información sobre el valor devuelto en `set_options`, consulte [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
+ En el ejemplo siguiente se devuelven las opciones SET con las que se compiló el plan. También `sql_handle` se devuelve el para el plan. El operador PIVOT se usa para generar los `set_options` atributos `sql_handle` y como columnas en lugar de como filas. Para obtener más información sobre el valor devuelto en `set_options`, vea [sys. dm_exec_plan_attributes &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
   
 ```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
@@ -111,14 +111,14 @@ WHERE cacheobjtype = 'Compiled Plan';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vistas de administración dinámica y funciones relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
- [sys.dm_os_memory_cache_entries &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
+ [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [Sys. dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
+ [Sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [Sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
+ [Sys. dm_os_memory_cache_entries &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
   

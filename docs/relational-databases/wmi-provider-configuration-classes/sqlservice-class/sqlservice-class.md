@@ -18,10 +18,10 @@ ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 772a7640f93fa11d6596511bc72ec9d1d5e2e1c1
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660888"
 ---
 # <a name="sqlservice-class"></a>Clase SqlService
@@ -30,7 +30,7 @@ ms.locfileid: "73660888"
   
  La [Clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) se utiliza para administrar el servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante programación. Con el objeto de la [clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) se pueden realizar las siguientes tareas:  
   
--   Conectarse al servicio.  
+-   Conéctese al servicio.  
   
 -   Modificar la cuenta y la contraseña que se utilizan para conectarse al servicio.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73660888"
   
 -   Comprobar las propiedades del servicio.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -11,18 +11,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890258"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Implementación de proyectos y paquetes
+  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite dos modelos de implementación, el modelo de implementación del proyecto y el modelo de implementación de paquetes. El modelo de implementación del proyecto le permite implementar sus proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Para más información sobre la implementación de proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md).  
+ Para más información sobre la implementación de proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md).  
   
- Para obtener más información acerca del modelo de implementación de paquetes, consulte [la implementación del paquete &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
+ Para obtener más información sobre el modelo de implementación de paquetes, vea [implementación de paquetes &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
   
 ## <a name="compare-project-deployment-and-package-deployment"></a>Comparar la implementación del proyecto y la implementación de paquetes  
  El tipo de modelo de implementación que elija para un proyecto determina qué opciones de desarrollo y administrativas están disponibles para ese proyecto. En la tabla siguiente se muestran las diferencias y similitudes entre utilizar el modelo de implementación del proyecto y utilizar el modelo de implementación de paquetes.  
@@ -62,7 +63,7 @@ ms.locfileid: "62890258"
 ## <a name="related-content"></a>Contenido relacionado  
  Entrada del blog, sobre [consideraciones sobre las estrategias de bifurcación en los proyectos de SSIS](https://go.microsoft.com/fwlink/?LinkId=245739), en mattmasson.com.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [dtexec (utilidad)](dtexec-utility.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8dfc5a65659efe71fd3389a770af06f360f980bd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255650"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurar DQS para utilizar datos de referencia
@@ -31,12 +31,12 @@ ms.locfileid: "75255650"
 
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Para utilizar datos de referencia de Marketplace, es necesario tener una clave de cuenta de Marketplace válida. Para obtener información detallada sobre cómo crear una clave de cuenta de Marketplace, veahttps://go.microsoft.com/fwlink/?LinkId=212936) [crear su cuenta](https://go.microsoft.com/fwlink/?LinkId=212936) (. También es posible crear una clave de cuenta de Marketplace desde [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; para ello, haga clic en **Configuración** en el área **Administración** de la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] y, a continuación, haga clic en **Crear un id. de cuenta de DataMarket** en la pestaña **Datos de referencia** .  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Para configurar servicios de datos de referencia en DQS, debe disponer del rol dqs_administrator en la base de datos DQS_MAIN.  
   
 ##  <a name="Marketplace"></a>Configurar DQS para usar datos de referencia de Marketplace  

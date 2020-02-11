@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 286236ec52f1ebb9e1d5639404a48fa91b24aee2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761340"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
@@ -47,7 +47,7 @@ ms.locfileid: "73761340"
   
  Las notificaciones se envían una sola vez. Para obtener notificaciones continuas de cambios de datos, debe crearse una nueva suscripción ejecutando de nuevo la consulta después de procesar cada notificación.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplicaciones cliente nativas suelen recibir notificaciones mediante el comando [!INCLUDE[tsql](../../../includes/tsql-md.md)] [Receive](../../../t-sql/statements/receive-transact-sql.md) para leer las notificaciones de la cola asociada al servicio especificado en las opciones de notificación.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Normalmente, las aplicaciones cliente nativas reciben notificaciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] mediante el comando [Receive](../../../t-sql/statements/receive-transact-sql.md) para leer las notificaciones de la cola asociada al servicio especificado en las opciones de notificación.  
   
 > [!NOTE]  
 >  Los nombres de tabla deben calificarse en las consultas para las que se requiere notificación como, por ejemplo, `dbo.myTable`. Las tablas deben calificarse con nombres de dos partes. La suscripción no será válida si se usan nombres de tres o cuatro partes.  
@@ -67,19 +67,19 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  El servicio debe usar el contrato predefinido `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, tal y como se indicó anteriormente.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
- El proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite la notificación de consumidor en la modificación del conjunto de filas. El consumidor recibe notificaciones en cada fase de modificación del conjunto de filas y ante cualquiera intento de modificación.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite la notificación de consumidor en la modificación del conjunto de filas. El consumidor recibe notificaciones en cada fase de modificación del conjunto de filas y ante cualquiera intento de modificación.  
   
 > [!NOTE]  
->  Pasar una consulta de notificaciones al servidor con **ICommand:: Execute** es la única manera válida de suscribirse a las notificaciones de consulta con el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+>  Pasar una consulta de notificaciones al servidor con **ICommand:: Execute** es la única manera válida de suscribirse a las notificaciones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de consulta con el proveedor de OLE DB de Native Client.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Conjunto de propiedades DBPROPSET_SQLSERVERROWSET  
- Para admitir las notificaciones de consulta a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega las siguientes propiedades nuevas al conjunto de propiedades DBPROPSET_SQLSERVERROWSET.  
+ Para admitir las notificaciones de consulta a través de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB, Native Client agrega las siguientes propiedades nuevas al conjunto de propiedades DBPROPSET_SQLSERVERROWSET.  
   
 |Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Número de segundos que la notificación de consulta va a permanecer activa.<br /><br /> El valor predeterminado es 432000 segundos (5 días). El valor mínimo es 1 segundo y el valor máximo es 2^31-1 segundos.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texto del mensaje de la notificación. Lo define el usuario y no tiene ningún formato predefinido.<br /><br /> De forma predeterminada, la cadena está vacía. Puede especificarse un mensaje usando de 1 a 2000 caracteres.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opciones de notificación de consulta. Se especifican en una cadena con la sintaxis *nombre*=*valor*. El usuario es responsable de la creación del servicio y de la lectura de las notificaciones fuera de la cola.<br /><br /> El valor predeterminado es una cadena vacía.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opciones de notificación de consulta. Se especifican en una cadena con la sintaxis del*valor* de *nombre*=. El usuario es responsable de la creación del servicio y de la lectura de las notificaciones fuera de la cola.<br /><br /> El valor predeterminado es una cadena vacía.|  
   
  La suscripción de notificación se confirma siempre, independientemente de que la instrucción se haya ejecutado en una transacción de usuario o en una confirmación automática o de que la transacción en la que se haya ejecutado la instrucción se haya confirmado o revertido. La notificación del servidor se activa ante cualquiera de las siguientes condiciones de notificación no válida: cambio de esquema o datos subyacentes o cuando se alcanza el período de tiempo de espera, lo que ocurra antes. Los registros de notificación se eliminan en cuanto se activan. Por lo tanto, al recibir las notificaciones, la aplicación debe suscribirse de nuevo en caso de que deseen obtenerse actualizaciones posteriores.  
   
@@ -107,7 +107,7 @@ RECEIVE * FROM MyQueue
  Para obtener más información sobre el conjunto de propiedades DBPROPSET_SQLSERVERROWSET, vea [propiedades y comportamientos de conjuntos de filas](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Controlador ODBC de SQL Server Native Client  
- El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite las notificaciones de consulta mediante la adición de tres nuevos atributos a las funciones [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) y [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) :  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite las notificaciones de consulta mediante la adición de tres nuevos atributos a las funciones [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) y [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) :  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -123,11 +123,11 @@ RECEIVE * FROM MyQueue
 ## <a name="special-cases-and-restrictions"></a>Restricciones y casos especiales  
  Las notificaciones no admiten los siguientes tipos de datos:  
   
--   **texto**  
+-   **negrita**  
   
 -   **ntext**  
   
--   **image**  
+-   **impresión**  
   
  Si se realiza una solicitud de notificación para una consulta que devuelve cualquiera de estos tipos, la notificación se activa inmediatamente, especificando que no fue posible la suscripción de notificación.  
   
@@ -135,7 +135,7 @@ RECEIVE * FROM MyQueue
   
  El envío de una consulta de notificación enviada por el mismo usuario en el mismo contexto de base de datos y que tiene la misma plantilla, los mismos valores de parámetro, el mismo identificador de notificación y la misma ubicación de entrega de una suscripción activa existente, renovará el existente suscripción, restableciendo el nuevo tiempo de espera especificado. Esto significa que si se solicita una notificación para consultas idénticas, solo se enviará una notificación. Esto se aplicaría a una consulta duplicada de un lote o si se llamó varias veces a una consulta de un procedimiento almacenado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

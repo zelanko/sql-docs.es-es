@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_semantic_languages (Transact-SQL) | Microsoft Docs
+title: Sys. fulltext_semantic_languages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,30 +20,30 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133775"
 ---
-# <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
+# <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila por cada idioma cuyo modelo de estadísticas se registra con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se registra un modelo de idioma, el idioma se habilita para la indización semántica.  
   
- Esta vista de catálogo es similar a [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+ Esta vista de catálogo es similar a [Sys. fulltext_languages &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
     
 ||||  
 |-|-|-|  
-|**Nombre de columna**|**Tipo**|**Descripción**|  
+|**Nombre de la columna**|**Tipo**|**Descripción**|  
 |lcid|int|Identificador de configuración regional (LCID) de Microsoft Windows para el idioma.|  
-|name|sysname|Es el valor del alias en [sys.syslanguages &#40;Transact-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corresponde al valor de **lcid**, o la representación de cadena del LCID numérico.|  
+|name|sysname|Es el valor del alias en [Sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondiente al valor de **LCID**o la representación de cadena del LCID numérico.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, vea [Instalar y configurar la búsqueda semántica](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadatos  
- Para obtener más información acerca de la base de datos de estadísticas semánticas de lenguaje que se instala para admitir la indización semántica, consulte la vista de catálogo [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+ Para obtener más información acerca de la base de datos de estadísticas semánticas de lenguaje que se instala para admitir la indización semántica, consulte la vista de catálogo [Sys. fulltext_semantic_language_statistics_database &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
 ## <a name="security"></a>Seguridad  
   
@@ -51,14 +51,14 @@ ms.locfileid: "68133775"
  La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente se muestra cómo realizar consultas **sys.fulltext_semantic_languages** para obtener información acerca de todos los modelos de lenguaje registrados para la indización semántica en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el ejemplo siguiente se muestra cómo consultar **Sys. fulltext_semantic_languages** para obtener información sobre todos los modelos de lenguaje registrados para la indización semántica en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instancia actual de.  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_languages;  
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar y configurar la búsqueda semántica](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

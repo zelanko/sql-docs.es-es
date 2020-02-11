@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278216"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Cambiar el nombre de los inicios de sesión que coinciden con nombres de roles fijos de servidor
@@ -33,7 +33,7 @@ ms.locfileid: "72278216"
   
 -   **sysadmin**  
   
--   **serveradmin**  
+-   **ServerAdmin**  
   
 -   **setupadmin**  
   
@@ -60,10 +60,10 @@ ms.locfileid: "72278216"
   
 2.  Elimine los inicios de sesión.  
   
-3.  Utilice el procedimiento del sistema **sp_addlogin** para crear nuevos inicios de sesión. Especifique el SID devuelto en el paso 1 en el parámetro **\@SID** para cada inicio de sesión correspondiente.  
+3.  Utilice el procedimiento del sistema **sp_addlogin** para crear nuevos inicios de sesión. Especifique el SID devuelto en el paso 1 ** \@** en el parámetro SID para cada inicio de sesión correspondiente.  
   
-## <a name="see-also"></a>Vea también  
- [Motor de base de datos problemas de actualización](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor &#91;de actualizaciones de SQL Server 2014 nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

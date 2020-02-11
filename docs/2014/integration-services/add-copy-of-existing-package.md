@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772251"
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
@@ -34,7 +34,7 @@ ms.locfileid: "62772251"
  **Tipo de autenticación**  
  Si copia desde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], seleccione un tipo de autenticación.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
@@ -43,7 +43,7 @@ ms.locfileid: "62772251"
  **Ruta de acceso del paquete**  
  Escriba la ruta de acceso del paquete, o bien haga clic en el botón Examinar **(…)** y busque el paquete que quiere copiar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guardar copia del paquete](../../2014/integration-services/save-copy-of-package.md)   
  [Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530891"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Normas de nomenclatura de objetos (Analysis Services)
@@ -70,26 +70,26 @@ ms.locfileid: "69530891"
 |------------|------------------------|  
 |`Server`|Siga las convenciones de nomenclatura de servidores de Windows al asignar nombre a un objeto de servidor. Vea [Convenciones de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obtener más detalles.|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level` o `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension` o `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level`de`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension`de`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |Todos los demás objetos|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
- **Excepciones Cuando se permiten caracteres reservados**  
+ **Excepciones: cuándo se permiten caracteres reservados**  
   
  Como se ha indicado, los nombres de las bases de datos de una modalidad y un nivel de compatibilidad determinados pueden incluir caracteres reservados. Los nombres de objeto de atributo de dimensión, jerarquía, nivel, medida y KPI pueden incluir caracteres reservados para las bases de datos tabulares (1103 o superior) que permiten el uso de caracteres extendidos:  
   
 |Modo de servidor y nivel de compatibilidad de base de datos|¿Se permiten caracteres reservados?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (todas las versiones)|Sin|  
-|Tabular - 1050|Sin|  
-|Tabular - 1100|Sin|  
+|MOLAP (todas las versiones)|No|  
+|Tabular - 1050|No|  
+|Tabular - 1100|No|  
 |Tabular: 1130 y versiones posteriores|Sí|  
   
  Las bases de datos pueden tener un ModelType predeterminado (default). Default es equivalente a multidimensional y por tanto no admite el uso de caracteres reservados en los nombres de columna.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Palabras reservadas de MDX](/sql/mdx/mdx-reserved-words)   
  [Traducciones &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
- [Compatibilidad &#40;con XML for Analysis XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [Compatibilidad con XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

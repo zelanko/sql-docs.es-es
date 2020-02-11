@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036245"
 ---
 # <a name="rename-indexes"></a>Cambiar el nombre a los índices
@@ -48,7 +48,7 @@ ms.locfileid: "63036245"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en el índice.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-rename-an-index-by-using-the-table-designer"></a>Para cambiar el nombre de un índice mediante el Diseñador de tablas  
   

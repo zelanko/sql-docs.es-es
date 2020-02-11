@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875671"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
@@ -62,14 +62,14 @@ ms.locfileid: "62875671"
 ####  <a name="Permissions"></a> Permisos  
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 > [!WARNING]  
 >  El proceso normal de una restauración consiste en seleccionar las copias de seguridad de registros en el cuadro de diálogo **Restaurar base de datos** junto con las copias de seguridad de datos y diferenciales.  
   
 #### <a name="to-restore-a-transaction-log-backup"></a>Para restaurar una copia de seguridad del registro de transacciones  
   
-1.  Tras conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
+1.  Después de conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
 2.  Expanda **Bases de datos**y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "62875671"
   
      En la tabla siguiente se muestran los encabezados de columna de la cuadrícula y se describen sus valores.  
   
-    |Header|Valor|  
+    |Encabezado|Value|  
     |------------|-----------|  
     |**Restauración**|Las casillas seleccionadas indican los conjuntos de copias de seguridad que se restaurarán.|  
-    |**Name**|Nombre del conjunto de copia de seguridad.|  
-    |**Componente**|Componente de copia de seguridad: **Base de datos**, **archivo**, o \<en blanco > (para registros de transacciones).|  
+    |**Nombre**|Nombre del conjunto de copia de seguridad.|  
+    |**Componente**|Componente cuya copia de seguridad se ha realizado: **Base de datos**, **Archivo** o \<en blanco> (para registros de transacciones).|  
     |**Base de datos**|Nombre de la base de datos que forma parte de la operación de copia de seguridad.|  
     |**Fecha de inicio**|Fecha y hora de inicio de la operación de copia de seguridad, según la configuración regional del cliente.|  
     |**Fecha final**|Fecha y hora de finalización de la operación de copia de seguridad, según la configuración regional del cliente.|  
@@ -114,7 +114,7 @@ ms.locfileid: "62875671"
     |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  
     |**Expiración**|Fecha y hora de expiración del conjunto de copia de seguridad.|  
   
-7.  Seleccione una de las opciones siguientes:  
+7.  Seleccione uno de los siguientes:  
   
     -   **A un momento dado**  
   
@@ -128,7 +128,7 @@ ms.locfileid: "62875671"
   
          En la tabla siguiente se muestran los encabezados de columna de la cuadrícula y se describen sus valores.  
   
-        |Header|Valor|  
+        |Encabezado|Value|  
         |------------|-----------|  
         |\<blank>|Muestra una casilla para seleccionar la marca.|  
         |**Marca de transacción**|Nombre de la transacción marcada especificada por el usuario cuando se confirmó la transacción.|  
@@ -146,9 +146,9 @@ ms.locfileid: "62875671"
   
          Conserva la configuración de replicación cuando se restaura una base de datos publicada en un servidor distinto de aquel en que se creó.  
   
-         Esta opción solo está disponible con la **dejar la base de datos lista para su uso revirtiendo las transacciones no confirmadas...**  opción (descrita más adelante), que equivale a restaurar una copia de seguridad con el `RECOVERY` opción.  
+         Esta opción solo está disponible con la opción **dejar la base de datos lista para su uso revirtiendo las transacciones no confirmadas...** (descrita más adelante), que equivale a restaurar una `RECOVERY` copia de seguridad con la opción.  
   
-         Si activa esta opción equivale a utilizar el `KEEP_REPLICATION` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
+         La activación de esta opción equivale a utilizar `KEEP_REPLICATION` la opción en [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` una instrucción.  
   
     -   **Preguntar antes de restaurar cada copia de seguridad**  
   
@@ -162,19 +162,19 @@ ms.locfileid: "62875671"
   
          Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator**o **sysadmin**.  
   
-         Si activa esta opción equivale al uso del `RESTRICTED_USER` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
+         La activación de esta opción equivale al uso `RESTRICTED_USER` de la opción [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` en una instrucción.  
   
 10. Para las opciones **Estado de recuperación** , especifique el estado de la base de datos después de la operación de restauración.  
   
     -   **Revertir las transacciones no confirmadas para dejar la base de datos lista para su uso. No pueden restaurarse registros de transacciones adicionales. (RESTORE WITH RECOVERY)**  
   
-         Recupera la base de datos. Esta opción es equivalente a la `RECOVERY` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
+         Recupera la base de datos. Esta opción es equivalente a la `RECOVERY` opción en una [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
   
          Elíjala solo si no desea restaurar ningún archivo de registro.  
   
     -   **Dejar la base de datos no operativa y no revertir las transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)**  
   
-         Deja la base de datos sin recuperar, en el estado `RESTORING`. Esta opción equivale a usar el `NORECOVERY` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
+         Deja la base de datos sin recuperar, en el estado `RESTORING`. Esta opción es equivalente a usar la `NORECOVERY` opción en una [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
   
          Si elige esta opción, la opción **Conservar la configuración de replicación** no estará disponible.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "62875671"
   
     -   **Dejar la base de datos en modo de solo lectura. Deshacer las transacciones sin confirmar, pero guardar las acciones de deshacer en un archivo para que los efectos de recuperación puedan invertirse. (RESTORE WITH STANDBY)**  
   
-         Deja la base de datos en estado de espera. Esta opción equivale a usar el `STANDBY` opción en un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
+         Deja la base de datos en estado de espera. Esta opción es equivalente a usar la `STANDBY` opción en una [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
   
          Si elige esta opción, debe especificar un archivo en espera.  
   
@@ -259,7 +259,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="b-applying-multiple-transaction-log-backups"></a>b. Aplicar varias copias de seguridad del registro de transacciones  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>B. Aplicar varias copias de seguridad del registro de transacciones  
  En el siguiente ejemplo se empieza con la restauración de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] utilizando una copia de seguridad completa de la base de datos que se encuentra en un dispositivo de copia de seguridad denominado `AdventureWorks2012_1`. A continuación, se aplican, una por una, las tres primeras copias de seguridad del registro de transacciones, que se encuentran en un dispositivo de copia de seguridad denominado `AdventureWorks2012_log`. Finalmente, el ejemplo recupera la base de datos.  
   
 ```sql  
@@ -299,7 +299,7 @@ GO
   
 -   [Restaurar una base de datos en una transacción marcada &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Aplicar copias de seguridad de registros de transacción &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779035"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propiedades del índice de texto completo (página Programaciones)
@@ -30,7 +30,7 @@ ms.locfileid: "62779035"
  **Programaciones**  
  Enumera cada rellenado incremental programado, si lo hay, en la tabla base para el índice de texto completo.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de cada rellenado programado.  
   
  **Tipo de rellenado**  
@@ -42,11 +42,11 @@ ms.locfileid: "62779035"
  **Descripción**  
  Muestra la descripción que se especificó cuando se creó la programación.  
   
- **Nueva**  
+ **Nuevo**  
  Haga clic en esta opción si desea crear una programación nueva para rellenar el índice de texto completo.  
   
-## <a name="see-also"></a>Vea también  
- [Use el Asistente para indización de texto completo](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
+## <a name="see-also"></a>Consulte también  
+ [Usar el Asistente para indización de texto completo](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [Rellenar índices de texto completo](../relational-databases/search/populate-full-text-indexes.md)  
   
   

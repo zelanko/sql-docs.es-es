@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892343"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de datos de origen&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Para entrenar un modelo de minería de datos y crear predicciones a partir de un modelo de minería de datos, tiene que tener [!INCLUDE[msCoName](../includes/msconame-md.md)] acceso a los datos externos a la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos. Utilice la \<cláusula de > de consultas de datos de origen en extensiones de minería de datos (DMX) para definir estos datos externos. La [instrucción INSERT &#40;into&#41;DMX](../dmx/insert-into-dmx.md), [SELECT &#60;from&#62; Model PREDICT &#40;join&#41;DMX](../dmx/select-from-model-prediction-join-dmx.md)y [Select from natural PREDICT join](../dmx/select-from-model-prediction-join-dmx.md) statements All use **\<Source Data Query >** .  
+  Para entrenar un modelo de minería de datos y crear predicciones a partir de un modelo de minería de datos, tiene que tener [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] acceso a los datos externos a la base de datos. Utilice la \<cláusula de> de consultas de datos de origen en extensiones de minería de datos (DMX) para definir estos datos externos. La [inserción en &#40;DMX&#41;](../dmx/insert-into-dmx.md), [Seleccione entre &#60;modelo&#62; combinación de predicción &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)y [Seleccione de las instrucciones de combinación de predicción natural](../dmx/select-from-model-prediction-join-dmx.md) todos usan ** \<la consulta de datos de origen>**.  
   
 ## <a name="query-types"></a>Tipos de consulta  
  Las tres formas más habituales de especificar datos de origen son:  
@@ -35,7 +35,7 @@ ms.locfileid: "68892343"
  [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  Esta instrucción consulta datos externos a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando un origen de datos existente.  
   
- [FORMA &#40;DMX&#41;](../dmx/source-data-query-shape.md)  
+ [&#41;DE FORMA &#40;DMX](../dmx/source-data-query-shape.md)  
  Esta instrucción consulta varios orígenes de datos para crear una tabla anidada. Mediante el uso de **Shape**, puede combinar datos de varios orígenes en una sola tabla jerárquica. Esto le permite aprovechar la capacidad de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de anidar tablas incrustando una tabla dentro de otra tabla.  
   
  Para especificar los datos de origen, también puede usar las siguientes opciones:  
@@ -50,9 +50,9 @@ ms.locfileid: "68892343"
   
 -   Un parámetro de conjunto de filas  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de manipulación &#40;de&#41; datos DMX de extensiones de minería de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de la &#40;instrucción&#41; DMX de extensiones de minería de datos](../dmx/data-mining-extensions-dmx-statements.md)   
- [Tablas &#40;anidadas Analysis Services: minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
+## <a name="see-also"></a>Consulte también  
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Tablas anidadas &#40;Analysis Services de minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   
   

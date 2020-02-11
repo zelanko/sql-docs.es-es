@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
+title: Sys. pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bb20ecd4fe212f4004061a6c39ad33c3ffc8ac8e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68809929"
 ---
-# <a name="syspdw_nodes_indexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
+# <a name="syspdw_nodes_indexes-transact-sql"></a>Sys. pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Devuelve índices para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|identificador del objeto al que pertenece este índice.||  
 |name|**sysname**|Nombre del índice. Name es único solo dentro del objeto. NULL = Montón||  
-|index_id|**int**|identificador del índice. el número de la secuencia es único en el objeto.<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster<br /><br /> > 1 = índice no clúster||  
+|index_id|**int**|identificador del índice. index_id es exclusivo solo dentro del objeto.<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster<br /><br /> > 1 = Índice no clúster||  
 |type|**tinyint**|Tipo de índice:<br /><br /> 0 = Montón<br /><br /> 1 = Clúster<br /><br /> 2 = No clúster<br /><br /> 5 = índice de almacén de columnas optimizado para memoria xVelocity en clúster|  
-|type_desc|**nvarchar(60)**|Descripción del tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> ALMACÉN DE COLUMNAS AGRUPADO||  
+|type_desc|**nvarchar (60)**|Descripción del tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> ALMACÉN DE COLUMNAS AGRUPADO||  
 |is_unique|**bit**|0 = El índice no es exclusivo.|Siempre es 0.|  
 |data_space_id|**int**|identificador del espacio de datos para este índice. El espacio de datos es un grupo de archivos o un esquema de partición.<br /><br /> 0 = object_id es una función con valores de tabla.||  
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY está OFF.|Siempre es 0.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68809929"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL SERVER.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

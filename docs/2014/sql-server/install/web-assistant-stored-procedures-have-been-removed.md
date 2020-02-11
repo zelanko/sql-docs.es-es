@@ -1,5 +1,5 @@
 ---
-title: Se han quitado los procedimientos almacenados del Ayudante de Web | Microsoft Docs
+title: Se han quitado los procedimientos almacenados del asistente de Web | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8bca81e9e02cf7f2bfed14b05a5842ca52a6d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091041"
 ---
 # <a name="web-assistant-stored-procedures-have-been-removed"></a>Se han eliminado los procedimientos almacenados del Asistente de web
@@ -24,7 +24,7 @@ ms.locfileid: "66091041"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descripción  
- Procedimientos almacenados del Ayudante de Web **sp_makewebtask**, **sp_dropwebtask**, **sp_runwebtask**, y **sp_enumcodepages** han sido quitar.  
+ Se han quitado los procedimientos almacenados del asistente de Web **sp_makewebtask**, **sp_dropwebtask**, **sp_runwebtask**y **sp_enumcodepages** .  
   
 ## <a name="corrective-action"></a>Acción correctora  
  Se recomienda utilizar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en su lugar.  

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 023700b1922946cc1234468aeb0551785067666c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128704"
 ---
 # <a name="localdbstoptracing-function"></a>Función LocalDBStopTracing
   Deshabilita el seguimiento de las llamadas a la API para todas las instancias de SQL Server Express LocalDB que son propiedad del usuario de Windows actual.  
   
- **Archivo de encabezado:** sqlncli.h  
+ **Archivo de encabezado:** SQLNCLI. h  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,12 +39,12 @@ HRESULT LocalDBStopTracing();
  La función se ha realizado correctamente.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- Error inesperado. Vea el registro de eventos para obtener detalles.  
+ Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información de encabezado y versión de SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728339"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Eliminar un atributo (Master Data Services)
@@ -60,10 +60,10 @@ ms.locfileid: "73728339"
   
 8.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Atributos basados en dominios &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Crear un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [Atributos basados en dominio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [Cree un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Cree un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0e4a49778b9c75c696d079549f586187b1204fd8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728941"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Requerir valores de atributo (Master Data Services)
@@ -60,15 +60,15 @@ ms.locfileid: "73728941"
   
 11. En la lista desplegable **Atributo** , seleccione un atributo.  
   
-12. Haga clic en **Guardar**. Se agregará una fila nueva a la cuadrícula **Entonces** .  
+12. Haga clic en **Save**(Guardar). Se agregará una fila nueva a la cuadrícula **Entonces** .  
   
-13. Haga clic en **Guardar**.  
+13. Haga clic en **Save**(Guardar).  
   
 14. Haga clic en **Publish All**(Publicar todo).  
   
 15. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. El valor de la columna **Business Rule State** (Estado de la regla de negocio) es **Activo**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Aplique las reglas de negocios a los datos siguiendo uno de estos procedimientos:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "73728941"
   
     -   [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   

@@ -18,17 +18,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: af3e8d9184b12a726361643c563402242c6b04cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876812"
 ---
 # <a name="backup-compression-sql-server"></a>Compresión de copia de seguridad (SQL Server)
   En este tema se describe la compresión de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluidas las restricciones, las ventajas y desventajas de la compresión de las copias de seguridad respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.  
   
 > [!NOTE]  
->  Para obtener información qué ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admiten la compresión de copia de seguridad, consulte [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Cada edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y posteriores pueden restaurar una copia de seguridad cifrada.  
+>  Para obtener información sobre las [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ediciones de que admiten la compresión de copia de seguridad, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Cada edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y posteriores pueden restaurar una copia de seguridad cifrada.  
   
   
 ##  <a name="Benefits"></a> Ventajas  
@@ -109,7 +109,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceoff-transact-sql)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Marcas de seguimiento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
   

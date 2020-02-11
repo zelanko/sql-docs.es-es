@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400911"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Supervisión de consultas activas: almacenamiento de datos paralelos
 En este artículo se muestra cómo usar la consola de administración de y las vistas del sistema de PDW de SQL Server para supervisar las consultas activas. Consulte [supervisión del dispositivo mediante la consola de administración y las](monitor-the-appliance-by-using-the-admin-console.md) [vistas del sistema](tsql-system-views.md) para obtener información sobre estas herramientas.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Independientemente del método que se use para supervisar las consultas activas, el inicio de sesión debe tener los permisos descritos en "usar toda la consola de administración" en [conceder permisos para usar la consola de administración](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
 ## <a name="PermsAdminConsole"></a>Supervisión de consultas activas  

@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5af4472d80e74c9d2845e6397f815ffb1c27f4d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211434"
 ---
 # <a name="create-a-wmi-event-alert"></a>Create a WMI Event Alert
   En este tema se describe cómo crear una alerta del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se genera cuando se produce un evento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] específico supervisado por el proveedor WMI para eventos de servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- Para obtener información sobre cómo utilizar el proveedor WMI para supervisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los eventos, vea [proveedor WMI para eventos de conceptos del servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md). Para más información sobre los permisos necesarios para recibir notificaciones de alertas de eventos de WMI, consulte [Seleccionar una cuenta para el servicio Agente SQL Server](select-an-account-for-the-sql-server-agent-service.md). Para más información sobre WQL, consulte [Usar WQL con el proveedor de WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md).  
+ Para obtener información sobre el uso del proveedor WMI para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supervisar eventos, vea [conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md). Para más información sobre los permisos necesarios para recibir notificaciones de alertas de eventos de WMI, consulte [Seleccionar una cuenta para el servicio Agente SQL Server](select-an-account-for-the-sql-server-agent-service.md). Para más información sobre WQL, consulte [Usar WQL con el proveedor de WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md).  
   
  **En este tema**  
   
@@ -42,7 +42,8 @@ ms.locfileid: "68211434"
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona una forma gráfica y fácil de administrar todo el sistema de alertas, y constituye el método recomendado para configurar una infraestructura de alertas.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona una forma gráfica y fácil de administrar todo el sistema de alertas, y constituye el método recomendado para configurar una infraestructura de alertas.  
   
 -   Los eventos generados durante **xp_logevent** se producen en la base de datos maestra. Por tanto, **xp_logevent** no desencadena una alerta a menos que el valor de **@database_name** de la alerta sea is **'master'** o NULL.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68211434"
 ####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_add_alert**.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-wmi-event-alert"></a>Para crear una alerta de evento WMI  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68211434"
   
 8.  En el cuadro **Consulta** , especifique la instrucción WQL que identifica el evento al que responde esta alerta.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -102,6 +103,6 @@ ms.locfileid: "68211434"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_add_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql).  
+ Para obtener más información, vea [sp_add_alert &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql).  
   
   

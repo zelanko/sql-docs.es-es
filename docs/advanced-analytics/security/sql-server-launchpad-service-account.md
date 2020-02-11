@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f05181e1a3069ec56f079751e43bd739424ce92
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727366"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Configuración del servicio de SQL Server Launchpad
@@ -65,8 +65,8 @@ En la siguiente tabla se muestran las configuraciones avanzadas para [!INCLUDE[s
 
 |**Nombre de opción**|**Tipo**|**Descripción**|
 |----|----|----|
-|JOB\_CLEANUP\_ON\_EXIT|Integer |Se trata únicamente de una opción interna: no cambie este valor. </br></br>Especifica si se debe limpiar la carpeta de trabajo temporal creada para cada sesión de runtime externa una vez completada. Esta opción resulta útil para la depuración. </br></br>Los valores admitidos son **0** (deshabilitado) o **1** (habilitado). </br></br>El valor predeterminado es 1, lo que significa que los archivos de registro se quitan al salir.|
-|TRACE\_LEVEL|Integer |Configura el nivel de detalle del seguimiento de MSSQLLAUNCHPAD con fines de depuración. Esto afecta a los archivos de seguimiento de la ruta de acceso especificada por el valor LOG_DIRECTORY. </br></br>Los valores admitidos son: **1** (error), **2** (rendimiento), **3** (advertencia), **4** (información). </br></br>El valor predeterminado es 1, lo que significa que solo se producen errores de salida.|
+|JOB\_CLEANUP\_ON\_EXIT|Entero |Se trata únicamente de una opción interna: no cambie este valor. </br></br>Especifica si se debe limpiar la carpeta de trabajo temporal creada para cada sesión de runtime externa una vez completada. Esta opción resulta útil para la depuración. </br></br>Los valores admitidos son **0** (deshabilitado) o **1** (habilitado). </br></br>El valor predeterminado es 1, lo que significa que los archivos de registro se quitan al salir.|
+|TRACE\_LEVEL|Entero |Configura el nivel de detalle del seguimiento de MSSQLLAUNCHPAD con fines de depuración. Esto afecta a los archivos de seguimiento de la ruta de acceso especificada por el valor LOG_DIRECTORY. </br></br>Los valores admitidos son: **1** (error), **2** (rendimiento), **3** (advertencia), **4** (información). </br></br>El valor predeterminado es 1, lo que significa que solo se producen errores de salida.|
 
 Todas las opciones se presentan como un par clave-valor y cada una de ellas se encuentra en una línea aparte. Por ejemplo, para cambiar el nivel de seguimiento, agregaría la línea `Default: TRACE_LEVEL=4`.
 
@@ -82,5 +82,5 @@ Para restablecer las contraseñas a intervalos regulares, puede establecer esta 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-+ [Marco de extensibilidad](../concepts/extensibility-framework.md)
++ [Plataforma de extensibilidad](../concepts/extensibility-framework.md)
 + [Información general sobre seguridad](../concepts/security.md)

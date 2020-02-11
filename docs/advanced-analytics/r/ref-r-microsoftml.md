@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707922"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (biblioteca de R en SQL Server)
@@ -22,7 +22,7 @@ ms.locfileid: "73707922"
 
 Microsoft desarrolló las API de aprendizaje automático para aplicaciones de aprendizaje automático internas, y las ha ido perfeccionando a lo largo de los años para que admitan un alto rendimiento en macrodatos, mediante el procesamiento de varios núcleos y la transmisión rápida de datos. MicrosoftML también incluye numerosas transformaciones para el procesamiento de texto e imágenes.
 
-## <a name="full-reference-documentation"></a>Documentación de referencia completa:
+## <a name="full-reference-documentation"></a>Documentación de referencia completa
 
 La biblioteca de **MicrosoftML** se distribuye en varios productos de Microsoft, pero el uso es el mismo, se obtenga la biblioteca en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
 
@@ -31,7 +31,7 @@ La biblioteca de **MicrosoftML** se distribuye en varios productos de Microsoft,
 La biblioteca de **MicrosoftML** se basa en R 3.4.3 y solo está disponible cuando se instala uno de los siguientes productos o descargas de Microsoft:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [Servicios de aprendizaje de máquina SQL Server](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 o posterior](https://docs.microsoft.com/machine-learning-server/)
 + [Cliente de Microsoft R](set-up-a-data-science-client.md)
 
@@ -150,7 +150,7 @@ library(RevoScaleR);
 logisticRegression(args);
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [Tutoriales de R](../tutorials/sql-server-r-tutorials.md)
 + [Información sobre cómo usar contextos de cálculo](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)

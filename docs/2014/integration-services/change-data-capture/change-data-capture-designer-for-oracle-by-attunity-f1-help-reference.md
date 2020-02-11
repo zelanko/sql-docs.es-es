@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 873aaee7641c84ad3e204c860a61ea5bc138fae6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835757"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Diseñador de captura de datos modificados para Oracle de Attunity (Referencia de la Ayuda de F1)
@@ -32,7 +32,7 @@ ms.locfileid: "62835757"
   
 -   [Usar el Asistente para nueva instancia](use-the-new-instance-wizard.md) (o vaya directamente a una de las tareas siguientes)  
   
-    -   [Crear la base de datos de cambios de SQL Server](create-the-sql-server-change-database.md)  
+    -   [Crear la base de datos de cambio SQL Server ](create-the-sql-server-change-database.md)  
   
     -   [Conectarse a una base de datos de origen de Oracle ](connect-to-an-oracle-source-database.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62835757"
   
     -   [Generar y ejecutar el Script de registro complementario ](generate-and-run-the-supplemental-logging-script.md)  
   
-    -   [Generar tablas reflejadas e instancias de captura CDC](generate-mirror-tables-and-cdc-capture-instances.md)  
+    -   [Generar tablas reflejadas e instancias de captura CDC ](generate-mirror-tables-and-cdc-capture-instances.md)  
   
     -   [Finalizar](finish.md)  
   

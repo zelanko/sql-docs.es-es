@@ -14,10 +14,10 @@ ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729444"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Crear y publicar una regla de negocios (Master Data Services)
@@ -79,7 +79,7 @@ ms.locfileid: "73729444"
   
 19. Complete todos los campos obligatorios.  
   
-20. Haga clic en **Guardar**. Se agregará una fila nueva a la cuadrícula **Entonces** .  
+20. Haga clic en **Save**(Guardar). Se agregará una fila nueva a la cuadrícula **Entonces** .  
   
 21. Opcionalmente, para agregar la acción **Otra** , complete los pasos siguientes.  
   
@@ -91,9 +91,9 @@ ms.locfileid: "73729444"
   
     4.  Complete todos los campos obligatorios.  
   
-    5.  Haga clic en **Guardar**. Se agregará una fila nueva a la cuadrícula **Otra** .  
+    5.  Haga clic en **Save**(Guardar). Se agregará una fila nueva a la cuadrícula **Otra** .  
   
-22. Haga clic en **Guardar**. Se agregará una fila nueva a la cuadrícula de la regla de negocio.  
+22. Haga clic en **Save**(Guardar). Se agregará una fila nueva a la cuadrícula de la regla de negocio.  
   
 23. Haga clic en **Publish All**(Publicar todo).  
   
@@ -102,16 +102,16 @@ ms.locfileid: "73729444"
 ## <a name="grid-columns"></a>Columnas de la cuadrícula  
  Por cada regla de negocio creada, se agrega una fila con seis columnas a la cuadrícula. Las columnas son las siguientes.  
   
-|NOMBRE|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|Estado|Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la regla de negocio se está actualizando.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh ")<br /><br /> Si aparecen errores al crear o editar una regla de negocio, se muestra la imagen siguiente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error ")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success ")|  
-|NOMBRE|El nombre de la regla de negocio.|  
+|Status|Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la regla de negocio se está actualizando.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Si aparecen errores al crear o editar una regla de negocio, se muestra la imagen siguiente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|Nombre|El nombre de la regla de negocio.|  
 |Descripción|La descripción de la regla de negocio.|  
 |Business Rule State|Uno de los siguientes estados de la regla de negocio: Regla no definida, Activa, Excluida, Cambios pendientes, Exclusión pendiente y Eliminación pendiente.|  
 |Excluido|Especifica si la regla de negocios está excluida.|  
-|Notification|Especifica el usuario o grupo seleccionado al que enviar la notificación por correo electrónico.|  
+|Notificación|Especifica el usuario o grupo seleccionado al que enviar la notificación por correo electrónico.|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Aplique las reglas de negocios a los datos siguiendo uno de estos procedimientos:  
   
@@ -119,7 +119,7 @@ ms.locfileid: "73729444"
   
     -   [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar reglas de negocios para enviar notificaciones &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Cambiar el nombre de una regla de negocios &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Agregar varias condiciones a una regla de negocios &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

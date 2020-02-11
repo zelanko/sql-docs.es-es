@@ -12,10 +12,10 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d39f86d2efa18c385f2aafd8b3e4cb7de9975b06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252259"
 ---
 # <a name="create-a-domain"></a>Crear un dominio
@@ -26,14 +26,14 @@ ms.locfileid: "75252259"
   
  Hay dos maneras de crear un nuevo dominio. La primera es durante el paso de asignación de la actividad de detección de conocimiento, cuando se analiza una muestra de los datos para agregar conocimiento a una base de conocimiento nueva o a una ya existente. La segunda es durante la actividad de administración de dominios, cuando se crea un nuevo dominio en lugar de modificar uno ya existente.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Para crear un dominio, debe haber creado y abierto una base de conocimiento.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio.  
   
 ##  <a name="Discovery"></a>Crear un dominio en la actividad detección de conocimiento  
@@ -87,7 +87,7 @@ ms.locfileid: "75252259"
   
 8.  Si el tipo de datos es **Cadena**, seleccione **Deshabilitar algoritmos de error de sintaxis** para rellenar el dominio sin comprobar la existencia de errores de sintaxis en los valores de cadena.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 10. Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   

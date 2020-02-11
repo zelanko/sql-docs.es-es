@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530881"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar seguridad dinámica utilizando filtros de filas
-  En esta lección complementaria, creará un rol adicional que implemente seguridad dinámica. La seguridad dinámica proporciona seguridad de nivel de fila basada en el nombre de usuario o el identificador de inicio de sesión del usuario que ha iniciado sesión actualmente. Para obtener más información, consulte [Roles &#40;SSAS tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular).  
+  En esta lección complementaria, creará un rol adicional que implemente seguridad dinámica. La seguridad dinámica proporciona seguridad de nivel de fila en función del identificador de inicio de sesión o del nombre de usuario de la persona que tenga la sesión iniciada. Para obtener más información, consulte [Roles &#40;SSAS tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular).  
   
  Para implementar la seguridad dinámica, debe agregar una tabla al modelo que contiene los nombres de usuario de Windows de los usuarios que pueden crear una conexión al modelo como un origen de datos y examinar los objetos y datos del modelo. El modelo que se crea con este tutorial está en el contexto de Adventure Works Corp.; sin embargo, para completar esta lección, debe agregar una tabla que contenga usuarios de su propio dominio. No necesitará contraseñas para los nombres de usuario que se van a agregar. Para crear una tabla de seguridad de empleados, con una pequeña muestra de usuarios de su propio dominio, utilizará la función de pegar para pegar datos de empleados de una hoja de cálculo de Excel. En un escenario real, la tabla que contiene los nombres de usuario que agrega a un modelo utilizaría normalmente una tabla de una base de datos real como origen de datos; por ejemplo, una tabla dimEmployee real.  
   
- Para implementar la seguridad dinámica, utilizará dos nuevas funciones de DAX: [Función &#40;de nombre&#41; de usuario Dax](/dax/username-function-dax) y [función &#40;ValorBuscar Dax&#41;](/dax/lookupvalue-function-dax). Estas funciones, aplicadas en una fórmula de filtro de columna, se definen en un nuevo rol. Con la función LOOKUPVALUE, la fórmula especifica un valor de la tabla Employee Security y pasa ese valor a la función USERNAME, que especifica el nombre del usuario que ha iniciado sesión como perteneciente a este rol. El usuario puede examinar solo los datos especificados por los filtros de fila del rol. En este escenario, especificará que los empleados de ventas solo podrán examinar los datos de ventas por Internet de los territorios de ventas de los que son miembros.  
+ Para implementar la seguridad dinámica, usará dos nuevas funciones de DAX: función de [nombre de usuario &#40;&#41;Dax](/dax/username-function-dax) y [función VALORBUSCAR &#40;&#41;Dax ](/dax/lookupvalue-function-dax). Estas funciones, aplicadas en una fórmula de filtro de fila, se definen en un nuevo rol. Con la función LOOKUPVALUE, la fórmula especifica un valor de la tabla Employee Security y pasa ese valor a la función USERNAME, que especifica el nombre del usuario que ha iniciado sesión como perteneciente a este rol. El usuario puede examinar solo los datos especificados por los filtros de fila del rol. En este escenario, especificará que los empleados de ventas solo podrán examinar los datos de ventas por Internet de los territorios de ventas de los que son miembros.  
   
- Para completar esta lección complementaria, realizará una serie de tareas. Las tareas que son únicas de este escenario de modelo tabular de Adventure Works, pero que no se aplicarían necesariamente en un escenario real, se identifican como tales. Cada tarea incluye información adicional que describe el propósito de la tarea.  
+ Para completar esta lección complementaria, realizará una serie de tareas. Las tareas que solo se realizan en este escenario de modelo tabular de Adventure Works, pero no que se aplicarían necesariamente a un escenario real, se identifican como tales. Cada tarea incluye información adicional que describe el propósito de la tarea.  
   
  Tiempo estimado para completar esta lección: **30 minutos**  
   
-## <a name="prerequisites"></a>Requisitos previos  
- Este tema de lección complementaria forma parte de un tutorial de creación de modelos tabulares, que se debe completar de forma ordenada. Antes de realizar las tareas de esta lección complementaria, debe haber completado todas las lecciones anteriores.  
+## <a name="prerequisites"></a>Prerequisites  
+ Este tema de la lección complementaria forma parte de un tutorial de modelado tabular, que debe completar en orden. Antes de realizar las tareas de esta lección complementaria, debe haber completado todas las lecciones anteriores.  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>Agregar la tabla dimSalesTerritory al proyecto de modelo tabular AW Internet Sales  
  Para implementar la seguridad dinámica en este escenario de ejemplo Adventure Works, debe agregar dos tablas adicionales al modelo. La primera tabla que agregará es dimSalesTerritory (como Sales Territory) procedente de la misma base de datos AdventureWorksDW. Aplicará posteriormente un filtro de fila a la tabla Sales Territory que define los datos concretos que el usuario que ha iniciado sesión puede examinar.  
@@ -40,11 +40,11 @@ ms.locfileid: "69530881"
   
 2.  En el cuadro de diálogo **Conexiones existentes** , compruebe que esté seleccionada la conexión al origen de datos **BD de Adventure Works de SQL** y haga clic en **Abrir**.  
   
-     Si aparece el cuadro de diálogo credenciales de suplantación, escriba las credenciales de suplantación que utilizó en la lección 2: Agregar datos.  
+     Si aparece el cuadro de diálogo Credenciales de suplantación, escriba las credenciales de suplantación que usó en la lección 2 sobre incorporación de datos.  
   
 3.  En la página **Elegir cómo importar los datos** , deje seleccionada la opción **Seleccionar en una lista de tablas y vistas para elegir los datos a importar** y haga clic en **Siguiente**.  
   
-4.  En la página **Seleccionar tablas y vistas**, seleccione la tabla **DimSalesTerritory**.  
+4.  En la página **Seleccionar tablas y vistas** , seleccione la tabla **DimSalesTerritory** .  
   
 5.  En la columna Nombre descriptivo, escriba **Sales Territory**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "69530881"
   
 -   En el diseñador de modelos, cambie el nombre a las columnas de la tabla **Sales Territory** :  
   
-     **Territorio de ventas**  
+     **Sales Territory**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
@@ -74,21 +74,21 @@ ms.locfileid: "69530881"
     |SalesTerritoryCountry|País del territorio de ventas|  
     |SalesTerritoryGroup|Grupo de territorios de ventas|  
   
-## <a name="add-a-table-with-user-name-data"></a>Agregar una tabla con datos de nombre de usuario  
+## <a name="add-a-table-with-user-name-data"></a>Incorporación de una tabla con datos de nombres de usuario  
  Puesto que la tabla dimEmployee de la base de datos de ejemplo AdventureWorksDW contiene usuarios del dominio AdventureWorks, y esos nombres de usuario no existen en su propio entorno, debe crear una tabla en el modelo que contenga una pequeña muestra (tres) de usuarios reales de su organización. Agregará después estos usuarios al nuevo rol como miembros. No necesita las contraseñas de los nombres de usuario de ejemplo, pero necesitará nombres de usuario de Windows reales de su propio dominio.  
   
 #### <a name="to-add-an-employee-security-table"></a>Para agregar una tabla de seguridad de empleados  
   
-1.  Abra Microsoft Excel para crear una nueva hoja de cálculo.  
+1.  Abra Microsoft Excel para crear una hoja de cálculo.  
   
-2.  Copie la siguiente tabla, incluida la fila de encabezado, y péguela en la hoja de cálculo.  
+2.  Copie la siguiente tabla, incluida la fila de encabezado y, luego, péguela en la hoja de cálculo.  
   
-    |Employee Id|Sales Territory Id|Nombre|Apellidos|Login Id|  
+    |Employee Id|Sales Territory Id|Nombre de usuario|Apellido|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<nombre del usuario >|\<Apellido del usuario >|\<dominio\nombredeusuario >|  
-    |1|3|\<nombre del usuario >|\<Apellido del usuario >|\<dominio\nombredeusuario >|  
-    |2|4|\<nombre del usuario >|\<Apellido del usuario >|\<dominio\nombredeusuario >|  
-    |3|5|\<nombre del usuario >|\<Apellido del usuario >|\<dominio\nombredeusuario >|  
+    |1|2|\<nombre del usuario>|\<Apellido del usuario>|\<dominio\nombredeusuario>|  
+    |1|3|\<nombre del usuario>|\<Apellido del usuario>|\<dominio\nombredeusuario>|  
+    |2|4|\<nombre del usuario>|\<Apellido del usuario>|\<dominio\nombredeusuario>|  
+    |3|5|\<nombre del usuario>|\<Apellido del usuario>|\<dominio\nombredeusuario>|  
   
 3.  En la nueva hoja de cálculo, reemplace el nombre, el apellido, y el dominio\nombreUsuario con los nombres y los id. de inicio de sesión de tres usuarios de su organización. Coloque el mismo usuario en las dos primeras filas, para el Employee Id 1. Esto mostrará que este usuario pertenece a más de un territorio de ventas. Deje los campos Employee Id y Sales Territory Id como están.  
   
@@ -100,16 +100,16 @@ ms.locfileid: "69530881"
   
      Si la opción Pegar aparece deshabilitada, haga clic en cualquier columna de una tabla de la ventana del diseñador de modelos, haga clic en el menú **Edición** y, después, haga clic en **Pegar**.  
   
-7.  En el cuadro de diálogo **vista previa** de pegado, en `Employee Security`nombre de **tabla**, escriba.  
+7.  En el cuadro de diálogo **vista previa de pegado** , en `Employee Security`nombre de **tabla**, escriba.  
   
 8.  En **Datos que se van a pegar**, compruebe que los datos incluyen todos los datos y encabezados de usuario de la hoja de cálculo Empleado de ejemplo.  
   
-9. Compruebe que esté seleccionada la opción **Usar primera fila como encabezados de columna** y haga clic en **Aceptar**.  
+9. Compruebe que la casilla **Usar primera fila como encabezados de columna** está activada y, luego, haga clic en **Aceptar**.  
   
      Se crea una nueva tabla denominada Employee Security con los datos de empleado copiados de la hoja de cálculo Empleado de ejemplo.  
   
 ## <a name="create-relationships-between-internet-sales-geography-and-sales-territory-table"></a>Crear relaciones entre las tablas Internet Sales, Geography y Sales Territory  
- Las tablas Internet Sales, Geography y Sales Territory contienen todas ellas una columna común, Sales Territory Id. La columna Sales Territory Id de la tabla Sales Territory contiene valores con un identificador diferente para cada territorio de ventas.  
+ Todas las tablas Internet sales, Geography y territorio de ventas contienen una columna común, ID. de territorio de ventas. La columna ID. de territorio de ventas de la tabla territorio de ventas contiene valores con un identificador diferente para cada territorio de ventas.  
   
 #### <a name="to-create-relationships-between-the-internet-sales-geography-and-the-sales-territory-table"></a>Para crear relaciones entre las tablas Internet Sales, Geography y Sales Territory  
   
@@ -120,19 +120,19 @@ ms.locfileid: "69530881"
      Observe que la propiedad Active de esta relación es False, lo que significa que está inactiva. Esto se debe a que la tabla Internet Sales tiene ya otra relación activa que se utiliza en las medidas.  
   
 ## <a name="hide-the-employee-security-table-from-client-applications"></a>Ocultar la tabla Employee Security en las aplicaciones cliente  
- En esta tarea, ocultará la tabla Employee Security y la dejará de aparecer en la lista de campos de una aplicación cliente. Recuerde que ocultar una tabla no significa protegerla. Los usuarios podrán seguir consultando los datos de la tabla Employee Security si saben cómo hacerlo. Para proteger los datos de la tabla Employee Security e impedir que los usuarios puedan consultar sus datos, aplicará un filtro en una tarea posterior.  
+ En esta tarea, ocultará la tabla Employee Security y la dejará de aparecer en la lista de campos de una aplicación cliente. Tenga en cuenta que ocultar una tabla no significa protegerla. Los usuarios podrán seguir consultando los datos de la tabla Employee Security si saben cómo hacerlo. Para proteger los datos de la tabla Employee Security e impedir que los usuarios puedan consultar sus datos, aplicará un filtro en una tarea posterior.  
   
 #### <a name="to-hide-the-employee-table-from-client-applications"></a>Para ocultar la tabla Employee Security en las aplicaciones cliente  
   
--   En el diseñador de modelos en la vista de diagrama, haga clic con el botón derecho en el encabezado de tabla **Empleado** y, después, haga clic en **Ocultar en herramientas de cliente**.  
+-   En el Diseñador de modelos, en la vista de diagrama, haga clic con el botón derecho en el encabezado de tabla **Empleado** y, luego, haga clic en **Ocultar en herramientas cliente**.  
   
-## <a name="create-a-sales-employees-by-territory-user-role"></a>Crear empleados de ventas por el rol de usuario de territorio  
+## <a name="create-a-sales-employees-by-territory-user-role"></a>Creación de un rol de usuario Empleados de ventas por territorio  
  En esta tarea, creará un rol de usuario. Este rol incluirá un filtro de fila que define qué filas de la tabla Sales Territory estarán visibles para los usuarios. El filtro se aplicará en una dirección de relación de uno-a muchos para el resto de las tablas relacionadas con Sales Territory. También aplicará un filtro sencillo que proteja la tabla Seguridad de los empleados de las consultas por parte de cualquier usuario que sea miembro del rol.  
   
 > [!NOTE]  
->  El rol de empleados de ventas por territorio que creará en esta lección solo permitirá a los miembros examinar (o consultar) los datos de ventas del territorio de ventas al que pertenezcan. Si agrega un usuario como miembro al rol de empleados de ventas por territorio que también existe como miembro de un rol creado en [la lección 12: Crear roles](../analysis-services/lesson-11-create-roles.md), obtendrá una combinación de permisos. Cuando un usuario es miembro de varios roles, los permisos y los filtros de fila definidos para cada uno de ellos son acumulativos. Es decir, el usuario tendrá los mayores permisos determinados por la combinación de roles.  
+>  El rol Empleados de ventas por territorio que creará en esta lección permitirá a los miembros examinar (o consultar) solo los datos de ventas del territorio de ventas al que pertenecen. Si agrega un usuario como miembro al rol de empleados de ventas por territorio que también existe como miembro del rol creado en [Lección 12: Crear roles](../analysis-services/lesson-11-create-roles.md), obtendrá una combinación de permisos. Cuando un usuario es miembro de varios roles, los permisos y filtros de fila definidos para cada rol son acumulativos. Es decir, el usuario tendrá los mayores permisos determinados por la combinación de roles.  
   
-#### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Para crear empleados de ventas por el rol de usuario de Territorio  
+#### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Procedimiento para crear un rol de usuario Empleados de ventas por territorio  
   
 1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** y luego haga clic en **Roles**.  
   
@@ -142,11 +142,11 @@ ms.locfileid: "69530881"
   
 3.  Haga clic en el nuevo rol y, a continuación, en la columna **nombre** , cambie el `Sales Employees by Territory`nombre del rol a.  
   
-4.  En la columna **Permisos** , haga clic en la lista desplegable y, después, seleccione el permiso **Lectura** .  
+4.  En la columna **Permisos**, haga clic en la lista desplegable y, luego, seleccione el permiso **Lectura**.  
   
 5.  Haga clic en la pestaña **Miembros** y luego en **Agregar**.  
   
-6.  En el cuadro de diálogo **Seleccionar usuario o grupo** , en **Escribir los nombres de objeto para seleccionar**, escriba el primer nombre de usuario de ejemplo que ha usado al crear la tabla Employee Security. Haga clic en **Comprobar nombres** para comprobar que el nombre de usuario es válido y haga clic en **Aceptar**.  
+6.  En el cuadro de diálogo **Seleccionar usuario o grupo** , en **Escribir los nombres de objeto para seleccionar**, escriba el primer nombre de usuario de ejemplo que ha usado al crear la tabla Employee Security. Haga clic en **Comprobar nombres** para comprobar que el nombre de usuario es válido y, luego, haga clic en **Aceptar**.  
   
      Repita este paso, agregando los otros nombres de usuario de ejemplo que utilizó al crear la tabla Employee Security.  
   
@@ -172,34 +172,34 @@ ms.locfileid: "69530881"
   
 10. En el cuadro de diálogo Administrador de roles, haga clic en **Aceptar**.  
   
-## <a name="test-the-sales-employees-by-territory-user-role"></a>Probar los empleados de ventas por el rol de usuario de territorio  
+## <a name="test-the-sales-employees-by-territory-user-role"></a>Prueba del rol de usuario Empleados de ventas por territorio  
  En esta tarea, utilizará la característica Analizar en Excel de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para probar la eficacia de los empleados de ventas por el rol usuario Territorio. Especificará uno de los nombres de usuario que ha agregado a la tabla Employee Security como miembro del rol. Este nombre de usuario se utilizará como el nombre de usuario efectivo en la conexión creada entre Excel y el modelo.  
   
-#### <a name="to-test-the-sales-employees-by-territory-user-role"></a>Para probar los empleados de ventas por el rol de usuario de territorio  
+#### <a name="to-test-the-sales-employees-by-territory-user-role"></a>Procedimiento para probar el rol de usuario Empleados de ventas por territorio  
   
 1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** y después en **Analizar en Excel**.  
   
-2.  En el cuadro de diálogo **Analizar en Excel** , en **Especifique el nombre de usuario o rol que se va a usar al conectarse al modelo**, seleccione **Otro usuario de Windows**y, después, haga clic en **Examinar**.  
+2.  En el cuadro de diálogo **Analizar en Excel**, en **Especifique el nombre de usuario o rol que se va a usar al conectarse al modelo**, seleccione **Otro usuario de Windows**. Después, haga clic en **Examinar**.  
   
 3.  En el cuadro de diálogo **Seleccionar usuario o grupo** , en **Escriba el nombre del objeto que desea seleccionar**, escriba uno de los nombres de usuario que se incluyeron en la tabla de empleados y luego haga clic en **Comprobar nombres**.  
   
-4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Seleccionar usuario o grupo** y, después, haga clic en **Aceptar** para cerrar el cuadro de diálogo **Analizar en Excel**.  
+4.  Haga clic en **Aceptar** para cerrar el **Seleccionar usuario o grupo** cuadro de diálogo y, a continuación, haga clic en **Aceptar** para cerrar el **analizar en Excel** cuadro de diálogo.  
   
-     Excel se abrirá con un libro nuevo. Se crea automáticamente una tabla dinámica. La lista de campos de tabla dinámica incluye todos la mayoría de campos de datos disponibles en su nuevo modelo.  
+     Se abrirá Excel con un nuevo libro. Se crea automáticamente una tabla dinámica. La lista de campos de tabla dinámica incluye todos la mayoría de campos de datos disponibles en su nuevo modelo.  
   
      Observe que la tabla Employee Security no está visible en la lista de campos de la tabla dinámica. Esto se debe a que eligió ocultar esta tabla de las herramientas cliente en una tarea anterior.  
   
-5.  En la **lista de campos de tabla dinámica** , en **∑ Internet Sales** (medidas), seleccione la medida **Internet Total Sales** . La medida se agregará a los campos **Valores**.  
+5.  En la **lista de campos de tabla dinámica** , en **∑ Internet Sales** (medidas), seleccione la medida **Internet Total Sales** . La medida se agregará a los campos **Valores** .  
   
-6.  En la **lista de campos de tabla dinámica** , seleccione la columna **Sales Territory Id** de la tabla **Sales Territory** . La columna se agregará a los campos **Etiquetas de fila**.  
+6.  En la **lista de campos de tabla dinámica** , seleccione la columna **Sales Territory Id** de la tabla **Sales Territory** . La columna se agregará a los campos **Etiquetas de fila** .  
   
-     Observe que las cifras de ventas por Internet solo aparecen para la región a la que pertenece el nombre de usuario efectivo que usó. Si selecciona otra columna; por ejemplo, City, en la tabla Geography como un campo de etiqueta de fila, solo se mostrarán las ciudades del territorio de ventas al que el usuario efectivo pertenece.  
+     Tenga en cuenta que las cifras de ventas por Internet solo aparecen para la región a la que pertenece el nombre de usuario efectivo que usó. Si selecciona otra columna; por ejemplo, City, en la tabla Geography como un campo de etiqueta de fila, solo se mostrarán las ciudades del territorio de ventas al que el usuario efectivo pertenece.  
   
      Este usuario no podrá examinar o consultar los datos de ventas por Internet para otros territorios distintos de aquel al que pertenece, porque el filtro de fila definido para la tabla Sales Territory en el rol de usuario de empleados de ventas por territorio protege eficazmente los datos relacionados con otros territorios de ventas.  
   
-## <a name="see-also"></a>Vea también  
- [Función &#40;de nombre de usuario Dax&#41;](/dax/username-function-dax)   
- [Función &#40;ValorBuscar Dax&#41;](/dax/lookupvalue-function-dax)   
- [Función &#40;CUSTOMDATA de Dax&#41;](/dax/customdata-function-dax)  
+## <a name="see-also"></a>Consulte también  
+ [Función USERNAME &#40;&#41;DAX](/dax/username-function-dax)   
+ [Función VALORBUSCAR &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [Función CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

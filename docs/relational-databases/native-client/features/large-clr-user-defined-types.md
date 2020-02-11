@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 878d68858a75bd6e26adbc8080e8956b3a8a061d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761381"
 ---
 # <a name="large-clr-user-defined-types"></a>Tipos definidos por el usuario de CLR grandes
@@ -24,7 +24,7 @@ ms.locfileid: "73761381"
 
   En SQL Server 2005, los tipos definidos por el usuario (UDT) en Common Language Runtime (CLR) estaban restringidos a un tamaño de 8.000 bytes. Esta restricción se soluciona en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y versiones posteriores. Los UDT CLR se tratan ahora de una manera similar a los tipos de objeto grandes (LOB). Es decir, los UDT con un tamaño menor o igual que 8.000 bytes se comportan de la misma manera que en SQL Server 2005, pero se admiten UDT de mayor tamaño y notifican su tamaño como "ilimitado".  
   
- Para obtener más información, vea [tipos &#40;CLR grandes definidos por el&#41; usuario OLE DB](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) y [ &#40;tipos CLR grandes definidos por&#41;el usuario ODBC](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) y [tipos CLR grandes definidos por el usuario &#40;&#41;ODBC ](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="use-cases"></a>Casos de uso  
  Para ODBC, la compatibilidad con UDT grandes incluye la capacidad de enviar los valores de UDT en partes como parámetros de datos en ejecución. Esto se hace mediante SQLPutData.  
@@ -37,7 +37,7 @@ ms.locfileid: "73761381"
   
  Para las aplicaciones que tienen código de acceso a datos existente, puede aprovechar el comportamiento de los UDT CLR en el cliente recuperando los UDT a través de API nativas y creando instancias de ellos utilizando la interoperabilidad de C++ CLI en aplicaciones de modo mixto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

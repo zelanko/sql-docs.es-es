@@ -14,10 +14,10 @@ ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a83b51479aadc92941da073e5bf9f0da394691ff
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729166"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Iniciar acciones según los cambios de valores de atributos (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "73729166"
   
 -   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Los atributos deben estar en un grupo de seguimiento de cambios. Consulte [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) para obtener más información.  
+-   Los atributos deben estar en un grupo de seguimiento de cambios. Consulte [Agregar atributos a un grupo de seguimiento de cambios &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) para obtener más información.  
   
 ### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>Crear una regla de negocios para iniciar acciones según los cambios de los valores de atributos  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73729166"
   
 21. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. El estado de la regla cambia a **Activo**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Aplique las reglas de negocios a los datos siguiendo uno de estos procedimientos:  
   
@@ -90,8 +90,8 @@ ms.locfileid: "73729166"
   
     -   [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Agregar atributos a un grupo de seguimiento de cambios &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Agregar atributos a un grupo de Change Tracking &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

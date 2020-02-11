@@ -18,10 +18,10 @@ ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5a4c6441cd2e6210575cfd30d28bf2cc2f385c18
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660767"
 ---
 # <a name="propertyvaltype-property-clientnetworkprotocolproperty-class"></a>Propiedad PropertyValType (clase ClientNetworkProtocolProperty)
@@ -36,15 +36,15 @@ object.PropertyValType [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Objeto de la [clase ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red utilizado por el cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
+ *objeto*  
+ Objeto de la [clase ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red utilizado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **UInt32** que especifica el tipo de datos del valor de propiedad.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

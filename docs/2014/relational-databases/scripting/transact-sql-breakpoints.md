@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 024f079d28c5ce144282bf09fff675fd308a8173
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243140"
 ---
 # <a name="transact-sql-breakpoints"></a>Utilizar puntos de interrupción de Transact-SQL
@@ -36,10 +36,10 @@ ms.locfileid: "75243140"
 |Describe cómo especificar una condición, que define si el punto de interrupción interrumpe basándose en la evaluación de una expresión de Transact SQL especificada.|[Especificar una condición de punto de interrupción](specify-a-breakpoint-condition.md)|  
 |Describe como especificar un número de llamadas, que causa que un punto de interrupción se interrumpa solo cuando la instrucción que lo contiene se ha ejecutado un número de veces especificado.|[Especificar un número de llamadas](specify-a-hit-count.md)|  
 |Describe cómo especificar un filtro, que hace que un punto de interrupción interrumpa únicamente en procesos o subprocesos especificados.|[Especificar un filtro del punto de interrupción](specify-a-breakpoint-filter.md)|  
-|Describe cómo especificar una acción **Cuándo se llama** , una operación personalizada que se realiza cuando se ejecuta la instrucción de punto de interrupción. Un ejemplo de lo anterior sería imprimir un mensaje.|[Especificar una acción de punto de interrupción](specify-a-breakpoint-action.md)|  
-|Describe cómo editar la ubicación de un punto de interrupción.|[Editar una ubicación de punto de interrupción](edit-a-breakpoint-location.md)|  
+|Describe cómo especificar una acción **Cuándo se llama** , una operación personalizada que se realiza cuando se ejecuta la instrucción de punto de interrupción. Un ejemplo de lo anterior sería imprimir un mensaje.|[Especificar una acción del punto de interrupción](specify-a-breakpoint-action.md)|  
+|Describe cómo editar la ubicación de un punto de interrupción.|[Modificar la ubicación de un punto de interrupción](edit-a-breakpoint-location.md)|  
   
-## <a name="see-also"></a>Véase también  
- [Información del depurador de Transact-SQL](transact-sql-debugger-information.md)  
+## <a name="see-also"></a>Consulte también  
+ [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)  
   
   

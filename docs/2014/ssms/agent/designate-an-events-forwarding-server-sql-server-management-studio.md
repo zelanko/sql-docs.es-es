@@ -1,5 +1,5 @@
 ---
-title: Designar un servidor (SQL Server Management Studio) de reenvío de eventos | Microsoft Docs
+title: Designar un servidor de reenvío de eventos (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b79da95e2709e2bb5ff3a3d76cac06b2a4268f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189383"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
-  En este tema se describe cómo designar un servidor al que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reenvía eventos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Observe que el reenvío de eventos se aplica a los eventos reenviados entre servidores, no a los eventos reenviados entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospedadas en un único equipo. Tenga en cuenta también que para recibir eventos reenviados, el servidor de administración de alertas debe ser una instancia predeterminada de SQL Server.  
+  En este tema se describe cómo designar un servidor al [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que reenvía [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eventos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante. Observe que el reenvío de eventos se aplica a los eventos reenviados entre servidores, no a los eventos reenviados entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospedadas en un único equipo. Tenga en cuenta también que para recibir eventos reenviados, el servidor de administración de alertas debe ser una instancia predeterminada de SQL Server.  
   
  **En este tema**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68189383"
   
      [Seguridad](#Security)  
   
--   **Para designar un servidor de reenvío de eventos. utilizando:**  
+-   **Para designar un servidor de reenvío de eventos, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,15 +41,15 @@ ms.locfileid: "68189383"
 ####  <a name="Permissions"></a> Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-designate-an-events-forwarding-server"></a>Para designar un servidor de reenvío de eventos  
   
 1.  En el **Explorador de objetos** , haga clic en el signo más para expandir el servidor desde el que desea reenviar eventos a otro servidor.  
   
-2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **Propiedades**.  
+2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **propiedades**.  
 
-3.  En el cuadro de diálogo **Propiedades de Agente SQL Server -** _nombre_de_servidor_, en **Seleccionar una página**, haga clic en **Avanzadas**.  
+3.  En el cuadro de diálogo **Propiedades de Agente SQL Server -**_nombre_de_servidor_, en **Seleccionar una página**, haga clic en **Avanzadas**.  
 
 4.  En **Reenvío de eventos de SQL Server**, active la casilla **Reenviar eventos a otro servidor** .  
   

@@ -18,10 +18,10 @@ ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 40c0822bc8b881153909f77ec50b0c9de9883dec
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660933"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>Método ResumeService (clase SqlService)
@@ -36,15 +36,15 @@ object.ResumeService()
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Objeto de la [clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
- Valor UInt32 que es 0 si se aceptó la solicitud **ResumeService** , 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
+ Valor de uint32 que es igual a 0 si se aceptó la solicitud de **ResumeService** , igual a 1 si no se admite dicha solicitud e igual a cualquier otro número para indicar que hubo un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

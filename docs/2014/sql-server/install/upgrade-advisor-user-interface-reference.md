@@ -1,5 +1,5 @@
 ---
-title: Actualizar referencia de interfaz de usuario del Asesor de actualizaciones | Microsoft Docs
+title: Referencia de la interfaz de usuario del Asesor de actualizaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,28 +20,28 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57edb1b92459b2e66f53895c20ead6f3e95cea59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091487"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>Referencia de la interfaz de usuario del Asesor de actualizaciones
-  Esta sección incluye temas de ayuda para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor. Estos temas están disponibles en el Asistente para actualización de Advisor presionando la tecla F1 o haciendo clic en **ayuda** en las páginas del asistente y en los cuadros de diálogo.  
+  En esta sección se incluyen temas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de ayuda para el asesor de actualizaciones. Estos temas están disponibles en el asistente del Asesor de actualizaciones. para ello, presione la tecla F1 o haga clic en **ayuda** en las páginas del asistente y en los cuadros de diálogo.  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Componentes de SQL Server](../../../2014/sql-server/install/sql-server-components.md)|Identifique el servidor y el conjunto adecuado de tipos de servidores y componentes para enviarlos a un análisis de la actualización.|  
 |[Parámetros de conexión](../../../2014/sql-server/install/connection-parameters.md)|Para realizar un análisis de la actualización de ciertos tipos de servidor, como [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], debe seleccionar una instancia del servidor concreta para el análisis. En esta página, escriba la información necesaria que permita al Asesor de actualizaciones conectarse con la instancia de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea analizar.|  
-|[Parámetros de SQL Server](../../../2014/sql-server/install/sql-server-parameters.md)|Establezca los parámetros para utilizar el análisis de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Puede determinar qué bases de datos, archivos de seguimiento o archivos por lotes de SQL desea analizar. Este paso no está incluido, y se deshabilitan todos los elementos de cuadro de diálogo relacionado, si no ha seleccionado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] análisis en [componentes de SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
-|[Parámetros de Analysis Services](../../../2014/sql-server/install/analysis-services-parameters.md)|Para analizar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], debe seleccionar una instancia concreta de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Este paso no está incluido. Todas las relacionadas con elementos de la interfaz de usuario se deshabilitará si no selecciona [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] análisis en [componentes de SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
-|[Parámetros de Reporting Services](../../../2014/sql-server/install/reporting-services-parameters.md)|Para analizar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe seleccionar una instancia concreta de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Este paso no está incluido y todos los elementos de interfaz de usuario relacionados se deshabilitará si no selecciona [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] análisis en [componentes de SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
-|[Parámetros de Integration Services](../../../2014/sql-server/install/integration-services-parameters.md)|Para analizar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], hay una opción para analizar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] situados en el equipo o en el sistema de archivos. Este paso no está incluido. Todas las relacionadas con elementos de la interfaz de usuario se deshabilitará si no selecciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] análisis en [componentes de SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
+|[Parámetros de SQL Server](../../../2014/sql-server/install/sql-server-parameters.md)|Establezca los parámetros para utilizar el análisis de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Puede determinar qué bases de datos, archivos de seguimiento o archivos por lotes de SQL desea analizar. Este paso no está incluido y todos los elementos de cuadro de diálogo relacionados están deshabilitados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si no ha seleccionado el análisis en [SQL Server componentes](../../../2014/sql-server/install/sql-server-components.md).|  
+|[Parámetros de Analysis Services](../../../2014/sql-server/install/analysis-services-parameters.md)|Para analizar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], debe seleccionar una instancia concreta de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Este paso no está incluido. Todos los elementos de la interfaz de usuario relacionados estarán deshabilitados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si no selecciona el análisis en [SQL Server componentes](../../../2014/sql-server/install/sql-server-components.md).|  
+|[Parámetros de Reporting Services](../../../2014/sql-server/install/reporting-services-parameters.md)|Para analizar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe seleccionar una instancia concreta de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Este paso no está incluido y todos los elementos de la interfaz de usuario relacionados estarán deshabilitados si [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no selecciona análisis en [SQL Server componentes](../../../2014/sql-server/install/sql-server-components.md).|  
+|[Parámetros de Integration Services](../../../2014/sql-server/install/integration-services-parameters.md)|Para analizar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], hay una opción para analizar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] situados en el equipo o en el sistema de archivos. Este paso no está incluido. Todos los elementos de la interfaz de usuario relacionados estarán deshabilitados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] si no selecciona el análisis en [SQL Server componentes](../../../2014/sql-server/install/sql-server-components.md).|  
 |[Confirmar la configuración del Asesor de actualizaciones](../../../2014/sql-server/install/confirm-upgrade-advisor-settings.md)|Revise las opciones y los parámetros antes de ejecutar el análisis de la actualización.|  
 |[Progreso del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-progress.md)|Cuando se analizan los componentes, el progreso general se notifica a través del cuadro de diálogo de progreso.|  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Ejecute el Asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)  
+## <a name="see-also"></a>Consulte también  
+ [Trabajar con el asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Ejecutar el asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)  
   
   

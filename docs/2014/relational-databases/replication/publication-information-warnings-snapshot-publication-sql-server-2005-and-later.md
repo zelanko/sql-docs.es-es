@@ -1,5 +1,5 @@
 ---
-title: Información de publicación, advertencias (publicación de instantáneas, SQL Server 2005 y versiones posterior) | Microsoft Docs
+title: Información de publicación, advertencias (publicación de instantáneas, SQL Server 2005 y versiones posteriores) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35399614c69d63f3d7daae2a64f670d7ccfbaef0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021652"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Información de publicación, Advertencias (Publicación de instantáneas, SQL Server 2005 y posteriores)
@@ -34,16 +34,16 @@ ms.locfileid: "63021652"
  Además de mostrar una advertencia en el Monitor de replicación, llegar a un umbral también puede desencadenar una alerta. Para definir alertas, haga clic en **Configurar alertas** y proporcione información en el cuadro de diálogo **Configurar alertas de replicación** .  
   
 ## <a name="options"></a>Opciones  
- **Habilitado**  
+ **Enabled**  
  Seleccione esta opción si desea habilitar una advertencia y especificar un umbral asociado.  
   
- **Advertencia**  
+ **Warning (ADVERTENCIA)**  
  Descripción de la advertencia asociada al umbral.  
   
  **Umbral**  
  Permite especificar un valor para el umbral.  
   
- **Configurar alertas**  
+ **Configuración de alertas**  
  Seleccione una fila en la cuadrícula **Advertencias** y haga clic en **Configurar alertas** para abrir el cuadro de diálogo **Configurar alertas de replicación** . El cuadro de diálogo permite definir una alerta que se asociará al umbral y la advertencia seleccionados.  
   
  **Descartar cambios**  
@@ -52,10 +52,10 @@ ms.locfileid: "63021652"
 > [!NOTE]  
 >  Hacer clic en **Descartar cambios** no afecta a las alertas definidas en el cuadro de diálogo **Configurar alertas de replicación** .  
   
- **Guardar cambios**  
+ **Save Changes**  
  Haga clic para guardar los cambios realizados en las advertencias y los umbrales.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  

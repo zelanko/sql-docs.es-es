@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103618"
 ---
 # <a name="process-large-reports"></a>Procesar informes grandes
@@ -68,11 +68,11 @@ ms.locfileid: "66103618"
   
  Si desea utilizar la entrega de informes por correo electrónico, configure la suscripción para que incluya un vínculo. Evite enviar el informe como datos adjuntos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Establecer las propiedades del procesamiento de informes](set-report-processing-properties.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Especificar información de credenciales y conexión para los orígenes de datos de informe](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
- [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](preload-the-cache-report-manager.md)  
+ [Cargar previamente el Administrador de informes de &#40;de caché&#41;](preload-the-cache-report-manager.md)  
   
   

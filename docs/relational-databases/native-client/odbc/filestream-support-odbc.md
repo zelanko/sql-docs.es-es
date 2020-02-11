@@ -14,18 +14,18 @@ ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e7d2e57b68ed9ab3ae117c543361f810952ba9c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761191"
 ---
 # <a name="filestream-support-odbc"></a>Compatibilidad con FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  ODBC en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite la característica mejorada FILESTREAM. Para obtener más información acerca de esta característica, vea [compatibilidad de FileStream](../../../relational-databases/native-client/features/filestream-support.md). Para obtener un ejemplo que muestra la compatibilidad de ODB con FILESTREAM, vea [enviar y recibir datos incrementalmente con &#40;FileStream&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
+  ODBC en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite la característica mejorada FILESTREAM. Para obtener más información acerca de esta característica, vea [compatibilidad de FileStream](../../../relational-databases/native-client/features/filestream-support.md). Para obtener un ejemplo que muestra la compatibilidad de ODB con FILESTREAM, vea [enviar y recibir datos incrementalmente con filestream &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Para enviar y recibir valores **varbinary (Max)** mayores de 2 GB, una aplicación debe enlazar parámetros mediante SQLBindParameter con el valor de *columnas* establecido en **SQL_SS_LENGTH_UNLIMITED**y establecer el contenido de *StrLen_or_IndPtr* en  **SQL_DATA_AT_EXEC** antes de SQLExecDirect o SQLExecute.  
+ Para enviar y recibir valores **varbinary (Max)** mayores de 2 GB, una aplicación debe enlazar parámetros mediante SQLBindParameter con el valor de *columnas* establecido en **SQL_SS_LENGTH_UNLIMITED**y establecer el contenido de *StrLen_or_IndPtr* en **SQL_DATA_AT_EXEC** antes de SQLExecDirect o SQLExecute.  
   
  Como con cualquier parámetro de datos en ejecución, los datos se proporcionarán con SQLParamData y SQLPutData.  
   
@@ -45,7 +45,7 @@ author varchar(64),
 document VARBINARY(MAX) FILESTREAM NULL)  
 ```  
   
-### <a name="read"></a>Leer  
+### <a name="read"></a>Lectura  
   
 ```  
 void selectFilestream (LPCWSTR dstFilePath) {  
@@ -101,7 +101,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>Insertar  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  
@@ -266,7 +266,7 @@ return r;
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Programación de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

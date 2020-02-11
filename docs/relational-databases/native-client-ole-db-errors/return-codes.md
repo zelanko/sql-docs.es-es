@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 36f376710dbcdd09daf664e9eee20533c5372641
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790236"
 ---
 # <a name="return-codes"></a>Códigos de retorno
@@ -37,17 +37,17 @@ ms.locfileid: "73790236"
   
  Para obtener más información sobre los códigos de retorno OLE DB, vea [Códigos de retorno (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
- Cuando una función miembro del proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Devuelve S_OK, la función se realiza correctamente.  
+ Cuando una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] función miembro de proveedor de OLE DB de Native Client Devuelve S_OK, la función se realiza correctamente.  
   
- Cuando una función miembro de proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB no Devuelve S_OK, se produce un error en el desempaquetado de HRESULT de OLE/COM y las macros de IS_ERROR pueden determinar el éxito o el error general de una función.  
+ Cuando una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] función miembro de proveedor de OLE DB de Native Client no Devuelve S_OK, se produce un error en el desempaquetado de HRESULT de OLE/COM y IS_ERROR macros pueden determinar el éxito o el error general de una función.  
   
- Si FAILed o IS_ERROR devuelve TRUE, el consumidor del proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client está seguro de que se ha producido un error en la ejecución de la función miembro. Cuando FAILed o IS_ERROR devuelven FALSE y HRESULT no es igual a S_OK, el consumidor del proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB está seguro de que la función se realizó correctamente en algún sentido. El consumidor puede recuperar información detallada sobre este valor "éxito con información" de las interfaces de error del proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Además, en el caso de que se produzca un error claramente en una función (la macro FAILed devuelve TRUE), la información de error ampliada está disponible en las interfaces de error del proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
+ Si FAILed o IS_ERROR devuelve TRUE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el consumidor del proveedor de OLE DB de Native Client está seguro de que se ha producido un error en la ejecución de la función miembro. Cuando FAILed o IS_ERROR devuelven FALSE y HRESULT no es igual a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] S_OK, el consumidor del proveedor de OLE DB de Native Client está seguro de que la función se realizó correctamente en algún sentido. El consumidor puede recuperar información detallada sobre este valor "éxito con información" de las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interfaces de error del proveedor de OLE DB de Native Client. Además, en el caso de que se produzca un error claramente en una función (la macro FAILed devuelve TRUE), la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información de error ampliada está disponible en las interfaces de error del proveedor de OLE DB de Native Client.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los consumidores de proveedores de OLE DB de Native Client suelen encontrar el valor devuelto DB_S_ERRORSOCCURRED "success with Information". Normalmente, las funciones miembro que devuelven DB_S_ERRORSOCCURRED definen uno o más parámetros que proporcionen valores de estado al consumidor. Es posible que no haya más información de error disponible para el consumidor que los parámetros de valor de estado devueltos, de modo que los consumidores deban implementar la lógica de la aplicación para recuperar los valores de estado cuando estén disponibles.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Los consumidores de proveedores de OLE DB de Native Client suelen encontrar el valor devuelto por el DB_S_ERRORSOCCURRED "success with Information". Normalmente, las funciones miembro que devuelven DB_S_ERRORSOCCURRED definen uno o más parámetros que proporcionen valores de estado al consumidor. Es posible que no haya más información de error disponible para el consumidor que los parámetros de valor de estado devueltos, de modo que los consumidores deban implementar la lógica de la aplicación para recuperar los valores de estado cuando estén disponibles.  
   
- Las funciones miembro del proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no devuelven el S_FALSE de código correcto. Todas las funciones miembro del proveedor de OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelven S_OK para indicar que la operación se ha realizado correctamente.  
+ Las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funciones miembro del proveedor de OLE DB de Native Client no devuelven el código de éxito S_FALSE. Todas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las funciones miembro de proveedor de OLE DB de Native Client siempre devuelven S_OK para indicar que se ha realizado correctamente.  
   
-## <a name="see-also"></a>Vea también  
- [Errores](../../relational-databases/native-client-ole-db-errors/errors.md)  
+## <a name="see-also"></a>Consulte también  
+ [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124218"
 ---
-# <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
+# <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve cambios sin procesar, como eliminaciones, actualizaciones e inserciones pendientes, de una tabla especificada que utilice el seguimiento de cambios.  
@@ -45,27 +45,27 @@ sp_fulltext_pendingchanges table_id
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Key**|*|Valor de clave de texto completo de la tabla especificada.|  
-|**DocId**|**bigint**|Una columna de identificador de documento interno (DocId) que se corresponde con el valor de clave.|  
+|**Clave**|*|Valor de clave de texto completo de la tabla especificada.|  
+|**DocId**|**BIGINT**|Una columna de identificador de documento interno (DocId) que se corresponde con el valor de clave.|  
 |**Estado**|**int**|0 = La fila se eliminará del índice de texto completo.<br /><br /> 1 = La fila contendrá un índice de texto completo.<br /><br /> 2 = La fila está actualizada.<br /><br /> -1 = La fila se encuentra en un estado transicional (de lote, pero no confirmado) o un estado de error.|  
 |**DocState**|**tinyint**|Es un volcado de la columna de estado de la asignación del identificador de documento interno (DocId).|  
   
- <sup>* El tipo de datos de clave es igual que el tipo de datos de la columna de clave de texto completo en la tabla base.</sup>  
+ <sup>* El tipo de datos para Key es el mismo que el tipo de datos de la columna de clave de texto completo en la tabla base.</sup>  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si no hay cambios que procesar, se devuelve un conjunto de filas vacío.  
   
- Las consultas de búsqueda de texto completo no devolverá las filas con un **estado** valor de 0. Esto se debe a que la fila se ha eliminado de la tabla base y está esperando a ser eliminada del índice de texto completo.  
+ Las consultas de búsqueda de texto completo no devuelven filas con el valor 0 para **Status**. Esto se debe a que la fila se ha eliminado de la tabla base y está esperando a ser eliminada del índice de texto completo.  
   
  Para averiguar cuántos cambios siguen pendientes para una tabla específica, utilice la propiedad **TableFullTextPendingChanges** de la función OBJECTPROPERTYEX.  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenan de búsqueda de texto completo y la búsqueda semántica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Búsqueda de texto completo y procedimientos almacenados de búsqueda semántica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   
   

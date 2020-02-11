@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401360"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Información general del hardware de copia de seguridad y carga: almacenamiento de datos paralelos
@@ -29,7 +29,7 @@ Para realizar una copia de seguridad de una base de datos de PDW, se necesitan u
   
 Para cargar datos, necesita uno o más servidores de carga. Puede usar su propio ETL existente u otros servidores, o puede adquirir nuevos servidores. Para obtener más información, vea [adquirir y configurar un servidor de carga](acquire-and-configure-loading-server.md). Estas instrucciones incluyen una [hoja de cálculo de planeamiento](loading-server-capacity-planning-worksheet.md) de la capacidad del servidor de carga para ayudarle a planear la solución adecuada para la carga.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Información general sobre copias de seguridad y restauración](backup-and-restore-overview.md)  
 [Información general sobre la carga](load-overview.md)  
   

@@ -13,18 +13,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783251"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Cambiar la extensión de entrega predeterminada de Reporting Services
   Puede modificar las opciones de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para cambiar la extensión de entrega predeterminada que aparece en la lista **Entregado por** de una página de definición de suscripción. Por ejemplo, puede modificar la configuración de modo que cuando los usuarios creen una nueva suscripción, la entrega de recurso compartido de archivos se seleccione de forma predeterminada en lugar de la entrega por correo electrónico. También puede cambiar el orden en que se muestran las extensiones de entrega en la interfaz de usuario.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modo nativo | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo de SharePoint  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye las extensiones de entrega Correo electrónico y Recurso compartido de archivos de Windows. El servidor de informes puede tener extensiones de entrega adicionales si ha implementado extensiones personalizadas o de otros fabricantes para admitir la entrega personalizada. La disponibilidad de una extensión de entrega depende de si está implementada en un servidor de informes.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye las extensiones de entrega Correo electrónico y Recurso compartido de archivos de Windows. El servidor de informes puede tener extensiones de entrega adicionales si ha implementado extensiones personalizadas o de otros fabricantes para admitir la entrega personalizada. La disponibilidad de una extensión de entrega depende de si está implementada en un servidor de informes.  
   
 ## <a name="default-native-mode-report-server-configuration"></a>Configuración predeterminada del servidor de informes de modo nativo  
  El orden en el que una extensión de entrega aparece en el Administrador de informes en la lista **Entregado por** se basa en el orden de las entradas de extensión de entrega del archivo **RSReportServer.config** . Por ejemplo, la siguiente imagen muestra el correo electrónico primero en la lista y está seleccionado de forma predeterminada.  
@@ -85,14 +86,15 @@ ms.locfileid: "72783251"
   
      Cuando se lee la configuración, se escribe el siguiente evento en el registro de eventos de Windows.  
   
-     **Identificador del evento:** 109  
+     **ID. de evento:** 109  
   
-     **Origen:** Servicio Servidor de informes de Windows (nombre de instancia)  
+     **Origen:** Servicio servidor de informes de Windows (nombre de instancia)  
   
      Se ha modificado el archivo RSReportServer.config  
   
 ## <a name="sharepoint-mode-report-servers"></a>Servidores de informes en modo de SharePoint  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] El modo de SharePoint almacena la información de las extensiones en las bases de datos de aplicación de servicio de SharePoint y no en el archivo RsrReportServer.config. En el modo de SharePoint, la configuración de la extensión de entrega se modifica con PowerShell.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] El modo de SharePoint almacena la información de las extensiones en las bases de datos de aplicación de servicio de SharePoint y no en el archivo RsrReportServer.config. En el modo de SharePoint, la configuración de la extensión de entrega se modifica con PowerShell.  
   
 #### <a name="configure-the-default-delivery-extension"></a>Configurar la extensión de entrega predeterminada  
   
@@ -111,9 +113,9 @@ ms.locfileid: "72783251"
     Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
   
-## <a name="see-also"></a>Vea también  
-   del [archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
-   del [archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
- [Entrega a recursos compartidos de archivos en Reporting Services](file-share-delivery-in-reporting-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+ [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+ [Entrega de recursos compartidos de archivos en Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md)   
- [Configurar un servidor de informes para la &#40;entrega de correo electrónico en SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configurar un servidor de informes para la entrega por correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

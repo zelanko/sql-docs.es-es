@@ -1,5 +1,5 @@
 ---
-title: Power ver propiedades de informes (SSAS Tabular) | Microsoft Docs
+title: Propiedades de informes de Power View (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b5ec7fcb999c6c81de199aaf3676677edbdd41d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066814"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Propiedades de informes de Vista avanzada (SSAS tabular)
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] permite la creación de informes ad hoc intuitiva para los usuarios profesionales como analistas de datos, responsables de la toma de decisiones empresariales y trabajadores de la información. Los informes pueden crearse con facilidad y se puede interactuar con vistas de datos de los modelos tabulares basados en los libros de PowerPivot publicados en una galería de PowerPivot o los modelos tabulares creados con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e implementados en las instancias de Analysis Services de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] es una aplicación de Silverlight basada en explorador que se inicia desde SharePoint Server 2010 o versiones posteriores.  
+  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]proporciona informes ad hoc intuitivos para usuarios empresariales como analistas de datos, responsables de la toma de decisiones empresariales y trabajadores de la información. Los informes pueden crearse con facilidad y se puede interactuar con vistas de datos de los modelos tabulares basados en los libros de PowerPivot publicados en una galería de PowerPivot o los modelos tabulares creados con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e implementados en las instancias de Analysis Services de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . 
+  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] es una aplicación de Silverlight basada en explorador que se inicia desde SharePoint Server 2010 o versiones posteriores.  
   
  Al crear proyectos de modelos tabulares en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], puede configurar algunas propiedades de informes únicas para los informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Los temas de esta sección describen cómo optimizar un modelo para mejorar la experiencia de informes en [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   

@@ -9,24 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f03c3152e3144b137c079cbdfddeff5b9cd5156
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008175"
 ---
 # <a name="operators-dmx"></a>Operadores (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Puede usar los operadores de extensiones de minería de datos (DMX) para realizar aritmética, comparación, concatenación y operaciones lógicas de una consulta en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Puede utilizar operadores de extensiones de minería de datos (DMX) para realizar operaciones aritméticas, de comparación, de concatenación y lógicas en una consulta en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza operadores para realizar las siguientes acciones:  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza operadores para realizar las siguientes acciones:  
   
 -   Buscar valores u objetos que cumplan una condición determinada.  
   
 -   Implementar una decisión entre columnas o expresiones.  
   
- DMX emplea varias categorías de operadores, que se describen en las siguientes secciones. Para obtener más información acerca de los operadores individuales, consulte [extensiones de minería de datos &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md).  
+ DMX emplea varias categorías de operadores, que se describen en las siguientes secciones. Para obtener más información acerca de los operadores individuales, vea [extensiones de minería de datos &#40;referencia del operador DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md).  
   
 |Categoría de operador|Tipo de operación|  
 |-----------------------|-----------------------|  
@@ -39,11 +40,11 @@ ms.locfileid: "68008175"
   
  Cuando se combinan expresiones sencillas para formar una expresión compleja, el tipo de datos de la expresión resultante está determinado por la combinación de las reglas de los operadores con las reglas de la precedencia de tipo de datos. Si el resultado es un carácter o un valor de Unicode, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la intercalación del resultado mediante la combinación de las reglas de los operadores con las reglas de precedencia de la intercalación. También hay reglas que determinan la precisión, escala y longitud del resultado basándose en la precisión, escala y longitud de las expresiones sencillas.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+## <a name="see-also"></a>Consulte también  
+ [Referencia de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Convenciones de sintaxis de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estructura y uso de las consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

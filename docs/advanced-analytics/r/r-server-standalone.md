@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727386"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>¿Qué son Machine Learning Server (independiente) o R Server en SQL Server?
@@ -26,7 +26,7 @@ En SQL Server 2016, esta característica se denomina **R Server (independient
 > [!Note]
 > Tal y como se instala con el programa de instalación de SQL Server, un servidor independiente es funcionalmente equivalente a las versiones que no son de la marca SQL de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) y admite los mismos escenarios de usuario, como la ejecución remota, la operacionalización y los servicios web, así como la colección completa de bibliotecas de R y Python.
 
-## <a name="components"></a>Components
+## <a name="components"></a>Componentes
 
 SQL Server 2016 solo admite R. SQL Server 2017 admite R y Python. En la tabla siguiente se indican las características de cada versión.
 
@@ -90,7 +90,7 @@ Puede encontrar descripciones de la funcionalidad nueva o modificada en el artí
 
 Para obtener más información sobre cómo aplicar las actualizaciones a una instancia existente, vea [Aplicación de actualizaciones](../install/sql-machine-learning-standalone-windows-install.md#apply-cu) en las instrucciones de instalación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Instalación de R Server (independiente) o Machine Learning Server (independiente)](../install/sql-machine-learning-standalone-windows-install.md)
 

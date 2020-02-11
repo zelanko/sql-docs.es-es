@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0807a034f05d723ae19c86e8b00d08309176551c
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095155"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Administrar servicios y configuración de red utilizando el proveedor WMI
@@ -31,10 +31,10 @@ ms.locfileid: "74095155"
  El objeto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> funciona independientemente de la conexión establecida con el objeto <xref:Microsoft.SqlServer.Management.Smo.Server> a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y utiliza las credenciales de Windows para conectarse al servicio WMI.  
   
 ## <a name="example"></a>Ejemplo  
-Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
- En el caso de los programas que utilizan el proveedor WMI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe incluir la instrucción **Imports** para calificar el espacio de nombres WMI. Inserte la instrucción después de las demás instrucciones **Imports** , antes de cualquier declaración de la aplicación, como:  
+ En el caso de los [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programas que utilizan el proveedor WMI, debe incluir la instrucción **Imports** para calificar el espacio de nombres WMI. Inserte la instrucción después de las demás instrucciones **Imports** , antes de cualquier declaración de la aplicación, como:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -212,7 +212,7 @@ $svc.ServiceState
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos del proveedor WMI de administración de configuración](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

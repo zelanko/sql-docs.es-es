@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832970"
 ---
 # <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea
@@ -35,11 +35,12 @@ ms.locfileid: "62832970"
   
 -   Los valores de las operaciones por lotes se omiten para los modelos tabulares.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye diversas tareas que realizan operaciones de Business Intelligence, como la ejecución de instrucciones del lenguaje de definición de datos (DDL) y consultas de predicción de minería de datos. Para obtener más información sobre tareas de Business Intelligence relacionadas, haga clic en uno de los temas siguientes:  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye diversas tareas que realizan operaciones de Business Intelligence, como la ejecución de instrucciones del lenguaje de definición de datos (DDL) y consultas de predicción de minería de datos. Para obtener más información sobre tareas de Business Intelligence relacionadas, haga clic en uno de los temas siguientes:  
   
 -   [Tarea Ejecutar DDL de Analysis Services](analysis-services-execute-ddl-task.md)  
   
--   [Tarea Consulta de minería de datos](data-mining-query-task.md)  
+-   [Data Mining Query Task](data-mining-query-task.md)  
   
 ## <a name="object-processing"></a>Procesamiento de objetos  
  Pueden procesarse varios objetos a la vez. Cuando se procesan varios objetos, se definen valores de configuración que se aplicarán al procesamiento de todos los objetos del lote.  
@@ -57,7 +58,7 @@ ms.locfileid: "62832970"
   
  Esta tarea se suele usar en combinación con una tarea de inserción masiva, que carga datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o con una tarea Flujo de datos que implementa un flujo de datos que carga datos en una tabla. Por ejemplo, la tarea Flujo de datos puede tener un flujo de datos que extraiga los datos de una base de datos transaccional en línea (OLTP) y los cargue en una tabla de hechos de un almacenamiento de datos, tras lo cual se realiza la llamada a la tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para que procese el cubo generado en el almacenamiento de datos.  
   
- La tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa un administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para conectarse a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información, consulte [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
+ La [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tarea procesamiento de usa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un administrador de conexiones de para conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una instancia de. Para más información, consulte [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
   
 ## <a name="error-handling"></a>Tratamiento de errores  
   
@@ -66,9 +67,9 @@ ms.locfileid: "62832970"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea de procesamiento de Analysis Services &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [&#40;página general del editor de la tarea procesamiento de Analysis Services&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea de procesamiento de Analysis Services &#40;página Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Analysis Services página de procesamiento de &#40;del editor de la tarea Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

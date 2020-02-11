@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2d239dfc3d094f72d40ce6d020610fe1c0eabbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103804"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Habilitar los errores remotos (Reporting Services)
@@ -33,14 +33,14 @@ ms.locfileid: "66103804"
   
 -   [Modificar la tabla ConfigurationInfo (modo nativo)](#bkmk_ConfigurationInfo)  
   
-##  <a name="bkmk_sharepoint"></a> Habilitar errores remotos para el modo de SharePoint  
+##  <a name="bkmk_sharepoint"></a>Habilitar errores remotos para el modo de SharePoint  
  Hay diferentes procedimientos para habilitar errores remotos para el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El procedimiento es distinto para las dos arquitecturas diferentes del servidor de informes. El servicio de SharePoint más reciente basado en la arquitectura que se introdujo en la versión de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usa un valor que se puede configurar para cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La arquitectura más antigua utiliza un solo valor de nivel de sitio.  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Habilitar errores remotos para una aplicación de servicio de Reporting Services  
   
 1.  Para un servidor de informes en modo de SharePoint instalado con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o una versión más reciente de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], habilite la configuración de aplicación de servicio **Habilitar los errores remotos**. El valor se puede configurar para cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-2.  En Administración central de SharePoint, en el grupo **Administrar aplicaciones de servicio** , haga clic en **Administración de aplicaciones** .  
+2.  En administración central de SharePoint, haga clic en **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones** .  
   
 3.  Encuentre su aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y haga clic en el nombre.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66103804"
   
 5.  Haga clic en **Habilitar errores remotos** en la sección **Seguridad** .  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 #### <a name="enable-remote-errors-for-a-sharepoint-site"></a>Habilitar errores remotos para un sitio de SharePoint  
   
@@ -60,13 +60,13 @@ ms.locfileid: "66103804"
   
 4.  Haga clic en **Habilitar los errores remotos en modo local**.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haz clic en **Aceptar**.  
   
-##  <a name="bkmk_mgtStudio"></a> Habilitar los errores remotos a través de SQL Server Management Studio (modo nativo)  
+##  <a name="bkmk_mgtStudio"></a>Habilitar los errores remotos a través de SQL Server Management Studio (modo nativo)  
   
 1.  Inicie Management Studio y conéctese a una instancia del servidor de informes. Para obtener más información, vea [Conectar con un servidor de informes en Management Studio](../tools/connect-to-a-report-server-in-management-studio.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-2.  Haga clic con el botón derecho en el nodo del servidor de informes y seleccione **Propiedades**.  
+2.  Haga clic con el botón derecho en el nodo de servidor de informes y seleccione **Propiedades**.  
   
 3.  Haga clic en **Avanzadas** para abrir la página de propiedades. Para más información, vea [Propiedades del servidor &#40;página Avanzadas&#41;](../tools/server-properties-advanced-page-reporting-services.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66103804"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_script"></a> Habilitar errores remotos mediante scripts (modo nativo)  
+##  <a name="bkmk_script"></a>Habilitar errores remotos mediante scripts (modo nativo)  
   
 1.  Cree un archivo de texto y copie en él el script siguiente.  
   
@@ -106,11 +106,11 @@ ms.locfileid: "66103804"
     rs -i EnableRemoteErrors.rss -s http://servername/ReportServer  
     ```  
   
-6.  Para obtener más información, vea [Utilidad RS.exe &#40;SSRS&#41;](../tools/rs-exe-utility-ssrs.md).  
+6.  Para obtener más información, vea [utilidad RS. exe &#40;SSRS&#41;](../tools/rs-exe-utility-ssrs.md)  
   
-##  <a name="bkmk_ConfigurationInfo"></a> Modificar la tabla ConfigurationInfo (modo nativo)  
+##  <a name="bkmk_ConfigurationInfo"></a>Modificar la tabla ConfigurationInfo (modo nativo)  
   
 1.  > [!NOTE]  
-    >  Puede editar el **ConfigurationInfo** tabla en la base de datos del servidor de informes para establecer `EnableRemoteErrors` a `True`, pero si se utiliza el servidor de informes, debe usar SQL Server Management Studio o un script para modificar la configuración. Si modifica el valor de la base de datos, debe reiniciar el servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para que los cambios surtan efecto.  
+    >  Puede editar la tabla **ConfigurationInfo** en la base de datos del servidor de `EnableRemoteErrors` informes `True`para establecer en, pero si el servidor de informes se usa activamente, debe usar SQL Server Management Studio o script para modificar la configuración. Si modifica el valor de la base de datos, debe reiniciar el servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para que los cambios surtan efecto.  
   
   

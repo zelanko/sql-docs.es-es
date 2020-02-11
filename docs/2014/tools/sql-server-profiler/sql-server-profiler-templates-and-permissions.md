@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7d7e92758707217a42afbd41649720907adfeaa3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211054"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>Plantillas y permisos de SQL Server Profiler
@@ -56,7 +56,7 @@ ms.locfileid: "68211054"
 |[Filtrar seguimientos con SQL Server Profiler](filter-traces-with-sql-server-profiler.md)|Contiene información acerca del establecimiento de filtros en columnas de datos para filtrar la salida del seguimiento mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Reproducir seguimientos](replay-traces.md)|Contiene información que explica lo que significa la reproducción de un seguimiento y qué es necesario para reproducir un seguimiento.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](sql-server-profiler.md)   
  [Iniciar SQL Server Profiler](start-sql-server-profiler.md)  
   

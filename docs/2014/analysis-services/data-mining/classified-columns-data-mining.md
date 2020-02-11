@@ -1,5 +1,5 @@
 ---
-title: Clasificar las columnas (minería de datos) | Microsoft Docs
+title: Columnas clasificadas (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085686"
 ---
 # <a name="classified-columns-data-mining"></a>Columnas clasificadas (Minería de datos)
@@ -40,10 +40,10 @@ ms.locfileid: "66085686"
   
  En la lista siguiente se describen los tipos de contenido que admite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para las columnas clasificadas.  
   
- **PROBABILITY**  
+ **PROBABILIDAD**  
  El valor de la columna es la probabilidad del valor asociado, un número entre cero y uno.  
   
- **VARIANCE**  
+ **CONCILIA**  
  El valor de la columna es la varianza del valor asociado.  
   
  **STDEV**  
@@ -55,12 +55,12 @@ ms.locfileid: "66085686"
  **PROBABILITY_STDEV**  
  El valor de la columna es la desviación estándar de la probabilidad del valor asociado.  
   
- **Support**  
+ **SER**  
  El valor de la columna es el peso, o factor de replicación del caso, del valor asociado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tipos de datos &#40;minería de datos&#41;](data-types-data-mining.md)  
+ [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-structures-analysis-services-data-mining.md)   
+ [Tipos de datos &#40;&#41;de minería de datos](data-types-data-mining.md)  
   
   

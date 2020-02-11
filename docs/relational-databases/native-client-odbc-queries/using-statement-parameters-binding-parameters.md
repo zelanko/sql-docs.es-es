@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 340a3a0f44201c81eafe8717962b2894709eb65d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779536"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Usar parámetros de instrucciones: enlazar parámetros
@@ -49,19 +49,20 @@ ms.locfileid: "73779536"
   
      El enlace de modo de fila se especifica mediante una llamada a **SQLSetStmtAttr** con el *atributo* establecido en SQL_ATTR_PARAM_BIND_TYPE y *ValuePtr* establecido en el tamaño de la estructura que contiene las variables de programa.  
   
- Cuando el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client envía parámetros de cadena binaria o de caracteres al servidor, rellena los valores con la longitud especificada en el parámetro **SQLBindParameter** *columnas* . Si una aplicación ODBC 2. x especifica 0 para *columnas*, el controlador rellena el valor del parámetro con la precisión del tipo de datos. La precisión es 8000 cuando se conecta con los servidores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 cuando se conecta con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Columnas* en bytes para las columnas Variant.  
+ Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client envía parámetros de cadena binaria o de caracteres al servidor, rellena los valores con la longitud especificada en el parámetro **SQLBindParameter** *columnas* . Si una aplicación ODBC 2. x especifica 0 para *columnas*, el controlador rellena el valor del parámetro con la precisión del tipo de datos. La precisión es 8000 cuando se conecta con los servidores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 cuando se conecta con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Columnas* en bytes para las columnas Variant.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite definir nombres para parámetros de procedimiento almacenado. ODBC 3.5 también introdujo la compatibilidad con el uso de parámetros con nombre para llamar a procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta compatibilidad se puede utilizar para:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite definir nombres para parámetros de procedimiento almacenado. ODBC 3.5 también introdujo la compatibilidad con el uso de parámetros con nombre para llamar a procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta compatibilidad se puede utilizar para:  
   
 -   Llamar a un procedimiento almacenado y proporcionar valores para un subconjunto de parámetros definido para el procedimiento almacenado.  
   
 -   Especifique los parámetros en la aplicación en un orden diferente que el orden especificado cuando se creó el procedimiento almacenado.  
   
- Los parámetros con nombre solo se admiten cuando se usa la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] **Execute** o la secuencia de escape ODBC Call para ejecutar un procedimiento almacenado.  
+ Los parámetros con nombre solo se admiten [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se usa la instrucción **Execute** o la secuencia de escape ODBC Call para ejecutar un procedimiento almacenado.  
   
- Si se establece **SQL_DESC_NAME** para un parámetro de procedimiento almacenado, todos los parámetros de procedimiento almacenado de la consulta también deben establecer **SQL_DESC_NAME**.  Si se usan literales en llamadas a procedimientos almacenados, donde los parámetros tienen **SQL_DESC_NAME** establecen, los literales deben usar el formato *' nombre*=*valor*', donde *nombre* es el nombre del parámetro del procedimiento almacenado (por ejemplo, @p1). Para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Si se establece **SQL_DESC_NAME** para un parámetro de procedimiento almacenado, todos los parámetros de procedimiento almacenado de la consulta también deben establecer **SQL_DESC_NAME**.  Si se usan literales en llamadas a procedimientos almacenados, donde los parámetros tienen **SQL_DESC_NAME** establecen, los literales deben usar el formato *' nombre*=*valor*', donde *nombre* es el nombre del parámetro del procedimiento almacenado @p1(por ejemplo,). Para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar parámetros de instrucciones](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
   

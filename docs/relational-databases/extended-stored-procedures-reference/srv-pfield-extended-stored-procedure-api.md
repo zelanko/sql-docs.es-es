@@ -20,17 +20,18 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68131580"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Devuelve información acerca de una conexión de base de datos.  
   
@@ -54,10 +55,10 @@ len
  *srvproc*  
  Puntero que identifica una conexión a la base de datos.  
   
- *field*  
+ *campo*  
  Especifica los datos que se van a devolver en la conexión.  
   
-|Valor|Devuelve|  
+|Value|Devuelve|  
 |-----------|-------------|  
 |SRV_APPLNAME|El nombre de aplicación proporcionado por el cliente cuando estableció la conexión.|  
 |SRV_BCPFLAG|Una marca que es TRUE si el cliente está preparando una operación de copia masiva; de lo contrario, FALSE.|  
@@ -79,7 +80,7 @@ len
 |SRV_USER|El nombre del usuario de la conexión.|  
 |||  
   
- *len*  
+ *terminado*  
  Es un puntero a una variable **int** que contiene la longitud del valor *field* devuelto. Si *len* es NULL, no se devuelve la longitud de la cadena.  
   
 ## <a name="returns"></a>Devuelve  

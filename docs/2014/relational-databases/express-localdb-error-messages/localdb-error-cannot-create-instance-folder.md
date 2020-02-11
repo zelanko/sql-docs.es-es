@@ -11,23 +11,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5375c391b976de111813f55d422a367b3ea874a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519549"
 ---
-# <a name="localdberrorcannotcreateinstancefolder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
+# <a name="localdb_error_cannot_create_instance_folder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|256|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|256|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
-|Texto del mensaje|No se puede crear la carpeta para la instancia de base de datos Local en: %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server Local DB\Instances\\< nombre de instancia\>.|  
+|Texto del mensaje|No se puede crear la carpeta para la instancia de base de datos local en:%% LOCALAPPDATA%\\ % \ Microsoft\Microsoft\>SQL Server local DB\Instances<nombre de instancia.|  
   
 ## <a name="explanation"></a>Explicación  
  No se puede crear una carpeta en %userprofile%.  

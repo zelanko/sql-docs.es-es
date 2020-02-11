@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891220"
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
@@ -44,7 +44,7 @@ ms.locfileid: "68891220"
   
     -   El carácter de subrayado (_).  
   
-3.  El identificador no debe ser una palabra clave reservada de DMX. Las palabras clave reservadas de DMX no distinguen entre mayúsculas y minúsculas. Para obtener más información, vea [sintaxis &#40;&#41;MDX de palabras clave reservadas](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  El identificador no debe ser una palabra clave reservada de DMX. Las palabras clave reservadas de DMX no distinguen entre mayúsculas y minúsculas. Para obtener más información, vea [palabras clave reservadas &#40;sintaxis de MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  No se permiten los caracteres especiales o los espacios incrustados.  
   
@@ -83,7 +83,8 @@ ms.locfileid: "68891220"
   
 -   Cuando el nombre de un objeto contiene caracteres no incluidos en la lista de identificadores calificados.  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permite que los identificadores delimitados utilicen cualquier carácter de la página de códigos actual. No obstante, el uso indiscriminado de caracteres especiales en los nombres de objeto puede hacer que las instrucciones y scripts MDX resulten difíciles de leer y de mantener.  
+     
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permite que los identificadores delimitados utilicen cualquier carácter de la página de códigos actual. No obstante, el uso indiscriminado de caracteres especiales en los nombres de objeto puede hacer que las instrucciones y scripts MDX resulten difíciles de leer y de mantener.  
   
 ### <a name="formatting-rules-for-delimited-identifiers"></a>Reglas de formato para los identificadores delimitados  
  La parte de cuerpo de un identificador delimitado puede contener cualquier combinación de caracteres de la página de códigos actual, incluidos los propios caracteres delimitadores. Si el cuerpo del identificador delimitado contiene caracteres delimitadores, será necesario un tratamiento especial:  
@@ -122,9 +123,9 @@ ms.locfileid: "68891220"
   
  También se ha delimitado el identificador Measures del ejemplo anterior para mostrar la delimitación de más de un identificador.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
  [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [MDX (elementos &#40;de sintaxis MDX)&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

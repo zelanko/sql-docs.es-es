@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251950"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
@@ -44,10 +44,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  La solicitud del nombreruta para una columna de cualquier otro tipo de datos o de un columnthat **varbinary (Max)** no tiene el atributo de almacenamiento FileStream producirá un error en tiempo de compilación de la consulta.  
   
- *\@, opción*  
- [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *\@opción* puede ser uno de los valores siguientes. El valor predeterminado es 0.  
+ *\@desea*  
+ [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. la opción puede ser uno de los valores siguientes. * \@* El valor predeterminado es 0.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0|Devuelve el nombre del servidor convertido al formato BIOS, por ejemplo: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Devuelve el nombre del servidor sin la conversión, por ejemplo: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,19 +60,19 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Cuando la base de datos pertenece a un grupo de disponibilidad de Always On, el valor de *use_replica_computer_name* tiene el efecto siguiente en la salida de la función **PathName** :  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |No especificada.|La función devuelve el nombre de red virtual (VNN) en la ruta de acceso.|  
 |0|La función devuelve el nombre de red virtual (VNN) en la ruta de acceso.|  
 |1|La función devuelve el nombre del equipo en la ruta de acceso.|  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **nvarchar(max)**  
   
 ## <a name="return-value"></a>Valor devuelto  
  El valor devuelto es la ruta de acceso de NETBIOS o la ruta de acceso lógica completa del BLOB. PathName no devuelve una dirección IP. Se devuelve NULL cuando no se ha creado el BLOB FILESTREAM.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  La columna ROWGUID debe estar visible en cualquier consulta que llame a PathName.  
   
  Un BLOB FILESTREAM solo se puede crear utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -91,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>b. Mostrar las rutas de acceso de BLOB FILESTREAM en una tabla  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. Mostrar las rutas de acceso de BLOB FILESTREAM en una tabla  
  En el ejemplo siguiente se crean y muestran las rutas de acceso para tres BLOB FILESTREAM.  
   
 ```sql  
@@ -147,9 +147,9 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41; ](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;&#41;de Transact-SQL](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

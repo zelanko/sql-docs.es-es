@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 23a1392256e103fa1bc112f11b5c5b97f5c398f1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75237713"
 ---
 # <a name="whats-new-in-sql-server-2014"></a>Novedades de SQL Server 2014 +
@@ -45,7 +45,7 @@ This file, at this exact GitHub path, is dedicated to SQL Server version 2014.
   
 -   [Novedades de Analysis Services y Business Intelligence](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
   
--   [Novedades de SQL Server instalación](install/what-s-new-in-sql-server-installation.md)  
+-   [Novedades de la instalación de SQL Server](install/what-s-new-in-sql-server-installation.md)  
   
  **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]no ha presentado nuevas características importantes para las siguientes características:**  
   

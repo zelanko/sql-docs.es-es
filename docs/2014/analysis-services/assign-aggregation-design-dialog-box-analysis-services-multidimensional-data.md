@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de diseño de agregaciones (Analysis Services - datos multidimensionales) asignar | Microsoft Docs
+title: Cuadro de diálogo asignar diseño de agregaciones (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11ee89e8849155f905e3908e491184f78a8f08b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062230"
 ---
 # <a name="assign-aggregation-design-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Asignar diseño de agregaciones (Analysis Services - Datos multidimensionales)
@@ -27,10 +27,10 @@ ms.locfileid: "66062230"
 |Término|Definición|  
 |----------|----------------|  
 |**Diseños de agregaciones**|Seleccione un diseño de agregaciones para asignarlo a una o varias particiones de destino.|  
-|**Particiones de destino**|Seleccione las particiones a las que se debe asignar el diseño de agregaciones. La siguiente cuadrícula se utiliza para especificar particiones de destino:<br /><br /> \<casilla de verificación >: Active o desactive la casilla de verificación en el encabezado de columna para incluir o excluir todas las particiones enumeradas como particiones de destino. Active o desactive la casilla de una partición para incluir o excluir esa partición como partición de destino.<br /><br /> **Partición**: Muestra el nombre de la partición.<br /><br /> **Origen**: Muestra la tabla o la consulta de origen de la partición.<br /><br /> **Diseño de agregaciones**: Muestra el nombre del diseño de agregaciones existente para la partición.|  
+|**Particiones de destino**|Seleccione las particiones a las que se debe asignar el diseño de agregaciones. La siguiente cuadrícula se utiliza para especificar particiones de destino:<br /><br /> \<> casilla: Active o desactive la casilla del encabezado de columna para incluir o excluir todas las particiones enumeradas como particiones de destino. Active o desactive la casilla de una partición para incluir o excluir esa partición como partición de destino.<br /><br /> **Partición**: muestra el nombre de la partición.<br /><br /> **Origen**: muestra la tabla o consulta de origen para la partición.<br /><br /> **Diseño de agregaciones**: muestra el nombre del diseño de agregaciones existente para la partición.|  
 |**Ocultar particiones con diseños de agregaciones**|Seleccione esta opción para mostrar únicamente las particiones que no tienen asignados diseños de agregaciones.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregaciones y diseños de agregaciones](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

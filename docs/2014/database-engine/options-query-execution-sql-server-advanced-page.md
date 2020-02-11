@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (consulta de ejecución: SQL Server: página Opciones avanzadas) | Microsoft Docs'
+title: 'Opciones (ejecución de la consulta: SQL Server: Página avanzadas) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,38 +13,38 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089372"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Opciones (Ejecución de la consulta/SQL Server/página Avanzadas)
-  Hay varias opciones disponibles cuando se utiliza el comando SET. Utilice esta página para especificar una opción **set** para ejecutar consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el Editor de consultas de SQL Server. No tendrán efecto en otros editores de código. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o en el menú contextual de la ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . En **Ejecución**, haga clic en **Avanzadas**. Para obtener más información sobre cada una estas opciones, consulte los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Hay varias opciones disponibles cuando se utiliza el comando SET. Utilice esta página para especificar una opción **set** para ejecutar consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el Editor de consultas de SQL Server. No tendrán efecto en otros editores de código. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o en el menú contextual de la ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . En **Ejecución**, haga clic en **Avanzadas**. Para obtener más información sobre cada una estas opciones, consulte los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
- **SET NOCOUNT**  
+ **ESTABLECER NOCOUNT**  
  No devuelve el recuento del número de filas, como un mensaje con el conjunto de resultados. Esta casilla está desactivada de forma predeterminada.  
   
- **SET NOEXEC**  
+ **ESTABLECER NOEXEC**  
  No ejecuta la consulta. Esta casilla está desactivada de forma predeterminada.  
   
- **SET PARSEONLY**  
+ **ESTABLECER PARSEONLY**  
  Comprueba la sintaxis de cada consulta, pero no las ejecuta. Esta casilla está desactivada de forma predeterminada.  
   
- **SET CONCAT_NULL_YIELDS_NULL**  
+ **ESTABLECER CONCAT_NULL_YIELDS_NULL**  
  Cuando esta casilla está activada, las consultas que concatenan un valor existente con un valor NULL devuelven siempre un valor NULL como resultado. Cuando esta casilla está desactivada, un valor existente concatenado con un valor NULL devolverá el valor existente. Esta casilla está activada de forma predeterminada.  
   
- **SET ARITHABORT**  
+ **ESTABLECER ARITHABORT**  
  Cuando esta casilla está activada, el hecho de que una instrucción INSERT, DELETE o UPDATE encuentre un error aritmético (desbordamiento, división por cero o error de dominio) al evaluar una expresión, hará que la consulta o proceso por lotes finalicen. Cuando esta casilla está desactivada, se proporciona si es posible un valor NULL para dicho valor, la consulta continúa y se incluye un mensaje con el resultado. Para obtener más información, vea [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql). Esta casilla está activada de forma predeterminada.  
   
- **SET SHOWPLAN_TEXT**  
+ **ESTABLECER SHOWPLAN_TEXT**  
  Cuando esta casilla está activada, el plan de consulta se devuelve en formato de texto con cada consulta. Esta casilla está desactivada de forma predeterminada.  
   
- **SET STATISTICS TIME**  
+ **ESTABLECER HORA DE ESTADÍSTICAS**  
  Cuando se activa esta casilla, las estadísticas de tiempo se devuelven con cada consulta. Esta casilla está desactivada de forma predeterminada.  
   
- **SET STATISTICS IO**  
+ **ESTABLECER E/S DE ESTADÍSTICAS**  
  Cuando esta casilla está activada, las estadísticas de entrada y salida se devuelven con cada consulta. Esta casilla está desactivada de forma predeterminada.  
   
  **SET TRANSACTION ISOLATION LEVEL**  
@@ -55,10 +55,10 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 GO  
 ```  
   
- **ESTABLECER LA PRIORIDAD DE INTERBLOQUEO**  
+ **SET DEADLOCK PRIORITY**  
  El valor predeterminado Normal permite que cada consulta tenga la misma prioridad cuando se produce un interbloqueo. Seleccione una prioridad baja si desea que esta consulta pierda conflictos de interbloqueo y quede seleccionada como la consulta que debe finalizar.  
   
- **ESTABLECER TIEMPO DE ESPERA DE BLOQUEO**  
+ **SET LOCK TIMEOUT**  
  El valor predeterminado de -1 indica que los bloqueos se mantienen hasta que finalizan las transacciones. El valor de 0 significa no esperar en absoluto y devolver un mensaje en cuanto se encuentre un bloqueo. Proporcione un valor mayor que 0 milisegundos para finalizar una transacción si los bloqueos para transacción deben mantenerse durante un intervalo mayor.  
   
  **SET QUERY_GOVERNOR_COST_LIMIT**  
@@ -70,7 +70,7 @@ GO
  **Desconectar tras la ejecución de la consulta**  
  Cuando esta casilla está activada, la conexión a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] finaliza después de completarse la consulta. Esta casilla está desactivada de forma predeterminada.  
   
- **Valores predeterminados**  
+ **Restablecer valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

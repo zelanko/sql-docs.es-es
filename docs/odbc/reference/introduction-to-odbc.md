@@ -14,14 +14,14 @@ ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1792161b472e42c42ea2bfc895bf013802cb656c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093782"
 ---
 # <a name="introduction-to-odbc"></a>Introducción a ODBC
-Esta sección proporciona una breve historia de lenguaje de consulta estructurado y ODBC e incluye información conceptual acerca de la interfaz ODBC.  
+En esta sección se proporciona un breve historial de Lenguaje de consulta estructurado y ODBC, y se incluye información conceptual sobre la interfaz ODBC.  
   
  Esta sección contiene los siguientes temas:  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400922"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Componentes físicos del dispositivo: Analytics Platform System
@@ -79,7 +79,7 @@ El clúster de PDW se denomina WFOHST01. Administra todos los hosts físicos y l
 *appliance_domain*-DAS01 a *appliance_domain*-DAS03  
 Este es el almacenamiento de conexión directa que está conectado a los nodos de proceso. HP tiene un DAS por cada dos nodos de proceso. Dell y cuantos tienen un DAS por cada tres nodos de proceso.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
 [Configuración del dispositivo &#40;Analytics Platform System&#41;](appliance-configuration.md)  
 [Tareas de administración de dispositivos &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  

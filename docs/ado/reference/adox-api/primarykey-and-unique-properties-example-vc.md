@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de propiedades únicas (VC ++) y PrimaryKey | Microsoft Docs
+title: Ejemplo de propiedades PrimaryKey y Unique (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0b81ad98725bb48fe03e472cdf5cfdbbf047aaef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce3541843bc0eb82aa035864cd5c2490c4399ff5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965538"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918395"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>Ejemplo de propiedades PrimaryKey y Unique (VC++)
-Este ejemplo se muestra el [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) y [Unique](../../../ado/reference/adox-api/unique-property-adox.md) las propiedades de un [índice](../../../ado/reference/adox-api/index-object-adox.md). El código crea una nueva tabla con dos columnas. El **PrimaryKey** y **Unique** propiedades se utilizan para establecer una columna de clave principal para el que no se permiten valores duplicados.  
+En este ejemplo se muestran las propiedades [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) y [Unique](../../../ado/reference/adox-api/unique-property-adox.md) de un [Índice](../../../ado/reference/adox-api/index-object-adox.md). El código crea una nueva tabla con dos columnas. Las propiedades **PrimaryKey** y **Unique** se usan para convertir una columna en la clave principal para la que no se permiten valores duplicados.  
   
 ```  
 // BeginPrimaryKeyCpp.cpp  
@@ -117,7 +117,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in PrimaryKeyX...." << endl;  
+      cout << "Error occurred in PrimaryKeyX...." << endl;  
    }  
   
    m_pCatalog = NULL;  

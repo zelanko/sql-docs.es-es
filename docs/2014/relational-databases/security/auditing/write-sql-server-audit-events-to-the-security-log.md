@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211976"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Escribir eventos de auditoría de SQL Server en el registro de seguridad
@@ -47,13 +47,13 @@ ms.locfileid: "68211976"
   
      [Seguridad](#Security)  
   
--   **Para escribir eventos de auditoría de SQL Server en el registro de seguridad:**  
+-   **Para escribir SQL Server eventos de auditoría en el registro de seguridad:**  
   
-     [Configurar el valor Auditar el acceso a objetos en Windows utilizando auditpol](#auditpolAccess)  
+     [Configurar el valor auditar el acceso a objetos en Windows mediante Auditpol](#auditpolAccess)  
   
-     [Configurar el valor Auditar el acceso a objetos en Windows utilizando secpol](#secpolAccess)  
+     [Configurar el valor auditar el acceso a objetos en Windows mediante secpol](#secpolAccess)  
   
-     [Conceder el permiso Generar auditorías de seguridad a una cuenta utilizando secpol](#secpolPermission)  
+     [Conceder el permiso generar auditorías de seguridad a una cuenta mediante secpol](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68211976"
   
 7.  Cierre la herramienta Directiva de seguridad.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Audit &#40;motor de base de datos&#41;](sql-server-audit-database-engine.md)  
   
   

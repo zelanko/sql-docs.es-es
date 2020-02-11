@@ -1,5 +1,5 @@
 ---
-title: Creación de una aplicación de proveedor SQL Server Native Client OLE DB | Documentos de Microsoft
+title: Creación de una aplicación de proveedor de OLE DB de SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209757"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Crear una aplicación de proveedor OLE DB de SQL Server Native Client
-  Creación de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicación del proveedor OLE DB de Native Client incluye los siguientes pasos:  
+  La creación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una aplicación de proveedor de OLE DB de Native Client implica estos pasos:  
   
 1.  Establecer una conexión con un origen de datos.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "63209757"
   
 -   [Ejecutar un comando](executing-a-command.md)  
   
--   [Procesar resultados](processing-results.md)  
+-   [Procesar los resultados (ODBC)](processing-results.md)  
   
 -   [Acerca de las propiedades de OLE DB](about-ole-db-properties.md)  
   
 -   [Usar la cláusula OUTPUT con OLE DB en SQL Server Native Client](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Propiedades del trabajo: Nuevo trabajo (página alertas) | Microsoft Docs'
+title: 'Propiedades del trabajo: nuevo trabajo (página alertas) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,29 +13,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189278"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>Propiedades del trabajo: Nuevo trabajo (página Alertas)
-  Utilice esta página para ver y cambiar las alertas de un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice esta página para ver y organizar las alertas de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente.  
   
 ## <a name="options"></a>Opciones  
  **Lista de alertas**  
  Presenta una lista de las alertas de este trabajo.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Crea una nueva alerta para el trabajo.  
   
- **Editar**  
+ **Edición**  
  Modifica la definición de la alerta seleccionada.  
   
- **Quitar**  
+ **Remove**  
  Quita la alerta seleccionada del trabajo y la elimina.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Alerts](alerts.md)   
  [Implementar trabajos](implement-jobs.md)  
   

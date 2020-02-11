@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243197"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Ejecutar archivos de scripts Transact-SQL mediante sqlcmd
@@ -51,7 +51,7 @@ ms.locfileid: "75243197"
   
 2.  En la ventana de símbolo del sistema, escriba: `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
-3.  Presione Entrar.  
+3.  Presione ENTRAR.  
   
  En la ventana del símbolo del sistema se escribe una lista con las direcciones y los nombres de los empleados que figuran en [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] .  
   
@@ -61,12 +61,12 @@ ms.locfileid: "75243197"
   
 2.  En la ventana de símbolo del sistema, escriba: `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   
-3.  Presione Entrar.  
+3.  Presione ENTRAR.  
   
  La ventana del símbolo del sistema no devuelve resultados. En su lugar, los resultados se envían al archivo EmpAdds.txt. Para comprobar los resultados, abra el archivo EmpAdds.txt.  
   
-## <a name="see-also"></a>Véase también  
- [Iniciar la utilidad SQLCMD](sqlcmd-start-the-utility.md)   
- [Sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)  
+## <a name="see-also"></a>Consulte también  
+ [Iniciar la utilidad sqlcmd](sqlcmd-start-the-utility.md)   
+ [Utilidad sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

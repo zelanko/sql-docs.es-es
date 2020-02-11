@@ -1,5 +1,5 @@
 ---
-title: Tablas del Agente SQL Server (Transact-SQL) | Microsoft Docs
+title: Tablas de Agente SQL Server (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130586"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>Tablas de Agente SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  En los temas de esta sección se describen las tablas del sistema que almacenan la información utilizada por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todas las tablas están en el esquema dbo en la base de datos msdb.  
+  En los temas de esta sección se describen las tablas del sistema que almacenan la información utilizada por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todas las tablas están en el esquema dbo de la base de datos msdb.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [dbo.sysalerts](../../relational-databases/system-tables/dbo-sysalerts-transact-sql.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "68130586"
  Almacena la información de cada trabajo programado que debe ejecutar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [dbo.sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
- Contiene información de programación de trabajos ser ejecutado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente  
+ Contiene información de programación para los trabajos que va [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ejecutar el agente  
   
  [dbo.sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
  Almacena la asociación o relación de un trabajo determinado con uno o más servidores de destino.  

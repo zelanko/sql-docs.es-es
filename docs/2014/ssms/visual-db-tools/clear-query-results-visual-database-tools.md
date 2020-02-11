@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255786"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Borrar los resultados de una consulta (Visual Database Tools)
@@ -35,7 +35,7 @@ ms.locfileid: "63255786"
   
      Si está ejecutando una consulta cuando borra el panel Resultados, el Diseñador de consultas y vistas detendrá la consulta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar consultas &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [Detener una consulta &#40;Visual Database Tools&#41;](stop-a-query-visual-database-tools.md)   
  [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](visual-database-tools.md)  

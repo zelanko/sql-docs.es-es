@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811236"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instancias del motor de base de datos (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "62811236"
 |Describe las capacidades de Service Broker para las aplicaciones de mensajería y de puesta en cola, y proporciona punteros a la documentación de Service Broker.|[Service Broker](sql-server-service-broker.md)|  
 |Describe cómo se puede utilizar la extensión del grupo de búferes para proporcionar una integración sin problemas del almacenamiento de acceso aleatorio no volátil (unidades de estado sólido) con el grupo de búferes del motor de base de datos para mejorar significativamente el rendimiento de E/S.|[Archivo de la extensión del grupo de búferes](buffer-pool-extension.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sqlservr (aplicación)](../../tools/sqlservr-application.md)   
  [Características de la base de datos](../../relational-databases/database-features.md)   
  [Características entre instancias del motor de base de datos](../database-engine-cross-instance-features.md)  

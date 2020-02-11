@@ -20,19 +20,20 @@ ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5a5aba02a9aaead76e7c9c3340de4f568160b307
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74119397"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
- Llama al controlador de mensajes de la API Procedimiento almacenado extendido instalado. Esta función normalmente se usa para llamar a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un procedimiento almacenado extendido para registrar un error (definido por el procedimiento almacenado extendido) en el archivo de registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en el registro de aplicaciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Llama al controlador de mensajes de la API Procedimiento almacenado extendido instalado. Esta función se utiliza normalmente para llamar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a desde un procedimiento almacenado extendido para registrar un error (definido por el procedimiento almacenado extendido) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el archivo de registro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] errores o en el registro de aplicación de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -75,10 +76,10 @@ oserrtextlen
  *errornum*  
  Es un número de error definido por el procedimiento almacenado extendido. Este número debe estar comprendido entre 50.001 y 2.147.483.647.  
   
- *severity*  
+ *gravedad*  
  Es un valor de gravedad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estándar para el error. Este número debe estar comprendido entre 0 y 24.  
   
- *state*  
+ *State*  
  Es un valor de estado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el error.  
   
  *oserrnum*  
@@ -99,7 +100,7 @@ oserrtextlen
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  La función **srv_message_handler** permite que un procedimiento almacenado extendido se integre con las características centralizadas de registro e informe de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se pueden establecer alertas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para eventos a partir de los procedimientos almacenados extendidos; el Agente SQL Server supervisa estas condiciones de alerta.  
   
  Si el mensaje de error es más largo, se trunca a 412 bytes.  

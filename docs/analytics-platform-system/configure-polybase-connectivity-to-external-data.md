@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401277"
 ---
 # <a name="what-is-polybase"></a>¿Qué es PolyBase?
@@ -32,7 +32,7 @@ Vea [características y limitación](https://docs.microsoft.com/sql/relational-d
 > [!NOTE] 
 > En el resto de los artículos relacionados con polybase se describen cómo configurar polybase en APS 2016 (AU6) y versiones posteriores.
 
-## <a name="see-also"></a>Véase también
+## <a name="see-also"></a>Consulte también
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

@@ -16,33 +16,33 @@ ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918257"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
-Especifica el tipo de bloqueo colocado en registros durante la edición.  
+Especifica el tipo de bloqueo colocado en los registros durante la edición.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adLockBatchOptimistic**|4|Indica las actualizaciones por lotes optimista. Se requiere para el modo de actualización por lotes.|  
-|**adLockOptimistic**|3|Indica un bloqueo optimista, registro por registro. El proveedor utiliza el bloqueo optimista bloquear registros solo cuando se llama a la [actualización](../../../ado/reference/ado-api/update-method.md) método.|  
-|**adLockPessimistic**|2|Indica un bloqueo pesimista, registro por registro. El proveedor no lo que es necesario para garantizar la modificación correcta de los registros, normalmente mediante el bloqueo de registros en el origen de datos inmediatamente después de editar.|  
-|**adLockReadOnly**|1|Indica los registros de solo lectura. No se puede modificar los datos.|  
-|**adLockUnspecified**|-1|No especifica un tipo de bloqueo. Para clones, el clon se crea con el mismo tipo de bloqueo que el original.|  
+|**adLockBatchOptimistic**|4|Indica actualizaciones de Batch optimistas. Necesario para el modo de actualización por lotes.|  
+|**adLockOptimistic**|3|Indica bloqueo optimista, registro por registro. El proveedor utiliza el bloqueo optimista y bloquea los registros solo cuando se llama al método [Update](../../../ado/reference/ado-api/update-method.md) .|  
+|**adLockPessimistic**|2|Indica un bloqueo pesimista, registro por registro. El proveedor hace lo necesario para garantizar la correcta edición de los registros, normalmente mediante el bloqueo de registros en el origen de datos inmediatamente después de la edición.|  
+|**adLockReadOnly**|1|Indica los registros de solo lectura. No se pueden modificar los datos.|  
+|**adLockUnspecified**|-1|No especifica un tipo de bloqueo. En el caso de los clones, el clon se crea con el mismo tipo de bloqueo que el original.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
+ Paquete: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
-|AdoEnums.LockType.BATCHOPTIMISTIC|  
-|AdoEnums.LockType.OPTIMISTIC|  
-|AdoEnums.LockType.PESSIMISTIC|  
-|AdoEnums.LockType.READONLY|  
-|AdoEnums.LockType.UNSPECIFIED|  
+|AdoEnums. LockType. BATCHOPTIMISTIC|  
+|AdoEnums. LockType. OPTIMISTic|  
+|AdoEnums. LockType. PESIMISTA|  
+|AdoEnums. LockType. READONLY|  
+|AdoEnums. LockType. no especificado|  
   
 ## <a name="applies-to"></a>Se aplica a  
   

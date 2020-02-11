@@ -13,19 +13,19 @@ ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b6f12b4b60e1914cab5ab1a52f48b0ac939aa8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073852"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (biblioteca de cursores)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Este tema describe el uso de la **SQLGetStmtAttr** función en la biblioteca de cursores. Para obtener información general sobre **SQLGetStmtAttr**, consulte [función SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ En este tema se describe el uso de la función **SQLGetStmtAttr** en la biblioteca de cursores. Para obtener información general sobre **SQLGetStmtAttr**, consulte la [función SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
- La biblioteca de cursores es compatible con los siguientes atributos de instrucción con **SQLGetStmtAttr**:  
+ La biblioteca de cursores admite los siguientes atributos de instrucción con **SQLGetStmtAttr**:  
   
 |||  
 |-|-|  

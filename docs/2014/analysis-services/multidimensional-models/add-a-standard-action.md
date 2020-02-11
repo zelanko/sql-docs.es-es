@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077465"
 ---
 # <a name="add-a-standard-action"></a>Agregar una acción estándar
@@ -53,18 +53,18 @@ ms.locfileid: "66077465"
         |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  
         |Conjunto de filas|Recupera un conjunto de filas.|  
         |.|Ejecuta un comando OLE DB.|  
-        |Dirección URL|Muestra una página web en un explorador de Internet.|  
+        |URL|Muestra una página web en un explorador de Internet.|  
   
     -   En **Expresión de acción**, cree una expresión que defina la acción. La expresión debe evaluarse como una cadena. Puede escribir la expresión manualmente, o puede arrastrar elementos desde las pestañas **Metadatos** y **Funciones** .  
   
 3.  (Opcional) Expanda **Propiedades adicionales**y, a continuación, realice uno de los pasos siguientes:  
   
-    -   En la lista desplegable **Invocación**, especifique cómo se invoca la acción. La siguiente tabla describe las opciones disponibles para invocar una acción.  
+    -   En la lista desplegable **Invocación** , especifique cómo se invoca la acción. La siguiente tabla describe las opciones disponibles para invocar una acción.  
   
         |Opción|Descripción|  
         |------------|-----------------|  
-        |Interactiva|La acción la desencadena la interacción del usuario.|  
-        |Lote|La acción se ejecuta como una operación por lotes.|  
+        |Interactive|La acción la desencadena la interacción del usuario.|  
+        |Batch|La acción se ejecuta como una operación por lotes.|  
         |Al abrir|La acción se ejecuta cuando un usuario abre el cubo.|  
   
     -   En **Aplicación**, escriba el nombre de la aplicación que está asociada a la acción. Por ejemplo, si crea una acción que transfiere a un usuario a un sitio web determinado, la aplicación asociada a la acción debería ser Microsoft Internet Explorer u otro explorador web.  
@@ -72,7 +72,7 @@ ms.locfileid: "66077465"
         > [!NOTE]  
         >  Las acciones de propietario no se devuelven al servidor a menos que la aplicación cliente limite explícitamente el conjunto de filas de esquema para que devuelva únicamente las acciones que coinciden con el nombre especificado en **Aplicación**.  
   
-    -   En **contenido de la acción**, si está utilizando el tipo de dirección URL, incluya la dirección de Internet comillas; por ejemplo, "http://www.adventure-works.com".  
+    -   En **contenido**de la acción, si usa el tipo de dirección URL, incluya la dirección de Internet entre comillas,http://www.adventure-works.compor ejemplo, "".  
   
     -   En **Descripción**, escriba una descripción de la acción.  
   

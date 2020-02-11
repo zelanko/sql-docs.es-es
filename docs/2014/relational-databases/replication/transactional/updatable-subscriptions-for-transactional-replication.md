@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655498"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -108,9 +108,11 @@ ms.locfileid: "62655498"
   
 -   Para las columnas de tipo de datos `SQL_VARIANT`, cuando los datos se insertan o actualizan en el suscriptor, son asignados del siguiente modo por el Agente de lectura de cola al copiarlos del suscriptor a la cola:  
   
-    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` y `SMALLMONEY` se asignan a `NUMERIC`.  
+    -   
+  `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` y `SMALLMONEY` se asignan a `NUMERIC`.  
   
-    -   `BINARY` y `VARBINARY` se asignan a datos `VARBINARY`.  
+    -   
+  `BINARY` y `VARBINARY` se asignan a datos `VARBINARY`.  
   
 ### <a name="conflict-detection-and-resolution"></a>Detección y resolución de conflictos  
   
@@ -122,7 +124,7 @@ ms.locfileid: "62655498"
   
     -   Si se esperan conflictos, no debe utilizar restricciones de clave externa en el publicador o suscriptor si utiliza la resolución de conflictos "El suscriptor gana"; no debe utilizar restricciones de clave externa en el suscriptor si utiliza la resolución de conflictos "El publicador gana".  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
  [Replicación transaccional](transactional-replication.md)   
  [Publicar datos y objetos de base de datos](../publish/publish-data-and-database-objects.md)   

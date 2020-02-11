@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894789"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabajar con archivos de Excel con la tarea Script
@@ -28,13 +28,13 @@ ms.locfileid: "62894789"
   
  [Configurar un paquete para probar los ejemplos](#configuring)  
   
- [Ejemplo 1: Comprobar si existe un archivo de Excel](#example1)  
+ [Ejemplo1: Compruebe si existe un archivo de Excel](#example1)  
   
- [Ejemplo 2: Comprobar si existe una tabla de Excel](#example2)  
+ [Ejemplo 2: comprobar si existe una tabla de Excel](#example2)  
   
- [Ejemplo 3: Obtener una lista de archivos de Excel en una carpeta](#example3)  
+ [Ejemplo 3: obtener una lista de archivos de Excel en una carpeta](#example3)  
   
- [Ejemplo 4: Obtener una lista de tablas en un archivo de Excel](#example4)  
+ [Ejemplo 4: obtener una lista de tablas en un archivo de Excel](#example4)  
   
  [Mostrar los resultados de los ejemplos](#testing)  
   
@@ -50,58 +50,67 @@ ms.locfileid: "62894789"
   
 2.  **Variables**. Abra la ventana **Variables** y defina las variables siguientes:  
   
-    -   `ExcelFile`, de tipo `String`. Escriba la ruta de acceso completa y nombre de archivo a un libro de Excel existente.  
+    -   
+  `ExcelFile`, de tipo `String`. Escriba la ruta de acceso completa y nombre de archivo a un libro de Excel existente.  
   
-    -   `ExcelTable`, de tipo `String`. Escriba el nombre de una hoja de cálculo existente o rango con nombre en el libro denominado en el valor de la variable `ExcelFile`. Este valor distingue mayúsculas de minúsculas.  
+    -   
+  `ExcelTable`, de tipo `String`. Escriba el nombre de una hoja de cálculo existente o rango con nombre en el libro denominado en el valor de la variable `ExcelFile`. Este valor distingue mayúsculas de minúsculas.  
   
-    -   `ExcelFileExists`, de tipo `Boolean`.  
+    -   
+  `ExcelFileExists`, de tipo `Boolean`.  
   
-    -   `ExcelTableExists`, de tipo `Boolean`.  
+    -   
+  `ExcelTableExists`, de tipo `Boolean`.  
   
-    -   `ExcelFolder`, de tipo `String`. Escriba la ruta de acceso completa de una carpeta que contiene por lo menos un libro de Excel.  
+    -   
+  `ExcelFolder`, de tipo `String`. Escriba la ruta de acceso completa de una carpeta que contiene por lo menos un libro de Excel.  
   
-    -   `ExcelFiles`, de tipo `Object`.  
+    -   
+  `ExcelFiles`, de tipo `Object`.  
   
-    -   `ExcelTables`, de tipo `Object`.  
+    -   
+  `ExcelTables`, de tipo `Object`.  
   
 3.  **Instrucciones Imports**. La mayoría de los ejemplos de código le exigen que importe uno o ambos de los espacios de nombres de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] siguientes en la parte superior de su archivo de script:  
   
-    -   `System.IO`, para operaciones del sistema de archivos.  
+    -   
+  `System.IO`, para operaciones del sistema de archivos.  
   
-    -   `System.Data.OleDb`, para abrir los archivos de Excel como orígenes de datos.  
+    -   
+  `System.Data.OleDb`, para abrir los archivos de Excel como orígenes de datos.  
   
 4.  **Referencias**. Los ejemplos de código que leen información de esquema de los archivos de Excel requieren una referencia adicional en el proyecto de script al espacio de nombres `System.Xml`.  
   
-5.  Establezca el lenguaje de scripting predeterminado para el componente de script mediante la opción **Lenguaje de scripting** de la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea[página General](../general-page-of-integration-services-designers-options.md).  
+5.  Establezca el lenguaje de scripting predeterminado para el componente de script mediante la opción **Lenguaje de scripting** de la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Descripción del ejemplo 1: Comprobación de si existe un archivo de Excel  
+##  <a name="example1"></a>Descripción de ejemplo 1: comprobar si existe un archivo de Excel  
  En este ejemplo se determina si existe el archivo de libro de Excel especificado en la variable `ExcelFile` y, a continuación, se establece el valor booleano de la variable `ExcelFileExists` en el resultado. Puede usar este valor booleano para la bifurcación en el flujo de trabajo del paquete.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
   
-1.  Agregue una nueva tarea Script al paquete y cambie su nombre a `ExcelFileExists`.  
+1.  Agregue una nueva tarea script al paquete y cambie su nombre a `ExcelFileExists`.  
   
 2.  En el **Editor de la tarea Script**, en la pestaña **Script**, haga clic en **ReadOnlyVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo `ExcelFile`.  
+    -   Escriba `ExcelFile`.  
   
-         -o bien-  
+         O bien  
   
-    -   Haga clic en el botón de puntos suspensivos ( **...** ) situado junto al campo de propiedad y, en el **seleccionar variables** cuadro de diálogo, seleccione el `ExcelFile` variable.  
+    -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de `ExcelFile` diálogo **seleccionar variables** , seleccione la variable.  
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo `ExcelFileExists`.  
+    -   Escriba `ExcelFileExists`.  
   
-         -o bien-  
+         O bien  
   
-    -   Haga clic en el botón de puntos suspensivos ( **...** ) situado junto al campo de propiedad y, en el **seleccionar variables** cuadro de diálogo, seleccione el `ExcelFileExists` variable.  
+    -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de `ExcelFileExists` diálogo **seleccionar variables** , seleccione la variable.  
   
 4.  Haga clic en **Modificar script** para abrir el editor de script.  
   
 5.  Agregue una instrucción `Imports` para el espacio de nombres `System.IO` en la parte superior del archivo de script.  
   
-6.  Agregue el código siguiente:  
+6.  Agregue el siguiente código.  
   
 ### <a name="example-1-code"></a>Código de ejemplo 1  
   
@@ -144,28 +153,28 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Descripción del ejemplo 2: Comprobación de si existe una tabla de Excel  
+##  <a name="example2"></a>Descripción del ejemplo 2: comprobar si existe una tabla de Excel  
  En este ejemplo se determina si existe la hoja de cálculo de Excel o el rango con nombre especificado en la variable `ExcelTable` en el archivo de libro de Excel especificado en la variable `ExcelFile` y, a continuación, se establece el valor booleano de la variable `ExcelTableExists` en el resultado. Puede usar este valor booleano para la bifurcación en el flujo de trabajo del paquete.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
   
-1.  Agregue una nueva tarea Script al paquete y cambie su nombre a `ExcelTableExists`.  
+1.  Agregue una nueva tarea script al paquete y cambie su nombre a `ExcelTableExists`.  
   
 2.  En el **Editor de la tarea Script**, en la pestaña **Script**, haga clic en **ReadOnlyVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo `ExcelTable` y `ExcelFile` separados por comas`.`  
+    -   Escriba `ExcelTable` y `ExcelFile` sepárelos con comas`.`  
   
-         -o bien-  
+         O bien  
   
-    -   Haga clic en el botón de puntos suspensivos ( **...** ) situado junto al campo de propiedad y, en el **seleccionar variables** cuadro de diálogo, seleccione el `ExcelTable` y `ExcelFile` variables.  
+    -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de `ExcelTable` diálogo `ExcelFile` **seleccionar variables** , seleccione las variables y.  
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo `ExcelTableExists`.  
+    -   Escriba `ExcelTableExists`.  
   
-         -o bien-  
+         O bien  
   
-    -   Haga clic en el botón de puntos suspensivos ( **...** ) situado junto al campo de propiedad y, en el **seleccionar variables** cuadro de diálogo, seleccione el `ExcelTableExists` variable.  
+    -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de `ExcelTableExists` diálogo **seleccionar variables** , seleccione la variable.  
   
 4.  Haga clic en **Modificar script** para abrir el editor de script.  
   
@@ -173,7 +182,7 @@ public class ScriptMain
   
 6.  Agregue instrucciones `Imports` para los espacios de nombres `System.IO` y `System.Data.OleDb` en la parte superior del archivo de script.  
   
-7.  Agregue el código siguiente:  
+7.  Agregue el siguiente código.  
   
 ### <a name="example-2-code"></a>Código de ejemplo 2  
   
@@ -251,7 +260,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Descripción del ejemplo 3: Obtención de una lista de archivos de Excel en una carpeta  
+##  <a name="example3"></a>Descripción de ejemplo 3: obtener una lista de archivos de Excel en una carpeta  
  En este ejemplo se llena una matriz con la lista de archivos de Excel ubicados en la carpeta especificada del valor de la variable `ExcelFolder` y, a continuación, se copia la matriz en la variable `ExcelFiles`. Puede usar el enumerador de variable para Foreach para iterar sobre los archivos en la matriz.  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
@@ -262,23 +271,23 @@ public class ScriptMain
   
     -   Escriba `ExcelFolder`  
   
-         -o bien-  
+         O bien  
   
-    -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelFolder.  
+    -   Haga clic en el botón de puntos suspensivos (**…**) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelFolder.  
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo `ExcelFiles`.  
+    -   Escriba `ExcelFiles`.  
   
-         -o bien-  
+         O bien  
   
-    -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelFiles.  
+    -   Haga clic en el botón de puntos suspensivos (**…**) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelFiles.  
   
 4.  Haga clic en **Modificar script** para abrir el editor de script.  
   
 5.  Agregue una instrucción `Imports` para el espacio de nombres `System.IO` en la parte superior del archivo de script.  
   
-6.  Agregue el código siguiente:  
+6.  Agregue el siguiente código.  
   
 ### <a name="example-3-code"></a>Código de ejemplo 3  
   
@@ -323,7 +332,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Solución alternativa  
  En lugar de usar una tarea Script para recopilar una lista de archivos de Excel en una matriz, puede usar también el enumerador de archivos ForEach para iterar sobre todos los archivos de Excel de una carpeta. Para obtener más información, consulte [Loop through Excel Files and Tables by Using a Foreach Loop Container](../control-flow/foreach-loop-container.md) (Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Para cada uno).  
   
-##  <a name="example4"></a> Descripción del ejemplo 4: Obtención de una lista de tablas en un archivo de Excel  
+##  <a name="example4"></a>Descripción de ejemplo 4: obtener una lista de tablas en un archivo de Excel  
  En este ejemplo se llena una matriz con la lista de hojas de cálculo y rangos con nombre ubicados en el archivo de libro de Excel especificado por el valor de la variable `ExcelFile` y, a continuación, se copia la matriz en la variable `ExcelTables`. Puede usar el enumerador de variable para Foreach para iterar sobre las tablas en la matriz.  
   
 > [!NOTE]  
@@ -335,19 +344,19 @@ public class ScriptMain
   
 2.  Abra el **Editor de la tarea Script**, en la pestaña **Script**, haga clic en **ReadOnlyVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo `ExcelFile`.  
+    -   Escriba `ExcelFile`.  
   
-         -o bien-  
+         O bien  
   
-    -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelFile.  
+    -   Haga clic en el botón de puntos suspensivos (**…**) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelFile.  
   
 3.  Haga clic en **ReadWriteVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Tipo `ExcelTables`.  
+    -   Escriba `ExcelTables`.  
   
-         -o bien-  
+         O bien  
   
-    -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelTablesvariable.  
+    -   Haga clic en el botón de puntos suspensivos (**…**) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelTablesvariable.  
   
 4.  Haga clic en **Modificar script** para abrir el editor de script.  
   
@@ -355,7 +364,7 @@ public class ScriptMain
   
 6.  Agregue una instrucción `Imports` para el espacio de nombres `System.Data.OleDb` en la parte superior del archivo de script.  
   
-7.  Agregue el código siguiente:  
+7.  Agregue el siguiente código.  
   
 ### <a name="example-4-code"></a>Código de ejemplo 4  
   
@@ -435,7 +444,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Solución alternativa  
  En lugar de usar una tarea Script para recopilar una lista de tablas Excel en una matriz, puede usar también el enumerador de conjunto de filas de esquema para Foreach de ADO.NET para iterar sobre todas las tablas (es decir, hojas de cálculo y rangos con nombre) en un archivo de libro de Excel. Para obtener más información, consulte [Loop through Excel Files and Tables by Using a Foreach Loop Container](../control-flow/foreach-loop-container.md) (Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Para cada uno).  
   
-##  <a name="testing"></a> Mostrar los resultados de los ejemplos  
+##  <a name="testing"></a>Mostrar los resultados de los ejemplos  
  Si ha configurado cada uno de los ejemplos de este tema en el mismo paquete, puede conectar todas las tareas Script a una tarea Script adicional que muestra la salida de todos los ejemplos.  
   
 #### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Para configurar una tarea Script para mostrar la salida de los ejemplos de este tema  
@@ -450,15 +459,15 @@ public class ScriptMain
   
     -   Escriba el nombre de cada variable separado por comas.  
   
-         -o bien-  
+         O bien  
   
-    -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione las variables.  
+    -   Haga clic en el botón de puntos suspensivos (**…**) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione las variables.  
   
 5.  Haga clic en **Modificar script** para abrir el editor de script.  
   
 6.  Agregue instrucciones `Imports` para los espacios de nombres `Microsoft.VisualBasic` y `System.Windows.Forms` en la parte superior del archivo de script.  
   
-7.  Agregue el código siguiente:  
+7.  Agregue el siguiente código.  
   
 8.  Ejecute el paquete y examine los resultados que aparecen en un cuadro de mensaje.  
   
@@ -541,10 +550,10 @@ public class ScriptMain
 }  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
- [Administrador de conexiones de Excel](../connection-manager/excel-connection-manager.md)   
- [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](../control-flow/foreach-loop-container.md)  
+## <a name="see-also"></a>Consulte también  
+ [Administrador de conexiones con Excel](../connection-manager/excel-connection-manager.md)   
+ [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](../control-flow/foreach-loop-container.md)  
   
   

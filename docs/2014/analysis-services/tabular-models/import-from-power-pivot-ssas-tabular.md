@@ -1,5 +1,5 @@
 ---
-title: Importar desde PowerPivot (SSAS Tabular) | Microsoft Docs
+title: Importar desde PowerPivot (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067016"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importar desde PowerPivot (SSAS tabular)
-  En este tema se describe cómo crear un nuevo proyecto de modelos tabulares importando los metadatos y datos desde un libro PowerPivot mediante la importación desde PowerPivot de plantilla de proyecto en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  En este tema se describe cómo crear un nuevo proyecto de modelos tabulares importando los metadatos y los datos de un libro PowerPivot mediante la plantilla de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]proyecto importar desde PowerPivot de.  
   
 ## <a name="create-a-new-tabular-model-from-a-powerpivot-for-excel-file"></a>Cree un nuevo modelo tabular desde un archivo de PowerPivot para Excel  
  Al crear un nuevo proyecto de modelos tabulares importando desde un libro PowerPivot, los metadatos que definen la estructura del libro se usan para crear y definir la estructura del proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Los objetos como tablas, columnas, medidas y relaciones se conservan, y aparecerán en el proyecto de modelos tabulares tal como están en el libro PowerPivot. No se realizan cambios en el archivo de libro .xlsx.  
@@ -28,26 +28,26 @@ ms.locfileid: "66067016"
 > [!NOTE]  
 >  Los modelos tabulares no admiten tablas vinculadas. Al importar datos de un libro PowerPivot que contiene una tabla vinculada, los datos de la tabla vinculada se tratan como datos copiados y pegados y se almacenan en el archivo Model.bim. Al ver las propiedades de una tabla copiada y pegada, la propiedad **Datos de origen** está deshabilitada y el cuadro de diálogo **Propiedades de la tabla** del menú **Tabla** está deshabilitado.  
 >   
->  Hay un límite de 10 000 filas que se pueden agregar a los datos incrustados en el modelo. Si importa un modelo de PowerPivot y aparece el error "los datos se truncaron. Las tablas pegadas no pueden contener más de 10000 filas"debe revisar el modelo de PowerPivot moviendo los datos incrustados a otro origen de datos, como una tabla en SQL Server y, a continuación, vuelva a importar.  
+>  Hay un límite de 10 000 filas que se pueden agregar a los datos incrustados en el modelo. Si importa un modelo desde PowerPivot y ve el error "los datos se truncaron. Las tablas pegadas no pueden contener más de 10000 filas ". debe revisar el modelo de PowerPivot moviendo los datos incrustados a otro origen de datos, como una tabla en SQL Server y, a continuación, volver a importar.  
   
  Existen consideraciones especiales que dependen de si la base de datos del área de trabajo está o no en una instancia de Analysis Services del mismo equipo (local) como [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o está en una instancia remota de Analysis Services.  
   
- Si la base de datos del área de trabajo está en una instancia local de Analysis Services, puede importar los metadatos y datos del libro PowerPivot. Los metadatos se copian del libro y se usan para crear el proyecto de modelos tabulares. Los datos, a continuación, se copian del libro y almacenan en la base de datos del proyecto en el área de trabajo (excepto los datos copiados/pegados, que se almacenan en el archivo Model.bim).  
+ Si la base de datos del área de trabajo está en una instancia local de Analysis Services, puede importar los metadatos y datos del libro PowerPivot. Los metadatos se copian del libro y se usan para crear el proyecto de modelos tabulares. Después, los datos se copian del libro y se almacenan en la base de datos del área de trabajo del proyecto (excepto los datos copiados o pegados, que se almacenan en el archivo Model. BIM).  
   
  Si la base de datos del área de trabajo está en una instancia remota de Analysis Services, no podrá importar datos de un libro PowerPivot para Excel. Todavía puede importar metadatos del libro; sin embargo, esto hará que se ejecute un script en la instancia remota de Analysis Services. Solo debería importar metadatos de un libro PowerPivot de plena confianza. Los datos se deben importar de los orígenes definidos en las conexiones a un origen de datos. Los datos copiados/pegados y los datos de la tabla vinculada del libro PowerPivot se deben copiar y pegar en el proyecto de modelos tabulares.  
   
-#### <a name="to-create-a-new-tabular-model-project-from-a-powerpivot-for-excel-file"></a>Para crear un nuevo proyecto de modelo tabular desde un archivo de PowerPivot para Excel  
+#### <a name="to-create-a-new-tabular-model-project-from-a-powerpivot-for-excel-file"></a>Para crear un nuevo proyecto de modelo tabular a partir de un archivo de PowerPivot para Excel  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el menú **Archivo** , haga clic en **Nuevo**y, a continuación, en **Proyecto**.  
   
-2.  En el **nuevo proyecto** cuadro de diálogo **plantillas instaladas**, haga clic en **Business Intelligence**y, a continuación, haga clic en **importar desde PowerPivot**.  
+2.  En el cuadro de diálogo **nuevo proyecto** , en **plantillas instaladas**, haga clic en **Business Intelligence**y, a continuación, haga clic en **Importar desde PowerPivot**.  
   
-3.  En  **Nombre**, escriba un nombre para el proyecto, después especifique una ubicación y un nombre de solución, y haga clic en **Aceptar**.  
+3.  En **nombre**, escriba un nombre para el proyecto, especifique una ubicación y un nombre de solución y, a continuación, haga clic en **Aceptar**.  
   
 4.  En el cuadro de diálogo **Abrir** , seleccione el archivo de [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] que contiene los metadatos del modelo y los datos que desea importar y, a continuación, haga clic en **Abrir**.  
   
-## <a name="see-also"></a>Vea también  
- [Base de datos de área de trabajo &#40;SSAS tabular&#41;](workspace-database-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Base de datos del área de trabajo &#40;SSAS tabular&#41;](workspace-database-ssas-tabular.md)   
  [Copiar y pegar datos &#40;SSAS tabular&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

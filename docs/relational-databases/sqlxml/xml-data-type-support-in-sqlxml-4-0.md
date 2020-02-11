@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c56efd6c79b7ce7d74af621963f4b12e734d5f9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252168"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Compatibilidad con tipos de datos xml en SQLXML 4.0
@@ -50,7 +50,7 @@ ms.locfileid: "75252168"
   
 -   SQLXML 4,0 no conserva las instrucciones de procesamiento de declaraciones XML (por ejemplo,) en función del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]comportamiento de. En su lugar, la declaración XML se trata como una directiva del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analizador XML y sus atributos (versión, codificación y independiente) se pierden después de que los datos se conviertan al tipo de datos **XML** . Los datos XML se almacenan internamente como UCS-2. Se conservan todas las demás instrucciones de procesamiento de la instancia XML; se permiten en la columna **XML** y pueden ser compatibles con SQLXML.  
   
-## <a name="see-also"></a>Véase también  
- [&#40;de datos XML SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

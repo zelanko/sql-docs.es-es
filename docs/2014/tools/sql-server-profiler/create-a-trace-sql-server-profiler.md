@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211086"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Crear un seguimiento (SQL Server Profiler)
@@ -26,10 +26,10 @@ ms.locfileid: "68211086"
   
 1.  En el menú **Archivo** , haga clic en **Nueva seguimiento**y conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Aparece el cuadro de diálogo **Propiedades de seguimiento** .  
+     Aparecerá el cuadro de diálogo **Propiedades de seguimiento** .  
   
     > [!NOTE]  
-    >  Si se ha seleccionado **Iniciar el seguimiento inmediatamente tras realizar la conexión** , no aparecerá el cuadro de diálogo **Propiedades de seguimiento** y, en su lugar, se iniciará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones**y desactive la casilla **Propiedades de seguimiento** .  
+    >  Si se ha seleccionado **Iniciar el seguimiento inmediatamente tras realizar la conexión** , no aparecerá el cuadro de diálogo **Propiedades de seguimiento** y, en su lugar, se iniciará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones**y desactive la casilla **Iniciar el seguimiento inmediatamente tras realizar la conexión** .  
   
 2.  En el cuadro **Nombre de seguimiento** , escriba un nombre para el seguimiento.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "68211086"
   
 5.  Opcionalmente, active la casilla **Habilitar hora de detención de seguimiento** para especificar una fecha y hora de detención.  
   
-6.  Para agregar o quitar eventos, columnas de datos o filtros, haga clic en la pestaña **Selección de eventos**. Para obtener más información, vea: [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
+6.  Para agregar o quitar eventos, columnas de datos o filtros, haga clic en la pestaña **Selección de eventos**. Para obtener más información, vea [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](sql-server-profiler.md).  
   
 7.  Haga clic en **Ejecutar** para iniciar el seguimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Permisos necesarios para ejecutar SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)   
- [Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
+ [Correlacionar un seguimiento con los datos del registro de rendimiento de Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 53707c62e018b9923f2bb923a4df46f6917d2902
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400444"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Restaurar una base de datos protegida por TDE en almacenamiento de datos paralelos
@@ -58,7 +58,7 @@ RESTORE DATABASE AdventureWorksPDW2012
     FROM DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
 [Crear](../t-sql/statements/create-master-key-transact-sql.md) 
 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) de clave maestra  

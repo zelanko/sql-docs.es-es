@@ -16,17 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064680"
 ---
 # <a name="browsing-a-clustering-model"></a>Examinar un modelo de clústeres
-  Al abrir un modelo de agrupación en clústeres con **examinar**, el modelo se muestra en un visor interactivo, similar al Visor de agrupación en clústeres de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor le ayudará a explorar los clústeres que se han creado y a conocer las características del clúster. Asimismo, podrá comparar y contrastar segmentos individuales con otros segmentos o con la población.  
+  Al abrir un modelo de agrupación en clústeres mediante **examinar**, el modelo se muestra en un visor interactivo, similar al visor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]agrupación en clústeres de. El visor le ayudará a explorar los clústeres que se han creado y a conocer las características del clúster. Asimismo, podrá comparar y contrastar segmentos individuales con otros segmentos o con la población.  
   
-##  <a name="BKMK_Tabs"></a> Explorar el modelo  
- El **examinar** ventana incluye las siguientes herramientas para ayudarle a entender el modelo de agrupación en clústeres y explorar los atributos de los grupos de datos subyacente:  
+##  <a name="BKMK_Tabs"></a>Explorar el modelo  
+ La ventana **examinar** incluye las siguientes herramientas para ayudarle a entender el modelo de agrupación en clústeres y explorar los atributos de los grupos de datos subyacentes:  
   
 -   [Diagrama del clúster](#BKMK_ClusterDiagram)  
   
@@ -36,10 +36,10 @@ ms.locfileid: "66064680"
   
 -   [Distinción del clúster](#BKMK_ClusterDiscrimination)  
   
- Para experimentar con un modelo de agrupación en clústeres, puede usar los datos de ejemplo en la pestaña entrenamiento del libro de ejemplo y generar un modelo de agrupación en clústeres mediante [Asistente para clúster &#40;complementos minería de datos para Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) y todos los valores predeterminados .  
+ Para experimentar con un modelo de agrupación en clústeres, puede usar los datos de ejemplo de la pestaña entrenamiento del libro de datos de ejemplo y generar un modelo de agrupación en clústeres mediante el [Asistente para clúster &#40;complementos de minería de datos para Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) y todos los valores predeterminados.  
   
-###  <a name="BKMK_ClusterDiagram"></a> Diagrama del clúster  
- El **diagrama del clúster** ficha muestra todos los clústeres que se encuentran en un modelo de minería de datos. Aquí puede comprobar la cantidad de agrupaciones que se encontraron en el conjunto de datos y lo cerca o lejos que se encuentran entre sí.  
+###  <a name="BKMK_ClusterDiagram"></a>Diagrama del clúster  
+ La pestaña **Diagrama del clúster** muestra todos los clústeres que se encuentran en un modelo de minería de datos. Aquí puede comprobar la cantidad de agrupaciones que se encontraron en el conjunto de datos y lo cerca o lejos que se encuentran entre sí.  
   
 ##### <a name="explore-the-cluster-diagram"></a>Explorar el diagrama del clúster  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66064680"
   
      Observe cómo las líneas en gris que conectan todos los clústeres cambian, de forma que la líneas que se dirigen al clúster seleccionado se resaltan en azul chillón.  
   
-     ![Introducción al diagrama del clúster](media/dm13-cluster-diagram-intro.gif "Introducción al diagrama del clúster")  
+     ![introducción al diagrama del clúster](media/dm13-cluster-diagram-intro.gif "introducción al diagrama del clúster")  
   
      La intensidad de la línea que conecta un clúster a otro representa la importancia de la similitud de los clústeres. Si el sombreado es claro o inexistente, los clústeres no son muy similares. A medida que la línea se va oscureciendo, indica que la similitud entre dos clústeres es más marcada.  
   
@@ -55,58 +55,58 @@ ms.locfileid: "66064680"
   
      Cuando baje el control deslizante, solamente se mostrarán los vínculos de mayor importancia entre los clústeres. De esta forma, resultará más sencillo centrase en los grupos relacionados.  
   
-3.  Tenga en cuenta la **Variable de sombreado** control en la esquina superior derecha de la **diagrama del clúster** ventana.  
+3.  Observe el control **variable de sombreado** en la esquina superior derecha de la ventana **Diagrama del clúster** .  
   
-     De forma predeterminada, se establece en **rellenado**. Esto indica que los clústeres más oscuros proporcionan mayor compatibilidad.  
+     De forma predeterminada, se establece en **Population**. Esto indica que los clústeres más oscuros proporcionan mayor compatibilidad.  
   
 4.  Deténgase sobre cualquier clúster con el cursor.  
   
      Aparecerá una ventana con información sobre herramientas que contiene la población de ese clúster.  
   
-5.  Ahora, haga clic en el **Variable de sombreado** lista desplegable lista y elija el **Age** variable. Al hacerlo, aparecerá una lista de valores en el **estado** cuadro de texto.  
+5.  Ahora, haga clic en la lista desplegable **variable de sombreado** y elija la variable **Age** . Al hacerlo, aparecerá una lista de valores en el cuadro de texto **Estado** .  
   
-     La columna Edad se usa como entrada en este modelo y contiene valores numéricos continuos, pero para fines de agrupación en clústeres, el algoritmo siempre discretiza números. Aquí puede ver las discretizaciones o grupos que ha creado el algoritmo, como "muy baja (\<= 27)" y "muy alto (> = 63)".  
+     La columna Edad se usa como entrada en este modelo y contiene valores numéricos continuos, pero para fines de agrupación en clústeres, el algoritmo siempre discretiza números. Aquí puede ver las ubicaciones o los grupos creados por el algoritmo, como "muy bajo (\<= 27)" y "muy alto (>= 63)".  
   
-6.  Desde el **estado** listas desplegables, seleccione **muy alto** y ver cómo cambia el diagrama.  
+6.  En las listas desplegables **Estado** , seleccione **muy alta** y vea cómo cambia el diagrama.  
   
      Si cambia la variable de sombreado, podrá ver fácilmente qué clústeres contienen más elementos de este grupo de edad objetivo y qué clústeres contienen muy pocos clientes de este grupo de edad.  
   
-     ![Modificar el diagrama del clúster para mostrar la edad](media/dm13-cluster-diagramshadebyage.gif "modificar el diagrama del clúster para mostrar la edad")  
+     ![Modificar el diagrama de clúster para mostrar la edad](media/dm13-cluster-diagramshadebyage.gif "Modificar el diagrama de clúster para mostrar la edad")  
   
      Cuanto más oscuro sea el sombreado, mayor será la proporción del atributo de destino y la distribución de valores para ese clúster.  
   
-7.  Busque el clúster sombreado más oscuro cuando la **Variable de sombreado** se establezca en edad > 65.  
+7.  Busque el clúster sombreado más oscuro cuando la variable de **sombreado** esté establecida en Age >65.  
   
      Mantenga el mouse sobre el clúster.  
   
      El valor que aparece ahora en la ventana de información sobre herramientas muestra la población de clientes en este clúster con más de 65 años de edad.  
   
-8.  Haga clic en el clúster y seleccione **cambiar nombre de clúster**. Escriba un nombre nuevo que sea descriptivo, como **más de 65**. El nuevo nombre se guarda con el modelo en el servidor y se puede usar para identificar el clúster en las otras vistas de agrupación en clústeres.  
+8.  Haga clic con el botón derecho en el clúster y seleccione **cambiar nombre de clúster**. Escriba un nuevo nombre descriptivo, por ejemplo, **más de 65**. El nuevo nombre se guarda con el modelo en el servidor y se puede usar para identificar el clúster en las otras vistas de agrupación en clústeres.  
   
  [Volver al principio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a> Perfiles del clúster  
- El **perfiles del clúster** pestaña le permite comparar la composición de todos los clústeres de un vistazo. Es un buen punto de partida cuando se empieza a familiarizar con el modelo. Esta vista será también útil más adelante, si ha estado explorando un clúster determinado y decide que necesita buscar clústeres relacionados.  
+###  <a name="BKMK_ClusterProfiles"></a>Perfiles del clúster  
+ La pestaña **perfiles del clúster** le permite comparar la composición de todos los clústeres de un vistazo. Es un buen punto de partida cuando se empieza a familiarizar con el modelo. Esta vista será también útil más adelante, si ha estado explorando un clúster determinado y decide que necesita buscar clústeres relacionados.  
   
- **Perfiles del clúster** también le ofrece una buena descripción general de cómo los clústeres son diferentes entre sí. Por consiguiente, se recomienda usar esta vista para asignar a cada clúster un nombre descriptivo.  
+ Los **perfiles de clúster** también proporcionan una buena información general sobre el modo en que los clústeres son diferentes entre sí. Por consiguiente, se recomienda usar esta vista para asignar a cada clúster un nombre descriptivo.  
   
 ##### <a name="explore-the-cluster-profiles"></a>Explorar los perfiles del clúster  
   
-1.  Haga clic en la celda con los empleos, en el **estados** columna, para ver la lista de todos los valores para empleos.  
+1.  Haga clic en la celda de profesiones, en la columna **Estados** , para ver la lista de todos los valores de ocupación.  
   
 2.  Ahora desplace el cursor sobre Empleos en los perfiles del clúster.  
   
      La información sobre herramientas muestra la distribución de los empleos en ese clúster.  
   
-     ![Ver los valores detallados en la información sobre herramientas o en la leyenda](media/dm13-cluster-profile-age-tooltip.gif "ver los valores detallados en la información sobre herramientas o en la leyenda")  
+     ![Vea los valores detallados en la información sobre herramientas o en la leyenda](media/dm13-cluster-profile-age-tooltip.gif "Vea los valores detallados en la información sobre herramientas o en la leyenda")  
   
-     Tenga en cuenta que, en algunos clústeres (por ejemplo, uno en el gráfico), la lista de empleos no está completo, y algunos empleos se reemplazan con la etiqueta, **otros**.  
+     Tenga en cuenta que, en algunos clústeres (como el del gráfico), la lista de profesiones no está completa y algunas profesiones se sustituyen por la etiqueta **other**.  
   
-     Esto es así por motivos de diseño, ya que podría resultar difícil ver las diferencias entre muchas barras pequeñas en un histograma. De forma predeterminada se conservan solo las barras de mayor importancia y el resto de las barras se agrupa en un gris **otros** depósito.  
+     Esto es así por motivos de diseño, ya que podría resultar difícil ver las diferencias entre muchas barras pequeñas en un histograma. De forma predeterminada, solo se conservan las barras de mayor importancia y las barras restantes se agrupan en **otro** cubo gris.  
   
-     Para cambiar el número de barras que están visibles en un histograma, use la opción **barras de histograma**.  
+     Para cambiar el número de barras que están visibles en cualquier histograma, use la opción **barras de histograma**.  
   
-3.  Tenga en cuenta que el **Age** columna tiene un aspecto diferente de los demás. Haga clic en el rombo del gráfico que se usa para representar la edad.  
+3.  Tenga en cuenta que la columna **Age** es diferente de las demás. Haga clic en el rombo del gráfico que se usa para representar la edad.  
   
      La columna Edad inicialmente solo contenía números continuos. El algoritmo de clústeres requiere valores discretos, de modo que agrupó los valores numéricos de la columna Edad en un número limitado de grupos de edad, en función de la distribución de valores.  
   
@@ -114,56 +114,56 @@ ms.locfileid: "66064680"
   
      Estos gráficos de rombo se muestran únicamente cuando los datos de origen usan valores numéricos continuos. Los gráficos de rombo proporcionan algunas estadísticas descriptivas de utilidad, lo cual incluye la media y la desviación estándar para ese valor en cada clúster:  
   
-    -   La línea del gráfico de rombo representa el intervalo de valores del atributo. También se muestran los valores en el **estados** columna a la izquierda de la **perfiles** gráfico.  
+    -   La línea del gráfico de rombo representa el intervalo de valores del atributo. Los valores también se muestran en la columna **Estados** a la izquierda del gráfico **perfiles** .  
   
     -   El centro del rombo se encuentra en la media del nodo.  
   
     -   El ancho del rombo representa la varianza del atributo en ese nodo. Por tanto, un rombo más estrecho indica que el nodo puede crear una predicción más exacta.  
   
-5.  Para crear más espacio en el gráfico, haga clic en un clúster que no es necesario ver de inmediato y seleccione **Ocultar columna**. Esto no elimina del modelo, tan solo la contrae temporalmente la columna.  
+5.  Para hacer más espacio en el gráfico, haga clic con el botón derecho en un clúster que no necesite ver de inmediato y seleccione **Ocultar columna**. Esto no lo elimina del modelo, simplemente contrae la columna de forma temporal.  
   
-     Para ver los clústeres que ha ocultado, haga clic y arrastre el borde de la columna o seleccione el nombre del clúster en la lista, **más clústeres**.  
+     Para ver los clústeres que ha ocultado, puede hacer clic y arrastrar el borde de la columna o seleccionar el nombre del clúster en la lista, **más clústeres**.  
   
 6.  Descienda por la lista de atributos hasta que encuentre Bike Buyer y, después, busque el clúster con el porcentaje más alto de los valores Sí.  
   
-     Haga clic en el encabezado de columna para el clúster que desea cambiar el nombre, seleccione **cambiar nombre de clúster**y el tipo **compradores de bicicletas**.  
+     Haga clic con el botón derecho en el encabezado de columna del clúster cuyo nombre desea cambiar, seleccione **cambiar nombre de clúster**y escriba **Bike**Buyers.  
   
      El nuevo nombre del clúster se mantiene en todas las vistas y en el servidor hasta que se vuelva a procesar el modelo.  
   
-     ![Cambiar el nombre de los clústeres para facilitar el uso del gráfico](media/dm13-cluster-rename.gif "cambiar el nombre de los clústeres para facilitar el uso del gráfico")  
+     ![Cambiar el nombre de los clústeres para que el gráfico sea más fácil de utilizar](media/dm13-cluster-rename.gif "Cambiar el nombre de los clústeres para que el gráfico sea más fácil de utilizar")  
   
- **Sugerencias**  
+ **Útiles**  
   
 -   Haga clic en un encabezado de columna para ordenar los atributos por orden de importancia respecto a ese clúster.  
   
 -   Arrastre las columnas para volver a ordenarlas en el visor.  
   
--   Haga clic en cualquier celda en el gráfico de perfiles para ver estadísticas detalladas en el **leyenda de minería de datos**.  
+-   Haga clic en cualquier celda del gráfico de perfiles para ver estadísticas detalladas en la **leyenda de minería de datos**.  
   
--   Haga clic en cualquier celda y seleccione **columnas del modelo de obtención de detalles** para generar los datos subyacentes a una nueva hoja de cálculo de Excel.  
+-   Haga clic con el botón secundario en cualquier celda y seleccione **columnas del modelo de obtención de detalles** para generar los datos subyacentes en una nueva hoja de cálculo de Excel.  
   
--   Haga clic en la columna de la del clúster en el encabezado y seleccione **obtención de detalles para estructurar datos** para obtener información detallada acerca de los miembros del clúster que no se incluyó en el modelo.  
+-   Haga clic con el botón derecho en el encabezado de columna del clúster y seleccione **obtención de detalles para estructurar datos** para obtener información detallada sobre los miembros del clúster que no se incluyeron en el modelo.  
   
-     Por ejemplo, si está generando perfiles para los clientes, puede dejar la información de contacto en los datos subyacentes (la estructura de minería de datos) pero no incluirlo en el modelo, porque no es útil para el análisis. Sin embargo, una vez se hayan asignado los clientes a los clústeres, podrá ver los datos detallados mediante la obtención de detalles.  
+     Por ejemplo, si va a generar perfiles de clientes, puede dejar la información de contacto en los datos subyacentes (la estructura de minería de datos), pero no incluirla en el modelo, ya que no es útil para el análisis. Sin embargo, una vez se hayan asignado los clientes a los clústeres, podrá ver los datos detallados mediante la obtención de detalles.  
   
  [Volver al principio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a> Características del clúster  
+###  <a name="BKMK_ClusterCharacteristics"></a>Características del clúster  
  Con la vista Características de clúster, podrá realizar una exploración profunda de un solo clúster, para buscar los atributos que mejor definen a este grupo de datos.  
   
 ##### <a name="explore-the-cluster-characteristics"></a>Explorar las características del clúster  
   
-1.  Seleccione el **más de 65** clúster desde el **clúster** lista.  
+1.  Seleccione el clúster de **más de 65** en la lista de **clústeres** .  
   
      Tras seleccionar un clúster, puede ver detalladamente las características que lo componen.  
   
      Los atributos que contiene el clúster se enumeran en las columnas **Variables** ; el estado del atributo se indica en la columna **Valores** .  
   
-     Estados de atributo se muestran en orden de importancia, junto con su probabilidad en este clúster, representado como una barra coloreada en la **probabilidad** columna.  
+     Los Estados de los atributos se muestran por orden de importancia, junto con su probabilidad en este clúster, representados como una barra coloreada en la columna **probabilidad** .  
   
-     ![Las características de un modelo de agrupación en clústeres](media/dm13-cluster-characteristics.gif "las características de un modelo de agrupación en clústeres")  
+     ![Características de un modelo de agrupación en clústeres](media/dm13-cluster-characteristics.gif "Características de un modelo de agrupación en clústeres")  
   
-2.  Haga clic en el **Variables** columna para ordenar por atributo.  
+2.  Haga clic en la columna **variables** para ordenar por atributo.  
   
      Al cambiar la variable para ordenar, podrá ver con más facilidad cómo se distribuyen en el grupo los valores de variables tales como ingresos o propiedad de vehículo.  
   
@@ -171,24 +171,24 @@ ms.locfileid: "66064680"
   
      Se agrega una nueva hoja de cálculo al libro que contiene las características del clúster seleccionado.  
   
-4.  Ahora elija otro clúster en la lista, **compradores de bicicletas**.  
+4.  Ahora elija otro clúster de la lista, **Bike**Buyers.  
   
 5.  Haga clic en **copiar a Excel**.  
   
-     Tenga en cuenta que el nuevo gráfico de características del clúster se ha agregado en su propia hoja de cálculo. Puede moverlo a la misma hoja de cálculo como el otro perfil para que resulte más fácil compararlos, lo que hará en el paso siguiente.  
+     Tenga en cuenta que el nuevo gráfico de características del clúster se ha agregado en su propia hoja de cálculo. Puede moverla a la misma hoja de cálculo que el otro perfil para facilitar su comparación, lo que hará en el paso siguiente.  
   
- **Sugerencias**  
+ **Útiles**  
   
--   Tenga en cuenta que la característica principal del cliente en el clúster más de 65 es que no compran su producto. Si quiere saber por qué es así, puede examinar los clústeres y comparar los grupos o bien, puede crear un modelo relacionado con un algoritmo que sea bueno para examinar las causas y los resultados, como un modelo de árbol de decisión o un modelo Bayes naive.  
+-   Tenga en cuenta que la principal característica del cliente en el clúster de más de 65 es que no compran el producto. Si quiere saber por qué es así, puede examinar los clústeres y comparar los grupos o bien, puede crear un modelo relacionado con un algoritmo que sea bueno para examinar las causas y los resultados, como un modelo de árbol de decisión o un modelo Bayes naive.  
   
--   Si desea obtener una lista completa de atributos y de probabilidades para este clúster (o para todos los clústeres) puede crear una consulta. Para obtener ejemplos de consultas en los modelos de clústeres, consulte [ejemplos de consultas de modelo de agrupación en clústeres](data-mining/clustering-model-query-examples.md).  
+-   Si desea obtener una lista completa de atributos y de probabilidades para este clúster (o para todos los clústeres) puede crear una consulta. Para obtener ejemplos de consultas en los modelos de agrupación en clústeres, vea [ejemplos de consultas de modelos de agrupación en clústeres](data-mining/clustering-model-query-examples.md).  
   
  [Volver al principio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a> Distinción del clúster  
- Usa el **distinción del clúster** tab para comparar los atributos entre dos clústeres, o entre un clúster y todos los demás casos del conjunto de datos.  
+###  <a name="BKMK_ClusterDiscrimination"></a>Distinción del clúster  
+ Utilice la pestaña **distinción del clúster** para comparar los atributos entre dos clústeres, o entre un clúster y todos los demás casos del conjunto de datos.  
   
- Para resaltar las características de este visor, lo compararemos a las tablas en paralelo en Excel que había creado según la **características del clúster** vista.  
+ Para resaltar las características de este visor, se comparará con las tablas en paralelo de Excel que se crearon en función de la vista **características del clúster** .  
   
 ##### <a name="explore-cluster-discrimination"></a>Explorar la distinción del clúster  
   
@@ -202,26 +202,26 @@ ms.locfileid: "66064680"
   
      ![comparar los clústeres de un modelo](media/dm13-cluster-compareclusters.gif "comparar los clústeres de un modelo")  
   
-     Tenga en cuenta que, en segundo plano, el **distinción del clúster** Visor envía consultas complejas en el servidor de minería de datos, para extraer los atributos que son más importantes en la distinción entre los dos grupos, facilitando la tarea comparar dos conjuntos de clientes.  
+     Tenga en cuenta que, en segundo plano, el visor de **distinción de clústeres** envía consultas complejas al servidor de minería de datos para extraer los atributos más importantes para distinguir entre los dos grupos, lo que facilita la comparación de dos conjuntos de clientes.  
   
-2.  Haga clic en cualquiera de los **favorece...**  columnas.  
+2.  Haga clic en una de las columnas **favorecer...** .  
   
      La barra a la derecha de la lista de atributos y valores muestra las características o valores que son más importantes como rasgos diferenciadores del clúster seleccionado.  
   
 3.  Ahora compare las listas de Excel.  
   
-     ![Gráfico de red de dependencias de un modelo de asociación](media/dm13-comparing-profiles-in-excel.gif "gráfico de red de dependencias de un modelo de asociación")  
+     ![Gráfico de redes de dependencias para un modelo de asociación](media/dm13-comparing-profiles-in-excel.gif "Gráfico de redes de dependencias para un modelo de asociación")  
   
      Dado que las estadísticas subyacentes que se usaron para generar la imagen en el visor se guardan en Excel como tablas, puede filtrar y ordenar, y ver los valores reales de probabilidad.  
   
-     Además de utilizar Excel, se recomienda que pruebe el visor de clústeres para Visio, el cual permite no solo ver los puntos de datos, sino también modificar y mejorar ampliamente el gráfico. Para obtener más información, consulte [tutorial del diagrama de clúster &#40;complementos de minería de datos&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md).  
+     Además de utilizar Excel, se recomienda que pruebe el visor de clústeres para Visio, el cual permite no solo ver los puntos de datos, sino también modificar y mejorar ampliamente el gráfico. Para obtener más información, vea [tutorial del diagrama del clúster &#40;complementos de minería de datos&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md).  
   
- **Sugerencias**  
+ **Útiles**  
   
- Después de obtener algo de información sobre los grupos de clientes, pruebe a usar el [escenario y si &#40;herramientas de análisis de tabla para Excel&#41; ](what-if-scenario-table-analysis-tools-for-excel.md) o [escenario de búsqueda de objetivo &#40;herramientas de análisis de tabla para Excel&#41; ](goal-seek-scenario-table-analysis-tools-for-excel.md) herramientas para explorar los factores que influyen en el modelo que se puede cambiar para modificar los resultados.  
+ Después de obtener información sobre los grupos de clientes, pruebe a usar el [escenario de escenarios condicionales &#40;herramientas de análisis de tabla para excel&#41;](what-if-scenario-table-analysis-tools-for-excel.md) o el [escenario de búsqueda de objetivos &#40;herramientas de análisis de tabla para Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md) herramientas para explorar los factores del modelo que podrían cambiarse para afectar al resultado.  
   
-## <a name="see-also"></a>Vea también  
- [Examinar modelos en Excel &#40;complementos de minería de datos de SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)   
- [Asistente para clúster &#40;datos complementos de minería de datos para Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Consulte también  
+ [Examinar modelos en Excel &#40;SQL Server complementos de minería de datos&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)   
+ [Asistente para clúster &#40;complementos de minería de datos para Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
   
   

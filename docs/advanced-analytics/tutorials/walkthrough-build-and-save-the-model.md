@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4cb806c0a6286ec8a6608b346d12e666a8e9a09f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73724530"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Compilación de un modelo de R y almacenamiento en SQL Server (tutorial)
@@ -81,7 +81,7 @@ El modelo es un clasificador binario que predice si es probable que el taxista o
     summary(logitObj);
     ```
 
-    **Resultado**
+    **Resultados**
     
     ```R
      *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs +*
@@ -201,7 +201,7 @@ Para comprobar que el contexto de cálculo es local, ejecute `rxGetComputeContex
 > [!NOTE]
 > Sus gráficos pueden tener un aspecto diferente al de estos, dependiendo de cuántos puntos de datos haya usado.
 
-## <a name="deploy-the-model"></a>Implementar el modelo
+## <a name="deploy-the-model"></a>Implementación del modelo
 
 Después de haber creado un modelo y de asegurarse de que funciona bien, lo más probable es que quiera implementarlo en un sitio en el que los usuarios o las personas de la organización puedan usarlo o, quizás, volver a entrenarlo y recalibrarlo de forma periódica. Este proceso se denomina a veces *operacionalizar* un modelo. En SQL Server, la operacionalización se logra al insertar código de R en un procedimiento almacenado. Como el código reside en el procedimiento, se puede llamar desde cualquier aplicación que pueda conectarse a SQL Server.
 

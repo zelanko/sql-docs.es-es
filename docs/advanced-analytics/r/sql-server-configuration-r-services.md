@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d18661fadb12167fd0a443758cced1188401750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727339"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuración de SQL Server para su uso con R
@@ -94,7 +94,7 @@ Para obtener más información, vea los documentos siguientes:
 
 + [Guía de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
-### <a name="memory-optimized-tables"></a>Tablas con optimización para memoria
+### <a name="memory-optimized-tables"></a>Tablas optimizadas para memoria
 
 En la actualidad, la memoria de los equipos modernos ha dejado de ser un problema. A medida que las especificaciones de hardware siguen mejorando, es relativamente fácil obtener buenas capacidades de RAM. Sin embargo, al mismo tiempo se generan datos más rápidamente que nunca, y estos datos se deben procesar con una latencia baja.
 

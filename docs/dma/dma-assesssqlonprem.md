@@ -2,8 +2,7 @@
 title: Realización de una evaluación de migración SQL Server
 titleSuffix: Data Migration Assistant
 description: Aprenda a usar Data Migration Assistant para evaluar una SQL Server local antes de migrar a otro SQL Server o a Azure SQL Database
-ms.custom: seo-lt-2019
-ms.date: 12/10/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8b01469536655fc351ecf742ed284f3f6c68f707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001910"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037166"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Evaluación de la migración de SQL Server con Data Migration Assistant
 
@@ -114,6 +114,9 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
     ![Adición de orígenes e inicio de la evaluación](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> Para ejecutar varias evaluaciones simultáneamente y ver su estado, abra la página **All Assessments** (Todas las evaluaciones).
+
 ## <a name="view-results"></a>Visualización de los resultados
 
 La duración de la evaluación depende del número de bases de datos agregadas y el tamaño del esquema de cada base de datos. Los resultados se muestran para cada base de datos en cuanto están disponibles.
@@ -156,4 +159,6 @@ Esto le permite ver los resultados consolidados en el proyecto de Azure Migrate 
 
 Una vez finalizada la evaluación de todas las bases de datos, seleccione **exportar Informe** para exportar los resultados a un archivo JSON o a un archivo CSV. A continuación, puede analizar los datos con su comodidad.
 
-Para ejecutar varias evaluaciones simultáneamente y ver su estado, abra la página **All Assessments** (Todas las evaluaciones).
+## <a name="save-and-load-assessments"></a>Guardado y carga de evaluaciones
+
+Además de exportar los resultados de una evaluación, puede guardar los detalles de la evaluación en un archivo y cargar un archivo de evaluación para revisarlo más adelante.  Para obtener más información, consulte el artículo sobre cómo [Guardar y cargar evaluaciones con Data Migration Assistant](../dma/dma-save-load-assessments.md).

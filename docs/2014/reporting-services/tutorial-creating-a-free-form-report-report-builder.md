@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Creación de un informe de forma libre (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Crear un informe de forma libre (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,46 +11,46 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 332c67f47c8096cbeb5a94c4e2a288cd532038cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098951"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Creación de un informe de forma libre (generador de informes)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Crear un informe de forma libre (Generador de informes)
   Este tutorial le enseña a crear un informe de forma libre de SSRS que se asemeja a una carta de formularios. Puede organizar los elementos de informe para crear un formulario con cuadros de texto, imágenes y otras regiones de datos.  
   
  El informe que creará en este tutorial se basa en los datos de ventas de ejemplo que se incluyen en el tutorial. El informe agrupa la información por territorio y muestra el nombre del administrador de ventas del territorio, así como una información de ventas detallada y sumaria. Utilizará la región de datos de la lista como la base para el informe de la forma libre y, a continuación, agregará un panel decorativo con una imagen, texto estático con datos insertados, una tabla para mostrar información detallada y, opcionalmente, gráficos circulares y de columnas que muestren la información resumida.  
   
-##  <a name="BackToTop"></a> Qué aprenderá  
- En este tutorial, aprenderá a realizar las siguientes tareas:  
+##  <a name="BackToTop"></a>Qué aprenderá  
+ En este tutorial, aprenderá los siguientes procedimientos:  
   
--   [Crear un informe en blanco, el origen de datos y el conjunto de datos](#BlankReport)  
+-   [Crear un informe en blanco, un origen de datos y un conjunto de datos](#BlankReport)  
   
 -   [Agregar y configurar una lista](#List)  
   
 -   [Agregar gráficos](#Graphics)  
   
--   [Agregar texto de forma libre](#Text)  
+-   [Agregar texto en forma libre](#Text)  
   
--   [Agregar una tabla para mostrar los detalles](#Table)  
+-   [Agregar una tabla para mostrar detalles](#Table)  
   
--   [Formato de datos](#Format)  
+-   [Dar formato a datos](#Format)  
   
 -   [Guardar el informe](#Save)  
   
 ### <a name="other-optional-steps"></a>Otros pasos opcionales  
   
--   [Agregue una línea para separar áreas del informe](#Line)  
+-   [Agregar una línea para separar áreas de informe](#Line)  
   
--   [Agregar visualización de datos de resumen](#Visualization)  
+-   [Agregar visualización de datos resumidos](#Visualization)  
   
  Tiempo estimado para completar este tutorial: 20 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
  Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="BlankReport"></a> 1. Crear un informe en blanco, un origen de datos y un conjunto de datos  
+##  <a name="BlankReport"></a>1. crear un informe en blanco, un origen de datos y un conjunto de datos  
   
 > [!NOTE]  
 >  En este tutorial, la consulta contiene los valores de los datos, de forma que el informe no necesite un origen de datos externo. Es muy útil usar este tipo de datos internos para el aprendizaje, pero el método hace que la consulta sea larga. .  
@@ -68,25 +68,25 @@ ms.locfileid: "66098951"
   
 #### <a name="to-create-a-new-data-source"></a>Para crear un nuevo vista origen de datos  
   
-1.  En el panel Datos de informe, haga clic en **Nuevo**y, a continuación, haga clic en **Origen de datos**.  
+1.  En el panel datos de informe, haga clic en **nuevo**y, a continuación, haga clic en **origen de datos**.  
   
-2.  En el `Name` , escriba: **ListDataSource**  
+2.  En el `Name` cuadro, escriba: **ListDataSource**  
   
 3.  Haga clic en **Usar una conexión incrustada en mi informe**.  
   
-4.  Compruebe que el tipo de conexión sea Microsoft SQL Server y, luego, en el cuadro **Cadena de conexión** , escriba: **Data Source = \<nombre_de_servidor>**  
+4.  Compruebe que el tipo de conexión es Microsoft SQL Server y luego en el cuadro **Cadena de conexión**, escriba: **Origen de datos = \<nombre de servidor>**.  
   
-     \<ServerName >, por ejemplo Report001, especifica un equipo en el que se instala una instancia del motor de base de datos de SQL Server. Dado que los datos del informe no se extraen de una base de datos de SQL Server, no necesita incluir el nombre de una base de datos. Para analizar la consulta se utiliza la base de datos predeterminada en el servidor especificado.  
+     \<ServerName>, por ejemplo Report001, especifica un equipo en el que se ha instalado una instancia del Motor de base de datos de SQL Server. Dado que los datos del informe no se extraen de una base de datos de SQL Server, no necesita incluir el nombre de una base de datos. Para analizar la consulta se utiliza la base de datos predeterminada en el servidor especificado.  
   
 5.  Haga clic en **Credenciales**e introduzca las credenciales necesarias para conectarse a la instancia del Motor de base de datos de SQL Server.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 #### <a name="to-create-a-new-dataset"></a>Para crear un nuevo conjunto de datos  
   
-1.  En el panel Datos de informe, haga clic en **Nuevo**y, a continuación, haga clic en **Conjunto de datos**.  
+1.  En el panel datos de informe, haga clic en **nuevo**y, a continuación, en **conjunto**de datos.  
   
-2.  En el `Name` , escriba: **ListDataset.**  
+2.  En el `Name` cuadro, escriba: **ListDataset.**  
   
 3.  Haga clic en **Usar un conjunto de datos insertado en el informe**y compruebe que el origen de datos es **ListDataSource**.  
   
@@ -137,10 +137,11 @@ ms.locfileid: "66098951"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="List"></a> 2. Agregar y configurar una lista  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona tres plantillas de región de datos: tabla, matriz y lista. Todas estas plantillas se basan en una región de datos Tablix.  
+##  <a name="List"></a>2. agregar y configurar una lista  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona tres plantillas de región de datos: tabla, matriz y lista. Todas estas plantillas se basan en una región de datos Tablix.  
   
- En este tutorial, utilizará una lista para mostrar la información de ventas de los territorios de ventas de un informe similar a un boletín. La información está agrupada por territorio. Agregará un nuevo grupo de filas que agrupa los datos por territorio y, a continuación, eliminará el grupo de filas de detalles integrado. La plantilla de lista es perfecta para crear informes de forma libre. Para obtener más información, consulte [enumera &#40;generador de informes y SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ En este tutorial, utilizará una lista para mostrar la información de ventas de los territorios de ventas de un informe similar a un boletín. La información está agrupada por territorio. Agregará un nuevo grupo de filas que agrupa los datos por territorio y, a continuación, eliminará el grupo de filas de detalles integrado. La plantilla de lista es perfecta para crear informes de forma libre. Para obtener más información, vea [las listas &#40;generador de informes y SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Este informe utiliza la Carta de tamaño del papel (8.5 X11) y márgenes de 1 pulgada. Una página de informe más alta de 9 pulgadas o más ancha de 6 1/2 pulgadas podría generar páginas en blanco.  
@@ -151,7 +152,7 @@ ms.locfileid: "66098951"
   
 2.  Haga clic dentro de la lista, haga clic con el botón secundario en la parte superior de la lista y luego haga clic en **Propiedades de Tablix**.  
   
-     ![Agregar lista](../../2014/tutorials/media/tutorial-addinglistwithnumbers.png "agregar lista")  
+     ![Añadir lista](../../2014/tutorials/media/tutorial-addinglistwithnumbers.png "Añadir lista")  
   
 3.  En la lista desplegable **Nombre del conjunto de datos** , seleccione **ListDataset**.  
   
@@ -159,7 +160,7 @@ ms.locfileid: "66098951"
   
 5.  Haga clic con el botón derecho dentro de la lista y luego haga clic en **Propiedades del rectángulo**.  
   
-     ![Comando de propiedades del rectángulo](../../2014/tutorials/media/tutorial-rectanglepropertiescommand.png "comando Propiedades del rectángulo")  
+     ![Comando de las propiedades del rectángulo](../../2014/tutorials/media/tutorial-rectanglepropertiescommand.png "Comando de las propiedades del rectángulo")  
   
 6.  En la pestaña **General** , active la casilla **Agregar un salto de página después** .  
   
@@ -169,7 +170,7 @@ ms.locfileid: "66098951"
   
 1.  En el panel Grupos de filas, haga clic con el botón derecho en el grupo Detalles, seleccione **Agregar grupo**y, después, haga clic en **Grupo primario**.  
   
-     ![Comando de grupo primario](../../2014/tutorials/media/tutorial-parentgroupcommand.png "comando grupo primario")  
+     ![Comando de grupo primario](../../2014/tutorials/media/tutorial-parentgroupcommand.png "Comando de grupo primario")  
   
 2.  En la lista desplegable, seleccione `[Territory].`  
   
@@ -179,26 +180,26 @@ ms.locfileid: "66098951"
   
 4.  Haga clic con el botón derecho en la columna Territory de la lista y, después, seleccione **Eliminar columnas**.  
   
-     ![Eliminar columnas](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "eliminar columnas")  
+     ![Eliminar columnas](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "Eliminar columnas")  
   
 5.  Haga clic en **Eliminar solo columnas**.  
   
-     ![Eliminar el cuadro de diálogo columnas](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "cuadro de diálogo Eliminar columnas")  
+     ![Eliminar columnas (cuadro de diálogo)](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "Eliminar columnas, cuadro de diálogo")  
   
 6.  En el panel Grupos de filas, haga clic con el botón secundario en el grupo **Detalles** y, luego, haga clic en **Eliminar grupo**.  
   
-     ![Eliminar grupo de detalles](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "eliminar grupo de detalles")  
+     ![Eliminar grupo de detalles](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "Eliminar grupo de detalles")  
   
-7.  Haga clic en **Eliminar solo el grupo**.  
+7.  Haga clic en **eliminar solo el grupo**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Graphics"></a> 3. Agregar gráficos  
+##  <a name="Graphics"></a>3. agregar gráficos  
  Uno de las ventajas de utilizar una región de datos de la lista es que puede agregar en cualquier parte los elementos de informe, como rectángulos y cuadros de texto, en lugar de limitarse a un diseño tabular. Mejorará la apariencia del informe agregando un gráfico (un rectángulo relleno con un color).  
   
 #### <a name="to-add-graphic-elements-to-the-report"></a>Para agregar elementos gráficos al informe  
   
-1.  En el **insertar** pestaña de la cinta de opciones, haga clic en **rectángulo**y, a continuación, arrastre un rectángulo a la esquina superior izquierda de la lista. Haga el rectángulo de 7 pulgadas de alto y 1 de ancho.  
+1.  En la pestaña **Insertar** de la cinta de opciones, haga clic en **rectángulo**y, a continuación, arrastre un rectángulo hacia la esquina superior izquierda de la lista. Haga el rectángulo de 7 pulgadas de alto y 1 de ancho.  
   
 2.  Haga clic con el botón secundario en el rectángulo y, a continuación, haga clic en **Propiedades del rectángulo**.  
   
@@ -206,7 +207,7 @@ ms.locfileid: "66098951"
   
 4.  En la lista desplegable **Color de relleno** , haga clic en **Más colores**y, luego, seleccione el color **GrisOscuro** .  
   
-     ![Seleccione el color de relleno](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "color de relleno de selección")  
+     ![Seleccionar el color de relleno](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "Seleccionar el color de relleno")  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -214,7 +215,7 @@ ms.locfileid: "66098951"
   
  La parte izquierda del informe incorpora ahora un gráfico vertical compuesto por un rectángulo gris pizarra.  
   
-##  <a name="Text"></a> 4. Agregar texto en forma libre  
+##  <a name="Text"></a>4. agregar texto de forma libre  
  Un cuadro de texto contiene texto estático que se repite en cada página del informe, así como campos de datos.  
   
 #### <a name="to-add-text-to-the-report"></a>Para agregar texto al informe  
@@ -225,14 +226,14 @@ ms.locfileid: "66098951"
   
 3.  Coloque el cursor en la parte superior del cuadro de texto y, a continuación, escriba: **Boletín para** .  
   
-     ![Agregar un texto de encabezado del boletín](../../2014/tutorials/media/tutorial-newsletterfor.png "Agregar un texto de encabezado del boletín")  
+     ![Añadir un texto de encabezado del boletín](../../2014/tutorials/media/tutorial-newsletterfor.png "Añadir un texto de encabezado del boletín")  
   
     > [!NOTE]  
     >  Asegúrese de incluir el espacio adicional después de la palabra "para". El espacio separa el texto y el campo que agregará en el paso siguiente.  
   
 4.  Arrastre el campo Territory hasta el cuadro de texto y colóquelo después de que el texto que escribió en el paso 3.  
   
-     ![Agregar campo Territorial](../../2014/tutorials/media/tutorial-addterritorialfield.png "Territorial Agregar campo")  
+     ![Añadir campo territorial](../../2014/tutorials/media/tutorial-addterritorialfield.png "Añadir campo territorial")  
   
 5.  Seleccione todo el texto, haga clic con el botón secundario y, a continuación, haga clic en **Propiedades de texto**.  
   
@@ -240,7 +241,7 @@ ms.locfileid: "66098951"
   
 7.  En la lista **Fuente** , seleccione **Times New Roman**; en **Tamaño** seleccione **20 pto**, en **Color** seleccione **Rojo**.  
   
-     ![Propiedades de texto](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "propiedades de texto")  
+     ![Propiedades de texto](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "Propiedades de texto")  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -251,7 +252,7 @@ ms.locfileid: "66098951"
   
 10. Arrastre el campo FullName hasta el cuadro de texto y colóquelo después del el texto que escribió en el paso 9 y, a continuación, escribe una coma (,).  
   
-     ![Agregar campo de nombre completo](../../2014/tutorials/media/tutorial-addfullnamefield.png "campo Agregar nombre completo")  
+     ![Añadir campo de nombre completo](../../2014/tutorials/media/tutorial-addfullnamefield.png "Añadir campo de nombre completo")  
   
 11. Seleccionar el texto que agregó en los pasos 9 y 10, haga clic con el botón secundario y, a continuación, haga clic en **Propiedades de texto**  
   
@@ -276,16 +277,16 @@ ms.locfileid: "66098951"
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![Añadir texto al boletín](../../2014/tutorials/media/tutorial-newslettertext.png "añadir texto al boletín")  
+     ![Añadir texto al boletín](../../2014/tutorials/media/tutorial-newslettertext.png "Añadir texto al boletín")  
   
-20. Coloque el cursor debajo del texto que pegó en el paso 15 y, a continuación, escriba: **Felicidades por sus ventas totales de** .  
+20. Coloque el cursor debajo del texto que pegó en el paso 15, y, a continuación, escriba: **Felicidades por sus ventas totales de** .  
   
     > [!NOTE]  
     >  Asegúrese de incluir el espacio adicional después de la palabra "de". El espacio separa el texto y el campo que agregará en el paso siguiente.  
   
 21. Arrastre el campo Sales hasta el cuadro de texto, colóquelo después del texto que escribió en el paso 20 y, a continuación, escriba un signo de admiración (!).  
   
-22. Resalte el campo Sales, haga clic en el campo y, a continuación, haga clic en **expresión**.  
+22. Resalte el campo ventas, haga clic con el botón secundario en el campo y, a continuación, haga clic en **expresión**.  
   
 23. En el cuadro de expresión, cambie la expresión para incluir la función Sum como sigue:  
   
@@ -295,7 +296,7 @@ ms.locfileid: "66098951"
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![Agregar una expresión al campo de ventas](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "agregar una expresión al campo de ventas")  
+     ![Añadir una expresión al campo de ventas](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "Añadir una expresión al campo de ventas")  
   
 25. Seleccionar el texto que agregó en los pasos 20 a 23, haga clic con el botón secundario y, a continuación, haga clic en **Propiedades de texto**  
   
@@ -307,7 +308,7 @@ ms.locfileid: "66098951"
   
 29. Seleccione `[Sum(Sales)]` y en la pestaña **Inicio** , en el grupo **Número** , haga clic en el botón **Moneda** .  
   
-     ![Agregar símbolos de moneda](../../2014/tutorials/media/tutorial-addcurrencysymbol.png "agregar símbolos de moneda")  
+     ![Añadir símbolo de moneda](../../2014/tutorials/media/tutorial-addcurrencysymbol.png "Añadir símbolo de moneda")  
   
 30. Haga clic con el botón derecho en el cuadro de texto con el texto "Haga clic para agregar un título" y, después, haga clic en **Eliminar**.  
   
@@ -317,9 +318,9 @@ ms.locfileid: "66098951"
   
  El informe muestra el texto estático y cada página del informe incluye datos que pertenecen a un territorio. Se da formato a las ventas como moneda.  
   
- ![Vista previa de boletín](../../2014/tutorials/media/tutorial-newsletters.png "vista previa de boletín")  
+ ![Vista previa de boletín](../../2014/tutorials/media/tutorial-newsletters.png "Vista previa de boletín")  
   
-##  <a name="Table"></a> 5. Agregar una tabla para mostrar los detalles de ventas  
+##  <a name="Table"></a>5. agregar una tabla para mostrar los detalles de ventas  
  Utilice el nuevo Asistente para tablas y matrices para agregar una tabla al informe de la forma libre. Después de completar el asistente, agregará manualmente una fila para los totales.  
   
 #### <a name="to-add-a-table"></a>Para agregar una tabla  
@@ -328,23 +329,23 @@ ms.locfileid: "66098951"
   
 2.  En la página Elegir un conjunto de datos, haga clic en **ListDataset**.  
   
-3.  Haga clic en **Siguiente**.  
+3.  Haga clic en **Next**.  
   
 4.  En la página **Organizar campos** , arrastre el campo Product desde **Campos disponibles** hasta **Valores**.  
   
 5.  Repita el paso 4 para SalesDate, Quantity y Sales. Coloque SalesDate bajo Product, Quantity bajo SalesDate y Sales bajo SalesDate.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Elegir el diseño** , vea el diseño de la tabla.  
   
      La tabla es muy simple. Se compone de cinco columnas y no tiene ningún grupo de filas o columnas. Dado que no tiene ningún grupo, las opciones de diseño relacionadas con los grupos no están disponibles. Actualizará manualmente la tabla para incluir un total en una fase posterior del tutorial.  
   
-8.  Haga clic en **Siguiente**.  
+8.  Haga clic en **Next**.  
   
 9. En la página **Elegir un estilo** , en el panel **Estilos** , seleccione **Pizarra**.  
   
-10. Haga clic en **Finalizar**.  
+10. Haga clic en **Finalizar**  
   
 11. Arrastre la tabla bajo el cuadro de texto que agregó en la lección 4.  
   
@@ -353,24 +354,24 @@ ms.locfileid: "66098951"
   
 12. Confirme que la tabla está seleccionada y, en el panel Grupo de filas, haga clic con el botón secundario en Detalles, seleccione **Agregar total**y, luego, haga clic en **Después**.  
   
-     ![Agregar informe total](../../2014/tutorials/media/tutorial-addtotal.png "añadir total del informe")  
+     ![Añadir total del informe](../../2014/tutorials/media/tutorial-addtotal.png "Añadir total del informe")  
   
 13. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
  El informe muestra una tabla con detalles y totales de ventas.  
   
- ![Ventas totales en el informe](../../2014/tutorials/media/tutorial-reportsalestotals.png "totales de ventas en el informe")  
+ ![Totales de ventas en el informe](../../2014/tutorials/media/tutorial-reportsalestotals.png "Totales de ventas en el informe")  
   
-##  <a name="Format"></a> 6. Dar formato a datos  
+##  <a name="Format"></a>6. dar formato a los datos  
  Dar formato a datos numéricos como moneda y a fechas como día y hora solamente.  
   
 #### <a name="to-format-fields-table"></a>Para dar formato a la tabla de campos  
   
-1.  Haga clic en **Diseño** para cambiar a la vista de diseño.  
+1.  Haga clic en **diseño** para cambiar a la vista Diseño.  
   
 2.  Haga clic en las celdas de la tabla que contienen `[Sum(SalesSales)]` y en la pestaña **Inicio** del grupo **Número** haga clic en el botón **Moneda** .  
   
-     ![Agregar el símbolo de moneda a la suma de ventas](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "agregar el símbolo de moneda a la suma de ventas")  
+     ![Añadir símbolo de moneda a la suma de las ventas](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "Añadir símbolo de moneda a la suma de las ventas")  
   
 3.  Haga clic en la celda que contiene `[SalesDate]` y en el grupo **Número** , en la lista desplegable, seleccione **Fecha**.  
   
@@ -378,16 +379,16 @@ ms.locfileid: "66098951"
   
  El informe muestra ahora datos dados con formato y es más fácil de leer.  
   
- ![Dar formato a los totales de ventas en informe](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "dar formato a los totales de ventas en informe")  
+ ![Formatear totales de ventas en el informe](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "Formatear totales de ventas en el informe")  
   
-##  <a name="Save"></a> 7. Guardar el informe  
+##  <a name="Save"></a>7. guardar el informe  
  Puede guardar los informes en un servidor de informes, en una biblioteca de SharePoint o en su equipo. También puede exportar el informe en diversos formatos, como Word y PDF: para ello, ejecute el informe y seleccione el formato en el menú **Exportar** .  
   
  En este tutorial, guarde el informe en un servidor de informes. Si no tiene acceso a un servidor de informes, guarde el informe en su equipo.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  
   
-1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
+1.  En el botón **generador de informes** , haga clic en **Guardar como**.  
   
 2.  Haga clic en **Sitios y servidores recientes**.  
   
@@ -397,21 +398,21 @@ ms.locfileid: "66098951"
   
 4.  En `Name`, reemplace el nombre predeterminado por **SalesInformationByTerritory**.  
   
-5.  Haga clic en **Guardar**.  
+5.  Haga clic en **Save**(Guardar).  
   
  El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
 #### <a name="to-save-the-report-on-your-computer"></a>Para guardar el informe en el equipo  
   
-1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
+1.  En el botón **generador de informes** , haga clic en **Guardar como**.  
   
 2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde desea guardar el informe.  
   
 3.  En `Name`, reemplace el nombre predeterminado por **SalesInformationByTerritory**.  
   
-4.  Haga clic en **Guardar**.  
+4.  Haga clic en **Save**(Guardar).  
   
-##  <a name="Line"></a> 8. (Opcional) Agregar una línea para separar áreas del informe  
+##  <a name="Line"></a>8. (opcional) agregar una línea para separar áreas del informe  
  Agregue una línea para separar las áreas de editorial y detalles del informe.  
   
 #### <a name="to-add-a-line"></a>Para agregar una línea  
@@ -428,9 +429,9 @@ ms.locfileid: "66098951"
   
 6.  En el área **Borde** , para el ancho seleccione **4 1/2** pto y para el color seleccione **Rojo**.  
   
-     ![Añadir línea al informe](../../2014/tutorials/media/tutorial-reportwithline.png "añadir línea al informe")  
+     ![Añadir línea al informe](../../2014/tutorials/media/tutorial-reportwithline.png "Añadir línea al informe")  
   
-##  <a name="Visualization"></a> 9. (Opcional) Agregar visualización de datos de resumen  
+##  <a name="Visualization"></a>9. (opcional) agregar visualización de datos resumidos  
  Los rectángulos le ayudan a controlar cómo se representa el informe. Coloque un grafo circular y de columnas dentro de un rectángulo para asegurarse de que el informe se representa del modo que desea.  
   
 #### <a name="to-add-a-rectangle"></a>Para agregar un rectángulo  
@@ -451,21 +452,21 @@ ms.locfileid: "66098951"
   
 4.  En la página Organizar campos del gráfico, arrastre Product hasta **Categorías**.  
   
-5.  Arrastre Quantity a **valores**y, a continuación, haga clic en **siguiente**.  
+5.  Arrastre quantity hasta **valores**y, a continuación, haga clic en **siguiente**.  
   
 6.  En la página **Elegir un estilo** , en el panel **Estilos** , seleccione **Pizarra**.  
   
-7.  Haga clic en **Finalizar**.  
+7.  Haga clic en **Finalizar**  
   
 8.  Cambie el tamaño del gráfico que aparece en la esquina superior izquierda del informe, para que tenga 1 1/2 pulgadas de alto y 2 de ancho.  
   
 9. Arrastre el gráfico dentro del rectángulo.  
   
-     ![Agregar gráfico circular](../../2014/tutorials/media/tutorial-addpiechart.png "Agregar gráfico circular")  
+     ![Añadir gráfico circular](../../2014/tutorials/media/tutorial-addpiechart.png "Añadir gráfico circular")  
   
 10. Haga clic con el botón secundario en el título del gráfico y luego haga clic en **Propiedades del título**.  
   
-11. En el **propiedades del título del gráfico** cuadro de diálogo, en el texto de título, escriba: **Cantidades de producto vendidas**.  
+11. En el cuadro de diálogo **Propiedades del título del gráfico** , en texto de título, escriba: **Cantidades de producto vendidas**.  
   
 12. Haga clic en la pestaña **Fuente** y en la lista **Tamaño** haga clic en **10 pto**.  
   
@@ -475,11 +476,11 @@ ms.locfileid: "66098951"
   
 1.  En la pestaña **Insertar** de la cinta de opciones, en el área **Visualizaciones de datos** , haga clic en **Gráfico** y después haga clic en **Asistente para gráficos**.  
   
-2.  En la página **Elegir un conjunto de datos** , haga clic en **ListDataset**y, después, en **Siguiente**.  
+2.  En la página **elegir un conjunto** de los, haga clic en **ListDataset**y, a continuación, en **siguiente**.  
   
 3.  Haga clic en **Columna**y, a continuación, en **Siguiente**.  
   
-4.  En la página Organizar campos del gráfico, arrastre el campo Product hasta **categorías**.  
+4.  En la página organizar campos del gráfico, arrastre el campo Product hasta **categorías**.  
   
 5.  Arrastre Sales hasta **Valores** y, después, haga clic en **Siguiente**.  
   
@@ -487,7 +488,7 @@ ms.locfileid: "66098951"
   
 6.  En la página **Elegir un estilo** , en el panel **Estilos** , seleccione **Pizarra**.  
   
-7.  Haga clic en **Finalizar**.  
+7.  Haga clic en **Finalizar**  
   
      Un gráfico de columnas se agrega a la esquina superior izquierda del informe.  
   
@@ -495,11 +496,11 @@ ms.locfileid: "66098951"
   
 9. Arrastre el gráfico al interior del rectángulo, debajo del gráfico circular.  
   
-     ![Gráfico de columnas agregar](../../2014/tutorials/media/tutorial-addcolumnchart.png "Agregar gráfico de columnas")  
+     ![Agregar gráfico de columnas](../../2014/tutorials/media/tutorial-addcolumnchart.png "Agregar gráfico de columnas")  
   
-10. Haga clic con el botón secundario en el título del gráfico y luego haga clic en **Propiedades del título**.  
+10. Haga clic con el botón secundario en el título del gráfico y después haga clic en **propiedades del título**.  
   
-11. En el **propiedades del título del gráfico** cuadro de diálogo, en el texto de título, escriba: **Ventas de producto**.  
+11. En el cuadro de diálogo **Propiedades del título del gráfico** , en texto de título, escriba: **Ventas de producto**.  
   
 12. Haga clic en la pestaña **Fuente** y, en la lista **Tamaño** , haga clic en **10 pto**y luego en **Aceptar**.  
   
@@ -512,7 +513,7 @@ ms.locfileid: "66098951"
     > [!NOTE]  
     >  Quitar los títulos y la leyenda de un eje vuelve el gráfico más legible cuando es un tamaño pequeño.  
   
- ![Cambiar los títulos del gráfico y quitar el título del eje](../../2014/tutorials/media/tutorial-columnchart-newtitle-noaxistitle.png "cambiar los títulos del gráfico y quitar el título del eje")  
+ ![Cambiar los títulos del gráfico y eliminar el título del eje](../../2014/tutorials/media/tutorial-columnchart-newtitle-noaxistitle.png "Cambiar los títulos del gráfico y eliminar el título del eje")  
   
 #### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>Para comprobar que los gráficos están dentro del rectángulo  
   
@@ -520,13 +521,13 @@ ms.locfileid: "66098951"
   
      En el panel Propiedades, la propiedad `Name` muestra el nombre del rectángulo.  
   
-     ![Nombre del rectángulo](../../2014/tutorials/media/tutorial-rectanglename.png "nombre del rectángulo")  
+     ![Nombre del rectángulo](../../2014/tutorials/media/tutorial-rectanglename.png "Nombre del rectángulo")  
   
 2.  Haga clic en el gráfico circular.  
   
-3.  En el **propiedades** panel, compruebe que la `Parent` propiedad contiene el nombre del rectángulo.  
+3.  En el panel **propiedades** , compruebe que la `Parent` propiedad contiene el nombre del rectángulo.  
   
-     ![Propiedad para el gráfico circular principal](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "Parent (propiedad) para el gráfico circular")  
+     ![Propiedad primaria del gráfico circular](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "Propiedad primaria del gráfico circular")  
   
 4.  Haga clic en el gráfico de columnas y repita los pasos 2 y 3.  
   
@@ -539,7 +540,7 @@ ms.locfileid: "66098951"
   
 2.  Con ambos gráficos seleccionados, haga clic con el botón secundario para seleccionar **Diseño**y, a continuación, haga clic en **Igualar ancho**.  
   
-     ![Realizar el mismo ancho de gráfico](../../2014/tutorials/media/tutorial-makechartssamewidth.png "que el mismo ancho de gráfico")  
+     ![Igualar los anchos de los gráficos](../../2014/tutorials/media/tutorial-makechartssamewidth.png "Igualar los anchos de los gráficos")  
   
     > [!NOTE]  
     >  El elemento en el que hace clic primero determina el ancho de todos los elementos seleccionados.  
@@ -548,15 +549,15 @@ ms.locfileid: "66098951"
   
  El informe muestra ahora los datos de ventas resumidos en gráficos circulares y de columnas.  
   
- ![Informe de forma libre de tutorial de SSRS](../../2014/tutorials/media/tutorial-reportfinal.png "informe tutorial, de forma libre SSRS")  
+ ![Tutorial de SSRS, informe con formato libre](../../2014/tutorials/media/tutorial-reportfinal.png "Tutorial de SSRS, informe con formato libre")  
   
 ## <a name="more-information"></a>Más información  
- Para obtener más información acerca de las listas, vea [tablas, Matrices y listas &#40;generador de informes y SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [enumera &#40;generador de informes y SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [datos Tablix Áreas de la región &#40;generador de informes y SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), y [columnas, filas y celdas de la región de datos Tablix &#40;generador de informes&#41; y SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Para obtener más información acerca de las listas, consulte [tablas, matrices y listas &#40;generador de informes y ssrs&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [enumera &#40;Generador de informes y SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), áreas de la [región de datos Tablix &#40;generador de informes y SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)y [celdas, filas y columnas de la región de datos Tablix &#40;generador de informes&#41; y SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Para más información sobre los diseñadores de consultas, vea [Diseñadores de consultas &#40;Generador de informes&#41;](../../2014/reporting-services/query-designers-report-builder.md) e [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## <a name="see-also"></a>Vea también  
- [Tutoriales &#40;generador de informes&#41;](report-builder-tutorials.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tutoriales &#40;Generador de informes&#41;](report-builder-tutorials.md)   
  [Generador de informes en SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

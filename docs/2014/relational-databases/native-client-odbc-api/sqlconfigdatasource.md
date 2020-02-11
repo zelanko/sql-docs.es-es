@@ -15,19 +15,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 155d70856ae46a83f07ecd9c5c6848ee74f813dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067713"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-pares palabra clave-valor específicos para los datos del origen de las cadenas de atributos de configuración.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]varios pares de palabra clave y valor específicos de para las cadenas de atributos de configuración de orígenes de datos.  
   
- Para obtener una lista de las palabras clave disponibles en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, vea [Using Connection String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Para obtener una lista de las palabras clave disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el controlador ODBC de Native Client, vea [usar palabras clave de cadena de conexión con SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
-## <a name="see-also"></a>Vea también  
- [Función SQLConfigDataSource](https://go.microsoft.com/fwlink/?LinkId=59337)   
- [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQLConfigDataSource (función)](https://go.microsoft.com/fwlink/?LinkId=59337)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

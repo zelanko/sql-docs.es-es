@@ -1,5 +1,5 @@
 ---
-title: Página elementos dependientes (Administrador de informes) | Microsoft Docs
+title: Página de elementos dependientes (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109327"
 ---
 # <a name="dependent-items-page-report-manager"></a>Página de elementos dependientes (Administrador de informes)
@@ -34,7 +34,7 @@ ms.locfileid: "66109327"
 4.  Seleccione la pestaña **Elementos dependientes** .  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Muestra el nombre del informe o del modelo. Haga clic en el nombre del informe para abrirlo. Haga clic en el nombre del modelo para abrir sus páginas de propiedades.  
   
  **Descripción**  
@@ -43,10 +43,10 @@ ms.locfileid: "66109327"
  **Eliminar**  
  Haga clic para eliminar el informe o el modelo de la base de datos del servidor de informes. Antes de hacer clic en **Eliminar**, active la casilla situada junto a cada elemento que desee eliminar.  
   
- **Mover**  
+ **Move**  
  Haga clic para cambiar de posición un informe o un modelo dentro de la jerarquía de carpetas. Antes de hacer clic en **Mover**, active la casilla situada junto a cada elemento que desee mover. Al hacerlo, se abre la página para mover elementos, en la que puede examinar las carpetas para seleccionar una nueva ubicación.  
   
- **Editar**  
+ **Edición**  
  Haga clic en el icono de propiedades para obtener acceso a las páginas de propiedades de un informe o un modelo.  
   
  **Tipo**  
@@ -61,10 +61,10 @@ ms.locfileid: "66109327"
  **Cuando se ejecuta**  
  Para los informes que se ejecutan como instantáneas de ejecución de informes, muestra la fecha y la hora en que se actualizó el informe por última vez.  
   
-## <a name="see-also"></a>Vea también  
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenido &#40;página del Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Administrador de informes de &#40;de página de contenido&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

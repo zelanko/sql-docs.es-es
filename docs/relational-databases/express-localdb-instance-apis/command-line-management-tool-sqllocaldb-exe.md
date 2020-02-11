@@ -1,5 +1,5 @@
 ---
-title: 'Herramienta de administración de la línea de comandos: SqlLocalDB.exe | Microsoft Docs'
+title: 'Herramienta de administración de la línea de comandos: SqlLocalDB. exe | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126948"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Herramienta de administración de la línea de comandos: SqlLocalDB.exe
@@ -28,7 +28,7 @@ ms.locfileid: "68126948"
 ## <a name="sqllocaldb-options"></a>Opciones de SqlLocalDB  
  SqlLocalDB admite las opciones siguientes.  
   
-|Opción|Lo que hace|  
+|Opción|Qué hace|  
 |------------|------------------|  
 |`-?`|Imprime texto de ayuda.|  
 |`create\|c "instance name" [version-number] [-s]`|Crea una instancia de LocalDB con un nombre y una versión determinados.<br /><br /> Si se omite el parámetro [versión-número], toma el valor predeterminado de la versión de compilación de SqlLocalDB.<br /><br /> -s inicia la nueva instancia de LocalDB una vez se haya creado.|  

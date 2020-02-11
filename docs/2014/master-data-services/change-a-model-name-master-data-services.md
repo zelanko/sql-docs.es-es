@@ -1,5 +1,5 @@
 ---
-title: Cambiar un nombre de modelo (Master Data Services) | Microsoft Docs
+title: Cambiar el nombre de un modelo (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d933475231913edeccbc5206afb675916a765302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054218"
 ---
-# <a name="change-a-model-name-master-data-services"></a>Cambiar un nombre de modelo (Master Data Services)
+# <a name="change-a-model-name-master-data-services"></a>Cambiar el nombre de un modelo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el nombre de un modelo.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -35,19 +35,19 @@ ms.locfileid: "66054218"
   
 2.  En la página **Vista de modelo** , en la barra de menús, seleccione **Administrar** y haga clic en **Modelos**.  
   
-3.  En el **mantenimiento de modelos** , en la cuadrícula, haga clic en la fila correspondiente al modelo con el nombre que desea cambiar.  
+3.  En la página **mantenimiento de modelos** , en la cuadrícula, haga clic en la fila del modelo cuyo nombre desee cambiar.  
   
     > [!NOTE]  
     >  El nombre del modelo Metadatos no se puede cambiar.  
   
-4.  Haga clic en **modelo seleccionado editar**.  
+4.  Haga clic en **Editar modelo seleccionado**.  
   
-5.  En el **nombre del modelo** , escriba el nombre actualizado del modelo.  
+5.  En el cuadro **nombre del modelo** , escriba el nombre actualizado del modelo.  
   
 6.  Haga clic en **Guardar modelo**.  
   
-## <a name="see-also"></a>Vea también  
- [Crear un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cree un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [Eliminar un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
  [Modelos &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   

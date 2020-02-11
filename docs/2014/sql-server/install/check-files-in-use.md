@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096530"
 ---
 # <a name="check-files-in-use"></a>Comprobar archivos en uso
@@ -26,7 +26,7 @@ ms.locfileid: "66096530"
   
  Para eliminar el requisito de reinicio del equipo tras la instalación, el programa de instalación muestra una lista de los procesos que están bloqueando los archivos. Detenga o finalice los procesos y las aplicaciones de la lista. A continuación, haga clic en **Actualizar comprobación** para volver a ejecutar la comprobación. Haga clic en **Detener comprobación** para finalizar una comprobación que se esté ejecutando. Si no se encuentra ningún archivo bloqueado, la tabla está vacía. Cuando todos los procesos bloqueados se hayan cerrado o detenido, haga clic en **Siguiente** para continuar.  
   
- El programa de instalación registra la información en los archivos de registro. Para obtener más información sobre cómo ver los archivos de registro, consulte [vista y lectura de SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) y [Cómo: Leer un archivo de registro de instalación SQL Server](https://go.microsoft.com/fwlink/?LinkID=134490).  
+ El programa de instalación registra la información en los archivos de registro. Para obtener más información sobre cómo ver los archivos de registro, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) y [Cómo leer un archivo de registro de instalación de SQL Server](https://go.microsoft.com/fwlink/?LinkID=134490).  
   
  En el archivo de registro se incluye la información siguiente:  
   
@@ -38,17 +38,17 @@ ms.locfileid: "66096530"
   
 -   Cuenta en la que se está ejecutando el proceso  
   
--   Id. del proceso  
+-   Identificador del proceso  
   
 -   Nombre del archivo que está bloqueado  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|Process|Muestra el nombre completo del proceso que está utilizando los archivos que se van a actualizar.|  
+|Proceso|Muestra el nombre completo del proceso que está utilizando los archivos que se van a actualizar.|  
 |Tipo|Muestra el tipo de proceso.|  
 |Cuenta|Muestra la cuenta en la que se está ejecutando el proceso.|  
-|Id. del proceso|Muestra el identificador del proceso.|  
+|Identificador del proceso|Muestra el identificador del proceso.|  
   
   

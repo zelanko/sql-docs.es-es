@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b8ad5561de57c88e052d09741444c1608ea77086
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785309"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Administrar tamaños de lote de copia masiva
@@ -42,15 +42,15 @@ ms.locfileid: "73785309"
   
  Además de especificar el tamaño de una transacción, los lotes también afectan al envío de las filas al servidor a través de la red. Las funciones de copia masiva suelen almacenar en caché las filas de **bcp_sendrow** hasta que se rellene un paquete de red y, a continuación, enviar el paquete completo al servidor. Sin embargo, cuando una aplicación llama a **bcp_batch**, el paquete actual se envía al servidor independientemente de si se ha rellenado. La utilización de un tamaño de lote muy bajo puede reducir el rendimiento si da lugar al envío de numerosos paquetes parcialmente rellenados al servidor. Por ejemplo, la llamada a **bcp_batch** después de cada **bcp_sendrow** hace que cada fila se envíe en un paquete independiente y, a menos que las filas sean muy grandes, desperdicia espacio en cada paquete. El tamaño predeterminado de los paquetes de red para SQL Server es 4 KB, aunque una aplicación puede cambiar el tamaño mediante una llamada a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) que especifique el atributo de SQL_ATTR_PACKET_SIZE.  
   
- Otro efecto secundario de los lotes es que cada lote se considera un conjunto de resultados pendiente hasta que se completa con **bcp_batch**. Si se intenta realizar cualquier otra operación en un identificador de conexión mientras un lote está pendiente, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client emite un error con SQLState = "HY000" y una cadena de mensaje de error de:  
+ Otro efecto secundario de los lotes es que cada lote se considera un conjunto de resultados pendiente hasta que se completa con **bcp_batch**. Si se intenta realizar cualquier otra operación en un identificador de conexión mientras un lote está pendiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el controlador ODBC de Native Client emite un error con SQLSTATE = "HY000" y una cadena de mensaje de error de:  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  
 results for another hstmt."  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Realizar operaciones &#40;de copia masiva&#41; de ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Realizar operaciones de copia masiva &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [Importar y exportar datos en bloque &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

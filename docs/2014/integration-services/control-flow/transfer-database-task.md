@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830154"
 ---
 # <a name="transfer-database-task"></a>Tarea Transferir bases de datos
@@ -32,7 +32,7 @@ ms.locfileid: "62830154"
 ## <a name="transfer-of-databases-between-versions-of-sql-server"></a>Transferencia de bases de datos entre versiones de SQL Server  
  La tarea Transferir bases de datos puede transferir una base de datos entre instancias de versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferentes.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  La tarea Transferir bases de datos no indica el progreso incremental de la transferencia del mensaje de error; solo indica 0% y 100%.  
   
 ## <a name="execution-value"></a>Valor de ejecución  
@@ -71,9 +71,9 @@ ms.locfileid: "62830154"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea Transferir bases de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea transferir bases de datos &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea Transferir bases de datos &#40;página Bases de datos&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Editor de la tarea transferir bases de datos &#40;página bases de datos&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

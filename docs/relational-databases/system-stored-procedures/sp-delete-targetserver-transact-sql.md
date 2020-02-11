@@ -18,13 +18,13 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111990"
 ---
-# <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
+# <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita el servidor especificado de la lista de servidores de destino disponibles.  
@@ -41,11 +41,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server'` El nombre del servidor que se va a quitar como servidor de destino disponible. *servidor* es **nvarchar (30)** , no tiene ningún valor predeterminado.  
+`[ @server_name = ] 'server'`Nombre del servidor que se va a quitar como servidor de destino disponible. el *servidor* es de tipo **nvarchar (30)** y no tiene ningún valor predeterminado.  
   
-`[ @clear_downloadlist = ] clear_downloadlist` Especifica si se debe borrar la lista de descarga para el servidor de destino. *clear_downloadlist* es de tipo **bit**, su valor predeterminado es **1**. Cuando *clear_downloadlist* es **1**, el procedimiento borra la lista de descarga para el servidor antes de eliminar el servidor. Cuando *clear_downloadlist* es **0**, no se borra la lista de descarga.  
+`[ @clear_downloadlist = ] clear_downloadlist`Especifica si se va a borrar la lista de descarga del servidor de destino. *clear_downloadlist* es de tipo **bit**y su valor predeterminado es **1**. Cuando *clear_downloadlist* es **1**, el procedimiento borra la lista de descarga del servidor antes de eliminar el servidor. Cuando *clear_downloadlist* es **0**, la lista de descarga no se borra.  
   
-`[ @post_defection = ] post_defection` Especifica si se debe exponer una instrucción dar de baja al servidor de destino. *post_defection* es de tipo **bit**, su valor predeterminado es 1. Cuando *post_defection* es **1**, el procedimiento envía una instrucción dar de baja al servidor de destino antes de eliminar el servidor. Cuando *post_defection* es **0**, el procedimiento no expone una instrucción dar de baja al servidor de destino.  
+`[ @post_defection = ] post_defection`Especifica si se va a publicar una instrucción de defecto en el servidor de destino. *post_defection* es de tipo **bit**y su valor predeterminado es 1. Cuando *post_defection* es **1**, el procedimiento expone una instrucción defect en el servidor de destino antes de eliminar el servidor. Cuando *post_defection* es **0**, el procedimiento no publica una instrucción de defecto en el servidor de destino.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -53,11 +53,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- La forma habitual para eliminar un servidor de destino es llamar a **sp_msx_defect** en el servidor de destino. Use **sp_delete_targetserver** sólo cuando es necesaria una baja manual.  
+## <a name="remarks"></a>Observaciones  
+ La forma normal de eliminar un servidor de destino es llamar a **sp_msx_defect** en el servidor de destino. Utilice **sp_delete_targetserver** solo cuando sea necesaria una baja manual.  
   
 ## <a name="permissions"></a>Permisos  
- Para ejecutar este procedimiento almacenado, los usuarios debe concederse el **sysadmin** rol fijo de servidor.  
+ Para ejecutar este procedimiento almacenado, se debe conceder a los usuarios el rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita el servidor `LONDON1` de los servidores de trabajo disponibles.  
@@ -71,9 +71,9 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_help_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_help_targetserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_msx_defect &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

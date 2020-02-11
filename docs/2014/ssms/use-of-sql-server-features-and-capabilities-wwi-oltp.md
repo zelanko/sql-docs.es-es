@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280491"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
@@ -25,7 +25,7 @@ ms.locfileid: "63280491"
   
  En la tabla siguiente se enumeran los argumentos de las herramientas externas.  
   
-|Name|Argumento|Descripción|  
+|Nombre|Argumento|Descripción|  
 |----------|--------------|-----------------|  
 |**Ruta de acceso del elemento**|$(ItemPath)|El nombre completo del archivo de origen actual (definido como unidad + ruta de acceso + nombre de archivo); en blanco si hay una ventana de no origen activa.|  
 |**Directorio del elemento**|$(ItemDir)|El directorio del origen actual (definido como unidad + ruta de acceso); en blanco si hay una ventana de no origen activa.|  
@@ -43,10 +43,10 @@ ms.locfileid: "63280491"
 |**Directorio de la solución**|$(SolutionDir)|El directorio de la solución actual (definido como unidad + ruta de acceso).|  
 |**Nombre de archivo de la solución**|$(SolutionFileName)|El nombre de archivo de la solución actual (definido como unidad + ruta de acceso + nombre de archivo).|  
   
- <sup>1</sup> la línea actual, la columna actual o el texto actual se basa en la posición del cursor en el editor de texto, como se muestra en la barra de estado.  
+ <sup>1</sup> la línea actual, la columna actual o el texto actual se basan en la posición del cursor en el editor de texto, tal como se muestra en la barra de estado.  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo Herramientas externas](external-tools-dialog-box.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo herramientas externas](external-tools-dialog-box.md)   
  [Elementos generales de la interfaz de usuario](general-user-interface-elements.md)  
   
   

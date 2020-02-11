@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890326"
 ---
 # <a name="data-mining-query"></a>Consulta de minería de datos
@@ -26,9 +26,9 @@ ms.locfileid: "68890326"
  Botón Cambiar vista  
  Haga clic en un icono para cambiar entre el panel de diseño y el de consulta. De forma predeterminada, el panel de diseño está abierto.  
   
- Para cambiar al panel de diseño, haga clic en el icono ![icono de diseño](../media/ssis-designicon.gif "Design icon").  
+ Para cambiar al panel de diseño, haga clic en el icono del ![icono de diseño](../media/ssis-designicon.gif "Icono de diseño") .  
   
- Para cambiar al panel de consulta, haga clic en el icono ![icono de SQL](../media/ssis-queryicon.gif "icono de SQL").  
+ Para cambiar al panel consulta, haga clic en el icono ![icono SQL](../media/ssis-queryicon.gif "Icono de SQL") .  
   
  **Modelo de minería de datos**  
  Muestra el modelo de minería de datos seleccionado en el que desea basar las predicciones.  
@@ -50,20 +50,20 @@ ms.locfileid: "68890326"
  **Alias**  
  El nombre de la columna que devuelve el servidor.  
   
- **Mostrar**  
+ **Feria**  
  Seleccione esta opción para devolver la columna o para utilizar solamente la columna en la cláusula WHERE.  
   
  **Grupo**  
  Use esta opción con la columna **Y/O** para agrupar expresiones. Por ejemplo, (expr1 O expr2) Y expr3.  
   
- **Y/O**  
+ **Y/o**  
  Utilice esta opción para crear una consulta lógica. Por ejemplo, (expr1 O expr2) Y expr3.  
   
  **Criterios o argumento**  
  Especifique una condición o una expresión de usuario que se aplica a la columna. Las columnas pueden arrastrarse desde las tablas que contienen el modelo de minería de datos y las columnas de entrada a la celda.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Interfaces de consulta de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 12455c82fe7a885a3530b6c0db216b9996a5eda6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893560"
 ---
 # <a name="this-mdx"></a>This (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "68893560"
 This   
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **Esta** función se puede usar en lugar de cualquier expresión de subcubo para proporcionar el subcubo actual dentro del ámbito actual dentro del script de cálculo MDX. **Esta** función debe usarse en el lado izquierdo de una asignación.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -73,7 +73,7 @@ This
   
  `End Scope;`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Cálculos](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
   

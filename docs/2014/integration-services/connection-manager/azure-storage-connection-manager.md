@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833563"
 ---
 # <a name="azure-storage-connection-manager"></a>Administrador de conexiones de Almacenamiento de Azure
-  El Administrador de conexiones de Azure Storage permite que un paquete SSIS para conectarse a una cuenta de almacenamiento de Azure mediante el uso de los valores especificados para las propiedades: Nombre de la cuenta de almacenamiento y Clave de la cuenta.  
+  El Administrador de conexiones de Almacenamiento de Azure habilita un paquete SSIS para conectarse a una cuenta de Almacenamiento de Azure utilizando los valores especificados para las propiedades nombre de cuenta y clave de cuenta de almacenamiento.  
   
 1.  En el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione **AzureStorage**y haga clic en **Agregar**.  
   
@@ -29,9 +29,9 @@ ms.locfileid: "62833563"
   
 3.  Si ha seleccionado la opción **Use Azure account** (Usar cuenta de Azure), realice lo siguiente:  
   
-    1.  Especifique los valores para los campos **Nombre de cuenta de almacenamiento** y **Clave de cuenta** . Estos valores se almacenarán como información confidencial en el paquete SSIS.  
+    1.  Especifique los valores para los campos **Nombre de cuenta de almacenamiento** y **Clave de cuenta**. Estos valores se almacenarán como información confidencial en el paquete SSIS.  
   
-    2.  Seleccione **Use HTTPS** (Usar HTTPS) si desea utilizar HTTPS en lugar de HTTP para conectarse con el servicio de Almacenamiento de Azure.  
+    2.  Seleccione **Use HTTPS** (Usar HTTPS) si desea utilizar HTTPS en lugar de HTTP para conectarse con el servicio de Azure Storage.  
   
 4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   

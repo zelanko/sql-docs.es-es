@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827398"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Dirigir el flujo CDC según el tipo de cambio
@@ -36,11 +36,11 @@ ms.locfileid: "62827398"
   
 6.  Seleccione una de las siguientes salidas:  
   
-    -   Salida Delete: la salida adonde se dirigen las filas de cambios DELETE.  
+    -   Salida Delete: la salida donde se dirigen las filas de cambios DELETE.  
   
-    -   Salida Insert: la salida adonde se dirigen las filas de cambios INSERT.  
+    -   Salida Insert: la salida donde se dirigen las filas de cambios INSERT.  
   
-    -   Salida Update: la salida adonde se dirigen las filas de cambios UPDATE antes o después y las filas de cambios de combinación.  
+    -   Salida Update: la salida donde se dirigen las filas de cambios UPDATE antes o después y las filas de cambios Merge.  
   
 7.  Opcionalmente, puede configurar las propiedades avanzadas mediante el cuadro de diálogo **Editor avanzado** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62827398"
   
      Para obtener más información sobre cómo usar el divisor CDC, vea Componentes CDC para Microsoft SQL Server Integration Services.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Divisor CDC](cdc-splitter.md)  
   
   

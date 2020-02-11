@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 56c8edb4aca4cad37c74e074bf9a1bd1dd8d36ce
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246380"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Atributos de instrucción que afectan a parámetros con valores de tabla
@@ -32,7 +32,7 @@ ms.locfileid: "75246380"
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Para obtener más información acerca de SQL_SS_NAME_SCOPE, vea [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).|  
 ||||
 
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

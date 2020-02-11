@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48a335f4cf3dc3990cbcf6bbf68e82ce76a9e54f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759354"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -29,7 +29,7 @@ SNAC, o SQL Server Native Client, es un término que se ha usado indistintamente
 > Para obtener más información y descargar los controladores de SNAC o ODBC, vea la [entrada de blog explicación del ciclo de vida de snac](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
 > Para obtener más información sobre el controlador ODBC para SQL Server, vea [Microsoft ODBC driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
- Información sobre las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client publicadas con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la última versión disponible de SQL Server Native Client:
+ Información sobre las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] características de Native Client publicadas con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la última versión disponible de SQL Server Native Client:
 
 -   [Compatibilidad de SQL Server Native Client con LocalDB](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
@@ -59,6 +59,6 @@ ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 
 
 -   [Cambio de comportamiento del controlador ODBC al administrar las conversiones de caracteres](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Instalar SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [Características de SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)  

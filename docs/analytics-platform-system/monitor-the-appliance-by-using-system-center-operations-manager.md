@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400969"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Supervisión con System Center Operations Manager-Analytics Platform System
@@ -21,7 +21,7 @@ Use System Center Operations Manager (SCOM) para supervisar el dispositivo de An
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
   
 1.  System Center Operations Manager 2007 R2, 2012 o 2012 SP1 debe estar instalado y en ejecución.  
   
@@ -44,7 +44,7 @@ Después de configurar los módulos de administración de SCOM, haga clic en el 
 ### <a name="alerts"></a>Alertas  
 Las alertas son donde puede encontrar las alertas actuales para administrar.  
   
-![Alarmas](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Alertas](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Dota  
 Los dispositivos son los lugares en los que encontrará los dispositivos PDW de SQL Server detectados y supervisados actualmente en su entorno. Si un dispositivo no aparece aquí y ha creado la conexión ODBC para él, puede haber algún problema con su cuenta de PDWWatcher. Si aparecen como "sin supervisión", puede haber algún problema con su cuenta de PDWMonitor. Sea paciente, ya que SCOM no realiza cambios en tiempo real, sino que comprueba periódicamente si hay nuevos dispositivos para supervisar y envía consultas periódicamente a los dispositivos para su supervisión.  
@@ -61,7 +61,7 @@ Por último, la vista de nodos permite ver el estado del dispositivo a través d
   
 ![Nodos](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Descripción de las alertas de la consola de administración &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)  
   

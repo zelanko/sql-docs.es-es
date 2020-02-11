@@ -1,5 +1,5 @@
 ---
-title: sys.function_order_columns (Transact-SQL) | Microsoft Docs
+title: Sys. function_order_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,30 +20,30 @@ ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a2a51cc56b37325d760ca77f014594496c8ab6b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122746"
 ---
-# <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
+# <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve una fila por cada columna que forma parte de un **orden** expresión de una función con valores de tabla de Common language runtime (CLR).  
+  Devuelve una fila por cada columna que forma parte de una expresión de **orden** de una función con valores de tabla de Common Language Runtime (CLR).  
 
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificador del objeto (función con valores de tabla de CLR) en el que se define el orden.|  
-|**order_column_id**|**int**|Identificador de la columna de orden. **order_column_id** es exclusivo solo dentro **object_id**.<br /><br /> **order_column_id** representa la posición de esta columna en la ordenación.|  
-|**column_id**|**int**|Identificador de la columna en **object_id**.<br /><br /> **column_id** es exclusivo solo dentro **object_id**.|  
+|**order_column_id**|**int**|Identificador de la columna de orden. **order_column_id** es único solo dentro de **object_id**.<br /><br /> **order_column_id** representa la posición de esta columna en la ordenación.|  
+|**column_id**|**int**|IDENTIFICADOR de la columna en **object_id**.<br /><br /> **column_id** es único solo dentro de **object_id**.|  
 |**is_descending**|**bit**|1 = La columna de ordenación tiene una dirección descendente.<br /><br /> 0 = La columna de ordenación tiene una dirección ascendente.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

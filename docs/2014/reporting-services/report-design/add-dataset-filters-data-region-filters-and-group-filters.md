@@ -1,5 +1,5 @@
 ---
-title: Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (generador de informes y SSRS) | Microsoft Docs
+title: Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106631"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (Generador de informes y SSRS)
@@ -47,26 +47,26 @@ ms.locfileid: "66106631"
   
 -   **En los grupos de series o de categorías de una región de datos Gráfico** : establezca un filtro en un grupo de series o de categorías cuando desee incluir o excluir ciertos valores para que una expresión de grupo controle qué valores deben aparecer en el gráfico.  
   
-##  <a name="FilterEquations"></a> Descripción de una ecuación de filtro  
+##  <a name="FilterEquations"></a>Descripción de una ecuación de filtro  
  En tiempo de ejecución, el procesador de informes convierte el valor en el tipo de datos especificado y, a continuación, usa al operador especificado para comparar la expresión y el valor. En la lista siguiente, se describe cada una de las partes de la ecuación de filtro:  
   
--   **Expresión** : define lo que se va a filtrar. Normalmente, se trata de un campo de conjunto de datos.  
+-   **Expresión** de Define lo que está filtrando. Normalmente, se trata de un campo de conjunto de datos.  
   
--   **Tipo de datos** : especifica el tipo de datos que se usará cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución. El tipo de datos que seleccione debe ser uno de los tipos de datos admitidos por el esquema de definición de informe.  
+-   **Tipo de datos** Especifica el tipo de datos que se usará cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución. El tipo de datos que seleccione debe ser uno de los tipos de datos admitidos por el esquema de definición de informe.  
   
--   **Operador** : define cómo comparar las dos partes de la ecuación de filtro.  
+-   **Operador** de Define cómo comparar las dos partes de la ecuación de filtro.  
   
--   `Value` Define la expresión que se usará en la comparación.  
+-   `Value`Define la expresión que se va a usar en la comparación.  
   
  En las secciones siguientes, se describe cada una de las partes de la ecuación de filtro.  
   
-### <a name="expression"></a>Expresión  
- Cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución, los tipos de datos de la expresión y el valor deberán ser los mismos. La extensión de procesamiento de datos o el proveedor de datos que se usa para recuperar los datos del origen de datos determinará el tipo de datos del campo que seleccione en **Expresión** . El tipo de datos de la expresión que especifique para `Value` viene determinada por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] los valores predeterminados. Los tipos de datos admitidos para una definición de informe determinan las opciones para el tipo de datos. El proveedor de datos puede convertir los valores de la base de datos en un tipo CLR.  
+### <a name="expression"></a>Expression  
+ Cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución, los tipos de datos de la expresión y el valor deberán ser los mismos. La extensión de procesamiento de datos o el proveedor de datos que se usa para recuperar los datos del origen de datos determinará el tipo de datos del campo que seleccione en **Expresión** . Los [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] valores predeterminados determinan el tipo `Value` de datos de la expresión que se especifica para. Los tipos de datos admitidos para una definición de informe determinan las opciones para el tipo de datos. El proveedor de datos puede convertir los valores de la base de datos en un tipo CLR.  
   
 ### <a name="data-type"></a>Tipo de datos  
  Para que el procesador de informes pueda comparar dos valores, los tipos de datos deben ser los mismos. En la tabla siguiente, se especifica la asignación entre los tipos de datos CLR y los tipos de datos de la definición de informe. Los datos que recupere de un origen de datos pueden convertirse en un tipo de datos diferente cuando sean datos de informe.  
   
-|**Tipo de datos del esquema de definición de informe**|**Tipos CLR**|  
+|**Tipo de datos de esquema de definición de informe**|**Tipos CLR**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
 |`DateTime`|`DateTime`, `DateTimeOffset`|  
@@ -76,25 +76,25 @@ ms.locfileid: "66106631"
   
  En los casos en que es necesario especificar un tipo de datos, puede especificar su propia conversión en la parte Valor de la expresión.  
   
-### <a name="operator"></a>Operador  
+### <a name="operator"></a>Operator  
  En la tabla siguiente, se especifican los operadores que puede usar en una ecuación de filtro y lo que el procesador de informes usa para evaluar la ecuación de filtro.  
   
-|Operador|Acción|  
+|Operator|Acción|  
 |--------------|------------|  
-|**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara la expresión con un valor.|  
-|**TopN, BottomN**|Compara la expresión con un valor `Integer`.|  
-|**TopPercent, BottomPercent**|Compara la expresión con un valor `Integer` o `Float`.|  
-|**Entre**|Prueba si la expresión está entre dos valores, ambos inclusive.|  
-|**Entrada**|Prueba si la expresión está dentro de un conjunto de valores.|  
+|**Equal, like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara la expresión con un valor.|  
+|**TopN, abajo**|Compara la expresión con un valor `Integer`.|  
+|**Porcentaje de BottomPercent**|Compara la expresión con un valor `Integer` o `Float`.|  
+|**Otro**|Prueba si la expresión está entre dos valores, ambos inclusive.|  
+|**De**|Prueba si la expresión está dentro de un conjunto de valores.|  
   
-### <a name="value"></a>Valor  
+### <a name="value"></a>Value  
  La expresión de valor especifica la parte final de la ecuación de filtro. El procesador de informes convierte la expresión evaluada en el tipo de datos que especificó y, a continuación, evalúa la ecuación de filtro completa para determinar si los datos especificados en Expresión pasan a través del filtro.  
   
  Para convertir en un tipo de datos que no es un tipo de datos CLR estándar, debe modificar la expresión para que realice la conversión de manera explícita. Puede usar las funciones de conversión del cuadro de diálogo **Expresión** comprendidas en la categoría **Funciones comunes**, **Conversión**. Por ejemplo, para un campo `ListPrice` que representa datos que están almacenados como un tipo de datos **money** en un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la extensión de procesamiento de datos devuelve el valor de campo como un tipo de datos <xref:System.Decimal> . Si desea establecer un filtro para usar solo valores mayores que **$50000.00** en la moneda del informe, convierta el valor en Decimal con la expresión `=CDec(50000.00)`.  
   
  Este valor también puede incluir una referencia de parámetro para permitir al usuario seleccionar de forma interactiva el valor por el que va a filtrarse.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)  
   

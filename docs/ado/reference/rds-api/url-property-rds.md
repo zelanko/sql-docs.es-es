@@ -1,5 +1,5 @@
 ---
-title: Propiedad de dirección URL (RDS) | Microsoft Docs
+title: Propiedad URL (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +14,19 @@ ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c88b8029ee5d96986cf9b366bd8faee53ca1393b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963223"
 ---
 # <a name="url-property-rds"></a>Propiedad de dirección URL (RDS)
 Indica una cadena que contiene una dirección URL relativa o absoluta.  
   
- Puede establecer el **URL** propiedad en tiempo de diseño en el [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) del objeto de etiquetas, o en tiempo de ejecución de código de secuencias de comandos.  
+ Puede establecer la propiedad **URL** en tiempo de diseño en la etiqueta de objeto del objeto [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) , o en tiempo de ejecución en el código de scripting.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,20 +38,20 @@ Run time: DataControl.URL="Server"
   
 #### <a name="parameters"></a>Parámetros  
  *Server*  
- Un **cadena** valor que contiene una dirección URL válida.  
+ Valor de **cadena** que contiene una dirección URL válida.  
   
  *DataControl*  
- Una variable de objeto que representa un **DataControl** objeto.  
+ Variable de objeto que representa un objeto **DataControl** .  
   
-## <a name="remarks"></a>Comentarios  
- Normalmente, la dirección URL identifica un archivo de páginas Active Server (.asp) que puede generar y devolver un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Por lo tanto, el usuario puede obtener un **Recordset** sin tener que invocar el lado servidor [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) ni programar un objeto de negocios personalizada.  
+## <a name="remarks"></a>Observaciones  
+ Normalmente, la dirección URL identifica un archivo de página de Active Server (. asp) que puede generar y devolver un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Por lo tanto, el usuario puede obtener un **conjunto de registros** sin tener que invocar el objeto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) del servidor o programar un objeto comercial personalizado.  
   
- Si el **URL** se ha establecido la propiedad, [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) enviará los cambios en la ubicación especificada por la dirección URL.  
+ Si se ha establecido la propiedad **URL** , [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) enviará los cambios a la ubicación especificada por la dirección URL.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de la propiedad de dirección URL (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
 
 

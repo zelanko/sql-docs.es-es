@@ -1,5 +1,5 @@
 ---
-title: Sys.service_broker_endpoints (Transact-SQL) | Microsoft Docs
+title: Sys. service_broker_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,29 +20,29 @@ ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 33d94bf5a709c2581c6ee99a1e019f4eebcabe0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68132957"
 ---
-# <a name="sysservicebrokerendpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
+# <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Esta vista de catálogo contiene una fila por cada extremo de Service Broker. Para cada fila de esta vista, hay una fila correspondiente con el mismo **endpoint_id** en el **sys.tcp_endpoints** vista que contiene los metadatos de configuración de TCP. TCP es el único protocolo permitido para Service Broker.  
+  Esta vista de catálogo contiene una fila por cada extremo de Service Broker. Para cada fila de esta vista, hay una fila correspondiente con el mismo **endpoint_id** en la vista **Sys. tcp_endpoints** que contiene los metadatos de configuración de TCP. TCP es el único protocolo permitido para Service Broker.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<hereda columnas >**|**--**|Hereda columnas de [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**is_message_forwarding_enabled**|**bit**|El extremo admite el reenvío de mensajes. Esto se establece inicialmente en **0** (deshabilitado). No acepta valores NULL.|  
-|**message_forwarding_size**|**int**|El número máximo de megabytes de **tempdb** permite el espacio que se usará para la que se va a reenviar mensajes. Esto se establece inicialmente en **10**. No acepta valores NULL.|  
-|**connection_auth**|**tinyint**|Tipo de autenticación de la conexión necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> **1** - NTLM<br /><br /> **2** - KERBEROS<br /><br /> **3** -NEGOCIAR<br /><br /> **4** -CERTIFICADO<br /><br /> **5** -NTLM, EL CERTIFICADO<br /><br /> **6** -KERBEROS, CERTIFICADO<br /><br /> **7** -NEGOTIATE, CERTIFICADOS<br /><br /> **8** -CERTIFICADO, NTLM<br /><br /> **9** -CERTIFICADO, KERBEROS<br /><br /> **10** -CERTIFICADO, NEGOTIATE<br /><br /> No acepta valores NULL.|  
-|**connection_auth_desc**|**nvarchar(60)**|Descripción del tipo de autenticación de conexión requerido para conexiones a este extremo. Es una de las opciones siguientes:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE<br /><br /> QUE ACEPTA VALORES NULL.|  
+|**\<columnas heredadas>**|**--**|Hereda columnas de [Sys. endpoints &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**is_message_forwarding_enabled**|**bit**|El extremo admite el reenvío de mensajes. Inicialmente se establece en **0** (deshabilitado). No acepta valores NULL.|  
+|**message_forwarding_size**|**int**|Número máximo de megabytes de espacio de **tempdb** que se pueden usar para los mensajes que se reenvían. Inicialmente se establece en **10**. No acepta valores NULL.|  
+|**connection_auth**|**tinyint**|Tipo de autenticación de la conexión necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> **1** : NTLM<br /><br /> **2** -Kerberos<br /><br /> **3** -negociación<br /><br /> **4** : certificado<br /><br /> **5** : NTLM, certificado<br /><br /> **6** -Kerberos, certificado<br /><br /> **7** -Negotiate, certificado<br /><br /> **8** -certificado, NTLM<br /><br /> **9** -certificado, Kerberos<br /><br /> **10** -certificado, Negotiate<br /><br /> No acepta valores NULL.|  
+|**connection_auth_desc**|**nvarchar (60)**|Descripción del tipo de autenticación de conexión requerido para conexiones a este extremo. Es una de las opciones siguientes:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICADO<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE<br /><br /> Acepta valores NULL.|  
 |**certificate_id**|**int**|Identificador del certificado utilizado para la autenticación, si lo hay.<br /><br /> 0 = Se está utilizando la Autenticación de Windows.|  
-|**encryption_algorithm**|**tinyint**|Algoritmo de cifrado. Los siguientes son los valores posibles con sus descripciones y las opciones correspondientes de DDL.<br /><br /> **0** : NONE. Opción DDL correspondiente: Deshabilitado.<br /><br /> **1** :  RC4. Opción DDL correspondiente: {necesario &#124; necesita el algoritmo RC4}.<br /><br /> **2** : AES. Opción DDL correspondiente: Necesita el algoritmo AES.<br /><br /> **3** : NONE, RC4. Opción DDL correspondiente: {admitidas &#124; admite el algoritmo RC4}.<br /><br /> **4** : NINGUNO, AES. Opción DDL correspondiente: Se admite el algoritmo AES.<br /><br /> **5** : RC4, AES. Opción DDL correspondiente: Requiere el algoritmo RC4 AES.<br /><br /> **6** : AES, RC4. Opción DDL correspondiente: Se necesita el algoritmo AES RC4.<br /><br /> **7** : NONE, RC4, AES. Opción DDL correspondiente: Admite el algoritmo RC4 AES.<br /><br /> **8** : NINGUNO, AES, RC4. Opción DDL correspondiente: Se admite el algoritmo AES RC4.<br /><br /> No acepta valores NULL.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo de cifrado. Los valores posibles y sus opciones correspondientes de DDL se enumeran a continuación:<br /><br /> NINGUNO: Disabled<br /><br /> RC4: {necesario &#124; requiere el algoritmo RC4}<br /><br /> AES: Necesita el algoritmo AES<br /><br /> NONE, RC4: {admite &#124; admite el algoritmo RC4}<br /><br /> NINGUNO, AES: Se admite el algoritmo AES<br /><br /> RC4, AES : Requiere el algoritmo RC4 AES<br /><br /> AES, RC4: Se necesita el algoritmo AES RC4<br /><br /> NONE, RC4, AES: Admite el algoritmo RC4 AES<br /><br /> NINGUNO, AES, RC4: Se admite el algoritmo AES RC4<br /><br /> QUE ACEPTA VALORES NULL.|  
+|**encryption_algorithm**|**tinyint**|Algoritmo de cifrado. A continuación se muestran los posibles valores con sus descripciones y sus correspondientes opciones de DDL.<br /><br /> **0** : ninguno. Opción de DDL correspondiente: deshabilitada.<br /><br /> **1** : RC4. Opción de DDL correspondiente: {required &#124; obligatorio Algorithm RC4}.<br /><br /> **2** : AES. Opción de DDL correspondiente: algoritmo obligatorio AES.<br /><br /> **3** : ninguno, RC4. Opción de DDL correspondiente: {compatible &#124; algoritmo RC4}.<br /><br /> **4** : ninguno, AES. Opción de DDL correspondiente: algoritmo admitido AES.<br /><br /> **5** : RC4, AES. Opción de DDL correspondiente: algoritmo obligatorio RC4 AES.<br /><br /> **6** : AES, RC4. Opción DDL correspondiente: algoritmo obligatorio AES RC4.<br /><br /> **7** : ninguno, RC4, AES. Opción de DDL correspondiente: algoritmo RC4 compatible AES.<br /><br /> **8** : ninguno, AES, RC4. Opción de DDL correspondiente: algoritmo admitido AES RC4.<br /><br /> No acepta valores NULL.|  
+|**encryption_algorithm_desc**|**nvarchar (60)**|Descripción del algoritmo de cifrado. A continuación se enumeran los valores posibles y sus correspondientes opciones de DDL:<br /><br /> NINGUNO: deshabilitado<br /><br /> RC4: {obligatorio &#124; algoritmo RC4}<br /><br /> AES: algoritmo obligatorio AES<br /><br /> NINGUNO, RC4: {compatible &#124; algoritmo RC4}<br /><br /> NINGUNO, AES: algoritmo compatible AES<br /><br /> RC4, AES: se requiere el algoritmo RC4 AES<br /><br /> AES, RC4: se requiere el algoritmo AES RC4<br /><br /> NINGUNO, RC4, AES: se admite el algoritmo RC4 AES<br /><br /> NINGUNO, AES, RC4: algoritmo compatible AES RC4<br /><br /> Acepta valores NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]  
 >  El algoritmo RC4 se admite únicamente por razones de compatibilidad con versiones anteriores. El material nuevo solo se puede cifrar con RC4 o RC4_128 cuando la base de datos tenga el nivel de compatibilidad 90 o 100. (No se recomienda). Use un algoritmo más reciente como uno de los algoritmos AES en su lugar. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, el material cifrado con RC4 o RC4_128 se puede descifrar en cualquier nivel de compatibilidad.  
@@ -50,7 +50,7 @@ ms.locfileid: "68132957"
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)  
   

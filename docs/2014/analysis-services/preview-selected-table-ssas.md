@@ -1,5 +1,5 @@
 ---
-title: Vista previa de la tabla (SSAS) seleccionada | Microsoft Docs
+title: Vista previa de la tabla seleccionada (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070719"
 ---
 # <a name="preview-selected-table-ssas"></a>Vista previa de la tabla seleccionada (SSAS)
@@ -29,7 +29,7 @@ ms.locfileid: "66070719"
  El hecho de que aparezcan datos en esta página no garantiza que la importación se realizará correctamente. Si el nombre de usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer la base de datos seleccionada, la importación no se realizará correctamente.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Casilla de verificación en el encabezado de columna**  
+ **Casilla en el encabezado de columna**  
  Active la casilla para incluir la columna en la importación de datos. Desactive la casilla para quitar la columna de la importación de datos.  
   
  **Botón de flecha abajo en el encabezado de columna**  

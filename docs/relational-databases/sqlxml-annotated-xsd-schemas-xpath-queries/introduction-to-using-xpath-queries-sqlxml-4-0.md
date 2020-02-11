@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246591"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introducción al uso de consultas XPath (SQLXML 4.0)
@@ -91,7 +91,7 @@ ms.locfileid: "75246591"
 ## <a name="supported-functionality"></a>Funcionalidad compatible  
  En la siguiente tabla se muestran las características del lenguaje XPath que se implementan en SQLXML 4.0.  
   
-|Característica|item|Vínculo a consultas de ejemplo|  
+|Característica|Elemento|Vínculo a consultas de ejemplo|  
 |-------------|----------|----------------------------|  
 |Ejes|ejes de **atributo**, **secundario**, **primario**y **propio**|[Especificar ejes en consultas XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Predicados con valores booleanos que incluyen predicados sucesivos y anidados||[Especificar operadores aritméticos en consultas XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -105,7 +105,7 @@ ms.locfileid: "75246591"
 ## <a name="unsupported-functionality"></a>Funcionalidad incompatible  
  En la siguiente tabla se muestran las características del lenguaje XPath que no se implementan en SQLXML 4.0.  
   
-|Característica|item|  
+|Característica|Elemento|  
 |-------------|----------|  
 |Ejes|**antecesor**, **antecesor-or-self**, **descendiente**, **descendant-or-self (//)**, **siguiente**, **siguiente: relacionado**, **espacio de nombres**, **anterior**, **precedente-sibling**|  
 |Predicados con valores numéricos||  
@@ -120,7 +120,7 @@ ms.locfileid: "75246591"
   
 -   XPath puede contener caracteres como < o & que tienen significados especiales en XML (y la plantilla es un documento XML). Debe escapar estos caracteres mediante la codificación & XML o especificar el XPath en la dirección URL.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Utilizar consultas XPath en SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
   
   

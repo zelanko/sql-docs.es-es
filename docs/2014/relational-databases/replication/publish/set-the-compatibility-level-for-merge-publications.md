@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199318"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Establecer el nivel de compatibilidad para publicaciones de mezcla
@@ -32,7 +32,7 @@ ms.locfileid: "68199318"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Establezca el nivel de compatibilidad en la página **Tipos de suscriptor** del Asistente para nueva publicación. Para obtener más información acerca de cómo obtener acceso a este asistente, vea [Create a Publication](create-a-publication.md). Después de crear una publicación de instantáneas, el nivel de compatibilidad se puede aumentar pero no se puede reducir. Aumente el nivel de compatibilidad en la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md). Si aumenta el nivel de compatibilidad, las suscripciones existentes en los servidores que se ejecuten con versiones anteriores al nivel de compatibilidad no se podrán sincronizar.  
   
 > [!NOTE]  
@@ -51,11 +51,11 @@ ms.locfileid: "68199318"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Para establecer el nivel de compatibilidad de la publicación para una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), especificando un valor para **@publication_compatibility_level** para que la publicación sea compatible con versiones anteriores de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Crear una suscripción](create-a-publication.md).  
+1.  En el publicador, ejecute [sp_addmergepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), especificando un **@publication_compatibility_level** valor para para que la publicación sea compatible con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versiones anteriores de. Para obtener más información, vea [Crear una suscripción](create-a-publication.md).  
   
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>Para cambiar el nivel de compatibilidad de la publicación de una publicación de combinación  
   
-1.  Ejecute [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **publication_compatibility_level** para **@property** y el nivel de compatibilidad de la publicación adecuado para **@value** .  
+1.  Ejecute [sp_changemergepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **publication_compatibility_level** para **@property** y el nivel de compatibilidad de **@value**la publicación adecuado para.  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>Para determinar el nivel de compatibilidad de la publicación de una publicación de combinación  
   
@@ -128,7 +128,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Create a Publication](create-a-publication.md)  
+## <a name="see-also"></a>Consulte también  
+ [Create a Publication](create-a-publication.md) (Creación de una publicación)  
   
   

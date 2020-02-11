@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691596"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Crear una suscripción actualizable a una publicación transaccional [Management Studio]
@@ -35,22 +35,22 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
 2. Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .
 3. Haga clic con el botón derecho en una publicación transaccional habilitada para actualizar suscripciones y, a continuación, haga clic en **Nuevas suscripciones**.
 4. Siga las indicaciones del asistente para especificar opciones para la suscripción, por ejemplo dónde debe ejecutarse el Agente de distribución.
-5. En la página **Suscripciones actualizables** del **Asistente para nuevas suscripciones**, asegúrese de que **Replicar está seleccionado**.
+5. En la página **suscripciones actualizables** del **Asistente para nueva suscripción**, asegúrese de que la opción **replicar** está seleccionada.
 6. Seleccione una opción en la lista desplegable **Confirmar en el publicador**:
 
     *  Para utilizar las suscripciones de actualización inmediata, seleccione **Confirmar cambios simultáneamente**. Si selecciona esta opción y la publicación permite suscripciones de actualización en cola (el valor predeterminado para suscripciones creadas con el Asistente para nueva publicación), la propiedad **update_mode** de la suscripción se establece en **failover**. Este modo le permite cambiar a la actualización en cola más adelante en caso necesario.
-    *  Para utilizar las suscripciones de actualización en cola, seleccione **Poner en cola cambios y confirmar cuando sea posible**. Si selecciona esta opción y la publicación permite suscripciones de actualización inmediata (el valor predeterminado para suscripciones creadas con el Asistente para nueva publicación), y el suscriptor se está ejecutando en SQL Server 2005 o una versión posterior, la propiedad **update_mode** de la suscripción se establece en queued failover. Este modo le permite cambiar a la actualización inmediata más adelante en caso necesario.
+    *  Para utilizar las suscripciones de actualización en cola, seleccione **Poner en cola cambios y confirmar cuando sea posible**. Si selecciona esta opción y la publicación permite suscripciones de actualización inmediata (el valor predeterminado para las publicaciones creadas con el Asistente para nueva publicación) y el suscriptor se está ejecutando SQL Server 2005 o una versión posterior, la propiedad de suscripción **update_mode** se establece en queued failover. Este modo le permite cambiar a la actualización inmediata más adelante en caso necesario.
 
     Para obtener más información sobre cómo cambiar los modos de actualización, consulte [Cambiar entre modos de actualización para una suscripción transaccional actualizable](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).
 
-7. La página **Inicio de sesión para suscripciones actualizables** se muestra para las suscripciones que utilizan la actualización inmediata o tienen **update_mode** establecida en **queued failover**. En la página **Inicio de sesión para suscripciones actualizables**, especifique un servidor vinculado mediante el que se realicen las conexiones al publicador para las suscripciones de actualización inmediata. Las conexiones las utilizan los desencadenadores que se activan en el suscriptor y propagan los cambios al publicador. Seleccione una de las siguientes opciones:
+7. La página **Inicio de sesión para suscripciones actualizables** se muestra para las suscripciones que utilizan la actualización inmediata o tienen **update_mode** establecen en **queued failover**. En la página **Inicio de sesión para suscripciones actualizables**, especifique un servidor vinculado mediante el que se realicen las conexiones al publicador para las suscripciones de actualización inmediata. Las conexiones las utilizan los desencadenadores que se activan en el suscriptor y propagan los cambios al publicador. Seleccione una de las siguientes opciones:
 
-    * **Crear un servidor vinculado que se conecte mediante la autenticación de SQL Server**. Seleccione esta opción si no ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador. La replicación crea un servidor vinculado automáticamente. La cuenta que especifique debe existir ya en el publicador.
-    * **Utilizar un servidor vinculado o un servidor remoto que ya está definido.** Seleccione esta opción si ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador mediante [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio u otro método.
+    * **Cree un servidor vinculado que se conecte mediante la autenticación de SQL Server.** Seleccione esta opción si no ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador. La replicación crea un servidor vinculado automáticamente. La cuenta que especifique debe existir ya en el publicador.
+    * **Utilice un servidor vinculado o un servidor remoto que ya haya definido.** Seleccione esta opción si ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador mediante [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio u otro método.
 
     Para obtener información acerca de los permisos que requiere la cuenta del servidor vinculado, vea la sección sobre las **suscripciones de actualización** en [Escriba aquí la descripción del vínculo](../security/secure-the-subscriber.md).
 
-8. Finalice el asistente.
+8. Realice los pasos del asistente.
 
 ## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Configuración de una suscripción actualizable desde el suscriptor
 
@@ -72,12 +72,12 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
 
 10. La página **Inicio de sesión para suscripciones actualizables** se muestra para las suscripciones que utilizan la actualización inmediata o tienen **update_mode** establecida en **queued failover**. En la página **Inicio de sesión para suscripciones actualizables**, especifique un servidor vinculado mediante el que se realicen las conexiones al publicador para las suscripciones de actualización inmediata. Las conexiones las utilizan los desencadenadores que se activan en el suscriptor y propagan los cambios al publicador. Seleccione una de las siguientes opciones:
 
-    * **Crear un servidor vinculado que se conecte mediante la autenticación de SQL Server**. Seleccione esta opción si no ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador. La replicación crea un servidor vinculado automáticamente. La cuenta que especifique debe existir ya en el publicador.
-    * **Utilizar un servidor vinculado o un servidor remoto que ya está definido.** Seleccione esta opción si ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador mediante [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio u otro método.
+    * **Cree un servidor vinculado que se conecte mediante la autenticación de SQL Server.** Seleccione esta opción si no ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador. La replicación crea un servidor vinculado automáticamente. La cuenta que especifique debe existir ya en el publicador.
+    * **Utilice un servidor vinculado o un servidor remoto que ya haya definido.** Seleccione esta opción si ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador mediante [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio u otro método.
 
     Para obtener información acerca de los permisos que requiere la cuenta del servidor vinculado, vea la sección sobre las **suscripciones de actualización** en [Escriba aquí la descripción del vínculo](../security/secure-the-subscriber.md).
 
-11. Finalice el asistente.
+11. Realice los pasos del asistente.
 
 ## <a name="create-an-immediate-updating-pull-subscription"></a>Creación de una suscripción de extracción de actualización inmediata
 
@@ -93,11 +93,14 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
 
 3. En el suscriptor, ejecute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Especifique `@publisher` , `@publication`y uno de los valores siguientes para `@update_mode`:
 
-    * `sync tran` : habilita la suscripción de actualización inmediata.
-    * `failover` : habilita la suscripción de actualización inmediata con la actualización en cola como opción de conmutación por error.
+    * 
+  `sync tran` : habilita la suscripción de actualización inmediata.
+    * 
+  `failover` : habilita la suscripción de actualización inmediata con la actualización en cola como opción de conmutación por error.
 
     > [!NOTE]  
->  `failover` requiere que la publicación también esté habilitada para las suscripciones de actualización en cola. 
+>  
+  `failover` requiere que la publicación también esté habilitada para las suscripciones de actualización en cola. 
  
 4. En el suscriptor, ejecute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Especifique lo siguiente:
 
@@ -110,13 +113,15 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
     * (Opcional) Un valor de `0` para `@distributor_security_mode` y la información de inicio de sesión de Microsoft SQL Server para `@distributor_login` y `@distributor_password`, en caso de que necesite usar Autenticación de SQL Server cuando se conecte al distribuidor. 
     * Una programación para el trabajo del Agente de distribución de esta suscripción. 
 
-5. En el suscriptor de la base de datos de suscripción, ejecute [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Especifique `@publisher`, `@publication`, el nombre de la base de datos de publicación para `@publisher_db`y uno de los valores siguientes para `@security_mode`: 
+5. En la base de datos de suscripciones del suscriptor, ejecute [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Especifique `@publisher`, `@publication`, el nombre de la base de datos de publicación para `@publisher_db`y uno de los valores siguientes para `@security_mode`: 
 
-    * `0` - Use Autenticación de SQL Server al realizar las actualizaciones en el publicador. Esta opción le exige que especifique un inicio de sesión válido en el publicador para `@login` y `@password`.
-    * `1` - Use el contexto de seguridad del usuario que realiza modificaciones en el suscriptor al conectarse al publicador. Consulte [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) para conocer las restricciones relacionadas con este modo de seguridad.
-    * `2` - Use un inicio de sesión vinculado definido por el usuario ya existente y creado con [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
+    * 
+  `0` - Use Autenticación de SQL Server al realizar las actualizaciones en el publicador. Esta opción le exige que especifique un inicio de sesión válido en el publicador para `@login` y `@password`.
+    * 
+  `1` - Use el contexto de seguridad del usuario que realiza modificaciones en el suscriptor al conectarse al publicador. Consulte [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) para conocer las restricciones relacionadas con este modo de seguridad.
+    * `2`-Use un inicio de sesión de servidor vinculado definido por el usuario existente creado mediante [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
-6. En el publicador, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) y especifique `@publication`, `@subscriber`, `@destination_db`, un valor de extracción para `@subscription_type`y el mismo valor que especificó en el paso 3 para `@update_mode`.
+6. En el publicador, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) `@publication`especificando `@subscriber`, `@destination_db`,, un valor de Pull `@subscription_type`para y el mismo valor especificado en el paso 3 `@update_mode`para.
 
 Esto registra la suscripción de extracción en el publicador. 
 
@@ -135,11 +140,14 @@ Esto registra la suscripción de extracción en el publicador.
 
 3. En el publicador, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique `@publication`, `@subscriber`, `@destination_db`y uno de los valores siguientes para `@update_mode`:
 
-    * `sync tran` : habilita la compatibilidad con la actualización inmediata.
-    * `failover` : habilita la compatibilidad con la actualización inmediata con actualización en cola como opción de conmutación por error.
+    * 
+  `sync tran` : habilita la compatibilidad con la actualización inmediata.
+    * 
+  `failover` : habilita la compatibilidad con la actualización inmediata con actualización en cola como opción de conmutación por error.
 
     > [!NOTE]  
->  `failover` requiere que la publicación también esté habilitada para las suscripciones de actualización en cola. 
+>  
+  `failover` requiere que la publicación también esté habilitada para las suscripciones de actualización en cola. 
  
 4. En el publicador, ejecute [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Especifique los parámetros siguientes:
 
@@ -152,11 +160,13 @@ Esto registra la suscripción de extracción en el publicador.
     * (Opcional) Un valor de `0` para `@subscriber_security_mode` y la información de inicio de sesión de SQL Server para `@subscriber_login` y `@subscriber_password`, en caso de que necesite usar Autenticación de SQL Server cuando se conecte al suscriptor. 
     * Una programación para el trabajo del Agente de distribución de esta suscripción.
 
-5. En el suscriptor de la base de datos de suscripción, ejecute [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Especifique `@publisher`, `@publication`, el nombre de la base de datos de publicación para `@publisher_db`y uno de los valores siguientes para `@security_mode`: 
+5. En la base de datos de suscripciones del suscriptor, ejecute [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Especifique `@publisher`, `@publication`, el nombre de la base de datos de publicación para `@publisher_db`y uno de los valores siguientes para `@security_mode`: 
 
-     * `0` - Use Autenticación de SQL Server al realizar las actualizaciones en el publicador. Esta opción le exige que especifique un inicio de sesión válido en el publicador para `@login` y `@password`.
-     * `1` - Use el contexto de seguridad del usuario que realiza modificaciones en el suscriptor al conectarse al publicador. Consulte [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) para conocer las restricciones relacionadas con este modo de seguridad.
-     * `2` - Use un inicio de sesión vinculado definido por el usuario ya existente y creado con [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
+     * 
+  `0` - Use Autenticación de SQL Server al realizar las actualizaciones en el publicador. Esta opción le exige que especifique un inicio de sesión válido en el publicador para `@login` y `@password`.
+     * 
+  `1` - Use el contexto de seguridad del usuario que realiza modificaciones en el suscriptor al conectarse al publicador. Consulte [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) para conocer las restricciones relacionadas con este modo de seguridad.
+     * `2`-Use un inicio de sesión de servidor vinculado definido por el usuario existente creado mediante [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
 
 ## <a name="create-a-queued-updating-pull-subscription"></a>Creación de una suscripción de extracción de la actualización en cola ##
@@ -173,11 +183,14 @@ Esto registra la suscripción de extracción en el publicador.
 
 3. En el suscriptor, ejecute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Especifique `@publisher` , `@publication`y uno de los valores siguientes para `@update_mode`:
 
-    * `queued tran` : habilita la suscripción para actualización en cola.
-    * `queued failover` : habilita la compatibilidad con la actualización en cola con actualización inmediata como opción de conmutación por error.
+    * 
+  `queued tran` : habilita la suscripción para actualización en cola.
+    * 
+  `queued failover` : habilita la compatibilidad con la actualización en cola con actualización inmediata como opción de conmutación por error.
 
     > [!NOTE]  
->  `queued failover` requiere que la publicación también esté habilitada para la suscripción de actualización inmediata. Para conmutar por error a la actualización inmediata, debe usar [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) para definir las credenciales bajo las que se replican en el publicador los cambios realizados en el suscriptor.
+>  
+  `queued failover` requiere que la publicación también esté habilitada para la suscripción de actualización inmediata. Para conmutar por error a la actualización inmediata, debe usar [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) para definir las credenciales bajo las que se replican en el publicador los cambios realizados en el suscriptor.
  
 4. En el suscriptor, ejecute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Especifique los parámetros siguientes:
 
@@ -190,7 +203,7 @@ Esto registra la suscripción de extracción en el publicador.
     * (Opcional) Un valor de `0` para `@distributor_security_mode` y la información de inicio de sesión de SQL Server para `@distributor_login` y `@distributor_password`, en caso de que necesite usar Autenticación de SQL Server cuando se conecte al distribuidor. 
     * Una programación para el trabajo del Agente de distribución de esta suscripción.
 
-5. En el publicador, ejecute [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) para registrar el suscriptor en el publicador y especifique `@publication`, `@subscriber`, `@destination_db`, un valor de extracción para `@subscription_type`y el mismo valor que especificó en el paso 3 para `@update_mode`.
+5. En el publicador, [ejecute sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) para registrar el suscriptor en el publicador, `@publication`especificando, `@subscriber`, `@destination_db`, un valor de `@subscription_type`pull para y el mismo valor especificado en el paso `@update_mode`3 para.
 
 Esto registra la suscripción de extracción en el publicador. 
 
@@ -200,7 +213,7 @@ Esto registra la suscripción de extracción en el publicador.
 1. En el publicador, ejecute [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)para comprobar que la publicación admite suscripciones de actualización en cola. 
 
     * Si el valor de allow_queued_tran en el conjunto de resultados es 1, la publicación admite suscripciones de actualización inmediata.
-    * Si el valor de allow_queued_tran en el conjunto de resultados es 0, la publicación se debe volver a crear con suscripciones de actualización en cola habilitadas. Para más información, vea Cómo: Habilitar suscripciones actualizables para publicaciones transaccionales (programación de la replicación con Transact-SQL).
+    * Si el valor de allow_queued_tran en el conjunto de resultados es 0, la publicación se debe volver a crear con suscripciones de actualización en cola habilitadas. Para más información, consulte Habilitar suscripciones actualizables para publicaciones transaccionales (programación de la replicación con Transact-SQL).
 
 2. En el publicador, ejecute [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)para comprobar que la publicación admite suscripciones de inserción. 
 
@@ -209,8 +222,10 @@ Esto registra la suscripción de extracción en el publicador.
 
 3. En el publicador, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique `@publication`, `@subscriber`, `@destination_db`y uno de los valores siguientes para `@update_mode`:
 
-    * `queued tran` : habilita la suscripción para actualización en cola.
-    * `queued failover` : habilita la compatibilidad con la actualización en cola con actualización inmediata como opción de conmutación por error.
+    * 
+  `queued tran` : habilita la suscripción para actualización en cola.
+    * 
+  `queued failover` : habilita la compatibilidad con la actualización en cola con actualización inmediata como opción de conmutación por error.
 
     > [!NOTE]  
 >  La opción queued failover option requiere que la publicación también esté habilitada para las suscripciones de actualización inmediatas. Para conmutar por error a la actualización inmediata, debe usar [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) para definir las credenciales bajo las que se replican en el publicador los cambios realizados en el suscriptor.
@@ -299,17 +314,17 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>Establecer opciones de resolución de conflictos de actualización en cola (SQL Server Management Studio)
-  Establezca las opciones de resolución de conflictos para las publicaciones que admiten suscripciones de actualización en cola en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación - \<Publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+  Establezca las opciones de resolución de conflictos para las publicaciones que admiten suscripciones de actualización en cola en la página **Opciones de suscripción** del cuadro de diálogo Propiedades de la **publicación \<: publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>Para establecer las opciones de resolución de conflictos de actualización en cola  
   
-1.  En la página **Opciones de suscripción**, del cuadro de diálogo **Propiedades de la publicación - \<Publicación>** , seleccione uno de los siguientes valores para la opción **Directiva de resolución de conflictos**:    
+1.  En la página **Opciones de suscripción**, del cuadro de diálogo **Propiedades de la publicación - \<Publicación>**, seleccione uno de los siguientes valores para la opción **Directiva de resolución de conflictos**:    
     -   **Mantener el cambio del publicador**    
     -   **Mantener el cambio del suscriptor**    
     -   **Reinicializar la suscripción**    
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-## <a name="see-also"></a>Vea también ##
+## <a name="see-also"></a>Consulte también ##
  [Create a Publication](create-a-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Usar sqlcmd con variables de script](../../scripting/sqlcmd-use-with-scripting-variables.md)   

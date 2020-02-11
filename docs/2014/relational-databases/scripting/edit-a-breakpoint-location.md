@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244887"
 ---
 # <a name="edit-a-breakpoint-location"></a>Modificar la ubicación de un punto de interrupción
@@ -29,7 +29,7 @@ ms.locfileid: "75244887"
   
 1.  En la ventana del editor, haga clic con el botón derecho en el glifo de punto de interrupción y, después, en el menú contextual, haga clic en **Ubicación** .  
   
-     O bien:  
+     O bien  
   
      En la ventana **Puntos de interrupción** , haga clic con el botón derecho en el glifo de punto de interrupción y, después, en el menú contextual, haga clic en **Ubicación** .  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75244887"
   
      La opción para **Permitir que el código fuente sea diferente al de la versión original** no tiene ningún efecto al depurar [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Especificar un número de llamadas](specify-a-hit-count.md)   
  [Especificar una acción de punto de interrupción](specify-a-breakpoint-action.md)   
  [Especificar una condición de punto de interrupción](specify-a-breakpoint-condition.md)   

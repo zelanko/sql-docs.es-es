@@ -1,5 +1,5 @@
 ---
-title: Tareas de controlador | Microsoft Docs
+title: Tareas del controlador | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915458"
 ---
 # <a name="driver-tasks"></a>Tareas de controlador
-Tareas específicas realizadas por los controladores incluyen:  
+Entre las tareas específicas realizadas por los controladores se incluyen las siguientes:  
   
--   La conexión y desconexión del origen de datos.  
+-   Conectarse y desconectarse del origen de datos.  
   
--   Comprueba si hay errores de función no comprueba por el Administrador de controladores.  
+-   Comprobando si hay errores de función no comprobados por el administrador de controladores.  
   
--   Iniciar las transacciones. Esto es transparente para la aplicación.  
+-   Iniciar transacciones; Esto es transparente para la aplicación.  
   
--   Enviar instrucciones SQL para el origen de datos para su ejecución. El controlador debe modificar SQL de ODBC para DBMS específicos SQL; Esto suele limitarse a reemplazando las cláusulas de escape que se definen en ODBC con SQL específicos para DBMS.  
+-   Enviar instrucciones SQL al origen de datos para su ejecución. El controlador debe modificar SQL ODBC a SQL específico de DBMS; a menudo, esto se limita al reemplazo de cláusulas de escape definidas por ODBC con SQL específico del DBMS.  
   
--   Enviar y recuperar datos de origen de datos, incluyendo la conversión de tipos de datos según lo especificado por la aplicación.  
+-   Enviar y recuperar datos del origen de datos, incluida la conversión de los tipos de datos especificados por la aplicación.  
   
--   Asignación de errores específicos de DBMS para SQLSTATE de ODBC.
+-   Asignación de errores específicos de DBMS a SQLSTATEs de ODBC.

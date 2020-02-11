@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 93b5666bd2d57fb0a8ffae435818a02ba152217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484127"
 ---
 # <a name="managing-a-domain"></a>Administrar un dominio
@@ -45,18 +45,18 @@ ms.locfileid: "65484127"
 |||  
 |-|-|  
 |Crear una representación semántica de un campo de datos con un tipo de datos específico, especificar cómo se rellena el dominio y dar formato a los resultados del dominio|[Crear un dominio](../../2014/data-quality-services/create-a-domain.md)|  
-|Vincular un dominio a otro, permitiéndole compartir los mismos valores y configuración|[Crear un dominio vinculado](../../2014/data-quality-services/create-a-linked-domain.md)|  
+|Vincular un dominio a otro, permitiéndole compartir los mismos valores y configuración|[Crear dominio vinculado](../../2014/data-quality-services/create-a-linked-domain.md)|  
 |Adjuntar un servicio de datos de referencia a un dominio único o compuesto|[Adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Cambiar o aumentar los valores de una base de conocimiento|[Cambiar valores de dominio](../../2014/data-quality-services/change-domain-values.md)|  
-|Utilizar reglas de validación y normalización|[Crear una regla de dominio](../../2014/data-quality-services/create-a-domain-rule.md)|  
+|Utilizar reglas de validación y normalización|[Cree una regla de dominio](../../2014/data-quality-services/create-a-domain-rule.md)|  
 |Utilizar relaciones para corregir un término que forma parte de un valor de un dominio|[Crear relaciones basadas en términos](../../2014/data-quality-services/create-term-based-relations.md)|  
-|Completar, cerrar o cancelar la actividad de administración de dominios|[Finalizar la actividad de administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
+|Completar, cerrar o cancelar la actividad de administración de dominios|[Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Compilar una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Crear una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
 |Importar conocimiento en una base de conocimiento o exportarlo desde esta.|[Importar y exportar conocimiento](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
 |Crear un dominio compuesto y agregarle conocimiento.|[Administrar un dominio compuesto](../../2014/data-quality-services/managing-a-composite-domain.md)|  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103396"
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
@@ -32,10 +32,10 @@ ms.locfileid: "66103396"
 |**Nombre de archivo**|De forma predeterminada, los nombres de los archivos de registro son<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> Puede personalizar el prefijo del nombre de archivo si modifica el atributo HttpTraceFileName en el archivo ReportingServicesService.exe.config. La marca de tiempo se basa en la hora universal coordinada (UTC).|  
 |**Ubicación del archivo**|Los archivos se escriben en la siguiente ubicación:<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**Formato de archivo**|El archivo está en formato EN-US. Es un archivo de texto ASCII.|  
-|**Creación de archivos y retención**|El registro HTTP se crea tras habilitarlo en el archivo de configuración, de reiniciar el servicio y de que el servidor de informes procese una solicitud HTTP. Si configura los valores pero no ve el archivo de registro, abra un informe o inicie una aplicación de servidor de informes (como el Administrador de informes) para generar una solicitud HTTP y crear el archivo.<br /><br /> Se creará una nueva instancia del archivo de registro después de cada reinicio del servicio y de la solicitud HTTP subsiguiente al servidor de informes.<br /><br /> De manera predeterminada, los registros de seguimiento están limitados a 32 megabytes y se eliminan transcurridos 14 días.|  
+|**Creación y retención de archivos**|El registro HTTP se crea tras habilitarlo en el archivo de configuración, de reiniciar el servicio y de que el servidor de informes procese una solicitud HTTP. Si configura los valores pero no ve el archivo de registro, abra un informe o inicie una aplicación de servidor de informes (como el Administrador de informes) para generar una solicitud HTTP y crear el archivo.<br /><br /> Se creará una nueva instancia del archivo de registro después de cada reinicio del servicio y de la solicitud HTTP subsiguiente al servidor de informes.<br /><br /> De manera predeterminada, los registros de seguimiento están limitados a 32 megabytes y se eliminan transcurridos 14 días.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Parámetros de configuración para el registro HTTP del servidor de informes  
- Para configurar el registro HTTP del servidor de informes, utilice el Bloc de notas para modificar el archivo **ReportingServicesService.exe.config** . El archivo de configuración se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
+ Para configurar el registro HTTP del servidor de informes, use el Bloc de notas para modificar el archivo **ReportingServicesService. exe. config** . El archivo de configuración se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
  Para habilitar el servidor HTTP, agregue `http:4` a la sección RStrace del archivo ReportingServicesService.exe.config. Las restantes entradas del archivo de registro HTTP son opcionales. El ejemplo siguiente incluye todos los valores para que pueda pegar la sección entera sobre la sección RStrace y, a continuación, eliminar los valores que no sean necesarios.  
   
@@ -54,31 +54,31 @@ ms.locfileid: "66103396"
 ```  
   
 ## <a name="log-file-fields"></a>Campos del archivo de registro  
- En la tabla siguiente se describen los campos disponibles en el registro. La lista de campos es configurable; puede especificar qué campos desea incluir mediante el valor de configuración `HTTPTraceSwitches`. El **predeterminado** columna especifica si el campo se incluirá en el archivo de registro automáticamente si no especifica `HTTPTraceSwitches`.  
+ En la tabla siguiente se describen los campos disponibles en el registro. La lista de campos es configurable; puede especificar qué campos desea incluir mediante el valor de configuración `HTTPTraceSwitches`. La columna **predeterminada** especifica si el campo se incluirá automáticamente en el archivo de registro si no se especifica `HTTPTraceSwitches`.  
   
-|Campo|Descripción|Default|  
+|Campo|Descripción|Valor predeterminado|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Este valor es opcional. El valor predeterminado es ReportServerServiceHTTP_. Puede especificar un valor diferente si desea utilizar una convención de nomenclatura de archivos diferente (por ejemplo, para incluir el nombre de servidor si guarda los archivos de registro en una ubicación central).|Sí|  
-|HTTPTraceSwitches|Este valor es opcional. Si lo especifica, puede configurar los campos utilizados en el archivo de registro con un formato separado por comas.|Sin|  
-|date|Fecha en que se produjo la actividad.|Sin|  
+|HTTPTraceSwitches|Este valor es opcional. Si lo especifica, puede configurar los campos utilizados en el archivo de registro con un formato separado por comas.|No|  
+|Date|Fecha en que se produjo la actividad.|No|  
 |Time|Hora en que se produjo la actividad.|No|  
 |ClientIp|Dirección IP del cliente que tiene acceso al servidor de informes.|Sí|  
-|UserName|Nombre del usuario que tuvo acceso al servidor de informes.|Sin|  
+|UserName|Nombre del usuario que tuvo acceso al servidor de informes.|No|  
 |ServerPort|Número de puerto utilizado para la conexión.|No|  
 |Host|Contenido del encabezado de host.|No|  
 |Método|Acción o método SOAP llamado desde el cliente.|Sí|  
 |UriStem|Recurso al que se obtuvo acceso.|Sí|  
 |UriQuery|Consulta utilizada para tener acceso al recurso.|No|  
-|ProtocolStatus|Código de estado HTTP.|Sí|  
+|ProtocolStatus|El código de estado HTTP.|Sí|  
 |BytesReceived|Número de bytes recibidos por el servidor.|No|  
 |TimeTaken|Tiempo transcurrido (en milisegundos) desde que el HTTP.SYS instantáneo devuelve los datos de la solicitud hasta que el servidor finaliza el último envío, excluido el tiempo de transmisión por la red.|No|  
-|ProtocolVersion|Versión de protocolo utilizada por el cliente.|Sin|  
-|UserAgent|Tipo de explorador utilizado por el cliente.|Sin|  
-|CookieReceived|Contenido de la cookie recibida por el servidor.|Sin|  
-|CookieSent|Contenido de la cookie enviada por el servidor.|Sin|  
+|ProtocolVersion|Versión de protocolo utilizada por el cliente.|No|  
+|UserAgent|Tipo de explorador utilizado por el cliente.|No|  
+|CookieReceived|Contenido de la cookie recibida por el servidor.|No|  
+|CookieSent|Contenido de la cookie enviada por el servidor.|No|  
 |Referrer|Sitio anterior visitado por el cliente.|No|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Registro de seguimiento del servicio del servidor de informes](report-server-service-trace-log.md)   
  [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  

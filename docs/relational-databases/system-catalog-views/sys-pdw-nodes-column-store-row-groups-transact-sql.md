@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399875"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>Sys. pdw_nodes_column_store_row_groups (Transact-SQL)
@@ -26,18 +26,18 @@ ms.locfileid: "74399875"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Inter**|IDENTIFICADOR de la tabla subyacente. Esta es la tabla física del nodo de proceso, no la object_id de la tabla lógica del nodo de control. Por ejemplo, object_id no coincide con el object_id de sys. tables.<br /><br /> Para combinar con sys. Tables, utilice sys. pdw_index_mappings.|  
-|**index_id**|**Inter**|IDENTIFICADOR del índice de almacén de columnas agrupado en *object_id* tabla.|  
-|**partition_number**|**Inter**|IDENTIFICADOR de la partición de tabla que contiene el *row_group_id*de grupo de filas. Puede usar *partition_number* para unir esta DMV a sys. partitions.|  
-|**row_group_id**|**Inter**|IDENTIFICADOR de este grupo de filas. Es único en la partición.|  
-|**dellta_store_hobt_id**|**bigint**|El hobt_id para los grupos de filas delta, o NULL si el tipo del grupo de filas no es delta. Un grupo de filas delta es un grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas Delta tiene el estado **Open** . Un grupo de filas delta está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.|  
+|**object_id**|**int**|IDENTIFICADOR de la tabla subyacente. Esta es la tabla física del nodo de proceso, no la object_id de la tabla lógica del nodo de control. Por ejemplo, object_id no coincide con el object_id de sys. tables.<br /><br /> Para combinar con sys. Tables, utilice sys. pdw_index_mappings.|  
+|**index_id**|**int**|IDENTIFICADOR del índice de almacén de columnas agrupado en *object_id* tabla.|  
+|**partition_number**|**int**|IDENTIFICADOR de la partición de tabla que contiene el *row_group_id*de grupo de filas. Puede usar *partition_number* para unir esta DMV a sys. partitions.|  
+|**row_group_id**|**int**|IDENTIFICADOR de este grupo de filas. Es único en la partición.|  
+|**dellta_store_hobt_id**|**BIGINT**|El hobt_id para los grupos de filas delta, o NULL si el tipo del grupo de filas no es delta. Un grupo de filas delta es un grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas Delta tiene el estado **Open** . Un grupo de filas delta está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.|  
 |**State**|**tinyint**|Número de identificación asociado con el state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar (60)**|Descripción del estado persistente del grupo de filas:<br /><br /> ABRIR: un grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas abierto está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.<br /><br /> CLOSED: Grupo de filas que se ha rellenado, pero que aún no se ha comprimido mediante el proceso de la tupla.<br /><br /> COMPRIMIDO: Grupo de filas que se ha rellenado y comprimido.|  
-|**total_rows**|**bigint**|Total de filas almacenadas físicamente en el grupo de filas. Es posible que se hayan eliminado algunas, pero estas se siguen almacenando. El número máximo de filas en un grupo de filas es 1.048.576 (hexadecimal FFFFF).|  
-|**deleted_rows**|**bigint**|Número de filas almacenadas físicamente en el grupo de filas que se han marcado para su eliminación.<br /><br /> Siempre es 0 para los grupos de filas DELTA.|  
-|**size_in_bytes**|**Inter**|Tamaño combinado, en bytes, de todas las páginas de este grupo de filas. Este tamaño no incluye el tamaño necesario para almacenar metadatos o diccionarios compartidos.|  
-|**pdw_node_id**|**Inter**|Identificador único de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
-|**distribution_id**|**Inter**|Identificador único de la distribución.|
+|**total_rows**|**BIGINT**|Total de filas almacenadas físicamente en el grupo de filas. Es posible que se hayan eliminado algunas, pero estas se siguen almacenando. El número máximo de filas en un grupo de filas es 1.048.576 (hexadecimal FFFFF).|  
+|**deleted_rows**|**BIGINT**|Número de filas almacenadas físicamente en el grupo de filas que se han marcado para su eliminación.<br /><br /> Siempre es 0 para los grupos de filas DELTA.|  
+|**size_in_bytes**|**int**|Tamaño combinado, en bytes, de todas las páginas de este grupo de filas. Este tamaño no incluye el tamaño necesario para almacenar metadatos o diccionarios compartidos.|  
+|**pdw_node_id**|**int**|Identificador único de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
+|**distribution_id**|**int**|Identificador único de la distribución.|
   
 ## <a name="remarks"></a>Observaciones  
  Devuelve una fila para cada grupo de filas del almacén de columnas de cada tabla que tenga un índice clúster o no clúster de almacén de columnas.  
@@ -104,7 +104,7 @@ GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CREAR índice de almacén de columnas &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [Sys. pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   

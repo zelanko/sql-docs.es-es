@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de archivo sin formato (página columnas) | Microsoft Docs
+title: Editor de destino de archivos sin formato (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056578"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>Editor de destino de archivo sin formato (página Columnas)
@@ -61,7 +61,7 @@ ms.locfileid: "66056578"
  **Alias de salida**  
  Especifique un nombre alternativo para usarlo en la columna de salida.  
   
-## <a name="see-also"></a>Vea también  
- [Destino de archivo sin formato](data-flow/raw-file-destination.md)  
+## <a name="see-also"></a>Consulte también  
+ [destino de archivo sin formato](data-flow/raw-file-destination.md)  
   
   

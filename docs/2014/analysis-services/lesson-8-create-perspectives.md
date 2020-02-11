@@ -1,5 +1,5 @@
 ---
-title: 'Lección 9: Creación de perspectivas | Microsoft Docs'
+title: 'Lección 9: crear perspectivas | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,37 +11,37 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078252"
 ---
 # <a name="lesson-9-create-perspectives"></a>Lección 9: Crear perspectivas
   En esta lección, creará una perspectiva Venta por Internet. Una perspectiva define un subconjunto visible de un modelo que ofrece puntos de vista centrados, específicos del negocio o específicos de la aplicación. Cuando un usuario se conecta a un modelo utilizando una perspectiva, solo ve los objetos del modelo (tablas, columnas, medidas, jerarquías y KPI) como campos definidos en esa perspectiva.  
   
- La perspectiva Venta por Internet que va a crear en esta lección excluirá el objeto de tabla Cliente. Al crear una perspectiva que excluye ciertos objetos en la vista, ese objeto todavía existe en el modelo; sin embargo, no está visible en una lista de campos del cliente de informe. Las columnas calculadas y medidas se pueden incluir en una perspectiva o no pueden calcularse a partir de los datos del objeto excluido.  
+ La perspectiva Venta por Internet que va a crear en esta lección excluirá el objeto de tabla Cliente. Cuando se crea una perspectiva que excluye ciertos objetos de la vista, ese objeto todavía existe en el modelo; sin embargo, no está visible en una lista de campos de cliente de generación de informes. Las columnas y las medidas calculadas, tanto si se incluyen en una perspectiva como si no, aún se pueden calcular a partir de los datos del objeto excluido.  
   
- El propósito de esta lección es describir cómo se crean las perspectivas y permitir que se familiarice con las herramientas de creación de modelos tabulares. Si posteriormente amplía el modelo para incluir tablas adicionales, puede crear otras perspectivas para definir puntos de vista diferentes del modelo, como Inventario y Personal de ventas.  
+ Esta lección tiene como objetivo describir cómo se crean las perspectivas, así como familiarizarse con las herramientas de creación de modelos tabulares. Si posteriormente amplía el modelo para incluir tablas adicionales, puede crear otras perspectivas para definir puntos de vista diferentes del modelo, como Inventario y Personal de ventas.  
   
  Para obtener más información, consulte [Perspectivas &#40;SSAS tabular&#41;](tabular-models/perspectives-ssas-tabular.md).  
   
  Tiempo estimado para completar esta lección: **5 minutos**  
   
-## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 8: Creación de indicadores clave de rendimiento](lesson-7-create-key-performance-indicators.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 8: Crear indicadores clave de rendimiento](lesson-7-create-key-performance-indicators.md).  
   
 ## <a name="create-perspectives"></a>Crear perspectivas  
   
-#### <a name="to-create-an-internet-sales-perspective"></a>Para crear una perspectiva Venta por Internet  
+#### <a name="to-create-an-internet-sales-perspective"></a>Para crear una perspectiva Venta por Internet, siga estos pasos:  
   
-1.  En el Diseñador de modelos, haga clic en el **modelo** menú y, a continuación, haga clic en **perspectivas**.  
+1.  En el diseñador de modelos, haga clic en el menú **modelo** y, a continuación, en **perspectivas**.  
   
-2.  En el cuadro de diálogo **Perspectivas** , haga clic en **Nueva perspectiva**.  
+2.  En el cuadro de diálogo **Perspectivas**, haga clic en **Nueva perspectiva**.  
   
-3.  Para cambiar el nombre de la perspectiva, haga doble clic en el **nueva perspectiva 1** encabezado de columna y, a continuación, escriba `Internet Sales`.  
+3.  Para cambiar el nombre de la perspectiva, haga doble clic en el encabezado de columna **nueva perspectiva 1** y, a continuación, escriba `Internet Sales`.  
   
-4.  En **campos**, seleccione las tablas siguientes **fecha**, **Geography**, **producto**, **Product Category**, **Subcategoría de producto**, y `Internet Sales`.  
+4.  En **campos**, seleccione las tablas siguientes: **Date**, **Geography**, **Product**, **Product Category**, `Internet Sales` **Product**subcategory y.  
   
      Tenga en cuenta que excluyó la tabla Cliente y todas sus columnas de esta perspectiva. Más adelante, en la lección 12, utilizará la característica Analizar en Excel para probar esta perspectiva. La lista de campos de tabla dinámica de Excel incluirá todas las tablas, excepto la tabla Cliente.  
   

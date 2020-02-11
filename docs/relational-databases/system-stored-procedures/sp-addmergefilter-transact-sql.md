@@ -16,13 +16,13 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769177"
 ---
-# <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
+# <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Agrega un nuevo filtro de mezcla para crear una partición basada en una combinación con otra tabla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -53,9 +53,9 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'`Es el artículo primario al que el artículo secundario, especificado por *article*, debe combinarse mediante la cláusula de combinación especificada por *join_filterclause*, con el fin de determinar las filas del artículo secundario que cumplen el criterio de filtro del filtro de mezcla. *join_articlename* es de **tipo sysname**y no tiene ningún valor predeterminado. El artículo debe encontrarse en la publicación proporcionada por la *publicación*.  
   
-`[ @join_filterclause = ] join_filterclause`Es la cláusula de combinación que debe utilizarse para combinar el artículo secundario especificado por *article*y el artículo primario especificado por *join_article*, con el fin de determinar las filas que cumplen el filtro de mezcla. *join_filterclause* es de tipo **nvarchar (1000)** .  
+`[ @join_filterclause = ] join_filterclause`Es la cláusula de combinación que debe utilizarse para combinar el artículo secundario especificado por *article*y el artículo primario especificado por *join_article*, con el fin de determinar las filas que cumplen el filtro de mezcla. *join_filterclause* es **nvarchar (1000)**.  
   
-`[ @join_unique_key = ] join_unique_key`Especifica si la combinación entre el artículodel artículo secundario y el artículo primario *join_article*es de uno a varios, de uno a uno, de varios a uno o de varios a varios. *join_unique_key* es de **tipo int**y su valor predeterminado es 0. **0** indica una combinación de varios a uno o de varios a varios. **1** indica una combinación uno a uno o uno a varios. Este valor es **1** cuando las columnas de combinación forman una clave única en *join_article*o si *join_filterclause* se encuentra entre una clave externa en el *artículo* y una clave principal en *join_article*.  
+`[ @join_unique_key = ] join_unique_key`Especifica si la combinación entre *el artículo del artículo secundario y el*artículo primario *join_article*es uno a varios, uno a uno, varios a uno o varios a varios. *join_unique_key* es de **tipo int**y su valor predeterminado es 0. **0** indica una combinación de varios a uno o de varios a varios. **1** indica una combinación uno a uno o uno a varios. Este valor es **1** cuando las columnas de combinación forman una clave única en *join_article*o si *join_filterclause* se encuentra entre una clave externa en el *artículo* y una clave principal en *join_article*.  
   
 > [!CAUTION]  
 >  Establezca este parámetro en **1** únicamente si tiene una restricción en la columna de combinación de la tabla subyacente para el artículo primario que garantiza la unicidad. Si *join_unique_key* se establece en **1** de forma incorrecta, se puede producir la no convergencia de los datos.  
@@ -74,7 +74,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`Especifica el tipo de filtro que se va a agregar. *filter_type* es **tinyint**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Solo filtro de combinación. Necesario para admitir [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores.|  
 |**2**|Solo relación de registros lógicos.|  
@@ -85,7 +85,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_addmergefilter** se utiliza en la replicación de mezcla.  
   
  **sp_addmergefilter** solo se puede usar con artículos de tabla. No se admiten los artículos de vista ni de vista indizada.  
@@ -106,13 +106,13 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addmergefilter**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Definir y modificar un filtro de combinación entre artículos de mezcla](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
- [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

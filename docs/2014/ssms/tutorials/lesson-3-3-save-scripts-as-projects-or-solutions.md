@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753051"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Guardar scripts como proyectos o soluciones
@@ -58,11 +58,11 @@ ms.locfileid: "62753051"
     > [!NOTE]  
     >  Si necesita más espacio para escribir la consulta, presione MAYÚS+ALT+ENTRAR para cambiar al modo de pantalla completa.  
   
-11. En el Explorador de soluciones, haga clic con el botón derecho en **SQLQuery1**y, después, haga clic en **Cambiar nombre**. Tipo **Check Workorders.sql** como el nuevo nombre para la consulta y presione ENTRAR.  
+11. En el Explorador de soluciones, haga clic con el botón derecho en **SQLQuery1**y, después, haga clic en **Cambiar nombre**. Escriba **checkss. SQL** como el nuevo nombre de la consulta y presione Entrar.  
   
 12. Para guardar la solución y el proyecto de script, en el menú **Archivo** , haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Resumen: Soluciones y proyectos de Script](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [Resumen: Soluciones y proyectos de scripts](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   

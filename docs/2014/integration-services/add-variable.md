@@ -1,5 +1,5 @@
 ---
-title: Agregar Variable | Microsoft Docs
+title: Agregar variable | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061787"
 ---
 # <a name="add-variable"></a>Agregar variable
@@ -28,7 +28,7 @@ ms.locfileid: "66061787"
  **Contenedor**  
  Seleccione un contenedor de la lista. El contenedor define el ámbito de la variable. El contenedor puede ser el paquete o un ejecutable del mismo.  
   
- **Name**  
+ **Nombre**  
  Escriba el nombre de la variable.  
   
  **Espacio de nombres**  
@@ -43,7 +43,7 @@ ms.locfileid: "66061787"
  **Solo lectura**  
  Seleccione esta opción para cambiar la variable a solo lectura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Tipos de datos de Integration Services](data-flow/integration-services-data-types.md)   
  [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)  

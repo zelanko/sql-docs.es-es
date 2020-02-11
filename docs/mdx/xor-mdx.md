@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125789"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
@@ -36,19 +36,19 @@ Expression1 XOR Expression2
  Expresión MDX válida que devuelve un valor numérico.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un valor booleano que devuelve **true** si se evalúa como un solo argumento **true**; en caso contrario, **false**.  
+ Un valor booleano que devuelve **true** si uno y solo un argumento se evalúa como **true**; en caso contrario, **false**.  
   
-## <a name="remarks"></a>Comentarios  
- El **XOR** operador trata los dos parámetros como valores booleanos (cero, 0, como **false**; en caso contrario, **true**) antes de que el operador realice la exclusión lógica. La tabla siguiente se muestra cómo el **XOR** operador realiza la exclusión lógica.  
+## <a name="remarks"></a>Observaciones  
+ El operador **XOR** trata ambos parámetros como valores booleanos (cero, 0, como **false**; de lo contrario, **true**) antes de que el operador realice la exclusión lógica. En la tabla siguiente se muestra cómo el operador **XOR** realiza la exclusión lógica.  
   
 |*Expression1*|*Expression2*|Valor devuelto|  
 |-------------------|-------------------|------------------|  
-|**true**|**true**|**false**|  
-|**true**|**false**|**true**|  
-|**false**|**true**|**true**|  
-|**false**|**false**|**false**|  
+|**reales**|**reales**|**es**|  
+|**reales**|**es**|**reales**|  
+|**es**|**reales**|**reales**|  
+|**es**|**es**|**es**|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e25a5438eb147cfe5e3c7e4df3d3fe504cfcda48
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242017"
 ---
 # <a name="manage-code-formatting"></a>Administrar formato de código
@@ -51,9 +51,9 @@ ms.locfileid: "75242017"
   
 5.  Haga clic en una de las opciones siguientes:  
   
-    -   **Ninguno**. El cursor va al comienzo de la línea siguiente.  
+    -   **No**. El cursor va al comienzo de la línea siguiente.  
   
-    -   **Bloque**. El cursor alinea la línea siguiente con la anterior.  
+    -   **Bloqueo**. El cursor alinea la línea siguiente con la anterior.  
   
     -   **Inteligente** (valor predeterminado). El servicio de lenguaje determina el estilo de sangría adecuado.  
   

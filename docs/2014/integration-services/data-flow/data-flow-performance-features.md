@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637822"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
@@ -110,7 +110,7 @@ ms.locfileid: "73637822"
   
 -   Especificar las columnas de criterio de ordenación en las que se basa el orden de los datos.  
   
- Para más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+ Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
  Si es necesario ordenar los datos en el flujo de datos, puede mejorar el rendimiento diseñando el flujo de datos de forma que utilice el menor número posible de operaciones de ordenación. Por ejemplo, si el flujo de datos utiliza una transformación Multidifusión para copiar el conjunto de datos, ordene el conjunto de datos una vez antes de que se ejecute la transformación Multidifusión, en lugar de ordenar varias salidas después de la transformación.  
   
@@ -125,30 +125,30 @@ ms.locfileid: "73637822"
  Utilice las sugerencias de esta sección para mejorar el rendimiento de las transformaciones Agregado, Búsqueda aproximada, Agrupación aproximada, Búsqueda, Combinación de mezcla y Dimensión de variación lenta.  
   
 #### <a name="aggregate-transformation"></a>Transformación Agregado  
- La transformación Agregado incluye las propiedades `Keys`, `KeysScale`, `CountDistinctKeys` y `CountDistinctScale`. Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de una operación **Agrupar por** , establezca las propiedades `Keys` y `KeysScale`, respectivamente. Si conoce el número exacto o aproximado de valores distintos que se esperan como resultado de una operación de **recuento distintiva** , establezca las propiedades `CountDistinctKeys` y `CountDistinctScale`, respectivamente.  
+ La transformación Agregado incluye las propiedades `Keys`, `KeysScale`, `CountDistinctKeys` y `CountDistinctScale`. Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de una operación **Agrupar por** , establezca `Keys` las `KeysScale` propiedades y, respectivamente. Si conoce el número exacto o aproximado de valores distintos que se esperan como resultado de una operación de **recuento distintiva** , `CountDistinctKeys` establezca `CountDistinctScale` las propiedades y, respectivamente.  
   
  Si tiene que crear varias agregaciones en un flujo de datos, considere la posibilidad de crear varias agregaciones que utilicen una sola transformación Agregado, en lugar de crear varias transformaciones. Esto mejora el rendimiento cuando una agregación es un subconjunto de otra agregación, ya que la transformación puede optimizar el almacenamiento interno y examinar los datos entrantes una sola vez. Por ejemplo, si una agregación utiliza una cláusula GROUP BY y una agregación AVG, puede mejorar el rendimiento combinándolas en una transformación. No obstante, al realizar varias agregaciones dentro de una transformación Agregado se serializan las operaciones de agregación y, por consiguiente, el rendimiento podría no mejorar cuando haya que calcular varias agregaciones por separado.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformaciones Búsqueda aproximada y Agrupación aproximada  
  Para obtener información sobre cómo optimizar el rendimiento de las transformaciones Agrupación aproximada y Búsqueda aproximada, vea las notas del producto [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
-#### <a name="lookup-transformation"></a>Lookup Transformation  
+#### <a name="lookup-transformation"></a>Transformación de búsqueda  
  Puede minimizar el tamaño de los datos de referencia en memoria si escribe una instrucción SELECT que busque solo las columnas necesarias. Esta opción presenta un rendimiento mejor que seleccionar una tabla o una vista completa, lo que devuelve una gran cantidad de datos innecesarios.  
   
-#### <a name="merge-join-transformation"></a>Transformación Combinación de mezcla  
+#### <a name="merge-join-transformation"></a>Combinación de mezcla, transformación  
  Ya no tiene que configurar el valor de la propiedad `MaxBuffersPerInput` porque Microsoft ha realizado modificaciones que reducen el riesgo de que la transformación Combinación de mezcla utilice demasiada memoria. Este problema se producía a veces cuando varias entradas de la Combinación de mezcla generaban datos a velocidades desiguales.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Slowly Changing Dimension Transformation  
+#### <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación  
  El Asistente para dimensiones variables y la transformación Dimensión de variación lenta son herramientas de uso general que satisfacen las necesidades de la mayoría de los usuarios. Sin embargo, el flujo de datos que genera el asistente no está optimizado en cuanto a rendimiento.  
   
  Normalmente, los componentes más lentos de la transformación Dimensión de variación lenta son las transformaciones Comando de OLE DB que ejecutan cláusulas UPDATE sobre las filas de una en una. Por consiguiente, la manera más efectiva de mejorar el rendimiento de la transformación Dimensión de variación lenta consiste en reemplazar las transformaciones Comando de OLE DB. Puede reemplazar estas transformaciones por componentes de destino que guarden todas las filas que hay que actualizar en una tabla de ensayo. A continuación, puede agregar una tarea Ejecutar SQL que ejecute una cláusula Transact-SQL UPDATE basada en un solo conjunto sobre todas las filas al mismo tiempo.  
   
  Los usuarios avanzados pueden diseñar un flujo de datos personalizado para el procesamiento de dimensiones de variación lenta que esté optimizado para las dimensiones de gran tamaño. Para obtener una descripción y un ejemplo de este método, consulte la sección "Unique dimension scenario" en las notas del producto [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
-### <a name="destinations"></a>Destinos  
+### <a name="destinations"></a>Destinations  
  Para lograr un mejor rendimiento con los destinos, considere la posibilidad de utilizar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de probar el rendimiento del destino.  
   
-#### <a name="sql-server-destination"></a>Destino de SQL Server  
+#### <a name="sql-server-destination"></a>SQL Server, destino  
  Cuando un paquete cargue datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo, utilice un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este destino está optimizado para cargas masivas de alta velocidad.  
   
 #### <a name="testing-the-performance-of-destinations"></a>Probar el rendimiento de los destinos  
@@ -161,7 +161,7 @@ ms.locfileid: "73637822"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  **Artículos y publicaciones de blogs**  
@@ -196,8 +196,8 @@ ms.locfileid: "73637822"
   
 -   Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Herramientas para solucionar problemas de la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

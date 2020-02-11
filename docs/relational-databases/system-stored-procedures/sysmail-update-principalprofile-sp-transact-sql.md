@@ -18,13 +18,13 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037381"
 ---
-# <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
+# <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Actualiza la información para una asociación entre una entidad de seguridad y un perfil.  
@@ -41,15 +41,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @principal_id = ] principal_id` El identificador de usuario de base de datos o del rol en el **msdb** base de datos de asociación que se va a cambiar. *principal_id* es **int**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* debe especificarse.  
+`[ @principal_id = ] principal_id`IDENTIFICADOR del usuario o el rol de la base de datos **msdb** de la asociación que se va a cambiar. *principal_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *principal_id* o *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'` El nombre de usuario de base de datos o del rol en el **msdb** base de datos de asociación que se va a actualizar. *principal_name* es **sysname**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* se puede especificar.  
+`[ @principal_name = ] 'principal_name'`Nombre del usuario o el rol de la base de datos **msdb** de la asociación que se va a actualizar. *principal_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar *principal_id* o *principal_name* .  
   
-`[ @profile_id = ] profile_id` El identificador del perfil para la asociación a cambiar. *profile_id* es **int**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* debe especificarse.  
+`[ @profile_id = ] profile_id`Identificador del perfil para la asociación que se va a cambiar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` El nombre del perfil para la asociación a cambiar. *nombre_perfil* es **sysname**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* debe especificarse.  
+`[ @profile_name = ] 'profile_name'`Nombre del perfil para la asociación que se va a cambiar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @is_default = ] 'is_default'` Es si este perfil es el perfil predeterminado para el usuario de base de datos. El usuario de la base de datos solo puede tener un perfil predeterminado. *is_default* es **bit**, no tiene ningún valor predeterminado.  
+`[ @is_default = ] 'is_default'`Indica si este perfil es el perfil predeterminado para el usuario de base de datos. El usuario de la base de datos solo puede tener un perfil predeterminado. *is_default* es de **bits**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -57,22 +57,22 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este procedimiento almacenado cambia si el perfil especificado es el perfil predeterminado para el usuario de la base de datos. El usuario de la base de datos solo puede tener un perfil privado predeterminado.  
   
- Cuando el nombre principal de la asociación es **pública** o el identificador de entidad de seguridad para la asociación es **0**, este procedimiento almacenado cambia el perfil público. Solo puede haber un perfil público predeterminado.  
+ Cuando el nombre de la entidad de seguridad de la asociación es **público** o el ID. de la entidad de seguridad de la asociación es **0**, este procedimiento almacenado cambia el perfil público. Solo puede haber un perfil público predeterminado.  
   
- Cuando  **\@is_default** es '**1**' y la entidad de seguridad está asociado a más de un perfil, el perfil especificado se convierte en el perfil predeterminado para la entidad de seguridad. El perfil predeterminado anterior sigue estando asociado a la entidad de seguridad, pero ya no es el perfil predeterminado.  
+ Cuando ** \@is_default** es '**1**' y la entidad de seguridad está asociada a más de un perfil, el perfil especificado se convierte en el perfil predeterminado para la entidad de seguridad. El perfil predeterminado anterior sigue estando asociado a la entidad de seguridad, pero ya no es el perfil predeterminado.  
   
- El procedimiento almacenado **sysmail_update_principalprofile_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_update_principalprofile_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  **A. Configurar un perfil como perfil público predeterminado para una base de datos**  
   
- En el ejemplo siguiente se establece el perfil `General Use Profile` para el perfil público predeterminado para los usuarios de la **msdb** base de datos.  
+ En el ejemplo siguiente se establece `General Use Profile` el perfil como perfil público predeterminado para los usuarios de la base de datos **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **B. Configurar un perfil como perfil privado predeterminado para un usuario**  
   
- En el ejemplo siguiente se establece el perfil `AdventureWorks Administrator` como perfil predeterminado para la entidad de seguridad `ApplicationUser` en el **msdb** base de datos. El perfil ya debe estar asociado a la entidad de seguridad. El perfil predeterminado anterior sigue estando asociado a la entidad de seguridad, pero ya no es el perfil predeterminado.  
+ En el ejemplo siguiente se establece `AdventureWorks Administrator` el perfil para que sea el perfil predeterminado `ApplicationUser` para la entidad de seguridad en la base de datos **msdb** . El perfil ya debe estar asociado a la entidad de seguridad. El perfil predeterminado anterior sigue estando asociado a la entidad de seguridad, pero ya no es el perfil predeterminado.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -92,9 +92,9 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1' ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Objetos de configuración de correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Procedimientos almacenados de correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos objetos de configuración](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

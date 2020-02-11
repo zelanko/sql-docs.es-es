@@ -1,5 +1,5 @@
 ---
-title: sys.security_predicates (Transact-SQL) | Microsoft Docs
+title: Sys. security_predicates (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,32 +22,32 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6cf464370c5c2ca3f5075205c6783e9332309f12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135223"
 ---
-# <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (Transact-SQL)
+# <a name="syssecurity_predicates-transact-sql"></a>Sys. security_predicates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Devuelve una fila para cada predicado de seguridad de la base de datos.  
+  Devuelve una fila para cada predicado de seguridad en la base de datos.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Identificador de la directiva de seguridad que contiene este predicado.|  
 |security_predicate_id|**int**|Identificador del predicado dentro de esta directiva de seguridad.|  
 |target_object_id|**int**|Identificador del objeto en el que está enlazado el predicado de seguridad.|  
 |predicate_definition|**nvarchar(max)**|Nombre completo de la función que se utilizará como predicado de seguridad, incluidos los argumentos. Tenga en cuenta que el nombre `schema.function` puede estar normalizado (es decir, convertido), así como cualquier otro elemento en el texto para mantener la coherencia. Por ejemplo:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
-|predicate_type|**int**|El tipo de predicado que se usa la directiva de seguridad:<br /><br /> 0 = EL PREDICADO DE FILTRO<br /><br /> 1 = EL PREDICADO DE BLOQUEO|  
-|predicate_type_desc|**nvarchar(60)**|El tipo de predicado que se usa la directiva de seguridad:<br /><br /> FILTER<br /><br /> BLOQUE|  
-|operación|**int**|El tipo de operación especificada para el predicado:<br /><br /> NULL = todas las operaciones aplicables<br /><br /> 1 = DESPUÉS DE INSERTAR<br /><br /> 2 = DESPUÉS DE LA ACTUALIZACIÓN<br /><br /> 3 = ANTES DE LA ACTUALIZACIÓN<br /><br /> 4 = ANTES DE ELIMINAR|  
-|operation_desc|**nvarchar(60)**|El tipo de operación especificada para el predicado:<br /><br /> NULL<br /><br /> DESPUÉS DE INSERTAR<br /><br /> AFTER UPDATE<br /><br /> ANTES DE LA ACTUALIZACIÓN<br /><br /> ANTES DE ELIMINAR|  
+|predicate_type|**int**|El tipo de predicado utilizado por la Directiva de seguridad:<br /><br /> 0 = PREDICADO DE FILTRO<br /><br /> 1 = PREDICADO DE BLOQUE|  
+|predicate_type_desc|**nvarchar (60)**|El tipo de predicado utilizado por la Directiva de seguridad:<br /><br /> FILTER<br /><br /> BLOQUEAR|  
+|operation|**int**|El tipo de operación especificado para el predicado:<br /><br /> NULL = todas las operaciones aplicables<br /><br /> 1 = DESPUÉS DE LA INSERCIÓN<br /><br /> 2 = DESPUÉS DE LA ACTUALIZACIÓN<br /><br /> 3 = ANTES DE LA ACTUALIZACIÓN<br /><br /> 4 = ANTES DE LA ELIMINACIÓN|  
+|operation_desc|**nvarchar (60)**|El tipo de operación especificado para el predicado:<br /><br /> NULL<br /><br /> DESPUÉS DE LA INSERCIÓN<br /><br /> AFTER UPDATE<br /><br /> ANTES DE LA ACTUALIZACIÓN<br /><br /> ANTES DE LA ELIMINACIÓN|  
   
 ## <a name="permissions"></a>Permisos  
- Las entidades de seguridad con el **ALTER ANY SECURITY POLICY** permiso tiene acceso a todos los objetos en esta vista de catálogo, así como cualquier persona con **VIEW DEFINITION** en el objeto.  
+ Las entidades de seguridad con el permiso **ALTER any Security Policy** tienen acceso a todos los objetos de esta vista de catálogo, así como a cualquier persona con **View definition** en el objeto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   

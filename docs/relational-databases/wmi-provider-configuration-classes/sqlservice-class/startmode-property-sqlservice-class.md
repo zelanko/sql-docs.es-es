@@ -18,10 +18,10 @@ ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660870"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Propiedad StartMode (clase SqlService)
@@ -36,7 +36,7 @@ object.StartMode [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Objeto de la [clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
@@ -50,18 +50,18 @@ object.StartMode [= value]
  Sistema  
  Valor = 1. Servicio Iniciado por el método **IoInitSystem** . Esta opción solo es válida para los servicios del controlador.  
   
- Automática  
+ Automático  
  Valor = 2. Servicio que el administrador de control de servicios iniciará automáticamente durante el inicio del sistema.  
   
  Manual  
  Valor = 3. Servicio que el administrador de equipo iniciará cuando un proceso llame al método **StartService** .  
   
- Deshabilitado  
+ Disabled  
  Valor = 4. El servicio no se puede iniciar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

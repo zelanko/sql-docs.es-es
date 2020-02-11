@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103759"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modificar un archivo de configuración de Reporting Services (RSreportserver.config)
@@ -90,14 +90,14 @@ ms.locfileid: "66103759"
   
 6.  Compruebe los archivos de registro de seguimiento para ver que no se produjeron errores. Si observa condiciones de error es porque una opción de configuración o su valor se especificó incorrectamente. Examine el [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) para ver los valores válidos para cualquier configuración que esté produciendo un error. Para obtener más información sobre cómo ver el registro de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](report-server-service-trace-log.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md)   
  [Archivo de configuración ReportingServicesService](reportingservicesservice-configuration-file.md)   
  [Archivo de configuración RSReportDesigner](rsreportdesigner-configuration-file.md)   
- [Implementar una extensión de procesamiento de datos](../extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Implementación de una extensión de procesamiento de datos](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Implementación de una extensión de entrega](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Implementación de una extensión de representación](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Cómo: Implementar un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [Cómo: implementar un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Archivos de configuración de Reporting Services](reporting-services-configuration-files.md)  
   
   

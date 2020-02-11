@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632734"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar el Asesor de actualizaciones para preparar las actualizaciones
@@ -56,17 +56,18 @@ ms.locfileid: "73632734"
 >  Los informes pueden contener un elemento "otros problemas de actualización". Este elemento vincula a una lista de problemas que no detecta el Asesor de actualizaciones, pero que pueden existir en el servidor o en las aplicaciones. Debe leer la lista de problemas no detectables y determinar si debe realizar cambios en el servidor o en las aplicaciones para solventarlos.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>Cómo instalar y ejecutar el Asesor de actualizaciones  
- La ubicación en la que se instala el Asesor de actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de lo que se vaya a analizar. El Asesor de actualizaciones admite el análisis remoto de todos los componentes admitidos excepto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si no está analizando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede instalar el Asesor de actualizaciones en cualquier equipo que pueda conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que cumpla los requisitos previos del Asesor de actualizaciones. Para obtener información detallada, vea [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Si está examinando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe instalar el Asesor de actualizaciones en el servidor de informes.  
+ La ubicación en la que se instala el Asesor de actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de lo que se vaya a analizar. El Asesor de actualizaciones admite el análisis remoto de todos los componentes admitidos excepto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si no está analizando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede instalar el Asesor de actualizaciones en cualquier equipo que pueda conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que cumpla los requisitos previos del Asesor de actualizaciones. Para obtener más información, vea [actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Si está examinando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe instalar el Asesor de actualizaciones en el servidor de informes.  
   
  El Asesor de actualizaciones está disponible en un Feature Pack.  
   
  Los requisitos previos para instalar y ejecutar el asesor de actualizaciones son los siguientes:  
   
--   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 y [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
+-   
+  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 y [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
 -   Windows Installer a partir de la versión 4.5. Puede instalar Windows Installer desde el [sitio web de Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   Microsoft .NET Framework 4. .NET Framework 4 está disponible en los medios del producto [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y en la [Página de descarga de .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET Framework 4 está disponible en los [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] medios del producto y en la [Página de descarga de .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Para instalar .NET Framework 4 desde el disco de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], busque la raíz de la unidad de disco. A continuación, haga doble clic en la carpeta \redist, haga doble clic en la carpeta DotNetFrameworks y ejecute dotNetFx40_Full_x86_x64.exe (para sistemas operativos de 32 bits o para sistemas operativos de 64 bits).  
   
@@ -74,11 +75,11 @@ ms.locfileid: "73632734"
   
  Después de instalar el asesor de actualizaciones, puede abrirlo desde el menú **Inicio** :  
   
--   Haga clic en **Inicio**, seleccione **todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, haga clic en **Asesor de actualizaciones de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** .  
+-   Haga clic en **Inicio**, seleccione **todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, haga clic en ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Asesor de actualizaciones**.  
   
  Para obtener más información, vea la documentación del Asesor de actualizaciones incluida en la descarga del Asesor de actualizaciones y las notas de la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con varias versiones e instancias de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Compatibilidad con versiones anteriores](../../../2014/getting-started/backward-compatibility.md)  

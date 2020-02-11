@@ -16,10 +16,10 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68894043"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68894043"
   Agrega un nuevo trabajo del agente programado que se utiliza para sincronizar una suscripción de inserción con una publicación transaccional. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
 > [!IMPORTANT]  
->  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -82,7 +82,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @subscriber_login = ] 'subscriber_login'`Es el inicio de sesión del suscriptor que se va a utilizar al conectarse a un suscriptor durante la sincronización. *subscriber_login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor. se requiere *subscriber_password* si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL. Si se utiliza una contraseña de suscriptor, se cifra automáticamente.  
+`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor. *subscriber_password* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL. Si se utiliza una contraseña de suscriptor, se cifra automáticamente.  
   
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura. Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
@@ -98,13 +98,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el Agente de distribución. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Cada día|  
-|**8**|Programación semanal|  
-|**16**|Programación mensual|  
+|**4**|Diariamente|  
+|**203**|Semanal|  
+|**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64** (valor predeterminado)|Iniciar automáticamente|  
 |**128**|Periódica|  
@@ -116,24 +116,24 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha del Agente de distribución. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1** (predeterminado)|Primero|  
-|**2**|Second|  
+|**1** (valor predeterminado)|Primero|  
+|**2**|Segundo|  
 |**4**|Tercero|  
-|**8**|Cuarto|  
-|**16**|Último|  
+|**203**|Cuarto|  
+|**dieciséi**|Último|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es 0.  
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
-|**2**|Second|  
+|**1**|Una sola vez|  
+|**2**|Segundo|  
 |**4** (valor predeterminado)|Minute|  
-|**8**|Hour|  
+|**203**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es 5.  
   
@@ -160,7 +160,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`Es el identificador de programación único (ProgID) con el que se registra el proveedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el origen de datos que no es de. *subscriber_provider* es de **tipo sysname y su**valor predeterminado es NULL. *subscriber_provider* debe ser único para el proveedor de OLE DB instalado en el distribuidor. *subscriber_provider* solo se admite para suscriptores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no sean de.  
+`[ @subscriber_provider = ] 'subscriber_provider'`Es el identificador de programación único (PROGID) con el que se registra el proveedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el origen de datos que no es de. *subscriber_provider* es de **tipo sysname y su**valor predeterminado es NULL. *subscriber_provider* debe ser único para el proveedor de OLE DB instalado en el distribuidor. *subscriber_provider* solo se admite para suscriptores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no sean de.  
   
 `[ @subscriber_datasrc = ] 'subscriber_datasrc'`Es el nombre del origen de datos tal y como lo entiende el proveedor de OLE DB. *subscriber_datasrc* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. *subscriber_datasrc* se pasa como la propiedad DBPROP_INIT_DATASOURCE para inicializar el proveedor de OLE DB. *subscriber_datasrc* solo se admite para suscriptores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no sean de.  
   
@@ -173,7 +173,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_addpushsubscription_agent** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
 ## <a name="example"></a>Ejemplo  
@@ -182,14 +182,14 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addpushsubscription_agent**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Crear una suscripción para un suscriptor que no sea de SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [Transact &#40;-SQL de sp_changesubscription&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [Transact &#40;-SQL de sp_helpsubscription&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

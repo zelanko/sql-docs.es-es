@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 44c4bb7c01f18db6062ad1982fcf5a5f80e4d6b0
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797979"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
@@ -36,21 +36,21 @@ ms.locfileid: "72797979"
   
 -   **Antes de empezar:**  [Elegir opciones de actualización de DAC](#ChoseDACUpgOptions), [Limitaciones y restricciones](#LimitationsRestrictions), [Requisitos previos](#Prerequisites), [Seguridad](#Security), [Permisos](#Permissions)  
   
--   **Para actualizar una DAC con:**  [Asistente Actualizar aplicación de capa de datos](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Para actualizar una DAC mediante:**  [el Asistente Actualizar aplicación de capa de datos](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Una actualización de DAC es un proceso en contexto que modifica el esquema de la base de datos existente para coincidir con el esquema definido en una nueva versión de la DAC. La nueva versión de la DAC se proporciona en un archivo de paquete DAC. Para obtener más información sobre cómo crear un paquete DAC, vea [Aplicaciones de capa de datos](data-tier-applications.md).  
   
 ###  <a name="ChoseDACUpgOptions"></a> Elegir opciones de actualización de DAC  
  Hay cuatro opciones de actualización para una actualización en contexto:  
   
--   **Omitir pérdida de datos** : si `True`, la actualización continuará incluso si algunas de las operaciones provocan la pérdida de datos. Si es `False`, estas operaciones terminarán la actualización. Por ejemplo, si no hay una tabla de la base de datos actual en el esquema de la nueva DAC, la tabla se quitará si se especifica `True`. El valor predeterminado es `True`.  
+-   **Omitir pérdida** de datos `True`: si es, la actualización continuará incluso si algunas de las operaciones provocan la pérdida de datos. Si es `False`, estas operaciones terminarán la actualización. Por ejemplo, si no hay una tabla de la base de datos actual en el esquema de la nueva DAC, la tabla se quitará si se especifica `True`. La configuración predeterminada es `True`.  
   
--   **Bloquear en cambios** : si `True`, la actualización se termina si el esquema de la base de datos es diferente del definido en la DAC anterior. Si es `False`, la actualización continúa incluso si se detectan cambios. El valor predeterminado es `False`.  
+-   **Bloquear en cambios** : Si `True`es, la actualización se termina si el esquema de la base de datos es diferente del definido en la DAC anterior. Si es `False`, la actualización continúa incluso si se detectan cambios. La configuración predeterminada es `False`.  
   
--   **Reversión en** caso de error: si `True`, la actualización se incluye en una transacción y, si se detectan errores, se intentará revertir. Si es `False`, se confirman todos los cambios a medida que se efectúan y, si se producen errores, puede que tenga que restaurar una copia de seguridad anterior de la base de datos. El valor predeterminado es `False`.  
+-   **Reversión en** caso de `True`error: si es, la actualización se incluye en una transacción y, si se detectan errores, se intentará revertir. Si es `False`, se confirman todos los cambios a medida que se efectúan y, si se producen errores, puede que tenga que restaurar una copia de seguridad anterior de la base de datos. La configuración predeterminada es `False`.  
   
--   **Omitir validación de directiva** : si `True`, no se evalúa la Directiva de selección de servidor DAC. Si es `False`, se evalúa la directiva y la actualización se termina si se produce un error en la validación. El valor predeterminado es `False`.  
+-   **Omitir validación** de directiva `True`: si es, la Directiva de selección de servidor DAC no se evalúa. Si es `False`, se evalúa la directiva y la actualización se termina si se produce un error en la validación. La configuración predeterminada es `False`.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Las actualizaciones de DAC solo se pueden realizar en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior.  
@@ -104,7 +104,7 @@ ms.locfileid: "72797979"
 ##  <a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para actualizar una aplicación de capa de datos.  
   
- **No volver a mostrar esta página.** active esta casilla para que la página deje de mostrarse en el futuro.  
+ **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
   
  **Siguiente >:** avanza a la página **Seleccionar paquete**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72797979"
   
  **Descripción:** cuadro de solo lectura que muestra la descripción que se escribió cuando la DAC se creó o extrajo de una base de datos.  
   
- **\< Anterior** : vuelve a la página **Introducción** .  
+ Anterior: vuelve a la página **Introducción** . ** \< **  
   
  **Siguiente>:** muestra una barra de progreso cuando el asistente confirma que el archivo seleccionado es un paquete DAC válido.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "72797979"
   
  **Validando el contenido de DAC:** barra de progreso que notifica el estado actual del proceso de validación.  
   
- **\< anterior** : vuelve al estado inicial de la página **seleccionar paquete** .  
+ Anterior: vuelve al estado inicial de la página **seleccionar paquete** . ** \< **  
   
  **Siguiente>:** avanza a la versión final de la página **Seleccionar paquete**.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "72797979"
   
  **Pasar por alto infracciones de directivas:** use esta casilla para comenzar con la actualización si se produce un error en una o más de las condiciones de la directiva. Seleccione esta opción solamente si está seguro de que todas las condiciones que produjeron errores no evitarán la correcta operación de la DAC.  
   
- **\< anterior** : vuelve a la página **seleccionar paquete** .  
+ Anterior: vuelve a la página **seleccionar paquete** . ** \< **  
   
  **Siguiente >:** avanza a la página **Detectar cambio**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "72797979"
   
  **Guardar informe:** haga clic en el botón para guardar un informe de los cambios que el asistente detectó entre los objetos de la base de datos y sus homólogos en la definición de la DAC. A continuación, puede revisar el informe para determinar si necesita tomar medidas cuando se complete la actualización para incorporar algunos o todos los objetos enumerados en el informe dentro de la nueva base de datos.  
   
- **\< anterior** : vuelve a la página **seleccionar paquete DAC** .  
+ Anterior: vuelve a la página **seleccionar paquete DAC** . ** \< **  
   
  **Siguiente >** : avanza a la página **Opciones**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "72797979"
   
  **Restaurar valores predeterminados:** devuelve la opción a su valor predeterminado de false.  
   
- **\< anterior** : vuelve a la página **detectar cambio** .  
+ Anterior: vuelve a la página **detectar cambio** . ** \< **  
   
  **Siguiente >:** avanza a la página **Revisar el plan de actualización**.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "72797979"
   
  **Restaurar valores predeterminados:** devuelve la opción a su valor predeterminado de false.  
   
- **\< anterior** : vuelve a la página **detectar cambio** .  
+ Anterior: vuelve a la página **detectar cambio** . ** \< **  
   
  **Siguiente >** : avanza a la página **Resumen**.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "72797979"
   
  **Se usará la siguiente configuración en la actualización de su DAC.** - Compruebe la información que se muestra para asegurarse de que las acciones emprenda serán las correctas. La ventana muestra la DAC que seleccionó para su actualización y el paquete DAC que contiene la nueva versión de la DAC. La ventana también muestra si la versión actual de la base de datos es igual que la definición de la DAC actual, o bien si la base de datos ha cambiado.  
   
- **\< anterior** : vuelve a la página **revisar el plan de actualización** .  
+ Anterior: vuelve a la página **revisar el plan de actualización** . ** \< **  
   
  **Siguiente >** : implementa la DAC y muestra los resultados en la página **Actualizar DAC**.  
   
@@ -284,6 +284,6 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](data-tier-applications.md)   
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  

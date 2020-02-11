@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_diag_event_properties (Transact-SQL) | Microsoft Docs
+title: Sys. pdw_diag_event_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,23 +13,23 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: fc14e2f03deb833d18a0d68be05deefe69842cf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67914999"
 ---
-# <a name="syspdwdiageventproperties-transact-sql"></a>sys.pdw_diag_event_properties (Transact-SQL)
+# <a name="syspdw_diag_event_properties-transact-sql"></a>Sys. pdw_diag_event_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Contiene información sobre qué propiedades están asociadas con los eventos de diagnóstico.  
+  Contiene información sobre qué propiedades están asociadas a los eventos de diagnóstico.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|**event_name**|**nvarchar(255)**|Nombre del evento de diagnóstico específicos.||  
+|**event_name**|**nvarchar(255)**|Nombre del evento de diagnóstico específico.||  
 |**property_name**|**nvarchar(255)**|Nombre de una propiedad del evento.||  
   
-## <a name="see-also"></a>Vea también  
- [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

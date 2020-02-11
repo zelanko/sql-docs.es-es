@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71199324"
 ---
 # <a name="query-options-execution-advanced-page"></a>Opciones de ejecución de consulta (página Avanzadas)
@@ -29,11 +29,11 @@ ms.locfileid: "71199324"
 
 **establecer PARSEONLY** Comprueba la sintaxis de cada consulta, pero no ejecuta las consultas. Esta opción está desactivada de forma predeterminada.  
 
-**establecer CONCAT_NULL_YIELDS_NULL** Cuando se activa esta casilla, las consultas que concatenan un valor existente con un `NULL`, siempre `NULL` devuelven como resultado. Cuando se desactiva esta casilla, un valor existente concatenado con un valor `NULL`, devuelve el valor existente. Esta opción está activada de forma predeterminada.
+**establecer CONCAT_NULL_YIELDS_NULL** Cuando se activa esta casilla, las consultas que concatenan un valor existente con un `NULL`, siempre devuelven `NULL` como resultado. Cuando se desactiva esta casilla, un valor existente concatenado con un valor `NULL`, devuelve el valor existente. Esta opción está activada de forma predeterminada.
 
 **establecer ARITHABORT** Cuando se activa esta casilla, cuando una `INSERT`instrucción, `DELETE` o `UPDATE` encuentra un error aritmético (desbordamiento, división por cero o error de dominio) durante la evaluación de la expresión, se finaliza la consulta o el lote. Cuando se desactiva esta casilla, se proporciona un valor `NULL` para ese valor si es posible, la consulta continúa y se incluye un mensaje con el resultado. Vea los Libros en pantalla para una descripción más detallada de este comportamiento. Esta opción está activada de forma predeterminada.
   
-**SET SHOWPLAN_TEXT** Cuando se activa esta casilla, el plan de consulta se devuelve en formato de texto con cada consulta. Esta opción está desactivada de forma predeterminada.
+**establecer SHOWPLAN_TEXT** Cuando se activa esta casilla, el plan de consulta se devuelve en formato de texto con cada consulta. Esta opción está desactivada de forma predeterminada.
   
 **establecer hora de estadísticas** Cuando se activa esta casilla, las estadísticas de tiempo se devuelven con cada consulta. Esta opción está desactivada de forma predeterminada.
   
@@ -66,4 +66,4 @@ Los protocolos de atestación admitidos actualmente son:
 
 Para obtener más información, consulte [Always Encrypted con seguridad enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) y la [atestación de enclave segura](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 
-**Valores predeterminados** Restablece todos los valores de esta página a los valores predeterminados originales.
+**Restablecer valores predeterminados** Restablece todos los valores de esta página a los valores predeterminados originales.

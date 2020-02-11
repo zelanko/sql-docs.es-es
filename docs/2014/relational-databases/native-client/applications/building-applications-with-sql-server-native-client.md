@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175414"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Generar aplicaciones con SQL Server Native Client
@@ -38,23 +38,23 @@ ms.locfileid: "70175414"
  [Utilizar los archivos de encabezado y de biblioteca de SQL Server Native Client](using-the-sql-server-native-client-header-and-library-files.md)  
  Se describe cómo usar los archivos de encabezado y biblioteca de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client en una aplicación.  
   
- [Actualizar una aplicación a SQL Server Native Client desde MDAC](updating-an-application-to-sql-server-native-client-from-mdac.md)  
+ [Actualizar una aplicación de MDCA a SQL Server Native Client](updating-an-application-to-sql-server-native-client-from-mdac.md)  
  Se describen las diferencias que existen entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y MDAC, y los problemas que deberían tenerse en cuenta a la hora de realizar la actualización de MDAC a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- [Actualizar una aplicación desde SQL Server 2005 Native Client](updating-an-application-from-sql-server-2005-native-client.md)  
+ [Actualización de una aplicación desde SQL Server 2005 Native Client](updating-an-application-from-sql-server-2005-native-client.md)  
  Se describen los problemas que deben tenerse en cuenta a la hora de realizar la actualización de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
- [Utilizar ADO con SQL Server Native Client](using-ado-with-sql-server-native-client.md)  
+ [Usar ADO con SQL Server Native Client](using-ado-with-sql-server-native-client.md)  
  Se describe el modo en que ADO usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para obtener acceso a la funcionalidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usarla.  
   
- [Directivas de soporte para SQL Server Native Client](support-policies-for-sql-server-native-client.md)  
+ [Directivas de soporte con SQL Server Native Client](support-policies-for-sql-server-native-client.md)  
  Se describe cómo se pueden usar varios componentes de acceso a datos con versiones diferentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- [Conexión a un Azure SQL Database mediante SQL Server Native Client](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
+ [Conexión a una Azure SQL Database con SQL Server Native Client](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  Describe cómo conectarse a una base de datos de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Vea también  
- [SQL Server Native Client programación](../sql-server-native-client-programming.md)   
+## <a name="see-also"></a>Consulte también  
+ [Programación de SQL Server Native Client](../sql-server-native-client-programming.md)   
  [Temas de procedimientos de ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Temas de procedimientos de OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

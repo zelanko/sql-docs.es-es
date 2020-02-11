@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106129"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Crear un informe escalonado (Generador de informes y SSRS)
@@ -64,7 +64,7 @@ ms.locfileid: "66106129"
   
     2.  En el panel de propiedades, debajo de **Alineación**, expanda las propiedades para **Relleno**.  
   
-    3.  Para **izquierda**, escriba un nuevo valor de relleno, como `.5in`. El relleno aplica una sangría al texto de la celda según el valor especificado. El valor de relleno predeterminado es 2 puntos. Los valores válidos para las propiedades de relleno son cero o un número positivo, seguido de un designador de tamaño.  
+    3.  A la **izquierda**, escriba un nuevo valor de relleno, `.5in`como. El relleno aplica una sangría al texto de la celda según el valor especificado. El valor de relleno predeterminado es 2 puntos. Los valores válidos para las propiedades de relleno son cero o un número positivo, seguido de un designador de tamaño.  
   
          Los designadores de tamaño son:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66106129"
     1.  En el panel Grupos de filas, haga clic con el botón derecho en el grupo, haga clic en **Agregar grupo**y, después, elija el tipo de grupo que quiera agregar.  
   
         > [!NOTE]  
-        >  Existen varias formas de agregar grupos a una región de datos. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+        >  Existen varias formas de agregar grupos a una región de datos. Para obtener más información, vea [Agregar o eliminar un grupo en una región de datos &#40;generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
     2.  En el cuadro de diálogo **Grupo de Tablix** , escriba un nombre.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66106129"
   
 3.  Cambie el relleno para la celda que muestra los datos del grupo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   

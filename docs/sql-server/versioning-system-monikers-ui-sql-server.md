@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049906"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Sistema de control de versiones para la documentación de SQL
@@ -56,7 +56,7 @@ El _código_ de moniker de la dirección `https` siempre coincide con el _nombre
 
 ## <a name="products-not-editions"></a>Productos, no ediciones
 
-### <a name="editions"></a>ediciones
+### <a name="editions"></a>Ediciones
 
 En los años 90 y en los 2000, Microsoft SQL Server solo tenía un producto. Había varias _ediciones_ de cada versión de SQL Server, como las ediciones _Developer_ y _Enterprise_ de SQL Server 2008. Las ediciones representaban conjuntos de características ligeramente distintas, pero el producto principal era el mismo. Es posible que las versiones nuevas de SQL Server todavía tengan varias ediciones.
 
@@ -113,9 +113,9 @@ En el siguiente escenario poco habitual se explica lo que sucede si se hace clic
 
 El siguiente artículo se ha agregado como novedad para SQL Server 2017. En el artículo se describen las características que se han agregado a la versión 2017 de SQL Server. La mayoría o todas esas características nuevas también forman parte de la versión 2019. Estos son los atributos del artículo.
 
-| Attribute | Valor |
+| Atributo | Value |
 | :-------- | :---- |
-| Title | Novedades de SQL Server 2017 |
+| Título | Novedades de SQL Server 2017 |
 | Intervalo de moniker | `>= sql-server-2017 || = sqlallproducts-allversions` |
 | Dirección `https` | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 | &nbsp; | &nbsp; |
@@ -168,7 +168,7 @@ El sistema de control de versiones está totalmente implementado para SQL Server
 - _2016 y versiones posteriores:_ &nbsp; el sistema de control de versiones está totalmente implementado para SQL Server 2016 y versiones posteriores.
     - [Bienvenido a la documentación de SQL Server 2016 y versiones posteriores](/sql/sql-server/?view=sql-server-2016)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Versiones anteriores de SQL Server, 2014-2005](../toc/previous-versions-sql-server.md)  
 [Guía de navegación de la documentación de SQL Server](sql-docs-navigation-guide.md)  

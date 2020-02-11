@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155543"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
@@ -32,11 +32,11 @@ ms.locfileid: "70155543"
 
   **Nota: esto solo se aplica a Azure SQL Database v11.**  
   
- Muestra el número, el tipo y la duración de las bases de datos en el servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ Muestra el número, el tipo y la duración de las bases de datos [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el servidor.  
   
  La vista **Sys. database_usage** contiene las columnas siguientes.  
   
-|Column Name|Descripción|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |time|Fecha en que se produjeron los eventos de uso.|  
 |sku|El tipo de nivel de servicio para la base de datos: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
@@ -45,11 +45,11 @@ ms.locfileid: "70155543"
 ## <a name="permissions"></a>Permisos  
  El acceso de solo lectura a esta vista está disponible para todos los usuarios con permisos para conectarse a la base de datos **maestra** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  La vista **Sys. database_usage** devuelve una fila por cada día de la suscripción.  
   
-## <a name="see-also"></a>Vea también  
- [SQL Database detalles de precios](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Cuentas y facturación en Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Detalles de precios de SQL Database](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Cuentas y facturación en Base de datos SQL de Azure](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

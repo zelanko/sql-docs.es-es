@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de extensiones de Visual C++ | Microsoft Docs
+title: Ejemplo de Visual C++ Extensions | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926391"
 ---
 # <a name="visual-c-extensions-example"></a>Ejemplo de extensiones de Visual C++
-Este programa muestra cómo se recuperan de los campos y se convierten en variables de C o C++ valores.  
+Este programa muestra cómo se recuperan los valores de los campos y se convierten en variables de C/C++.  
   
- En este ejemplo también aprovecha las "punteros inteligentes", que controlan automáticamente los detalles específicos de COM de llamar a `QueryInterface` y recuento de referencias para el **IADORecordBinding** interfaz.  
+ En este ejemplo también se aprovechan los "punteros inteligentes", que controlan automáticamente los detalles específicos de `QueryInterface` com de la llamada y el recuento de referencias para la interfaz **IADORecordBinding** .  
   
- Sin punteros inteligentes, el código será:  
+ Sin punteros inteligentes, se codificaría lo siguiente:  
   
 ```cpp
 IADORecordBinding   *picRs = NULL;  
@@ -38,19 +38,19 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- Con punteros inteligentes, se deriva el `IADORecordBindingPtr` escriba desde el `IADORecordBinding` interfaz con la siguiente instrucción:  
+ Con punteros inteligentes, se deriva el `IADORecordBindingPtr` tipo de la `IADORecordBinding` interfaz con esta instrucción:  
   
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
- Y crear una instancia del puntero como este:  
+ Y cree una instancia del puntero de la siguiente manera:  
   
 ```cpp
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Dado que el objeto Visual C++ extensiones se implementan mediante la **Recordset** (objeto), el constructor del puntero inteligente, `picRs`, toma el _`RecordsetPtr` puntero, `pRs`. El constructor llama a `QueryInterface` mediante `pRs` para encontrar el `IADORecordBinding` interfaz.  
+ Dado que el objeto de **conjunto de registros** implementa las extensiones de Visual C++, el constructor del puntero `picRs`inteligente,, toma`RecordsetPtr` el puntero `pRs`_,. El constructor llama `QueryInterface` a `pRs` utilizando para buscar `IADORecordBinding` la interfaz.  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  
@@ -109,6 +109,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Uso de extensiones de Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Encabezado de extensiones de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952006"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Solucionar problemas de una instalación de PowerPivot para SharePoint
@@ -22,20 +22,20 @@ ms.locfileid: "71952006"
   
 -   Revise las notas de la versión para SharePoint y [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con el fin de conocer soluciones alternativas para los problemas de instalación conocidos. Las notas de la versión se proporcionan con los discos de instalación o en el sitio de Microsoft del que descargó el software.  
   
-    -   [Notas de la versión de SQL Server 2014](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
+    -   [SQL Server notas](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx)de la versión de 2014.  
   
 -   Vea el tema de la wiki [de TechNet sobre cómo solucionar problemas de instalaciones de PowerPivot (y otros complementos)](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx).  
   
-## <a name="issues"></a>Problemas  
+## <a name="issues"></a>Issues  
   
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>Las imágenes en miniatura de la galería de PowerPivot se muestran como una X roja  
  Una posible causa es que la **integración de las características de PowerPivot para las colecciones de sitios** no esté activa. Haga lo siguiente:  
   
-1.  En la biblioteca de la galería de PowerPivot, haga clic en **configuración del sitio** desde el icono de engranaje ![configuración](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "de SharePoint configuración de SharePoint") o en la lista **Inicio** .  
+1.  En la biblioteca de la galería de PowerPivot, haga clic en **configuración del sitio** desde el icono de engranaje ![configuración de SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint") o desde la lista **Inicio** .  
   
 2.  En la sección **Administración de la colección de sitios** , haga clic en **Características de la colección de sitios**.  
   
-3.  Haga clic en **Características de la colección de sitios**.  
+3.  Haga clic en características de la **colección de sitios**.  
   
 4.  Compruebe que la **integración de las características de PowerPivot para las colecciones de sitios** está **activa**.  
   

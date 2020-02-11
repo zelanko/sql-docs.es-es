@@ -18,10 +18,10 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70810555"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
@@ -45,31 +45,31 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'` la clase de la categoría que se va a agregar. la *clase* es **VARCHAR (8)** con un valor predeterminado Job y puede tener uno de estos valores.  
+`[ @class = ] 'class'`Clase de la categoría que se va a agregar. la *clase* es **VARCHAR (8)** con un valor predeterminado Job y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |JOB|Agrega una categoría de trabajo.|  
 |ALERT|Agrega una categoría de alerta.|  
 |OPERATOR|Agrega una categoría de operador.|  
   
-`[ @type = ] 'type'` el tipo de categoría que se va a agregar. *Type* es **VARCHAR (12)** , con un valor predeterminado de **local**y puede tener uno de estos valores.  
+`[ @type = ] 'type'`Tipo de categoría que se va a agregar. *Type* es **VARCHAR (12)**, con un valor predeterminado de **local**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |LOCAL|Categoría de trabajos locales.|  
 |VARIOS SERVIDORES|Categoría de trabajos multiservidor.|  
-|NONE|Una categoría para una clase distinta de JOB **.**|  
+|Ninguno|Una categoría para una clase distinta de JOB **.**|  
   
-`[ @name = ] 'name'` el nombre de la categoría que se va a agregar. El nombre debe ser único en la clase especificada. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'`Nombre de la categoría que se va a agregar. El nombre debe ser único en la clase especificada. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  **sp_add_category** se debe ejecutar desde la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
@@ -89,12 +89,12 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_delete_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [DBO. sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [DBO. sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

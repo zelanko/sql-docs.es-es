@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874471"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Posibles errores durante sesiones entre las réplicas de disponibilidad (SQL Server)
@@ -59,7 +59,8 @@ ms.locfileid: "70874471"
   
 -   Los cables están desconectados  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows tiene un firewall que bloquea un puerto específico.  
+-   
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows tiene un firewall que bloquea un puerto específico.  
   
 -   Se ha producido un error en la aplicación que está supervisando un puerto  
   
@@ -68,14 +69,15 @@ ms.locfileid: "70874471"
 -   Se reinicia un servidor basado en Windows.  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] no protege frente a problemas específicos de los clientes que intentan obtener acceso a los servidores. Por ejemplo, considere un caso en que un adaptador de red pública controla las conexiones de cliente a la réplica principal, como una tarjeta de interfaz de red privada controla el tráfico entre las instancias de servidor que están hospedando las réplicas de un grupo de disponibilidad. En este caso, el error del adaptador de red pública evitaría que los clientes tuvieran acceso a las bases de datos.  
+>  
+  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] no protege frente a problemas específicos de los clientes que intentan obtener acceso a los servidores. Por ejemplo, considere un caso en que un adaptador de red pública controla las conexiones de cliente a la réplica principal, como una tarjeta de interfaz de red privada controla el tráfico entre las instancias de servidor que están hospedando las réplicas de un grupo de disponibilidad. En este caso, el error del adaptador de red pública evitaría que los clientes tuvieran acceso a las bases de datos.  
   
 ## <a name="failures-due-to-soft-errors"></a>Problemas debidos a errores de software  
  Las condiciones que pueden provocar el agotamiento del tiempo de espera de la sesión incluyen (sin limitarse a) lo siguiente:  
   
 -   Errores de red, como tiempos de espera de vínculos TCP, paquetes que se han dañado o se han quitado o paquetes que están en un orden incorrecto.  
   
--   Sistema operativo, servidor o base de datos que no responde.  
+-   Un sistema operativo, un servidor o una base de datos que no responde.  
   
 -   Se ha agotado el tiempo de espera de un servidor de Windows.  
   
@@ -86,7 +88,7 @@ ms.locfileid: "70874471"
   
  La réplica principal y secundaria hacen ping entre sí para indicar que siguen activas, y un tiempo de espera de sesión limitado impide que una réplica espere indefinidamente a recibir el ping de la otra réplica. El límite de tiempo de espera de la sesión es una propiedad de la réplica configurable por el usuario que tiene un valor predeterminado de 10 segundos. La recepción de un ping durante el período de tiempo de espera indica que la conexión todavía está abierta y que las instancias de servidor se comunican a través de ella. Al recibir un ping, la réplica de disponibilidad restablece el contador de tiempo de espera de la sesión de esa conexión.  
   
- Si no se recibe ningún ping de la otra réplica durante el tiempo de espera de la sesión, el tiempo de espera se agota. La conexión se cierra y la réplica con el tiempo de espera agotado entra en el estado DISCONNECTED. Aunque una replicación desconectada esté configurada en modo de confirmación sincrónica, las transacciones no esperarán a que la réplica vuelva a conectarse y sincronizarse.  
+ Si no se recibe ningún ping de la otra réplica dentro del período de tiempo de espera de la sesión, se agota el tiempo de espera de la conexión. La conexión se cierra y la réplica que agotó el tiempo de espera entra en el estado desconectado. Aunque una replicación desconectada esté configurada en modo de confirmación sincrónica, las transacciones no esperarán a que la réplica vuelva a conectarse y sincronizarse.  
   
 ## <a name="responding-to-an-error"></a>Responder a un error  
  Independientemente del tipo de error, una instancia de servidor que detecta un error responde apropiadamente según el rol de la instancia, el modo de disponibilidad de la sesión y el estado de las demás conexiones de la sesión. Para obtener información acerca de lo que ocurre en caso de pérdida de un asociado, vea [modos de disponibilidad (grupos de disponibilidad AlwaysOn)](availability-modes-always-on-availability-groups.md).  
@@ -96,11 +98,11 @@ ms.locfileid: "70874471"
   
 -   [Cambiar el tiempo de espera de la sesión en una réplica de disponibilidad &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
- **Para visualizar el valor del tiempo de espera actual**  
+ **Para ver el valor de tiempo de espera actual**  
   
 -   Consulte **session_timeout** en [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175358"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>Lección 9. Restaurar una base de datos desde Azure Storage
@@ -24,7 +24,7 @@ ms.locfileid: "70175358"
   
 -   Ha creado una base de datos en el equipo de origen.  
   
--   Ha creado una copia de seguridad de su base de datos (. bak) en Azure Storage mediante el uso de la característica [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) . Tenga en cuenta que deberá crear una credencial de SQL Server en este paso. Esta credencial utiliza las claves de la cuenta de almacenamiento.  
+-   Ha creado una copia de seguridad de su base de datos (. bak) en Azure Storage mediante el uso de la característica [SQL Server Backup and restore with Azure BLOB Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) . Tenga en cuenta que deberá crear una credencial de SQL Server en este paso. Esta credencial utiliza las claves de la cuenta de almacenamiento.  
   
 -   Tiene una cuenta de Azure Storage.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "70175358"
   
     ```  
   
- **Fin del tutorial: SQL Server archivos de datos en Azure Storage servicio**  
+ **Final del tutorial: archivos de datos de SQL Server en Azure Storage Service**  
   
   

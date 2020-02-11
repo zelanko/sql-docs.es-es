@@ -1,5 +1,5 @@
 ---
-title: Comandos con comandos COMPUTE intermedios con parámetros | Microsoft Docs
+title: Comandos con parámetros con comandos de proceso intermedios | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924722"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandos de proceso de comandos con parámetros con intermedias
-Una forma con parámetros típica comandos APPEND tiene una cláusula que crea un elemento primario **Recordset** con un comando de consulta y otra cláusula que crea un elemento secundario **Recordset** con un comando de consulta con parámetros: es decir, un comando que contiene un marcador de posición de parámetro (un signo de interrogación "?"). El resultado en forma de **Recordset** tiene dos niveles, en el que el elemento primario ocupa el nivel superior y el elemento secundario ocupa el nivel inferior.  
+Un comando APPEND de forma parametrizada típico tiene una cláusula que crea un **conjunto de registros** primario con un comando de consulta y otra cláusula que crea un **conjunto de registros** secundario con un comando de consulta con parámetros, es decir, un comando que contiene un marcador de posición de parámetro (un signo de interrogación "?"). El conjunto de **registros** con forma resultante tiene dos niveles, en los que el elemento primario ocupa el nivel superior y el secundario ocupa el nivel inferior.  
   
- La cláusula que crea el elemento secundario **Recordset** puede ahora ser un número arbitrario de forma anidada comandos COMPUTE, donde el comando más profundamente anidado contiene la consulta con parámetros. El resultado en forma de **Recordset** tiene varios niveles, en el que el elemento primario ocupa el nivel superior, el elemento secundario que ocupa el nivel inferior y un número arbitrario de **Recordset**s generados por el comandos Shape COMPUTE ocupan los niveles intermedios.  
+ La cláusula que crea el **conjunto de registros** secundario puede ser ahora un número arbitrario de comandos de proceso de forma anidada, donde el comando más profundamente anidado contiene la consulta con parámetros. El conjunto de **registros** con forma resultante tiene varios niveles, en los que el elemento primario ocupa el nivel superior, el secundario ocupa el nivel inferior y un número arbitrario de **conjuntos de registros**generados por los comandos COMPUTE de forma ocupan los niveles intermedios.  
   
- El uso típico de esta característica consiste en llamar a la función de agregado y las capacidades de agrupamiento de shapeCOMPUTE comandos para crear intermedia **Recordset** objetos con información analítica sobre el elemento secundario **conjunto de registros** . Además, puesto que es un comando de forma con parámetros, se accede cada vez que una columna de capítulo del elemento primario, un nuevo elemento secundario **Recordset** se pueden recuperar. Dado que se derivan de los niveles intermedios del elemento secundario, también se volverá a calcular.  
+ El uso típico de esta característica es invocar la función de agregado y agrupar las capacidades de los comandos shapeCOMPUTE para crear objetos de **conjunto de registros** intermedios con información analítica sobre el **conjunto de registros**secundario. Además, dado que se trata de un comando Shape con parámetros, cada vez que se tiene acceso a una columna Chapter del elemento primario, se puede recuperar un nuevo **conjunto de registros** secundario. Dado que los niveles intermedios se derivan del elemento secundario, también se volverán a calcular.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de la forma de datos](../../../ado/guide/data/data-shaping-example.md)

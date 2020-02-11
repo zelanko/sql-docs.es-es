@@ -19,12 +19,12 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49311ac52d9dba7c31e48f68b4363ead5a2c0b2a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: bd17110b5a5f2abf8f64662221f334ebf769b258
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095335"
+ms.lasthandoff: 02/10/2020
+ms.locfileid: "77114571"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74095335"
   
  Para obtener más información sobre los números de secuencia, vea [números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,26 +51,26 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sequence_name = ] N'sequence'` el nombre del objeto de secuencia. El esquema es opcional. *sequence_name* es **nvarchar (776)** .  
+`[ @sequence_name = ] N'sequence'`Nombre del objeto de secuencia. El esquema es opcional. *sequence_name* es **nvarchar (776)**.  
   
-`[ @range_size = ] range_size` el número de valores que se van a capturar de la secuencia. **\@range_size** es **BIGINT**.  
+`[ @range_size = ] range_size`Número de valores que se van a capturar de la secuencia. range_size es **BIGINT**. ** \@**  
   
-`[ @range_first_value = ] range_first_value` parámetro de salida devuelve el primer valor (mínimo o máximo) del objeto de secuencia utilizado para calcular el intervalo solicitado. **\@range_first_value** se **sql_variant** con el mismo tipo base que el del objeto de secuencia utilizado en la solicitud.  
+`[ @range_first_value = ] range_first_value`El parámetro de salida devuelve el primer valor (mínimo o máximo) del objeto de secuencia utilizado para calcular el intervalo solicitado. range_first_value se **sql_variant** con el mismo tipo base que el del objeto de secuencia utilizado en la solicitud. ** \@**  
   
-`[ @range_last_value = ] range_last_value` parámetro de salida opcional devuelve el último valor del intervalo solicitado. **\@range_last_value** se **sql_variant** con el mismo tipo base que el del objeto de secuencia utilizado en la solicitud.  
+`[ @range_last_value = ] range_last_value`El parámetro de salida opcional devuelve el último valor del intervalo solicitado. range_last_value se **sql_variant** con el mismo tipo base que el del objeto de secuencia utilizado en la solicitud. ** \@**  
   
-`[ @range_cycle_count = ] range_cycle_count` parámetro de salida opcional devuelve el número de veces que el objeto de secuencia se ha reciclado para devolver el intervalo solicitado. **\@range_cycle_count** es de **tipo int**.  
+`[ @range_cycle_count = ] range_cycle_count`El parámetro de salida opcional devuelve el número de veces que el objeto de secuencia se ha reciclado para devolver el intervalo solicitado. range_cycle_count es de **tipo int**. ** \@**  
   
-`[ @sequence_increment = ] sequence_increment` parámetro de salida opcional devuelve el incremento del objeto de secuencia utilizado para calcular el intervalo solicitado. **\@sequence_increment** se **sql_variant** con el mismo tipo base que el del objeto de secuencia utilizado en la solicitud.  
+`[ @sequence_increment = ] sequence_increment`El parámetro de salida opcional devuelve el incremento del objeto de secuencia utilizado para calcular el intervalo solicitado. sequence_increment se **sql_variant** con el mismo tipo base que el del objeto de secuencia utilizado en la solicitud. ** \@**  
   
-`[ @sequence_min_value = ] sequence_min_value` parámetro de salida opcional devuelve el valor mínimo del objeto de secuencia. **\@sequence_min_value** se **sql_variant** con el mismo tipo base que el del objeto de secuencia utilizado en la solicitud.  
+`[ @sequence_min_value = ] sequence_min_value`El parámetro de salida opcional devuelve el valor mínimo del objeto de secuencia. sequence_min_value se **sql_variant** con el mismo tipo base que el del objeto de secuencia utilizado en la solicitud. ** \@**  
   
-`[ @sequence_max_value = ] sequence_max_value` parámetro de salida opcional devuelve el valor máximo del objeto de secuencia. **\@sequence_max_value** se **sql_variant** con el mismo tipo base que el del objeto de secuencia utilizado en la solicitud.  
+`[ @sequence_max_value = ] sequence_max_value`El parámetro de salida opcional devuelve el valor máximo del objeto de secuencia. sequence_max_value se **sql_variant** con el mismo tipo base que el del objeto de secuencia utilizado en la solicitud. ** \@**  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  sp_sequence_get_rangeis en sys. el esquema y se puede hacer referencia a él como sys. sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Secuencias con recorrido  
@@ -111,7 +111,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
 DECLARE @range_first_value_output sql_variant ;  
   
-EXEC sp_sequence_get_range  
+EXEC sys.sp_sequence_get_range  
 @sequence_name = N'Test.RangeSeq'  
 , @range_size = 4  
 , @range_first_value = @range_first_value_output OUTPUT ;  
@@ -120,7 +120,7 @@ SELECT @range_first_value_output AS FirstNumber ;
   
 ```  
   
-### <a name="b-returning-all-output-parameters"></a>b. Devolver todos los parámetros de salida  
+### <a name="b-returning-all-output-parameters"></a>B. Devolver todos los parámetros de salida  
  En el ejemplo siguiente se devuelven todos los valores de salida del procedimiento sp_sequence_get_range.  
   
 ```  
@@ -166,7 +166,7 @@ cmd.CommandText = "sys.sp_sequence_get_range";
 cmd.Parameters.AddWithValue("@sequence_name", "Test.RangeSeq");  
 cmd.Parameters.AddWithValue("@range_size", 10);  
   
-// Specify an output parameter to retreive the first value of the generated range.  
+// Specify an output parameter to retrieve the first value of the generated range.  
 SqlParameter firstValueInRange = new SqlParameter("@range_first_value", SqlDbType.Variant);  
 firstValueInRange.Direction = ParameterDirection.Output;  
 cmd.Parameters.Add(firstValueInRange);  
@@ -179,7 +179,7 @@ Console.WriteLine(firstValueInRange.Value);
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   

@@ -18,38 +18,38 @@ ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9fbd2240bdeba50d8ae41bce8d3a8d58b28de036
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907295"
 ---
-# <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history (Transact-SQL)
+# <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSlogreader_history** tabla contiene filas de historial para los agentes de lector de registro asociado con el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
+  La tabla **MSlogreader_history** contiene filas de historial para los agentes de registro del log asociados al distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|Id. del Agente de registro del LOG.|  
-|**runstatus**|**int**|Estado de ejecución:<br /><br /> 1 = Iniciada.<br /><br /> 2 = sea un éxito.<br /><br /> 3 = En curso.<br /><br /> 4 = Inactiva.<br /><br /> 5 = Reintentar.<br /><br /> 6 = Error.|  
+|**runstatus**|**int**|Estado de ejecución:<br /><br /> 1 = Iniciada.<br /><br /> 2 = Correcto.<br /><br /> 3 = En curso.<br /><br /> 4 = Inactiva.<br /><br /> 5 = Reintentar.<br /><br /> 6 = Error.|  
 |**start_time**|**datetime**|Hora a la que comienza la ejecución del trabajo.|  
 |**time**|**datetime**|Hora a la que se registra el mensaje.|  
-|**duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
-|**Comentarios**|**nvarchar(255)**|El texto del mensaje.|  
-|**xact_seqno**|**varbinary (16)**|Número de secuencia de la última transacción procesada.|  
-|**delivery_time**|**int**|Se entrega la primera transacción en tiempo.|  
+|**Duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
+|**opiniones**|**nvarchar(255)**|El texto del mensaje.|  
+|**xact_seqno**|**varbinary(16)**|Número de secuencia de la última transacción procesada.|  
+|**delivery_time**|**int**|La hora en que se entrega la primera transacción.|  
 |**delivered_transactions**|**int**|Número total de transacciones entregadas en la sesión.|  
-|**delivered_commands**|**int**|El número total de comandos entregados en la sesión.|  
+|**delivered_commands**|**int**|Número total de comandos entregados en la sesión.|  
 |**average_commands**|**int**|Número promedio de comandos entregados en la sesión.|  
 |**delivery_rate**|**float**|Promedio de comandos entregados por segundo.|  
 |**delivery_latency**|**int**|Latencia entre la entrada del comando en la base de datos publicada y su entrada en la base de datos de distribución. En milisegundos.|  
-|**error_id**|**int**|El identificador del error en la **MSrepl_error** tabla del sistema.|  
+|**error_id**|**int**|IDENTIFICADOR del error en la **MSrepl_error** tabla del sistema.|  
 |**timestamp**|**timestamp**|La columna de marca de tiempo de esta tabla.|  
-|**updateable_row**|**bit**|Establecido en **1** si la fila de historial se puede sobrescribir.|  
+|**updateable_row**|**bit**|Se establece en **1** si se puede sobrescribir la fila de historial.|  
   
-## <a name="see-also"></a>Vea también  
- [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

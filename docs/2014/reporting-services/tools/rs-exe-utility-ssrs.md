@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6c4bf8f67f787214d38148db40ea8122a064a42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099826"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilidad RS.exe (SSRS)
@@ -57,23 +57,23 @@ ms.locfileid: "66099826"
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a> Ubicación del archivo  
- **RS.exe** se encuentra en **\Archivos de programa\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
+##  <a name="bkmk_filelocation"></a>Ubicación del archivo  
+ **RS. exe** se encuentra en **\Archivos de programa\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
   
 ##  <a name="bkmk_arguments"></a> Argumentos  
  **-?**  
  (Opcional) Muestra la sintaxis de los argumentos de **rs** .  
   
- `-i` *input_file*  
+ `-i`*input_file*  
  (Obligatorio) Especifica el archivo .rss que debe ejecutarse. Este valor puede ser una ruta de acceso relativa o una ruta de acceso completa al archivo .rss.  
   
- `-s` *serverURL*  
+ `-s`*ServerURL*  
  (Obligatorio) Especifica el nombre del servidor web y el nombre del directorio virtual del servidor de informes donde debe ejecutarse el archivo. Un ejemplo de una dirección URL de un servidor de informes es `http://examplewebserver/reportserver`. El prefijo http:// o https:// al principio del nombre del servidor es opcional. Si se omite el prefijo, el host de script del servidor de informes intentará usar primero https y, después, http si https no funciona.  
   
- `-u` [*dominio*\\]*nombre de usuario*  
+ `-u`[*dominio*\\] *nombre de usuario*  
  (Opcional) Especifica una cuenta de usuario que se utiliza para conectarse al servidor de informes. Si se omiten `-u` y `-p`, se usa la cuenta de usuario actual de Windows.  
   
- `-p` *password*  
+ `-p`*contraseña* de  
  (Obligatorio si se especifica `-u`) Especifica la contraseña que debe utilizarse con el argumento `-u`. Este valor distingue mayúsculas de minúsculas.  
   
  `-e`  
@@ -89,8 +89,8 @@ ms.locfileid: "66099826"
   
  Si no se especifica ningún valor, se utilizará el extremo Mgmt2005. Para obtener más información acerca de los extremos SOAP, vea [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
- `-l` *time_out*  
- (Opcional) Especifica el número de segundos que deben transcurrir antes de que se agote el tiempo de espera de la conexión al servidor. El valor predeterminado es 60 segundos. Si no se especifica ningún valor de tiempo de espera, se utiliza el valor predeterminado. El valor `0` indica que nunca se agota el tiempo de espera de la conexión.  
+ `-l`*time_out*  
+ Opta Especifica el número de segundos que transcurren antes de que se agote el tiempo de espera de la conexión al servidor. El valor predeterminado es 60 segundos. Si no se especifica ningún valor de tiempo de espera, se utiliza el valor predeterminado. El valor `0` indica que nunca se agota el tiempo de espera de la conexión.  
   
  **-b**  
  (Opcional) Especifica que los comandos del archivo de script se ejecutan en un lote. Si se produce un error en alguno de los comandos, se revierte el lote. Algunos comandos no se pueden ejecutar por lotes y se ejecutan de la manera habitual. Solo si se producen excepciones que no se controlan dentro del script tiene lugar una operación de reversión. Si el script controla una excepción y vuelve con normalidad desde `Main`, se confirma el lote. Si omite este parámetro, los comandos se ejecutan sin crear un lote. Para obtener más información, consulte [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
@@ -102,9 +102,9 @@ ms.locfileid: "66099826"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Se crean variables globales con los nombres indicados y se establecen en los valores proporcionados. Por ejemplo, **- v una =** "`1`" **- v b =** "`2`" da como resultado una variable denominada `a` con un valor de "`1`" y una variable **b**con un valor de "`2`".  
+ Se crean variables globales con los nombres indicados y se establecen en los valores proporcionados. Por ejemplo, **-v a =**"`1`" **-v b =**"`2`" da como resultado una variable `a` denominada con un valor de`1`"" y una variable **b** con un valor de`2`"".  
   
- Las variables globales están disponibles para todas las funciones del script. Si se especifica una barra diagonal inversa y comillas ( **\\"** ), se interpreta como comillas dobles. Las comillas solo son necesarias si la cadena contiene un espacio. Los nombres de las variables deben ser válidos para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; deben comenzar por un carácter alfabético o de subrayado y deben contener caracteres alfabéticos, dígitos o caracteres de subrayado. No se pueden utilizar palabras reservadas como nombres de variables. Para más información sobre las variables globales, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
+ Las variables globales están disponibles para todas las funciones del script. Una barra diagonal inversa y Comillas (**\\"**) se interpretan como comillas dobles. Las comillas solo son necesarias si la cadena contiene un espacio. Los nombres de variable deben ser [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]válidos para; deben empezar por un carácter alfabético o un carácter de subrayado y contener caracteres alfabéticos, dígitos o caracteres de subrayado. No se pueden utilizar palabras reservadas como nombres de variables. Para más información sobre las variables globales, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **-t**  
  (Opcional) Muestra mensajes de error en el registro de seguimiento. Este argumento no toma ningún valor. Para obtener más información, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
@@ -112,29 +112,29 @@ ms.locfileid: "66099826"
 ##  <a name="bkmk_permissions"></a> Permisos  
  Para ejecutar la herramienta, debe tener permiso para conectarse a la instancia del servidor de informes en la que se está ejecutando el script. Puede ejecutar scripts para realizar cambios en el equipo local o en un equipo remoto. Para realizar cambios en un servidor de informes instalado en un equipo remoto, especifique el equipo remoto en el argumento `-s`.  
   
-##  <a name="bkmk_examples"></a> Ejemplos  
+##  <a name="bkmk_examples"></a>Example  
  En el ejemplo siguiente se muestra cómo especificar el archivo de script que contiene el script de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET y los métodos del servicio Web que se desea ejecutar.  
   
 ```  
 rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- Para obtener un ejemplo detallado, vea [Script rs.exe de ejemplo de Reporting Services para migrar contenido entre servidores de informes](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ Para obtener un ejemplo detallado, vea [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  Para ver otros ejemplos, vea [Ejecutar un archivo de script de Reporting Services](run-a-reporting-services-script-file.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede definir scripts para establecer propiedades del sistema, publicar informes, etc. Los scripts que crea pueden incluir cualquier método de la API [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información sobre los métodos y las propiedades disponibles, vea [Report Server Web Service](../report-server-web-service/report-server-web-service.md).  
   
- Es necesario escribir el script en código de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET y guardarlo en un archivo de texto Unicode o UTF-8 con la extensión de nombre de archivo .rss. No se pueden depurar scripts mediante la utilidad **rs** . Para depurar un script, ejecute el código dentro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Es necesario escribir el script en código de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET y guardarlo en un archivo de texto Unicode o UTF-8 con la extensión de nombre de archivo .rss. No se pueden depurar scripts mediante la utilidad **rs** . Para depurar un script, ejecute el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]código dentro de.  
   
 > [!TIP]  
->  Para obtener un ejemplo detallado, vea [Script rs.exe de ejemplo de Reporting Services para migrar contenido entre servidores de informes](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+>  Para obtener un ejemplo detallado, vea [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar un archivo de script de Reporting Services](run-a-reporting-services-script-file.md)   
- [Script para tareas administrativas y de implementación](script-deployment-and-administrative-tasks.md)   
- [Script con la utilidad rs.exe y el servicio Web](script-with-the-rs-exe-utility-and-the-web-service.md)   
+ [Crear script de tareas administrativas y de implementación](script-deployment-and-administrative-tasks.md)   
+ [Script con la utilidad RS. exe y el servicio Web](script-with-the-rs-exe-utility-and-the-web-service.md)   
  [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

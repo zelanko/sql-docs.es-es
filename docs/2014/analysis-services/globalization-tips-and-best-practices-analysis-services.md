@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874416"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Sugerencias de globalización y procedimientos recomendados (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  solo a modelos multidimensionales  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensional  
   
  Con estas sugerencias e instrucciones, le resultará más fácil aumentar la portabilidad de las soluciones de inteligencia empresarial y evitar errores que están directamente relacionados con la configuración de idioma e intercalación.  
   
@@ -32,15 +32,15 @@ ms.locfileid: "70874416"
   
 -   [Recomendaciones de intercalación comunes](#bkmk_recos)  
   
--   [Distinción entre mayúsculas y minúsculas de los identificadores de objetos](#bkmk_objid)  
+-   [Distinción entre mayúsculas y minúsculas de los identificadores de objeto](#bkmk_objid)  
   
 -   [Pruebas de configuración regional con Excel y SQL Server Profiler](#bkmk_test)  
   
--   [Escritura de consultas MDX en una solución que contiene traducciones](#bkmk_mdx)  
+-   [Escribir consultas MDX en una solución que contiene traducciones](#bkmk_mdx)  
   
--   [Escritura de consultas MDX que contengan valores de fecha y hora](#bkmk_datetime)  
+-   [Escribir consultas MDX que contengan valores de fecha y hora](#bkmk_datetime)  
   
-##  <a name="bkmk_sameColl"></a> Usar intercalaciones similares en toda la pila  
+##  <a name="bkmk_sameColl"></a>Usar intercalaciones similares en toda la pila  
  Si es posible, trate de utilizar la misma configuración de intercalación en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y en el motor de base de datos, para que la distinción de ancho, la distinción entre mayúsculas y minúsculas y la distinción de acceso sean iguales.  
   
  La intercalación de cada servicio tiene su propia configuración, con el valor predeterminado del motor de la base de datos establecido en SQL_Latin1_General_CP1_CI_AS y con Analysis Services establecido en Latin1_General_AS. Los valores predeterminados son compatibles en términos de distinción de mayúsculas y minúsculas, ancho y acentos. Tenga en cuenta que si cambia la configuración de intercalaciones en uno de estos elementos, pueden surgir problemas cuando las propiedades de intercalación difieran en aspectos fundamentales.  
@@ -51,7 +51,7 @@ ms.locfileid: "70874416"
   
  Para ver más detalles y las soluciones alternativas sugeridas, consulte el tema sobre [espacios en blanco en una cadena Unicode que tienen resultados de procesamiento diferentes en función de la intercalación](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
-##  <a name="bkmk_recos"></a> Recomendaciones de intercalación comunes  
+##  <a name="bkmk_recos"></a>Recomendaciones de intercalación comunes  
  Analysis Services siempre muestra la lista completa de todos los idiomas e intercalaciones disponibles; no filtra las intercalaciones según el idioma seleccionado. Asegúrese de elegir una combinación factible.  
   
  Algunas de las intercalaciones más comúnmente usadas son las de la lista siguiente.  
@@ -78,62 +78,62 @@ ms.locfileid: "70874416"
   
 -   Para el coreano se recomienda Korean_100. Aunque en la lista sigue apareciendo Korean_Wansung_Unicode, ya no se utiliza.  
   
-##  <a name="bkmk_objid"></a> Distinción entre mayúsculas y minúsculas de los identificadores de objetos  
+##  <a name="bkmk_objid"></a>Distinción entre mayúsculas y minúsculas de los identificadores de objeto  
  Desde SQL Server 2012 SP2, la distinción entre mayúsculas y minúsculas de los identificadores de objetos se exige independientemente de la intercalación, pero el comportamiento varía según el idioma:  
   
-|Alfabeto del idioma|Distinción de mayúsculas y minúsculas|  
+|Alfabeto del idioma|Distinción entre mayúsculas y minúsculas|  
 |---------------------|----------------------|  
-|**Alfabeto Latín básico**|Los identificadores de objetos expresados en el alfabeto latino (cualquiera de las 26 letras mayúsculas o minúsculas del inglés) se tratan sin distinguir mayúsculas de minúsculas, independientemente de la intercalación. Por ejemplo, los identificadores de objetos siguientes se consideran idénticos: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services trata los caracteres de la cadena como si todos estuvieran en mayúsculas y, luego, realiza una comparación de byte simple que es independiente del idioma.<br /><br /> Tenga en cuenta que solo los 26 caracteres se ven afectados. Si el idioma es Europeo occidental pero utiliza caracteres escandinavos, los caracteres adicionales no estarán en mayúsculas.|  
+|**Alfabeto latino básico**|Los identificadores de objetos expresados en el alfabeto latino (cualquiera de las 26 letras mayúsculas o minúsculas del inglés) se tratan sin distinguir mayúsculas de minúsculas, independientemente de la intercalación. Por ejemplo, los identificadores de objetos siguientes se consideran idénticos: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services trata los caracteres de la cadena como si todos estuvieran en mayúsculas y, luego, realiza una comparación de byte simple que es independiente del idioma.<br /><br /> Tenga en cuenta que solo los 26 caracteres se ven afectados. Si el idioma es Europeo occidental pero utiliza caracteres escandinavos, los caracteres adicionales no estarán en mayúsculas.|  
 |**Cirílico, griego, copto y armenio**|Los identificadores de objetos en script bicameral no latino, como el cirílico, siempre distinguen entre mayúsculas y minúsculas. Por ejemplo, Измерение y измерение se consideran dos valores distintos, aunque la única diferencia sea el uso de mayúsculas y minúsculas en la primera letra.|  
   
- **Implicaciones de la distinción entre mayúsculas y minúsculas para los identificadores de objetos**  
+ **Implicaciones de la distinción de mayúsculas y minúsculas para los identificadores de objeto**  
   
- Solo los identificadores de objetos, y no los nombres de objetos, están sujetos a los comportamientos de mayúsculas y minúsculas que se describen en la tabla. Si ve un cambio en el funcionamiento de la solución (una comparación del antes y el después de instalar SQL Server 2012 SP2 o una versión posterior), probablemente se trate de un problema de procesamiento. Los identificadores de objetos no afectan a las consultas. En los dos lenguajes de consulta (DAX y MDX), el motor de fórmulas utiliza el nombre del objeto (no el identificador).  
+ Solo los identificadores de objetos, y no los nombres de objetos, están sujetos a los comportamientos de mayúsculas y minúsculas que se describen en la tabla. Si ve un cambio en el funcionamiento de la solución (una comparación del antes y el después de instalar SQL Server 2012 SP2 o una versión posterior), probablemente se trate de un problema de procesamiento. Las consultas no se ven afectadas por los identificadores de objeto. En los dos lenguajes de consulta (DAX y MDX), el motor de fórmulas utiliza el nombre del objeto (no el identificador).  
   
 > [!NOTE]  
 >  Los cambios de código relacionados con la distinción entre mayúsculas y minúsculas han supuesto un cambio importante para algunas aplicaciones. Consulte [cambios importantes en las características de Analysis Services en SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
   
-##  <a name="bkmk_test"></a> Pruebas de configuración regional con Excel, SQL Server Profiler y SQL Server Management Studio  
+##  <a name="bkmk_test"></a>Pruebas de configuración regional con Excel, SQL Server Profiler y SQL Server Management Studio  
  Al probar las traducciones, la conexión debe especificar el LCID de la traducción. Como se documenta en el tema sobre [cómo obtener otro idioma de SSAS en Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx), puede utilizar Excel para probar las traducciones.  
   
  Puede hacerlo manualmente, editando el archivo .odc para incluir la propiedad de cadena de conexión del identificador de configuración regional. Pruebe con la base de datos multidimensional de muestra de Adventure Works.  
   
--   Busque los archivos.odc existentes. Cuando encuentre el de la base de datos multidimensional de Adventure Works, haga clic con el botón derecho en el archivo para abrirlo en el Bloc de notas.  
+-   Busque los archivos .odc existentes. Cuando encuentre el de la base de datos multidimensional de Adventure Works, haga clic con el botón derecho en el archivo para abrirlo en el Bloc de notas.  
   
--   Agregue `Locale Identifier=1036` a la cadena de conexión. Guarde el archivo y ciérrelo.  
+-   Agregue `Locale Identifier=1036` a la cadena de conexión. Guarde y cierre el archivo.  
   
--   Abra Excel | **Datos** | **Conexiones existentes**. Filtre la lista para que solo aparezcan los archivos de las conexiones de este equipo. Busque la conexión de Adventure Works (observe el nombre con atención: puede que haya más de una). Abra la conexión.  
+-   Abrir Excel | **** | **Conexiones existentes**de datos. Filtre la lista para que solo aparezcan los archivos de las conexiones de este equipo. Busque la conexión de Adventure Works (observe el nombre con atención: puede que haya más de una). Abrir la conexión.  
   
      Debería ver las traducciones al francés de la base de datos de muestra de Adventure Works.  
   
-     ![Tabla dinámica de Excel con traducciones francesas](media/ssas-localetest-excel.png "tabla dinámica de Excel con traducciones en francés")  
+     ![Tabla dinámica de Excel con traducciones al francés](media/ssas-localetest-excel.png "Tabla dinámica de Excel con traducciones al francés")  
   
  A modo de seguimiento, puede usar SQL Server Profiler para confirmar la configuración regional. Haga clic en un evento de `Session Initialize` y, luego, observe la lista de propiedades del área de texto inferior para buscar `<localeidentifier>1036</localeidentifier>`.  
   
  En Management Studio, puede especificar el identificador de configuración regional en una conexión de servidor.  
   
--   En el Explorador de objetos | **Conectar** | **Analysis Services** | **Opciones**, haga clic en la pestaña **Parámetros de conexión adicionales** .  
+-   En Explorador de objetos | **Conectar** | **** Analysis Services | **Opciones**, haga clic en la pestaña **parámetros de conexión adicionales** .  
   
 -   Escriba `Local Identifier=1036` y, después, haga clic en **Conectar**.  
   
 -   Ejecute una consulta MDX en la base de datos de Adventure Works. Los resultados de la consulta deberían ser las traducciones al francés.  
   
-     ![Consulta MDX con traducciones francesas en SSMS](media/ssas-localetest-ssms.png "consulta MDX con traducciones en francés en SSMS")  
+     ![Consulta MDX con traducciones al francés en SSMS](media/ssas-localetest-ssms.png "Consulta MDX con traducciones al francés en SSMS")  
   
-##  <a name="bkmk_mdx"></a> Escritura de consultas MDX en una solución que contiene traducciones  
+##  <a name="bkmk_mdx"></a>Escribir consultas MDX en una solución que contiene traducciones  
  Las traducciones proporcionan información de los nombres de los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , pero los identificadores de los mismos objetos no se traducen. Siempre que sea posible, utilice los identificadores y las claves de los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en lugar de los títulos y los nombres traducidos. Por ejemplo, utilice claves de miembro en lugar de nombres de miembro en los scripts e instrucciones MDX (Expresiones multidimensionales) con el fin de asegurar la portabilidad entre diferentes idiomas.  
   
 > [!NOTE]  
->  Recuerde que los nombres de objetos tabulares siempre distinguen mayúsculas de minúsculas, independientemente de la intercalación. Los nombres de objetos multidimensionales, sin embargo, distinguen mayúsculas de minúsculas según la intercalación. Puesto que solo los nombres de los objetos multidimensionales distinguen entre mayúsculas y minúsculas, compruebe que en todas las consultas MDX que hagan referencia a objetos multidimensionales se utilicen las mayúsculas y las minúsculas correctamente.  
+>  Recuerde que los nombres de objetos tabulares siempre distinguen mayúsculas de minúsculas, independientemente de la intercalación. Los nombres del objeto multidimensional, en cambio, siguen la distinción entre mayúsculas y minúsculas de la intercalación. Puesto que solo los nombres de los objetos multidimensionales distinguen entre mayúsculas y minúsculas, compruebe que en todas las consultas MDX que hagan referencia a objetos multidimensionales se utilicen las mayúsculas y las minúsculas correctamente.  
   
-##  <a name="bkmk_datetime"></a> Escritura de consultas MDX que contengan valores de fecha y hora  
+##  <a name="bkmk_datetime"></a>Escribir consultas MDX que contengan valores de fecha y hora  
  Las siguientes sugerencias permiten hacer que las consultas MDX basadas en el tiempo y en la fecha sean más portables en los diferentes idiomas:  
   
-1.  **Utilizar elementos numéricos para las comparaciones y operaciones**  
+1.  **Usar elementos numéricos para las comparaciones y operaciones**  
   
-     Cuando realice operaciones y comparaciones de día de la semana y mes, utilice los elementos numéricos de hora y fecha en lugar de los equivalentes de cadena (por ejemplo, utilice MonthNumberofYear en lugar de MonthName). Las diferencias en las traducciones de idiomas afectan menos a los valores numéricos.  
+     Cuando realice operaciones y comparaciones de día de la semana y mes, utilice los elementos numéricos de hora y fecha en lugar de los equivalentes de cadena (por ejemplo, utilice MonthNumberofYear en lugar de MonthName). Los valores numéricos se ven menos afectados por las diferencias en las traducciones de idiomas.  
   
-2.  **Utilizar los equivalentes de cadena en un conjunto de resultados**  
+2.  **Usar equivalentes de cadena en un conjunto de resultados**  
   
      Al generar conjuntos de resultados vistos por los usuarios finales, plantéese la posibilidad de utilizar una cadena (como MonthName) para que la audiencia multilingüe pueda utilizar las traducciones proporcionadas.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "70874416"
   
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenarios de globalización para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Escribir instrucciones Transact-SQL internacionales](../relational-databases/collations/write-international-transact-sql-statements.md)  
   

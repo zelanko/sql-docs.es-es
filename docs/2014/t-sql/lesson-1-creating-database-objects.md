@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632714"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lección 1: Crear objetos de base de datos
@@ -34,17 +34,17 @@ ms.locfileid: "73632714"
   
  En esta lección se incluyen los temas siguientes:  
   
--   [Crear una base de datos &#40;Tutorial&#41;](lesson-1-1-creating-a-database.md)  
+-   [Crear una base de datos &#40;tutorial&#41;](lesson-1-1-creating-a-database.md)  
   
--   [Crear una tabla &#40;Tutorial&#41;](lesson-1-2-creating-a-table.md)  
+-   [Crear una tabla &#40;tutorial&#41;](lesson-1-2-creating-a-table.md)  
   
--   [Insertar y actualizar datos en una tabla &#40;Tutorial&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+-   [Insertar y actualizar datos en una tabla &#40;tutorial&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [Leer datos de una tabla &#40;Tutorial&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [Leer los datos de una tabla &#40;tutorial&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [Resumen: Crear objetos de base de datos](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Crear una base de datos &#40;Tutorial&#41;](lesson-1-1-creating-a-database.md)  
+ [Crear una base de datos &#40;tutorial&#41;](lesson-1-1-creating-a-database.md)  
   
   

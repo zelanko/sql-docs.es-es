@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1306c4463544d2aee882645a2f0a9401a8fb3a60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913180"
 ---
-# <a name="mssqlserver7934"></a>MSSQLSERVER_7934
+# <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7934|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7934|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|Texto del mensaje|Error de tabla: El directorio Filestream F_ID Id. de objeto ID O_ID, ID. de partición PN_ID de Id. de índice no se encontró.|  
+|Texto del mensaje|Error de tabla: no se encontró el id. de directorio FILESTREAM F_ID para el id. de objeto O_ID, id. de índice I_ID e id. de partición PN_ID.|  
   
 ## <a name="explanation"></a>Explicación  
  Durante DBCC CHECKDB, se ha encontrado una partición; sin embargo, no se ha encontrado el directorio de conjunto de filas FILESTREAM correspondiente en el espacio de datos FILESTREAM.  
@@ -50,7 +50,7 @@ ms.locfileid: "62913180"
 ### <a name="run-dbcc-checkdb"></a>Ejecute DBCC CHECKDB  
  No aplicable. Este error no puede repararse automáticamente. Si no puede restaurar la base de datos a partir de una copia de seguridad, póngase en contacto con el servicio de soporte técnico y atención al cliente (CSS) de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

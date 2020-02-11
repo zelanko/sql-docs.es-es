@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911261"
 ---
 # <a name="getting-started-in-smo"></a>Introducción a SMO
@@ -33,7 +33,7 @@ La [instalación de SMO](installing-smo.md) proporciona instrucciones para insta
 El [modelo de objetos](../../relational-databases/server-management-objects-smo/smo-object-model.md) describe la jerarquía de objetos SMO y el modo en que los objetos se relacionan entre sí.  
   
 ## <a name="programming-languages"></a>Lenguajes de programación  
-[Lenguajes de programación](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) describe el entorno de programación e incluye procedimientos detallados para empezar C#a escribir un programa SMO en.  
+[Lenguajes de programación](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) describe el entorno de programación e incluye procedimientos detallados para empezar a escribir un programa de SMO en C#.  
   
 ## <a name="general-programming-in-smo"></a>Programación general en SMO  
 La [programación general en SMO](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md) es una introducción a la programación con SMO. En este tema se describe cómo conectarse a una instancia de SQL Server y cómo usar las propiedades, los métodos y las colecciones. En los temas más avanzados se describen los tipos de datos, transacciones, configuración del modo captura, y control de eventos y excepciones.  

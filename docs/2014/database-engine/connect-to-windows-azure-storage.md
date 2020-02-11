@@ -13,19 +13,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154303"
 ---
 # <a name="connect-to-azure-storage"></a>Conectar a Azure Storage
-  Use el cuadro de diálogo **Azure Storage conexión** para especificar una cuenta de almacenamiento y validar la conexión a Azure.  
+  Use el cuadro de diálogo **Conexión de Azure Storage** para especificar una cuenta de almacenamiento y validar la conexión a Azure.  
   
 ## <a name="options"></a>Opciones  
- Especifique la siguiente información sobre su cuenta de Azure y, a continuación, haga clic en **siguiente** para continuar.  
+ Especifique la siguiente información sobre su cuenta de Azure y, a continuación, haga clic en **Siguiente** para continuar.  
   
-1.  **Cuenta de almacenamiento** : especifique el nombre de la cuenta de almacenamiento.  
+1.  **Cuenta de almacenamiento**: especifique el nombre de la cuenta de almacenamiento.  
   
 2.  **Clave de cuenta** : especifique la clave de cuenta para la cuenta de almacenamiento especificada.  
   

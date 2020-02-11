@@ -1,5 +1,5 @@
 ---
-title: DataSpace (ADO - sintaxis WFC) | Microsoft Docs
+title: DataSpace (ADO-sintaxis WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 569944991c029c091f0f17be4e5d943a893333a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919195"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO - sintaxis WFC)
-El **createObject** método de la **DataSpace** clase especifica un objeto de negocios para procesar las solicitudes de aplicación de cliente (*progid*) y el protocolo de comunicaciones y el servidor (*conexión*). **createObject** devuelve un [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) objeto que representa el servidor.  
+El método **CreateObject** de la clase **DataSpace** especifica un objeto comercial para procesar las solicitudes de la aplicación cliente (*ProgID*) y el protocolo de comunicaciones y el servidor (*conexión*). **CreateObject** devuelve un objeto [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) que representa el servidor.  
   
-## <a name="package-commswfcdata"></a>paquete com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>paquete com. ms. wfc. Data  
   
 ### <a name="constructor"></a>Constructor  
   
@@ -45,5 +45,5 @@ public static int getInternetTimeout()
 public static void setInternetTimeout(int plInetTimeout)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)

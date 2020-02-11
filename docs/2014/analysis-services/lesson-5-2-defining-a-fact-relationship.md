@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493862"
 ---
 # <a name="defining-a-fact-relationship"></a>Definir una relación de hechos
@@ -63,15 +63,15 @@ ms.locfileid: "69493862"
   
 13. En el menú **Archivo** , haga clic en **Guardar todo**.  
   
-14. En el panel **atributos** del diseñador de dimensiones para la dimensión **Internet sales Order Details** , seleccione **sales Order Number**y, a continuación, cambie la propiedad **Name** en el ventana Propiedades a `Item Description.`  
+14. En el panel **atributos** del diseñador de dimensiones para la dimensión **Internet sales Order Details** , seleccione **sales Order Number**y, a continuación, cambie la propiedad **Name** en el ventana Propiedades a`Item Description.`  
   
-15. En la celda de la propiedad **NameColumn** , haga clic en el botón examinar **(...)** . En el cuadro de diálogo **columna de nombre** , seleccione **Product** en la lista **tabla de origen** , seleccione **EnglishProductName** en la **columna origen**y, a continuación, haga clic en **Aceptar**.  
+15. En la celda de la propiedad **NameColumn** , haga clic en el botón examinar **(...)**. En el cuadro de diálogo **columna de nombre** , seleccione **Product** en la lista **tabla de origen** , seleccione **EnglishProductName** en la **columna origen**y, a continuación, haga clic en **Aceptar**.  
   
 16. Agregue el atributo **Sales Order Number** a la dimensión arrastrando la columna **SalesOrderNumber** de la tabla **InternetSales** del panel **Vista del origen de datos** al panel **Atributos** .  
   
 17. Cambie la propiedad **nombre** del nuevo atributo **sales Order Number** por `Order Number`y cambie la propiedad **OrderBy** a **key**.  
   
-18. En el panel **jerarquías** , cree una jerarquía de usuarios de **pedidos de ventas por Internet** que contenga los niveles de `Order Number` y descripción de los **elementos** , en ese orden.  
+18. En el panel **jerarquías** , cree una jerarquía de usuarios de pedidos de ventas por `Order Number` **Internet** que contenga los niveles de Descripción del **elemento** y en ese orden.  
   
 19. En el panel **Atributos** , seleccione **Internet Sales Order Details**y luego revise el valor de la propiedad **StorageMode** en la ventana Propiedades.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "69493862"
   
      Observe que la dimensión de cubo **Internet Sales Order Details** está configurada automáticamente con una relación de hechos, como indica el icono único.  
   
-2.  Haga clic en el botón Examinar ( **...** ) de la celda **Descripción del elemento** , en la intersección del grupo de medida **Internet sales** y la dimensión **Internet sales Order Details** , para revisar las propiedades de la relación de hechos.  
+2.  Haga clic en el botón Examinar (**...**) de la celda **Descripción del elemento** , en la intersección del grupo de medida **Internet sales** y la dimensión **Internet sales Order Details** , para revisar las propiedades de la relación de hechos.  
   
      Se abre el cuadro de diálogo **Definir relación** . Observe que no puede configurar ninguna de las propiedades.  
   
@@ -115,12 +115,12 @@ ms.locfileid: "69493862"
   
      En la imagen siguiente se muestra el resultado de los pasos anteriores.  
   
-     ![Dimensiones de ventas por Internet-importe de ventas](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensiones de ventas por Internet-importe de ventas")  
+     ![Dimensión de Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensión de Internet Sales-Sales Amount")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Definir una relación de varios a varios](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definir relaciones de hechos y propiedades de las relaciones de hechos](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

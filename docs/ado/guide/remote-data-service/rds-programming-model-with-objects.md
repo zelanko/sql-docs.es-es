@@ -14,38 +14,38 @@ ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922477"
 ---
 # <a name="rds-programming-model-with-objects"></a>Modelo de programación de RDS con objetos
-El objetivo de RDS es obtener acceso y actualizar orígenes de datos a través de un intermediario, como IIS. El modelo de programación especifica la secuencia de actividades necesarias para lograr este objetivo. El modelo de objetos especifica los objetos cuyos métodos y propiedades afectan al modelo de programación.  
+El objetivo de RDS es obtener acceso a los orígenes de datos y actualizarlos a través de un intermediario como IIS. El modelo de programación especifica la secuencia de actividades necesaria para lograr este objetivo. El modelo de objetos de especifica los objetos cuyos métodos y propiedades afectan al modelo de programación.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  RDS proporciona los medios para realizar la siguiente secuencia de acciones:  
   
--   Especifique el programa que se invocará en el servidor y obtenga una forma (proxy) para hacer referencia a él desde el cliente ([RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)).  
+-   Especifique el programa que se va a invocar en el servidor y obtenga una forma (proxy) para hacer referencia a él desde el cliente ([RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)).  
   
--   Invocar el programa de servidor. Pasar parámetros al programa de servidor que identifica el origen de datos y el comando para emitir (proxy o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).  
+-   Invoque el programa de servidor. Pase los parámetros al programa de servidor que identifica el origen de datos y el comando que se va a emitir (proxy o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).  
   
--   El programa de servidor obtiene una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto desde el origen de datos, normalmente mediante ADO. Opcionalmente, el **Recordset** objeto se procesa en el servidor ([RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)).  
+-   El programa de servidor obtiene un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) del origen de datos, normalmente mediante ADO. Opcionalmente, el objeto de **conjunto de registros** se procesa en el servidor ([RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)).  
   
--   El programa de servidor devuelve el estado final **Recordset** objeto a la aplicación de cliente (proxy).  
+-   El programa de servidor devuelve el último objeto de **conjunto de registros** a la aplicación cliente (proxy).  
   
--   En el cliente, el **Recordset** objeto se coloca en un formulario que se puede usar fácilmente los controles visuales (control visual y **RDS. DataControl**).  
+-   En el cliente, el objeto de **conjunto de registros** se coloca en un formulario que se puede usar fácilmente en los controles visuales (control visual y **RDS). DataControl**).  
   
--   Cambia a la **Recordset** objeto se envían al servidor y se usa para actualizar el origen de datos (**RDS. DataControl** o **RDSServer.DataFactory**).  
+-   Los cambios en el objeto de **conjunto de registros** se devuelven al servidor y se usan para actualizar el origen de datos (**RDS. DataControl** o **RDSServer. DataFactory**).  
   
-## <a name="see-also"></a>Vea también  
- [Resumen del modelo de objetos de RDS](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
+## <a name="see-also"></a>Consulte también  
+ [Resumen del modelo de objetos RDS](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Escenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [Escenario de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seguridad y uso de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

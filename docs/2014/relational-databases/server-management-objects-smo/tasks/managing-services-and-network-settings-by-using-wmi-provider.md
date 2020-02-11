@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796629"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Administrar servicios y configuración de red utilizando el proveedor WMI
@@ -30,7 +30,7 @@ ms.locfileid: "72796629"
 ## <a name="example"></a>Ejemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- En el caso de los programas que utilizan el proveedor WMI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe incluir la instrucción `Imports` para certificar el espacio de nombres WMI. Inserte la instrucción después de las demás instrucciones `Imports`, antes de cualquier declaración de la aplicación, como:  
+ En el caso de los [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programas que utilizan el proveedor WMI, `Imports` debe incluir la instrucción para certificar el espacio de nombres WMI. Inserte la instrucción después de las demás instrucciones `Imports`, antes de cualquier declaración de la aplicación, como:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -175,5 +175,5 @@ $svc.ServiceState
 "Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos del proveedor WMI de administración de configuración](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  

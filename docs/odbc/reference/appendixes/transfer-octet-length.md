@@ -16,10 +16,10 @@ ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a92a9ead66736ff2b72813d6d4cbec5acfcda4fe
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73032972"
 ---
 # <a name="transfer-octet-length"></a>Transferir la longitud en octetos
@@ -27,7 +27,7 @@ La longitud del octeto de transferencia de una columna es el número máximo de 
   
  En la tabla siguiente se muestra la longitud de octetos de transferencia definida para cada tipo de datos SQL de ODBC.  
   
-|Identificador de tipo de SQL|Longitud|  
+|Identificador de tipo de SQL|Length|  
 |-------------------------|------------|  
 |Todos los tipos de caracteres [a]|La longitud definida o máxima (para el tipo de variable) de la columna en bytes. Este es el mismo valor que el campo descriptor SQL_DESC_OCTET_LENGTH.|  
 |SQL_DECIMAL<br />SQL_NUMERIC|El número de bytes necesarios para contener la representación de caracteres de estos datos si el juego de caracteres es ANSI y el doble de este número si el juego de caracteres es Unicode. Es el número máximo de dígitos más dos, porque los datos se devuelven como una cadena de caracteres y se necesitan caracteres para los dígitos, un signo y un separador decimal. Por ejemplo, la longitud de la transferencia de una columna definida como numérica (10, 3) es 12.|  
@@ -40,8 +40,8 @@ La longitud del octeto de transferencia de una columna es el número máximo de 
 |SQL_DOUBLE|8|  
 |SQL_BIT|1|  
 |Todos los tipos binarios [a]|Número de bytes necesarios para contener el número de caracteres definido (para tipos fijos) o máximo (para tipos de variable).|  
-|SQL_TYPE_DATE<br />SQL_TYPE_TIME|6 (el tamaño de la estructura SQL_DATE_STRUCT o SQL_TIME_STRUCT).|  
-|SQL_TYPE_TIMESTAMP|16 (el tamaño de la estructura SQL_TIMESTAMP_STRUCT).|  
+|SQL_TYPE_DATE<br />SQL_TYPE_TIME|6 (el tamaño de la estructura de SQL_DATE_STRUCT o SQL_TIME_STRUCT).|  
+|SQL_TYPE_TIMESTAMP|16 (el tamaño de la estructura de SQL_TIMESTAMP_STRUCT).|  
 |Todos los tipos de datos de intervalo|34 (el tamaño de la estructura de intervalo).|  
 |SQL_GUID|16 (el tamaño de la estructura GUID).|  
 | &nbsp; | &nbsp; |

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -23,24 +23,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73532788"
 ---
-# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>Sys. dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Devuelve los errores que se producen en los nodos de proceso de polybase.  
   
-|Column Name|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|Identificador numérico único asociado al error.|Único en todos los errores de consulta del sistema|  
-|origen|`nvarchar(255)`|Descripción del proceso o subproceso de origen||  
-|Tipo|`nvarchar(255)`|Tipo de error.||  
+|source|`nvarchar(255)`|Descripción del proceso o subproceso de origen||  
+|type|`nvarchar(255)`|Tipo de error.||  
 |create_time|`datetime`|La hora de la ocurrencia del error||  
-|compute_node_id|`int`|Identificador del nodo de proceso específico|Vea compute_node_id de [Sys. dm_exec_compute_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|compute_node_id|`int`|Identificador del nodo de proceso específico|Vea compute_node_id de [Sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificador de la consulta de polybase, si existe.||  
 |spid|`int`|Identificador de la sesión de SQL Server||  
 |thread_id|`int`|Identificador numérico del subproceso en el que se produjo el error.||  
@@ -48,9 +48,9 @@ ms.locfileid: "73532788"
 |compute_pool_id|`int`|Identificador único para el grupo.|
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Solución de problemas de polybase con vistas de administración dinámica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vistas &#40;de administración dinámica relacionadas con bases de datos TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

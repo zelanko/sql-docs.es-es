@@ -1,5 +1,5 @@
 ---
-title: Sys. DM _ _resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
+title: Sys. dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 ms.openlocfilehash: 5fea5badf14ce9863f07dff189f1665788ec5fb6
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70873772"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
@@ -30,11 +30,11 @@ ms.locfileid: "70873772"
 
 Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 minutos (128 archivos en total) de las estadísticas de grupos de recursos para un Azure SQL Database.
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**pool_id**| int |Id. del grupo de recursos de servidor. No admite valores NULL.|
 |**group_id**| int |Id. del grupo de cargas de trabajo No admite valores NULL.|
-|**name**| nvarchar(256) |Nombre del grupo de cargas de trabajo No admite valores NULL.|
+|**Name**| nvarchar(256) |Nombre del grupo de cargas de trabajo No admite valores NULL.|
 |**snapshot_time**| datetime |Fecha y hora de la instantánea de estadísticas del grupo de recursos tomada.|
 |**duration_ms**| int |Duración entre la instantánea actual y la anterior.|
 |**active_worker_count**| int |Total de trabajos en la instantánea actual.|
@@ -79,7 +79,7 @@ Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 mi
 
 Esta vista requiere el permiso VIEW SERVER STATE.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los usuarios pueden tener acceso a esta vista de administración dinámica para supervisar el consumo de recursos casi en tiempo real para el grupo de cargas de trabajo de usuario, así como los grupos internos del sistema de la instancia de Azure SQL Database.
 
@@ -100,7 +100,7 @@ WHERE name LIKE 'User%'
 ORDER BY snapshot_time DESC;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Gobierno de velocidad de registro de traducción](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Límites de recursos de DTU de grupo elástico](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)

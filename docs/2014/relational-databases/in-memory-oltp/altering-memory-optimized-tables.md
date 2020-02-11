@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783242"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
@@ -63,13 +63,13 @@ ms.locfileid: "72783242"
     select @permissions  
     ```  
   
-4.  Cree una copia de la tabla y copie los datos de la tabla original en ella. La copia se puede crear con el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)]<sup>1</sup>.  
+4.  Cree una copia de la tabla y copie los datos de la tabla original en ella. La copia se puede crear con el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>.  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Si hay suficiente memoria disponible, `T_copy` podría ser una tabla optimizada para memoria, lo que hace que la copia de datos sea más rápida. <sup>2</sup>  
+     Si hay suficiente memoria disponible, `T_copy` puede ser una tabla optimizada para memoria, lo que hace que la copia de datos sea más rápida. <sup>2</sup>  
   
 5.  Quite los objetos enlazados al esquema que hacen referencia a la tabla original.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72783242"
   
 10. Inicie la carga de trabajo en `T`.  
   
- <sup>1</sup> tenga en cuenta que en este ejemplo se conserva `T_copy` en el disco. Si hay una copia de seguridad de `T` disponible, `T_copy` puede ser una tabla temporal o no perdurable.  
+ <sup>1</sup> tenga en `T_copy` cuenta que se conserva en el disco en este ejemplo. Si hay una copia de seguridad de `T` disponible, `T_copy` puede ser una tabla temporal o no perdurable.  
   
  <sup>2</sup> debe haber suficiente memoria para `T_copy`. La memoria no se libera inmediatamente en `DROP TABLE`. Si `T_copy` está con optimización para memoria, debe haber suficiente memoria para dos copias adicionales de `T`. Si `T_copy` está basada en disco, basta con que haya memoria suficiente para una copia adicional de `T`, debido a que el recolector de elementos no utilizados necesita ponerse al día después de anular la versión anterior de `T`.  
   
@@ -293,5 +293,5 @@ Write-Host "--done--"
 Write-Host ""  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Tablas con optimización para memoria](memory-optimized-tables.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tablas optimizadas para la memoria](memory-optimized-tables.md)  

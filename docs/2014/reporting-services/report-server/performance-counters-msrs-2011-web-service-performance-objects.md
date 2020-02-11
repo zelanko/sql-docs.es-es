@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3acf02dff2d0d699a6d4dfe271d0aed8419683a
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782822"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>Contadores de rendimiento para los objetos de rendimiento de MSRS 2014 Web Service y MSRS 2014 Windows Service (modo nativo)
@@ -30,15 +30,15 @@ ms.locfileid: "72782822"
 > [!NOTE]  
 >  Estos objetos de rendimiento supervisan los eventos en el servidor de informes local. Si ejecuta un servidor de informes en una implementación escalada, los recuentos se aplican al servidor actual y no a la implementación escalada.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modo nativo  
   
- Los objetos de rendimiento están disponibles en el Monitor de rendimiento de Windows (**Perfmon.exe**). Para más información, consulte la documentación de Windows, [Generar perfiles en tiempo de ejecución](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Los objetos de rendimiento están disponibles en el Monitor de rendimiento de Windows (**Perfmon.exe**). Para obtener más información, vea la documentación de Windows, generación dehttps://msdn.microsoft.com/library/w4bz2147.aspx) [perfiles en tiempo de ejecución](https://msdn.microsoft.com/library/w4bz2147.aspx) (.  
   
- Para obtener información relacionada con los contadores de rendimiento en modo de SharePoint, vea [contadores de rendimiento para el modo SharePoint de msrs 2014 Web Service y el &#40;modo sharepoint&#41;de MSRS 2014 Windows Service](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)SharePoint Mode.  
+ Para obtener información relacionada con los contadores de rendimiento de modo de SharePoint, vea [contadores de rendimiento para los objetos de rendimiento de modo SharePoint de msrs 2014 Web Service y msrs 2014 Windows Service SharePoint mode &#40;sharepoint&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
   
  **En este tema:**  
   
--   [Contadores de rendimiento del servicio Web de MSRS 2014](#bkmk_webservice)  
+-   [Contadores de rendimiento de MSRS 2014 Web Service](#bkmk_webservice)  
   
 -   [Contadores de rendimiento de MSRS 2014 Windows Service](#bkmk_windowsservice)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72782822"
 |`Cache Misses/Sec`|Número de solicitudes por segundo que no han podido devolver un informe de memoria caché. Utilice este contador para averiguar si los recursos utilizados para el almacenamiento en caché (disco o memoria) son suficientes.|  
 |`Cache Misses/Sec (Semantic Models)`|Número de solicitudes por segundo que no han podido devolver un modelo de memoria caché. Utilice este contador para averiguar si los recursos utilizados para el almacenamiento en caché (disco o memoria) son suficientes.|  
 |`First Session Requests/Sec`|Número de nuevas sesiones de usuario que se inician desde la memoria caché del servidor de informes por segundo.|  
-|`Memory Cache Hits/Sec`|Número de veces por segundo que se recuperan informes de la memoria caché en memoria. La*caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
+|`Memory Cache Hits/Sec`|Número de veces por segundo que se recuperan informes de la memoria caché en memoria. La *caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
 |`Memory Cache Misses/Sec`|Número de veces por segundo que no se han podido recuperar informes de la memoria caché en memoria.|  
 |`Next Session Requests/Sec`|Número de solicitudes por segundo de informes que se abren en una sesión existente (como informes que se representan a partir de una instantánea de sesión).|  
 |`Report Requests`|Número de informes actualmente activos que el servidor de informes administra.|  
@@ -67,7 +67,7 @@ ms.locfileid: "72782822"
 |`Total Cache Hits (Semantic Models)`|Número total de solicitudes del modelo de la memoria caché después del inicio del servicio. Este contador se restablece siempre que ASP.NET detiene el servicio web del servidor de informes.|  
 |`Total Cache Misses`|Número total de veces que no se ha podido devolver un informe de la memoria caché después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes. Utilice este contador para determinar si el espacio en disco y la memoria son suficientes.|  
 |`Total Cache Misses (Semantic Models)`|Número total de veces que no se ha podido devolver un modelo de la memoria caché después del inicio del servicio. Este contador se restablece siempre que ASP.NET detiene el servicio web del servidor de informes. Utilice este contador para determinar si el espacio en disco y la memoria son suficientes.|  
-|`Total Memory Cache Hits`|Número total de informes en memoria caché devueltos desde la memoria caché en memoria después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes. La*caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
+|`Total Memory Cache Hits`|Número total de informes en memoria caché devueltos desde la memoria caché en memoria después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes. La *caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
 |`Total Memory Cache Misses`|Número total de errores de memoria caché en la memoria caché en memoria después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.|  
 |`Total Processing Failures`|Número de errores del procesamiento de la solicitud de servicio web del servidor de informes.|  
 |`Total Rejected Threads`|Número total de subprocesos rechazados para el procesamiento asincrónico y tratados posteriormente como procesos sincrónicos en el mismo subproceso. Cada origen de datos se procesa en un subproceso. Si el volumen de subprocesos es superior a la capacidad, se rechazan subprocesos para el procesamiento asincrónico y, a continuación, se procesan en serie.|  
@@ -90,7 +90,7 @@ ms.locfileid: "72782822"
 |`Delivers/Sec`|Número de entregas de informes por segundo, desde cualquier extensión de entrega.|  
 |`Events/Sec`|Número de eventos procesados por segundo. Entre los eventos que se supervisan se incluyen `SnapshotUpdated` y `TimedSubscription`.|  
 |`First Session Requests/Sec`|Número de nuevas sesiones de ejecución de informe creadas por segundo.|  
-|`Memory Cache Hits/Sec`|Número de veces por segundo que se recuperan informes de la memoria caché en memoria. La*caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
+|`Memory Cache Hits/Sec`|Número de veces por segundo que se recuperan informes de la memoria caché en memoria. La *caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
 |`Memory Cache Misses/Sec`|Número de veces por segundo que no se pueden recuperar informes de la memoria caché en memoria.|  
 |`Next Session Requests/Sec`|Número de solicitudes por segundo de informes que se abren en una sesión existente (como informes que se representan a partir de una instantánea de sesión).|  
 |`Report Requests`|Número de informes actualmente activos que el servidor de informes administra. Utilice este contador para evaluar la estrategia de almacenamiento en memoria caché. Es posible que haya más solicitudes que informes generados.|  
@@ -98,10 +98,10 @@ ms.locfileid: "72782822"
 |`Requests/Sec`|Número total de solicitudes correctas que el servicio del servidor de informes procesó por segundo.|  
 |`Snapshot Updates/Sec`|Número total de actualizaciones de instantánea de ejecución de informes por segundo.|  
 |`Total App Domain Recycles`|Número total de ciclos de dominio de aplicación después del inicio del servicio Windows del servidor de informes.|  
-|**Total de vaciados de caché**|Número total de actualizaciones de memoria caché del servidor de informes después del inicio del servicio. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Flushes/Sec`.|  
-|`Total Cache Hits`|Número total de solicitudes de informes procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Hits/Sec`.|  
-|`Total Cache Hits (Semantic Models)`|Número total de solicitudes de modelos procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Hits/Sec`.|  
-|`Total Cache Misses`|Número total de veces que no se ha podido devolver un informe de la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Vea `Cache Misses/Sec`.|  
+|**Total de vaciados de caché**|Número total de actualizaciones de memoria caché del servidor de informes después del inicio del servicio. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Flushes/Sec`.|  
+|`Total Cache Hits`|Número total de solicitudes de informes procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Hits/Sec`.|  
+|`Total Cache Hits (Semantic Models)`|Número total de solicitudes de modelos procesadas directamente desde la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Hits/Sec`.|  
+|`Total Cache Misses`|Número total de veces que no se ha podido devolver un informe de la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación. Consulte `Cache Misses/Sec`.|  
 |`Total Cache Misses (Semantic Models)`|Número total de veces que no se ha podido devolver un modelo de la memoria caché después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
 |`Total Deliveries`|Número total de informes entregados a través del Procesador de entrega y programación para todas las extensiones de entrega. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
 |`Total Events`|Número total de eventos después del inicio del servicio Windows del servidor de informes. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
@@ -113,7 +113,7 @@ ms.locfileid: "72782822"
 |`Total Requests`|Número total de informes que se han ejecutado correctamente después del inicio del servicio. Este contador se restablece tras los reciclamientos de dominio de aplicación.|  
 |`Total Snapshot Updates`|Número total de actualizaciones de instantánea de ejecución de informes.|  
   
-##  <a name="bkmk_powershell"></a> Usar cmdlets de PowerShell para devolver listas  
+##  <a name="bkmk_powershell"></a>Usar cmdlets de PowerShell para devolver listas  
  ![Contenido relacionado con PowerShell](../media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") El siguiente script de Windows PowerShell devuelve los conjuntos de contadores en los que CounterSetName comienza con "MSR":  
   
 ```powershell
@@ -126,7 +126,7 @@ Get-Counter -ListSet msr*
 (Get-Counter -ListSet "MSRS 2014 Windows Service").Paths  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el rendimiento del servidor de informes](monitoring-report-server-performance.md)   
- [Contadores de rendimiento para los &#40;objetos&#41; de rendimiento de modo SharePoint de MSRS 2014 Web Service y MSRS 2014 Windows Service](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md) SharePoint en modo SharePoint   
+ [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2014 Web Service y SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  

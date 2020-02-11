@@ -16,21 +16,21 @@ ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 738f4cece8cf2355c12c0de4ac42314152c6370a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921442"
 ---
-# <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
-Especifica cuándo el [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) proveedor vuelve a calcular las columnas agregadas y calculadas en un conjunto de registros jerárquico.  
+# <a name="adcprop_autorecalc_enum"></a>ADCPROP_AUTORECALC_ENUM
+Especifica cuándo el proveedor [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) vuelve a calcular las columnas agregadas y calculadas en un conjunto de registros jerárquico.  
   
- Estas constantes se utilizan solo con el **MSDataShape** proveedor y el **Recordset** "**recálculo automático**" propiedad dinámica que se hace referencia en el [ADO Índice de propiedades dinámicas](../../../ado/reference/ado-api/ado-dynamic-property-index.md) y documentado en el [servicio de cursores de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) o [servicio de forma de datos de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) documentación.  
+ Estas constantes solo se usan con el proveedor **MSDataShape** y la propiedad dinámica de **conjunto de registros** "**auto Calc**", a la que se hace referencia en el [Índice de propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) y se documentan en el servicio [de cursor de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) o en el [servicio de forma de datos de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) documentación.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adRecalcAlways**|1|Predeterminado: Vuelve a calcular cada vez que el **MSDataShape** proveedor determina han cambiado los valores que dependen de las columnas calculadas.|  
-|**adRecalcUpFront**|0|Calcula sólo al generar inicialmente el jerárquica **Recordset**.|  
+|**adRecalcAlways**|1|Default. Vuelve a calcular cada vez que el proveedor **MSDataShape** determina los valores de los que dependen las columnas calculadas.|  
+|**adRecalcUpFront**|0|Calcula solo cuando se compila inicialmente el conjunto de **registros**jerárquico.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Estas constantes no tienen equivalentes de ADO y WFC.
+## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
+ Estas constantes no tienen equivalentes de ADO/WFC.

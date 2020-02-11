@@ -1,5 +1,5 @@
 ---
-title: Comentarios en HelloData | Microsoft Docs
+title: Comentarios sobre HelloData | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,64 +13,64 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925804"
 ---
 # <a name="comments-on-hellodata"></a>Comentarios en HelloData
-Los pasos de la aplicación HelloData a través de las operaciones básicas de una aplicación típica de ADO: introducción, examinar, editar y actualizar datos. Cuando se inicia la aplicación, haga clic en el primer botón, **obtener datos**. Esto ejecutará la **GetData** subrutina.  
+La aplicación HelloData guía a través de las operaciones básicas de una aplicación ADO típica: obtener, examinar, editar y actualizar datos. Cuando inicie la aplicación, haga clic en el primer botón, **obtener datos**. Se ejecutará la subrutina **GetData** .  
   
 ## <a name="getdata"></a>GetData  
- **GetData** coloca una cadena de conexión válida en una variable de nivel de módulo, *m_sConnStr*. Para obtener más información acerca de las cadenas de conexión, consulte [crear la cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md).  
+ **GetData** coloca una cadena de conexión válida en una variable de nivel de módulo *m_sConnStr*. Para obtener más información sobre las cadenas de conexión, vea [crear la cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md).  
   
- Asigne un controlador de error mediante Visual Basic **OnError** instrucción. Para obtener más información sobre el control de errores en ADO, vea [Error Handling](../../../ado/guide/data/error-handling.md). Un nuevo **conexión** se crea un objeto y el **CursorLocation** propiedad está establecida en **adUseClient** porque el ejemplo de HelloData crea un  *conjunto de registros desconectado*. Esto significa que tan pronto como se han obtenido los datos del origen de datos, se interrumpe la conexión física con el origen de datos, pero puede seguir trabajando con los datos que se almacena en caché localmente en su **Recordset** objeto.  
+ Asigne un controlador de errores mediante una instrucción Visual Basic **OnError** . Para obtener más información sobre el control de errores en ADO, vea [control de errores](../../../ado/guide/data/error-handling.md). Se crea un nuevo objeto de **conexión** y la propiedad **CursorLocation** está establecida en **AdUseClient** porque el ejemplo de HelloData crea un *conjunto de registros desconectado*. Esto significa que, tan pronto como se hayan recuperado los datos del origen de datos, se interrumpirá la conexión física con el origen de datos, pero puede seguir trabajando con los datos almacenados en caché localmente en el objeto de **conjunto de registros** .  
   
- Después de que se ha abierto la conexión, asigne una cadena SQL a una variable (sSQL). A continuación, cree una instancia de un nuevo **Recordset** objeto, `m_oRecordset1`. En la siguiente línea de código, abra el **Recordset** sobre existente **conexión**, pasando `sSQL` como origen de la **Recordset**. ADO ayuda a tomar la determinación de que el código SQL cadena que se han pasado como el origen de la **Recordset** es una definición textual de un comando pasando **adCmdText** en el argumento final para el **Conjunto de registros abierto** método. Esta línea establece también el **LockType** y **CursorType** asociado con el **Recordset**.  
+ Una vez abierta la conexión, asigne una cadena SQL a una variable (sSQL). A continuación, cree una instancia de un nuevo objeto `m_oRecordset1`de conjunto de **registros** ,. En la siguiente línea de código, abra el **conjunto de registros** a **** través de la conexión `sSQL` existente, pasando como el origen del **conjunto de registros**. Ayuda a ADO a tomar la decisión de que la cadena de SQL que ha pasado como origen del **conjunto de registros** es una definición textual de un comando pasando **adCmdText** en el argumento final al método Open de **conjunto de registros** . Esta línea también establece el **LockType** y **CursorType** asociados al **conjunto de registros**.  
   
- La siguiente línea de código establece la **MarshalOptions** propiedad igual a **adMarshalModifiedOnly**. **MarshalOptions** indica qué registros se deben serializar en el nivel intermedio (o el servidor Web). Para obtener más información acerca de la serialización, vea la documentación de COM. Cuando usas **adMarshalModifiedOnly** con un cursor de cliente ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**), solo los registros que se han modificado en el cliente se reescriben en el nivel intermedio. Establecer **MarshalOptions** a **adMarshalModifiedOnly** puede mejorar el rendimiento porque se serializan menos filas.  
+ La siguiente línea de código establece el valor de la propiedad **MarshalOptions** en **adMarshalModifiedOnly**. **MarshalOptions** indica qué registros deben calcularse en el nivel intermedio (o servidor Web). Para obtener más información sobre el cálculo de referencias, vea la documentación de COM. Cuando se usa **adMarshalModifiedOnly** con un cursor del lado cliente ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**), solo los registros que se han modificado en el cliente se escriben de nuevo en el nivel intermedio. Establecer **MarshalOptions** en **adMarshalModifiedOnly** puede mejorar el rendimiento porque se calculan las referencias de menos filas.  
   
- A continuación, desconecte el **Recordset** estableciendo su **ActiveConnection** propiedad igual a **nada**. Para obtener más información, vea la sección "Desconectar y volver a conectar el conjunto de registros" en [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).  
+ A continuación, desconecte el **conjunto de registros** estableciendo su propiedad **ActiveConnection** en **Nothing**. Para obtener más información, vea la sección "desconectar y volver a conectar el conjunto de registros" en [actualización y persistencia de datos](../../../ado/guide/data/updating-and-persisting-data.md).  
   
- Cierre la conexión al origen de datos y destruir existente **conexión** objeto. Esto libera los recursos que lo consume.  
+ Cierre la conexión al origen de datos y destruya el objeto de **conexión** existente. Esto libera los recursos consumidos.  
   
- El último paso es establecer el **Recordset** como el **DataSource** para la cuadrícula de datos de Microsoft de Control del formulario hasta que se pueden mostrar fácilmente los datos de la **Recordset** en el formulario.  
+ El paso final consiste en establecer el **conjunto de registros** como el **origen** de datos del control DataGrid de Microsoft en el formulario para que pueda mostrar fácilmente los datos del **conjunto de registros** en el formulario.  
   
- Haga clic en el segundo botón, **examinar datos**. Esta opción ejecuta la **ExamineData** subrutina.  
+ Haga clic en el segundo botón, **examinar datos**. Esto ejecuta la subrutina **ExamineData** .  
   
 ## <a name="examinedata"></a>ExamineData  
- ExamineData emplea varios métodos y propiedades de la **Recordset** objeto para mostrar información acerca de los datos en el **Recordset**. Informa del número de registros mediante el uso de la **RecordCount** propiedad. Recorre en bucle la **Recordset** e imprime el valor de la **AbsolutePosition** propiedad en el cuadro de texto en el formulario. Mientras se encuentre también en el bucle, el valor de la **marcador** propiedad para el tercer registro se coloca en una variable de tipo variant, *vBookmark*, para su uso posterior.  
+ ExamineData usa varios métodos y propiedades del objeto de **conjunto de registros** para mostrar información sobre los datos del conjunto de **registros**. Informa del número de registros mediante la propiedad **RecordCount** . Recorre en bucle el **conjunto de registros** e imprime el valor de la propiedad **AbsolutePosition** en el cuadro de texto para mostrar del formulario. Además, en el bucle, el valor de la propiedad **Bookmark** del tercer registro se coloca en una variable Variant, *vBookmark*, para su uso posterior.  
   
- La rutina se desplaza directamente al tercer registro mediante la variable de marcador almacenada anteriormente. Las llamadas a rutinas el **WalkFields** subrutina, que recorre en bucle la **campos** colección de la **Recordset** y muestra detalles sobre cada **campo**  en la colección.  
+ La rutina navega directamente al tercer registro mediante la variable de marcador que almacenó anteriormente. La rutina llama a la subrutina **WalkFields** , que recorre en bucle la colección **Fields** del **conjunto de registros** y muestra los detalles de cada **campo** de la colección.  
   
- Por último, **ExamineData** usa el **filtro** propiedad de la **Recordset** en pantalla para solo aquellos registros con un **CategoryId** igual a 2. El resultado de aplicar este filtro está visible inmediatamente en la cuadrícula de presentación en el formulario.  
+ Por último, **ExamineData** usa la propiedad **Filter** del **conjunto de registros** para buscar solo los registros cuyo **CategoryID** sea igual a 2. El resultado de aplicar este filtro es visible inmediatamente en la cuadrícula de presentación del formulario.  
   
- Para obtener más información acerca de la funcionalidad que se muestra en el **ExamineData** subrutina, consulte [examinar datos](../../../ado/guide/data/examining-data.md).  
+ Para obtener más información acerca de la funcionalidad que se muestra en la subrutina **ExamineData** , consulte [examinar datos](../../../ado/guide/data/examining-data.md).  
   
- A continuación, haga clic en el tercer botón, **editar datos**. Esto ejecutará la **EditData** subrutina.  
+ A continuación, haga clic en el tercer botón, **Editar datos**. Se ejecutará la subrutina **EditData** .  
   
 ## <a name="editdata"></a>EditData  
- Cuando el código entra el **EditData** subrutina, el **Recordset** todavía se filtra por **CategoryId** es igual a 2, para que sean solo los elementos que cumplen los criterios de filtro está visible. Primero recorre la **Recordset** y aumenta el precio de cada elemento visible en el **Recordset** un 10 por ciento. El valor de la **precio** campo se puede cambiar estableciendo la **valor** propiedad para ese campo igual a una nueva cantidad válida.  
+ Cuando el código entra en la subrutina **EditData** , el **conjunto de registros** sigue estando filtrado por **CategoryID** igual a 2, de modo que solo estén visibles los elementos que cumplan los criterios de filtro. En primer lugar, recorre en iteración el **conjunto de registros** y aumenta el precio de cada elemento visible en el **conjunto de registros** en un 10 por ciento. El valor del campo **Price** se cambia estableciendo la propiedad **Value** de ese campo en una cantidad nueva y válida.  
   
- Recuerde que el **Recordset** se desconecta del origen de datos. Los cambios que se realizaron en **EditData** sólo se realizan en la copia en caché local de los datos. Para obtener más información, consulte [modificar datos](../../../ado/guide/data/editing-data.md).  
+ Recuerde que el **conjunto de registros** está desconectado del origen de datos. Los cambios que se realizaron en **EditData** solo se realizan en la copia almacenada localmente en caché de los datos. Para obtener más información, vea [Editar datos](../../../ado/guide/data/editing-data.md).  
   
- Los cambios no se realizarán en el origen de datos hasta que haga clic en el cuarto botón, **actualizar datos**. Esto ejecutará la **UpdateData** subrutina.  
+ Los cambios no se realizarán en el origen de datos hasta que haga clic en el cuarto botón, **actualizar datos**. Se ejecutará la subrutina **UpdateData** .  
   
 ## <a name="updatedata"></a>UpdateData  
- En primer lugar, UpdateData quita el filtro que se ha aplicado a la **Recordset**. El código quita y restablece `m_oRecordset1` como el **DataSource** para el control DataGrid enlazado a Microsoft en el formulario para que el sin filtrar **Recordset** aparece en la cuadrícula.  
+ En primer lugar, UpdateData quita el filtro que se ha aplicado al **conjunto de registros**. El código quita y restablece `m_oRecordset1` como el **origen** de los elementos DataGrid de Microsoft en el formulario para que el conjunto de **registros** sin filtrar aparezca en la cuadrícula.  
   
- El código, a continuación, se comprueba para ver si puede desplazarse hacia atrás en el **Recordset** utilizando el **admite** método con el **adMovePrevious** argumento.  
+ A continuación, el código comprueba para ver si puede moverse hacia atrás en el **conjunto de registros** mediante el método **Supports** con el argumento **adMovePrevious** .  
   
- La rutina se mueve en el primer registro mediante el **MoveFirst** método y muestra los valores del campo original y actual, utilizando el **OriginalValue** y **valor** propiedades de la **campo** objeto. Estas propiedades, juntas con el **UnderlyingValue** propiedad (no se utiliza aquí), se tratan en [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).  
+ La rutina se mueve al primer registro mediante el método **MoveFirst** y muestra los valores originales y actuales del campo, utilizando las propiedades **OriginalValue** y **Value** del objeto de **campo** . Estas propiedades, junto con la propiedad **UnderlyingValue** (no utilizadas aquí), se describen en [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).  
   
- A continuación, un nuevo **conexión** objeto se crea y se usa para restablecer una conexión al origen de datos. Se vuelve a conectar el **Recordset** al origen de datos estableciendo la nueva **conexión** como el **ActiveConnection** para el **Recordset**. Para enviar las actualizaciones al servidor, el código llama a **UpdateBatch** en el **Recordset**.  
+ A continuación, se crea un nuevo objeto de **conexión** y se utiliza para restablecer una conexión con el origen de datos. Para volver a conectar el **conjunto de registros** al origen de datos, establezca la nueva **conexión** como el objeto **ActiveConnection** del **conjunto de registros**. Para enviar las actualizaciones al servidor, el código llama a **UpdateBatch** en el **conjunto de registros**.  
   
- Si la actualización por lotes se realiza correctamente, una variable de indicador de nivel de módulo, `m_flgPriceUpdated`, se establece en True. Esto le recordará que más adelante para limpiar todos los cambios realizados en la base de datos.  
+ Si la actualización por lotes se realiza correctamente, una variable de marcador de `m_flgPriceUpdated`nivel de módulo,, se establece en true. Esto le avisará más adelante para limpiar todos los cambios que se realizaron en la base de datos.  
   
- Por último, el código se desplaza al primer registro en el **Recordset** y muestra los valores originales y actuales. Los valores son los mismos después de llamar a **UpdateBatch**.  
+ Por último, el código vuelve al primer registro del conjunto de **registros** y muestra los valores originales y actuales. Los valores son los mismos después de la llamada a **UpdateBatch**.  
   
- Para obtener información detallada acerca de cómo actualizar los datos, incluido qué hacer cuando los datos en el servidor cambia mientras la **Recordset** es desconectado, consulte [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).  
+ Para obtener información detallada sobre cómo actualizar los datos, incluido qué hacer cuando cambian los datos en el servidor mientras el **conjunto de registros** está desconectado, vea [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).  
   
-## <a name="formunload"></a>Form_Unload  
- El **Form_Unload** subrutina es importante por varias razones. En primer lugar, porque se trata de una aplicación de ejemplo, Form_Unload limpia los cambios realizados en la base de datos antes de salir de la aplicación. En segundo lugar, el código muestra cómo se puede ejecutar un comando directamente desde una apertura **conexión** objeto utilizando el **Execute** método. Por último, muestra un ejemplo de la ejecución de una consulta no devuelve filas (una consulta UPDATE) en el origen de datos.
+## <a name="form_unload"></a>Form_Unload  
+ La subrutina **Form_Unload** es importante por varias razones. En primer lugar, dado que se trata de una aplicación de ejemplo, Form_Unload limpia los cambios que se realizaron en la base de datos antes de salir de la aplicación. En segundo lugar, el código muestra cómo un comando se puede ejecutar directamente desde un objeto de **conexión** abierto mediante el método **Execute** . Por último, se muestra un ejemplo de ejecución de una consulta que no devuelve filas (una consulta UPDATE) en el origen de datos.

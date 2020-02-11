@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211840"
 ---
 # <a name="modify-check-constraints"></a>Modificar restricciones CHECK
@@ -44,7 +44,7 @@ ms.locfileid: "68211840"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-a-check-constraint"></a>Para modificar una restricción CHECK  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68211840"
   
 4.  Complete una de las acciones descritas en la tabla siguiente:  
   
-    |En|Siga estos pasos|  
+    |A|Siga estos pasos|  
     |--------|------------------------|  
     |Modificar la expresión de restricción|Escriba la nueva expresión en el campo **Expresión** .|  
     |Cambiar el nombre de la restricción|Escriba un nuevo nombre en el campo **Nombre** .|  

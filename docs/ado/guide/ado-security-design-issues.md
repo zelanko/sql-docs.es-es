@@ -13,23 +13,23 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927035"
 ---
 # <a name="ado-security-design-features"></a>Características de diseño de seguridad de ADO
-Las secciones siguientes describen las características de diseño de seguridad de ActiveX Data Objects (ADO) 2.8 y versiones posteriores. Estos cambios se realizaron en ADO 2.8 para mejorar la seguridad. ADO 6.0, que se incluye en Windows DAC 6.0 en Windows Vista, es funcionalmente equivalente a ADO 2.8, que se incluyó en MDAC 2.8 en Windows XP y Windows Server 2003. En este tema se proporciona información sobre cómo proteger mejor sus aplicaciones en ADO 2.8 o posterior.
+En las secciones siguientes se describen las características de diseño de seguridad de Objetos de datos ActiveX (ADO) 2,8 y versiones posteriores. Estos cambios se realizaron en ADO 2,8 para mejorar la seguridad. ADO 6,0, que se incluye en Windows DAC 6,0 en Windows Vista, es funcionalmente equivalente a ADO 2,8, que se incluyó en MDAC 2,8 en Windows XP y Windows Server 2003. En este tema se proporciona información sobre cómo proteger mejor las aplicaciones en ADO 2,8 o posterior.
 
 > [!IMPORTANT]
->  Si va a actualizar la aplicación desde una versión anterior de ADO, se recomienda probar la aplicación actualizada en un equipo que no sea de producción antes de implementarla para los clientes. De este modo, puede asegurarse de que es conscientes de los problemas de compatibilidad antes de implementar la aplicación actualizada.
+>  Si va a actualizar la aplicación desde una versión anterior de ADO, se recomienda que pruebe la aplicación actualizada en un equipo que no sea de producción antes de implementarla en los clientes. De este modo, puede asegurarse de que conoce los problemas de compatibilidad antes de implementar la aplicación actualizada.
 
-## <a name="internet-explorer-file-access-scenarios"></a>Escenarios de acceso de archivo de Internet Explorer
- El efecto de las características siguientes el funcionamiento de ADO a 2.8 y versiones posterior cuando se utiliza en las páginas Web en Internet Explorer de la secuencia de comandos.
+## <a name="internet-explorer-file-access-scenarios"></a>Escenarios de acceso a archivos de Internet Explorer
+ Las siguientes características afectan al funcionamiento de ADO 2,8 y versiones posteriores cuando se utiliza en páginas web con script en Internet Explorer.
 
-### <a name="revised-and-improved-security-warning-message-box-now-used-to-alert-users"></a>Cuadro de mensaje de advertencia de seguridad mejorado y revisado usa ahora para avisar a los usuarios
- Para ADO 2.7 y versiones anterior, el siguiente mensaje de advertencia aparece cuando se trata de una página Web con script ejecutar código ADO de un proveedor de confianza:
+### <a name="revised-and-improved-security-warning-message-box-now-used-to-alert-users"></a>Cuadro de mensaje de advertencia de seguridad revisado y mejorado ahora usado para alertar a los usuarios
+ Para ADO 2,7 y versiones anteriores, aparece el siguiente mensaje de advertencia cuando una página web con script intenta ejecutar código ADO desde un proveedor que no es de confianza:
 
 ```console
 This page accesses data on another domain. Do you want to allow this? To
@@ -38,78 +38,78 @@ your Trusted Sites zone on the Security tab of the Internet Options dialog
 box.
 ```
 
- Para ADO 2.8 y versiones posterior, ya no aparece el mensaje anterior. En su lugar, aparece el siguiente mensaje en este contexto:
+ Para ADO 2,8 y versiones posteriores, ya no aparece el mensaje anterior. En su lugar, aparece el siguiente mensaje en este contexto:
 
 ```console
 This Website uses a data provider that may be unsafe. If you trust the
 Website, click OK, otherwise click Cancel.
 ```
 
- El mensaje anterior permite al usuario tomar una decisión informada, sabiendo las consecuencias para cualquiera de las opciones:
+ El mensaje anterior permite al usuario tomar decisiones informadas, a la vez que conoce las consecuencias de ambas opciones:
 
--   Si el usuario confía en el sitio, haga clic en Aceptar permitirá todo el código con seguridad de disco (todos los métodos de ADO y propiedades con las excepciones de las API accesibles para el disco se describe más adelante en este tema) para ejecutar y se ejecutan en la ventana del explorador.
+-   Si el usuario confía en el sitio, al hacer clic en aceptar se permitirá todo el código seguro para disco (todos los métodos y propiedades de ADO con las excepciones de las API accesibles en disco que se describen más adelante en este tema) para ejecutarse y ejecutarse en la ventana del explorador.
 
--   Si el usuario no confía en el sitio, haga clic en Cancelar bloquea el código de ADO para el acceso a datos desde la ejecución y ejecutar en su totalidad.
+-   Si el usuario no confía en el sitio, al hacer clic en Cancelar se bloquea el código ADO para que el acceso a los datos se ejecute y se ejecute en su totalidad.
 
-### <a name="disk-accessible-code-limited-now-to-trusted-sites"></a>Código accesible para el disco limitado ahora a sitios de confianza
- Se realizaron cambios de diseño adicionales en ADO 2.8 que restringir específicamente la capacidad de un conjunto limitado de API, lo cual podrían exponer la posibilidad de leer o escribir en archivos en el equipo local. Estos son los métodos de API que han sido más restringido por motivos de seguridad cuando se ejecuta Internet Explorer:
+### <a name="disk-accessible-code-limited-now-to-trusted-sites"></a>Código accesible desde disco limitado ahora a sitios de confianza
+ Se han realizado cambios de diseño adicionales en ADO 2,8 que restringen específicamente la capacidad de un conjunto limitado de API, lo que podría exponer la posibilidad de leer o escribir archivos en el equipo local. Estos son los métodos de API que se han restringido aún más para la seguridad al ejecutar Internet Explorer:
 
--   Para la propiedad ADO **Stream** objeto, si la [LoadFromFile](../../ado/reference/ado-api/loadfromfile-method-ado.md) o [SaveToFile](../../ado/reference/ado-api/savetofile-method.md) se usan los métodos.
+-   Para el objeto de **secuencia** de ADO, si se usan los métodos [LoadFromFile](../../ado/reference/ado-api/loadfromfile-method-ado.md) o [SaveToFile](../../ado/reference/ado-api/savetofile-method.md) .
 
--   Para ADO **Recordset** objeto, si bien la [guardar](../../ado/reference/ado-api/save-method.md) método o la [abierto](../../ado/reference/ado-api/open-method-ado-recordset.md) método, por ejemplo, cuando cualquier el **adCmdFile** opción está establecida o el [proveedor Microsoft OLE DB persistencia (MSPersist)](../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) se utiliza.
+-   Para el objeto **de conjunto de registros** ADO, si el método [Save](../../ado/reference/ado-api/save-method.md) o el método [Open](../../ado/reference/ado-api/open-method-ado-recordset.md) , como cuando se establece la opción **AdCmdFile** o se utiliza el proveedor de [persistencia de Microsoft OLE DB (MSPersist)](../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) .
 
- Estos conjuntos de limitado de funciones disco potencialmente accesibles, ocurre lo siguiente para ADO 2.8 y versiones posterior, si se ejecuta cualquier código que utilice estos métodos en Internet Explorer:
+ Para estos conjuntos limitados de funciones potencialmente accesibles en disco, se produce el comportamiento siguiente para ADO 2,8 y versiones posteriores, si se ejecuta cualquier código que use estos métodos en Internet Explorer:
 
--   Si el sitio que proporciona el código se ha agregado anteriormente a la lista de la zona de sitios de confianza, el código se ejecuta en el explorador y se concede acceso a archivos locales.
+-   Si el sitio que proporcionó el código se agregó previamente a la lista de zonas de sitios de confianza, el código se ejecuta en el explorador y se concede el acceso a los archivos locales.
 
--   Si el sitio no aparece en la lista de la zona de sitios de confianza, el código está bloqueado y se deniega el acceso a archivos locales.
+-   Si el sitio no aparece en la lista de zonas de sitios de confianza, se bloquea el código y se deniega el acceso a los archivos locales.
 
     > [!NOTE]
-    >  En ADO 2.8 y versiones posterior, el usuario no es una alerta o recomienda agregar sitios a la lista de la zona de sitios de confianza. Por lo tanto, la administración de la lista de sitios de confianza es responsabilidad de aquellos que se va a implementar o que admiten aplicaciones basadas en el sitio Web que requieren acceso al sistema de archivos local.
+    >  En ADO 2,8 y versiones posteriores, no se advierte al usuario ni le aconseja agregar sitios a la lista de zonas de sitios de confianza. Por lo tanto, la administración de la lista de sitios de confianza es responsabilidad de aquellos que implementan o admiten aplicaciones basadas en sitios web que requieren acceso al sistema de archivos local.
 
 ### <a name="access-blocked-to-the-activecommand-property-on-recordset-objects"></a>Acceso bloqueado a la propiedad ActiveCommand en objetos de conjunto de registros
- Cuando se ejecuta en Internet Explorer, ADO 2.8 ahora bloquea el acceso a la [ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md) propiedad para un activo **Recordset** de objetos y devuelve un error. El error se produce independientemente de si la página procede de un sitio Web que se registra en la lista de sitios de confianza.
+ Al ejecutarse en Internet Explorer, ADO 2,8 ahora bloquea el acceso a la propiedad [ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md) para un objeto **Recordset** activo y devuelve un error. El error se produce independientemente de si la página procede de un sitio Web registrado en la lista de sitios de confianza.
 
-### <a name="changes-in-handling-for-ole-db-providers-and-integrated-security"></a>Cambios en el control para proveedores OLE DB y la seguridad integrada
- Mientras revisa ADO 2.7 y versiones anteriores de los posibles problemas de seguridad y problemas, se detectó el siguiente escenario:
+### <a name="changes-in-handling-for-ole-db-providers-and-integrated-security"></a>Cambios en el control de los proveedores de OLE DB y la seguridad integrada
+ Al revisar ADO 2,7 y versiones anteriores para detectar posibles problemas de seguridad y preocupaciones, se detectó el siguiente escenario:
 
- En algunos casos, los proveedores OLE DB que admiten la seguridad integrada [DBPROP_AUTH_INTEGRATED](https://msdn.microsoft.com/library/windows/desktop/ms712973.aspx) propiedad potencialmente podría permitir que las páginas Web con script para volver a usar el objeto de conexión de ADO para conectarse de forma no intencionada a otros servidores con las credenciales de inicio de sesión actual de los usuarios. Para evitar esto, ADO 2.8 y versiones posterior controlan los proveedores de OLE DB, dependiendo de cómo ha elegido para proporcionar o no se proporciona, para la seguridad integrada.
+ En algunos casos, OLE DB proveedores que admiten la propiedad Integrated Security [DBPROP_AUTH_INTEGRATED](https://msdn.microsoft.com/library/windows/desktop/ms712973.aspx) podría permitir que las páginas web con script reutilicen el objeto de conexión ADO para conectarse de forma no intencionada a otros servidores con las credenciales de inicio de sesión actuales de los usuarios. Para evitar esto, ADO 2,8 y versiones posteriores controlan OLE DB proveedores en función de cómo hayan elegido proporcionar, o no, la seguridad integrada.
 
- Para las páginas Web que se cargan desde sitios que se indican en la lista de la zona de sitios de confianza, en la tabla siguiente proporciona un desglose de cómo ADO 2.8 y versiones posterior administra las conexiones de ADO en cada caso.
+ En el caso de las páginas web que se cargan desde sitios que aparecen en la lista de zonas de sitios de confianza, en la tabla siguiente se proporciona un desglose del modo en que ADO 2,8 y las versiones posteriores administran las conexiones ADO en cada caso.
 
-|Configuración de Internet Explorer para la autenticación de usuario, de inicio de sesión|Admite el proveedor "Integrated Security" y UID y PWD están especificados (SQLOLEDB)|Proveedor no admite "Integrated Security" (MSPersist JOLT, MSDASQL)|Proveedor es compatible con "Integrated Security" y se establece en SSPI (no se especifica ningún UID y PWD)|
+|Configuración de IE para la autenticación de usuario, Inicio de sesión|El proveedor admite "Integrated Security" y se especifican UID y PWD (SQLOLEDB)|El proveedor no admite "Integrated Security" (JOLT, MSDASQL, MSPersist)|El proveedor es compatible con "Integrated Security" y se establece en SSPI (no se especifica ningún UID/PWD)|
 |------------------------------------------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-|Inicio de sesión automático con el nombre de usuario actual y la contraseña|Permitir la conexión|Permitir la conexión|Permitir la conexión|
-|Símbolo del sistema para el nombre de usuario y contraseña|Permitir la conexión|Un error de conexión|Un error de conexión|
-|Inicio de sesión automático solo en la zona de Intranet|Permitir la conexión|Preguntar al usuario con una advertencia de seguridad|Preguntar al usuario con una advertencia de seguridad|
-|Inicio de sesión anónimo|Permitir la conexión|Un error de conexión|Un error de conexión|
+|Inicio de sesión automático con nombre de usuario y contraseña actuales|Permitir conexión|Permitir conexión|Permitir conexión|
+|Solicitar el nombre de usuario y la contraseña|Permitir conexión|Error de conexión|Error de conexión|
+|Inicio de sesión automático solo en la zona de intranet|Permitir conexión|Preguntar al usuario con la advertencia de seguridad|Preguntar al usuario con la advertencia de seguridad|
+|Inicio de sesión anónimo|Permitir conexión|Error de conexión|Error de conexión|
 
- En el caso donde aparece la advertencia de seguridad ahora, el cuadro de mensaje informa a los usuarios:
+ En el caso de que aparezca una advertencia de seguridad, el cuadro de mensaje informa a los usuarios:
 
 ```console
 This Website is using your identity to access a data source. If you trust this Website, click OK, otherwise click Cancel.
 ```
 
- El mensaje anterior permite al usuario tomar una decisión más informada y actúe en consecuencia.
+ El mensaje anterior permite al usuario tomar una decisión más informada y continuar en consecuencia.
 
 > [!NOTE]
->  Para sitios de confianza (es decir, los sitios no aparecen en la lista de la zona de sitios de confianza), si el proveedor también es de confianza (como se ha descrito anteriormente en esta sección), el usuario podría ver dos advertencias de seguridad en una fila, una advertencia sobre el proveedor no seguro y una segunda advertencia la intento de utilizar su identidad. Si el usuario hace clic en Aceptar para la primera advertencia, se ejecutan la configuración de Internet Explorer y el código de respuesta comportamiento descrito en la tabla anterior.
+>  En el caso de sitios que no son de confianza (es decir, sitios que no aparecen en la lista de zonas de sitios de confianza), si el proveedor tampoco es de confianza (como se explicó anteriormente en esta sección), es posible que el usuario vea dos advertencias de seguridad en una fila, una advertencia sobre el proveedor no seguro y una segunda advertencia sobre el intente usar su identidad. Si el usuario hace clic en aceptar en la primera ADVERTENCIA, se ejecuta la configuración de Internet Explorer y el código de comportamiento de respuesta descrito en la tabla anterior.
 
-## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>Controlar si el texto de la contraseña se devuelve en las cadenas de conexión de ADO
- Al intentar obtener el valor de la [ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad ADO **conexión** objeto, se producen los eventos siguientes:
+## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>Controlar si el texto de la contraseña se devuelve en cadenas de conexión ADO
+ Cuando se intenta obtener el valor de la propiedad [ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md) en un objeto de **conexión** ADO, se producen los siguientes eventos:
 
-1.  Si la conexión está abierta, se realiza, a continuación, una llamada de inicialización para el proveedor OLE DB subyacente para obtener la cadena de conexión.
+1.  Si la conexión está abierta, se realiza una llamada de inicialización al proveedor de OLE DB subyacente para obtener la cadena de conexión.
 
-2.  Dependiendo de la configuración en el proveedor OLE DB de la [DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO](https://msdn.microsoft.com/library/windows/desktop/ms714905.aspx) propiedad, las contraseñas se incluye junto con otra información de la cadena de conexión que se devuelve.
+2.  Dependiendo de la configuración del proveedor de OLE DB de la propiedad [DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO](https://msdn.microsoft.com/library/windows/desktop/ms714905.aspx) , las contraseñas se incluyen junto con otra información de la cadena de conexión que se devuelve.
 
- Por ejemplo, si la propiedad dinámica de conexión ADO **Persist Security Info** está establecido en **True**, se incluye información de contraseña en la cadena de conexión devuelta. En caso contrario, si el proveedor subyacente ha establecido la propiedad **False** (por ejemplo, con el proveedor SQLOLEDB), se omite la información de contraseña en la cadena de conexión devuelta.
+ Por ejemplo, si la propiedad dinámica de conexión ADO **Persist Security info** está establecida en **true**, la información de la contraseña se incluye en la cadena de conexión devuelta. De lo contrario, si el proveedor subyacente ha establecido la propiedad en **false** (por ejemplo, con el proveedor SQLOLEDB), se omite la información de contraseña en la cadena de conexión devuelta.
 
- Si usa aplicaciones de terceros (es decir, que no sean de Microsoft) proveedores OLE DB con el código de aplicación ADO, podría comprobar cómo el **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** se implementa la propiedad para determinar si la inclusión de se permite la información de contraseña con cadenas de conexión de ADO.
+ Si usa proveedores de OLE DB de terceros (es decir, que no son de Microsoft) con el código de aplicación ADO, puede comprobar cómo se implementa la propiedad **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** para determinar si se permite la inclusión de información de contraseña con cadenas de conexión ADO.
 
-## <a name="checking-for-non-file-devices-when-loading-and-saving-recordsets-or-streams"></a>Comprobación de los dispositivos no es un archivo al cargar y guardar los conjuntos de registros o secuencias
- Para ADO 2.7 y versiones anterior, archivo operaciones de entrada/salida, como [abierto](../../ado/reference/ado-api/open-method-ado-recordset.md) y [guardar](../../ado/reference/ado-api/save-method.md) que se usaron para leer y escribir en algunos casos, los datos basados en archivos podrían permitir un nombre de archivo o dirección URL que se usará que especifican un disco no según el tipo de archivo. Por ejemplo, LPT1, COM2, PRN. TXT, AUX podría utilizarse como alias de entrada/salida, entre las impresoras auxiliares dispositivos y en el sistema con determinados
+## <a name="checking-for-non-file-devices-when-loading-and-saving-recordsets-or-streams"></a>Comprobando si hay dispositivos que no son archivos al cargar y guardar conjuntos de registros o secuencias
+ En el caso de ADO 2,7 y versiones anteriores, las operaciones de entrada/salida de archivos como [abrir](../../ado/reference/ado-api/open-method-ado-recordset.md) y [Guardar](../../ado/reference/ado-api/save-method.md) que se usaron para leer y escribir datos basados en archivos podrían, en algunos casos, permitir el uso de una dirección URL o un nombre de archivo que especifica un tipo de archivo no basado en disco. Por ejemplo, LPT1, COM2, PRN. TXT, AUX podría usarse como alias para la entrada/salida entre impresoras y dispositivos auxiliares en el sistema mediante determinados
 
- Para ADO 2.8 y versiones posterior, esta funcionalidad se ha actualizado. Para abrir y guardar **Recordset** y **Stream** los objetos ADO ahora realiza una comprobación de tipo de archivo para asegurarse de que el dispositivo de entrada o salido especificado en un dirección URL o nombre de archivo es un archivo real.
+ Para ADO 2,8 y versiones posteriores, esta funcionalidad se ha actualizado. Para abrir y guardar objetos **Recordset** y **Stream** , ADO ahora realiza una comprobación de tipo de archivo para asegurarse de que el dispositivo de entrada o salida especificado en una dirección URL o un nombre de archivo es un archivo real.
 
 > [!NOTE]
->  Comprobación de tipos de archivo como se describe en esta sección solo se aplica para Windows 2000 y versiones posteriores. No se aplica a las situaciones donde se está ejecutando en versiones anteriores de Windows, como Windows 98 ADO 2.8 o posterior.
+>  La comprobación de tipos de archivo tal como se describe en esta sección solo se aplica a Windows 2000 y versiones posteriores. No se aplica a situaciones en las que se ejecuta ADO 2,8 o posterior en versiones anteriores de Windows, como Windows 98.

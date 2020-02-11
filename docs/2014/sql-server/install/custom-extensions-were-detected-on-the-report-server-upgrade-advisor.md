@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952596"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Se han detectado extensiones personalizadas en el servidor de informes (Asesor de actualizaciones)
@@ -28,13 +28,13 @@ ms.locfileid: "71952596"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descripción  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una arquitectura extensible que permite a los desarrolladores crear extensiones personalizadas para el procesamiento, la entrega, la representación, la seguridad y la autenticación de los datos.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una arquitectura extensible que permite a los desarrolladores crear extensiones personalizadas para el procesamiento, la entrega, la representación, la seguridad y la autenticación de los datos.  
   
  Si se utilizan extensiones personalizadas o ensamblados en la instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede utilizar la instalación para realizar una actualización, pero es posible que necesite mover las extensiones a la nueva ubicación de instalación una vez que se complete la actualización, o que necesite realizar algún paso antes de la actualización.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "71952596"
 ## <a name="corrective-action"></a>Acción correctora  
  Utilice las secciones siguientes para determinar los pasos para realizar además de o antes de realizar una actualización de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
- [Procesamiento de datos personalizado o extensiones de entrega](#dataprocdeliver)  
+ [Extensiones de entrega o procesamiento de datos personalizados](#dataprocdeliver)  
   
- [Extensiones de representación personalizadas](#render)  
+ [Extensiones de entrega personalizadas](#render)  
   
  [Seguridad personalizada o extensiones de autenticación en un servidor de informes de SQL Server 2000](#secauth2000)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71952596"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Pasos de tras la actualización para procesamiento de datos personalizado o extensiones de entrega personalizadas  
   
-1.  Mueva los archivos de extensión a la nueva carpeta de programas para el servidor de informes. De forma predeterminada, la carpeta de programas del servidor de informes se encuentra en \Archivos de Programa\microsoft SQL Server\MSRS10_50. \<*instance_name*> servidor \report.  
+1.  Mueva los archivos de extensión a la nueva carpeta de programas para el servidor de informes. De forma predeterminada, la carpeta de programas del servidor de informes se encuentra en \Archivos de Programa\microsoft SQL Server \ MSRS10_50. \< *instance_name*> servidor \report.  
   
  Para obtener más información, vea "Implementar una extensión de procesamiento de datos" e "Implementar una extensión de entrega" en Libros en pantalla de SQL Server.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71952596"
   
 3.  Configure las extensiones en la nueva instancia.  
   
-## <a name="see-also"></a>Vea también  
- [Asesor de actualizaciones &#40;de Reporting Services upgrade issues&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Reporting Services problemas de actualización &#40;el asesor de actualizaciones&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

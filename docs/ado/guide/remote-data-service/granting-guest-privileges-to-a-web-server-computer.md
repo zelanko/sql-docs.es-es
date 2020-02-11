@@ -13,30 +13,30 @@ ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bddf6ce0bbfb78435118ef3d87303a94c792c96d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922644"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Concesión de privilegios de invitado a un equipo del servidor web
-La cuenta anónima de servidor Web (IUSR_*ComputerName*) debe agregarse a los invitados grupo local en el equipo servidor Web para utilizar RDS.  
+La cuenta del servidor Web anónimo (IUSR_*ComputerName*) debe agregarse al grupo local invitados del equipo servidor web para usar RDS.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ### <a name="to-grant-guest-privileges-to-a-web-server-computer"></a>Para conceder privilegios de invitado a un equipo servidor Web  
   
-1.  En el equipo de Microsoft Windows 2000 Server, haga clic en **iniciar**, apunte a **programas**, apunte a **herramientas administrativas**y, a continuación, haga clic en **equipo Administración**.  
+1.  En el equipo de Microsoft Windows 2000 Server, haga clic en **Inicio**, seleccione **programas**, seleccione **herramientas administrativas**y, a continuación, haga clic en **Administración de equipos**.  
   
 2.  En el árbol de consola, en **usuarios y grupos locales**, haga clic en **grupos**.  
   
-3.  Seleccione el **invitados** grupo local. Desde el **acción** menú, elija **propiedades**.  
+3.  Seleccione el grupo local **invitados** . En el menú **acción** , elija **propiedades**.  
   
-4.  En el **invitados propiedades** cuadro de diálogo, haga clic en **agregar**.  
+4.  En el cuadro de diálogo **propiedades de invitados** , haga clic en **Agregar**.  
   
-5.  Si la cuenta anónima de servidor Web no aparece en la lista en el **Seleccionar usuarios o grupos** diálogo cuadro, escriba su nombre (IUSR_*ComputerName*) en el cuadro vacío inferior y, a continuación, haga clic en **agregar** .  
+5.  Si la cuenta del servidor Web anónimo no aparece en la lista del cuadro de diálogo **Seleccionar usuarios o grupos** , escriba su nombre (IUSR_*ComputerName*) en el cuadro en blanco inferior y, a continuación, haga clic en **Agregar**.  
   
-6.  Haga clic en **Aceptar**.
+6.  Haga clic en **OK**.
 
 

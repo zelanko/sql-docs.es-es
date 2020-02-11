@@ -14,26 +14,26 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1607c9434e6c30ffd317277aadab27af96868fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923444"
 ---
 # <a name="what-is-a-lock"></a>¿Qué es un bloqueo?
-El bloqueo es el proceso mediante el cual un DBMS restringe el acceso a una fila en un entorno multiusuario. Cuando está bloqueado exclusivamente una fila o columna, no se permiten otros usuarios para tener acceso a los datos bloqueados hasta que se libere el bloqueo. Esto garantiza que dos usuarios no puedan actualizar simultáneamente la misma columna en una fila.  
+El bloqueo es el proceso por el que un DBMS restringe el acceso a una fila en un entorno de varios usuarios. Cuando una fila o columna está bloqueada de forma exclusiva, no se permite a otros usuarios obtener acceso a los datos bloqueados hasta que se libera el bloqueo. Esto garantiza que dos usuarios no puedan actualizar simultáneamente la misma columna de una fila.  
   
- Los bloqueos pueden ser muy costosos desde una perspectiva de los recursos y deben usarse solo cuando sea necesario para mantener la integridad de datos. En una base de datos donde cientos o miles de usuarios podrían estar intentando tener acceso a un registro cada segundo: por ejemplo, una base de datos conectado a Internet, el bloqueo innecesario rápidamente podría provocar un rendimiento más lento en la aplicación.  
+ Los bloqueos pueden ser muy caros desde la perspectiva de los recursos y solo se deben usar cuando sea necesario para conservar la integridad de los datos. En una base de datos en la que cientos o miles de usuarios podrían estar intentando obtener acceso a un registro cada segundo, como una base de datos conectada a Internet, el bloqueo innecesario podría dar lugar a un rendimiento más lento en la aplicación.  
   
- Puede controlar cómo el origen de datos y la biblioteca de cursores ADO administran la simultaneidad eligiendo la opción de bloqueo apropiada.  
+ Puede controlar el modo en que el origen de datos y la biblioteca de cursores de ADO administran la simultaneidad seleccionando la opción de bloqueo adecuada.  
   
- Establecer el **LockType** propiedad antes de abrir un **Recordset** para especificar qué tipo de bloqueo que el proveedor debe usar al abrirlo. Leer la propiedad para devolver el tipo de bloqueo en uso en una página abierta **Recordset** objeto.  
+ Establezca la propiedad **LockType** antes de abrir un **conjunto de registros** para especificar el tipo de bloqueo que debe utilizar el proveedor al abrirlo. Lea la propiedad para devolver el tipo de bloqueo en uso en un objeto de **conjunto de registros** abierto.  
   
- Los proveedores podrían no admitir todos los tipos de bloqueo. Si un proveedor no admite solicitado **LockType** establecer, sustituirá por otro tipo de bloqueo. Para determinar la funcionalidad de bloqueo real disponible en un **Recordset** de objeto, utilice el [admite](../../../ado/reference/ado-api/supports-method.md) método con **adUpdate** y **adUpdateBatch**.  
+ Es posible que los proveedores no admitan todos los tipos de bloqueo. Si un proveedor no admite la configuración de **LockType** solicitada, reemplazará a otro tipo de bloqueo. Para determinar la funcionalidad de bloqueo real disponible en un objeto de **conjunto de registros** , use el método [Supports](../../../ado/reference/ado-api/supports-method.md) con **adUpdate** y **adUpdateBatch**.  
   
- El **adLockPessimistic** configuración no se admite si el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad está establecida en **adUseClient.** Si se establece un valor no admitido, se producirá ningún error; admite la más cercana **LockType** se usará en su lugar.  
+ El valor **adLockPessimistic** no se admite si la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) está establecida en **adUseClient.** Si se establece un valor no compatible, no se producirá ningún error. en su lugar, se utilizará el **LockType** compatible más cercano.  
   
- El **LockType** propiedad es de lectura/escritura cuando el **Recordset** está cerrado y solo lectura cuando se abre.  
+ La propiedad **LockType** es de lectura y escritura cuando se cierra el **conjunto de registros** y de solo lectura cuando está abierto.  
   
  Esta sección contiene los temas siguientes.  
   

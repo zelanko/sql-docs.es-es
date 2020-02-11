@@ -15,14 +15,14 @@ ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00f470bef5026a6f91c43478b3d745446130d081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924969"
 ---
 # <a name="internet-publishing-scenario"></a>Escenario de publicación en Internet
-Este ejemplo de código muestra cómo usar ADO con el proveedor Microsoft OLE DB para la publicación en Internet. En este escenario, creará una aplicación de Visual Basic que utiliza **Recordset**, **registro**, y **Stream** objetos para mostrar el contenido de los recursos publicados con el proveedor de publicación en Internet.  
+En este ejemplo de código se muestra cómo usar ADO con el proveedor de Microsoft OLE DB para la publicación en Internet. En este escenario, creará una aplicación Visual Basic que utiliza objetos de **conjunto de registros**, **registros**y **secuencias** para mostrar el contenido de los recursos publicados con el proveedor de publicación en Internet.  
   
  Los pasos siguientes son necesarios para crear este escenario:  
   
@@ -34,6 +34,6 @@ Este ejemplo de código muestra cómo usar ADO con el proveedor Microsoft OLE DB
   
 -   [Paso 4: Rellenar el cuadro de texto de detalles](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
-## <a name="see-also"></a>Vea también  
- [Proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
+## <a name="see-also"></a>Consulte también  
+ [Proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
  [El proveedor OLE DB para la publicación en Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

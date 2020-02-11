@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900379"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordenar datos para las transformaciones Mezclar y Combinación de mezcla
@@ -38,7 +38,7 @@ ms.locfileid: "62900379"
   
      La transformación Ordenar utiliza la intercalación de Windows para ordenar los valores de cadena.  
   
-     -o bien-  
+     O bien  
   
 -   Utilice el operador CAST de Transact-SQL para convertir primero los valores `varchar` en valores `nvarchar` y, a continuación, utilice la cláusula ORDER BY de Transact-SQL para ordenar los datos.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62900379"
   
 5.  Haga clic en la pestaña **Propiedades de entrada y salida** .  
   
-6.  Haga clic en  **\<nombre de componente > salida**y establezca el `IsSorted` propiedad `True`.  
+6.  Haga clic en ** \<nombre del componente> salida**y `IsSorted` establezca la `True`propiedad en.  
   
     > [!NOTE]  
     >  Si establece manualmente la propiedad `IsSorted` de la salida en `True` y los datos no están ordenados, es posible que falten datos o haya comparaciones de datos no válidas en la transformación de nivel inferior Mezclar o Combinación de mezcla al ejecutar el paquete.  
@@ -102,11 +102,11 @@ ms.locfileid: "62900379"
   
 9. Repita el paso 8 para cada columna ordenada.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Transformación Mezclar](merge-transformation.md)   
  [Transformación Combinación de mezcla](merge-join-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   

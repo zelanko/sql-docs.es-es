@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a62997caa5625a901684e2e8da3c5dc8c46a82b9
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874591"
 ---
 # <a name="retrieving-error-information"></a>Recuperar información sobre errores
@@ -216,7 +216,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Errores](errors.md)  
+## <a name="see-also"></a>Consulte también  
+ [Errors](errors.md)  
   
   

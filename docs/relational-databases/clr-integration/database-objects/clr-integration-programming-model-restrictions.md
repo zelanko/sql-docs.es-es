@@ -15,15 +15,15 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c019b50f896109a699869d748d8eef20b57d6edb
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212370"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restricciones del modelo de programación de la integración CLR
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Cuando se crea un procedimiento almacenado administrado u otro objeto de base de datos administrado, se realiza una serie de comprobaciones de código [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se deben tener en cuenta. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza comprobaciones en el ensamblado de código administrado cuando se registra por primera vez en la base de datos, mediante la instrucción **Create Assembly** y también en tiempo de ejecución. El código administrado también se comprueba en tiempo de ejecución porque en un ensamblado puede haber rutas de acceso al código que nunca se hayan alcanzado realmente en tiempo de ejecución.  Esto proporciona flexibilidad para registrar ensamblados de terceros, de manera especial, de forma que no se debe bloquear un ensamblado donde haya un código 'no seguro' diseñado para que se ejecute en un entorno cliente pero nunca se ejecutaría en el CLR hospedado. Los requisitos que debe cumplir el código administrado dependen de si el ensamblado está registrado como **seguro**, **external_access**o no **seguro**, **seguro** que es el más estricto y se enumeran a continuación.  
+  Al compilar un procedimiento almacenado administrado u otro objeto de base de datos administrado, se deben tener en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuenta ciertas comprobaciones de código. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]realiza comprobaciones en el ensamblado de código administrado cuando se registra por primera vez en la base de datos, mediante la instrucción **Create Assembly** y también en tiempo de ejecución. El código administrado también se comprueba en tiempo de ejecución porque en un ensamblado puede haber rutas de acceso al código que nunca se hayan alcanzado realmente en tiempo de ejecución.  Esto proporciona flexibilidad para registrar ensamblados de terceros, de manera especial, de forma que no se debe bloquear un ensamblado donde haya un código 'no seguro' diseñado para que se ejecute en un entorno cliente pero nunca se ejecutaría en el CLR hospedado. Los requisitos que debe cumplir el código administrado dependen de si el ensamblado está registrado como **seguro**, **external_access**o no **seguro**, **seguro** que es el más estricto y se enumeran a continuación.  
   
  Además de las restricciones que se ubican en los ensamblados de código administrado, también hay permisos de seguridad de código que se conceden. Common Language Runtime (CLR) admite un modelo de seguridad denominado seguridad de acceso del código (CAS) para el código administrado. En este modelo, se conceden permisos a los ensamblados basados en la identidad del código. Los ensamblados **Safe**, **external_access**y **Unsafe** tienen permisos CAS diferentes. Para obtener más información, vea [seguridad de acceso del código de integración CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
@@ -37,9 +37,9 @@ ms.locfileid: "70212370"
   
 -   El ensamblado es uno de los ensamblados compatibles. Para obtener más información, consulte [supported .NET Framework Libraries](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Está usando **Create Assembly desde** _\<ubicación >,_ y todos los ensamblados a los que se hace referencia y sus dependencias están disponibles en *\<ubicación >* .  
+-   Está usando **Create Assembly from**_\<Location>,_ y todos los ensamblados a los que se hace referencia y sus dependencias están disponibles en * \<la ubicación>*.  
   
--   Está usando **Create Assembly FROM** _\<bytes... >_ y todas las referencias se especifican a través de bytes separados por espacios.  
+-   Está usando **Create Assembly from**_\<bytes... >_ y todas las referencias se especifican mediante bytes separados por espacios.  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  Todos los ensamblados de **external_access** deben cumplir los siguientes criterios:  
@@ -116,10 +116,10 @@ ms.locfileid: "70212370"
 ### <a name="safe"></a>SAFE  
  Se comprueban todas las condiciones de **external_access** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Bibliotecas de .NET Framework compatibles](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
-   de [seguridad de acceso del código de integración CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
- [Atributos de protección del host y programación de la integración con CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
+ [Seguridad de acceso del código de integración CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ [Atributos de protección del host y programación de la integración CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Crear un ensamblado](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

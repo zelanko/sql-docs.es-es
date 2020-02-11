@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891553"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Paso 6: Adición y configuración de transformaciones de búsqueda
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Paso 6: Agregar y configurar transformaciones de búsqueda
   Tras configurar el origen de archivo plano para extraer datos del archivo de origen, la siguiente tarea consiste en definir las transformaciones de búsqueda necesarias para obtener los valores para las claves **CurrencyKey** y **DateKey**. Una transformación Búsqueda realiza una búsqueda combinando datos de la columna de entrada especificada en una columna de un conjunto de datos de referencia. El conjunto de datos de referencia puede ser una tabla o una vista existente, una tabla nueva o el resultado de una instrucción SQL. En este tutorial, la transformación Búsqueda utiliza un administrador de conexiones OLE DB para conectar con la base de datos que contiene los datos que constituyen el origen del conjunto de datos de referencia.  
   
 > [!NOTE]  
->  También puede configurar la transformación de Búsqueda para conectar con una caché que contiene el conjunto de datos de referencia. Para más información, consulte [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
+>  También puede configurar la transformación de Búsqueda para conectar con una caché que contiene el conjunto de datos de referencia. Para obtener más información, vea [lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
  Para este tutorial, agregará y configurará los dos componentes de la transformación Búsqueda en el paquete:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62891553"
   
 ### <a name="to-add-and-configure-the-lookup-currency-key-transformation"></a>Para agregar y configurar la transformación Lookup Currency Key  
   
-1.  En el **cuadro de herramientas de SSIS**, expanda **Comunes**y arrastre **Búsqueda** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque Búsqueda directamente bajo el origen **Extract Sample Currency Data** .  
+1.  En el **cuadro de herramientas de SSIS**, expanda **común**y arrastre **búsqueda** en la superficie de diseño de la pestaña **flujo de datos** . Coloque la búsqueda directamente debajo del origen de **datos Extract Sample Currency** .  
   
 2.  Haga clic en el origen de archivo plano **Extract Sample Currency Data** y arrastre la flecha verde a la transformación **Búsqueda** que acaba de agregar para conectar los dos componentes.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62891553"
   
 9. Haga clic con el botón derecho en la transformación Lookup Currency Key y haga clic en **Propiedades**.  
   
-10. En la ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos)** y **DefaultCodePage** propiedad está establecida en **1252**.  
+10. En el ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **Inglés (Estados Unidos)** y que la propiedad **DefaultCodePage** está establecida en **1252**.  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Para agregar y configurar la transformación Lookup Date Key  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62891553"
   
     1.  En el cuadro de diálogo **Administrador de conexiones OLEDB** , asegúrese de que se muestra **localhost.AdventureWorksDW2012** .  
   
-    2.  En el cuadro **Usar una tabla o vista** , escriba o seleccione **[dbo].[DimDate]** .  
+    2.  En el cuadro **Usar una tabla o vista** , escriba o seleccione **[dbo].[DimDate]**.  
   
 8.  En la página **Columnas** , realice las selecciones siguientes:  
   
@@ -128,12 +128,12 @@ ms.locfileid: "62891553"
   
 11. Haga clic con el botón derecho en la transformación Lookup Date Key y haga clic en **Propiedades.**  
   
-12. En la ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos)** y **DefaultCodePage** propiedad está establecida en **1252**.  
+12. En el ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **Inglés (Estados Unidos)** y que la propiedad **DefaultCodePage** está establecida en **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 7: Agregar y configurar el destino de OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [Paso 7: agregar y configurar el destino de OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>Vea también  
- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>Consulte también  
+ [Transformación Búsqueda](data-flow/transformations/lookup-transformation.md)  
   
   

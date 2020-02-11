@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798011"
 ---
 # <a name="copy-only-backups-sql-server"></a>Copias de seguridad de solo copia (SQL Server)
-  Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la secuencia de copias de seguridad convencionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Normalmente, la realización de una copia de seguridad cambia la base de datos y afecta a la forma de restaurar las copias de seguridad posteriores. Sin embargo, a veces es útil realizar una copia de seguridad con un fin específico sin afectar a los procedimientos generales para copias de seguridad y restauración de la base de datos. Las copias de seguridad de solo copia sirven para este propósito.  
+  Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la secuencia de copias de seguridad convencionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Normalmente, la realización de una copia de seguridad cambia la base de datos y afecta a la forma de restaurar las copias de seguridad posteriores. Sin embargo, a veces es útil realizar una copia de seguridad con un fin específico sin afectar a los procedimientos generales para copias de seguridad y restauración de la base de datos. Las copias de seguridad de solo copia sirven para este propósito.  
   
  Los tipos de copias de seguridad de solo copia son los siguientes:  
   
@@ -38,12 +38,12 @@ ms.locfileid: "72798011"
   
      El registro de transacciones nunca se trunca después de una copia de seguridad de solo copia.  
   
- Las copias de seguridad de solo copia se registran en la columna **is_copy_only** de la tabla [backupset](/sql/relational-databases/system-tables/backupset-transact-sql).  
+ Las copias de seguridad de solo copia se registran en la columna **is_copy_only** de la tabla [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) .  
   
 ## <a name="to-create-a-copy-only-backup"></a>Para crear una copia de seguridad de solo copia  
- Para crear una copia de seguridad de solo copia, utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell.  
+ Para crear una copia de seguridad de solo copia, utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell.  
   
-###  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 1.  En la página **General** del cuadro de diálogo **Copia de seguridad de base de datos**, seleccione la opción **Copia de seguridad de solo copia**.  
   
@@ -52,14 +52,14 @@ ms.locfileid: "72798011"
   
 -   Para una copia de seguridad completa de solo copia:  
   
-     *Database_name* de base de datos de copia de seguridad en \<backup_device *>* ... CON COPY_ONLY...  
+     *Database_name* de base de \<datos*>* de copia de seguridad para backup_device... CON COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY no tiene ningún efecto cuando se especifica con la opción DIFFERENTIAL.  
   
 -   Para una copia de seguridad de registros de solo copia:  
   
-     *Database_name* del registro de copia de seguridad para *\<* backup_device *>* ... CON COPY_ONLY...  
+     *Database_name* del registro de *\<* copia*>* de seguridad para backup_device... CON COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> Usar PowerShell  
   
@@ -71,7 +71,7 @@ Utilice el cmdlet `Backup-SqlDatabase` con el parámetro `-CopyOnly`.
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 ### <a name="to-view-copy-only-backups"></a>Para ver copias de seguridad de solo copia
   
@@ -79,9 +79,9 @@ Utilice el cmdlet `Backup-SqlDatabase` con el parámetro `-CopyOnly`.
   
 ### <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a>Para configurar y usar el proveedor de SQL Server PowerShell
   
--   [Proveedor de PowerShell de SQL Server](../../powershell/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Modelos de recuperación &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Copiar bases de datos con Copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md)   

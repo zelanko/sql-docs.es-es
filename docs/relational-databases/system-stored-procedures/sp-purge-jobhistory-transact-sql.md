@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313762"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Quita los registros de historial de un trabajo.  
+  Quita los registros del historial de un trabajo.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,22 +43,22 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'` el nombre del trabajo para el que se van a eliminar los registros del historial. *job_name*es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo para el que se van a eliminar los registros de historial. *job_name*es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
 > [!NOTE]  
 >  Los miembros del rol fijo de servidor **sysadmin** o los miembros del rol fijo de base de datos **SQLAgentOperatorRole** pueden ejecutar **sp_purge_jobhistory** sin especificar un *job_name* o *job_id*. Cuando los usuarios de **sysadmin** no especifican estos argumentos, se elimina el historial de trabajos de todos los trabajos locales y multiservidor en el tiempo especificado por *oldest_date*. Cuando los usuarios de **SQLAgentOperatorRole** no especifican estos argumentos, se elimina el historial de trabajos de todos los trabajos locales en el tiempo especificado por *oldest_date*.  
   
-`[ @job_id = ] job_id` el número de identificación del trabajo para los registros que se van a eliminar. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos. Vea la nota en la descripción de **\@job_name** para obtener información sobre cómo los usuarios de **sysadmin** o **SQLAgentOperatorRole** pueden utilizar este argumento.  
+`[ @job_id = ] job_id`Número de identificación del trabajo para los registros que se van a eliminar. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos. Vea la nota en la descripción de ** \@job_name** para obtener información sobre cómo los usuarios de **sysadmin** o **SQLAgentOperatorRole** pueden usar este argumento.  
   
-`[ @oldest_date = ] oldest_date` el registro más antiguo para conservarlo en el historial. *oldest_date* es de **tipo DateTime**y su valor predeterminado es NULL. Cuando se especifica *oldest_date* , **sp_purge_jobhistory** solo quita los registros que son más antiguos que el valor especificado.  
+`[ @oldest_date = ] oldest_date`Registro más antiguo que se va a conservar en el historial. *oldest_date* es de **tipo DateTime**y su valor predeterminado es NULL. Cuando se especifica *oldest_date* , **sp_purge_jobhistory** solo quita los registros que son más antiguos que el valor especificado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  Cuando **sp_purge_jobhistory** se completa correctamente, se devuelve un mensaje.  
   
 ## <a name="permissions"></a>Permisos  
@@ -82,7 +82,7 @@ EXEC dbo.sp_purge_jobhistory
 GO  
 ```  
   
-### <a name="b-remove-history-for-all-jobs"></a>b. Quitar el historial de todos los trabajos  
+### <a name="b-remove-history-for-all-jobs"></a>B. Quitar el historial de todos los trabajos  
   
 > [!NOTE]  
 >  Solo los miembros del rol fijo de servidor **sysadmin** y de los miembros de **SQLAgentOperatorRole** pueden quitar el historial de todos los trabajos. Cuando los usuarios de **sysadmin** ejecutan este procedimiento almacenado sin parámetros, se purga el historial de trabajos de todos los trabajos locales y multiservidor. Cuando los usuarios de **SQLAgentOperatorRole** ejecutan este procedimiento almacenado sin parámetros, solo se purga el historial de trabajos de todos los trabajos locales.  
@@ -97,9 +97,9 @@ EXEC dbo.sp_purge_jobhistory ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_help_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobhistory &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

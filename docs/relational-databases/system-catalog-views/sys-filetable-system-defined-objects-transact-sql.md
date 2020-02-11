@@ -1,5 +1,5 @@
 ---
-title: Sys.filetable_system_defined_objects (Transact-SQL) | Microsoft Docs
+title: Sys. filetable_system_defined_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dd05f24ab90844065b708230ee016ce9ce78bfbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005151"
 ---
-# <a name="sysfiletablesystemdefinedobjects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
+# <a name="sysfiletable_system_defined_objects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Muestra una lista de los objetos definidos por el sistema relacionados con objetos FileTable. Contiene una fila por cada objeto definido por el sistema.  
@@ -35,13 +35,13 @@ ms.locfileid: "68005151"
   
  Para más información sobre FileTables, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
-|columna|Data type|Descripción|  
+|Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
-|**object_id**|**int**|Identificador de objeto del objeto definido por el sistema relacionado con una tabla FileTable.<br /><br /> Hace referencia al objeto en **sys.objects**.|  
-|**parent_object_id**|**int**|Identificador de objeto de la tabla FileTable primaria.<br /><br /> Hace referencia al objeto en **sys.objects**.|  
+|**object_id**|**int**|Identificador de objeto del objeto definido por el sistema relacionado con una tabla FileTable.<br /><br /> Hace referencia al objeto de **Sys. Objects**.|  
+|**parent_object_id**|**int**|Identificador de objeto de la tabla FileTable primaria.<br /><br /> Hace referencia al objeto de **Sys. Objects**.|  
   
-## <a name="see-also"></a>Vea también  
- [Crear, modificar y quitar FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
+## <a name="see-also"></a>Consulte también  
+ [Create, Alter y Drop FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

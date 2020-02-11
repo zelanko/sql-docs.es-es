@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1290e92ecd49a95f250574fb8778a8aa27eb2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083875"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Bayes Naive es un algoritmo de clasificación basado en los teoremas de Bayes y proporcionada por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para su uso en el modelado de predicción. La palabra naïve (ingenuo en inglés) del término Bayes naive proviene del hecho que el algoritmo utiliza técnicas Bayesianas pero no tiene en cuenta las dependencias que puedan existir.  
+  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Bayes Naive de es un algoritmo de clasificación basado en el teoremas de Bayes y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporcionado por para su uso en el modelado de predicción. La palabra naïve (ingenuo en inglés) del término Bayes naive proviene del hecho que el algoritmo utiliza técnicas Bayesianas pero no tiene en cuenta las dependencias que puedan existir.  
   
  Desde el punto de vista computacional, el algoritmo es menos complejo que otros algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] y, por tanto, resulta útil para generar rápidamente modelos de minería de datos que detectan las relaciones entre las columnas de entrada y las columnas de predicción. Puede utilizar este algoritmo para realizar la exploración inicial de los datos y, más adelante, aplicar los resultados para crear modelos de minería de datos adicionales con otros algoritmos más complejos y precisos desde el punto de vista computacional.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66083875"
   
  Para comprender cómo funciona, utilice el Visor Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (como se muestra en el siguiente gráfico) para consultar una representación visual del modo en que el algoritmo distribuye los estados.  
   
- ![Distribución de bayes naive de estados](../media/naive-bayes.gif "distribución de bayes Naive de Estados")  
+ ![Distribución de Bayes naive de estados](../media/naive-bayes.gif "Distribución de Bayes naive de estados")  
   
  Aquí, el Visor Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] muestra cada columna de entrada del conjunto de datos e indica cómo se distribuyen los estados de cada columna, dado cada estado de la columna de predicción.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66083875"
   
  Los requisitos para un modelo Bayes naive son los siguientes:  
   
--   **Una columna de una sola clave** : cada modelo debe contener una columna numérica o de texto que identifique cada registro de manera única. No están permitidas las claves compuestas.  
+-   **Una columna de clave única** Cada modelo debe contener una columna numérica o de texto que identifique cada registro de forma única. No están permitidas las claves compuestas.  
   
--   **Columnas de entrada** en un modelo Bayes Naive, todas las columnas deben ser discretos o discretizados columnas. Para obtener información acerca de la discretización de columnas, vea [métodos de discretización &#40;minería de datos&#41;](discretization-methods-data-mining.md).  
+-   **Columnas de entrada** En un modelo Bayes Naive, todas las columnas deben ser columnas discretas o de datos discretos. Para obtener información sobre la discretización de columnas, vea [métodos de discretización &#40;&#41;de minería de datos ](discretization-methods-data-mining.md).  
   
      En un modelo Bayes naive, también es importante asegurarse de que los atributos de entrada sean independientes unos de otros. Esto es particularmente importante al utilizar el modelo para la predicción.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66083875"
   
      Al contrario, la capacidad del algoritmo de identificar las correlaciones entre las variables es útil cuando está explorando un modelo o conjunto de datos, para identificar las relaciones entre las entradas.  
   
--   **Al menos una columna de predicción** : el atributo de predicción debe contener valores discretos o discretizados.  
+-   **Al menos una columna de predicción** El atributo de predicción debe contener valores discretos o de datos discretos.  
   
      Los valores de la columna predecible se pueden tratar como entradas. Este ejercicio puede ser útil si explora un nuevo conjunto de datos, para encontrar relaciones entre las columnas.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "66083875"
   
  Puede crear consultas para devolver las predicciones sobre cómo se relacionan los nuevos datos con el atributo de predicción, o puede recuperar estadísticas que describan las correlaciones que ha hallado el modelo.  
   
- Para más información sobre cómo crear consultas en un modelo de minería de datos, vea [Consultas de minería de datos](data-mining-queries.md). Para obtener ejemplos de cómo usar las consultas con un modelo de Bayes naive, vea [Ejemplos de consultas del modelo Bayes naive](naive-bayes-model-query-examples.md).  
+ Para obtener información sobre cómo crear consultas en un modelo de minería de datos, vea [Consultas de minería de datos](data-mining-queries.md). Para obtener ejemplos de cómo usar las consultas con un modelo de Bayes naive, vea [Ejemplos de consultas del modelo Bayes naive](naive-bayes-model-query-examples.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 -   Admite el uso del Lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
   
@@ -91,11 +91,11 @@ ms.locfileid: "66083875"
   
 -   Admite el uso de modelos de minería de datos OLAP.  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-algorithms-analysis-services-data-mining.md)   
  [Selección de características &#40;minería de datos&#41;](feature-selection-data-mining.md)   
- [Ejemplos de consultas del modelo Bayes naive](naive-bayes-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos Bayes naive &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [Ejemplos de consultas del modelo Bayes Naive](naive-bayes-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos Bayes Naive &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Referencia técnica del algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e49b37a6f344b7fc6c45c9767a05c7f7d5bfe6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087321"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Conectar con un archivo de Microsoft Excel (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite conectar con un archivo de Microsoft Excel almacenado en el equipo local. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
   
- Para conectarse a un archivo de Microsoft Excel, debe tener instalado en el equipo el proveedor ACE adecuado. Para obtener más información, vea [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
+ Para conectarse a un archivo de Microsoft Excel, debe tener instalado en el equipo el proveedor ACE adecuado. Para más información, vea [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Las credenciales del usuario actual se utilizan al seleccionar un archivo en esta página. Sin embargo, la importación no se realizará correctamente si el usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer el archivo seleccionado.  
@@ -31,16 +31,16 @@ ms.locfileid: "66087321"
  **Nombre descriptivo de la conexión**  
  Escriba un nombre único para esta conexión de origen de datos. Este campo es obligatorio.  
   
- **Ruta de acceso de archivo de Excel**  
+ **Ruta de acceso del archivo de Excel**  
  Especifique la ruta de acceso completa para el archivo de Excel.  
   
- **Examinar**  
+ **Browse**  
  Navegue a una ubicación donde haya un archivo de Excel.  
   
  **Avanzadas**  
  Establezca las propiedades de conexión adicionales al usar el cuadro de diálogo **Establecer propiedades avanzadas** .  
   
- **Usar la primera fila como encabezados de columna**  
+ **Usar primera fila como encabezados de columna**  
  Especifique si utilizar la primera fila de datos como encabezados de columna de la tabla de destino.  
   
  **Probar conexión**  

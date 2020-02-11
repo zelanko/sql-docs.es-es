@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084612"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Obtener detalles de datos de caso a partir de un modelo de minería de datos
@@ -31,16 +31,16 @@ ms.locfileid: "66084612"
   
 |Nombre del visor|Nombre de la pestaña o del panel|Seleccionar nodo|  
 |-----------------|----------------------|-----------------|  
-|**Visor de árboles de Microsoft**|Pestaña**Árbol de decisión**|Haga clic en un nodo de árbol.<br /><br /> **Tenga en cuenta** evite usar la obtención de detalles en el `All` nodo, porque puede llevar mucho tiempo devolver resultados.|  
+|**Visor de árboles de Microsoft**|Pestaña **árbol de decisión**|Haga clic en un nodo de árbol.<br /><br /> **Nota:** Evite el uso de la `All` obtención de detalles en el nodo, ya que puede tardar mucho tiempo en devolver resultados.|  
 |**Visor de clústeres de Microsoft**|**Diagrama del clúster**|Haga clic en un nodo de clúster.|  
 |**Visor de clústeres de Microsoft**|**Perfiles del clúster**|Haga clic en cualquier lugar de la columna de clúster.|  
-|**Visor de asociación de Microsoft**|Pestaña**Reglas**|Haga clic en una fila que contenga un conjunto de reglas.|  
-|**Visor de asociación de Microsoft**|Pestaña**Conjuntos de elementos**|Haga clic en una fila que contenga un conjunto de elementos.|  
-|**Visor de agrupación en clústeres de secuencia de Microsoft**|Pestaña**Reglas**|Haga clic en una fila que contenga un conjunto de reglas.|  
-|**Visor de agrupación en clústeres de secuencia de Microsoft**|Pestaña**Conjuntos de elementos**|Haga clic en una fila que contenga un conjunto de elementos.|  
+|**Visor de asociaciones de Microsoft**|Pestaña **reglas**|Haga clic en una fila que contenga un conjunto de reglas.|  
+|**Visor de asociaciones de Microsoft**|Pestaña **conjuntos**|Haga clic en una fila que contenga un conjunto de elementos.|  
+|**Visor de agrupación en clústeres de secuencia de Microsoft**|Pestaña **reglas**|Haga clic en una fila que contenga un conjunto de reglas.|  
+|**Visor de agrupación en clústeres de secuencia de Microsoft**|Pestaña **conjuntos**|Haga clic en una fila que contenga un conjunto de elementos.|  
   
 > [!NOTE]  
->  Algunos modelos no pueden usar la obtención de detalles. La capacidad de usar la obtención de detalles depende del algoritmo usado para crear el modelo. Para obtener una lista de los tipos de modelo de minería de datos que admiten la obtención de detalles, vea [Drillthrough Queries &#40;Data Mining&#41;](drillthrough-queries-data-mining.md).  
+>  Algunos modelos no pueden usar la obtención de detalles. La capacidad de usar la obtención de detalles depende del algoritmo usado para crear el modelo. Para obtener una lista de los tipos de modelo de minería de datos que admiten la obtención de detalles, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](drillthrough-queries-data-mining.md).  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>Para ver los datos de obtención de detalles de un modelo de minería de datos  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66084612"
   
 6.  Para copiar los datos en el Portapapeles, haga clic con el botón derecho en cualquier fila de la tabla y seleccione **Copiar todo**.  
   
-## <a name="see-also"></a>Vea también  
- [Consultas de obtención de detalles &#40;minería de datos&#41;](drillthrough-queries-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Consultas de obtención de detalles &#40;&#41;de minería de datos](drillthrough-queries-data-mining.md)  
   
   

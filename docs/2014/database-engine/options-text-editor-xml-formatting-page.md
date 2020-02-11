@@ -1,5 +1,5 @@
 ---
-title: Opciones (Editor de texto - XML - página formato) | Microsoft Docs
+title: Opciones (editor de texto-XML-Página formato) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089845"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Opciones (Editor de texto - XML - Página Formato)
@@ -26,12 +26,12 @@ Este cuadro de diálogo permite especificar la configuración de formato del Edi
   
 ## <a name="attributes"></a>Atributos  
  **Preservar el formato manual de atributos**  
- No vuelve a dar formato a los atributos. Ésta es la opción predeterminada.  
+ No vuelve a dar formato a los atributos. Este es el valor predeterminado.  
   
 > [!NOTE]  
 >  Si los atributos se encuentran en varias líneas, el editor sangra cada línea de atributos para que coincida con el sangrado del elemento primario.  
   
- **Alinear cada atributo en una línea independiente**  
+ **Alinear los atributos en líneas separadas**  
  Los atributos segundo y siguientes se alinean verticalmente para coincidir con el sangrado del primer atributo. El siguiente texto XML es un ejemplo de alineación de los atributos.  
   
 ```  
@@ -42,15 +42,15 @@ Este cuadro de diálogo permite especificar la configuración de formato del Edi
 ```  
   
 ## <a name="auto-reformat"></a>Formatear automáticamente  
- **Al pegar desde el Portapapeles.**  
+ **Al pegar desde el portapapeles**  
  Vuelve a dar formato al texto XML pegado desde el portapapeles.  
   
- **Al finalizar la etiqueta de cierre**  
+ **Al terminar la etiqueta final**  
  Vuelve a dar formato al elemento cuando se completa la etiqueta final.  
   
 ## <a name="mixed-content"></a>Contenido mixto  
- **Formatear contenido mixto de forma predeterminada.**  
- Intenta volver a dar formato al contenido mixto, excepto si se encuentra en un ámbito `xml:space="preserve"`. Ésta es la opción predeterminada.  
+ **Formatear contenido mixto de forma predeterminada**  
+ Intenta volver a dar formato al contenido mixto, excepto si se encuentra en un ámbito `xml:space="preserve"`. Este es el valor predeterminado.  
   
  Si un elemento contiene una mezcla de texto y marcado, el contenido se considera mixto. A continuación se incluye un ejemplo de un elemento con contenido mixto.  
   
@@ -60,7 +60,7 @@ Este cuadro de diálogo permite especificar la configuración de formato del Edi
   <file readOnly="false">test2.txt</file>  
 ```  
   
- \</dir>  
+ \</DIR>  
   
-## <a name="see-also"></a>Vea también  
- [Editor XML &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
+## <a name="see-also"></a>Consulte también  
+ [&#40;del editor XML SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

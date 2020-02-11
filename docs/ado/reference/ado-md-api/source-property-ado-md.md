@@ -1,5 +1,5 @@
 ---
-title: Origen (propiedad, ADO MD) | Microsoft Docs
+title: Propiedad Source (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,22 +17,22 @@ ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0af28306ebc8aa1c10d33f3c96d7871e67144ca7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949140"
 ---
 # <a name="source-property-ado-md"></a>Propiedad de origen (ADO MD)
-Indica el origen de datos en el [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+Indica el origen de los datos del [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **Variant**, y es de lectura/escritura de cerrará [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objetos y de solo lectura para abrir **Cellset** objetos. El **Variant** debe contener un válido **cadena**, por ejemplo, una consulta MDX.  
+ Establece o devuelve una **variante**y es de lectura/escritura para los objetos [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) cerrados y de solo lectura para los objetos **Cellset** abiertos. La **variante** debe contener una **cadena**válida, por ejemplo, una consulta MDX.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de celdas (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de conjunto de celdas (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [ActiveConnection (propiedad, ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Propiedad ActiveConnection (ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
  [Open (método) (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057044"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Editor de origen de OLE DB (página Administrador de conexiones)
@@ -30,7 +30,7 @@ ms.locfileid: "66057044"
 >  Para cargar datos desde un origen de datos que use [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 o anterior, use un origen de Excel. Para más información, vea [Editor de origen de Excel &#40;página Administrador de conexiones&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
   
 > [!NOTE]  
->  El `CommandTimeout` propiedad del origen de OLE DB no está disponible en el **Editor de origen de OLE DB**, pero se puede establecer utilizando la **Editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección Origen de Excel de [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
+>  La `CommandTimeout` propiedad del origen de OLE DB no está disponible en el **Editor de origen de OLE DB**, pero se puede establecer mediante el **editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección Origen de Excel de [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  Para obtener más información acerca del origen de OLE DB, vea [OLE DB Source](data-flow/ole-db-source.md).  
   
@@ -43,10 +43,10 @@ ms.locfileid: "66057044"
 3.  Haga clic en **Administrador de conexiones**.  
   
 ## <a name="static-options"></a>Opciones estáticas  
- **Administrador de conexiones OLE DB**  
+ **Administrador de conexiones de OLE DB**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones con el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
  **Modo de acceso a datos**  
@@ -55,12 +55,12 @@ ms.locfileid: "66057044"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Tabla o vista|Obtenga datos de una tabla o vista en el origen de datos OLE DB.|  
-|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada:** [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada:** [usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Obtenga datos del origen de datos OLE DB mediante una consulta SQL.|  
 |Comando SQL de variable|Especifique el texto de la consulta SQL de una variable.|  
   
- **Vista previa**  
- Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . **Vista previa** puede mostrar hasta 200 filas.  
+ **Versión preliminar**  
+ Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . La **vista previa** puede mostrar hasta 200 filas.  
   
 > [!NOTE]  
 >  Cuando genera una vista previa de datos, las columnas con un tipo definido por el usuario CLR no contienen datos. En su lugar, se muestran los valores \<value too big to display> o System.Byte[]. El primero se muestra cuando se tiene acceso al origen de datos mediante el proveedor SQL OLE DB y el último, cuando se utiliza el proveedor Native Client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -72,34 +72,34 @@ ms.locfileid: "66057044"
  Seleccione el nombre de la tabla o vista de los disponibles en una lista del origen de datos.  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acceso a datos = Variable de nombre de tabla o nombre de vista  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene el nombre de la tabla o vista.  
   
 ### <a name="data-access-mode--sql-command"></a>Modo de acceso a datos = Comando SQL  
  **Texto de comando SQL**  
  Escriba el texto de una consulta SQL, genere la consulta haciendo clic en **Generar consulta**, o bien busque el archivo que contiene el texto de la consulta haciendo clic en **Examinar**.  
   
- **Parámetros**  
+ **Los**  
  Si ha escrito una consulta con parámetros mediante ? como marcador de posición de parámetro en el texto de la consulta, utilice el cuadro de diálogo **Establecer parámetros de consulta** para asignar los parámetros de entrada de las consultas a las variables del paquete.  
   
- **Build query**  
+ **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
- **Examinar**  
+ **Browse**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
  **Analizar consulta**  
  Comprueba la sintaxis del texto de la consulta.  
   
 ### <a name="data-access-mode--sql-command-from-variable"></a>Modo de acceso a datos = Comando SQL de variable  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene el texto de la consulta SQL.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origen de OLE DB &#40;página Columnas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [Editor de origen de OLE DB &#40;página Salida de error&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [&#40;página columnas del editor de origen de OLE DB&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [OLE DB Editor de origen &#40;página salida de error&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extraer datos mediante el origen de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md)  
+ [OLE DB, administrador de conexiones](connection-manager/ole-db-connection-manager.md)  
   
   

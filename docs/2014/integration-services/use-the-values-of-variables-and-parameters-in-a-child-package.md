@@ -1,5 +1,5 @@
 ---
-title: Use los valores de Variables y parámetros de un paquete secundario | Microsoft Docs
+title: Usar los valores de variables y parámetros en un paquete secundario | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054729"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Usar los valores de variables y parámetros en un paquete secundario
   Este procedimiento describe cómo crear una configuración de paquete que utiliza el tipo de configuración de variables primarias. Este tipo de configuración habilita un paquete secundario que se ejecuta desde un paquete primario para tener acceso a una variable del elemento primario.  
   
 > [!NOTE]  
->  También puede pasar valores a un paquete secundario configurando la Tarea Ejecutar paquete para asignar variables o parámetros del paquete primario, o parámetros del proyecto, a parámetros del paquete secundario. Para más información, consulte [Execute Package Task](control-flow/execute-package-task.md).  
+>  También puede pasar valores a un paquete secundario configurando la Tarea Ejecutar paquete para asignar variables o parámetros del paquete primario, o parámetros del proyecto, a parámetros del paquete secundario. Para obtener más información, consulte [Execute Package Task](control-flow/execute-package-task.md).  
   
  No es necesario crear la variable en el paquete primario antes de crear la configuración de paquete en el paquete secundario. Puede agregar la variable al paquete primario en cualquier momento, pero debe utilizar el nombre exacto de la variable primaria en la configuración del paquete. Sin embargo, antes de que pueda crear una configuración de variable primaria, debe existir una variable en el paquete secundario que la configuración pueda actualizar. Para obtener más información sobre cómo agregar y configurar variables, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66054729"
   
 4.  En el cuadro de diálogo **Organizador de configuraciones de paquetes** , seleccione **Habilitar configuraciones de paquetes**y haga clic en **Agregar**.  
   
-5.  En la página de bienvenida del Asistente para la configuración de paquetes, haga clic en **Siguiente**.  
+5.  En la página de bienvenida del Asistente para la configuración de paquetes, haga clic en **siguiente.**  
   
 6.  En la página Seleccionar tipo de configuración, en la lista **Tipo de configuración** , seleccione **Variable de paquete primario** y realice una de las siguientes acciones:  
   
@@ -89,11 +89,11 @@ ms.locfileid: "66054729"
   
     -   Seleccione **La ubicación de configuración se almacena en una variable de entorno** y luego, en la **lista Variable de entorno**, seleccione la variable de entorno que contenga el nombre de la variable.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página Seleccionar propiedad de destino, expanda el nodo **Variable** y expanda el nodo **Propiedades** de la variable para configurarla, y luego haga clic en la propiedad que establecerá la configuración.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 10. En la página Finalización del asistente, también puede modificar el nombre predeterminado de la configuración y revisar la información de configuración.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66054729"
   
 13. Haga clic en **Cerrar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   
  [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)   
  [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   

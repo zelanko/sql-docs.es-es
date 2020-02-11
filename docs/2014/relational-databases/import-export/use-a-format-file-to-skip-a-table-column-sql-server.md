@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011689"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Usar un archivo de formato para omitir una columna de tabla  (SQL Server)
@@ -62,11 +62,11 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
  En el ejemplo anterior se crea un archivo de formato no XML, `myTestSkipCol_Default.fmt`. Este formato de archivo se denomina *archivo de formato predeterminado* porque es el formulario generado por **bcp**. Normalmente, un archivo de formato predeterminado describe una correspondencia uno a uno entre los campos de archivo de datos y las columnas de la tabla.  
   
 > [!IMPORTANT]  
->  Es posible que deba especificar el nombre de la instancia de servidor a la que se va a conectar. También es posible que deba especificar el nombre de usuario y la contraseña. Para más información, consulte [bcp Utility](../../tools/bcp-utility.md).  
+>  Es posible que deba especificar el nombre de la instancia de servidor a la que se va a conectar. También es posible que deba especificar el nombre de usuario y la contraseña. Para obtener más información, consulte [bcp Utility](../../tools/bcp-utility.md).  
   
  En la siguiente ilustración se muestran los valores de estos archivos de formato predeterminados de ejemplo. La ilustración también muestra el nombre de cada campo de archivo de formato.  
   
- ![archivo de formato no XML predeterminado para myTestSkipCol](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "archivo de formato no XML predeterminado para myTestSkipCol")  
+ ![archivo predeterminado de formato no XML para myTestSkipCol](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "archivo predeterminado de formato no XML para myTestSkipCol")  
   
 > [!NOTE]  
 >  Para obtener más información sobre los campos de archivo de formato, vea [Archivos de formato no XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
@@ -76,7 +76,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
 -   El método preferido consta de tres pasos básicos. Primero, elimine cualquier fila de archivo de formato que describa un campo que no esté en el archivo de datos. A continuación, reduzca el valor "Orden de campo del archivo host" de cada fila de archivo de formato antecedida por una fila eliminada. El objetivo es tener valores "Orden de campo del archivo host" secuenciales, de 1 a *n*, que reflejen la posición real de cada campo de datos del archivo de datos. Por último, reduzca el valor del campo "Número de columnas" para que se ajuste al número real de campos del archivo de datos.  
   
-     El ejemplo siguiente se basa en el archivo de formato predeterminado para la tabla `myTestSkipCol` , que se creó en "Crear un archivo de formato no XML predeterminado", anteriormente en este tema. Este archivo de formato modificado asigna el primer campo de datos a `Col1`, omite `Col2`y asigna el segundo campo de datos a `Col3`. La fila para `Col2` se ha eliminado. Otras modificaciones se indican en negrita:  
+     El ejemplo siguiente se basa en el archivo de formato predeterminado para la tabla `myTestSkipCol` , que se creó en "Crear un archivo de formato no XML predeterminado", anteriormente en este tema. Este archivo de formato modificado asigna el primer campo de datos a `Col1`, omite `Col2`y asigna el segundo campo de datos a `Col3`. La fila para `Col2` se ha eliminado. Otras modificaciones se indican en negrita:   
   
     ```  
     9.0  
@@ -171,7 +171,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 #### <a name="using-openrowsetbulk"></a>Usar OPENROWSET(BULK...)  
  En el siguiente ejemplo se utiliza el proveedor de conjuntos de filas BULK `OPENROWSET` y el archivo de formato `myTestSkipCol2.xml` . En el ejemplo se importa masivamente el archivo de datos `myTestSkipCol2.dat` a la tabla `myTestSkipCol` . La instrucción contiene una lista explícita de las columnas en la lista de selección y también en la tabla de destino, según convenga.  
   
- En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , ejecute el siguiente código:  
+ En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], ejecute el siguiente código:  
   
 ```  
 USE AdventureWorks2012;  
@@ -204,8 +204,8 @@ WITH (FORMATFILE='C:\myTestSkipCol2.xml');
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Consulte también  
+ [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Usar un archivo de formato para omitir un campo de datos &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   

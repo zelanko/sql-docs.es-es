@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211714"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Crear funciones definidas por el usuario (motor de base de datos)
@@ -36,9 +36,9 @@ ms.locfileid: "68211714"
   
 -   **Para crear una función definida por el usuario:**  
   
-     [Cree una función escalar](#Scalar)  
+     [Crear una función escalar](#Scalar)  
   
-     [Creación de una función con valores de tabla](#TVF)  
+     [Crear una función con valores de tabla](#TVF)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211714"
   
 -   Las funciones definidas por el usuario no pueden devolver varios conjuntos de resultados. Utilice un procedimiento almacenado si necesita devolver varios conjuntos de resultados.  
   
--   El control de errores está restringido en una función definida por el usuario. Una UDF no admite TRY... CATCH, @ERROR o RAISERROR.  
+-   El control de errores está restringido en una función definida por el usuario. Una UDF no admite TRY... CATCH @ERROR o RAISERROR.  
   
 -   Las funciones definidas por el usuario no pueden llamar a un procedimiento almacenado, pero pueden llamar a un procedimiento almacenado extendido.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68211714"
 ####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso CREATE FUNCTION en la base de datos y el permiso ALTER en el esquema en el que se va a crear la función. Si la función especifica un tipo definido por el usuario, requiere el permiso EXECUTE para ese tipo.  
   
-##  <a name="Scalar"></a> Funciones escalares  
+##  <a name="Scalar"></a>Funciones escalares  
  En el ejemplo siguiente se crea una función escalar de varias instrucciones en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . La función toma un valor de entrada, `ProductID`, y devuelve un valor de devolución único, la cantidad agregada del producto especificado en el inventario.  
   
 ```  
@@ -115,7 +115,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 ```  
   
-##  <a name="TVF"></a> Funciones con valores de tabla  
+##  <a name="TVF"></a>Funciones con valores de tabla  
  En el ejemplo siguiente se crea una función insertada con valores de tabla en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . La función toma un parámetro de entrada, Id. de cliente (almacén), y devuelve las columnas `ProductID`, `Name`, y el agregado de las ventas del año hasta la fecha como `YTD Total` para cada producto vendido en el almacén.  
   
 ```  
@@ -192,7 +192,7 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones definidas por el usuario](user-defined-functions.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   

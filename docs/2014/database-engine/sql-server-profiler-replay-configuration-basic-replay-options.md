@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - configuración de reproducción (opciones básicas de reproducción) | Microsoft Docs
+title: Configuración de SQL Server Profiler-reproducción (opciones básicas de reproducción) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089719"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>Analizador SQL Server (Configuración de reproducción/página Opciones básicas de reproducción)
@@ -34,10 +34,12 @@ ms.locfileid: "66089719"
  Inicia el cuadro de diálogo **Conectar al servidor** para conectarse a otro servidor.  
   
  **Guardar en el archivo**  
- Guarda los resultados de la reproducción en un archivo. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de archivo estándar, en el puede especificar la ubicación en la que se guarda el archivo.  
+ Guarda los resultados de la reproducción en un archivo. 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de archivo estándar, en el puede especificar la ubicación en la que se guarda el archivo.  
   
  **Guardar en la tabla**  
- Guarda los resultados de la reproducción en una tabla. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de selección de tabla, en el puede especificar la ubicación en la que se guarda la tabla.  
+ Guarda los resultados de la reproducción en una tabla. 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de selección de tabla, en el puede especificar la ubicación en la que se guarda la tabla.  
   
  **Número de subprocesos de reproducción**  
  Especifique el número de subprocesos de reproducción que se utilizarán simultáneamente. Un número mayor consume más recursos durante la reproducción, pero ésta es más rápida y simultánea.  
@@ -51,7 +53,7 @@ ms.locfileid: "66089719"
  **Mostrar los resultados de la reproducción**  
  Muestra el resultado de la reproducción en el [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproducir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Reproducir seguimientos](../tools/sql-server-profiler/replay-traces.md)  

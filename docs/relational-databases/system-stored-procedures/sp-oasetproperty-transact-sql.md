@@ -18,13 +18,13 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ecbfba038b1954565839a3d931ef96431b77f50b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008941"
 ---
-# <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
+# <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Establece un nuevo valor para una propiedad de un objeto OLE.  
@@ -40,32 +40,32 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
 ## <a name="arguments"></a>Argumentos  
  *objecttoken*  
- Es el token de un objeto OLE creado anteriormente por **sp_OACreate**.  
+ Es el token de objeto de un objeto OLE creado previamente por **sp_OACreate**.  
   
- *propertyname*  
+ *PropertyName*  
  Es el nombre de la propiedad del objeto OLE que se va establecer en un nuevo valor.  
   
- *newvalue*  
+ *nuevovalor*  
  Es el nuevo valor de la propiedad y debe ser un valor del tipo de datos apropiado.  
   
- *index*  
- Es un parámetro de índice. Si se especifica, *índice* debe ser un valor de tipo de datos adecuado.  
+ *índice*  
+ Es un parámetro de índice. Si se especifica, *index* debe ser un valor del tipo de datos adecuado.  
   
  Algunas propiedades tienen parámetros. Estas propiedades se llaman propiedades indizadas y los parámetros se llaman parámetros de índice. Una propiedad puede tener varios parámetros de índice.  
   
 > [!NOTE]  
->  Los parámetros para este procedimiento almacenado se especifican por posición, no por el nombre.  
+>  Los parámetros para este procedimiento almacenado se especifican por posición, no por nombre.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un valor distinto de cero (error) que es el valor entero del HRESULT devuelto por el objeto de OLE Automation.  
   
- Para obtener más información sobre los códigos de retorno HRESULT, vea [OLE Automation códigos de retorno e información de Error](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obtener más información sobre los códigos de retorno de HRESULT, vea [códigos de retorno e información de error de automatización OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **sysadmin** rol fijo de servidor o permiso de ejecución directamente en este procedimiento almacenado. `Ole Automation Procedures` configuración de debe ser **habilitado** utilizar ningún procedimiento del sistema relacionadas con la automatización OLE.  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o al permiso Execute directamente en este procedimiento almacenado. `Ole Automation Procedures`la configuración debe estar **habilitada** para usar cualquier procedimiento del sistema relacionado con la automatización OLE.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente se establece la `HostName` propiedad (de creado previamente **SQLServer** objeto) a un nuevo valor.  
+ En el ejemplo siguiente se `HostName` establece la propiedad (del objeto **SQLServer** creado previamente) en un nuevo valor.  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  
@@ -76,8 +76,8 @@ BEGIN
 END'  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [OLE Automation procedimientos almacenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Procedimientos almacenados de automatización OLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ejemplo de script de automatización OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154837"
 ---
 # <a name="back-up-database-media-options-page"></a>Copia de seguridad de la base de datos (página Opciones multimedia)
@@ -33,22 +33,22 @@ ms.locfileid: "70154837"
 >  Puede definir un plan de mantenimiento de base de datos para crear copias de seguridad. Para obtener más información, vea [Planes de mantenimiento](../maintenance-plans/maintenance-plans.md) y [Usar el Asistente para planes de mantenimiento](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)]BACKUP[ de ](/sql/t-sql/statements/backup-transact-sql) correspondiente si hace clic en el botón **Script** y, después, selecciona un destino para el script.  
+>  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) script by clicking the **Script** button and then selecting a destination for the script.  
   
 ## <a name="options"></a>Opciones  
   
 ### <a name="overwrite-media"></a>Sobrescribir medios  
- Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó la dirección URL (Azure Storage) como el destino de la copia de seguridad en la página General del cuadro de diálogo Copia de seguridad de base de datos, las opciones de la sección Sobrescribir medios estarán deshabilitadas. Puede sobrescribir una copia de seguridad mediante la instrucción Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para obtener más información, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó la dirección URL (Azure Storage) como el destino de la copia de seguridad en la página General del cuadro de diálogo Copia de seguridad de base de datos, las opciones de la sección Sobrescribir medios estarán deshabilitadas. Puede sobrescribir una copia de seguridad mediante la instrucción Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para más información, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
- Solo la opción **Hacer copia de seguridad en un nuevo medio y borrar todos los conjuntos de copia de seguridad existentes** se admite con las opciones de cifrado. Si selecciona las opciones de la sección **Hacer copia de seguridad en un medio existente** , las opciones de cifrado en la página **Opciones de copia de seguridad** se deshabilitarán.  
+ Solo la opción **Hacer copia de seguridad en un nuevo medio y borrar todos los conjuntos de copia de seguridad existentes** se admite con las opciones de cifrado. Si selecciona las opciones de la sección **Hacer copia de seguridad en un medio existente**, las opciones de cifrado en la página **Opciones de copia de seguridad** se deshabilitarán.  
   
 > [!NOTE]  
->  Para obtener más información sobre los conjuntos de medios, vea [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+>  Para obtener más información sobre los conjuntos de medios, vea [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
  **Hacer copia de seguridad en el conjunto de medios existente**  
  Realiza una copia de seguridad de una base de datos en un conjunto de medios existente. Si se selecciona este botón de opción, se activan tres opciones.  
   
- Elija una de las opciones siguientes:  
+ Elija una de las siguientes opciones:  
   
  **Anexar al conjunto de copia de seguridad existente**  
  Anexa el conjunto de copias de seguridad al conjunto de medios existente, manteniendo las copias de seguridad anteriores.  
@@ -56,13 +56,13 @@ ms.locfileid: "70154837"
  **Sobrescribir todos los conjuntos de copia de seguridad existentes**  
  Reemplaza las copias de seguridad anteriores del conjunto de medios existente por la copia de seguridad actual.  
   
- **Comprobar nombre de conjunto de medios y fecha de expiración de conjunto de copia**  
+ **Comprobar el nombre del conjunto de medios y el conjunto de copia de seguridad**  
  Opcionalmente, si se realiza una copia de seguridad en un conjunto de medios existente, solicite que la operación de copia de seguridad compruebe el nombre y la fecha de expiración de los conjuntos de copia de seguridad.  
   
  **Nombre del conjunto de medios**  
  Si la opción **Comprobar nombre de conjunto de medios y fecha de expiración de conjunto de copia de seguridad** está seleccionada, de forma opcional, especifique el nombre del conjunto de medios establecido para usarse para la operación de copia de seguridad.  
   
- **Hacer copia de seguridad en un nuevo conjunto de medios y borrar todos los conjuntos de copia de seguridad existentes**  
+ **Hacer una copia de seguridad en un nuevo conjunto de medios y borrar todos los conjuntos de copia de seguridad existentes**  
  Se utiliza un conjunto de medios nuevo y se borran los conjuntos de copia de seguridad anteriores.  
   
  Si hace clic en esta opción, se activan las opciones siguientes:  
@@ -79,22 +79,22 @@ ms.locfileid: "70154837"
  **Comprobar copia de seguridad al finalizar**  
  Comprueba que el conjunto de copias de seguridad está completo y que todos los volúmenes son legibles.  
   
- **Realizar suma de comprobación antes de escribir en los medios**  
+ **Realizar suma de comprobación antes de escribir en el medio**  
  Comprueba las sumas de comprobación antes de escribir en los medios de copia de seguridad. Seleccionar esta opción equivale a especificar la opción CHECKSUM en la instrucción BACKUP de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si se selecciona esta opción, es posible que aumente la carga de trabajo y que disminuya el rendimiento de la copia de seguridad de la operación de copia de seguridad. Para obtener más información sobre las sumas de comprobación de copias de seguridad, vea [Errores posibles de medios durante copia de seguridad y restauración &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
  **Continuar después de un error**  
  La operación de copia de seguridad debe continuar, aunque se detecten uno o varios errores.  
   
 ### <a name="transaction-log"></a>Registro de transacciones  
- Las opciones del panel **Registro de transacciones** controlan el comportamiento de una copia de seguridad del registro de transacciones. Estas opciones solo son relevantes en el modelo de recuperación completa o en el modelo de recuperación optimizado para cargas masivas de registros. Se activan solo si se seleccionó **Registro de transacciones** en el campo **Tipo de copia de seguridad** de la página [General](../../integration-services/general-page-of-integration-services-designers-options.md) del cuadro de diálogo **Copia de seguridad de base de datos** .  
+ Las opciones del panel **Registro de transacciones** controlan el comportamiento de una copia de seguridad del registro de transacciones. Estas opciones solo son relevantes en el modelo de recuperación completa o en el modelo de recuperación optimizado para cargas masivas de registros. Se activan solo si se seleccionó **Registro de transacciones** en el campo **Tipo de copia de seguridad** de la página [General](../../integration-services/general-page-of-integration-services-designers-options.md) del cuadro de diálogo **Copia de seguridad de base de datos**.  
   
 > [!NOTE]  
 >  Para obtener más información sobre las copias de seguridad del registro de transacciones, vea [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
  **Truncar el registro de transacciones**  
- Realice una copia de seguridad del registro de transacciones y trúnquelo para liberar espacio de registro. La base de datos permanece en línea. Esta es la opción predeterminada.  
+ Realice una copia de seguridad del registro de transacciones y trúnquelo para liberar espacio de registro. La base de datos permanece en línea. Ésta es la opción predeterminada.  
   
- **Realizar copia de seguridad del final del registro y dejar la base de datos en estado de restauración**  
+ **Realizar una copia de seguridad del final del registro y dejar la base de datos en estado de restauración**  
  Realice una copia de seguridad del final del registro y deje la base de datos en estado de restauración. Esta opción crea una *copia del final del registro*, que realiza una copia de seguridad de los registros de los que todavía no se ha realizado ninguna (registro activo), generalmente, para la preparación de la restauración de una base de datos. La base de datos no estará disponible para los usuarios hasta que haya finalizado su restauración.  
   
  Seleccionar esta opción es equivalente a especificar WITH NO_TRUNCATE, NORECOVERY en una instrucción [BACKUP](/sql/t-sql/statements/backup-transact-sql) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Para obtener más información, vea [Copias del final del registro &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  
@@ -105,15 +105,15 @@ ms.locfileid: "70154837"
 > [!NOTE]  
 >  Para obtener más información sobre cómo usar dispositivos de cinta, vea [Dispositivos de cinta &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
- **Descargar la cinta después de realizar la copia de seguridad**  
+ **Descargar la cinta después de la copia de seguridad**  
  Una vez finalizada la copia de seguridad, descargue la cinta.  
   
  **Rebobinar la cinta antes de descargar**  
  Antes de descargar la cinta, se libera y rebobina. Solo se habilitará si está seleccionada la opción **Descargar la cinta después de realizar la copia de seguridad** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Realizar una copia de seguridad del registro de transacciones cuando la base de datos está dañada &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   

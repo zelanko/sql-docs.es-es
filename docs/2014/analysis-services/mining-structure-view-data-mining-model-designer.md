@@ -1,5 +1,5 @@
 ---
-title: Vista (Diseñador de modelos de minería de datos) de la estructura de minería de datos | Microsoft Docs
+title: Estructura de minería de datos (vista del diseñador de modelos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077669"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Estructura de minería de datos (vista del Diseñador de modelos de minería)
@@ -24,16 +24,16 @@ ms.locfileid: "66077669"
   
  La vista **Estructura de minería de datos** incluye las herramientas y los cuadros de diálogo siguientes:  
   
--   [Nuevo cuadro de diálogo de modelo de minería de datos &#40;vista estructura de minería de datos&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
+-   [Cuadro de diálogo nuevo modelo de minería de datos &#40;vista estructura de minería de datos&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
   
--   [Seleccione una columna del cuadro de diálogo &#40;vista estructura de minería de datos&#41;](select-a-column-dialog-box-mining-structure-view.md)  
+-   [Cuadro de diálogo Seleccionar una columna &#40;vista estructura de minería de datos&#41;](select-a-column-dialog-box-mining-structure-view.md)  
   
--   [Seleccione un cuadro de diálogo de la columna de clave de tabla anidada &#40;vista estructura de minería de datos&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
+-   [Seleccione un cuadro de diálogo de columna de clave de tabla anidada &#40;vista estructura de minería de datos&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
   
-## <a name="see-also"></a>Vea también  
- [Vista de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-models-view-data-mining-model-designer.md)   
- [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Diseñador gráfico de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Generador de consultas de predicción &#40;minería de datos&#41;](prediction-query-builder-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vista modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Diseñador de gráficos de precisión de minería de datos &#40;&#41;de minería de datos](mining-accuracy-chart-designer-data-mining.md)   
+ [Predicción Generador de consultas &#40;de minería de datos&#41;](prediction-query-builder-data-mining.md)  
   
   

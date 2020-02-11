@@ -1,5 +1,5 @@
 ---
-title: Mover tabla, cuadro de diálogo (SSAS) | Microsoft Docs
+title: Cuadro de diálogo de movimiento de tabla (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077609"
 ---
 # <a name="move-table-dialog-box-ssas"></a>Mover tabla, cuadro de diálogo (SSAS)
   El cuadro de diálogo **Mover tabla** le permite cambiar el orden en el que las tablas aparecen en el diseñador de modelos. Para tener acceso a este cuadro de diálogo, haga clic con el botón derecho en la pestaña de la parte inferior de la tabla que quiere mover y, después, seleccione **Mover**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Mover la tabla seleccionada antes de la tabla**  
- La tabla que desea mover se moverá delante de la tabla que elija en esta lista. Si quiere mover una tabla al final del conjunto de tablas, elija **(mover hasta el final)** .  
+ **Mover la tabla seleccionada antes de otra tabla**  
+ La tabla que desea mover se moverá delante de la tabla que elija en esta lista. Si quiere mover una tabla al final del conjunto de tablas, elija **(mover hasta el final)**.  
   
   

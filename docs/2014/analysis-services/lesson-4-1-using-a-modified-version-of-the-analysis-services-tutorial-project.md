@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493945"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Usar una versión modificada del proyecto Tutorial de Analysis Services
@@ -24,7 +24,7 @@ ms.locfileid: "69493945"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Descargar y extraer el archivo de proyecto  
   
-1.  [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para ir a la página de descarga que proporciona los proyectos de ejemplo relacionados con este tutorial. Los proyectos del tutorial se incluyen en la descarga de **Tutorial de Analysis Services SQL Server 2012** .  
+1.  [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para ir a la página de descarga que proporciona los proyectos de ejemplo que acompañan a este tutorial. Los proyectos del tutorial se incluyen en la descarga de **Tutorial de Analysis Services SQL Server 2012** .  
   
 2.  Haga clic en **Tutorial de Analysis Services de SQL Server 2012** para descargar el paquete que contiene los proyectos para este tutorial.  
   
@@ -56,35 +56,35 @@ ms.locfileid: "69493945"
 ### <a name="data-source-view"></a>Vista del origen de datos  
  La vista del origen de datos del proyecto mejorado contiene una tabla de hechos adicional y cuatro tablas de dimensiones adicionales de la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Observe que, con diez tablas en la vista del origen de \<datos, el diagrama de todas las tablas > está llenando. Esto dificulta la comprensión de las relaciones entre las tablas y la localización de tablas específicas. Para resolver este problema, las tablas están organizadas en dos diagramas lógicos, el diagrama **Internet Sales** y el diagrama **Reseller Sales** . Estos diagramas están organizados cada uno en una única tabla de hechos. Crear diagramas lógicos permite ver y utilizar un subconjunto específico de tablas de la vista del origen de datos en lugar de ver siempre todas las tablas y sus relaciones en un único diagrama.  
+ Observe que, con diez tablas en la vista del origen de \<datos, el diagrama de todas las tablas> está llenando. Esto dificulta la comprensión de las relaciones entre las tablas y la localización de tablas específicas. Para resolver este problema, las tablas están organizadas en dos diagramas lógicos, el diagrama **Internet Sales** y el diagrama **Reseller Sales** . Estos diagramas están organizados cada uno en una única tabla de hechos. Crear diagramas lógicos permite ver y utilizar un subconjunto específico de tablas de la vista del origen de datos en lugar de ver siempre todas las tablas y sus relaciones en un único diagrama.  
   
 #### <a name="internet-sales-diagram"></a>Diagrama Internet Sales  
  El diagrama **Internet Sales** contiene las tablas que están relacionadas con la venta directa de productos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] a los clientes a través de Internet. Las tablas del diagrama son las cuatro tablas de dimensiones y la tabla de hechos que agregó a la vista del origen de datos **Adventure Works DW 2012** en la Lección 1. Estas tablas son las siguientes:  
   
--   **Geography**  
+-   **Geográfico**  
   
 -   **Customer**  
   
 -   **Date**  
   
--   **Product**  
+-   **Producto**  
   
 -   **InternetSales**  
   
 #### <a name="reseller-sales-diagram"></a>Diagrama Reseller Sales  
  El diagrama **Reseller Sales** contiene las tablas relacionadas con la venta de productos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] realizadas por los distribuidores. Este diagrama contiene las siete tablas de dimensiones siguientes y una tabla de hechos de la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] :  
   
--   **Reseller**  
+-   **Vendedor**  
   
--   **Promoción**  
+-   **Ascende**  
   
 -   **SalesTerritory**  
   
--   **Geografía**  
+-   **Geográfico**  
   
 -   **Date**  
   
--   **Product**  
+-   **Producto**  
   
 -   **Employee**  
   
@@ -116,7 +116,7 @@ ms.locfileid: "69493945"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Definir propiedades de atributo primario en una jerarquía de elementos primarios y secundarios](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar un proyecto de Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
   

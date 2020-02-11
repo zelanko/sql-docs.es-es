@@ -16,13 +16,13 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769132"
 ---
-# <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
+# <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crea una suscripción de mezcla de inserción o extracción. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -72,11 +72,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  Las suscripciones anónimas no necesitan utilizar este procedimiento almacenado.  
   
-`[ @subscriber_type = ] 'subscriber_type'`Es el tipo de suscriptor. *subscriber_type*es de tipo **nvarchar (15)** y puede tener uno de los valores siguientes.  
+`[ @subscriber_type = ] 'subscriber_type'`Es el tipo de suscriptor. *subscriber_type*es **nvarchar (15)** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**local** predeterminada|Suscriptor solo conocido para el publicador.|  
+|**local** (valor predeterminado)|Suscriptor solo conocido para el publicador.|  
 |**global**|Suscriptor conocido para todos los servidores.|  
   
  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, se hace referencia a las suscripciones locales como suscripciones de cliente y a las suscripciones globales como suscripciones de servidor.  
@@ -90,19 +90,19 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Es un valor que indica cuándo se ejecutará el Agente de mezcla. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
-|**4**|Cada día|  
-|**8**|Programación semanal|  
-|**10**|Programación mensual|  
+|**1**|Una sola vez|  
+|**4**|Diariamente|  
+|**203**|Semanal|  
+|**7**|Mensual|  
 |**20**|Mensualmente, dependiendo del intervalo de frecuencia|  
 |**40**|Cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |NULL (predeterminado)||  
   
 `[ @frequency_interval = ] frequency_interval`El día o los días en los que se ejecuta el Agente de mezcla. *frequency_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -111,35 +111,35 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|Jueves|  
 |**6**|Viernes|  
 |**7**|Sábado|  
-|**8**|Day|  
-|**9**|Días de la semana|  
-|**10**|Días del fin de semana|  
+|**203**|Día|  
+|**9**|Días laborables|  
+|**7**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la repetición de combinación programada del intervalo de frecuencia de cada mes. *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
-|**2**|Second|  
+|**2**|Segundo|  
 |**4**|Tercero|  
-|**8**|Cuarto|  
-|**16**|Último|  
+|**203**|Cuarto|  
+|**dieciséi**|Último|  
 |NULL (predeterminado)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor*es de **tipo int**y su valor predeterminado es NULL.  
   
 `[ @frequency_subday = ] frequency_subday`Es la unidad de *frequency_subday_interval*. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
-|**2**|Second|  
+|**1**|Una sola vez|  
+|**2**|Segundo|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**203**|Hour|  
 |NULL (predeterminado)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Es la frecuencia de *frequency_subday* que debe producirse entre cada combinación. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Es la frecuencia con la que se producen *frequency_subday* entre cada combinación. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`Es la hora del día a la que se programa el Agente de mezcla por primera vez, con el formato HHMMSS. *active_start_time_of_day* es de **tipo int**y su valor predeterminado es NULL.  
   
@@ -164,20 +164,20 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`Permite resolver conflictos de forma interactiva para todos los artículos que permiten la resolución interactiva. *use_interactive_resolver* es de tipo **nvarchar (5)** y su valor predeterminado es false.  
   
-`[ @merge_job_name = ] 'merge_job_name'`El parámetro merge_job_name está en desuso y no se puede establecer.  *\@* *merge_job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @merge_job_name = ] 'merge_job_name'`El * \@parámetro merge_job_name* está desusado y no se puede establecer. *merge_job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @hostname = ] 'hostname'`Invalida el valor devuelto por [host_name](../../t-sql/functions/host-name-transact-sql.md) cuando esta función se usa en la cláusula WHERE de un filtro con parámetros. *Hostname* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @hostname = ] 'hostname'`Invalida el valor devuelto por [host_name](../../t-sql/functions/host-name-transact-sql.md) cuando esta función se utiliza en la cláusula WHERE de un filtro con parámetros. *Hostname* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!IMPORTANT]  
->  Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de filtro de fila con parámetros, como `LEFT([MyColumn]) = SUSER_SNAME()`. Si utiliza [host_name](../../t-sql/functions/host-name-transact-sql.md) en una cláusula de filtro y reemplaza el valor de host_name, puede que sea necesario convertir los tipos de datos mediante [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obtener más información acerca de las prácticas recomendadas para este caso, vea la sección "Reemplazar el valor de HOST_NAME()" del tema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+>  Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de filtro de fila con parámetros, como `LEFT([MyColumn]) = SUSER_SNAME()`. Si utiliza [host_name](../../t-sql/functions/host-name-transact-sql.md) en una cláusula de filtro y reemplaza el valor host_name, podría ser necesario convertir los tipos de datos mediante [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obtener más información acerca de las prácticas recomendadas para este caso, vea la sección "Reemplazar el valor de HOST_NAME()" del tema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_addmergesubscription** se utiliza en la replicación de mezcla.  
   
- Cuando un miembro del rol fijo de servidor **sysadmin** ejecuta **sp_addmergesubscription** para crear una suscripción de extracción, el trabajo agente de mezcla se crea implícitamente y se ejecuta en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio del agente. Se recomienda ejecutar [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) y especificar las credenciales de una cuenta de Windows diferente específica del agente para  **\@job_login** y  **\@job_password**. Para más información, consulte [Modelo de seguridad del agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Cuando un miembro del rol fijo de servidor **sysadmin** ejecuta **sp_addmergesubscription** para crear una suscripción de extracción, el trabajo de agente de mezcla se crea implícitamente y se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la cuenta de servicio del agente. Se recomienda ejecutar [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) y especificar las credenciales de una cuenta de Windows diferente específica del agente para ** \@job_login** y ** \@job_password**. Para obtener más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
@@ -185,13 +185,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addmergesubscription**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Resolución interactiva de conflictos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
- [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
- [Transact &#40;-SQL de sp_changemergesubscription&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [Transact &#40;-SQL de sp_helpmergesubscription&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_changemergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

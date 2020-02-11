@@ -1,5 +1,5 @@
 ---
-title: Sys.database_audit_specifications (Transact-SQL) | Microsoft Docs
+title: Sys. database_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,35 +20,35 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940204"
 ---
-# <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
+# <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene información sobre las especificaciones de auditoría de base de datos en una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia del servidor. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|Name|**sysname**|Nombre de la especificación de auditoría.|  
+|Nombre|**sysname**|Nombre de la especificación de auditoría.|  
 |database_specification_id|**int**|Identificador de la especificación de base de datos.|  
 |create_date|**datetime**|Fecha en la que se creó la especificación de auditoría.|  
 |modified_date|**datetime**|Fecha en la que se modificó por última vez la especificación de auditoría.|  
-|is_state_enabled|**bit**|Estado de la especificación de auditoría:<br /><br /> 0 - DESHABILITADO<br /><br /> 1 - HABILITADO|  
+|is_state_enabled|**bit**|Estado de la especificación de auditoría:<br /><br /> 0: DESHABILITADO<br /><br /> 1: HABILITADO|  
 |audit_GUID|**uniqueidentifer**|GUID de la auditoría que contiene esta especificación. Se usa durante la enumeración de las especificaciones de auditoría de base de datos miembro al adjuntar o iniciar la base de datos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si una base de datos está en modo de solo lectura, la característica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit no puede agregar especificaciones de auditoría de base de datos.  
   
 ## <a name="permissions"></a>Permisos  
- Las entidades de seguridad con el **ALTER ANY DATABASE AUDIT** o **VIEW DEFINITION** permisos, el rol dbo y los miembros del rol fijo de base de datos db_owners tienen acceso a esta vista de catálogo. Además, no se debe denegar la entidad de seguridad **VIEW DEFINITION** permiso.  
+ Las entidades de seguridad con los permisos **ALTER any Database Audit** o **View definition** , el rol DBO y los miembros del rol fijo de base de datos db_owners tienen acceso a esta vista de catálogo. Además, la entidad de seguridad no debe tener denegado el permiso **View definition** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

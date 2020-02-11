@@ -18,19 +18,19 @@ ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c8f2e34d15f7cca4443680b2d8b8a9fa2c7c6199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952319"
 ---
-# <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
+# <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita el servidor actual de las operaciones multiservidor.  
   
 > [!CAUTION]  
->  **sp_msx_defect** modifica el registro. No se recomienda la modificación manual del Registro porque los cambios inapropiados o incorrectos pueden causar graves problemas de configuración en el sistema. Por tanto, solo los usuarios experimentados deben utilizar el programa Editor del Registro para modificar el Registro. Para obtener más información, consulte la documentación de Microsoft Windows.  
+>  **sp_msx_defect** edita el registro. No se recomienda la modificación manual del Registro porque los cambios inapropiados o incorrectos pueden causar graves problemas de configuración en el sistema. Por tanto, solo los usuarios experimentados deben utilizar el programa Editor del Registro para modificar el Registro. Para obtener más información, consulte la documentación de Microsoft Windows.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +42,9 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @forced_defection = ] forced_defection` Especifica si se debe o no forzar la baja si se ha perdido permanentemente debido a un irreversibles SQLServerAgent maestro **msdb** base de datos o no **msdb** copia de seguridad de base de datos. *forced_defection*es **bit**, su valor predeterminado es **0**, lo que indica que no se debe realizar ningún forzosa. Un valor de **1** fuerza la baja.  
+`[ @forced_defection = ] forced_defection`Especifica si se debe forzar la baja o no si se ha perdido permanentemente el SQLServerAgent maestro debido a una base de datos **msdb** dañada irreversible o a ninguna copia de seguridad de base de datos **msdb** . *forced_defection*es de **bit**y su valor predeterminado es **0**, que indica que no se debe producir ninguna baja forzada. Un valor de **1** fuerza la baja.  
   
- Después de forzar una baja mediante la ejecución de **sp_msx_defect**, un miembro de la **sysadmin** rol fijo de servidor en el SQLServerAgent maestro debe ejecutar el comando siguiente para completar la baja:  
+ Después de forzar una baja ejecutando **sp_msx_defect**, un miembro del rol fijo de servidor **sysadmin** en el SQLServerAgent maestro debe ejecutar el siguiente comando para completar la baja:  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  
@@ -56,14 +56,14 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- Cuando **sp_msx_defect** finaliza correctamente, se devuelve un mensaje.  
+## <a name="remarks"></a>Observaciones  
+ Cuando **sp_msx_defect** se completa correctamente, se devuelve un mensaje.  
   
 ## <a name="permissions"></a>Permisos  
  Para ejecutar este procedimiento almacenado, un usuario debe ser miembro del rol fijo de servidor **sysadmin** .  
   
-## <a name="see-also"></a>Vea también  
- [sp_msx_enlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_msx_enlist &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

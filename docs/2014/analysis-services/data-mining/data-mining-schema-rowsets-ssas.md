@@ -1,5 +1,5 @@
 ---
-title: Consultar los conjuntos de filas de esquema de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Consultar los conjuntos de filas de esquema de minería de datos (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084907"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Consultar los conjuntos de filas de esquema de minería de datos (Analysis Services - Minería de datos)
@@ -41,7 +41,7 @@ ms.locfileid: "66084907"
 |DMSCHEMA_MINING_STRUCTURE_COLUMNS|Muestra todas las columnas utilizadas en estructuras de minería en el contexto actual.<br /><br /> La información incluye el tipo de contenido y el tipo de datos, la nulabilidad y si la columna contiene los datos de tabla anidada.|  
 |DMSCHEMA_MINING_SERVICES|Muestra la lista de servicios o algoritmos de minería que están disponibles en el servidor especificado.<br /><br /> La información incluye marcas de modelado compatibles, tipos de entrada y tipos de origen de datos compatibles.|  
 |DMSCHEMA_MINING_SERVICE_PARAMETERS|Muestra todos los parámetros para servicios de minería que están disponibles en la instancia actual.<br /><br /> La información incluye el tipo de datos para cada parámetro, los valores predeterminados y los límites superiores e inferiores.|  
-|DMSCHEMA_MODEL_CONTENT|Devuelve el contenido del modelo si se ha procesado el modelo.<br /><br /> Para más información, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).|  
+|DMSCHEMA_MODEL_CONTENT|Devuelve el contenido del modelo si se ha procesado el modelo.<br /><br /> Para obtener más información, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).|  
 |DBSCHEMA_CATALOGS|Muestra todas las bases de datos (catálogos) de la instancia actual de Analysis Services.|  
 |MDSCHEMA_INPUT_DATASOURCES|Muestra todos los orígenes de datos de la instancia actual de Analysis Services.|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66084907"
 ## <a name="examples"></a>Ejemplos  
  En la sección siguiente se proporcionan algunos ejemplos de consultas para los conjuntos de filas de esquema de minería de datos.  
   
-### <a name="example-1-list-data-mining-services"></a>Ejemplo 1: Servicios de minería de datos de lista  
+### <a name="example-1-list-data-mining-services"></a>Ejemplo 1: lista de servicios de minería de datos  
  La consulta siguiente devuelve una lista de servicios de minería que están disponibles en el servidor actual, es decir, los algoritmos que están habilitados. Las columnas proporcionadas para cada servicio de minería incluyen las marcas de modelado y tipos de contenido que pueden ser utilizados por cada algoritmo, el GUID para cada servicio y los límites de predicción que se puede haber agregado para cada servicio.  
   
 ```  
@@ -59,7 +59,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Ejemplo 2: Lista de parámetros del modelo de minería de datos  
+### <a name="example-2-list-mining-model-parameters"></a>Ejemplo 2: lista de parámetros de modelo de minería  
  En el ejemplo siguiente se devuelven los parámetros que se utilizaron para crear un modelo de minería concreto:  
   
 ```  
@@ -68,7 +68,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Ejemplo 3: Lista de todos los conjuntos de filas  
+### <a name="example-3-list-all-rowsets"></a>Ejemplo 3: lista de todos los conjuntos de filas  
  En el ejemplo siguiente se devuelve una lista completa de los conjuntos de filas que están disponibles en el servidor actual:  
   
 ```  
@@ -76,7 +76,7 @@ SELECT *
 FROM $system.DBSCHEMA_TABLES  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos de solución de problemas (Analysis Services - minería de datos)](https://msdn.microsoft.com/library/cc645881.aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Conceptos de la solución de problemas (Analysis Services - Minería de datos)](https://msdn.microsoft.com/library/cc645881.aspx)  
   
   

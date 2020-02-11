@@ -1,5 +1,5 @@
 ---
-title: Uso (Diseñador de cubos) de dimensiones (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Uso de dimensiones (diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081667"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Uso de dimensiones (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -26,19 +26,19 @@ ms.locfileid: "66081667"
   
 |Panel|Definición|  
 |----------|----------------|  
-|**Barra de herramientas**|Use la barra de herramientas para llevar a cabo operaciones comunes en esta pestaña. Para más información sobre este panel, vea [Barra de herramientas &#40;pestaña Uso de dimensiones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Grid**|Use la cuadrícula para ver y editar relaciones de dimensiones existentes entre las dimensiones de cubo y los grupos de medida del cubo. Para más información sobre este panel, vea [Cuadrícula &#40;pestaña Uso de dimensiones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barra de herramientas**|Use la barra de herramientas para realizar operaciones comunes en esta pestaña. Para obtener más información sobre este panel, vea [barra de herramientas &#40;pestaña uso de dimensiones, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Cuadrícula**|Use la cuadrícula para ver y editar relaciones de dimensiones existentes entre las dimensiones de cubo y los grupos de medida del cubo. Para más información sobre este panel, vea [Cuadrícula &#40;pestaña Uso de dimensiones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Estructura de cubo &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Cálculos &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [KPI &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Acciones &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Las particiones &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
- [Las perspectivas &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
- [Traducciones &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)   
- [Explorador &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Estructura de cubo &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Cálculos &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [KPI &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Acciones &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Particiones &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Perspectivas &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
+ [Traducciones &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Explorador de cubos &#40;&#41; &#40;Analysis Services de datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

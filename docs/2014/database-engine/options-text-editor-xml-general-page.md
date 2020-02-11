@@ -1,5 +1,5 @@
 ---
-title: Opciones (página General del Editor de texto - XML -) | Microsoft Docs
+title: Opciones (editor de texto-XML-página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089199"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   Utilice este cuadro de diálogo para cambiar el comportamiento de edición general del Editor XML, que se utiliza para modificar los documentos XML. Para mostrar esta configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la subcarpeta **XML** y luego haga clic en **General**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  
- Las opciones del Editor XML también se pueden establecer en el cuadro de diálogo **Todos los idiomas** de la página General. Si utiliza los cuadros de diálogos **Todos los idiomas** para establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor XML mediante este cuadro de diálogo.  
+ Las opciones del Editor XML también se pueden establecer en el cuadro de diálogo **Todos los idiomas** de la página General. Si usa los cuadros de diálogo **todos los lenguajes** para establecer diferentes opciones para [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] los demás editores, como los editores de DMX o MDX, debe restablecer las opciones del editor XML mediante este cuadro de diálogo.  
   
 ## <a name="statement-completion"></a>Finalización de instrucciones  
  **Lista de miembros automática**  
@@ -37,7 +37,7 @@ ms.locfileid: "66089199"
  **Habilitar espacio virtual**  
  Cuando se selecciona esta casilla, los espacios se insertan al final de cada línea de código. Seleccione esta casilla para colocar comentarios en un punto coherente junto al código.  
   
- **Ajuste de línea**  
+ **Ajuste de palabra**  
  Cuando se selecciona esta casilla, cualquier parte de una línea que se extienda horizontalmente fuera del área visible del editor se mostrará automáticamente en la siguiente línea. Cuando se selecciona esta casilla, se habilita la casilla **Mostrar glifos visuales para ajuste de línea** .  
   
  **Mostrar glifos visuales para ajuste de línea**  
@@ -46,7 +46,7 @@ ms.locfileid: "66089199"
 > [!NOTE]  
 >  Estas flechas de recordatorio no se agregan al código y no se imprimen. Solo sirven como referencia.  
   
- **Aplicar comandos Cortar o copiar a líneas en blanco cuando no hay ninguna selección**  
+ **Aplicar comandos Cortar o Copiar a líneas en blanco si no hay selección**  
  Esta casilla establece el comportamiento del editor cuando el punto de inserción se coloca en una línea en blanco, no se selecciona nada y se hace clic en **Copiar** o **Cortar**.  
   
  Cuando se selecciona esta casilla, se copia o se corta la línea en blanco. Si luego hace clic en **Pegar**, se insertará una nueva línea en blanco.  
@@ -62,7 +62,7 @@ ms.locfileid: "66089199"
 > [!NOTE]  
 >  Estos números de línea no se agregan al código y no se imprimen. Solo sirven como referencia.  
   
- **Habilitar navegación a direcciones URL con un solo clic**  
+ **Habilitar acceso a direcciones URL con un solo clic**  
  Cuando se selecciona esta casilla, el cursor cambia a una mano cuando pasa por encima de una dirección URL en el editor. Puede hacer clic en la dirección URL para abrir la página indicada en el explorador web.  
   
  **Barra de navegación**  

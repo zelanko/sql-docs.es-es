@@ -1,5 +1,5 @@
 ---
-title: Objeto Axis (ADO MD) | Microsoft Docs
+title: Objeto de eje (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,34 +16,34 @@ ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939968"
 ---
 # <a name="axis-object-ado-md"></a>Objeto Axis (ADO MD)
-Representa una posición o el eje del filtro de un conjunto de celdas que contiene a los miembros seleccionados de uno o más dimensiones.  
+Representa un eje posicional o de filtro de un objeto Cellset, que contiene los miembros seleccionados de una o más dimensiones.  
   
-## <a name="remarks"></a>Comentarios  
- Un **eje** objeto puede contener un [ejes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) colección, o devuelto por la [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) propiedad de un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+## <a name="remarks"></a>Observaciones  
+ Un objeto de **eje** puede estar incluido en una colección de [ejes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) o ser devuelto por la propiedad [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) de un conjunto de [celdas](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
- Con las colecciones y propiedades de un **eje** objeto, puede hacer lo siguiente:  
+ Con las colecciones y las propiedades de un objeto de **eje** , puede hacer lo siguiente:  
   
--   Identificar el **eje** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) propiedad.  
+-   Identifique el **eje** con la propiedad [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) .  
   
--   Recorrer en iteración cada posición a lo largo de un **eje** utilizando el [posiciones](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) colección.  
+-   Recorrer en iteración cada posición a lo largo de un **eje** mediante la colección [positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
   
--   Obtener el número de dimensiones en el **eje** con el [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) propiedad.  
+-   Obtenga el número de dimensiones del **eje** con la propiedad [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) .  
   
--   Obtener atributos específicos del proveedor de la **eje** con el estándar de ADO [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
+-   Obtener los atributos específicos del proveedor del **eje** con la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) de ADO estándar.  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Propiedades, métodos y eventos](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Colección Axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Colección de posiciones (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de eje (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [Colección axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
+ [Colección positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

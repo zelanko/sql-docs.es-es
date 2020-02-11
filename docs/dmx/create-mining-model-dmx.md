@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889077"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
@@ -22,7 +22,7 @@ ms.locfileid: "68889077"
   
  Para asignar el nombre a la estructura de minería de datos, se anexa "_structure" al nombre del modelo, lo que garantiza que el nombre de la estructura sea distinto del nombre del modelo.  
   
- Para crear un modelo de minería de datos para una estructura de minería de datos existente, use la instrucción [ALTER Mining Structure &#40;&#41; DMX](../dmx/alter-mining-structure-dmx.md) .  
+ Para crear un modelo de minería de datos para una estructura de minería de datos existente, use la instrucción [ALTER Mining structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,11 +43,11 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *lista de definiciones de columna*  
  Lista delimitada por comas de definiciones de columna.  
   
- *algorithm*  
+ *algoritmo*  
  Nombre de un algoritmo de minería de datos definido por el proveedor actual.  
   
 > [!NOTE]  
->  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante el [conjunto de filas DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para ver los algoritmos admitidos en la instancia actual [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de, vea [propiedades de minería de datos](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [DMSCHEMA_MINING_SERVICES conjunto de filas](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para ver los algoritmos admitidos en la instancia actual [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de, vea [propiedades de minería de datos](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *lista de parámetros*  
  Opcional. Lista delimitada por comas de parámetros definidos por el proveedor para el algoritmo.  
@@ -74,7 +74,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   Tipo de contenido (obligatorio)  
   
--   Solicitud de predicción, que indica al algoritmo que debe predecir esta columna, indicada por la cláusula PREDICT o **PREDICT_ONLY**  
+-   Solicitud de predicción, que indica al algoritmo que debe predecir esta columna, indicada por la cláusula **PREDICT** o **PREDICT_ONLY**  
   
 -   Relación con una columna de atributos (solo es obligatorio si se aplica), indicada por la cláusula **relacionada con**  
   
@@ -94,22 +94,22 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Para obtener una lista de los tipos de datos, tipos de contenido, distribuciones de columnas y marcas de modelado que puede usar en la definición de una columna, vea los siguientes temas:  
   
--   [Tipos de datos &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Tipos de datos &#40;&#41;de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
 -   [Tipos de contenido &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distribuciones de columnas &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distribuciones de columnas &#40;&#41;de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Marcas de modelado &#40;Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Marcas de modelado &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- Puede agregar una cláusula a la instrucción para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de la siguiente \<cláusula de relación de columna >.  
+ Puede agregar una cláusula a la instrucción para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de la siguiente \<cláusula de relación de columna>.  
   
  **RELACIONADO CON**  
  Este formulario indica una jerarquía de valores. El destino de una columna RELATED TO puede ser una columna de clave de una tabla anidada, una columna de valores discretos en la fila de caso u otra columna con una cláusula RELATED TO, que indica una jerarquía de más niveles.  
   
  Use una cláusula de predicción para describir el uso de la columna de predicción. La siguiente tabla describe las dos cláusulas posibles.  
   
-|\<cláusula de > de predicción|Descripción|  
+|\<cláusula de> de predicción|Descripción|  
 |---------------------------|-----------------|  
 |**PREDICT**|Esta columna puede predecirla el modelo y puede proporcionarse en casos de entrada para predecir el valor de otras columnas de predicción.|  
 |**PREDICT_ONLY**|Esta columna puede predecirla el modelo, pero sus valores no se pueden utilizar en escenarios de entrada para predecir el valor de otras columnas de predicción.|  
@@ -121,9 +121,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- Para obtener una lista de los parámetros que están asociados a cada algoritmo, vea algoritmos de [minería de datos &#40;Analysis Services&#41;-minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Para obtener una lista de los parámetros asociados a cada algoritmo, vea [algoritmos de minería de datos &#40;Analysis Services-&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si desea crear un modelo que tenga un conjunto de datos de pruebas integrado, debe utilizar la instrucción CREATE MINING STRUCTURE seguida de ALTER MINING STRUCTURE. Sin embargo, no todos los tipos de modelo admiten un conjunto de datos de exclusiones. Para obtener más información, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  Para ver un tutorial sobre cómo crear un modelo de minería de datos mediante la instrucción CREATEMODEL, consulte el [tutorial DMX de predicción de series temporales](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
@@ -174,7 +174,7 @@ USING Microsoft_Sequence_Clustering
  En el siguiente ejemplo se usa el algoritmo de serie temporal de [!INCLUDE[msCoName](../includes/msconame-md.md)] para crear un nuevo modelo de minería de datos mediante el algoritmo ARTxp. ReportingDate es la columna de clave de la serie temporal y ModelRegion es la columna de clave de la serie de datos. En este ejemplo, se supone que la periodicidad de los datos es cada 12 meses. Por lo tanto, el parámetro *PERIODICITY_HINT* se establece en 12.  
   
 > [!NOTE]  
->  Debe especificar el parámetro *PERIODICITY_HINT* mediante el uso de caracteres de llave. Además, dado que el valor es una cadena, se debe incluir entre comillas simples: "{\<Numeric value >}".  
+>  Debe especificar el parámetro *PERIODICITY_HINT* mediante el uso de caracteres de llave. Además, dado que el valor es una cadena, se debe incluir entre comillas simples: "{\<numeric Value>}".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  
@@ -186,9 +186,9 @@ CREATE MINING MODEL SalesForecast (
 USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP')  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de definición &#40;de&#41; datos DMX de extensiones de minería de datos](../dmx/dmx-statements-data-definition.md)   
- [Instrucciones de manipulación &#40;de&#41; datos DMX de extensiones de minería de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte también  
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

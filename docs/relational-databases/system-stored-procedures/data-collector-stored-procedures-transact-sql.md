@@ -1,5 +1,5 @@
 ---
-title: Recopilador de datos procedimientos almacenados (Transact-SQL) | Microsoft Docs
+title: Procedimientos almacenados del recopilador de datos (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942402"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Procedimientos almacenados del recopilador de datos (Transact-SQL)
@@ -66,7 +66,7 @@ ms.locfileid: "67942402"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

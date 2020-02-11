@@ -1,5 +1,5 @@
 ---
-title: SQL Server Compact Edition Connection Manager Editor (página todo) | Microsoft Docs
+title: Editor del administrador de conexiones de SQL Server Compact Edition (página todos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055467"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Editor del administrador de conexiones con SQL Server Compact Edition (página Todo)
@@ -27,25 +27,25 @@ ms.locfileid: "66055467"
  Para obtener más información acerca del administrador de conexiones con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition, vea [Administrador de conexiones con SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md).  
   
 ## <a name="options"></a>Opciones  
- **AutoShrink Threshold**  
+ **Umbral de reducción automática**  
  Especifique la cantidad de espacio disponible, como porcentaje, permitido en la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact antes de que se ejecute el proceso de reducción automática.  
   
  **Extensión de bloqueo predeterminada**  
  Especifique el número de bloqueos de base de datos que adquiere la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact antes de intentar concentrar los bloqueos.  
   
- **Default Lock Timeout**  
+ **Tiempo de espera de bloqueo predeterminado**  
  Especifique el intervalo predeterminado, en milisegundos, que una transacción esperará un bloqueo.  
   
- **Flush Interval**  
+ **Intervalo de vaciado**  
  Especifique el intervalo, en segundos, transcurrido entre que las transacciones confirmadas vacían datos en el disco.  
   
  **Identificador de configuración regional**  
  Especifique el identificador de configuración regional (LCID) de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
- **Max Buffer Size**  
+ **Tamaño de búfer máximo**  
  Especifique la cantidad máxima de memoria, en kilobytes, que usará [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact antes del vaciado de datos en el disco.  
   
- **Max Database Size**  
+ **Tamaño máximo de la base de datos**  
  Especifique el tamaño máximo, en megabytes, de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
  **Modo**  
@@ -53,27 +53,27 @@ ms.locfileid: "66055467"
   
  La opción Modo tiene cuatro valores, tal como se describe en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Solo lectura**|Especifica acceso de solo lectura a la base de datos.|  
-|**Lectura y escritura**|Especifica permiso de lectura/escritura a la base de datos.|  
+|**Lectura Escritura**|Especifica permiso de lectura/escritura a la base de datos.|  
 |**Exclusivo**|Especifica acceso exclusivo a la base de datos.|  
-|**Shared Read**|Especifica que otros usuarios pueden leer de la base de datos al mismo tiempo.|  
+|**Lectura compartida**|Especifica que otros usuarios pueden leer de la base de datos al mismo tiempo.|  
   
- **Persist Security Info**  
+ **Información de seguridad persistente**  
  Especifique si la información de seguridad será devuelta como parte de la cadena de conexión. El valor predeterminado de esta opción es **False**.  
   
- **Temp File Directory**  
+ **Directorio de archivos temporales**  
  Especifique la ubicación del archivo de base de datos temporal de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
- **Origen de datos**  
+ **Data Source** (Origen de datos)  
  Especifique el nombre de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
  **Contraseña**  
  Escriba la contraseña de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Conexión&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+ [&#40;página de conexión del editor del administrador de conexiones de SQL Server Compact Edition&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
   

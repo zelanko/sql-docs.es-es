@@ -11,45 +11,45 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266539"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Actualizar desde la base de datos (OracleToSQL)
-El **actualizar desde la base de datos** cuadro de diálogo le permite seleccionar los objetos que desea actualizar desde la base de datos de Oracle. Las filas en el cuadro de diálogo están codificados con colores según el estado de los metadatos:  
+El cuadro de diálogo **actualizar desde base de datos** permite seleccionar los objetos que se van a actualizar desde la base de datos de Oracle. Las filas del cuadro de diálogo están codificadas por colores en función del estado de los metadatos:  
   
--   Si los metadatos del objeto ha cambiado localmente y en la base de datos de Oracle, la fila está en azul.  
+-   Si los metadatos del objeto han cambiado localmente y en la base de datos de Oracle, la fila es azul.  
   
--   Si los metadatos del objeto ha cambiado en la base de datos de Oracle, pero no en SSMA, la fila está en amarilla.  
+-   Si los metadatos del objeto han cambiado en la base de datos de Oracle pero no en SSMA, la fila es amarilla.  
   
--   Si los metadatos del objeto ha cambiado localmente, pero no en la base de datos de Oracle, la fila es verde.  
+-   Si los metadatos del objeto han cambiado localmente, pero no en la base de datos de Oracle, la fila es verde.  
   
--   Si el objeto es nuevo en la base de datos de Oracle, la fila es de color fucsia.  
+-   Si el objeto es nuevo en la base de datos de Oracle, la fila es de color rosa.  
   
-Puede especificar la configuración de actualización de objeto predeterminado en el **configuración del proyecto** cuadro de diálogo. Para obtener más información, consulte [configuración del proyecto&#40;sincronización&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+Puede especificar la configuración de actualización de objetos predeterminada en el cuadro de diálogo **configuración del proyecto** . Para obtener más información, vea [configuración del proyecto&#40;Synchronization&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
   
-Para tener acceso a la **actualizar desde la base de datos** contextual de un objeto en el Explorador de metadatos de Oracle y haga clic en cuadro de diálogo **actualizar desde la base de datos**.  
+Para tener acceso al cuadro de diálogo **actualizar desde base** de datos, haga clic con el botón secundario en un objeto del explorador de metadatos de Oracle y haga clic en **actualizar desde base de**datos.  
   
 ## <a name="options"></a>Opciones  
 **Contraer (-)**  
-Contraer todos los grupos de objetos para ocultar objetos individuales.  
+Contrae todos los grupos de objetos para ocultar objetos individuales.  
   
 **Expandir (+)**  
-Expandir todos los grupos de objeto para mostrar los objetos individuales.  
+Expanda todos los grupos de objetos para mostrar objetos individuales.  
   
-**Mostrar u ocultar objetos iguales**  
-Oculta los objetos de la lista si los metadatos del objeto son el mismo en la base de datos de Oracle y de SSMA.  
+**Ocultar/mostrar objetos iguales**  
+Oculta los objetos de la lista si los metadatos del objeto son los mismos en la base de datos de Oracle y en SSMA.  
   
-**Actualizar desde la base de datos (botón de flecha)**  
-Utilice el botón de flecha para especificar que se deben actualizar los metadatos de los objetos seleccionados en SSMA.  
+**Actualizar desde base de datos (botón de flecha)**  
+Use el botón de flecha para especificar que los metadatos de los objetos seleccionados se deben actualizar en SSMA.  
   
-**Hacer no actualizar desde la base de datos (X botón)**  
-Use el botón X para especificar que no se deben actualizar los metadatos de los objetos seleccionados en SSMA.  
+**No actualizar desde base de datos (botón X)**  
+Use el botón X para especificar que los metadatos de los objetos seleccionados no se deben actualizar en SSMA.  
   
 **Leyenda**  
-Muestra un **leyenda** cuadro de diálogo. La leyenda contiene la asignación entre los Estados de los metadatos y los colores de la fila.  
+Muestra un cuadro de diálogo de **leyenda** . La leyenda contiene la asignación entre los colores de fila y los Estados de los metadatos.  
   
-Para mantener la **leyenda** cuadro de diálogo en la parte superior de la **actualizar desde la base de datos** cuadro de diálogo, seleccione el **mostrar en la parte superior** casilla de verificación.  
+Para mantener el cuadro de diálogo **leyenda** en la parte superior del cuadro de diálogo **actualizar desde la base de datos** , active la casilla **Mostrar en la parte superior** .  
   

@@ -15,17 +15,17 @@ ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dde6e14283195ef3b56d545a58a95c307774223
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964528"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>Ejemplo del método CreateRecordset (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Este ejemplo de código se crea un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en el servidor. Tiene dos columnas con cuatro filas. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **CreateRecordsetVBS.asp**.  
+ En este ejemplo de código se crea un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) en el lado servidor. Tiene dos columnas con cuatro filas cada una. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **CreateRecordsetVBS. asp**.  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -167,8 +167,8 @@ End Sub
 <!-- EndCreateRecordsetVBS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo del método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
+## <a name="see-also"></a>Consulte también  
+ [Método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 

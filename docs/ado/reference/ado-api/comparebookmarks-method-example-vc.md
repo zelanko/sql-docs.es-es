@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método CompareBookmarks (VC ++) | Microsoft Docs
+title: Ejemplo del método CompareBookmarks (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 137805600b30876baa96e8b795b99b62b140e915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933595"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>Ejemplo del método CompareBookmarks (VC ++)
-Este ejemplo se muestra el [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. El valor relativo de los marcadores rara vez es necesario a menos que un marcador concreto es de algún modo especial.  
+En este ejemplo se muestra el método [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado sea de algún modo especial.  
   
- Designe una fila aleatoria de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) deriva el ***autores*** tabla como destino de una búsqueda. A continuación, muestra la posición de cada fila con respecto a los que tienen como destino.  
+ Designar una fila aleatoria de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) derivado de la tabla ***authors*** como destino de una búsqueda. A continuación, muestre la posición de cada fila con respecto a ese destino.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -169,6 +169,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Método CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [CompareBookmarks (método) (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

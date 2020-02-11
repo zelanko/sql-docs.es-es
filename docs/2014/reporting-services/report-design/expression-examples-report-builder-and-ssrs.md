@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
 ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68661282"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresiones (Generador de informes y SSRS)
@@ -25,17 +25,17 @@ Las expresiones se usan con frecuencia en los informes para controlar el conteni
 
 En este tema se incluyen ejemplos de expresiones que se pueden usar en los informes para realizar tareas comunes.  
 
--   [Funciones de Visual Basic](#VisualBasicFunctions) : ejemplos de funciones de fecha, de cadena, de conversión y condicionales de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+-   [Funciones de Visual Basic](#VisualBasicFunctions) Ejemplos de funciones de fecha, de cadena, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] de conversión y condicionales.  
 
 -   [Funciones de informe](#ReportFunctions) Ejemplos de agregados y otras funciones de informe integradas.  
 
--   [Apariencia de los datos del informe](#AppearanceofReportData) : ejemplos relacionados con el cambio de apariencia de un informe.  
+-   [Apariencia de los datos del informe](#AppearanceofReportData) Ejemplos de cómo cambiar la apariencia de un informe.  
 
--   [Propiedades](#Properties) : ejemplos para establecer las propiedades de elementos de informe a fin de controlar el formato o la visibilidad.  
+-   [Propiedades](#Properties) de Ejemplos para establecer las propiedades de los elementos de informe para controlar el formato o la visibilidad.  
 
--   [Parámetros](#Parameters) : ejemplos relacionados con el uso de parámetros en una expresión.  
+-   [Parámetros](#Parameters) de Ejemplos de uso de parámetros en una expresión.  
 
--   [Código personalizado](#CustomCode) : ejemplos de código personalizado incrustado.  
+-   [Código personalizado](#CustomCode) Ejemplos de código personalizado incrustado.  
 
 Para obtener ejemplos de expresiones para usos específicos, vea los siguientes temas:  
 
@@ -49,18 +49,19 @@ Para obtener ejemplos de expresiones para usos específicos, vea los siguientes 
 
 Para más información sobre las expresiones simples y complejas, dónde se pueden usar las expresiones y los tipos de referencias que se pueden incluir en una expresión, vea los temas en [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md). Para más información sobre el contexto donde se evalúan las expresiones para calcular agregados, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
 
-Para aprender a escribir expresiones que usan muchas de las funciones y operadores que también se usan en los ejemplos de expresiones de este tema, pero en el contexto de la escritura de un informe, consulte el [Tutorial: Introducción a las expresiones](../tutorial-introducing-expressions.md).  
+Para aprender a escribir expresiones que usan muchas de las funciones y operadores que también se usan en los ejemplos de expresiones de este tema, pero en el contexto de la escritura de un informe, vea [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md).  
 
-El editor de expresiones incluye también una vista jerárquica de funciones integradas. Cuando se selecciona una función, aparece un ejemplo de código en el panel de valores. Para obtener más información, vea el cuadro de [diálogo expresión](../expression-dialog-box.md) o el [ &#40;cuadro&#41;de diálogo expresión generador de informes](../expression-dialog-box-report-builder.md).  
+El editor de expresiones incluye también una vista jerárquica de funciones integradas. Cuando se selecciona una función, aparece un ejemplo de código en el panel de valores. Para obtener más información, vea el cuadro de [diálogo expresión](../expression-dialog-box.md) o el [cuadro de diálogo expresión &#40;generador de informes&#41;](../expression-dialog-box-report-builder.md).  
 
-## <a name="functions"></a>Funciones  
+## <a name="functions"></a>Functions  
 
-Muchas expresiones de un informe contienen funciones. Con estas funciones, se puede dar formato a los datos, aplicar lógica y obtener acceso a los metadatos del informe. Puede escribir expresiones que usen funciones de la biblioteca en tiempo de ejecución de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y desde los espacios de nombres <xref:System.Convert> y <xref:System.Math> . Puede agregar referencias a las funciones desde otros ensamblados o desde código personalizado. También puede usar clases desde [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], incluida <xref:System.Text.RegularExpressions>.  
+Muchas expresiones de un informe contienen funciones. Con estas funciones, se puede dar formato a los datos, aplicar lógica y obtener acceso a los metadatos del informe. Puede escribir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] expresiones que usen funciones de la biblioteca en tiempo de ejecución y de los <xref:System.Convert> espacios de <xref:System.Math> nombres y. Puede agregar referencias a las funciones desde otros ensamblados o desde código personalizado. También puede utilizar las clases de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], incluido <xref:System.Text.RegularExpressions>.  
 
-###  <a name="VisualBasicFunctions"></a> Funciones de Visual Basic  
+###  <a name="VisualBasicFunctions"></a>Funciones de Visual Basic  
 Las funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] se pueden usar para manipular los datos que se muestran en los cuadros de texto o que se emplean en los parámetros, las propiedades u otras áreas del informe. En esta sección se ofrecen ejemplos de algunas de estas funciones. Para obtener más información, vea [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
 
-[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona muchas opciones de formato, por ejemplo, formatos de fecha específicos. Para obtener más información, vea [Aplicar formato a tipos](https://go.microsoft.com/fwlink/?LinkId=112024) en MSDN.  
+
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona muchas opciones de formato, por ejemplo, formatos de fecha específicos. Para obtener más información, vea [Aplicar formato a tipos](https://go.microsoft.com/fwlink/?LinkId=112024) en MSDN.  
 
 #### <a name="math-functions"></a>Funciones matemáticas  
 
@@ -76,7 +77,7 @@ También puede escribir una expresión para redondear un valor al múltiplo que 
 = Round(1.3*5)/5  
 ```  
 
-####  <a name="DateFunctions"></a> Funciones de fecha  
+####  <a name="DateFunctions"></a>Funciones de fecha  
 
 -   La función `Today` proporciona la fecha actual. Esta expresión puede utilizarse en un cuadro de texto para mostrar la fecha en el informe o puede utilizarse en un parámetro para filtrar los datos por la fecha actual.  
 
@@ -90,7 +91,7 @@ También puede escribir una expresión para redondear un valor al múltiplo que 
 =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
 ```  
 
--   La función `Year` muestra el año correspondiente a una fecha determinada. Puede utilizarse para agrupar las fechas o para mostrar el año como etiqueta para un conjunto de fechas. Esta expresión proporciona el año correspondiente a un determinado grupo de fechas de pedidos de venta. También es posible utilizar la función `Month` y otras funciones para manipular las fechas. Para obtener más información, consulte el [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] documentación.  
+-   La función `Year` muestra el año correspondiente a una fecha determinada. Puede utilizarse para agrupar las fechas o para mostrar el año como etiqueta para un conjunto de fechas. Esta expresión proporciona el año correspondiente a un determinado grupo de fechas de pedidos de venta. También es posible utilizar la función `Month` y otras funciones para manipular las fechas. Para obtener más información, consulte la documentación de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
 
 ```  
 =Year(Fields!OrderDate.Value)  
@@ -118,7 +119,8 @@ Cuando se utiliza como un campo calculado en un conjunto de datos, puede utiliza
 =FORMAT(Fields!SellStartDate.Value, "dd/MM/yyyy")  
 ```  
 
--   La función `CDate` convierte el valor en una fecha. La función `Now` devuelve un valor de fecha que contiene la fecha y la hora actuales del sistema. `DateDiff` devuelve un valor de tipo Long que especifica el número de intervalos de tiempo entre dos valores de fecha.  
+-   La función `CDate` convierte el valor en una fecha. La función `Now` devuelve un valor de fecha que contiene la fecha y la hora actuales del sistema. 
+  `DateDiff` devuelve un valor de tipo Long que especifica el número de intervalos de tiempo entre dos valores de fecha.  
 
 El ejemplo siguiente muestra la fecha de inicio del año en curso  
 
@@ -162,7 +164,7 @@ El ejemplo siguiente muestra la fecha de inicio del año en curso
 |Hace un año|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Hace dos años|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 
-####  <a name="StringFunctions"></a> Funciones de cadena  
+####  <a name="StringFunctions"></a>Funciones de cadena  
 
 -   Combine varios campos con operadores de concatenación y constantes de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . La expresión siguiente devuelve dos campos, cada uno de ellos en una línea diferente del mismo cuadro de texto:  
 
@@ -178,19 +180,19 @@ El ejemplo siguiente muestra la fecha de inicio del año en curso
 
 Si el cuadro de texto solo contiene una fecha o un número, debe utilizar la propiedad formato del cuadro de texto para aplicar formato en lugar de `Format` la función dentro del cuadro de texto.  
 
--   Las `Right`funciones `Len`,\\y `InStr` son útiles para devolver una subcadena; por ejemplo, recortar el nombre de usuario del *dominio* *solo en el* nombre de usuario. La siguiente expresión devuelve la parte de la cadena situada a la derecha de un carácter de barra diagonal inversa (\\) de un parámetro denominado *User*:  
+-   Las `Right`funciones `Len`, y `InStr` son útiles para devolver una subcadena; por ejemplo, recortar el nombre de usuario del *dominio*\\*solo en el* nombre de usuario. La siguiente expresión devuelve la parte de la cadena situada a la derecha de un carácter de barra diagonal inversa (\\) de un parámetro denominado *User*:  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
 ```  
 
-Con la expresión siguiente se obtiene el mismo valor que con la anterior, pero se usan miembros de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> en lugar de funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] :  
+La siguiente expresión da como resultado el mismo valor que el anterior, con los miembros de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> la clase en lugar [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] de las funciones:  
 
 ```  
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   Muestre los valores seleccionados en un parámetro de varios valores. En el ejemplo siguiente se `Join` usa la función para concatenar los valores seleccionados del parámetro alseleccionar en una sola cadena que se puede establecer como una expresión para el valor de un cuadro de texto en un elemento de informe:  
+-   Muestre los valores seleccionados en un parámetro de varios valores. En el ejemplo siguiente se `Join` usa la función para concatenar los valores seleccionados del parámetro *alseleccionar* en una sola cadena que se puede establecer como una expresión para el valor de un cuadro de texto en un elemento de informe:  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +205,7 @@ El ejemplo siguiente hace lo mismo que el ejemplo anterior, además de mostrar u
 
 ```  
 
--   Las `Regex` funciones [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] desonútilesparacambiarelformatodelascadenasexistentes,porejemplo,paradarformatoaun<xref:System.Text.RegularExpressions> número de teléfono. La expresión siguiente usa la `Replace` función para cambiar el formato de un número de teléfono de diez dígitos de un campo de "*nnn*-*nnn*-*nnnn*" a "(*nnn*) *nnn* - *nnnn*":  
+-   Las `Regex` funciones de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> son útiles para cambiar el formato de las cadenas existentes, por ejemplo, para dar formato a un número de teléfono. La expresión siguiente usa la `Replace` función para cambiar el formato de un número de teléfono de diez dígitos de un campo de *"NNN*-*nnn*-*nnnn*" a "*(nnn*) *nnn*-*nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -212,7 +214,7 @@ El ejemplo siguiente hace lo mismo que el ejemplo anterior, además de mostrar u
 > [!NOTE]  
 >  Compruebe que el valor de Fields!Phone.Value no tiene espacios adicionales y es del tipo <xref:System.String>.  
 
-#### <a name="lookup"></a>Lookup  
+#### <a name="lookup"></a>Búsqueda  
 
 -   Al especificar un campo clave, puede usar la función `Lookup` para recuperar un valor de un conjunto de datos para una relación uno a uno, por ejemplo, un par clave-valor. En la expresión siguiente se muestra el nombre de producto de un conjunto de datos ("Producto"), según el identificador de producto con el que se va a realizar la coincidencia:  
 
@@ -222,13 +224,14 @@ El ejemplo siguiente hace lo mismo que el ejemplo anterior, además de mostrar u
 
 #### <a name="lookupset"></a>LookupSet  
 
--   Al especificar un campo de clave, puede usar la función `LookupSet` para recuperar un conjunto de valores de un conjunto de datos para una relación de uno a varios. Por ejemplo, una persona puede tener varios números de teléfono. En el siguiente ejemplo, suponga que el conjunto de datos PhoneList contiene un identificador de persona y un número de teléfono en cada fila. `LookupSet` devuelve una matriz de valores. La siguiente expresión combina los valores devueltos en una sola cadena y muestra la lista de números de teléfono para la persona especificada por ContactID:  
+-   Al especificar un campo de clave, puede usar la función `LookupSet` para recuperar un conjunto de valores de un conjunto de datos para una relación de uno a varios. Por ejemplo, una persona puede tener varios números de teléfono. En el siguiente ejemplo, suponga que el conjunto de datos PhoneList contiene un identificador de persona y un número de teléfono en cada fila. 
+  `LookupSet` devuelve una matriz de valores. La siguiente expresión combina los valores devueltos en una sola cadena y muestra la lista de números de teléfono para la persona especificada por ContactID:  
 
 ```  
 =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
 ```  
 
-####  <a name="ConversionFunctions"></a> Funciones de conversión  
+####  <a name="ConversionFunctions"></a>Funciones de conversión  
 Puede usar las funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para convertir el tipo de datos de un campo en otro tipo de datos. Las funciones de conversión pueden usarse para convertir el tipo de datos predeterminado de un campo en el tipo de datos necesario para realizar cálculos o para combinar texto.  
 
 -   La expresión siguiente convierte la constante 500 al tipo Decimal a fin de compararla con un tipo de datos money de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el campo Valor de una expresión de filtro.  
@@ -243,7 +246,7 @@ Puede usar las funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para
 =CStr(Parameters!MySelection.Count)  
 ```  
 
-####  <a name="DecisionFunctions"></a> Funciones de decisión  
+####  <a name="DecisionFunctions"></a>Funciones de decisión  
 
 -   La función `Iif` devuelve un valor u otro en función de si la expresión es TRUE o no. En la expresión siguiente, se usa la función `Iif` para devolver el valor booleano `True` si el valor de `LineTotal` es mayor que 100. En caso contrario, devuelve `False`:  
 
@@ -298,10 +301,10 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 
 ```  
 
-###  <a name="ReportFunctions"></a> Funciones de informe  
+###  <a name="ReportFunctions"></a>Funciones de informe  
 En una expresión, puede agregar una referencia a las funciones de informe adicionales que manipulan datos de un informe. En esta sección, se ofrecen ejemplos de dos de estas funciones. Para más información sobre las funciones de informes y ejemplos, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
 
-#####  <a name="Sum"></a> Sum  
+#####  <a name="Sum"></a>Sume  
 
 -   La función `Sum` puede calcular el total de los valores de un grupo o de una región de datos. Esta función puede resultar útil en el encabezado o en el pie de página de un grupo. La expresión siguiente muestra la suma de los datos del grupo o de la región de datos Order:  
 
@@ -315,7 +318,7 @@ En una expresión, puede agregar una referencia a las funciones de informe adici
 =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
 ```  
 
-#####  <a name="RowNumber"></a> RowNumber  
+#####  <a name="RowNumber"></a>RowNumber  
 
 -   La función `RowNumber`, cuando se utiliza en un cuadro de texto de una región de datos, muestra el número de fila de cada instancia del cuadro de texto en que aparece la expresión. Esta función puede ser de utilidad para numerar las filas de una tabla. También puede resultar útil para tareas más complejas, como proporcionar saltos de página según el número de filas. Para obtener más información, vea [Saltos de página](#PageBreaks) más adelante en este tema.  
 
@@ -325,10 +328,10 @@ El ámbito que especifique para `RowNumber` controlará cuándo comienza la nuev
 =RowNumber(Nothing)  
 ```  
 
-##  <a name="AppearanceofReportData"></a> Apariencia de los datos del informe  
+##  <a name="AppearanceofReportData"></a>Apariencia de los datos del informe  
 Pueden utilizarse expresiones para manipular la apariencia de los datos en el informe. Por ejemplo, se pueden mostrar los valores de dos campos en un solo cuadro de texto, se puede mostrar información acerca del informe o se puede influir en el modo en que se insertan los saltos de página en el informe.  
 
-###  <a name="PageHeadersandFooters"></a> Encabezados y pies de página  
+###  <a name="PageHeadersandFooters"></a>Encabezados y pies de página  
 Cuando se diseña un informe, existe la posibilidad de mostrar el nombre del informe y el número de página en el pie del informe. Para ello, se utilizan las siguientes expresiones:  
 
 -   La siguiente expresión proporciona el nombre del informe y la hora a la que se ejecutó. Puede colocarse en un cuadro de texto en el pie de página o en el cuerpo del informe. A la hora se le aplica formato con la cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para fechas cortas:  
@@ -368,7 +371,7 @@ En el ejemplo siguiente, se indica cómo incluir un total para la página. En el
 > [!NOTE]  
 >  Solamente puede hacerse referencia a un elemento de informe por expresión en un encabezado o pie de página. Asimismo, puede hacer referencia al nombre del cuadro de texto, pero no a la expresión de datos real del cuadro de texto, en expresiones de encabezado y de pie de página.  
 
-###  <a name="PageBreaks"></a> Saltos de página  
+###  <a name="PageBreaks"></a>Saltos de página  
 Es posible que en algunos informes se desee insertar un salto de página al final de un número de filas determinado, en lugar de (o además de) en los grupos o elementos de informe. Para ello, cree un grupo que contenga los grupos o registros de detalle que desee, agregue un salto de página al grupo y, a continuación, agregue una expresión de grupo para agrupar por un número concreto de filas.  
 
 -   Si se coloca la expresión siguiente en la expresión de grupo, se asigna un número a cada conjunto de 25 filas. Cuando se define un salto de página para el grupo, el resultado de la expresión es un salto de página cada 25 filas.  
@@ -385,10 +388,10 @@ Para permitir al usuario establecer un valor para el número de filas por págin
 
 Para más información sobre cómo configurar saltos de página para un grupo, vea [Agregar un salto de página &#40;Generador de informes y SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md).  
 
-##  <a name="Properties"></a> Propiedades  
+##  <a name="Properties"></a>Propiedades  
 Las expresiones no se utilizan únicamente para mostrar datos en cuadros de texto. También se pueden utilizar para cambiar el modo en que se aplican las propiedades a los elementos de informe. Es posible cambiar la información de estilo de un elemento de informe o modificar su visibilidad.  
 
-###  <a name="Formatting"></a> Formato  
+###  <a name="Formatting"></a>Formato  
 
 -   La expresión siguiente, cuando se usa en la propiedad Color de un cuadro de texto, cambia el color del texto según el valor del campo `Profit` :  
 
@@ -418,7 +421,7 @@ Si se utiliza una expresión para un ámbito determinado, puede que sea necesari
 ### <a name="chart-colors"></a>Colores del gráfico  
 Para especificar los colores de un gráfico de formas, puede usar código personalizado que le permita controlar el orden en que los colores se asignan a los valores de los puntos de datos. Esto le permitirá usar colores coherentes para varios gráficos que tienen los mismos grupos de categorías. Para más información, vea [Especificar colores uniformes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
 
-###  <a name="Visibility"></a> Visibilidad  
+###  <a name="Visibility"></a>Visibilidad  
 Es posible mostrar y ocultar los elementos de un informe mediante las propiedades de visibilidad del elemento de informe. En una región de datos, como una tabla, se pueden ocultar inicialmente las filas de detalles basándose en el valor de una expresión.  
 
 -   La expresión siguiente, cuando se utiliza para la visibilidad inicial de las filas de detalles de un grupo, muestra las filas de detalles de todas las ventas que superen el 90 por ciento en el campo `PctQuota` :  
@@ -439,7 +442,7 @@ Es posible mostrar y ocultar los elementos de un informe mediante las propiedade
 =IIF(Fields!Column_1.IsMissing, true, false)  
 ```  
 
-###  <a name="Hyperlinks"></a> direcciones URL  
+###  <a name="Hyperlinks"></a>URL  
 Puede personalizar direcciones URL con los datos de informe y, además, controlar de manera condicional si las dichas direcciones URL se agregan como acciones para un cuadro de texto.  
 
 -   La expresión siguiente, cuando se usa como acción en un cuadro de texto, genera una dirección URL personalizada que especifica el campo `EmployeeID` del conjunto de datos como parámetro de URL.  
@@ -456,10 +459,10 @@ Para más información, vea [Agregar un hipervínculo a una dirección URL &#40;
 =IIF(Parameters!IncludeURLs.Value,"http://adventure-works.com/productcatalog",Nothing)  
 ```  
 
-##  <a name="ReportData"></a> Datos de informe  
+##  <a name="ReportData"></a>Datos de informe  
 Pueden utilizarse expresiones para manipular los datos que se usan en el informe. Se puede hacer referencia a parámetros y a otra información del informe. Incluso se puede modificar la consulta que se usa para recuperar datos para el informe.  
 
-###  <a name="Parameters"></a> Parámetros  
+###  <a name="Parameters"></a>Los  
 Pueden utilizarse expresiones en un parámetro para modificar su valor predeterminado. Por ejemplo, puede usar un parámetro que filtre datos para un usuario determinado basándose en el identificador de usuario con el que se ejecuta el informe.  
 
 -   La siguiente expresión, cuando se usa como valor predeterminado para un parámetro, obtiene el identificador de usuario de la persona que ejecuta el informe:  
@@ -480,7 +483,7 @@ Pueden utilizarse expresiones en un parámetro para modificar su valor predeterm
 =Fields(Parameters!ParameterField.Value).Value  
 ```  
 
-## <a name="CustomCode"></a> Código personalizado
+## <a name="CustomCode"></a>Código personalizado
 
 En un informe, puede utilizarse código personalizado. El código personalizado puede incrustarse en el informe o puede almacenarse en un ensamblado personalizado que se utilice en el informe. Para más información sobre código personalizado, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
 
@@ -524,7 +527,7 @@ En la expresión siguiente se muestra cómo llamar a este código personalizado 
 
 Esto ayuda a evitar excepciones en tiempo de ejecución. Ahora puede utilizar una expresión como `=IIF(Me.Value < 0, "red", "black")` en la propiedad `Color` del cuadro de texto para condicionalmente el texto para mostrar basándose en si los valores son mayores o menores que 0.  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)
 - [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)

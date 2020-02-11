@@ -14,14 +14,14 @@ ms.assetid: 77ed4c6c-d976-4eb2-8526-a12697b0ef83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a00861365df27357099176151bcd681e15e585e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985116"
 ---
 # <a name="tracing"></a>Seguimiento
-El Administrador de controladores ODBC tiene una utilidad de seguimiento que permite la secuencia de llamadas de función realizadas por una aplicación ODBC se graben y transcripción en un archivo de registro. Realizar el seguimiento de un archivo DLL que captura las llamadas entre la aplicación y el Administrador de controladores y entre el Administrador de controladores y el controlador de seguimiento. Este método de seguimiento reemplaza el seguimiento realizado por el 2 de ODBC *.x* realizan el Administrador de controladores y el seguimiento de ODBC 2 *.x* por ODBC Spy.  
+El administrador de controladores ODBC tiene una utilidad de seguimiento que permite que la secuencia de llamadas a funciones realizadas por una aplicación ODBC se registre y se transpresente en un archivo de registro. El seguimiento se realiza mediante un archivo DLL de seguimiento que captura las llamadas entre la aplicación y el administrador de controladores, y entre el administrador de controladores y el controlador. Este método de seguimiento reemplaza el seguimiento realizado por el administrador de controladores ODBC 2 *. x* y el seguimiento realizado en ODBC 2 *. x* de ODBC Spy.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -16,13 +16,13 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7927eef8105fff23a3fe790f32794fe5dd44cdae
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769190"
 ---
-# <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
+# <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Agrega la capacidad de un suscriptor para utilizar un asociado de sincronización alternativo. Las propiedades de la publicación deben especificar que los suscriptores pueden sincronizarse con otros publicadores. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
@@ -59,21 +59,21 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
   
 `[ @alternate_distributor = ] 'alternate_distributor'`Es el nombre del distribuidor para el asociado de sincronización alternativo. *alternate_distributor* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @friendly_name = ] 'friendly_name'`Es un nombre para mostrar con el que se puede identificar la Asociación del publicador, la publicación y el distribuidor que conforma un asociado de sincronización alternativo. *Nombre_descriptivo* es de tipo **nvarchar (255)** y su valor predeterminado es NULL.  
+`[ @friendly_name = ] 'friendly_name'`Es un nombre para mostrar con el que se puede identificar la Asociación del publicador, la publicación y el distribuidor que conforma un asociado de sincronización alternativo. *friendly_name* es de tipo **nvarchar (255)** y su valor predeterminado es NULL.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_addmergealternatepublisher** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addmergealternatepublisher**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_dropmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_dropmergealternatepublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

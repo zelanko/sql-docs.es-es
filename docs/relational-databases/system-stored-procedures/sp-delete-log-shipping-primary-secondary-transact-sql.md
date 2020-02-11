@@ -18,13 +18,13 @@ ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8276a23224495b7bcc69721fd5317d0b2b87821a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009169"
 ---
-# <a name="spdeletelogshippingprimarysecondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
+# <a name="sp_delete_log_shipping_primary_secondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita la entrada para una base de datos secundaria del servidor principal.  
@@ -42,11 +42,11 @@ sp_delete_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos en el servidor principal. *primary_database* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @primary_database = ] 'primary_database'`Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @secondary_server = ] 'secondary_server'` Es el nombre del servidor secundario. *secondary_server* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @secondary_server = ] 'secondary_server'`Es el nombre del servidor secundario. *secondary_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @secondary_database = ] 'secondary_database'` Es el nombre de la base de datos secundaria. *secondary_database* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @secondary_database = ] 'secondary_database'`Es el nombre de la base de datos secundaria. *secondary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -54,8 +54,8 @@ sp_delete_log_shipping_primary_secondary
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Comentarios  
- **sp_delete_log_shipping_primary_secondary** se debe ejecutar desde la **maestro** base de datos en el servidor principal. Este procedimiento almacenado quita la entrada para una base de datos secundaria **log_shipping_primary_secondaries** en el servidor principal.  
+## <a name="remarks"></a>Observaciones  
+ **sp_delete_log_shipping_primary_secondary** se debe ejecutar desde la base de datos **maestra** del servidor principal. Este procedimiento almacenado quita la entrada de una base de datos secundaria de **log_shipping_primary_secondaries** en el servidor principal.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
@@ -71,7 +71,7 @@ EXEC master.dbo.sp_delete_log_shipping_primary_secondary
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

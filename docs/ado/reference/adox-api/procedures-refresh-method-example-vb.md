@@ -1,5 +1,5 @@
 ---
-title: Procedimientos de actualización de ejemplo del método (VB) | Microsoft Docs
+title: Ejemplo de método de actualización de procedimientos (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b5201be26bfd9df41c9cb1d8908f59499520878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965376"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Ejemplo de método Refresh de procedimientos (VB)
-El código siguiente muestra cómo actualizar el [procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md) colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). Esto es necesario antes de [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md) objetos desde el **catálogo** se puede tener acceso.  
+En el código siguiente se muestra cómo actualizar la colección [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). Esto es necesario antes de que se pueda tener acceso a los objetos de [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md) del **Catálogo** .  
   
 ```  
 ' BeginProceduresRefreshVB  
@@ -54,7 +54,7 @@ End Sub
 ' EndProceduresRefreshVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Colección de procedimientos (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [Colección Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Actualizar (método, ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

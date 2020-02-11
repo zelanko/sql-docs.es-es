@@ -19,22 +19,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250488"
 ---
 # <a name="replication-backward-compatibility"></a>Compatibilidad con versiones anteriores de replicación
-  Los temas de la sección de compatibilidad con versiones anteriores describen cambios de comportamiento entre versiones de la replicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es importante entender la compatibilidad con versiones anteriores si realiza una actualización o si tiene más de una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una topología de replicación.  
+  En los temas de la sección de compatibilidad con versiones anteriores se describen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los cambios de comportamiento entre las versiones de replicación. Es importante entender la compatibilidad con versiones anteriores si realiza una actualización o si tiene más de una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una topología de replicación.  
   
- [Características que ya no se usan en la replicación de SQL Server](deprecated-features-in-sql-server-replication.md)  
- Características de replicación que se han conservado en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para preservar la compatibilidad con versiones anteriores pero que se quitarán de una futura versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Características que ya no se utilizan en la replicación de SQL Server](deprecated-features-in-sql-server-replication.md)  
+ Características de replicación que se han conservado en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para la compatibilidad con versiones anteriores, pero que se quitarán [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en una versión futura de.  
   
  [Últimos cambios en la replicación de SQL Server](breaking-changes-in-sql-server-replication.md)  
  Cambios en las características de replicación que pueden requerir cambios en las aplicaciones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actualizar bases de datos replicadas](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

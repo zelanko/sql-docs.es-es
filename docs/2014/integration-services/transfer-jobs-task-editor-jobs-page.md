@@ -1,5 +1,5 @@
 ---
-title: Transferir el Editor de la tarea de trabajos (página trabajos) | Microsoft Docs
+title: Editor de la tarea transferir trabajos (página trabajos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054988"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Editor de la tarea Transferir trabajos (página Trabajos)
@@ -39,7 +39,7 @@ ms.locfileid: "66054988"
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|Copia todos los trabajos.|  
 |**False**|Copia solo los trabajos especificados.|  
@@ -57,27 +57,27 @@ ms.locfileid: "66054988"
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**FailTask**|La tarea falla si ya existen trabajos con el mismo nombre en el servidor de destino.|  
 |**Sobrescribir**|La tarea sobrescribe los trabajos con el mismo nombre en el servidor de destino.|  
-|**Omitir**|La tarea omite los trabajos con el mismo nombre que existen en el servidor de destino.|  
+|**Skip**|La tarea omite los trabajos con el mismo nombre que existen en el servidor de destino.|  
   
  **EnableJobsAtDestination**  
  Seleccione si se deben habilitar los trabajos copiados en el servidor de destino.  
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|Habilita los trabajos en el servidor de destino.|  
 |**False**|Deshabilita los trabajos en el servidor de destino.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor de la tarea Transferir trabajos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expresiones](expressions/expressions-page.md)   
- [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)  
+ [SMO, administrador de conexiones](connection-manager/smo-connection-manager.md)  
   
   

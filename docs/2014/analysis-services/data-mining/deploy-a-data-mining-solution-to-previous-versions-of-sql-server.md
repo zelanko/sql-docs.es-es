@@ -1,5 +1,5 @@
 ---
-title: Implementar una solución de minería de datos para versiones anteriores de SQL Server | Microsoft Docs
+title: Implementar una solución de minería de datos en versiones anteriores de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084684"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Implementar soluciones de minería de datos para versiones anteriores de SQL Server
@@ -38,9 +38,9 @@ ms.locfileid: "66084684"
   
  [Restaurar a partir de copias de seguridad de base de datos](#bkmk_Backup)  
   
- [Usar la sincronización de bases de datos](#bkmk_Synch)  
+ [Usar la sincronización de base de datos](#bkmk_Synch)  
   
-##  <a name="bkmk_TimeSeries"></a> Implementar modelos de serie temporal  
+##  <a name="bkmk_TimeSeries"></a>Implementar modelos de serie temporal  
  El algoritmo de serie temporal de Microsoft se mejoró en SQL Server 2008 mediante la adición de un segundo algoritmo complementario: ARIMA. Para obtener más información sobre los cambios en el algoritmo de serie temporal, vea [Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md).  
   
  Por consiguiente, los modelos de minería de datos de serie temporal que utilizan el nuevo algoritmo ARIMA pueden comportarse de manera diferente cuando se implementan en una instancia de SQL Server 2005 Analysis Services.  
@@ -55,29 +55,29 @@ ms.locfileid: "66084684"
   
  Si el proveedor que se utiliza para el origen de datos del modelo es SQL Client Data Provider 10, también debe modificar la definición del origen de datos para especificar la versión anterior de SQL Server Native Client. De lo contrario, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] genera un error que indica que el proveedor no está registrado.  
   
-##  <a name="bkmk_Holdout"></a> Implementar modelos con exclusión  
+##  <a name="bkmk_Holdout"></a>Implementar modelos con exclusión  
  Si utiliza [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] para crear una estructura de minería de datos que contenga una partición de exclusión que se use para probar modelos de minería de datos, la estructura de minería de datos se puede implementar en una instancia de SQL Server 2005, pero la información de la partición se perderá.  
   
  Al abrir la estructura de minería de datos en SQL Server 2005 Analysis Services, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] produce un error y, a continuación, vuelve a generar la estructura para quitar la partición de datos de exclusión.  
   
- Después de que se ha vuelto a la estructura, el tamaño de la partición de exclusión ya no está disponible en la ventana Propiedades; Sin embargo, el valor \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) todavía pueden estar presentes en el archivo de script ASSL.  
+ Una vez que se ha vuelto a generar la estructura, el tamaño de la partición de exclusión ya no está disponible en el ventana Propiedades; sin embargo, el \<valor Ddl100_100: HoldoutMaxPercent>\<30/ddl100_100: HoldoutMaxPercent>) puede estar aún presente en el archivo de script ASSL.  
   
-##  <a name="bkmk_Filter"></a> Implementar modelos con filtros  
+##  <a name="bkmk_Filter"></a>Implementar modelos con filtros  
  Si utiliza [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] para aplicar un filtro a un modelo de minería de datos, este se puede implementar en una instancia de SQL Server 2005, pero el filtro no se aplicará.  
   
  Al abrir el modelo de minería de datos, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] produce un error y, a continuación, vuelve a generar el modelo para quitar el filtro.  
   
-##  <a name="bkmk_Backup"></a> Restaurar a partir de copias de seguridad de base de datos  
+##  <a name="bkmk_Backup"></a>Restaurar a partir de copias de seguridad de base de datos  
  No puede restaurar una copia de seguridad de base de datos que haya creado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a una instancia de SQL Server 2005. Si lo hace, SQL Server Management Studio genera un error.  
   
  Si crea una copia de seguridad de una base de datos de SQL Server 2005 Analysis Services y la restaura en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], todos los modelos de serie temporal se modifican según se describe en la sección anterior.  
   
-##  <a name="bkmk_Synch"></a> Usar la sincronización de bases de datos  
+##  <a name="bkmk_Synch"></a>Usar la sincronización de base de datos  
  La sincronización de bases de datos no se admite entre [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y SQL Server 2005.  
   
  Si intenta sincronizar una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , el servidor devuelve un error de sincronización de base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con versiones anteriores de Analysis Services](../analysis-services-backward-compatibility.md)  
   
   

@@ -19,16 +19,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212114"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Definir y modificar un filtro de fila con parámetros para un artículo de mezcla
   En este tema se describe cómo definir y modificar un filtro de fila con parámetros en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Al crear los artículos de la tabla, puede usar filtros de fila con parámetros. Estos filtros usan una cláusula [WHERE](/sql/t-sql/queries/where-transact-sql) para seleccionar los datos adecuados que se van a publicar. En vez de especificar un valor literal en la cláusula (como ocurre con un filtro de fila estático), se especifica una o las dos funciones del sistema siguientes: [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) y [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql). Para obtener más información, consulte [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+ Al crear los artículos de la tabla, puede usar filtros de fila con parámetros. Estos filtros usan una cláusula [WHERE](/sql/t-sql/queries/where-transact-sql) para seleccionar los datos adecuados que se van a publicar. En vez de especificar un valor literal en la cláusula (como ocurre con un filtro de fila estático), se especifica una o las dos funciones del sistema siguientes: [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) y [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql). Para obtener más información, consulte [Filtros de fila con parámetros](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  
   
@@ -43,12 +43,12 @@ ms.locfileid: "68212114"
 -   Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de filtro de fila con parámetros, como `LEFT([MyColumn]) = SUSER_SNAME()`. Si utiliza HOST_NAME en una cláusula de filtro y reemplaza el valor HOST_NAME, puede que sea necesario convertir los tipos de datos utilizando CONVERT. Para obtener más información acerca de las prácticas recomendadas para este caso, vea la sección "Reemplazar el valor de HOST_NAME()" del tema [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Defina, modifique y elimine filtros de fila con parámetros en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Defina, modifique y elimine filtros de fila con parámetros en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>Para definir un filtro de fila con parámetros  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>** , haga clic en **Agregar** y, luego, en **Agregar filtro**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>**, haga clic en **Agregar** y, luego, en **Agregar filtro**.  
   
 2.  En el cuadro de diálogo **Agregar filtro** , seleccione la tabla que va a filtrar en el cuadro de lista desplegable.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68212114"
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>Para modificar un filtro de fila con parámetros  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>** , seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Editar**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>**, seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Editar**.  
   
 2.  Modifique el filtro en el cuadro de diálogo **Editar filtro** .  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68212114"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>Para eliminar un filtro de fila con parámetros  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>** , seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Eliminar**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>**, seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Eliminar**.  
   
 
   
@@ -99,29 +99,29 @@ ms.locfileid: "68212114"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Para definir un filtro de fila con parámetros para un artículo en una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique **@publication** , un nombre para el artículo para **@article** , la tabla que está publicándose para **@source_object** , la cláusula WHERE que define el filtro con parámetros para **@subset_filterclause** (sin incluir `WHERE`) y uno de los valores siguientes para **@partition_options** , que describe el tipo de particionamiento que resultará del filtro de fila con parámetros:  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique **@publication**un nombre para el artículo **@article**para, la tabla que se va a **@source_object**publicar para, la cláusula WHERE que define el filtro con **@subset_filterclause** parámetros para ( `WHERE`sin incluir) y uno de los siguientes valores **@partition_options**para, que describe el tipo de particionamiento que será el resultado del filtro de fila con parámetros:  
   
-    -   **0** : El filtro del artículo es estático o no produce un subconjunto de datos único para cada partición (una partición "superpuesta").  
+    -   **0** : el filtrado para el artículo es estático o no produce un subconjunto de datos único para cada partición (una partición "superpuesta").  
   
-    -   **1** : Las particiones resultantes son superpuestas y las actualizaciones realizadas en el suscriptor no pueden cambiar la partición a la que pertenece la fila.  
+    -   **1** : las particiones resultantes se superponen y las actualizaciones realizadas en el suscriptor no pueden cambiar la partición a la que pertenece una fila.  
   
-    -   **2** : El filtro del artículo produce particiones no superpuestas, pero varios suscriptores pueden recibir la misma partición.  
+    -   **2** : el filtrado para el artículo produce particiones no superpuestas, pero varios suscriptores pueden recibir la misma partición.  
   
-    -   **3** : El filtro del artículo produce particiones no superpuestas que son únicas para cada suscripción.  
+    -   **3** : el filtrado para el artículo produce particiones no superpuestas que son únicas para cada suscripción.  
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Para cambiar un filtro de fila con parámetros para un artículo en una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especificar **@publication** , **@article** , un valor de `subset_filterclause` para **@property** , la expresión que define el filtro con parámetros para **@value** (sin incluir `WHERE`) y un valor de **1** para ambos **@force_invalidate_snapshot** y **@force_reinit_subscription** .  
+1.  En la base de datos de publicación del publicador, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique **@publication**, **@article**, un valor de `subset_filterclause` para **@property**, la expresión que define el filtro con parámetros para **@value** (sin incluir `WHERE`) y un valor de **1** para **@force_invalidate_snapshot** y **@force_reinit_subscription**.  
   
-2.  Si este cambio produce un comportamiento de particionamiento diferente, a continuación, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) de nuevo. Especificar **@publication** , **@article** , un valor de `partition_options` para **@property** y la opción de particionamiento más adecuada para **@value** , que puede ser uno de los siguientes:  
+2.  Si este cambio produce un comportamiento de particionamiento diferente, a continuación, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) de nuevo. Especifique **@publication**, **@article**, un valor de `partition_options` para **@property**y la opción de particionamiento más adecuada para **@value**, que puede ser una de las siguientes:  
   
-    -   **0** : El filtro del artículo es estático o no produce un subconjunto de datos único para cada partición (una partición "superpuesta").  
+    -   **0** : el filtrado para el artículo es estático o no produce un subconjunto de datos único para cada partición (una partición "superpuesta").  
   
-    -   **1** : Las particiones resultantes son superpuestas y las actualizaciones realizadas en el suscriptor no pueden cambiar la partición a la que pertenece la fila.  
+    -   **1** : las particiones resultantes se superponen y las actualizaciones realizadas en el suscriptor no pueden cambiar la partición a la que pertenece una fila.  
   
-    -   **2** : El filtro del artículo produce particiones no superpuestas, pero varios suscriptores pueden recibir la misma partición.  
+    -   **2** : el filtrado para el artículo produce particiones no superpuestas, pero varios suscriptores pueden recibir la misma partición.  
   
-    -   **3** : El filtro del artículo produce particiones no superpuestas que son únicas para cada suscripción.  
+    -   **3** : el filtrado para el artículo produce particiones no superpuestas que son únicas para cada suscripción.  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  En este ejemplo se define un grupo de artículos en una publicación de mezcla, donde los artículos se filtran con una serie de filtros de combinación con la tabla `Employee` que a su vez se filtra mediante un filtro de fila con parámetros en la columna **LoginID** . Durante la sincronización, el valor devuelto por la función [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql) se invalida. Para obtener más información, vea Invalidar el valor de HOST_NAME() en el tema [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
@@ -129,10 +129,10 @@ ms.locfileid: "68212114"
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Definir y modificar un filtro de combinación entre artículos de mezcla](define-and-modify-a-join-filter-between-merge-articles.md)   
  [Cambiar las propiedades de la publicación y de los artículos](change-publication-and-article-properties.md)   
  [Join Filters](../merge/join-filters.md)   
- [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)  
+ [Filtros de fila con parámetros](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

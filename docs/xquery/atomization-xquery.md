@@ -16,18 +16,18 @@ ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985709"
 ---
 # <a name="atomization-xquery"></a>Atomización (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  La atomización es un proceso que consiste en extraer el valor con tipo de un elemento. Este proceso se produce en determinadas circunstancias. Algunos de los operadores XQuery, como los aritméticos y los de comparación, dependen de este proceso. Por ejemplo, al aplicar operadores aritméticos directamente a los nodos, el valor con tipo de un nodo se recupera primero invocando implícitamente la [función datos](../xquery/data-accessor-functions-data-xquery.md). De esta manera, el valor atómico se pasa al operador aritmético como un operando.  
+  La atomización es un proceso que consiste en extraer el valor con tipo de un elemento. Este proceso se produce en determinadas circunstancias. Algunos de los operadores XQuery, como los aritméticos y los de comparación, dependen de este proceso. Por ejemplo, al aplicar operadores aritméticos directamente a los nodos, el valor con tipo de un nodo se recupera primero al invocar implícitamente la [función de datos](../xquery/data-accessor-functions-data-xquery.md). De esta manera, el valor atómico se pasa al operador aritmético como un operando.  
   
- Por ejemplo, la consulta siguiente devuelve el total de los atributos LaborHours. En este caso, **data()** se aplica implícitamente a los nodos de atributo.  
+ Por ejemplo, la consulta siguiente devuelve el total de los atributos LaborHours. En este caso, los **datos ()** se aplican implícitamente a los nodos de atributo.  
   
 ```  
 declare @x xml  
@@ -39,17 +39,17 @@ set @x='<ROOT><Location LID="1" SetupTime="1.1" LaborHours="3.3" />
 SELECT @x.query('sum(/ROOT/Location/@LaborHours)')  
 ```  
   
- Aunque no es necesario, puede especificar explícitamente el **data()** función:  
+ Aunque no es necesario, también puede especificar explícitamente la función **Data ()** :  
   
 ```  
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- Otro ejemplo de atomización implícita se produce al utilizar operadores aritméticos. El **+** operador requiere valores atómicos y **data()** se aplica implícitamente para recuperar el valor atómico del atributo LaborHours. La consulta se especifica en la columna Instructions de la **xml** tipo en la tabla ProductModel. La consulta siguiente devuelve el atributo LaborHours tres veces. Respecto a la consulta, observe lo siguiente:  
+ Otro ejemplo de atomización implícita se produce al utilizar operadores aritméticos. El **+** operador requiere valores atómicos y los **datos ()** se aplican implícitamente para recuperar el valor atómico del atributo LaborHours. La consulta se especifica en la columna instructions del tipo **XML** de la tabla ProductModel. La consulta siguiente devuelve el atributo LaborHours tres veces. Respecto a la consulta, observe lo siguiente:  
   
 -   Al construir el atributo OrigninalLaborHours, la atomización se aplica implícitamente a la secuencia singleton devuelta por (`$WC/@LaborHours`). El valor con tipo del atributo LaborHours se asigna a OrigninalLaborHours.  
   
--   Al construir el atributo UpdatedLaborHoursV1, el operador aritmético requiere valores atómicos. Por lo tanto, **data()** se aplica implícitamente al atributo LaborHours devuelto por (`$WC/@LaborHours`). A continuación, se le agrega el valor atómico 1. La creación del atributo UpdatedLaborHoursV2 muestra la aplicación explícita de **data()** , pero no es necesario.  
+-   Al construir el atributo UpdatedLaborHoursV1, el operador aritmético requiere valores atómicos. Por lo tanto, los **datos ()** se aplican implícitamente al atributo LaborHours devuelto`$WC/@LaborHours`por (). A continuación, se le agrega el valor atómico 1. La construcción del atributo UpdatedLaborHoursV2 muestra la aplicación explícita de **datos ()**, pero no es obligatorio.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +64,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <WC OriginalLaborHours="2.5"   
@@ -74,9 +74,9 @@ where ProductModelID=7
   
  La atomización da lugar a una instancia de tipo simple, un conjunto vacío o un error de tipo estático.  
   
- Atomización también se produce en parámetros de la expresión de comparación pasados a funciones, valores devueltos por las funciones, **cast()** expresiones y expresiones de orden pasadas en el orden por cláusula.  
+ La atomización también se produce en parámetros de expresión de comparación pasados a funciones, valores devueltos por funciones, expresiones de **conversión ()** y expresiones de ordenación pasadas en la cláusula ORDER BY.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos básicos de XQuery](../xquery/xquery-basics.md)   
  [Expresiones de comparación &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)  

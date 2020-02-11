@@ -17,24 +17,24 @@ ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c544668ebadab4a20b07f53fca9e1b501f6b1cf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003166"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo devuelve valores para Excel
-La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento y los correspondientes valores devueltos por **SQLGetInfo**. Esta información puede recuperarse transfiriendo el lenguaje C enumerado #defines a **SQLGetInfo** en el *fInfoType* argumento. Para obtener más información acerca de los valores devueltos por **SQLGetInfo**, consulte el *referencia del programador de ODBC*.  
+En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento *fInfoType* y los valores correspondientes devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el #defines del lenguaje C indicado a **SQLGetInfo** en el argumento *fInfoType* . Para obtener más información sobre los valores devueltos por **SQLGetInfo**, vea la *Referencia del programador de ODBC*.  
   
 > [!NOTE]  
 >  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra vertical (&#124;) representa una operación OR bit a bit.  
   
-|tipo de información|Valor devuelto|  
+|InfoType|Valor devuelto|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Todo listo|  
+|SQL_AGGREGATE_FUNCTIONS|Todo establecido|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -81,22 +81,22 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|El DSN de archivo Odbc.ini, o "" si se usa la palabra clave DRIVER en Odbc.ini|  
+|SQL_DATA_SOURCE_NAME|El DSN de ODBC. ini o "" si se usa la palabra clave DRIVER en ODBC. ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|Directorio de base de datos actual|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"EXCEL"|  
+|SQL_DBMS_NAME|CÁLCULO|  
 |SQL_DBMS_VER|Varios valores|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_HENV|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_HLIB|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_HSTMT|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HENV|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HLIB|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HSTMT|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* especifica la fecha de compilación)|  
+|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* especifica la fecha de compilación)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -122,7 +122,7 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Cuando se usa el controlador de Microsoft Excel, una instrucción CREATE TABLE podría permitir 256 columnas, pero el límite de 255 columnas sigue siendo válido y se producirá un error en la instrucción insert de 256 columnas.|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Al usar el controlador de Microsoft Excel, una instrucción CREATE TABLE podría permitir 256 columnas, pero el límite de 255 columnas sigue siendo válido y se producirá un error en la columna de inserción en la columna 256.|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  
@@ -143,7 +143,7 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_NUMERIC_FUNCTIONS|Varios valores|  
 |SQL_ODBC_SAG_CLI_ CONFORMIDAD|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Desde el Administrador de controladores|  
+|SQL_ODBC_VER|Desde el administrador de controladores|  
 |SQL_OJ_CAPABILITIES|Varios valores|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Varios valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"EXCEL"|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@#$%^&\*\_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SERVER_NAME|CÁLCULO|  
+|SQL_SPECIAL_CHARACTERS|"\`\@#$%^&~\*\_} {" ';:?/><,.! '-+=\\ [] &#124; "|  
 |SQL_STRING_FUNCTIONS|Varios valores|  
 |SQL_SUBQUERIES|Varios valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABLE"|  
+|SQL_TABLE_TERM|CUADRO|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Varios valores|  

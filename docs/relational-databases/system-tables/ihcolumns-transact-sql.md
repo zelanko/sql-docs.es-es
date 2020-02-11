@@ -18,37 +18,37 @@ ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990386"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **IHcolumns** tabla del sistema contiene una fila por cada columna publicada. Esta tabla se utiliza para definir cómo se representarán los tipos de datos de columna desde la que no sea publicador de SQL Server cuando se publica, básicamente, se asignan los tipos de datos entre un sistema de administración de base de datos (DBMS) de que no son de SQL Server y SQL Server. Esta tabla se almacena en la base de datos de distribución.  
+  La tabla del sistema **IHcolumns** contiene una fila por cada columna publicada. Esta tabla se utiliza para definir cómo se van a representar cuando se publiquen los tipos de datos de columna de un publicador que no es de SQL Server, proceso que esencialmente consiste en asignar tipos de datos entre un sistema de administración de bases de datos (DBMS) que no es de SQL Server y SQL Server. Esta tabla se almacena en la base de datos de distribución.  
   
 ## <a name="definition"></a>Definición  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Identifica una columna publicada.|  
-|**publishercolumn_id**|**int**|Asocia una columna publicada a metadatos de columna almacenados en el [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) tabla del sistema.|  
-|**name**|**sysname**|Especifica el nombre de la columna.|  
+|**publishercolumn_id**|**int**|Asocia una columna publicada a los metadatos de columna almacenados en la tabla del sistema [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) .|  
+|**Name**|**sysname**|Especifica el nombre de la columna.|  
 |**article_id**|**int**|Identifica el artículo al que pertenece la columna.|  
 |**column_ordinal**|**int**|Identifica la columna por orden.|  
 |**mapped_type**|**tinyint**|Tipo de datos de columna de la columna de destino en el suscriptor.|  
-|**mapped_length**|**bigint**|Longitud de la columna en el suscriptor.|  
+|**mapped_length**|**BIGINT**|Longitud de la columna en el suscriptor.|  
 |**mapped_prec**|**int**|Precisión de la columna en el suscriptor.|  
 |**mapped_scale**|**int**|Escala de la columna en el suscriptor.|  
 |**mapped_nullable**|**bit**|Indica si la columna en el suscriptor acepta valores NULL, donde **1** significa que se aceptan valores NULL.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_articlecolumn &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sysarticlecolumns &#40;vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
  [sysarticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   

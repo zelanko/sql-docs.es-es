@@ -10,22 +10,22 @@ ms.assetid: 0ed9d0f8-3297-4e31-a3e9-4a827f381789
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 48af2bc8153373484aa9c6641a9d6ad4b68cab51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995855"
 ---
-# <a name="localdberrorinstancebusy"></a>LOCALDB_ERROR_INSTANCE_BUSY
+# <a name="localdb_error_instance_busy"></a>LOCALDB_ERROR_INSTANCE_BUSY
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
+|Nombre de producto|SQL Server|  
 |Id. de evento|274|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|La operación solicitada en la instancia de Local Database no puede realizarse debido a que la instancia especificada está en uso actualmente. Detenga la instancia e inténtelo de nuevo.|  
   

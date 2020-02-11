@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079570"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Registro de SPN para una instancia de Analysis Services
@@ -36,7 +36,7 @@ ms.locfileid: "66079570"
   
  Este tema contiene las siguientes secciones:  
   
- [Cuándo se necesita un registro de SPN](#bkmk_scnearios)  
+ [Cuándo se requiere el registro de SPN](#bkmk_scnearios)  
   
  [Formato de SPN para Analysis Services](#bkmk_SPNSyntax)  
   
@@ -52,10 +52,10 @@ ms.locfileid: "66079570"
   
  [Registro de SPN para instancias de SSAS configuradas para acceso HTTP](#bkmk_spnHTTP)  
   
- [Registro de SPN para instancias de SSAS que escuchan en varios puertos fijos](#bkmk_spnFixedPorts)  
+ [Registro de SPN para instancias de SSAS que escuchan en puertos fijos](#bkmk_spnFixedPorts)  
   
-##  <a name="bkmk_scnearios"></a> Cuándo se necesita un registro de SPN  
- Las conexiones de cliente que especifican "SSPI = Kerberos" en la conexión cadena presentará los requisitos del registro SPN para una instancia de Analysis Services.  
+##  <a name="bkmk_scnearios"></a>Cuándo se requiere el registro de SPN  
+ Todas las conexiones de cliente que especifican "SSPI = Kerberos" en la cadena de conexión introducirán requisitos de registro de SPN para una instancia de Analysis Services.  
   
  El registro de SPN es necesario en las siguientes circunstancias. Para obtener información más detallada, vea [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66079570"
   
 -   Analysis Services delega una identidad de usuario al recuperar datos de una base de datos relacional de SQL Server en el caso de bases de datos tabulares que usan el modo DirectQuery. Este es el único escenario en el que Analysis Services suplantará la identidad del usuario para otro servicio.  
   
-##  <a name="bkmk_SPNSyntax"></a> Formato de SPN para Analysis Services  
+##  <a name="bkmk_SPNSyntax"></a>Formato de SPN para Analysis Services  
  Use **setspn** para registrar un SPN. En los sistemas operativos más recientes, **setspn** se instala como una utilidad del sistema. Para obtener más información, vea [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx).  
   
  En la tabla siguiente se describen la distintas partes de un SPN de Analysis Services.  
@@ -76,14 +76,14 @@ ms.locfileid: "66079570"
 |Nombre de host|Identifica el equipo en el que se está ejecutando el servicio. Puede ser un nombre de dominio completo o un nombre NetBIOS. Se debe registrar un SPN para ambos.<br /><br /> Al registrar un SPN para el nombre NetBIOS de un servidor, asegúrese de usar `SetupSPN -S` para comprobar si se produce un registro duplicado. No se garantiza que los nombres NetBIOS sean únicos en un bosque y la existencia de un registro de SPN duplicado producirá errores de conexión.<br /><br /> Para los clústeres de carga equilibrada de Analysis Services, el nombre de host debe ser el nombre virtual asignado al clúster.<br /><br /> No cree nunca un SPN con la dirección IP. Kerberos emplea las capacidades de resolución de DNS del dominio. Al especificar una dirección IP se elude esa capacidad.|  
 |Número de puerto|Aunque el número de puerto forma parte de la sintaxis de SPN, no especifique nunca un número de puerto al registrar un SPN de Analysis Services. Analysis Services suele usar el carácter de dos puntos (:) para proporcionar un número de puerto en la sintaxis estándar de SPN, con el fin de especificar el nombre de instancia. En el caso de una instancia de Analysis Services, se supone que el puerto será el puerto predeterminado (TCP 2383) o un puerto asignado por el servicio SQL Server Browser (TCP 2382).|  
 |Nombre de instancia|Analysis Services es un servicio replicable que se puede instalar varias veces en el mismo equipo. Cada instancia se identifica mediante su nombre de instancia.<br /><br /> El nombre de instancia tiene como prefijo un carácter de dos puntos (:). Por ejemplo, dado un equipo host con el nombre SRV01 y una instancia con el nombre SSAS-Tabular, el SPN debe ser SRV01:SSAS-Tabular.<br /><br /> Observe que la sintaxis para especificar una instancia con nombre de Analysis Services es distinta de la que usan otras instancias de SQL Server. Otros servicios usan una barra diagonal inversa (\) para anexar el nombre de instancia en un SPN.|  
-|Cuenta de servicio|Es la cuenta de inicio del servicio **MSSQLServerOLAPService** de Windows. Puede ser una cuenta de usuario de dominio de Windows, una cuenta virtual, una cuenta de servicio administrada o una cuenta integrada, como un SID por servicio, NetworkService o LocalSystem. Una cuenta de usuario de dominio de Windows se puede aplicar formato dominio\usuario o user@domain.|  
+|Cuenta de servicio|Es la cuenta de inicio del servicio **MSSQLServerOLAPService** de Windows. Puede ser una cuenta de usuario de dominio de Windows, una cuenta virtual, una cuenta de servicio administrada o una cuenta integrada, como un SID por servicio, NetworkService o LocalSystem. A una cuenta de usuario de dominio de Windows se le user@domainpuede dar formato dominio\usuario o.|  
   
-##  <a name="bkmk_virtual"></a> Registro de SPN para una cuenta virtual  
- Las cuentas virtuales son el tipo de cuenta predeterminado de los servicios de SQL Server. La cuenta virtual es **NT Service\MSOLAPService** para una instancia predeterminada y **NT Service\MSOLAP$** \<nombre-instancia > para una instancia con nombre.  
+##  <a name="bkmk_virtual"></a>Registro de SPN para una cuenta virtual  
+ Las cuentas virtuales son el tipo de cuenta predeterminado de los servicios de SQL Server. La cuenta virtual es **NT Service\MSOLAPService** para una instancia predeterminada y **NT Service\MSOLAP $**\<Instance-Name> para una instancia con nombre.  
   
  Como implica el nombre, estas cuentas no existen en Active Directory. Una cuenta virtual solo existe en el equipo local. Cuando se conecta a servicios, aplicaciones o dispositivos externos, la conexión se realiza mediante la cuenta de equipo local. Por esta razón, un registro de SPN para Analysis Services en ejecución en una cuenta virtual es realmente un registro de SPN para la cuenta de equipo.  
   
- **Sintaxis de ejemplo para una instancia predeterminada que se ejecuta como Servicio NT\MSOLAPService**  
+ **Sintaxis de ejemplo para una instancia predeterminada que se ejecuta como NT Service\MSOLAPService**  
   
  En este ejemplo se muestra la sintaxis de **setspn** para la instancia predeterminada de Analysis Services en ejecución en la cuenta virtual predeterminada. En este ejemplo, el nombre de host del equipo es **AW-SRV01**. Tal y como se indicó, el registro de SPN debe especificar la *cuenta de equipo* en lugar de la cuenta virtual, **NT Service\MSOLAPService**.  
   
@@ -94,20 +94,20 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
 > [!NOTE]  
 >  Recuerde crear dos registros de SPN, uno para el nombre de host de NetBIOS y otro para el nombre de dominio completo del host. Las diferentes aplicaciones cliente utilizan distintas convenciones de nombre de host cuando se conectan a Analysis Services. El uso de dos registros de SPN asegura que se tienen en cuenta ambas versiones del nombre de host.  
   
- **Sintaxis de ejemplo para una instancia con nombre que se ejecuta como NT Service\MSOLAP$\<nombre de instancia >**  
+ **Sintaxis de ejemplo para una instancia con nombre que se ejecuta\<como NT Service\MSOLAP $ Instance-Name>**  
   
- En este ejemplo se muestra la sintaxis de **setspn** para una instancia con nombre en ejecución en la cuenta virtual predeterminada. En este ejemplo, el nombre de host del equipo es **AW-SRV02** y el nombre de instancia es **AW-FINANCE**. Nuevamente, es la cuenta de equipo que se especifica para el SPN, en lugar de la cuenta virtual **NT Service\MSOLAP$** \<nombre de instancia >.  
+ En este ejemplo se muestra la sintaxis de **setspn** para una instancia con nombre en ejecución en la cuenta virtual predeterminada. En este ejemplo, el nombre de host del equipo es **AW-SRV02** y el nombre de instancia es **AW-FINANCE**. De nuevo, es la cuenta de equipo especificada para el SPN, en lugar de la cuenta virtual **NT Service\MSOLAP $**\<Instance-Name>.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
 ```  
   
-##  <a name="bkmk_domain"></a> Registro de SPN para una cuenta de dominio  
+##  <a name="bkmk_domain"></a>Registro de SPN para una cuenta de dominio  
  Una práctica común consiste en usar una cuenta de dominio para ejecutar una instancia de Analysis Services.  
   
  Para las instancias de Analysis Services que se ejecutan en un clúster de carga equilibrada de red o de hardware, se necesita una cuenta de dominio, con cada instancia del clúster en ejecución en la misma cuenta de dominio.  
   
- **Sintaxis de ejemplo para una instancia predeterminada que se ejecuta como usuario de dominio**  
+ **Sintaxis de ejemplo para una instancia predeterminada que se ejecuta como un usuario de dominio**  
   
  En este ejemplo se muestra la sintaxis de **setspn** para la instancia predeterminada de Analysis Services que se ejecuta en una cuenta de usuario de dominio, **SSAS-Service**, en el dominio AdventureWorks.  
   
@@ -116,9 +116,9 @@ Setspn -s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service
 ```  
   
 > [!TIP]  
->  Compruebe si se ha creado el SPN para el servidor de Analysis Services ejecutando `Setspn -L <domain account>` o `Setspn -L <machinename>`, según la forma en que se haya registrado el SPN. Msolapsvc.3\<nombre de host > en la lista.  
+>  Compruebe si se ha creado el SPN para el servidor de Analysis Services ejecutando `Setspn -L <domain account>` o `Setspn -L <machinename>`, según la forma en que se haya registrado el SPN. Debería ver MSOLAPSVC. 3/\<hostname> en la lista.  
   
-##  <a name="bkmk_builtin"></a> Registro de SPN para una cuenta integrada  
+##  <a name="bkmk_builtin"></a>Registro de SPN para una cuenta integrada  
  Aunque esta práctica no se recomienda, las instalaciones antiguas de Analysis Services están configuradas a veces para ejecutarse en cuentas integradas como Servicio de red, Servicio local o Sistema local.  
   
  **Sintaxis de ejemplo para una instancia predeterminada que se ejecuta en una cuenta integrada**  
@@ -129,10 +129,10 @@ Setspn -s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service
 Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01  
 ```  
   
-##  <a name="bkmk_spnNamed"></a> Registro de SPN para una instancia con nombre  
+##  <a name="bkmk_spnNamed"></a>Registro de SPN para una instancia con nombre  
  Las instancias con nombre de Analysis Services usan las asignaciones dinámicas de puerto que el servicio SQL Server Browser detecta. Cuando se usa una instancia con nombre, debe registrar un SPN tanto para el servicio SQL Server Browser como para la instancia con nombre de Analysis Services. Para obtener más información, vea [Se necesita un SPN para el servicio SQL Server Browser cuando se establece una conexión para una instancia con nombre de SQL Server Analysis Services o de SQL Server](https://support.microsoft.com/kb/950599).  
   
- **Ejemplo de sintaxis de SPN para el servicio SQL Browser en ejecución como LocalService**  
+ **Ejemplo de sintaxis de SPN para el servicio SQL Browser que se ejecuta como LocalService**  
   
  La clase de servicio es **MSOLAPDisco.3**. De forma predeterminada, este servicio se ejecuta como NT AUTHORITY\LocalService, lo que significa que el registro de SPN está establecido para la cuenta de equipo. En este ejemplo, la cuenta de equipo es **AW-SRV01**, que corresponde al nombre de equipo.  
   
@@ -140,8 +140,8 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
 Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01  
 ```  
   
-##  <a name="bkmk_spnCluster"></a> Registro de SPN para un clúster de SSAS  
- Para los clústeres de conmutación por error de Analysis Services, el nombre de host debe ser el nombre virtual asignado al clúster. Este es el nombre de red de SQL Server que se especificó durante la instalación de SQL Server en el momento de instalar Analysis Services sobre un WSFC existente. Puede encontrar este nombre en Active Directory. También puede encontrarlo en la pestaña **Administrador de clústeres de conmutación por error** | **Rol** | **Recursos** . El nombre del servidor en la pestaña Recursos es lo que debe usarse como "nombre virtual" en el comando SPN.  
+##  <a name="bkmk_spnCluster"></a>Registro de SPN para un clúster de SSAS  
+ Para los clústeres de conmutación por error de Analysis Services, el nombre de host debe ser el nombre virtual asignado al clúster. Este es el nombre de red de SQL Server que se especificó durante la instalación de SQL Server en el momento de instalar Analysis Services sobre un WSFC existente. Puede encontrar este nombre en Active Directory. También puede encontrarla en **Administrador de clústeres de conmutación por error** | pestaña**recursos** de**rol** | . El nombre del servidor en la pestaña recursos es lo que debe usarse como "nombre virtual" en el comando SPN.  
   
  **Sintaxis de SPN para un clúster de Analysis Services**  
   
@@ -151,8 +151,8 @@ Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Recuerde que los nodos de un clúster de Analysis Services deben usar el puerto predeterminado (TCP 2383) y ejecutarse bajo la misma cuenta de usuario de dominio para que cada nodo tenga el mismo SID. Vea el artículo sobre [cómo organizar en clúster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) para más información.  
   
-##  <a name="bkmk_spnHTTP"></a> Registro de SPN para instancias de SSAS configuradas para acceso HTTP  
- En función de los requisitos de la solución, puede que haya configurado Analysis Services para acceso HTTP. Si la solución incluye IIS como componente de nivel intermedio, y la autenticación Kerberos es un requisito de la solución, puede que sea necesario registrar manualmente un SPN para IIS. Para obtener más información, vea "Configurar las opciones en el equipo que ejecuta IIS" en [cómo configurar SQL Server 2008 Analysis Services y SQL Server 2005 Analysis Services para usar la autenticación Kerberos](https://support.microsoft.com/kb/917409).  
+##  <a name="bkmk_spnHTTP"></a>Registro de SPN para instancias de SSAS configuradas para acceso HTTP  
+ En función de los requisitos de la solución, puede que haya configurado Analysis Services para acceso HTTP. Si la solución incluye IIS como componente de nivel intermedio, y la autenticación Kerberos es un requisito de la solución, puede que sea necesario registrar manualmente un SPN para IIS. Para obtener más información, vea "configurar las opciones en el equipo que ejecuta IIS" en [How to configure SQL Server 2008 Analysis Services y SQL Server 2005 Analysis Services para usar la autenticación Kerberos](https://support.microsoft.com/kb/917409).  
   
  En cuanto al registro de SPN para la instancia de Analysis Services, no hay ninguna diferencia entre una instancia configurada para TCP o para HTTP. La conexión con Analysis Services desde IIS, mediante la extensión ISAPI de MSMDPUMP, siempre es TCP.  
   
@@ -160,22 +160,22 @@ Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Para más información, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
-##  <a name="bkmk_spnFixedPorts"></a> Registro de SPN para instancias de SSAS que escuchan en varios puertos fijos  
+##  <a name="bkmk_spnFixedPorts"></a>Registro de SPN para instancias de SSAS que escuchan en puertos fijos  
  No puede especificar un número de puerto en un registro de SPN de Analysis Services. Si instaló Analysis Services como instancia predeterminada y lo configuró para escuchar en un puerto fijo, ahora debe configurarlo para escuchar en el puerto predeterminado (TCP 2383). En el caso de instancias con nombre, debe usar el servicio SQL Server Browser y asignaciones dinámicas de puerto.  
   
  Una instancia de Analysis Services solo puede escuchar en un único puerto. No se admite usar varios puertos. Para obtener más información acerca de la configuración de puertos, vea [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-## <a name="see-also"></a>Vea también  
- [Autenticación y delegación de identidades de Microsoft BI](https://go.microsoft.com/fwlink/?LinkID=286576)   
+## <a name="see-also"></a>Consulte también  
+ [Autenticación y delegación de identidad de Microsoft BI](https://go.microsoft.com/fwlink/?LinkID=286576)   
  [Autenticación mutua con Kerberos](https://go.microsoft.com/fwlink/?LinkId=299283)   
- [Cómo configurar SQL Server 2008 Analysis Services y SQL Server 2005 Analysis Services para usar la autenticación de Kerberos](https://support.microsoft.com/kb/917409)   
- [Sintaxis de nombres SetSPN de los nombres de entidad de servicio (SPN) (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [¿Qué SPN se debe usar y cómo llega allí?](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Cómo configurar SQL Server 2008 Analysis Services y SQL Server 2005 Analysis Services para usar la autenticación Kerberos](https://support.microsoft.com/kb/917409)   
+ [Sintaxis de los nombres de entidad de seguridad de servicio (SPN) SetSPN (setspn. exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [¿Qué SPN uso y cómo se obtiene?](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Guía paso a paso de las cuentas de servicio](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Cómo usar SPN al configurar aplicaciones web que se hospedan en Internet Information Services](https://support.microsoft.com/kb/929650)   
  [Novedades de las cuentas de servicio](https://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [Configurar la autenticación de Kerberos para productos de SharePoint 2010 (notas del producto)](https://technet.microsoft.com/library/ff829837.aspx)  
+ [Configurar la autenticación Kerberos para productos de SharePoint 2010 (notas del producto)](https://technet.microsoft.com/library/ff829837.aspx)  
   
   

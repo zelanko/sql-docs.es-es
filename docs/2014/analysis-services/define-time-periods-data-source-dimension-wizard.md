@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082008"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Definir períodos de tiempo (Origen de datos, Asistente para dimensiones)
@@ -26,7 +26,7 @@ ms.locfileid: "66082008"
 >  Solo se mostrará esta página si ha seleccionado **Build the dimension using a data source** (Generar la dimensión con un origen de datos) en la página **Dimension Definition** (Definición de dimensión) y **Dimensión de tiempo** en la página **Seleccionar el tipo de dimensión** .  
   
 ## <a name="options"></a>Opciones  
- **Nombre de propiedad de tiempo**  
+ **Nombre de la propiedad de tiempo**  
  Muestra los tipos de atributos utilizados para indicar períodos de tiempo con dimensiones de tiempo. Para más información sobre tipos de atributo, vea [Elemento Type &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   
 > [!NOTE]  
@@ -37,9 +37,9 @@ ms.locfileid: "66082008"
   
  Para cambiar la columna, haga clic en la columna y, a continuación, seleccione otra columna de la lista.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para dimensiones (ayuda F1)](dimension-wizard-f1-help.md)   
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

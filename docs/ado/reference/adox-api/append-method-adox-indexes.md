@@ -16,14 +16,14 @@ ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967306"
 ---
 # <a name="append-method-adox-indexes"></a>Append (método) (índices ADOX)
-Agrega un nuevo [índice](../../../ado/reference/adox-api/index-object-adox.md) de objeto para el [índices](../../../ado/reference/adox-api/indexes-collection-adox.md) colección.  
+Agrega un nuevo objeto [index](../../../ado/reference/adox-api/index-object-adox.md) a la colección [Indexes](../../../ado/reference/adox-api/indexes-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,22 +33,22 @@ Indexes.Append Index [,Columns]
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Index*  
- El **índice** objeto anexar o el nombre del índice que se va a crear y anexar.  
+ *Ajustar*  
+ Objeto de **Índice** que se va a anexar o nombre del índice que se va a crear y anexar.  
   
  *Columnas*  
- Opcional. Un **Variant** valor que especifica los nombres de las columnas que se puede indizar. El *columnas* parámetro corresponde a los valores de la [nombre](../../../ado/reference/adox-api/name-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md) objeto u objetos.  
+ Opcional. Valor **Variant** que especifica los nombres de las columnas que se van a indizar. El parámetro *Columns* corresponde a los valores de la propiedad [Name](../../../ado/reference/adox-api/name-property-adox.md) de un objeto de [columna](../../../ado/reference/adox-api/column-object-adox.md) u objetos.  
   
-## <a name="remarks"></a>Comentarios  
- El *columnas* parámetro puede tomar el nombre de una columna o una matriz de nombres de columna.  
+## <a name="remarks"></a>Observaciones  
+ El parámetro *Columns* puede tomar el nombre de una columna o una matriz de nombres de columna.  
   
  Se producirá un error si el proveedor no admite la creación de índices.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Colección de índices (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
-## <a name="see-also"></a>Vea también  
- [Los índices de ejemplo de método Append (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de método Append de índices (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Append (método) (columnas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append (método) (grupos ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append (método) (claves ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   

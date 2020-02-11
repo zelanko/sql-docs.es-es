@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades (SSAS - Tabular) de la base de datos | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la base de datos (SSAS-tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8361508d678e407be9bed6eb18e8c221364daf61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082362"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>Cuadro de diálogo Propiedades de base de datos (SSAS: tabular)
@@ -26,14 +26,14 @@ ms.locfileid: "66082362"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Name**|**Nombre** es el nombre de la base de datos que identifica exclusivamente la base de datos en el servidor. Al cambiar el nombre de la base de datos, considere el efecto en los informes y las aplicaciones cliente que utilizan el nombre actual en las cadenas de conexión existentes. Tendrá que actualizar las cadenas de conexión de los informes existentes para evitar errores de acceso denegado. Además, el modelo tabular que es el origen de esta base de datos utiliza probablemente el nombre original. Considere actualizar las propiedades de implementación del modelo para asegurarse de que las actualizaciones posteriores de ese modelo se publican en la base de datos deseada.|  
-|**ID**|Muestra el identificador de la base de datos.|  
+|**Nombre**|**Nombre** es el nombre de la base de datos que identifica de forma única la base de datos en el servidor. Al cambiar el nombre de la base de datos, considere el efecto en los informes y las aplicaciones cliente que utilizan el nombre actual en las cadenas de conexión existentes. Tendrá que actualizar las cadenas de conexión de los informes existentes para evitar errores de acceso denegado. Además, el modelo tabular que es el origen de esta base de datos utiliza probablemente el nombre original. Considere actualizar las propiedades de implementación del modelo para asegurarse de que las actualizaciones posteriores de ese modelo se publican en la base de datos deseada.|  
+|**SESIÓN**|Muestra el identificador de la base de datos.|  
 |**Descripción**|Escriba una descripción para cambiar la descripción de la base de datos.|  
-|**Marca de tiempo de creación**|Muestra la fecha y hora en que se creó la base de datos.|  
+|**Crear marca de tiempo**|Muestra la fecha y hora en que se creó la base de datos.|  
 |**Última actualización de esquema**|Muestra la fecha y hora en que se actualizaron por última vez los metadatos de la base de datos.|  
 |**Última actualización**|Muestra la fecha y hora en que se actualizaron por última vez los datos de la base de datos.|  
-|**Modo de lectura y escritura**|Es una propiedad de solo lectura, pero se puede cambiar con una secuencia de comandos **Detach** y **Attach** , donde la propiedad es un parámetro del comando **Attach** . Para más información, vea [Modos de la propiedad de base de datos ReadWriteMode](multidimensional-models/database-readwritemodes.md).|  
-|**DirectQueryMode**|Especifica si la base de datos utiliza solo el almacenamiento en memoria (sin almacenamiento en disco), solo el almacenamiento basado en disco o una combinación de ambos. Los valores válidos son InMemory, DirectQuery, InMemoryWithDirectQuery (principalmente, el almacenamiento basado en memoria con cierta paginación en el disco) o DirectQueryWithInMemory (principalmente basado en disco con parte de almacenamiento en memoria). Para obtener más información, consulte [escenarios de implementación de DirectQuery &#40;Tabular de SSAS&#41;](directquery-deployment-scenarios-ssas-tabular.md).|  
+|**Modo de lectura/escritura**|Es una propiedad de solo lectura, pero se puede cambiar con una secuencia de comandos **Detach** y **Attach**, donde la propiedad es un parámetro del comando **Attach**. Para más información, vea [Modos de la propiedad de base de datos ReadWriteMode](multidimensional-models/database-readwritemodes.md).|  
+|**DirectQueryMode**|Especifica si la base de datos utiliza solo el almacenamiento en memoria (sin almacenamiento en disco), solo el almacenamiento basado en disco o una combinación de ambos. Los valores válidos son InMemory, DirectQuery, InMemoryWithDirectQuery (principalmente, el almacenamiento basado en memoria con cierta paginación en el disco) o DirectQueryWithInMemory (principalmente basado en disco con parte de almacenamiento en memoria). Para obtener más información, vea [escenarios de implementación de DirectQuery &#40;&#41;tabulares de SSAS ](directquery-deployment-scenarios-ssas-tabular.md).|  
 |**Información de suplantación de origen de datos**|Especifica la cuenta de suplantación utilizada en las conexiones a bases de datos al procesar o actualizar los datos en las particiones locales o remotos, las consultas que se ejecutan en un almacén de datos relacional (mediante DirectQuery), los enlaces fuera de línea y la sincronización de bases de datos del destino al origen.<br /><br /> Los valores válidos incluyen la cuenta de servicio de Analysis Services o un conjunto específico de credenciales de Windows. No especifique **Usar las credenciales del usuario actual**. Esa opción de credenciales no se admite para una base de datos de modelo tabular.|  
 |**Procesado por última vez**|Muestra la fecha y hora en que se procesó por última vez la base de datos.|  
 |**Tamaño estimado**|Muestra el tamaño estimado de la base de datos.|  

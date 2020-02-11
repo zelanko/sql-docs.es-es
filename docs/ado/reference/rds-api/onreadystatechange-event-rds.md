@@ -1,5 +1,5 @@
 ---
-title: onReadyStateChange (evento, RDS) | Microsoft Docs
+title: onReadyStateChange (evento) (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3558fc1fecd343fff480cca3b45c468860a801f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963839"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange (evento, RDS)
-El **onReadyStateChange** se llama al evento cada vez que el valor de la [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) los cambios de propiedad.  
+Se llama al evento **onreadystatechange** siempre que cambia el valor de la propiedad [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) .  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,14 +36,14 @@ onReadyStateChange
 #### <a name="parameters"></a>Parámetros  
  Ninguno.  
   
-## <a name="remarks"></a>Comentarios  
- El **ReadyState** propiedad refleja el progreso de una [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto tal y como recupera asincrónicamente datos en su [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. Use la **onReadyStateChange** evento para supervisar los cambios en el **ReadyState** propiedad que se produzcan. Esto es más eficiente que comprobar periódicamente el valor de propiedad.  
+## <a name="remarks"></a>Observaciones  
+ La propiedad **ReadyState** refleja el progreso de un [objeto RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) , ya que recupera de forma asincrónica los datos en su objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) . Use el evento **onreadystatechange** para supervisar los cambios en la propiedad **ReadyState** siempre que se produzcan. Esto es más eficaz que comprobar periódicamente el valor de la propiedad.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de modelo de eventos de ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de modelo de eventos de ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Conexión ADO y los eventos de conjunto de registros](../../../ado/guide/data/ado-event-handler-summary.md)
 
 

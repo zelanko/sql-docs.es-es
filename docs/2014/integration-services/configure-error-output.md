@@ -1,5 +1,5 @@
 ---
-title: Configurar la salida de Error | Microsoft Docs
+title: Configurar la salida de errores | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060636"
 ---
 # <a name="configure-error-output"></a>Configurar la salida de errores
@@ -34,12 +34,12 @@ ms.locfileid: "66060636"
  **Error**  
  Si procede, permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Temas relacionados:** [Control de errores en los datos](data-flow/error-handling-in-data.md)  
+ **Temas relacionados:** [control de errores en los datos](data-flow/error-handling-in-data.md)  
   
  **Truncamiento**  
  Si procede, permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Temas relacionados:** [Control de errores en los datos](data-flow/error-handling-in-data.md)  
+ **Temas relacionados:** [control de errores en los datos](data-flow/error-handling-in-data.md)  
   
  **Descripción**  
  Muestra la descripción de la operación.  
@@ -50,7 +50,7 @@ ms.locfileid: "66060636"
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

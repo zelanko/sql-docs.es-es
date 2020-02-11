@@ -19,16 +19,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086552"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversiones de moneda (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  solo a modelos multidimensionales  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensional  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa una combinación de características, guiadas por scripts MDX (Expresiones multidimensionales), para proporcionar compatibilidad con la conversión de divisa en cubos que admiten varias divisas.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa una combinación de características, guiadas por scripts MDX (Expresiones multidimensionales), para proporcionar compatibilidad con la conversión de divisa en cubos que admiten varias divisas.  
   
 ## <a name="currency-conversion-terminology"></a>Terminología de conversión de monedas  
  La siguiente terminología se utiliza en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para describir la funcionalidad de conversión de moneda.  
@@ -84,7 +85,7 @@ ms.locfileid: "66086552"
 ## <a name="defining-currency-conversions"></a>Definir las conversiones de moneda  
  Puede utilizar el Asistente de Business Intelligence para definir la funcionalidad de conversión de moneda en un cubo o puede definir manualmente las conversiones de moneda mediante scripts MDX.  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
  Antes de que pueda definir una conversión de moneda en un cubo mediante el Asistente de Business Intelligence, debe definir, al menos, una dimensión de moneda, una dimensión temporal y un grupo de medida de tarifas. Desde estos objetos, el Asistente de Business Intelligence puede recuperar los datos y metadatos que se usan para construir la dimensión de moneda del informe y el script MDX necesarios para proporcionar la funcionalidad de conversión de moneda.  
   
 ### <a name="decisions"></a>Decisiones  
@@ -184,7 +185,7 @@ ms.locfileid: "66086552"
   
  Siempre que sea necesario, puede cambiar los comandos de script de una conversión de moneda. Sin embargo, si sobrescribe la conversión de moneda, estos cambios se perderán.  
   
-## <a name="see-also"></a>Vea también  
- [Escenarios de globalización para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)  
+## <a name="see-also"></a>Consulte también  
+ [Escenarios de globalización para Analysis Services Multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
   

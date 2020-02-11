@@ -1,5 +1,5 @@
 ---
-title: Editor de consultas MDX (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Editor de consultas MDX (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 579af162998ffaa7c9483a6e6d29a87f98e96fac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077879"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>Editor de consultas MDX (Analysis Services - Datos multidimensionales)
@@ -43,25 +43,25 @@ ms.locfileid: "66077879"
 |Término|Definición|  
 |----------|----------------|  
 |**Conectar**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Desconectar**|Desconecta el Editor de consultas MDX de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Conecto**|Desconecta el Editor de consultas MDX de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Cambiar conexión**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Consulta con conexión actual**|Abre una nueva ventana del Editor de consultas MDX y usa la información de conexión de la ventana actual del Editor de consultas MDX.|  
+|**Nueva consulta con conexión actual**|Abre una nueva ventana del Editor de consultas MDX y usa la información de conexión de la ventana actual del Editor de consultas MDX.|  
 |**Bases de datos disponibles**|Cambie la conexión a una base de datos distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la misma instancia.|  
-|**Ejecutar**|Ejecuta el código seleccionado y, si no se ha seleccionado ningún código, ejecuta todo el código del Editor de consultas MDX.|  
+|**Ejecut**|Ejecuta el código seleccionado y, si no se ha seleccionado ningún código, ejecuta todo el código del Editor de consultas MDX.|  
 |**Analizar**|Comprueba la sintaxis del código seleccionado. Si no se selecciona ningún código, comprueba la sintaxis de toda la ventana del Editor de consultas MDX.|  
-|**Cancelar ejecución de la consulta**|Envía una solicitud de cancelación al servidor. Algunas consultas no pueden cancelarse inmediatamente, sino que deben esperar a una condición de cancelación adecuada. Al cancelar las consultas, podrían producirse retrasos mientras se revierten las transacciones.|  
+|**Cancelar la ejecución de la consulta**|Envía una solicitud de cancelación al servidor. Algunas consultas no pueden cancelarse inmediatamente, sino que deben esperar a una condición de cancelación adecuada. Al cancelar las consultas, podrían producirse retrasos mientras se revierten las transacciones.|  
   
 ## <a name="mdx-query-editor-window"></a>Ventana Editor de consultas MDX  
  Las opciones incluidas en la siguiente tabla están disponibles en el Editor de consultas MDX.  
   
 |Término|Definición|  
 |----------|----------------|  
-|**Ventana editor de consultas**|Escriba las instrucciones y scripts MDX que debe ejecutar el Editor de consultas MDX.<br /><br /> El menú contextual del editor de consultas proporciona las siguientes opciones:<br /><br /> **Cortar**: Copia la selección actual en el portapapeles y quita la selección de la ventana del editor de consultas.<br /><br /> **Copiar**: Copia la selección actual en el portapapeles.<br /><br /> **Pegar**: Pega el contenido del portapapeles en la selección actual.<br /><br /> **Conectar**: Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Desconectar**: Desconecta el editor de consultas actual de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Desconectar todas las consultas**: Desconecta todos los editores de consultas abiertos.<br /><br /> **Cambiar conexión**: Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Abrir servidor en el Explorador de objetos**: Abre el cuadro de diálogo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a la que está conectado el editor de consultas actual en el **Explorador de objetos**.<br /><br /> **Ejecutar**: Ejecuta el código seleccionado y, si no se ha seleccionado ningún código, ejecuta todo el código del editor de consultas actual.<br /><br /> **Ventana Propiedades**: Muestra la ventana **Propiedades** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para la ventana de consultas actual.<br /><br /> **Opciones de consulta**: Muestra el cuadro de diálogo **Opciones de consulta** .|  
-|**Ventana metadatos**|Muestra los metadatos para la base de datos conectada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Cubo**|Seleccione un cubo en la base de datos conectada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para mostrar los metadatos asociados al cubo en la pestaña **Metadatos** .|  
-|**Metadatos**|Muestra los metadatos para el cubo seleccionado en **Cubo**, incluidos los grupos de medida y las medidas, los indicadores clave de rendimiento, las dimensiones, las jerarquías, los niveles, los miembros y las propiedades de los miembros. Para recuperar la clave completa de un objeto:<br /><br /> Arrastre el objeto desde la pestaña **Metadatos** hasta el panel de consultas.<br /><br /> Haga clic con el botón derecho en el objeto y seleccione **Copiar**y, después, haga clic con el botón derecho en el panel de consultas y seleccione **Pegar**.|  
-|**Funciones**|Muestra los metadatos para las funciones MDX disponibles para la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , una vez recuperados del conjunto de filas de esquema MDSCHEMA_FUNCTIONS. Para recuperar la sintaxis de una función:<br /><br /> Arrastre el objeto desde la pestaña **Funciones** hasta el panel de consultas.<br /><br /> Haga clic con el botón derecho en la función y seleccione **Copiar**y, luego, haga clic con el botón derecho en el panel de consultas y seleccione **Pegar**.|  
-|**Ventana de resultados**|Muestra los resultados de una instrucción o script MDX en una cuadrícula.|  
-|**Ventana de mensajes**|Muestra información sobre cómo ejecutar una instrucción o script MDX. Por ejemplo, esta ventana muestra todos los errores encontrados durante la ejecución o el número de celdas recuperadas tras la ejecución.|  
+|**Ventana del editor de consultas**|Escriba las instrucciones y scripts MDX que debe ejecutar el Editor de consultas MDX.<br /><br /> El menú contextual del editor de consultas proporciona las siguientes opciones:<br /><br /> **Cortar**: copia la selección actual en el portapapeles y quita la selección de la ventana del editor de consultas.<br /><br /> **Copiar**: copia la selección actual en el portapapeles.<br /><br /> **Pegar**: pega el contenido del portapapeles en la selección actual.<br /><br /> **Conectar**: abre el cuadro de diálogo **conectar con el servidor** para establecer una conexión a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] una instancia de.<br /><br /> **Desconectar**: desconecta el editor de consultas actual de una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia de.<br /><br /> **Desconectar todas las consultas**: desconecta todos los editores de consultas abiertos actualmente.<br /><br /> **Cambiar conexión**: abre el cuadro de diálogo **conectar con el servidor** para establecer una conexión a una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia diferente.<br /><br /> **Abrir servidor en explorador de objetos**: abre la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia de a la que está conectado el editor de consultas actual en **Explorador de objetos**.<br /><br /> **Ejecutar**: ejecuta el código seleccionado o, si no se selecciona ningún código, ejecuta todo el código en el editor de consultas actual.<br /><br /> **Ventana Propiedades**: muestra la ventana **propiedades** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para la ventana de consulta actual.<br /><br /> **Opciones de consulta**: muestra el cuadro de diálogo **Opciones de consulta** .|  
+|**Ventana Metadatos**|Muestra los metadatos para la base de datos conectada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**BD**|Seleccione un cubo en la base de datos conectada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para mostrar los metadatos asociados al cubo en la pestaña **Metadatos** .|  
+|**Metadatos**|Muestra los metadatos para el cubo seleccionado en **Cubo**, incluidos los grupos de medida y las medidas, los indicadores clave de rendimiento, las dimensiones, las jerarquías, los niveles, los miembros y las propiedades de los miembros. Para recuperar la clave completa de un objeto:<br /><br /> Arrastre el objeto desde la pestaña **Metadatos** hasta el panel de consultas.<br /><br /> Haga clic con el botón derecho en el objeto y seleccione **Copiar** y, después, haga clic con el botón derecho en el panel de consultas y seleccione **Pegar**.|  
+|**Funciones**|Muestra los metadatos para las funciones MDX disponibles para la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], una vez recuperados del conjunto de filas de esquema MDSCHEMA_FUNCTIONS. Para recuperar la sintaxis de una función:<br /><br /> Arrastre el objeto desde la pestaña **Funciones** hasta el panel de consultas.<br /><br /> Haga clic con el botón derecho en la función y seleccione **Copiar** y, luego, haga clic con el botón derecho en el panel de consultas y seleccione **Pegar**.|  
+|**Ventana Resultados**|Muestra los resultados de una instrucción o script MDX en una cuadrícula.|  
+|**Ventana Mensajes**|Muestra información sobre cómo ejecutar una instrucción o script MDX. Por ejemplo, esta ventana muestra todos los errores encontrados durante la ejecución o el número de celdas recuperadas tras la ejecución.|  
   
   

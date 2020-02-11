@@ -1,5 +1,5 @@
 ---
-title: Herramientas de cálculo (pestaña cálculos, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Herramientas de cálculo (pestaña cálculos, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff0f13ec91ef1e8796ed5ebd5ccf3cc37ff2f354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088277"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Herramientas de cálculo (pestaña Cálculos, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -36,15 +36,15 @@ ms.locfileid: "66088277"
 > [!NOTE]  
 >  En el modo de proyecto, el cuadro de diálogo **Herramientas de cálculo** lee la información de esta opción desde un archivo XML con el nombre MDXFunctions.xml, incluido en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. En el modo en línea, la información de esta opción se recupera del conjunto de filas del esquema MDSCHEMA_FUNCTIONS para la instancia.  
   
- **Templates** (Plantillas [C++])  
+ **Templa**  
  Muestra las plantillas predefinidas disponibles para los miembros calculados, los conjuntos con nombre y los comandos de script.  
   
  Arrastre el elemento seleccionado al panel **Editor de script**, **Editor de Formulario de miembro calculado**o **Editor de Formulario de conjunto con nombre** para incluir la sintaxis MDX de dicho elemento en la ubicación seleccionada del panel.  
   
 ## <a name="context-menu"></a>Menú contextual  
- Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en un elemento del panel **Herramientas de cálculo** :  
+ Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en un elemento del panel **Herramientas de cálculo**:  
   
- **Copiar**  
+ **Copy**  
  Seleccione esta opción para copiar el elemento seleccionado en **Metadatos** o **Funciones** en el Portapapeles.  
   
 > [!NOTE]  
@@ -68,13 +68,13 @@ ms.locfileid: "66088277"
 > [!NOTE]  
 >  Solo se mostrará esta opción si se selecciona **Metadatos** .  
   
-## <a name="see-also"></a>Vea también  
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organizador de script &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulario de miembro calculado &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Denominada Editor de formulario de conjunto &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de script &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Cálculos &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Organizador de scripts &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulario de miembro calculado &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulario de conjuntos con nombre &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de scripts &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Cálculos &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

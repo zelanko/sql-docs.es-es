@@ -16,21 +16,21 @@ ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04c7b1d1cb5d07a300b82d13a7e80158498bbd5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965653"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
-Especifica el tipo de objeto de base de datos que se va a establecer permisos o la propiedad.  
+Especifica el tipo de objeto de base de datos para el que se van a establecer permisos o propiedad.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|El objeto es una columna.|  
 |**adPermObjDatabase**|3|El objeto es una base de datos.|  
 |**adPermObjProcedure**|4|El objeto es un procedimiento.|  
-|**adPermObjProviderSpecific**|-1|El objeto es un tipo definido por el proveedor. Se producirá un error si el *ObjectType* parámetro es **adPermObjProviderSpecific** y un *valor de ObjectTypeId* no se proporciona.|  
+|**adPermObjProviderSpecific**|-1|El objeto es un tipo definido por el proveedor. Se producirá un error si el parámetro *objecttype* es **adPermObjProviderSpecific** y no se proporciona un *ObjectTypeId* .|  
 |**adPermObjTable**|1|El objeto es una tabla.|  
 |**adPermObjView**|5|El objeto es una vista.|  
   

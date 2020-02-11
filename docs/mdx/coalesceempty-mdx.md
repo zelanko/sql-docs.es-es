@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f760220b02396591e684a83305111e487908d19b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006305"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
@@ -44,17 +44,17 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *String_Expression2*  
  Expresión de cadena válida que suele ser un valor de cadena especificado sustituido por un valor NULL devuelto por la primera expresión de cadena.  
   
-## <a name="remarks"></a>Comentarios  
- Si se especifican uno o más expresiones numéricas, la **CoalesceEmpty** función devuelve el valor numérico de la primera expresión numérica (de izquierda a derecha) que se puede resolver como un valor no vacío. Si ninguna de las expresiones numéricas especificadas puede resolverse en un valor no vacío, la función devuelve el valor de la celda vacía. Normalmente, el valor de la segunda expresión numérica es el valor numérico sustituido por un valor NULL devuelto por la primera expresión numérica.  
+## <a name="remarks"></a>Observaciones  
+ Si se especifican una o más expresiones numéricas, la función **CoalesceEmpty** devuelve el valor numérico de la primera expresión numérica (de izquierda a derecha) que puede resolverse en un valor que no esté vacío. Si ninguna de las expresiones numéricas especificadas puede resolverse en un valor no vacío, la función devuelve el valor de la celda vacía. Normalmente, el valor de la segunda expresión numérica es el valor numérico sustituido por un valor NULL devuelto por la primera expresión numérica.  
   
  Si se especifican una o más expresiones de cadena, la función devuelve el valor de cadena de la primera expresión de cadena (de izquierda a derecha) que puede resolverse en un valor no vacío. Si ninguna de las expresiones de cadena especificadas puede resolverse en un valor no vacío, la función devuelve el valor de la celda vacía. Normalmente, el valor de la segunda expresión de cadena es el valor de cadena sustituido por un valor NULL devuelto por la primera expresión de cadena.  
   
- El **CoalesceEmpty** función solo puede tomar valores del mismo tipo. Es decir, todas las expresiones de valor especificadas se deben evaluar solo como tipos de datos numéricos o un valor de celda vacía, o bien todas las expresiones de valor especificadas deben evaluar tipos de datos o un valor de celda vacía. Una sola llamada a esta función no puede incluir expresiones numéricas y de cadena.  
+ La función **CoalesceEmpty** solo puede tomar valores del mismo tipo. Es decir, todas las expresiones de valor especificadas se deben evaluar solo como tipos de datos numéricos o un valor de celda vacía, o bien todas las expresiones de valor especificadas deben evaluar tipos de datos o un valor de celda vacía. Una sola llamada a esta función no puede incluir expresiones numéricas y de cadena.  
   
  Para obtener más información acerca de las celdas vacías, consulte la documentación de OLE DB.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se consulta el **Adventure Works** cubo. Este ejemplo devuelve la cantidad de pedido de cada producto y el porcentaje de cantidades de pedido por categoría. El **CoalesceEmpty** función garantiza que los valores null se representan como cero (0) al dar formato a los miembros calculados.  
+ En el ejemplo siguiente se consulta el cubo **Adventure Works** . Este ejemplo devuelve la cantidad de pedido de cada producto y el porcentaje de cantidades de pedido por categoría. La función **CoalesceEmpty** garantiza que los valores NULL se representan como cero (0) al dar formato a los miembros calculados.  
   
 ```  
 WITH   
@@ -77,7 +77,7 @@ FROM [Adventure Works]
 WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

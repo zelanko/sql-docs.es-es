@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e3d2a420529778584b9e187550772a112d459c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867969"
 ---
-# <a name="mssqlserver5229"></a>MSSQLSERVER_5229
+# <a name="mssqlserver_5229"></a>MSSQLSERVER_5229
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|5229|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|5229|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC4_ANTIMATTER_IN_HEAP_OR_CLUSTERED_INDEX|  
-|Texto del mensaje|Error de tabla: Objeto ID O_ID, ID. de partición PN_ID, índice de unidad de asignación ID A_ID (tipo TYPE) contiene una columna antimateria, pero no es un índice no agrupado.|  
+|Texto del mensaje|Error de tabla: el Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación A_ID (tipo TYPE) contiene una columna antimateria, pero no es un índice no clúster.|  
   
 ## <a name="explanation"></a>Explicación  
  Un montón o índice clúster contiene una columna antimateria, aunque no debería.  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901799"
 ---
 # <a name="integration-services-paths"></a>Rutas de Integration Services
@@ -41,9 +41,9 @@ ms.locfileid: "62901799"
   
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de rutas de flujo de datos** , haga clic en uno de los siguientes temas:  
   
--   [Editor de rutas de flujo de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de rutas de flujo de datos &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de rutas de flujo de datos &#40;metadatos (página)&#41;](../data-flow-path-editor-metadata-page.md)  
+-   [Editor de rutas de flujo de datos &#40;página de metadatos&#41;](../data-flow-path-editor-metadata-page.md)  
   
 -   [Editor de rutas de flujo de datos &#40;página visores de datos&#41;](../data-flow-path-editor-data-viewers-page.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62901799"
   
 -   [Conectar componentes de un flujo de datos](connect-components-in-a-data-flow.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de datos](data-flow.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bebeec974bff46333662708952d0a8b6fa841a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835226"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Conexión de SQL Server para la creación de instancias
@@ -29,7 +29,7 @@ ms.locfileid: "62835226"
  Escriba el nombre del servidor donde se encuentra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Autenticación**  
- Seleccione una de las opciones siguientes:  
+ Seleccione uno de los siguientes:  
   
 -   **Autenticación de Windows**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62835226"
   
      Para obtener información sobre el cuadro de diálogo Propiedades avanzadas de conexión, vea [Propiedades avanzadas de conexión](advanced-connection-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear la base de datos de cambios de SQL Server](create-the-sql-server-change-database.md)   
  [Permisos necesarios de conexión con SQL Server para el Diseñador CDC](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   

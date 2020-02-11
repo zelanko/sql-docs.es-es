@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18db8cfd54a9df36564d64c0cd94407bfefb21f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914799"
 ---
-# <a name="mssqlserver3151"></a>MSSQLSERVER_3151
+# <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|3151|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|3151|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|LDDB_MASTER_LOAD_FAILED|  
 |Texto del mensaje|No se pudo restaurar la base de datos maestra. Cerrando SQL Server. Compruebe los registros de errores y vuelva a generar la base de datos maestra. Para obtener más información acerca de cómo volver a crear la base de datos maestra, vea los Libros en pantalla de SQL Server.|  
@@ -36,6 +36,6 @@ ms.locfileid: "62914799"
  Se trata de un mensaje de error general que indica diversos problemas con la base de datos **maestra**.  
   
 ## <a name="user-action"></a>Acción del usuario  
- Consulte los registros de errores para obtener más información. Para crear una base de datos **maestra** utilizable, ejecute Setup.exe con la opción REBUILDDATABASE. Para obtener más información, vea "Cómo: Instalar a SQL Server desde el símbolo del sistema"en libros en pantalla de SQL Server.  
+ Consulte los registros de errores para obtener más información. Para crear una base de datos **maestra** utilizable, ejecute Setup.exe con la opción REBUILDDATABASE. Para obtener más información, vea "Cómo instalar SQL Server desde el símbolo del sistema" en los Libros en pantalla de SQL Server.  
   
   

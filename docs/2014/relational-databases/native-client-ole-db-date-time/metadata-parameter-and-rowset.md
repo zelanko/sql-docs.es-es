@@ -1,5 +1,5 @@
 ---
-title: Parámetros y metadatos del conjunto de filas | Microsoft Docs
+title: Metadatos de parámetros y conjuntos de filas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655631"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Parámetros y metadatos de conjuntos de filas
@@ -37,12 +37,12 @@ ms.locfileid: "62655631"
   
 |Tipo de parámetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Establecer|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Establecer|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Establecer|  
+|date|DBTYPE_DBDATE|6|10|0|Borrar|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Borrar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Borrar|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Set|  
   
  Observe que en algunos casos los intervalos de valores no son continuos. Esto se debe a la adición de un separador decimal cuando la precisión fraccionaria es mayor que cero.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "62655631"
 |datetime2 o DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- El *bPrecision* parámetro se omite.  
+ Se omite el parámetro *bPrecision* .  
   
- No se tiene en cuenta "DBPARAMFLAGS_SS_ISVARIABLESCALE" al enviar los datos al servidor. Las aplicaciones pueden exigir el uso de tipos heredados de flujo TDS mediante los nombres de tipo específico del proveedor "`datetime`" y "`smalldatetime`". Cuando se conecta a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) de los servidores, "`datetime2`"se usará el formato e implícita de servidor se producirá una conversión, si es necesario, cuando el nombre de tipo es"`datetime2`" o "DBTYPE_DBTIMESTAMP". *bScale* se omite si los nombres de tipo específico del proveedor "`datetime`"o"`smalldatetime`" se usan. En caso contrario, las aplicaciones deben asegurarse que *bScale* se ha establecido correctamente. Las aplicaciones actualizadas de MDAC y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que usan "DBTYPE_DBTIMESTAMP" se producirá un error si no se establece *bScale* correctamente. Cuando esté conectado a las instancias de servidor anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], un valor *bScale* que no sea 0 o 3 con "DBTYPE_DBTIMESTAMP" es un error y se devolverá E_FAIL.  
+ No se tiene en cuenta "DBPARAMFLAGS_SS_ISVARIABLESCALE" al enviar los datos al servidor. Las aplicaciones pueden exigir el uso de tipos heredados de flujo TDS mediante los nombres de tipo específico del proveedor "`datetime`" y "`smalldatetime`". Cuando se conecta [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a servidores de (o posterior)`datetime2`, se usará el formato "" y se producirá una conversión implícita de servidor, si es necesario, cuando`datetime2`el nombre de tipo sea "" o "DBTYPE_DBTIMESTAMP". *bScale* se omite si se usan los nombres de tipo`datetime`específicos del proveedor`smalldatetime`"" o "". De lo contrario, Appications debe asegurarse de que *bScale* se ha establecido correctamente. Se producirá un error en las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicaciones actualizadas [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] desde MDAC y Native Client a partir de que usan "DBTYPE_DBTIMESTAMP" si no establecen *bScale* correctamente. Cuando esté conectado a las instancias de servidor anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], un valor *bScale* que no sea 0 o 3 con "DBTYPE_DBTIMESTAMP" es un error y se devolverá E_FAIL.  
   
- Cuando no se llama a ICommandWithParameters:: SetParameterInfo, el proveedor implica el servidor escriba en el tipo de enlace como se especifica en IAccessor:: CreateAccessor como sigue:  
+ Cuando no se llama a ICommandWithParameters:: SetParameterInfo, el proveedor implica el tipo de servidor del tipo de enlace tal y como se especifica en IAccessor:: CreateAccessor de la manera siguiente:  
   
 |Tipo de enlace|*pwszDataSourceType*<br /><br /> (depende del proveedor)|  
 |------------------|----------------------------------------------------|  
@@ -78,16 +78,17 @@ ms.locfileid: "62655631"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- `IColumnsRowset::GetColumnsRowset` devuelve las columnas siguientes:  
+ 
+  `IColumnsRowset::GetColumnsRowset` devuelve las columnas siguientes:  
   
 |Tipo de columna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Establecer|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Establecer|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Establecer|  
+|date|DBTYPE_DBDATE|6|10|0|Borrar|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Borrar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Borrar|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  DBCOLUMN_FLAGS, DBCOLUMNFLAGS_ISFIXEDLENGTH es siempre TRUE para los tipos de fecha y hora, y las marcas siguientes son siempre FALSE:  
   
@@ -116,12 +117,12 @@ ms.locfileid: "62655631"
   
 |Tipo de parámetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
-|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Establecer|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Establecer|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Establecer|  
+|date|DBTYPE_DBDATE|6|10|0|Borrar|  
+|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Borrar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Borrar|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  En *dwFlags*, DBCOLUMNFLAGS_ISFIXEDLENGTH siempre es TRUE para los tipos de fecha y hora, y las marcas siguientes son siempre FALSE:  
   
@@ -139,9 +140,9 @@ ms.locfileid: "62655631"
   
  Se pueden establecer las marcas restantes (DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE y DBCOLUMNFLAGS_WRITEUNKNOWN).  
   
- Se proporciona una nueva marca DBCOLUMNFLAGS_SS_ISVARIABLESCALE en *dwFlags* para permitir que una aplicación determine el tipo de servidor de columnas, donde *wType* es DBTYPE_DBTIMESTAMP. *bScale* también tiene que usarse para identificar el tipo de servidor.  
+ Se proporciona una nueva marca DBCOLUMNFLAGS_SS_ISVARIABLESCALE en *dwFlags* para permitir que una aplicación determine el tipo de servidor de columnas, donde *wType* es DBTYPE_DBTIMESTAMP. *bScale* también se debe usar para identificar el tipo de servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Metadatos &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Restauración por etapas de la base de datos (modelo de recuperación completa) | Microsoft Docs'
+title: 'Ejemplo: restauración por etapas de la base de datos (modelo de recuperación completa) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 157541fe3792ba082d9b1ec84c3ab45ca0617060
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875827"
 ---
-# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Ejemplo: Restauración por etapas de la base de datos (modelo de recuperación completa)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Ejemplo: restauración por etapas de la base de datos (modelo de recuperación completa)
   En una secuencia de restauración por etapas se restaura y recupera una base de datos en fases en el nivel del grupo de archivos, empezando con los grupos de archivos principales, los de lectura y escritura, y los secundarios.  
   
  En este ejemplo, la base de datos `adb` se restaura en un nuevo equipo después de un desastre. La base de datos está utilizando el modelo de recuperación completa, por lo que, antes de iniciar la restauración, debe crearse una copia del final del registro de la base de datos. Antes del desastre, todos los grupos de archivos están en línea. El grupo de archivos `B` es de solo lectura. Se deben restaurar todos los grupos de archivos secundarios, pero por orden de importancia: `A` (el de mayor importancia), `C`y, por último, `B`. En este ejemplo, hay cuatro copias de seguridad de registros, incluida la copia del final del registro.  
@@ -83,7 +83,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 ## <a name="additional-examples"></a>Otros ejemplos  
   
--   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
@@ -95,7 +95,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Restauración con conexión &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   

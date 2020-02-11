@@ -1,5 +1,5 @@
 ---
-title: Dimensiones (pestaña estructura de cubo, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Dimensiones (pestaña estructura de cubo, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081696"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensiones (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -26,18 +26,18 @@ ms.locfileid: "66081696"
  **Jerarquías**  
  Haga clic para mostrar las dimensiones de cubo disponibles y las jerarquías de cubo asociadas.  
   
- Expanda una dimensión de cubo y seleccione **editar \<dimensión >** para mostrar el Diseñador de dimensiones y editar la dimensión de base de datos en el que se basa la dimensión de cubo. Para más información sobre el Diseñador de dimensiones, vea [Diseñador de dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Expanda una dimensión de cubo y seleccione ** \<editar dimensión>** para mostrar el diseñador de dimensiones y editar la dimensión de la base de datos en la que se basa la dimensión de cubo. Para más información sobre el Diseñador de dimensiones, vea [Diseñador de dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Atributos**  
  Haga clic para mostrar las dimensiones de cubo disponibles y los atributos de cubo asociados.  
   
- Expanda una dimensión de cubo y seleccione **editar \<dimensión >** para mostrar el Diseñador de dimensiones y editar la dimensión de base de datos en el que se basa la dimensión de cubo. Para más información sobre el Diseñador de dimensiones, vea [Diseñador de dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Expanda una dimensión de cubo y seleccione ** \<editar dimensión>** para mostrar el diseñador de dimensiones y editar la dimensión de la base de datos en la que se basa la dimensión de cubo. Para más información sobre el Diseñador de dimensiones, vea [Diseñador de dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="context-menu"></a>Menú contextual  
  Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en el panel **Dimensiones** :  
   
  **Agregar dimensión de cubo**  
- Haga clic en esta opción para mostrar el cuadro de diálogo **Agregar dimensión de cubo** y agregar referencias a las dimensiones de base de datos nuevas o existentes del cubo. Para obtener más información sobre el cuadro de diálogo **Agregar dimensión de cubo**, vea [Cuadro de diálogo Agregar dimensión de cubo &#40;Analysis Services - Datos multidimensionales&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md)  
+ Haga clic en esta opción para mostrar el cuadro de diálogo **Agregar dimensión de cubo** y agregar referencias a las dimensiones de base de datos nuevas o existentes del cubo. Para más información sobre el cuadro de diálogo **Agregar dimensión de cubo**, vea [Cuadro de diálogo Agregar dimensión de cubo &#40;Analysis Services - Datos multidimensionales&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
 >  Esta opción solo se muestra si se ha seleccionado una dimensión.  
@@ -76,7 +76,7 @@ ms.locfileid: "66081696"
 >  Esta opción solo se muestra si se ha seleccionado una dimensión.  
   
  **Nuevo objeto vinculado**  
- Haga clic en esta opción para mostrar el **Asistente para objetos vinculados** , vincular grupos de medida y dimensiones de otros cubos e importar acciones, indicadores clave de rendimiento (KPI) y cálculos al cubo seleccionado. Para obtener más información sobre el **Asistente para objetos vinculados**, vea [Asistente para objetos vinculados (Ayuda F1)](linked-object-wizard-f1-help.md).  
+ Haga clic en esta opción para mostrar el **Asistente para objetos vinculados** , vincular grupos de medida y dimensiones de otros cubos e importar acciones, indicadores clave de rendimiento (KPI) y cálculos al cubo seleccionado. Para más información sobre el **Asistente para objetos vinculados**, vea [Asistente para objetos vinculados (Ayuda F1)](linked-object-wizard-f1-help.md).  
   
 > [!NOTE]  
 >  Esta opción solo se muestra si se ha seleccionado una dimensión.  
@@ -84,10 +84,10 @@ ms.locfileid: "66081696"
  **Propiedades**  
  Haga clic para mostrar la ventana **Propiedades** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para la dimensión, jerarquía o atributo de cubo seleccionado.  
   
-## <a name="see-also"></a>Vea también  
- [Barra de herramientas &#40;pestaña estructura de cubo, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Las medidas &#40;pestaña estructura de cubo, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Vista del origen de datos &#40;pestaña estructura de cubo, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
- [Estructura de cubo &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Barra de herramientas &#40;pestaña estructura de cubo, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Medidas &#40;pestaña estructura de cubo, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Vista del origen de datos &#40;pestaña estructura de cubo, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
+ [Estructura de cubo &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

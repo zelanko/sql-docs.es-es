@@ -1,5 +1,5 @@
 ---
-title: Editor de formulario de acción de obtención de detalles (pestaña acciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Editor de formulario de acción de obtención de detalles (pestaña acciones, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081457"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de acción de obtención de detalles (pestaña Acciones, Diseñador de cubos) (Analysis Services -  Datos multidimensionales)
@@ -26,13 +26,13 @@ ms.locfileid: "66081457"
 >  Las acciones de obtención de detalles ya no obtienen detalles del almacén de datos subyacente. La información a la que tienen acceso las acciones de obtención de detalles debe modelarse en el cubo utilizando miembros de jerarquía o dimensión.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre de la acción.  
   
  **Destino de la acción**  
  Expanda esta opción para ver la opción **Miembros de grupo de medida** .  
   
- **Miembros del grupo de medida**  
+ **Miembros de grupo de medida**  
  Seleccione el grupo de medida al que se asociará la acción de obtención de detalles.  
   
  **Condición (opcional)**  
@@ -48,18 +48,18 @@ ms.locfileid: "66081457"
   
  La cuadrícula contiene las columnas siguientes:  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |**Dimensions**|Seleccione la dimensión de la que se deriva el atributo devuelto. Seleccione MEASURES para obtener detalles de medidas.|  
-|**Devolver las columnas**|Seleccione el atributo o la medida de las dimensiones seleccionadas que se van a devolver cuando se ejecute la acción.|  
+|**Columnas devueltas**|Seleccione el atributo o la medida de las dimensiones seleccionadas que se van a devolver cuando se ejecute la acción.|  
   
  **Propiedades adicionales**  
  Expanda esta opción para ver las opciones **Predeterminado**, **Número máximo de filas**, **Invocación**, **Aplicación**, **Descripción**, **Título**y **El título es MDX** .  
   
- **Default**  
+ **Predeterminada**  
  Seleccione **True** para incluir esta acción de obtención de detalles como la acción de obtención de detalles predeterminada; en caso contrario, seleccione **False**.  
   
- Si el `RETURN` se omite la cláusula de tipo MDX `DRILLTHROUGH` instrucción ejecutada por una aplicación cliente, el [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia evalúa todas las acciones de obtención de detalles predeterminadas y ejecuta la primera obtención de detalles predeterminada acción que devuelve un conjunto no vacío. Para obtener más información acerca de MDX `DRILLTHROUGH` instrucción, consulte [instrucción DRILLTHROUGH &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
+ Si se `RETURN` omite la cláusula en una instrucción `DRILLTHROUGH` MDX ejecutada por una aplicación cliente, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] la instancia de evalúa todas las acciones de obtención de detalles predeterminadas y ejecuta la primera acción de obtención de detalles predeterminada que devuelve un conjunto no vacío. Para obtener más información acerca de `DRILLTHROUGH` la instrucción MDX, vea [instrucción DRILLTHROUGH &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
   
 > [!NOTE]  
 >  Esta opción se utiliza por compatibilidad con versiones anteriores.  
@@ -75,10 +75,10 @@ ms.locfileid: "66081457"
   
  En la siguiente tabla se describen las configuraciones disponibles.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|Lote|La acción debe ejecutarse como parte de una operación de lote o una tarea de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactiva|La acción se ejecuta cuando el usuario invoca la acción.|  
+|Batch|La acción debe ejecutarse como parte de una operación de lote o una tarea de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
+|Interactive|La acción se ejecuta cuando el usuario invoca la acción.|  
 |Al abrir|La acción se ejecuta cuando se abre el cubo por primera vez.|  
   
  **Aplicación**  
@@ -102,13 +102,13 @@ ms.locfileid: "66081457"
   
  Seleccione **True** para indicar que **Título** contiene una expresión MDX que devuelve una cadena que representa un título que se mostrará para la acción en la aplicación cliente. La expresión MDX debe resolverse antes de devolver la acción a la aplicación cliente.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de expresiones multidimensionales &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Acciones &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organizador de acciones &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Herramientas de cálculo &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulario de acción &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulario de acción de informe &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Expresiones multidimensionales &#40;referencia de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Acciones &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña acciones, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Organizador de acciones &#40;pestaña acciones, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Herramientas de cálculo &#40;pestaña acciones, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulario de acción &#40;pestaña acciones, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulario de acción de informe &#40;pestaña acciones, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

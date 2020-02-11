@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 926f6227d5a3a2e11dffbf4b9f080b1fc5ec35a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871858"
 ---
 # <a name="database-properties-changetracking-page"></a>Propiedades de la base de datos (página ChangeTracking)
   Utilice esta página para ver o modificar la configuración del seguimiento de cambios de la base de datos seleccionada. Para obtener más información sobre las opciones disponibles en esta página, vea [Habilitar y deshabilitar el seguimiento de cambios &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md).  
   
 ## <a name="options"></a>Opciones  
- **Seguimiento de los cambios**  
+ **Seguimiento de cambios**  
  Utilice esta opción para habilitar o deshabilitar el seguimiento de cambios de la base de datos.  
   
  Para habilitar el seguimiento de cambios, debe tener el permiso para modificar la base de datos.  
@@ -47,7 +47,7 @@ ms.locfileid: "62871858"
   
  Al habilitar la opción **Limpieza automática** , se restablece cualquier período de retención anterior personalizado al valor predeterminado de 2 días.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   

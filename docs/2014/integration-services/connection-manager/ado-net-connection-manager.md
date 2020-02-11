@@ -15,25 +15,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97a0690775b7b6d95a257bc5f5ed0a6483e1c24a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833867"
 ---
 # <a name="adonet-connection-manager"></a>Administrador de conexiones ADO.NET
-  Un administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permite a un paquete tener acceso a orígenes de datos mediante un proveedor .NET. Este administrador de conexiones normalmente se usa para acceder a orígenes de datos como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como a orígenes de datos expuestos a través de OLE DB y XML en tareas personalizadas que se escriben en código administrado con un lenguaje como C#.  
+  Un administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permite a un paquete tener acceso a orígenes de datos mediante un proveedor .NET. Este administrador de conexiones se usa normalmente para tener acceso a orígenes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de datos como, y también a orígenes de datos expuestos a través de OLE DB y XML en tareas personalizadas escritas en código administrado mediante un lenguaje como C#.  
   
- Cuando se agrega un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Administrador de conexiones a un paquete, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador que se resuelve como un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] conexión en tiempo de ejecución, Establece las propiedades del Administrador de la conexión y agrega el Administrador de conexiones el `Connections` colección en el paquete.  
+ Cuando se agrega un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] administrador de conexiones a un paquete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crea un administrador de conexiones que se resuelve [!INCLUDE[vstecado](../../includes/vstecado-md.md)] como una conexión en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el `Connections` administrador de conexiones a la colección del paquete.  
   
  La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `ADO.NET`. El valor de `ConnectionManagerType` se califica para incluir el nombre del proveedor .NET que usa el administrador de conexiones.  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>Solución de problemas del administrador de conexiones ADO.NET  
- Puede registrar las llamadas realizadas por el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con las conexiones que el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] establece con orígenes de datos externos. Para registrar las llamadas que el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] realiza a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Puede registrar las llamadas realizadas por el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con las conexiones que el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] establece con orígenes de datos externos. Para registrar las llamadas que el [!INCLUDE[vstecado](../../includes/vstecado-md.md)] administrador de conexiones realiza a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
  Al ser leídos por un administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , los datos de ciertos tipos de datos de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generarán los resultados que se muestran en la tabla siguiente.  
   
-|Tipo de datos de SQL Server|Resultado|  
+|Tipos de datos de SQL Server|Resultado|  
 |--------------------------|------------|  
 |`time`, `datetimeoffset`|Se produce un error en el paquete a menos que el paquete utilice comandos SQL parametrizados. Para utilizar comandos SQL parametrizados, utilice la tarea Ejecute SQL en el paquete. Para más información, vea [Tarea Ejecutar SQL](../control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](../parameters-and-return-codes-in-the-execute-sql-task.md).|  
 |`datetime2`|El administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] trunca el valor de milisegundos.|  
@@ -62,7 +62,7 @@ ms.locfileid: "62833867"
   
  Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conexiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

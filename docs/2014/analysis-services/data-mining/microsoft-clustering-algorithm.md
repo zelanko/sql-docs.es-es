@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da8511361badbdfa1ded7497aaf623fdc35252d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084006"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo de clústeres de Microsoft
@@ -32,7 +32,7 @@ ms.locfileid: "66084006"
   
  Los modelos de agrupación en clústeres identifican las relaciones en un conjunto de datos que no se podrían derivar lógicamente a través de la observación casual. Por ejemplo, puede discernir lógicamente que las personas que se desplazan a sus trabajos en bicicleta no viven, por lo general, a gran distancia de sus centros de trabajo. Sin embargo, el algoritmo puede encontrar otras características que no son evidentes acerca de los trabajadores que se desplazan en bicicleta. En el siguiente diagrama, el clúster A representa los datos sobre las personas que suelen conducir hasta el trabajo, en tanto que el clúster B representa los datos sobre las personas que van hasta allí en bicicleta.  
   
- ![Patrón de clústeres de tendencias de conmutador](../media/clustering-example.gif "patrón de clústeres de tendencias de conmutador")  
+ ![Patrón de clústeres de tendencias de conmutador](../media/clustering-example.gif "Patrón de clústeres de tendencias de conmutador")  
   
  El algoritmo de clústeres se diferencia de otros algoritmos de minería de datos, como el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , en que no se tiene que designar una columna de predicción para generar un modelo de agrupación en clústeres. El algoritmo de clústeres entrena el modelo de forma estricta a partir de las relaciones que existen en los datos y de los clústeres que identifica el algoritmo.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66084006"
 ## <a name="how-the-algorithm-works"></a>Cómo funciona el algoritmo  
  El algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] identifica primero las relaciones de un conjunto de datos y genera una serie de clústeres basándose en ellas. Un gráfico de dispersión es una forma útil de representar visualmente el modo en que el algoritmo agrupa los datos, tal como se muestra en el siguiente diagrama. El gráfico de dispersión representa todos los casos del conjunto de datos; cada caso es un punto del gráfico. Los clústeres agrupan los puntos del gráfico e ilustran las relaciones que identifica el algoritmo.  
   
- ![Gráfico de dispersión de casos de un conjunto de datos](../media/clustering-plot.gif "gráfico de dispersión de casos de un conjunto de datos")  
+ ![Gráfico de dispersión de casos en un conjunto de datos](../media/clustering-plot.gif "Gráfico de dispersión de casos en un conjunto de datos")  
   
  Después de definir los clústeres, el algoritmo calcula el grado de perfección con que los clústeres representan las agrupaciones de puntos y, a continuación, intenta volver a definir las agrupaciones para crear clústeres que representen mejor los datos. El algoritmo establece una iteración en este proceso hasta que ya no es posible mejorar los resultados mediante la redefinición de los clústeres.  
   
@@ -53,18 +53,18 @@ ms.locfileid: "66084006"
   
  Los requisitos para un modelo de agrupación en clústeres son los siguientes:  
   
--   **Una columna de una sola clave** : cada modelo debe contener una columna numérica o de texto que identifique cada registro de manera única. No están permitidas las claves compuestas.  
+-   **Una columna de clave única** Cada modelo debe contener una columna numérica o de texto que identifique cada registro de forma única. No están permitidas las claves compuestas.  
   
--   **Columnas de entrada** Cada modelo debe tener al menos una columna de entrada que contenga los valores que se utilizan para generar los clústeres. Puede tener tantas columnas de entrada como desee, pero dependiendo del número de valores existentes en cada columna, la adición de columnas adicionales podría aumentar el tiempo necesario para entrenar el modelo.  
+-   **Columnas de entrada** Cada modelo debe contener al menos una columna de entrada que contenga los valores que se usan para compilar los clústeres. Puede tener tantas columnas de entrada como desee, pero dependiendo del número de valores existentes en cada columna, la adición de columnas adicionales podría aumentar el tiempo necesario para entrenar el modelo.  
   
--   **Una columna de predicción opcional** El algoritmo no necesita una columna de predicción para generar el modelo, pero puede agregar una columna de predicción de casi cualquier tipo de datos. Los valores de la columna de predicción se pueden tratar como entradas del modelo de agrupación en clústeres, o se puede especificar que solo se utilicen para las predicciones. Por ejemplo, si desea predecir los ingresos del cliente agrupando en clústeres de acuerdo con datos demográficos como la región o la edad, se deben especificar los ingresos como `PredictOnly` y agregar todas las demás columnas, como la región o la edad, como entradas.  
+-   **Columna de predicción opcional** El algoritmo no necesita una columna de predicción para generar el modelo, pero puede Agregar una columna de predicción de casi cualquier tipo de datos. Los valores de la columna de predicción se pueden tratar como entradas del modelo de agrupación en clústeres, o se puede especificar que solo se utilicen para las predicciones. Por ejemplo, si desea predecir los ingresos del cliente agrupando en clústeres de acuerdo con datos demográficos como la región o la edad, se deben especificar los ingresos como `PredictOnly` y agregar todas las demás columnas, como la región o la edad, como entradas.  
   
  Para obtener información más detallada sobre los tipos de contenido y los tipos de datos compatibles con los modelos de agrupación en clústeres, vea la sección Requisitos de [Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md).  
   
 ## <a name="viewing-a-clustering-model"></a>Ver un modelo de agrupación en clústeres  
  Para explorar el modelo, puede utilizar el **Visor de clústeres de Microsoft**. Cuando se observa un modelo de agrupación en clústeres, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] presenta los clústeres en un diagrama que muestra las relaciones existentes entre ellos, además de un perfil detallado de cada clúster, una lista de los atributos que diferencian cada clúster de los demás, y las características de todo el conjunto de datos de entrenamiento. Para obtener más información, vea [Examinar un modelo usando el Visor de clústeres de Microsoft](browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Si desea obtener más detalles, puede examinar el modelo en el [Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). El contenido almacenado para el modelo incluye la distribución para todos los valores de cada nodo, la probabilidad de cada clúster y otros datos. Para obtener más información, vea [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
+ Si desea obtener más detalles, puede examinar el modelo en el [Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). El contenido almacenado para el modelo incluye la distribución para todos los valores de cada nodo, la probabilidad de cada clúster y otros datos. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Crear predicciones  
  Una vez entrenado el modelo, los resultados se almacenan como un conjunto de patrones que se puede explorar o utilizar para realizar predicciones.  
@@ -73,7 +73,7 @@ ms.locfileid: "66084006"
   
  Para obtener información sobre cómo crear consultas en un modelo de minería de datos, vea [Consultas de minería de datos](data-mining-queries.md). Para obtener ejemplos de cómo usar las consultas con un modelo de agrupación en clústeres, vea [Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 -   Admite el uso del Lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
   
@@ -81,10 +81,10 @@ ms.locfileid: "66084006"
   
 -   Admite el uso de modelos de minería de datos OLAP y la creación de dimensiones de minería de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-algorithms-analysis-services-data-mining.md)   
  [Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)  
   
   

@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727651"
 ---
 # <a name="cube-properties"></a>Propiedades del cubo
@@ -44,9 +44,9 @@ ms.locfileid: "62727651"
 > [!NOTE]  
 >  Algunas propiedades se establecen automáticamente cuando se crea el cubo y no se pueden cambiar.  
   
- Para obtener más información sobre cómo establecer las propiedades de cubo, vea [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
+ Para obtener más información sobre cómo establecer las propiedades de un cubo, vea [Diseñador de cubos &#40;Analysis Services-&#41;de datos multidimensionales ](../cube-designer-analysis-services-multidimensional-data.md).  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |`AggregationPrefix`|Especifica el prefijo normal que se utiliza para los nombres de agregación.|  
 |`Collation`|Especifica el identificador de configuración regional (LCID) y la marca de comparación, separados por un carácter de subrayado. por ejemplo, Latin1_General_C1_AS.|  
@@ -58,19 +58,19 @@ ms.locfileid: "62727651"
 |`Language`|Especifica el identificador de idioma predeterminado del cubo.|  
 |`Name`|Especifica el nombre descriptivo del cubo.|  
 |`ProactiveCaching`|Define la configuración de almacenamiento en caché automático para el cubo.|  
-|`ProcessingMode`|Indica si la indización y la agregación se deben producir durante o después del procesamiento. Las opciones son **regular** o `lazy`.|  
+|`ProcessingMode`|Indica si la indización y la agregación se deben producir durante o después del procesamiento. Las opciones **** son regular `lazy`o.|  
 |`ProcessingPriority`|Determina la prioridad de procesamiento del cubo durante las operaciones de fondo, como indizaciones y agregaciones diferidas. El valor predeterminado es **0**.|  
-|`ScriptCacheProcessingMode`|Indica si la caché de script se debe generar durante o después del procesamiento. Las opciones son **regular** y `lazy`.|  
-|`ScriptErrorHandlingMode`|Determina el control de errores. Las opciones son `IgnoreNone` o `IgnoreAll`|  
+|`ScriptCacheProcessingMode`|Indica si la caché de script se debe generar durante o después del procesamiento. Las opciones **** son regular `lazy`y.|  
+|`ScriptErrorHandlingMode`|Determina el control de errores. Las opciones `IgnoreNone` son o`IgnoreAll`|  
 |`Source`|Muestra la vista del origen de datos utilizada para el cubo.|  
 |`StorageLocation`|Especifica la ubicación de almacenamiento del sistema de archivos para el cubo. Si no se especifica ninguna ubicación, se hereda de la base de datos que contiene el objeto de cubo.|  
-|`StorageMode`|Especifica el modo de almacenamiento del cubo. Los valores son `MOLAP`, `ROLAP`, o `HOLAP``.`|  
+|`StorageMode`|Especifica el modo de almacenamiento del cubo. Los valores `MOLAP`son `ROLAP`, o`HOLAP``.`|  
 |`Visible`|Determina la visibilidad del cubo|  
   
 > [!NOTE]  
->  Para obtener más información acerca de cómo establecer valores para la propiedad ErrorConfiguration cuando se trabaja con valores nulos y otros problemas de integridad de datos, vea [controlar problemas de integridad de datos en Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Para obtener más información sobre cómo establecer los valores de la propiedad ErrorConfiguration cuando se trabaja con valores NULL y otros problemas de integridad de datos, vea [control de problemas de integridad de datos en Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Almacenamiento en caché automático &#40;particiones&#41;](partitions-proactive-caching.md)  
   
   

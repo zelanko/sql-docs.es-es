@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895034"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Consultar Active Directory con la tarea Script
@@ -37,11 +37,11 @@ ms.locfileid: "62895034"
   
 1.  Cree las tres variable de cadena `email`, `name` y `title`. Escriba una dirección de correo electrónico corporativa válida como el valor de la variable `email`.  
   
-2.  En el **Script** página de la **Editor de la tarea Script**, agregar el `email` variable a la `ReadOnlyVariables` propiedad.  
+2.  En la página **script** del editor de la **tarea script**, agregue `email` la variable a `ReadOnlyVariables` la propiedad.  
   
 3.  Agregue las variables `name` y `title` a la propiedad `ReadWriteVariables`.  
   
-4.  En el proyecto de script, agregue una referencia a la `System.DirectoryServices` espacio de nombres.  
+4.  En el proyecto de script, agregue una referencia al `System.DirectoryServices` espacio de nombres.  
   
 5.  . En el código, utilice una instrucción `Imports` para importar el espacio de nombres `DirectoryServices`.  
   
@@ -110,6 +110,6 @@ public void Main()
   
 -   Artículo técnico, [Procesar la información de Active Directory en SSIS](https://go.microsoft.com/fwlink/?LinkId=199588), en social.technet.microsoft.com  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
   

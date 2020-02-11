@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083954"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo de regresión logística de Microsoft
@@ -46,11 +46,11 @@ ms.locfileid: "66083954"
   
  Los requisitos para un modelo de regresión logística son los siguientes:  
   
- **Una columna de una sola clave** : cada modelo debe contener una columna numérica o de texto que identifique cada registro de manera única. No están permitidas las claves compuestas.  
+ **Una columna de clave única** Cada modelo debe contener una columna numérica o de texto que identifique cada registro de forma única. No están permitidas las claves compuestas.  
   
- **Columnas de entrada** : cada modelo debe tener al menos una columna de entrada que contenga los valores que se utilizan como factores en el análisis. Puede tener tantas columnas de entrada como desee, pero dependiendo del número de valores existentes en cada columna, la adición de columnas adicionales podría aumentar el tiempo necesario para entrenar el modelo.  
+ **Columnas de entrada** Cada modelo debe contener al menos una columna de entrada que contenga los valores que se utilizan como factores en el análisis. Puede tener tantas columnas de entrada como desee, pero dependiendo del número de valores existentes en cada columna, la adición de columnas adicionales podría aumentar el tiempo necesario para entrenar el modelo.  
   
- **Al menos una columna de predicción** : el modelo debe contener al menos una columna de predicción de cualquier tipo de datos, incluidos datos numéricos continuos. Los valores de la columna de predicción también se pueden tratar como entradas del modelo, o se puede especificar que solo se utilicen para las predicciones. No se admiten tablas anidadas en las columnas de predicción, pero se pueden usar como entradas.  
+ **Al menos una columna de predicción** El modelo debe contener al menos una columna de predicción de cualquier tipo de datos, incluidos los datos numéricos continuos. Los valores de la columna de predicción también se pueden tratar como entradas del modelo, o se puede especificar que solo se utilicen para las predicciones. No se admiten tablas anidadas en las columnas de predicción, pero se pueden usar como entradas.  
   
  Para obtener información más detallada sobre los tipos de contenido y los tipos de datos compatibles con los modelos de regresión logística, vea la sección Requisitos de [Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66083954"
   
  Cuando se ve el modelo con el Visor de redes neuronales de Microsoft, Analysis Services muestra los factores que contribuyen a un resultado determinado, clasificados por su importancia. Puede elegir un atributo y los valores que desea comparar. Para más información, vea [Examinar un modelo usando el Visor de redes neuronales de Microsoft](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
- Si desea obtener más información, puede examinar los detalles del modelo con el Visor de árbol de contenido genérico de Microsoft. El contenido de un modelo de regresión logística incluye un nodo marginal que muestra todas las entradas usadas para el modelo y las subredes de los atributos de predicción. Para obtener más información, vea [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
+ Si desea obtener más información, puede examinar los detalles del modelo con el Visor de árbol de contenido genérico de Microsoft. El contenido de un modelo de regresión logística incluye un nodo marginal que muestra todas las entradas usadas para el modelo y las subredes de los atributos de predicción. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-logistic-regression-models.md).  
   
 ## <a name="creating-predictions"></a>Crear predicciones  
  Una vez entrenado el modelo, puede crear consultas en el contenido del modelo para obtener los coeficientes de regresión y otros detalles, o puede usar el modelo para realizar predicciones.  
@@ -68,7 +68,7 @@ ms.locfileid: "66083954"
   
 -   Para obtener ejemplos de consultas en un modelo de regresión logística, vea [Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 -   No admite la obtención de detalles. Esto se debe a que la estructura de nodos del modelo de minería de datos no tiene por qué corresponder directamente a los datos subyacentes.  
   
@@ -78,8 +78,8 @@ ms.locfileid: "66083954"
   
 -   No se admite el uso del Lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-logistic-regression-models.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-logistic-regression-models.md)   
  [Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Ejemplos de consultas de modelos de regresión logística](logistic-regression-model-query-examples.md)  
   

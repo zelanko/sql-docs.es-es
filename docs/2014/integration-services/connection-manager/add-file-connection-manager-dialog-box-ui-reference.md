@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833877"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones de archivos
@@ -33,7 +33,7 @@ ms.locfileid: "62833877"
  **Tipo de uso**  
  Especifique el tipo de archivo que va a utilizar para el administrador de conexiones de varios archivos.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Crear archivos**|El administrador de conexiones creará los archivos.|  
 |**Archivos existentes**|El administrador de conexiones utilizará archivos existentes.|  
@@ -43,19 +43,19 @@ ms.locfileid: "62833877"
  **Archivos/Carpetas**  
  Muestra los archivos o carpetas que se han agregado mediante los botones descritos a continuación.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un archivo desde el cuadro de diálogo **Seleccionar archivos** o agregue una carpeta desde el cuadro de diálogo **Buscar carpeta** .  
   
- **Editar**  
+ **Edición**  
  Seleccione un archivo o una carpeta y reemplácelos con un archivo o una carpeta diferentes desde el cuadro de diálogo **Seleccionar archivos** o **Buscar carpeta** , respectivamente.  
   
- **Quitar**  
+ **Remove**  
  Seleccione un archivo o una carpeta y quítelos de la lista con el botón **Quitar** .  
   
  **Botones de flecha**  
  Seleccione un archivo o una carpeta y utilice los botones de flecha para subirlos o bajarlos y especificar la secuencia de acceso.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md)  
   
   

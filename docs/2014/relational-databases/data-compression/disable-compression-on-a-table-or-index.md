@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7700a2d1da4349bd1bc652badc1c2cdd89dc6550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873278"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Deshabilitar compresión de una tabla o un índice
@@ -51,7 +51,7 @@ ms.locfileid: "62873278"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o índice.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-compression-on-a-table"></a>Para deshabilitar la compresión en una tabla  
   
@@ -148,7 +148,7 @@ ms.locfileid: "62873278"
   
     6.  Debajo de **Resumen**, en **Descripción**, compruebe que todos los valores de la programación de trabajo son correctos.  
   
-    7.  Haga clic en **Aceptar**.  
+    7.  Haga clic en **OK**.  
   
      Después de completar esta página, haga clic en **Siguiente**.  
   
@@ -167,10 +167,10 @@ ms.locfileid: "62873278"
      **Estado**  
      Indica si la acción del asistente como conjunto ha devuelto el valor **Correcto** o **Error**.  
   
-     **de mensaje**  
+     **Mensaje**  
      Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
-     **Informe**  
+     **Report**  
      Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  

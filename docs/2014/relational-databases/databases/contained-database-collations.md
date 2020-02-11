@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872059"
 ---
 # <a name="contained-database-collations"></a>Intercalaciones de bases de datos independientes
@@ -58,7 +58,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Esto parece relativamente sencillo, pero surgen varios problemas. Dado que la intercalación de una columna depende de la base de datos en el que se crea la tabla, surgen problemas con el uso de las tablas temporales se almacenan en `tempdb`. La intercalación de `tempdb` normalmente coincide con la intercalación de la instancia, que no tiene que coincidir con la intercalación de base de datos.  
+ Esto parece relativamente sencillo, pero surgen varios problemas. Dado que la intercalación de una columna depende de la base de datos en la que se crea la tabla, surgen problemas con el uso de tablas `tempdb`temporales que se almacenan en. La intercalación `tempdb` de normalmente coincide con la intercalación de la instancia, que no tiene que coincidir con la intercalación de la base de datos.  
   
 ### <a name="example-2"></a>Ejemplo 2  
  Por ejemplo, considere la base de datos (chino) anterior cuando se usa en una instancia con una intercalación **Latin1_General** :  
@@ -85,7 +85,8 @@ JOIN #T2
   
  No puede resolver el conflicto de la intercalación entre "Latin1_General_100_CI_AS_KS_WS_SC" y Chinese_Simplified_Pinyin_100_CI_AS" en la operación igual que.  
   
- Podemos corregir esto intercalando la tabla temporal explícitamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] facilita esto proporcionando la palabra clave `DATABASE_DEFAULT` para la cláusula `COLLATE`.  
+ Podemos corregir esto intercalando la tabla temporal explícitamente. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] facilita esto proporcionando la palabra clave `DATABASE_DEFAULT` para la cláusula `COLLATE`.  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
@@ -111,14 +112,14 @@ AS BEGIN
 END;  
 ```  
   
- Esta es una función bastante peculiar. En una intercalación que distingue mayúsculas de minúsculas, el @i en la cláusula return no se puede enlazar a @I o @??. En una intercalación Latin1_General sin distinción entre mayúsculas y minúsculas, @i enlaza a @I y la función devuelve 1. Pero en una intercalación turca entre mayúsculas y minúsculas, @i enlaza a @?, y la función devuelve 2. Esto puede causar confusión en una base de datos que se mueva entre instancias con intercalaciones diferentes.  
+ Esta es una función bastante peculiar. En una intercalación que distingue entre mayúsculas y minúsculas, @i en la cláusula @I Return no puede enlazarse a ni @??. En una intercalación Latin1_General sin distinción entre mayúsculas y minúsculas, @i enlaza a @I y la función devuelve 1. Pero en una intercalación turco sin distinción entre mayúsculas y minúsculas, @i se enlaza a @??, y la función devuelve 2. Esto puede causar confusión en una base de datos que se mueva entre instancias con intercalaciones diferentes.  
   
 ## <a name="contained-databases"></a>Bases de datos independientes  
  Dado que uno de los objetivos de diseño de las bases de datos independientes es hacer que sean autodependientes, la dependencia de las intercalaciones de `tempdb` e instancia debe romperse. Para ello, las bases de datos independientes presentan el concepto de intercalación de catálogo. La intercalación de catálogo se utiliza para los objetos transitorios y los metadatos del sistema. Abajo se proporcionan los detalles.  
   
  En una base de datos independiente, la intercalación de catálogo es **Latin1_General_100_CI_AS_WS_KS_SC**. Esta intercalación es la misma para todas las bases de datos independientes en todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no se puede cambiar.  
   
- La intercalación de la base de datos se conserva, pero solo se usa como intercalación predeterminada para los datos del usuario. De forma predeterminada, la intercalación de base de datos es igual a la intercalación de base de datos de modelo, pero puede cambiarse por el usuario a través de un `CREATE` o `ALTER DATABASE` comando como con bases de datos dependientes.  
+ La intercalación de la base de datos se conserva, pero solo se usa como intercalación predeterminada para los datos del usuario. De forma predeterminada, la intercalación de la base de datos es igual a la de la base de datos del modelo, `CREATE` pero `ALTER DATABASE` el usuario puede cambiarla a través de un comando o como con las bases de datos dependientes.  
   
  Una palabra clave nueva, `CATALOG_DEFAULT`, está disponible en la cláusula `COLLATE`. Esto se utiliza como acceso directo a la intercalación actual de los metadatos tanto en las bases de datos independientes como en las dependientes. Es decir, en una base de datos dependiente, `CATALOG_DEFAULT` devolverá la intercalación de la base de datos actual, dado que los metadatos se intercalan en la intercalación de la base de datos. En una base de datos independiente, estos dos valores pueden ser diferentes, porque el usuario puede cambiar la intercalación de la base de datos para que no coincida con la del catálogo.  
   
@@ -131,7 +132,7 @@ END;
 |Datos de Temp (predeterminado)|Intercalación de TempDB|DATABASE_DEFAULT|  
 |Metadatos|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  
 |Metadatos temporales|Intercalación de TempDB|CATALOG_DEFAULT|  
-|Variables|Intercalación de instancia|CATALOG_DEFAULT|  
+|variables|Intercalación de instancia|CATALOG_DEFAULT|  
 |Etiquetas Goto|Intercalación de instancia|CATALOG_DEFAULT|  
 |Nombres de cursor|Intercalación de instancia|CATALOG_DEFAULT|  
   
@@ -235,7 +236,7 @@ GO
  El nombre de objeto '#A' no es válido.  
   
 ### <a name="example-3"></a>Ejemplo 3  
- El siguiente ejemplo ilustra el caso en el que la referencia encuentra varias coincidencias que eran distintas originalmente. Primero, comenzamos en `tempdb` (que tiene la misma intercalación entre mayúsculas y minúsculas que nuestra instancia) y ejecute las siguientes instrucciones.  
+ El siguiente ejemplo ilustra el caso en el que la referencia encuentra varias coincidencias que eran distintas originalmente. Primero, comenzamos en `tempdb` (que tiene la misma intercalación que distingue mayúsculas de minúsculas que nuestra instancia) y ejecutamos las siguientes instrucciones.  
   
 ```  
 USE tempdb;  
@@ -278,7 +279,7 @@ GO
 ## <a name="conclusion"></a>Conclusión  
  El comportamiento de la intercalación de bases de datos independientes difiere sutilmente del comportamiento en las bases de datos dependientes. Este comportamiento suele ser beneficioso y proporciona independencia de la instancia y simplicidad. Algunos usuarios pueden tener problemas, en concreto cuando una sesión accede tanto a bases de datos independientes como a dependientes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Bases de datos independientes](contained-databases.md)  
   
   

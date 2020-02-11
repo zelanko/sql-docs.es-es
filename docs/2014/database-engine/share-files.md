@@ -15,13 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843561"
 ---
 # <a name="share-files"></a>Compartir archivos
+  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se puede utilizar para compartir elementos entre proyectos de control de código fuente. Cuando se comparte un elemento, los cambios realizados en éste se reflejan en todos los proyectos que comparten ese elemento.  
   
  El compartir elementos ofrece una serie de ventajas a los usuarios del control de código fuente:  
@@ -34,13 +35,13 @@ ms.locfileid: "62843561"
   
 1.  En el Explorador de soluciones, seleccione la carpeta o proyecto en que desea colocar los archivos compartidos.  
   
-2.  En el **archivo** menú, elija **Control de código fuente**y, a continuación, haga clic en **Share**.  
+2.  En el menú **archivo** , seleccione **control de código fuente**y, a continuación, haga clic en **compartir**.  
   
-3.  En el **compartir con** cuadro de diálogo Examinar la lista de directorios para el elemento que desea compartir y haga clic en ese elemento.  
+3.  En el cuadro de diálogo **compartir con** , busque en la lista de directorios el elemento que desea compartir y haga clic en ese elemento.  
   
-4.  Haga clic en **Share**.  
+4.  Haga clic en **Compartir**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Fundamentos del control de código fuente](../../2014/database-engine/source-control-basics.md)  
   
   

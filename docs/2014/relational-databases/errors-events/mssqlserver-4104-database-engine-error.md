@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd364a08781c00eaaf42eb0b1c15e7e5011ed432
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868002"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|4104|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|4104|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|ALG_MULTI_ID_BAD|  
 |Texto del mensaje|El identificador formado por varias partes "%.*ls" no se pudo enlazar.|  
@@ -113,7 +113,7 @@ ms.locfileid: "62868002"
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-     o Administrador de configuración de  
+     or  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  
@@ -121,7 +121,7 @@ ms.locfileid: "62868002"
   
 -   Utilice nombres únicos y definidos claramente para los identificadores. De este modo, el código es más fácil de leer y mantener, y también se reduce al mínimo el riesgo de que haya referencias ambiguas a varias entidades.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [MSSQLSERVER_107](mssqlserver-107-database-engine-error.md)   
  [Identificadores de base de datos](../databases/database-identifiers.md)  
   

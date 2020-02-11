@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077221"
 ---
 # <a name="rename-an-attribute"></a>Cambiar el nombre de un atributo
@@ -27,7 +27,7 @@ ms.locfileid: "66077221"
   
  Para más información sobre cómo cambiar el nombre de un atributo, vea [Enlazar un atributo a una columna de clave](attribute-properties-bind-an-attribute-to-a-key-column.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de las propiedades de los atributos de dimensión](dimension-attribute-properties-reference.md)  
   
   

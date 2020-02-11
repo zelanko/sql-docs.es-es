@@ -1,5 +1,5 @@
 ---
-title: Ver el cuadro de diálogo de detalles (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo ver detalles (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065444"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Ver detalles (Analysis Services - Datos multidimensionales)
@@ -30,9 +30,9 @@ ms.locfileid: "66065444"
  **Detalles**  
  Muestra información adicional acerca del mensaje u operación seleccionados.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Cuadro de diálogo de progreso procesar &#40;Analysis Services - datos multidimensionales&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)   
- [Procesamiento de objetos de modelo multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Cuadro de diálogo progreso del proceso &#40;Analysis Services de datos multidimensionales&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)   
+ [Procesamiento de objetos del modelo multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

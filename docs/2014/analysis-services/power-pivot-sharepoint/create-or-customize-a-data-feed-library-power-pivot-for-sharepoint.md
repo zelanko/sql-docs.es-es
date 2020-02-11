@@ -1,5 +1,5 @@
 ---
-title: Crear o personalizar una biblioteca de fuentes de datos (PowerPivot para SharePoint) | Microsoft Docs
+title: Crear o personalizar una biblioteca de fuentes de distribución de datos (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31e69ddc36079c993e66a7e9253bfdd178057302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071558"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Crear o personalizar una biblioteca de fuentes de datos (PowerPivot para SharePoint)
@@ -27,7 +27,7 @@ ms.locfileid: "66071558"
   
 -   Compartir y administrar los documentos de servicio de datos en una ubicación central.  
   
--   Identificar visualmente los documentos de servicio de datos mediante un icono, para que pueda distinguir con facilidad los documentos de servicio de otros documentos almacenados en la misma biblioteca: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Identifique visualmente los documentos de servicio de datos mediante un icono, para que pueda distinguir fácilmente los documentos de servicio de otros documentos almacenados en la misma biblioteca: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  Una biblioteca de fuentes de distribución de datos siempre contiene archivos de documentos de servicio de datos (.atomsvc) y nunca las propias fuentes de distribución de datos. A diferencia de una fuente de distribución de datos, que consta de datos XML estáticos, el documento de servicio de datos especifica una dirección URL para un servicio o aplicación que genera una fuente tras la solicitud, proporcionando información de conexión reutilizable para las operaciones de importación repetibles.  
   
@@ -37,14 +37,15 @@ ms.locfileid: "66071558"
   
  [Crear una nueva biblioteca de fuentes de distribución de datos](#createlib)  
   
- [Agregar el tipo de contenido de la fuente de distribución de datos a una biblioteca](#addtolib)  
+ [Agregar el tipo de contenido de la fuente de distribución de datos a cualquier biblioteca](#addtolib)  
   
 ##  <a name="prereq"></a> Requisitos previos  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se debe activar para los sitios para los que vaya a crear la biblioteca de fuentes de distribución de datos. Si el tipo de plantilla de biblioteca de fuentes de distribución de datos no está disponible, probablemente se deba a que no se ha cumplido este requisito previo. Para obtener más información, consulte [activar la característica Integración de PowerPivot para colecciones de sitios en Administración Central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se debe activar para los sitios para los que vaya a crear la biblioteca de fuentes de distribución de datos. Si el tipo de plantilla de biblioteca de fuentes de distribución de datos no está disponible, probablemente se deba a que no se ha cumplido este requisito previo. Para obtener más información, vea [activar la integración de características de PowerPivot para colecciones de sitios en administración central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Debe ser propietario del sitio para crear la biblioteca.  
   
-##  <a name="createlib"></a> Crear una nueva biblioteca de fuentes de distribución de datos  
+##  <a name="createlib"></a>Crear una nueva biblioteca de fuentes de distribución de datos  
  Crear una biblioteca de fuentes de distribución de datos es el primer paso si se desea habilitar fuentes de distribución de datos para los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Dado que una biblioteca de fuentes de distribución de datos proporciona las páginas de aplicación y administración para los documentos de servicio de datos, debe disponer de una para poder crear un documento nuevo.  
   
  Una biblioteca de fuentes de distribución de datos se basa en una plantilla integrada y en un *tipo de contenido del documento de servicio de datos* preconfigurado que define las propiedades y comportamientos para un documento de servicio de datos.  
@@ -61,16 +62,16 @@ ms.locfileid: "66071558"
   
  Un vínculo a la biblioteca de fuentes de distribución de datos aparecerá en el panel Inicio rápido de navegación para el sitio actual.  
   
- Después de crear una biblioteca, puede utilizarla para crear documentos de servicio de datos. Para obtener más información, consulte [fuentes de datos de uso &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
+ Después de crear una biblioteca, puede utilizarla para crear documentos de servicio de datos. Para obtener más información, vea [usar fuentes de datos &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
-##  <a name="addtolib"></a> Agregar el tipo de contenido de la fuente de distribución de datos a una biblioteca  
+##  <a name="addtolib"></a>Agregar el tipo de contenido de la fuente de distribución de datos a cualquier biblioteca  
  Si no desea crear una biblioteca de fuentes de distribución de datos dedicada, pero sigue deseando crear y administrar los documentos de servicio de datos desde un sitio de SharePoint, puede agregar y configurar manualmente el tipo de contenido del documento de servicio de datos para cualquier biblioteca que use para compartir los archivos de documento de servicio de datos (.atomsvc).  
   
  Para agregar y configurar un tipo de contenido, debe tener al menos el permiso Administrar listas. Este permiso se integra en el nivel de permisos de diseño y superiores.  
   
  Los siguientes pasos se deben repetir para cada biblioteca en la que desee crear o modificar los documentos de registro de fuentes de distribución de datos.  
   
-#### <a name="step-1-enable-content-type-management"></a>Paso 1: Habilitar la administración del tipo de contenido  
+#### <a name="step-1-enable-content-type-management"></a>Paso 1: habilitar la administración de tipos de contenido  
   
 1.  Abra la biblioteca de documentos para la que desee habilitar varios tipos de contenido.  
   
@@ -84,9 +85,9 @@ ms.locfileid: "66071558"
   
 6.  En Tipos de contenido, en la sección "¿Desea permitir la administración de tipos de contenido?" haga clic en **Sí**.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Paso 2: Agregar el tipo de contenido del documento de servicio de datos  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Paso 2: agregar el tipo de contenido de documento de servicio de datos  
   
 1.  En la sección Tipos de contenido, haga clic en **Agregar a partir de tipos de contenido de sitio**. Si no ve esta página, regrese al sitio, haga clic en **Biblioteca** en Herramientas de biblioteca y, a continuación, haga clic en **Configuración de la biblioteca**.  
   
@@ -96,9 +97,9 @@ ms.locfileid: "66071558"
   
 4.  En la lista Tipos de contenido de sitio disponibles, haga clic en **Documento de servicio de datos**y, a continuación, haga clic en **Agregar** para mover el tipo de contenido seleccionado a la lista Tipos de contenido que agregar.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
-#### <a name="step-3-verify-data-service-document-configuration"></a>Paso 3: Comprobar la configuración de documento de servicio de datos  
+#### <a name="step-3-verify-data-service-document-configuration"></a>Paso 3: comprobar la configuración del documento de servicio de datos  
   
 1.  Abra la página principal del sitio.  
   
@@ -108,10 +109,10 @@ ms.locfileid: "66071558"
   
 4.  Haga clic en la flecha abajo en Nuevo documento y seleccione **Documento de servicio de datos**. Debería aparecer la página Nuevo documento de servicio de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Usar fuentes de distribución de datos &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)   
- [Eliminar una biblioteca de fuentes de datos de PowerPivot](delete-a-power-pivot-data-feed-library.md)   
- [Administración de servidor de PowerPivot y la configuración en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+## <a name="see-also"></a>Consulte también  
+ [Usar fuentes de datos &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)   
+ [Eliminar una biblioteca de fuentes de distribución de datos PowerPivot](delete-a-power-pivot-data-feed-library.md)   
+ [Administración y configuración del servidor de PowerPivot en administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Fuentes de distribución de datos de PowerPivot](power-pivot-data-feeds.md)  
   
   

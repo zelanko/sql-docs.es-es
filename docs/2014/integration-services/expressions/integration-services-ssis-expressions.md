@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a9d7fe2f1f65f0a698e727e5bad6df392c91546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898080"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expresiones de Integration Services (SSIS)
@@ -63,12 +63,12 @@ ms.locfileid: "62898080"
  Las variables tienen un ámbito y en la carpeta **Variables** del Generador de expresiones solo se muestran las variables que están en el ámbito y disponibles para su uso. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [utilizar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
+ [Usar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Artículo técnico, sobre [ejemplos de expresiones SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

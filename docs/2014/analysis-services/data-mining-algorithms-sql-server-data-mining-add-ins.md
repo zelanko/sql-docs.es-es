@@ -1,5 +1,5 @@
 ---
-title: Algoritmos de minería de datos (datos de SQL Server a los complementos de minería de datos) | Microsoft Docs
+title: Algoritmos de minería de datos (SQL Server complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086513"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmos de minería de datos (Complementos de minería de datos de SQL Server)
@@ -49,16 +49,16 @@ ms.locfileid: "66086513"
 ## <a name="advanced-options"></a>Opciones avanzadas  
  Cuando utiliza el Cliente de minería de datos para Excel, tiene la posibilidad de crear sus propias estructuras y modelos de minería de datos u optimizar los parámetros de los algoritmos.  
   
- [Parámetros de algoritmo &#40;complementos de minería de datos de SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+ [Parámetros de algoritmo &#40;SQL Server complementos de minería de datos&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
  Hay dos maneras de personalizar los modelos mediante estas opciones avanzadas:  
   
--   Use la **consulta de minería de datos** Asistente para crear el modelo.  
+-   Use el Asistente para **consulta de minería de datos** para crear el modelo.  
   
 -   En el **cliente de minería de datos**, después de iniciar el asistente, haga clic en **parámetros**.  
   
-## <a name="see-also"></a>Vea también  
- [Consulta &#40;complementos de minería de datos de SQL Server&#41;](query-sql-server-data-mining-add-ins.md)   
- [Advanced modelado &#40;datos complementos de minería de datos para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Consulte también  
+ [&#40;de consultas SQL Server complementos de minería de datos&#41;](query-sql-server-data-mining-add-ins.md)   
+ [Modelado avanzado &#40;complementos de minería de datos para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

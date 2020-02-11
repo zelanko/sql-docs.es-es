@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a8ab505f27bcbd271ef5d68e050545662d5b518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870052"
 ---
-# <a name="mssqlserver12300"></a>MSSQLSERVER_12300
+# <a name="mssqlserver_12300"></a>MSSQLSERVER_12300
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|12300|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|12300|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|HK_UNSUPPORTED_COMPUTED_COLUMNS|  
 |Texto del mensaje|No se admiten columnas calculadas con '*construct*'.|  
@@ -35,7 +35,7 @@ ms.locfileid: "62870052"
 ## <a name="user-action"></a>Acción del usuario  
  No se admiten columnas calculadas con tablas optimizadas de memoria.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

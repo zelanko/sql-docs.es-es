@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4f8d62a98d39a65db78f79fdfaf3ecdb2921408e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915377"
 ---
-# <a name="mssqlserver17130"></a>MSSQLSERVER_17130
+# <a name="mssqlserver_17130"></a>MSSQLSERVER_17130
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|17130|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|17130|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|INIT_NOLOCKSPACE|  
 |Texto del mensaje|Memoria insuficiente para el número de bloqueos configurado. Se está intentando iniciar con una tabla hash de bloqueos más pequeña, lo que puede afectar al rendimiento. Póngase en contacto con el administrador de la base de datos para configurar más memoria para esta instancia del motor de base de datos.|  

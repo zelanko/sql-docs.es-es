@@ -1,5 +1,5 @@
 ---
-title: Acciones (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Acciones (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077587"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Acciones (Analysis Services - Datos multidimensionales)
@@ -40,9 +40,10 @@ ms.locfileid: "66077587"
   
  La condición es una expresión MDX de tipo `Boolean` que se evalúa en el evento de la acción. La acción se ejecuta si la condición se evalúa como `true`. En caso contrario, no se ejecuta la acción.  
   
- El tipo es el tipo de acción que se va a ejecutar. <xref:Microsoft.AnalysisServices.Action> es una clase abstracta y, por lo tanto, para usarla es necesario usar una de las clases derivadas. Existen dos tipos de acciones predefinidas: obtención de detalles y elaboración de informes. Estos tienen clases derivadas correspondientes: <xref:Microsoft.AnalysisServices.DrillThroughAction> y <xref:Microsoft.AnalysisServices.ReportAction>. Otras acciones se realizan con la clase <xref:Microsoft.AnalysisServices.StandardAction> .  
+ El tipo es el tipo de acción que se va a ejecutar. 
+  <xref:Microsoft.AnalysisServices.Action> es una clase abstracta y, por lo tanto, para usarla es necesario usar una de las clases derivadas. Existen dos tipos de acciones predefinidas: obtención de detalles y elaboración de informes. Estos tienen clases derivadas correspondientes: <xref:Microsoft.AnalysisServices.DrillThroughAction> y <xref:Microsoft.AnalysisServices.ReportAction>. Otras acciones se realizan con la clase <xref:Microsoft.AnalysisServices.StandardAction> .  
   
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una acción es una instrucción MDX almacenada que se puede presentar y emplear en aplicaciones cliente. En otras palabras, una acción es un comando cliente que se define y se almacena en el servidor. Una acción también contiene información que especifica cuándo y cómo debe la aplicación cliente mostrar y controlar la instrucción MDX. La operación que se especifica con la acción puede iniciar una aplicación, utilizando la información de la acción como parámetro, o bien recuperar información en función de criterios que proporciona la acción.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una acción es una instrucción MDX almacenada que se puede presentar y emplear en aplicaciones cliente. En otras palabras, una acción es un comando cliente que se define y se almacena en el servidor. Una acción también contiene información que especifica cuándo y cómo debe la aplicación cliente mostrar y controlar la instrucción MDX. La operación que se especifica con la acción puede iniciar una aplicación, utilizando la información de la acción como parámetro, o bien recuperar información en función de criterios que proporciona la acción.  
   
  Las acciones permiten a los usuarios corporativos actuar sobre los resultados de sus análisis. Al guardar y volver a utilizar acciones, los usuarios finales pueden llegar más lejos que con el análisis tradicional, que suele finalizar con la presentación de datos, e iniciar soluciones para problemas y deficiencias que se hayan detectado, ampliando así la aplicación de Business Intelligence más allá del cubo. Las acciones pueden transformar la aplicación cliente de una sofisticada herramienta de representación de datos en una parte integral del sistema operativo de la empresa. En lugar de centrarse en enviar datos como entrada para aplicaciones operativas, los usuarios finales pueden "cerrar el ciclo" en el proceso de toma de decisiones. Esta posibilidad de transformar datos analíticos en decisiones es fundamental para la correcta aplicación de Business Intelligence.  
   
@@ -66,12 +67,12 @@ ms.locfileid: "66077587"
 |Informe|Envía una solicitud parametrizada basada en una dirección URL a un servidor de informes y devuelve un informe a una aplicación cliente.|  
 |Conjunto de filas|Devuelve un conjunto de filas a una aplicación cliente.|  
 |.|Ejecuta un comando OLE DB.|  
-|Dirección URL|Muestra una página web dinámica en un explorador de Internet.|  
+|URL|Muestra una página web dinámica en un explorador de Internet.|  
   
 ## <a name="resolving-and-executing-actions"></a>Resolver y ejecutar acciones  
  Cuando un usuario corporativo obtiene acceso al objeto para el que se define el objeto de comando, la instrucción asociada a la acción se resuelve automáticamente, lo que la pone a disposición de la aplicación cliente, pero la acción no se ejecuta automáticamente. La acción se ejecuta solo cuando el usuario corporativo realiza la operación específica del cliente que inicia la acción. Por ejemplo, las aplicaciones cliente pueden presentar una lista de acciones como menú emergente cuando el usuario corporativo hace clic con el botón secundario en un miembro o una celda concretos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Acciones en modelos multidimensionales](actions-in-multidimensional-models.md)  
   
   

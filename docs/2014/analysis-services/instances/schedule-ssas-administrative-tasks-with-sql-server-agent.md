@@ -1,5 +1,5 @@
 ---
-title: Programar tareas administrativas de SSAS con el Agente SQL Server | Microsoft Docs
+title: Programar tareas administrativas de SSAS con Agente SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079681"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Programar tareas administrativas de SSAS con el Agente SQL Server
@@ -24,19 +24,19 @@ ms.locfileid: "66079681"
   
  Este tema es un tutorial que muestra dos formas de usar el Agente SQL Server para ejecutar el script XMLA. El primer ejemplo demuestra cómo programar el procesamiento de una sola dimensión. El segundo ejemplo muestra cómo combinar tareas de procesamiento en un único script que se ejecuta según una programación. Para completar este tutorial, deberá cumplir los siguientes requisitos previos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Se debe instalar el servicio del Agente SQL Server.  
   
- De forma predeterminada, trabajos se ejecutan con la cuenta de servicio. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la cuenta predeterminada para el Agente SQL Server es NT Service\SQLAgent$\<instancename >. Para realizar una tarea de copia de seguridad o de procesamiento, esta cuenta debe ser administrador del sistema en la instancia de Analysis Services. Para obtener más información, consulte [conceder permisos de administrador de servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ De forma predeterminada, trabajos se ejecutan con la cuenta de servicio. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la cuenta predeterminada para Agente SQL Server es NT Service\SQLAgent $\<InstanceName>. Para realizar una tarea de copia de seguridad o de procesamiento, esta cuenta debe ser administrador del sistema en la instancia de Analysis Services. Para obtener más información, vea [conceder permisos de administrador de servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- También debe tener una base de datos de prueba para trabajar con ella. Puede implementar la base de datos de ejemplo multidimensional AdventureWorks o un proyecto del tutorial multidimensional de Analysis Services para usarlo en este tutorial. Para más información, consulte [Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services](../install-sample-data-and-projects.md).  
+ También debe tener una base de datos de prueba para trabajar con ella. Puede implementar la base de datos de ejemplo multidimensional AdventureWorks o un proyecto del tutorial multidimensional de Analysis Services para usarlo en este tutorial. Para obtener más información, vea [instalar datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services](../install-sample-data-and-projects.md).  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Ejemplo 1: Procesar una dimensión en una tarea programada  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Ejemplo 1: procesar una dimensión en una tarea programada  
  Este ejemplo muestra cómo crear y programar un trabajo que procesa una dimensión.  
   
  Una tarea programada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es un script XMLA incrustado en un trabajo del Agente SQL Server. Este trabajo se programa para ejecutarse en los momentos y con la frecuencia deseados. Dado que el Agente SQL Server es parte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se trabaja con el motor de base de datos y con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear y programar una tarea administrativa.  
   
-###  <a name="bkmk_CreateScript"></a> Crear un script para procesar una dimensión en un trabajo del Agente SQL Server  
+###  <a name="bkmk_CreateScript"></a>Crear un script para procesar una dimensión en un trabajo de Agente SQL Server  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Abra una carpeta de base de datos y busque una dimensión. Haga clic con el botón derecho en la dimensión y seleccione **Procesar**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66079681"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a> Crear y programar el trabajo de procesamiento de dimensiones  
+###  <a name="bkmk_ProcessJob"></a>Crear y programar el trabajo de procesamiento de dimensiones  
   
 1.  Conéctese a una instancia del Motor de base de datos y, a continuación, abra el Explorador de objetos.  
   
@@ -81,15 +81,15 @@ ms.locfileid: "66079681"
   
 6.  En el cuadro de diálogo **Nuevo paso de trabajo** , escriba un nombre de paso en **Nombre del paso**.  
   
-7.  En **Servidor**, escriba **localhost** para una instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y **localhost\\** \<*nombre de instancia*> para una instancia con nombre.  
+7.  En **Servidor**, escriba **localhost** para una instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y **localhost\\**\<*nombre de instancia*> para una instancia con nombre.  
   
-     Si va a ejecutar el trabajo desde un equipo remoto, use el nombre de servidor y el nombre de instancia donde se ejecutará el trabajo. Use el formato \< *nombre del servidor*> para una instancia predeterminada, y \< *nombre del servidor*>\\<*instancia nombre*> para una instancia con nombre.  
+     Si va a ejecutar el trabajo desde un equipo remoto, use el nombre de servidor y el nombre de instancia donde se ejecutará el trabajo. Use el formato \<de *nombre de servidor*> para una instancia predeterminada \<y el*nombre de instancia* de nombre>\\<de *servidor*> para una instancia con nombre.  
   
 8.  En **Tipo**, seleccione **Comando de SQL Server Analysis Services**.  
   
 9. En **Comando**, haga clic con el botón derecho y seleccione **Pegar**. El script XMLA que generó en el paso anterior debe aparecer en la ventana de comandos.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. En **Seleccione una página**, haga clic en **Programaciones**y, a continuación, haga clic en **Nuevo**.  
   
@@ -105,10 +105,10 @@ ms.locfileid: "66079681"
   
 15. Cuando finalice el trabajo, haga clic **Cerrar**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Ejemplo 2: Procesamiento por lotes una dimensión y una partición en una tarea programada  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Ejemplo 2: procesamiento por lotes de una dimensión y una partición en una tarea programada  
  Los procedimientos de este ejemplo demuestran cómo crear y programar una trabajo que procese por lotes una dimensión de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y al mismo tiempo procesar una partición de cubo que dependa de la dimensión para la agregación. Para obtener más información sobre el procesamiento por lotes de objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Procesamiento por lotes &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
-###  <a name="bkmk_BatchProcess"></a> Crear un script para el procesamiento por lotes de una dimensión y una partición en un trabajo del Agente SQL Server  
+###  <a name="bkmk_BatchProcess"></a>Crear un script para el procesamiento por lotes de una dimensión y una partición en un trabajo de Agente SQL Server  
   
 1.  Con la misma base de datos, expanda **Dimensiones**, haga clic con el botón derecho en la dimensión **Cliente** y seleccione **Procesar**.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66079681"
   
 12. Este paso copia el script XMLA en el Portapapeles de Windows. Puede dejar el script XMLA en el portapapeles, guardarlo en un archivo o pegarlo en el Bloc de notas u otro editor de texto.  
   
-###  <a name="bkmk_Scheduling"></a> Crear y programar el trabajo de procesamiento por lotes  
+###  <a name="bkmk_Scheduling"></a>Crear y programar el trabajo de procesamiento por lotes  
   
 1.  Conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y, a continuación, abra el Explorador de objetos.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "66079681"
   
 10. En **Comando**, haga clic con el botón derecho y seleccione **Pegar**.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
 12. En la página **Programaciones** , haga clic en **Nuevo**.  
   
@@ -221,8 +221,8 @@ ms.locfileid: "66079681"
   
 16. Cuando finalice el trabajo, haga clic **Cerrar**.  
   
-## <a name="see-also"></a>Vea también  
- [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Opciones de procesamiento y configuración &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Crear scripts para tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

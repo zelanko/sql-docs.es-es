@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079709"
 ---
 # <a name="performance-counters-ssas"></a>Contadores de rendimiento (SSAS)
@@ -30,10 +30,10 @@ ms.locfileid: "66079709"
   
 ## <a name="counters-by-groups"></a>Contadores por grupos  
   
-|Agrupar|Descripción|  
+|Grupo|Descripción|  
 |-----------|-----------------|  
-|[Caché](#bkmk_Cache)|Estadísticas relacionadas con la memoria caché de agregaciones de Analysis Services.|  
-|[Conexión](#bkmk_Connection)|Estadísticas relacionadas con las conexiones de Microsoft Analysis Services.|  
+|[Almacenar](#bkmk_Cache)|Estadísticas relacionadas con la memoria caché de agregaciones de Analysis Services.|  
+|[Connection](#bkmk_Connection)|Estadísticas relacionadas con las conexiones de Microsoft Analysis Services.|  
 |[Predicción de minería de datos](#bkmk_DataMiningPrediction)|Estadísticas relacionadas con el procesamiento de los modelos de minería de datos.|  
 |[Procesamiento del modelo de minería de datos](#bkmk_DataMiningModelProcessing)|Estadísticas relacionadas con la creación de predicciones a partir de los modelos de minería de datos.|  
 |[Bloqueos](#bkmk_Locks)|Estadísticas relacionadas con los bloqueos internos del servidor de Microsoft Analysis Services.|  
@@ -41,12 +41,12 @@ ms.locfileid: "66079709"
 |[Memoria](#bkmk_Memory)|Estadísticas relacionadas con la memoria interna del servidor de Microsoft Analysis Services.|  
 |[Almacenamiento en caché automático](#bkmk_ProactiveCaching)|Estadísticas relacionadas con el almacenamiento en caché automático de Microsoft Analysis Services.|  
 |[Procesamiento de agregaciones](#bkmk_ProcAggregations)|Estadísticas relacionadas con el procesamiento de agregaciones en archivos de datos MOLAP.|  
-|[Procesamiento de índices](#bkmk_ProcIndexes)|Estadísticas relacionadas con el procesamiento de índices para los archivos de datos MOLAP.|  
-|[Procesamiento](#bkmk_Processing)|Estadísticas relacionadas con el procesamiento de datos.|  
+|[Procesar índices](#bkmk_ProcIndexes)|Estadísticas relacionadas con el procesamiento de índices para los archivos de datos MOLAP.|  
+|[Procesos](#bkmk_Processing)|Estadísticas relacionadas con el procesamiento de datos.|  
 |[Consulta del motor de almacenamiento](#bkmk_StorageEngineQuery)|Estadísticas relacionadas con las consultas del motor de almacenamiento de Microsoft Analysis Services.|  
-|[Subprocesos](#bkmk_Threads)|Estadísticas relacionadas con los subprocesos de Microsoft Analysis Services.|  
+|[ThreadPool](#bkmk_Threads)|Estadísticas relacionadas con los subprocesos de Microsoft Analysis Services.|  
   
-###  <a name="bkmk_Cache"></a> Caché  
+###  <a name="bkmk_Cache"></a>Almacenar  
  Estadísticas relacionadas con la caché de agregaciones de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
@@ -68,21 +68,21 @@ ms.locfileid: "66079709"
 |Total de aciertos de caché del elemento de iterador filtrados|Número total de aciertos de caché que devolvió un elemento de iterador indexado en relación con los resultados filtrados.|  
 |Total de errores de caché del elemento de iterador filtrados|Número total de aciertos de caché que no pudieron generar un iterador indizado en relación con los resultados filtrados y tuvieron que generar otra caché con dichos resultados.|  
   
-###  <a name="bkmk_Connection"></a> Conexión  
+###  <a name="bkmk_Connection"></a>Conectarse  
  Estadísticas relacionadas con las conexiones de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
 |-------------|-----------------|  
 |Conexiones actuales|Número actual de conexiones de cliente establecidas.|  
 |Solicitudes/s|Velocidad de solicitudes de conexión.  Se trata de llegadas.|  
-|Total de solicitudes|Total de solicitudes de conexión.  Se trata de llegadas.|  
-|Conexiones realizadas correctamente/s|Velocidad de finalizaciones de conexión realizadas correctamente.|  
+|Total de solicitudes|Número total de solicitudes de conexión.  Se trata de llegadas.|  
+|Conexiones realizadas correctamente/s|Tasa de finalizaciones de conexión correctas.|  
 |Total de conexiones realizadas correctamente|Total de conexiones realizadas correctamente.|  
 |Errores/s|Velocidad de errores de conexión.|  
-|Total de errores|Total de intentos de conexión con error.|  
-|Sesiones de usuarios actuales|Número actual de sesiones de usuarios establecidas.|  
+|Total de errores|Número total de intentos de conexión con error.|  
+|Sesiones de usuarios actuales|Número actual de sesiones de usuario establecidas.|  
   
-###  <a name="bkmk_DataMiningModelProcessing"></a> Procesamiento del modelo de minería de datos  
+###  <a name="bkmk_DataMiningModelProcessing"></a>Procesamiento del modelo de minería de datos  
  Estadísticas relacionadas con el procesamiento del modelo de minería de datos de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
@@ -90,7 +90,7 @@ ms.locfileid: "66079709"
 |Casos/s|Velocidad a la que se procesan los casos.|  
 |Procesamiento actual de modelos|Número actual de modelos en proceso.|  
   
-###  <a name="bkmk_DataMiningPrediction"></a> Predicción de minería de datos  
+###  <a name="bkmk_DataMiningPrediction"></a>Predicción de minería de datos  
  Estadísticas relacionadas con la predicción de minería de datos de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
@@ -103,7 +103,7 @@ ms.locfileid: "66079709"
 |Filas de totales|Total de filas devueltas por consultas de minería de datos.|  
 |Total de predicciones|Total de consultas de predicciones de minería de datos recibidas por el servidor.|  
   
-###  <a name="bkmk_Locks"></a> Bloqueos  
+###  <a name="bkmk_Locks"></a>Pestillo  
  Estadísticas relacionadas con los bloqueos internos del servidor de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
@@ -119,7 +119,7 @@ ms.locfileid: "66079709"
 |Solicitudes de desbloqueo/s|Número de solicitudes de desbloqueo por segundo.|  
 |Total de interbloqueos detectados|Número total de interbloqueos detectados.|  
   
-###  <a name="bkmk_MDX"></a> MDX  
+###  <a name="bkmk_MDX"></a>MDX  
  Estadísticas relacionadas con los cálculos MDX de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
@@ -152,7 +152,7 @@ ms.locfileid: "66079709"
 |Total de Autoexist|Número total de veces que se realizó Autoexist.|  
 |Total de EXISTING|Número total de veces que se realizó una operación de conjuntos EXISTING.|  
   
-###  <a name="bkmk_Memory"></a> Memoria  
+###  <a name="bkmk_Memory"></a>Memoria  
  Estadísticas relacionadas con la memoria interna del servidor de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
@@ -163,18 +163,18 @@ ms.locfileid: "66079709"
 |8 KB en lista de direcciones de bloque paginado|Memoria actual en lista de direcciones de 8 KB, en KB.  (Páginas de memoria listas para utilizarlas).|  
 |1 KB asignado de bloque paginado|Memoria prestada de grupo de páginas de 64 KB, en KB.  Esta memoria se cede a otras partes del servidor.|  
 |1 KB en lista de direcciones de bloque paginado|Memoria actual en lista de direcciones de 8 KB, en KB.  (Páginas de memoria listas para utilizarlas).|  
-|Precio actual de limpiador|Precio actual de memoria, $/byte/tiempo, normalizado a 1000.|  
+|precio actual de limpieza|Precio actual de memoria, USD/byte/tiempo, normalizado a 1000.|  
 |Balance de limpiador/s|Velocidad de operaciones de balance+reducción.|  
 |KB de memoria de limpiador reducida/s|Velocidad de reducción, en KB/s.|  
 |KB reducibles de memoria de limpiador|Cantidad de memoria, en KB, que purgará el limpiador en segundo plano.|  
 |KB no reducibles de memoria de limpiador|Cantidad de memoria, en KB, que no purgará el limpiador en segundo plano.|  
 |KB de memoria de limpiador|Cantidad de memoria, en KB, conocida por el limpiador en segundo plano.  (KB reducibles de memoria de limpiador + KB no reducibles de memoria de limpiador).|  
-|KB de uso de memoria|Uso de memoria del proceso de servidor tal como se usa para calcular el precio de la memoria del limpiador.  Es igual al contador Proceso\Bytes privados más el tamaño de los datos asignados a la memoria; se omite la memoria que ha asignado el motor analítico en memoria xVelocity (VertiPaq) superior al límite de memoria del motor xVelocity.|  
-|KB de límite bajo de memoria|Límite de memoria baja del archivo de configuración.|  
-|KB de límite alto de memoria|Límite de memoria alta del archivo de configuración.|  
+|KB de uso de memoria|Uso de memoria del proceso de servidor tal como se usa para calcular el precio de la memoria del limpiador.  Es igual al contador Proceso\Bytes privados más el tamaño de los datos asignados a la memoria; se ignora la memoria que ha asignado VertiPaq superior al límite de memoria de VertiPaq.|  
+|KB de límite bajo de memoria|Límite bajo de memoria del archivo de configuración.|  
+|KB de límite alto de memoria|Límite alto de memoria del archivo de configuración.|  
 |KB caché agregación|Memoria actual asignada a caché de agregaciones, en KB.|  
 |KB de cuota|Cuota de memoria actual, en KB.  La cuota de memoria también se denomina concesión de memoria o reserva de memoria.|  
-|Cuota bloqueada|Número actual de solicitudes de cuota que están bloqueadas hasta que se liberen otras cuotas de memoria.|  
+|cuota bloqueada|Número actual de solicitudes de cuota que están bloqueadas hasta que se liberen otras cuotas de memoria.|  
 |KB de almacén de archivos|Memoria actual asignada a almacén de archivos (caché de archivos), en KB.|  
 |Errores de página de almacén de archivos/s|Velocidad de errores de página de almacén de archivos.|  
 |Lecturas de almacén de archivos/s|Páginas de almacén de archivos leídas/s|  
@@ -229,7 +229,7 @@ ms.locfileid: "66079709"
 |KB de límite físico de memoria|Límite de memoria física del archivo de configuración.|  
 |KB de VertiPaq de límite de memoria|Límite en memoria del archivo de configuración.|  
   
-###  <a name="bkmk_ProactiveCaching"></a> Almacenamiento en caché automático  
+###  <a name="bkmk_ProactiveCaching"></a>Almacenamiento en caché automático  
  Estadísticas relacionadas con el almacenamiento en caché automático de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
@@ -239,7 +239,7 @@ ms.locfileid: "66079709"
 |Inicio de almacenamiento en caché automático/s|Velocidad de inicio de almacenamiento en caché automático.|  
 |Finalización de almacenamiento en caché automático/s|Velocidad de finalización de almacenamiento en caché automático.|  
   
-###  <a name="bkmk_ProcAggregations"></a> Procesamiento de agregaciones  
+###  <a name="bkmk_ProcAggregations"></a>Procesamiento de agregaciones  
  Estadísticas relacionadas con el procesamiento de agregaciones de Microsoft Analysis Services en archivos de datos MOLAP.  
   
 |Contador|Descripción|  
@@ -253,7 +253,7 @@ ms.locfileid: "66079709"
 |Filas de archivo temporal escritas/s|Velocidad de escritura de filas en un archivo temporal.  En los archivos temporales se escribe cuando las agregaciones superan los límites de memoria.|  
 |Bytes de archivo temporal escritos/s|Velocidad de escritura de bytes en un archivo temporal.  En los archivos temporales se escribe cuando las agregaciones superan los límites de memoria.|  
   
-###  <a name="bkmk_ProcIndexes"></a> Procesamiento de índices  
+###  <a name="bkmk_ProcIndexes"></a>Procesar índices  
  Estadísticas relacionadas con el procesamiento de índices de Microsoft Analysis Services para archivos de datos MOLAP.  
   
 |Contador|Descripción|  
@@ -263,19 +263,19 @@ ms.locfileid: "66079709"
 |Filas/s|Velocidad de filas de archivos MOLAP utilizadas para crear índices.|  
 |Filas de totales|Total de filas de archivos MOLAP utilizadas para crear índices.|  
   
-###  <a name="bkmk_Processing"></a> Procesamiento  
+###  <a name="bkmk_Processing"></a>Procesos  
  Estadísticas relacionadas con el procesamiento de datos de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
 |-------------|-----------------|  
-|Filas leídas/s|Velocidad de filas leídas en todas las bases de datos relacionales.|  
+|Filas leídas/s|Velocidad de filas leídas de todas las bases de datos relacionales.|  
 |Total de filas leídas|Recuento de filas leídas en todas las bases de datos relacionales.|  
 |Filas convertidas/s|Velocidad de filas convertidas durante el procesamiento.|  
 |Total de filas convertidas|Recuento de filas convertidas durante el procesamiento.|  
 |Filas escritas/s|Velocidad de filas escritas durante el procesamiento.|  
 |Total de filas escritas|Recuento de filas escritas durante el procesamiento.|  
   
-###  <a name="bkmk_StorageEngineQuery"></a> Consulta del motor de almacenamiento  
+###  <a name="bkmk_StorageEngineQuery"></a>Consulta del motor de almacenamiento  
  Estadísticas relacionadas con las consultas del motor de almacenamiento de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
@@ -318,30 +318,30 @@ ms.locfileid: "66079709"
 |Búsquedas de agregación/s|Frecuencia de búsquedas de agregación.|  
 |Aciertos de agregación/s|Frecuencia de aciertos de agregación.|  
   
-###  <a name="bkmk_Threads"></a> Subprocesos  
+###  <a name="bkmk_Threads"></a>ThreadPool  
  Estadísticas relacionadas con los subprocesos de Microsoft Analysis Services.  
   
 |Contador|Descripción|  
 |-------------|-----------------|  
-|Subprocesos inactivos de análisis corto|Número de subprocesos inactivos en el grupo de subprocesos de análisis corto.|  
-|Subprocesos ocupados de análisis corto|Número de subprocesos ocupados en el grupo de subprocesos de análisis corto.|  
-|Longitud de cola de trabajos de análisis corto|Número de trabajos en la cola del grupo de subprocesos de análisis corto.|  
+|subprocesos inactivos en análisis cortos|Número de subprocesos inactivos del grupo de subprocesos de análisis cortos.|  
+|subprocesos ocupados en análisis cortos|Número de subprocesos ocupados del grupo de subprocesos de análisis cortos.|  
+|longitud de cola de trabajos en análisis cortos|Número de trabajos en la cola del grupo de subprocesos en análisis cortos.|  
 |Velocidad de trabajos de análisis corto|Velocidad de los trabajos en el grupo de subprocesos de análisis corto.|  
-|Subprocesos inactivos de análisis largo|Número de subprocesos inactivos en el grupo de subprocesos de análisis largo.|  
-|Subprocesos ocupados de análisis largo|Número de subprocesos ocupados en el grupo de subprocesos de análisis largo.|  
-|Longitud de cola de trabajos de análisis largo|Número de trabajos en la cola del grupo de subprocesos de análisis largo.|  
+|subprocesos inactivos en análisis largos|Número de subprocesos inactivos del grupo de subprocesos en análisis largos.|  
+|subprocesos ocupados en análisis largos|Número de subprocesos ocupados del grupo de subprocesos de análisis largos.|  
+|longitud de cola de trabajos en análisis largos|Número de trabajos en la cola del grupo de subprocesos en análisis largos.|  
 |Velocidad de trabajos de análisis largo|Velocidad de los trabajos en el grupo de subprocesos de análisis largo.|  
-|Subprocesos inactivos de grupo de consultas|Número de subprocesos inactivos en el grupo de subprocesos de consulta.|  
-|Subprocesos ocupados de grupo de consultas|Número de subprocesos ocupados en el grupo de subprocesos de consulta.|  
-|Longitud de cola de trabajos de grupo de consultas|Número de trabajos en la cola del grupo de subprocesos de consulta.|  
+|subprocesos inactivos del grupo de consultas|Número de subprocesos inactivos en el grupo de subprocesos de consulta.|  
+|Subprocesos ocupados de grupo de consultas|Número de subprocesos ocupados del grupo de subprocesos de consulta.|  
+|longitud de cola de trabajos del grupo de consultas|Número de trabajos en la cola del grupo de subprocesos de consultas.|  
 |Velocidad de trabajos de grupo de consultas|Velocidad de los trabajos en el grupo de subprocesos de consulta.|  
-|Subprocesos inactivos del grupo de procesamiento que no son de E/S|Número de subprocesos inactivos en el grupo de subprocesos de procesamiento dedicados a trabajos que no son de E/S.|  
-|Subprocesos ocupados del grupo de procesamiento que no son de E/S|Número de subprocesos del grupo de subprocesos de procesamiento dedicados a trabajos que no son de E/S.|  
+|subprocesos de trabajo inactivos que no son de E/S del grupo de procesamiento|Número de subprocesos inactivos del grupo de subprocesos de procesamiento dedicado a trabajos que no son de E/S.|  
+|subprocesos de trabajo ocupados que no son de E/S del grupo de procesamiento|Número de subprocesos que ejecutan trabajos que no son de E/S del grupo de subprocesos de procesamiento.|  
 |Longitud de cola de trabajos de grupo de procesamiento|Número de trabajos que no son de E/S en la cola del grupo de subprocesos de procesamiento.|  
 |Velocidad de trabajos de grupo de procesamiento|Porcentaje de trabajos que no son de E/S completados en el grupo de subprocesos de procesamiento.|  
-|Subprocesos inactivos de trabajos de E/S del grupo de procesamiento|Número de subprocesos inactivos del grupo de subprocesos de procesamiento dedicados a trabajos de E/S.|  
-|Subprocesos ocupados de trabajos de E/S del grupo de procesamiento|Número de subprocesos del grupo de subprocesos de procesamiento dedicados a trabajos de E/S.|  
-|Longitud de la cola de trabajos de E/S del grupo de procesamiento|Número de trabajos de E/S en la cola del grupo de subprocesos de procesamiento.|  
+|subprocesos de trabajo de E/S inactivos del grupo de procesamiento|Número de subprocesos inactivos para trabajos de E/S en el grupo de subprocesos de procesamiento.|  
+|subprocesos de trabajo de E/S ocupados del grupo de procesamiento|Número de subprocesos que ejecutan trabajos de E/S en el grupo de subprocesos de procesamiento.|  
+|Longitud de cola de trabajos de E/S de grupo de procesamiento|Número de trabajos de E/S en la cola del grupo de subprocesos de procesamiento.|  
 |Porcentaje de trabajos de E/S completados del grupo de procesamiento|Porcentaje de trabajos de E/S completados en el grupo de subprocesos de procesamiento.|  
   
   

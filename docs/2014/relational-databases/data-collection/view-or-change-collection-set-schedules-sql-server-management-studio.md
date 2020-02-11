@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873493"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio)
@@ -49,7 +49,7 @@ ms.locfileid: "62873493"
   
 2.  Haga clic con el botón derecho en un conjunto de recopilación que use el modo de almacenamiento en memoria caché, como **Estadísticas de consultas**y haga clic en **Propiedades** para abrir el cuadro de diálogo [Propiedades del conjunto de recopilación de datos](#CollectionSet) .  
   
-3.  Puede cambiar la frecuencia de recopilación en la página **General** . Para ello, siga estos pasos:  
+3.  Puede cambiar la frecuencia de recopilación en la página **General** . Para ello, siga estos pasos.  
   
     1.  En el panel de detalles, haga doble clic en el número que se muestra para la columna **Frecuencia de recopilación (s)** en la tabla **Elementos de recopilación** .  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62873493"
   
  Utilice esta página para configurar la recopilación y carga de datos, las programaciones y los períodos de retención de datos en el almacén de administración de datos. Esta página también proporciona información sobre los conjuntos de recopilación, como los tipos de recopilador y las frecuencias de recopilación, así como sobre los parámetros de entrada que se utilizan para un conjunto de recopilación.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del conjunto de recopilación al que hace referencia esta página.  
   
  **Recopilación y carga de datos**  
@@ -118,7 +118,7 @@ ms.locfileid: "62873493"
  **Elementos de recopilación**  
  Muestra los elementos de recopilación del conjunto de recopilación. Se proporciona la información siguiente para cada elemento de recopilación:  
   
--   **Name**  
+-   **Nombre**  
   
 -   **Tipo de recopilador**  
   
@@ -161,7 +161,7 @@ ms.locfileid: "62873493"
   
  Utilice esta página para ver una descripción del conjunto de recopilación al que hace referencia esta página de propiedades.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar la recopilación de datos](manage-data-collection.md)   
  [Recopilación de datos](data-collection.md)  
   

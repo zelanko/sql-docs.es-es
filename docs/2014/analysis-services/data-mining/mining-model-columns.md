@@ -1,5 +1,5 @@
 ---
-title: Las columnas del modelo de minería de datos | Microsoft Docs
+title: Columnas del modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f99a2dc218543faa4d862fa7520c1618ec307ba7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083706"
 ---
 # <a name="mining-model-columns"></a>Columnas del modelo de minería de datos
@@ -30,9 +30,9 @@ ms.locfileid: "66083706"
   
  En una columna de minería de datos puede definir dos elementos adicionales de información: uso y marcas de modelado.  
   
--   El**uso** es una propiedad que define cómo el modelo va a usar la columna. Las columnas se pueden usar como columnas de entrada, de clave o de predicción.  
+-   El **uso** es una propiedad que define cómo el modelo utiliza la columna. Las columnas se pueden usar como columnas de entrada, de clave o de predicción.  
   
--   Las**marcas de modelado** proporcionan al algoritmo información adicional sobre los datos que se definen en la tabla de casos, de forma que el algoritmo pueda generar un modelo más preciso. Puede definir marcas de modelado mediante programación con el lenguaje DMX (Extensiones de minería de datos) o en el **Diseñador de minería de datos** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+-   Las **marcas de modelado** proporcionan al algoritmo información adicional sobre los datos que se definen en la tabla de casos, de modo que el algoritmo pueda generar un modelo más preciso. Puede definir marcas de modelado mediante programación con el lenguaje DMX (Extensiones de minería de datos) o en el **Diseñador de minería de datos** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  La siguiente lista describe las marcas de modelado que puede definir en una columna de modelo de minería de datos.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66083706"
   
  Para más información sobre la configuración de la propiedad de uso y la definición de marcas de modelado mediante programación con DMX, vea [CREATE MINING MODEL &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx). Para más información sobre la configuración de la propiedad de uso y la definición de marcas de modelado en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vea [Mover objetos de minería de datos](moving-data-mining-objects.md).  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-structures-analysis-services-data-mining.md)   
  [Cambiar las propiedades de un modelo de minería de datos](change-the-properties-of-a-mining-model.md)   
  [Excluir una columna de un modelo de minería de datos](exclude-a-column-from-a-mining-model.md)   
  [Columnas de la estructura de minería de datos](mining-structure-columns.md)  

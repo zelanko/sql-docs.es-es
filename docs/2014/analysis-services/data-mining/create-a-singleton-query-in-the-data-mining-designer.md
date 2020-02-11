@@ -1,5 +1,5 @@
 ---
-title: Crear una consulta Singleton en el Diseñador de minería de datos | Microsoft Docs
+title: Crear una consulta Singleton en el diseñador de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085307"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Crear una consulta singleton en el Diseñador de minería de datos
@@ -57,9 +57,9 @@ AS [t]
   
 4.  En la tabla **Entrada de consulta singleton** , seleccione los valores de la columna **Valor** para describir el caso para el que desea crear una predicción.  
   
-     Por ejemplo, seleccione **2** para **Number Children At Home**y, a continuación, escriba `45` para **Age**.  
+     Por ejemplo, seleccione **2** en **número de hijos en Inicio**y, a `45` continuación, escriba para **edad**.  
   
-5.  Arrastre una columna de predicción de la tabla **Modelo de minería de datos** hacia la columna **Origen** en la parte inferior de la pestaña. También puede escribir un alias para la columna.  
+5.  Arrastre una columna de predicción de la tabla **modelo de minería de datos** a la columna de **origen** en la parte inferior de la pestaña. opcionalmente, puede escribir un alias para la columna.  
   
      Por ejemplo, arrastre **Bike Buyer** a la columna **Origen** .  
   
@@ -79,7 +79,7 @@ AS [t]
   
      Aparece una nueva ventana mostrando el resultado de la consulta. Para ver la instrucción DMX que acaba de crear, haga clic en **SQL**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Consultas de predicción &#40;minería de datos&#41;](prediction-queries-data-mining.md)  
   
   

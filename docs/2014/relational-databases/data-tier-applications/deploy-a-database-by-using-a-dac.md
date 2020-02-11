@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873056"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implementar una base de datos mediante una DAC
   Use el asistente para **implementar una base de datos en SQL Azure** para implementar una base de datos entre una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un servidor de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o entre dos servidores de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-##  <a name="BeforeBegin"></a> Antes de empezar  
+##  <a name="BeforeBegin"></a> Antes de comenzar  
  El asistente emplea un archivo de almacenamiento BACPAC de aplicación de capa de datos (DAC) para implementar los datos y las definiciones de los objetos de base de datos. Realiza una operación de exportación de DAC de la base de datos de origen y una importación de DAC al destino.  
   
 ###  <a name="DBOptSettings"></a> Opciones y configuración de bases de datos  
@@ -76,7 +76,7 @@ ms.locfileid: "62873056"
   
     -   [Página Resumen](#Summary)  
   
-    -   [Resultado](#Results)  
+    -   [Resultados](#Results)  
   
 ##  <a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos del asistente **Implementar la base de datos** .  
@@ -85,26 +85,26 @@ ms.locfileid: "62873056"
   
 -   **No volver a mostrar esta página.** - Active la casilla para que la página Introducción deje de mostrarse en el futuro.  
   
--   **Siguiente** : continúa a la página **Configuración de implementación** .  
+-   **Siguiente** : continúa en la página **configuración de implementación** .  
   
--   **Cancelar**: cancela la operación y cierra el asistente.  
+-   **Cancelar** : cancela la operación y cierra el asistente.  
   
-##  <a name="Deployment_settings"></a> Página Configuración de implementación  
+##  <a name="Deployment_settings"></a>Página configuración de implementación  
  Use esta página para especificar el servidor de destino y proporcionar detalles sobre la nueva base de datos.  
   
  **Host local:**  
   
--   **Conexión de servidor**: especifique los detalles de conexión del servidor y haga clic en **Conectar** para comprobar la conexión.  
+-   **Conexión de servidor** : especifique los detalles de conexión del servidor y, a continuación, haga clic en **conectar** para comprobar la conexión.  
   
--   **Nombre de la nueva base de datos**: especifique un nombre para la nueva base de datos.  
+-   **Nombre** de la nueva base de datos: especifique un nombre para la nueva base de datos.  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]configuración de base de datos:**  
   
--   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** : seleccione la edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el menú desplegable.  
+-   edición: seleccione la edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el menú desplegable. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
   
--   **Tamaño máximo de la base de datos**: seleccione el tamaño máximo de la base de datos en el menú desplegable.  
+-   **Tamaño máximo** de la base de datos: seleccione el tamaño máximo de la base de datos en el menú desplegable.  
   
- **Otros valores:**  
+ **Otras opciones de configuración:**  
   
 -   Especifique un directorio local para el archivo temporal, que es el archivo de almacenamiento BACPAC. Tenga en cuenta que el archivo se creará en la ubicación especificada y permanecerá en ella una vez completada la operación.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "62873056"
  Haga clic en **Finalizar** para cerrar el asistente.  
   
 ## <a name="using-a-net-framework-application"></a>Mediante una aplicación de .Net Framework  
- **Para implementar una base de datos por medio de los métodos Export() e Import() de DacStore en una aplicación de .NET Framework.**  
+ **Para implementar una base de datos mediante los métodos métodos Export () e Import () en una aplicación .NET Framework.**  
   
  Para obtener un ejemplo de código, descargue la aplicación de ejemplo de DAC en [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575).  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62873056"
   
 6.  Use el método de `Import` del tipo `Microsoft.SqlServer.Management.Dac.DacStore` para importar el archivo BACPAC. Especifique el archivo BACPAC creado por la exportación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](data-tier-applications.md)   
  [Exportar una aplicación de capa de datos](export-a-data-tier-application.md)   
  [Importar un archivo de bacpac para crear una nueva base de datos de usuario](import-a-bacpac-file-to-create-a-new-user-database.md)  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ca7eb5b4883edf9ab718c731049da4c3be44324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835803"
 ---
 # <a name="connect-to-oracle"></a>Conectar con Oracle
@@ -24,13 +24,13 @@ ms.locfileid: "62835803"
   
  **Autenticación**  
   
- Seleccione una de las opciones siguientes:  
+ Seleccione uno de los siguientes:  
   
 -   **Autenticación de Windows**: seleccione esta opción para usar las credenciales del dominio de Windows actual. Solo puede usar esta opción si la base de datos de Oracle está configurada para usar la autenticación de Windows.  
   
 -   **Autenticación de Oracle**: si selecciona esta opción, debe escribir el **Nombre de usuario** y la **Contraseña** para el usuario en la base de datos de Oracle a la que se está conectando.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar tablas a una instancia CDC](add-tables-to-a-cdc-instance.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Usar SQL Server extendida Events (XEvents) para supervisar Analysis Services | Microsoft Docs
+title: Usar SQL Server Extended Events (XEvents) para supervisar Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079741"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Usar SQL Server Extended Events (XEvents) para supervisar Analysis Services
-  Analysis Services proporciona capacidades de seguimiento mediante el uso de [Extended Events](../../relational-databases/extended-events/extended-events.md).  
+  Analysis Services proporciona funciones de seguimiento mediante el uso de [eventos extendidos](../../relational-databases/extended-events/extended-events.md).  
   
  Eventos extendidos es una infraestructura de eventos con un alto nivel de escalabilidad y configurabilidad para sistemas de servidor. Extended Events es un sistema ligero de supervisión de rendimiento que usa muy pocos recursos de rendimiento.  
   
- Todos los Analysis Services, los eventos se pueden capturar y destinar a usuarios específicos, como se define en [Extended Events](../../relational-databases/extended-events/extended-events.md), con XEvents.  
+ Todos los eventos de Analysis Services se pueden capturar y destinar a usuarios específicos, tal como se define en [Extended Events](../../relational-databases/extended-events/extended-events.md), a través de XEvents.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Iniciar Eventos extendidos en Analysis Services  
  El seguimiento de Eventos extendidos se habilita mediante un comando de script de objeto de creación XMLA similar como se muestra a continuación:  
@@ -98,7 +98,7 @@ ms.locfileid: "66079741"
  *trace_id*  
  Define el identificador único para el seguimiento que se va a eliminar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

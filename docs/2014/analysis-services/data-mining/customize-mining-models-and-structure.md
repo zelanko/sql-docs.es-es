@@ -1,5 +1,5 @@
 ---
-title: Personalizar los modelos de minería de datos y la estructura | Microsoft Docs
+title: Personalizar los modelos y la estructura de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d5ffe7ba8f0f844b7de626ff6238ebbead91dd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085206"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personalizar la estructura y los modelos de minería de datos
@@ -43,7 +43,7 @@ ms.locfileid: "66085206"
 ### <a name="using-feature-selection"></a>Usar la selección de características  
  La mayor parte de los algoritmos de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza un proceso denominado *selección de características* para seleccionar solo los atributos más útiles e incorporarlos a un modelo. Reducir el número de columnas y atributos puede mejorar el rendimiento y la calidad del modelo. Los métodos de selección de características disponibles difieren dependiendo del algoritmo que se elija.  
   
- [Selección de características &#40;minería de datos&#41;](feature-selection-data-mining.md).  
+ [Selección de características &#40;&#41;de minería de datos ](feature-selection-data-mining.md).  
   
 ### <a name="changing-usage"></a>Cambiar el uso  
  Puede cambiar las columnas que están incluidas en un modelo de minería de datos y cómo se utiliza cada columna. Si no obtiene los resultados esperados, debe muestrear las columnas que utilizó como entrada y preguntarse si las columnas son una buena elección y si hay algo que pueda hacer para mejorar el tratamiento de los datos, como podría ser:  
@@ -56,14 +56,14 @@ ms.locfileid: "66085206"
   
 -   Quitar las columnas que tienen muchos valores únicos, o las columnas que son en realidad datos de referencia y no resultan de utilidad para el análisis, como las direcciones o el segundo nombre.  
   
- No necesita quitar físicamente las columnas de la estructura de minería de datos. basta con marcar la columna como **omitir**. La columna se quita del modelo de minería de datos, pero otros modelos de minería de datos de la estructura aún podrán utilizarla o hacer referencia a ella en una consulta de obtención de datos.  
+ No es necesario quitar físicamente las columnas de la estructura de minería de datos; simplemente puede marcar la columna como **omitir**. La columna se quita del modelo de minería de datos, pero otros modelos de minería de datos de la estructura aún podrán utilizarla o hacer referencia a ella en una consulta de obtención de datos.  
   
 ### <a name="creating-aliases-for-model-columns"></a>Crear alias para las columnas de modelo  
  Cuando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea el modelo de minería de datos, usa los mismos nombres de columna que se encuentran en la estructura de minería de datos. Puede agregar un alias a cualquier columna del modelo de minería de datos. Esto podría facilitar la comprensión del uso o el contenido de la columna, o hacer el nombre más corto para su comodidad en la creación de consultas. Los alias también son útiles si desea crear una copia de una columna y asignarle un nombre descriptivo.  
   
- Cree un alias modificando la propiedad `Name` de la columna de minería de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continúa usando el nombre original como el identificador de la columna y el nuevo valor que escribe para `Name` se convierte en el alias de columna y aparece en la cuadrícula entre paréntesis junto al uso de la columna.  
+ Cree un alias modificando la propiedad `Name` de la columna de minería de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sigue usando el nombre original como el identificador de la columna y el nuevo valor que escribe para `Name` se convierte en el alias de columna y aparece en la cuadrícula entre paréntesis junto al uso de la columna.  
   
- ![columnas del modelo de alias en la minería de datos](../media/modelcolumnalias-income.gif "columnas del modelo de alias en la minería de datos")  
+ ![alias en columnas de un modelo de minería de datos](../media/modelcolumnalias-income.gif "alias en columnas de un modelo de minería de datos")  
   
  El gráfico muestra los modelos relacionados que tienen varias copias de una columna de estructura de minería de datos, todos relacionados con los ingresos. Cada copia de la columna de estructura se ha hecho de datos discretos de una manera diferente. Cada uno de los modelos del diagrama usan una columna diferente de la estructura de minería de datos; en cambio, para comodidad en la comparación de las columnas por los modelos, se ha cambiado el nombre de la columna de cada modelo a [**Income**].  
   
@@ -77,15 +77,15 @@ ms.locfileid: "66085206"
 ## <a name="changing-the-algorithm"></a>Cambiar el algoritmo  
  Aunque los modelos nuevos que agregue a una estructura de minería de datos comparten el mismo conjunto de datos, puede obtener resultados diferentes utilizando un algoritmo distinto (si los datos lo admiten) o cambiando los parámetros del algoritmo. También puede establecer marcas de modelado.  
   
- La elección de algoritmo determina qué tipo de resultados se van a obtener. Para obtener información general sobre cómo funciona un algoritmo concreto o sobre los escenarios empresariales donde se beneficiaría del uso de un algoritmo determinado, vea [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
+ La elección de algoritmo determina qué tipo de resultados se van a obtener. Para obtener información general sobre cómo funciona un algoritmo concreto o sobre los escenarios empresariales donde se beneficiaría del uso de un algoritmo determinado, vea [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
  Vea el tema de referencia técnica de cada algoritmo para obtener una descripción de los requisitos y las restricciones, así como información detallada sobre las personalizaciones que cada algoritmo admite.  
   
 |||  
 |-|-|  
 |[Algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm.md)|[Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md)|  
-|[Algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm.md)|[Algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm.md)|  
-|[Algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm.md)|[Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)|  
+|[Algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm.md)|[Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)|  
+|[Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)|[Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)|  
 |[Algoritmo de asociación de Microsoft](microsoft-association-algorithm.md)|[Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)|  
 |[Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)||  
   
@@ -96,44 +96,44 @@ ms.locfileid: "66085206"
   
 |Nombre de propiedad|Se aplica a|  
 |-------------------|----------------|  
-|AUTO_DETECT_PERIODICITY|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
+|AUTO_DETECT_PERIODICITY|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |CLUSTER_COUNT|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)|  
-|COMPLEXITY_PENALTY|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md)|  
-|FORECAST_METHOD|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
+|COMPLEXITY_PENALTY|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|FORCE_REGRESSOR|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)|  
+|FORECAST_METHOD|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)|  
-|HISTORIC_MODEL_COUNT|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
-|HISTORICAL_MODEL_GAP|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
-|HOLDOUT_PERCENTAGE|[Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Nota: Este parámetro es diferente del valor de porcentaje de exclusión que se aplica a una estructura de minería de datos.|  
-|HOLDOUT_SEED|[Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Nota: Este parámetro es distinto del valor de inicialización de exclusión que se aplica a una estructura de minería de datos.|  
-|INSTABILITY_SENSITIVITY|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
+|HISTORIC_MODEL_COUNT|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|HISTORICAL_MODEL_GAP|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|HOLDOUT_PERCENTAGE|[Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Nota: Este parámetro es distinto del valor de porcentaje de datos de exclusión que se aplica a una estructura de minería de datos.|  
+|HOLDOUT_SEED|[Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Nota: Este parámetro es distinto del valor de inicialización de datos de exclusión que se aplica a una estructura de minería de datos.|  
+|INSTABILITY_SENSITIVITY|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_INPUT_ATTRIBUTES|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_SIZE|[Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)|  
 |MAXIMUM_OUTPUT_ATTRIBUTES|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)|  
 |MAXIMUM_SEQUENCE_STATES|[Referencia técnica del algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
-|MAXIMUM_SERIES_VALUE|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
+|MAXIMUM_SERIES_VALUE|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_STATES|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |MAXIMUM_SUPPORT|[Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_IMPORTANCE|[Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_ITEMSET_SIZE|[Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_DEPENDENCY_PROBABILITY|[Referencia técnica del algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm-technical-reference.md)|  
 |MINIMUM_PROBABILITY|[Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)|  
-|MINIMUM_SERIES_VALUE|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
-|MINIMUM_SUPPORT|[Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
-|MISSING_VALUE_SUBSTITUTION|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
+|MINIMUM_SERIES_VALUE|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|MINIMUM_SUPPORT|[Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|MISSING_VALUE_SUBSTITUTION|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |MODELLING_CARDINALITY|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)|  
-|PERIODICITY_HINT|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
-|PREDICTION_SMOOTHING|[Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)|  
+|PERIODICITY_HINT|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|PREDICTION_SMOOTHING|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |SAMPLE_SIZE|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)|  
 |SCORE_METHOD|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |SPLIT_METHOD|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |STOPPING_TOLERANCE|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Arquitectura física &#40;Analysis Services:&#41;de minería de datos](physical-architecture-analysis-services-data-mining.md)  
   
   

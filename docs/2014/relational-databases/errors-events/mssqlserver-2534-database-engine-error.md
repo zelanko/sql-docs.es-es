@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed3a5a48a4c327decc75e37142c77d7d4ee52f1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914674"
 ---
-# <a name="mssqlserver2534"></a>MSSQLSERVER_2534
+# <a name="mssqlserver_2534"></a>MSSQLSERVER_2534
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2534|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2534|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|Texto del mensaje|Error de tabla: Page P_ID, cuyo encabezado indica ya está asignada a un objeto ID O_ID, ID. de partición PN_ID, índice de unidad de asignación ID A_ID (tipo TYPE), está asignada mediante otro objeto.|  
+|Texto del mensaje|Error de tabla: la página P_ID, cuyo encabezado indica que está asignada al Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación A_ID (tipo TYPE), está asignada mediante otro objeto.|  
   
 ## <a name="explanation"></a>Explicación  
  El encabezado de la página contiene el Id. de unidad de asignación, *A_ID*, pero ninguna de las páginas IAM (Mapa de asignación de índices) de esa unidad de asignación asigna la página. Por tanto, el encabezado de la página contiene un Id. de unidad de asignación incorrecto y la página tendrá un error de coincidencia MSSQLServer_2533 que corresponde al Id. de unidad de asignación al que la página está realmente asignada.  

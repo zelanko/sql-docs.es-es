@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085045"
 ---
 # <a name="data-mining-model-viewers"></a>Visores de modelos de minería de datos
-  Después de realizar el entrenamiento de un modelo de minería de datos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede explorar el modelo para buscar tendencias interesantes. Como los resultados de los modelos de minería de datos son complejos y pueden resultar difíciles de comprender sin formato, investigar los datos visualmente suele ser la manera más fácil de entender las reglas y relaciones que los algoritmos descubren en los datos.  
+  Después de entrenar un modelo de minería de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]datos en, puede explorar el modelo para buscar tendencias interesantes. Como los resultados de los modelos de minería de datos son complejos y pueden resultar difíciles de comprender sin formato, investigar los datos visualmente suele ser la manera más fácil de entender las reglas y relaciones que los algoritmos descubren en los datos.  
   
  Cada algoritmo que utilice para generar un modelo devuelve un tipo de resultados diferente. Por tanto, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un visor independiente para cada algoritmo. Cuando se examina un modelo de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el modelo se muestra en la pestaña **Visor de modelos de minería de datos** del Diseñador de minería de datos, utilizando el visor adecuado para el modelo.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66085045"
   
      A la izquierda, el visor genérico muestra una lista de los nodos del modelo. Puede hacer clic en un nodo para ver su contenido en el panel derecho.  
   
- ![Información general del Diseñador de modelos de minería de datos](../media/generic-mining-model-tab1.gif "información general del Diseñador de modelos de minería de datos")  
+ ![Información general del diseñador del modelo de minería de datos](../media/generic-mining-model-tab1.gif "Información general del diseñador del modelo de minería de datos")  
   
 ## <a name="more-about-the-microsoft-generic-content-tree-viewer"></a>Más información acerca del Visor de árbol de contenido genérico de Microsoft  
  Cada modelo también se puede visualizar con el [Visor de árbol de contenido genérico de Microsoft &#40;minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md). Este visor muestra el contenido del modelo de minería de datos según un formato de tabla HTML normalizado. Sin embargo, la organización de los nodos y el contenido de cada nodo variarán considerablemente dependiendo del algoritmo utilizado para generar los resultados.  
@@ -69,7 +69,7 @@ ms.locfileid: "66085045"
  [Examinar un modelo usando el visor Bayes naive de Microsoft](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
  Describe el Visor Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Este visor muestra los modelos de minería de datos que se generan con el algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Examinar un modelo usando el Visor de clústeres de Microsoft](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
  Describe el Visor de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Este visor muestra los modelos de minería de datos que se generan con el algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)  
@@ -81,8 +81,8 @@ ms.locfileid: "66085045"
  [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  Describe la información detallada disponible en el  visor genérico para todos los modelos de minería de datos y presenta ejemplos para interpretar la información de cada algoritmo.  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Diseñador de minería de datos](data-mining-designer.md)  
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Designer](data-mining-designer.md)  
   
   

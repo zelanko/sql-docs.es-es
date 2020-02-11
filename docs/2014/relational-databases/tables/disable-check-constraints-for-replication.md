@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 957fcd77a6443cf2e23be8965a68823085db870c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762197"
 ---
 # <a name="disable-check-constraints-for-replication"></a>Deshabilitar restricciones CHECK para la replicación
@@ -35,7 +35,7 @@ ms.locfileid: "62762197"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>Para deshabilitar una restricción CHECK para la replicación  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62762197"
  Para obtener más información, vea [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ###  <a name="TsqlExample"></a>   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar opciones de esquema](../replication/publish/specify-schema-options.md)  
   
   

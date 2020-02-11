@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087597"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Finalización del asistente (Asistente para dimensiones)
@@ -28,15 +28,15 @@ ms.locfileid: "66087597"
   
 -   Si es necesario, genere el esquema necesario para admitir la dimensión.  
   
- **Para abrir al Asistente para dimensiones**  
+ **Para abrir el Asistente para dimensiones**  
   
 -   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Dimensiones** para un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, luego, haga clic en **Nueva dimensión**.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Escriba el nombre de la nueva dimensión.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra los atributos y las jerarquías que se crearán para la nueva dimensión.  
   
  **Generar el esquema ahora**  
@@ -45,9 +45,9 @@ ms.locfileid: "66087597"
 > [!NOTE]  
 >  Esta opción solo aparece si ha seleccionado **Generar una tabla de tiempos en el origen de datos** o **Generar una tabla que no sea de tiempos en el origen de datos** en la página **Seleccionar método de creación**. Para obtener más información, vea [Seleccionar método de creación &#40;Asistente para dimensiones&#41;](select-creation-method-dimension-wizard.md).  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para dimensiones (ayuda F1)](dimension-wizard-f1-help.md)   
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

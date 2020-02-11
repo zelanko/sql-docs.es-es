@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef1595ff322979a150c8854a73db5088cd8e0139
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085470"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Crear una consulta DMX en SQL Server Management Studio
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de características para ayudarle a crear consultas de predicción, consultas de contenido y consultas de definición de datos en los modelos y estructuras de minería de datos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona un conjunto de características para ayudarle a crear consultas de predicción, consultas de contenido y consultas de definición de datos en modelos y estructuras de minería de datos.  
   
 -   El Generador de consultas de predicción gráfico está disponible tanto en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] como en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para simplificar el proceso de escritura de consultas de predicción y la asignación de conjuntos de datos a un modelo.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "66085470"
   
  En este tema se describe cómo crear una consulta DMX mediante el Explorador de metadatos y el editor de consultas DMX.  
   
-##  <a name="BKMK_Templates"></a> Plantillas de consulta DMX  
+##  <a name="BKMK_Templates"></a>Plantillas de consulta DMX  
  Las plantillas para crear consultas DMX básicas están disponibles en el Explorador de plantillas. La carpeta **DMX** contiene las plantillas de minería de datos, que se dividen en las categorías siguientes:  
   
--   **Contenido del modelo**  
+-   **contenido del modelo**  
   
--   **Administración del modelo**  
+-   **Administración de modelos**  
   
 -   **Consultas de predicción**  
   
@@ -50,13 +50,14 @@ ms.locfileid: "66085470"
  También puede crear plantillas personalizadas, para las consultas o los comandos que se ejecutan con frecuencia.  
   
 ## <a name="xmla-query-templates"></a>Plantillas de consulta XMLA  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también proporciona plantillas para las consultas XMLA.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también proporciona plantillas para las consultas XMLA.  
   
  Hay cierta superposición entre los tipos de consultas que se pueden realizar mediante XMLA y DMX. Por ejemplo, puede crear algunas consultas de contenido de modelo con conjuntos de filas de esquema de minería de datos o DMX, pero los conjuntos de filas de esquema a veces contienen información que no se expone en las consultas de contenido DMX.  
   
  También hay algunas diferencias clave en la manera en que las operaciones se tratan en DMX y en XMLA. Por ejemplo, puede usar XMLA para realizar operaciones administrativas como la copia de seguridad de una base de datos completa de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pero, si quiere realizar la copia de seguridad de un único modelo de minería de datos, DMX proporciona un sencillo comando, [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx), que es más adecuado para ese fin.  
   
-##  <a name="BKMK_Building_Queries"></a> Generar y ejecutar una consulta DMX  
+##  <a name="BKMK_Building_Queries"></a>Compilar y ejecutar una consulta DMX  
   
 #### <a name="open-a-new-dmx-query-window"></a>Abrir una nueva ventana de consulta DMX  
   
@@ -84,8 +85,8 @@ ms.locfileid: "66085470"
   
  [Crear una consulta de contenido en un modelo de minería de datos](create-a-content-query-on-a-mining-model.md)  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de consultas de minería de datos](data-mining-query-tools.md)   
- [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+## <a name="see-also"></a>Consulte también  
+ [Interfaces de consulta de minería de datos](data-mining-query-tools.md)   
+ [Referencia de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

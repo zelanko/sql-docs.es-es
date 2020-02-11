@@ -1,5 +1,5 @@
 ---
-title: Conceder permisos de base de datos de proceso | Microsoft Docs
+title: Conceder permisos procesar base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc77762698b04143802ad38c05385d4b18555e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079149"
 ---
 # <a name="granting-process-database-permissions"></a>Conceder permisos Procesar base de datos
@@ -30,7 +30,7 @@ ms.locfileid: "66079149"
   
 2.  Haga clic en la casilla **Procesar base de datos** .  
   
-3.  En la ventana Propiedades, cambie la **nombre** propiedad de este nuevo rol a `Process Database Objects Role`.  
+3.  En el ventana Propiedades, cambie la propiedad **nombre** de este nuevo rol a `Process Database Objects Role`.  
   
      ![Diseñador de roles](../../2014/tutorials/media/l10-security-1.png "Diseñador de roles")  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66079149"
   
      Observe que los miembros de este rol tienen permisos para procesar esta base de datos, pero no tienen permiso para obtener acceso a los datos del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial y no tienen acceso a obtención de detalles o cubo local, como se muestra en la siguiente imagen.  
   
-     ![Pestaña cubos del Diseñador de roles](../../2014/tutorials/media/l10-security-2.png "pestaña cubos del Diseñador de roles")  
+     ![Pestaña Cubos del Diseñador de roles](../../2014/tutorials/media/l10-security-2.png "Pestaña Cubos del Diseñador de roles")  
   
 7.  Vaya a la pestaña **Dimensiones** del Diseñador de roles.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "66079149"
      Acaba de definir e implementar correctamente el rol de seguridad Procesar objetos de base de datos. Después de que el cubo se implemente en el entorno de producción, los administradores del cubo implementado podrán agregar usuarios a este rol según vayan necesitando delegar responsabilidades de procesamiento en usuarios específicos.  
   
 > [!NOTE]  
->  Para disponer de un proyecto completado de la Lección 10, descargue e instale los ejemplos. Para más información, consulte [Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services](install-sample-data-and-projects.md).  
+>  Para disponer de un proyecto completado de la Lección 10, descargue e instale los ejemplos. Para obtener más información, vea [instalar datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services](install-sample-data-and-projects.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Roles y permisos &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

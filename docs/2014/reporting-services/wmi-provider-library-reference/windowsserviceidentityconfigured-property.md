@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb9b782aece15cf9aaf49b2bc427d34fa3d86525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096970"
 ---
-# <a name="windowsserviceidentityconfigured-property-wmi-msreportserverconfigurationsetting"></a>Propiedad WindowsServiceIdentityConfigured (MSReportServer_ConfigurationSetting de WMI)
+# <a name="windowsserviceidentityconfigured-property-wmi-msreportserver_configurationsetting"></a>Propiedad WindowsServiceIdentityConfigured (MSReportServer_ConfigurationSetting de WMI)
   Devuelve la última identidad en la que se configuró el servicio Servidor de informes de Windows para ejecutarse. Solo lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -45,9 +45,9 @@ public string WindowsServiceIdentityConfigured;
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

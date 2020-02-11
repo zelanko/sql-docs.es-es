@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7c1f4792d97ae82561f0d05fe9754daae0a2bf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890187"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Realizar el equilibrio de carga de paquetes en servidores remotos mediante el Agente SQL Server
-  Cuando se tienen que ejecutar varios paquetes, es conveniente utilizar otros servidores que están disponibles. Se denomina equilibrio de carga a este método de utilizar otros servidores para ejecutar paquetes cuando los paquetes están todos bajo el control de un paquete primario. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el equilibrio de carga es un procedimiento manual que deben llevar a cabo los propietarios de los paquetes. Los servidores no realizan el equilibrio de carga automáticamente. Asimismo, los paquetes ejecutados en los servidores remotos deben ser paquetes completos, y no tareas individuales en otros paquetes.  
+  Cuando se tienen que ejecutar varios paquetes, es conveniente utilizar otros servidores que están disponibles. Se denomina equilibrio de carga a este método de utilizar otros servidores para ejecutar paquetes cuando los paquetes están todos bajo el control de un paquete primario. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el equilibrio de carga es un procedimiento manual que deben diseñar los propietarios de los paquetes. Los servidores no realizan el equilibrio de carga automáticamente. Asimismo, los paquetes ejecutados en los servidores remotos deben ser paquetes completos, y no tareas individuales en otros paquetes.  
   
  El equilibrio de carga es útil en los siguientes escenarios:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62890187"
 ## <a name="illustration-of-load-balancing"></a>Ilustración de equilibrio de carga  
  El siguiente diagrama muestra un paquete primario en un servidor. El paquete primario contiene varias tareas Ejecutar trabajo del Agente SQL. Cada tarea del paquete primario llama a un Agente SQL Server en un servidor remoto. Esos servidores remotos contienen trabajos del Agente SQL Server que incluyen un paso que llama a un paquete en ese servidor.  
   
- ![Información general sobre la arquitectura de equilibrio de carga de SSIS](../media/loadbalancingoverview.gif "Overview of SSIS load balancing architecture")  
+ ![Información general de la arquitectura de equilibrio de carga SSIS](../media/loadbalancingoverview.gif "Información general de la arquitectura de equilibrio de carga SSIS")  
   
  Los pasos requeridos para el equilibrio de carga en esta arquitectura no son conceptos nuevos. En lugar de ello, el equilibrio de carga se logra al utilizar conceptos existentes y objetos SSIS comunes de una nueva manera.  
   

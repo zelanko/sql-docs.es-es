@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42f0b6894bac639d287eb62f9870d7bfd6daba3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62864850"
 ---
-# <a name="mssqleng014160"></a>MSSQL_ENG014160
+# <a name="mssql_eng014160"></a>MSSQL_ENG014160
     
 ## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|14160|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|14160|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
 |Texto del mensaje|Se ha establecido el umbral [%s:%s] para la publicación [%s]. Han expirado una o más suscripciones a esta publicación.|  
@@ -46,7 +46,7 @@ ms.locfileid: "62864850"
   
 -   Si la suscripción ha expirado, debe ser reinicializada o bien quitada y creada nuevamente, dependiendo del tipo de suscripción y durante cuanto tiempo ha expirado. Para más información, consulte [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084516"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>Modifique la vista del origen de datos utilizada para una estructura de minería de datos
@@ -30,7 +30,7 @@ ms.locfileid: "66084516"
   
      El Diseñador de vistas del origen de datos se abrirá en una nueva pestaña en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md)  
   
   

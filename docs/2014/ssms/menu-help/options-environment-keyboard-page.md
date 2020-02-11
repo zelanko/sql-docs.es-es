@@ -1,5 +1,5 @@
 ---
-title: Opciones (página entorno teclado) | Microsoft Docs
+title: Opciones (entorno-página teclado) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662076"
 ---
 # <a name="options-environment-keyboard-page"></a>Options (Environment-Keyboard Page)
-  El cuadro de diálogo **Opciones** le permite personalizar el esquema de teclado para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilice esta opción para elegir un esquema de teclado. Para obtener acceso a esta página, haga clic en **Opciones** en el menú **Herramientas** , seleccione la carpeta **Entorno** y, a continuación, haga clic en **Teclado**.  
+  El cuadro de diálogo **Opciones** permite personalizar el esquema de teclado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para. Utilice esta opción para elegir un esquema de teclado. Para obtener acceso a esta página, haga clic en **Opciones** en el menú **Herramientas** , seleccione la carpeta **Entorno** y, a continuación, haga clic en **Teclado**.  
   
  La lista desplegable **Esquema de teclado** proporciona las colecciones disponibles de teclas de método abreviado. Para cargar un esquema específico, selecciónelo en la lista. Cuando esté preparado para dejar el cuadro de diálogo **Opciones** , haga clic en **Aceptar**. El esquema que haya seleccionado se cargará en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Standard**  
- El esquema Estándar es el esquema predeterminado en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se parece bastante a las teclas de método abreviado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio.  
+ **Estándar**  
+ El esquema estándar es el predeterminado en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se parece bastante a [!INCLUDE[msCoName](../../includes/msconame-md.md)] las teclas de método abreviado de Visual Studio.  
   
  Utilice la cuadrícula **Accesos directos de consulta** para asociar un procedimiento almacenado a un método abreviado de teclado.  
   
- **Método abreviado**  
+ **Contextual**  
  Combinación de teclas presionada para ejecutar el procedimiento almacenado.  
   
  **Procedimiento almacenado**  

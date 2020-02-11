@@ -96,13 +96,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068871"
 ---
 # <a name="olap-properties"></a>Propiedades OLAP
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor OLAP enumeradas en las tablas siguientes. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **Se aplica a:** Modo de servidor multidimensional únicamente  
@@ -196,7 +197,7 @@ ms.locfileid: "66068871"
  `PartitionLatencyAccuracy`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="process"></a>Process  
+## <a name="process"></a>Proceso  
  `AggregationMemoryLimitMax`  
  Una propiedad de número de punto flotante de doble precisión de 64 bits con signo que define el máximo de memoria que se puede destinar a procesamiento, expresado en forma de porcentaje de memoria física.  
   
@@ -431,7 +432,7 @@ ms.locfileid: "66068871"
  `DataCache\ MemoryModel\ Tax`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="jobs"></a>trabajos  
+## <a name="jobs"></a>Trabajos  
  `ProcessAggregation\ MemoryModel\ Income`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -477,7 +478,7 @@ ms.locfileid: "66068871"
  `ProcessAggregation\ ProcessProperty\ Tax`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

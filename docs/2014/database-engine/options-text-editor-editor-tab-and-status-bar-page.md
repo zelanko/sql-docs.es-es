@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (Editor de texto: Pestaña Editor y página barra de estado) | Microsoft Docs'
+title: 'Opciones (editor de texto: pestaña Editor y página barra de estado) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089240"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opciones (Editor de texto: pestaña Editor y página de la barra de estado)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opciones (Editor de texto: pestaña Editor y página Barra de estado)
   La **página Barra de estado y pestaña de editor** permite personalizar la información mostrada por los editores de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Puede especificar el nivel de información que se muestra en la pestaña y en la barra de estado de la ventana del editor de consultas y si la barra de estado debe aparecer en la parte superior o inferior de la ventana del editor.  
   
 ## <a name="option-settings-by-editor"></a>Configuración de las opciones de editor  
@@ -34,10 +34,10 @@ ms.locfileid: "66089240"
  **Mostrar tiempo de ejecución**  
  Incluye la hora de ejecución del script. La configuración es la siguiente:  
   
- **Ninguno**  
+ **None**  
  La barra de estado no muestra ninguna información horaria.  
   
- **final**  
+ **Fin**  
  La barra de estado muestra la hora actual del día mientras se ejecuta el script. Cuando se completa el script, la pantalla muestra la hora del día a la que se ha completado el script.  
   
  **Transcurrido**  
@@ -52,7 +52,7 @@ ms.locfileid: "66089240"
  **Incluir recuento de filas**  
  Incluye un recuento de las filas procesadas por el script que se está ejecutando actualmente.  
   
- **Incluir nombre del servidor**  
+ **Incluir nombre de servidor**  
  Incluye el nombre del servidor. Para las conexiones locales, es el nombre de instancia. Para las conexiones remotas, es el nombre del equipo remoto y el nombre de instancia.  
   
 ## <a name="status-bar-layout-and-colors"></a>Diseño de la barra de estado y colores  
@@ -67,10 +67,10 @@ ms.locfileid: "66089240"
  **Ubicación de la barra de estado**  
  Especifica la ubicación de la barra de estado. La configuración es la siguiente:  
   
- **Top**  
+ **Arriba**  
  La barra de estado aparece en la parte superior de la ventana del Editor de consultas.  
   
- **parte inferior**  
+ **Inferior**  
  La barra de estado aparece en la parte inferior de la ventana del Editor de consultas.  
   
 ## <a name="tab-text"></a>Texto de pestaña  
@@ -82,17 +82,17 @@ ms.locfileid: "66089240"
  **Incluir nombre de archivo**  
  Incluye el nombre del archivo donde se almacena el script.  
   
- **Incluir nombre de carpeta**  
+ **Incluir carpeta**  
  Incluye la ruta de acceso donde se almacena el archivo de script.  
   
  **Incluir nombre de inicio de sesión**  
  Incluye el nombre de inicio de sesión.  
   
- **Incluir nombre del servidor**  
+ **Incluir nombre de servidor**  
  Incluye el nombre del servidor. Para las conexiones locales, es el nombre de instancia. Para las conexiones remotas, es el nombre del equipo remoto y el nombre de instancia.  
   
-## <a name="see-also"></a>Vea también  
- [Opciones de &#40;entorno: Página fuentes y colores&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+## <a name="see-also"></a>Consulte también  
+ [Opciones &#40;entorno: página fuentes y colores&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Codificación de colores en el Editor de consultas](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

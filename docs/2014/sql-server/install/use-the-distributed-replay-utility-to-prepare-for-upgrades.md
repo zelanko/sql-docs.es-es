@@ -1,5 +1,5 @@
 ---
-title: Usar Distributed Replay Utility para preparar las actualizaciones | Microsoft Docs
+title: Usar la utilidad Distributed Replay para preparar las actualizaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e00d749fc222becacc3e84ddb7051a3fbe65f641
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091275"
 ---
 # <a name="use-the-distributed-replay-utility-to-prepare-for-upgrades"></a>Emplear Distributed Replay Utility para preparar las actualizaciones
-  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Utility puede usar varios equipos para reproducir los datos de seguimiento, simulando una carga de trabajo críticas. Realizando una reproducción en un servidor de prueba antes y después de una actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede medir las diferencias de rendimiento y buscar cualquier incompatibilidad que su aplicación pueda tener con la actualización. Para obtener más información, vea [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilidad de Distributed Replay puede utilizar varios equipos para reproducir los datos de seguimiento, simulando una carga de trabajo crítica. Realizando una reproducción en un servidor de prueba antes y después de una actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede medir las diferencias de rendimiento y buscar cualquier incompatibilidad que su aplicación pueda tener con la actualización. Para obtener más información, vea [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
-## <a name="see-also"></a>Vea también  
- [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)  
+## <a name="see-also"></a>Consulte también  
+ [Opciones de la línea de comandos de la herramienta de administración &#40;Distributed Replay utilidad&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)  
   
   

@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e68bb7c70d08fb07d3079436fafe5fd61ae104f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097914"
 ---
-# <a name="setvirtualdirectory-method-wmi-msreportserverconfigurationsetting"></a>Método SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)
+# <a name="setvirtualdirectory-method-wmi-msreportserver_configurationsetting"></a>Método SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)
   Establece el nombre del directorio virtual para una aplicación dada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,19 +42,19 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  *VirtualDirectory*  
  Nombre del directorio virtual.  
   
- *lcid*  
+ *LCID*  
  Identificador de configuración regional para el directorio virtual.  
   
  *Error*  
  [out] Descripción del error que se produjo.  
   
- *HRESULT*  
+ *VALOR*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente; un código de error indica que la llamada no se realizó correctamente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Una aplicación solo puede tener un nombre de directorio virtual para todas las reservas de direcciones URL.  
   
  VirtualDirectory debe cumplir las convenciones de nomenclatura para directorios virtuales. VirtualDirectory no debe ser una cadena vacía ni estar en blanco.  
@@ -62,9 +62,9 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  Actualiza el valor del elemento \Configuration\URLReservations\Application\VirtualDirectory. Se realiza correctamente aunque no se hayan creado todavía reservas de direcciones URL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

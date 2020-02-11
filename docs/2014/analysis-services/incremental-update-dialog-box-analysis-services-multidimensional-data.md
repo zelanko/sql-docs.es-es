@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo actualización incremental (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo actualización incremental (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080487"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Actualización incremental (Analysis Services - Datos multidimensionales)
@@ -26,17 +26,17 @@ ms.locfileid: "66080487"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Grupo de medida**|Seleccione el grupo de medida que se va a actualizar incrementalmente.<br /><br /> Nota: Esta opción está habilitada sólo si está actualizando incrementalmente un cubo. Si está actualizando incrementalmente una partición o un grupo de medida, esta opción está deshabilitada.|  
-|**Partición**|Seleccione la partición que se va a actualizar.<br /><br /> Nota: Esta opción está habilitada sólo si está actualizando incrementalmente un cubo. Si está actualizando incrementalmente una partición o un grupo de medida, esta opción está deshabilitada.|  
+|**Grupo de medida**|Seleccione el grupo de medida que se va a actualizar incrementalmente.<br /><br /> Nota: Esta opción está habilitada únicamente si se está actualizando incrementalmente un cubo. Si está actualizando incrementalmente una partición o un grupo de medida, esta opción está deshabilitada.|  
+|**Divide**|Seleccione la partición que se va a actualizar.<br /><br /> Nota: Esta opción está habilitada únicamente si se está actualizando incrementalmente un cubo. Si está actualizando incrementalmente una partición o un grupo de medida, esta opción está deshabilitada.|  
 |**Table**|Haga clic para actualizar el objeto de una tabla.|  
-|**Origen de datos o vista**|Seleccione el origen de datos o la vista del origen de datos en la que se encuentra la tabla de origen.<br /><br /> Nota: Esta opción está habilitada sólo si **tabla** está seleccionada.|  
-|**Nombre y el esquema de tabla**|Seleccione la tabla de origen utilizada para recuperar los datos para actualizar incrementalmente el cubo, grupo de medida o partición.<br /><br /> Nota: Esta opción está habilitada sólo si **tabla** está seleccionada.|  
-|**Consulta**|Haga clic para actualizar el objeto de una consulta.|  
-|**Origen de datos**|Seleccione el origen de datos en los que se encuentran las tablas que se van a consultar.<br /><br /> Nota: Esta opción está habilitada sólo si **consulta** está seleccionada.|  
-|**Texto de la consulta**|Escriba el texto de la consulta utilizada para recuperar los datos para actualizar incrementalmente el cubo, grupo de medida o partición.<br /><br /> Nota: Esta opción está habilitada sólo si **consulta** está seleccionada.|  
+|**Origen de datos o vista**|Seleccione el origen de datos o la vista del origen de datos en la que se encuentra la tabla de origen.<br /><br /> Nota: Esta opción solo está habilitada si se ha seleccionado **Tabla** .|  
+|**Esquema y nombre de tabla**|Seleccione la tabla de origen utilizada para recuperar los datos para actualizar incrementalmente el cubo, grupo de medida o partición.<br /><br /> Nota: Esta opción solo está habilitada si se ha seleccionado **Tabla** .|  
+|**Consultar**|Haga clic para actualizar el objeto de una consulta.|  
+|**Data Source** (Origen de datos)|Seleccione el origen de datos en los que se encuentran las tablas que se van a consultar.<br /><br /> Nota: Esta opción solo está habilitada si se ha seleccionado **Consulta** .|  
+|**Texto de la consulta**|Escriba el texto de la consulta utilizada para recuperar los datos para actualizar incrementalmente el cubo, grupo de medida o partición.<br /><br /> Nota: Esta opción solo está habilitada si se ha seleccionado **Consulta** .|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Cuadro de diálogo procesar &#40;Analysis Services - datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Cuadro de diálogo procesar &#40;Analysis Services-datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

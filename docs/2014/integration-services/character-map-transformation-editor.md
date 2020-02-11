@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060982"
 ---
 # <a name="character-map-transformation-editor"></a>Editor de transformación Mapa de caracteres
@@ -36,7 +36,7 @@ ms.locfileid: "66060982"
  **Destino**  
  Especifique si se guardan los resultados de las operaciones de cadena en contexto, utilizando la columna existente, o se guardan los datos modificados como una columna nueva.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Nueva columna|Guardar los datos en una columna nueva. Asigne el nombre de columna en **Alias de salida**.|  
 |Modificación en contexto|Guardar los datos modificados en la columna existente.|  
@@ -44,10 +44,10 @@ ms.locfileid: "66060982"
  **Operación**  
  Seleccione de la lista las funciones de cadena que se aplicarán a los datos de la columna.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Minúsculas|Convertir en minúsculas.|  
-|Mayúsculas|Convertir en mayúsculas.|  
+|Uppercase|Convertir en mayúsculas.|  
 |Inversión de byte|Convertir invirtiendo el orden de los bytes.|  
 |Hiragana|Convertir caracteres japoneses katakana en caracteres hiragana.|  
 |Katakana|Convertir caracteres japoneses hiragana en caracteres katakana.|  
@@ -63,7 +63,7 @@ ms.locfileid: "66060982"
  **Configurar la salida de errores**  
  Use el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) para especificar las opciones de control de errores de esta transformación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

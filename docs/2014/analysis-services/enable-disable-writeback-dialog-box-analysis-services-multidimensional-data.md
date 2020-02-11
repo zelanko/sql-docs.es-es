@@ -1,5 +1,5 @@
 ---
-title: Habilitación y deshabilitación de cuadro de diálogo de reescritura (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Habilitar/deshabilitar reescritura (cuadro de diálogo) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498d1af6f96791b9ee3912c09a3667e139f30ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081286"
 ---
-# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Habilitación y deshabilitación de cuadro de diálogo de reescritura (Analysis Services - datos multidimensionales)
+# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Habilitar/deshabilitar reescritura (cuadro de diálogo) (Analysis Services-datos multidimensionales)
   El cuadro de diálogo **Habilitar/deshabilitar reescritura** permite habilitar o deshabilitar la reescritura para un grupo de medida en un cubo. Al habilitar la reescritura en un grupo de medida se define una partición de reescritura y se crea una tabla de reescritura para ese grupo de medida. Al deshabilitar la reescritura en un grupo de medida se quita la partición de reescritura, pero no se elimina la tabla de reescritura a fin de evitar la pérdida imprevista de datos. Para mostrar el cuadro de diálogo **Habilitar/deshabilitar reescritura** :  
   
 -   En el Diseñador de cubos, haga clic en **Configuración de reescritura** (en el panel **Grupos de medida** de la pestaña **Particiones** ).  
@@ -27,7 +27,7 @@ ms.locfileid: "66081286"
 -   En el Diseñador de cubos, haga clic con el botón derecho en una partición de la cuadrícula **Particiones** (en el panel **Grupos de medida** de la pestaña **Particiones** ) y, después, seleccione **Configuración de reescritura** en el menú contextual.  
   
 ## <a name="options"></a>Opciones  
- **Nombre de la tabla**  
+ **Nombre de tabla**  
  Escriba el nombre de la tabla de reescritura que desea crear para la partición seleccionada. La tabla de escritura diferida almacena los cambios realizados al grupo de medidas desde una aplicación cliente.  
   
 > [!NOTE]  
@@ -39,7 +39,7 @@ ms.locfileid: "66081286"
 > [!NOTE]  
 >  Esta opción está deshabilitada si la reescritura no está habilitada.  
   
- **Nueva**  
+ **Nuevo**  
  Haga clic para mostrar el cuadro de diálogo **Administrador de conexiones** y defina un nuevo origen de datos para que contenga la tabla de reescritura.  
   
 > [!NOTE]  

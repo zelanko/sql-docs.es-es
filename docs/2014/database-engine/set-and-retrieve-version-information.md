@@ -20,20 +20,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843488"
 ---
 # <a name="set-and-retrieve-version-information"></a>Establecer y recuperar información de versión
-  La información de versión incluye el historial y el estado actual de un archivo controlado por código fuente. [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe conserva un historial completo de cada archivo controlado por código fuente, lo que permite realizar un seguimiento de la evolución de uno o más archivos a lo largo del tiempo. Además, esta información se puede utilizar para recuperar una copia local de cualquier versión del archivo o para comparar dos versiones cualesquiera.  
+  La información de versión incluye el historial y el estado actual de un archivo controlado por código fuente. 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe conserva un historial completo de cada archivo controlado por código fuente, lo que permite realizar un seguimiento de la evolución de uno o más archivos a lo largo del tiempo. Además, esta información se puede utilizar para recuperar una copia local de cualquier versión del archivo o para comparar dos versiones cualesquiera.  
   
  El historial de un archivo incluye:  
   
 -   El número de versión, que identifica su secuencia entre otras versiones del mismo archivo.  
   
--   La acción llevada a cabo. Las operaciones realizadas incluyen la creación del archivo, la protección y la eliminación.  
+-   acción realizada. Las operaciones realizadas incluyen la creación del archivo, la protección y la eliminación.  
   
 -   El nombre de usuario de la persona que realizó una acción con el archivo.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "62843488"
   
 -   [Crear informes de historial y estado](../../2014/database-engine/create-history-and-status-reports.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Fundamentos del control de código fuente](../../2014/database-engine/source-control-basics.md)  
   
   

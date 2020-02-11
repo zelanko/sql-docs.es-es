@@ -18,37 +18,37 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5db71b5a94285f8ae63afeb65bec3f9807f8da27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085705"
 ---
 # <a name="column-distributions-data-mining"></a>Distribuciones de columnas (minería de datos)
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]puede definir distribuciones de columnas en una estructura de minería de datos para modificar la forma en que los algoritmos procesan los datos de estas columnas cuando se crean modelos de minería de datos. Para algunos algoritmos, resulta útil definir la distribución de las columnas continuas antes de procesar el modelo, si se sabe que las columnas contienen distribuciones de valores comunes. Si no define las distribuciones, los modelos de minería de datos resultantes podrían generar predicciones menos precisas que si se definieran las distribuciones porque los algoritmos disponen de menos información con la que interpretar los datos.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede definir distribuciones de columnas en una estructura de minería de datos, para que los algoritmos puedan procesar los datos de esas columnas cuando se crean modelos de minería de datos. Para algunos algoritmos, resulta útil definir la distribución de las columnas continuas antes de procesar el modelo, si se sabe que las columnas contienen distribuciones de valores comunes. Si no define las distribuciones, los modelos de minería de datos resultantes podrían generar predicciones menos precisas que si se definieran las distribuciones porque los algoritmos disponen de menos información con la que interpretar los datos.  
   
  Los algoritmos que están disponibles en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admiten los siguientes tipos de distribución:  
   
  `Normal`  
  Los valores de la columna continua forman un histograma con una distribución normal.  
   
- ![Histograma con distribución normal](../media/normal-distribution.gif "histograma con distribución normal")  
+ ![Histograma con distribución normal](../media/normal-distribution.gif "Histograma con distribución normal")  
   
  `Log Normal`  
  Los valores de la columna continua forman un histograma, donde la curva se alarga en el extremo superior y se desvía hacia el extremo inferior.  
   
- ![Histograma con distribución log-normal](../media/log-normal-distribution.gif "histograma con distribución log-normal")  
+ ![Histograma con distribución normal del registro](../media/log-normal-distribution.gif "Histograma con distribución normal del registro")  
   
  `Uniform`  
  Los valores de la columna continua forman una curva plana, en la que todos los valores tienen la misma probabilidad.  
   
- ![Histograma con distribución uniforme](../media/uniform-distribution.gif "histograma con distribución uniforme")  
+ ![Histograma con distribución uniforme](../media/uniform-distribution.gif "Histograma con distribución uniforme")  
   
  Para más información sobre los algoritmos que proporciona [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Algoritmos de minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-structures-analysis-services-data-mining.md)   
  [Métodos de discretización &#40;minería de datos&#41;](discretization-methods-data-mining.md)   
  [Distribuciones &#40;DMX&#41;](/sql/dmx/distributions-dmx)   
  [Columnas de la estructura de minería de datos](mining-structure-columns.md)  

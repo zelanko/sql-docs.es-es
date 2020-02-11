@@ -1,5 +1,5 @@
 ---
-title: Crear-editar con el nombre de cuadro de diálogo de cálculo (Analysis Services) | Microsoft Docs
+title: Cuadro de diálogo crear-editar cálculo con nombre (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086852"
 ---
-# <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Crear y editar cuadro de diálogo de cálculo con nombre (Analysis Services)
+# <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Cuadro de diálogo crear-editar cálculo con nombre (Analysis Services)
   Use el cuadro de diálogo **Crear/editar cálculo con nombre** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir o modificar un cálculo con nombre para una tabla en una vista del origen de datos. Para mostrar el cuadro de diálogo **Crear/editar cálculo con nombre**:  
   
 -   Haga clic en **Nuevo cálculo con nombre** en el panel de la **barra de herramientas** del **Diseñador de vistas del origen de datos**.  
@@ -31,13 +31,13 @@ ms.locfileid: "66086852"
 -   Haga clic con el botón derecho en un cálculo con nombre del panel **Diagrama**, en el **Diseñador de vistas del origen de datos**, y seleccione **Editar cálculo con nombre**.  
   
 ## <a name="options"></a>Opciones  
- **Nombre de la columna**  
+ **Nombre de columna**  
  Escriba el nombre del cálculo con nombre.  
   
  **Descripción**  
  Escriba la descripción opcional del cálculo con nombre.  
   
- **Expresión**  
+ **Expression**  
  Escriba una expresión SQL válida que devuelva un valor escalar. La expresión se envía al proveedor y se valida en la siguiente expresión:  
   
 ```  
@@ -46,8 +46,8 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
  La expresión puede tener referencias a otras tablas, mediante una instrucción sub-SELECT. Si la expresión requiere el uso de paréntesis en una instrucción SELECT, la expresión que se especifique debe estar entre paréntesis.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Diseñador de vistas del origen de datos &#40;Analysis Services de datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

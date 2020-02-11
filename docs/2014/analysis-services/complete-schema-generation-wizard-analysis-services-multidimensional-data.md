@@ -1,5 +1,5 @@
 ---
-title: Finalización del asistente (Asistente para generación de esquemas) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Finalización del asistente (Asistente para generar esquemas) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6491d0a73aa28d8dd396bf1befa321ed6f1cb9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087739"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>Finalización del asistente (Asistente para generar esquemas) (Analysis Services - Datos multidimensionales)
@@ -26,8 +26,8 @@ ms.locfileid: "66087739"
  **Resumen**  
  Muestra las opciones establecidas.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda F1 de Asistente para generación de esquema &#40;Analysis Services - datos multidimensionales&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente para generar esquemas ayuda F1 &#40;Analysis Services-datos multidimensionales&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Analysis Services asistentes &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

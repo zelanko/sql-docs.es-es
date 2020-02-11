@@ -1,5 +1,5 @@
 ---
-title: Medidas (pestaña estructura de cubo, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Medidas (pestaña estructura de cubo, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077922"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Medidas (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -26,7 +26,7 @@ ms.locfileid: "66077922"
  medidas  
  Muestra los grupos de medida y las medidas incluidas en el cubo, según la vista seleccionada:  
   
- trEE  
+ Árbol  
  Muestra una vista de árbol de los grupos de medida, con medidas como nodos secundarios.  
   
  Expanda los grupos de medida para ver las medidas. Haga clic en un grupo de medida seleccionado o en una medida para cambiar el nombre del grupo de medida o de la medida respectivamente.  
@@ -62,8 +62,8 @@ ms.locfileid: "66077922"
   
 |Opción|Definición|  
 |------------|----------------|  
-|**Árbol**|Muestra los grupos de medida y las medidas en una vista de árbol.|  
-|**Grid**|Muestra los grupos de medida y las medidas en una cuadrícula.|  
+|**Palmera**|Muestra los grupos de medida y las medidas en una vista de árbol.|  
+|**Cuadrícula**|Muestra los grupos de medida y las medidas en una cuadrícula.|  
   
  **Cambiar el nombre**  
  Seleccione esta opción para cambiar el nombre del grupo de medida o de la medida seleccionados.  
@@ -89,7 +89,7 @@ ms.locfileid: "66077922"
  **Propiedades**  
  Seleccione esta opción para mostrar la ventana **Propiedades** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para el grupo de medida o la medida seleccionados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar propiedades de medidas](multidimensional-models/configure-measure-properties.md)   
  [Medidas y grupos de medida](multidimensional-models/measures-and-measure-groups.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Procesar manualmente los datos (SSAS Tabular) | Microsoft Docs
+title: Procesar manualmente los datos (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077972"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Procesar manualmente los datos (SSAS tabular)
@@ -28,9 +28,9 @@ ms.locfileid: "66077972"
   
 -   [Procesar manualmente los datos](#bkmk_mahually_process)  
   
--   [Progreso de procesamiento de datos](#bkmk_data_process_progress)  
+-   [Progreso del proceso de datos](#bkmk_data_process_progress)  
   
-##  <a name="bkmk_mahually_process"></a> Procesar manualmente los datos  
+##  <a name="bkmk_mahually_process"></a>Procesar manualmente los datos  
   
 #### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>Para procesar los datos de una sola tabla o todas las tablas de un modelo  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66077972"
     |**Proceso completo**|Procesa un objeto de partición y todos los objetos que contiene. Cuando se ejecuta Proceso completo en un objeto que ya se ha procesado, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] quita todos los datos del objeto y, a continuación, lo procesa. Este tipo de procesamiento es necesario cuando se ha realizado un cambio estructural en un objeto.|  
     |**Procesar datos**|Carga datos en una partición o en una tabla sin volver a generar las jerarquías o las relaciones, ni volver a calcular las columnas calculadas y las medidas.|  
     |**Procesar borrado**|Quita todos los datos de una partición.|  
-    |**Procesar adición**|Actualiza la partición con nuevos datos de forma incremental.|  
+    |**Agregar proceso**|Actualiza la partición con nuevos datos de forma incremental.|  
   
 3.  En la lista Particiones, seleccione las particiones que desee procesar y haga clic en **Aceptar**.  
   
-##  <a name="bkmk_data_process_progress"></a> Progreso de procesamiento de datos  
+##  <a name="bkmk_data_process_progress"></a>Progreso del proceso de datos  
  El cuadro de diálogo **Progreso de procesamiento de datos** le permite supervisar el procesamiento de los datos que ha importado en el modelo desde un origen externo. Para obtener acceso a este cuadro de diálogo, haga clic en el menú **Modelo** y, a continuación, en **Procesar particiones**, **Procesar tabla** o **Procesar todo**.  
   
  **Estado**  
@@ -72,8 +72,8 @@ ms.locfileid: "66077972"
  **Detener actualización**  
  Haga clic aquí para detener la operación de procesamiento. Esta opción resulta útil si la operación tarda demasiado o hay demasiados errores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procesar datos &#40;SSAS tabular&#41;](process-data-ssas-tabular.md)   
- [Solucionar problemas del procesamiento de datos &#40;SSAS tabular&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [Solucionar problemas de datos de proceso &#40;SSAS tabular&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

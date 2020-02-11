@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de datos de aprendizaje y pruebas | Microsoft Docs
+title: Conjuntos de datos de entrenamiento y pruebas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082738"
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de datos de entrenamiento y de prueba
-  Separar los datos en conjuntos de entrenamiento y de prueba es una parte importante de la evaluación de los modelos de minería de datos. Normalmente, al dividir un conjunto de datos en un conjunto de entrenamiento y un conjunto de prueba, la mayoría de los datos se usan para el entrenamiento y una parte menor se emplea para las pruebas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestrea los datos de forma aleatoria para asegurarse de que los conjuntos de entrenamiento y de prueba son similares. Si usa datos similares para el entrenamiento y las pruebas, puede minimizar los efectos de las diferencias en los datos y comprender mejor las características del modelo.  
+  Separar los datos en conjuntos de entrenamiento y de prueba es una parte importante de la evaluación de los modelos de minería de datos. Normalmente, al dividir un conjunto de datos en un conjunto de entrenamiento y un conjunto de prueba, la mayoría de los datos se usan para el entrenamiento y una parte menor se emplea para las pruebas. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestrea los datos de forma aleatoria para asegurarse de que los conjuntos de entrenamiento y de prueba son similares. Si usa datos similares para el entrenamiento y las pruebas, puede minimizar los efectos de las diferencias en los datos y comprender mejor las características del modelo.  
   
  Una vez procesado un modelo utilizando el conjunto de entrenamiento, se prueba realizando predicciones con el conjunto de pruebas. Dado que los datos del conjunto de prueba ya contienen valores conocidos para el atributo que desea predecir, es fácil determinar si las estimaciones del modelo son correctas.  
   
@@ -51,7 +52,7 @@ ms.locfileid: "66082738"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Modificar las propiedades de la estructura para crear un conjunto de datos de prueba  
  Si crea y procesa una estructura de minería de datos y, a continuación, decide que desea reservar un conjunto de datos de prueba, puede modificar las propiedades de la estructura de minería de datos. Para cambiar la manera en que se crean las particiones de los datos, modifique las propiedades siguientes:  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |`HoldoutMaxCases`|Especifica el número máximo de casos que se van a incluir en el conjunto de pruebas.|  
 |`HoldoutMaxPercent`|Especifica el número de casos que se van a incluir en el conjunto de pruebas como porcentaje del conjunto de datos completo. Para no tener ningún conjunto de datos, especificaría 0.|  
@@ -62,11 +63,11 @@ ms.locfileid: "66082738"
 ### <a name="specifying-holdout-programmatically"></a>Especificar los datos de exclusión mediante programación  
  Puede definir conjuntos de datos de entrenamiento y de prueba en una estructura de minería de datos usando instrucciones DMX, AMO o XML DDL. La instrucción ALTER MINING STRUCTURE no admite el uso de parámetros de datos de exclusión.  
   
--   **DMX** En el lenguaje de Extensiones de minería de datos (DMX), la instrucción CREATE MINING STRUCTURE se ha extendido para incluir una cláusula WITH HOLDOUT.  
+-   **DMX** en el lenguaje de extensiones de minería de datos (DMX), la instrucción CREATE Mining structure se ha extendido para incluir una cláusula with de exclusión.  
   
--   **ASSL** Puede crear una estructura de minería de datos o agregar un conjunto de datos de prueba a una estructura de minería de datos existente con el lenguaje de scripting de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL).  
+-   **ASSL** Puede crear una nueva estructura de minería de datos o agregar un conjunto de datos de prueba a una estructura de minería de datos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente mediante el lenguaje de scripting de (ASSL).  
   
--   **AMO** También puede ver y modificar los conjuntos de datos de exclusión mediante AMO.  
+-   **Amo** También puede ver y modificar los conjuntos de datos de exclusión mediante AMO.  
   
  Para ver información sobre el conjunto de datos de exclusión de una estructura de minería de datos existente, haga una consulta en el conjunto de filas de esquema de minería de datos. Para hacer esto, puede realizar una llamada a DISCOVER ROWSET o puede usar una consulta DMX.  
   
@@ -91,7 +92,8 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   No puede quitar datos de un modelo de serie temporal; por consiguiente, no puede dividir los datos de origen en conjuntos de entrenamiento y de prueba. Si empieza a crear una estructura y un modelo de minería de datos, y elige el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , la opción que permite crear un conjunto de datos de exclusión aparece deshabilitada. También se deshabilita el uso de datos de exclusión si la estructura de minería de datos contiene una columna KEY TIME en el nivel de tabla anidada o caso.  
   
--   Se puede configurar accidentalmente el conjunto de datos de exclusión de tal manera que el conjunto de datos completo se use para las pruebas y no queden datos para el entrenamiento. Sin embargo, si lo hace, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mostrará un error para que pueda corregir el problema. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también le advierte si al procesar la estructura más del 50 por ciento de los datos se han reservado para las pruebas.  
+-   Se puede configurar accidentalmente el conjunto de datos de exclusión de tal manera que el conjunto de datos completo se use para las pruebas y no queden datos para el entrenamiento. Sin embargo, si lo hace, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mostrará un error para que pueda corregir el problema. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también le advierte si al procesar la estructura más del 50 por ciento de los datos se han reservado para las pruebas.  
   
 -   En la mayoría de los casos, el valor de exclusión predeterminado de 30 proporciona un buen equilibrio entre los datos de pruebas y los de entrenamiento. No es fácil determinar lo grande que debería ser el conjunto de datos para proporcionar entrenamiento suficiente, ni el grado de dispersión que puede alcanzar el conjunto de entrenamiento antes de que se llegue al sobreajuste. Sin embargo, después de haber generado un modelo, puede usar la validación cruzada para evaluar el conjunto de datos con respecto a un modelo determinado.  
   
@@ -101,16 +103,16 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 |Temas|Vínculos|  
 |------------|-----------|  
-|Describe cómo interactúan los filtros de un modelo con los conjuntos de datos de entrenamiento y de prueba.|[Filtros para modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)|  
-|Describe cómo afecta a la validación cruzada el uso de los datos de entrenamiento y de prueba.|[Validación cruzada &#40;Analysis Services - Minería de datos&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Describe cómo interactúan los filtros de un modelo con los conjuntos de datos de entrenamiento y de prueba.|[Filtros para modelos de minería de datos &#40;Analysis Services-minería de datos&#41;](mining-models-analysis-services-data-mining.md)|  
+|Describe cómo afecta a la validación cruzada el uso de los datos de entrenamiento y de prueba.|[Analysis Services de &#40;de validación cruzada&#41;de minería de datos](cross-validation-analysis-services-data-mining.md)|  
 |Proporciona información sobre las interfaces de programación para trabajar con conjuntos de entrenamiento y de prueba en una estructura de minería de datos.|[Modelo de objetos y conceptos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
-|Proporciona la sintaxis DMX para crear conjuntos de datos de exclusión.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
-|Recupera información sobre los casos de los conjuntos de entrenamiento y de prueba.|[Conjuntos de filas de esquema de minería de datos](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Consultar los conjuntos de filas de esquema de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-schema-rowsets-ssas.md)|  
+|Proporciona la sintaxis DMX para crear conjuntos de datos de exclusión.|[CREAR ESTRUCTURA DE MINERÍA DE DATOS &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
+|Recupera información sobre los casos de los conjuntos de entrenamiento y de prueba.|[Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Consultar los conjuntos de filas de esquema de minería de datos &#40;Analysis Services de minería de datos&#41;](data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Conceptos de minería de datos](data-mining-concepts.md)   
  [Soluciones de minería de datos](data-mining-solutions.md)   
- [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+ [Pruebas y validación &#40;&#41;de minería de datos](testing-and-validation-data-mining.md)  
   
   

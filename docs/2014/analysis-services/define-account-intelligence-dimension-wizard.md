@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082160"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Definir la inteligencia de cuentas (Asistente para dimensiones)
@@ -34,19 +34,19 @@ ms.locfileid: "66082160"
   
  En la tabla siguiente se enumeran los tipos de cuenta definidos en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Asset**|Valor de cosas en propiedad en un momento dado.|  
-|**Equilibrio**|Cuenta de algo en un momento dado.|  
-|**Expense**|Valor de cosas consumidas.|  
-|**Flow**|Cuenta incremental de cosas.|  
-|**Income**|Valor de las cosas recibidas.|  
-|**Liability**|Valor de cosas debidas en un momento dado.|  
-|**Estadísticas**|Proporción calculada de algo o cuenta de algo que no se agrega.|  
+|**Recurso**|Valor de cosas en propiedad en un momento dado.|  
+|**Saldo**|Cuenta de algo en un momento dado.|  
+|**Gastos**|Valor de cosas consumidas.|  
+|**Transmite**|Cuenta incremental de cosas.|  
+|**Regular**|Valor de las cosas recibidas.|  
+|**Asumir**|Valor de cosas debidas en un momento dado.|  
+|**Estadística**|Proporción calculada de algo o cuenta de algo que no se agrega.|  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para dimensiones (ayuda F1)](dimension-wizard-f1-help.md)   
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

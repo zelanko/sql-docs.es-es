@@ -1,5 +1,5 @@
 ---
-title: Registrar propiedades | Microsoft Docs
+title: Propiedades del registro | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -54,13 +54,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068919"
 ---
 # <a name="log-properties"></a>Propiedades de registro
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de registro descritas en las siguientes tablas. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
 ## <a name="general"></a>General  
@@ -76,7 +77,7 @@ ms.locfileid: "66068919"
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="error-log"></a>Registro de errores  
- Puede establecer estas propiedades en la instancia de servidor level para modificar los valores predeterminados de Configuración de errores que aparecen en otras herramientas y diseñadores. Consulte [configuración de errores de procesamiento de dimensiones, particiones y cubos &#40;SSAS - multidimensionales&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) y <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obtener más información.  
+ Puede establecer estas propiedades en la instancia de servidor level para modificar los valores predeterminados de Configuración de errores que aparecen en otras herramientas y diseñadores. Vea [configuración de errores para el procesamiento de cubos, particiones y dimensiones &#40;SSAS-multidimensional&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) y <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obtener más información.  
   
  **ErrorLog\ErrorLogFileName**  
  Una propiedad utilizada como valor predeterminado durante la operación de procesamiento realizada por el servidor.  
@@ -87,9 +88,11 @@ ms.locfileid: "66068919"
  **ErrorLog\KeyErrorAction**  
  Especifica la acción que realiza el servidor cuando se produce un error de `KeyNotFound`. Entre las respuestas válidas a este error se incluyen:  
   
--   `ConvertToUnknown` indica al servidor que asigne el valor de clave de error al miembro desconocido.  
+-   
+  `ConvertToUnknown` indica al servidor que asigne el valor de clave de error al miembro desconocido.  
   
--   `DiscardRecord` indica al servidor que excluya el registro.  
+-   
+  `DiscardRecord` indica al servidor que excluya el registro.  
   
  **ErrorLog\KeyErrorLogFile**  
  Es un nombre de archivo definido por el usuario que debe tener una extensión de archivo .log, situado en una carpeta para la que la cuenta de servicio tiene permisos de lectura y escritura. Este archivo de registro solo contendrá errores generados durante el procesamiento. Use la Caja negra si necesita información más detallada.  
@@ -100,35 +103,40 @@ ms.locfileid: "66068919"
  **ErrorLog\KeyErrorLimitAction**  
  Especifica la acción que realiza el servidor cuando el número de errores de clave alcanza el límite superior. Entre las respuestas válidas a esta acción se incluyen:  
   
--   `StopProcessing` indica al servidor que detenga el procesamiento cuando se alcance el límite de errores.  
+-   
+  `StopProcessing` indica al servidor que detenga el procesamiento cuando se alcance el límite de errores.  
   
--   `StopLogging` indica al servidor que detenga el registro de errores cuando se alcance el límite de errores, pero que permita que el procesamiento continúe.  
+-   
+  `StopLogging` indica al servidor que detenga el registro de errores cuando se alcance el límite de errores, pero que permita que el procesamiento continúe.  
   
- **ErrorLog\ LogErrorTypes\KeyNotFound**  
+ **ErrorLog \ LogErrorTypes\KeyNotFound**  
  Especifica la acción que realiza el servidor cuando se produce un error de `KeyNotFound`. Entre las respuestas válidas a este error se incluyen:  
   
--   `IgnoreError` indica al servidor que continúe con el procesamiento sin registrar el error o contarlo de cara al límite de errores de clave. Si se omite el error, se permite que el procesamiento continúe sin agregarlo al recuento de errores o registrarlo en la pantalla o en el archivo de registro. El registro en cuestión tiene un problema de integridad de datos y no se puede agregar a la base de datos. El registro se descartará o se agregará al Miembro desconocido, según determine la propiedad `KeyErrorAction`.  
+-   
+  `IgnoreError` indica al servidor que continúe con el procesamiento sin registrar el error o contarlo de cara al límite de errores de clave. Si se omite el error, se permite que el procesamiento continúe sin agregarlo al recuento de errores o registrarlo en la pantalla o en el archivo de registro. El registro en cuestión tiene un problema de integridad de datos y no se puede agregar a la base de datos. El registro se descartará o se agregará al Miembro desconocido, según determine la propiedad `KeyErrorAction`.  
   
--   `ReportAndContinue` indica al servidor que registre el error, lo cuente de cara al límite de errores de clave y continúe con el procesamiento. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
+-   
+  `ReportAndContinue` indica al servidor que registre el error, lo cuente de cara al límite de errores de clave y continúe con el procesamiento. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
   
--   `ReportAndStop` indica al servidor que registre el error y detenga el procesamiento inmediatamente, cualquiera que sea el límite de errores de clave. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
+-   
+  `ReportAndStop` indica al servidor que registre el error y detenga el procesamiento inmediatamente, cualquiera que sea el límite de errores de clave. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
   
- **ErrorLog\ LogErrorTypes\KeyDuplicate**  
+ **ErrorLog \ LogErrorTypes\KeyDuplicate**  
  Especifica la acción que realiza el servidor cuando se encuentra una clave duplicada. Entre los valores válidos se incluyen `IgnoreError` para continuar con el procesamiento como si el error no se hubiera producido, `ReportAndContinue` para registrar el error y continuar con el procesamiento, y `ReportAndStop` para registrar el error y detener el procesamiento inmediatamente, aunque el recuento de errores esté por debajo del límite de errores.  
   
- **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
+ **ErrorLog \ LogErrorTypes\NullKeyConvertedToUnknown**  
  Especifica la acción que realiza el servidor cuando una clave NULL se ha convertido en Miembro desconocido. Entre los valores válidos se incluyen `IgnoreError` para continuar con el procesamiento como si el error no se hubiera producido, `ReportAndContinue` para registrar el error y continuar con el procesamiento, y `ReportAndStop` para registrar el error y detener el procesamiento inmediatamente, aunque el recuento de errores esté por debajo del límite de errores.  
   
- **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
+ **ErrorLog \ LogErrorTypes\NullKeyNotAllowed**  
  Especifica la acción que realiza el servidor cuando `NullProcessing` se establece en `Error` para un atributo de dimensión. Se genera un error cuando no se permite un valor NULL en un atributo determinado. Esta propiedad de configuración de errores informa al paso siguiente, que es notificar el error y continuar con el procesamiento hasta que se alcance el límite de errores. Entre los valores válidos se incluyen `IgnoreError` para continuar con el procesamiento como si el error no se hubiera producido, `ReportAndContinue` para registrar el error y continuar con el procesamiento, y `ReportAndStop` para registrar el error y detener el procesamiento inmediatamente, aunque el recuento de errores esté por debajo del límite de errores.  
   
- **ErrorLog\ LogErrorTypes\CalculationError**  
+ **ErrorLog \ LogErrorTypes\CalculationError**  
  Una propiedad utilizada como valor predeterminado durante la operación de procesamiento realizada por el servidor.  
   
  **ErrorLog\IgnoreDataTruncation**  
  Una propiedad utilizada como valor predeterminado durante la operación de procesamiento realizada por el servidor.  
   
-## <a name="exception"></a>Excepción  
+## <a name="exception"></a>Exception  
  **Exception\CreateAndSendCrashReports**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -198,7 +206,7 @@ ms.locfileid: "66068919"
  El valor predeterminado para esta propiedad es False, que indica que el servidor no creará automáticamente la tabla del registro y no registrará eventos de consulta.  
   
 > [!NOTE]  
->  Para obtener más información acerca de cómo configurar el registro de consultas, vea [las operaciones de registro en Analysis Services](../instances/log-operations-in-analysis-services.md).  
+>  Para obtener más información acerca de cómo configurar el registro de consultas, consulte [operaciones de registro en Analysis Services](../instances/log-operations-in-analysis-services.md).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
@@ -231,7 +239,7 @@ ms.locfileid: "66068919"
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

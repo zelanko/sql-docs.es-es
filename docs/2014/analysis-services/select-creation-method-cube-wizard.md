@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069633"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Seleccionar método de creación (Asistente para cubos)
@@ -33,21 +33,21 @@ ms.locfileid: "66069633"
 >  Esta opción solo está disponible cuando trabaja con un proyecto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y no está disponible cuando está conectado directamente a una base de datos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Generar tablas en el origen de datos**  
- Seleccione esta opción para crear en primer lugar un cubo primero y, a continuación, generar nuevas tablas en el origen de datos basado en la definición de cubo.  
+ Seleccione esta opción para crear en primer lugar un cubo primero y, a continuación, generar nuevas tablas en el origen de datos basado** en la definición de cubo.  
   
 > [!NOTE]  
 >  Para usar esta opción, debe tener permiso para crear objetos en el origen de datos subyacente.  
   
  Si selecciona esta opción, se habilitará la opción **Plantilla** .  
   
- **Plantilla**  
- Seleccione la plantilla que desea usar para crear el cubo. Las plantillas proporcionan un conjunto de definiciones orientadas para un motivo profesional específico.  
+ **Plantillas**  
+ Seleccione la plantilla que desea usar para crear el cubo. Las plantillas proporcionan un conjunto de definiciones orientadas para un motivo** profesional específico.  
   
 > [!NOTE]  
 >  Esta opción solo está disponible cuando se ha activado la opción **Generar tablas en el origen de datos** .  
   
-## <a name="see-also"></a>Vea también  
- [Objetos de cubo &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Objetos de cubo &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

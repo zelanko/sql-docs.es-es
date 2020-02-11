@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091878"
 ---
 # <a name="sql-server-parameters"></a>Parámetros de SQL Server
@@ -29,30 +29,30 @@ ms.locfileid: "66091878"
 >  Se pueden detectar algunos problemas de actualización solo si envía los archivos de seguimiento o los archivos por lotes de SQL que se van a analizar.  
   
 ## <a name="options"></a>Opciones  
- **Bases de datos para analizar**  
- Para analizar todas las bases de datos, seleccione el **todas las bases de datos** casilla de verificación. Para analizar una selección de bases de datos, active la casilla situada junto a aquellas bases de datos que desee incluir en el análisis.  
+ **Base(s) de datos a analizar**  
+ Para analizar todas las bases de datos, active la casilla **todas las bases de datos** . Para analizar una selección de bases de datos, active la casilla situada junto a aquellas bases de datos que desee incluir en el análisis.  
   
- **Analizar los archivos de seguimiento**  
+ **Analizar archivo(s) de seguimiento**  
  Active esta casilla para analizar los archivos de seguimiento en el sistema de archivos.  
   
  **Ruta de acceso a los archivos de seguimiento**  
  Puede analizar uno o más archivos. Puede ir a una ubicación y seleccionar varios archivos, o puede proporcionar varios nombres de archivo. Utilice la ruta completa de cada archivo, incluya el nombre de éstos y separe las entradas utilizando el carácter de canalización (|).  
   
- Si habilita **analizar los archivos de seguimiento**, **siguiente** está deshabilitado hasta que escriba un nombre de ruta de acceso y un nombre de archivo.  
+ Si habilita **analizar archivos de seguimiento**, **siguiente** se deshabilitará hasta que escriba un nombre de ruta de acceso y un nombre de archivo.  
   
  **Analizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivos por lotes**  
  Active esta casilla para analizar los archivos por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] del sistema de archivos.  
   
- **Ruta de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivos por lotes**  
+ **Ruta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acceso a los archivos por lotes**  
  Puede analizar uno o más archivos por lotes. Puede ir a una ubicación y seleccionar varios archivos, o puede escribir varios nombres de archivo. Utilice la ruta completa de cada archivo, incluya el nombre de éstos y separe las entradas utilizando el carácter de canalización (|).  
   
- Si habilita **archivos por lotes de SQL analizar**, **siguiente** botón está deshabilitado hasta que escriba un nombre de ruta de acceso y un nombre de archivo.  
+ Si habilita **analizar archivos por lotes de SQL**, el botón **siguiente** estará deshabilitado hasta que escriba un nombre de ruta de acceso y un nombre de archivo.  
   
- **Separador de lotes SQL**  
- El texto que se utiliza para separar los lotes de las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El valor predeterminado es **vaya**.  
+ **Separador de lotes de SQL**  
+ El texto que se utiliza para separar los lotes de las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El valor predeterminado es **Go**.  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Actualización del Asistente para la referencia de la interfaz de usuario](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
+## <a name="see-also"></a>Consulte también  
+ [Trabajar con el asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Referencia de la interfaz de usuario del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

@@ -13,22 +13,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62893600"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Elegir un origen de datos (Asistente para importación y exportación de SQL Server)
-  Use la **elegir un origen de datos** página para especificar el origen de los datos que se van a copiar.  
+  Use la página **elegir un origen de datos** para especificar el origen de los datos que desea copiar.  
   
- Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información sobre las opciones para iniciar el asistente y sobre los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
+ Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información sobre las opciones para iniciar el asistente y sobre los permisos necesarios para ejecutar el asistente correctamente, vea [ejecutar el Asistente para importación y exportación de SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  La finalidad del Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es copiar datos desde un origen a un destino. El asistente también puede crear una base de datos y tablas de destino. Sin embargo, si tiene que copiar diversas bases de datos o tablas, u otros tipos de objetos de bases de datos, debe utilizar el Asistente para copiar bases de datos. Para más información, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Opciones  
- **Origen de datos**  
- Elija el proveedor de datos que se corresponda con el formato de almacenamiento de datos del origen. Es posible que haya más de un proveedor disponible para el origen de datos. Por ejemplo, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el proveedor de datos de .NET Framework para SQL Server o el proveedor Microsoft OLE DB para SQL Server.  
+ **Data Source** (Origen de datos)  
+ Elija el proveedor de datos que se corresponda con el formato de almacenamiento de datos del origen. Es posible que haya más de un proveedor disponible para el origen de datos. Por ejemplo, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el proveedor de datos de .NET Framework para SQL Server o el proveedor de OLE DB de Microsoft para SQL Server.  
   
  La propiedad **Origen de datos** tiene un número variable de opciones que depende de los proveedores instalados en el equipo. En las tablas siguientes se indican las opciones para algunos de los destinos utilizados con mayor frecuencia. Para otros proveedores, vea la documentación específica del proveedor.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "62893600"
  **Nombre del servidor**  
  Escriba el nombre del servidor que contiene los datos o elija un servidor de la lista.  
   
- **Utilizar autenticación de Windows**  
+ **Usar autenticación de Windows**  
  Especifique si el paquete debe utilizar la autenticación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para iniciar sesión en la base de datos. Para obtener una mayor seguridad, es recomendable utilizar la autenticación de Windows.  
   
- **Utilizar autenticación de SQL Server**  
- Especifique si el paquete debe utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación para iniciar sesión en la base de datos. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
+ **Usar autenticación SQL Server**  
+ Especifique si el paquete debe usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación de para iniciar sesión en la base de datos. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Especifique un nombre de usuario para la conexión de la base de datos cuando utilice la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Contraseña**  
@@ -60,7 +60,7 @@ ms.locfileid: "62893600"
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>Origen de datos = Proveedor de datos de .NET Framework para servidor SQL Server  
  Esta página presenta una lista alfabética de opciones para el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las opciones más importantes se indican en la tabla siguiente.  
   
- **Origen de datos**  
+ **Data Source** (Origen de datos)  
  Escriba el nombre del servidor que contiene los datos o elija un servidor de la lista.  
   
  **Catálogo original**  
@@ -80,12 +80,12 @@ ms.locfileid: "62893600"
 ### <a name="data-source--microsoft-excel"></a>Origen de datos = Microsoft Excel  
   
 > [!NOTE]  
->  Seleccione **Microsoft Excel** únicamente si desea conectarse a un origen de datos que utiliza Excel 2003 o versiones anteriores. Para conectarse a un origen de datos que usa Excel 2007, seleccione **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, haga clic en **propiedades**y, a continuación, en el **todas** pestaña de la **Propiedades de vínculo de datos** diálogo cuadro, escriba `Excel 12.0` como el valor de **propiedades extendidas**.  
+>  Seleccione **Microsoft Excel** solo si desea conectarse a un origen de datos que use Excel 2003 o una versión anterior. Para conectarse a un origen de datos que usa Excel 2007, seleccione **Microsoft Office 12,0 acceso motor de base de datos proveedor de OLE DB**, haga clic en **propiedades**y, a continuación, en la pestaña **todo** del cuadro de diálogo Propiedades de **vínculo de datos** , escriba `Excel 12.0` como el valor de **propiedades extendidas**.  
   
  **Ruta de acceso del archivo Excel**  
  Especifique la ruta de acceso y el nombre de archivo correspondientes a la hoja de cálculo desde la que se importarán los datos. Por ejemplo, **C:\MyData.xls, \\\Sales\Database\Northwind.xls**. O bien, haga clic en **Examinar**.  
   
- **Examinar**  
+ **Browse**  
  Busque la hoja de cálculo desde el cuadro de diálogo **Abrir**.  
   
  **Versión de Excel**  
@@ -97,32 +97,32 @@ ms.locfileid: "62893600"
 ### <a name="data-source--microsoft-access"></a>Origen de datos = Microsoft Access  
   
 > [!NOTE]  
->  Seleccione **Microsoft Access** únicamente si desea conectarse a una base de datos que use Access 2003 o versiones anteriores. Para conectarse a una base de datos que use Access 2007, seleccione **Microsoft Office 12.0 Access Database Engine OLE DB Provider** en su lugar.  
+>  Seleccione **Microsoft Access** solo si desea conectarse a una base de datos que use Access 2003 o una versión anterior. Para conectarse a una base de datos que usa Access 2007, en su lugar seleccione **Microsoft Office 12,0 Access Motor de base de datos OLE DB proveedor** .  
   
  **Nombre de archivo**  
  Especifique la ruta de acceso y el nombre de archivo correspondientes al archivo de base de datos desde el que se importarán los datos. Por ejemplo, **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**. O bien, haga clic en **Examinar**.  
   
- **Examinar**  
+ **Browse**  
  Busque el archivo de base de datos desde el cuadro de diálogo **Abrir**.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Especifique un nombre de usuario válido para la conexión de base de datos si hay un archivo de información de grupo de trabajo asociado a la base de datos.  
   
  **Contraseña**  
  Especifique una contraseña de usuario para la conexión de base de datos si hay un archivo de información de grupo de trabajo asociado a la base de datos. Si la base de datos está protegida con una única contraseña para todos los usuarios, debe proporcionar este valor en el cuadro de diálogo **Propiedades de vínculo de datos** , al que puede obtener acceso haciendo clic en **Avanzadas**.  
   
  **Avanzadas**  
- Puede desear especificar opciones avanzadas, como la contraseña de la base de datos o un archivo de información de grupo de trabajo no predeterminado, mediante la **propiedades de vínculo de datos** cuadro de diálogo. Para obtener más información acerca de las propiedades del proveedor OLE DB, busque en la sección de acceso a datos de la [biblioteca MSDN](https://go.microsoft.com/fwlink/?linkid=62553).  
+ Es posible que desee especificar opciones avanzadas, como la contraseña de la base de datos o un archivo de información de grupo de trabajo no predeterminado, mediante el cuadro de diálogo **propiedades de vínculo de datos** . Para obtener más información acerca de las propiedades del proveedor de OLE DB, busque en la sección de acceso a datos de [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Origen de datos = Origen de archivo plano  
  Vea los temas siguientes para obtener información acerca de las opciones para un origen de datos de archivo plano.  
   
- [Editor del administrador de conexiones de archivos planos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+ [Página general del editor del administrador de conexiones de archivos planos &#40;&#41;](../general-page-of-integration-services-designers-options.md)  
   
- [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+ [Página &#40;columnas del editor del administrador de conexiones de archivos planos&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
- [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+ [Página opciones avanzadas del editor del administrador de conexiones de archivos planos &#40;&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+ [Página de vista previa del editor del administrador de conexiones de archivos planos &#40;&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
   

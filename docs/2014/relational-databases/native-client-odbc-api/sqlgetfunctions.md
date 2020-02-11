@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657834"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
-  La interfaz del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client cumple los tres niveles de compatibilidad definidos para ODBC (ISO, Open Group y ODBC nivel 2). **SQLGetFunctions** informa que todas las funciones ODBC son compatibles con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  La interfaz del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client cumple los tres niveles de compatibilidad definidos para ODBC (ISO, Open Group y ODBC nivel 2). **SQLGetFunctions** informa de que todas las funciones ODBC son compatibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el controlador ODBC de Native Client.  
   
-## <a name="see-also"></a>Vea también  
- [Función SQLGetFunctions](https://go.microsoft.com/fwlink/?LinkId=59353)   
- [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQLGetFunctions función)](https://go.microsoft.com/fwlink/?LinkId=59353)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

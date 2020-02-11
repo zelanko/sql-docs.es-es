@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9f9969630f8fe9f665a04575af8670ddb1af1b3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835638"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
@@ -41,12 +41,12 @@ ms.locfileid: "62835638"
 ##  <a name="BKMK_WhatcandowithCDCService"></a> Lo que puede hacer con un servicio CDC  
  Puede realizar las acciones siguientes al trabajar con un servicio CDC.  
   
-### <a name="delete-the-service"></a>Eliminar el servicio  
+### <a name="delete-the-service"></a>Eliminación del servicio  
  En el panel **Acciones** del lado derecho de la Consola de configuración del servicio CDC, haga clic en **Eliminar** para eliminar el servicio.  
   
  También puede hacer clic con el botón derecho en el servicio CDC que quiera eliminar y seleccionar **Eliminar**.  
   
- **Nota**: Si cuando se elimina el servicio, este está en ejecución, se detiene antes de eliminarse.  
+ **Nota**: si el servicio se está ejecutando cuando se elimina el servicio, se detendrá el servicio antes de eliminarlo.  
   
  Para eliminar la definición del servicio de Windows CDC de Oracle, el programa necesita acceso de actualización a la base de datos MSXDBCDC en la instancia asociada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al hacer clic en Aceptar para eliminar el servicio, el programa intenta eliminar el registro del servicio CDC de Oracle en la base de datos MSXDBCDC. Si el programa no puede eliminar el registro del servicio CDC de Oracle porque no tiene los permisos adecuados, pedirá al usuario que especifique un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con permisos de actualización para la base de datos MSXDBCDC.  
   
@@ -57,5 +57,5 @@ ms.locfileid: "62835638"
   
  También puede hacer clic con el botón derecho en el servicio CDC cuyas propiedades quiera editar y seleccionar **Propiedades**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cómo administrar un servicio CDC local](how-to-manage-a-local-cdc-service.md)  

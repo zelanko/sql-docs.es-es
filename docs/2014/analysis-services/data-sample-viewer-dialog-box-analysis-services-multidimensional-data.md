@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Visor (Analysis Services - datos multidimensionales) de datos de ejemplo | Microsoft Docs
+title: Visor de muestras de datos (cuadro de diálogo) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f406885d607827c4ed29102164c6fe89ea621508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082620"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Visor de muestras de datos (Analysis Services - Datos multidimensionales)
@@ -30,8 +30,8 @@ ms.locfileid: "66082620"
  Cuadrícula de tabla  
  Muestra las filas y las columnas correspondientes a las primeras 1.000 filas de la tabla de hechos que contiene la columna de origen seleccionada.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Seleccionar medidas &#40;Asistente del cubo&#41;](select-measures-cube-wizard.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Seleccione medidas &#40;Asistente para cubos&#41;](select-measures-cube-wizard.md)  
   
   

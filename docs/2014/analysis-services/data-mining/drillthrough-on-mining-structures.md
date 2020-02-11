@@ -11,16 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084577"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Obtención de detalles en estructuras de minería de datos
-  La*obtención de detalles* se refiere a la capacidad de consultar un modelo o una estructura de minería de datos y obtener datos detallados que no se exponen en el modelo.  
+  La *obtención de detalles* significa la capacidad de consultar un modelo de minería de datos o una estructura de minería de datos y obtener datos detallados que no se exponen en el modelo.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona dos opciones diferentes para obtener detalles sobre los datos de los casos. Puede obtener detalles tanto de los datos utilizados para generar el modelo de minería de datos como de los datos de origen de la estructura de minería de datos.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona dos opciones diferentes para obtener detalles sobre los datos de los casos. Puede obtener detalles tanto de los datos utilizados para generar el modelo de minería de datos como de los datos de origen de la estructura de minería de datos.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Obtención de detalles de los casos del modelo frente a obtención de detalles de la estructura  
  La obtención de detalles de los **casos del modelo** resulta útil para buscar detalles adicionales sobre las reglas, los patrones o los clústeres de un modelo.  
@@ -38,7 +39,7 @@ ms.locfileid: "66084577"
   
 -   La obtención de detalles funciona recuperando la información sobre los casos de entrenamiento que se almacenó en memoria caché al procesar la estructura de minería de datos. Por lo tanto, si borra los datos almacenados en caché después de procesar la estructura cambiando la propiedad <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> a `ClearAfterProcessing`, la obtención de detalles no funcionará. Para habilitar la obtención de detalles en las columnas de la estructura, debe cambiar la propiedad <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> a `KeepTrainingCases` y, a continuación, volver a procesar la estructura.  
   
--   Compruebe que la estructura de minería de datos y el modelo de minería de datos tienen la [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) propiedad establecida en `True`. Es más, debe ser miembro de un rol con los permisos de obtención de detalles para la estructura y el modelo.  
+-   Compruebe que la estructura de minería de datos y el modelo de [](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) minería de datos tienen `True`la propiedad AllowDrillThrough establecida en. Es más, debe ser miembro de un rol con los permisos de obtención de detalles para la estructura y el modelo.  
   
 ## <a name="security-issues-for-drillthrough"></a>Problemas de seguridad para la obtención de detalles  
  Los permisos de obtención de detalles se establecen por separado en la estructura y en el modelo. El permiso del modelo le permite obtener detalles del modelo, aunque no tenga permisos en la estructura. Los permisos de obtención de detalles en la estructura ofrecen la posibilidad adicional de incluir columnas de la estructura en las consultas de obtención de detalles del modelo, mediante la función [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
@@ -55,9 +56,9 @@ ms.locfileid: "66084577"
 |-|-|  
 |Utilizar la obtención de detalles en la estructura desde los visores de modelos de minería de datos|[Usar la obtención de detalles desde los visores de modelos](use-drillthrough-from-the-model-viewers.md)|  
 |Ver ejemplos de consultas de obtención de detalles para tipos de modelos concretos.|[Consultas de minería de datos](data-mining-queries.md)|  
-|Obtener información sobre cómo asignar permisos que se aplican a estructuras de minería de datos y modelos de minería de datos concretos.|[Otorgar permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Obtener información sobre cómo asignar permisos que se aplican a estructuras de minería de datos y modelos de minería de datos concretos.|[Conceder permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Obtención de detalles en modelos de minería de datos](drillthrough-on-mining-models.md)  
   
   

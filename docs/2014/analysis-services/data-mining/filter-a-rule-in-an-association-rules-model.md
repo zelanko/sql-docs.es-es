@@ -1,5 +1,5 @@
 ---
-title: Filtro de modelo de reglas de una regla en una asociación | Microsoft Docs
+title: Filtrar una regla en un modelo de reglas de asociación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084410"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrar una regla en un modelo de reglas de asociación
@@ -43,7 +43,7 @@ ms.locfileid: "66084410"
   
 5.  En **Importancia mínima**, aumente el valor de importancia para ver menos reglas o disminuya el valor para ver más reglas.  
   
-6.  Para **mostrar**, seleccione una de las siguientes opciones: **Mostrar el valor y nombre del atributo**, **mostrar solo el nombre del atributo**, o **mostrar solo el valor del atributo**.  
+6.  En **Mostrar**, seleccione una de las opciones siguientes: **Mostrar el valor y el nombre del atributo**, **Mostrar solo el nombre del atributo**o **Mostrar solo el valor del atributo**.  
   
 7.  En **Número máximo de filas**, aumente el valor para aumentar el número total de reglas que cumplen las condiciones especificadas o disminuya el valor para limitar el número de reglas devueltas. Las reglas se ordenan por probabilidad, de modo que podría eliminar reglas adicionales que cumplan las condiciones especificadas para la probabilidad o la importancia.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66084410"
   
 -   [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)  
   
-## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
- [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Lección 3: Generar un escenario de cesta &#40;intermedio de Tutorial de minería de datos&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tareas y procedimientos del visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Examinar un modelo mediante el visor de reglas de Asociación de Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Lección 3: generar un escenario de cesta de la compra &#40;tutorial intermedio de minería de datos&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

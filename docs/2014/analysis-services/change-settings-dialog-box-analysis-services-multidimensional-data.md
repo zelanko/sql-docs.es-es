@@ -1,5 +1,5 @@
 ---
-title: Cambie el cuadro de diálogo de configuración (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo Cambiar configuración (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088250"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Cambiar configuración (Analysis Services - Datos multidimensionales)
@@ -29,19 +29,19 @@ ms.locfileid: "66088250"
  **Opciones de procesamiento**  
  Utilice esta pestaña para modificar la configuración relacionada con el orden de procesamiento, la tabla de reescritura y los objetos afectados por la operación de procesamiento. Esta pestaña contiene las siguientes opciones:  
   
- **Parallel**  
+ **Paralelo**  
  Haga clic en esta opción para procesar los objetos en paralelo.  
   
  **Tareas paralelas máximas**  
  Seleccione el número máximo de tareas que quiere que la operación de procesamiento ejecute en paralelo o elija **Dejar que el servidor decida** para que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seleccione el número óptimo de tareas paralelas.  
   
- **Sequential**  
+ **secuencial**  
  Haga clic en esta opción procesar los objetos de manera secuencial.  
   
  **Modo de transacción**  
  Elija el modo de transacción que se utiliza cuando los objetos se procesan en orden secuencial:  
   
--   **Una transacción** procesa todos los objetos en la misma transacción.  
+-   **Una transacción** procesa todos los objetos de la misma transacción.  
   
 -   **Transacciones independientes** procesa todos los objetos, incluidos los objetos dependientes, en transacciones independientes.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "66088250"
  **Opción de tabla de reescritura**  
  Elija la opción usada para administrar la tabla de reescritura:  
   
--   **Crear** crea una tabla de reescritura si no existe una. Se produce un error si la tabla de reescritura ya existe.  
+-   **Create** crea una tabla de reescritura si no existe. Se produce un error si la tabla de reescritura ya existe.  
   
--   **Crear siempre** crea una tabla de reescritura si no existe una o sobrescribe la tabla de reescritura existente si existiese una.  
+-   **Crear siempre** crea una tabla de reescritura si no existe o sobrescribe la tabla de reescritura existente si existe.  
   
--   **Utilizar existente** utiliza la tabla de reescritura existente si es que existe una. Se produce un error si no existe una tabla de reescritura.  
+-   **Usar existente** usa la tabla de reescritura existente si existe. Se produce un error si no existe una tabla de reescritura.  
   
  **Procesar objetos afectados**  
  Seleccione esta opción para incluir y procesar objetos que dependan de otros objetos incluidos en la operación de procesamiento.  
@@ -63,82 +63,82 @@ ms.locfileid: "66088250"
  **Errores de clave de dimensión**  
  Utilice esta pestaña para modificar la configuración relacionada con la configuración de errores de la operación de procesamiento. Esta pestaña contiene las siguientes opciones:  
   
- **Use la configuración de error predeterminada**  
+ **Usar configuración de error predeterminada**  
  Seleccione esta opción para utilizar la configuración de errores predeterminada para los objetos en la operación de procesamiento.  
   
- **Utilizar la configuración de error personalizado**  
+ **Utilizar la configuración de error personalizada**  
  Seleccione esta opción para definir la configuración de error para los objetos de la operación de procesamiento.  
   
- **Acción del error de clave**  
+ **Acción de error de clave**  
  Elija una de las siguientes acciones que tienen lugar cuando se encuentra una nueva clave que no se puede buscar durante el procesamiento:  
   
--   **Convertir en desconocido** agrega la información del registro en el miembro desconocido.  
+-   **Convert to Unknown** agrega la información del registro en el miembro desconocido.  
   
--   **Descartar registro** excluye la información del registro del procesamiento del objeto.  
+-   **Descartar registro** excluye la información del registro que se va a procesar con el objeto.  
   
  **Omitir recuento de errores**  
  Haga en esta opción clic para omitir los errores que se producen durante el procesamiento.  
   
- **Detenerse ante errores**  
+ **Detener tras error**  
  Haga clic en esta opción para detener el procesamiento cuando se producen errores. Esta opción habilita las opciones **Número de errores** y **Acción ante el error** .  
   
  **Número de errores**  
  Escriba el número de errores que se ignorarán antes de que el proceso se detenga.  
   
- **Acción ante el error**  
+ **Acción en el error**  
  Elija una de las siguientes acciones para que se realice cuando el número de errores supere el valor de **Número de errores**:  
   
 -   **Detener el procesamiento** finaliza la operación de procesamiento.  
   
 -   **Detener el registro** detiene el registro de errores, pero continúa la operación de procesamiento.  
   
- **Clave no encontrada**  
+ **No se encontró la clave**  
  Especifique una de las siguientes acciones para que se lleve a cabo cuando no se encuentre una clave al procesar un objeto:  
   
 -   **Omitir error** omite el error.  
   
--   **Informar y continuar** notifica el error y continúa con la operación de procesamiento.  
+-   **Informar y continuar** notifica el error y continúa la operación de procesamiento.  
   
--   **Informar y detenerse** informa del error y detiene la operación de procesamiento.  
+-   **Notificar y detener** informa del error y detiene la operación de procesamiento.  
   
  **Clave duplicada**  
  Especifique una de las siguientes acciones para que se lleve a cabo si se encuentra una clave duplicada al procesar un objeto:  
   
 -   **Omitir error** omite el error.  
   
--   **Informar y continuar** notifica el error y continúa con la operación de procesamiento.  
+-   **Informar y continuar** notifica el error y continúa la operación de procesamiento.  
   
--   **Informar y detenerse** informa del error y detiene la operación de procesamiento.  
+-   **Notificar y detener** informa del error y detiene la operación de procesamiento.  
   
- **Clave NULL convertida en desconocida**  
+ **Clave null convertida en Unknown**  
  Especifique una de las siguientes acciones para que se lleve a cabo cuando se agregue una clave de miembro NULL al miembro desconocido durante el procesamiento de un objeto:  
   
 -   **Omitir error** omite el error.  
   
--   **Informar y continuar** notifica el error y continúa con la operación de procesamiento.  
+-   **Informar y continuar** notifica el error y continúa la operación de procesamiento.  
   
--   **Informar y detenerse** informa del error y detiene la operación de procesamiento.  
+-   **Notificar y detener** informa del error y detiene la operación de procesamiento.  
   
- **Clave NULL no permitida**  
+ **Clave null no permitida**  
  Especifique una de las siguientes acciones para que se lleve a cabo si se encuentra una clave NULL que no está permitida cuando se procesa un objeto:  
   
 -   **Omitir error** omite el error.  
   
--   **Informar y continuar** notifica el error y continúa con la operación de procesamiento.  
+-   **Informar y continuar** notifica el error y continúa la operación de procesamiento.  
   
--   **Informar y detenerse** informa del error y detiene la operación de procesamiento.  
+-   **Notificar y detener** informa del error y detiene la operación de procesamiento.  
   
  **Ruta de acceso del registro de errores**  
  Escriba la ruta de acceso completa y un nombre para el archivo de registro de errores.  
   
- **Examinar**  
+ **Browse**  
  Haga clic en esta acción para abrir el cuadro de diálogo **Abrir** y seleccionar la ruta de acceso completa y el nombre de archivo correspondiente al archivo del registro de errores.  
   
  **Procesar objetos afectados**  
  Haga clic en esta acción para procesar los objetos que dependan de los objetos seleccionados en el cuadro de diálogo **Proceso** .  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Cuadro de diálogo procesar &#40;Analysis Services - datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Cuadro de diálogo procesar &#40;Analysis Services-datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Creación de la estructura de minería de datos de Bike Buyer | Microsoft Docs'
+title: 'Lección 1: crear la estructura de minería de datos Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678498"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lección 1: Creación de la estructura de minería de datos de Bike Buyer
-  En esta lección creará una estructura de minería de datos que permita predecir si un cliente potencial de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] adquirirá una bicicleta. Si no está familiarizado con las estructuras de minería de datos y su función en la minería de datos, vea [estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lección 1: Crear la estructura de minería de datos de Bike Buyer
+  En esta lección creará una estructura de minería de datos que permita predecir si un cliente potencial de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] adquirirá una bicicleta. Si no está familiarizado con las estructuras de minería de datos y su rol en la minería de datos, vea estructuras de minería de datos [&#40;Analysis Services-data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- La estructura de minería de datos de Bike Buyer que creará en esta lección admite la adición de modelos de minería de datos según la [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). En lecciones posteriores, utilizará los modelos de minería de datos de agrupación en clústeres para explorar las distintas formas en las que los clientes pueden agruparse, y utilizará los modelos de minería de datos del árbol de decisión para predecir si un cliente potencial adquirirá una bicicleta.  
+ La estructura de minería de datos Bike Buyer que creará en esta lección permite agregar modelos de minería de datos basados en el algoritmo de [Microsoft clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)Algorithm[Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). En lecciones posteriores, utilizará los modelos de minería de datos de agrupación en clústeres para explorar las distintas formas en las que los clientes pueden agruparse, y utilizará los modelos de minería de datos del árbol de decisión para predecir si un cliente potencial adquirirá una bicicleta.  
   
 ## <a name="create-mining-structure-statement"></a>Instrucción CREATE MINING STRUCTURE  
- Para crear una estructura de minería de datos, utilice el [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) instrucción. El código de la instrucción se puede dividir en las partes siguientes:  
+ Para crear una estructura de minería de datos, use la instrucción [Create Mining structure &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx) . El código de la instrucción se puede dividir en las partes siguientes:  
   
 -   Asignación de un nombre a la estructura.  
   
@@ -50,7 +50,7 @@ WITH HOLDOUT (<holdout specifier>)
 CREATE MINING STRUCTURE [<mining structure name>]  
 ```  
   
- Para obtener información sobre la nomenclatura de un objeto en extensiones de minería de datos (DMX), consulte [identificadores &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Para obtener información acerca de cómo asignar un nombre a un objeto en extensiones de minería de datos (DMX), consulte [identifiers &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
   
  En la siguiente línea del código se define la columna de clave para la estructura de minería de datos, que identifica de forma única una entidad de los datos de origen:  
   
@@ -66,11 +66,11 @@ CREATE MINING STRUCTURE [<mining structure name>]
 <mining structure columns>  
 ```  
   
- Puede usar la función DISCRETIZE en \<columnas de estructura de minería de datos > para discretizar columnas continuas mediante la sintaxis siguiente:  
+ Puede utilizar la función de discretización dentro de \<las columnas de la estructura de minería de datos> para discretos las columnas continuas mediante la sintaxis siguiente:  
   
  `DISCRETIZE(<method>,<number of buckets>)`  
   
- Para obtener más información acerca de la discretización de columnas, vea [métodos de discretización &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md). Para obtener más información sobre los tipos de columnas que se pueden definir de la estructura de minería de datos, vea [columnas de estructura de minería de datos](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
+ Para obtener más información sobre la discretización de columnas, vea [métodos de discretización &#40;&#41;de minería de datos ](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md). Para obtener más información acerca de los tipos de columnas de estructura de minería de datos que puede definir, vea [columnas de estructura de minería de datos](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
   
  La línea final del código define una partición opcional en la estructura de minería de datos:  
   
@@ -87,7 +87,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 -   Modificar la consulta para crear la estructura de minería de datos.  
   
--   Ejecutar la consulta.  
+-   Ejecute la consulta.  
   
 ## <a name="creating-the-query"></a>Crear la consulta  
  El primer paso es conectarse a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y crear una consulta DMX en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -96,9 +96,9 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  En el **conectar al servidor** cuadro de diálogo para **tipo de servidor**, seleccione **Analysis Services**. En **nombre del servidor**, tipo `LocalHost`, o escriba el nombre de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que desea conectarse a esta lección. Haga clic en **Conectar**.  
+2.  En el cuadro de diálogo **conectar con el servidor** , en **tipo de servidor**, seleccione **Analysis Services**. En **nombre del servidor**, `LocalHost`escriba o escriba el nombre de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a la que desea conectarse para esta lección. Haga clic en **Conectar**.  
   
-3.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el **Editor de consultas**y una consulta en blanco.  
+3.  En **Explorador de objetos**, haga clic con el botón secundario [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]en la instancia de, seleccione **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el **Editor de consultas** y una nueva consulta en blanco.  
   
 ## <a name="altering-the-query"></a>Modificar la consulta  
  El paso siguiente es modificar la instrucción CREATE MINING STRUCTURE descrita anteriormente para crear la estructura de minería de datos de Bike Buyer.  
@@ -191,29 +191,29 @@ WITH HOLDOUT (<holdout specifier>)
   
     ```  
   
-6.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
+6.  En el menú **archivo** , haga clic en **Guardar DMXQuery1. DMX como**.  
   
-7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Bike Buyer Structure.dmx`.  
+7.  En el cuadro de diálogo **Guardar como** , vaya a la carpeta correspondiente y asigne el nombre `Bike Buyer Structure.dmx`al archivo.  
   
 ## <a name="executing-the-query"></a>Ejecutar la consulta  
- El último paso es ejecutar la consulta. Una vez creada y guardada una consulta, tiene que ejecutarse. Es decir, la instrucción tiene que ejecutarse para crear la estructura de minería de datos en el servidor. Para obtener más información acerca de cómo ejecutar consultas en el Editor de consultas, vea [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
+ El último paso es ejecutar la consulta. Una vez creada y guardada una consulta, tiene que ejecutarse. Es decir, la instrucción tiene que ejecutarse para crear la estructura de minería de datos en el servidor. Para obtener más información acerca de la ejecución de consultas en el editor de consultas, vea [motor de base de datos editor de consultas &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>Para ejecutar la consulta  
   
-1.  En el Editor de consultas, en la barra de herramientas, haga clic en **Execute**.  
+1.  En el editor de consultas, en la barra de herramientas, haga clic en **Ejecutar**.  
   
-     El estado de la consulta se muestra en el **mensajes** en la parte inferior del Editor de consultas de una vez que finaliza la ejecución de la instrucción. En Mensajes, debe aparecer lo siguiente:  
+     El estado de la consulta se muestra en la pestaña **mensajes** , en la parte inferior del editor de consultas, una vez finalizada la ejecución de la instrucción. En Mensajes, debe aparecer lo siguiente:  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     Una nueva estructura denominada **Bike Buyer** ahora existe en el servidor.  
+     Ya existe una nueva estructura denominada **Bike Buyer** en el servidor.  
   
  En la siguiente lección agregará modelos de minería de datos a la estructura que acaba de crear.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

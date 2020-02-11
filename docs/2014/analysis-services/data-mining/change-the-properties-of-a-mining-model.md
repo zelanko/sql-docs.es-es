@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085877"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Cambiar las propiedades de un modelo de minería de datos
@@ -25,9 +25,9 @@ ms.locfileid: "66085877"
   
  Las propiedades del modelo siguientes disponen de editores avanzados que se pueden utilizar para crear expresiones o configurar propiedades complejas del modelo. Las propiedades siguientes proporcionan:  
   
--   `Filter` Propiedad: Se abre el [filtro de conjunto de datos o el cuadro de diálogo de filtro de modelo](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter`propiedad: abre el [cuadro de diálogo filtro de conjunto de datos o filtro de modelo](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` Propiedad: Se abre el [cuadro de diálogo parámetros de algoritmo &#40;vista los modelos de minería de datos&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters`propiedad: abre el [cuadro de diálogo parámetros de algoritmo &#40;vista modelos de minería de datos&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  Para obtener información sobre cómo configurar las propiedades de un modelo de minería de datos, vea [Columnas del modelo de minería de datos](mining-model-columns.md).  
   
@@ -46,11 +46,11 @@ ms.locfileid: "66085877"
 2.  En la ventana **Propiedades** situada en el lado derecho de la pantalla, resalte el valor correspondiente a la propiedad que desee cambiar y, a continuación, escriba el nuevo valor.  
   
     > [!NOTE]  
-    >  Si el uso de la columna se establece en `Ignore`, **propiedades** ventana para la columna está en blanco.  
+    >  Si el uso de la columna está `Ignore`establecido en, la ventana **propiedades** de la columna está en blanco.  
   
      El nuevo valor tendrá efecto cuando se seleccione otro elemento diferente en el diseñador.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)  
   
   

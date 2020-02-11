@@ -1,5 +1,5 @@
 ---
-title: Obtención de detalles (Visor de modelos de minería de datos) del cuadro de diálogo | Microsoft Docs
+title: Cuadro de diálogo obtener detalles (visor de modelos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081493"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Cuadro de diálogo Obtener detalles (Visor de modelos de minería de datos)
@@ -34,19 +34,19 @@ ms.locfileid: "66081493"
  **Lista de columnas**  
  Muestra las columnas del modelo, seguidas por las columnas de estructura.  
   
- **Nota** : las columnas de estructura solamente se muestran si la obtención de detalles está habilitada en la estructura de minería de datos y si se ha seleccionado la opción, **Columnas de modelo y estructura**. Además, debe tener permisos de obtención de detalles en el modelo de minería de datos y en la estructura de minería de datos para ver las columnas.  
+ **Nota:** Las columnas de estructura solo se muestran si la obtención de detalles está habilitada en la estructura de minería de datos y si se han seleccionado las columnas de la opción, el **modelo y la estructura**. Además, debe tener permisos de obtención de detalles en el modelo de minería de datos y en la estructura de minería de datos para ver las columnas.  
   
- Las columnas de estructura que no están incluidas en el modelo aparecen como **estructura.\< nombre de columna >** .  
+ Las columnas de estructura que no están incluidas en el modelo aparecen como **Structure.\<>de nombre de columna **.  
   
 > [!NOTE]  
 >  Puede hacer clic con el botón derecho en cualquier lugar de la cuadrícula de columnas y seleccionar **Copiar todo** para copiar en el Portapapeles los datos de la obtención de detalles, en formato delimitado por tabuladores. Los datos copiados incluyen solo los datos de los casos, no la definición del nodo.  
   
- **Reproducir**  
+ **Reproducción**  
  Haga clic en el botón de flecha verde para actualizar los datos.  
   
-## <a name="see-also"></a>Vea también  
- [Consultas de obtención de detalles &#40;minería de datos&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Consulte también  
+ [Consultas de obtención de detalles &#40;&#41;de minería de datos](data-mining/drillthrough-queries-data-mining.md)   
+ [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Tareas y procedimientos del Visor de modelos de minería de datos](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

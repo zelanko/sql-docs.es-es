@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd935387e8d6e4a95a25d21eb5d5d229f9599bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895494"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Mejorar una salida de errores con el componente de script
@@ -33,7 +33,7 @@ ms.locfileid: "62895494"
 ## <a name="example"></a>Ejemplo  
  El ejemplo que aparece aquí utiliza un componente de script configurado como una transformación para agregar una columna de descripción del error a los datos de salida de error existentes en el flujo de datos.  
   
- Para obtener más información acerca de cómo configurar el componente de Script para su uso como una transformación del flujo de datos, vea [crear una transformación sincrónica con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [creando una asincrónica Transformación con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Para obtener más información sobre cómo configurar el componente de script para su uso como una transformación en el flujo de datos, vea [crear una transformación sincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [crear una transformación asincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   
@@ -45,13 +45,13 @@ ms.locfileid: "62895494"
   
 4.  Abra el **Editor de transformación Script** y en la página **Script**, para la propiedad **ScriptLanguage**, seleccione el lenguaje de script.  
   
-5.  Haga clic en **Editar script[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] para abrir el IDE de**  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tools for Applications (VSTA) y agregue el código de ejemplo que se muestra a continuación.  
+5.  Haga clic en **Editar script** para abrir el IDE de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) y agregue el código de ejemplo que se muestra a continuación.  
   
 6.  Cierre VSTA.  
   
-7.  En el Editor de transformación de Script en el **columnas de entrada** , seleccione la columna ErrorCode.  
+7.  En el editor de transformación script, en la página **columnas de entrada** , seleccione la columna ErrorCode.  
   
-8.  En el **entradas y salidas** página, agregue una nueva columna de salida de tipo `String` denominado **ErrorDescription**. Aumente la longitud predeterminada de la nueva columna a 255 para admitir mensajes largos.  
+8.  En la página **entradas y salidas** , agregue una nueva columna de salida de `String` tipo denominada **ErrorDescription**. Aumente la longitud predeterminada de la nueva columna a 255 para admitir mensajes largos.  
   
 9. Cierre el **Editor de transformación Script**.  
   
@@ -85,11 +85,11 @@ public class ScriptMain:
   
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Control de errores en los datos](../data-flow/error-handling-in-data.md)   
- [Usar las salidas de error en un componente de flujo de datos](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
+ [Usar salidas de error en un componente de flujo de datos](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Crear una transformación sincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 
   
   

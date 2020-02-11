@@ -1,5 +1,5 @@
 ---
-title: Editar cuadro de diálogo Propiedades de tabla (SSAS) | Microsoft Docs
+title: Cuadro de diálogo Editar propiedades de tabla (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081434"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Editar propiedades de tabla, cuadro de diálogo (SSAS)
@@ -26,16 +26,16 @@ ms.locfileid: "66081434"
  Las opciones de este cuadro de diálogo varían dependiendo de si importó los datos originalmente seleccionando las tablas en una lista o usando una consulta SQL.  
   
 ## <a name="table-preview-mode"></a>Modo de vista previa de tabla  
- **Nombre de la tabla**  
+ **Nombre de tabla**  
  Muestra el nombre de la tabla de datos en el modelo.  
   
 > [!NOTE]  
 >  No puede modificar el nombre aquí. Sin embargo, puede cambiar el nombre de la tabla haciendo clic con el botón secundario en la pestaña de la tabla en la parte inferior del diseñador de modelos.  
   
- **Nombre de conexión**  
+ **Nombre de la conexión**  
  Muestra el nombre de la conexión que se usa actualmente.  
   
- **Nombre de origen**  
+ **Nombre del origen**  
  Se usa para mostrar o cambiar la tabla de la que se obtienen los datos.  
   
  Si se cambia el origen a una tabla que tiene columnas distintas que la tabla actual, aparece un mensaje que advierte que las columnas son distintas. En ese caso, debe seleccionar las columnas que desea poner en la tabla actual y hacer clic en **Guardar**. Puede reemplazar toda la tabla activando la casilla de la izquierda de la tabla.  
@@ -46,8 +46,8 @@ ms.locfileid: "66081434"
  **Nombres de columna de**  
  |||  
 |-|-|  
-|**Source**|Seleccione esta opción para reemplazar los nombres de columna actuales por los nombres de columna de la tabla de origen seleccionada.|  
-|**Modelo**|Seleccione esta opción para usar los nombres de columna actual tal como aparecen en el modelo.|  
+|**Origen**|Seleccione esta opción para reemplazar los nombres de columna actuales por los nombres de columna de la tabla de origen seleccionada.|  
+|**Modela**|Seleccione esta opción para usar los nombres de columna actual tal como aparecen en el modelo.|  
   
  **Actualizar vista previa**  
  Haga clic en esta opción para ver las columnas de datos de la tabla de origen actualmente seleccionada.  
@@ -58,7 +58,7 @@ ms.locfileid: "66081434"
 |**Vista previa de tabla**|Seleccione esta opción de la lista para obtener una vista previa de la tabla seleccionada y un número limitado de filas de datos.|  
 |**Editor de consultas**|Seleccione esta opción para ver la consulta en el origen de datos seleccionado. Esta opción no está disponible para todos los orígenes de datos.|  
   
- **Casilla de verificación en el encabezado de columna**  
+ **Casilla en el encabezado de columna**  
  Active la casilla para incluir la columna en la importación de datos. Desactive la casilla para quitar la columna de la importación de datos.  
   
  **Botón de flecha abajo en el encabezado de columna**  
@@ -67,17 +67,17 @@ ms.locfileid: "66081434"
  **Borrar filtros de fila**  
  Haga clic en esta opción para quitar los filtros que se hayan aplicado.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Haga clic en esta opción para aplicar todos los cambios, incluso el reemplazo de columnas.  
   
 ## <a name="query-design-mode"></a>Modo de diseño de consulta  
- **Nombre de la tabla**  
+ **Nombre de tabla**  
  Muestra el nombre de la tabla de datos en el modelo.  
   
 > [!NOTE]  
 >  Aquí no se puede modificar el nombre. El nombre de la tabla se puede cambiar haciendo clic con el botón secundario en la pestaña de la tabla de la parte inferior del diseñador.  
   
- **Nombre de conexión**  
+ **Nombre de la conexión**  
  Muestra el nombre de la conexión que se usa actualmente.  
   
  **Cambiar a**  
@@ -89,16 +89,16 @@ ms.locfileid: "66081434"
  **Instrucción SQL**  
  Muestra la instrucción SQL que se emite al origen de datos actual para recuperar filas. De forma predeterminada, se recuperan todas las filas, pero se puede recuperar un subconjunto de filas diseñando un filtro o editando la instrucción SQL manualmente.  
   
- **Validar**  
+ **Validación**  
  Haga clic en esta opción para comprobar si la instrucción es sintácticamente correcta para el origen de datos y el proveedor seleccionados.  
   
- **Design**  
+ **Diseño**  
  Haga clic en esta opción para abrir un diseñador de consultas visual y generar una instrucción de consulta. Para obtener información acerca de cómo utilizar el diseñador, presione F1 desde el diseñador.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Haga clic en esta opción para aplicar todos los cambios, incluso el reemplazo de columnas.  
   
-## <a name="see-also"></a>Vea también  
- [Definir tablas y columnas &#40;SSAS tabular&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tablas y columnas &#40;SSAS tabular&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

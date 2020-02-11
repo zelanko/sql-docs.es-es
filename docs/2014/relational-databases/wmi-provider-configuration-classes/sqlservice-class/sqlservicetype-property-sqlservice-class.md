@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d3fd5a90ba479ef8075e45dcaab16475c0284f19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912159"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>Propiedad SqlServiceType (clase SqlService)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Objeto de la [clase SqlService](sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de uint32 que especifica el tipo de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los valores devueltos pueden ser uno de los siguientes:  
   
 |Tipo|Definición|  
@@ -56,7 +56,7 @@ object
 |*6*|ReportServer es el servicio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|  
 |*7*|SQLBrowser es el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

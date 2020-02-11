@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a646d152abaa3c352bf5ca1c576760e1715c3578
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080212"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Conectarse desde aplicaciones cliente (Analysis Services)
   Si no está familiarizado con Analysis Services, use la información de este tema para conectarse a una instancia existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante herramientas y aplicaciones comunes. En este tema también explica cómo conectarse bajo distintas identidades de usuario para realizar pruebas.  
   
--   [Conectarse con SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
+-   [Conexión con SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
   
 -   [Conectarse con Excel](#bkmk_excel)  
   
--   [Conectarse con SQL Server Data Tools](#bkmk_SSDT)  
+-   [Conectar con SQL Server Data Tools](#bkmk_SSDT)  
   
--   [Probar conexiones](#bkmk_tshoot)  
+-   [Prueba de conexiones](#bkmk_tshoot)  
   
  La documentación de referencia de la cadena de conexión se proporciona por separado. Para obtener más información, vea [Propiedades de cadena de conexión &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md).  
   
@@ -34,9 +34,9 @@ ms.locfileid: "66080212"
   
 -   [Configurar Firewall de Windows para permitir el acceso a Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorización de acceso a objetos y operaciones &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
-##  <a name="bkmk_SSMS"></a> Conectarse con SQL Server Management Studio (SSMS)  
+##  <a name="bkmk_SSMS"></a>Conectar con SQL Server Management Studio (SSMS)  
  Conéctese a Analysis Services en SSMS para administrar las instancias de servidor y las bases de datos de forma interactiva. También puede ejecutar consultas XMLA o MDX para realizar tareas administrativas o recuperar datos. A diferencia de otras herramientas y aplicaciones que solo cargan bases de datos cuando se envía una consulta, SSMS carga todas las bases de datos cuando se conecta al servidor, siempre y cuando tenga permiso para ver la base de datos. Esto significa que si tiene numerosas bases de datos tabulares en el servidor, todas ellas se cargan en la memoria del sistema cuando se conecta mediante SSMS.  
   
  Para probar los permisos, ejecute SSMS bajo una identidad de usuario específica y conéctese después a Analysis Services como ese usuario.  
@@ -55,7 +55,7 @@ ms.locfileid: "66080212"
   
 3.  La autenticación siempre es la de Windows y la identidad de usuario siempre es el usuario de Windows que se está conectando a través de Management Studio.  
   
-     Para que la conexión se realice correctamente, debe tener permiso para acceder al servidor o a la base de datos del servidor. La mayoría de las tareas que desea realizar en Management Studio necesitan permisos administrativos. Asegúrese de que la cuenta con la que se está conectando es miembro del rol de administrador del servidor. Para obtener más información, consulte [conceder permisos de administrador de servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+     Para que la conexión se realice correctamente, debe tener permiso para acceder al servidor o a la base de datos del servidor. La mayoría de las tareas que desea realizar en Management Studio necesitan permisos administrativos. Asegúrese de que la cuenta con la que se está conectando es miembro del rol de administrador del servidor. Para obtener más información, vea [conceder permisos de administrador de servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 4.  Haga clic en **Propiedades de conexión** para especificar una base de datos determinada, establecer valores de tiempo de espera o configurar opciones de cifrado. La información de conexión opcional incluye las propiedades de conexión que se usan para la conexión actual únicamente.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66080212"
     Provider=MSOLAP; Data Source=SERVERNAME; Initial Catalog=AdventureWorks2012; Roles=READER  
     ```  
   
-##  <a name="bkmk_excel"></a> Conectarse con Excel  
+##  <a name="bkmk_excel"></a>Conectarse con Excel  
  Se suele usar Microsoft Excel para analizar datos empresariales. Como parte de una instalación de Excel, Office instala el proveedor OLE DB de Analysis Services (MSOLAP DLL), ADOMD.NET y otros proveedores de datos para que pueda usar más fácilmente los datos de los servidores de red. Si usa una versión más reciente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con una versión anterior de Excel, lo más probable es que necesite instalar proveedores de datos más recientes en todas las estaciones de trabajo que se conecten a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vea [Proveedores de datos usados para conexiones de Analysis Services](data-providers-used-for-analysis-services-connections.md) para obtener más información.  
   
  Al configurar una conexión a un cubo de Analysis Services o una base de datos modelo tabular, Excel guarda la información de conexión en un archivo .odc para su uso futuro. La conexión se realiza en el contexto de seguridad del usuario actual de Windows. La cuenta de usuario debe tener permisos de lectura en la base de datos para que la conexión se establezca correctamente.  
@@ -88,19 +88,19 @@ ms.locfileid: "66080212"
   
  Para obtener más información, vea [Conectarse a datos o importarlos desde SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
-##  <a name="bkmk_SSDT"></a> Conectarse con SQL Server Data Tools  
+##  <a name="bkmk_SSDT"></a>Conectar con SQL Server Data Tools  
  SQL Server Data Tools se usa para compilar soluciones de BI, incluidos modelos de Analysis Services, informes de Reporting Services y paquetes SSIS. Al compilar informes o paquetes, puede que necesite especificar una conexión con Analysis Services.  
   
  Los vínculos siguientes explican cómo conectarse a Analysis Services desde un proyecto de servidor de informes o un proyecto de Integration Services:  
   
--   [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+-   [Analysis Services tipo de conexión para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
--   [Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+-   [administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
 > [!NOTE]  
 >  Cuando use SQL Server Data Tools para trabajar en un proyecto de Analysis Services existente, recuerde que puede conectarse sin conexión mediante un proyecto local o un proyecto con control de versiones, o puede conectarse en modo en línea para actualizar objetos de Analysis Services mientras la base de datos está en ejecución. Para obtener más información, vea [Connect in Online Mode to an Analysis Services Database](../multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md). Normalmente, las conexiones desde [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] están en modo de proyecto, en el que los cambios se implementan en la base de datos solo cuando el proyecto se implementa de modo explícito.  
   
-##  <a name="bkmk_tshoot"></a> Probar conexiones  
+##  <a name="bkmk_tshoot"></a>Probar conexiones  
  Puede usar SQL Server Profiler para supervisar las conexiones con Analysis Services. Los eventos Audit Login y Audit Logout proporcionan la prueba de una conexión. La columna de identidad indica el contexto de seguridad bajo el que se realiza la conexión.  
   
 1.  Inicie **SQL Server Profiler** en la instancia de Analysis Services e inicie después un nuevo seguimiento.  
@@ -125,10 +125,10 @@ ms.locfileid: "66080212"
   
  He aquí algunos recursos que pueden ayudarle a resolver errores de conexión:  
   
- [Resolver problemas comunes de conectividad en escenarios de conectividad de SQL Server 2005 Analysis Services](https://technet.microsoft.com/library/cc917670.aspx) Este documento tiene algunos años de antigüedad, pero la información y las metodologías que contiene siguen siendo aplicables.  
+ [Resolver problemas comunes de conectividad en escenarios de conectividad de SQL Server 2005 Analysis Services](https://technet.microsoft.com/library/cc917670.aspx). Este documento tiene algunos años de antigüedad, pero la información y las metodologías que contiene siguen siendo aplicables.  
   
-## <a name="see-also"></a>Vea también  
- [Conectar a Analysis Services](connect-to-analysis-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Conectarse a Analysis Services](connect-to-analysis-services.md)   
  [Metodologías de autenticación admitidas por Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
  [Suplantación &#40;SSAS tabular&#41;](../tabular-models/impersonation-ssas-tabular.md)   
  [Crear un origen de datos &#40;SSAS multidimensional&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  

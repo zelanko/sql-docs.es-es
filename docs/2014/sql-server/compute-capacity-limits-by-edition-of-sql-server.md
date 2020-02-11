@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714772"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "62714772"
   
  En la tabla siguiente se describen las notaciones que se usan en el diagrama anterior:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0..1|Cero o uno|  
 |1|Exactamente uno|  
@@ -64,7 +64,7 @@ ms.locfileid: "62714772"
   
 -   Un procesador físico puede estar formado por uno o varios núcleos. Un procesador físico es igual que un paquete de procesadores, o socket.  
   
- Los sistemas con más de un procesador físico o con procesadores físicos que tienen varios núcleos y/o hyperthreads permiten al sistema operativo ejecutar varias tareas simultáneamente. Cada subproceso de ejecución aparece como procesador lógico. Por ejemplo, si tiene un equipo que tiene dos procesadores de cuatro núcleos con hyper-threading habilitado y dos subprocesos por núcleo, tiene 16 procesadores lógicos: 2 procesadores x 4 núcleos por procesador x 2 subprocesos por núcleo. Cabe mencionar que:  
+ Los sistemas con más de un procesador físico o con procesadores físicos que tienen varios núcleos y/o hyperthreads permiten al sistema operativo ejecutar varias tareas simultáneamente. Cada subproceso de ejecución aparece como procesador lógico. Por ejemplo, si su equipo tiene dos procesadores de cuatro núcleos con el hyperthreading habilitado y dos subprocesos por núcleo, tiene 16 procesadores lógicos: 2 procesadores x 4 núcleos por procesador x 2 subprocesos por núcleo. Cabe mencionar que:  
   
 -   La capacidad de cálculo de un procesador lógico de un solo subproceso de un núcleo hyperthreaded es menor que la capacidad de cálculo de un procesador lógico del mismo núcleo con el hyperthreading deshabilitado.  
   
@@ -80,28 +80,28 @@ ms.locfileid: "62714772"
   
  En la siguiente tabla se especifican los límites de la capacidad de cálculo para una sola instancia de cada edición de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edición|Capacidad máxima de cálculo que usa una sola instancia ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidad máxima de cálculo que usa una sola instancia (AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Versión|Capacidad máxima de cálculo que usa una sola instancia ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidad máxima de cálculo que usa una sola instancia (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: Las licencias basadas en núcleo<sup>1</sup>|Sistema operativo máximo|Sistema operativo máximo|  
+|Enterprise Edition: licencia basada en núcleo<sup>1</sup>|Sistema operativo máximo|Sistema operativo máximo|  
 |Desarrollador|Sistema operativo máximo|Sistema operativo máximo|  
-|Evaluation|Sistema operativo máximo|Sistema operativo máximo|  
-|Business Intelligence|Limitada a menos de 4 sockets o 16 núcleos|Sistema operativo máximo|  
+|Evaluación|Sistema operativo máximo|Sistema operativo máximo|  
+|Inteligencia empresarial|Limitada a menos de 4 sockets o 16 núcleos|Sistema operativo máximo|  
 |Estándar|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|  
 |Web|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|  
 |Express|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
 |Express con herramientas|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
 |Express con Advanced Services|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
   
- <sup>1</sup> Enterprise Edition con el servidor y cliente acceso licencia (CAL) en función de licencias (no disponible para nuevos contratos) está limitada a un máximo de 20 núcleos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia. No hay ningún límite en el modelo de licencias de servidor basado en núcleos.  
+ <sup>1</sup> la licencia basada en Enterprise Edition con licencia de servidor y acceso de cliente (cal) (no disponible para nuevos contratos) está limitada a un máximo de 20 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] núcleos por instancia. No hay ningún límite en el modelo de licencias de servidor basado en núcleos.  
   
- En un entorno virtualizado, el límite de la capacidad de cálculo se basa en el número de procesadores lógicos, no en el de núcleos, porque la arquitectura de procesador no está visible para las aplicaciones invitadas.  Por ejemplo, un servidor con cuatro sockets poblados con procesadores de cuatro núcleos y la capacidad de habilitar dos hyperthreads por núcleo contiene 32 procesadores lógicos el hyperthreading habilitado, pero solo 16 procesadores lógicos con el hyperthreading deshabilitado. Estos procesadores lógicos se pueden asignar a las máquinas virtuales en el servidor con la carga de cálculo de las máquinas virtuales en el procesador lógico asignada en un subproceso de ejecución en el procesador físico en el servidor host.  
+ En un entorno virtualizado, el límite de la capacidad de cálculo se basa en el número de procesadores lógicos, no en el de núcleos, porque la arquitectura de procesador no está visible para las aplicaciones invitadas.  Por ejemplo, un servidor con cuatro sockets poblados con procesadores de cuatro núcleos y la capacidad de habilitar dos hyperthreads por núcleo contiene 32 procesadores lógicos el hyperthreading habilitado, pero solo 16 procesadores lógicos con el hyperthreading deshabilitado. Estos procesadores lógicos se pueden asignar a máquinas virtuales en el servidor con la carga de proceso de las máquinas virtuales en ese procesador lógico asignada a un subproceso de ejecución en el procesador físico del servidor host.  
   
  Puede que desee deshabilitar el hyperthreading cuando el rendimiento de cada procesador virtual es importante. El hyperthreading se puede habilitar o deshabilitar mediante la configuración del BIOS del procesador durante la instalación del BIOS, pero normalmente es una operación de ámbito de servidor que afectará a todas las cargas de trabajo que se ejecutan en el servidor. Esto puede sugerir que se deben separar las cargas de trabajo que se ejecutarán en entornos virtualizados de aquellas que se beneficiarían de aumentar el rendimiento de hyperthreading en un entorno físico del sistema operativo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ediciones y componentes de SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Características compatibles con las ediciones de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [Características admitidas por las ediciones de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Especificaciones de capacidad máxima para SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Inicio rápido de instalación de SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
+ [Instalación del tutorial de SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

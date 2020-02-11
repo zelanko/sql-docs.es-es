@@ -1,5 +1,5 @@
 ---
-title: Conectarse a la base de datos cuadro de diálogo | Microsoft Docs
+title: Cuadro de diálogo conectar con base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01862762cdea7ea0ef49c12a3c82ee1fd1c972cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087078"
 ---
 # <a name="connect-to-database-dialog-box"></a>Cuadro de diálogo Conectar con base de datos
@@ -26,12 +26,12 @@ ms.locfileid: "66087078"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Conectarse a la base de datos existente**|Seleccione esta opción para conectar con una base de datos existente. En la lista de bases de datos existentes, haga clic en la base de datos con la que desea conectar.|  
-|**Crear nueva base de datos**|Seleccione esta opción para crear una nueva base de datos.|  
-|**Agregar a solución**|Seleccione esta opción para agregar la base de datos a la solución actual.|  
+|**Conectar con base de datos existente**|Seleccione esta opción para conectar con una base de datos existente. En la lista de bases de datos existentes, haga clic en la base de datos con la que desea conectar.|  
+|**Create new database**|Seleccione esta opción para crear una nueva base de datos.|  
+|**Agregar a la solución**|Seleccione esta opción para agregar la base de datos a la solución actual.|  
 |**Cerrar solución**|Seleccione esta opción para agregar la base de datos a una solución nueva.|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

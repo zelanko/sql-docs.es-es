@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856511"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Ver la definición de un procedimiento almacenado
@@ -28,7 +28,7 @@ ms.locfileid: "62856511"
   
 -   **Antes de empezar:**  [Seguridad](#Security)  
   
--   **Para ver la definición de un procedimiento, utilizando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para ver la definición de un procedimiento con:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -51,14 +51,14 @@ ms.locfileid: "62856511"
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver la definición de un procedimiento en el Explorador de objetos**  
   
 1.  En el Explorador de objetos, conéctese a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
   
 2.  Expanda **Bases de datos**, expanda la base de datos a la que pertenece el procedimiento y, a continuación, expanda **Programación**.  
   
-3.  Expanda **Stored Procedures**, haga clic en el procedimiento y, a continuación, haga clic en **incluir procedimiento almacenado como**y, a continuación, haga clic en uno de los siguientes: **Crear a**, **Alter a**, o **anular y crear en**.  
+3.  Expanda **Procedimientos almacenados**, haga clic con el botón derecho en el procedimiento y luego en **Incluir procedimiento almacenado como**. A continuación, haga clic en uno de los siguientes: **Create To**, **Alter To** o **Drop and Create To**.  
   
 4.  Seleccione **Nueva ventana del Editor de consultas**. Se mostrará la definición del procedimiento.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62856511"
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un procedimiento almacenado](create-a-stored-procedure.md)   
  [Modificar un procedimiento almacenado](modify-a-stored-procedure.md)   
  [Eliminar un procedimiento almacenado](delete-a-stored-procedure.md)   

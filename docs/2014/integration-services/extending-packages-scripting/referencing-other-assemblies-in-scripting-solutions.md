@@ -25,17 +25,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6f942e1afe40467e331519f276b360f87f9a6da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894739"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Hacer referencia a otros ensamblados en soluciones de scripting
-  La biblioteca de clases de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona al desarrollador de script un conjunto eficaz de herramientas para implementar una funcionalidad personalizada en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Tanto la tarea como el componente Script también pueden usar ensamblados administrados personalizados.  
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] biblioteca de clases de proporciona al desarrollador de script un conjunto eficaz de herramientas para implementar la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] funcionalidad personalizada en los paquetes de. Tanto la tarea como el componente Script también pueden usar ensamblados administrados personalizados.  
   
 > [!NOTE]  
->  Para permitir que los paquetes usen los objetos y métodos de un servicio web, use el comando **Agregar referencia web** disponible en [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). En versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], tenía que generar una clase de proxy para utilizar un servicio web.  
+>  Para permitir que los paquetes usen los objetos y métodos de un servicio Web, use el comando **Agregar referencia Web** disponible en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). En versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], tenía que generar una clase de proxy para utilizar un servicio web.  
   
 ## <a name="using-a-managed-assembly"></a>Utilizar un ensamblado administrado  
  Para que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] busque en tiempo de diseño un ensamblado administrado, debe efectuar los pasos siguientes:  
@@ -62,29 +62,29 @@ ms.locfileid: "62894739"
   
  En esta lista se describen algunas de las clases más utilizadas de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]:  
   
--   `System.Data` Contiene la arquitectura de ADO.NET.  
+-   `System.Data`Contiene la arquitectura ADO.NET.  
   
--   `System.IO` Proporciona una interfaz para el sistema de archivos y secuencias.  
+-   `System.IO`Proporciona una interfaz para el sistema de archivos y las secuencias.  
   
--   `System.Windows.Forms` Proporciona la creación de formularios.  
+-   `System.Windows.Forms`Proporciona la creación de formularios.  
   
--   `System.Text.RegularExpressions` Proporciona clases para trabajar con expresiones regulares.  
+-   `System.Text.RegularExpressions`Proporciona clases para trabajar con expresiones regulares.  
   
--   `System.Environment` Devuelve información sobre el equipo local, el usuario actual y configuraciones de equipo y usuario.  
+-   `System.Environment`Devuelve información acerca del equipo local, el usuario actual y la configuración del equipo y del usuario.  
   
--   `System.Net` Proporciona comunicaciones por red.  
+-   `System.Net`Proporciona comunicaciones de red.  
   
--   `System.DirectoryServices` Expone Active Directory.  
+-   `System.DirectoryServices`Expone Active Directory.  
   
--   `System.Drawing` Proporciona bibliotecas de manipulación de imágenes completas.  
+-   `System.Drawing`Proporciona bibliotecas de manipulación de imágenes extensas.  
   
--   `System.Threading` Habilita la programación multiproceso.  
+-   `System.Threading`Habilita la programación multiproceso.  
   
  Para obtener más información acerca de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vea MSDN Library.  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ampliar paquetes con scripting](extending-packages-with-scripting.md)  
   
   

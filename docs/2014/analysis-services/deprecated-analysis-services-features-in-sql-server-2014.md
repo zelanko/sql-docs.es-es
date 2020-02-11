@@ -1,5 +1,5 @@
 ---
-title: Características en desuso de Analysis Services en SQL Server 2014 | Microsoft Docs
+title: Características desusadas Analysis Services en SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04d12aab677e38d17d4e869e6885eb470854d824
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081918"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Características en desuso de Analysis Services en SQL Server 2014
@@ -33,7 +33,7 @@ ms.locfileid: "66081918"
 |Función MDX|Función CalculationPassValue|Ninguno. El motor de OLAP administra el paso de cálculo. Esta función ya no se necesita.|  
 |Función MDX|CalculationCurrentPass, función|Ninguno. El motor de OLAP administra el paso de cálculo. Esta función ya no se necesita.|  
 |Expresiones multidimensionales (MDX)|La sugerencia del optimizador de consultas NON_EMPTY_BEHAVIOR estaba activada de forma predeterminada.|La sugerencia del optimizador de consultas NON_EMPTY_BEHAVIOR estará desactivada de forma predeterminada en una futura versión. Se trata de una sugerencia de optimización MDX que puede generar resultados incorrectos si no se usa correctamente.|  
-|Otros|Propiedad de celda intrínseca CELL_EVALUATION_LIST|Se proporcionaba originalmente una lista de las fórmulas evaluadas que se aplican a una celda. Está en blanco en esta versión de Analysis Services.  El orden de resolución se especifica en un script MDX. Para obtener más información, consulte [descripción de orden de paso y orden de resolución &#40;MDX&#41;](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|  
+|Otros|Propiedad de celda intrínseca CELL_EVALUATION_LIST|Se proporcionaba originalmente una lista de las fórmulas evaluadas que se aplican a una celda. Está en blanco en esta versión de Analysis Services.  El orden de resolución se especifica en un script MDX. Para obtener más información, vea [Descripción de orden de paso y orden de resolución &#40;MDX&#41;](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|  
 |Objetos|Ensamblados COM|Los ensamblados COM pueden suponer un riesgo para la seguridad. Compatibilidad con los ensamblados COM se quitará en una versión futura.|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Características no admitidas en una versión futura de SQL Server  
@@ -41,14 +41,14 @@ ms.locfileid: "66081918"
   
 |Category|Característica desusada|Sustituta|  
 |--------------|------------------------|-----------------|  
-|Modelos multidimensionales|Particiones remotas|Ninguno. Use particiones locales en su lugar. Consulte [crear y administrar una partición Local &#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) para obtener más información.|  
+|Modelos multidimensionales|Particiones remotas|Ninguno. Use particiones locales en su lugar. Vea [crear y administrar una partición Local &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) para obtener más información.|  
 |Modelos multidimensionales|Grupos de medida vinculados remotos|Un grupo de medida vinculado remoto es un grupo de medida vinculado que usa un origen de datos de un servidor remoto. Está previsto desusar la posibilidad de usar un origen de datos remoto para un grupo de medida vinculado.<br /><br /> No hay ningún reemplazo para esta característica. Se recomienda usar grupos de medida vinculados locales en su lugar. Consulte [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) para obtener más información.|  
-|Modelos multidimensionales|Reescritura de dimensiones|Ninguno. Use la reescritura de particiones si necesita la capacidad de reescritura. Consulte [Set Partition Writeback](multidimensional-models/set-partition-writeback.md) para obtener más información.|  
+|Modelos multidimensionales|Reescritura de dimensiones|Ninguno. Use la reescritura de particiones si necesita la capacidad de reescritura. Para obtener más información, vea [establecer la reescritura de particiones](multidimensional-models/set-partition-writeback.md) .|  
 |Modelos multidimensionales|Dimensiones vinculadas|Ninguno. Considere la posibilidad de copiar dimensiones a modelos adicionales en lugar de vincularse a una dimensión de otro modelo.|  
 |MDX|Propiedad Non_Empty_Behavior|Ninguno. Al crear un miembro calculado, establecer esta propiedad incorrectamente aumenta la probabilidad de devolver resultados no válidos. Las optimizaciones recientes para el motor OLAP han mejorado las operaciones en conjuntos de datos dispersos, lo que hace que esta propiedad sea menos relevante.|  
   
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con versiones anteriores de Analysis Services](analysis-services-backward-compatibility.md)   
- [Funcionalidad no incluida Analysis Services en SQL Server 2014](discontinued-analysis-services-functionality-in-sql-server-2014.md)  
+## <a name="see-also"></a>Consulte también  
+ [Compatibilidad con versiones anteriores Analysis Services](analysis-services-backward-compatibility.md)   
+ [Funcionalidad de Analysis Services no incluida en SQL Server 2014](discontinued-analysis-services-functionality-in-sql-server-2014.md)  
   
   

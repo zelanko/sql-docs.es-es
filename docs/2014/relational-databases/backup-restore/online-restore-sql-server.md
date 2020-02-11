@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876199"
 ---
 # <a name="online-restore-sql-server"></a>Restauración en línea (SQL Server)
@@ -59,12 +59,12 @@ ms.locfileid: "62876199"
     > [!NOTE]  
     >  Como alternativa, puede dejar el archivo sin conexión manualmente antes de la secuencia de restauración. Para obtener más información, vea "Dejar sin conexión una base de datos o un archivo" más adelante en este tema.  
   
-##  <a name="taking_db_or_file_offline"></a> Dejar sin conexión una base de datos o un archivo  
+##  <a name="taking_db_or_file_offline"></a>Dejar sin conexión una base de datos o un archivo  
  Si no desea utilizar la restauración en línea, puede dejar sin conexión la base de datos antes de iniciar la secuencia de restauración; para ello, puede usar uno de los métodos siguientes:  
   
 -   En todos los modelos de recuperación puede dejar sin conexión la base de datos con la siguiente instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
   
-     ALTER DATABASE *nombre_base_de_datos* SET OFFLINE  
+     ALTER DATABASE *database_name* establecer sin conexión  
   
 -   Si lo desea, en el modelo de recuperación completa, puede forzar que la restauración de un archivo o una página sea sin conexión; para ello, use la siguiente instrucción [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) la base de datos se pone en el estado de restauración:  
   
@@ -77,13 +77,13 @@ ms.locfileid: "62876199"
 > [!NOTE]  
 >  La sintaxis de un flujo de restauración en línea es la misma que la de un flujo de restauración sin conexión.  
   
--   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación simple&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62876199"
   
 -   [Quitar grupos de archivos inactivos &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Restauraciones de archivos &#40;modelo de recuperación completa&#41;](file-restores-full-recovery-model.md)   
  [Restauraciones de archivos &#40;modelo de recuperación simple&#41;](file-restores-simple-recovery-model.md)   
  [Restaurar páginas &#40;SQL Server&#41;](restore-pages-sql-server.md)   

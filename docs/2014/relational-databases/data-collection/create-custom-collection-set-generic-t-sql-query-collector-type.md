@@ -1,5 +1,5 @@
 ---
-title: Crear un conjunto de recopilación personalizado que utiliza el tipo de recopilador consulta T-SQL genérico (Transact-SQL) | Microsoft Docs
+title: Crear un conjunto de recopilación personalizado que use el tipo de recopilador de consultas T-SQL genérico (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c131f413c8b7be0dad8432c5711b19e74253aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873345"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>Crear un conjunto de recopilación personalizado que utilice el tipo de recopilador de consultas T-SQL genérico (Transact-SQL)
@@ -160,7 +160,7 @@ SELECT @collection_item_id;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Administrar programaciones](../../ssms/agent/manage-schedules.md)   
  [Iniciar o detener un conjunto de recopilación](start-or-stop-a-collection-set.md)  

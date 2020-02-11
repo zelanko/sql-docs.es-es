@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085080"
 ---
 # <a name="data-mining-architecture"></a>Arquitectura de minería de datos
@@ -22,7 +22,7 @@ ms.locfileid: "66085080"
   
  En general, la minería de datos de SQL Server opera como un servicio que se proporciona como parte de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo multidimensional; por consiguiente, recomendamos que también repase las secciones siguientes de los Libros en pantalla en las que se describe el funcionamiento, el mantenimiento y la configuración de las soluciones multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Procesamiento de objetos de modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [Procesamiento de objetos del modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
  [Conectar a Analysis Services](../instances/connect-to-analysis-services.md)  
   
@@ -33,17 +33,17 @@ ms.locfileid: "66085080"
  Para obtener más información sobre cómo puede implementar la minería de datos en una solución de Business Intelligence, vea la sección Solution Guides de MSDN Library.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Arquitectura lógica &#40;Analysis Services - Minería de datos&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Arquitectura lógica &#40;Analysis Services:&#41;de minería de datos](logical-architecture-analysis-services-data-mining.md)  
   
- [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Arquitectura física &#40;Analysis Services:&#41;de minería de datos](physical-architecture-analysis-services-data-mining.md)  
   
  [Servicios de minería de datos y orígenes de datos](data-mining-services-and-data-sources.md)  
   
  [Administración de las soluciones y los objetos de minería de datos](management-of-data-mining-solutions-and-objects.md)  
   
- [Información general sobre seguridad &#40;minería de datos&#41;](security-overview-data-mining.md)  
+ [Información general de seguridad &#40;minería de datos&#41;](security-overview-data-mining.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Programación de modelos multidimensionales](../multidimensional-models/multidimensional-model-programming.md)   
  [Programación de minería de datos](../dev-guide/data-mining-programming.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Ver modelos (complementos de minería de datos para Office de datos) | Microsoft Docs
+title: Ver modelos (complementos de minería de datos para Office) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fbd8b24b490123c337c9f7510899da12bcae749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065527"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>Ver modelos (Complementos de minería de datos para Office)
@@ -27,17 +27,17 @@ ms.locfileid: "66065527"
   
 -   Use los gráficos en Excel generados por cada asistente.  
   
-     [Examinar modelos en Excel &#40;complementos de minería de datos de SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+     [Examinar modelos en Excel &#40;SQL Server complementos de minería de datos&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
 -   Use las Formas de minería de datos para Visio para crear una presentación interactiva.  
   
      [Ver modelos de minería de datos en Visio &#40;complementos de minería de datos&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
--   Use la **documentar modelo** Asistente para generar un resumen de los metadatos del modelo y del contenido del modelo.  
+-   Use el Asistente para **documentar modelo** para generar un resumen de los metadatos del modelo y el contenido del modelo.  
   
-     [Documentar modelos de minería de datos &#40;datos complementos de minería de datos para Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
+     [Documentar modelos de minería de datos &#40;complementos de minería de datos para Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>Vea también  
- [Consulta &#40;complementos de minería de datos de SQL Server&#41;](query-sql-server-data-mining-add-ins.md)  
+## <a name="see-also"></a>Consulte también  
+ [&#40;de consultas SQL Server complementos de minería de datos&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

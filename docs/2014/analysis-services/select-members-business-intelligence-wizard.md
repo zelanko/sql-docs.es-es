@@ -1,5 +1,5 @@
 ---
-title: Seleccione los miembros (Asistente de Business Intelligence) | Microsoft Docs
+title: Seleccionar miembros (Asistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cc66896eb1735d09991644dd49c03b5a94c208d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069432"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Seleccionar miembros (Asistente de Business Intelligence)
@@ -33,20 +33,20 @@ ms.locfileid: "66069432"
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Tipos de medida integrados**|Seleccione esta opción para incluir la función de conversión de moneda correspondiente a la medida especificada.|  
-|**Medidas**|Seleccione la medida del grupo de medida de tarifas que contiene la tasa de cambio que se va a usar cuando se convierta la medida seleccionada en **Tipos de medida integrados** .|  
+|**Seleccionar miembros**|Seleccione esta opción para incluir la función de conversión de moneda correspondiente a la medida especificada.|  
+|**medidas**|Seleccione la medida del grupo de medida de tarifas que contiene la tasa de cambio que se va a usar cuando se convierta la medida seleccionada en **Tipos de medida integrados** .|  
   
  **Jerarquía de cuentas**  
- Seleccione esta opción para aplicar la función de conversión de moneda a uno o varios miembros de la jerarquía de cuentas correspondiente a la dimensión de cuenta incluida en el cubo. La jerarquía de cuentas es la dimensión de la jerarquía dentro de la cuenta cuya `Type` propiedad está establecida en *cuenta*.  
+ Seleccione esta opción para aplicar la función de conversión de moneda a uno o varios miembros de la jerarquía de cuentas correspondiente a la dimensión de cuenta incluida en el cubo. La jerarquía de cuentas es la jerarquía dentro de la dimensión `Type` de cuenta cuya propiedad se establece en *account*.  
   
  Si está seleccionada, la cuadrícula muestra las opciones enumeradas en la siguiente tabla.  
   
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Miembro de la cuenta**|Seleccione esta opción para incluir la función de conversión de moneda correspondiente al miembro especificado de la jerarquía de cuentas.|  
-|**Medidas**|Seleccione la medida del grupo de medida de tarifas que contiene la tasa de cambio que se va a utilizar cuando se conviertan las medidas correspondientes al miembro seleccionado en **Miembro de la cuenta** .|  
+|**medidas**|Seleccione la medida del grupo de medida de tarifas que contiene la tasa de cambio que se va a utilizar cuando se conviertan las medidas correspondientes al miembro seleccionado en **Miembro de la cuenta** .|  
   
- **Según el tipo de jerarquía de cuentas**  
+ **Jerarquía de cuentas basada en el tipo**  
  Seleccione esta opción para aplicar la función de conversión de moneda a todos los miembros de los atributos de la jerarquía de cuentas, cuya propiedad `Type` esté establecida en un tipo de cuenta especificado.  
   
  Si está seleccionada, la cuadrícula muestra las opciones enumeradas en la siguiente tabla.  
@@ -54,11 +54,11 @@ ms.locfileid: "66069432"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Tipo de cuenta**|Seleccione esta opción para incluir la función de conversión de moneda correspondiente al tipo de cuenta especificado.|  
-|**Medidas**|Seleccione la medida del grupo de medida de tarifas que contiene la tasa de cambio que se va a utilizar cuando se conviertan los miembros de los atributos utilizando el tipo de cuenta seleccionado en **Tipo de cuenta** .|  
+|**medidas**|Seleccione la medida del grupo de medida de tarifas que contiene la tasa de cambio que se va a utilizar cuando se conviertan los miembros de los atributos utilizando el tipo de cuenta seleccionado en **Tipo de cuenta** .|  
   
-## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente de Business Intelligence (ayuda F1)](business-intelligence-wizard-f1-help.md)   
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Diseñador de dimensiones &#40;Analysis Services de datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d8cb4bb7aec53ebc28a91cc36add1ae810b08d44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911849"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Método SetStrValue (clase SqlServiceAdvancedProperty)
@@ -40,7 +40,7 @@ StrValue
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Objeto de la [clase SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) que representa una propiedad avanzada.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -52,10 +52,10 @@ StrValue
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor unit 32 que es igual a 0 si se modificó el servicio correctamente, igual a 1 si no se admite la solicitud e igual a cualquier otro número para indicar que hubo un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El tipo de valor de la propiedad debe ser *string* para establecer la propiedad en un valor de cadena.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

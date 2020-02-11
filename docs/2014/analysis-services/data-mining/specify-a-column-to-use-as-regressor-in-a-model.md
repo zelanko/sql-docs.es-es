@@ -1,5 +1,5 @@
 ---
-title: Especificar una columna que se usarán como regresor en un modelo | Microsoft Docs
+title: Especificar una columna para utilizar como Regresor en un modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082908"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Especificar una columna para utilizar como regresor en un modelo
@@ -26,7 +26,7 @@ ms.locfileid: "66082908"
   
 ### <a name="how-to-create-a-simple-linear-regression-model"></a>Cómo se crea un modelo de regresión lineal simple  
   
-1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en el **Explorador de soluciones**, expanda **Estructuras de minería de datos**.  
+1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en **Explorador de soluciones**, expanda **estructuras de minería de datos**.  
   
 2.  Haga doble clic en Call Center.dmm para abrirlo en el diseñador.  
   
@@ -59,10 +59,10 @@ ms.locfileid: "66082908"
   
      En el visor, el modelo se representa en un solo nodo que contiene la fórmula de regresión. Se puede ver la fórmula en la **Leyenda de minería de datos**o se pueden extraer los coeficientes para la fórmula mediante el uso de consultas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)   
  [Consultas de minería de datos](data-mining-queries.md)   
  [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

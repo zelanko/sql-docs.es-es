@@ -1,5 +1,5 @@
 ---
-title: Perspectivas (SSAS Tabular) | Microsoft Docs
+title: Perspectivas (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066880"
 ---
 # <a name="perspectives-ssas-tabular"></a>Perspectivas (SSAS tabular)
@@ -22,9 +22,9 @@ ms.locfileid: "66066880"
   
  Secciones de este tema:  
   
--   [Ventajas](#bkmk_understanding)  
+-   [Privilegios](#bkmk_understanding)  
   
--   [Probar perspectivas](#bkmk_testpersp)  
+-   [Perspectivas de pruebas](#bkmk_testpersp)  
   
 -   [Tareas relacionadas](#bkmk_related_tasks)  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66066880"
   
  Cuando un usuario se conecta a un modelo (como un origen de datos) que tiene perspectivas definidas, dicho usuario puede seleccionar la perspectiva que desea usar. Por ejemplo, al conectarse a un origen de datos de modelo en Excel, los usuarios de recursos humanos pueden seleccionar la perspectiva Recursos humanos en la página Seleccionar tablas y vistas del Asistente para la conexión de datos. En la lista de campos de la tabla dinámica solo se verán los campos (tablas, columnas y medidas) definidos para la perspectiva Recursos humanos.  
   
- Las perspectivas no están diseñadas para usarse como mecanismo de seguridad, sino como una herramienta para proporcionar una mejor experiencia para el usuario. Toda la seguridad de una determinada perspectiva se hereda del modelo subyacente. Las perspectivas no pueden proporcionar acceso a objetos de modelo a los que el usuario no tiene acceso. La seguridad de la base de datos de modelos se debe resolver antes de dar acceso a los objetos del modelo mediante una perspectiva. Los roles de seguridad se pueden usar para proteger los datos y los metadatos de los modelos. Para más información, vea [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md).  
+ Las perspectivas no están diseñadas para usarse como mecanismo de seguridad, sino como una herramienta para proporcionar una mejor experiencia para el usuario. Toda la seguridad de una determinada perspectiva se hereda del modelo subyacente. Las perspectivas no pueden proporcionar acceso a objetos de modelo a los que el usuario no tiene acceso. La seguridad de la base de datos de modelos se debe resolver antes de dar acceso a los objetos del modelo mediante una perspectiva. Los roles de seguridad se pueden usar para proteger los datos y los metadatos de los modelos. Para obtener más información, vea [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md).  
   
-##  <a name="bkmk_testpersp"></a> Probar perspectivas  
+##  <a name="bkmk_testpersp"></a>Perspectivas de pruebas  
  Al crear un modelo, puede usar la característica Analizar en Excel del diseñador de modelos para probar la eficacia de las perspectivas que ha definido. En el menú **Modelo** del diseñador de modelos, al hacer clic en **Analizar en Excel**, y antes de que se inicie Excel, aparecerá el cuadro de diálogo **Elegir credenciales y perspectivas** . En este cuadro de diálogo, puede especificar el nombre de usuario actual, otro usuario, un rol y una perspectiva que usará para conectar con la base de datos del área de trabajo del modelo como origen de datos y para ver los datos.  
   
 ##  <a name="bkmk_related_tasks"></a> Tareas relacionadas  
@@ -46,8 +46,8 @@ ms.locfileid: "66066880"
 |-----------|-----------------|  
 |[Crear y administrar perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md)|Describe cómo crear y administrar perspectivas mediante el cuadro de diálogo Perspectivas del diseñador de modelos.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md)   
- [Jerarquías &#40;SSAS tabular&#41;](hierarchies-ssas-tabular.md)  
+ [Jerarquías &#40;&#41;tabular de SSAS](hierarchies-ssas-tabular.md)  
   
   

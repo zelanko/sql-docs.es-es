@@ -12,10 +12,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837708"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Obtener ayuda (SQL Server 2014)
@@ -39,8 +39,8 @@ ms.locfileid: "62837708"
  [Comentarios sobre SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
  Describe cómo puede transmitirnos sus sugerencias e informes de errores sobre las características e interfaz de usuario del producto, presentarnos sus comentarios acerca de la documentación y, si lo desea, enviarnos de manera automática sus informes de errores y datos de uso a [!INCLUDE[msCoName](../includes/msconame-md.md)] para su estudio.  
   
-## <a name="see-also"></a>Vea también  
- [Novedades en SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
+## <a name="see-also"></a>Consulte también  
+ [Novedades de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Instalación de SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
   
   

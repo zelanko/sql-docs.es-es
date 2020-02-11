@@ -1,5 +1,5 @@
 ---
-title: Opciones (consulta resultados de SQL Server-Multi-Server) | Microsoft Docs
+title: Opciones (resultados de la consulta-SQL Server-multiservidor) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089966"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Opciones (Resultados de la consulta/SQL Server/Multiservidor)
@@ -26,17 +26,17 @@ ms.locfileid: "66089966"
  Cuando no se mezclan resultados, el conjunto de resultados de cada servidor se mostrará en su propia cuadrícula con su propio esquema.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Combinar resultados**  
+ **Mezclar resultados**  
  Active esta casilla para combinar los conjuntos de resultados de varios servidores en la misma cuadrícula.  
   
- **Agregue el nombre del servidor a los resultados**  
+ **Agregar nombre de servidor a los resultados**  
  Active esta casilla para incluir una columna adicional que proporcione el nombre del servidor que generó cada fila.  
   
  **Agregar nombre de inicio de sesión a los resultados**  
  Active esta casilla para incluir una columna adicional que proporcione el inicio de sesión que se utilizó para conectarse al servidor que proporcionó cada fila.  
   
-## <a name="see-also"></a>Vea también  
- [Crear un servidor de Administración Central y el grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cree un servidor de administración central y un grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [Ejecutar instrucciones con varios servidores simultáneamente &#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   
   

@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ec9a7b6ce05637a35761b40bd039e243fec3e99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914694"
 ---
-# <a name="mssqlserver2577"></a>MSSQLSERVER_2577
+# <a name="mssqlserver_2577"></a>MSSQLSERVER_2577
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2577|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2577|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_IAM_CHAIN_SEQUENCE_OUT_OF_ORDER|  
 |Texto del mensaje|Los números de secuencia de cadena no están ordenados en la cadena IAM (Mapa de asignación de índices) para el Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación A_ID (tipo TYPE). La página P_ID1 con el número de secuencia SEQUENCE1 apunta a la página P_ID2 con el número de secuencia SEQUENCE2.|  

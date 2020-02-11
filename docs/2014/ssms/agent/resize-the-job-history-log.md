@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650892"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-  En este tema se describe el modo de establecer límites de tamaño para registros de historial de trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  En este tema se describe cómo establecer límites de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tamaño para los registros de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] historial de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]trabajos del agente en mediante.  
   
 -   **Antes de empezar:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62650892"
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-resize-the-job-history-log-based-on-raw-size"></a>Para cambiar el tamaño del registro de historial de trabajos según un tamaño sin procesar  
   

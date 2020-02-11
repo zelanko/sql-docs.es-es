@@ -1,5 +1,5 @@
 ---
-title: Gráfico de beneficios (Analysis Services - minería de datos) | Microsoft Docs
+title: Gráfico de beneficios (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083088"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Gráfico de beneficios (Analysis Services - Minería de datos)
-  Un gráfico de beneficios muestra la rentabilidad estimada asociada al uso de un modelo de minería de datos. Por ejemplo, supongamos que su modelo predice deben ponerse en contacto con los clientes que una compañía en un escenario empresarial. En ese caso, agregaría al gráfico de beneficios información sobre el costo de realizar la campaña de envío de correo directo. Entonces, en el gráfico completo puede ver el beneficio estimado si se dirige correctamente a los clientes en comparación con si se pone en contacto con los clientes de forma aleatoria.  
+  Un gráfico de beneficios muestra la rentabilidad estimada asociada al uso de un modelo de minería de datos. Por ejemplo, supongamos que el modelo predice en qué clientes debe ponerse en contacto una compañía en un escenario empresarial. En ese caso, agregaría al gráfico de beneficios información sobre el costo de realizar la campaña de envío de correo directo. Entonces, en el gráfico completo puede ver el beneficio estimado si se dirige correctamente a los clientes en comparación con si se pone en contacto con los clientes de forma aleatoria.  
   
 ## <a name="build-a-profit-chart"></a>Crear un gráfico de beneficios  
  Un gráfico de beneficios es similar a un gráfico de mejora respecto al modelo predictivo. Empiece creando un gráfico de elevación y, después, agregue la información de costo y beneficios.  
@@ -33,7 +33,7 @@ ms.locfileid: "66083088"
   
  En este ejemplo, hemos utilizado el modelo de árbol de decisiones de correo directo. El modelo identifica los clientes que es probable que compren una bicicleta. Puede aplicar el **Gráfico de beneficios** para determinar a cuántos de sus clientes debe dirigirse para maximizar el beneficio.  
   
- Si no tiene el modelo de ejemplo, puede crearlo mediante el [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md).  
+ Si no tiene el modelo de ejemplo, puede crearlo mediante el [tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md).  
   
 1.  Abra el generador de gráficos de precisión de minería de datos.  
   
@@ -59,12 +59,12 @@ ms.locfileid: "66083088"
   
      Este cuadro de diálogo ayuda a especificar los costos y los beneficios asociados con una campaña de envío de correo directo. Para el gráfico que se muestra en estos ejemplos, se usaron los valores siguientes:  
   
-    |Parámetro|Valor|Comentarios|  
+    |Configuración|Value|Comentarios|  
     |-------------|-----------|--------------|  
-    |**Población**|20,000|Establezca el valor de la población total de destino<br /><br /> La base de datos puede contener muchos clientes, pero para ahorrar gastos de envío elige dirigirse solo a los 20.000 clientes que es más probable que respondan. Para obtener esta lista, ejecute una consulta de predicción y ordénela por el resultado de probabilidad del modelo de predicción.|  
+    |**Llenado**|20.000|Establezca el valor de la población total de destino<br /><br /> La base de datos puede contener muchos clientes, pero para ahorrar gastos de envío elige dirigirse solo a los 20.000 clientes que es más probable que respondan. Para obtener esta lista, ejecute una consulta de predicción y ordénela por el resultado de probabilidad del modelo de predicción.|  
     |**Costo fijo**|500|Especifique el costo de preparar una vez una campaña de envío de correo directo para 20.000 personas. Esto puede incluir la impresión, o el costo de configurar una campaña de correo electrónico.|  
     |**Costo individual**|3|Especifique el costo por unidad de la campaña de envío de correo directo.<br /><br /> Este importe se multiplicará por un número igual o menor que 20.000, según cuántos clientes prediga el modelo que son buenos candidatos.|  
-    |**Ingresos por individuo**|400|Escriba un valor que representa la cantidad de beneficios o de ingresos que se pueden esperar de un resultado correcto. En este caso, supondremos da como resultado compra de accesorios o bicicletas por promedio de $400 de correo de un catálogo.<br /><br /> Esta cantidad se usará para proyectar la ganancia total asociada a los casos de probabilidad alta.|  
+    |**Ingresos por individuo**|400|Escriba un valor que representa la cantidad de beneficios o de ingresos que se pueden esperar de un resultado correcto. En este caso, supondremos que el envío de un catálogo da como resultado la compra de accesorios o bicicletas con un promedio de $400.<br /><br /> Esta cantidad se usará para proyectar la ganancia total asociada a los casos de probabilidad alta.|  
   
 7.  Después de haber definido los parámetros necesarios, haga clic en **Aceptar**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66083088"
   
  Como se puede ver aquí, se puede usar un gráfico de beneficios para comparar varios modelos, siempre y cuando todos ellos predigan el mismo atributo discreto.  
   
- ![comparación de tres modelos de gráfico de beneficios](../media/dm14-profitchartupdated.gif "comparar tres modelos de gráfico de beneficios")  
+ ![un gráfico de beneficios que compara tres modelos](../media/dm14-profitchartupdated.gif "un gráfico de beneficios que compara tres modelos")  
   
  Observe la línea gris vertical del gráfico. A medida que hace clic y arrastra la línea, la información sobre herramientas muestra el porcentaje de la población de destino que se incluye en la curva en ese momento.  
   
@@ -91,13 +91,13 @@ ms.locfileid: "66083088"
   
 |Temas|Vínculos|  
 |------------|-----------|  
-|Incluye una visita guiada que explica cómo se crea un gráfico de mejora respecto al modelo predictivo para el modelo de distribución de correo directo.|[Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Probar la exactitud con gráficos de mejora respecto al modelo predictivo &#40;Tutorial básico de minería de datos&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|Explica los tipos de gráficos relacionados.|[Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Matriz de clasificación &#40;Analysis Services - Minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services - Minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Describe la validación cruzada en los modelos y estructuras de minería de datos.|[Validación cruzada &#40;Analysis Services - Minería de datos&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Describe los pasos necesarios para crear gráficos de mejora respecto al modelo predictivo y otros gráficos de precisión.|[Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Incluye una visita guiada que explica cómo se crea un gráfico de mejora respecto al modelo predictivo para el modelo de distribución de correo directo.|[Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Probar la precisión con gráficos de elevación &#40;tutorial básico de minería de datos&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Explica los tipos de gráficos relacionados.|[Gráfico de elevación &#40;Analysis Services:&#41;de minería de datos](lift-chart-analysis-services-data-mining.md)<br /><br /> [Matriz de clasificación &#40;Analysis Services:&#41;de minería de datos](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services de minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Describe la validación cruzada en los modelos y estructuras de minería de datos.|[Analysis Services de &#40;de validación cruzada&#41;de minería de datos](cross-validation-analysis-services-data-mining.md)|  
+|Describe los pasos necesarios para crear gráficos de mejora respecto al modelo predictivo y otros gráficos de precisión.|[Tareas y procedimientos de prueba y validación &#40;&#41;de minería de datos](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)   
- [Probar la exactitud con gráficos de mejora respecto al modelo predictivo &#40;Tutorial básico de minería de datos&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+## <a name="see-also"></a>Consulte también  
+ [Pruebas y validación &#40;&#41;de minería de datos](testing-and-validation-data-mining.md)   
+ [Probar la precisión con gráficos de elevación &#40;tutorial básico de minería de datos&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

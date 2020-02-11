@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificación de la directiva ELEMENTXSINIL | Microsoft Docs'
+title: 'Ejemplo: Especificar la directiva ELEMENTXSINI | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a23baa7791aea37c4c90077c21391001ddc538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704809"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>Ejemplo: Especificación de la directiva ELEMENTXSINIL
+# <a name="example-specifying-the-elementxsinil-directive"></a>Ejemplo: Especificar la directiva ELEMENTXSINIL
   Cuando se especifica la directiva ELEMENT para recuperar XML centrado en elementos, si la columna tiene algún valor NULL, el modo EXPLICIT no genera el elemento correspondiente. Opcionalmente, se puede especificar la directiva ELEMENTXSINIL para solicitar al elemento que se genera valores NULL donde el atributo `xsi:nil` esté establecido con el valor TRUE.  
   
  La consulta siguiente genera XML que incluye una dirección del empleado. Para las columnas `AddressLine2` y `City` , los nombres de columna especifican la directiva `ELEMENTXSINIL` . Así, se genera el elemento para los valores NULL en las columnas `AddressLine2` y `City` del conjunto de filas.  
@@ -77,7 +77,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Suplantación y credenciales para conexiones | Microsoft Docs
+title: Suplantación y credenciales para las conexiones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874018"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Suplantación y credenciales para conexiones
@@ -33,7 +33,7 @@ ms.locfileid: "62874018"
   
  En algunos casos, puede que desee suplantar al autor de las llamadas mediante la propiedad `SqlContext.WindowsIdentity` en lugar de ejecutarse como una cuenta de servicio. La instancia de `WindowsIdentity` representa la identidad del cliente que invocó el código de llamada y solo está disponible cuando el cliente usó la autenticación de Windows. Después de haber obtenido la instancia de `WindowsIdentity`, puede llamar a `Impersonate` para cambiar el token de seguridad del subproceso y, a continuación, abrir las conexiones de ADO.NET en nombre del cliente.  
   
- Después de llamar a SQLContext.WindowsIdentity.Impersonate, no se puede obtener acceso a datos locales y no se puede obtener acceso a los datos del sistema. Para obtener acceso a datos de nuevo, se debe llamar a WindowsImpersonationContext.Undo.  
+ Después de llamar a SQLContext. WindowsIdentity. Impersonate, no puede tener acceso a los datos locales y no puede tener acceso a los datos del sistema. Para acceder a los datos de nuevo, debe llamar a WindowsImpersonationContext. Undo.  
   
  En el ejemplo siguiente se muestra cómo suplantar al autor de las llamadas mediante la propiedad `SqlContext.WindowsIdentity`.  
   
@@ -71,11 +71,11 @@ catch
 ```  
   
 > [!NOTE]  
->  Para obtener información acerca de los cambios de comportamiento en la suplantación, vea [cambios recientes en las características del motor de base de datos de SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Para obtener información sobre los cambios de comportamiento en la suplantación, vea [cambios importantes en las características de motor de base de datos en SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
- Además, si obtuvo la instancia de identidad en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, no puede propagar esa instancia a otro equipo de forma predeterminada; la infraestructura de seguridad de Windows restringe esa acción de forma predeterminada. Sin embargo, hay un mecanismo denominado "delegación" que habilita la propagación de identidades de Windows a través de varios equipos de confianza. Puede aprender más acerca de la delegación en el artículo de TechNet "[Kerberos Protocol Transition and Constrained Delegation](https://go.microsoft.com/fwlink/?LinkId=50419)".  
+ Además, si obtuvo la instancia de identidad en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, no puede propagar esa instancia a otro equipo de forma predeterminada; la infraestructura de seguridad de Windows restringe esa acción de forma predeterminada. Sin embargo, hay un mecanismo denominado "delegación" que habilita la propagación de identidades de Windows a través de varios equipos de confianza. Puede obtener más información sobre la delegación en el artículo de TechNet "[transición del protocolo Kerberos y delegación restringida](https://go.microsoft.com/fwlink/?LinkId=50419)".  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto SqlContext](../../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
   
   

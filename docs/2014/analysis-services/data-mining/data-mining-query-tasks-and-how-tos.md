@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084948"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tareas y procedimientos de Consulta de minería de datos
@@ -33,7 +33,7 @@ ms.locfileid: "66084948"
   
 -   [Ver y guardar los resultados de una consulta de predicción](view-and-save-the-results-of-a-prediction-query.md)  
   
--   [Editar manualmente una consulta de predicción](manually-edit-a-prediction-query.md)  
+-   [Modificar manualmente una consulta de predicción](manually-edit-a-prediction-query.md)  
   
 -   [Aplicar funciones de predicción a un modelo](apply-prediction-functions-to-a-model.md)  
   
@@ -54,11 +54,11 @@ ms.locfileid: "66084948"
  [Crear una consulta de contenido en un modelo de minería de datos](create-a-content-query-on-a-mining-model.md)  
  Describe cómo crear consultas que devuelven información detallada que se almacena en el modelo de minería de datos usando los conjuntos de filas del esquema de minería de datos.  
   
- [Crear una consulta de minería de datos mediante XMLA](create-a-data-mining-query-by-using-xmla.md)  
+ [Crear una consulta de minería de datos utilizando XMLA](create-a-data-mining-query-by-using-xmla.md)  
  Describe cómo crear una consulta en el contenido del modelo de minería de datos usando las plantillas XMLA incluidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="see-also"></a>Vea también  
- [Referencia del lenguaje de expresiones y consultas &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Procedimientos almacenados de minería de datos &#40;Analysis Services - Minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+## <a name="see-also"></a>Consulte también  
+ [&#40;de referencia del lenguaje de expresiones y consultas Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [Procedimientos almacenados de minería de datos &#40;Analysis Services:&#41;de minería de datos](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

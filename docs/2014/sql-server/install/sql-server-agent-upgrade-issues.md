@@ -1,5 +1,5 @@
 ---
-title: Problemas de actualización de agente SQL Server | Microsoft Docs
+title: Problemas de actualización de Agente SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092008"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>Problemas de actualización del Agente SQL Server
@@ -41,8 +41,8 @@ ms.locfileid: "66092008"
   
 -   [La actualización cambiará la cuenta de proxy de usuario del Agente SQL Server a la cuenta temporal UpgradedProxyAccount](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)  
   
-## <a name="see-also"></a>Vea también  
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)   
+## <a name="see-also"></a>Consulte también  
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)   
  [Resolver problemas de la actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS), proyectos | Microsoft Docs
+title: Proyectos de Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26ab429a5f2abeda9a811e85dc5113121380e999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892526"
 ---
 # <a name="integration-services-ssis-projects"></a>Proyectos de Integration Services (SSIS)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para el desarrollo de paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]proporciona [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para el desarrollo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] paquetes.  
   
- Cuando implemente paquetes en una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o en el Almacén de paquetes de [!INCLUDE[ssIS](../includes/ssis-md.md)] , utilice el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administrar los paquetes. El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] solo está disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para más información sobre el servicio, vea [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md). Para obtener más información acerca de la implementación de paquetes, consulte [la implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+ Cuando implemente paquetes en una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos [!INCLUDE[ssIS](../includes/ssis-md.md)] de o en el almacén de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] paquetes de, utilice el servicio para administrar los paquetes. El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] solo está disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para más información sobre el servicio, vea [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md). Para obtener más información sobre la implementación de paquetes, vea [implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Al implementar proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], utilice los procedimientos almacenados y las vistas de Transact-SQL de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para administrarlos. Para obtener más información acerca de la implementación de proyectos, vea [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md). Para más información sobre el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vea [Integration Services &#40;SSIS&#41; Server (Servidor de Integration Services &#40;SSIS&#41;)](catalog/integration-services-ssis-server-and-catalog.md).  
   
@@ -42,13 +42,13 @@ ms.locfileid: "62892526"
 ### <a name="folders-in-integration-services-projects"></a>Carpetas en proyectos de Integration Services  
  El diagrama siguiente muestra las carpetas en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- ![Carpetas en un proyecto de Integration Services](media/solutionexplorer.gif "Folders in an Integration Services project")  
+ ![Carpetas de un proyecto de Integration Services](media/solutionexplorer.gif "Carpetas de un proyecto de Integration Services")  
   
  La tabla siguiente describe las carpetas que aparecen en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 |Carpeta|Descripción|  
 |------------|-----------------|  
-|[!INCLUDE[ssIS](../includes/ssis-md.md)] .|Contiene paquetes. Para obtener más información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|  
+|[!INCLUDE[ssIS](../includes/ssis-md.md)]Paquetes|Contiene paquetes. Para obtener más información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|  
 |Varios|Contiene archivos que no son archivos de paquete.|  
   
 ### <a name="files-in-integration-services-projects"></a>Archivos en proyectos de Integration Services  

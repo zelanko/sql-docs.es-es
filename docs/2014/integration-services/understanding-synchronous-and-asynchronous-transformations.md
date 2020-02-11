@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d0ae065c411214a1b86aff29917a34cdcff0e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62878065"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Descripción de las transformaciones sincrónicas y asincrónicas
@@ -30,7 +30,7 @@ ms.locfileid: "62878065"
   
  Un ejemplo de transformación sincrónica es la transformación Conversión de datos. Para cada fila entrante, convierte el valor de la columna especificada y envía la fila a lo largo de su recorrido. Cada operación de conversión discreta es independiente del resto de las filas del conjunto de datos.  
   
- En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] scripting y programación, especifique una transformación sincrónica debe buscar el identificador de entrada de un componente y asignarlo a la `SynchronousInputID` propiedad de las salidas del componente. Esto indica al motor de flujo de datos que procese cada fila de entrada y se la envíe automáticamente a las salidas especificadas. Si desea que cada fila se dirija a cada una de las salidas, no es necesario que escriba código adicional para generar los datos. Si usa la propiedad `ExclusionGroup` para especificar que las filas solo se dirijan a uno u otro de los grupos de salidas, como en el caso de la transformación División condicional, debe llamar al método `DirectRow` para seleccionar el destino adecuado para cada fila. Cuando tenga una salida de error, deberá llamar a `DirectErrorRow` para enviar las filas con problemas a la salida de error en lugar de enviarlas a la salida predeterminada.  
+ En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] scripting y programación, para especificar una transformación sincrónica, debe buscar el identificador de la entrada de un componente y asignarlo a la `SynchronousInputID` propiedad de las salidas del componente. Esto indica al motor de flujo de datos que procese cada fila de entrada y se la envíe automáticamente a las salidas especificadas. Si desea que cada fila se dirija a cada una de las salidas, no es necesario que escriba código adicional para generar los datos. Si usa la propiedad `ExclusionGroup` para especificar que las filas solo se dirijan a uno u otro de los grupos de salidas, como en el caso de la transformación División condicional, debe llamar al método `DirectRow` para seleccionar el destino adecuado para cada fila. Cuando tenga una salida de error, deberá llamar a `DirectErrorRow` para enviar las filas con problemas a la salida de error en lugar de enviarlas a la salida predeterminada.  
   
 ## <a name="asynchronous-transformations"></a>Transformaciones asincrónicas  
  Es posible que decida que su diseño requiere una transformación asincrónica cuando no es posible procesar cada fila independientemente del resto de las filas. En otras palabras, no es posible pasar cada fila al flujo de datos en cuanto se procesa, sino que los datos deben generarse de forma asincrónica o en un momento distinto al de la entrada. Por ejemplo, los siguientes escenarios requieren una transformación asincrónica:  
@@ -48,9 +48,9 @@ ms.locfileid: "62878065"
   
  También sería posible crear una transformación asincrónica que emule una transformación sincrónica mediante la copia explícita de cada fila de entrada en la salida. Con este enfoque, podría cambiar el nombre de las columnas o convertir los tipos de datos o los formatos. No obstante, este enfoque disminuye el rendimiento. Puede obtener los mismos resultados con un mayor rendimiento utilizando componentes integrados de Integration Services, como Copiar columna o Conversión de datos.  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una transformación sincrónica con el componente de script](data-flow/transformations/script-component.md)   
  [Crear una transformación asincrónica con el componente de script](extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)   
  [Desarrollar un componente de transformación personalizado con salidas sincrónicas](extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900650"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Crear e implementar una memoria caché para la transformación Búsqueda
@@ -51,7 +51,7 @@ ms.locfileid: "62900650"
      El sistema crea el archivo al ejecutar el paquete.  
   
     > [!NOTE]  
-    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../../access-to-files-used-by-packages.md).  
+    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../access-to-files-used-by-packages.md).  
   
 6.  Haga clic en la pestaña **Columnas** e indique qué columnas son las columnas de índice mediante la opción **Posición de índice** .  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62900650"
   
 5.  Implemente el paquete en el sistema de archivos. Para más información, consulte [Deploy Packages by Using the Deployment Utility](../../deploy-packages-by-using-the-deployment-utility.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una utilidad de implementación](../../create-a-deployment-utility.md)  
   
   

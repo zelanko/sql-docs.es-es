@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccdf0285dc110cde89e08778f6badf56f586a5ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085151"
 ---
 # <a name="cross-validation-formulas"></a>Fórmulas de validación cruzada
@@ -35,17 +35,17 @@ ms.locfileid: "66085151"
 |**Verdadero negativo**|Atributo discreto, se especifica el valor.|Recuento de casos que cumplen estas condiciones:<br /><br /> El caso no contiene el valor de destino.<br /><br /> El modelo predijo que el caso no contendría el valor de destino.|  
 |**Falso positivo**|Atributo discreto, se especifica el valor.|Recuento de casos que cumplen estas condiciones:<br /><br /> El valor real es igual al valor de destino.<br /><br /> El modelo predijo que ese caso contendría el valor de destino.|  
 |**Falso negativo**|Atributo discreto, se especifica el valor.|Recuento de casos que cumplen estas condiciones:<br /><br /> El valor real no es igual al valor de destino.<br /><br /> El modelo predijo que el caso no contendría el valor de destino.|  
-|**Sin errores/error**|Atributo discreto, sin destino especificado|Recuento de casos que cumplen estas condiciones:<br /><br /> Sin errores en caso de que el estado predicho con la máxima probabilidad es igual al estado de entrada y la probabilidad es mayor que el valor de **Umbral de estado**.<br /><br /> De lo contrario, se producirá un error.|  
+|**Pass/Fail**|Atributo discreto, sin destino especificado|Recuento de casos que cumplen estas condiciones:<br /><br /> Sin errores en caso de que el estado predicho con la máxima probabilidad es igual al estado de entrada y la probabilidad es mayor que el valor de **Umbral de estado**.<br /><br /> De lo contrario, se producirá un error.|  
 |**Mejora respecto al modelo predictivo**|Atributo discreto. Se puede especificar el valor de destino pero no es necesario.|La probabilidad de logaritmo medio para todas las filas con valores para el atributo de destino, donde la probabilidad de logaritmo para cada caso se calcula como Log(ActualProbability/MarginalProbability). Para calcular la media, la suma de los valores de probabilidad logarítmica se divide entre el número de filas del conjunto de datos de entrada, excluidas las filas sin valores para el atributo de destino.<br /><br /> La mejora respecto al modelo predictivo puede ser un valor positivo o negativo. Un valor positivo indica que estamos ante un modelo eficaz que supera la estimación aleatoria.|  
-|**Logaritmo**|Atributo discreto. Se puede especificar el valor de destino pero no es necesario.|Logaritmo de la probabilidad real de cada caso, sumada y después dividida entre el número de filas del conjunto de datos de entrada, excluidas las filas sin valores para el atributo de destino.<br /><br /> Como la probabilidad se representa como una fracción decimal, las puntuaciones del registro son siempre números negativos. Una puntuación más cercana a 0 es una puntuación mejor.|  
+|**Puntuación de registro**|Atributo discreto. Se puede especificar el valor de destino pero no es necesario.|Logaritmo de la probabilidad real de cada caso, sumada y después dividida entre el número de filas del conjunto de datos de entrada, excluidas las filas sin valores para el atributo de destino.<br /><br /> Como la probabilidad se representa como una fracción decimal, las puntuaciones del registro son siempre números negativos. Una puntuación más cercana a 0 es una puntuación mejor.|  
 |**Probabilidad de casos**|Clúster|Suma de las puntuaciones de probabilidad de clúster para todos los casos, dividida entre el número de casos de la partición, excluidas las filas sin valores para el atributo de destino.|  
-|**Desviación media**|Atributo continuo|Suma del error absoluto para todos los casos de la partición, dividida entre el número de casos de la partición.|  
-|**Error cuadrático medio**|Atributo continuo|Raíz cuadrada del error cuadrático medio para la partición.|  
-|**Error cuadrático medio**|Atributo discreto. Se puede especificar el valor de destino pero no es necesario.|Raíz cuadrada de la media de los cuadrados del complemento de la puntuación de probabilidad, dividida entre el número de casos de la partición, excluidas las filas sin valores para el atributo de destino.|  
-|**Error cuadrático medio**|Atributo discreto, sin destino especificado.|Raíz cuadrada de la media de los cuadrados del complemento de la puntuación de probabilidad, dividida entre el número de casos de la partición, excluidos los casos sin valores para el atributo de destino.|  
+|**Error medio absoluto**|Atributo continuo|Suma del error absoluto para todos los casos de la partición, dividida entre el número de casos de la partición.|  
+|**Error medio cuadrado raíz**|Atributo continuo|Raíz cuadrada del error cuadrático medio para la partición.|  
+|**Error medio cuadrado de raíz**|Atributo discreto. Se puede especificar el valor de destino pero no es necesario.|Raíz cuadrada de la media de los cuadrados del complemento de la puntuación de probabilidad, dividida entre el número de casos de la partición, excluidas las filas sin valores para el atributo de destino.|  
+|**Error medio cuadrado de raíz**|Atributo discreto, sin destino especificado.|Raíz cuadrada de la media de los cuadrados del complemento de la puntuación de probabilidad, dividida entre el número de casos de la partición, excluidos los casos sin valores para el atributo de destino.|  
   
-## <a name="see-also"></a>Vea también  
- [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)   
- [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](cross-validation-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Pruebas y validación &#40;&#41;de minería de datos](testing-and-validation-data-mining.md)   
+ [Analysis Services de &#40;de validación cruzada&#41;de minería de datos](cross-validation-analysis-services-data-mining.md)  
   
   

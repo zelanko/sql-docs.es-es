@@ -1,5 +1,5 @@
 ---
-title: Usar Try... Catch en procedimientos almacenados compilados de forma nativa | Microsoft Docs
+title: Usar try.. Catch en procedimientos almacenados compilados de forma nativa | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa7115be43361e25f5ad2b082a92929298ce8bef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842483"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>Utilizar Try..Catch en procedimientos almacenados compilados de forma nativa
@@ -60,7 +60,7 @@ exec test_try_catch
 go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados compilados de forma nativa](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

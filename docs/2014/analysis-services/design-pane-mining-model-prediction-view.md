@@ -1,5 +1,5 @@
 ---
-title: (Vista predicción de modelo de minería de datos) del panel de diseño | Microsoft Docs
+title: Panel de diseño (vista predicción de modelo de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081849"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Diseño (panel de la vista Predicción de modelo de minería de datos)
@@ -29,19 +29,19 @@ ms.locfileid: "66081849"
 > [!NOTE]  
 >  Si hace algún cambio manualmente en la consulta, los cambios se perderán al volver a la vista Diseño. Si desea guardar la consulta DMX, puede copiar la consulta en el Portapapeles de Windows y, a continuación, pegarlo en un archivo de texto.  
   
- **Para obtener más información:** [Consultas de minería de datos](data-mining/data-mining-queries.md)  
+ **Para obtener más información: consultas de minería de** [datos](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Opciones  
  **Cambiar a vista de resultado de consulta**  
  Haga clic para cambiar entre los paneles **Diseño**, **Consulta**y **Resultado** . Al cambiar al panel **Resultado** se ejecuta la consulta.  
   
- **Guardar el resultado de consulta**  
+ **Guardar el resultado de la consulta**  
  Abre el cuadro de diálogo **Guardar resultado de consulta de minería de datos** .  
   
  **Consulta singleton**  
  Habilita la creación de una consulta singleton, en la que puede proporcionar valores directamente para la consulta en lugar de proporcionar una tabla como el origen de los datos conocidos. La tabla **Seleccionar tabla(s) de entrada** se reemplaza por una tabla **Entrada de consulta singleton** .  
   
- **Actualizar los resultados de la consulta**  
+ **Actualizar el resultado de la consulta**  
  Vuelve a procesar la consulta de predicción. Esto solo está habilitado en el panel **Resultado** .  
   
  **Modelo de minería de datos**  
@@ -50,7 +50,7 @@ ms.locfileid: "66081849"
  **Seleccionar modelo**  
  Abre el cuadro de diálogo **Seleccionar modelo de minería de datos** .  
   
- **Seleccione las tablas de entrada**  
+ **Seleccionar tabla(s) de entrada**  
  Muestra las tablas de entrada seleccionadas que contienen datos conocidos en los que se basarán las predicciones.  
   
  **Eliminar tabla**  
@@ -68,12 +68,12 @@ ms.locfileid: "66081849"
  **Entrada de consulta singleton**  
  Se habilita cuando selecciona el botón **Consulta singleton** . Contiene las columnas siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Columna del modelo de minería de datos**|Muestra las columnas del modelo de minería de datos contenidas en el modelo de minería de datos seleccionado en la tabla **Modelo de minería de datos** .|  
 |**Valor**|Seleccione un valor de la lista que contiene cada estado posible de la columna del modelo de minería de datos que se ha seleccionado.<br /><br /> Si la columna es una columna de tabla anidada, haga clic en la celda de valor para abrir el cuadro de diálogo **Entrada de tabla anidada** .|  
   
- **Source**  
+ **Origen**  
  Seleccione el origen que contiene el campo que utilizará para la columna. Puede usar el modelo de minería de datos seleccionado en la tabla **Modelo de minería de datos** , la tabla o las tablas seleccionadas en la tabla **Seleccionar tabla(s) de entrada** , una función de predicción o una expresión personalizada.  
   
  Se puede arrastrar las columnas de las tablas que contienen el modelo de minería de datos y las tablas de entrada a la celda.  
@@ -84,15 +84,15 @@ ms.locfileid: "66081849"
  **Grupo**  
  Use esta opción con la columna **Y/O** para agrupar expresiones. Por ejemplo, `(expr1 Or expr2) And expr3`.  
   
- **Y/O**  
+ **Y/o**  
  Utilice esta opción para crear una consulta lógica. Por ejemplo, `(expr1 Or expr2) And expr3`.  
   
  **Criterios o argumento**  
  Especifique una condición o una expresión de usuario que se aplica a la columna. Se puede arrastrar las columnas de las tablas que contienen el modelo de minería de datos y las tablas de entrada a la celda.  
   
-## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](/sql/dmx/data-mining-extensions-dmx-statements)   
- [Interfaces de consultas de minería de datos](data-mining/data-mining-query-tools.md)   
- [Generador de consultas de predicción &#40;minería de datos&#41;](prediction-query-builder-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)   
+ [Interfaces de consulta de minería de datos](data-mining/data-mining-query-tools.md)   
+ [Predicción Generador de consultas &#40;de minería de datos&#41;](prediction-query-builder-data-mining.md)  
   
   

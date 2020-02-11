@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e500eb47af39502e1bcf59f60b3dd24fed0713fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872132"
 ---
 # <a name="database-mail-log-and-audits"></a>Registro y auditorías del Correo electrónico de base de datos
@@ -40,7 +40,7 @@ ms.locfileid: "62872132"
 |Limpiar los mensajes, los datos adjuntos, y las entradas de registro del Correo electrónico de base de datos|[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql)<br /><br /> [sysmail_delete_log_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql)|  
 |Almacenar los mensajes de correo electrónico y los registros de la base de datos|[Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos](create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

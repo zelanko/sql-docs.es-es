@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a73f2469c38d611b95e3446e80755687f40346e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869713"
 ---
-# <a name="mssqlserver17128"></a>MSSQLSERVER_17128
+# <a name="mssqlserver_17128"></a>MSSQLSERVER_17128
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|17128|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|17128|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|INIT_NOBUFSPACE|  
-|Texto del mensaje|initdata: No hay memoria para los búferes del kernel.|  
+|Texto del mensaje|initdata: memoria insuficiente para los búferes del kernel.|  
   
 ## <a name="explanation"></a>Explicación  
  Se ha producido un error en las reservas o las asignaciones de memoria iniciales del grupo de búferes, y SQL Server se cierra.  

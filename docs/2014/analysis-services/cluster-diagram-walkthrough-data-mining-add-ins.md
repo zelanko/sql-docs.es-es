@@ -1,5 +1,5 @@
 ---
-title: Tutorial del diagrama (complementos de minería de datos) del clúster | Microsoft Docs
+title: Tutorial del diagrama del clúster (complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,45 +17,45 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087910"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Tutorial del diagrama del clúster (Complementos de minería de datos)
-  Después de haber creado un modelo de agrupación en clústeres, puede importarlo en Visio con el **clúster** dar forma y, a continuación, seguir personalizando y mejorando el diseño. El **formas de minería de datos para Visio** incluyen los siguientes controles personalizados para trabajar con diagramas de minería de datos:  
+  Después de crear un modelo de agrupación en clústeres, puede importarlo en Visio con la forma **agrupar** y, a continuación, seguir personalizando y mejorando el diseño. Las **formas de minería de datos para Visio** incluyen los siguientes controles personalizados para trabajar con diagramas de minería de datos:  
   
 -   Representar los controles del diagrama de clúster  
   
-     Estas opciones forman parte de la **Asistente para clúster** que se inicia cuando se coloca una forma en el área de trabajo de Visio.  
+     Estas opciones forman parte del **Asistente para clúster** que se inicia cuando se coloca una forma en el área de trabajo de Visio.  
   
--   **Diseño de minería de datos** barra de herramientas  
+-   Barra de herramientas de **diseño de minería de datos**  
   
      Estas opciones se agregan al área de trabajo de Visio con el fin de ayudarle a interactuar con la forma de minería de datos. Las opciones son diferentes en función del tipo de datos del modelo de minería de datos que esté usando.  
   
 ## <a name="build-a-cluster-diagram"></a>Generar un diagrama de clúster  
  Este tutorial muestra cómo crear y personalizar un diagrama de agrupación de clúster en Visio.  
   
- Para poder continuar, deberá tener ya disponible un modelo de agrupación en clústeres. Si no tiene un modelo, use el [Asistente para clúster &#40;complementos minería de datos para Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) asistente y crear un modelo usando el conjunto de datos de entrenamiento en el libro de ejemplo, con todos los valores predeterminados.  
+ Para poder continuar, deberá tener ya disponible un modelo de agrupación en clústeres. Si no tiene un modelo, use el asistente [para clúster &#40;complementos de minería de datos para el Asistente para&#41;de Excel](cluster-wizard-data-mining-add-ins-for-excel.md) y cree un modelo mediante el conjunto de datos de entrenamiento del libro de ejemplo, con todos los valores predeterminados.  
   
-#### <a name="use-the-cluster-visio-shape-wizard"></a>Utilice al Asistente para formas de Visio de clúster  
+#### <a name="use-the-cluster-visio-shape-wizard"></a>Usar el Asistente para crear formas clúster de Visio  
   
-1.  Si no ve **formas de minería de datos de Microsoft** en el **formas** lista, haga clic en **más formas**, seleccione **Abrir galería de símbolos**y abra el plantilla de la ubicación de instalación predeterminada.  
+1.  Si no ve formas de **minería de datos de Microsoft** en la lista **formas** , haga clic en **más formas**, seleccione **Abrir Galería de símbolos**y abra la plantilla desde la ubicación de instalación predeterminada.  
   
-     \<unidad >: \Program files\Microsoft SQL Server 2012 DM Add-Ins  
+     \<> de unidad: \Archivos de Programa\microsoft SQL Server 2012 DM-ins  
   
-2.  Arrastre el **clúster** forma en la página.  
+2.  Arrastre la forma **clúster** hasta la página.  
   
-3.  En la página principal de la **Asistente para crear formas de clúster de Visio**, haga clic en **siguiente**.  
+3.  En la página de bienvenida del **Asistente para crear formas clúster de Visio**, haga clic en **siguiente**.  
   
-4.  En el **seleccionar un origen de datos** página de la **Asistente para clúster**, elegir una conexión a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servidor que contiene los modelos de minería de datos que desea visualizar.  
+4.  En la página **seleccionar un origen de datos** del **Asistente para clúster**, elija una conexión a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] un servidor que contenga los modelos de minería de datos que desea visualizar.  
   
 5.  Seleccione un modelo de minería de datos adecuado y haga clic en **siguiente**.  
   
-     Para asegurarse de elegir un modelo de agrupación en clústeres, revise la descripción en el **propiedades** panel.  
+     Para asegurarse de que elige un modelo de agrupación en clústeres, revise la descripción en el panel **propiedades** .  
   
-6.  Si la conexión es correcta, en la página, **opciones de diagrama del clúster**, decidir qué tipo de diagrama del clúster debe incluir en la presentación de Visio:  
+6.  Si la conexión se realiza correctamente, en la página **Opciones del diagrama del clúster**, decida qué tipo de diagrama de clúster desea incluir en la presentación de Visio:  
   
      **Mostrar sólo formas de clúster**  
      Esta opción crea un diagrama del clúster sencillo, donde cada clúster queda representado por un rectángulo u otra forma que elija  
@@ -63,30 +63,30 @@ ms.locfileid: "66087910"
      **Mostrar clústeres con gráfico de características**  
      Esta opción crea el mismo gráfico que anteriormente, pero dentro de las formas habrá histogramas que describen las características del clúster.  
   
-     ![Ejemplo de gráfico de características de clúster en Visio](media/dm13-visio-cluster-samplecharshape.gif "ejemplo de gráfico de características de clúster en Visio")  
+     ![Ejemplo de gráfico de características de clúster en Visio](media/dm13-visio-cluster-samplecharshape.gif "Ejemplo de gráfico de características de clúster en Visio")  
   
      **Mostrar clústeres con gráfico de distinción**  
      Esta opción crea el mismo gráfico que el diagrama del clúster, pero enumera las características del clúster actual que lo diferencian con mayor claridad de otros clústeres.  
   
-     Puede cambiar a otro tipo de gráfico después de que el asistente haya generado el diagrama; para ello, haga clic con el botón secundario y seleccione un tipo de gráfico nuevo. Por ahora, elija la opción **Mostrar clústeres con gráfico de características**.  
+     Puede cambiar a otro tipo de gráfico después de que el asistente haya generado el diagrama; para ello, haga clic con el botón secundario y seleccione un tipo de gráfico nuevo. Por ahora, elija la opción **Mostrar clústeres con el gráfico de características**.  
   
 7.  Deje la opción **número de filas en el gráfico**, como 5.  
   
      Esta opción no cambia el número de clústeres del modelo; simplemente limita el número de atributos que se pueden mostrar como características de cada clúster.  
   
-     Sin embargo, la opción actúa como un filtro en los datos del gráfico, por lo que no puede aumentar el número de elementos más adelante.  
+     Sin embargo, la opción actúa como filtro en los datos del gráfico, por lo que no puede aumentar el número de elementos más adelante.  
   
 8.  Haga clic en **Avanzadas**.  
   
-     El **opciones de clúster** cuadro de diálogo es donde personaliza la apariencia visual de las formas utilizadas en el diagrama. Puede cambiar los colores que se usan en el gráfico, así como las formas de los clústeres.  
+     El cuadro de diálogo **Opciones de clúster** es donde se personaliza la apariencia visual de las formas utilizadas en el diagrama. Puede cambiar los colores que se usan en el gráfico, así como las formas de los clústeres.  
   
-     El **Variable de sombreado** control no funciona en Office 2013.  
+     El control de **variable de sombreado** no funciona en Office 2013.  
   
-     ![Haga clic en Avanzadas para seleccionar colores de forma](media/dm13-visio-clusteroptions-advanced.gif "haga clic en Avanzadas para seleccionar los colores de las formas")  
+     ![hacer clic en Avanzadas para seleccionar colores de forma](media/dm13-visio-clusteroptions-advanced.gif "hacer clic en Avanzadas para seleccionar colores de forma")  
   
-     **Sugerencia:** Algunos colores se pueden modificar posteriormente mediante el uso de los temas de Visio y la forma que los controles de edición. Sin embargo, los temas de Visio también invalidarán algunas de estas selecciones de color, por lo que se recomienda comenzar con los colores predeterminados e ir aplicando cambios paulatinamente.  
+     **Sugerencia:** Algunos colores se pueden modificar posteriormente mediante los temas de Visio y los controles de edición de formas. Sin embargo, los temas de Visio también invalidarán algunas de estas selecciones de color, por lo que se recomienda comenzar con los colores predeterminados e ir aplicando cambios paulatinamente.  
   
-9. Haga clic en **finalizar** para crear el gráfico.  
+9. Haga clic en **Finalizar** para crear el gráfico.  
   
      El asistente recupera información del modelo de minería de datos, crea las formas y rellena cada clúster con atributos y valores.  
   
@@ -95,41 +95,41 @@ ms.locfileid: "66087910"
 ## <a name="explore-and-modify-the-finished-diagram"></a>Explorar y modificar el diagrama finalizado  
  Una vez haya completado el diagrama, puede seguir personalizando la apariencia mediante los controles de Visio, tal como se muestra en el siguiente ejemplo.  
   
- ![diagrama de clúster personalizado con Visio](media/dm13-visio-clustercomplete1.gif "diagrama de clúster personalizado con Visio")  
+ ![Diagrama de clúster personalizado con Visio](media/dm13-visio-clustercomplete1.gif "Diagrama de clúster personalizado con Visio")  
   
  El asistente genera todas las formas básicas de clústeres; use las herramientas siguientes para actualizar y personalizar el diagrama:  
   
-1.  Arrastre el control deslizante el **opciones de clúster** control, para filtrar las relaciones más débiles y simplificar el diagrama.  
+1.  Arrastre el control deslizante del control **Opciones de clúster** para filtrar las relaciones más débiles y simplificar el diagrama.  
   
-2.  Utilice el Visio **rediseñar página** opción para experimentar con diseños de clúster diferente.  
+2.  Use la opción **de página rediseño** de Visio para experimentar con distintos diseños de clúster.  
   
-3.  Use la **conectores** opción el **diseño** tab para cambiar el estilo de conector para evitar que las líneas pasen por los clústeres.  
+3.  Use la opción **conectores** en la pestaña **diseño** para cambiar el estilo del conector y evitar que las líneas crucen los clústeres.  
   
-4.  Haga clic en el **Add-Ins** la cinta de opciones y, a continuación, mostrar una de las barras de herramientas personalizados utilizados para trabajar con diagramas de minería de datos:  
+4.  Haga clic en la cinta de opciones de **Complementos** y, a continuación, muestre una de las barras de herramientas personalizadas que se usan para trabajar con diagramas de minería de datos:  
   
      **Diseño**  
      Optimiza la organización de los clústeres para que se ajusten en la página actual.  
   
-     **Cambiar el tamaño de página**  
+     **Cambiar tamaño de página**  
      Este control se ha diseñado para la versiones anteriores de HTML. En su lugar, use la página de Visio para cambiar el tamaño de los controles.  
   
      **Descripción**  
      Si selecciona un clúster, haga clic en esta opción para mostrar los detalles sobre el clúster.  
   
-     ![Haga clic para obtener detalles sobre el clúster](media/dm13-visio-cluster-description-control.gif "haga clic para obtener detalles acerca del clúster")  
+     ![hacer clic en Descripción para obtener detalles acerca del clúster](media/dm13-visio-cluster-description-control.gif "hacer clic en Descripción para obtener detalles acerca del clúster")  
   
      **Intensidad del borde**  
      Muestra las puntuaciones de confianza en las líneas que conectan los clústeres.  
   
      Sin embargo, si aplica algún formato especial distinto del predeterminado que genera el asistente, lo cual incluye algunos fondos, es posible que estos números no estén visibles.  
   
-     **Slider**  
+     **Hasta**  
      Filtra las líneas entre los clústeres. Si se sube el control deslizante, se quitan todas las asociaciones salvo las más importantes.  
   
-     **Shading**  
+     **Sombreado**  
      Este control no funciona en Office 2013.  
   
-5.  Use la **panorámica y Zoom** controlar, en el **panel de tareas** área de la Visio **vista** cinta de opciones para centrarse en un conjunto de clústeres y desplazarse por el diagrama.  
+5.  Use el control **panorámica y zoom** , en el área del **Panel de tareas** de la cinta de opciones **vista** de Visio, para centrarse en un conjunto de clústeres y desplazarse por el diagrama.  
   
 6.  Haga clic con el botón secundario en cualquier clúster para ver las opciones específicas de la forma del clúster:  
   
@@ -139,7 +139,7 @@ ms.locfileid: "66087910"
   
     -   Agregue un gráfico de distinción.  
   
-## <a name="see-also"></a>Vea también  
- [Solución de problemas de diagramas de minería de datos de Visio &#40;complementos de minería de datos de SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
+## <a name="see-also"></a>Consulte también  
+ [Solucionar problemas de diagramas de minería de datos de Visio &#40;SQL Server complementos de minería de datos&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

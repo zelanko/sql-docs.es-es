@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078983"
 ---
 # <a name="browsing-the-cube"></a>Examinar el cubo
@@ -30,7 +30,7 @@ ms.locfileid: "66078983"
   
 1.  Cambie al **Diseñador de dimensiones** para la dimensión Product en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para ello, haga doble clic en la dimensión **Product** del nodo **Dimensiones** del Explorador de soluciones.  
   
-2.  Haga clic en el **explorador** ficha para mostrar el **todas** miembro de la `Product Key` jerarquía de atributo. En la lección tres, definirá una jerarquía de usuario para la dimensión Product que le permitirá examinar la dimensión.  
+2.  Haga clic en la pestaña **Explorador** para mostrar el miembro **All** de la `Product Key` jerarquía de atributo. En la lección tres, definirá una jerarquía de usuario para la dimensión Product que le permitirá examinar la dimensión.  
   
 3.  Cambie a **Diseñador de cubos** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para ello, haga doble clic en el cubo **Tutorial de Analysis Services** en el nodo **Cubos** del Explorador de soluciones.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66078983"
 ## <a name="next-lesson"></a>Lección siguiente  
  [Lección 3: Modificar medidas, atributos y jerarquías](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>Vea también  
- [Editor de consultas MDX &#40;Analysis Services: datos multidimensionales&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Editor de consultas MDX &#40;Analysis Services-datos multidimensionales&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

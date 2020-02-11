@@ -1,5 +1,5 @@
 ---
-title: Multidimensional de modelado (Tutorial de Adventure Works) | Microsoft Docs
+title: Modelado multidimensional (tutorial de Adventure Works) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077580"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Creación de modelos multidimensionales (tutorial de Adventure Works)
@@ -36,7 +36,7 @@ ms.locfileid: "66077580"
   
  Este tutorial va acompañado de una descripción del escenario para poder entender mejor el contexto de estas lecciones. Para obtener más información, consulte [Escenario de Tutorial de Analysis Services](analysis-services-tutorial-scenario.md).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Necesitará datos de ejemplo, archivos del proyecto de ejemplo y software para completar todas las lecciones de este tutorial. Para obtener instrucciones sobre cómo encontrar e instalar los requisitos previos para este tutorial, consulte [Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services](install-sample-data-and-projects.md).  
   
  Además, los permisos siguientes deben existir para realizar correctamente este tutorial:  
@@ -48,23 +48,23 @@ ms.locfileid: "66077580"
 ## <a name="lessons"></a>Lecciones  
  Este tutorial incluye las siguientes lecciones.  
   
-|Lección|Tiempo estimado para completar la lección|  
+|Lección|Tiempo estimado para completarla|  
 |------------|--------------------------------|  
-|[Lección 1: Definir una vista del origen de datos dentro de un análisis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutos|  
-|[Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minutos|  
+|[Lección 1: definir una vista del origen de datos en un proyecto de Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutos|  
+|[Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minutos|  
 |[Lección 3: Modificar medidas, atributos y jerarquías](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutos|  
-|[Lección 4: Definir propiedades de dimensión y atributos avanzados](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutos|  
-|[Lección 5: Definir relaciones entre dimensiones y grupos de medida](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutos|  
+|[Lección 4: Definir propiedades de dimensiones y de atributos avanzados](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutos|  
+|[Lección 5: definir relaciones entre dimensiones y grupos de medida](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutos|  
 |[Lección 6: Definir cálculos](lesson-6-defining-calculations.md)|45 minutos|  
-|[Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minutos|  
-|[Lección 8: Definir acciones](lesson-8-defining-actions.md)|30 minutos|  
+|[Lección 7: definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minutos|  
+|[Lección 8: definir acciones](lesson-8-defining-actions.md)|30 minutos|  
 |[Lección 9: Definir perspectivas y traducciones](lesson-9-defining-perspectives-and-translations.md)|30 minutos|  
-|[Lección 10: Definir Roles administrativos](lesson-10-defining-administrative-roles.md)|15 minutos|  
+|[Lección 10: definir roles administrativos](lesson-10-defining-administrative-roles.md)|15 minutos|  
   
 > [!NOTE]  
 >  La base de datos del cubo que creará en este tutorial es una versión simplificada del proyecto de modelo multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que forma parte de las bases de datos de ejemplo Adventure Works que se pueden descargar en el sitio de codeplex. La versión del tutorial de la base de datos multidimensional de Adventure Works se ha simplificado para centrarse en los conocimientos específicos que le interesará dominar inmediatamente. Después de completar el tutorial, considere la posibilidad de explorar el proyecto de modelo multidimensional por su cuenta para entender mejor el modelado multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="next-step"></a>Paso siguiente  
- Para comenzar el tutorial, vaya a la primera lección: [Lección 1: Definir una vista del origen de datos dentro de un análisis Services proyecto](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
+## <a name="next-step"></a>siguiente paso  
+ Para comenzar el tutorial, vaya a la primera lección: [Lección 1: Definir una vista del origen de datos en un proyecto de Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   

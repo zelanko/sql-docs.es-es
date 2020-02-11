@@ -1,5 +1,5 @@
 ---
-title: Tareas del Visor de modelos y procedimientos de minería de datos | Microsoft Docs
+title: Tareas y procedimientos del visor de modelos de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083479"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tareas y procedimientos del Visor de modelos de minería de datos
@@ -41,12 +41,12 @@ ms.locfileid: "66083479"
   
 -   [Obtener detalles de datos de caso a partir de un modelo de minería de datos](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Ver la fórmula de un modelo de serie temporal &#40;Minería de datos&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Ver la fórmula de un modelo de serie temporal &#40;minería de datos&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [Cambiar los colores usados en los visores de minería de datos](change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md)   
- [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

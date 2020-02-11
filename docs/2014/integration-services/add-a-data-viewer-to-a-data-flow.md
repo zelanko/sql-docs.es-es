@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062093"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>agregar un visor de datos a un flujo de datos
@@ -51,9 +51,9 @@ ms.locfileid: "66062093"
     > [!NOTE]  
     >  En la cuadrícula, los valores que representan los tipos de datos DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 y DT_DBTIMESTAMPOFFSET aparecen como cadenas con formato ISO 8601 y un espacio separador reemplaza el separador `T`. Los valores que representan los tipos de datos DT_DATE y DT_FILETIME incluyen siete dígitos para las fracciones de segundo. Dado que el tipo de datos DT_FILETIME almacena solamente tres dígitos de fracciones de segundo, la cuadrícula muestra ceros para los cuatro dígitos restantes. Los valores que representan el tipo de datos DT_DBTIMESTAMP incluyen tres dígitos para las fracciones de segundo. Para los valores que representan los tipos de datos DT_DBTIME2, DT_DBTIMESTAMP2 y DT_DBTIMESTAMPOFFSET, el número de dígitos de las fracciones de segundo corresponde a la escala especificada para el tipo de datos de la columna. Para obtener más información acerca de los formatos ISO 8601, vea [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md). Para obtener más información acerca de los tipos de datos, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Transformaciones de Integration Services](data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](data-flow/integration-services-paths.md)   
  [Flujo de datos](data-flow/data-flow.md)   

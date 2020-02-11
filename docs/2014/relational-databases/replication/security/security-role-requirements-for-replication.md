@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676898"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
@@ -49,8 +49,8 @@ ms.locfileid: "62676898"
 |Mantener agentes de replicación.|Rol de base de datos**db_owner** en la base de datos correspondiente o rol de servidor **sysadmin** en el servidor apropiado.<br /><br /> Si un usuario creó el agente en el rol **sysadmin** y no especificó una cuenta de proxy para el agente, éste se ejecutará en el contexto de la cuenta del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . En este caso, un usuario con el rol **db_owner** no podrá modificar el trabajo asociado con el agente.|  
 |Iniciar o detener un agente de replicación.|Propietario del trabajo de agente o rol de servidor **sysadmin** en el servidor apropiado.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Seguridad de replicación de SQL Server](view-and-modify-replication-security-settings.md)  
+ [Seguridad de Replicación de SQL Server](view-and-modify-replication-security-settings.md)  
   
   

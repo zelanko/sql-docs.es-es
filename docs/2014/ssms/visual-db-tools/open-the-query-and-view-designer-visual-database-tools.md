@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1b729c5652258deb0780ec129592e1a0f14217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195051"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>Abrir el Diseñador de consultas y vistas (Visual Database Tools)
@@ -51,8 +51,8 @@ ms.locfileid: "63195051"
   
 3.  Resalte las instrucciones de la consulta, haga clic con el botón derecho en el área resaltada y, a continuación, haga clic en **Diseñar consulta en el editor**.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Herramientas Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  
   
   

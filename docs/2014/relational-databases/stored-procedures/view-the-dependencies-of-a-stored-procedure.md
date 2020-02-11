@@ -15,19 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856500"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Ver las dependencias de un procedimiento almacenado
     
-##  <a name="Top"></a> En este tema se describe cómo ver las dependencias de procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  
+  <a name="Top"></a> En este tema se describe cómo ver las dependencias de procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Antes de empezar:**  [Seguridad](#Security)  
+-   **Antes de empezar:**  [seguridad](#Security)  
   
--   **Para ver las dependencias de un procedimiento, utilizando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para ver las dependencias de un procedimiento con:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -43,15 +44,15 @@ ms.locfileid: "62856500"
  Vista de catálogo de objetos: `sys.sql_expression_dependencies`  
  Necesita el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en sys.sql_expression_dependencies para la base de datos. De forma predeterminada, solo se permite el permiso SELECT a los miembros del rol fijo de base de datos db_owner. Si se conceden los permisos SELECT y VIEW DEFINITION a otro usuario, el receptor puede ver todas las dependencias de la base de datos.  
   
-##  <a name="Procedures"></a> Cómo ver las dependencias de un procedimiento almacenado  
+##  <a name="Procedures"></a>Cómo ver las dependencias de un procedimiento almacenado  
  Puede usar cualquiera de los siguientes medios:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- **Para ver las dependencias de un procedimiento en el Explorador de objetos**  
+###  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ **Para ver las dependencias de un procedimiento en Explorador de objetos**  
   
 1.  En el Explorador de objetos, conéctese a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
   
@@ -63,10 +64,10 @@ ms.locfileid: "62856500"
   
 5.  Examine la lista de objetos de los cuales depende el procedimiento.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ###  <a name="TsqlProcedure"></a> Usar Transact-SQL  
- **Para ver las dependencias de un procedimiento en el Editor de consultas**  
+ **Para ver las dependencias de un procedimiento en el editor de consultas**  
   
  Función del sistema: `sys.dm_sql_referencing_entities`  
  Esta función se usa para mostrar los objetos que dependen de un procedimiento.  
@@ -181,10 +182,10 @@ ms.locfileid: "62856500"
     GO  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cambiar el nombre de un procedimiento almacenado](rename-a-stored-procedure.md)   
- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
+ [Sys. dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
+ [Sys. dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
   

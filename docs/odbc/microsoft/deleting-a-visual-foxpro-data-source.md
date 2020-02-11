@@ -15,24 +15,24 @@ ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ba7c1956bc03835131a440bfe9ad37469a7858e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68112100"
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>Eliminar un origen de datos de Visual FoxPro
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>Para eliminar un origen de datos de Visual FoxPro  
   
-1.  En equipos que ejecutan Windows 2000, abra el Panel de Control de Windows y haga doble clic en Herramientas administrativas.  
+1.  En los equipos que ejecutan Windows 2000, abra el panel de control de Windows y haga doble clic en herramientas administrativas.  
   
 2.  Haga doble clic en orígenes de datos (ODBC) para abrir el cuadro de diálogo Administrador de orígenes de datos ODBC. Este icono está disponible después de instalar el controlador ODBC de Visual FoxPro o cualquier software de controlador ODBC.  
   
     > [!NOTE]  
-    >  Si se está ejecutando una versión anterior de Windows, abra el Panel de Control de Windows y haga doble clic en ODBC u ODBC de 32 bits para abrir el cuadro de diálogo Administrador de orígenes de datos ODBC.  
+    >  Si está ejecutando una versión anterior de Windows, abra el panel de control de Windows y haga doble clic en ODBC de 32 bits para abrir el cuadro de diálogo Administrador de orígenes de datos ODBC.  
   
-3.  En la ficha DSN de usuario o DSN de sistema, seleccione el nombre del origen de datos que desea eliminar.  
+3.  En la pestaña DSN de usuario o DSN de sistema, seleccione el nombre del origen de datos que desea eliminar.  
   
-4.  Haga clic en quitar.  
+4.  Haga clic en Quitar.  
   
 5.  Haga clic en Aceptar para guardar los cambios y cerrar el cuadro de diálogo Administrador de orígenes de datos ODBC.

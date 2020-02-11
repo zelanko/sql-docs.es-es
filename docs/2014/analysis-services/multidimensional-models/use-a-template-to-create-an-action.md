@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072687"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Usar una plantilla para crear una acción
   La vista **Acciones** del Diseñador de cubos contiene varias plantillas que puede usar para crear acciones comunes. Se puede obtener acceso al Diseñador de cubos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  Una vez creada la acción, estará disponible para los usuarios después de actualizar o volver a procesar el cubo. Para obtener más información, consulte [procesamiento del objeto de modelo Multidimensional](processing-a-multidimensional-model-analysis-services.md).  
+>  Una vez creada la acción, estará disponible para los usuarios después de actualizar o volver a procesar el cubo. Para obtener más información, vea [procesamiento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-use-a-template-to-create-an-action"></a>Para usar una plantilla para crear una acción  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66072687"
   
 -   Rellene la información necesaria para completar la creación de la acción basándose en la plantilla.  
   
-## <a name="see-also"></a>Vea también  
- [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](actions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Acciones &#40;Analysis Services de datos multidimensionales&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

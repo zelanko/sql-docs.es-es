@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62505993"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificar las cuentas de servicios de controlador y de cliente
@@ -32,9 +32,9 @@ ms.locfileid: "62505993"
   
 2.  En **Servicios**, haga clic con el botón derecho en **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller**y luego seleccione **Propiedades**.  
   
-3.  En la ventana **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** , en la pestaña **Iniciar sesión** , seleccione **Esta cuenta**, escriba la nueva cuenta de inicio de sesión o haga clic en **Examinar** para buscarla y, a continuación, haga clic en **Aceptar**.  
+3.  En la ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ventana Propiedades del controlador de Distributed Replay** , en la pestaña **iniciar sesión** , seleccione **esta cuenta**, escriba o haga clic en **examinar** para especificar la nueva cuenta de inicio de sesión y, a continuación, haga clic en **Aceptar**.  
   
-     **Importante**: Al configurar Distributed Replay Controller, puede especificar una o varias cuentas de usuario que se usará para ejecutar los servicios de Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
+     **Importante**: al configurar el controlador de Distributed Replay, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios de cliente de Distributed Replay. La lista siguiente es una relación de las cuentas admitidas:  
   
     -   Cuenta de usuario de dominio  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62505993"
   
     2.  En el equipo del controlador en el que esté instalado el servicio del controlador, desde el símbolo del sistema, escriba `dcomcnfg`.  
   
-    3.  En la ventana **Servicios de componentes**, vaya a **Raíz de consola -> Servicios de componentes -> Equipos -> Mi PC -> DCOM Config ->DReplayController**.  
+    3.  En la ventana **Servicios de componentes**, navegue a **Raíz de consola -> Servicios de componentes -> Equipos -> Mi PC -> Dconfig->DReplayController**.  
   
-    4.  Haga clic con el botón derecho en **DReplayController** y luego haga clic en **Propiedades**.  
+    4.  Haga clic con el botón derecho en **DReplayController**y luego haga clic en **Propiedades**.  
   
     5.  En la ventana **Propiedades de DReplayController** , en la pestaña **Seguridad** , haga clic en **Editar** en la sección **Permisos de inicio y activación** .  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62505993"
   
 2.  Detenga el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client.  
   
-3.  En la ventana **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** , en la pestaña **Iniciar sesión** , seleccione **Esta cuenta**, escriba la nueva cuenta de inicio de sesión o haga clic en **Examinar** para buscarla y, a continuación, haga clic en **Aceptar**.  
+3.  En la ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ventana Propiedades del cliente de Distributed Replay** , en la pestaña **iniciar sesión** , seleccione **esta cuenta**, escriba o haga clic en **examinar** para especificar la nueva cuenta de inicio de sesión y, a continuación, haga clic en **Aceptar**.  
   
 4.  Inicie el servicio Distributed Replay Client.  
   

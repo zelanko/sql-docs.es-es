@@ -1,5 +1,5 @@
 ---
-title: Ver o cambiar las ubicaciones predeterminadas de los datos y archivos de registro (SQL Server Management Studio) | Microsoft Docs
+title: Ver o cambiar las ubicaciones predeterminadas de los archivos de datos y de registro (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808716"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Ver o cambiar las ubicaciones predeterminadas de los archivos de datos y registro (SQL Server Management Studio)
@@ -29,11 +29,11 @@ ms.locfileid: "62808716"
   
      [Recomendaciones](#Recommendations)  
   
--   **Para ver o cambiar los datos y registro predeterminado ubicaciones de archivos, utilizando:**  
+-   **Para ver o cambiar las ubicaciones predeterminadas de los archivos de datos y de registro, use:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **Seguimiento:**  [Cambiar las ubicaciones predeterminadas](#FollowUp)  
+-   **Seguimiento:**  [cambiar las ubicaciones predeterminadas](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -44,20 +44,20 @@ ms.locfileid: "62808716"
   
 ####  <a name="Permissions"></a> Permisos  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-default-locations-for-database-files"></a>Para ver o cambiar las ubicaciones predeterminadas de los archivos de base de datos  
   
-1.  En el Explorador de objetos, haga clic con el botón secundario en un servidor y haga clic en **Propiedades**.  
+1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y haga clic en **Propiedades**.  
   
 2.  En el panel izquierdo, haga clic en la página **Configuración de base de datos** .  
   
 3.  En **Ubicaciones predeterminadas de la base de datos**, vea las ubicaciones predeterminadas actuales de los archivos de datos y de registro nuevos. Para cambiar una ubicación predeterminada, escriba una nueva ruta de acceso predeterminada en el campo **Datos** o **Registro** , o haga clic en el botón Examinar para buscar y seleccionar una ruta de acceso.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de cambiar las ubicaciones predeterminadas  
+##  <a name="FollowUp"></a>Seguimiento: después de cambiar las ubicaciones predeterminadas  
  Debe detener e iniciar el servicio SQL Server para completar el cambio.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Crear una base de datos](../../relational-databases/databases/create-a-database.md)  
   

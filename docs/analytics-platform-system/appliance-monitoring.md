@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401424"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Supervisión del dispositivo para el sistema de plataforma de análisis
@@ -38,7 +38,7 @@ Los valores y la información que se pueden supervisar en el PDW de SQL Server d
 Hay varias herramientas disponibles para supervisar el dispositivo.  
   
 Consola de administración  
-PDW de SQL Server tiene una consola de administración. Se trata de una herramienta basada en Web que muestra información acerca de las consultas, las cargas, las copias de seguridad y restauración, los bloqueos, las sesiones, las alertas y el estado del dispositivo. La consola de administración se ejecuta en el dispositivo. los usuarios se conectan a la consola de administración a través de Internet Explorer. Para obtener más información, consulte:  
+PDW de SQL Server tiene una consola de administración. Se trata de una herramienta basada en Web que muestra información acerca de las consultas, las cargas, las copias de seguridad y restauración, los bloqueos, las sesiones, las alertas y el estado del dispositivo. La consola de administración se ejecuta en el dispositivo. los usuarios se conectan a la consola de administración a través de Internet Explorer. Para más información, consulte:  
   
 -   [Supervise el dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
@@ -80,7 +80,7 @@ Si la solución de supervisión no admite consultas directas\-de Transact SQL o 
 <!-- MISSING LINKS |Monitor backups and restores.|[Monitor Backups and Restores &#40;SQL Server PDW&#41;](../sqlpdw/monitor-backups-and-restores-sql-server-pdw.md)|  -->  
 <!-- MISSING LINKS |Monitor the active queries.|[Monitoring Active Queries &#40;SQL Server PDW&#41;](../sqlpdw/monitoring-active-queries-sql-server-pdw.md)|  -->  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Tareas de administración de dispositivos &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

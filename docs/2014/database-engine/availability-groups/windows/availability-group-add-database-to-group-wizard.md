@@ -1,5 +1,5 @@
 ---
-title: Usar la base de datos Agregar asistente de grupo de disponibilidad (SQL Server Management Studio) | Microsoft Docs
+title: Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815730"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)
@@ -36,10 +36,10 @@ ms.locfileid: "62815730"
   
      [Seguridad](#Security)  
   
--   **Para agregar una base de datos, utilizando:**  [Agregar base de datos al Asistente de grupo de disponibilidad (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Para agregar una base de datos, mediante:**  [Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
- Si nunca ha agregado una base de datos a un grupo de disponibilidad, consulte la sección "Bases de datos de disponibilidad" en [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Si nunca ha agregado una base de datos a un grupo de disponibilidad, consulte la sección "bases de datos de disponibilidad" en [requisitos previos, restricciones y recomendaciones para obtener Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Requisitos previos, restricciones y recomendaciones  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62815730"
   
 -   Si una base de datos está cifrada o incluso contiene una clave de cifrado de base de datos (DEK), no puede usar el [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] ni el [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] para agregar la base de datos a un grupo de disponibilidad. Aunque se haya descifrado una base de datos cifrada, sus copias de seguridad de registros pueden contener datos cifrados. En este caso, la sincronización de datos completa inicial podría producir errores en la base de datos. Esto se debe a que la operación de restaurar registro puede requerir el certificado utilizado por las claves de cifrado de base de datos (DEK) y ese certificado podría no estar disponible.  
   
-     **Para hacer que una base de datos descifrada se pueda agregar a un grupo de disponibilidad mediante el Asistente para:**  
+     **Para que una base de datos descifrada se pueda agregar a un grupo de disponibilidad mediante el asistente:**  
   
     1.  Cree una copia de seguridad de registros de la base de datos principal.  
   
@@ -74,20 +74,20 @@ ms.locfileid: "62815730"
 ####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)  
+##  <a name="SSMSProcedure"></a>Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)  
  **Para usar el Asistente para agregar una base de datos al grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal del grupo de disponibilidad y expanda el árbol.  
   
 2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
-3.  Haga clic con el botón secundario en el grupo de disponibilidad al que está agregando una base de datos y seleccione el comando **Agregar base de datos** . Este comando inicia el Asistente para agregar una base de datos al grupo de disponibilidad.  
+3.  Haga clic con el botón derecho en el grupo de disponibilidad al que está agregando una base de datos y seleccione el comando **Agregar base de datos** . Este comando inicia el Asistente para agregar una base de datos al grupo de disponibilidad.  
   
-4.  En la página **Seleccionar bases de datos** , seleccione una o varias bases de datos. Para obtener más información, consulte [seleccione página de bases de datos &#40;disponibilidad Asistente para agregar base de datos de Asistente para nuevo grupo&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
+4.  En la página **Seleccionar bases de datos** , seleccione una o varias bases de datos. Para obtener más información, vea [página seleccionar bases de datos &#40;Asistente para nuevo grupo de disponibilidad: Asistente para agregar bases de datos&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
   
-5.  En la página **Seleccionar sincronización de datos iniciales** , elija cómo desea que las nuevas bases de datos secundarias se creen y se unan al grupo de disponibilidad. Elija una de las opciones siguientes:  
+5.  En la página **Seleccionar sincronización de datos iniciales** , elija cómo desea que las nuevas bases de datos secundarias se creen y se unan al grupo de disponibilidad. Elija una de las siguientes opciones:  
   
-    -   **Completa**  
+    -   **Completo**  
   
          Seleccione esta opción si el entorno cumple los requisitos para iniciar automáticamente la sincronización de datos iniciales (para obtener más información, vea [Requisitos previos, restricciones y recomendaciones](#Prerequisites), anteriormente en este tema).  
   
@@ -106,25 +106,25 @@ ms.locfileid: "62815730"
   
          Seleccione esta opción si desea usar sus propias bases de datos y copias de seguridad de registros de sus bases de datos principales. Para más información, vea [Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-     Para obtener más información, consulte [seleccione página de sincronización de datos inicial &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
+     Para obtener más información, vea [página seleccionar sincronización de datos iniciales &#40;asistentes para grupos de disponibilidad alwayson&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
   
 6.  En la página **Conectar con réplicas secundarias existentes** , si las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedan las réplicas de disponibilidad para este grupo de disponibilidad se ejecutan todas como un servicio en la misma cuenta de usuario, haga clic en **Conectar todas**. Si alguna instancia de servidor se ejecuta como un servicio bajo diferentes cuentas, haga clic en el botón **Conectar** individual situado a la derecha de cada nombre de instancia de servidor.  
   
-     Para obtener más información, consulte [conectarse a la página réplicas secundarias existentes &#40;Agregar réplica y el Asistente para agregar las bases de datos&#41;](connect-to-existing-secondary-replicas-page.md).  
+     Para obtener más información, consulte la [Página conectarse a las réplicas secundarias existentes &#40;Asistente para agregar réplicas y el Asistente para agregar bases de datos&#41;](connect-to-existing-secondary-replicas-page.md).  
   
 7.  La página **Validación** comprueba si los valores especificados en este asistente cumplen los requisitos del Asistente para nuevo grupo de disponibilidad. Para realizar un cambio, puede hacer clic en **Anterior** para volver a una página anterior del asistente con el fin de cambiar uno o varios valores. Haga clic en **Siguiente** para volver a la página **Validación** y haga clic en **Volver a ejecutar la validación**.  
   
-     Para obtener más información, consulte [página validación &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](validation-page-always-on-availability-group-wizards.md).  
+     Para obtener más información, vea [Página validación &#40;asistentes para grupos de disponibilidad alwayson&#41;](validation-page-always-on-availability-group-wizards.md).  
   
 8.  En la página **Resumen** , revise las opciones para el nuevo grupo de disponibilidad. Para realizar un cambio, haga clic en **Anterior** para volver a la página correspondiente. Después de realizar el cambio, haga clic en **Siguiente** para volver a la página **Resumen** .  
   
-     Para obtener más información, consulte [página resumen &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](summary-page-always-on-availability-group-wizards.md).  
+     Para obtener más información, vea la [Página resumen &#40;asistentes para grupos de disponibilidad alwayson&#41;](summary-page-always-on-availability-group-wizards.md).  
   
      Si está satisfecho con las selecciones, puede hacer si lo desea en Script para crear un script de los pasos que ejecutará el asistente. A continuación, para crear y configurar el nuevo grupo de disponibilidad, haga clic en **Finalizar**.  
   
 9. En la página **Progreso** se muestra el progreso de los pasos necesarios para crear el grupo de disponibilidad (configuración de puntos de conexión, creación del grupo de disponibilidad y unión de la réplica secundaria al grupo).  
   
-     Para obtener más información, consulte [página progreso &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](progress-page-always-on-availability-group-wizards.md).  
+     Para obtener más información, vea [Página progreso &#40;asistentes para grupos de disponibilidad alwayson&#41;](progress-page-always-on-availability-group-wizards.md).  
   
 10. Según se completen estos pasos, la página **Resultados** mostrará el resultado de cada paso. Si todos estos pasos se realizan correctamente, el nuevo grupo de disponibilidad se configura por completo. Si alguno de los pasos produce un error, puede que tenga que completar manualmente la configuración. Para obtener información sobre la causa de un error determinado, haga clic en el vínculo “Error” asociado de la columna **Resultado** .  
   
@@ -140,9 +140,9 @@ ms.locfileid: "62815730"
   
 -   [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Requisitos previos, restricciones y recomendaciones para el SQL Server de &#40;de Grupos de disponibilidad AlwaysOn&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Agregar una base de datos a un grupo de disponibilidad &#40;SQL Server&#41;](availability-group-add-a-database.md)   
  [Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
  [Agregar una base de datos a un grupo de disponibilidad &#40;SQL Server&#41;](availability-group-add-a-database.md)  

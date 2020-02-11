@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243325"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de consultas y texto (SQL Server Management Studio)
@@ -55,7 +55,7 @@ ms.locfileid: "75243325"
  **Numeración de línea**  
  Muestra los números de línea a la izquierda del texto o el código en el editor. Puede navegar a números de línea específicos.  
   
- **Ajuste de palabra**  
+ **Ajuste de línea**  
  Muestra las líneas largas de texto o código como varias líneas, lo que permite ver todo el texto de la línea. El ajuste de línea no afecta al modo en que aparece el texto al ejecutarse o imprimirse. El ajuste de línea se activa desde el cuadro de diálogo **Opciones**, en **Herramientas** , ya sea en la página Editor de texto, Todos los lenguajes, General o en una página específica del editor.  
   
 ## <a name="code-editor-components"></a>Componentes del editor de código  
@@ -76,7 +76,7 @@ ms.locfileid: "75243325"
  **Plantillas**  
  Las plantillas son archivos que incluyen la estructura básica de las instrucciones necesarias para crear objetos en una base de datos. Se pueden usar para agilizar la creación de scripts.  
   
- **Mensajes**  
+ **error de Hadoop**  
  Muestra los errores, advertencias y mensajes informativos que devuelve el servidor cuando se ejecuta un script. La lista de mensajes no cambia hasta que se ejecuta el script de nuevo.  
   
  **Barra de estado**  
@@ -94,7 +94,7 @@ ms.locfileid: "75243325"
  **Plan de presentación gráfico**  
  Muestra los pasos lógicos integrados en el plan de ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- **Estadísticas de cliente**  
+ **Estadísticas de clientes**  
  Muestra información acerca de la ejecución de una consulta agrupada en categorías. Cuando se selecciona **Incluir estadísticas de cliente** en el menú **Consulta** , se muestra una ventana **Estadísticas de clientes** al ejecutarse la consulta. Las estadísticas de ejecuciones de consultas sucesivas se muestran junto con los valores promedio. Seleccione **Restablecer estadísticas de cliente** en el menú **Consulta** para restablecer el promedio.  
   
  **Fragmentos de código**  
@@ -107,7 +107,7 @@ ms.locfileid: "75243325"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo ver y usar las características básicas del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[SQL Server Management Studio de &#40;del editor de consultas de Motor de base de datos&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+|Describe cómo ver y usar las características básicas del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
 |Describe cómo ver y usar las características básicas del editor de consultas de MDX.|[Editor de consultas MDX &#40;Analysis Services-datos multidimensionales&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
 |Describe cómo ver y usar las características básicas del editor de consultas de DMX.|[Editor de consultas DMX &#40;Analysis Services:&#41;de minería de datos](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Describe cómo ver y usar las características básicas del editor XML/A.|[&#40;del editor XML SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
@@ -116,17 +116,17 @@ ms.locfileid: "75243325"
 |Describe cómo administrar el modo de vista, como el ajuste de línea, la división de una ventana o las tabulaciones.|[Administrar el editor y el modo de vista](manage-the-editor-and-view-mode.md)|  
 |Describe cómo establecer las opciones de formato, como el texto oculto o la sangría aplicada.|[Administrar formato de código](manage-code-formatting.md)|  
 |Describe cómo navegar por el texto en una ventana del editor mediante características tales como la búsqueda incremental o el desplazamiento a una determinada parte.|[Navegar por código y texto](navigate-code-and-text.md)|  
-|Describe cómo establecer las opciones de codificación de color para los distintos tipos de sintaxis, lo que facilita la lectura de instrucciones complejas.|[Codificación de colores en los editores de consultas](color-coding-in-query-editors.md)|  
+|Describe cómo establecer las opciones de codificación de color para los distintos tipos de sintaxis, lo que facilita la lectura de instrucciones complejas.|[Codificación de colores en el Editor de consultas](color-coding-in-query-editors.md)|  
 |Describe cómo usar la esquematización de código para ocultar partes de escrituras complejas en las que no se esté trabajando actualmente.|[Esquematización de código](code-outlining.md)|  
 |Describe cómo arrastrar el texto desde una ubicación en un script y colocarlo en una nueva ubicación.|[Arrastrar y colocar texto](drag-and-drop-text.md)|  
 |Describe cómo realizar una operación de búsqueda y reemplazo global, como, por ejemplo, al cambiar los nombres de columna.|[Buscar y reemplazar](search-and-replace.md)|  
 |Describe cómo establecer los marcadores para encontrar más fácilmente fragmentos de código importantes.|[Administrar marcadores](../native-client-ole-db-rowsets/bookmarks.md)|  
 |Describe cómo imprimir los scripts o los resultados en una ventana o cuadrícula.|[Imprimir código y resultados](print-code-and-results.md)|  
-|Describe cómo usar las características sqlcmd en el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editar scripts SQLCMD con el editor de consultas](edit-sqlcmd-scripts-with-query-editor.md)|  
+|Describe cómo usar las características sqlcmd en el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modificar scripts SQLCMD con el Editor de consultas](edit-sqlcmd-scripts-with-query-editor.md)|  
 |Describe cómo usar las características de IntelliSense, como, por ejemplo, autocompletar nombres de objeto a medida que se escriben, o garantizar que los puntos de interrupción se colocan en ubicaciones válidas.|[SQL Server Management Studio de &#40;de IntelliSense&#41;](intellisense-sql-server-management-studio.md)|  
 |Describe cómo usar los fragmentos de código del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los fragmentos son plantillas para instrucciones o bloques que se usan habitualmente, y se pueden personalizar o ampliar para incluir fragmentos específicos del sitio.|[Fragmentos de código de Transact-SQL](transact-sql-code-snippets.md)|  
 |Describe cómo usar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para recorrer el código y consultar la información de depuración, como los valores de variables y parámetros.|[Depurador de Transact-SQL](transact-sql-debugger.md)|  
 |Describe cómo definir colores personalizados para diferentes instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y establecerlos como el fondo de la barra de estado en las ventanas del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Barra de estado &#40;Motor de base de datos editor de consultas&#41;](status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

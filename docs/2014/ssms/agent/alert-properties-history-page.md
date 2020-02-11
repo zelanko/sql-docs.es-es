@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189830"
 ---
 # <a name="alert-properties-history-page"></a>Propiedades de alerta (página Historial)
-  Utilice esta página para ver y modificar el historial de las alertas del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice esta página para ver y modificar el historial de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las alertas del agente.  
   
 ## <a name="options"></a>Opciones  
  **Fecha de la última alerta**  
@@ -32,10 +32,10 @@ ms.locfileid: "68189830"
  **Número de repeticiones**  
  Número total de repeticiones del evento desde que se creó la alerta, o desde la última vez que se restableció el recuento.  
   
- **Restablecer cuenta**  
+ **Restablecer recuento**  
  Restablece la información de esta página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Alertas](alerts.md)  
   
   

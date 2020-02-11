@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_health_component_properties (Transact-SQL) | Microsoft Docs
+title: Sys. pdw_health_component_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c2bca7f0deef9a5cb137525e165670404cad65ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016551"
 ---
-# <a name="syspdwhealthcomponentproperties-transact-sql"></a>Sys.pdw_health_component_properties (Transact-SQL)
+# <a name="syspdw_health_component_properties-transact-sql"></a>Sys. pdw_health_component_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Almacena las propiedades que describen un dispositivo. Algunas propiedades muestran el estado del dispositivo y algunas propiedades describen el propio dispositivo.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|property_id|**int**|Identificador único de la propiedad de un componente.<br /><br /> identificador property_id e IdComponente forman la clave para esta vista.|NOT NULL|  
-|component_id|**int**|El identificador del componente. Consulte [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> identificador property_id e IdComponente forman la clave para esta vista.|NOT NULL|  
+|property_id|**int**|Identificador único de la propiedad de un componente.<br /><br /> property_id y component_id forman la clave de esta vista.|NOT NULL|  
+|component_id|**int**|IDENTIFICADOR del componente. Vea [Sys. pdw_health_components &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> property_id y component_id forman la clave de esta vista.|NOT NULL|  
 |property_name|**nvarchar(255)**|Nombre de la propiedad.|NOT NULL|  
-|physical_name|**nvarchar(32)**|Nombre de la propiedad tal como se define por el fabricante.|NOT NULL|  
-|is_key|**bit**|Determina si la instancia del dispositivo es único o no.|NOT NULL<br /><br /> 0: la instancia de dispositivo es único.<br /><br /> 1 - instancia de el dispositivo no es único.|  
+|physical_name|**nvarchar (32)**|Nombre de propiedad definido por el fabricante.|NOT NULL|  
+|is_key|**bit**|Determina si la instancia del dispositivo es única o no única.|NOT NULL<br /><br /> 0: la instancia del dispositivo es única.<br /><br /> 1: la instancia del dispositivo no es única.|  
   
-## <a name="see-also"></a>Vea también  
- [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

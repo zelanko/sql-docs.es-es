@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808714"
 ---
 # <a name="connect-to-server-integration-services"></a>Conectar al servidor (Integration Services)
-  Use este cuadro de diálogo para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Use este cuadro de diálogo para ver o especificar opciones al [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]conectarse a.  
   
 ## <a name="options"></a>Opciones  
  **Tipo de servidor**  
@@ -30,12 +30,12 @@ ms.locfileid: "62808714"
  Seleccione el servidor al que va a conectarse. De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
   
 > [!NOTE]  
->  No use  *\<servername >* \\ *\<instancename >* , ya que [!INCLUDE[ssIS](../includes/ssis-md.md)] no admite varias instancias en un equipo.  
+>  No use * \<ServerName>* \\ * \<InstanceName>*, porque [!INCLUDE[ssIS](../includes/ssis-md.md)] no admite varias instancias en un equipo.  
   
  **Autenticación**  
  La autenticación [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows solo está disponible para [!INCLUDE[ssIS](../includes/ssis-md.md)]. Windows permite al usuario conectarse mediante una cuenta de usuario de Windows.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Esta opción no está disponible ya que la autenticación de Windows solo está disponible para [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
  **Contraseña**  

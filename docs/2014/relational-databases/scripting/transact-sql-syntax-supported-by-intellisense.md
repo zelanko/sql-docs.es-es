@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243000"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
@@ -47,17 +47,17 @@ ms.locfileid: "75243000"
   
 |Instrucción Transact-SQL|Sintaxis compatible|  
 |-----------------------------|----------------------|  
-|[INTRODUCIR](/sql/t-sql/statements/insert-transact-sql)|Toda la sintaxis, excepto la cláusula *execute_statement* .|  
+|[INSERT](/sql/t-sql/statements/insert-transact-sql)|Toda la sintaxis, excepto la cláusula *execute_statement* .|  
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|Toda la sintaxis.|  
-|[ELIMÍNELOS](/sql/t-sql/statements/delete-transact-sql)|Toda la sintaxis.|  
-|[Clare@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Toda la sintaxis.|  
-|[CONJUNTO@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Toda la sintaxis.|  
-|[EJECUT](/sql/t-sql/language-elements/execute-transact-sql)|Ejecución de procedimientos almacenados definidos por el usuario, procedimientos almacenados del sistema, funciones definidas por el usuario y funciones del sistema.|  
+|[DELETE](/sql/t-sql/statements/delete-transact-sql)|Toda la sintaxis.|  
+|[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Toda la sintaxis.|  
+|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Toda la sintaxis.|  
+|[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Ejecución de procedimientos almacenados definidos por el usuario, procedimientos almacenados del sistema, funciones definidas por el usuario y funciones del sistema.|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|Toda la sintaxis.|  
-|[CREAR VISTA](/sql/t-sql/statements/create-view-transact-sql)|Toda la sintaxis.|  
-|[CREAR PROCEDIMIENTO](/sql/t-sql/statements/create-procedure-transact-sql)|Toda la sintaxis, con las excepciones siguientes:<br /><br /> No hay compatibilidad con IntelliSense para la cláusula EXTERNAL NAME.<br /><br /> En la cláusula AS, IntelliSense solamente es compatible con las instrucciones y la sintaxis que se mencionan en este tema.|  
+|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|Toda la sintaxis.|  
+|[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|Toda la sintaxis, con las excepciones siguientes:<br /><br /> No hay compatibilidad con IntelliSense para la cláusula EXTERNAL NAME.<br /><br /> En la cláusula AS, IntelliSense solamente es compatible con las instrucciones y la sintaxis que se mencionan en este tema.|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|Toda la sintaxis, con las excepciones siguientes:<br /><br /> No hay compatibilidad con IntelliSense para la cláusula EXTERNAL NAME.<br /><br /> En la cláusula AS, IntelliSense solamente es compatible con las instrucciones y la sintaxis que se mencionan en este tema.|  
-|[Realice](/sql/t-sql/language-elements/use-transact-sql)|Toda la sintaxis.|  
+|[USE](/sql/t-sql/language-elements/use-transact-sql)|Toda la sintaxis.|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense en las instrucciones compatibles  
  La característica IntelliSense del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es compatible con los elementos de sintaxis siguientes cuando se utilizan en una de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] compatibles:  

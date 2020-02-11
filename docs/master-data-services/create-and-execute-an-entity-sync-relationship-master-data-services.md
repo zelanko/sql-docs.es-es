@@ -11,22 +11,22 @@ ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729524"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Crear y ejecutar una relación de sincronización de entidades (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  La sincronización de entidades es una sincronización unidireccional y repetible entre versiones de entidades. que proporciona una forma de compartir datos de entidad entre diferentes modelos.  
+  La sincronización de entidades es una sincronización unidireccional y repetible entre versiones de entidades que proporciona una forma de compartir datos de entidad entre diferentes modelos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Estos son los requisitos previos para crear una relación de sincronización de entidades:  
   
--   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Debe ser administrador de modelo del modelo de destino. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73729524"
   
  Estos son los requisitos previos para ejecutar una relación de sincronización de entidades:  
   
--   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Debe ser administrador de modelo del modelo de destino. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73729524"
   
 10. Seleccione **Sync On Demand**(Sincronizar a petición) o seleccione **Auto Sync** (Sincronización automática) y establezca una frecuencia.  
   
-11. Haga clic en **Guardar**.  
+11. Haga clic en **Save**(Guardar).  
   
  **Para ejecutar una relación de sincronización de entidades**  
   
@@ -88,7 +88,7 @@ ms.locfileid: "73729524"
   
 2.  En la barra de menús de la página **Vista de modelo** , seleccione **Administrar** y haga clic en **Entity Sync**(Sincronización de entidades).  
   
-3.  En la página **Mantenimiento de sincronización de entidades** , seleccione una relación de sincronización en la cuadrícula.  
+3.  En la página **Entity Sync Maintenance** (Mantenimiento de sincronización de entidades), seleccione una relación de sincronización en la cuadrícula.  
   
 4.  Haga clic en **Ejecutar**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "73729524"
   
 |Columna|Descripción|  
 |------------|-----------------|  
-|Estado|Estado de la relación de sincronización.<br /><br /> Al hacer clic en **Guardar** o ejecutar una relación de sincronización, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icon para actualizar el estado ") , que indica que la relación de sincronización se está actualizando.<br /><br /> Si hay errores al crear, editar o ejecutar una relación de sincronización, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icon para estado de error ") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icon para el estado correcto ") .|  
+|Status|Estado de la relación de sincronización.<br /><br /> Al hacer clic en **Guardar** o ejecutar una relación de sincronización, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que la relación de sincronización se está actualizando.<br /><br /> Si hay errores al crear, editar o ejecutar una relación de sincronización, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
 |Modelo de origen|Nombre del modelo de origen.|  
 |Versión de origen|Nombre de la versión de origen.|  
 |Entidad de origen|Nombre de la entidad de origen.|  
@@ -110,17 +110,17 @@ ms.locfileid: "73729524"
   
  Cuando se hace clic en un índice, se muestra la siguiente información.  
   
--   **Last Attempt Error**(Error de último intento): muestra información de error relativa al último intento de sincronización.  
+-   **Último error de intento**: muestra la información de error sobre el último intento de sincronización.  
   
--   **Creado por:** nombre del usuario que creó la sincronización.  
+-   **Creado por**: el nombre del usuario que creó la sincronización.  
   
--   **El:** fecha y hora en que se creó la sincronización.  
+-   El: fecha y hora **en**que se creó la sincronización.  
   
--   **Actualizado por:** nombre del usuario que actualizó la sincronización por última vez.  
+-   **Actualizado por**: el nombre del usuario que actualizó la sincronización por última vez.  
   
--   **El:** fecha y hora en que se actualizó la sincronización por última vez.  
+-   El: fecha y hora **en**que se actualizó la sincronización por última vez.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Modificación y eliminación de una relación de sincronización de entidades &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
+ [Editar y eliminar una relación de sincronización de entidades &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ejemplo (VB) del método Append de vistas | Microsoft Docs
+title: Ejemplo del método Append de vistas (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50b24a21c54fcf23dba0748dfba31a99b5bbb1ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964790"
 ---
 # <a name="views-append-method-example-vb"></a>Ejemplo de método Append de vistas (VB)
-El código siguiente muestra cómo usar un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto y el [vistas](../../../ado/reference/adox-api/views-collection-adox.md) colección [Append](../../../ado/reference/adox-api/append-method-adox-views.md) método para crear una nueva vista del origen de datos subyacente.  
+En el código siguiente se muestra cómo usar un objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) y el método [Append](../../../ado/reference/adox-api/append-method-adox-views.md) de la colección [views](../../../ado/reference/adox-api/views-collection-adox.md) para crear una nueva vista en el origen de datos subyacente.  
   
 ```  
 ' BeginCreateViewVB  
@@ -61,9 +61,9 @@ End Sub
 ' EndCreateViewVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ActiveConnection (propiedad, ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append (método) (vistas ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)   
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [Objeto de vista (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

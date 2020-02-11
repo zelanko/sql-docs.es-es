@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones MSMQ | Microsoft Docs
+title: Editor del administrador de conexiones MSMQ | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057640"
 ---
 # <a name="msmq-connection-manager-editor"></a>administrador de conexiones MSMQ, editor del
@@ -30,26 +30,28 @@ ms.locfileid: "66057640"
 >  El administrador de conexiones MSMQ admite colas públicas y privadas locales, además de colas públicas remotas. No admite colas privadas remotas. Para obtener una solución que utilice la tarea Script, vea [Enviar a una cola de mensajes privada remota con la tarea Script](control-flow/script-task.md).  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Proporcione un nombre único para el administrador de conexiones MSMQ en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Descripción**  
  Describa el administrador de conexiones. Como método recomendado, describa el administrador de conexiones desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
- **Ruta de acceso**  
+ **Path**  
  Escriba la ruta de acceso completa de la cola de mensajes. El formato de la ruta de acceso depende del tipo de cola.  
   
 |Tipo de cola|Ruta de acceso de ejemplo|  
 |----------------|-----------------|  
-|Público|\<nombre del equipo>\\<nombre de la cola\>|  
-|Privada|\<nombre del equipo>\Private$\\<nombre de la cola\>|  
+|Público|
+  \<nombre del equipo>\\<nombre de la cola\>|  
+|Private|
+  \<nombre del equipo>\Private$\\<nombre de la cola\>|  
   
  Puede utilizar "." para representar el equipo local.  
   
- **Prueba**  
+ **Muestre**  
  Después de configurar el Administrador de conexiones MSMQ, confirme que la conexión es viable haciendo clic en **Probar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

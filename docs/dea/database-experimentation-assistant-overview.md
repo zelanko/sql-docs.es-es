@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247123"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Información general del Asistente para experimentación con bases de datos.
@@ -113,6 +113,6 @@ Recopilar y enviar datos de telemetría es opcional. Para especificar los evento
 
 DEA se rige por la [declaración de privacidad de Microsoft](https://aka.ms/dea-privacy).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - El artículo [información general sobre el proceso de comparación de cargas de trabajo](database-experimentation-assistant-get-started.md), que explica el proceso implicado en la comparación de cargas de trabajo en dos entornos.

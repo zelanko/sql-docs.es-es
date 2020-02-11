@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957214"
 ---
 # <a name="encrypt-a-column-of-data"></a>Cifrar una columna de datos
@@ -27,15 +27,15 @@ ms.locfileid: "74957214"
   
 -   **Antes de empezar:**  
   
-     [Bursátil](#Security)  
+     [Seguridad](#Security)  
   
 -   [Para cifrar una columna de datos mediante Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Los siguientes permisos son necesarios para realizar los pasos siguientes:  
   
 -   Permiso CONTROL en la base de datos.  
@@ -46,13 +46,13 @@ ms.locfileid: "74957214"
   
 -   Algún permiso en la clave y no debe haberse denegado el permiso VIEW DEFINITION.  
   
-##  <a name="TsqlProcedure"></a>Usar Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para cifrar una columna de datos usando un cifrado simétrico simple  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  En la barra Estándar , haga clic en **Nueva consulta**.  
+2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "74957214"
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  En la barra Estándar , haga clic en **Nueva consulta**.  
+2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
@@ -174,14 +174,14 @@ ms.locfileid: "74957214"
     GO  
     ```  
   
- Para obtener más información, consulte los temas siguientes:  
+ Para obtener más información, vea lo siguiente:  
   
--   [CREATE CERTIFICAte &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CREAR clave simétrica &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
 -   [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
--   [ABRIR clave simétrica &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811289"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
@@ -48,7 +48,7 @@ ms.locfileid: "62811289"
  El enlace de canal establece un canal seguro (Schannel) entre un cliente y una instancia del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El servicio comprueba la autenticidad del cliente comparando el token de enlace de canal (CBT) del cliente específico de ese canal, con su propio CBT. El enlace de canal trata tanto los ataques de suplantación como los de atracción. Sin embargo, incurre en un costo de tiempo de ejecución mayor, porque requiere cifrado de Seguridad de la capa de transporte (TLS) de todo el tráfico de la sesión. El enlace de canal se produce cuando una aplicación cliente usa el cifrado para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independientemente de si el cifrado lo fuerza el cliente o el servidor.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 y SSL 3.0. Si fuerza un protocolo diferente (como por ejemplo, TLS 1.1 o TLS 1.2) realizando cambios en la capa SChannel del sistema operativo, las conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrían no funcionar como es debido.  
+>  Los proveedores de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten TLS 1.0 y SSL 3.0. Si fuerza un protocolo diferente (como por ejemplo, TLS 1.1 o TLS 1.2) realizando cambios en la capa SChannel del sistema operativo, las conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrían no funcionar como es debido.  
   
 ### <a name="operating-system-support"></a>Sistemas operativos admitidos  
  Los siguientes vínculos proporcionan más información acerca del modo en que Windows admite la **protección ampliada**:  
@@ -85,7 +85,7 @@ ms.locfileid: "62811289"
   
 1.  En el menú **Inicio** , elija **Todos los programas**, elija **Microsoft SQL Server** y haga clic en **Administrador de configuración de SQL Server**.  
   
-2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<* nombreDeInstancia *>* y, luego, haga clic en **Propiedades**.  
+2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<* nombreDeInstancia*>* y, luego, haga clic en **Propiedades**.  
   
 3.  Para el enlace de canal y el enlace de servicio, en la pestaña **Opciones avanzadas** , establezca **Protección ampliada** en el valor adecuado.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62811289"
   
  Al utilizar IIS para tener acceso a los datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando una conexión HTTPS o HTTP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pueden sacar provecho de la protección ampliada que proporciona IIS. Para obtener más información acerca de cómo configurar IIS para utilizar la protección ampliada, vea el tema que trata cómo [configurar la protección ampliada en IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configuración de red del servidor](server-network-configuration.md)   
  [Configuración de red de cliente](client-network-configuration.md)   
  [Introducción a la protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkID=177943)   

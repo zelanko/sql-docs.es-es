@@ -16,17 +16,17 @@ ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00a369b4fd6cc11728fb9e3fcea2db958d4ae45d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990599"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>Funciones ODBC ejecutadas por la biblioteca de cursores
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- La biblioteca de cursores ejecuta las siguientes funciones. Cuando una aplicación llama a una función en esta lista, el Administrador de controladores invoca la biblioteca de cursores, no el controlador. Tenga en cuenta que la biblioteca de cursores puede llamar a los controladores cuando se ejecuta la función.  
+ La biblioteca de cursores ejecuta las siguientes funciones. Cuando una aplicación llama a una función de esta lista, el administrador de controladores invoca la biblioteca de cursores, no el controlador. Tenga en cuenta que la biblioteca de cursores puede llamar al controlador al ejecutar la función.  
   
 |||  
 |-|-|  

@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 660405e7e7592557422e43655c35ec27c194aad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130679"
 ---
-# <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
+# <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Quita la configuración del firewall de nivel de base de datos de su [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las reglas de firewall de base de datos se pueden configurar y eliminar la base de datos maestra y las bases de datos de usuario en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
+  Quita la configuración de Firewall de nivel de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]base de datos de su. Las reglas de Firewall de base de datos se pueden configurar y eliminar para la base de datos maestra y [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]para las bases de datos de usuario en.   
   
  
 ## <a name="syntax"></a>Sintaxis  
@@ -40,13 +40,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>Argumentos  
  `[@name =] [N]'name'`  
- El nombre de la configuración del firewall de nivel de base de datos que se quitará. *nombre* es **nvarchar (128)** con ningún valor predeterminado. El identificador de Unicode `N` es opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+ El nombre de la configuración del firewall de nivel de base de datos que se quitará. *Name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado. El identificador Unicode `N` es opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
 ## <a name="permissions"></a>Permisos  
- Solo el nivel de servidor de inicio de sesión principal creada por el proceso de aprovisionamiento o una entidad de Azure Active Directory asignado como administrador puede eliminar las reglas de firewall de nivel de base de datos.  
+ Solo el inicio de sesión principal de nivel de servidor creado por el proceso de aprovisionamiento o una entidad de seguridad Azure Active Directory asignada como administrador puede eliminar reglas de Firewall de nivel de base de datos.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se quita el nivel de base de datos de configuración de firewall denominada `Example DB Setting 1`.
+ En el ejemplo siguiente se quita la configuración de Firewall de `Example DB Setting 1`nivel de base de datos denominada.
   
 ```  
 -- Remove database-level firewall setting  
@@ -54,12 +54,12 @@ EXECUTE sp_delete_database_firewall_rule N'Example DB Setting 1';
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Firewall de base de datos SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Cómo: Configurar el Firewall (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+## <a name="see-also"></a>Consulte también  
+ [Firewall de Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
+ [Cómo configurar los valores del firewall (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
- [Sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [Sys. database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   
 

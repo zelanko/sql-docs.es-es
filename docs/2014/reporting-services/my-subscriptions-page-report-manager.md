@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108190"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Mis suscripciones (página del Administrador de informes)
-  Use la página Mis suscripciones para ver todas sus suscripciones en un solo lugar. Desde esta página, puede obtener acceso a cualquier suscripción de su propiedad, modificarla o eliminarla. Es propietario solamente de las suscripciones que ha creado. No puede obtener acceso a las suscripciones de otros usuarios, ni siquiera aunque las utilice (por ejemplo, si se ha agregado su nombre a una suscripción existente definida por otro usuario). Desde esta página no se pueden crear suscripciones. Para obtener más información sobre cómo crear suscripciones, vea el [página nueva suscripción o Editar suscripción &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
+  Use la página Mis suscripciones para ver todas sus suscripciones en un solo lugar. Desde esta página, puede obtener acceso a cualquier suscripción de su propiedad, modificarla o eliminarla. Es propietario solamente de las suscripciones que ha creado. No puede obtener acceso a las suscripciones de otros usuarios, ni siquiera aunque las utilice (por ejemplo, si se ha agregado su nombre a una suscripción existente definida por otro usuario). Desde esta página no se pueden crear suscripciones. Para obtener más información acerca de la creación de suscripciones, consulte la [página nueva suscripción o editar suscripción &#40;Administrador de informes&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
   
  De manera predeterminada, las suscripciones se ordenan alfabéticamente por nombre de informe. Haga clic en un encabezado de columna diferente para cambiar el orden de las suscripciones. Si no tiene suscripciones o si el permiso para crear o administrar suscripciones está deshabilitado, no aparecen suscripciones en la página.  
   
@@ -41,10 +41,10 @@ ms.locfileid: "66108190"
  **Eliminar**  
  Active la casilla situada al lado de cada suscripción que desee eliminar y haga clic en **Eliminar**.  
   
- **Editar**  
+ **Edición**  
  Haga clic para ver o editar la descripción.  
   
- **Informe**  
+ **Report**  
  Muestra el informe especificado en la suscripción. Haga clic en el nombre del informe para verlo.  
   
  **Descripción**  
@@ -53,7 +53,7 @@ ms.locfileid: "66108190"
  **Carpeta**  
  Muestra la carpeta que contiene el informe especificado en la suscripción. Haga clic en el nombre de la carpeta para ver su contenido.  
   
- **Desencadenador**  
+ **Activado**  
  Identifica los criterios que hacen que se ejecute la suscripción. El desencadenador **TimedSubscription** se basa en una programación que define cuándo se ejecuta la suscripción. El desencadenador **SnapshotUpdated** se basa en la actualización de una instantánea de informe.  
   
  **Última ejecución**  
@@ -66,7 +66,7 @@ ms.locfileid: "66108190"
   
  No se puede procesar una suscripción si se ha desactivado. Para actualizar la suscripción y hacer que sea operativa, ábrala y guárdela.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

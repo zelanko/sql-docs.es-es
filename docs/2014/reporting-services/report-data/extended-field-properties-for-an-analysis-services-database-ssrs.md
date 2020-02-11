@@ -10,35 +10,35 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b601c08633ffe98d6b6005aa3dc34c773810ba3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892030"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
-  La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo `Value` e `IsMissing` en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Puede incluir valores de propiedades de campo extendidas en el informe escribiendo expresiones que las especifiquen por su nombre mediante la `Fields` colección integrada.  
+  La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] extensión de procesamiento de datos de admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo `Value` e `IsMissing` en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Puede incluir valores de propiedades de campo extendidas en el informe escribiendo expresiones que las especifiquen por su nombre mediante la `Fields` colección integrada.  
   
  Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes para varios orígenes de datos que se asignan a nombres de propiedades de campo específicos y a las que se tiene acceso por su nombre mediante la colección `Fields` integrada. Las propiedades personalizadas son específicas de cada proveedor de datos y se puede tener acceso a ellas mediante la colección `Fields` integrada, pero solo mediante la sintaxis que usa el nombre de la propiedad extendida como una cadena.  
   
- Al usar el diseñador de consultas MDX para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo gráfico para definir la consulta, se agrega automáticamente un conjunto predefinido de propiedades de celda y propiedades de dimensión a la consulta MDX. Solo puede usar las propiedades extendidas que se indican de forma específica en la consulta MDX del informe. En función del informe, puede que desee modificar el texto del comando MDX predeterminado para incluir otras propiedades de dimensión o personalizadas definidas en el cubo. Para más información sobre los campos extendidos disponibles en los orígenes de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Crear y usar los valores de propiedad &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/creating-and-using-property-values-mdx).  
+ Al usar el diseñador de consultas MDX para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo gráfico para definir la consulta, se agrega automáticamente un conjunto predefinido de propiedades de celda y propiedades de dimensión a la consulta MDX. Solo puede usar las propiedades extendidas que se indican de forma específica en la consulta MDX del informe. En función del informe, puede que desee modificar el texto del comando MDX predeterminado para incluir otras propiedades de dimensión o personalizadas definidas en el cubo. Para más información sobre los campos extendidos disponibles en los orígenes de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Crear y usar los valores de propiedad &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Trabajar con propiedades de campo en un informe  
  Las propiedades de campo extendidas incluyen propiedades predefinidas y propiedades específicas del proveedor de datos. Las propiedades de campo no aparecen con la lista de campos del panel **Datos de informe** , aunque estén en la consulta creada para un conjunto de datos; por tanto, las propiedades de campo no se pueden arrastrar a la superficie de diseño del informe. En su lugar, debe arrastrar el campo al informe y, después, cambiar la propiedad `Value` del campo a la propiedad que se desee usar. Por ejemplo, si ya se ha dado formato a los datos de celda de un cubo, puede usar la propiedad de campo FormattedValue con la siguiente expresión: `=Fields!FieldName.FormattedValue`.  
   
  Para hacer referencia a una propiedad extendida no predefinida, se utiliza la siguiente sintaxis en una expresión:  
   
--   *Fields!nombreDeCampo("nombreDePropiedad")*  
+-   *Ámbitos! FieldName ("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>Propiedades de campo predefinidas  
  En la mayoría de los casos, las propiedades de campo predefinidas se aplican a las medidas, niveles o dimensiones. Una propiedad de campo predefinida debe tener un valor correspondiente almacenado en el origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si no existe un valor, o si (por ejemplo) especifica una propiedad de campo de solo medida en un nivel, la propiedad devuelve un valor NULL.  
   
  Para hacer referencia a una propiedad predefinida desde una expresión, se utiliza la sintaxis siguiente:  
   
--   *Fields!nombreDeCampo.nombreDePropiedad*  
+-   *Ámbitos! FieldName. PropertyName*  
   
--   *Fields!nombreDeCampo("nombreDePropiedad")*  
+-   *Ámbitos! FieldName ("PropertyName")*  
   
  En la siguiente tabla se ofrece una lista de las propiedades de campo predefinidas que se pueden usar.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68892030"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Especifica el valor de los datos del campo.|  
 |`IsMissing`|`Boolean`|Indica si se ha encontrado el campo en el conjunto de datos resultante.|  
-|`UniqueName`|`String`|Devuelve el nombre completo de un nivel. Por ejemplo, el `UniqueName` valor de un empleado podría ser *[empleado]. [ Departamento de empleados]. [Departamento]. & [sales]. & [Director de ventas de Norteamérica]. & [272]* .|  
+|`UniqueName`|`String`|Devuelve el nombre completo de un nivel. Por ejemplo, el `UniqueName` valor de un empleado podría ser *[empleado]. [ Departamento de empleados]. [Departamento]. & [sales]. & [Director de ventas de Norteamérica]. & [272]*.|  
 |`BackgroundColor`|`String`|Devuelve el color de fondo del campo, definido en la base de datos.|  
 |`Color`|`String`|Devuelve el color de primer plano del elemento, definido en la base de datos.|  
 |`FontFamily`|`String`|Devuelve el nombre de la fuente del elemento, definido en la base de datos.|  
@@ -119,19 +119,19 @@ CELL PROPERTIES
   
  Las primeras cuatro filas de resultado del panel de resultados MDX se muestran en la siguiente tabla.  
   
-|Month of Year|Order Count|  
+|Month of Year|Número de pedidos|  
 |-------------------|-----------------|  
 |January|2,481|  
 |February|2,684|  
 |March|2,749|  
 |April|2,739|  
   
- Incluso si las propiedades forman parte de la instrucción SELECT de MDX, no aparecen en las columnas del conjunto de resultados. No obstante, los datos están disponibles para un informe mediante el uso de la característica de propiedades extendidas. En el panel de resultados de una consulta MDX de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], puede hacer doble clic en la celda para ver los valores de propiedades de celda si están establecidos en el cubo. Si hace doble clic en la primera celda de Order Count que contiene 1,379, verá una ventana emergente con las siguientes propiedades de celda:  
+ Incluso si las propiedades forman parte de la instrucción SELECT de MDX, no aparecen en las columnas del conjunto de resultados. No obstante, los datos están disponibles para un informe mediante el uso de la característica de propiedades extendidas. En un panel de resultados de consulta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]MDX de, puede hacer doble clic en la celda y ver los valores de las propiedades de celda si están establecidos en el cubo. Si hace doble clic en la primera celda de Order Count que contiene 1,379, verá una ventana emergente con las siguientes propiedades de celda:  
   
-|Property|Valor|  
+|Propiedad|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|VALOR|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  
@@ -148,7 +148,7 @@ CELL PROPERTIES
   
  De este modo, se ordena el valor del campo en el tipo de datos de enteros original del origen de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  

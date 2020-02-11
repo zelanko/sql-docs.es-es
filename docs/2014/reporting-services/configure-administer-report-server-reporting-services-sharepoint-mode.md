@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b8ed87ea78424049f1dc42513826ef032b3654
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74685343"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuración y administración de un servidor de informes (modo de SharePoint de Reporting Services)
@@ -25,13 +25,13 @@ ms.locfileid: "74685343"
   
 -   Opciones de menú en una biblioteca de documentos de SharePoint  
   
-    -   [Administrador de alertas de datos para usuarios de SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
+    -   [Administrador de alertas de datos para los usuarios de SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
     -   [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Actualizar credenciales en orígenes de datos de informe desde un sitio de SharePoint](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
-    -   [Administrar conjuntos de recursos compartidos](report-data/manage-shared-datasets.md)  
+    -   [Administración de conjuntos de datos compartidos](report-data/manage-shared-datasets.md)  
   
     -   [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
@@ -39,9 +39,9 @@ ms.locfileid: "74685343"
   
     -   [Opciones de actualización de caché &#40;Administrador de informes&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
   
--   [Reporting Services características de la colección de sitios](../../2014/reporting-services/reporting-services-site-collection-features.md)  
+-   [Características de la colección de sitios Reporting Services](../../2014/reporting-services/reporting-services-site-collection-features.md)  
   
--   [Activar el servidor de informes y Power View características de integración de SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
+-   [Activar las características de integración del servidor de informes y Power View en SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
   
 -   [Reporting Services la configuración del sitio y las características del sitio&#40;el modo de SharePoint&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
   

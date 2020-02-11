@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830586"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
@@ -32,7 +32,7 @@ ms.locfileid: "62830586"
   
      Si no usa una variable para el argumento Propiedades extendidas, debe agregarlo manualmente a la expresión que contiene la cadena de conexión.  
   
-3.  Agregue un contenedor de bucles Foreach a la pestaña **Flujo de control** . Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](foreach-loop-container.md).  
+3.  Agregue un contenedor de bucles foreach a la pestaña **flujo de control** . Para obtener información sobre cómo configurar el contenedor de bucles foreach, vea [configurar un contenedor de bucles foreach](foreach-loop-container.md).  
   
 4.  En la página **Colección** del **Editor de bucles Foreach**, seleccione el enumerador de archivos para Foreach, especifique la carpeta en la que se encuentran los libros de Excel e indique el filtro de archivos (generalmente *.xls).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62830586"
   
 8.  Seleccione el nuevo administrador de conexiones de Excel, haga clic en la propiedad **Expresiones** en la ventana Propiedades y luego haga clic en los puntos suspensivos.  
   
-9. En el **Editor de expresiones de propiedad**, seleccione el `ConnectionString` propiedad y, a continuación, haga clic en el botón de puntos suspensivos.  
+9. En el **Editor de expresiones de propiedad**, `ConnectionString` seleccione la propiedad y, a continuación, haga clic en los puntos suspensivos.  
   
 10. En el Generador de expresiones, escriba la siguiente expresión:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62830586"
   
 2.  Cree una variable de cadena que recibirá el nombre de la tabla actual en cada iteración del bucle.  
   
-3.  Agregue un contenedor de bucles Foreach a la pestaña **Flujo de control** . Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](foreach-loop-container.md).  
+3.  Agregue un contenedor de bucles foreach a la pestaña **flujo de control** . Para obtener información sobre cómo configurar el contenedor de bucles foreach, vea [configurar un contenedor de bucles foreach](foreach-loop-container.md).  
   
 4.  En la página **Colección** del **Editor de bucles Foreach**, seleccione el enumerador de conjunto de filas del esquema para Foreach de ADO.NET.  
   
@@ -90,10 +90,10 @@ ms.locfileid: "62830586"
   
 9. Cree tareas en el contenedor de bucles Foreach que utilicen el administrador de conexiones con Excel para realizar las mismas operaciones en cada tabla de Excel en el libro especificado. Si usa una tarea Script para examinar el nombre de la tabla enumerada o para trabajar con cada tabla, recuerde agregar la variable de cadena a la propiedad ReadOnlyVariables de la tarea Script.  
   
-## <a name="see-also"></a>Vea también  
- [Importar datos desde Excel o exportarlos a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurar un contenedor de bucles Foreach](foreach-loop-container.md)   
+## <a name="see-also"></a>Consulte también  
+ [Importar datos desde Excel o exportar datos a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurar un contenedor de bucles foreach](foreach-loop-container.md)   
  [Agregar o cambiar una expresión de propiedad](../expressions/add-or-change-a-property-expression.md)   
- [Administrador de conexiones de Excel](../connection-manager/excel-connection-manager.md)   
+ [Administrador de conexiones con Excel](../connection-manager/excel-connection-manager.md)   
  [Origen de Excel](../data-flow/excel-source.md)   
  [Destino de Excel](../data-flow/excel-destination.md)   
  [Trabajar con archivos de Excel con la tarea Script](script-task.md)  

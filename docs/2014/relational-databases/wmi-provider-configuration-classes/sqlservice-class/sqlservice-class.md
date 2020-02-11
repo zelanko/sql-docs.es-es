@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912139"
 ---
 # <a name="sqlservice-class"></a>Clase SqlService
@@ -30,7 +30,7 @@ ms.locfileid: "62912139"
   
  La [Clase SqlService](sqlservice-class.md) se utiliza para administrar el servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante programación. Con el objeto de la [clase SqlService](sqlservice-class.md) se pueden realizar las siguientes tareas:  
   
--   Conectarse al servicio.  
+-   Conéctese al servicio.  
   
 -   Modificar la cuenta y la contraseña que se utilizan para conectarse al servicio.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62912139"
   
 -   Comprobar las propiedades del servicio.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

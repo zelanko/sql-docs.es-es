@@ -16,16 +16,16 @@ ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67ba388871720ff804063f27a378b838d300baf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126394"
 ---
-# <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
+# <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Genera la instrucción CREATE PROCEDURE que crea un procedimiento almacenado de actualización dinámica. La instrucción UPDATE del procedimiento almacenado personalizado se genera dinámicamente a partir de la sintaxis MCALL que indica las columnas que deben modificarse. Utilice este procedimiento almacenado si el número de índices de la tabla de suscripción va en aumento y el número de columnas modificadas es relativamente pequeño. Este procedimiento almacenado se ejecuta en el publicador en la base de datos de publicación.  
+  Genera la instrucción CREATE PROCEDURE que crea un procedimiento almacenado de actualización dinámica. La instrucción UPDATE del procedimiento almacenado personalizado se genera dinámicamente a partir de la sintaxis MCALL que indica las columnas que deben modificarse. Utilice este procedimiento almacenado si el número de índices de la tabla de suscripción va en aumento y el número de columnas modificadas es relativamente pequeño. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,19 +37,19 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @artid = ] artid` Es el identificador de artículo. *artid* es **int**, no tiene ningún valor predeterminado.  
+`[ @artid = ] artid`Es el identificador del artículo. *artid especificado* es de **tipo int**y no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Devuelve un conjunto de resultados que consta de una sola **nvarchar (4000)** columna. El conjunto de resultados forma la instrucción CREATE PROCEDURE completa que se utiliza para crear el procedimiento almacenado personalizado.  
+ Devuelve un conjunto de resultados que consta de una única columna **nvarchar (4000)** . El conjunto de resultados forma la instrucción CREATE PROCEDURE completa que se utiliza para crear el procedimiento almacenado personalizado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_scriptdynamicupdproc** se utiliza en la replicación transaccional. La lógica de scripting predeterminada de MCALL incluye todas las columnas de la instrucción UPDATE y utiliza un mapa de bits para determinar las columnas modificadas. En el supuesto de que una columna no haya cambiado, ésta se restablece a su propio valor, lo que no suele generar ningún problema. Si la columna estuviera indizada, tendría lugar un procesamiento adicional. El enfoque dinámico incluye únicamente las columnas modificadas, lo cual optimiza la cadena UPDATE. No obstante, se incurrirá en un procesamiento adicional en tiempo de ejecución a fin de generar la instrucción UPDATE dinámica. Se recomienda probar los enfoques dinámico y estático y elegir la mejor solución.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_scriptdynamicupdproc**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_scriptdynamicupdproc**.  
   
 ## <a name="examples"></a>Ejemplos  
- Este ejemplo crea un artículo (con *artid* establecido en **1**) en el **autores** de tabla en la **pubs** de base de datos y especifica que la actualización instrucción es el procedimiento personalizado para ejecutar:  
+ En este ejemplo se crea un artículo (con *artid especificado* establecido en **1**) en la tabla **authors** de la base de datos **pubs** y se especifica que la instrucción UPDATE es el procedimiento personalizado que se va a ejecutar:  
   
 ```  
 'MCALL sp_mupd_authors'  
@@ -122,7 +122,7 @@ if @@rowcount = 0
   
  Una vez ejecutado este procedimiento almacenado, puede utilizar el script resultante para crear de forma manual el procedimiento almacenado en los suscriptores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

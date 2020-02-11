@@ -16,10 +16,10 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762530"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
@@ -57,7 +57,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el publicador para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los publicadores.  
+>  no se debe usar el *publicador* para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los publicadores.  
   
 `[ @ignore_distributor_failure = ] ignore_distributor_failure`Permite la reinicialización incluso si el distribuidor no existe o está sin conexión. *ignore_distributor_failure* es de **bit**y su valor predeterminado es 0. Si es **0**, se produce un error en la reinicialización si el distribuidor no existe o está sin conexión.  
   
@@ -66,7 +66,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_reinitsubscription** se utiliza en la replicación transaccional.  
   
  **sp_reinitsubscription** no se admite para la replicación transaccional punto a punto.  
@@ -91,7 +91,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** , los miembros del rol fijo de base de datos **db_owner** o el creador de la suscripción pueden ejecutar **sp_reinitsubscription**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reinicializar una suscripción](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Los desencadenadores CLR | Microsoft Docs
+title: Desencadenadores CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,17 +26,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755258"
 ---
 # <a name="clr-triggers"></a>Desencadenadores CLR
-  Debido a la integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), es posible usar cualquier lenguaje [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para crear desencadenadores CLR. En esta sección se incluye información específica acerca de los desencadenadores implementados con la integración CLR. Para obtener una explicación completa de los desencadenadores, consulte [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md).  
+  Debido a la integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), es posible usar cualquier lenguaje [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para crear desencadenadores CLR. En esta sección se incluye información específica acerca de los desencadenadores implementados con la integración CLR. Para obtener una descripción completa de los desencadenadores, vea [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## <a name="what-are-triggers"></a>Qué son los desencadenadores  
- Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando se produce un evento de lenguaje. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos tipos de desencadenadores: desencadenadores del lenguaje de manipulación de datos (DML) y desencadenadores del lenguaje de definición de datos (DDL). Los desencadenadores DML pueden usarse cuando las instrucciones `INSERT`, `UPDATE` o `DELETE` modifican los datos de una tabla o vista especificada. Los desencadenadores DDL activan procedimientos almacenados en respuesta a una serie de instrucciones DDL, principalmente instrucciones que comienzan por `CREATE`, `ALTER` y `DROP`. Los desencadenadores DDL pueden usarse en tareas administrativas, como la auditoría y regulación de operaciones de base de datos.  
+ Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando se produce un evento de lenguaje. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos tipos de desencadenadores: desencadenadores del lenguaje de manipulación de datos (DML) y desencadenadores del lenguaje de definición de datos (DDL). Los desencadenadores DML pueden usarse cuando las instrucciones `INSERT`, `UPDATE` o `DELETE` modifican los datos de una tabla o vista especificada. Los desencadenadores DDL activan procedimientos almacenados en respuesta a una serie de instrucciones DDL, principalmente instrucciones que comienzan por `CREATE`, `ALTER` y `DROP`. Los desencadenadores DDL pueden usarse en tareas administrativas, como la auditoría y regulación de operaciones de base de datos.  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>Capacidades únicas de los desencadenadores CLR  
  Los desencadenadores escritos en [!INCLUDE[tsql](../../includes/tsql-md.md)] poseen la capacidad de determinar las columnas de la vista o de la tabla de activación que se han actualizado mediante el uso de las funciones `UPDATE(column)` y `COLUMNS_UPDATED()`.  
@@ -49,14 +50,14 @@ ms.locfileid: "62755258"
   
 -   Obtener acceso a información acerca de los objetos de base de datos afectados por la ejecución de instrucciones DDL.  
   
- Estas capacidades se proporcionan de forma inherente en el lenguaje de consulta o por medio de la clase `SqlTriggerContext`. Para obtener información acerca de las ventajas de la integración de CLR y elegir entre código administrado y [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [información general de la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Estas capacidades se proporcionan de forma inherente en el lenguaje de consulta o por medio de la clase `SqlTriggerContext`. Para obtener información sobre las ventajas de la integración CLR y la elección entre [!INCLUDE[tsql](../../includes/tsql-md.md)]código administrado y, consulte [información general sobre la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Usar la clase SqlTriggerContext  
  La clase `SqlTriggerContext` no puede construirse públicamente y solo puede obtenerse mediante el acceso a la propiedad `SqlContext.TriggerContext` dentro del cuerpo de un desencadenador CLR. La clase `SqlTriggerContext` puede obtenerse a partir del contexto `SqlContext` activo mediante una llamada a la propiedad `SqlContext.TriggerContext`:  
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- La clase `SqlTriggerContext` proporciona información de contexto acerca del desencadenador. Esta información contextual incluye el tipo de acción que provocó la activación del desencadenador, las columnas que se modificaron en una operación UPDATE y, en el caso de un desencadenador DDL, una estructura XML `EventData` que describe la operación de desencadenamiento. Para obtener más información, consulte [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
+ La clase `SqlTriggerContext` proporciona información de contexto acerca del desencadenador. Esta información contextual incluye el tipo de acción que provocó la activación del desencadenador, las columnas que se modificaron en una operación UPDATE y, en el caso de un desencadenador DDL, una estructura XML `EventData` que describe la operación de desencadenamiento. Para obtener más información, vea [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
   
 ### <a name="determining-the-trigger-action"></a>Determinar la acción del desencadenador  
  Una vez que ha obtenido un `SqlTriggerContext`, puede usarlo para determinar el tipo de acción que provocó que se activara el desencadenador. Esta información se encuentra disponible a través de la propiedad `TriggerAction` de la clase `SqlTriggerContext`.  
@@ -71,10 +72,11 @@ ms.locfileid: "62755258"
   
 -   En el caso de los desencadenadores DDL, la lista de valores posibles de TriggerAction es bastante más larga. Para obtener más información, vea el tema relativo a la enumeración TriggerAction en el SDK de .NET Framework.  
   
-### <a name="using-the-inserted-and-deleted-tables"></a>Uso de las tablas insertadas y eliminadas  
- Se usan dos tablas especiales en las instrucciones de desencadenadores DML: el **insertado** tabla y el **eliminado** tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede usar estas tablas temporales para probar los efectos de determinadas modificaciones en los datos y para establecer condiciones para las acciones de los desencadenadores DML; sin embargo, no es posible modificar los datos de las tablas directamente.  
+### <a name="using-the-inserted-and-deleted-tables"></a>Usar las tablas Inserted y Deleted  
+ En las instrucciones de desencadenadores DML se usan dos tablas especiales: la tabla **Inserted** y la tabla **Deleted** . 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede usar estas tablas temporales para probar los efectos de determinadas modificaciones en los datos y para establecer condiciones para las acciones de los desencadenadores DML; sin embargo, no es posible modificar los datos de las tablas directamente.  
   
- Los desencadenadores CLR pueden tener acceso a la **insertado** y **eliminado** tablas a través del proveedor en proceso CLR. Para ello, se obtiene un objeto `SqlCommand` del objeto SqlContext. Por ejemplo:  
+ Los desencadenadores CLR pueden tener acceso a las tablas **Inserted** y **Deleted** a través del proveedor en proceso de CLR. Para ello, se obtiene un objeto `SqlCommand` del objeto SqlContext. Por ejemplo:  
   
  C#  
   
@@ -230,7 +232,7 @@ End Class
  Para este ejemplo, considere un escenario donde se permita que el usuario elija el identificador que desee, pero usted desea saber qué usuarios en concreto han especificado una dirección de correo electrónico como identificador. El siguiente desencadenador detectará esa información y la registrará en una tabla de auditoría.  
   
 > [!NOTE]  
->  El envío de resultados y mensajes a través del objeto `SqlPipe` se muestra aquí únicamente como ejemplo y, en general, no se aconseja para el código de producción. Otros datos devueltos pueden ser errores inesperados y conducir a aplicaciones  
+>  El envío de resultados y mensajes a través del objeto `SqlPipe` se muestra aquí únicamente como ejemplo y, en general, no se aconseja para el código de producción. Otros datos devueltos pueden ser inesperados y conducir a errores de la aplicación.  
   
 ```csharp  
 using System;  
@@ -480,7 +482,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- El [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción que crea el desencadenador en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es la siguiente y asume que el ensamblado **SQLCLRTest** ya está registrado en el actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  
+ La [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción que crea el desencadenador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en es la siguiente y asume que el ensamblado **SQLCLRTest** ya está registrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos actual.  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -655,12 +657,12 @@ DROP ASSEMBLY ValidationTriggers;
 DROP TABLE Table1;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [Desencadenadores DML](../../relational-databases/triggers/dml-triggers.md)   
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [Creación de objetos de base de datos con Common Language Runtime &#40;CLR&#41; integración](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [Crear objetos de base de datos con Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

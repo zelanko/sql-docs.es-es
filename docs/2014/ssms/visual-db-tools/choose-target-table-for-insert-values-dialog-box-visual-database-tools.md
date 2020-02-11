@@ -1,5 +1,5 @@
 ---
-title: Elegir tabla de destino para el cuadro de diálogo Insertar valores (Visual Database Tools) | Microsoft Docs
+title: Elegir tabla de destino para insertar valores (cuadro de diálogo, Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255748"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Elegir tabla de destino para Insertar valores (cuadro de diálogo, Visual Database Tools)
@@ -25,7 +25,7 @@ ms.locfileid: "63255748"
   
  Seleccione la tabla a la que desea agregar datos y, luego, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear consultas de inserción de valores &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

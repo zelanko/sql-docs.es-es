@@ -1,5 +1,5 @@
 ---
-title: Roles de usuario para los datos modificados Capture Service para Oracle de Attunity | Microsoft Docs
+title: Roles de usuario para Change Data Capture Service para Oracle de Attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771091"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity
@@ -23,7 +23,7 @@ ms.locfileid: "62771091"
 ## <a name="windows-user-roles"></a>Roles de usuario de Windows  
  A continuación se describen los roles de usuario de Windows que el servicio CDC de Oracle emplea.  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>Administrador de equipo: Servicio CDC de Oracle  
+### <a name="computer-administrator-oracle-cdc-service"></a>Administrador del equipo: Servicio CDC de Oracle  
  El administrador del equipo es un usuario de Windows responsable de crear y mantener el servicio CDC en el equipo. Este usuario debe pertenecer al grupo Administradores del equipo local.  
   
  Entre las tareas realizadas por el administrador del equipo del servicio CDC de Oracle se incluyen:  

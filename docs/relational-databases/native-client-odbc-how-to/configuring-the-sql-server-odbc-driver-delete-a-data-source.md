@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8e3b2f19d25374a592203cbd4b00f118385d980
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781677"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurar el controlador ODBC de SQL Server: eliminar un origen de datos
@@ -29,7 +29,7 @@ ms.locfileid: "73781677"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Para eliminar un origen de datos mediante el Administrador ODBC  
   
-1.  En **el panel de control**, Abra **herramientas administrativas**y, a continuación, haga doble clic en orígenes de **datos ODBC (64 bits)** o en orígenes de **datos ODBC (32 bits)** . Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema.  
+1.  En **el panel de control**, Abra **herramientas administrativas**y, a continuación, haga doble clic en orígenes de **datos ODBC (64 bits)** o en orígenes de **datos ODBC (32 bits)**. Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema.  
   
 2.  Haga clic en la pestaña **DSN de usuario**, **DSN de sistema**o DSN de **archivo** .  
   
@@ -59,7 +59,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Agregar un origen &#40;de datos ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+## <a name="see-also"></a>Consulte también  
+ [Agregar un origen de datos &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

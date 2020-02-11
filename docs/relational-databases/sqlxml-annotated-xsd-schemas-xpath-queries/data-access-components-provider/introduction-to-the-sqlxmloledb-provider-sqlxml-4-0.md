@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246676"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introducción al proveedor SQLXMLOLEDB (SQLXML 4.0)
@@ -45,7 +45,7 @@ oTestCommand.Execute , , adExecuteStream
   
  El proveedor SQLXMLOLEDB expone las siguientes propiedades de comando específicas del proveedor.  
   
-|Comando<br /><br /> propiedad|Valor predeterminado<br /><br /> (si existe)|Descripción|  
+|Get-Help<br /><br /> propiedad|Valor predeterminado<br /><br /> (si existe)|Descripción|  
 |--------------------------|----------------------------|-----------------|  
 |Ruta de base|""|Especifica la ruta de acceso del archivo base. La ruta de acceso del archivo base se usa para especificar la ubicación del lenguaje de hojas de estilo XML (XSL) o de los archivos de esquema de asignación. La ruta de acceso del archivo base también se utiliza para resolver las rutas de acceso relativas de XSL o archivos de esquema de asignación que se han especificado en las propiedades de esquema XSL o de asignación.<br /><br /> Para obtener un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas XPath &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |Clientsidexml,|False|Establezca esta propiedad en True si desea que el proceso de conversión del conjunto de filas a XML se produzca en el cliente en lugar de en el servidor. Esto resulta de gran utilidad si desea mover la carga de rendimiento al nivel intermedio.<br /><br /> Para ver un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas sql &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) o [Ejecutar plantillas que contienen consultas SQL &#40;&#41;proveedor de SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  

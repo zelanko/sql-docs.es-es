@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470012"
 ---
 # <a name="customize-toolbars-page"></a>Personalizar (página Barras de herramientas)
@@ -29,16 +29,16 @@ ms.locfileid: "62470012"
 > [!NOTE]  
 >  La barra de menús no puede ocultarse. Solo se puede restablecer.  
   
- **Nueva**  
+ **Nuevo**  
  Muestra el cuadro de diálogo **Nueva barra de herramientas** , que permite crear y dar nombre a una barra de herramientas personalizada.  
   
- **Rename**  
+ **Cambiar el nombre**  
  Muestra el cuadro de diálogo **Cambiar nombre de herramientas** , que solo permite cambiar el nombre de una barra de herramientas personalizada.  
   
  **Eliminar**  
  Elimina la barra de herramientas personalizada de la lista **Barra de herramientas** .  
   
- **Restablecer**  
+ **Reset**  
  Elimina cualquier cambio en la barra de herramientas predefinida seleccionada en la lista **Barra de herramientas** y la restablece a su estado original. Solo está disponible si selecciona una barra de herramientas integrada.  
   
  **Iconos grandes**  

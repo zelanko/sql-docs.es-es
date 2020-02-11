@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012257"
 ---
 # <a name="accessing-the-soap-api"></a>Acceso a la API SOAP
@@ -41,7 +41,7 @@ ms.locfileid: "63012257"
   
 -   El extremo <xref:ReportExecution2005> permite a los desarrolladores procesar y representar mediante programación los informes en un servidor de informes. El acceso a WSDL para este punto de conexión se realiza a través de `ReportExecution2005.asmx?wsdl`.  
   
- Los kits de desarrollo que admiten SOAP y servicios web, como el SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], pueden usar el WSDL.  
+ WSDL puede ser utilizado por los kits de desarrollo que admiten SOAP y servicios Web, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] como el SDK.  
   
  En el siguiente ejemplo se muestra el formato de la dirección URL del archivo WSDL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
@@ -54,12 +54,12 @@ http://server/reportserver/ReportService2010.asmx?wsdl
 |Elemento de dirección URL|Descripción|  
 |-----------------|-----------------|  
 |*servidor*|Nombre del servidor donde se implementa el servidor de informes.|  
-|*servidorDeInformes*|Nombre de la carpeta que contiene el servicio web XML. Se configura durante la instalación.|  
-|*\<nombreDelPuntoDeConexión>.asmx*|Nombre del extremo de servicios web.|  
+|*ReportServer*|Nombre de la carpeta que contiene el servicio web XML. Se configura durante la instalación.|  
+|*\<nombre del punto de conexión>. asmx*|Nombre del extremo de servicios web.|  
   
  Para más información acerca del formato de WSDL, consulte la especificación de WSDL del World Wide Web Consortium (W3C) en http://www.w3.org/TR/wsdl.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](report-server-web-service.md)  
   

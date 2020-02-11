@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771431"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar si los datos modificados están preparados
@@ -86,7 +86,7 @@ ms.locfileid: "62771431"
   
  En la tabla siguiente, la primera columna muestra los valores devueltos desde la tarea Ejecutar SQL por la consulta de ejemplo de Transact-SQL. La segunda columna muestra cómo responden los otros componentes a estos valores.  
   
-|Valor devuelto|Significado|Respuesta|  
+|Valor devuelto|Significado|Response|  
 |------------------|-------------|--------------|  
 |0|Indica que los datos modificados no están listos.<br /><br /> No hay ningún registro de captura de datos modificados posterior al punto final del intervalo seleccionado.|La ejecución continúa con el componente que implementa un retraso. A continuación, el control vuelve al contenedor de bucles For, que sigue comprobando la tarea Ejecutar SQL mientras el valor devuelto sea 0.|  
 |1|Podría indicar que no se han capturado los datos modificados para el intervalo completo, o que se ha eliminado. Esto se trata como una condición de error.<br /><br /> No hay ningún registro de captura de datos modificados anterior al punto inicial del intervalo seleccionado.|La ejecución continúa con el componente opcional que registra el error.|  
@@ -187,7 +187,7 @@ ms.locfileid: "62771431"
         System.Threading.Thread.Sleep((int)Dts.Variables["DelaySeconds"].Value * 1000);  
         ```  
   
-         \- o -  
+         \- O bien  
   
     -   Si está programando en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], escriba la línea de código siguiente:  
   
@@ -331,7 +331,7 @@ ms.locfileid: "62771431"
   
 8.  Cierre el entorno de desarrollo de script y el **Editor de la tarea Script**.  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>siguiente paso  
  Después de determinar que los datos modificados están listos, el paso siguiente consiste en preparar la consulta de los mismos.  
   
  **Tema siguiente:** [Preparar para consultar datos modificados](prepare-to-query-for-the-change-data.md)  

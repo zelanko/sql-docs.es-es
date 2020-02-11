@@ -14,14 +14,14 @@ ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cf11d125bbdfab3c65d08fbf7d27a5ebe7f9096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985098"
 ---
 # <a name="transaction-isolation"></a>Aislamiento de transacción
-*Aislamiento de transacción* se refiere al grado de interacción entre varias transacciones simultáneas. Para ver por qué esto es importante, deberá primero analicemos la idea de seriabilidad.  
+El *aislamiento de transacciones* hace referencia al grado de interacción entre varias transacciones simultáneas. Para ver por qué esto es importante, debe examinar primero la idea de la serialización.  
   
  Esta sección contiene los temas siguientes.  
   

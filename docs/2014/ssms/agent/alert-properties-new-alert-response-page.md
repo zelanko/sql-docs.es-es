@@ -1,5 +1,5 @@
 ---
-title: Propiedades de nueva alerta (página respuesta) de alertas | Microsoft Docs
+title: Propiedades de alerta-nueva alerta (página respuesta) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062196"
 ---
-# <a name="alert-properties-new-alert-response-page"></a>Alerta de propiedades de nueva alerta (página respuesta)
-  Use esta página para especificar el trabajo que desea ejecutar y obtener una lista de operadores a los que se notificará en respuesta a una alerta del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="alert-properties-new-alert-response-page"></a>Propiedades de alerta-nueva alerta (página respuesta)
+  Utilice esta página para especificar el trabajo que desea ejecutar y para obtener una lista de operadores a los que se notificará en respuesta a una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta del agente.  
   
 ## <a name="options"></a>Opciones  
  **Ejecutar trabajo**  
@@ -32,13 +32,13 @@ ms.locfileid: "63062196"
  **Ver trabajo**  
  Permite ver o modificar el trabajo seleccionado. Esta opción no está disponible si **Ejecutar trabajo** no está seleccionada.  
   
- **Notificar a los operadores**  
+ **Notificar operadores**  
  Habilita los controles que le permiten agregar, quitar o cambiar operadores.  
   
  **Lista de operadores**  
  Enumera los operadores a los que se notificará cuando se produzca una alerta. Para especificar un método de notificación, seleccione la casilla **Correo electrónico**, **Buscapersonas**o **Net send** que aparece después del nombre del operador. Esta opción no está disponible si **Notificar a los operadores** no está seleccionada.  
   
- **Correo electrónico**  
+ **Por**  
  Utiliza el correo electrónico para notificar al operador.  
   
  **Buscapersonas**  
@@ -47,15 +47,15 @@ ms.locfileid: "63062196"
  **Net send**  
  Use **net send** para notificar al operador.  
   
- **Nuevo operador**  
+ **New (operador)**  
  Muestra el cuadro de diálogo **Nuevo operador** , que se puede usar para crear un nuevo operador.  
   
  **Ver operador**  
  Muestra el cuadro de diálogo **Propiedades** para el operador seleccionado actualmente. Puede ver y modificar las propiedades del operador en el cuadro de diálogo **Propiedades del operador**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Alerts](alerts.md)   
- [Crear una alerta con gravedad de nivel](create-an-alert-using-severity-level.md)   
+ [Crear una alerta con nivel de gravedad](create-an-alert-using-severity-level.md)   
  [Alerts](alerts.md)   
  [Editar una alerta](edit-an-alert.md)   
  [Delete an Alert](delete-an-alert.md)  

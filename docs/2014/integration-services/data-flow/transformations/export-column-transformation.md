@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900161"
 ---
 # <a name="export-column-transformation"></a>Transformación Exportar columna
@@ -32,12 +32,12 @@ ms.locfileid: "62900161"
 ## <a name="append-and-truncate-options"></a>Opciones de anexar y truncar  
  En la tabla siguiente se describe cómo afectan a los resultados las opciones para anexar y truncar.  
   
-|Anexar|Truncamiento|El archivo existe|Resultado|  
+|Append|Truncate|El archivo existe|Results|  
 |------------|--------------|-----------------|-------------|  
-|False|False|Sin|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|False|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
 |True|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|False|True|Sin|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|True|True|Sin|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en `true`.|  
+|False|True|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|True|True|No|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en `true`.|  
 |False|False|Sí|Se produce un error en tiempo de ejecución. El archivo existe, pero la transformación no puede escribir en él.|  
 |False|True|Sí|La transformación elimina y vuelve a crear el archivo, y escribe los datos en el archivo.|  
 |True|False|Sí|La transformación abre el archivo y escribe los datos al final del archivo.|  
@@ -55,7 +55,7 @@ ms.locfileid: "62900161"
     > [!NOTE]  
     >  Solo se escribe una BOM cuando no se anexan los datos a un archivo existente y cuando los datos tienen el tipo de datos DT_NTEXT.  
   
- La transformación usa pares de columnas de entrada: una columna contiene un nombre de archivo y la otra columna contiene datos. Cada fila del conjunto de datos puede especificar un archivo diferente. Cuando la transformación procesa una fila, los datos de dicha fila se insertan en el archivo especificado. En tiempo de ejecución, la transformación crea los archivos (si no existen) y después escribe los datos en dichos archivos. Los datos deben tener un tipo de datos DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md).  
+ La transformación utiliza pares de columnas de entrada: una columna contiene un nombre de archivo y la otra contiene datos. Cada fila del conjunto de datos puede especificar un archivo diferente. Cuando la transformación procesa una fila, los datos de dicha fila se insertan en el archivo especificado. En tiempo de ejecución, la transformación crea los archivos (si no existen) y después escribe los datos en dichos archivos. Los datos deben tener un tipo de datos DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md).  
   
  Esta transformación tiene una entrada, una salida y una salida de error.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62900161"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

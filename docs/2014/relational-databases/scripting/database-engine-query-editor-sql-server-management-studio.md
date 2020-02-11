@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244944"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de consultas del motor de base de datos (SQL Server Management Studio)
@@ -53,34 +53,34 @@ ms.locfileid: "75244944"
 ## <a name="sql-editor-toolbar"></a>Barra de herramientas del Editor SQL  
  Cuando el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] está abierto, la barra de herramientas del Editor SQL aparece con los botones siguientes.  
   
- **Conéctelo**  
+ **Conexión**  
  Se abre el cuadro de diálogo **Conectar al servidor** . Utilice este cuadro de diálogo para establecer una conexión a un servidor.  
   
- **Conecto**  
+ **Desconexión**  
  Desconecta el Editor de consultas actual del servidor.  
   
  **Cambiar conexión**  
  Se abre el cuadro de diálogo **Conectar al servidor** . Utilice este cuadro de diálogo para establecer una conexión a un servidor diferente.  
   
- **Nueva consulta con conexión actual**  
+ **Consulta con conexión actual**  
  Abre una nueva ventana del Editor de consultas y usa la información de conexión de la ventana actual del Editor de consultas.  
   
  **Bases de datos disponibles**  
  Cambia la conexión a una base de datos distinta del mismo servidor.  
   
- **Ejecut**  
+ **Ejecutar**  
  Ejecuta el código seleccionado o, si no se ha seleccionado ningún código, ejecuta todo el código del Editor de consultas.  
   
- **Depura**  
+ **Depuración**  
  Habilita el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este depurador admite acciones de depuración como establecer puntos de interrupción, inspeccionar variables y recorrer el código.  
   
- **Cancelar la ejecución de la consulta**  
+ **Cancelar ejecución de la consulta**  
  Envía una solicitud de cancelación al servidor. Algunas consultas no pueden cancelarse inmediatamente, sino que deben esperar a una condición de cancelación adecuada. Cuando se cancelan las transacciones, podrían producirse retrasos mientras se revierten.  
   
- **Analiza**  
+ **Analizar**  
  Comprueba la sintaxis del código seleccionado. Si no se ha seleccionado ningún código, comprueba la sintaxis de todo el código en la ventana del Editor de consultas.  
   
- **Mostrar plan de ejecución Estimado**  
+ **Mostrar plan de ejecución estimado**  
  Solicita un plan de ejecución de consulta desde el procesador de consultas sin ejecutar realmente la consulta y muestra el plan en la ventana **Plan de ejecución** . Este plan utiliza estadísticas de índice para calcular el número de filas que se prevé que van a devolverse en cada parte de la ejecución de la consulta. El plan de consultas real que se utiliza puede ser diferente del plan de ejecución calculado. Esto puede ocurrir si el número de filas que se devuelven es significativamente diferente del calculado y el procesador de consultas cambia el plan para obtener una mayor eficacia.  
   
  **Opciones de consulta**  
@@ -102,9 +102,9 @@ ms.locfileid: "75244944"
  Devuelve los resultados de la consulta como una o varias cuadrículas en la ventana **Resultados** .  
   
  **Resultados a archivo**  
- Cuando se ejecuta la consulta, se abre el cuadro de diálogo **Guardar resultados** . En **Guardar en**, seleccione la carpeta en la que desea guardar el archivo. En **Nombre de archivo**, escriba el nombre del archivo y, a continuación, haga clic en **Guardar** para guardar los resultados de la consulta como un archivo **Informe** que tenga la extensión .rpt. Para obtener acceso a las opciones avanzadas, haga clic en la flecha abajo del botón **Guardar** y, a continuación, haga clic en **Guardar con codificación**.  
+ Cuando se ejecuta la consulta, se abre el cuadro de diálogo **Guardar resultados** . En **Guardar en**, seleccione la carpeta en la que desea guardar el archivo. En **Nombre de archivo**, escriba el nombre del archivo y, a continuación, haga clic en **Guardar** para guardar los resultados de la consulta como un archivo **Informe** que tenga la extensión .rpt. Para obtener acceso a las opciones avanzadas, haga clic en la flecha abajo del botón **Guardar** y después haga clic en **Guardar con codificación**.  
   
- **Selección de comentarios**  
+ **Selección con comentarios**  
  Convierte la línea actual en comentario agregando al principio de la línea un operador de comentario (--).  
   
  **Selección sin comentarios**  
@@ -116,7 +116,7 @@ ms.locfileid: "75244944"
  **Aumentar sangría de línea**  
  Mueve el texto de la línea a la derecha agregando espacios en blanco al principio de la línea.  
   
- **Especificar valores para los parámetros de plantilla**  
+ **Especificar valores para parámetros de plantilla**  
  Abre un cuadro de diálogo que puede utilizar para especificar los valores de los parámetros en los procedimientos almacenados y funciones.  
   
  También puede agregar la barra de herramientas del Editor SQL seleccionando el menú **Ver** y, a continuación, las opciones **Barras de herramientas**y **Editor SQL**. Si agrega la barra de herramientas del Editor SQL cuando no hay ninguna ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] abierta, no habrá ningún botón disponible.  
@@ -124,7 +124,7 @@ ms.locfileid: "75244944"
 ## <a name="sql-editor-toolbar"></a>Barra de herramientas del Editor SQL  
  Cuando se abre una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , puede agregar la barra de herramientas Depurar seleccionando el menú **Ver** , seleccionando **Barras de herramientas**y seleccionando a continuación **Depurar**. Si agrega la barra de herramientas Depurar cuando no hay ninguna ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] abierta, no habrá ningún botón disponible.  
   
- **Funcionando**  
+ **Continuar**  
  Ejecuta el código en la ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] hasta que se encuentre un punto de interrupción.  
   
  **Interrumpir todos**  
@@ -133,22 +133,22 @@ ms.locfileid: "75244944"
  **Detener la depuración**  
  Saca la ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] seleccionada del modo de depuración y restaura el modo de ejecución estándar.  
   
- **Mostrar instrucción siguiente**  
+ **Mostrar la instrucción siguiente**  
  Mueve el cursor a la siguiente instrucción que se va a ejecutar.  
   
- **Paso a paso por instrucciones**  
+ **Depurar paso a paso por instrucciones**  
  Se ejecuta la siguiente instrucción. Si la siguiente instrucción invoca un procedimiento almacenado, función o desencadenador de Transact-SQL, el depurador muestra una nueva ventana del **Editor de consultas** que contiene el código del módulo. La ventana está en el modo de depuración y la ejecución se detiene en la primera instrucción del módulo. Después puede desplazarse por el módulo, por ejemplo, estableciendo puntos de interrupción o recorriendo el código.  
   
- **Paso a paso por procedimientos**  
+ **Depurar paso a paso por procedimientos**  
  Se ejecuta la siguiente instrucción. Si la instrucción invoca un procedimiento almacenado, una función o un desencadenador Transact-SQL, el módulo se ejecuta hasta que termine y los resultados se devuelven al código de llamada. Si está seguro de que no hay errores en el módulo, puede omitirlo. La ejecución se detiene en la instrucción que sigue a la llamada al módulo.  
   
- **Paso a paso para salir**  
+ **Depurar paso a paso para salir**  
  Vuelve al nivel de la siguiente llamada superior (función, procedimiento almacenado o desencadenador). La ejecución se detiene en la instrucción que sigue a la llamada al procedimiento almacenado, a la función o al desencadenador.  
   
  **Windows**  
  Abre la ventana **Punto de interrupción** o la ventana **Inmediato** .  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

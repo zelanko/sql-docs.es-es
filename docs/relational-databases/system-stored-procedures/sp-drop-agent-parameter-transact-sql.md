@@ -16,16 +16,16 @@ ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8356ee01b0c14a9cb87542d750a93ea537fac5cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016531"
 ---
-# <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
+# <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Quita uno o todos los parámetros de un perfil en el **MSagent_parameters** tabla. Este procedimiento almacenado se ejecuta en el distribuidor en el que se está ejecutando el agente, en cualquier base de datos.  
+  Quita uno o todos los parámetros de un perfil de la tabla **MSagent_parameters** . Este procedimiento almacenado se ejecuta en el distribuidor en el que se está ejecutando el agente, en cualquier base de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,22 +38,22 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id` Es el identificador del perfil del que se va a quitar un parámetro. *profile_id* es **int**, no tiene ningún valor predeterminado.  
+`[ @profile_id = ] profile_id`Es el identificador del perfil para el que se va a quitar un parámetro. *profile_id* es de **tipo int**y no tiene ningún valor predeterminado.  
   
-`[ @parameter_name = ] 'parameter_name'` Es el nombre del parámetro que se va a quitar. *parameter_name* es **sysname**, su valor predeterminado es **%** . Si **%** , se quitan todos los parámetros para el perfil especificado.  
+`[ @parameter_name = ] 'parameter_name'`Es el nombre del parámetro que se va a quitar. *parameter_name* es de **%** **tipo sysname y su**valor predeterminado es. Si **%** es, se quitan todos los parámetros del perfil especificado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_drop_agent_parameter** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_drop_agent_parameter**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_drop_agent_parameter**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

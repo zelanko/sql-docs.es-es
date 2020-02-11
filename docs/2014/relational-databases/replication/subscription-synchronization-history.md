@@ -1,5 +1,5 @@
 ---
-title: Suscripción, historial de sincronizaciones (suscripción de mezcla, SQL Server 2005 y versiones posterior) | Microsoft Docs
+title: Suscripción, historial de sincronizaciones (suscripción de mezcla, SQL Server 2005 y versiones posteriores) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629714"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>Suscripción, Historial de sincronizaciones (suscripción de mezcla, SQL Server 2005 y versiones posteriores)
@@ -26,7 +26,7 @@ ms.locfileid: "62629714"
 ## <a name="options"></a>Opciones  
  Seleccione en el menú **Ver** las sesiones del Agente de mezcla que desea ver y después seleccione una sesión específica en la cuadrícula con la etiqueta **Sesiones del Agente de mezcla**. En la cuadrícula con la etiqueta **Artículos procesados en la sesión seleccionada**se muestra información detallada sobre la sesión.  
   
- **Ver**  
+ **Vista**  
  Permite seleccionar las sesiones del Agente de mezcla que desea ver.  
   
  **Estado**  
@@ -34,7 +34,7 @@ ms.locfileid: "62629714"
   
 -   Error  
   
--   Completada  
+-   Completed  
   
 -   Intentando de nuevo  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62629714"
  **Hora de finalización**  
  Muestra la hora de finalización de la sesión. Si no se ha detenido el agente, el campo se mostrará vacío.  
   
- **Duración**  
+ **Duration**  
  Tiempo de ejecución del Agente de mezcla en una sesión. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Comandos cargados**  
@@ -74,7 +74,7 @@ ms.locfileid: "62629714"
  **% del total**  
  Porcentaje del tiempo total de procesamiento dedicado a cada fase en la sesión seleccionada.  
   
- **Duración**  
+ **Duration**  
  Tiempo dedicado a cada fase de procesamiento. Este tiempo representa el tiempo transcurrido si el Agente de mezcla se está ejecutando actualmente para la sesión y el tiempo total de ejecución si ya finalizó su ejecución.  
   
  **Inserts**  
@@ -95,9 +95,9 @@ ms.locfileid: "62629714"
  **Último mensaje de la sesión seleccionada**  
  Esta área de texto muestra el último mensaje de la sesión seleccionada. Cuando se produce un error se muestra información detallada sobre el error y el comando que se estaba ejecutando. También incluye vínculos a la información adicional relativa al error.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)  (Supervisar la replicación)  
  [Información general sobre los agentes de replicación](agents/replication-agents-overview.md)  
   

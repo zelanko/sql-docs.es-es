@@ -1,5 +1,5 @@
 ---
-title: Alerta de propiedades-nueva alerta (página General) | Microsoft Docs
+title: Propiedades de alerta-nueva alerta (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062153"
 ---
-# <a name="alert-properties-new-alert-general-page"></a>Alerta de propiedades de nueva alerta (página General)
-  Utilice esta página para ver y modificar las propiedades generales de las alertas del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="alert-properties-new-alert-general-page"></a>Propiedades de alerta-nueva alerta (página general)
+  Utilice esta página para ver y modificar las propiedades generales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las alertas del agente.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Cambie el nombre de la alerta.  
   
  **Habilitar**  
@@ -32,11 +32,11 @@ ms.locfileid: "63062153"
  **Tipo**  
  Seleccione el tipo de alerta:  
   
--   **Alerta de evento de SQL Server** responde a los mensajes del registro de eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+-   **SQL Server alerta de evento** responde a los mensajes del [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro de eventos de Windows.  
   
--   **Alerta de condición de rendimiento de SQL Server** responde a una condición específica del contador de rendimiento.  
+-   **SQL Server alerta de condición de rendimiento** responde a una condición específica en un contador de rendimiento.  
   
--   **Alerta de evento WMI** responde a un evento Instrumental de administración de Windows (WMI).  
+-   **Alerta de evento WMI** responde a un evento de instrumental de administración de Windows (WMI).  
   
 ## <a name="sql-server-event-alert-options"></a>Opciones de Alerta de evento de SQL Server  
  **Nombre de la base de datos**  
@@ -45,17 +45,17 @@ ms.locfileid: "63062153"
  **Número de error**  
  Especifica que este evento responde a un error e indica el número de error.  
   
- **Severity**  
+ **severity**  
  Especifica que este evento responde a mensajes con un nivel de gravedad específico e indica dicho nivel.  
   
- **Mostrar alerta cuando el mensaje contenga**  
+ **Generar una alerta cuando el mensaje contenga**  
  Filtra los eventos mediante una cadena específica. Cuando esta opción está seleccionada, la alerta solo responde a los eventos que contengan una cadena específica.  
   
  **Texto del mensaje**  
  Especifica la cadena que se va a utilizar para filtrar eventos.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Alertas de condición de rendimiento de SQL Server  
- **Objeto**  
+ **Object**  
  Especifica el objeto de rendimiento que se supervisará.  
   
  **Contador**  
@@ -74,13 +74,13 @@ ms.locfileid: "63062153"
  **Espacio de nombres**  
  Especifica el espacio de nombres que se utilizará para la instrucción WQL (Lenguaje de consulta WMI). Solo se admite el espacio de nombres del equipo que ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Consulta**  
+ **Consultar**  
  Especifica la instrucción WQL que identifica el evento al que responde la alerta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Alerts](alerts.md)   
  [Usar WQL con el proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
- [Crear una alerta con un número de Error](create-an-alert-using-an-error-number.md)   
+ [Crear una alerta con un número de error](create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  
   
   

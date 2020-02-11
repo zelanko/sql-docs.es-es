@@ -19,16 +19,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754598"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se usa [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
   
  En este tema se describen los requisitos previos y las recomendaciones para configurar la creación de reflejo de la base de datos. Para obtener una introducción a la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62754598"
   
 
   
-##  <a name="DbmSupport"></a> Compatibilidad con la creación de reflejo de la base de datos  
+##  <a name="DbmSupport"></a>Compatibilidad con la creación de reflejo de la base de datos  
  Para más información sobre la compatibilidad con la creación de reflejo de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [Características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Tenga en cuenta que la creación de reflejo de la base de datos funciona con cualquier nivel de compatibilidad de base de datos. Para obtener información sobre los niveles de compatibilidad admitidos, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
@@ -51,7 +51,7 @@ ms.locfileid: "62754598"
 -   Los dos asociados, el servidor principal y el servidor reflejado, deben ejecutar la misma edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El testigo, si existe, puede ejecutarse en cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admita la creación de reflejo de la base de datos.  
   
     > [!NOTE]  
-    >  Puede actualizar las instancias del servidor que sean asociados en una sesión de creación de reflejo a una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, consulte [Minimizar el tiempo de inactividad de las bases de datos reflejadas al actualizar instancias de servidor](upgrading-mirrored-instances.md).  
+    >  Puede actualizar las instancias del servidor que sean asociados en una sesión de creación de reflejo a una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, consulte [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
 -   La base de datos debe usar el modelo de recuperación completa. Los modelos de recuperación simple y de recuperación optimizado para cargas masivas de registros no admiten la creación de reflejo de la base de datos. Por tanto, las operaciones masivas siempre se registran completamente para una base de datos reflejada. Para obtener información sobre los modelos de recuperación, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62754598"
   
 
   
-##  <a name="RecommendationsForPartners"></a> Recomendaciones para configurar servidores asociados  
+##  <a name="RecommendationsForPartners"></a>Recomendaciones para configurar servidores asociados  
   
 -   Los servidores asociados deben ejecutarse en sistemas comparables que puedan manejar cargas de trabajo idénticas.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62754598"
   
 
   
-##  <a name="RecommendationsForDeploying"></a> Recomendaciones para implementar la creación de reflejo de la base de datos  
+##  <a name="RecommendationsForDeploying"></a>Recomendaciones para implementar la creación de reflejo de la base de datos  
  El rendimiento óptimo de la creación de reflejo de la base de datos se obtiene mediante el funcionamiento asincrónico. Una sesión de creación de reflejo que utiliza el funcionamiento sincrónico puede disminuir el rendimiento cuando su carga de trabajo genera grandes cantidades de datos del registro de transacciones.  
   
  En entornos de prueba, es adecuado explorar todos los modos de funcionamiento para evaluar la forma en que tiene lugar la creación de reflejo de la base de datos. Sin embargo, antes de implementar la creación de reflejo en un entorno de producción, asegúrese de que comprende cómo funciona red en la realidad.  
@@ -123,9 +123,9 @@ ms.locfileid: "62754598"
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Seguridad de transporte para la creación de reflejo de base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Seguridad de transporte para la creación de reflejo de la base de datos y Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6fcb4245d4efff00002dea9b490312792e0d83d6
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706994"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Instalación de SQL Server 2016 R Services
@@ -115,7 +115,7 @@ Este paso requiere el reinicio del servidor. Si va a habilitar la ejecución de 
     > [!TIP]
     > Puede descargar e instalar la versión adecuada desde esta página: [Descargue SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > También puede usar [Azure Data Studio](../../azure-data-studio/what-is.md), que admite tareas administrativas y consultas en SQL Server.
+    > También puede usar [Azure Data Studio](../../azure-data-studio/what-is.md), que admite tareas administrativas y consultas en SQL Server.
   
 2. Conéctese a la instancia en la que instaló Machine Learning Services, haga clic en **Nueva consulta** para abrir una ventana de consulta y ejecute el comando siguiente:
 
@@ -137,7 +137,7 @@ Cuando se haya completado la instalación, reinicie el motor de base de datos an
 
 Al reiniciar el servicio, también se reiniciará automáticamente el servicio [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] relacionado.
 
-Para reiniciar el servicio, puede hacer clic con el botón derecho en el comando **Reiniciar** para la instancia en SSMS, usar el panel **Servicios** del panel de control o emplear el [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md).
+Para reiniciar el servicio, puede hacer clic con el botón derecho en el comando **Reiniciar** de la instancia en SSMS, usar el panel **Servicios** del panel de control o emplear el [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>Comprobar la instalación
 
@@ -153,7 +153,7 @@ Haga lo siguiente para comprobar que se están ejecutando todos los componentes 
 
     **run_value** debería estar establecido ahora en 1.
 
-2. Abra el panel de **Servicios** o el Administrador de configuración de SQL Server y compruebe que se está ejecutando el **servicio SQL Server Launchpad**. Debe tener un servicio para cada instancia del motor de base de datos que tenga instalado R o Python. Para más información sobre el servicio, vea [Marco de extensibilidad](../concepts/extensibility-framework.md).
+2. Abra el panel de **Servicios** o el Administrador de configuración de SQL Server y compruebe que el **servicio SQL Server Launchpad** se está ejecutando. Debe tener un servicio para cada instancia del motor de base de datos que tenga instalado R o Python. Para más información sobre el servicio, vea [Marco de extensibilidad](../concepts/extensibility-framework.md).
 
 7. Si Launchpad se está ejecutando, debería poder ejecutar scripts sencillos de R para comprobar que los tiempos de ejecución de scripting externo pueden comunicarse con SQL Server. 
 
@@ -179,7 +179,7 @@ Haga lo siguiente para comprobar que se están ejecutando todos los componentes 
 
 ## <a name="apply-updates"></a>Aplicación de actualizaciones
 
-Se recomienda aplicar la última actualización acumulativa al motor de base de datos y a los componentes de aprendizaje automático.
+Se recomienda aplicar la última actualización acumulativa tanto en el motor de base de datos como en los componentes de Machine Learning.
 
 En los dispositivos conectados a Internet, las actualizaciones acumulativas suelen aplicarse a través de Windows Update, pero también puede usar los pasos siguientes para las actualizaciones controladas. Al aplicar la actualización para el motor de base de datos, el programa de instalación extrae las actualizaciones acumulativas de las bibliotecas de R instaladas en la misma instancia. 
 

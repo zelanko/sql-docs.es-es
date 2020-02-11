@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206565"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>JobSteps (objeto del Agente SQL Server)
@@ -25,11 +25,11 @@ ms.locfileid: "68206565"
   
  La siguiente tabla contiene los contadores de **SQLAgent:JobSteps** .  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |**Pasos activos**|Este contador muestra el número de pasos de trabajo que se están ejecutando actualmente.|  
 |**Pasos en cola**|Este contador informa acerca del número de pasos de trabajo preparados para que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los ejecute, pero cuya ejecución aún no se ha iniciado.|  
-|**Total de reintentos de pasos**|Este contador informa acerca del número total de veces que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha intentado ejecutar un paso de trabajo desde la última vez que se reinició el servidor.|  
+|**Total de reintentos de pasos**|Este contador informa del número total de veces que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha reintentado un paso de trabajo desde el último reinicio del servidor.|  
   
  Cada contador del objeto contiene las instancias siguientes:  
   
@@ -41,17 +41,17 @@ ms.locfileid: "68206565"
 |**ANALYSISQUERY**|Información de los pasos de trabajo que utilizan el subsistema ANALYSISQUERY.|  
 |**CmdExec**|Información de los pasos de trabajo que utilizan el subsistema **CmdExec** .|  
 |**Distribución**|Información de los pasos de trabajo que utilizan el subsistema **Distribution** .|  
-|**Dts**|Información de los pasos de trabajo que utilizan el subsistema [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
-|**LogReader**|Información de los pasos de trabajo que utilizan el subsistema **LogReader** .|  
-|**Mezcla**|Información de los pasos de trabajo que utilizan el subsistema **Merge** .|  
+|**DTS**|Información de los pasos de trabajo que utilizan el subsistema [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
+|**Lector del registro**|Información de los pasos de trabajo que utilizan el subsistema **LogReader** .|  
+|**Combinar**|Información de los pasos de trabajo que utilizan el subsistema **Merge** .|  
 |**PowerShell**|Información de los pasos de trabajo que utilizan el subsistema **PowerShell** .|  
 |**QueueReader**|Información de los pasos de trabajo que utilizan el subsistema **QueueReader** .|  
-|**Snapshot**|Información de los pasos de trabajo que utilizan el subsistema **Snapshot** .|  
+|**Archivos**|Información de los pasos de trabajo que utilizan el subsistema **Snapshot** .|  
 |**TSQL**|Información de los pasos de trabajo que ejecutan [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar pasos de trabajo](../../ssms/agent/manage-job-steps.md)   
  [Usar objetos de rendimiento](../../ssms/agent/use-performance-objects.md)   
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)  
+ [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

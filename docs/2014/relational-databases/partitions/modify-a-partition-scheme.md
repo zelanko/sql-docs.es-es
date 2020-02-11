@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206567"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar un esquema de partición
@@ -50,16 +50,16 @@ ms.locfileid: "68206567"
   
 -   Permiso CONTROL SERVER o ALTER ANY DATABASE en el servidor de la base de datos en la que se ha creado el esquema de partición.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para modificar un esquema de partición:**  
   
- Esta acción específica no se puede realizar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar un esquema de partición, primero debe eliminar el esquema y después crear uno nuevo con las propiedades deseadas mediante el Asistente para la creación de particiones. Para obtener más información, consulte [crear tablas de particiones e índices con SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) en **crear Partitioned Tables and Indexes**.  
+ Esta acción específica no se puede realizar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar un esquema de partición, primero debe eliminar el esquema y después crear uno nuevo con las propiedades deseadas mediante el Asistente para la creación de particiones. Para obtener más información, vea [crear tablas e índices con particiones mediante SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) en **crear tablas e índices con particiones**.  
   
 #### <a name="to-delete-a-partition-scheme"></a>Para eliminar un esquema de partición  
   
 1.  Haga clic en el signo más para expandir la base de datos donde desea eliminar el esquema de partición.  
   
-2.  Haga clic en el signo más para expandir la carpeta **Almacenamiento** .  
+2.  Haga clic en el signo más para expandir la carpeta **Almacenamiento**.  
   
 3.  Haga clic en el signo más para expandir la carpeta **Esquemas de partición** .  
   

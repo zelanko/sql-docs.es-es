@@ -19,10 +19,10 @@ ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a43f4b3fac5f237904d0160ccfbde4b88f9a3616
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322117"
 ---
 # <a name="msmerge_generation_partition_mappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
@@ -33,11 +33,11 @@ ms.locfileid: "75322117"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Identifica la publicación de combinación.|  
-|**última**|**bigint**|Valor de generación.|  
-|**partition_id**|**Inter**|Identifica la partición.|  
-|**changecount**|**Inter**|Número de veces que la partición ha cambiado.|  
+|**última**|**BIGINT**|Valor de generación.|  
+|**partition_id**|**int**|Identifica la partición.|  
+|**changecount**|**int**|Número de veces que la partición ha cambiado.|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

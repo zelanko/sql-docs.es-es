@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: ae7d1e66d4cbd9b74ad8e58d3ac59c7ddda920a7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244606"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Crear o editar un grupo de servidores (SQL Server Management Studio)
@@ -44,7 +44,7 @@ ms.locfileid: "75244606"
     > [!NOTE]  
     >  También puede crear un grupo de servidores mientras está registrando un servidor. Para ello, haga clic en **Nuevo grupo**y, después, rellene el cuadro de diálogo **Nuevo grupo** .  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Registrar servidores](register-servers.md)  
   
   

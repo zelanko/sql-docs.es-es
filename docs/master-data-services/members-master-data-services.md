@@ -1,5 +1,5 @@
 ---
-title: Miembros
+title: Members
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728006"
 ---
 # <a name="members-master-data-services"></a>Miembros (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "73728006"
   
  En este ejemplo, la tabla representa una entidad, las filas serían los miembros y las columnas, los atributos. Cada celda representa un valor de atributo de un miembro concreto.  
   
- ![Entidad Master Data Services representada como tabla](../master-data-services/media/mds-conc-entity-table.gif "Entidad Master Data Services representada como tabla")  
+ ![Entidad de Master Data Services representada como una tabla](../master-data-services/media/mds-conc-entity-table.gif "Entidad de Master Data Services representada como una tabla")  
   
 ## <a name="member-types"></a>Tipos de miembro  
  Existen tres tipos de miembros: hoja, consolidados y de colección.  
@@ -53,27 +53,27 @@ ms.locfileid: "73728006"
 -   En las jerarquías explícitas, los miembros consolidados pueden ser elementos primarios de otros miembros de la jerarquía o pueden ser elementos secundarios.  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>Usar jerarquías y colecciones para organizar los miembros  
- Las jerarquías y las colecciones se pueden usar para agrupar miembros con fines de informes o análisis. Para obtener más información, consulte [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) y [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
+ Las jerarquías y las colecciones se pueden usar para agrupar miembros con fines de informes o análisis. Para obtener más información, consulte [Jerarquías &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) y [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="member-example"></a>Ejemplo de miembro  
  En el ejemplo siguiente, cada miembro se compone de los valores de atributo Name, Code, Subcategory, StandardCost, ListPrice y FilePhoto.  
   
- ![Tabla de entidades de producto Bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabla de entidades de producto Bike")  
+ ![Tabla de entidades de producto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabla de entidades de producto de bicicleta")  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear un nuevo miembro hoja.|[Crear un miembro hoja &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
-|Crear un nuevo miembro consolidado.|[Crear un miembro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|Crear un nuevo miembro hoja.|[Cree un miembro hoja &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
+|Crear un nuevo miembro consolidado.|[Cree un miembro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Eliminar un miembro o colección existente.|[Eliminar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|Reactivar un miembro o una colección eliminados.|[Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Actualizar los valores de atributo de un miembro.|[Cambar el tipo de atributo &#40;complemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Reactivar un miembro o una colección eliminados.|[Reactivar un miembro o colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|Actualizar los valores de atributo de un miembro.|[Cambiar el tipo de atributo &#40;Complemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Información general de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   

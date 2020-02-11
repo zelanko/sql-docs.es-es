@@ -1,5 +1,5 @@
 ---
-title: Stream propiedad | Microsoft Docs
+title: Propiedad de flujo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58bbbc299f13c0d876807476136cede76894bbb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916699"
 ---
 # <a name="stream-property"></a>Propiedad de la secuencia
-Obtiene o establece OLE DB **Stream** objeto desde/en un **ADOStreamConstruction** objeto.  
+Obtiene o establece un objeto de **flujo** de OLE DB de/en un objeto **ADOStreamConstruction** .  
   
  Lectura/escritura  
   
@@ -40,10 +40,10 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>Parámetros  
  *ppStream*  
- Puntero a OLE DB **Stream** objeto.  
+ Puntero a un objeto de **secuencia** de OLE DB.  
   
  *pStream*  
- OLE DB **Stream** objeto.  
+ Objeto de **secuencia** de OLE DB.  
   
 ## <a name="return-values"></a>Valores devueltos  
  Este método de propiedad devuelve los valores HRESULT estándar. Esto incluye S_OK y E_FAIL.  

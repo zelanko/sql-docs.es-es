@@ -1,5 +1,5 @@
 ---
-title: Stream eventos, métodos y propiedades del objeto | Microsoft Docs
+title: Propiedades, métodos y eventos del objeto Stream | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,15 +13,15 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930675"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>Los eventos, métodos y propiedades del objeto Stream
+# <a name="stream-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Stream
 ## <a name="properties"></a>Propiedades  
- [Propiedad del juego de caracteres](../../../ado/reference/ado-api/charset-property-ado.md)  
+ [Charset (propiedad)](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [Propiedad EOS](../../../ado/reference/ado-api/eos-property.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67930675"
  [Propiedad Type (objeto Stream de ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
   
 ## <a name="methods"></a>Métodos  
- [Cancel (método)](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [CANCEL (método)](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
  [Close (método)](../../../ado/reference/ado-api/close-method-ado.md)  
   
@@ -66,8 +66,8 @@ ms.locfileid: "67930675"
   
  [Método WriteText](../../../ado/reference/ado-api/writetext-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

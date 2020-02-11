@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770730"
 ---
 # <a name="sql-server-destination"></a>SQL Server, destino
@@ -32,7 +32,7 @@ ms.locfileid: "62770730"
  Los usuarios que ejecutan paquetes que incluyen el destino de SQL Server deben tener el permiso Crear objetos globales. Para otorgar este permiso a los usuarios, utilice la herramienta Directiva de seguridad local que se abre desde el menú **Herramientas administrativas** . Si recibe un mensaje de error al ejecutar un paquete que utiliza el destino de SQL Server, asegúrese de que la cuenta que ejecuta el paquete tiene el permiso Crear objetos globales.  
   
 ## <a name="bulk-inserts"></a>Inserciones masivas  
- Si se intenta usar el destino de SQL Server para realizar una carga masiva de datos en una base de datos remota de SQL Server, puede recibir un mensaje de error similar al siguiente: "Hay un registro OLE DB disponible". Origen : "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Descripción: "No se pudo realizar la carga masiva porque el objeto de asignación de archivos "Global\DTSQLIMPORT" no se pudo abrir. Código de error del sistema operativo 2 (El sistema no encuentra el archivo especificado). Asegúrese de que tiene acceso a un servidor local mediante Seguridad de Windows."".  
+ Si se intenta utilizar el destino de SQL Server para realizar una carga masiva de datos en una base de datos remota de SQL Server, puede recibir un mensaje de error similar al siguiente: "Hay un registro OLE DB disponible. Origen: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Resultado: 0x80040E14 Descripción: "No se pudo realizar la carga masiva porque el objeto de asignación de archivos SSIS "Global\DTSQLIMPORT" no se pudo abrir. Código de error del sistema operativo 2 (El sistema no encuentra el archivo especificado). Asegúrese de que tiene acceso a un servidor local mediante Seguridad de Windows."".  
   
  El destino de SQL Server ofrece la misma inserción de datos de alta velocidad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que proporciona la tarea Inserción masiva. En cambio, al usar el destino de SQL Server, un paquete puede aplicar transformaciones a los datos de las columnas antes de que estos se carguen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62770730"
   
  Para obtener más información sobre las opciones de carga masiva, vea [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
-#### <a name="performance-improvements"></a>Mejoras de rendimiento  
+#### <a name="performance-improvements"></a>Mejoras en el rendimiento  
  Para mejorar el rendimiento de una inserción masiva y el acceso a los datos de tablas durante la operación de inserción masiva, se deben cambiar las opciones predeterminadas de la manera siguiente:  
   
 -   No comprobar las restricciones en la tabla o vista de destino durante la operación de importación masiva.  
@@ -93,15 +93,15 @@ ms.locfileid: "62770730"
   
 -   [Editor de destino de SQL &#40;página Administrador de conexiones&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de SQL &#40;página Asignaciones&#41;](../sql-destination-editor-mappings-page.md)  
+-   [&#40;página asignaciones del editor de destino de SQL&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [Editor de destino de SQL &#40;página Avanzadas&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Editor de destino de SQL &#40;página avanzadas&#41;](../sql-destination-editor-advanced-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
 -   [Common Properties](../common-properties.md)  
   
--   [Propiedades personalizadas del destino SQL Server](sql-server-destination-custom-properties.md)  
+-   [Propiedades personalizadas del destino de SQL Server](sql-server-destination-custom-properties.md)  
   
  Para obtener más información sobre cómo establecer valores de propiedades, haga clic en uno de los temas siguientes:  
   
@@ -123,7 +123,7 @@ ms.locfileid: "62770730"
   
 -   Artículo técnico [Usar SQL Server Integration Services para cargar datos de forma masiva](https://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de datos](data-flow.md)  
   
   

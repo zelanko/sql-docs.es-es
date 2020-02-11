@@ -1,5 +1,5 @@
 ---
-title: Otras arquitecturas de controlador | Microsoft Docs
+title: Otras arquitecturas de controladores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,36 +17,36 @@ ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dbfb09a261d7499e07137b7ed830d5a5b92dc73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086015"
 ---
 # <a name="other-driver-architectures"></a>Otras arquitecturas de controlador
-Algunos controladores ODBC no cumplir estrictamente la arquitectura descrita anteriormente. Esto puede deberse a los controladores realizan tareas distintas de las de un controlador ODBC tradicional o no son controladores en el sentido normal.  
+Algunos controladores ODBC no se ajustan estrictamente a la arquitectura descrita previamente. Esto puede deberse a que los controladores realizan tareas distintas de las de un controlador ODBC tradicional o no son controladores en el sentido normal.  
   
-## <a name="driver-as-a-middle-component"></a>Controlador como un componente central  
- El controlador ODBC puede residir entre el Administrador de controladores y uno o varios controladores ODBC. Cuando el controlador en el medio es capaz de trabajar con varios orígenes de datos, actúa como un distribuidor de llamadas ODBC (o llamadas adecuadamente traducidas) a otros módulos que realmente tienen acceso a los orígenes de datos. En esta arquitectura, el controlador en el medio está tardando en algunos de los roles del Administrador de controladores.  
+## <a name="driver-as-a-middle-component"></a>Controlador como componente intermedio  
+ El controlador ODBC puede residir entre el administrador de controladores y uno o varios controladores ODBC. Cuando el controlador de la mitad es capaz de trabajar con varios orígenes de datos, actúa como un distribuidor de llamadas ODBC (o llamadas traducidas correctamente) a otros módulos que realmente tienen acceso a los orígenes de datos. En esta arquitectura, el controlador de la mitad está tomando parte de la función de un administrador de controladores.  
   
- Otro ejemplo de este tipo de controlador es un programa spy para ODBC, que intercepta y copia las funciones ODBC que se envían entre el Administrador de controladores y el controlador. Esta capa se puede usar para emular un controlador o una aplicación. En el Administrador de controladores, la capa aparece como el controlador; para el controlador, la capa parece ser el Administrador de controladores.  
+ Otro ejemplo de este tipo de controlador es un programa espía para ODBC, que intercepta y copia las funciones ODBC que se envían entre el administrador de controladores y el controlador. Esta capa se puede usar para emular un controlador o una aplicación. En el administrador de controladores, la capa parece ser el controlador; en el controlador, la capa parece ser el administrador de controladores.  
   
-## <a name="heterogeneous-join-engines"></a>Motores de combinación heterogéneo  
- Algunos controladores ODBC se basan en un motor de consultas para combinaciones heterogéneas. En una arquitectura de un motor de combinación heterogéneo (vea la ilustración siguiente), aparece el controlador a la aplicación como un controlador, pero aparece en otra instancia del Administrador de controladores como una aplicación. Este controlador procesa una combinación heterogénea de la aplicación mediante una llamada a instrucciones SQL independientes en los controladores para cada base de datos combinada.  
+## <a name="heterogeneous-join-engines"></a>Motores de combinación heterogéneos  
+ Algunos controladores ODBC se basan en un motor de consultas para realizar combinaciones heterogéneas. En una arquitectura de un motor de combinación heterogéneo (vea la ilustración siguiente), el controlador aparece como un controlador en la aplicación, pero aparece en otra instancia del administrador de controladores como una aplicación. Este controlador procesa una combinación heterogénea de la aplicación mediante una llamada a instrucciones SQL independientes en los controladores para cada base de datos combinada.  
   
- ![Arquitectura de un motor de combinación heterogéneo](../../odbc/reference/media/fig3-4.gif "fig3-4")  
+ ![Arquitectura de un motor de combinación heterogéneo](../../odbc/reference/media/fig3-4.gif "Fig3-4")  
   
- Esta arquitectura proporciona una interfaz común para la aplicación tener acceso a datos desde bases de datos diferentes. Se puede utilizar una forma habitual de recuperar los metadatos, como información acerca de las columnas especiales (identificadores de fila), y pueden llamar a funciones de catálogo comunes para recuperar información del diccionario de datos. Mediante una llamada a la función ODBC **SQLStatistics**, por ejemplo, la aplicación puede recuperar información acerca de los índices en las tablas que se va a combinarse, incluso si las tablas están en dos bases de datos independientes. El procesador de consultas no tiene que preocuparse por cómo almacenan los metadatos de las bases de datos.  
+ Esta arquitectura proporciona una interfaz común para que la aplicación tenga acceso a los datos de diferentes bases de datos. Puede usar una manera común de recuperar metadatos, como información sobre columnas especiales (identificadores de fila), y puede llamar a funciones de catálogo comunes para recuperar información del Diccionario de datos. Al llamar a la función de ODBC **SQLStatistics**, por ejemplo, la aplicación puede recuperar información sobre los índices de las tablas que se van a combinar, incluso si las tablas están en dos bases de datos independientes. El procesador de consultas no tiene que preocuparse de cómo almacenan los metadatos las bases de datos.  
   
- La aplicación también tiene acceso estándar a tipos de datos. ODBC define los tipos de datos SQL comunes que se asignan los tipos de datos específicos para DBMS a. Una aplicación puede llamar a **SQLGetTypeInfo** para recuperar información sobre los tipos de datos en diferentes bases de datos.  
+ La aplicación también tiene acceso estándar a los tipos de datos. ODBC define los tipos de datos de SQL comunes a los que se asignan los tipos de datos específicos del DBMS. Una aplicación puede llamar a **SQLGetTypeInfo** para recuperar información acerca de los tipos de datos en distintas bases de datos.  
   
- Cuando la aplicación genera una instrucción de combinación heterogéneo, el procesador de consultas en esta arquitectura analiza la instrucción SQL y, a continuación, genera instrucciones SQL independientes para cada base de datos que se unirán. Con los metadatos acerca de cada controlador, el procesador de consultas puede determinar la combinación inteligente y más eficaz. Por ejemplo, si la instrucción combina dos tablas en una base de datos con una tabla en otra base de datos, el procesador de consultas puede combinar las dos tablas en una base de datos antes de unir el resultado con la tabla de la otra base de datos.  
+ Cuando la aplicación genera una instrucción de combinación heterogénea, el procesador de consultas de esta arquitectura analiza la instrucción SQL y, a continuación, genera instrucciones SQL independientes para cada base de datos que se va a combinar. Mediante el uso de metadatos sobre cada controlador, el procesador de consultas puede determinar la combinación más eficaz y inteligente. Por ejemplo, si la instrucción combina dos tablas en una base de datos con una tabla en otra base de datos, el procesador de consultas puede combinar las dos tablas en una base de datos antes de unir el resultado con la tabla de la otra base de datos.  
   
 ## <a name="odbc-on-the-server"></a>ODBC en el servidor  
- Controladores ODBC pueden instalarse en un servidor para que se pueden usar las aplicaciones en cualquier parte de una serie de equipos cliente. En esta arquitectura (consulte la ilustración siguiente), un administrador de controladores y un solo controlador ODBC se instalan en cada cliente, y otro administrador de controladores y una serie de controladores ODBC instalados en el servidor. Esto permite que cada acceso de cliente a una variedad de controladores de uso y mantenimiento en el servidor.  
+ Los controladores ODBC se pueden instalar en un servidor para que las aplicaciones puedan utilizarlos en cualquiera de las series de equipos cliente. En esta arquitectura (vea la ilustración siguiente), se instalan un administrador de controladores y un solo controlador ODBC en cada cliente, y se instalan en el servidor otro administrador de controladores y una serie de controladores ODBC. Esto permite que cada cliente tenga acceso a diversos controladores usados y mantenidos en el servidor.  
   
  ![Arquitectura de controladores ODBC en un servidor](../../odbc/reference/media/fig3-5.gif "FIG3-5")  
   
- Una ventaja de esta arquitectura es la configuración y mantenimiento de software eficaz. Los controladores solo necesitan actualizarse en un solo lugar: en el servidor. Mediante el uso de orígenes de datos del sistema, pueden definir orígenes de datos en el servidor para su uso por todos los clientes. No es necesario definir los orígenes de datos en el cliente. Agrupación de conexiones se puede usar para simplificar el proceso por el que los clientes se conectan a orígenes de datos.  
+ Una ventaja de esta arquitectura es el mantenimiento y la configuración de software eficientes. Los controladores solo deben actualizarse en un lugar: en el servidor. Mediante el uso de orígenes de datos del sistema, los orígenes de datos se pueden definir en el servidor para su uso por parte de todos los clientes. No es necesario definir los orígenes de datos en el cliente. La agrupación de conexiones se puede usar para simplificar el proceso mediante el cual los clientes se conectan a los orígenes de datos.  
   
- El controlador en el cliente suele ser un controlador muy pequeño que se transfiere la llamada del Administrador de controladores al servidor. Su impacto puede ser significativamente menor que los controladores ODBC completamente funcionales en el servidor. En esta arquitectura, se pueden liberar los recursos de cliente si el servidor tiene más capacidad de proceso. Además, se pueden mejorar la eficacia y la seguridad de todo el sistema mediante la instalación de servidores de copia de seguridad y realizar el equilibrio de carga para optimizar el uso del servidor.
+ Normalmente, el controlador del cliente es un controlador muy pequeño que transfiere la llamada del administrador de controladores al servidor. Su superficie puede ser significativamente menor que los controladores ODBC totalmente funcionales del servidor. En esta arquitectura, los recursos de cliente se pueden liberar si el servidor tiene más potencia de computación. Además, la eficacia y la seguridad de todo el sistema se pueden mejorar mediante la instalación de los servidores de copia de seguridad y el equilibrio de carga para optimizar el uso del servidor.

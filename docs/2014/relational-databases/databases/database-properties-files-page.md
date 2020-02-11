@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871991"
 ---
 # <a name="database-properties-files-page"></a>Propiedades de la base de datos (página Archivos)
@@ -64,7 +64,7 @@ ms.locfileid: "62871991"
   
  En el caso de los archivos de los grupos de archivos optimizados para memoria, este campo debe establecerse en **Ilimitado**.  
   
- **Ruta de acceso**  
+ **Path**  
  Muestra la ruta de acceso del archivo seleccionado. Para especificar una ruta de acceso a un nuevo archivo, haga clic en el botón de edición situado junto a la ruta de acceso al archivo y navegue a la carpeta de destino. No se puede modificar la ruta de acceso de un archivo existente.  
   
  Para los archivos FILESTREAM, la ruta de acceso es una carpeta. El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] creará los archivos subyacentes en esta carpeta.  
@@ -74,15 +74,15 @@ ms.locfileid: "62871991"
   
  Este campo no es válido para los archivos FILESTREAM, lo cual incluye los archivos en grupos de archivos optimizados para memoria.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega un nuevo archivo a la base de datos.  
   
- **Quitar**  
+ **Remove**  
  Elimina el archivo seleccionado de la base de datos. No podrá eliminarse un archivo a menos que esté vacío. El archivo de datos principal y el archivo de registro principal no se pueden quitar.  
   
  Para obtener información acerca de los archivos, vea [Database Files and Filegroups](database-files-and-filegroups.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

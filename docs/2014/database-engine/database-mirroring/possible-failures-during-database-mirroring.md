@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874504"
 ---
-# <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
+# <a name="possible-failures-during-database-mirroring"></a>Posibles errores durante la creación de reflejo de la base de datos
   Los problemas físicos, del sistema operativo o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden provocar un error en una sesión de creación de reflejo de la base de datos. La creación de reflejo de la base de datos no comprueba regularmente los componentes de los que depende Sqlservr.exe para comprobar si están funcionando de forma correcta o si se ha producido un error. Sin embargo, en algunos tipos de errores, el componente afectado informa a Sqlservr.exe. Cuando otro componente informa del error, éste se denomina *error de hardware*. Para detectar otros errores que pudieran pasar desapercibidos, la creación de reflejo de la base de datos implementa su propio mecanismo de tiempo de espera. Si se agota el tiempo de espera de la creación de reflejo, la creación de reflejo de la base de datos supone que se ha producido un error y declara un *error de software*. Sin embargo, algunos errores que se producen en el nivel de instancia de SQL Server no ocasionan que se agote el tiempo de espera de la creación de reflejo y pueden no ser detectados.  
   
 > [!IMPORTANT]  
@@ -90,7 +90,7 @@ ms.locfileid: "70874504"
   
  Para mantener una conexión abierta, una instancia de servidor debe recibir un ping en dicha conexión dentro del período de tiempo de espera definido, además del tiempo de espera necesario para enviar otro ping. La recepción de un ping durante el período de tiempo de espera indica que la conexión todavía está abierta y que las instancias de servidor se comunican a través de ella. Al recibir un ping, una instancia de servidor restablece su contador de tiempo de espera en dicha conexión.  
   
- Si no se recibe ningún ping en una conexión durante el período de tiempo de espera, una instancia de servidor considera que la conexión ha agotado el tiempo de espera. La instancia de servidor cierra la conexión que ha agotado el tiempo de espera y controla el evento de tiempo de espera según el estado y el modo de funcionamiento de la sesión.  
+ Si no se recibe ningún ping en una conexión durante el período de tiempo de espera, una instancia de servidor considera que la conexión ha agotado el tiempo de espera. La instancia de servidor cierra la conexión que ha superado el tiempo de espera y controla el evento de tiempo de espera según el estado y el modo de funcionamiento de la sesión.  
   
  Incluso aunque el otro servidor funcione correctamente, un tiempo de espera agotado se considera un error. Si el valor de tiempo de espera establecido para una sesión es demasiado corto para el nivel de respuesta normal de cualquier servidor asociado, puede darse un error falso. Un error falso se produce cuando una instancia de servidor se pone en contacto correctamente con otra cuyo tiempo de respuesta es tan lento que sus comandos ping no se reciben antes de que expire el período de tiempo de espera.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "70874504"
 ## <a name="responding-to-an-error"></a>Responder a un error  
  Independientemente del tipo de error, una instancia de servidor que detecta un error responde apropiadamente según el rol de la instancia, el modo de funcionamiento de la sesión y el estado de las demás conexiones de la sesión. Para obtener información acerca de lo que ocurre en caso de pérdida de un asociado, vea [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   

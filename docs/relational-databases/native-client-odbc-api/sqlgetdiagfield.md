@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786474"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client especifica los siguientes campos de diagnóstico adicionales para **SQLGetDiagField**. Estos campos admiten el informe de errores enriquecido para aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y están disponible en todos los registros de diagnóstica que se generan en los identificadores de conexión de ODBC e identificadores de instrucciones de ODBC conectados. Los campos se definen en sqlncli.h.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client especifica los siguientes campos de diagnóstico adicionales para **SQLGetDiagField**. Estos campos admiten el informe de errores enriquecido para aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y están disponible en todos los registros de diagnóstica que se generan en los identificadores de conexión de ODBC e identificadores de instrucciones de ODBC conectados. Los campos se definen en sqlncli.h.  
   
 |Campo del registro de diagnóstico|Descripción|  
 |------------------------------|-----------------|  
@@ -38,9 +38,9 @@ ms.locfileid: "73786474"
   
  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client notifica los siguientes códigos de función dinámica adicionales que identifican la última instrucción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentada. El código de función dinámica se devuelve en el encabezado (registro 0) del conjunto de registros de diagnóstico y está por tanto disponible en cada ejecución (correcta o no).  
   
-|Código de función dinámica|Origen|  
+|Código de función dinámica|Source|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|instrucción ALTER DATABASE|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|Instrucción ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrucción CHECKPOINT|  
 |SQL_DIAG_DFC_SS_CONDITION|Error surgido en las cláusulas WHERE o HAVING de una instrucción.|  
 |SQL_DIAG_DFC_SS_CREATE_DATABASE|Instrucción CREATE DATABASE|  
@@ -75,7 +75,7 @@ ms.locfileid: "73786474"
 |SQL_DIAG_DFC_SS_READTEXT|Instrucción READTEXT|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|Instrucción RECONFIGURE|  
 |SQL_DIAG_DFC_SS_RETURN|Instrucción RETURN de control de flujo|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|SELECT INTO, instrucción|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|Instrucción SELECT INTO|  
 |SQL_DIAG_DFC_SS_SET|Instrucción SET (genérico, todas las opciones)|  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|SET IDENTITY_INSERT, instrucción|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|SET ROWCOUNT, instrucción|  
@@ -99,10 +99,10 @@ ms.locfileid: "73786474"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField y parámetros con valores de tabla  
  SQLGetDiagField se puede utilizar para recuperar dos campos de diagnóstico: SQL_DIAG_SS_TABLE_COLUMN_NUMBER y SQL_DIAG_SS_TABLE_ROW_NUMBER. Estos campos ayudan a determinar qué valor produjo el error o la advertencia asociados al registro de diagnóstico.  
   
- Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros &#40;con&#41;valores de tabla ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>Vea también  
-   de la [función SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)  
- [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQLGetDiagField función)](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760708"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Generar perfiles del rendimiento del controlador ODBC
@@ -100,13 +100,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Número de identificadores de instrucciones abiertos actualmente en todas las conexiones abiertas del controlador.|  
 |MaxOpenStmt|Número máximo de identificadores de instrucciones abiertos simultáneamente después de SQL_PERF_START.|  
 |SumOpenStmt|Número de identificadores de instrucciones que se han abierto después de SQL_PERF_START.|  
-|**Estadísticas de conexión:**||  
+|**Estadísticas de conexión**||  
 |CurrentConnectionCount|Número actual de controladores de conexiones activas que la aplicación ha abierto en el servidor.|  
 |MaxConnectionsOpened|Número máximo de controladores de conexiones simultáneas abiertos después de SQL_PERF_START.|  
 |SumConnectionsOpened|Suma del número de controladores de conexión abiertos después de SQL_PERF_START.|  
 |SumConnectionTime|Suma de la cantidad de tiempo que han estado abiertas todas las conexiones después de SQL_PERF_START. Por ejemplo, si una aplicación abrió 10 conexiones y mantuvo cada conexión durante 5 segundos, el valor de SumConnectionTime sería 50 segundos.|  
 |AvgTimeOpened|Igual que SumConnectionsOpened/SumConnectionTime.|  
-|**Estadísticas de red:**||  
+|**Estadísticas de red**||  
 |ServerRndTrips|Número de veces que el controlador envió comandos al servidor y obtuvo una respuesta.|  
 |BuffersSent|Número de paquetes de flujo TDS que el controlador ha enviado a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] después de SQL_PERF_START. Los comandos grandes pueden tomar varios búferes, de modo que si se envía un comando grande al servidor y llena seis paquetes, ServerRndTrips en uno y BuffersSent se incrementa en seis.|  
 |BuffersRec|Número de paquetes TDS recibidos por el controlador desde [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] después de que la aplicación empezase a utilizar el controlador.|  
@@ -120,8 +120,8 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|Cantidad acumulada de tiempo que ha dedicado el controlador al procesamiento después de SQL_PERF_START, incluido el tiempo que ha pasado esperando respuestas del servidor.|  
 |msNetworkServerTime|Cantidad acumulada de tiempo que el controlador ha pasado esperando respuestas del servidor.|  
   
-## <a name="see-also"></a>Vea también  
-   de [SQL Server Native Client &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
- [Temas &#40;de procedimientos de generación de perfiles de rendimiento del controlador ODBC ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Temas de procedimientos de generación de perfiles de rendimiento del controlador ODBC &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

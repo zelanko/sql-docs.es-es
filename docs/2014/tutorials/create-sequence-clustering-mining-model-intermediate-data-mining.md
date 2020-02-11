@@ -1,5 +1,5 @@
 ---
-title: Creación de una estructura del modelo de minería de datos (Tutorial de minería de datos intermedios) de clústeres de secuencia | Microsoft Docs
+title: Crear una estructura de modelos de minería de datos de clústeres de secuencia (tutorial intermedio de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273478"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Crear una estructura del modelo de minería de datos de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
@@ -26,70 +26,70 @@ ms.locfileid: "63273478"
   
 ### <a name="to-create-a-sequence-clustering-structure-and-model"></a>Para crear un modelo y una estructura de agrupación en clústeres de secuencia  
   
-1.  En el Explorador de soluciones en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en **estructuras de minería de datos** y seleccione **nueva estructura de minería de datos**.  
+1.  En Explorador de soluciones en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic con el botón secundario en **estructuras de minería de datos** y seleccione **nueva estructura de minería de datos**.  
   
 2.  En la página de inicio del **Asistente para minería de datos** , haga clic en **Siguiente**.  
   
-3.  En el **seleccionar el método de definición** , comprueba que **desde el almacén de datos o base de datos relacional existente** está seleccionada y, a continuación, haga clic en **siguiente**.  
+3.  En la página **seleccionar el método de definición** , compruebe que la opción **de base de datos relacional o del almacenamiento de datos existente** está seleccionada y, a continuación, haga clic en **siguiente**.  
   
-4.  En el **crear la estructura de minería de datos** , comprueba que la opción **crear estructura de minería de datos con un modelo de minería de datos** está seleccionada. A continuación, haga clic en la lista desplegable para la opción, **qué técnica de minería de datos desea utilizar?** y seleccione **Microsoft Sequence Clustering**. Haga clic en **Siguiente**.  
+4.  En la página **crear la estructura de minería de datos** , compruebe que está seleccionada la opción **crear estructura de minería de datos con un modelo de minería de** datos. A continuación, haga clic en la lista desplegable de la opción **¿qué técnica de minería de datos desea utilizar?** y seleccione **agrupación en clústeres de secuencia de Microsoft**. Haga clic en **Next**.  
   
-     El **seleccionar vista del origen de datos** aparece la página. En **vistas del origen de datos disponibles**, seleccione `Orders`.  
+     Aparece la página **seleccionar vista del origen de datos** . En **vistas del origen de datos disponibles**, seleccione `Orders`.  
   
-     Orders es la misma vista del origen de datos que utilizó para el escenario de la cesta de la compra. Si no ha creado esta vista del origen de datos, consulte [agregar una vista del origen de datos con tablas anidadas &#40;Tutorial intermedio de minería de datos&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md).  
+     Orders es la misma vista del origen de datos que utilizó para el escenario de la cesta de la compra. Si no ha creado esta vista del origen de datos, vea [Agregar una vista del origen de datos con tablas anidadas &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md).  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
-6.  En el **especificar tipos de tablas** página, seleccione el **caso** casilla de verificación junto a la **vAssocSeqOrders** de tabla y seleccione el **Nested** casilla de verificación junto a la **vAssocSeqLineItems** tabla. Haga clic en **Siguiente**.  
+6.  En la página **especificar tipos de tablas** , active la casilla de verificación de **mayúsculas y minúsculas** junto a la tabla **VAssocSeqOrders** y active la casilla **anidada** junto a la tabla **vAssocSeqLineItems** . Haga clic en **Next**.  
   
     > [!NOTE]  
-    >  Si se produce un error cuando se selecciona el **caso** o **Nested** casillas de verificación, es posible que la combinación en la vista del origen de datos no es correcta. La tabla anidada, **vAssocSeqLineItems**, debe estar conectado a la tabla de casos, **vAssocSeqOrders,** por una combinación de varios a uno. Puede modificar la relación haciendo clic con el botón secundario en la línea de combinación e invirtiendo entonces la dirección de la unión. Para obtener más información, consulte [Create o cuadro de diálogo Editar relación &#40;Analysis Services - datos multidimensionales&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
+    >  Si se produce un error al activar las **casillas de verificación de** **mayúsculas o minúsculas** , es posible que la combinación de la vista del origen de datos no sea correcta. La tabla anidada, **vAssocSeqLineItems**, debe estar conectada a la tabla de casos, **vAssocSeqOrders,** por una combinación de varios a uno. Puede modificar la relación haciendo clic con el botón secundario en la línea de combinación e invirtiendo entonces la dirección de la unión. Para obtener más información, vea [cuadro de diálogo crear o editar relación &#40;Analysis Services-&#41;de datos multidimensionales ](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
   
-7.  En el **especificar los datos de entrenamiento** página, elija las columnas para su uso en el modelo activando una casilla de verificación como sigue:  
+7.  En la página **especificar los datos de entrenamiento** , elija las columnas que se van a usar en el modelo activando una casilla como se indica a continuación:  
   
-    -   **IncomeGroup** seleccione la **entrada** casilla de verificación.  
+    -   **IncomeGroup** Active la casilla **entrada** .  
   
          Esta columna contiene información interesante sobre los clientes que puede utilizar para la agrupación en clústeres. La utilizará en el primer modelo y, a continuación, la omitirá en el segundo.  
   
-    -   **OrderNumber** seleccione el `Key` casilla de verificación.  
+    -   **OrderNumber** Active la `Key` casilla.  
   
          Este campo se utilizará como identificador para la tabla de casos o `Key`. En general, nunca debería utilizar el campo clave de la tabla de casos como una entrada, porque la clave contiene valores únicos que no son útiles para la agrupación en clústeres.  
   
-    -   **Región** seleccione la **entrada** casilla de verificación.  
+    -   **Región** de Active la casilla **entrada** .  
   
          Esta columna contiene información interesante sobre los clientes que puede utilizar para la agrupación en clústeres. La utilizará en el primer modelo y, a continuación, la omitirá en el segundo.  
   
-    -   **LineNumber** seleccione la `Key` y **entrada** casillas de verificación.  
+    -   **LineNumber** Active las `Key` **casillas de verificación y** .  
   
-         El **LineNumber** campo se utilizará como identificador de la tabla anidada, o `Sequence Key`. La clave para una tabla anidada siempre se debe utilizar para la entrada.  
+         El campo **lineNumber** se usará como el identificador de la tabla anidada o `Sequence Key`. La clave para una tabla anidada siempre se debe utilizar para la entrada.  
   
-    -   **Modelo** seleccione la **entrada** y **Predictable** casillas de verificación.  
+    -   **Modelo** de Active las casillas de verificación de **entrada** y de **predicción** .  
   
-     Compruebe que las selecciones son correctas y, a continuación, haga clic en **siguiente**.  
+     Compruebe que las selecciones sean correctas y, a continuación, haga clic en **siguiente**.  
   
-8.  En el **contenido y el tipo de datos de columnas especificar** página, compruebe que la cuadrícula contiene las columnas, tipos de contenido y los tipos de datos que se muestra en la tabla siguiente y, a continuación, haga clic en **siguiente**.  
+8.  En la página **especificar el contenido y el tipo de datos de las columnas** , compruebe que la cuadrícula contiene las columnas, los tipos de contenido y los tipos de datos que se muestran en la tabla siguiente y, a continuación, haga clic en **siguiente**.  
   
     |Tablas y columnas|Tipo de contenido|Tipo de datos|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Text|  
-    |OrderNumber|Key|Text|  
-    |Region|Discrete|Text|  
+    |IncomeGroup|Discrete|Texto|  
+    |OrderNumber|Clave|Texto|  
+    |Region|Discrete|Texto|  
     |vAssocSeqLineItems|||  
-    |Line Number|Key Sequence|Long|  
-    |Modelo|Discrete|Text|  
+    |Line Number|Key Sequence|long|  
+    |Modelo|Discrete|Texto|  
   
-9. En el **crear conjunto de pruebas** página, cambie la **porcentaje de datos de prueba** a 20 y, a continuación, haga clic en **siguiente**.  
+9. En la página **crear conjunto de pruebas** , cambie el **porcentaje de datos de prueba** a 20 y, a continuación, haga clic en **siguiente**.  
   
-10. En el **completando el Asistente para** página, para el **nombre de la estructura de minería de datos**, tipo `Sequence Clustering with Region`.  
+10. En la página **finalización del asistente** , en **nombre**de la estructura de `Sequence Clustering with Region`minería de datos, escriba.  
   
-11. Para el **nombre del modelo de minería de datos**, tipo `Sequence Clustering with Region`.  
+11. En el **nombre del modelo**de minería `Sequence Clustering with Region`de datos, escriba.  
   
-12. Compruebe el **permitir obtención de detalles** cuadro y, a continuación, haga clic en **finalizar**.  
+12. Active la casilla **permitir obtención de detalles** y, a continuación, haga clic en **Finalizar**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Procesar el modelo de agrupación en clústeres de secuencia](../../2014/tutorials/processing-the-sequence-clustering-model.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñador de minería de datos](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algoritmo de clústeres de secuencia de Microsoft](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
   

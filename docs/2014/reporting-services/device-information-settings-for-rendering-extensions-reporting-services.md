@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8866b6b8193ec61e08d20868ed88a21211fa2a32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109255"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Configuración de información de dispositivos para las extensiones de representación (Reporting Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66109255"
 |[Configuración de la información del dispositivo XML](xml-device-information-settings.md)|Describe la configuración de información de dispositivos asociada a una salida de representación XML.|  
 |[Configuración de la información del dispositivo RGDI](rgdi-device-information-settings.md)|Describe la configuración de información de dispositivos asociada a una salida de representación RGDI.|  
   
-## <a name="see-also"></a>Vea también  
- [Personalizar los parámetros de extensión de representación en RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+## <a name="see-also"></a>Consulte también  
+ [Personalización de los parámetros de extensión de representación en RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   

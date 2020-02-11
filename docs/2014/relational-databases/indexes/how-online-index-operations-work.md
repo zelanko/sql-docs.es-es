@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162163"
 ---
 # <a name="how-online-index-operations-work"></a>Cómo funcionan las operaciones de índice en línea
@@ -36,7 +36,7 @@ ms.locfileid: "63162163"
   
      Los índices preexistentes están disponibles para que los usuarios simultáneos realicen operaciones de selección, inserción, actualización y eliminación. Entre dichas operaciones se incluyen las inserciones masivas (que se admiten pero no se recomiendan) y las actualizaciones implícitas realizadas mediante desencadenadores y restricciones de integridad referencial. Los índices preexistentes están disponibles para las consultas y las búsquedas. Esto significa que se pueden seleccionar en el optimizador de consultas y, si es necesario, se pueden especificar en sugerencias de índice.  
   
--   **Destino**  
+-   **Dirigir**  
   
      Los destinos son el nuevo índice (o montón) o un conjunto de nuevos índices que se crean o se regeneran. Durante la operación de índice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] aplica al destino las operaciones de inserción, actualización y eliminación de los usuarios efectuadas en el origen. Por ejemplo, si la operación del índice en línea regenera un índice clúster, el destino es el índice clúster regenerado; [!INCLUDE[ssDE](../../includes/ssde-md.md)] no regenera los índices no clúster cuando se regenera un índice clúster.  
   
@@ -59,10 +59,11 @@ ms.locfileid: "63162163"
 |Fase|Actividad de origen|Bloqueos de origen|  
 |-----------|---------------------|------------------|  
 |Preparación<br /><br /> Fase muy breve|Preparación de los metadatos del sistema para crear la nueva estructura de índice vacía.<br /><br /> Se define una instantánea de base de datos. Es decir, se utilizan las versiones de fila para proporcionar coherencia de lectura en la transacción.<br /><br /> Las operaciones de usuario simultáneas de escritura se bloquean durante un período muy breve.<br /><br /> No se admiten las operaciones DDL simultáneas, excepto la creación de varios índices no clúster.|S (Compartido) en la tabla*<br /><br /> IS (Intención compartida)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Compilar<br /><br /> Fase principal|Los datos se recorren, ordenan, combinan e insertan en el destino en operaciones de carga masiva.<br /><br /> Las operaciones de usuario simultáneas de selección, inserción, actualización y eliminación se aplican a los índices preexistentes y a los nuevos índices que se generan.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Build<br /><br /> Fase principal|Los datos se recorren, ordenan, combinan e insertan en el destino en operaciones de carga masiva.<br /><br /> Las operaciones de usuario simultáneas de selección, inserción, actualización y eliminación se aplican a los índices preexistentes y a los nuevos índices que se generan.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Final<br /><br /> Fase muy breve|Antes de iniciar esta fase deben completarse todas las transacciones de actualización no confirmadas. Según el bloqueo aplicado, se bloquean brevemente las nuevas transacciones de lectura y escritura de usuario hasta que finaliza esta fase.<br /><br /> Se actualizan los metadatos del sistema para reemplazar el origen con el destino.<br /><br /> Si es preciso, el origen se quita. Por ejemplo, después de regenerar o quitar un índice clúster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S en la tabla si se crea un índice no agrupado.\*<br /><br /> SCH-M (Modificación del esquema) si se quita alguna estructura de origen (índice o tabla).\*|  
   
- \* La operación de índice esperará a que se completen las transacciones de actualización no confirmadas antes de aplicar un bloqueo S o SCH-M a la tabla.  
+ 
+  \* La operación de índice esperará a que se completen las transacciones de actualización no confirmadas antes de aplicar un bloqueo S o SCH-M a la tabla.  
   
  ** El bloqueo de recurso INDEX_BUILD_INTERNAL_RESOURCE impide la ejecución de operaciones de lenguaje de definición de datos (DDL) simultáneas en las estructuras preexistentes y de origen mientras la operación de índice está en proceso. Por ejemplo, este bloqueo impide la regeneración simultánea de dos índices en la misma tabla. Este bloqueo de recurso está asociado con el bloqueo Sch-M; sin embargo, no impide las instrucciones de manipulación de datos.  
   
@@ -74,8 +75,8 @@ ms.locfileid: "63162163"
 |Fase|Actividad de destino|Bloqueos de destino|  
 |-----------|---------------------|------------------|  
 |Preparación|Se crea un nuevo índice y se define como de solo escritura.|IS|  
-|Compilar|Se insertan datos del origen.<br /><br /> Se aplican las modificaciones de usuario (inserciones, actualizaciones, eliminaciones) aplicadas al origen.<br /><br /> Esta actividad resulta transparente para el usuario.|IS|  
-|Final|Se actualizan los metadatos de índice.<br /><br /> El índice se establece en un estado de lectura/escritura.|S<br /><br /> o Administrador de configuración de<br /><br /> SCH-M|  
+|Build|Se insertan datos del origen.<br /><br /> Se aplican las modificaciones de usuario (inserciones, actualizaciones, eliminaciones) aplicadas al origen.<br /><br /> Esta actividad resulta transparente para el usuario.|IS|  
+|Final|Se actualizan los metadatos de índice.<br /><br /> El índice se establece en un estado de lectura/escritura.|S<br /><br /> or<br /><br /> SCH-M|  
   
  Las instrucciones SELECT del usuario no tienen acceso al destino hasta que finaliza la operación de índice.  
   
@@ -86,6 +87,6 @@ ms.locfileid: "63162163"
 ## <a name="related-content"></a>Contenido relacionado  
  [Realizar operaciones de índice en línea](perform-index-operations-online.md)  
   
- [Directrices para operaciones de índices en línea](guidelines-for-online-index-operations.md)  
+ [Directrices para operaciones de índice en línea](guidelines-for-online-index-operations.md)  
   
   

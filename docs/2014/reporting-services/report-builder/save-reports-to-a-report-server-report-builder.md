@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107634"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Guardar informes en un servidor de informes (Generador de informes)
@@ -25,7 +25,7 @@ ms.locfileid: "66107634"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Guardar un informe en un servidor de informes  
   
-1.  Desde el botón Generador de informes, haga clic en **Guardar**. El **Guardar como** _\<elemento de informe\>_  abre el cuadro de diálogo.  
+1.  Desde el botón Generador de informes, haga clic en **Guardar**. Se abre el cuadro de diálogo **Guardar como**_\<elemento\> de informe_ .  
   
     > [!NOTE]  
     >  Si vuelve a guardar un informe, automáticamente se guarda en su ubicación anterior. Utilice la opción Guardar como para cambiar la ubicación.  
@@ -40,7 +40,7 @@ ms.locfileid: "66107634"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Para guardar un informe con un nombre diferente  
   
-1.  En el botón Generador de informes, haga clic en **Guardar como**. El **Guardar como** _\<elemento de informe\>_  abre el cuadro de diálogo.  
+1.  En el botón Generador de informes, haga clic en **Guardar como**. Se abre el cuadro de diálogo **Guardar como**_\<elemento\> de informe_ .  
   
 2.  Vaya a la ubicación del servidor de informes o al recurso compartido de archivos donde desea guardar el informe.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "66107634"
   
 4.  En **Elementos de tipo**, seleccione el tipo de elemento de informe que está guardando. El tipo para los informes es Informes (*.rdl).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Exportar informes &#40;Generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Guardar informes &#40;Generador de informes&#41;](saving-reports-report-builder.md)   
  [Exportar un informe como otro tipo de archivo &#40;Generador de informes y SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   

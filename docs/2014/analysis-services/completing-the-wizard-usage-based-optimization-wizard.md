@@ -1,5 +1,5 @@
 ---
-title: Finalización del asistente (Asistente para optimización basada en uso) | Microsoft Docs
+title: Finalización del asistente (Asistente para optimización basada en el uso) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087562"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Finalización del asistente (Asistente para optimización basada en el uso)
@@ -35,8 +35,8 @@ ms.locfileid: "66087562"
  **Procesar particiones inmediatamente**  
  Procesa las particiones seleccionadas después de que se complete el asistente.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para optimización basada en uso](usage-based-optimization-wizard-f1-help.md)   
- [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente para optimización basada en el uso (ayuda F1)](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services asistentes &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

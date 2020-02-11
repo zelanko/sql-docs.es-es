@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 882ce47467a38ab4a891f632c9598070e13494e3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727538"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Conversión de código de R para ejecutarlo en instancias de SQL Server (en la base de datos)
@@ -65,7 +65,7 @@ Aún así, es posible que tenga que realizar cambios importantes en el código s
 
     Para más información, vea [Bibliotecas de R y tipos de datos](../r/r-libraries-and-data-types.md).
 
-## <a name="step-2-convert-or-repackage-code"></a>Paso 2. Convertir o volver a empaquetar código
+## <a name="step-2-convert-or-repackage-code"></a>Paso 2. Convertir o volver a empaquetar código
 
 La cantidad de código que cambie dependerá de si quiere enviar el código de R desde un cliente remoto para que se ejecute en el contexto de proceso de SQL Server, o si pretende implementar el código como parte de un procedimiento almacenado, lo que puede proporcionar un mejor rendimiento y seguridad de los datos. Ajustar el código en un procedimiento almacenado impone algunos requisitos adicionales. 
 
@@ -123,7 +123,7 @@ La cantidad de código que cambie dependerá de si quiere enviar el código de R
 
     Para más información, vea [Sugerencias y trucos de optimización de SQL Services para servicios de análisis](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services).
 
-### <a name="step-3-prepare-for-deployment"></a>Paso 3. Preparar la implementación
+### <a name="step-3-prepare-for-deployment"></a>Paso 3. Preparar la implementación
 
 + Notifique al administrador para que los paquetes se puedan instalar y probar antes de implementar el código. 
 

@@ -13,10 +13,10 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255590"
 ---
 # <a name="create-a-composite-domain"></a>Crear un dominio compuesto
@@ -29,14 +29,14 @@ ms.locfileid: "75255590"
   
  Después de crear un dominio compuesto, puede cambiar las propiedades del mismo, adjuntar un servicio de datos de referencia al dominio, crear reglas entre dominios o crear relaciones de valor. Para ello, seleccione el dominio compuesto en la lista **Dominio** de la página **Administración de dominios** y seleccione la pestaña adecuada.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Para crear un dominio compuesto, debe haber creado y abierto una base de conocimiento, y debe haber creado al menos dos dominios individuales para agregarlos al dominio compuesto.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio compuesto.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a>Crear un dominio compuesto en la actividad detección de conocimiento  
@@ -69,7 +69,7 @@ ms.locfileid: "75255590"
   
 6.  En la **Lista de dominios**, seleccione los dominios que formarán parte del dominio compuesto y, a continuación, haga clic en la flecha derecha para moverlos a la tabla **Dominios del dominio compuesto** .  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 ##  <a name="CompositeDomainProperties"></a>Establecer propiedades de dominio compuesto  
   
@@ -77,7 +77,7 @@ ms.locfileid: "75255590"
   
 2.  En la **Lista de dominios**, seleccione los dominios que formarán parte del dominio compuesto y, a continuación, haga clic en la flecha derecha para moverlos a la tabla **Dominios del dominio compuesto** . Esta lista contiene los dominios individuales disponibles para agregarlos al dominio compuesto que está creando. Solo están disponibles los dominios individuales que se han creado y que no se hayan agregado a un dominio compuesto existente. Un dominio individual no se puede agregar a más de un dominio compuesto de la knowledge base, y un dominio compuesto no se puede agregar a otro dominio compuesto.  
   
-3.  Haga clic en **Opciones avanzadas**.  
+3.  Haga clic en **Avanzadas**.  
   
 4.  En **Método de análisis**, seleccione una de las opciones siguientes:  
   

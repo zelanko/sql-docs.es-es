@@ -14,10 +14,10 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251666"
 ---
 # <a name="dqs-administration"></a>dqs, administración
@@ -75,17 +75,17 @@ ms.locfileid: "75251666"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo supervisar actividades en DQS.|[Supervisar las actividades de DQS](../data-quality-services/monitor-dqs-activities.md)|  
-|Describe cómo configurar valores de datos de referencia en DQS.|[Configurar DQS para usar datos de referencia](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
-|Describe cómo configurar los umbrales para las actividades de limpieza y búsqueda de coincidencias.|[Configurar los valores de umbral para la limpieza y la búsqueda de coincidencias](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
-|Describe cómo habilitar o deshabilitar las notificaciones en DQS.|[Habilitar o deshabilitar las notificaciones de generación de perfiles en DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
-|Describe cómo configurar el registro de DQS basado en el nivel de gravedad de los eventos.|[Configurar los niveles de gravedad para los archivos de registro de DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
+|Describe cómo configurar valores de datos de referencia en DQS.|[Configurar DQS para utilizar datos de referencia](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|Describe cómo configurar los umbrales para las actividades de limpieza y búsqueda de coincidencias.|[Configurar los valores de umbral para la limpieza y coincidencia](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|Describe cómo habilitar o deshabilitar las notificaciones en DQS.|[Habilitar o deshabilitar notificaciones de generación de perfiles en DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|Describe cómo configurar el registro de DQS basado en el nivel de gravedad de los eventos.|[Configurar los niveles de gravedad de los archivos de registro de DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |Describe cómo configurar las configuraciones avanzadas del registro de DQS.|[Configurar las opciones avanzadas de los archivos de registro de DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
-|Describe cómo realizar copias de seguridad y restaurar bases de datos de DQS.|[Realizar copias de seguridad y restaurar bases de datos de DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
-|Describe cómo adjuntar y separar bases de datos de DQS.|[Desasociar y adjuntar bases de datos de DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
+|Describe cómo realizar copias de seguridad y restaurar bases de datos de DQS.|[Realizar copias de seguridad de bases de datos de DQS y restaurarlas](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
+|Describe cómo adjuntar y separar bases de datos de DQS.|[Separar y adjuntar bases de datos de DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Data Services de referencia en DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Administrar archivos de registro de DQS](../data-quality-services/manage-dqs-log-files.md)   
- [Administrar bases de datos de DQS](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

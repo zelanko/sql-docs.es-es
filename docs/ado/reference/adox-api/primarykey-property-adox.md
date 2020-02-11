@@ -20,26 +20,26 @@ ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afd6ad45295ab5a888c3b392adb0019197710e15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965541"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey (propiedad, ADOX)
-Indica si el índice representa la clave principal en la tabla.  
+Indica si el índice representa la clave principal de la tabla.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece y devuelve un **booleano** valor.  
+ Establece y devuelve un valor **booleano** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El valor predeterminado es **False**.  
   
- Esta propiedad es de solo lectura en [índice](../../../ado/reference/adox-api/index-object-adox.md) ya anexados a una colección de objetos.  
+ Esta propiedad es de solo lectura en los objetos de [Índice](../../../ado/reference/adox-api/index-object-adox.md) ya anexados a una colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>Vea también  
- [PrimaryKey y propiedades únicas (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de propiedades PrimaryKey y Unique (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

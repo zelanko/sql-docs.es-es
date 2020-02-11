@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3009eb9a341cb0881cdade4f927955d953c6fcfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105284"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Función Count (Generador de informes y SSRS)
@@ -34,16 +34,17 @@ Count(expression, scope, recursive)
  *expression*  
  (`Variant` o `Binary`). Expresión en la que se lleva a cabo la agregación, por ejemplo, `=Fields!FieldName.Value`.  
   
- *ámbito*  
+ *scope*  
  (`String`). Nombre de un conjunto de datos, un grupo o una región de datos que contiene los elementos de informe a los que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
- *recursivos*  
- (**Tipo enumerado**) Opcional. `Simple` (predeterminado) o `RdlRecursive`. Especifica si se debe realizar la agregación de forma recursiva.  
+ *recursive*  
+ (**Tipo enumerado**) Opcional. 
+  `Simple` (predeterminado) o `RdlRecursive`. Especifica si se debe realizar la agregación de forma recursiva.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un `Integer`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El valor de *scope* debe ser una constante de cadena y no puede ser una expresión. Para los agregados exteriores o los que no especifican a otros agregados, *scope* debe hacer referencia al ámbito actual o a un ámbito de contenido. Para los agregados de agregados, los agregados anidados pueden especificar un ámbito secundario.  
   
  *Expression* puede contener las llamadas a las funciones de agregados anidados con las siguientes excepciones y condiciones:  
@@ -52,7 +53,7 @@ Count(expression, scope, recursive)
   
 -   *Scope* , para los agregados anidados, no puede ser el nombre de un conjunto de datos.  
   
--   *Expresión* no puede contener `First`, `Last`, `Previous`, o `RunningValue` funciones.  
+-   *Expression* no debe contener `First`las `Last`funciones `Previous`,, `RunningValue` o.  
   
 -   *Expression* no debe contener a los agregados anidados que especifican *recursive*.  
   
@@ -63,19 +64,19 @@ Count(expression, scope, recursive)
  Ejemplo  
   
 ## <a name="description"></a>Descripción  
- El ejemplo de código siguiente muestra una expresión que calcula el número de valores no NULL de `Size` para el ámbito predeterminado y para un ámbito de grupo primario. La expresión se agrega a una celda de una fila que pertenece al grupo secundario `GroupbySubcategory`. El grupo primario es `GroupbyCategory`. La expresión muestra los resultados para `GroupbySubcategory` (el ámbito predeterminado) y, después, para `GroupbyCategory` (el ámbito del grupo primario).  
+ El ejemplo de código siguiente muestra una expresión que calcula el número de valores no NULL de `Size` para el ámbito predeterminado y para un ámbito de grupo primario. La expresión se agrega a una celda de una fila que pertenece al grupo secundario `GroupbySubcategory`. El grupo primario es `GroupbyCategory`. La expresión muestra los resultados para `GroupbySubcategory` (el ámbito predeterminado) y, después, para `GroupbyCategory` (el ámbito de grupo primario).  
   
 > [!NOTE]  
 >  Las expresiones no deben contener retornos de carro ni saltos de línea reales; en el ejemplo se han incluido para posibilitar la compatibilidad con los representadores de documentación. Si copia el ejemplo siguiente, quite los retornos de carro de todas las líneas.  
   
-## <a name="code"></a>código  
+## <a name="code"></a>Código  
   
 ```  
 ="Count (Subcategory): " & Count(Fields!Size.Value) &   
 "Count (Category): " & Count(Fields!Size.Value,"GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   

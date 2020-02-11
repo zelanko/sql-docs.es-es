@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_loader_backup_runs (Transact-SQL) | Microsoft Docs
+title: Sys. pdw_loader_backup_runs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,40 +13,40 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8e7826e4dcefdbed65fb0fa1f3368411a9ef12a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127470"
 ---
-# <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
+# <a name="syspdw_loader_backup_runs-transact-sql"></a>Sys. pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contiene información sobre la copia de seguridad en curso y finalizada y en las operaciones de restauración [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]y acerca de la copia de seguridad en curso y completada, restauración y las operaciones de carga en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. La información se conserva entre reinicios del sistema.  
+  Contiene información acerca de las operaciones de copia de seguridad y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]restauración en curso y completadas en y sobre las operaciones de copia de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]seguridad, restauración y carga continuadas en. La información se conserva entre reinicios del sistema.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|run_id|**int**|Identificador único para una copia de seguridad específica, restauración o de ejecución de carga.<br /><br /> Clave para esta vista.||  
-|name|**nvarchar(255)**|NULL para la carga. Nombre opcional para la copia de seguridad o restauración.||  
-|submit_time|**datetime**|Tiempo que se envió la solicitud.||  
-|start_time|**datetime**|Tiempo de la operación iniciada.||  
-|end_time|**datetime**|Hora completado, error o se canceló la operación.||  
-|total_elapsed_time|**int**|Tiempo total transcurrido entre start_time y la hora actual, o entre start_time y end_time para completado, cancelados o fallidos ejecuciones.|Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), provocará el error de materialización debido al desbordamiento.<br /><br /> El valor máximo en milisegundos equivale a 24,8 días.|  
-|operation_type|**nvarchar(16)**|El tipo de carga.|'BACKUP', 'LOAD', 'RESTORE'|  
-|mode|**nvarchar(16)**|El modo en el tipo de ejecución.|Para obtener más operation_type = **copia de seguridad**<br />**DIFERENCIAL**<br />**FULL**<br /><br /> Para obtener más operation_type = **carga**<br />**ANEXAR**<br />**VOLVER A CARGAR**<br />**UPSERT**<br /><br /> Para obtener más operation_type = **restaurar**<br />**DATABASE**<br />**HEADER_ONLY**|  
-|database_name|**nvarchar(255)**|Nombre de la base de datos que es el contexto de esta operación||  
+|run_id|**int**|Identificador único para una copia de seguridad, restauración o ejecución de carga específica.<br /><br /> Clave para esta vista.||  
+|name|**nvarchar(255)**|Null para la carga. Nombre opcional para la copia de seguridad o restauración.||  
+|submit_time|**datetime**|Hora a la que se envió la solicitud.||  
+|start_time|**datetime**|Hora en que se inició la operación.||  
+|end_time|**datetime**|Hora de finalización de la operación, error o cancelada.||  
+|total_elapsed_time|**int**|Tiempo total transcurrido entre el start_time y la hora actual, o entre start_time y end_time para las ejecuciones completadas, canceladas o con errores.|Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), se producirá un error de materialización debido al desbordamiento.<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
+|operation_type|**nvarchar (16)**|Tipo de carga.|' BACKUP ', ' LOAD ', ' RESTORE '|  
+|modo|**nvarchar (16)**|Modo en el tipo de ejecución.|Por operation_type = **copia de seguridad**<br />**COPIA**<br />**TOTAL**<br /><br /> Por operation_type = **Load**<br />**ANEXAR**<br />**VOLVER A cargar**<br />**UPSERT**<br /><br /> Por operation_type = **restore**<br />**DATABASE**<br />**HEADER_ONLY**|  
+|database_name|**nvarchar(255)**|Nombre de la base de datos que es el contexto de esta operación.||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|Principal_id|**int**|Id. de usuario que solicita la operación.||  
-|session_id|**nvarchar(32)**|Identificador de la sesión realiza la operación.|Consulte session_id en [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|request_id|**nvarchar(32)**|Identificador de la solicitud que realiza la operación. Para las cargas, ésta es la solicitud última o actual asociada con esta carga...|Vea request_id en [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|status|**nvarchar(16)**|Estado de la ejecución.|'CANCELAR', 'COMPLETADO', 'ERROR', 'QUEUED', 'EJECUTANDO'|  
-|Progreso|**int**|Porcentaje completado.|de 0 a 100|  
-|comando|**nvarchar(4000)**|Texto del comando enviado por el usuario.|Se truncará si hay más de 4.000 caracteres (contando espacios).|  
-|rows_processed|**bigint**|Número de filas procesadas como parte de esta operación.||  
-|rows_rejected|**bigint**|Número de filas rechazadas como parte de esta operación.||  
-|rows_inserted|**bigint**|Número de filas insertadas en las tablas de base de datos como parte de esta operación.||  
+|Principal_id|**int**|IDENTIFICADOR del usuario que solicita la operación.||  
+|session_id|**nvarchar (32)**|IDENTIFICADOR de la sesión que realiza la operación.|Vea session_id en [Sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|request_id|**nvarchar (32)**|IDENTIFICADOR de la solicitud que realiza la operación. En el caso de las cargas, esta es la solicitud actual o última asociada a esta carga.|Vea request_id en [Sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|status|**nvarchar (16)**|Estado de la ejecución.|' CANCELADO ', ' COMPLETED ', ' FAILED ', ' QUEUED ', ' RUNNING '|  
+|progreso|**int**|Porcentaje completado.|De 0 a 100|  
+|command|**nvarchar(4000)**|Texto completo del comando enviado por el usuario.|Se truncará si tiene más de 4000 caracteres (recuento de espacios).|  
+|rows_processed|**BIGINT**|Número de filas procesadas como parte de esta operación.||  
+|rows_rejected|**BIGINT**|Número de filas rechazadas como parte de esta operación.||  
+|rows_inserted|**BIGINT**|Número de filas insertadas en las tablas de base de datos como parte de esta operación.||  
   
-## <a name="see-also"></a>Vea también  
- [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

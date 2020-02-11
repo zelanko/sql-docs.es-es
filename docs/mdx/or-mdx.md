@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055709"
 ---
 # <a name="or-mdx"></a>OR (MDX)
@@ -37,18 +37,18 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano que devuelve **true** si uno o ambos argumentos se evalúan como **true**; en caso contrario, **false**.  
   
-## <a name="remarks"></a>Comentarios  
- El **o** operador trata a ambos argumentos como valores booleanos (cero, 0, como **false**; en caso contrario, **true**) antes de que el operador realice la disyunción lógica. La tabla siguiente se muestra cómo el **o** operador realiza la disyunción lógica.  
+## <a name="remarks"></a>Observaciones  
+ El operador **or** trata ambos argumentos como valores booleanos (cero, 0, como **false**; de lo contrario, **true**) antes de que el operador realice la disyunción lógica. En la tabla siguiente se muestra cómo el operador **o** realiza la disyunción lógica.  
   
 |*Expression1*|*Expression2*|Valor devuelto|  
 |-------------------|-------------------|------------------|  
-|**true**|**true**|**true**|  
-|**true**|**false**|**true**|  
-|**false**|**true**|**true**|  
-|**false**|**false**|**false**|  
+|**reales**|**reales**|**reales**|  
+|**reales**|**es**|**reales**|  
+|**es**|**reales**|**reales**|  
+|**es**|**es**|**es**|  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente consulta contiene una medida calculada que devuelve la cadena "MARRIED OR MALE" si el miembro actual en la jerarquía Gender de la dimensión Customer es Male o el miembro actual en la jerarquía Marital Status de la dimensión Customer es Married; en caso contrario, devuelve la cadena "UNMARRIEDA o FEMALE".  
+ La siguiente consulta contiene una medida calculada que devuelve la cadena "casado o hombre" si el miembro actual de la jerarquía Gender de la dimensión Customer es macho o el miembro actual de la jerarquía de estado civil de la dimensión Customer es casado; en caso contrario, devuelve la cadena "noncasado OR femenino".  
   
 ```  
 WITH  
@@ -65,7 +65,7 @@ FROM [Adventure Works]
 WHERE(MEASURES.ORDEMO)  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

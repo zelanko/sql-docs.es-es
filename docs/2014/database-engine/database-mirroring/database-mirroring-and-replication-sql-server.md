@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807468"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
@@ -71,9 +71,9 @@ ms.locfileid: "62807468"
   
 3.  Configurar la distribución para la entidad reflejada. Indique el nombre de la entidad reflejada como el publicador y especifique el mismo distribuidor y la misma carpeta de instantáneas que se utilizan en la entidad de seguridad. Por ejemplo, si está configurando la replicación con procedimientos almacenados, ejecute [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) en el distribuidor y, después, ejecute [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) en la entidad reflejada. Para **sp_adddistpublisher**:  
   
-    -   Establezca el valor del parámetro **@publisher** en el nombre de red de la entidad reflejada.  
+    -   Establezca el valor del **@publisher** parámetro en el nombre de red del reflejo.  
   
-    -   Establezca el valor del parámetro **@working_directory** en la carpeta de instantáneas que se usa en la entidad de seguridad.  
+    -   Establezca el valor del **@working_directory** parámetro en la carpeta de instantáneas usada por la entidad de seguridad.  
   
 4.  Especifique el nombre de la entidad reflejada para el parámetro de agente **- PublisherFailoverPartner**. Este parámetro es necesario para que los siguientes agentes identifiquen la entidad reflejada después de una conmutación por error:  
   
@@ -85,17 +85,18 @@ ms.locfileid: "62807468"
   
     -   Agente de mezcla (para suscripciones de mezcla)  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Escucha de replicación (replisapi.dll: para suscripciones de mezcla sincronizadas mediante sincronización web)  
+    -   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Escucha de replicación (replisapi.dll: para suscripciones de mezcla sincronizadas mediante sincronización web)  
   
     -   Control ActiveX de mezcla de SQL (para suscripciones de mezcla sincronizadas con el control)  
   
      El Agente de distribución y el Control ActiveX de distribución de SQL no tienen este parámetro porque no se conectan al publicador.  
   
-     Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. Los parámetros se pueden especificar en perfiles de agente y desde el símbolo del sistema. Para obtener más información, vea:  
+     Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. Los parámetros se pueden especificar en perfiles de agente y desde el símbolo del sistema. Para más información, consulte:  
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Conceptos de los ejecutables del Agente de replicación](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
      Se recomienda agregar el parámetro **-PublisherFailoverPartner** a un perfil de agente y, después, especificar el nombre de la entidad reflejada en el perfil. Por ejemplo, si configura la replicación con procedimientos almacenados:  
   
@@ -133,9 +134,9 @@ ms.locfileid: "62807468"
   
 -   Si se utilizan procedimientos almacenados o Replication Management Objects (RMO) para administrar la replicación en la entidad reflejada, en los casos en que se especifica el nombre del publicador, se debe especificar el nombre de la instancia en la que la base de datos se habilitó para la replicación. Para determinar el nombre correcto, use la función [publishingservername](/sql/t-sql/functions/replication-functions-publishingservername).  
   
-     Cuando se crea el reflejo de una base de datos de publicación, los metadatos de la replicación que se encuentran almacenados en la base de datos reflejada son idénticos a los que se encuentran almacenados en la base de datos de la entidad de seguridad. En consecuencia, para las bases de datos de publicación habilitadas para replicación en la entidad de seguridad, el nombre de la instancia del publicador que está almacenado en las tablas del sistema en la entidad reflejada es el nombre de la entidad de seguridad, en lugar del nombre de la entidad reflejada. Esto afecta a la configuración y al mantenimiento de la replicación si se produce la conmutación por error de la base de datos de publicación a la entidad reflejada. Por ejemplo, si se configura la replicación con procedimientos almacenados en la entidad reflejada después de una conmutación por error y se quiere agregar una suscripción de extracción a una base de datos de publicación que estaba habilitada en la entidad de seguridad, se debe especificar el nombre de la entidad de seguridad, en lugar del nombre de la entidad reflejada, para el parámetro **@publisher** de **sp_addpullsubscription** o **sp_addmergepullsubscription**.  
+     Cuando se crea el reflejo de una base de datos de publicación, los metadatos de la replicación que se encuentran almacenados en la base de datos reflejada son idénticos a los que se encuentran almacenados en la base de datos de la entidad de seguridad. En consecuencia, para las bases de datos de publicación habilitadas para replicación en la entidad de seguridad, el nombre de la instancia del publicador que está almacenado en las tablas del sistema en la entidad reflejada es el nombre de la entidad de seguridad, en lugar del nombre de la entidad reflejada. Esto afecta a la configuración y al mantenimiento de la replicación si se produce la conmutación por error de la base de datos de publicación a la entidad reflejada. Por ejemplo, si está configurando la replicación con procedimientos almacenados en el reflejo después de una conmutación por error y desea agregar una suscripción de extracción a una base de datos de publicación que se habilitó en la entidad de seguridad, debe especificar el nombre principal **@publisher** en lugar del nombre del reflejo para el parámetro de **sp_addpullsubscription** o **sp_addmergepullsubscription**.  
   
-     Si se habilita una base de datos de publicación en la entidad reflejada después de una conmutación por error a dicha entidad, el nombre de la instancia del publicador que está almacenado en las tablas del sistema es el nombre de la entidad reflejada. En este caso, se debe utilizar el nombre de la entidad reflejada para el parámetro **@publisher** .  
+     Si habilita una base de datos de publicación en el reflejo después de la conmutación por error en el reflejo, el nombre de instancia del publicador almacenado en las tablas del sistema es el nombre del reflejo; en este caso, usaría el nombre del reflejo para el **@publisher** parámetro.  
   
     > [!NOTE]  
     >  En algunos casos, por ejemplo **sp_addpublication**, el parámetro **@publisher** solo se admite para publicadores que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En estos casos, no es relevante para la creación de reflejo de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -160,8 +161,8 @@ ms.locfileid: "62807468"
 |Modo de alto rendimiento|Si la entidad reflejada no está disponible, la base de datos de la entidad de seguridad se ejecuta de forma expuesta (es decir, sin reflejo). Sin embargo, el Agente de registro del LOG solo replica las transacciones reforzadas en la entidad reflejada. Si se fuerza el servicio y el servidor reflejado asume el rol de la entidad de seguridad, el Agente de registro del LOG trabajará con la entidad reflejada y comenzará a recoger las transacciones nuevas.<br /><br /> Tenga en cuenta que aumentará la latencia de replicación si la entidad reflejada se retrasa con respecto a la entidad de seguridad.|  
 |Modo de alta seguridad sin conmutación automática por error|Se garantiza que todas las transacciones confirmadas se refuerzan en disco en la entidad reflejada. El Agente de registro del LOG solo replica las transacciones reforzadas en la entidad reflejada. Si la entidad reflejada no está disponible, la entidad de seguridad no permite que continúe la actividad en la base de datos; por lo tanto, el Agente de registro del LOG no contará con transacciones para replicar.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Replicación de SQL Server](../../relational-databases/replication/sql-server-replication.md)   
- [Trasvase de registros y replicación &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
+ [SQL Server de &#40;de replicación y trasvase de registros&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

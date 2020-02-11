@@ -15,14 +15,14 @@ ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039915"
 ---
 # <a name="developing-applications"></a>Desarrollo de aplicaciones
-Esta sección contiene información sobre cómo desarrollar aplicaciones que utilizan la interfaz ODBC y controladores que lo implementan.  
+Esta sección contiene información acerca del desarrollo de aplicaciones que usan la interfaz ODBC y los controladores que la implementan.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -36,7 +36,7 @@ Esta sección contiene información sobre cómo desarrollar aplicaciones que uti
   
 -   [Instrucciones SQL](../../../odbc/reference/develop-app/sql-statements.md)  
   
--   [Ejecución de instrucciones](../../../odbc/reference/develop-app/executing-statements-odbc.md)  
+-   [Ejecutar instrucciones](../../../odbc/reference/develop-app/executing-statements-odbc.md)  
   
 -   [Al recuperar los resultados (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md)  
   
@@ -48,11 +48,11 @@ Esta sección contiene información sobre cómo desarrollar aplicaciones que uti
   
 -   [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
--   [Diagnósticos](../../../odbc/reference/develop-app/diagnostics.md)  
+-   [Diagnóstico](../../../odbc/reference/develop-app/diagnostics.md)  
   
 -   [Interoperabilidad](../../../odbc/reference/develop-app/interoperability.md)  
   
--   [Consideraciones de programación](../../../odbc/reference/develop-app/programming-considerations.md)  
+-   [Consideraciones sobre la programación](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del programador de ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)

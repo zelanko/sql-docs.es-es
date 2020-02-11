@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482623"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Complemento Master Data Services para Microsoft Excel
-  Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], se pueden distribuir listas maestras de datos de referencia para todos los usuarios de su organización que usen Excel. La seguridad determina los datos que los usuarios pueden ver y actualizar.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]Con [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], las listas maestras de datos de referencia se pueden distribuir a todos los usuarios de la organización que usen Excel. La seguridad determina los datos que los usuarios pueden ver y actualizar.  
   
  Puede cargar listas filtradas de datos MDS en Excel, donde puede trabajar con ellos al igual que otros datos cualesquiera. Cuando termine, puede publicar los datos en MDS, donde se almacenan centralmente.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "65482623"
   
 -   El *MDS repository* es donde se almacenan todos los datos maestros. Es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada para almacenar datos de MDS. Para trabajar con datos del repositorio, los datos se cargan en Excel; cuando haya terminado, puede volver a publicar los cambios en el repositorio. Los administradores pueden agregar nuevas entidades y atributos al repositorio.  
   
--   Los*datos administrados con MDS* son aquellos datos que se almacenan en el repositorio MDS y se cargan en Excel, donde se muestran como filas resaltadas. Puede agregar datos no administrados por MDS a una hoja de cálculo, y esto no les afecta al actualizar los datos administrados por MDS.  
+-   Los *datos administrados por MDS* son datos que se almacenan en el repositorio MDS y que se cargan en Excel, donde los datos se muestran como filas resaltadas. Puede agregar datos no administrados por MDS a una hoja de cálculo, y esto no les afecta al actualizar los datos administrados por MDS.  
   
 -   Un *model* es un contenedor de datos. Se pueden crear versiones de estos contenedores y normalmente la última versión es la más reciente. Para obtener más información, consulte [Modelos &#40;Master Data Services&#41;](../models-master-data-services.md).  
   
@@ -42,37 +42,37 @@ ms.locfileid: "65482623"
   
 -   Un *member* es una fila de datos. Cada entidad contiene miembros. Un ejemplo de un miembro es **Azul**. Para obtener más información, consulte [Miembros &#40;Master Data Services&#41;](../members-master-data-services.md).  
   
--   Un *attribute* es una columna de datos. Cada miembro tiene atributos. Por ejemplo, el atributo **Código** del miembro **Azul** es **A**. Para obtener más información sobre los atributos, consulte [Atributos &#40;Master Data Services&#41;](../attributes-master-data-services.md).  
+-   Un *attribute* es una columna de datos. Cada miembro tiene atributos. Por ejemplo, el atributo **code** del miembro **Blue** es **B**. Para obtener más información sobre los atributos, vea [atributos &#40;Master Data Services&#41;](../attributes-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear una conexión a un repositorio de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Conectarse a un repositorio MDS &#40;complemento MDS para Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Crear una conexión a un repositorio de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Conéctese a un repositorio MDS &#40;Complemento MDS para Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |Cargar los datos administrados por MDS en Excel.|[Cargar datos de MDS en Excel](export-data-to-excel-from-master-data-services.md)|  
-|Guardar una consulta de acceso directo que se puede usar para abrir en el futuro los datos mostrados, administrados por MDS actualmente.|[Guardar un archivo de consulta de acceso directo &#40;complemento MDS para Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Compartir los métodos abreviados con otros.|[Enviar por correo electrónico un archivo de consulta de acceso directo &#40;complemento MDS para Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Ver todos los cambios realizados en un miembro.|[Ver todas las anotaciones o transacciones de un miembro &#40;complemento MDS para Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
-|Antes de publicar nuevos datos, averigüe si existe la replicación.|[Coincidir datos similares &#40;Complemento MDS para Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
-|Publicar datos de una hoja de cálculo en el repositorio MDS.|[Publicar datos de Excel en MDS &#40;complemento MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Crear una nueva entidad con datos de la hoja de cálculo. (Solo administradores)|[Crear una entidad &#40;Complemento MDS para Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
-|Crear un atributo basado en dominio, también conocido como lista restringida. (Solo administradores)|[Crear un atributo basado en dominio &#40;complemento MDS para Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
+|Guardar una consulta de acceso directo que se puede usar para abrir en el futuro los datos mostrados, administrados por MDS actualmente.|[Guardar un archivo de consulta de acceso directo &#40;Complemento MDS para Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Compartir los métodos abreviados con otros.|[Enviar por correo electrónico un archivo de consulta de acceso directo &#40;Complemento MDS para Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Ver todos los cambios realizados en un miembro.|[Ver todas las anotaciones o transacciones de un miembro &#40;Complemento MDS para Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
+|Antes de publicar nuevos datos, averigüe si existe la replicación.|[Coincide con &#40;de datos similares Complemento MDS para Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|Publicar datos de una hoja de cálculo en el repositorio MDS.|[Publicar datos de Excel en MDS &#40;Complemento MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|Crear una nueva entidad con datos de la hoja de cálculo. (Solo administradores)|[Cree una entidad &#40;Complemento MDS para Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
+|Crear un atributo basado en dominio, también conocido como lista restringida. (Solo administradores)|[Cree un atributo basado en dominio &#40;Complemento MDS para Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Establezca las propiedades para cargar y publicar datos del complemente Master Data Services para Excel. (Solo administradores)|[Establecer propiedades para el complemento Master Data Services para Excel](setting-properties-for-master-data-services-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Conexiones &#40;complemento MDS para Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Conexiones &#40;Complemento MDS para Excel&#41;](connections-mds-add-in-for-excel.md)  
   
--   [Cargando datos &#40;complemento MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [Cargando datos &#40;Complemento MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Archivos de consulta de acceso directo &#40;complemento MDS para Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [Archivos de consulta de acceso directo &#40;Complemento MDS para Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Coincidencia de calidad de datos en el Complemento MDS para Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
--   [Publicar datos &#40;complemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Complemento MDS para Excel de &#40;de datos de publicación&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
--   [Generar un modelo &#40;complemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
+-   [Generar un modelo &#40;Complemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
--   [Seguridad &#40;Master Data Services&#41;](../security-master-data-services.md)  
+-   [Master Data Services de &#40;de seguridad&#41;](../security-master-data-services.md)  
   
   

@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24a180fde90ff406d40a0f0c89bf82dfe5138b88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097873"
 ---
-# <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>Propiedad ConnectionPoolSize (WMI MSReportServer_ConfigurationSetting)
+# <a name="connectionpoolsize-property-wmi-msreportserver_configurationsetting"></a>Propiedad ConnectionPoolSize (WMI MSReportServer_ConfigurationSetting)
   Tamaño de grupo de conexiones utilizado por el servidor de informes para comunicarse con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos del servidor de informes. Solo lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,15 +39,15 @@ public UInt32 ConnectionPoolSize;
 ```  
   
 ## <a name="property-values"></a>Valores de propiedad  
- Solo lectura **entero** objeto que devuelve un valor de `768`.  
+ Un objeto **Integer** de solo lectura que devuelve un valor de `768`.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

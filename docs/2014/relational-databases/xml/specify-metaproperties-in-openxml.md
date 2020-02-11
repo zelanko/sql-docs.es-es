@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679506"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropiedades en OPENXML
@@ -102,7 +102,7 @@ FROM OPENXML (@idoc, '/root/Customer/Order', 9)
 EXEC sp_xml_removedocument @idoc  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 id   oid         date                amount    parentIDNo  parentLocalName    
@@ -113,7 +113,7 @@ id   oid         date                amount    parentIDNo  parentLocalName
 25   O4    1996-01-20 00:00:00.000     10000.0     15       Customer  
 ```  
   
-### <a name="b-retrieving-the-whole-xml-document"></a>b. Recuperar todo el documento XML  
+### <a name="b-retrieving-the-whole-xml-document"></a>B. Recuperar todo el documento XML  
  En este ejemplo, se usa OPENXML para crear una vista de conjunto de filas de una columna del documento XML de ejemplo. Esta columna ( **Col1**) se asigna a la metapropiedad **xmltext** y se convierte en una columna de desbordamiento. Como consecuencia, la columna recibe los datos no utilizados. En este caso es todo el documento.  
   
  A continuación, la instrucción SELECT devuelve el conjunto de filas completo.  
@@ -211,7 +211,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML &#40;SQL Server&#41;](../xml/openxml-sql-server.md)  
   

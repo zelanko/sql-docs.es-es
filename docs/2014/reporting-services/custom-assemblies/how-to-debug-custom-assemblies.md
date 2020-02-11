@@ -1,5 +1,5 @@
 ---
-title: 'Procedimientos: Depurar ensamblados personalizados | Microsoft Docs'
+title: Cómo depurar ensamblados personalizados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265057"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Procedimientos: Depuración de ensamblados personalizados
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona varias herramientas de depuración que pueden ayudar a analizar el código de ensamblado personalizado y a detectar errores en él. La mejor herramienta para utilizar dependerá de lo que intente llevar a cabo. Este ejemplo usa [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
+# <a name="how-to-debug-custom-assemblies"></a>Cómo depurar ensamblados personalizados
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Proporciona varias herramientas de depuración que pueden ayudarle a analizar el código de ensamblado personalizado y encontrar errores en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] él. La mejor herramienta para utilizar dependerá de lo que intente llevar a cabo. En este ejemplo se usa [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  La manera recomendada de diseñar, desarrollar y probar los ensamblados personalizados para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es crear una solución que contenga tanto los informes de prueba como el ensamblado personalizado.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63265057"
   
 9. Haga clic en la pestaña **Generar** si se encuentra en un proyecto C# o en la pestaña **Compilar** si se encuentra en un proyecto de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-10. En la página **Generar**/**Compilar**, escriba la ruta de acceso a la carpeta del Diseñador de informes. De forma predeterminada, es C:\Archivos de programa\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE en el cuadro de texto **Ruta de acceso de salida**. De esta forma se genera e implementa directamente una versión actualizada del ensamblado personalizado para el Diseñador de informes antes de que se ejecute el informe.  
+10. En la página**compilar** **compilación**/, escriba la ruta de acceso a la carpeta diseñador de informes. De forma predeterminada, es C:\Archivos de programa\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE en el cuadro de texto **Ruta de acceso de salida**. De esta forma se genera e implementa directamente una versión actualizada del ensamblado personalizado para el Diseñador de informes antes de que se ejecute el informe.  
   
 11. Cuando haya diseñado el informe y desarrollado el ensamblado personalizado, establezca puntos de interrupción en el código de ensamblado personalizado.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63265057"
   
 9. Recorra el código con la tecla F11. Para obtener más información acerca de cómo depurar con [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vea la documentación de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-## <a name="see-also"></a>Vea también  
- [Usar ensamblados personalizados con informes](using-custom-assemblies-with-reports.md)  
+## <a name="see-also"></a>Consulte también  
+ [Uso de ensamblados personalizados con informes](using-custom-assemblies-with-reports.md)  
   
   

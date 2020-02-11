@@ -1,5 +1,5 @@
 ---
-title: Filtros para modelos de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Filtros para modelos de minería de datos (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084426"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de minería (Analysis Services - Minería de datos)
@@ -43,14 +43,14 @@ ms.locfileid: "66084426"
   
 -   Usar la pestaña **Modelos de minería de datos** en el Diseñador de minería de datos para generar condiciones con la ayuda de los cuadros de diálogo del editor de filtros.  
   
--   Escribir una expresión de filtro directamente en el `Filter` propiedad del modelo de minería de datos.  
+-   Escribir una expresión de filtro directamente en `Filter` la propiedad del modelo de minería de datos.  
   
 -   Establecer condiciones de filtro en un modelo mediante programación usando AMO.  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Crear filtros de modelo mediante el Diseñador de minería de datos  
  Primero filtra un modelo en el Diseñador de minería de datos cambiando la propiedad `Filter` del modelo de minería de datos. Puede escribir una expresión de filtro directamente en el panel **Propiedades** o bien, puede abrir un cuadro de diálogo de filtro para generar condiciones.  
   
- Hay dos cuadros de diálogo de filtro. El primero le permite crear condiciones que se aplican a la tabla de casos. Si el origen de datos contiene varias tablas, primero seleccione una tabla y, a continuación, seleccione una columna y especifique los operadores y condiciones que desee que se apliquen a dicha columna. Puede vincular varias condiciones mediante `AND` / `OR` operadores. Los operadores disponibles para definir valores dependen de si la columna contiene valores discretos o continuos. Por ejemplo, con valores continuos, puede usar operadores `greater than` y `less than`. Sin embargo, para valores discretos, solo puede usar los operadores `= (equal to)`, `!= (not equal to)` y `is null`.  
+ Hay dos cuadros de diálogo de filtro. El primero le permite crear condiciones que se aplican a la tabla de casos. Si el origen de datos contiene varias tablas, primero seleccione una tabla y, a continuación, seleccione una columna y especifique los operadores y condiciones que desee que se apliquen a dicha columna. Puede vincular varias condiciones mediante el `AND` / `OR` uso de operadores. Los operadores disponibles para definir valores dependen de si la columna contiene valores discretos o continuos. Por ejemplo, con valores continuos, puede usar operadores `greater than` y `less than`. Sin embargo, para valores discretos, solo puede usar los operadores `= (equal to)`, `!= (not equal to)` y `is null`.  
   
 > [!NOTE]  
 >  No se admite la palabra clave `LIKE`. Si desea incluir varios atributos discretos, debe crear condiciones individuales y vincularlas mediante el operador `OR`.  
@@ -62,7 +62,8 @@ ms.locfileid: "66084426"
   
  Por ejemplo, si su tabla de casos está relacionada con los clientes y la tabla anidada muestra los productos que ha comprado un cliente, puede crear un filtro para los clientes que han comprado determinados elementos usando la sintaxis siguiente en el filtro de tabla anidada: `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- También puede filtrar por la existencia de un valor determinado en la tabla anidada usando las palabras clave `EXISTS` o `NOT EXISTS` y una subconsulta. Esto le permite crear condiciones como `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. `EXISTS SELECT(<subquery>)` devuelve `true` si la tabla anidada contiene al menos una fila que incluye el valor `Water Bottle`.  
+ También puede filtrar por la existencia de un valor determinado en la tabla anidada usando las palabras clave `EXISTS` o `NOT EXISTS` y una subconsulta. Esto le permite crear condiciones como `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. 
+  `EXISTS SELECT(<subquery>)` devuelve `true` si la tabla anidada contiene al menos una fila que incluye el valor `Water Bottle`.  
   
  Puede combinar condiciones en la tabla de casos con condiciones en la tabla anidada. Por ejemplo, la sintaxis siguiente incluye una condición en la tabla de casos (`Age > 30` ), una subconsulta en la tabla anidada (`EXISTS (SELECT * FROM Products)`) y varias condiciones en la tabla anidada (`WHERE ProductName='Milk'  AND Quantity>2`)).  
   
@@ -82,7 +83,7 @@ ms.locfileid: "66084426"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>¿Cómo puedo saber si se está usando un filtro?  
  Hay varias formas de determinar si se está aplicando un filtro a un modelo:  
   
--   En el diseñador, haga clic en el **modelos de minería de datos** pestaña abierta **propiedades**y ver el `Filter` propiedad del modelo de minería de datos.  
+-   En el diseñador, haga clic en la pestaña **modelos de minería de datos** , Abra `Filter` **propiedades**y vea la propiedad del modelo de minería de datos.  
   
 -   La DMV DMSCHEMA_MINING_MODELS muestra una columna que contiene el texto del filtro. Puede usar la consulta siguiente en una DMV para devolver los nombres de los modelos y sus filtros:  
   
@@ -99,7 +100,7 @@ ms.locfileid: "66084426"
 ### <a name="how-can-i-save-a-filter"></a>¿Cómo se guarda un filtro?  
  La expresión de filtro se guarda como un script almacenado con la tabla anidada o el modelo de minería de datos asociado. Si elimina el texto del filtro, solo podrá restaurarlo si vuelve a crear manualmente la expresión de filtro. Por consiguiente, si crea expresiones de filtro complejas, debería crear una copia de seguridad del texto del filtro.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>¿Por qué no puedo ver los efectos del filtro?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>¿Por qué no veo ningún efecto del filtro?  
  Siempre que cambie o agregue una expresión de filtro, debe volver a procesar la estructura y el modelo para ver los efectos del filtro.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>¿Por qué veo atributos filtrados en los resultados de una consulta de predicción?  
@@ -116,12 +117,12 @@ ms.locfileid: "66084426"
 -   Contraer los valores excluidos de una categoría como parte de la definición de la estructura de minería de datos.  
   
 ## <a name="related-resources"></a>Recursos relacionados  
- Para más información sobre la sintaxis del filtro, así como ejemplos de expresiones de filtros, vea [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
+ Para más información sobre la sintaxis del filtro, así como ejemplos de expresiones de filtros, vea [Sintaxis y ejemplos del filtro de modelos &#40;Analysis Services: Minería de datos&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
   
  Para más información sobre cómo usar los filtros de modelo al probar un modelo de minería de datos, vea [Elegir un tipo de gráfico de precisión y establecer las opciones del gráfico](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
-## <a name="see-also"></a>Vea también  
- [Sintaxis y ejemplos del filtro de modelos &#40;Analysis Services: Minería de datos&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Sintaxis y ejemplos del filtro de modelos &#40;Analysis Services:&#41;de minería de datos](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Pruebas y validación &#40;&#41;de minería de datos](testing-and-validation-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
+title: Sys. dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ee5c5ff44928c2f2b9e775eae41aea77fed87a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086225"
 ---
-# <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
+# <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información acerca de las claves proporcionadas por un proveedor de Administración extensible de claves (EKM).  
@@ -45,14 +45,14 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>Tablas devueltas  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|Número de identificación de la clave del proveedor.|  
 |**key_name**|**nvarchar(512)**|Nombre de la clave del proveedor.|  
-|**key_thumbprint**|**varbinary(32)**|Huella digital del proveedor de la clave.|  
+|**key_thumbprint**|**varbinary (32)**|Huella digital del proveedor de la clave.|  
 |**algorithm_id**|**int**|Número de identificación del algoritmo del proveedor.|  
 |**algorithm_tag**|**int**|Etiqueta del algoritmo del proveedor.|  
-|**key_type**|**nchar(256)**|Tipo de clave del proveedor.|  
+|**key_type**|**NCHAR (256)**|Tipo de clave del proveedor.|  
 |**key_length**|**int**|Longitud de la clave del proveedor.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -68,7 +68,7 @@ SELECT * FROM sys.dm_cryptographic_provider_keys(1234567);
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

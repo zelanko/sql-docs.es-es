@@ -1,5 +1,5 @@
 ---
-title: 'Acceso a datos externos: Hadoop-polybase'
+title: 'Acceso a datos externos: Hadoop: PolyBase'
 description: Explica cómo configurar polybase en el almacenamiento de datos paralelos para conectarse a Hadoop externo.
 author: mzaman1
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245392"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
 
 En el artículo se explica cómo usar polybase en un dispositivo APS para consultar datos externos en Hadoop.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 PolyBase es compatible con dos proveedores de Hadoop: Hortonworks Data Platform (HDP) y Cloudera Distributed Hadoop (CDH). Hadoop sigue el patrón “Principal.Secundaria.Versión” para sus revisiones nuevas y se admiten todas las versiones dentro de una revisión principal y secundaria compatible. Se admiten los siguientes proveedores de Hadoop:
  - Hortonworks HDP 1.3 en Linux y Windows Server  
@@ -297,7 +297,7 @@ ORDER BY CarSensor_Data.Speed DESC
 OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)  
 ```  
 
-### <a name="importing-data"></a>Importación de datos  
+### <a name="importing-data"></a>Importar datos  
 
 La siguiente consulta importa datos externos en APS. En este ejemplo se importan los datos de los controladores rápidos en APS para realizar análisis más profundos. Para mejorar el rendimiento, aprovecha la tecnología de almacén de columnas en APS.  
 

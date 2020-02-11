@@ -1,5 +1,5 @@
 ---
-title: Asistente Generar y publicar scripts
+title: Asistente generar y publicar scripts
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -43,13 +43,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242107"
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>Asistente Generar y publicar scripts
+# <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
   Puede usar el **Asistente Generar y publicar scripts** para crear scripts con el fin de transferir una base de datos entre instancias de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Puede generar scripts para una base de datos en una instancia del motor de base de datos en la red local o a partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Los scripts generados se pueden ejecutar en otra instancia del motor de base de datos o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. También puede usar el asistente para publicar el contenido de una base de datos directamente en un servicio web creado usando Database Publishing Services. Es posible crear scripts para una base de datos completa o limitarlos a objetos específicos.  
   
 1.  **Antes de empezar:**  [publicar en un servicio hospedado](#PubHostSvc), [permisos](#Permissions)  
@@ -64,7 +64,7 @@ ms.locfileid: "75242107"
   
  Para publicar una base de datos a un servicio de hospedaje web, seleccione la opción **Publicar en servicio web** en la página **Establecer opciones de scripting** del asistente.  
   
-###  <a name="Permissions"></a>Los  
+###  <a name="Permissions"></a> Permisos  
  El permiso mínimo para publicar una base de datos es la pertenencia al rol fijo de base de datos db_ddladmin en la base de datos de origen. El permiso mínimo para publicar un script de base de datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el proveedor de hospedaje es la pertenencia al rol fijo de base de datos db_ddladmin en la base de datos de destino.  
   
  Para publicar con el asistente, el usuario también debe proporcionar un nombre de usuario y una contraseña para tener acceso a su cuenta en el proveedor de hospedaje. La base de datos destino se debe crear en el proveedor del hospedaje antes de que la base de datos de origen se publique. Al publicar, se sobrescriben los objetos presentes en la base de datos.  
@@ -78,28 +78,28 @@ ms.locfileid: "75242107"
   
 3.  Complete los cuadros de diálogo del asistente:  
   
-    -   [Página introducción](#Introduction)  
+    -   [Página Introducción](#Introduction)  
   
-    -   [Página elegir objetos](#ChooseObjects)  
+    -   [Página Elegir objetos](#ChooseObjects)  
   
-    -   [Página establecer opciones de scripting](#SetScriptOpt)  
+    -   [Página Establecer opciones de scripting](#SetScriptOpt)  
   
-    -   [Página opciones de scripting avanzadas](#AdvScriptOpt)  
+    -   [Página Opciones de scripting avanzadas](#AdvScriptOpt)  
   
-    -   [Página administrar proveedores](#MgProviders)  
+    -   [Página Proveedores administrados](#MgProviders)  
   
-    -   [Página opciones de publicación avanzadas](#AdvPubOpts)  
+    -   [Página Opciones de publicación avanzadas](#AdvPubOpts)  
   
-    -   [Página configuración de proveedor](#ProvConfig)  
+    -   [Página Configuración de proveedor](#ProvConfig)  
   
     -   [Página Resumen](#Summary)  
   
-    -   [Página guardar o publicar scripts](#SavePubScripts)  
+    -   [Página Guardar o publicar scripts](#SavePubScripts)  
   
-###  <a name="Introduction"></a>Página introducción  
+###  <a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para generar o publicar un script.  
   
- **No volver a mostrar esta página** : omitir esta página la próxima vez que inicie el **Asistente generar y publicar scripts**.  
+ **No volver a mostrar esta página** : omite esta página la próxima vez que inicie el **asistente Generar y publicar scripts**.  
   
  **Siguiente >** : avanza a la página **elegir método** .  
   
@@ -110,13 +110,13 @@ ms.locfileid: "75242107"
   
  Incluir en el **script la opción de base de datos completa** : haga clic para generar scripts para todos los objetos de la base de datos e incluir un script para la propia base de datos.  
   
- **Seleccionar objetos de base de datos específicos** : haga clic para limitar el asistente a fin de generar scripts solo para los objetos específicos de la base de datos que elija:  
+ **Seleccionar objetos de base de datos específicos** : haga clic en esta opción para limitar el asistente con el fin de que genere scripts solo para los objetos concretos de la base de datos que elija:  
   
 -   **Objetos de base de datos** : seleccione al menos un objeto para incluirlo en el script.  
   
 -   **Seleccionar todo** : activa todas las casillas disponibles.  
   
--   **Anular selección** : desactiva todas las casillas. Para poder continuar, deberá seleccionar al menos un objeto de base de datos.  
+-   **Anular la selección** : desactiva todas las casillas. Para poder continuar, deberá seleccionar al menos un objeto de base de datos.  
   
 ###  <a name="SetScriptOpt"></a>Página establecer opciones de scripting  
  Use esta página para especificar si desea que el asistente guarde los scripts en la ubicación que elija o usarlos para publicar objetos de base de datos en un proveedor de hospedaje web remoto. Para publicar, debe tener acceso a un servicio web que se haya instalado mediante el servicio web Database Publishing Services Web.  
@@ -172,7 +172,7 @@ ms.locfileid: "75242107"
   
 -   **Incluir enlaces** : genera un script para enlazar los objetos predeterminados y de regla. El valor predeterminado es **False**. Para obtener más información, vea [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) y [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
--   **Incluir intercalación** : incluye información de intercalación en el script. El valor predeterminado es **False**. Para más información, consulte [Collation and Unicode Support](../collations/collation-and-unicode-support.md).  
+-   **Incluir intercalación** : incluye información de intercalación en el script. El valor predeterminado es **False**. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../collations/collation-and-unicode-support.md).  
   
 -   Valores **predeterminados de script** : incluye los objetos predeterminados usados para establecer los valores predeterminados en las columnas de la tabla. El valor predeterminado es **true**. Para obtener más información, vea [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
@@ -240,11 +240,11 @@ ms.locfileid: "75242107"
   
 1.  **Convertir UDDTs en tipos base** : Si **es true**, los tipos de datos definidos por el usuario (UDDT) se convierten en los tipos de datos base subyacentes que se usaron para crearlos. Use **True** cuando el UDDT no exista en la base de datos en la que se ejecutará el script. Si es **False**, se usan los UDDT. El valor predeterminado es **False**.  
   
-2.  **Publicar intercalación** : incluye información de intercalación para las columnas de la tabla. El valor predeterminado es **False**. Para más información, consulte [Collation and Unicode Support](../collations/collation-and-unicode-support.md).  
+2.  **Publicar intercalación** : incluye información de intercalación para las columnas de la tabla. El valor predeterminado es **False**. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../collations/collation-and-unicode-support.md).  
   
 3.  **Publicar valores predeterminados** : incluye los objetos predeterminados que se usan para establecer valores predeterminados en las columnas de la tabla. El valor predeterminado es **true**. Para obtener más información, vea [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
-4.  **Publicar objetos dependientes** : publica cualquier objeto que deba estar presente cuando se ejecute el script para el objeto seleccionado. El valor predeterminado es **true**.  
+4.  **Publicar objetos dependientes** : publica cualquier objeto que deba estar presente cuando se ejecute el script para el objeto seleccionado. El valor predeterminado es **True**.  
   
 5.  **Publicar propiedades extendidas** : incluye propiedades extendidas en el script que se envía al proveedor para su publicación, si el objeto tiene propiedades extendidas. El valor predeterminado es **true**.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242107"
   
  **Opciones de tabla o vista** : las siguientes opciones solo se aplican a tablas o vistas.  
   
-1.  **Publicar restricciones check** : incluye la creación de `CHECK` restricciones en el proceso de publicación. El valor predeterminado es **true**. Las restricciones `CHECK` requieren datos que se escriban en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Publicar restricciones check** : incluye la creación de `CHECK` restricciones en el proceso de publicación. El valor predeterminado es **True**. Las restricciones `CHECK` requieren datos que se escriban en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Publicar claves externas** : incluye la creación de claves externas en el proceso de publicación. El valor predeterminado es **true**. Las claves externas indican y exigen relaciones entre tablas. Para más información, consulte [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
@@ -276,7 +276,7 @@ ms.locfileid: "75242107"
   
 4.  **Publicar índices** : incluye índices de tablas en el proceso de publicación. El valor predeterminado es **true**. Los índices ayudan a encontrar rápidamente los datos.  
   
-5.  **Publicar claves principales** : incluye la creación de claves principales en el proceso de publicación. El valor predeterminado es **true**. Las claves principales identifican de forma exclusiva cada fila de una tabla. Para más información, consulte [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
+5.  **Publicar claves principales** : incluye la creación de claves principales en el proceso de publicación. El valor predeterminado es **True**. Las claves principales identifican de forma exclusiva cada fila de una tabla. Para más información, consulte [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
 6.  **Publicar desencadenadores** : incluye la creación de desencadenadores DML en el proceso de publicación. El valor predeterminado es **true**. Un desencadenador DML es una acción programada para ejecutarse cuando se produce un evento DML (lenguaje de manipulación de datos) en el servidor de base de datos. Para más información, consulte [DML Triggers](../triggers/dml-triggers.md).  
   
@@ -319,7 +319,7 @@ ms.locfileid: "75242107"
   
  **Cancelar** : deshacer todos los cambios realizados en este cuadro de diálogo y volver al asistente.  
   
-###  <a name="Summary"></a>Página Resumen  
+###  <a name="Summary"></a> Página Resumen  
  En esta página se resumen las opciones que ha seleccionado en este asistente. Para cambiar una opción, haga clic en **Anterior**. Para empezar a generar los scripts que se guardarán o publicarán, haga clic en **Siguiente**.  
   
  **Revisar las selecciones** : muestra las selecciones realizadas para cada página del asistente. Expanda un nodo para ver las opciones seleccionadas de la página correspondiente.  
@@ -335,7 +335,7 @@ ms.locfileid: "75242107"
   
  **Finalizar** : haga clic para cerrar el asistente después de que se haya completado el procesamiento o si se produce un error.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Instalación de SMO](../server-management-objects-smo/installing-smo.md)   
  [Copiar bases de datos en otros servidores](../databases/copy-databases-to-other-servers.md)  
   

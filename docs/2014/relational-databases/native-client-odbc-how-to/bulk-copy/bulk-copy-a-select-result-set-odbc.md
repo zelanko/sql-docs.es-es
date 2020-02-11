@@ -1,5 +1,5 @@
 ---
-title: Una copia masiva de un conjunto de resultados de SELECT (ODBC) | Microsoft Docs
+title: Copia masiva de un conjunto de resultados de selección (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225523"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Realizar una copia masiva de un conjunto de resultados de una instrucción SELECT (ODBC)
   En este ejemplo se muestra cómo usar las funciones de copia masiva para hacer una copia masiva del conjunto de resultados de una instrucción SELECT. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>Para una salida de copia masiva del conjunto de resultados de una instrucción SELECT  
   
@@ -35,9 +35,9 @@ ms.locfileid: "63225523"
   
 3.  Conéctese a SQL Server.  
   
-4.  Llame a [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para establecer la siguiente información:  
+4.  Llame a [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para establecer la información siguiente:  
   
-    -   Especifique NULL para el *szTable* parámetro.  
+    -   Especifique NULL para el parámetro *szTable* .  
   
     -   El nombre del archivo de datos que recibe los datos del conjunto de resultados.  
   
@@ -45,14 +45,14 @@ ms.locfileid: "63225523"
   
     -   La dirección de la copia: DB_OUT.  
   
-5.  Llame a [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), establezca eOption en BCPHINTS y coloque en iValue un puntero a una matriz SQLTCHAR que contiene la instrucción SELECT.  
+5.  Llame a [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), establezca EOPTION en BCPHINTS y coloque en iValue un puntero a una matriz de SQLTCHAR que contenga la instrucción SELECT.  
   
 6.  Llame a [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para ejecutar la operación de copia masiva.  
   
- Al utilizar estos pasos se crea el archivo en formato nativo. Puede convertir los valores de datos a otros tipos de datos mediante [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Para obtener más información, consulte [crear un archivo de formato de copia masiva &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
+ Al utilizar estos pasos se crea el archivo en formato nativo. Puede convertir los valores de datos en otros tipos de datos mediante [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Para obtener más información, vea [crear un archivo de formato de copia masiva &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
- Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la Página principal de [ejemplos y proyectos](https://go.microsoft.com/fwlink/?LinkID=85384) de la comunidad de Microsoft SQL Server). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
@@ -162,7 +162,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Copia masiva con los temas de procedimientos de controlador SQL Server ODBC &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de la copia masiva con el controlador ODBC de SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

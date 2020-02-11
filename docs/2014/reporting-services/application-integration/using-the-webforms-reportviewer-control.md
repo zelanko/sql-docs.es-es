@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238217"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usar el control ReportViewer de WebForms
@@ -24,9 +24,9 @@ ms.locfileid: "63238217"
   
 ###### <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Para usar el control ReportViewer en una aplicación web  
   
-1.  Cree un nuevo sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Cree un nuevo [!INCLUDE[msCoName](../../includes/msconame-md.md)] sitio web de ASP.net mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \- O bien  
+     \-De  
   
      Abra un sitio web ASP.NET existente y agregue un nuevo formulario Web Forms.  
   
@@ -38,11 +38,12 @@ ms.locfileid: "63238217"
   
      El control **ReportViewer** denominado reportViewer1 se agrega al formulario.  
   
- Una vez agregado al formulario el control, aparece la etiqueta inteligente **ReportViewer Tasks**, que le pide que seleccione un informe. Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Una vez seleccionada la opción **\<Servidor de informes>** , aparecen dos propiedades adicionales: **URL del servidor de informes** y **Ruta de acceso del informe**. **URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa del informe que quiere representar.  
+ Una vez agregado al formulario el control, aparece la etiqueta inteligente **ReportViewer Tasks**, que le pide que seleccione un informe. Si el informe que desea ver se ha implementado en un servidor de informes, seleccione la ** \<opción informe de servidor>** de la lista desplegable **elegir informe** . Una vez seleccionada la opción de ** \<>de informes de servidor** , aparecerán dos propiedades adicionales: URL del servidor de **informes** y ruta de **acceso del informe**. 
+  **URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa del informe que quiere representar.  
   
  Si quiere ver un informe en modo local, seleccione la opción **Diseñar nuevo informe** para iniciar el diseñador de informes o seleccione un informe que ya forme parte del proyecto existente. Después de haber seleccionado un informe, asegúrese de especificar el nombre del archivo RDLC del informe en la propiedad **ReportPath** del control ReportViewer. Esta propiedad aparece en el nodo **LocalReport** del panel **Propiedades**.  
   
- Tiene la posibilidad de ocultar uno o varios elementos de la barra de herramientas ReportViewer cuando se representa el informe. Por ejemplo, puede ocultar el botón para imprimir. Para ocultar los elementos de la barra de herramientas, establezca las siguientes propiedades de ReportViewer en `False` en el **propiedades** panel.  
+ Tiene la posibilidad de ocultar uno o varios elementos de la barra de herramientas ReportViewer cuando se representa el informe. Por ejemplo, puede ocultar el botón para imprimir. Para ocultar los elementos `False` de la barra de herramientas, establezca las siguientes propiedades de ReportViewer en en el panel **propiedades** .  
   
 -   `ShowBackButton`  
   
@@ -61,7 +62,7 @@ ms.locfileid: "63238217"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Ver los informes en modo de procesamiento remoto  
  En el ejemplo siguiente se muestra la forma de representar un informe que se ha implementado en un servidor de informes. En este ejemplo se utiliza el informe Sales Order Detail que se incluye con el proyecto de informes de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- En el ejemplo se utiliza la autenticación integrada de Windows, por lo que se debe habilitar primero la suplantación. Para ello, inserte la línea siguiente en el `web.config` archivo:  
+ En el ejemplo se utiliza la autenticación integrada de Windows, por lo que se debe habilitar primero la suplantación. Para ello, inserte la siguiente línea en el `web.config` archivo:  
   
 ```  
 <!-- Web.config file. -->  
@@ -478,7 +479,7 @@ Partial Class _Default
 End Class  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Integrar Reporting Services con los controles ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)  
   
   

@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667188"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Establecer umbrales y advertencias en el Monitor de replicación
-  En el Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones. De forma predeterminada, en el Monitor de replicación solamente se muestran advertencias de suscripciones no inicializadas, pero puede habilitar advertencias para otras condiciones. Se recomienda habilitar las advertencias para la topología, con el fin de estar puntualmente informado sobre el estado y rendimiento.  
+  En el Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones. De forma predeterminada, en el Monitor de replicación solamente se muestran advertencias de suscripciones no inicializadas, pero puede habilitar advertencias para otras condiciones. Se recomienda habilitar las advertencias para la topología, con el fin de estar puntualmente informado sobre el estado y rendimiento.  
   
  Al habilitar una advertencia, debe especificar un umbral. Cuando se alcanza o se supera ese umbral, aparece la advertencia (a menos que haya un problema de mayor prioridad). Además de mostrar una advertencia en el Monitor de replicación, llegar a un umbral también puede desencadenar una alerta. Se pueden habilitar advertencias para las siguientes condiciones:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62667188"
   
 4.  En la columna **Umbral** , establezca un umbral para las advertencias. Por ejemplo, si activó la casilla **Advertir si la latencia supera el valor de umbral** en el paso 3, puede seleccionar una latencia de **60 segundos** en la columna **Umbral** .  
   
-5.  Haga clic en **guardar cambios**.  
+5.  Haga clic en **Guardar cambios**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar una alerta para un umbral  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62667188"
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>** :  
+3.  Establezca opciones en el cuadro de diálogo **\<Propiedades de la alerta <nombreDeAlerta**:  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "62667188"
   
 4.  En la columna **Umbral** , establezca un umbral para la advertencia. Por ejemplo, puede seleccionar un valor de **70%** en la columna **Umbral** .  
   
-5.  Haga clic en **guardar cambios**.  
+5.  Haga clic en **Guardar cambios**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar una alerta para un umbral  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62667188"
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>** :  
+3.  Establezca opciones en el cuadro de diálogo **\<Propiedades de la alerta <nombreDeAlerta**:  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "62667188"
   
 5.  Haga clic en **Cerrar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación](../monitoring-replication.md)  
   
   

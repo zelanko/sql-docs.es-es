@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655341"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
@@ -77,7 +77,7 @@ ms.locfileid: "62655341"
 ### <a name="subscriber-wins"></a>El suscriptor gana  
  La detección de conflictos con la directiva El suscriptor gana significa que la última transacción de suscriptor que actualice el publicador ganará. En este caso, cuando se detecte un conflicto, se seguirá utilizando la transacción enviada por el suscriptor y se actualizará el publicador. Esta directiva es apropiada para las aplicaciones en que estos cambios no pongan en peligro la integridad de los datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)  
   
   

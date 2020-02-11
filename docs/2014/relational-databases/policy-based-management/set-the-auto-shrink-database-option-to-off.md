@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c81885e5a3aaec197b8963c2e868b6f65a0b0544
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691512"
 ---
-# <a name="set-the-autoshrink-database-option-to-off"></a>Establecer la opción de base de datos AUTO_SHRINK en OFF
+# <a name="set-the-auto_shrink-database-option-to-off"></a>Establecer la opción de base de datos AUTO_SHRINK en OFF
   Esta regla comprueba si la opción de base de datos AUTO_SHRINK está establecida en OFF. Si se reduce y se expande con frecuencia una base de datos, puede provocar la fragmentación física.  
   
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  
@@ -28,7 +28,7 @@ ms.locfileid: "62691512"
 ## <a name="for-more-information"></a>Para obtener más información  
  Artículo [315512](https://go.microsoft.com/fwlink/?linkid=117750)de Microsoft Knowledge Base  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

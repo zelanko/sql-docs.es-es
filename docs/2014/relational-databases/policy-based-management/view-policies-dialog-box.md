@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676846"
 ---
 # <a name="view-policies-dialog-box"></a>Cuadro de diálogo Ver directivas
@@ -41,13 +41,13 @@ ms.locfileid: "62676846"
  **Historial**  
  Haga clic en el hipervínculo para mostrar el informe de historial de ejecución.  
   
- **Evaluar**  
+ **Evaluación**  
  Haga clic en el hipervínculo para abrir el cuadro de diálogo **Evaluar directivas** y ejecutar la directiva.  
   
  **Última ejecución**  
  Fecha y hora en que la directiva se ejecutó por última vez.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  
   
   

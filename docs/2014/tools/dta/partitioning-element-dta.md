@@ -1,5 +1,5 @@
 ---
-title: Creación de particiones de elemento (DTA) | Microsoft Docs
+title: Partitioning (DTA, elemento) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657240"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning (DTA, elemento)
@@ -38,7 +38,8 @@ ms.locfileid: "62657240"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|**Tipo y longitud de los datos**|`string`, sin longitud máxima.|  
+|**Tipo y longitud de los datos**|
+  `string`, sin longitud máxima.|  
 |**Valores permitidos**|**NONE**<br /> Ninguna partición.<br /><br /> **FULL**<br /> Partición total. (Mejora el rendimiento).<br /><br /> **ALIGNED**<br /> Únicamente partición alineada. (Mejora la administración).<br /><br /> Utilice solo uno de estos valores con este elemento.<br /><br /> **ALIGNED** significa que, en la recomendación generada por el Asistente para la optimización de motor de base de datos, cada índice propuesto se divide exactamente igual que la tabla subyacente para la que se ha definido el índice. Los índices no clúster de una vista indizada se alinean con la vista indizada.|  
 |**Valor predeterminado**|**NONE**|  
 |**Repetición**|Una obligatoria para el elemento `TuningOptions`, a menos que se utilice el elemento `DropOnlyMode`. Si se utiliza `DropOnlyMode`, no es posible utilizar `Partitioning`. Estos elementos son mutuamente exclusivos.|  
@@ -53,7 +54,7 @@ ms.locfileid: "62657240"
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML simple &#40;DTA&#41;](simple-xml-input-file-sample-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

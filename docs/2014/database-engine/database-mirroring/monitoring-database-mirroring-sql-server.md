@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755365"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Supervisar la creación de reflejo de la base de datos (SQL Server)
@@ -129,7 +129,7 @@ ms.locfileid: "62755365"
   
      Los administradores del sistema pueden usar el procedimiento almacenado del sistema **sp_dbmmonitorresults** para ver y, opcionalmente, actualizar la tabla de estado, si esta no se ha actualizado en los 15 segundos anteriores. Este procedimiento llama al procedimiento **sp_dbmmonitorupdate** y devuelve una o más filas del historial, en función de la cantidad solicitada en la llamada del procedimiento. Para obtener más información sobre el estado en su conjunto de resultados, vea [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql).  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>Supervisar el estado de la creación de reflejo de la base de datos (por los miembros dbm_monitor)  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Supervisar el estado de la creación de reflejo de la base de datos (por los miembros dbm_monitor)  
  Como se ha mencionado, la primera vez que se ejecuta **sp_dbmmonitorupdate** , se crea el rol fijo de base de datos **dbm_monitor** en la base de datos **msdb** . Los miembros del rol fijo de base de datos **dbm_monitor** pueden ver el estado actual de la creación de reflejo mediante el Monitor de creación de reflejo de la base de datos o el procedimiento almacenado **sp_dbmmonitorresults** . No obstante, estos usuarios no pueden actualizar la tabla de estado. Para conocer la antigüedad del estado presentado, los usuarios pueden examinar las horas en las etiquetas **Registro del servidor principal (***\<hora>***)** y **Registro del servidor reflejado (***\<hora>***)** de la página **Estado**.  
   
  Los miembros del rol fijo de base de datos **dbm_monitor** dependen del **Trabajo del Monitor de creación de reflejo de la base de datos** para actualizar la tabla de estado a intervalos periódicos. Si el trabajo no existe o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está inactivo, el estado pasa a estar cada vez más desusado y es posible que no refleje la configuración de la sesión de creación de reflejo. Por ejemplo, después de una conmutación por error, es posible que parezca que los asociados comparten el mismo rol (de servidor principal o reflejado) o que el servidor principal actual se muestre como reflejado, a la vez que el servidor reflejado actual se muestra como principal.  
@@ -170,9 +170,9 @@ ms.locfileid: "62755365"
   
     -   Sincronizado  
   
-    -   Suspendida  
+    -   Suspended  
   
-    -   Desconectado  
+    -   Escenario desconectado  
   
 -   Conexión del testigo  
   
@@ -309,7 +309,7 @@ ms.locfileid: "62755365"
   
 -   [Ver el estado de una base de datos reflejada &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   
- **Procedimientos almacenados**  
+ **procedimientos almacenados**  
   
 -   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)  
   
@@ -329,7 +329,7 @@ ms.locfileid: "62755365"
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

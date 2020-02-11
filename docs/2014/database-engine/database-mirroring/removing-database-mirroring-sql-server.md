@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 414cdedb8f2bc3dee4edc792c11b6438306818c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754544"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>Quitar la creación de reflejo de la base de datos (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "62754544"
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Pausar y reanudar la creación de reflejo de la base de datos &#40;SQL Server&#41;](pausing-and-resuming-database-mirroring-sql-server.md)   

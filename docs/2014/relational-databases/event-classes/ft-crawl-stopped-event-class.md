@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 898a36e6f8dc65be24f386159a34158f23c1125a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662408"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped (clase de eventos)
@@ -29,8 +29,8 @@ ms.locfileid: "62662408"
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Id. de la base de datos en la que se ha detenido el rastreo de texto completo. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
-|**EventClass**|**int**|Tipo de evento = 156.|27|Sin|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|Sin|  
+|**EventClass**|**int**|Tipo de evento = 156.|27|No|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**ObjectID**|**int**|Identificador del objeto asignado por el sistema. El rastreo de texto completo se ha detenido para el índice de texto completo de este objeto.|22|Sí|  
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Sí|  
@@ -38,7 +38,7 @@ ms.locfileid: "62662408"
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

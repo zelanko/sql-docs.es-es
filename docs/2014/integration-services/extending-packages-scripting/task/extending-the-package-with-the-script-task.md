@@ -20,20 +20,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10cfa4d5d9deeeeb6bc664fc6480e31bc5dc483e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894779"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Extender el paquete con la tarea Script
-  La tarea Script amplía las funcionalidades de tiempo de ejecución de paquetes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] con código personalizado escrito en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# que se compila y ejecuta en tiempo de ejecución del paquete. La tarea Script simplifica el desarrollo de una tarea personalizada en tiempo de ejecución cuando las tareas incluidas con [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no satisfacen totalmente sus requisitos. La tarea Script escribe todo el código de infraestructura necesario, lo que le permite centrarse exclusivamente en el código que se requiere para el procesamiento personalizado.  
+  La tarea script amplía las capacidades de tiempo de ejecución [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] de los paquetes con código personalizado [!INCLUDE[msCoName](../../../includes/msconame-md.md)] escrito en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o Visual C# que se compila y ejecuta en tiempo de ejecución del paquete. La tarea Script simplifica el desarrollo de una tarea personalizada en tiempo de ejecución cuando las tareas incluidas con [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no satisfacen totalmente sus requisitos. La tarea Script escribe todo el código de infraestructura necesario, lo que le permite centrarse exclusivamente en el código que se requiere para el procesamiento personalizado.  
   
  Una tarea Script interactúa con el paquete contenedor a través del objeto `Dts` global, una instancia de la clase <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> que se expone en el entorno de scripting. Puede escribir el código de una tarea Script que modifica los valores almacenados en variables de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]; más adelante, el paquete puede utilizar esos valores actualizados para determinar la ruta de acceso del flujo de trabajo. La tarea Script también puede utilizar el espacio de nombres de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] y la biblioteca de clases de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], además de los ensamblados personalizados, para implementar la funcionalidad personalizada.  
   
  La tarea Script y el código de infraestructura que genera simplifican significativamente el proceso de desarrollar una tarea personalizada. Sin embargo, para comprender cómo funciona la tarea Script, le resultará de utilidad leer la sección [Desarrollar una tarea personalizada](../../extending-packages-custom-objects/task/developing-a-custom-task.md) para entender los pasos asociados al desarrollo de una tarea personalizada.  
   
- Si crea una tarea que piensa reutilizar en varios paquetes, considere desarrollar una tarea personalizada en lugar de utilizar la tarea Script. Para obtener más información, consulte [Comparing Scripting Solutions and Custom Objects](../comparing-scripting-solutions-and-custom-objects.md) (Comparar soluciones de scripting y objetos personalizados).  
+ Si crea una tarea que piensa reutilizar en varios paquetes, considere desarrollar una tarea personalizada en lugar de utilizar la tarea Script. Para obtener más información, consulte [Comparing Scripting Solutions and Custom Objects (Comparar soluciones de scripting y objetos personalizados)](../comparing-scripting-solutions-and-custom-objects.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  Los temas siguientes proporcionan más información sobre la tarea Script.  
@@ -42,7 +42,7 @@ ms.locfileid: "62894779"
  Explica cómo las propiedades que configura en el **Editor de la tarea Script** afectan a las funcionalidades y al rendimiento del código de la tarea Script.  
   
  [Codificar y depurar la tarea Script](../../control-flow/script-task.md)  
- Describe cómo utilizar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) para desarrollar los scripts contenidos en la tarea Script.  
+ Explica cómo usar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] tools for Applications (VSTA) para desarrollar los scripts contenidos en la tarea script.  
   
  [Usar variables en la tarea Script](using-variables-in-the-script-task.md)  
  Explica cómo utilizar las variables a través de la propiedad <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.  
@@ -62,10 +62,10 @@ ms.locfileid: "62894779"
  [Ejemplos de tarea Script](../../extending-packages-scripting-task-examples/script-task-examples.md)  
  Proporciona ejemplos simples que muestran varios posibles usos de una tarea Script.  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, los artículos, los ejemplos y los vídeos más recientes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, los artículos, los ejemplos y los vídeos más recientes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
- [Tarea Script](../../control-flow/script-task.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tarea script](../../control-flow/script-task.md)   
  [Comparar la tarea Script y el componente de script](../../extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   
   

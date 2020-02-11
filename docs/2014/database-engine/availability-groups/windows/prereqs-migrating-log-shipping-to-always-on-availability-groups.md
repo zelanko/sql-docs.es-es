@@ -1,5 +1,5 @@
 ---
-title: Requisitos previos para migrar de trasvase de registros a grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
+title: Requisitos previos para la migración desde el trasvase de registros a Grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789560"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Requisitos previos para migrar desde grupos de trasvase de registros a grupos de disponibilidad AlwaysOn (SQL Server)
@@ -36,10 +36,10 @@ ms.locfileid: "62789560"
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="AGPrereqsRealAddress"></a> Requisitos previos de los grupos de disponibilidad  
+##  <a name="AGPrereqsRealAddress"></a>Requisitos previos de los grupos de disponibilidad  
  Para permitir los trabajos de copia de seguridad para ejecutarse en la réplica principal del grupo de disponibilidad, use las siguientes opciones de copia de seguridad de los grupos de disponibilidad AlwaysOn:  
   
-|Property|Parámetro|  
+|Propiedad|Configuración|  
 |--------------|-------------|  
 |Preferencia de la copia de seguridad automatizada del grupo de disponibilidad|Solo en la réplica principal|  
 |Prioridad de copia de seguridad de la réplica principal.|>0|  
@@ -50,7 +50,7 @@ ms.locfileid: "62789560"
   
  [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a> Requisitos previos del trasvase de registros  
+##  <a name="LogShipPrereqs"></a>Requisitos previos del trasvase de registros  
   
 -   La base de datos principal del trasvase de registros debe residir en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal actual o inicial del grupo de disponibilidad.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62789560"
   
  **Para obtener más información:**  
   
- [Convertir una configuración de trasvase de registros en un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (blog de SQL Server)  
+ [Conversión de una configuración de trasvase en un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (un blog SQL Server)  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
  **Trasvase de registros**  
@@ -93,25 +93,25 @@ ms.locfileid: "62789560"
   
 -   **Blogs:**  
   
-     [Convertir una configuración de trasvase de registros en un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [Convertir una configuración de trasvase en un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [Agregue una base de datos principal de trasvase de registros y una base de datos secundaria a un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Agregar una base de datos principal y una base de datos secundaria de trasvase de registros a un grupo de disponibilidad existente](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
-     [Blogs del equipo de AlwaysOn SQL Server: El blog del equipo de AlwaysOn oficial SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs del equipo de AlwaysOn de SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
 -   **Notas del producto:**  
   
-     [Guía de migración: Migrar a grupos de disponibilidad AlwaysOn desde implementaciones anteriores que combinan creación de reflejo de base de datos y trasvase de registros](https://msdn.microsoft.com/library/jj635217)  
+     [Guía de migración: migrar a grupos de disponibilidad AlwaysOn desde implementaciones anteriores que combinan creación de reflejo de la base de datos y trasvase de registros](https://msdn.microsoft.com/library/jj635217)  
   
      [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

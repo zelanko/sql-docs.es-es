@@ -1,5 +1,5 @@
 ---
-title: Modificar la consulta de origen OData en tiempo de ejecución | Microsoft Docs
+title: Modificar consulta de origen OData en tiempo de ejecución | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901192"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modificar una consulta de origen OData en tiempo de ejecución
@@ -27,7 +27,7 @@ ms.locfileid: "62901192"
 ## <a name="exposing-the-query-as-a-parameter"></a>Exponer la consulta como un parámetro  
  El procedimiento siguiente tiene pasos para exponer la consulta usada por un componente de origen OData como un parámetro del paquete.  
   
-1.  Haga clic con el botón derecho en **Tarea Flujo de datos** y seleccione la opción **Parametrizar…**.  
+1.  Haga clic con el botón derecho en **Tarea Flujo de datos** y seleccione la opción **Parametrizar…** .  
   
 2.  En el diálogo **Parametrizar**, seleccione **[\<Nombre del componente de origen OData>].[Query]** para **Propiedad**.  
   
@@ -52,15 +52,15 @@ ms.locfileid: "62901192"
   
 2.  En la ventana **Propiedades** , resalte la propiedad **Expresiones** .  
   
-3.  Haga clic en el... botón (puntos suspensivos) para que aparezca el **Editor de expresiones de propiedad**.  
+3.  Haga clic en... (puntos suspensivos) para abrir el editor de **expresiones de propiedad**.  
   
 4.  Seleccione la propiedad **[OData Source].[Query]** .  
   
-5.  Haga clic en el... botón (puntos suspensivos) **expresión**.  
+5.  Haga clic en... botón (puntos suspensivos) para **expresión**.  
   
 6.  Escriba la **expresión**.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 > [!WARNING]  
 >  Tenga en cuenta que cuando se usa este enfoque debe asegurarse de que los valores establecidos están codificados correctamente como una dirección URL. Cuando reciba valores de datos proporcionados por el usuario (por ejemplo, al establecer valores de opción de consulta individuales de un parámetro), debe asegurarse de que los valores se validan para impedir posibles ataques de inyección de código SQL.  

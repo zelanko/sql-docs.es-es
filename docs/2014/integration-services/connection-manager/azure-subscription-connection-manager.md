@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ea90d10a0228321d33a4c55076e9ed46a14c80c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833500"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure Subscription Connection Manager (Administrador de conexiones de suscripciones de Azure)
-  El Administrador de conexiones de Azure HDInsight permite que un paquete SSIS para conectarse a una suscripción de Azure mediante el uso de los valores especificados para las propiedades: Id. de suscripción de Azure y Certificado de administración.  
+  El administrador de conexiones de HDInsight de Azure permite que un paquete de SSIS se conecte con una suscripción de Azure a través de los valores que especifica para las propiedades: id. de suscripción de Azure y certificado de administración.  
   
 1.  En el cuadro de diálogo **Agregar administrador de conexiones SSIS** que se muestra arriba, seleccione **Suscripción de Azure**y haga clic en **Agregar**.  Debería aparecer el cuadro de diálogo **Azure Subscription Connection Manager Editor** (Editor de administrador de conexiones de suscripciones de Azure).  
   
@@ -35,9 +35,9 @@ ms.locfileid: "62833500"
   
 4.  Escriba **Management certificate thumbprint** (Huella digital de certificado de administración) o haga clic en **Examinar…** para elegir un certificado en el almacén seleccionado. El certificado se debe cargar como un certificado de administración para la suscripción. Para hacerlo, haga clic en **Cargar** en la página siguiente del Portal de Azure (consulte esta [publicación de MSDN](https://msdn.microsoft.com/library/azure/gg551722.aspx) para obtener más detalles).  
   
-     ![SSIS-AzureSettings-ManagementCertificate](../media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
+     ![SSIS-AzureSettings-remota](../media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   
-5.  Haga clic en **Probar conexión** para probar la conexión.  
+5.  Haga clic en **probar conexión** para probar la conexión.  
   
 6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   

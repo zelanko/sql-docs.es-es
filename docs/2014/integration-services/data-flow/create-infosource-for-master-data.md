@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87ada4ef6cf9266720ac0c9742440d0d60345c88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827958"
 ---
 # <a name="create-infosource-for-master-data"></a>Crear InfoSource para datos maestros
@@ -46,7 +46,7 @@ ms.locfileid: "62827958"
   
  Después de seleccionar un InfoObject, el componente rellena el cuadro de texto **Nombre de InfoObject** con el nombre del InfoObject seleccionado.  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear un nuevo InfoObject. Esta opción abre el cuadro de diálogo **Crear nuevo InfoObject**, donde podrá crear el InfoObject nuevo. Para obtener más información sobre este cuadro de diálogo, vea [Create New InfoObject](create-new-infoobject.md).  
   
  Después de crear un InfoObject, el componente rellena el cuadro de texto **Nombre de InfoObject** con el nombre del InfoObject nuevo.  
@@ -72,7 +72,7 @@ ms.locfileid: "62827958"
  **Guardar y activar**  
  Permite guardar y activar el nuevo InfoSource.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear InfoSource](create-infosource.md)   
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

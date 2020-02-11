@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033669"
 ---
 # <a name="create-statistics"></a>Crear estadísticas
@@ -57,7 +57,7 @@ ms.locfileid: "63033669"
 ####  <a name="Permissions"></a> Permisos  
  Requiere que el usuario sea el propietario de la tabla o vista indexada o un miembro de uno de los roles siguientes: rol fijo de servidor **sysadmin** , rol fijo de base de datos **db_owner** o rol fijo de base de datos **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>Para crear estadísticas  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63033669"
   
 4.  Haga clic con el botón derecho en la carpeta **Estadísticas** y, después, seleccione **Nueva estadística...** .  
   
-     Las siguientes propiedades se muestran en la página **General** del cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre_tabla_ .  
+     Las siguientes propiedades se muestran en la página **General** del cuadro de diálogo **nuevas estadísticas de la tabla**_TABLE_NAME_ .  
   
      **Nombre de tabla**  
      Muestra el nombre de la tabla descrita por las estadísticas.  
@@ -80,7 +80,7 @@ ms.locfileid: "63033669"
      **Columnas de estadísticas**  
      Esta cuadrícula muestra las columnas descritas por este conjunto de estadísticas. Todos los valores de la cuadrícula son de solo lectura.  
   
-     **Name**  
+     **Nombre**  
      Muestra el nombre de la columna descrita por las estadísticas. Puede ser una sola columna o una combinación de columnas de una sola tabla.  
   
      **Tipo de datos**  
@@ -95,10 +95,10 @@ ms.locfileid: "63033669"
      **Permitir valores NULL**  
      Indica si la columna acepta valores NULL.  
   
-     **Agregar**  
+     **Add (Agregar)**  
      Agregue columnas adicionales de la tabla a la cuadrícula de estadísticas.  
   
-     **Quitar**  
+     **Remove**  
      Quita la columna seleccionada de la cuadrícula de estadísticas.  
   
      **Subir**  
@@ -113,16 +113,16 @@ ms.locfileid: "63033669"
      **Actualizar estadísticas de estas columnas**  
      Comprueba la actualización de las estadísticas cuando se cierra el cuadro de diálogo.  
   
-     La siguiente propiedad se muestra en la página **Filtro** del cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre_tabla_ .  
+     La siguiente propiedad se muestra en la página **filtro** del cuadro de diálogo **nuevas estadísticas de la tabla**_TABLE_NAME_ .  
   
      **Expresión de filtro**  
-     Define qué filas de datos se incluyen en las estadísticas filtradas. Por ejemplo, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Define qué filas de datos se incluyen en las estadísticas filtradas. Por ejemplo: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  En el cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre_tabla_ , en la página **General** , haga clic en **Agregar**.  
+5.  En el cuadro de diálogo **nuevas estadísticas de la tabla**_TABLE_NAME_ , en la página **General** , haga clic en **Agregar**.  
   
      Las propiedades siguientes se muestran en el cuadro de diálogo **Seleccionar columnas** . Esta información es de solo lectura.  
   
-     **Name**  
+     **Nombre**  
      Muestra el nombre de la columna descrita por las estadísticas. Puede ser una sola columna o una combinación de columnas de una sola tabla.  
   
      **Tipo de datos**  
@@ -134,12 +134,12 @@ ms.locfileid: "63033669"
      **Identidad**  
      Cuando se activa, indica una columna de identidad.  
   
-     **Allow NULLs**  
+     **Permitir valores NULL**  
      Indica si la columna acepta valores NULL.  
   
 6.  En el cuadro de diálogo **Seleccionar columnas** , active la casilla o casillas de cada columna para la que desee crear una estadística y haga clic en **Aceptar**.  
   
-7.  En el cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre_tabla_ , haga clic en **Aceptar**.  
+7.  En el cuadro de diálogo **nuevas estadísticas de la tabla**_TABLE_NAME_ , haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

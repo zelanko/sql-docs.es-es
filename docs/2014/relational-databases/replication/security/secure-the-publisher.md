@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201b1496444888b207a1a72be640b9705ff1059d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960153"
 ---
 # <a name="secure-the-publisher"></a>Proteger el publicador
@@ -63,7 +63,7 @@ ms.locfileid: "62960153"
  Existe un Agente de instantáneas para cada publicación. Para obtener más información, vea [Crear una suscripción](../publish/create-a-publication.md).  
   
 ## <a name="ftp-snapshot-delivery"></a>Entrega de instantáneas a través de FTP  
- Si especifica que las instantáneas deben estar disponibles a través de un recurso compartido FTP en lugar de un recurso compartido UNC, es preciso indicar un inicio de sesión y una contraseña al configurar el acceso FTP. Para más información, vea [Deliver a Snapshot Through FTP](../publish/deliver-a-snapshot-through-ftp.md) (Entregar una instantánea mediante FTP).  
+ Si especifica que las instantáneas deben estar disponibles a través de un recurso compartido FTP en lugar de un recurso compartido UNC, es preciso indicar un inicio de sesión y una contraseña al configurar el acceso FTP. Para obtener más información, vea [Entregar una instantánea mediante FTP](../publish/deliver-a-snapshot-through-ftp.md).  
   
 ## <a name="log-reader-agent"></a>Agente de registro del LOG  
  Existe un Agente de registro del LOG para cada base de datos publicada para la replicación transaccional. Para obtener más información, vea [Crear una suscripción](../publish/create-a-publication.md).  
@@ -71,9 +71,9 @@ ms.locfileid: "62960153"
 ## <a name="queue-reader-agent"></a>Agente de lectura de cola  
  Existe un Agente de lectura de cola para todos los publicadores y publicaciones (que permite las suscripciones de actualización en cola) asociados a un distribuidor determinado. Para más información, vea [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md) (Habilitar suscripciones actualizables para publicaciones transaccionales).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Seguridad de replicación de SQL Server](view-and-modify-replication-security-settings.md)  
+ [Seguridad de Replicación de SQL Server](view-and-modify-replication-security-settings.md)  
   
   

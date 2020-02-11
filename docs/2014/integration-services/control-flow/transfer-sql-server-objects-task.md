@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829460"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarea Transferir objetos de SQL Server
@@ -73,7 +73,7 @@ ms.locfileid: "62829460"
 ## <a name="transfer-objects-between-instances-of-sql-server"></a>Transferencia de objetos entre instancias de SQL Server  
  La tarea Transferir objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un origen y un destino que sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  La tarea emite un evento de información que indica el objeto transferido y un evento de advertencia cuando se sobrescribe un objeto. También se emite un evento de información para acciones como el truncamiento de tablas de una base de datos.  
   
  La tarea Transferir objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no indica el progreso incremental de la transferencia de objetos; solo indica 0% y 100%.  
@@ -106,7 +106,7 @@ ms.locfileid: "62829460"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea Transferir objetos de SQL Server &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [&#40;página general del editor de la tarea transferir objetos de SQL Server&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor de la tarea Transferir objetos de SQL Server &#40;página Objetos&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   

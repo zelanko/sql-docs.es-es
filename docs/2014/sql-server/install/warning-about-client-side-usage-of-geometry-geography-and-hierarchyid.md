@@ -1,5 +1,5 @@
 ---
-title: Advertencia sobre el uso del lado cliente de GEOMETRY, GEOGRAPHY y HIERARCHYID | Microsoft Docs
+title: Advertencia sobre el uso del lado cliente de GEOMETRY, Geography y HIERARCHYID | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091088"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Advertencia sobre el uso del lado cliente de GEOMETRY, GEOGRAPHY y HIERARCHYID
-  El ensamblado **Microsoft.SqlServer.Types.dll**, que contiene los tipos de datos espaciales se ha actualizado de la versión 10.0 a la versión 11.0. Cuando se cumplan determinadas condiciones, se puede producir un error en las aplicaciones personalizadas que hacen referencia a este ensamblado.  
+  El ensamblado **Microsoft. SqlServer. types. dll**, que contiene los tipos de datos espaciales, se ha actualizado de la versión 10,0 a la versión 11,0. Cuando se cumplan determinadas condiciones, se puede producir un error en las aplicaciones personalizadas que hacen referencia a este ensamblado.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descripción  
- El ensamblado **Microsoft.SqlServer.Types.dll**, que contiene los tipos de datos espaciales se ha actualizado de la versión 10.0 a la versión 11.0. Cuando se cumplan las siguientes condiciones, se puede producir un error en las aplicaciones personalizadas que hacen referencia a este ensamblado.  
+ El ensamblado **Microsoft. SqlServer. types. dll**, que contiene los tipos de datos espaciales, se ha actualizado de la versión 10,0 a la versión 11,0. Cuando se cumplan las siguientes condiciones, se puede producir un error en las aplicaciones personalizadas que hacen referencia a este ensamblado.  
   
--   Al mover una aplicación personalizada desde un equipo en el que [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] se instaló en un equipo en el que solo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está instalado, la aplicación generará un error porque la versión que se hace referencia 10.0 de la **SqlTypes** ensamblado no está presente. Puede aparecer este mensaje de error: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   Cuando se mueve una aplicación personalizada desde un equipo en el [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] que se instaló en un equipo en el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que solo está instalado, se producirá un error en la aplicación porque la versión 10,0 a la que se hace referencia del ensamblado **SqlTypes** no está presente. Puede aparecer este mensaje de error: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
--   Cuando se hace referencia el **SqlTypes** versión 11.0 del ensamblado y la versión 10.0 también está instalada, verá este mensaje de error: `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
+-   Cuando se hace referencia a la versión 11,0 del ensamblado **SqlTypes** y también se instala la versión 10,0, puede aparecer este mensaje de error:`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
--   Cuando se hace referencia el **SqlTypes** versión 11.0 del ensamblado desde una aplicación personalizada que tenga como destino .NET 3.5, 4 o 4.5, la aplicación generará un error porque SqlClient por diseño, carga la versión 10.0 del ensamblado. Este error se produce cuando la aplicación llama a uno de los siguientes métodos:  
+-   Cuando se hace referencia a la versión 11,0 del ensamblado **SqlTypes** desde una aplicación personalizada que tiene como destino .net 3,5, 4 o 4,5, se producirá un error en la aplicación porque SqlClient by Design carga la versión 10,0 del ensamblado. Este error se produce cuando la aplicación llama a uno de los siguientes métodos:  
   
     -   método `GetValue` de la clase `SqlDataReader`  
   
@@ -82,9 +82,9 @@ ms.locfileid: "66091088"
   
 -   Puede solucionar esta problema en la cadena de conexión si especifica el valor "SQL Server 2012" para el atributo "Type System Version" para forzar que SqlClient cargue la versión 11.0 del ensamblado. Este atributo de cadena de conexión solo está disponible en .NET 4.5 y posterior.  
   
-## <a name="see-also"></a>Vea también  
- [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md
+## <a name="see-also"></a>Consulte también  
+ [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md
 )  
   
   

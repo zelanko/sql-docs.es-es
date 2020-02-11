@@ -1,5 +1,5 @@
 ---
-title: Propiedades de seguimiento (pestaña General) | Microsoft Docs
+title: Propiedades de seguimiento (pestaña general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089532"
 ---
 # <a name="trace-properties-general-tab"></a>Propiedades de seguimiento (pestaña General)
@@ -34,10 +34,10 @@ ms.locfileid: "66089532"
  **Tipo de proveedor de seguimiento**  
  Muestra el tipo de proveedor que proporciona el seguimiento. El archivo de definición de seguimiento rellena el campo **Tipo de proveedor de seguimiento** automáticamente. No se puede modificar este campo.  
   
- **version**  
+ **Versión**  
  Muestra la versión del servidor que proporciona el seguimiento. El archivo de definición de seguimiento rellena el campo **Versión** automáticamente. No se puede modificar este campo.  
   
- **Usar la plantilla**  
+ **Uso de la plantilla**  
  Selecciona una plantilla del directorio de plantillas. El directorio se rellena con las plantillas predeterminadas y con cualquier tipo de plantilla definida por el usuario que se haya creado para el tipo de proveedor de seguimiento actual.  
   
  **Guardar en el archivo**  
@@ -46,7 +46,7 @@ ms.locfileid: "66089532"
  **Establecer el tamaño máximo de archivo (MB)**  
  Si elige la opción de guardar los datos de seguimiento en un archivo, deberá especificar el tamaño máximo del mismo. El valor predeterminado es 5 megabytes (MB). El tamaño máximo está limitado únicamente por el sistema de archivos (NTFS, FAT) donde se guarde el archivo.  
   
- \<Gráfico > **Guardar como**  
+ \<Gráfico> **Guardar como**  
  Después de seleccionar guardar, puede seleccionar este icono para cambiar el nombre de archivo.  
   
  **Habilitar sustitución incremental de archivos**  
@@ -58,7 +58,7 @@ ms.locfileid: "66089532"
  **Guardar en la tabla**  
  Captura los datos del seguimiento en una tabla de base de datos. Guardar los datos del seguimiento es útil para su posterior revisión y análisis. Sin embargo, guardar los datos de un seguimiento en una tabla también puede aumentar de forma significativa la sobrecarga en el servidor en el que se guarda el seguimiento. Si es posible, no guarde la tabla de seguimiento en el mismo servidor del que se realiza un seguimiento.  
   
- \<Gráfico > **tabla de destino**  
+ \<Tabla de **destino**> gráfico  
  Después de seleccionar que los datos de seguimiento se guarden en una tabla de base de datos, puede seleccionar este icono para cambiar el nombre de la tabla.  
   
  **Establecer número máximo de filas (en miles)**  
@@ -67,7 +67,7 @@ ms.locfileid: "66089532"
  **Habilitar hora de detención de seguimiento**  
  Establece la fecha y la hora de finalización y de cierre del seguimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
   

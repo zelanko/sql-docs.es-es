@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873413"
 ---
 # <a name="system-data-collection-set-reports"></a>Informes de conjuntos de recopilación de datos del sistema
@@ -41,7 +41,7 @@ ms.locfileid: "62873413"
 ##  <a name="Disk"></a> Informe Resumen de uso de disco  
  El informe Resumen de uso de disco contiene datos sobre el uso del espacio de disco de todas las bases de datos de la sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los datos que se proporcionan en los informes se obtienen con el conjunto de recopilación Uso de disco, que usa el tipo de recopilador de consultas T-SQL genérico.  
   
- Puede tener acceso al informe Resumen de uso de disco desde el Explorador de objetos. Para ver el informe, expanda la carpeta **Administración** , haga clic con el botón derecho en **Recopilación de datos**, seleccione **Informes**, **Almacén de administración de datos**y, después, haga clic en **Resumen de uso de disco**. Para obtener más información, vea [View a Collection Set Report &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
+ Puede tener acceso al informe Resumen de uso de disco desde el Explorador de objetos. Para ver el informe, expanda la carpeta **Administración** , haga clic con el botón derecho en **Recopilación de datos**, seleccione **Informes**, **Almacén de administración de datos**y, después, haga clic en **Resumen de uso de disco**. Para obtener más información, vea [Ver un informe de conjunto de recopilación &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
   
 ### <a name="disk-usage-collection-set-report"></a>Informe del conjunto de recopilación Uso de disco  
  El informe del conjunto de recopilación Uso de disco proporciona información general del espacio en disco que usan todas las bases de datos de la sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y tendencias de crecimiento de los datos y archivos de registro de cada una de estas bases de datos.  
@@ -50,19 +50,19 @@ ms.locfileid: "62873413"
   
 -   La información de las tendencias y del promedio de crecimiento se muestra gráfica y numéricamente tanto para los datos como para los archivos de registro.  
   
-#### <a name="disk-usage-collection-set---database-databasename-subreport"></a>Subinforme Conjunto de recopilación Uso de disco - Base de datos: <nombre_de_base de datos>  
+#### <a name="disk-usage-collection-set---database-database_name-subreport"></a>Subinforme Conjunto de recopilación Uso de disco - Base de datos: <nombre_de_base de datos>  
  El subinforme Conjunto de recopilación de uso de disco - Base de datos: *<nombre_de_base_de_datos>* se muestra al hacer clic en una línea de tendencia para una base de datos o archivo de registro concretos de la tabla de resumen del informe Conjunto de recopilación de uso de disco. Este informe proporciona una representación gráfica de las tendencias de crecimiento en el uso del espacio de disco sobre el período del informe. El uso de disco se organiza y se notifica según el espacio utilizado, el espacio de datos, el espacio sin asignar y el espacio de índice de los archivos de datos, y el espacio usado y el espacio sin usar de los archivos de registro.  
   
  La tabla debajo del gráfico muestra las horas de la recopilación de datos y los datos de uso correspondientes.  
   
-#### <a name="disk-usage-for-database-databasename-subreport"></a>Subinforme Uso de disco para la base de datos : <nombre_de_base_de_datos>  
+#### <a name="disk-usage-for-database-database_name-subreport"></a>Subinforme Uso de disco para la base de datos : <nombre_de_base_de_datos>  
  El subinforme **Uso de disco para la base de datos:** _<nombre_de_base_de_datos>_ se muestra al hacer clic en un nombre de base de datos de la tabla de resumen del informe Conjunto de recopilación de uso de disco. Este informe proporciona un desglose numérico y gráfico del uso de espacio de los archivos del registro de transacciones y de datos. El uso de espacio de los archivos de datos se categoriza como un porcentaje asignado a las páginas de índice, el espacio sin asignar, a los datos y al espacio sin usar. Estas categorías se definen como se indica a continuación:  
   
 |Category|Definición|  
 |--------------|----------------|  
 |Índice|Cantidad de espacio en disco utilizada para contener las páginas de índice.|  
 |Sin asignar|La cantidad de espacio en disco disponible para la base de datos pero que aún no se ha asignado a ningún objeto.|  
-|Datos|La cantidad de espacio en disco utilizada por páginas de datos.|  
+|data|La cantidad de espacio en disco utilizada por páginas de datos.|  
 |No utilizado|La cantidad de espacio de disco asignado a uno o más objetos, pero que aún no se ha usado.|  
   
  El uso de espacio para el archivo de registro de transacciones se categoriza como espacio usado y como espacio sin usar.  
@@ -88,14 +88,14 @@ ms.locfileid: "62873413"
  Utilice el botón de calendario para especificar la fecha de inicio, la hora de inicio y la duración de los datos que desea notificar.  
   
 #### <a name="query-statistics-history-report"></a>Informe Historial de estadísticas de consultas  
- El gráfico Principales consultas por total de CPU muestra el gasto relativo de cada consulta para el intervalo de tiempo seleccionado según el uso total de CPU. Para mostrar otra vista del gasto relativo de la consulta, haga clic en uno de los hipervínculos que se proporcionan debajo del gráfico: **Duración**, **Total E/S**, **Lecturas físicas** o **Escrituras lógicas**.  
+ El gráfico Principales consultas por total de CPU muestra el gasto relativo de cada consulta para el intervalo de tiempo seleccionado según el uso total de CPU. Para mostrar una vista diferente del gasto relativo de la consulta, haga clic en uno de los hipervínculos que se proporcionan debajo del gráfico: **Duración**, **Total E/S**, **Lecturas físicas**o **Escrituras lógicas**.  
   
  La tabla situada debajo del gráfico proporciona datos de consulta adicionales. Muestra el texto de cada consulta que se representa mediante un gráfico junto con información estadística detallada. Observe que las barras del gráfico son vínculos activos, como lo son cada una de las consultas que se muestran en la tabla. Al hacer clic en un vínculo activo, se abre el subinforme Detalles de consulta correspondiente a la consulta.  
   
 #### <a name="query-details-subreport"></a>Subinforme Detalles de consulta  
  El subinforme Detalles de consulta proporciona todo el texto de la consulta. Al lado de la consulta se encuentra el hipervínculo **Editar texto de consulta** . Puede hacer clic en este vínculo para abrir la consulta en el Editor de consultas. La tabla situada debajo de la consulta proporciona estadísticas de ejecución de la consulta, como el promedio de duración por cada ejecución de una consulta.  
   
- Se muestra un gráfico de los planes de consulta y el promedio de duración por cada ejecución. Para mostrar otra vista del costo relativo del plan de consulta, haga clic en cualquiera de los hipervínculos que se muestran debajo del gráfico: **Duración**, **Lecturas físicas** o **Escrituras lógicas**. La línea del gráfico es un elemento activo y puede hacer clic en cualquier punto para abrir el subinforme Detalles del plan de consulta.  
+ Se muestra un gráfico de los planes de consulta y el promedio de duración por cada ejecución. Para mostrar una vista diferente del costo relativo del plan de consulta, haga clic en uno de los hipervínculos que se muestran debajo del gráfico: **Duración**, **Lecturas físicas**o **Escrituras lógicas**. La línea del gráfico es un elemento activo y puede hacer clic en cualquier punto para abrir el subinforme Detalles del plan de consulta.  
   
  La tabla situada debajo del gráfico muestra los diez primeros planes de consulta según el uso de CPU por ejecución. Cada número de la columna **Nº de planes** es un vínculo activo en el que se puede hacer clic para abrir el subinforme Detalles del plan de consulta.  
   
@@ -123,16 +123,16 @@ ms.locfileid: "62873413"
   
  En la tabla siguiente se describen los gráficos que trazan la actividad del sistema y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el informe, y los subinformes detallados a los que se puede tener acceso a través de los gráficos.  
   
-|Gráfico|Descripción del informe|  
+|Grafo|Descripción del informe|  
 |-----------|------------------------|  
 |%CPU|Se tiene acceso a estos subinformes haciendo clic en cualquier punto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en las líneas del gráfico Sistema del gráfico %CPU.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> El informe Historial de estadísticas de consultas proporciona un gráfico de las consultas más caras en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una tabla debajo del gráfico muestra las consultas e incluye datos estadísticos para cada una. Puede hacer clic en una consulta para obtener detalles adicionales.<br /><br /> Sistema<br /> El informe Uso de CPU del sistema proporciona un gráfico del porcentaje de tiempo de CPU por procesador y datos estadísticos de cada proceso en formato tabular.|  
-|Utilización de la memoria|Para consultar estos subinformes, haga clic en cualquier punto de las líneas del gráfico Sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el gráfico Utilización de la memoria.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> El informe Utilización de la memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona gráficos para el uso de memoria de procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , contadores de memoria, consumo de memoria interna por tipo y una tabla que ofrece datos sobre el promedio de utilización de la memoria por cada tipo de componente.<br /><br /> Sistema<br /> El informe Uso de memoria del sistema proporciona gráficos para la utilización de memoria y las frecuencias de aciertos de páginas y memoria caché, y una tabla que ofrece información sobre los bytes privados y el espacio de trabajo de cada proceso.|  
+|Uso de la memoria|Para consultar estos subinformes, haga clic en cualquier punto de las líneas del gráfico Sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el gráfico Utilización de la memoria.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> El informe Utilización de la memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona gráficos para el uso de memoria de procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , contadores de memoria, consumo de memoria interna por tipo y una tabla que ofrece datos sobre el promedio de utilización de la memoria por cada tipo de componente.<br /><br /> Sistema<br /> El informe Uso de memoria del sistema proporciona gráficos para la utilización de memoria y las frecuencias de aciertos de páginas y memoria caché, y una tabla que ofrece información sobre los bytes privados y el espacio de trabajo de cada proceso.|  
 |Uso de E/S de disco|Para consultar estos subinformes, haga clic en cualquier punto de las líneas del gráfico Sistema o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el gráfico Uso de E/S de disco.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> El informe Uso de E/S de disco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona gráficos del tiempo de respuesta del disco y de la tasa de la transferencia de disco. En una tabla adicional se proporcionan estadísticas de los archivos virtuales por cada disco, base de datos y archivo.<br /><br /> Sistema<br /> El informe Uso de disco del sistema proporciona gráficos para el tiempo de respuesta del disco, el promedio de longitud de la cola de disco y la velocidad de transferencia de disco, y una tabla con información sobre las escrituras y lecturas de E/S de cada proceso.|  
 |Uso de red|No hay ningún informe adicional disponible.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esperas|El gráfico Esperas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra las esperas que encontraron los subprocesos que se ejecutan por cada categoría de espera. Puede tener acceso a un informe detallado haciendo clic en cualquier segmento del gráfico. Además de ofrecer estadísticas gráficas de las esperas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un intervalo de tiempo más reducido, este informe proporciona información sobre las categorías de las esperas en formato tabular. Para cada categoría, como CPU y sus subcategorías, la tabla muestra el número de esperas, el tiempo de espera y el porcentaje de tiempo de espera total.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Actividad|Desde el gráfico Actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede tener acceso a diferentes aspectos de la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los informes que puede obtener haciendo clic en un punto de la línea del gráfico Compilaciones SQL/s son los siguientes:<br /><br /> Conexiones y sesiones<br /><br /> Solicitudes<br /><br /> Frecuencia de aciertos de caché de plan<br /><br /> Características de TempDb|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Actividad|Desde el gráfico Actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede tener acceso a diferentes aspectos de la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los informes que puede obtener haciendo clic en un punto de la línea del gráfico Compilaciones SQL/s son los siguientes:<br /><br /> Conexiones y sesiones<br /><br /> Requests<br /><br /> Frecuencia de aciertos de caché de plan<br /><br /> Características de TempDb|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Recopilación de datos](data-collection.md)   
  [Ver un informe de conjunto de recopilación &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   

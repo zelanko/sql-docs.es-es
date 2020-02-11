@@ -1,5 +1,5 @@
 ---
-title: Superposición de máscara de máscara de afinidad correcto y afinidad de entrada y salida | Microsoft Docs
+title: Superposición correcta de la máscara de afinidad y de salida de entrada de afinidad | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3139c864805c7df9220afc9b81d2a242775f4fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856699"
 ---
-# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>Máscara de afinidad correcto y superposición de máscara de afinidad de entrada y salida
+# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>Superposición correcta de la máscara de afinidad y de salida de entrada de afinidad
   Esta regla comprueba si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene uno o varios procesadores que están asignados para usarse con las opciones de máscara de afinidad y de máscara de afinidad de E/S. En un equipo con más de un procesador, las opciones de máscara de afinidad y de máscara de afinidad de E/S se utilizan para designar qué CPU usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al habilitar una CPU con la máscara de afinidad y con la máscara de afinidad de E/S, se puede ralentizar el rendimiento al exigir que el procesador se use demasiado.  
   
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  
@@ -42,7 +42,7 @@ ms.locfileid: "62856699"
   
  [affinity64 I/O mask (opción de configuración del servidor)](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

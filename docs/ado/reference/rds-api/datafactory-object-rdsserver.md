@@ -14,35 +14,35 @@ ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97597e15bc5cd8ee8d3008c97f3a4e8b07b2d43d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964320"
 ---
 # <a name="datafactory-object-rdsserver"></a>Objeto DataFactory (RDSServer)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Este objeto de negocios de servidor predeterminado implementa métodos que proporcionan acceso de lectura y escritura a orígenes de datos para las aplicaciones del lado cliente.  
+ Este objeto empresarial de servidor predeterminado implementa métodos que proporcionan acceso a los datos de lectura y escritura a los orígenes de datos especificados para las aplicaciones del lado cliente.  
   
- El **RDSServer.DataFactory** objeto está diseñado como un objeto de automatización del lado servidor que recibe las solicitudes de cliente. En una implementación de Internet, reside en un servidor Web y se crea una instancia por el componente ADISAPI. El **RDSServer.DataFactory** objeto proporciona lectura y orígenes de acceso de escritura a datos especificado, pero no contiene ninguna lógica de reglas de validación o business.  
+ El objeto **RDSServer. DataFactory** está diseñado como un objeto de automatización de servidor que recibe las solicitudes del cliente. En una implementación de Internet, reside en un servidor Web y se crea una instancia del componente ADISAPI. El objeto **RDSServer. DataFactory** proporciona acceso de lectura y escritura a los orígenes de datos especificados, pero no contiene ninguna lógica de reglas de negocios o de validación.  
   
- Si usa un método que está disponible tanto en el **RDSServer.DataFactory** y [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objetos, el servicio de datos remoto usa el **RDS. DataControl** versión predeterminada. El valor predeterminado, se da por supuesto un escenario básico de programación, donde el **RDSServer.DataFactory** actúa como un objeto de negocios de servidor genérico.  
+ Si usa un método que está disponible tanto en **RDSServer. DataFactory** como en [RDS. Objetos DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) , el servicio de datos remotos utiliza **RDS. **Versión de control de DataControl de forma predeterminada. El valor predeterminado supone un escenario de programación básico, donde **RDSServer. DataFactory** actúa como un objeto de negocio del lado servidor genérico.  
   
- Si desea que la aplicación Web para controlar el procesamiento del lado servidor específicos de la tarea, puede reemplazar el **RDSServer.DataFactory** con un objeto de negocios personalizada.  
+ Si desea que la aplicación web controle el procesamiento del lado servidor específico de la tarea, puede reemplazar **RDSServer. DataFactory** por un objeto comercial personalizado.  
   
- Puede crear objetos de negocios de servidor que llame a la **RDSServer.DataFactory** métodos, como [consulta](../../../ado/reference/rds-api/query-method-rds.md) y [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md). Esto resulta útil si desea agregar funcionalidad a los objetos de negocios, pero puede aprovechar tecnologías de servicio de datos remoto existentes.  
+ Puede crear objetos de negocio del lado servidor que llamen a los métodos **RDSServer. DataFactory** , como [query](../../../ado/reference/rds-api/query-method-rds.md) y [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md). Esto resulta útil si desea agregar funcionalidad a los objetos de negocio, pero puede aprovechar las tecnologías existentes de servicio de datos remotos.  
   
- El **DataFactory** objeto no es seguro para los scripts que se ejecutan en el lado del cliente.  
+ El objeto **DataFactory** no es seguro para los scripts que se ejecutan en el lado cliente.  
   
- El identificador de clase para el **RDSServer.DataFactory** objeto es D 0-9501-00AA00B911A5 9381D8F5-0288-11.  
+ El identificador de clase del objeto **RDSServer. DataFactory** es 9381D8F5-0288-11D0-9501-00AA00B911A5.  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Eventos, métodos y propiedades del objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto DataFactory, método de consulta y ejemplo del método CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

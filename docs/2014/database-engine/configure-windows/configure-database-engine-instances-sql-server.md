@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 578b870128486285a7c31bf9a860b85d170f8771
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786608"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>Configurar instancias del motor de base de datos (SQL Server)
@@ -31,11 +31,11 @@ ms.locfileid: "62786608"
 |----------------------|-----------|  
 |Describe las distintas opciones de configuración de la instancia y cómo se pueden ver o cambiar estas opciones.|[Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)|  
 |Describe cómo ver y configurar las ubicaciones predeterminadas de los archivos de datos y registro nuevos en la instancia.|[Ver o cambiar las ubicaciones predeterminadas de los archivos de datos y registro &#40;SQL Server Management Studio&#41;](view-or-change-the-default-locations-for-data-and-log-files.md)|  
-|Describe cómo configurar SQL Server para que use soft-NUMA.|[Configurar SQL Server para que Use Soft-NUMA &#40;SQL Server&#41;](soft-numa-sql-server.md)|  
+|Describe cómo configurar SQL Server para que use soft-NUMA.|[Configure SQL Server para usar &#40;de Soft-NUMA SQL Server&#41;](soft-numa-sql-server.md)|  
 |Describe cómo asignar un puerto TCP/IP a la afinidad del nodo de acceso a memoria no uniforme (NUMA).|[Asignación de puertos TCP/IP a nodos NUMA &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)|  
 |Describe cómo habilitar la directiva de Bloquear páginas en memoria de Windows. Esta directiva determina qué cuentas pueden usar un proceso que mantiene los datos en memoria física, impidiendo que el sistema lleve los datos a páginas de memoria virtual (disco).|[Habilitar la opción Bloquear páginas en la memoria &#40;Windows&#41;](enable-the-lock-pages-in-memory-option-windows.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instancias del motor de base de datos &#40;SQL Server&#41;](database-engine-instances-sql-server.md)  
   
   

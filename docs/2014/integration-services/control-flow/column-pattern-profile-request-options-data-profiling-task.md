@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832612"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
@@ -32,7 +32,7 @@ ms.locfileid: "62832612"
   
 -   **Delimiters** De forma predeterminada, la lista de delimitadores contiene los caracteres siguientes: espacio, tabulador horizontal (\t), nueva línea (\n) y retorno de carro (\r). Puede especificar delimitadores adicionales, pero no puede quitar los predeterminados.  
   
--   **¿Símbolos** de forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'`~ = & / @!? [] de <> (){}| #* ^ %`. For example, if the symbols are "`()-'", se convierte el valor"(425) 123-4567"["(","425",")","123","-","4567",") "].  
+-   **Símbolos** de De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres `,.;:-"'`: ~ =&/@!? () <> []{}| # * ^%`. For example, if the symbols are "`()-' ", el valor" (425) 123-4567 "se ha acortado como [" ("," 425 ",") "," 123 ","-"," 4567 ",") "].  
   
  Un carácter no puede ser delimitador y símbolo a la vez.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "62832612"
 |Etiqueta|Término|  
 |---------|----------|  
 |Dirección|East|  
-|Direction|West|  
-|Direction|North|  
-|Direction|South|  
+|Dirección|West|  
+|Dirección|North|  
+|Dirección|South|  
   
  Podría utilizar otra etiqueta para agrupar las diferentes palabras que expresan la noción de "calle" en una dirección:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62832612"
 |Calle|Calle|  
 |Calle|Avenida|  
 |Calle|Lugar|  
-|Calle|Vía|  
+|Calle|Función|  
   
  Según esta combinación de etiquetas, el patrón resultante para una dirección podría parecerse al siguiente:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62832612"
   
  Para obtener más información, vea la sección "Opciones de TableorView" en este tema.  
   
- **Column**  
+ **Columna**  
  Seleccione la columna existente de la que se va a generar un perfil. Seleccione **(\*)** para generar un perfil de todas las columnas.  
   
  Para obtener más información, vea la sección "Opciones de Column" en este tema.  
@@ -100,16 +100,16 @@ ms.locfileid: "62832612"
   
 #### <a name="column-options"></a>Opciones de Column  
  **IsWildCard**  
- Especifica si se ha seleccionado el carácter comodín **(\*)**. Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
+ Especifica si se ha seleccionado el carácter comodín **(\*)** . Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
   
  **ColumnName**  
- Muestra el nombre de la columna seleccionada. Esta opción está en blanco si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Esta opción es de solo lectura.  
+ Muestra el nombre de la columna seleccionada. Esta opción está en blanco si ha seleccionado **(\*)** para generar perfiles de todas las columnas. Esta opción es de solo lectura.  
   
  **StringCompareOptions**  
  Esta opción no se aplica al perfil de patrón de columnas.  
   
 ### <a name="general-options"></a>Opciones generales  
- **IdSolicitud**  
+ **RequestID**  
  Escriba un nombre descriptivo para identificar esta solicitud de perfil. Generalmente, no tiene que cambiar el valor generado automáticamente.  
   
 ### <a name="options"></a>Opciones  
@@ -122,13 +122,13 @@ ms.locfileid: "62832612"
  **CaseSensitive**  
  Indica si los patrones deberían distinguir entre mayúsculas y minúsculas. El valor predeterminado de esta opción es **False**.  
   
- **Delimiters**  
+ **Delimitadores**  
  Muestra los caracteres que se deben tratar como equivalente de espacios entre las palabras al dividir el texto en tokens. De forma predeterminada, la lista **Delimiters** contiene los caracteres siguientes: espacio, tabulador horizontal (\t), nueva línea (\n) y retorno de carro (\r). Puede especificar delimitadores adicionales, pero no puede quitar los predeterminados.  
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
- **Symbols**  
- Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y " @ " para las direcciones de correo electrónico.  ¿De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'`~ = & / @!? [] de <> (){}| #* ^ %'.  
+ **Euro**  
+ Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y "@" para las direcciones de correo electrónico. De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres `,.;:-"'`: ~ =&/@!? () <> []{}| # * ^% '.  
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
@@ -142,8 +142,8 @@ ms.locfileid: "62832612"
   
  Para obtener más información al respecto, vea "Uso de la tabla de etiquetas" anteriormente en este tema.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de tareas de generación de perfiles de datos &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

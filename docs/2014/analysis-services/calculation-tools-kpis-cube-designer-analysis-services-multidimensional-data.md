@@ -1,5 +1,5 @@
 ---
-title: Herramientas de cálculo (pestaña KPI, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Herramientas de cálculo (pestaña KPI, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088268"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Herramientas de cálculo (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -39,15 +39,15 @@ ms.locfileid: "66088268"
 > [!NOTE]  
 >  En el modo de proyecto, el cuadro de diálogo **Herramientas de cálculo** lee la información de esta opción desde un archivo XML con el nombre MDXFunctions.xml, incluido en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. En el modo en línea, la información de esta opción se recupera del conjunto de filas del esquema MDSCHEMA_FUNCTIONS para la instancia.  
   
- **Templates** (Plantillas [C++])  
+ **Templa**  
  Muestra las plantillas predeterminadas disponibles para los KPI.  
   
  Arrastre el elemento seleccionado al panel **Editor de Formulario de KPI** para incluir la sintaxis MDX para dicho elemento en la ubicación seleccionada del panel.  
   
 ## <a name="context-menu"></a>Menú contextual  
- Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en un elemento del panel **Herramientas de cálculo** :  
+ Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en un elemento del panel **Herramientas de cálculo**:  
   
- **Copiar**  
+ **Copy**  
  Seleccione esta opción para copiar el elemento seleccionado en **Metadatos** o **Funciones** en el Portapapeles.  
   
 > [!NOTE]  
@@ -71,12 +71,12 @@ ms.locfileid: "66088268"
 > [!NOTE]  
 >  Solo se mostrará esta opción si se selecciona **Metadatos** .  
   
-## <a name="see-also"></a>Vea también  
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [KPI &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña KPI, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organizador de KPI &#40;pestaña KPI, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulario de KPI &#40;pestaña KPI, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Examinador de KPI &#40;pestaña KPI, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [KPI &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña KPI, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Organizador de KPI &#40;pestaña KPI, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulario de KPI &#40;pestaña KPI, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Explorador de KPI &#40;pestaña KPI, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

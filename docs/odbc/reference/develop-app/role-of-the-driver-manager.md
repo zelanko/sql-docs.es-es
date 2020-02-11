@@ -1,5 +1,5 @@
 ---
-title: Rol del Administrador de controladores | Microsoft Docs
+title: Rol del administrador de controladores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7184c8ac9e0ad1813999a276f1579351f98544ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020400"
 ---
 # <a name="role-of-the-driver-manager"></a>Rol del Administrador de controladores
-El Administrador de controladores determina el orden en que se va a devolver registros de estado que genera final. En concreto, determina el registro que tiene la clasificación más alta y se devuelve en primer lugar. El controlador es responsable de ordenar los registros de estado que genera. Si se registran registros de estado por el Administrador de controladores y el controlador, el Administrador de controladores es responsable de ordenarlas. Para obtener más información, consulte [secuencia de registros de estado](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
+El administrador de controladores determina el orden final en el que se devuelven los registros de estado que genera. En concreto, determina qué registro tiene el rango más alto y se devuelve en primer lugar. El controlador es responsable de la ordenación de los registros de estado que genera. Si el administrador de controladores y el controlador publican registros de estado, el administrador de controladores es responsable de ordenarlos. Para obtener más información, consulte [sequence of status Records](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
   
- El Administrador de controladores no tanta comprobación de errores como sea posible. Esto guarda todos los controladores de la comprobación de los mismos errores. Por ejemplo, si un argumento de función acepta un número de valores discreto como *operación* en **SQLSetPos**, el Administrador de controladores comprueba que el valor especificado es válido.  
+ El administrador de controladores realiza tantas comprobaciones de errores como pueda. Esto evita que todos los controladores comprueben los mismos errores. Por ejemplo, si un argumento de función acepta un número discreto de valores, como *operación* en **SQLSetPos**, el administrador de controladores comprueba que el valor especificado es válido.  
   
- Las siguientes secciones describen los tipos de condiciones activadas por el Administrador de controladores. No pretenden ser exhaustivo; Para obtener una lista completa de la SQLSTATE que devuelve el Administrador de controladores, consulte la sección "Diagnostics" de cada función; la descripción de cada comprobación realizada por el Administrador de controladores se inicia con las letras "(DM)". Consulte también las tablas de transición de estado de [Apéndice B: Las tablas de transición de estado de ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); errores que se muestran entre paréntesis se detectan mediante el Administrador de controladores.  
+ En las secciones siguientes se describen los tipos de condiciones que comprueba el administrador de controladores. No pretende ser exhaustiva; para obtener una lista completa del SQLSTATEs que devuelve el administrador de controladores, consulte la sección "diagnósticos" de cada función. la descripción de cada comprobación realizada por el administrador de controladores comienza con las letras "(DM)". Vea también las tablas de transición de estado en el [Apéndice B: tablas de transición de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); el administrador de controladores detecta los errores que se muestran entre paréntesis.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917123"
 ---
 # <a name="database-properties-filegroups-page"></a>Propiedades de la base de datos (página Grupos de archivos)
@@ -31,7 +31,7 @@ ms.locfileid: "62917123"
  Los grupos de archivos optimizados para memoria son necesarios para que una base de datos pueda contener una o más tablas optimizadas para memoria.  
   
 ## <a name="row-and-filestream-data-filegroup-options"></a>Opciones de grupo de archivos de filas y de datos FILESTREAM  
- **Name**  
+ **Nombre**  
  Escriba el nombre del grupo de archivos.  
   
  **Archivos**  
@@ -40,29 +40,29 @@ ms.locfileid: "62917123"
  **Solo lectura**  
  Seleccione esta opción para establecer el grupo de archivos en un estado de solo lectura.  
   
- **Default**  
+ **Valor predeterminado**  
  Seleccione esta opción para establecer este grupo de archivos como el valor predeterminado. Puede tener un grupo de archivos predeterminado para las filas y un grupo de archivos predeterminado para los datos de FILESTREAM.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una nueva fila en blanco a la lista de grupos de archivo de la base de datos.  
   
- **Quitar**  
+ **Remove**  
  Quita la fila del grupo de archivos seleccionado de la cuadrícula.  
   
 ## <a name="memory-optimized-data-filegroup-options"></a>Opciones de grupo de archivos de datos con optimización para memoria  
- **Name**  
+ **Nombre**  
  Escriba el nombre del grupo de archivos optimizados para memoria.  
   
  **Archivos FILESTREAM**  
  Muestra el número de archivos (contenedores) en el grupo de archivos de datos optimizados para memoria. Puede agregar contenedores en la página **Archivos** .  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una nueva fila en blanco a la lista de grupos de archivo de la base de datos.  
   
- **Quitar**  
+ **Remove**  
  Quita la fila del grupo de archivos seleccionado de la cuadrícula.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823792"
 ---
 # <a name="properties-window-management-studio"></a>Ventana Propiedades (Management Studio)
@@ -37,7 +37,7 @@ ms.locfileid: "62823792"
 |**Propiedades**|Muestra las propiedades de un objeto.|  
 |**Panel de descripción**|El panel de descripción aparece en la parte inferior de la ventana de propiedades. Muestra el tipo de propiedad y una breve descripción de la misma. La descripción de la propiedad puede desactivarse y activarse por medio del comando **Descripción** del menú contextual.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Elementos generales de la interfaz de usuario](general-user-interface-elements.md)  
   
   

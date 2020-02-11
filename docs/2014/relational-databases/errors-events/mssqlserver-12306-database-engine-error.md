@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdfbfd7ec4ac12d6c144eac399711ed587f2c9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870085"
 ---
-# <a name="mssqlserver12306"></a>MSSQLSERVER_12306
+# <a name="mssqlserver_12306"></a>MSSQLSERVER_12306
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|12306|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|12306|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|HK_UNSUPPORTED_CURSOR|  
 |Texto del mensaje|Los cursores no se admiten con '*construct*'.|  
@@ -35,7 +35,7 @@ ms.locfileid: "62870085"
 ## <a name="user-action"></a>Acción del usuario  
  No use cursores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

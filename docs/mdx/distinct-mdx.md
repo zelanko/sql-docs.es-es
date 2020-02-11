@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 283f1c10f4030ea2efc23ee237a61b402cefb396
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999899"
 ---
 # <a name="distinct-mdx"></a>Distinct (MDX)
@@ -31,8 +31,8 @@ Distinct(Set_Expression)
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Comentarios  
- Si el **Distinct** función encuentra tuplas duplicadas del conjunto especificado, la función conserva sólo la primera instancia de la tupla duplicada dejando intacto el orden del conjunto.  
+## <a name="remarks"></a>Observaciones  
+ Si la función **DISTINCT** encuentra tuplas duplicadas en el conjunto especificado, la función conserva solo la primera instancia de la tupla duplicada, a la vez que deja intacto el orden del conjunto.  
   
 ## <a name="examples"></a>Ejemplos  
  La consulta de ejemplo siguiente muestra el modo de usar la función Distinct con un conjunto con nombre, así como el modo de usarla junto con la función Count para buscar el número de tuplas distintas de un conjunto:  
@@ -59,7 +59,7 @@ Distinct(Set_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899948"
 ---
 # <a name="xml-source"></a>Origen XML
@@ -69,7 +69,7 @@ ms.locfileid: "62899948"
   
  El origen XML admite varias salidas normales y varias salidas de error.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye el cuadro de diálogo **Editor de origen de XML**para configurar el origen XML. Este cuadro de diálogo está disponible en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye el cuadro de diálogo **Editor de origen de XML**para configurar el origen XML. Este cuadro de diálogo está disponible en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "62899948"
   
 -   [Editor de origen de XML &#40;página Administrador de conexiones&#41;](../xml-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de XML &#40;página Columnas&#41;](../xml-source-editor-columns-page.md)  
+-   [Editor de origen de XML &#40;página columnas&#41;](../xml-source-editor-columns-page.md)  
   
--   [Editor de origen de XML &#40;página Salida de error&#41;](../xml-source-editor-error-output-page.md)  
+-   [Editor de origen de XML &#40;página salida de error&#41;](../xml-source-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -95,6 +95,6 @@ ms.locfileid: "62899948"
  [Extraer datos mediante el origen de XML](xml-source.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Artículo técnico, [mediante un archivo XML para configurar un paquete SSIS](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
+ Artículo técnico [sobre el uso de un archivo XML para configurar un paquete SSIS](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
   
   

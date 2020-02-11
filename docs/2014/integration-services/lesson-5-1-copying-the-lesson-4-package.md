@@ -11,50 +11,50 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891178"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>Paso 1: Copia del paquete de la lección 4
+# <a name="step-1-copying-the-lesson-4-package"></a>Paso 1: Copiar el paquete de la lección 4
   En esta tarea, creará una copia del paquete que ha creado en la lección 4, denominado Lesson 4.dtsx. También puede agregar al proyecto el paquete completado de la lección 4 que se incluye con el tutorial y, después, copiar ese paquete. Usará esta nueva copia en toda la lección 5.  
   
 ### <a name="to-copy-the-lesson-4-package"></a>Para copiar el paquete de la lección 4  
   
 1.  Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools no está abierto, haga clic en **Inicio**, seleccione **Todos los programas**, **Microsoft SQL Server 2012**y, después, haga clic en **SQL Server Data Tools**.  
   
-2.  En el menú **Archivo** , haga clic en **Abrir**, haga clic en **Proyecto o solución**, seleccione **SSIS Tutorial** , haga clic en **Abrir**y, después, haga doble clic en **SSIS Tutorial.sln**.  
+2.  En el menú **archivo** , haga clic en **abrir**, haga clic en **proyecto o solución**, seleccione **SSIS tutorial** , haga clic en **abrir**y, a continuación, haga doble clic en **SSIS tutorial. sln**.  
   
 3.  En el Explorador de soluciones, haga clic con el botón derecho en **Lesson 4.dtsx**y luego haga clic en **Copiar**.  
   
-4.  En el Explorador de soluciones, haga clic con el botón derecho en **Paquetes SSIS**y, después, haga clic en **Pegar**.  
+4.  En Explorador de soluciones, haga clic con el botón secundario en **paquetes SSIS**y, a continuación, haga clic en **pegar**.  
   
      De manera predeterminada, el paquete copiado se denomina Lesson 5.dtsx.  
   
 5.  En el Explorador de soluciones, haga doble clic en **Lesson 5.dtsx** para abrir el paquete.  
   
-6.  Haga clic con el botón derecho en cualquier parte del fondo de la pestaña **Flujo de control** y luego haga clic en **Propiedades**.  
+6.  Haga clic con el botón secundario en cualquier parte del fondo de la pestaña **flujo de control** y, después, haga clic en **propiedades**.  
   
-7.  En la ventana Propiedades, actualice el `Name` propiedad `Lesson 5`.  
+7.  En el ventana Propiedades, actualice la `Name` propiedad a `Lesson 5`.  
   
-8.  Haga clic en el cuadro para la **ID** propiedad, a continuación, haga clic en la flecha desplegable y, a continuación, haga clic en  **\<generar nuevo Id. >** .  
+8.  Haga clic en el cuadro de la propiedad **ID** ., haga clic en la flecha desplegable y, a continuación, haga clic en ** \<generar nuevo ID>**.  
   
 ### <a name="to-add-the-completed-lesson-4-package"></a>Para agregar el paquete de la lección 4 completada  
   
 1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools y el proyecto SSIS Tutorial.  
   
-2.  En el Explorador de soluciones, haga clic con el botón derecho en **Paquetes SSIS** y haga clic en **Agregar paquete existente**.  
+2.  En Explorador de soluciones, haga clic con el botón secundario en **paquetes SSIS**y haga clic en **Agregar paquete existente**.  
   
-3.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.  
+3.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione sistema de **archivos**.  
   
-4.  Haga clic en el botón Examinar **(…)** , busque **Lesson 4.dtsx** en el equipo y, después, haga clic en **Abrir**.  
+4.  Haga clic en el botón Examinar **(…)**, busque **Lesson 4.dtsx** en el equipo y, después, haga clic en **Abrir**.  
   
      Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   
-    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Vaya a [Integration Services ejemplos de productos](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Haga clic en la pestaña **DOWNLOADS** .  
+    2.  Haga clic en la pestaña **descargas** .  
   
     3.  Haga clic en el archivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   

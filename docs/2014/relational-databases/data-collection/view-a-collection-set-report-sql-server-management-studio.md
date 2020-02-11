@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 898dd309dae82818b60332b29c14f785c18b173b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873066"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Ver un informe de conjunto de recopilación (SQL Server Management Studio)
@@ -51,10 +51,10 @@ ms.locfileid: "62873066"
  **Hora de inicio**  
  Escriba una hora inicial para los datos del informe o especifique una haciendo clic en las flechas.  
   
- **Duración**  
+ **Duration**  
  Especifique el intervalo de tiempo que incluir en el informe. El valor predeterminado es de 240 minutos. Los valores posibles entre los que seleccionar son 15 minutos, 60 minutos, 240 minutos (4 horas), 720 minutos (12 horas) y 1440 minutos (24 horas).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Recopilación de datos](data-collection.md)   
  [Informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md)   
  [Configurar el almacén de administración de datos &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  

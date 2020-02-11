@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9ebad419585de0136708ea85e522f890dceac38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835581"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Editar las propiedades de la base de datos de Oracle
@@ -24,7 +24,7 @@ ms.locfileid: "62835581"
   
  A continuación se describe la información de la pestaña **Oracle** .  
   
- **Name**  
+ **Nombre**  
  Nombre de la instancia CDC que especificó en la página Crear base de datos CDC del Asistente para nueva instancia. Este campo es de solo lectura y no puede editar esta información.  
   
  **Descripción**  
@@ -42,9 +42,9 @@ ms.locfileid: "62835581"
   
  Puede ver las propiedades de la base de datos de Oracle en el visor. Cuando se usa el visor, la información es de solo lectura. El visor también incluye una lista de las columnas capturadas de la tabla. Para obtener información acerca de cómo obtener acceso al visor, vea [How to Manage a CDC Instance](manage-a-cdc-instance.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo administrar un servicio CDC desde la Consola del diseñador CDC](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Conectar con una base de datos de origen de Oracle](connect-to-an-oracle-source-database.md)   
+ [Conectarse a una base de datos de origen de Oracle](connect-to-an-oracle-source-database.md)   
  [Conectar con Oracle](connect-to-oracle.md)  
   
   

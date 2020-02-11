@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875080"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "62875080"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Recomendaciones de seguimiento:**  [Después de cambiar el modelo de recuperación](#FollowUp)  
+-   **Recomendaciones de seguimiento:**  [después de cambiar el modelo de recuperación](#FollowUp)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62875080"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>Para ver o cambiar el modelo de recuperación  
   
@@ -106,7 +106,7 @@ GO
   
 #### <a name="to-change-the-recovery-model"></a>Para cambiar el modelo de recuperación  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -117,9 +117,9 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Recomendaciones de seguimiento: Después de cambiar el modelo de recuperación  
+##  <a name="FollowUp"></a>Recomendaciones de seguimiento: después de cambiar el modelo de recuperación  
   
--   **Después de cambiar entre el modelo de recuperación completa y el modelo de recuperación optimizado para cargas masivas de registros**  
+-   **Después de cambiar entre los modelos de recuperación completa y de registro masivo**  
   
     -   Después de haber completado las operaciones masivas, vuelva a cambiar inmediatamente al modelo de recuperación completa.  
   
@@ -128,7 +128,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
         > [!NOTE]  
         >  La estrategia de copia de seguridad sigue siendo la misma: siga realizando las copias de seguridad periódicas de la base de datos, del registro y diferenciales.  
   
--   **Después de cambiar desde el modelo de recuperación simple**  
+-   **Después de cambiar del modelo de recuperación simple**  
   
     -   Inmediatamente después de cambiar al modelo de recuperación completa o al optimizado para cargas masivas de registros, realice una copia de seguridad de la base de datos completa o diferencial para iniciar la cadena de registros.  
   
@@ -140,7 +140,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
         > [!IMPORTANT]  
         >  Si no realiza la copia de seguridad con la frecuencia suficiente, el registro de transacciones se puede expandir hasta quedarse sin espacio en disco.  
   
--   **Tras cambiar al modelo de recuperación simple**  
+-   **Después de cambiar al modelo de recuperación simple**  
   
     -   Interrumpa cualquier trabajo programado para realizar copia de seguridad del registro de transacciones.  
   
@@ -154,13 +154,13 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Crear un trabajo](../../ssms/agent/create-a-job.md)  
   
--   [Deshabilitar o habilitar un trabajo](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Planes de mantenimiento de bases de datos](../maintenance-plans/maintenance-plans.md) (en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
+-   [Planes de mantenimiento](../maintenance-plans/maintenance-plans.md) de bases [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de datos (en los libros en pantalla de)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modelos de recuperación &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [El registro de transacciones &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   

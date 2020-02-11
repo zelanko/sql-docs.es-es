@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877252"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Restaurar una copia de seguridad diferencial de la base de datos (SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "62877252"
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-restore-a-differential-database-backup"></a>Para restaurar una copia de seguridad diferencial de la base de datos  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62877252"
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
-         En el cuadro de lista **Origen: Dispositivo: Base de datos**, seleccione el nombre de la base de datos que se debe restaurar.  
+         En el cuadro de lista **Origen: Dispositivo: Base de datos** , seleccione el nombre de la base de datos que se debe restaurar.  
   
          **Nota** : esta lista solo está disponible cuando se selecciona **Dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en el dispositivo seleccionado.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62877252"
   
 6.  En la cuadrícula **Conjuntos de copia de seguridad para restaurar** , seleccione las copias de seguridad mediante la copia de seguridad diferencial que desea restaurar.  
   
-     Para obtener información sobre las columnas de la cuadrícula **Conjuntos de copia de seguridad para restaurar**, vea [Restaurar la base de datos &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md).  
+     Para obtener información sobre las columnas de la cuadrícula **Conjuntos de copia de seguridad que se van a restaurar** , vea [Restaurar la base de datos &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)).  
   
 7.  En la página **Opciones** , en el panel **Opciones de restauración** , puede seleccionar una de las opciones siguientes si son apropiadas para su situación:  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62877252"
   
 #### <a name="to-restore-a-differential-database-backup"></a>Para restaurar una copia de seguridad diferencial de la base de datos  
   
-1.  Ejecute la instrucción RESTORE DATABASE con la cláusula NORECOVERY para restaurar la copia de seguridad de base de datos completa anterior a la copia de seguridad diferencial de la base de datos. Para obtener más información, vea [Cómo: Restaurar una copia de seguridad completa](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
+1.  Ejecute la instrucción RESTORE DATABASE con la cláusula NORECOVERY para restaurar la copia de seguridad de base de datos completa anterior a la copia de seguridad diferencial de la base de datos. Para obtener más información, vea [Cómo restaurar una copia de seguridad completa](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
 2.  Ejecute la instrucción RESTORE DATABASE para restaurar la copia de seguridad diferencial de la base de datos especificando:  
   
@@ -171,7 +171,7 @@ RESTORE DATABASE MyAdvWorks
 GO  
 ```  
   
-#### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>b. Restaurar una base de datos, una base de datos diferencial y una copia de seguridad del registro de transacciones  
+#### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. Restaurar una base de datos, una base de datos diferencial y una copia de seguridad del registro de transacciones  
  En este ejemplo se restaura una copia de seguridad completa, una copia de seguridad diferencial y una copia de seguridad del registro de transacciones de la base de datos `MyAdvWorks` .  
   
 ```sql  
@@ -207,7 +207,7 @@ GO
   
 -   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Copias de seguridad diferenciales &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

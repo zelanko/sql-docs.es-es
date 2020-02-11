@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f6b0ebed67ba918cb45c1aaae9c14f15d6871c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869143"
 ---
-# <a name="mssqlserver2579"></a>MSSQLSERVER_2579
+# <a name="mssqlserver_2579"></a>MSSQLSERVER_2579
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2579|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2579|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_EXTENT_OUT_OF_RANGE|  
-|Texto del mensaje|Error de tabla: La extensión P_ID de objeto ID O_ID, ID. de partición PN_ID, índice de unidad de asignación ID A_ID (tipo TYPE) está fuera del intervalo de esta base de datos.|  
+|Texto del mensaje|Error de tabla: la extensión P_ID del Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación ID A_ID (tipo TYPE) está fuera del intervalo de esta base de datos.|  
   
 ## <a name="explanation"></a>Explicación  
  *P_ID* es un Id. de página con el formato *(filenum:pageinfile)* . El valor de *pageinfile* de esta extensión es mayor que el tamaño físico de *filenum* en la base de datos. La extensión se marca como asignada en una página IAM para el Id. de unidad de asignación indicado.  

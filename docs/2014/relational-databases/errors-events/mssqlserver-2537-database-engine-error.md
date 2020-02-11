@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c4a2a9c8a49344a581ed85bc714cf4976f9f6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869235"
 ---
-# <a name="mssqlserver2537"></a>MSSQLSERVER_2537
+# <a name="mssqlserver_2537"></a>MSSQLSERVER_2537
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2537|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2537|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_RECORD_CHECK_FAILED|  
-|Texto del mensaje|Error de tabla: Id. de objeto O_ID, ID. de índice de partición Id. PN_ID, unidad de asignación A_ID (tipo TYPE), página P_ID, fila ROW_ID. Error en la comprobación de registro (CHECK_TEXT). Los valores son VALUE1 y VALUE2.|  
+|Texto del mensaje|Error de tabla: id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, id. de unidad de asignación A_ID (tipo TYPE), página P_ID, fila ROW_ID. Error en la comprobación de registro (CHECK_TEXT). Los valores son VALUE1 y VALUE2.|  
   
 ## <a name="explanation"></a>Explicación  
  El ROW_ID de fila (o una columna de la fila) produjo un error en la prueba o condición que se describe en CHECK_TEXT.  

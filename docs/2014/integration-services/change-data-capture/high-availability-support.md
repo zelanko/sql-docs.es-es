@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d948a9edfafdbf39bd8ee5c512fb77814cb7adf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837269"
 ---
 # <a name="high-availability-support"></a>Compatibilidad con alta disponibilidad
@@ -24,7 +24,7 @@ ms.locfileid: "62837269"
   
 -   El servicio CDC para Oracle puede usar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en clúster, por lo que se puede recuperar después de que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conmute por error a otro nodo del clúster. El administrador del equipo del servicio CDC de Oracle solo necesita especificar la información de conexión a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en clúster al crear un servicio CDC de Oracle.  
   
--   El servicio CDC para Oracle puede usar la característica de creación de reflejo de la base de datos [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** . Para ello, MSXDBCDC y todas las bases de datos CDC deben estar en el mismo grupo de disponibilidad. También requiere el Administrador de equipo de servicio CDC de Oracle para especificar adecuado **AlwaysOn** información de conexión a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grupo de disponibilidad (por ejemplo, las propiedades de conexión `Failover_Partner and Network=dbmssocn`). Esto permite que el servicio CDC reanude automáticamente el procesamiento en una replicación secundaria de las bases de datos tras una conmutación por error.  
+-   El servicio CDC para Oracle puede usar la característica de creación de reflejo de la base de datos [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** . Para ello, MSXDBCDC y todas las bases de datos CDC deben estar en el mismo grupo de disponibilidad. Además, el administrador del equipo del servicio CDC de Oracle debe especificar la información de conexión adecuada de **AlwaysOn** al grupo de disponibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, las propiedades de conexión `Failover_Partner and Network=dbmssocn`). Esto permite que el servicio CDC reanude automáticamente el procesamiento en una replicación secundaria de las bases de datos tras una conmutación por error.  
   
 -   El servicio CDC para Oracle se puede configurar como un recurso de servicio genérico en un clúster de conmutación por error de Windows (con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o de forma independiente), de forma que sea fácil conmutar por error y revertir al procesamiento de CDC con el clúster. Para configurar el servicio CDC para Oracle como un recurso de un clúster de conmutación por error, el administrador del sistema debe establecer el servicio como un recurso de servicio genérico en cada nodo del clúster de conmutación por error.  
   

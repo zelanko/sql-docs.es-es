@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875600"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurar una base de datos en una transacción marcada (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "62875600"
   
 ### <a name="to-restore-a-marked-transaction"></a>Para restaurar una transacción marcada  
   
-1.  Tras conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
+1.  Después de conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
 2.  Expanda **Bases de datos**y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62875600"
   
      En la tabla siguiente se muestran los encabezados de columna de la cuadrícula y se describen sus valores.  
   
-    |Header|Valor|  
+    |Encabezado|Value|  
     |------------|-----------|  
     |\<blank>|Muestra una casilla para seleccionar la marca.|  
     |**Marca de transacción**|Nombre de la transacción marcada especificada por el usuario cuando se confirmó la transacción.|  
@@ -55,7 +55,7 @@ ms.locfileid: "62875600"
     |**Base de datos**|Nombre de la base de datos en la que se confirmó la transacción marcada.|  
     |**Nombre de usuario**|Nombre del usuario de la base de datos que confirmó la transacción marcada.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   

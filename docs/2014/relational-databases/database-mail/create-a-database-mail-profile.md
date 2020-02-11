@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872211"
 ---
 # <a name="create-a-database-mail-profile"></a>Crear un perfil de correo electrónico de base de datos
@@ -39,16 +39,16 @@ ms.locfileid: "62872211"
   
 
   
-##  <a name="SSMSProcedure"></a> Usar el asistente para configuración del Correo electrónico de base de datos  
- **Para crear un perfil de correo electrónico de base de datos**  
+##  <a name="SSMSProcedure"></a>Uso del Asistente para configuración de Correo electrónico de base de datos  
+ **Para crear un perfil de Correo electrónico de base de datos**  
   
 -   En el explorador de objetos, conecte a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que quiera configurar el Correo electrónico de base de datos y expanda el árbol del servidor.  
   
--   Expanda el nodo **Administración** .  
+-   Expandir el nodo de **Administración**  
   
 -   Haga doble clic en el correo electrónico de base de datos para abrir el asistente de configuración del correo electrónico de base de datos.  
   
--   En la página **Seleccionar tarea de configuración** , seleccione la opción **Administrar cuentas y perfiles de Correo electrónico de base de datos** y haga clic en **Siguiente**.  
+-   En la página **seleccionar tarea de configuración** , seleccione la opción **administrar cuentas y perfiles de correo electrónico de base de datos** y haga clic en **siguiente**.  
   
 -   En la página **Administrar perfiles y cuentas** , seleccione la opción **Crear nuevo perfil** y haga clic en **Siguiente**.  
   
@@ -84,43 +84,43 @@ ms.locfileid: "62872211"
   
 ## <a name="using-transact-sql"></a>Usar Transact-SQL  
   
-###  <a name="PrivateProfile"></a> Para crear un perfil privado de Correo electrónico de base de datos  
+###  <a name="PrivateProfile"></a>Para crear un perfil privado de Correo electrónico de base de datos  
   
 -   Conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Para crear un nuevo perfil, ejecute el procedimiento almacenado del sistema [sysmail_add_profile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql) como sigue:  
   
-     **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
+     **EXECUTEmsdb. DBO. sysmail_add_profile_sp**  
   
-     *@profile_name* = '*Nombre del perfil*'  
+     *@profile_name*= '*Nombre del perfil*'  
   
-     *@description* = '*Descripción*'  
+     *@description*= '*Descripción*'  
   
-     donde *@profile_name* es el nombre del perfil y *@description* es su descripción. Este parámetro es opcional.  
+     donde *@profile_name* es el nombre del perfil y *@description* es la descripción del perfil. Este parámetro es opcional.  
   
 -   Para cada cuenta, ejecute el procedimiento almacenado [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql) como sigue:  
   
-     **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
+     **EXECUTEmsdb. DBO. sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*Nombre del perfil*'  
+     *@profile_name*= '*Nombre del perfil*'  
   
-     *@account_name* = '*Nombre de la cuenta*'  
+     *@account_name*= '*Nombre de la cuenta*'  
   
-     *@sequence_number* = '*Número de secuencia de la cuenta en el perfil.* '  
+     *@sequence_number*= '*número de secuencia de la cuenta en el perfil.* '  
   
-     donde *@profile_name* es el nombre del perfil y *@account_name* es el nombre de la cuenta que se va a agregar al perfil. Con *@sequence_number* se determina el orden en que se usan las cuentas en el perfil.  
+     donde *@profile_name* es el nombre del perfil y *@account_name* es el nombre de la cuenta que se va a agregar al perfil, *@sequence_number* determina el orden en el que se usan las cuentas en el perfil.  
   
 -   Para cada rol o usuario de base de datos que vaya a enviar correo mediante este perfil, concédale acceso a dicho perfil. Para ello, ejecute el procedimiento almacenado [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql) como sigue:  
   
-     **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
+     **EXECUTEmsdb. sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*Nombre del perfil*'  
+     *@profile_name*= '*Nombre del perfil*'  
   
-     *@ principal_name* = '*Nombre del usuario o rol de la base de datos*'  
+     *@ principal_name* = '*nombre del usuario o rol de la base de datos*'  
   
-     *@is_default* = '*Estado del perfil predeterminado* '  
+     *@is_default*= '*Estado de perfil predeterminado* '  
   
-     donde *@profile_name* es el nombre del perfil y *@principal_name* es el nombre del usuario o rol de la base de datos. Con *@is_default* se determina si este perfil es el predeterminado para el usuario o rol de la base de datos.  
+     donde *@profile_name* es el nombre del perfil y *@principal_name* es el nombre del usuario o rol de la base de datos *@is_default* , determina si este perfil es el predeterminado para el usuario o el rol de la base de datos.  
   
  El siguiente ejemplo crea una cuenta de Correo electrónico de base de datos, crea un perfil privado de Correo de base de datos y, a continuación, agrega la cuenta al perfil y le concede acceso al rol de base de datos **DBMailUsers** en la base de datos **msdb** .  
   
@@ -154,43 +154,43 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  
   
-###  <a name="PublicProfile"></a> Para crear un perfil público de Correo electrónico de base de datos  
+###  <a name="PublicProfile"></a>Para crear un perfil público de Correo electrónico de base de datos  
   
 -   Conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Para crear un nuevo perfil, ejecute el procedimiento almacenado del sistema [sysmail_add_profile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql) como sigue:  
   
-     **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
+     **EXECUTEmsdb. DBO. sysmail_add_profile_sp**  
   
-     *@profile_name* = '*Nombre del perfil*'  
+     *@profile_name*= '*Nombre del perfil*'  
   
-     *@description* = '*Descripción*'  
+     *@description*= '*Descripción*'  
   
-     donde *@profile_name* es el nombre del perfil y *@description* es su descripción. Este parámetro es opcional.  
+     donde *@profile_name* es el nombre del perfil y *@description* es la descripción del perfil. Este parámetro es opcional.  
   
 -   Para cada cuenta, ejecute el procedimiento almacenado [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql) como sigue:  
   
-     **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
+     **EXECUTEmsdb. DBO. sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*Nombre del perfil*'  
+     *@profile_name*= '*Nombre del perfil*'  
   
-     *@account_name* = '*Nombre de la cuenta*'  
+     *@account_name*= '*Nombre de la cuenta*'  
   
-     *@sequence_number* = '*Número de secuencia de la cuenta en el perfil.* '  
+     *@sequence_number*= '*número de secuencia de la cuenta en el perfil.* '  
   
-     donde *@profile_name* es el nombre del perfil y *@account_name* es el nombre de la cuenta que se va a agregar al perfil. Con *@sequence_number* se determina el orden en que se usan las cuentas en el perfil.  
+     donde *@profile_name* es el nombre del perfil y *@account_name* es el nombre de la cuenta que se va a agregar al perfil, *@sequence_number* determina el orden en el que se usan las cuentas en el perfil.  
   
 -   Para conceder acceso público, ejecute el procedimiento almacenado [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql) como sigue:  
   
-     **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
+     **EXECUTEmsdb. sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*Nombre del perfil*'  
+     *@profile_name*= '*Nombre del perfil*'  
   
-     *@ principal_name* = '**público** o **0**'  
+     *@ principal_name* = '**Public** o **0**'  
   
-     *@is_default* = '*Estado del perfil predeterminado* '  
+     *@is_default*= '*Estado de perfil predeterminado* '  
   
-     donde *@profile_name* es el nombre del perfil y *@principal_name* indica si se trata de un perfil público. Con *@is_default* se determina si este perfil es el predeterminado para el usuario o rol de la base de datos.  
+     donde *@profile_name* es el nombre del perfil y *@principal_name* , para indicar que se trata de un perfil público *@is_default* , determina si este perfil es el predeterminado para el usuario o el rol de la base de datos.  
   
  El ejemplo siguiente se crea una cuenta de Correo electrónico de base de datos, crea un perfil privado de Correo electrónico de base de datos, agrega la cuenta al perfil y concede acceso público al perfil.  
   

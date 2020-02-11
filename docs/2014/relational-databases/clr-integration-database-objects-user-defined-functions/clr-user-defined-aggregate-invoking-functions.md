@@ -1,5 +1,5 @@
 ---
-title: Invocar funciones de agregado definido por el usuario CLR | Microsoft Docs
+title: Invocar funciones de agregado definidas por el usuario de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919604"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Invocar funciones de agregado definidas por el usuario de CLR
@@ -32,11 +32,11 @@ ms.locfileid: "62919604"
   
 -   El usuario actual debe tener el permiso `EXECUTE` sobre el agregado definido por el usuario.  
   
--   Agregados definidos por el usuario se deben invocar utilizando un nombre de dos partes en forma de *nombre_esquema.nombre_agrdu*.  
+-   Los agregados definidos por el usuario se deben invocar mediante un nombre de dos partes con el formato *schema_name. udagg_name*.  
   
--   El tipo de argumento del agregado definido por el usuario debe coincidir con o ser implícitamente convertible a la *input_type* del agregado, tal como se define en el `CREATE AGGREGATE` instrucción.  
+-   El tipo de argumento del agregado definido por el usuario debe coincidir o ser implícitamente convertible al *INPUT_TYPE* del agregado, como se define en la `CREATE AGGREGATE` instrucción.  
   
--   El tipo de valor devuelto del agregado definido por el usuario debe coincidir con el *return_type* en el `CREATE AGGREGATE` instrucción.  
+-   El tipo de valor devuelto del agregado definido por el usuario debe ** coincidir con `CREATE AGGREGATE` el return_type de la instrucción.  
   
 ## <a name="example-1"></a>Ejemplo 1  
  A continuación figura un ejemplo de una función de agregado definida por el usuario que concatena un conjunto de valores de cadena obtenido de una columna de una tabla:  
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Una vez compilado el código en **MyAgg.dll**, puede registrar el agregado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como sigue:  
+ Una vez compilado el código en **MyAgg. dll**, puede registrar el agregado en de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la manera siguiente:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -441,7 +441,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregados definidos por el usuario de CLR](clr-user-defined-aggregates.md)  
   
   

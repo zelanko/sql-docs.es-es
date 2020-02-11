@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196611"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Ver las dependencias de una tabla
@@ -31,7 +31,7 @@ ms.locfileid: "68196611"
   
      [Seguridad](#Security)  
   
--   **Para ver las dependencias de una tabla con:**  
+-   **Para ver las dependencias de una tabla, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68196611"
 ####  <a name="Permissions"></a> Permisos  
  Necesita el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en sys.sql_expression_dependencies para la base de datos. De forma predeterminada, solo se permite el permiso SELECT a los miembros del rol fijo de base de datos db_owner. Si se conceden los permisos SELECT y VIEW DEFINITION a otro usuario, el receptor puede ver todas las dependencias de la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-the-dependencies-of-a-table"></a>Para ver las dependencias de una tabla  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68196611"
   
 2.  Haga clic con el botón derecho en una tabla y, después, haga clic en **Ver dependencias**.  
   
-3.  En el cuadro de diálogo **Dependencias del objeto** _\<nombre del objeto>_ , seleccione **Objetos que dependen de** _\<nombre del objeto>_ u **Objetos de los que depende** _\<nombre del objeto>_ **depende**.  
+3.  En el cuadro de diálogo **dependencias del objeto**_\<>nombre de objeto_ , seleccione los **objetos que dependen del** _ \<nombre de objeto>_ u **objetos de los que**_\<depende el nombre del objeto>_. ****  
   
 4.  Seleccione un objeto en la cuadrícula **Dependencias** . El tipo de objeto (por ejemplo, "Desencadenador" o "Procedimiento almacenado"), aparece en el cuadro **Tipo** .  
   

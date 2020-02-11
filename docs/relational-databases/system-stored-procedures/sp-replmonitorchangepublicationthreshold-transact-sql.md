@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322242"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75322242"
 
   Cambia la métrica del umbral de supervisión de una publicación. Este procedimiento almacenado, que se utiliza para supervisar la replicación, se ejecuta en el distribuidor en la base de datos de distribución.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,16 +57,16 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional.|  
-|**dimensional**|Publicación de instantáneas.|  
-|**dos**|Publicación de combinación.|  
+|**1**|Publicación de instantáneas.|  
+|**2**|Publicación de combinación.|  
 |NULL (predeterminado)|La replicación intenta determinar el tipo de publicación.|  
   
 `[ @metric_id = ] metric_id`Es el identificador de la métrica de umbral de publicación que se va a cambiar. *metric_id* es de **tipo int**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
 |Value|Nombre de métrica|  
 |-----------|-----------------|  
-|**dimensional**|**expiración** : supervisa la expiración inminente de las suscripciones a las publicaciones transaccionales.|  
-|**dos**|**latencia** : supervisa el rendimiento de las suscripciones a las publicaciones transaccionales.|  
+|**1**|**expiración** : supervisa la expiración inminente de las suscripciones a las publicaciones transaccionales.|  
+|**2**|**latencia** : supervisa el rendimiento de las suscripciones a las publicaciones transaccionales.|  
 |**4**|**mergeexpiration** : supervisa la expiración inminente de suscripciones a publicaciones de combinación.|  
 |**5**|**mergeslowrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).|  
 |**6**|**mergefastrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de red de área local (LAN) de gran ancho de banda.|  
@@ -92,7 +92,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de base de datos **db_owner** o **replmonitor** de la base de datos de distribución pueden ejecutar **sp_replmonitorchangepublicationthreshold**.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación mediante programación](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

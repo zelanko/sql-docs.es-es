@@ -10,10 +10,10 @@ ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258442"
 ---
 # <a name="managing-a-domain"></a>Administrar un dominio
@@ -47,12 +47,12 @@ ms.locfileid: "75258442"
 |||  
 |-|-|  
 |Crear una representación semántica de un campo de datos con un tipo de datos específico, especificar cómo se rellena el dominio y dar formato a los resultados del dominio|[Crear un dominio](../data-quality-services/create-a-domain.md)|  
-|Vincular un dominio a otro, permitiéndole compartir los mismos valores y configuración|[Crear un dominio vinculado](../data-quality-services/create-a-linked-domain.md)|  
+|Vincular un dominio a otro, permitiéndole compartir los mismos valores y configuración|[Crear dominio vinculado](../data-quality-services/create-a-linked-domain.md)|  
 |Adjuntar un servicio de datos de referencia a un dominio único o compuesto|[Adjuntar un dominio o un dominio compuesto a datos de referencia](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Cambiar o aumentar los valores de una base de conocimiento|[Cambiar valores de dominio](../data-quality-services/change-domain-values.md)|  
-|Utilizar reglas de validación y normalización|[Crear una regla de dominio](../data-quality-services/create-a-domain-rule.md)|  
+|Utilizar reglas de validación y normalización|[Cree una regla de dominio](../data-quality-services/create-a-domain-rule.md)|  
 |Utilizar relaciones para corregir un término que forma parte de un valor de un dominio|[Crear relaciones basadas en términos](../data-quality-services/create-term-based-relations.md)|  
-|Completar, cerrar o cancelar la actividad de administración de dominios|[Finalizar la actividad de administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Completar, cerrar o cancelar la actividad de administración de dominios|[Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

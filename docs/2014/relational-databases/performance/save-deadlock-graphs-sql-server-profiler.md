@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33757ad1f8085ce141b8e206f2c3fd99c7dcba90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150701"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Guardar gráficos de interbloqueo (SQL Server Profiler)
@@ -37,11 +37,11 @@ ms.locfileid: "63150701"
   
 3.  En la lista **Usar la plantilla** , seleccione la plantilla de seguimiento que desea utilizar para el seguimiento o seleccione la opción **En blanco** si no desea utilizar ninguna plantilla.  
   
-4.  Realice una de las siguientes operaciones:  
+4.  Realice una de las siguientes acciones:  
   
     -   Active la casilla**Guardar en archivo** para capturar el seguimiento en un archivo. Especifique un valor en **Establecer el tamaño máximo de archivo (MB)** .  
   
-         Si lo desea, seleccione **Habilitar sustitución incremental de archivos** y **El servidor procesa los datos de seguimiento**.  
+         Opcionalmente, seleccione **Habilitar sustitución incremental de archivos** y el **servidor procesa los datos de seguimiento**.  
   
     -   Active la casilla **Guardar en tabla** para capturar el seguimiento en una tabla de base de datos.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63150701"
   
  Una vez guardado el archivo de interbloqueo, puede abrir el archivo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, vea [Abrir, ver e imprimir un archivo de interbloqueo &#40;SQL Server Management Studio&#41;](open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Analizar interbloqueos con SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
   
   

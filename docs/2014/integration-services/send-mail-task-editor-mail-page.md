@@ -1,5 +1,5 @@
 ---
-title: Editor de tareas de correo (página correo) enviar | Microsoft Docs
+title: Editor de la tarea enviar correo (página correo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055831"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Editor de la tarea Enviar correo (página Correo)
@@ -28,7 +28,7 @@ ms.locfileid: "66055831"
   
 ## <a name="options"></a>Opciones  
  **SMTPConnection**  
- Seleccione un administrador de conexiones SMTP de la lista, o bien haga clic en **\<Nueva conexión…>** para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones SMTP de la lista o haga clic en ** \<nueva conexión... >** para crear un nuevo administrador de conexiones.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones SMTP solo es compatible con la autenticación anónima y la autenticación de Windows. No admite la autenticación básica.  
@@ -41,10 +41,10 @@ ms.locfileid: "66055831"
  **Para**  
  Escriba las direcciones de correo electrónico de los destinatarios, separadas con punto y coma.  
   
- **CC**  
+ **Correos**  
  Escriba las direcciones de correo electrónico de las personas que recibirán una copia del mensaje, separadas con punto y coma.  
   
- **CCO**  
+ **BCC**  
  Escriba las direcciones de correo electrónico de los destinatarios ocultos de copia del mensaje, separadas con punto y coma.  
   
  **Asunto**  
@@ -53,13 +53,13 @@ ms.locfileid: "66055831"
  **MessageSourceType**  
  Permite seleccionar el tipo de origen del mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para el texto del mensaje. Si selecciona este valor, se mostrará la opción dinámica **MessageSource**.|  
 |**Conexión de archivos**|Establezca el origen al archivo que incluye el texto del mensaje. Si selecciona este valor, se mostrará la opción dinámica **MessageSource**.|  
 |**Variable**|Establezca el origen para la variable que incluye el texto del mensaje. Si selecciona este valor, se mostrará la opción dinámica **MessageSource**.|  
   
- **Prioridad**  
+ **Priority**  
  Establezca la prioridad del mensaje.  
   
  **Datos adjuntos**  
@@ -76,19 +76,19 @@ ms.locfileid: "66055831"
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexión de archivos  
  **MessageSource**  
- Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos de la lista \<o haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
- Seleccione una variable de la lista, o bien haga clic en \<**Nueva variable…**> para crear una.  
+ Seleccione una variable de la lista o haga \<clic en **nueva variable...**> para crear una nueva variable.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
+ **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Enviar correo &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea enviar correo &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

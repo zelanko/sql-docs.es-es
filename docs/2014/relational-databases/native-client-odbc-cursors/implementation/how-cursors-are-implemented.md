@@ -1,5 +1,5 @@
 ---
-title: ¿Cómo se implementan los cursores | Microsoft Docs
+title: Cómo se implementan los cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c92391b1d8874da3a8901ccc5c6245e48334241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188519"
 ---
 # <a name="how-cursors-are-implemented"></a>Cómo se implementan los cursores
@@ -27,11 +27,11 @@ ms.locfileid: "63188519"
   
 -   Tipo de cursor  
   
-     Tipos de cursor se establecen mediante el atributo SQL_ATTR_CURSOR_TYPE de [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md). Los tipos de cursor de ODBC son de solo avance, estático, controlado por conjunto de claves, mixto y dinámico. Establecer el tipo de cursor fue el método original para especificar los cursores en ODBC.  
+     Los tipos de cursor se establecen mediante el atributo SQL_ATTR_CURSOR_TYPE de [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md). Los tipos de cursor de ODBC son de solo avance, estático, controlado por conjunto de claves, mixto y dinámico. Establecer el tipo de cursor fue el método original para especificar los cursores en ODBC.  
   
 -   Comportamiento de los cursores  
   
-     Comportamiento del cursor se establece mediante los atributos SQL_ATTR_CURSOR_SCROLLABLE y SQL_ATTR_CURSOR_SENSITIVITY de **SQLSetStmtAttr**. Estos atributos se modelan en las palabras clave SCROLL y SENSITIVE definidas para la instrucción DECLARE CURSOR en los estándares ISO. Estas dos opciones ISO se introdujeron en la versión 3.0 de ODBC.  
+     El comportamiento de los cursores se establece mediante los atributos SQL_ATTR_CURSOR_SCROLLABLE y SQL_ATTR_CURSOR_SENSITIVITY de **SQLSetStmtAttr**. Estos atributos se modelan en las palabras clave SCROLL y SENSITIVE definidas para la instrucción DECLARE CURSOR en los estándares ISO. Estas dos opciones ISO se introdujeron en la versión 3.0 de ODBC.  
   
  Las características de un cursor ODBC se deberían especificar con cualquiera de estos dos métodos, siendo preferente el uso de los tipos de cursor de ODBC.  
   
@@ -41,13 +41,13 @@ ms.locfileid: "63188519"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Usar conjuntos de resultados predeterminados de SQL Server](using-sql-server-default-result-sets.md)  
+-   [Utilizar conjuntos de resultados predeterminados de SQL Server](using-sql-server-default-result-sets.md)  
   
 -   [Utilizar cursores de servidor](using-server-cursors.md)  
   
 -   [Biblioteca de cursores ODBC](odbc-cursor-library.md)  
   
-## <a name="see-also"></a>Vea también  
- [Uso de cursores &#40;ODBC&#41;](../using-cursors-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Usar cursores &#40;&#41;ODBC](../using-cursors-odbc.md)  
   
   

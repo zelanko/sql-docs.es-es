@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401486"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Adquisición y configuración de un servidor de carga para almacenamiento de datos paralelos
@@ -86,7 +86,7 @@ Si tiene previsto usar Integration Services para cargar, deberá instalar Integr
 --> 
   
 ## <a name="Step5"></a>Paso 5: iniciar la carga  
-Ahora está listo para empezar a cargar datos. Para obtener más información, consulte:  
+Ahora está listo para empezar a cargar datos. Para más información, consulte:  
   
 1.  [Herramienta de carga de línea de comandos de dwloader](dwloader.md)  
   
@@ -111,6 +111,6 @@ Para reducir los riesgos de seguridad con los datos, se recomienda lo siguiente:
   
 -   Desactive la inicialización instantánea de archivos en Windows Server 2012 y versiones posteriores. Se trata de un equilibrio entre el rendimiento y la seguridad, como se indica en la sección rendimiento. Debe decidir qué es lo mejor según sus requisitos de seguridad.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Información general sobre copias de seguridad y restauración](backup-and-restore-overview.md)  
   

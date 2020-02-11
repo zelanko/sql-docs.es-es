@@ -1,5 +1,5 @@
 ---
-title: Instalar el Asesor de actualizaciones desde el símbolo | Microsoft Docs
+title: Instalación del Asesor de actualizaciones desde el símbolo del sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094334"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Instalar el Asesor de actualizaciones desde el símbolo del sistema
@@ -34,9 +34,9 @@ ms.locfileid: "66094334"
   
 |Argumento|Descripción|  
 |--------------|-----------------|  
-|/q[n&#124;b&#124;r&#124;f]|Establece el nivel de la interfaz de usuario (UI):<br /><br /> n = sin interfaz de usuario<br /><br /> b = interfaz de usuario básica (solo progresos, sin interacción)<br /><br /> r = interfaz de usuario reducida (cuadro de diálogo al final de la instalación)<br /><br /> f = interfaz de usuario completa|  
-|/L|Especifica las opciones del archivo de registro. Para registrar todos los mensajes en *log_file_name*, utilice **-L\*v**_log_file_name_. Para registrar los mensajes de error, use `-Le` *log_file_name*.|  
-|ADDLOCAL = ALL&AMP;#124; QUITAR = ALL&AMP;#124;REINSTALL = ALL|Se usa para instalar (ADDLOCAL), quitar (REMOVE) o reinstalar (REINSTALL) el Asesor de actualizaciones.|  
+|/q [n&#124;b&#124;r&#124;f]|Establece el nivel de la interfaz de usuario (UI):<br /><br /> n = sin interfaz de usuario<br /><br /> b = interfaz de usuario básica (solo progresos, sin interacción)<br /><br /> r = interfaz de usuario reducida (cuadro de diálogo al final de la instalación)<br /><br /> f = interfaz de usuario completa|  
+|/L|Especifica las opciones del archivo de registro. Para registrar todos los mensajes en *log_file_name*, use **-\*L v**_log_file_name_. Para registrar solo los mensajes de error `-Le`, use *log_file_name*.|  
+|ADDLOCAL = ALL&#124; REMOVE = ALL&#124;REINSTALL = ALL|Se usa para instalar (ADDLOCAL), quitar (REMOVE) o reinstalar (REINSTALL) el Asesor de actualizaciones.|  
 |UAINSTALLDIR=ruta|Instala el Asesor de actualizaciones en la ubicación especificada por la ruta.|  
   
 ## <a name="installation-examples"></a>Ejemplos de instalación  
@@ -67,8 +67,8 @@ SQLUA.msi /qn REMOVE=ALL
 Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Instalar el Asesor de actualizaciones](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
+## <a name="see-also"></a>Consulte también  
+ [Instalando el asesor de actualizaciones](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [Requisitos previos del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 65f9c926a75ae4d64e54d6f600aba2a70f0482cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218106"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Método SetServiceAccount (clase SqlService)
@@ -40,7 +40,7 @@ ServiceStartName , ServiceStartPassword
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Objeto de la [clase SqlService](sqlservice-class.md) que representa el servicio.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -49,19 +49,19 @@ ServiceStartName , ServiceStartPassword
   
 -   Si la cuenta pertenece al dominio integrado, puede especificarse \NombreUsuario.  
   
--   Si se especifica NULL, el servicio de haber iniciado sesión como el **LocalSystem** cuenta.  
+-   Si se especifica NULL, el servicio se iniciará sesión como la cuenta **LocalSystem** .  
   
- Para los controladores de kernel o nivel de sistema, *StartName* contiene el nombre de objeto de controlador, \FileSystem\Rdr o \Driver\Xns, que usa el sistema de E/S para cargar el controlador de dispositivo. Además, si se especifica NULL, el controlador se ejecutará con un nombre de objeto predeterminado creado por el sistema de E/S basado en el nombre del servicio. Ejemplo: DWDOM\Admin.  
+ En el caso de los controladores de kernel o de nivel de sistema, *StartName* contiene el nombre de objeto del controlador, ya sea \FileSystem\Rdr o \Driver\Xns, que el sistema de e/s utiliza para cargar el controlador de dispositivo. Además, si se especifica NULL, el controlador se ejecutará con un nombre de objeto predeterminado creado por el sistema de E/S basado en el nombre del servicio. Ejemplo: DWDOM\Admin.  
   
  *ServiceStartPassword*  
- Un valor de cadena que especifica la contraseña para el nombre de cuenta en el *StartName* parámetro. Especifique NULL si no va a cambiar la contraseña. Especifique una cadena vacía si el servicio no tiene contraseña.  
+ Valor de cadena que especifica la contraseña para el nombre de cuenta en el parámetro *StartName* . Especifique NULL si no va a cambiar la contraseña. Especifique una cadena vacía si el servicio no tiene contraseña.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de `uint32` que es igual a 0 si se modificó el servicio correctamente o igual a 1 si no se admite la solicitud. Cualquier otro número indica que hubo un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

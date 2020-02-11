@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd6cefd41ea223b91445042ff3cee9090074feeb
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783191"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
@@ -31,7 +31,7 @@ ms.locfileid: "72783191"
   
      [Seguridad](#Security)  
   
--   **Para eliminar un registro de pasos de trabajo del Agente SQL Server, utilizando:**  
+-   **Para eliminar una Agente SQL Server registro de pasos de trabajo, utilizando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "72783191"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Cuando se eliminan pasos de trabajo, sus registros de salida respectivos también se eliminan de forma automática.  
@@ -80,7 +80,7 @@ ms.locfileid: "72783191"
     GO  
     ```  
   
- Para obtener más información, [vea &#40;SP_DELETE_JOBSTEPLOG Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
+ Para obtener más información, vea [sp_delete_jobsteplog &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
   
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
  Use los métodos `DeleteJobStepLogs` de la clase `Job` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte[Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

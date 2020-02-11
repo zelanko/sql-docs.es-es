@@ -17,18 +17,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69724baa3790f2b7475369c8f947a4201bcd57f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108719"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requieren el Agente SQL Server y la configuración de permisos del mismo. Si ve mensajes de error que indican que se requiere el Agente SQL Server y ha comprobado que se está ejecutando, actualice o compruebe los permisos. El ámbito de este tema es [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint y en él se describen tres formas de actualizar los permisos del Agente SQL Server con suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las credenciales que use para los pasos de este tema deben disponer de los permisos adecuados para conceder permisos de ejecución a RSExecRole para los objetos de la aplicación de servicio, msdb y las bases de datos maestras.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
  ![Permisos de Agente SQL para bases de datos de aplicación de servicio](../../../2014/sql-server/install/media/rs-provisionsqlagent.gif "Permisos de Agente SQL para bases de datos de aplicación de servicio")  
   
@@ -57,9 +58,9 @@ ms.locfileid: "66108719"
   
 4.  Si el administrador de SharePoint tiene privilegios suficientes para la base de datos maestra y las bases de datos de aplicación de servicio, escriba esas credenciales.  
   
-5.  Haga clic en el botón **Aceptar** .  
+5.  Haga clic en el botón **Aceptar**.  
   
-##  <a name="bkmk_download"></a> Para descargar el script Transact-SQL  
+##  <a name="bkmk_download"></a>Para descargar el script Transact-SQL  
   
 1.  En Administración central de SharePoint, en el grupo **Administración de aplicaciones** , haga clic en **Administrar aplicaciones de servicio**.  
   
@@ -81,18 +82,18 @@ ms.locfileid: "66108719"
   
 4.  Actualice el siguiente cmdlet de PowerShell reemplazando el nombre de la base de datos del servidor de informes, la cuenta del grupo de aplicaciones y la ruta de acceso de la instrucción.  
   
-     **Sintaxis de cmdlet:** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
+     **Sintaxis del cmdlet:**`Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
-     **Cmdlet de prueba:** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
+     **Cmdlet de ejemplo:**`Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
 ## <a name="using-the-transact-sql-script"></a>Usar el script Transact-SQL  
  Los siguientes procedimientos se pueden utilizar con los scripts descargados de la página de provisiones o con los scripts creados con PowerShell.  
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>Para cargar el script Transact-SQL en SQL Server Management Studio  
   
-1.  Para abrir SQL Server Management Studio, en el **iniciar** menú, haga clic en **Microsoft SQL Server 2012** y haga clic en **SQL Server Management Studio**.  
+1.  Para abrir SQL Server Management Studio, en el menú **Inicio** , haga clic en **Microsoft SQL Server 2012** y haga clic en **SQL Server Management Studio**.  
   
-2.  En el cuadro de diálogo **Conectar con el servidor** establezca las opciones siguientes:  
+2.  En el cuadro de diálogo **conectar al servidor** , establezca las siguientes opciones:  
   
     -   En la lista **Tipo de servidor** , seleccione **Motor de base de datos**.  
   

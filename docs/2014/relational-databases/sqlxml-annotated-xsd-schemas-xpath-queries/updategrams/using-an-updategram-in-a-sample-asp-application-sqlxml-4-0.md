@@ -1,5 +1,5 @@
 ---
-title: Uso de un diagrama de actualización en una aplicación de ASP de ejemplo (SQLXML 4.0) | Documentos de Microsoft
+title: Usar un diagrama en una aplicación ASP de ejemplo (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e209a4f6118ae9581889299c09653ebaf1cfe2cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014627"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizar un diagrama de actualización en una aplicación ASP de ejemplo (SQLXML 4.0)
@@ -158,7 +158,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de updategram &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte también  
+ [Consideraciones de seguridad de diagrama &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

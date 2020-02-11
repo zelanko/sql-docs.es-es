@@ -15,21 +15,21 @@ ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc8999c0a7189772145f553646b45eb1f1fbd695
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091614"
 ---
 # <a name="uses-of-catalog-data"></a>Usos de los datos del catálogo
-Las aplicaciones utilizar los datos del catálogo en una variedad de formas. Estos son algunos usos habituales:  
+Las aplicaciones usan datos de catálogo de varias maneras. Estos son algunos usos comunes:  
   
--   **Crear instrucciones SQL en tiempo de ejecución.** Aplicaciones verticales, como una aplicación de entrada de pedidos, contienen las instrucciones SQL codificadas de forma rígida. Las tablas y columnas que se usan por la aplicación son fijos antes de tiempo, como son las instrucciones que tienen acceso a estas tablas. Por ejemplo, una aplicación de entrada de pedidos normalmente contiene un único, con parámetros **insertar** instrucción para agregar nuevos pedidos para el sistema.  
+-   **Construir instrucciones SQL en tiempo de ejecución.** Las aplicaciones verticales, como una aplicación de entrada de pedidos, contienen instrucciones SQL codificadas de forma rígida. Las tablas y columnas que usa la aplicación se fijan con anterioridad, al igual que las instrucciones que tienen acceso a estas tablas. Por ejemplo, una aplicación de entrada de pedidos normalmente contiene una única instrucción **Insert** con parámetros para agregar nuevos pedidos al sistema.  
   
-     Aplicaciones genéricas, por ejemplo, un programa de hoja de cálculo que usa ODBC para recuperar datos, a menudo construcción instrucciones SQL en tiempo de ejecución basándose en la entrada del usuario. Este tipo de aplicación podría requerir al usuario que escriba los nombres de las tablas y columnas que desea usar. Sin embargo, sería más fácil para el usuario si la aplicación muestra las listas de tablas y columnas desde el que el usuario podría realizar selecciones. Para crear estas listas, se llamaría la aplicación la **SQLTables** y **SQLColumns** funciones de catálogo.  
+     Las aplicaciones genéricas, como un programa de hoja de cálculo que usa ODBC para recuperar datos, suelen construir instrucciones SQL en tiempo de ejecución en función de la entrada del usuario. Este tipo de aplicación podría requerir que el usuario escriba los nombres de las tablas y columnas que se van a utilizar. Sin embargo, sería más sencillo para el usuario si la aplicación mostrara listas de tablas y columnas desde las que el usuario podía realizar selecciones. Para compilar estas listas, la aplicación llamaría a las funciones de catálogo **SQLTables** y **SQLColumns** .  
   
--   **Crear instrucciones SQL durante el desarrollo.** Entornos de desarrollo de aplicaciones normalmente permiten al programador crear consultas de base de datos al desarrollar un programa. Las consultas, a continuación, están codificados en la aplicación que se está compila.  
+-   **Construir instrucciones SQL durante el desarrollo.** Los entornos de desarrollo de aplicaciones suelen permitir al programador crear consultas de base de datos al desarrollar un programa. Las consultas se codifican de forma rígida en la aplicación que se está compilando.  
   
-     También podrían usar dichos entornos **SQLTables** y **SQLColumns** para crear listas desde el que el programador puede realizar selecciones. También pueden usar estos entornos **SQLPrimaryKeys** y **SQLForeignKeys** para determinar y mostrar las relaciones entre tablas seleccionadas y usar automáticamente **SQLStatistics** para determinar y resaltar los campos indizados por lo que el programador puede crear consultas eficaces.  
+     Estos entornos también podrían usar **SQLTables** y **SQLColumns** para crear listas desde las que el programador podría hacer selecciones. Estos entornos también pueden usar **SQLPrimaryKeys** y **SQLForeignKeys** para determinar y mostrar automáticamente las relaciones entre las tablas seleccionadas, y usar **SQLStatistics** para determinar y resaltar los campos indexados para que el programador pueda crear consultas eficaces.  
   
--   **Creación de los cursores.** Podría usar una aplicación, controlador o software intermedio que proporciona un motor de cursor desplazable **SQLSpecialColumns** para determinar qué columna o columnas identifican inequívocamente una fila. El programa podría generar un *keyset* que contiene los valores de estas columnas para cada fila que se han obtenido. Cuando la aplicación se desplaza a la fila, a continuación, utilizaría estos valores para capturar los datos más recientes para la fila. Para obtener más información acerca de los cursores desplazables y conjuntos de claves, consulte [los cursores desplazables](../../../odbc/reference/develop-app/scrollable-cursors.md).
+-   **Construir cursores.** Una aplicación, un controlador o un middleware que proporciona un motor de cursor desplazable podría usar **SQLSpecialColumns** para determinar qué columna o columnas identifican de forma única una fila. El programa podría generar un *conjunto de claves* que contenga los valores de estas columnas para cada fila que se ha capturado. Cuando la aplicación se desplaza de nuevo a la fila, utilizará estos valores para obtener los datos más recientes de la fila. Para obtener más información sobre los cursores desplazables y conjuntos, vea [cursores desplazables](../../../odbc/reference/develop-app/scrollable-cursors.md).

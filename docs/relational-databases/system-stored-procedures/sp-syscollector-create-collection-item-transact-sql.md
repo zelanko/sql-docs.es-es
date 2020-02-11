@@ -19,13 +19,13 @@ ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032669"
 ---
-# <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
+# <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea un elemento de recopilación en un conjunto de recopilación definido por el usuario. Los elementos de recopilación definen los datos que se van a recopilar y la frecuencia con la que se realizará dicha recopilación.  
@@ -46,32 +46,32 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_id =] *collection_set_id*  
- Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int**.  
+ [ @collection_set_id = ] *collection_set_id*  
+ Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es de **tipo int**.  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
- Es el GUID que identifica el tipo de recopilador que se utilizará para este elemento *collector_type_uid* es **uniqueidentifier** con ningún valor predeterminado... Para obtener una lista de los tipos de recopilador, consulte la vista del sistema syscollector_collector_types.  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
+ Es el GUID que identifica el tipo de recopilador que se va a usar para este elemento *collector_type_uid* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado. Para obtener una lista de los tipos de recopilador, consulte la vista del sistema syscollector_collector_types.  
   
- [ @name =] '*nombre*'  
- Es el nombre del elemento de colección. *nombre* es **sysname** y no puede ser una cadena vacía o NULL.  
+ [ @name = ] '*nombre*'  
+ Es el nombre del elemento de colección. *Name* es de **tipo sysname** y no puede ser una cadena vacía o null.  
   
- *nombre* deben ser únicos. Para obtener una lista de los nombres de elementos de recopilación actuales, consulte la vista del sistema syscollector_collection_items.  
+ *el nombre* debe ser único. Para obtener una lista de los nombres de elementos de recopilación actuales, consulte la vista del sistema syscollector_collection_items.  
   
- [ @frequency =] *frecuencia*  
- Se utiliza para especificar (en segundos) la frecuencia con la que este elemento de recopilación reúne los datos. *frecuencia* es **int**, su valor predeterminado es 5. El valor mínimo que se puede especificar es 5 segundos.  
+ [ @frequency = ] *frecuencia*  
+ Se utiliza para especificar (en segundos) la frecuencia con la que este elemento de recopilación reúne los datos. *Frequency* es de **tipo int**y su valor predeterminado es 5. El valor mínimo que se puede especificar es 5 segundos.  
   
- Si el conjunto de recopilación se establece en modo sin almacenamiento en caché, se omite la frecuencia porque este modo hace que la recopilación de datos y la carga se produzcan con la programación especificada para el conjunto de recopilación. Para ver el modo de recopilación del conjunto de recopilación, consulte el [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) vista del sistema.  
+ Si el conjunto de recopilación se establece en modo sin almacenamiento en caché, se omite la frecuencia porque este modo hace que la recopilación de datos y la carga se produzcan con la programación especificada para el conjunto de recopilación. Para ver el modo de recopilación del conjunto de recopilación, consulte la vista del sistema [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
- [ @parameters =] '*parámetros*'  
- Parámetros de entrada del tipo de recopilador. *parámetros* es **xml** con el valor predeterminado es NULL. El *parámetros* esquema debe coincidir con el esquema de parámetros del tipo de recopilador.  
+ [ @parameters = ] '*Parameters*'  
+ Parámetros de entrada del tipo de recopilador. *Parameters* es **XML** con un valor predeterminado de NULL. El esquema de *parámetros* debe coincidir con el esquema de parámetros del tipo de recopilador.  
   
- [ @collection_item_id =] *collection_item_id*  
- Es el identifer único que identifica el elemento del conjunto de recopilación. *collection_item_id* es **int** y tiene OUTPUT.  
+ [ @collection_item_id = ] *collection_item_id*  
+ Es el identifer único que identifica el elemento del conjunto de recopilación. *collection_item_id* es **int** y tiene output.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_syscollector_create_collection_item se debe ejecutar en el contexto de la base de datos del sistema msdb.  
   
  El conjunto de recopilación al que se agrega el elemento de recopilación debe detenerse antes de crear dicho elemento. Los elementos de recopilación no se pueden agregar a los conjuntos de recopilación del sistema.  
@@ -80,7 +80,7 @@ sp_syscollector_create_collection_item
  Debe pertenecer al rol fijo de base de datos dc_admin (con permiso EXECUTE) para ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea un elemento de recopilación en función del tipo de recopilador `Generic T-SQL Query Collector Type` y se agrega al conjunto de recopilación denominado `Simple collection set test 2`. Para crear la colección especificada establecido, ejecute el ejemplo B en [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ En el ejemplo siguiente se crea un elemento de recopilación en función del tipo de recopilador `Generic T-SQL Query Collector Type` y se agrega al conjunto de recopilación denominado `Simple collection set test 2`. Para crear el conjunto de recopilación especificado, ejecute el ejemplo B en [sp_syscollector_create_collection_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ```  
 USE msdb;  
@@ -115,13 +115,13 @@ EXEC sp_syscollector_create_collection_item
     @collection_item_id = @collection_item_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
- [sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
- [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
- [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
- [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [sp_syscollector_update_collection_item &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
+ [sp_syscollector_delete_collection_item &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
+ [syscollector_collector_types &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
+ [sp_syscollector_create_collection_set &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
+ [syscollector_collection_items &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

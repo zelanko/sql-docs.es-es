@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ea3755fb103362b797735d74c9cbe67523aace59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047190"
 ---
 # <a name="covariance-mdx"></a>Covariance (MDX)
@@ -37,13 +37,13 @@ Covariance(Set_Expression,Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número que representa los valores del eje X.  
   
-## <a name="remarks"></a>Comentarios  
- El **covarianza** función evalúa el conjunto especificado con la primera expresión numérica para obtener los valores del eje y. A continuación, la función evalúa el conjunto especificado con la segunda expresión numérica, si se especifica, para obtener el conjunto de valores del eje X. Si no especifica el segundo expressionis numérica, la función utiliza el contexto actual de las celdas del conjunto especificado como valores para el eje x.  
+## <a name="remarks"></a>Observaciones  
+ La función **covarianza** evalúa el conjunto especificado con la primera expresión numérica para obtener los valores del eje y. A continuación, la función evalúa el conjunto especificado con la segunda expresión numérica, si se especifica, para obtener el conjunto de valores del eje X. Si no se especifica la segunda expresión numérica, la función utiliza el contexto actual de las celdas del conjunto especificado como valores para el eje X.  
   
- El **covarianza** función utiliza la fórmula de población sesgada. Esto es por el contrario el [CovarianceN](../mdx/covariancen-mdx.md) función que utiliza la fórmula de población no sesgada (al dividir el número de pares x-y, a continuación, restar 1).  
+ La función de **covarianza** utiliza la fórmula de población sesgada. Esto contrasta con la función de la [covarianza](../mdx/covariancen-mdx.md) a la que utiliza la fórmula de población no sesgada (dividiendo el número de pares x-y y restando 1).  
   
 > [!NOTE]  
->  El **covarianza** se omiten los valores lógicos o función la omite las celdas vacías o las celdas que contienen texto. No obstante, la función incluye celdas con valor de cero.  
+>  La función **covarianza** omite las celdas vacías o las celdas que contienen texto o los valores lógicos se omiten. No obstante, la función incluye celdas con valor de cero.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo usar la función Covariance:  
@@ -57,7 +57,7 @@ FROM
 [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

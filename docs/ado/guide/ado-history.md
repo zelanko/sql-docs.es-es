@@ -13,64 +13,64 @@ ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84ccbb97c26ea92f31212933aac79bde2784b72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927167"
 ---
 # <a name="ado-features-for-each-release"></a>Características de ADO para cada versión
 
-En este tema se enumera las nuevas características introducidas con cada versión de ADO MD ADO y ADOX.
+En este tema se enumeran las nuevas características introducidas por cada versión de ADO, ADO MD y ADOX.
 
-## <a name="ado-60"></a>ADO 6.0
+## <a name="ado-60"></a>ADO 6,0
 
- ADO 6.0 se incluye en Windows Vista, como parte de Windows Data Access Components (Windows DAC) 6.0. ADO 6.0 es funcionalmente equivalente a ADO 2.8.
+ ADO 6,0 se incluye en Windows Vista, como parte de Windows Data Access Components (Windows DAC) 6,0. ADO 6,0 es funcionalmente equivalente a ADO 2,8.
 
-## <a name="ado-28"></a>ADO 2.8
+## <a name="ado-28"></a>ADO 2,8
 
- ADO 2.8 se incluyó en Windows XP y Windows Server 2003, como parte de Microsoft Data Access Components (MDAC) 2.8. Una versión redistribuible de MDAC 2.8 también está disponible; Tenga en cuenta que esta versión redistribuible solo debe instalarse en Windows 2000. ADO 2.8 aborda varios aspectos relacionados con la seguridad:
+ ADO 2,8 se incluyó en Windows XP y Windows Server 2003, como parte de Microsoft Data Access Components (MDAC) 2,8. También está disponible una versión redistribuible de MDAC 2,8; Tenga en cuenta que esta versión redistribuible solo debe instalarse en Windows 2000. ADO 2,8 aborda varios problemas relacionados con la seguridad:
 
- *No se permite el acceso de unidad de disco duro fuera de una zona de confianza.*
-En dominios que implican los sitios de confianza de secuencias de comandos, se deshabilitan las siguientes operaciones: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, y **Recordset.Open**, que se usa junto con el **adCmdFile**  marca o con el proveedor Microsoft OLE DB persistencia (MSPersist).
+ *No se permite el acceso a la unidad de disco duro fuera de una zona de confianza.*
+En el scripting entre dominios que implica sitios que no son de confianza, se deshabilitan las siguientes operaciones: **Stream. SaveToFile**, **Stream. LoadFromFile**, **Recordset. Save**y **Recordset. Open**, que se usan junto con la marca **adCmdFile** o con el proveedor de persistencia de Microsoft OLE DB (MSPersist).
 
- **Recordset.Open** _,_ **Recordset.Save** _,_ **Stream.SaveToFile** _, y_ **Stream.LoadFromFile** _operará solo los archivos físicos._
-Estos métodos ahora para comprobar que los identificadores de archivos punto a solo los archivos físicos.
+ **Recordset. Open** _,_  **Recordset. Save** _,_  **Stream. SaveToFile** _y_  **Stream. LoadFromFile**  _solo funcionan en archivos físicos._
+Estos métodos comprueban ahora que los identificadores de archivo apuntan únicamente a archivos físicos.
 
- **Recordset.ActiveCommand** _devuelve un error cuando se invoca desde una página ASP/HTML._
-Esto evita la **comando** objeto desde el que se utiliza incorrectamente.
+ **Recordset. ActiveCommand**  _devuelve un error cuando se invoca desde una página HTML/ASP._
+Esto evita que el objeto de **comando** se use inutilizable.
 
- _El número de_**conjuntos de registros**_devuelto por una anidada_**forma**_comando tiene un límite superior._
-Un comando shape anidado ahora devuelve un máximo de 512 **conjuntos de registros**. Esto significa que un **forma** comando ya no se puede anidar a cualquier profundidad. En su lugar, la profundidad máxima de nivel es 512, si cada comando genera un único (elemento secundario) **Recordset**. If, en cualquier nivel, una **forma** comando devuelve varios **conjuntos de registros**, el nivel máximo de profundidad será inferior a 512.
+ _El número de_**conjuntos de registros**_devueltos por un comando de forma anidada_****_tiene un límite superior._        
+Ahora, un comando de forma anidada devuelve un máximo de 512 **conjuntos de registros**. Esto significa que un comando de **forma** ya no puede anidarse a cualquier profundidad. En su lugar, la profundidad de nivel máximo es 512, si cada comando da como resultado un **conjunto de registros**único (secundario). Si, en cualquier nivel, un comando **Shape** devuelve varios **conjuntos de registros**, el nivel máximo de profundidad será inferior a 512.
 
-## <a name="ado-27"></a>ADO 2.7
+## <a name="ado-27"></a>ADO 2,7
 
- *compatibilidad con plataformas de 64 bits* ADO 2.7 introduce compatibilidad con procesadores de 64 bits.
+ *compatibilidad con la plataforma de 64 bits* ADO 2,7 introduce compatibilidad con procesadores de 64 bits.
 
-## <a name="ado-26"></a>ADO 2.6
+## <a name="ado-26"></a>ADO 2,6
 
- **CubDef.GetSchemaObject**_método_ desde ADO 2.6, los objetos ADO MD se pueden recuperar mediante nombres únicos, según lo especificado por el [UniqueName (propiedad, ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). Los nombres de los objetos primarios no se necesiten conocer y colecciones de elementos primarios no es necesario que se debe rellenar para recuperar un objeto de esquema. Consulte [método GetSchemaObject (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ _Método_ **CubDef. GetSchemaObject**a partir de ADO 2,6, ADO MD objetos se pueden recuperar mediante nombres únicos, tal y como se especifica en la [propiedad UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   No es necesario conocer los nombres de los objetos primarios y no es necesario rellenar las colecciones primarias para recuperar un objeto de esquema. Consulte [método GetSchemaObject (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
- *Secuencias de comandos* el **comando** objeto es compatible con los comandos en formato de secuencia como una alternativa al uso de la **CommandText** propiedad. El [propiedad CommandStream (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) puede utilizarse para especificar plantillas XML o diagramas de actualización como el **comando** la entrada con el proveedor Microsoft OLE DB para SQL Server.
+ *Secuencias de comandos* El objeto de **comando** admite comandos en formato de secuencia como alternativa al uso de la propiedad **CommandText** . La [propiedad CommandStream (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) se puede usar para especificar plantillas XML o diagramas como entrada de **comando** con el proveedor de Microsoft OLE DB para SQL Server.
 
- **Dialecto**_propiedad_ [dialecto](../../ado/reference/ado-api/dialect-property.md) es una nueva propiedad que define la sintaxis y reglas generales que el proveedor se usa para analizar la cadena o secuencia.
+ El [dialecto](../../ado/reference/ado-api/dialect-property.md) de la_propiedad_ de **dialecto**es una nueva propiedad que define la sintaxis y las reglas generales que el proveedor utiliza para analizar la cadena o el flujo.  
 
- **Command.Execute**_método_ el [Ejecutar método](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **comando** objeto se ha mejorado para usar flujos de entrada y salida.
+ **Comando. Execute**(_método_ ) el [método Execute](../../ado/reference/ado-api/execute-method-ado-command.md) del objeto **Command** de ADO se ha mejorado para usar secuencias para la entrada y la salida.  
 
- *Campo statusvalues* si el usuario encuentra un error DB_E_ERRORSOCCURRED cuando se modifica un **campo** de un **Recordset**, ADO ahora rellenará el **Field.Status**propiedad con la información de estado adecuado para que el usuario tendrá que obtener más información sobre qué salió mal. Consulte [propiedad Status (Field ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
+ *Campo statusvalues* Si el usuario encuentra un error DB_E_ERRORSOCCURRED al modificar un **campo** de un **conjunto de registros**, ADO rellenará ahora la propiedad **Field. status** con la información de estado adecuada para que el usuario tenga más información sobre lo que ha ido mal. Vea [propiedad Status (campo ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters**_propiedad_ [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) es una nueva propiedad de la **comando** denominado objeto que indica que debe utilizar el proveedor parámetros.
+ La propiedad **NamedParameters**__ [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) es una nueva propiedad del objeto **Command** que indica que el proveedor debe usar parámetros con nombre.  
 
- *Los conjuntos de resultados en secuencias* ADO puede devolver conjuntos de resultados de un origen de datos en un **Stream**, en lugar de un **Recordset** objeto. Con la versión más reciente del proveedor de Microsoft OLE DB para SQL Server, puede obtener los resultados XML del proveedor mediante la ejecución de una consulta de "XML". Un **Stream** que recibe el conjunto de resultados se pueden abrir con un comando "XML" como el origen. Consulte [recuperar conjuntos de resultados en secuencias](../../ado/guide/data/retrieving-resultsets-into-streams.md).
+ *Conjuntos de ResultSet en secuencias* ADO puede devolver conjuntos de resultados de un origen de datos en una **secuencia**, en lugar de un objeto de **conjunto de registros** . Con la versión más reciente del proveedor de Microsoft OLE DB para SQL Server, puede obtener resultados XML del proveedor ejecutando una consulta "for XML". Una **secuencia** que recibe el conjunto de resultados se puede abrir con un comando "for XML" como origen. Vea [recuperar conjuntos de ResultSet en secuencias](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
- *Conjunto de resultados de fila única* The ADO **registro** ahora se puede abrir el objeto en una cadena de comandos o **comando** objeto que devuelve una fila de datos del proveedor. Esto da como resultado un mejor rendimiento con proveedores de MDAC 2.6. Consulte [método Open (Record ADO)](../../ado/reference/ado-api/open-method-ado-record.md).
+ *Conjunto de resultados de fila única* Ahora se puede abrir el objeto de **registro** de ADO en una cadena de comandos o un objeto de **comando** que devuelve una fila de datos del proveedor. Esto mejora el rendimiento con los proveedores de MDAC 2,6. Vea [método Open (registro de ADO)](../../ado/reference/ado-api/open-method-ado-record.md).
 
-## <a name="ado-25"></a>ADO 2.5
+## <a name="ado-25"></a>ADO 2,5
 
- **Registro** _objeto_ ADO 2.5 presenta el **registro** objetos para representar y administrar una fila de un **Recordset** o un proveedor de datos o un objeto que encapsula un datos semiestructurados, como un archivo o directorio.
+ **** _Objeto_ de registro ADO 2,5 introduce el objeto de **registro** para representar y administrar una fila de un **conjunto de registros** o un proveedor de datos, o un objeto que encapsula los datos semiestructurados, como un archivo o un directorio.
 
- **Stream** _objeto_ ADO 2.5 también introduce el **Stream** objetos para representar un flujo de datos binarios o texto.
+ **** _Objeto_ de secuencia ADO 2,5 también presenta el objeto de **secuencia** para representar una secuencia de datos binarios o de texto.
 
- *Enlace de la dirección URL* ADO 2.5 presenta el uso de una dirección URL, como una alternativa a un texto de comando y la cadena de conexión, como nombres de objetos de almacén de datos. Se puede usar una dirección URL con el existente **conexión** y **Recordset** objetos, así como con el nuevo **registro** y **Stream** objetos.
+ *Enlace de URL* ADO 2,5 introduce el uso de una dirección URL, como alternativa a una cadena de conexión y un texto de comando, para asignar nombres a los objetos de almacén de datos. Se puede usar una dirección URL con los objetos **Connection** y **Recordset** existentes, así como con los nuevos objetos **Record** y **Stream** .
 
- *Proveedores de datos que admiten el enlace de la dirección URL* ADO 2.5 es compatible con proveedores de OLE DB que reconocen los esquemas de URL. Esto incluye el proveedor OLE DB para la publicación en Internet, que tiene acceso al sistema de archivos de Windows 2000 y reconoce el esquema HTTP existente.
+ *Proveedores de datos que admiten enlaces de URL* ADO 2,5 admite proveedores OLE DB que reconozcan los esquemas de dirección URL. Esto incluye OLE DB proveedor para la publicación en Internet, que tiene acceso al sistema de archivos de Windows 2000 y reconoce el esquema HTTP existente.

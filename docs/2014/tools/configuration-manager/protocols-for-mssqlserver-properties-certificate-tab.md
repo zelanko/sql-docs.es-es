@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245009"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Propiedades de Protocolos de MSSQLSERVER (pestaña Certificado)
@@ -30,7 +30,7 @@ ms.locfileid: "63245009"
  **Vista**  
  Proporciona acceso a detalles adicionales acerca del certificado. No está disponible hasta que se selecciona un certificado en el cuadro **Certificado** . Para obtener información adicional acerca de los detalles del certificado, vea la documentación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Desactivar**  
+ **Borrar**  
  Quita la selección del cuadro **Certificado** .  
   
  **Certificado**  

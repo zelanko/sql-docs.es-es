@@ -1,5 +1,5 @@
 ---
-title: 'Propiedades de paso de trabajo: Nuevo paso de trabajo (página avanzada) | Microsoft Docs'
+title: 'Propiedades de paso de trabajo: nuevo paso de trabajo (página avanzadas) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62937205"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página Avanzado)
-  Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="job-step-properties-new-job-step-advanced-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página Opciones avanzadas)
+  Utilice esta página para ver y cambiar las propiedades de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paso de trabajo del agente.  
   
 ## <a name="options"></a>Opciones  
  **Acción en caso de éxito**  
@@ -57,7 +57,7 @@ ms.locfileid: "62937205"
  **Anexar salida a la entrada existente de la tabla**  
  Anexa la salida al contenido existente de la tabla. De lo contrario, el anterior contenido de la tabla se sobrescribe cada vez que se ejecuta el paso de trabajo.  
   
- **Incluir salida de paso en historial**  
+ **Incluir salida de paso en el historial**  
  Seleccione esta opción para incluir la salida del paso de trabajo en el historial de trabajos.  
   
  **Ejecutar como usuario**  
@@ -85,7 +85,7 @@ ms.locfileid: "62937205"
  **Anexar salida a la entrada existente de la tabla**  
  Anexa la salida al contenido existente de la tabla. De lo contrario, el anterior contenido de la tabla se sobrescribe cada vez que se ejecuta el paso de trabajo.  
   
- **Incluir salida de paso en historial**  
+ **Incluir salida de paso en el historial**  
  Seleccione esta opción para incluir la salida del paso de trabajo en el historial de trabajos.  
   
 ## <a name="options-for-powershell-job-steps"></a>Opciones de pasos de trabajo de PowerShell  
@@ -110,7 +110,7 @@ ms.locfileid: "62937205"
  **Anexar salida a la entrada existente de la tabla**  
  Anexa la salida al contenido existente de la tabla. De lo contrario, el anterior contenido de la tabla se sobrescribe cada vez que se ejecuta el paso de trabajo.  
   
- **Incluir salida de paso en historial**  
+ **Incluir salida de paso en el historial**  
  Seleccione esta opción para incluir la salida del paso de trabajo en el historial de trabajos.  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>Opciones de pasos de trabajo del Lector de cola de replicación  
@@ -142,10 +142,10 @@ ms.locfileid: "62937205"
  **Anexar salida a la entrada existente de la tabla**  
  Anexa la salida al contenido existente de la tabla. De lo contrario, el anterior contenido de la tabla se sobrescribe cada vez que se ejecuta el paso de trabajo.  
   
- **Incluir salida de paso en historial**  
+ **Incluir salida de paso en el historial**  
  Seleccione esta opción para incluir la salida del paso de trabajo en el historial de trabajos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar pasos de trabajo](manage-job-steps.md)  
   
   

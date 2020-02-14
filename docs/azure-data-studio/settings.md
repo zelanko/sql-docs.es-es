@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959272"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificación de la configuración del usuario y el área de trabajo
@@ -44,9 +44,9 @@ En el siguiente ejemplo se deshabilitan los números de línea en el editor y se
 
 En función de la plataforma, el archivo de configuración del usuario se encuentra aquí:
 
-* **Windows**: `%APPDATA%\azuredatastudio\User\settings.json`
-* **Mac**: `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
-* **Linux**: `$HOME/.config/azuredatastudio/User/settings.json`
+* **Windows** `%APPDATA%\azuredatastudio\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
+* **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
 El archivo de configuración del área de trabajo se encuentra en la carpeta `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` del proyecto.
 

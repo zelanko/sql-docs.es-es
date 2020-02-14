@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68307631"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices de almacén de columnas: Guía de carga de datos
@@ -31,7 +31,7 @@ Con "*carga masiva*" nos referimos a la forma en que se agregan grandes cantidad
 
 Para realizar una carga masiva, puede usar la [utilidad bcp](../../tools/bcp-utility.md), [Integration Services](../../integration-services/sql-server-integration-services.md) o seleccionar las filas de una tabla de almacenamiento provisional.
 
-![Carga en un índice agrupado de almacén de columnas](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Carga en un índice agrupado de almacén de columnas")  
+![Carga en un índice de almacén de columnas agrupado](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Carga en un índice de almacén de columnas agrupado")  
   
 Tal y como se recomienda en el diagrama, una carga masiva:
   
@@ -60,7 +60,7 @@ En estos escenarios siguientes se describe cuándo las filas cargadas pasan dire
   
 |Filas que se cargarán de forma masiva|Filas agregadas al grupo de filas comprimido|Filas agregadas al grupo de filas delta|  
 |-----------------------|-------------------------------------------|--------------------------------------|  
-|102,000|0|102,000|  
+|102 000|0|102 000|  
 |145,000|145,000<br /><br /> Tamaño del grupo de filas: 145,000|0|  
 |1,048,577|1,048,576<br /><br /> Tamaño del grupo de filas: 1 048 576.|1|  
 |2,252,152|2,252,152<br /><br /> Tamaños de los grupos de filas: 1 048 576, 1 048 576, 155 000.|0|  

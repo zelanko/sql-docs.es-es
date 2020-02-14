@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d255b4f3599cc9d42f52e860a21941c6e8b95436
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 265f7fa72b6cdcd59ff7c74ec456e533471ddd0a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769741"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287414"
 ---
 # <a name="replication-backward-compatibility"></a>Compatibilidad con versiones anteriores de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Las reglas generales son las siguientes:
 
 ## <a name="additional-resources"></a>Recursos adicionales
  [Características que ya no se usan en la replicación de SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se han conservado las características de replicación para la compatibilidad con versiones anteriores, pero que se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se han conservado las características de replicación para la compatibilidad con versiones anteriores, pero se van a quitar en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Principales cambios en la replicación de SQL Server](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)  
  Cambios en las características de replicación que pueden requerir cambios en las aplicaciones. 

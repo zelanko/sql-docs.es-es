@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009405"
 ---
 # <a name="columnstore-indexes-overview"></a>Índices de almacén de columnas: Información general
@@ -61,7 +61,7 @@ Un segmento de columna es una columna de datos perteneciente al grupo de filas.
 -   Cada grupo de filas contiene un segmento de cada columna de la tabla.  
 -   Cada sector de columna se comprime junto y se almacena en un medio físico.  
   
-![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Segmento de columna](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "segmento de columna")  
   
 #### <a name="clustered-columnstore-index"></a>Índice de almacén de columnas agrupado
 Un índice de almacén de columnas agrupado es el almacenamiento físico de toda la tabla.    
@@ -156,7 +156,7 @@ Cuando se crea una tabla con la instrucción `CREATE TABLE`, puede crearla como 
 |Desfragmentar un índice de almacén de columnas.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE` desfragmenta los índices de almacén de columnas en línea.|  
 |Combinar tablas con índices de almacén de columnas.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Carga de datos de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Resumen de las características de los índices de almacén de columnas para cada versión](~/relational-databases/indexes/columnstore-indexes-what-s-new.md)   
  [Rendimiento de las consultas de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   

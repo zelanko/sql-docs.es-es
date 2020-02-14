@@ -12,10 +12,10 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285930"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Asignaciones de columnas (Asistente para importación y exportación de SQL Server)
@@ -32,12 +32,12 @@ Si no quiere copiar todas las columnas de la tabla seleccionada, una de las cosa
  
  En este ejemplo, puede ver que el asistente va a crear una nueva tabla de destino, porque la opción **Crear tabla de destino** está seleccionada. De manera predeterminada, el asistente asigna a cada columna de la nueva tabla de destino el mismo nombre, el mismo tipo de datos y las mismas propiedades que la columna de origen correspondiente. 
   
- ![Página Asignaciones de columnas del Asistente para importación y exportación](../../integration-services/import-export-data/media/column-mappings.png "Página Asignaciones de columnas del Asistente para importación y exportación")  
+ ![Página de asignaciones de columnas del Asistente para importar y exportar](../../integration-services/import-export-data/media/column-mappings.png "Página de asignaciones de columnas del Asistente para importar y exportar")  
   
 ## <a name="review-the-source-and-destination"></a>Revisar el origen y el destino 
 ![Página Asignaciones de columnas, sección de origen y destino](../../integration-services/import-export-data/media/column-mappings-page-source-and-destination-section.png)
 
- **Source**  
+ **Origen**  
  Tabla de origen, vista o consulta seleccionada.  
   
  **Destino**  
@@ -88,7 +88,7 @@ Si exporta datos que tienen una columna de autonumeración o una columna de iden
  
 La lista **Asignaciones** tiene las columnas siguientes:  
   
--    **Source**  
+-    **Origen**  
      Vea cada una de las columnas de origen.  
   
 -   **Destino**  
@@ -116,7 +116,7 @@ La lista **Asignaciones** tiene las columnas siguientes:
   
  Si especifica una asignación que puede que no se realice correctamente en la lista **Asignaciones** , el cuadro de diálogo **Asignaciones de columnas** le lleva a la página **Revisar asignación de tipos de datos** . En esta página, revise las advertencias, especifique las opciones de conversión y también especifique cómo controlar los errores. Para más información, vea [Revisar asignación de tipos de datos](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Vea también
+ ## <a name="see-also"></a>Consulte también
 [Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)  
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 

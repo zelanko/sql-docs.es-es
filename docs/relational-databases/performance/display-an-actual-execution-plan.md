@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6e96322cdd6dcd310a550fa1cd94d80dba38738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946885"
 ---
 # <a name="display-an-actual-execution-plan"></a>Mostrar un plan de ejecución real
@@ -37,17 +37,17 @@ ms.locfileid: "67946885"
   
 3.  En el menú **Consultar**, haga clic en **Incluir plan de ejecución real** o en el botón **Incluir plan de ejecución real** de la barra de herramientas.
 
-    ![Botón de Plan de ejecución real en la barra de herramientas](../../relational-databases/performance/media/actualexecplantoolbar.png "Actual Execution Plan button on toolbar")   
+    ![Botón Plan de ejecución real de la barra de herramientas](../../relational-databases/performance/media/actualexecplantoolbar.png "Botón Plan de ejecución real de la barra de herramientas")   
   
 4.  Ejecute la consulta haciendo clic en el botón **Ejecutar** de la barra de herramientas. El plan utilizado por el optimizador de consultas se muestra en la pestaña **Plan de ejecución** del panel de resultados. 
 
-    ![Plan de ejecución real](../../relational-databases/performance/media/actualexecplan.png "Actual Execution Plan")   
+    ![Plan de ejecución real](../../relational-databases/performance/media/actualexecplan.png "Plan de ejecución real")   
 
 5.  Sitúe el mouse sobre los operadores lógicos y físicos para ver la descripción y las propiedades de los operadores en la información sobre herramientas que se muestra, como las propiedades del plan de ejecución global. Para ello, seleccione el operador de nodo raíz (el nodo SELECT en la imagen anterior).   
   
     También puede ver las propiedades del operador en la ventana Propiedades. Si las propiedades no están visibles, haga clic con el botón derecho en un operador y haga clic en **Propiedades**. Seleccione un operador para ver sus propiedades.  
 
-    ![Haga clic con el botón derecho en Propiedades en el operador de plan](../../relational-databases/performance/media/planproperties.png "Right-click Properties in plan operator")    
+    ![Clic con el botón derecho en Propiedades en el operador del plan](../../relational-databases/performance/media/planproperties.png "Clic con el botón derecho en Propiedades en el operador del plan")    
   
 6.  Para cambiar la visualización del plan de ejecución, haga clic con el botón derecho en el plan de ejecución y seleccione **Acercar**, **Alejar**, **Zoom personalizado**o **Zoom para ajustar**. **Acercar** y **Alejar** permiten acercarse o alejarse del plan de ejecución, mientras que **Zoom personalizado** permite definir su propio zoom, como por ejemplo un 80 por ciento de zoom. **Zoom para ajustar** amplía el plan de ejecución para que se ajuste al panel de resultados. Como alternativa, use una combinación de la tecla CTRL y la rueda del mouse para activar el **zoom dinámico**.  
 

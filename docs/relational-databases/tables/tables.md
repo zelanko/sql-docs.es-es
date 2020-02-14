@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127374"
 ---
 # <a name="tables"></a>Tablas
@@ -30,7 +30,7 @@ Las tablas son objetos de base de datos que contienen todos sus datos. En las ta
 
 - Puede asignar propiedades a la tabla y a cada columna de la tabla para controlar los datos admitidos y otras propiedades. Por ejemplo, puede crear restricciones en una columna para no permitir valores nulos o para proporcionar un valor predeterminado si no se especifica un valor, o puede asignar una restricción de clave en la tabla que exige la unicidad o definir una relación entre las tablas. 
 
-- Los datos de la tabla se pueden comprimir por filas o por página. La compresión de datos puede permitir que se almacenen más filas en una página. Para más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). 
+- Los datos de la tabla se pueden comprimir por filas o por página. La compresión de datos puede permitir que se almacenen más filas en una página. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). 
 
 ## <a name="types-of-tables"></a>Tipos de tablas
  Además del rol estándar de las tablas básicas definidas por el usuario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona los siguientes tipos de tabla que permiten llevar a cabo objetivos especiales en una base de datos: 
@@ -82,7 +82,7 @@ Las tablas anchas tienen las siguientes implicaciones de rendimiento.
 |-----------------|-----------|
 |Describe cómo crear una tabla.|[Crear tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/create-tables-database-engine.md)|
 |Describe cómo eliminar una tabla.|[Eliminar tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/delete-tables-database-engine.md)|
-|Describe cómo crear una nueva tabla que contenga algunas o todas las columnas de una tabla existente.|[Tablas duplicadas](../../relational-databases/tables/duplicate-tables.md)|
+|Describe cómo crear una nueva tabla que contenga algunas o todas las columnas de una tabla existente.|[Duplicar tablas](../../relational-databases/tables/duplicate-tables.md)|
 |Describe cómo cambiar el nombre de una tabla.|[Cambiar el nombre a las tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/rename-tables-database-engine.md)|
 |Describe cómo ver las propiedades de la tabla.|[Ver la definición de tabla](../../relational-databases/tables/view-the-table-definition.md)|
 |Describe cómo determinar si otros objetos como una vista o un procedimiento almacenado dependen de una tabla.|[Ver las dependencias de una tabla](../../relational-databases/tables/view-the-dependencies-of-a-table.md)|
@@ -101,6 +101,6 @@ Las tablas anchas tienen las siguientes implicaciones de rendimiento.
 |Describe cómo especificar un valor predeterminado de una columna. Este valor se usa si no se proporciona otro.|[Especificar valores predeterminados para las columnas](../../relational-databases/tables/specify-default-values-for-columns.md)|
 
 ## <a name="see-also"></a>Consulte también
- [Restricciones entre claves principales y claves externas](../../relational-databases/tables/primary-and-foreign-key-constraints.md) y [Restricciones UNIQUE y restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
+ [Restricciones entre claves principales y claves externas](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [Restricciones UNIQUE y restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 
 

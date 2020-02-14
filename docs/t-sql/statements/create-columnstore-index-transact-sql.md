@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729931"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -59,7 +59,7 @@ Más información:
 -   [Guía de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)  
 -   [Resumen de características de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -311,13 +311,13 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
   
     |Opciones de Set|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
-    |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|   
+    |ANSI_NULLS|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
+    |ANSI_PADDING|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
+    |ANSI_WARNINGS*|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
+    |ARITHABORT|ACTIVAR|ACTIVAR|Apagado|Apagado|  
+    |CONCAT_NULL_YIELDS_NULL|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
+    |NUMERIC_ROUNDABORT|Apagado|Apagado|Apagado|Apagado|  
+    |QUOTED_IDENTIFIER|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|   
   
      *Al establecer ANSI_WARNINGS en ON, ARITHABORT se establece de forma implícita en ON cuando el nivel de compatibilidad de base de datos está establecido en 90 o un valor superior. Si el nivel de compatibilidad de la base de datos está establecido en 80 o en un nivel inferior, debe configurarse explícitamente la opción ARITHABORT en ON.  
   
@@ -336,9 +336,9 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
 **Cada columna de un índice de almacén de columnas debe ser de uno de los tipos de datos empresariales comunes siguientes:** 
 -   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [ ( *n* ) ]  
--   DATETIME  
+-   datetime  
 -   smalldatetime  
--   Date  
+-   date  
 -   time [ ( *n* ) ]  
 -   float [ ( *n* ) ]  
 -   real [ ( *n* ) ]  
@@ -346,9 +346,9 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
 -   SMALLMONEY  
--   BIGINT  
--   INT  
--   smallint  
+-   bigint  
+-   int  
+-   SMALLINT  
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
@@ -370,7 +370,7 @@ Si la tabla subyacente tiene una columna con un tipo de datos no admitido para l
 -   rowversion (y timestamp)  
 -   sql_variant  
 -   Tipos CLR (hierarchyid y tipos espaciales)  
--   xml  
+-   Xml  
 -   uniqueidentifier (Se aplica a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Índices no clúster de almacén de columnas:**

@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558473"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909905"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errores comunes en el cifrado de datos transparente con claves administradas por el cliente en Azure Key Vault
 
@@ -33,7 +33,7 @@ Durante las primeras 8 horas, si se resuelve el problema de acceso a la clave de
 
 Si ya no se necesita una base de datos inaccesible, puede eliminarse inmediatamente para dejar de incurrir en gastos. No se permiten todas las demás acciones en la base de datos hasta que se restaure el acceso a la clave de Azure Key Vault y la base de datos vuelva a estar en línea. Tampoco es posible cambiar en el servidor la opción de TDE de claves administradas por el cliente por la de claves administradas por el servicio mientras una base de datos cifrada con claves administradas por el cliente sea inaccesible. Esto es necesario para proteger los datos contra el acceso no autorizado mientras se han revocado los permisos para el protector de TDE. 
 
-Cuando no se pueda obtener acceso a una base de datos durante más de 8 horas, ya no se realizará la restauración automática. Si tras dicho período se ha restaurado el acceso a la clave de Azure Key Vault requerido, debe volver a validar el acceso manualmente para que la base de datos vuelva a estar en línea. En este caso, volver a poner la base de datos en línea puede tardar una cantidad considerable de tiempo según el tamaño de la base de datos y, actualmente, requiere la apertura de una incidencia de soporte técnico. Una vez que la base de datos vuelve a estar en línea, se perderán los valores configurados previamente, como el vínculo geográfico, si se configuró geo-DR, el historial de PITR y las etiquetas. Por tanto, se recomienda implementar un sistema de notificación mediante [Grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) que permita percatarse y resolver los problemas de acceso a la clave del almacén de claves subyacentes lo antes posible. 
+Cuando no se pueda obtener acceso a una base de datos durante más de 8 horas, ya no se realizará la restauración automática. Si tras dicho período se ha restaurado el acceso a la clave de Azure Key Vault requerido, debe volver a validar el acceso a la clave manualmente para que la base de datos vuelva a estar en línea. En este caso, volver a poner la base de datos en línea puede tardar una cantidad considerable de tiempo según el tamaño de la base de datos. Una vez que la base de datos vuelva a estar en línea, **se perderán** los valores configurados previamente, como el [grupo de conmutación por error](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group), el historial de PITR y las etiquetas. Por tanto, se recomienda implementar un sistema de notificación mediante [Grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) que permita percatarse y resolver los problemas de acceso a la clave del almacén de claves subyacentes lo antes posible. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Errores comunes que hacen que las bases de datos dejen de estar accesibles
 

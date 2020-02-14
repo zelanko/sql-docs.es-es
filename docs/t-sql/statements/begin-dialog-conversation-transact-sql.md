@@ -31,10 +31,10 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211373"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
@@ -106,7 +106,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Los mensajes intercambiados con servicios en la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se cifran en ningún caso. No obstante, la clave maestra de la base de datos y los certificados de cifrado siguen siendo necesarios para las conversaciones que utilizan el cifrado si los servicios para la conversación están en distintas bases de datos. Esto permite que las conversaciones continúen en caso de que una de las bases de datos se mueva a otra instancia mientras la conversación está en curso.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Todos los mensajes forman parte de una conversación. Por lo tanto, el servicio iniciador debe iniciar una conversación con el servicio de destino antes de enviar un mensaje al servicio de destino. La información especificada en la instrucción BEGIN DIALOG CONVERSATION es similar a la dirección de una carta; [!INCLUDE[ssSB](../../includes/sssb-md.md)] utiliza la información para entregar mensajes al servicio correcto. El servicio especificado en la cláusula TO SERVICE es la dirección a la que se envían los mensajes. El servicio especificado en la cláusula FROM SERVICE es la dirección de retorno utilizada para responder a los mensajes.  
   
  El destino de una conversación no necesita llamar a BEGIN DIALOG CONVERSATION. [!INCLUDE[ssSB](../../includes/sssb-md.md)] crea una conversación en la base de datos de destino cuando llega del iniciador el primer mensaje de la conversación.  

@@ -21,10 +21,10 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115692"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Crear un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
@@ -102,7 +102,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>Pasos del asistente  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- En las siguientes secciones se proporciona información sobre cada página del flujo de trabajo del asistente para crear un UCP nuevo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para iniciar el asistente para crear un nuevo UCP, abra el panel Explorador de la utilidad en el menú Vista de SSMS, luego haga clic en el botón ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Crear UCP** en la parte superior del panel Explorador de la utilidad.  
+ En las siguientes secciones se proporciona información sobre cada página del flujo de trabajo del asistente para crear un UCP nuevo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para iniciar el asistente a fin de crear un nuevo UCP, abra el panel Explorador de la utilidad en el menú Vista de SSMS y haga clic en el botón ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Crear UCP** en la parte superior del panel Explorador de la utilidad.  
   
  Haga clic en un vínculo en la lista siguiente para navegar a los detalles de una página del asistente:  
   
@@ -125,9 +125,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> Introducción al Asistente para crear UCP  
  Si abre el explorador de la utilidad y no existe ningún punto de control de utilidad, es preciso que se conecte a uno o que cree uno nuevo.  
   
- **Conectarse a UCP existente**: si ya existe un punto de control de la utilidad en la implementación, puede conectarse a él si hace clic en el botón ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Conectar con la utilidad** en la parte superior del panel Explorador de la utilidad. Para conectarse a un UCP existente, es preciso disponer de credenciales de administrador o ser un miembro del rol Lector de utilidad. Observe que puede haber solo un UCP por utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y solo se puede estar conectado a un UCP de una instancia de SSMS.  
+ **Conectarse a un UCP existente**: si ya existe un punto de control de la utilidad en la implementación, puede conectarse a él si hace clic en el botón ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Conectar con la utilidad** en la parte superior del panel Explorador de la utilidad. Para conectarse a un UCP existente, es preciso disponer de credenciales de administrador o ser un miembro del rol Lector de utilidad. Observe que puede haber solo un UCP por utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y solo se puede estar conectado a un UCP de una instancia de SSMS.  
   
- **Crear nuevo UCP**: para crear un punto de control de la utilidad nuevo, haga clic en el botón ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Crear UCP** en la parte superior del panel Explorador de la utilidad. Para crear un UCP nuevo, debe especificar el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y facilitar las credenciales de administrador en el cuadro de diálogo de conexión. Observe que solo puede haber un UCP por utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **Create a new UCP** (Crear un nuevo UCP): para crear un punto de control de la utilidad nuevo, haga clic en el botón ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Create UCP** (Crear UCP) en la parte superior del panel Explorador de la utilidad. Para crear un UCP nuevo, debe especificar el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y facilitar las credenciales de administrador en el cuadro de diálogo de conexión. Observe que solo puede haber un UCP por utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="Instance_name"></a> Especificar la instancia  
  Especifique la siguiente información sobre el UCP que está creando:  
@@ -158,7 +158,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Validation_rules"></a> Reglas de validación  
  En esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se deben dar las siguientes condiciones en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se creará el UCP:  
   
-|Regla de validación|Acción correctora|  
+|Regla de validación|Acción correctiva|  
 |---------------------|-----------------------|  
 |Debe contar con privilegios de administrador en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se creará el punto de control de utilidad.|Inicie sesión con una cuenta que disponga de privilegios de administrador en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |La versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser 10.50 o posterior.|Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente para hospedar el UCP.|  

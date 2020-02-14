@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296877"
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
@@ -110,7 +110,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
  Puede importar o exportar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de las ubicaciones siguientes o a dichas ubicaciones:  
   
--   Puede importar un paquete que esté almacenado en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en el sistema de archivos, o en el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] . El paquete importado se guarda en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en una carpeta del almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+-   Puede importar un paquete que esté almacenado en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en el sistema de archivos o en el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)]. El paquete importado se guarda en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en una carpeta del almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
 -   Puede exportar un paquete que esté almacenado en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en el sistema de archivos, o en el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] a una ubicación y un formato de almacenamiento diferentes.  
   
@@ -124,7 +124,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>Para importar un paquete con SQL Server Management Studio  
   
-1.  Haga clic en **Inicio**, seleccione **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y, después, haga clic en **SQL Server Management Studio**.  
+1.  Haga clic en **Inicio**, seleccione **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y haga clic en **SQL Server Management Studio**.  
   
 2.  En el cuadro de diálogo **Conectar con el servidor** establezca las opciones siguientes:  
   
@@ -160,7 +160,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>Para exportar un paquete con SQL Server Management Studio  
   
-1.  Haga clic en **Inicio**, seleccione **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y, después, haga clic en **SQL Server Management Studio**.  
+1.  Haga clic en **Inicio**, seleccione **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y haga clic en **SQL Server Management Studio**.  
   
 2.  En el cuadro de diálogo **Conectar al servidor** , establezca las siguientes opciones:  
   
@@ -197,7 +197,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
 ### <a name="options"></a>Opciones  
  **Ubicación del paquete**  
- Seleccione el tipo de ubicación de almacenamiento a la que se importará el paquete. Las siguientes opciones están disponibles:  
+ Seleccione el tipo de ubicación de almacenamiento a la que se importará el paquete. Están disponibles las siguientes opciones:  
   
  **SQL Server**  
   
@@ -217,7 +217,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
  **Tipo de autenticación**  
  Seleccione un tipo de autenticación.  
   
- **User name**  
+ **Nombre de usuario**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
@@ -237,7 +237,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
 ### <a name="options"></a>Opciones  
  **Ubicación del paquete**  
- Seleccione el tipo de almacenamiento al que desea exportar el paquete. Las siguientes opciones están disponibles:  
+ Seleccione el tipo de almacenamiento al que desea exportar el paquete. Están disponibles las siguientes opciones:  
   
  **SQL Server**  
   
@@ -257,7 +257,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
  **Tipo de autenticación**  
  Seleccione un tipo de autenticación.  
   
- **User name**  
+ **Nombre de usuario**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
@@ -271,11 +271,11 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
 
 ## <a name="back-up-and-restore-packages"></a>Copia de seguridad y restauración de paquetes
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes se pueden guardar en el sistema de archivos o en msdb, una base de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se puede crear una copia de seguridad de los paquetes guardados en msdb y restaurarlos con las características de copia de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Los paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se pueden guardar en el sistema de archivos o en msdb, una base de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede crear una copia de seguridad de los paquetes guardados en msdb y restaurarlos con las características de copia de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para más información sobre la copia de seguridad y la restauración de la base de datos msdb, haga clic en uno de los temas siguientes:  
   
--   [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+-   [Copia de seguridad y restauración de bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
 -   [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   

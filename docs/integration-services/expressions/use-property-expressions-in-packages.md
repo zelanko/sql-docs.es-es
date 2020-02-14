@@ -20,10 +20,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287870"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
@@ -45,7 +45,7 @@ ms.locfileid: "71287870"
   
 -   Los scripts ejecutados por la tarea Script y el componente de script pueden actualizar las variables de las expresiones.  
   
- Las expresiones se generan con el lenguaje de expresiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las expresiones pueden utilizar variables del sistema o definidas por el usuario, junto con los operadores, funciones y conversiones de tipo que proporciona el lenguaje de expresiones.  
+ Las expresiones se generan con el lenguaje de expresiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Las expresiones pueden utilizar variables del sistema o definidas por el usuario, junto con los operadores, funciones y conversiones de tipo que proporciona el lenguaje de expresiones.  
   
 > [!NOTE]  
 >  Los nombres están definidos por el usuario y las variables del sistema distinguen mayúsculas y minúsculas.  
@@ -71,7 +71,7 @@ ms.locfileid: "71287870"
   
  El diagrama siguiente muestra las interfaces de usuario que sirven para agregar, cambiar y quitar expresiones de propiedad.  
   
- ![Interfaz de usuario para las expresiones de propiedad](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
+ ![Interfaz de usuario para expresiones de propiedad](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "Interfaz de usuario para expresiones de propiedad")  
   
  En la ventana **Propiedades** y en la página **Expresiones**, haga clic en el botón Examinar **(…)** en el nivel de la colección de **Expresiones** para abrir el cuadro de diálogo **Editor de expresiones de propiedad**. El Editor de expresiones de propiedad le permite asignar una propiedad a una expresión y escribir una expresión de propiedad. Si quiere usar las herramientas gráficas de expresiones para crear y validar la expresión, haga clic en el botón Examinar **(…)** en el nivel de expresión para abrir el cuadro de diálogo **Generador de expresiones** y, después, cree o modifique la expresión (y, de manera opcional, valídela).  
   

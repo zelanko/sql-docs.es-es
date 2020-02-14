@@ -18,10 +18,10 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066538"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo de datos geography)
@@ -56,12 +56,12 @@ El límite mínimo es el 0,1 por ciento de la distancia, y cualquier tolerancia 
 _relative_  
 Es un valor **bit** que especifica si el valor _tolerance_ es relativo o absoluto. Si el valor es "TRUE" o 1, la tolerancia es relativa. Este valor es el producto del parámetro _tolerance_ y la extensión angular \* el radio ecuatorial de la elipsoide. La tolerancia es absoluta si el valor es "FALSE" o 0. El valor de _tolerance_ es la variación máxima absoluta en la distancia del búfer idónea para la aproximación lineal devuelta.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
 Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Este método produce una excepción **ArgumentException** si _distance_ no es un número (NAN) o si _distance_ es infinito positivo o negativo.  Este método también produce una excepción **ArgumentException** si _tolerance_ es cero (0), no es un número (NAN), es negativo o si es infinito positivo o negativo.  
   
 `STBuffer()` devuelve una instancia de **FullGlobe** en determinados casos; por ejemplo, `STBuffer()` devuelve una instancia de **FullGlobe** en dos polos cuando la distancia del búfer es mayor que la distancia desde el ecuador a los polos.  

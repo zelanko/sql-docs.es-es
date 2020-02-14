@@ -16,10 +16,10 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90855baaa61e242488a7fb6a91a52e34d77e5f48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284409"
 ---
 # <a name="integration-services-transactions"></a>Transacciones de Integration Services
@@ -100,7 +100,7 @@ Cuando configura un paquete para utilizar transacciones, tiene dos opciones:
 9. En la ventana **Propiedades** , establezca la propiedad TransactionOption en **Se admite**.  
   
     > [!NOTE]  
-    >  Para dar de alta una conexión en una transacción, inscriba las tareas que usan la conexión en la transacción. Para obtener más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md).  
+    >  Para dar de alta una conexión en una transacción, inscriba las tareas que usan la conexión en la transacción. Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
 10. Repita los pasos 6 a 9 para cada tarea y cada contenedor que inician una transacción.  
 
@@ -120,7 +120,7 @@ Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUD
   
  En el diagrama siguiente se muestran las cinco transacciones no relacionadas del paquete. El contenedor de secuencias inicia una transacción y las tareas Ejecutar SQL inician las otras cuatro.  
   
- ![Implementación de varias transacciones](../integration-services/media/mw-dts-trans2.gif "Implementation of multiple transactions")  
+ ![Implementación de varias transacciones](../integration-services/media/mw-dts-trans2.gif "Implementación de varias transacciones")  
  
 ## <a name="inherited-transactions"></a>Transacciones heredadas
  Un paquete puede ejecutar otro paquete, utilizando la tarea Ejecutar paquete. El paquete secundario, que es el que ejecuta la tarea Ejecutar paquete, puede crear su propia transacción de paquete o heredar la del paquete primario.  
@@ -144,7 +144,7 @@ Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUD
   
 -   **TransactionOption** se establece en **NotSupported** en el paquete E y en las tareas Ejecutar paquete C y Ejecutar paquete E.  
   
- ![Flujo de transacciones heredadas](../integration-services/media/mw-dts-executepack.gif "Flow of inherited transactions")  
+ ![Flujo de transacciones heredadas](../integration-services/media/mw-dts-executepack.gif "Flujo de transacciones heredadas")  
   
  Solo los paquetes B, D y F pueden heredar transacciones de sus paquetes primarios.  
   

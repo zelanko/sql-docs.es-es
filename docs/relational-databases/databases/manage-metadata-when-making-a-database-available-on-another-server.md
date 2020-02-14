@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119458"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929114"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "74119458"
   
  Algunas aplicaciones dependen de información, entidades u objetos que se encuentran fuera del ámbito de una base de datos de usuario único. Normalmente, una aplicación depende de las bases de datos **maestras** y **msdb** , así como de la base de datos del usuario. Cualquier elemento almacenado fuera de la base de datos de usuario que sea necesario para el funcionamiento correcto de dicha base de datos debe estar disponible en la instancia de servidor de destino. Por ejemplo, los inicios de sesión de una aplicación se almacenan como metadatos en la base de datos **maestra** y se deben volver a crear en el servidor de destino. Si una aplicación o un plan de mantenimiento de bases de datos dependen de trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cuyos metadatos estén almacenados en la base de datos **msdb** , dichos trabajos se deben volver a crear en la instancia del servidor de destino. De forma similar, los metadatos de un desencadenador de servidor se almacenan en la base de datos **maestra**.  
   
- Si mueve la base de datos de una aplicación a otra instancia del servidor, debe volver a crear todos los metadatos de las entidades y objetos dependientes de las bases de datos **maestra** y **msdb** en la instancia de servidor de destino. Por ejemplo, si una aplicación de la base de datos usa desencadenadores de servidor, no basta con adjuntar o restaurar la base de datos en el nuevo sistema. La base de datos no funcionará según lo previsto a menos que se vuelvan a crear manualmente los metadatos para dichos desencadenadores en la base de datos **maestra** .  
+ Si mueve la base de datos de una aplicación a otra instancia de servidor, debe volver a crear todos los metadatos de las entidades y los objetos dependientes de las bases de datos **maestra** y **msdb** en la instancia de servidor de destino. Por ejemplo, si una aplicación de la base de datos usa desencadenadores de servidor, no basta con adjuntar o restaurar la base de datos en el nuevo sistema. La base de datos no funcionará según lo previsto a menos que se vuelvan a crear manualmente los metadatos para dichos desencadenadores en la base de datos **maestra** .  
   
 ##  <a name="information_entities_and_objects"></a> Información, entidades y objetos almacenados fuera de las bases de datos de usuario  
  En lo que queda de este artículo se resumen los posibles problemas que podrían afectar a una base de datos que se pone a disposición de otra instancia de servidor. Podría tener que volver a crear uno o varios de los tipos de información, entidades u objetos de la lista siguiente. Para ver un resumen, haga clic en el vínculo del elemento.  
@@ -82,11 +82,11 @@ ms.locfileid: "74119458"
   
 -   [Propiedades del motor de texto completo para SQL Server](#ifts_service_properties)  
   
--   [Jobs](#jobs)  
+-   [Trabajos](#jobs)  
   
 -   [Inicios de sesión](#logins)  
   
--   [Permissions](#permissions)  
+-   [Permisos](#permissions)  
   
 -   [Configuración de replicación](#replication_settings)  
   
@@ -113,7 +113,7 @@ ms.locfileid: "74119458"
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
  Las opciones de base de datos DB_CHAINING y TRUSTWORTHY se establecen, de forma predeterminada, en OFF. Si alguna de estas opciones se establece en ON para la base de datos original, es posible que deba habilitarlas en la base de datos de la instancia de servidor de destino. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- Las operaciones de adjuntar y separar deshabilitan el encadenamiento de propiedad entre bases de datos. Para obtener información sobre cómo habilitar el encadenamiento, vea [cross db ownership chaining (opción de configuración del servidor)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
+ Las operaciones de adjuntar y separar deshabilitan el encadenamiento de propiedad entre bases de datos. Para obtener más información sobre cómo habilitar el encadenamiento, vea [cross db ownership chaining (opción de configuración del servidor)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
  Para obtener más información, vea también [Configurar una base de datos reflejada para usar la propiedad Trustworthy &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
@@ -198,7 +198,7 @@ ms.locfileid: "74119458"
   
  Para obtener más información, vea también:  
   
--   [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+-   [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
 -   [Creación de reflejo de la base de datos y catálogos de texto completo &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
 
@@ -273,15 +273,15 @@ ms.locfileid: "74119458"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Permisos GRANT, REVOKE o DENY sobre los objetos del sistema  
  Los permisos de los objetos del sistema como procedimientos almacenados, procedimientos almacenados extendidos, funciones y vistas, se almacenan en la base de datos **maestra** y se deben configurar en la instancia de servidor de destino.  
   
- Para generar un script de algunos o todos los objetos de la copia original de la base de datos, se puede usar el asistente Generar scripts y, en el cuadro de diálogo **Elegir opciones de script** , configurar la opción **Incluir permisos de objeto en el script** en **True**.  
+ Para generar un script de algunos o todos los objetos de la copia original de la base de datos, se puede usar el asistente Generar scripts y, en el cuadro de diálogo **Elegir opciones de script**, configurar la opción **Incluir permisos de objeto en el script** en **True**.  
   
    > [!IMPORTANT]
    > Si incluye inicios de sesión en el script, no se incluirán las contraseñas. Si tiene inicios de sesión que usan la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , deberá modificar el script en el destino.  
   
- Puede ver los objetos del sistema en la vista de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Puede ver los permisos de objetos del sistema en la vista de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) de la base de datos **maestra**. Para obtener información sobre las consultas de estas vistas de catálogo y la concesión de permisos de objetos del sistema, vea [GRANT &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Para obtener más información, vea [REVOKE &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) y [DENY &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
+ Puede ver los objetos del sistema en la vista de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Puede ver los permisos de objetos del sistema en la vista de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) de la base de datos **maestra** . Para obtener información sobre las consultas de estas vistas de catálogo y la concesión de permisos de objetos del sistema, vea [GRANT &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Para obtener más información, vea [REVOKE &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) y [DENY &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>Permisos GRANT, REVOKE o DENY sobre la instancia de servidor  
- Los permisos en el ámbito del servidor se almacenan en la base de datos **maestra** y se deben configurar en la instancia de servidor de destino. Para obtener información sobre los permisos de servidor de una instancia de servidor, consulte la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md); para obtener información sobre las entidades de seguridad de servidor, consulte la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) y, para obtener información sobre la pertenencia a los roles de servidor, consulte la vista de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
+ Los permisos en el ámbito del servidor se almacenan en la base de datos **maestra** y se deben configurar en la instancia de servidor de destino. Para obtener información sobre los permisos de servidor de una instancia de servidor, consulte la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) ; para obtener información sobre las entidades de seguridad de servidor, consulte la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)y, para obtener información sobre la pertenencia a los roles de servidor, consulte la vista de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) .  
   
  Para obtener más información, vea [GRANT &#40;permisos de servidor de Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md), [REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) y [DENY &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md).  
   

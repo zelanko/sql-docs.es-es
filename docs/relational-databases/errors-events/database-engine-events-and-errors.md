@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247321"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918188"
 ---
 # <a name="database-engine-errors"></a>Errores del motor de base de datos
 
@@ -5871,7 +5871,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   14689   |   16  |   No  |   Un conjunto de recopilación no se puede iniciar si el almacén de administración de datos no está configurado. Ejecute el script instmdw.sql para crear y configurar el almacén de administración de datos. |
 |   14690   |   16  |   No  |   Este procedimiento no se puede ejecutar si el recopilador está habilitado. Deshabilite el recopilador y vuelva a intentarlo.  |
 |   14691   |   16  |   No  |   El estado del recopilador no puede ser null. Esto puede indicar daños internos en los datos de configuración del recopilador.   |
-|   14692   |   16  |   No  |   No hay suficientes privilegios para iniciar el conjunto de recopilación '%s'. Solo un miembro del rol fijo de servidor 'sysadmin' puede iniciar un conjunto de recopilación sin un proxy del Agente SQL Server. Adjunte un proxy del Agente SQL Server al conjunto de recopilación antes de volver a intentarlo.    |
+|   14692   |   16  |   No  |   No hay suficientes privilegios para iniciar el conjunto de recopilación: "%s". Solo un miembro del rol fijo de servidor 'sysadmin' puede iniciar un conjunto de recopilación sin un proxy del Agente SQL Server. Adjunte un proxy del Agente SQL Server al conjunto de recopilación antes de volver a intentarlo.    |
 |   14693   |   16  |   No  |   Un conjunto de recopilación no puede empezar sin una programación. Especifique una programación para el conjunto de recopilación.    |
 |   14694   |   16  |   No  |   No se puede cargar datos a solicitud para el conjunto de recopilación '%s' en modo de datos no almacenados en caché.    |
 |   14695   |   16  |   No  |   No se puede recopilar datos a solicitud para el conjunto de recopilación '%s' en modo de datos almacenados en caché.   |
@@ -7997,7 +7997,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   21796   |   16  |   No  |   Se debe asignar un valor mayor o igual que 0 a la propiedad "xactsetjobinterval".  |
 |   21797   |   16  |   No  |   No se puede crear el trabajo del agente. "%s" debe ser un inicio de sesión de Windows válido en el formato: "MACHINE\Login" o "DOMAIN\Login". Consulte la documentación de '%s'.    |
 |   21798   |   16  |   No  |   No se puede ejecutar el procedimiento administrativo de replicación. Debe agregar el trabajo de agente '%s' a través de '%s' antes de continuar. Consulte la documentación de '%s'.   |
-|   21799   |   16  |   No  |   No se encontró el agente %s para el publicador (%s), la base de datos (%s) y la publicación (%s). Cree el agente con el procedimiento adecuado: sp_addpublication_snapshot, sp_addlogreader_agent o sp_addqreader_agent.  |
+|   21799   |   16  |   No  |   No se encuentra el agente %s para el publicador (%s), la base de datos (%s) y la publicación (%s). Cree el agente con el procedimiento adecuado: sp_addpublication_snapshot, sp_addlogreader_agent o sp_addqreader_agent.   |
 |   21800   |   16  |   No  |   La marca de agua de generación común no es válida en esta replicación, ya que no existe o se han limpiado los metadatos de los cambios no propagados. |
 |   21801   |   16  |   No  |   Error del procedimiento almacenado sp_createagentparameter al agregar uno o varios parámetros a la tabla del sistema msdb.dbo.MSagentparameterlist. Compruebe si hay errores devueltos por sp_createagentparameter y por SQL Server durante la ejecución de sp_createagentparameter.    |
 |   21802   |   16  |   No  |   El proceso de creación del perfil de agente no puede validar el valor del parámetro de agente especificado. '%s' no es un valor válido para el parámetro '%s'. El valor debe ser un entero menor o igual que '%d'. Compruebe si la replicación se ha instalado correctamente.   |

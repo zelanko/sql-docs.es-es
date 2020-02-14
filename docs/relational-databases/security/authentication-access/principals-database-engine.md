@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68344598"
 ---
 # <a name="principals-database-engine"></a>Entidades de seguridad (motor de base de datos)
@@ -67,7 +67,7 @@ El usuario `dbo` tiene la propiedad del esquema `dbo`. El esquema `dbo` es el pr
 ## <a name="public-server-role-and-database-role"></a>Rol público de base de datos y de servidor  
 Cada inicio de sesión pertenece al rol fijo de servidor `public` y cada usuario de base de datos pertenece al rol de base de datos `public`. Cuando a un usuario o inicio de sesión no se le han concedido ni denegado permisos concretos para un elemento protegible, hereda los permisos para ese elemento concedidos a public. El rol fijo de servidor `public` y el de base de datos `public` no pueden quitarse. Sin embargo, puede revocar los permisos de los roles `public`. Hay muchos de los permisos que se asignan a los roles `public` de forma predeterminada. La mayoría de estos permisos son necesarios para realizar operaciones rutinarias en la base de datos; el tipo de tareas que todo el mundo debe poder hacer. Tenga cuidado al revocar permisos desde el usuario o el inicio de sesión público, ya que afectará a todos los inicios de sesión y usuarios. Normalmente, no debe denegar permisos a public, ya que la instrucción deny invalida cualquier instrucción grant que podrían crear para los usuarios. 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA, y usuarios y esquemas sys 
+## <a name="information_schema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA, y usuarios y esquemas sys 
  Todas las bases de datos incluyen dos entidades que aparecen como usuarios en las vistas de catálogo:`INFORMATION_SCHEMA` y `sys`. Estas entidades son necesarias para uso interno por parte del motor de base de datos. No se pueden modificar ni quitar.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Inicios de sesión de SQL Server basados en certificados  

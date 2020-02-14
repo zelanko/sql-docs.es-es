@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037592"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315605"
 ---
 # <a name="database-files-and-filegroups"></a>Archivos y grupos de archivos de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Los archivos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen do
 > Los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden colocar en sistemas de archivos FAT o NTFS. En sistemas Windows, se recomienda usar el sistema de archivos NTFS por las características de seguridad que ofrece. 
 
 > [!WARNING]
-> No se pueden colocar grupos de archivos de datos de lectura/escritura, y archivos de registro, en un sistema de archivos NTFS comprimido. Solo las bases de datos de solo lectura y los grupos de archivos secundarios de solo lectura se pueden colocar en un sistema de archivos NTFS comprimido.
+> No se admiten grupos de archivos de datos de lectura o escritura ni archivos de registro en un sistema de archivos NTFS comprimido. Solo las bases de datos de solo lectura y los grupos de archivos secundarios de solo lectura se pueden colocar en un sistema de archivos NTFS comprimido.
 > Para ahorrar espacio, se recomienda encarecidamente usar [compresión de datos](../../relational-databases/data-compression/data-compression.md) en lugar de compresión del sistema de archivos.
 
 Cuando se ejecutan varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un único equipo, cada instancia recibe un directorio predeterminado diferente para albergar los archivos de las bases de datos creadas en la instancia. Para obtener más información, vea [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
@@ -106,7 +106,7 @@ La forma de archivo que utiliza una instantánea de base de datos para almacenar
 |Principal|Grupo de archivos que contiene el archivo principal. Todas las tablas del sistema se asignan al grupo de archivos principal.|  
 |Tabla optimizada para memoria|Un grupo de archivos optimizados para memoria está basado en un grupo de archivos de FILESTREAM.|  
 |Secuencia de archivos||    
-|Definidos por el usuario|Cualquier grupo de archivos creado específicamente por el usuario al crear la base de datos o al modificarla.|  
+|Definidas por el usuario|Cualquier grupo de archivos creado específicamente por el usuario al crear la base de datos o al modificarla.|  
   
 ### <a name="default-primary-filegroup"></a>Grupo de archivos predeterminado (principal)  
  Cuando se crean objetos en la base de datos sin especificar a qué grupo de archivos pertenecen, se asignan al grupo de archivos predeterminado. Siempre existe un grupo de archivos designado como predeterminado. Los archivos del grupo de archivos predeterminado deben ser lo suficientemente grandes como para dar cabida a todos los objetos nuevos no asignados a otros grupos de archivos.  

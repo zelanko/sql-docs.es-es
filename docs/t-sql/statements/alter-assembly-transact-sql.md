@@ -24,10 +24,10 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066113"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
@@ -125,7 +125,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Esta opción no está disponible en una base de datos independiente o en Azure SQL Database.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  ALTER ASSEMBLY no interrumpe las sesiones en ejecución actuales que están ejecutando código en el ensamblado que se va a modificar. Las sesiones actuales completan su ejecución utilizando los bits no modificados del ensamblado.  
   
  Si se especifica la cláusula FROM, ALTER ASSEMBLY actualiza el ensamblado en relación con las últimas copias de los módulos proporcionados. Puesto que pueden existir funciones CLR, procedimientos almacenados, desencadenadores, tipos de datos y funciones de agregado definidas por el usuario en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya definidas en el ensamblado, la instrucción ALTER ASSEMBLY las vuelve a enlazar con la última implementación del ensamblado. Para realizar la operación de volver a enlazar, los métodos que asignan a funciones CLR, procedimientos almacenados y desencadenadores ya deben existir en el ensamblado modificado con las mismas firmas. Las clases que implementan tipos definidos por el usuario CLR y funciones de agregado definidas por el usuario deben cumplir los requisitos de ser un tipo o un agregado definido por el usuario.  

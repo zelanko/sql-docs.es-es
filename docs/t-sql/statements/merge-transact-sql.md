@@ -25,10 +25,10 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680833"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
@@ -285,7 +285,7 @@ Indica las condiciones de búsqueda para especificar \<merge_search_condition> o
 \<graph search pattern>  
 Especifica el patrón de coincidencia de gráficos. Para obtener más información sobre los argumentos de esta cláusula, vea [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Al menos se debe especificar una de las tres cláusulas MATCHED, pero se pueden especificar en cualquier orden. Una variable no puede actualizarse más de una vez en la misma cláusula MATCHED.  
   
@@ -315,7 +315,7 @@ Requiere el permiso SELECT en la tabla de origen y los permisos INSERT, UPDATE o
   
 ## <a name="optimizing-merge-statement-performance"></a>Optimizar el rendimiento de la instrucción MERGE
 
-Mediante la instrucción MERGE, puede reemplazar las instrucciones DML individuales con una instrucción única. Esto puede mejorar el rendimiento de las consultas debido a que las operaciones se realizan dentro de una instrucción única y, por consiguiente, se reduce el número de veces que se procesan los datos en las tablas de destino y de origen. Pero las mejoras en el rendimiento dependerán de si hay índices, combinaciones y otras consideraciones correctas en su lugar.
+Mediante la instrucción MERGE, puede reemplazar las instrucciones DML individuales con una instrucción única. Esto puede mejorar el rendimiento de las consultas debido a que las operaciones se realizan dentro de una instrucción única y, por consiguiente, se reduce el número de veces que se procesan los datos en las tablas de destino y de origen. Sin embargo, las mejoras en el rendimiento dependerán de si hay índices, combinaciones y otras consideraciones correctas en su lugar.
 
 ### <a name="index-best-practices"></a>Prácticas recomendadas para índices
 
@@ -359,7 +359,7 @@ En la instrucción MERGE, la cláusula TOP especifica el número o porcentaje de
 
 Es habitual usar la cláusula TOP para realizar operaciones del lenguaje de manipulación de datos (DML) en una tabla grande en lotes. Cuando se usa la cláusula TOP en la instrucción MERGE con este fin, es importante comprender las implicaciones siguientes.
 
-- Puede afectar al rendimiento de E/S.
+- Puede afectar al rendimiento de la E/S.
 
   La instrucción MERGE realiza exámenes de tabla completos, tanto de las tablas de destino como de origen. Al dividir la operación en lotes, se reduce el número de operaciones de escritura realizadas por lote; sin embargo, cada lote realiza exámenes de tabla completos, tanto de las tablas de destino como de origen. La actividad de lectura resultante puede afectar al rendimiento de la consulta.
 
@@ -389,7 +389,7 @@ Estas instrucciones garantizan que las claves de unión son únicas y que el cri
 
 ### <a name="measuring-and-diagnosing-merge-performance"></a>Medir y diagnosticar el rendimiento de MERGE
 
-Las características siguientes están disponibles para ayudarlo a medir y diagnosticar el rendimiento de las instrucciones MERGE.
+Las características siguientes están disponibles para ayudarle a medir y diagnosticar el rendimiento de las instrucciones MERGE.
 
 - Use el contador merge stmt en la vista de administración dinámica [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) para devolver el número de optimizaciones de consulta para las instrucciones MERGE.
 - Use el atributo merge_action_type en la vista de administración dinámica [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md) para devolver el tipo de plan de ejecución de desencadenadores que se usa como el resultado de una instrucción MERGE.

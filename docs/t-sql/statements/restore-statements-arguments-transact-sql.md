@@ -16,10 +16,10 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982461"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instrucciones RESTORE: argumentos (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "73982461"
 
 En este tema se documentan los argumentos descritos en las secciones "Sintaxis" de la instrucción RESTORE {DATABASE|LOG} y del conjunto de instrucciones auxiliares asociado: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY y RESTORE VERIFYONLY. Solo un subconjunto de estas seis instrucciones admite la mayoría de los argumentos. En la descripción del argumento se indica si éste está admitido.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
  Para comprobar la sintaxis, vea los siguientes temas:  
@@ -52,7 +52,7 @@ En este tema se documentan los argumentos descritos en las secciones "Sintaxis" 
   
  En el caso de una base de datos que utilice el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere en la mayoría de los casos que realice una copia de seguridad de registros después del error antes de restaurar la base de datos. Restaurar una base de datos sin hacer primero una copia del final del registro produce un error, a menos que la instrucción RESTORE DATABASE contenga una cláusula WITH REPLACE o WITH STOPAT, que deben especificar un tiempo o una transacción producidos después de finalizar la copia de seguridad de los datos. Para obtener más información sobre las copias del final del registro, vea [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
- LOG  
+ REGISTRO  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica que se va a aplicar una copia de seguridad de registros de transacciones a esta base de datos. Los registros de transacciones deben aplicarse en orden secuencial. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprueba el registro de transacciones del que se ha realizado la copia de seguridad para asegurarse de que las transacciones se cargan en la base de datos y en la secuencia correctas. Para aplicar varios registros de transacciones, utilice la opción NORECOVERY en todas las operaciones de restauración, excepto en la última.  
@@ -238,7 +238,7 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
   
  Cuando se utiliza con RESTORE LOG, la opción MOVE se puede utilizar solo para reubicar los archivos agregados durante la restauración del registro. Por ejemplo, si la copia de seguridad de registros contiene una operación para agregar el archivo `file23`, este archivo se puede reubicar utilizando la opción MOVE en RESTORE LOG.  
   
- Cuando se usa con la copia de seguridad de instantánea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción MOVE solo se puede usar para reubicar archivos en un blob de Azure dentro de la misma cuenta de almacenamiento que el blob original. La opción MOVE no se puede usar para restaurar la copia de seguridad de instantánea en un archivo local o en otra cuenta de almacenamiento.  
+ Cuando se usa con la copia de seguridad de instantáneade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción MOVE solo se puede usar para reubicar archivos en un blob de Azure dentro de la misma cuenta de almacenamiento que el blob original. La opción MOVE no se puede usar para restaurar la copia de seguridad de instantánea en un archivo local o en otra cuenta de almacenamiento.  
   
  Si se utiliza la instrucción RESTORE VERIFYONLY cuando se tiene previsto reubicar una base de datos en el mismo servidor o copiarla en uno diferente, puede que sea necesario utilizar la opción MOVE para comprobar si hay espacio suficiente disponible en el destino y para identificar los posibles conflictos con los archivos existentes.  
   
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**Válido para**  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
  Un nombre de directorio compatible con Windows. Este nombre debe ser único entre todos los nombres de directorio de FILESTREAM de base de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparación de unicidad se realiza sin distinción entre mayúsculas y minúsculas, independientemente de la configuración de intercalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -541,7 +541,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para comprobar las notas adicionales, vea los siguientes temas:  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

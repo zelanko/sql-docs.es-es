@@ -35,10 +35,10 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155567"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar el Asistente para planes de mantenimiento
@@ -130,9 +130,9 @@ Debe habilitar la [opción de configuración del servidor Agent XPs](../../datab
   
         6.  Debajo de **Resumen**, en **Descripción**, compruebe que todos los valores de la programación de trabajo son correctos.  
   
-        7.  Haga clic en **Aceptar**.  
+        7.  Haga clic en **OK**.  
   
-    6.  Haga clic en **Siguiente**.  
+    6.  Haga clic en **Next**.  
   
 6.  En la página **Seleccionar servidores de destino** , seleccione los servidores en los que desea ejecutar el plan de mantenimiento. Esta página solo está visible en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuradas como servidores maestros.  
   
@@ -157,7 +157,7 @@ En esta página están disponibles las opciones siguientes.
   
  -  **Todas las bases de datos**  
   
-Genera un plan de mantenimiento que ejecuta esta tarea en todas las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a excepción de **tempdb**.  
+Genere un plan de mantenimiento que ejecute esta tarea en todas las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a excepción de **tempdb**.  
   
 **Bases de datos del sistema**  
   
@@ -182,7 +182,7 @@ Casilla**Incluir índices**
   
 ## <a name="define-database-shrink-tasks"></a>Definir las tareas Reducir base de datos  
   
-1.  En la página **Definir la tarea Reducir base de datos** , cree una tarea que intente reducir el tamaño de las bases de datos seleccionadas mediante la instrucción `DBCC SHRINKDATABASE` , con la opción `NOTRUNCATE` o `TRUNCATEONLY` . Para obtener más información, vea [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md). Cuando termine, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Reducir base de datos** , cree una tarea que intente reducir el tamaño de las bases de datos seleccionadas mediante la instrucción `DBCC SHRINKDATABASE` , con la opción `NOTRUNCATE` o `TRUNCATEONLY` . Para obtener más información, vea [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md). Cuando haya terminado, haga clic en **Siguiente**.  
   
     > **¡ADVERTENCIA!** Los datos movidos para reducir un archivo se pueden dispersar en cualquier ubicación disponible en el archivo. Esto produce la fragmentación de índices y puede reducir el rendimiento de las consultas que buscan un intervalo del índice. Para eliminar la fragmentación, considere la posibilidad de volver a generar los índices en el archivo después de la reducción.  
   
@@ -205,7 +205,7 @@ Casilla**Incluir índices**
   
 ## <a name="define-the-index-tasks"></a>Definir las tareas de índice  
   
-1.  En la página **Definir la tarea Reorganizar índice** , seleccione el servidor o los servidores en los que va a mover páginas de índice a un orden de búsqueda más eficiente. Esta tarea usa la instrucción `ALTER INDEX ... REORGANIZE`. Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Cuando termine, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Reorganizar índice** , seleccione el servidor o los servidores en los que va a mover páginas de índice a un orden de búsqueda más eficiente. Esta tarea usa la instrucción `ALTER INDEX ... REORGANIZE`. Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Cuando haya terminado, haga clic en **Siguiente**.  
   
      En esta página están disponibles las opciones siguientes.  
   
@@ -428,7 +428,7 @@ Casilla**Incluir índices**
   
 #### <a name="define-maintenance-cleanup-tasks"></a>Definir las tareas Limpieza de mantenimiento  
   
-1.  En la página **Definir la tarea Limpieza de mantenimiento** , especifique los tipos de archivos que desea eliminar como parte del plan de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y los archivos de copia de seguridad de base de datos. Esta tarea usa la instrucción `EXEC xp_delete_file` . Cuando termine, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Limpieza de mantenimiento** , especifique los tipos de archivos que desea eliminar como parte del plan de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y los archivos de copia de seguridad de base de datos. Esta tarea usa la instrucción `EXEC xp_delete_file`. Cuando termine, haga clic en **Siguiente**.  
   
     > **IMPORTANTE:** Esta tarea no elimina automáticamente archivos incluidos en las subcarpetas del directorio especificado. Esta precaución reduce la posibilidad de un ataque malintencionado que utilice la tarea Limpieza de mantenimiento para eliminar archivos. Si quiere eliminar archivos en las subcarpetas de primer nivel, hay que seleccionar **Incluir subcarpetas de primer nivel**.  
   
@@ -505,10 +505,10 @@ Casilla**Incluir índices**
      **Estado**  
      Indica si la acción del asistente como conjunto ha devuelto el valor **Correcto** o **Error**.  
   
-     **de mensaje**  
+     **Mensaje**  
      Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
-     **Informe**  
+     **Report**  
      Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  

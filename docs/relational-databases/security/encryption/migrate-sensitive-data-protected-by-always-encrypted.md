@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: b96529feb6e6e4c4ac2ad7d4be62474a624392d8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558210"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909915"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Carga masiva de datos cifrados en columnas con Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Para cargar datos cifrados sin tener que volver realizar comprobaciones de metad
 ## <a name="data-migration-scenarios"></a>Escenarios de migración de datos  
 En la siguiente tabla se muestra la configuración recomendada adecuada para varios escenarios de migración.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "|::ref1::|")  
+![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>Carga masiva de datos cifrados  
 Utilice el siguiente proceso para cargar datos cifrados.  
@@ -52,7 +52,7 @@ Utilice el siguiente proceso para cargar datos cifrados.
     ```  
 
 ## <a name="potential-for-data-corruption"></a>Posibilidad de daño en datos  
-Si esta opción no se utiliza adecuadamente, pueden dañarse los datos. La opción **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** permite al usuario insertar los datos en columnas cifradas de la base de datos, incluidos los que se cifran con claves diferentes, los que se cifran incorrectamente o los que, directamente, no se cifran. Si el usuario copia accidentalmente los datos que no están cifrados correctamente mediante el esquema de cifrado (clave de cifrado, algoritmo y tipo de cifrado) configurado para la columna de destino, no podrá descifrar los datos (se dañarán). Esta opción debe utilizarse con cuidado, ya que puede provocar que se dañen los datos de la base de datos.  
+Si esta opción no se utiliza adecuadamente, pueden dañarse los datos. La opción **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** permite al usuario insertar los datos en columnas cifradas de la base de datos, incluidos los que se cifran con claves diferentes, los que se cifran incorrectamente o los que, directamente, no se cifran. Si el usuario copia accidentalmente los datos que no están correctamente cifrados mediante el esquema de cifrado (clave de cifrado de columna, algoritmo y tipo de cifrado) configurado para la columna de destino, no se pueden descifrar los datos (se dañan). Esta opción debe utilizarse con cuidado, ya que puede provocar que se dañen los datos de la base de datos.  
 
 En el siguiente escenario se muestra cómo importar datos de forma incorrecta podría provocar que se dañen los datos:  
 

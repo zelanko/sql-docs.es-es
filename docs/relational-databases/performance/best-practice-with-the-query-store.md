@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: f5861ece9a27e0d38274e9cac97ae046a9f6bdde
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142776"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910108"
 ---
 # <a name="best-practices-with-query-store"></a>Procedimientos recomendados con el almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Intervalo del vaciado de datos (minutos)** : define la frecuencia para conservar en disco las estadísticas en tiempo de ejecución recopiladas. Se expresa en minutos en la interfaz gráfica de usuario (GUI), pero en [!INCLUDE[tsql](../../includes/tsql-md.md)] se expresa en segundos. El valor predeterminado es 900 segundos, equivalente a 15 minutos en la interfaz gráfica de usuario. Considere la posibilidad de usar un valor más alto si la carga de trabajo no genera gran cantidad de consultas y planes diferentes, o bien si puede soportar más tiempo de conservación de los datos antes de cerrar la base de datos.
  
 > [!NOTE]
-> El uso de la marca de seguimiento 7745 impide que los datos del almacén de consultas se escriban en el disco en el caso de un comando de conmutación por error o apagado. Para más información, vea la sección [Uso de marcas de seguimiento en servidores críticos para mejorar la recuperación ante desastres](#Recovery).
+> El uso de la marca de seguimiento 7745 impide que los datos del almacén de consultas se escriban en el disco en el caso de un comando de conmutación por error o apagado. Para obtener más información, vea la sección [Uso de marcas de seguimiento en servidores críticos](#Recovery).
 
 Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer otro valor para **Intervalo de vaciado de datos**:  
   
@@ -109,9 +109,12 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
 -   **Todos**: Captura todas las consultas. Es la opción predeterminada en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 -   **Automático**: se omiten las consultas poco frecuentes y aquellas con una duración de compilación y ejecución insignificante. Los umbrales para la duración del tiempo de ejecución, compilación y recuento de ejecuciones se determinan de forma interna. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], esta es la opción predeterminada.
--   **Ninguno**: el almacén de consultas deja de capturar consultas nuevas.  
+-   **Ninguna**: el almacén de consultas deja de capturar consultas nuevas.  
 -   **Personalizado**: permite un control adicional y la capacidad de ajustar la directiva de recopilación de datos. La nueva configuración personalizada define lo que sucede durante el umbral de tiempo de la directiva de captura interna. Es un límite de tiempo durante el que se evalúan las condiciones configurables y, si alguna de ellas es verdadera, la consulta se puede registrar en el almacén de consultas.
-  
+
+> [!IMPORTANT]
+> Los cursores, las consultas dentro de procedimientos almacenados y las consultas compiladas de forma nativa siempre se capturan cuando Modo de captura de Almacén de consultas se establece en **Todo**, **Automático** o **Personalizado**. Para capturar consultas compiladas de forma nativa, habilite la recopilación de estadísticas por consulta mediante [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
+
  En el script siguiente se establece QUERY_CAPTURE_MODE en AUTO:
   
 ```sql  
@@ -324,10 +327,10 @@ FROM sys.database_query_store_options;
   
 |Modo de captura del almacén de consultas|Escenario|  
 |------------------------|--------------|  
-|**Todos**|Analice la carga de trabajo exhaustivamente en cuanto a todas las formas de las consultas y sus frecuencias de ejecución, y otras estadísticas.<br /><br /> Identifique nuevas consultas en la carga de trabajo.<br /><br /> Detecte si las consultas ad hoc se usan para identificar oportunidades de parametrización automática o de usuario.<br /><br />Nota: Este es el modo de captura predeterminado en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
+|**Todo**|Analice la carga de trabajo exhaustivamente en cuanto a todas las formas de las consultas y sus frecuencias de ejecución, y otras estadísticas.<br /><br /> Identifique nuevas consultas en la carga de trabajo.<br /><br /> Detecte si las consultas ad-hoc se usan para identificar oportunidades de parametrización automática o manual.<br /><br />Nota: Este es el modo de captura predeterminado en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
 |**Automático**|Centre su atención en las consultas pertinentes y accionables. Un ejemplo son las que se ejecutan con regularidad o las que tienen un consumo significativo de recursos.<br /><br />Nota: A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], este es el modo de captura predeterminado.|  
-|**Ninguno**|Ya ha capturado el conjunto de consultas que quiere supervisar en tiempo de ejecución y quiere eliminar los objetos innecesarios que otras consultas podrían introducir.<br /><br /> El modo Ninguno es adecuado para entornos de pruebas y evaluación comparativa.<br /><br /> El modo Ninguno también es adecuado para los proveedores de software que incluyen la configuración del Almacén de consultas definida para supervisar la carga de trabajo de la aplicación.<br /><br /> El modo Ninguno se debe usar con precaución, ya que podría perder la oportunidad de realizar el seguimiento de consultas nuevas importantes y de optimizarlas. Evite el uso del modo Ninguno a menos que tenga un escenario específico que lo requiera.|  
-|**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce un modo de captura Personalizado en el comando `ALTER DATABASE SET QUERY_STORE`. Cuando se habilita, una nueva configuración de la directiva de captura del almacén de consultas incluye más configuraciones del almacén de consultas para ajustar la recopilación de datos en un servidor específico.<br /><br />La nueva configuración personalizada define lo que sucede durante el umbral de tiempo de la directiva de captura interna. Es un límite de tiempo durante el que se evalúan las condiciones configurables y, si alguna de ellas es verdadera, la consulta se puede registrar en el almacén de consultas. Para obtener más información, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
+|**None**|Ya ha capturado el conjunto de consultas que quiere supervisar en tiempo de ejecución y quiere eliminar los objetos innecesarios que otras consultas podrían introducir.<br /><br /> El modo Ninguno es adecuado para entornos de pruebas y evaluación comparativa.<br /><br /> El modo Ninguno también es adecuado para los proveedores de software que incluyen la configuración del Almacén de consultas definida para supervisar la carga de trabajo de la aplicación.<br /><br /> El modo Ninguno se debe usar con precaución, ya que podría perder la oportunidad de realizar el seguimiento de consultas nuevas importantes y de optimizarlas. Evite el uso del modo Ninguno a menos que tenga un escenario específico que lo requiera.|  
+|**Personalizada**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce un modo de captura Personalizado en el comando `ALTER DATABASE SET QUERY_STORE`. Cuando se habilita, una nueva configuración de la directiva de captura del almacén de consultas incluye más configuraciones del almacén de consultas para ajustar la recopilación de datos en un servidor específico.<br /><br />La nueva configuración personalizada define lo que sucede durante el umbral de tiempo de la directiva de captura interna. Es un límite de tiempo durante el que se evalúan las condiciones configurables y, si alguna de ellas es verdadera, la consulta se puede registrar en el almacén de consultas. Para obtener más información, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
 > Los cursores, las consultas dentro de procedimientos almacenados y las consultas compiladas de forma nativa siempre se capturan cuando Modo de captura de Almacén de consultas se establece en **Todo**, **Automático** o **Personalizado**. Para capturar consultas compiladas de forma nativa, habilite la recopilación de estadísticas por consulta mediante [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
@@ -336,7 +339,7 @@ FROM sys.database_query_store_options;
 Configure el almacén de consultas para que contenga solo los datos pertinentes de modo que se ejecute de forma continua y proporcione una magnífica experiencia de solución de problemas con un impacto mínimo en la carga de trabajo normal.  
 La tabla siguiente proporciona prácticas recomendadas:  
   
-|Práctica recomendada|Configuración|  
+|Procedimiento recomendado|Configuración|  
 |-------------------|-------------|  
 |Limitar los datos históricos retenidos.|Configurar la directiva basada en tiempo para activar la limpieza automática.|  
 |Filtrar las consultas no pertinentes.|Configurar **Modo de captura de Almacén de consultas** en **Automático**.|  
@@ -395,7 +398,7 @@ Las marcas de seguimiento globales 7745 y 7752 se pueden usar para mejorar la di
    > [!IMPORTANT]
    > Si va a usar el almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planee instalar las correcciones de escalabilidad de rendimiento descritas en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible.
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 - [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     
 - [Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 - [Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     

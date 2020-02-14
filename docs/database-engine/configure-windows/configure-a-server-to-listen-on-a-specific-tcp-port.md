@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012919"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurar un servidor para que escuche en un puerto TCP específico
@@ -53,9 +53,9 @@ Dado que el puerto 1433 es el estándar conocido de [!INCLUDE[ssNoVersion](../..
   
 3.  Si el cuadro de diálogo **Puertos dinámicos TCP** contiene **0**, que indica que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] escucha en los puertos dinámicos, elimine el 0.  
   
-     ![puertos_TCP](../../database-engine/configure-windows/media/tcp-ports.png "puertos_TCP")  
+     ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  En el cuadro de diálogo **Propiedades de**_IP_ **n** , en el cuadro **Puerto TCP** box, type the port number you want this Propiedades de address to listen on, and then click **Aceptar**. Para especificar varios puertos, sepárelos con una coma.
+4.  En el cuadro **Propiedades** de **IP_n_** , en **Puerto TCP**, escriba el número de puerto en el que quiere que esta dirección IP escuche y haga clic en **Aceptar**. Para especificar varios puertos, sepárelos con una coma.
 
     > [!NOTE] 
     > Si la opción **Escuchar todo** de la pestaña **Protocolo** está establecida en "Sí", solo se usarán los valores de **Puerto TCP** y **Puerto dinámico TCP** de la sección **IPAll** y se ignorarán las secciones individuales **IP**_n_ en su totalidad. Si la opción **Escuchar todo** está establecida en "No", se ignorarán los ajustes de **Puerto TCP** y **Puerto dinámico TCP** de la sección **IPAll** y se usarán los valores de **Puerto TCP**, **Puerto dinámico TCP** y **Habilitado** de las secciones individuales **IP**_n_ en su lugar.

@@ -14,10 +14,10 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947924"
 ---
 # <a name="sql-server-user-settable-object"></a>User Settable (objeto de SQL Server)
@@ -29,11 +29,11 @@ ms.locfileid: "67947924"
 > [!NOTE]  
 >  El Monitor del sistema no realiza automáticamente el sondeo de los procedimientos almacenados de contadores del usuario. Es necesario ejecutarlos explícitamente en una aplicación de usuario para actualizar los valores de estos contadores. Utilice un desencadenador para actualizar automáticamente el valor del contador. Por ejemplo, para crear un contador que supervise el número de filas de una tabla, cree un desencadenador INSERT y DELETE en la tabla que ejecuta la siguiente instrucción: `SELECT COUNT(*) FROM table`. Siempre que se active el desencadenador debido a que se esté realizando una operación INSERT o DELETE en la tabla, el contador del Monitor de sistema se actualizará automáticamente.  
   
- En esta tabla se describe el objeto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
+ En esta tabla se describe el objeto **User Settable** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores de Establecidas por el usuario de SQL Server|Descripción|  
 |---------------------------------------|-----------------|  
-|**Consulta**|El objeto **User Settable** contiene el contador de consultas. El usuario configura los **contadores del usuario** del objeto Query.|  
+|**Consultar**|El objeto **User Settable** contiene el contador de consultas. El usuario configura los **contadores del usuario** del objeto Query.|  
   
  En esta tabla se describen las **instancias** del contador **Consulta** .  
   

@@ -25,13 +25,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a56192c7aa54d9b5fe215b8f793d90d6e814238e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929051"
 ---
-# <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
+# <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Especifica la importancia relativa de que la sesión actual se siga procesando si existe un interbloqueo con otra sesión.  
@@ -66,7 +66,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@** *deadlock_intvar*  
  Es una variable de entero que especifica la prioridad del interbloqueo. La variable se debe establecer en un valor entero en el intervalo (de -10 a 10).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los interbloqueos se producen cuando dos sesiones esperan a tener acceso a los recursos bloqueados por la otra sesión. Si una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta que dos sesiones están interbloqueadas, resuelve el interbloqueo mediante la elección de una de las sesiones como el sujeto de interbloqueo. La transacción actual del sujeto se revierte y se devuelve el mensaje de error de interbloqueo 1205 al cliente. De este modo, se desbloquea dicha sesión para que pueda continuar la otra sesión.  
   
  La selección de la sesión como sujeto de interbloqueo depende de la prioridad de interbloqueo de cada sesión:  

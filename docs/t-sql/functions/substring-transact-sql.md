@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117676"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -54,7 +54,7 @@ SUBSTRING ( expression ,start , length )
  *length*  
  Es un entero positivo o una expresión **bigint** que especifica cuántos caracteres de *expression* se van a devolver. Si *length* es negativo, se genera un error y finaliza la instrucción. Si la suma de *start* y *length* es mayor que el número de caracteres de *expression*, se devuelve la expresión de valor completa que empieza en *start*.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve datos de caracteres si *expression* es de alguno de los tipos de datos de caracteres admitidos. Devuelve datos binarios si *expression* es de alguno de los tipos de datos **binary** admitidos. La cadena devuelta es del mismo tipo que la expresión indicada, con las excepciones mostradas en la tabla:  
   
 |Expresión especificada|Tipo de valor devuelto|  
@@ -63,7 +63,7 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los valores de *start* y *length* deben especificarse en número de caracteres para los tipos de datos **ntext**, **char** o **varchar** y bytes para los tipos de datos **text**, **image**, **binary** o **varbinary**.  
   
  *expresión* debe ser de tipo **varchar(max)** o **varbinary(max)** cuando *start* o *length* contienen un valor mayor que 2 147 483 647.  
@@ -85,9 +85,9 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|NAME |Initial |ThirdAndFourthCharacters|
+|name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|maestra  |m  |st |
+|maestro  |m  |st |
 |tempdb  |t  |mp |
 |model   |m  |de |
 |msdb    |m  |db |

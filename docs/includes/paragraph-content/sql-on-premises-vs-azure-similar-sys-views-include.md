@@ -17,7 +17,7 @@ Como ilustración, en la tabla siguiente se enumeran y comparan dos subconjuntos
 | server_event_notifications<br />server_event_session_actions<br />server_event_session_events<br />server_event_session_fields<br />server_event_session_targets<br />server_event_sessions<br />server_events<br />server_trigger_events | database_event_session_actions<br />database_event_session_events<br />database_event_session_fields<br />database_event_session_targets<br />database_event_sessions |
 | &nbsp; | &nbsp; |
 
-Las dos listas de la tabla anterior son precisas a partir de junio del 2019. Pero el contenido de esta tabla puede quedar obsoleto, porque su contenido no se va a mantener. Para obtener listas precisas, ejecute la siguiente instrucción SELECT de T-SQL. Ejecute SELECT dos veces, una en cada sistema de base de datos.
+Las dos listas de la tabla anterior son precisas a partir de junio del 2019. Pero el contenido de esta tabla puede quedar obsoleto, porque no se va a mantener. Para obtener listas precisas, ejecute la siguiente instrucción SELECT de T-SQL. Ejecute SELECT dos veces, una en cada sistema de base de datos.
 
 ```sql
 SELECT name

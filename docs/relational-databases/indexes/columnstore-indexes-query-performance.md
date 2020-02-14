@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816713"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Rendimiento de las consultas de índices de almacén de columnas
@@ -106,7 +106,7 @@ ms.locfileid: "71816713"
 |bucles anidados||no|no|no||    
 |Consultas uniproceso que se ejecutan en MAXDOP 1||no|no|sí||    
 |Consultas uniproceso con un plan de consulta en serie||no|no|sí||    
-|Sort|Cláusula Order by en SCAN con índice de almacén de columnas|no|no|sí||    
+|sort|Cláusula Order by en SCAN con índice de almacén de columnas|no|no|sí||    
 |Top Sort||no|no|sí||    
 |Agregados de ventana||N/D|N/D|sí|Nuevo operador en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
@@ -127,7 +127,7 @@ ms.locfileid: "71816713"
     
  La aplicación de la agregación se acelera aún más con la agregación eficaz en datos comprimidos/codificados en la ejecución compatible con la caché y el aprovechamiento de SIMD    
     
- ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
+ ![Aplicación de agregado](../../relational-databases/indexes/media/aggregate-pushdown.jpg "Aplicación de agregados")    
     
 Por ejemplo, la aplicación de la agregación se realiza en las dos consultas siguientes:    
     

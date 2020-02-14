@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 38e0164de9dda9f86183a89a29b58753b2a7f118
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769878"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287647"
 ---
 # <a name="filter-published-data"></a>Filtrar datos publicados
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "68769878"
   
 -   Filtros de combinación que están disponibles solamente con la replicación de mezcla.  
   
-     Al utilizar los filtros de combinación, puede ampliar un filtro de fila de una tabla publicada a otra. Para más información, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
+     Al utilizar los filtros de combinación, puede ampliar un filtro de fila de una tabla publicada a otra. Para obtener más información, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
 ## <a name="static-row-filters"></a>filtros de fila estáticos  
  En la siguiente ilustración se muestra una tabla publicada que está filtrada para que solamente se incluyan las filas 2, 3 y 6 en la publicación.  
@@ -74,14 +74,14 @@ ms.locfileid: "68769878"
     > [!NOTE]  
     >  Los filtros de fila en las publicaciones transaccionales pueden producir una sobrecarga significativa porque la cláusula de filtro de artículos se evalúa para cada fila de registro escrita en una tabla publicada para determinar si la fila se debe replicar. Se deben evitar los filtros de fila en publicaciones transaccionales si cada nodo de replicación puede admitir la carga de datos completa y el conjunto de datos global es suficientemente pequeño.  
   
--   Con la replicación de mezcla, utilice filtros de fila con parámetros en vez de crear varias publicaciones con filtros de fila estáticos. Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Con la replicación de mezcla, utilice filtros de fila con parámetros en vez de crear varias publicaciones con filtros de fila estáticos. Para obtener más información, consulte [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Para definir o modificar un filtro de fila estático, vea [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
 ## <a name="column-filters"></a>Filtros de columnas  
  En la siguiente ilustración se muestra una publicación que filtra la columna C.  
   
- ![Filtrado de columnas](../../../relational-databases/replication/publish/media/repl-17.gif "Filtrado de columnas")  
+ ![Filtrado de columnas](../../../relational-databases/replication/publish/media/repl-17.gif "Filtros de columnas")  
   
  También puede utilizar conjuntamente el filtrado de filas y columnas, como se ilustra a continuación.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68769878"
   
     -   **text y ntext**  
   
-    -   **imagen**  
+    -   **image**  
   
     -   **XML**  
   

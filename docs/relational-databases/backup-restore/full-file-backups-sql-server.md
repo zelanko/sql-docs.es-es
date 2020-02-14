@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939611"
 ---
 # <a name="full-file-backups-sql-server"></a>Copias de seguridad de archivos completas (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "67939611"
   
  La restauración de una base de datos usando solo copias de seguridad de archivos y de registros puede ser compleja. Por ello, si es posible, se recomienda realizar una copia de seguridad completa de la base de datos e iniciar las copias de seguridad de registros antes de la primera copia de seguridad de archivos. En la siguiente ilustración se muestra una estrategia en la que se realiza un copia de seguridad completa de la base de datos (a la hora t1) poco después de crear la base de datos (a la hora t0). Esta primera copia de seguridad de la base de datos permite que se inicien las copias de seguridad del registro de transacciones. Las copias de seguridad del registro de transacciones se programan para que se realicen a intervalos definidos. Las copias de seguridad de archivos se realizan con el intervalo que mejor se adapta a los requisitos empresariales de la base de datos. En esta ilustración se muestra cada uno de los cuatro grupos de archivos de los que se hace una copia de seguridad (de uno en uno). El orden en que se realiza una copia de seguridad de estos grupos (A, C, B, A) refleja los requisitos empresariales de la base de datos.  
   
- ![Estrategia que combina las copias de seguridad de la base de datos, de los archivos y del registro](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Estrategia que combina las copias de seguridad de la base de datos, de los archivos y del registro")  
+ ![Estrategia que combina las copias de seguridad de la base de datos, los archivos y el registro](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Estrategia que combina las copias de seguridad de la base de datos, los archivos y el registro")  
   
 > [!NOTE]  
 >  En el modelo de recuperación completa, al restaurar una copia de seguridad de archivos de lectura/escritura, debe poner al día el registro de transacciones para mantener la coherencia con el resto de la base de datos. Para evitar poner al día muchas copias de seguridad del registro de transacciones, contemple el uso de copias de seguridad diferenciales de archivos. Para obtener más información, vea [Copias de seguridad diferenciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  

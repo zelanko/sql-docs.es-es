@@ -21,10 +21,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f70ce04ebe25c752f3cc12d4888f1ff5c967b805
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292406"
 ---
 # <a name="integration-services-paths"></a>Rutas de Integration Services
@@ -56,7 +56,7 @@ Las rutas conectan dos componentes de flujo de datos. Para poder establecer prop
   
 4.  En el **Editor de rutas de flujo de datos**, haga clic en **General**. A partir de este momento puede editar el nombre predeterminado de la ruta y proporcionar una descripción de la ruta. También puede modificar la propiedad PathAnnotation.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
@@ -69,7 +69,7 @@ Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para estable
  **Nombre**  
  Proporcione un nombre único para la ruta.  
   
- **ID**  
+ **Id**  
  El identificador de linaje de la ruta. Esta propiedad es de solo lectura.  
   
  **IdentificationString**  
@@ -137,13 +137,13 @@ Utilice la página **Visores de datos** del cuadro de diálogo **Editor de rutas
  **Tipo de visor de datos**  
  Muestra el tipo del visor de datos.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en esta opción para agregar un visor de datos mediante el cuadro de diálogo **Configurar visor de datos** .  
   
  **Eliminar**  
  Haga clic en esta opción para eliminar el visor de datos seleccionado.  
   
- **Configurar**  
+ **Configuración**  
  Haga clic en esta opción para configurar un visor de datos seleccionado mediante el cuadro de diálogo **Configurar visor de datos** .  
  
 ## <a name="path-properties"></a>Path Properties

@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18aad5811c34eadfda4a2a7fabfdd7a9997311b5
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127389"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761718"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "74127389"
 
 Devuelve información de la propiedad acerca de la instancia del servidor.  
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +60,7 @@ Es una expresión que contiene la información de propiedad que se va a devolver
 |ComparisonStyle|Estilo de comparación de Windows de la intercalación.<br /><br /> Tipo de datos base: **int**|  
 |ComputerNamePhysicalNetBIOS|El nombre NetBIOS del equipo local en el que se está ejecutando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> En el caso de una instancia en clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un clúster de conmutación por error, este valor cambia conforme la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conmuta por error con otros nodos del clúster de conmutación por error.<br /><br /> En una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este valor permanece constante y devuelve el mismo valor que la propiedad MachineName.<br /><br /> **Nota:** Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentra en un clúster de conmutación por error y desea obtener el nombre de la instancia en clúster de conmutación por error, utilice la propiedad MachineName.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |Edición|Edición de producto instalada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use el valor de esta propiedad para determinar las características y los límites, como por ejemplo [Límites de la capacidad de cálculo de cada edición de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Las versiones de 64 bits del [!INCLUDE[ssDE](../../includes/ssde-md.md)] anexan (64 bits) a la versión.<br /><br /> Devuelve:<br /><br /> 'Enterprise Edition'<br /><br /> "Enterprise Edition: licencia basada en núcleo".<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' indica [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo de datos base: **nvarchar(128)**|  
-|EditionID|EditionID representa la edición instalada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use el valor de esta propiedad para determinar las características y los límites, como por ejemplo [Límites de la capacidad de cálculo de cada edición de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: licencia basada en núcleo<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express con Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database o SQL Data Warehouse<br /><br /> Tipo de base de datos: **bigint**|  
+|EditionID|EditionID representa la edición instalada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use el valor de esta propiedad para determinar las características y los límites, como por ejemplo [Límites de la capacidad de cálculo de cada edición de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: licencia basada en núcleo<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express con Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database o Azure Synapse Analytics (anteriormente SQL Data Warehouse)<br /><br /> Tipo de base de datos: **bigint**|  
 |EngineEdition|Edición de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada en el servidor.<br /><br /> 1 = Personal o Desktop Engine (No está disponible en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores.)<br /><br /> 2 = Standard (se devuelve para Standard, Web y Business Intelligence.)<br /><br /> 3 = Enterprise (es el valor que se devuelve en las ediciones Evaluation, Developer y Enterprise).<br /><br /> 4 = Express (se devuelve para Express, Express with Tools y Express con Advanced Services).<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = instancia administrada<br /><br /> Tipo de datos base: **int**|  
 |HadrManagerStatus|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Indica si el administrador de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ha iniciado.<br /><br /> 0 = No iniciado, pendiente de comunicación.<br /><br /> 1 = Iniciado y en ejecución.<br /><br /> 2 = No iniciado y con error.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.|  
 |InstanceDefaultDataPath|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta la versión actual en actualizaciones a partir de finales de 2015.<br /><br /> Nombre de la ruta de acceso predeterminada a los archivos de datos de instancia.|  
@@ -90,7 +90,7 @@ Es una expresión que contiene la información de propiedad que se va a devolver
 |ProductVersion|Versión de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato '*major.minor.build.revision*'.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |ResourceLastUpdateDateTime|Devuelve la fecha y hora de la última actualización de la base de datos de recursos.<br /><br /> Tipo de datos base: **datetime**|  
 |ResourceVersion|Devuelve la versión de la base de datos de recursos.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
-|ServerName|La información del servidor Windows y de la instancia asociada con una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NULL = La entrada no es válida o es un error.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
+|nombreDeServidor|La información del servidor Windows y de la instancia asociada con una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NULL = La entrada no es válida o es un error.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |SqlCharSet|Id. del juego de caracteres de SQL a partir del Id. de intercalación.<br /><br /> Tipo de datos base: **tinyint**|  
 |SqlCharSetName|Juego de caracteres de SQL a partir de la intercalación.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |SqlSortOrder|Id. de criterio de ordenación de SQL a partir de la intercalación.<br /><br /> Tipo de datos base: **tinyint**|  
@@ -99,11 +99,11 @@ Es una expresión que contiene la información de propiedad que se va a devolver
 |FilestreamConfiguredLevel|Nivel configurado de acceso de FILESTREAM. Para más información, vea [filestream access level (opción de configuración del servidor)](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).|  
 |FilestreamEffectiveLevel|Nivel efectivo de acceso de FILESTREAM. Este valor puede ser diferente de FilestreamConfiguredLevel si el nivel ha cambiado y queda pendiente un reinicio de la instancia o del equipo. Para más información, vea [filestream access level (opción de configuración del servidor)](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 
 **sql_variant**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ### <a name="servername-property"></a>Propiedad ServerName
 

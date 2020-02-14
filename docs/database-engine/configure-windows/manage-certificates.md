@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68212741"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Administración de certificados (Administrador de configuración de SQL Server)
@@ -43,11 +43,11 @@ Los certificados SSL/TLS son de uso generalizado para proteger el acceso a SQL S
 
 ##  <a name="provision-single-server-cert"></a> Para instalar un certificado para una única instancia de SQL Server  
   
-1. En Administrador de configuración de SQL Server, en el panel de la consola, expanda **Configuración de red de SQL Server**.  
+1. En el panel de la consola de Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server**.  
   
 2. Haga clic con el botón derecho en **Protocolos para** *&lt;nombre de instancia&gt;* y luego seleccione **Propiedades**.  
   
-3. Elija la pestaña **Certificado** y luego seleccione **Importar**.  
+3. Elija la pestaña **Certificado** y seleccione **Importar**.  
   
 4. Seleccione **Examinar** y luego el archivo del certificado.  
   
@@ -56,11 +56,11 @@ Los certificados SSL/TLS son de uso generalizado para proteger el acceso a SQL S
  
 ##  <a name="provision-failover-cluster-cert"></a> Para instalar un certificado en una configuración de clúster de conmutación por error  
   
-1. En Administrador de configuración de SQL Server, en el panel de la consola, expanda **Configuración de red de SQL Server**.
+1. En el panel de la consola de Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server**.
   
-2. Haga clic con el botón derecho en **Protocolos para** *&lt;nombre de instancia&gt;* y luego elija **Propiedades**. 
+2. Haga clic con el botón derecho en **Protocolos para** *&lt;nombre de instancia&gt;* y luego escoja **Propiedades**. 
 
-3. Elija la pestaña **Certificado** y luego seleccione **Importar**.
+3. Elija la pestaña **Certificado** y seleccione **Importar**.
 
 4. Seleccione el tipo de certificado y si quiere importarlo solo para el nodo actual o para cada nodo de clúster individual.
 

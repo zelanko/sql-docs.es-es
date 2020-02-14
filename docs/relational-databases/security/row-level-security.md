@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809948"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
@@ -34,7 +34,7 @@ La característica Seguridad de nivel de fila permite utilizar la pertenencia a 
   
 La seguridad de nivel de fila (RLS) simplifica el diseño y la codificación de la seguridad de la aplicación. RLS permite implementar restricciones en el acceso a las filas de datos. Por ejemplo, puede asegurarse de que los trabajadores accedan únicamente a aquellas filas de datos que sean pertinentes para su departamento. Otro ejemplo es restringir el acceso de los clientes solo a los datos pertinentes para la empresa.  
   
-La lógica de la restricción de acceso está ubicada en el nivel de base de datos en lugar de estar alejado de los datos en otro nivel de aplicación. El sistema de base de datos aplica las restricciones de acceso cada vez que se intenta acceder a los datos desde cualquier nivel. Esto hace que el sistema de seguridad sea más sólido y confiable ya que reduce la superficie del sistema de seguridad.  
+La lógica de la restricción de acceso está ubicada en el nivel de base de datos en lugar de estar alejado de los datos en otro nivel de aplicación. El sistema de base de datos aplica las restricciones de acceso cada vez que se intenta acceder a los datos desde cualquier nivel. Esto hace que el sistema de seguridad resulte más sólido y confiable al reducir el área expuesta del sistema de seguridad.  
   
 Implemente RLS mediante la instrucción [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] y los predicados creados como [funciones con valores de tabla insertadas](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
 
@@ -101,7 +101,7 @@ RLS admite dos tipos de predicados de seguridad.
   
  Los predicados de filtro RLS son funcionalmente equivalentes a anexar una cláusula **WHERE** . El predicado puede ser tan sofisticado como dictan las prácticas empresariales o la cláusula puede ser tan simple como `WHERE TenantId = 42`.  
   
- En términos más formales, RLS presenta control de acceso basado en predicado. Ofrece una evaluación flexible, centralizada y basada en predicados. El predicado puede basarse en metadatos o en cualquier otro criterio que el administrador determine según corresponda. El predicado se usa como un criterio para determinar si el usuario tiene el acceso adecuado a los datos según los atributos del usuario. El control de acceso basado en etiquetas se puede implementar con el control de acceso basado en predicados.  
+ En términos más formales, RLS presenta control de acceso basado en predicado. Ofrece una evaluación flexible, centralizada y basada en predicados. El predicado puede basarse en metadatos o en cualquier otro criterio que el administrador determine según corresponda. El predicado se usa como un criterio para determinar si el usuario tiene el acceso adecuado a los datos según los atributos del usuario. El control de acceso basado en etiquetas se puede implementar mediante el control de acceso basado en predicados.  
   
 ## <a name="Permissions"></a> Permisos
 
@@ -149,7 +149,7 @@ Es importante observar que un administrador de directivas de seguridad malintenc
   
 ### <a name="carefully-crafted-queries"></a>Consultas cuidadosamente diseñadas
 
-Es posible perder información mediante el uso de consultas cuidadosamente diseñadas. Por ejemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiría que un usuario malintencionado sepa que el salario de Juan García es 100.000 $. Aunque hay un predicado de seguridad para impedir que un usuario malintencionado consulte directamente el salario de otras personas, el usuario puede determinar el momento en que la consulta devuelve una excepción de división por cero.  
+Es posible perder información con el uso de consultas cuidadosamente diseñadas. Por ejemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiría que un usuario malintencionado sepa que el salario de Juan García es 100.000 $. Aunque hay un predicado de seguridad para impedir que un usuario malintencionado consulte directamente el salario de otras personas, el usuario puede determinar el momento en que la consulta devuelve una excepción de división por cero.  
 
 ## <a name="Limitations"></a> Compatibilidad entre características
 

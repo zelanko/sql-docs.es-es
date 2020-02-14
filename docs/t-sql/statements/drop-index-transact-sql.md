@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982159"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "73982159"
 > [!IMPORTANT]
 >  La sintaxis definida en `<drop_backward_compatible_index>` dejará de incluirse en una futura versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta sintaxis en nuevos trabajos de programación y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice la sintaxis especificada en `<drop_relational_or_xml_index>`. Los índices XML no se pueden quitar utilizando la sintaxis compatible con versiones anteriores.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -162,10 +162,10 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  Especifica si las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de índice. El valor predeterminado es OFF.  
   
- ON  
+ ACTIVAR  
  No se mantienen los bloqueos de tabla a largo plazo. Esto permite que continúen las consultas o actualizaciones en la tabla subyacente.  
   
- OFF  
+ Apagado  
  Se aplican bloqueos de tabla y la tabla deja de estar disponible mientras dure la operación con índices.  
   
  La opción ONLINE solo se puede especificar cuando se quitan índices clúster. Para obtener más información, vea la sección Comentarios.  
@@ -217,7 +217,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]
 >  En este contexto, el valor predeterminado no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en MOVE TO **"** default **"** o MOVE TO **[** default **]** . Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se quita un índice no clúster, se quita la definición del índice de los metadatos y las páginas de datos del índice (árbol b) se quitan de los archivos de la base de datos. Cuando se quita un índice clúster, se quita la definición del índice de los metadatos y las filas de datos que se almacenaron en el nivel hoja del índice clúster se almacenan en la tabla resultante no ordenada, un montón. Se recuperará todo el espacio anteriormente ocupado por el índice. Después, se puede utilizar este espacio para cualquier objeto de base de datos.  
   
  Un índice no se puede quitar si el grupo de archivos en el que se encuentra está sin conexión o se ha definido como de solo lectura.  

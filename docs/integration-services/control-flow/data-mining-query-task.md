@@ -19,10 +19,10 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cba502e5f89c39df67b74909f3185ad45c659e2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298359"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
@@ -38,7 +38,7 @@ ms.locfileid: "71298359"
   
 -   [Tarea Ejecutar DDL de Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Tarea Procesamiento de Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tarea de procesamiento de Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 ## <a name="prediction-queries"></a>Consultas de predicción  
  La consulta es una instrucción de Extensiones de minería de datos (DMX). El lenguaje DMX es una extensión del lenguaje SQL que permite trabajar con modelos de minería de datos. Para más información sobre cómo usar el lenguaje DMX, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
@@ -84,12 +84,12 @@ ms.locfileid: "71298359"
  Escriba una descripción de la tarea Consulta de minería de datos.  
   
 ### <a name="mining-model-tab-options"></a>Opciones de la pestaña Modelo de minería de datos  
- **Conexión**  
+ **Connection**  
  Seleccione un administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la lista, o bien haga clic en **Nuevo** para crear un administrador de conexiones.  
   
  **Temas relacionados:**  [Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear un administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  **Temas relacionados:** [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -133,10 +133,10 @@ ms.locfileid: "71298359"
  **Nombre de variable**  
  Seleccione una variable de la lista para asignarla al parámetro.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un parámetro a la lista.  
   
- **Quitar**  
+ **Remove**  
  Seleccione un parámetro y haga clic en **Quitar**.  
   
 ### <a name="result-set-tab-options"></a>Opciones de la pestaña Conjunto de resultados  
@@ -151,15 +151,15 @@ ms.locfileid: "71298359"
  **Tipo de resultado**  
  Indique si desea devolver una fila única o un conjunto de resultados completo.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un conjunto de resultados a la lista.  
   
- **Quitar**  
+ **Remove**  
  Seleccione un resultado y haga clic en **Quitar**.  
 ## <a name="data-mining-query-task-editor-output-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Salida)
   Use la pestaña **Salida** del cuadro de diálogo **Editor de la tarea Consulta de minería de datos** para especificar el destino de la consulta de predicción.  
   
- Para obtener información sobre cómo implementar minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
+ Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Opciones generales  
  **Nombre**  
@@ -172,10 +172,10 @@ ms.locfileid: "71298359"
  Escriba una descripción de la tarea Consulta de minería de datos.  
   
 ### <a name="output-tab-options"></a>Opciones de la pestaña Salida  
- **Conexión**  
+ **Connection**  
  Seleccione un administrador de conexiones de la lista o haga clic en **Nuevo** para crear uno.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones nuevo. Solo se pueden usar los tipos de administrador de conexiones ADO.NET y OLE DB.  
   
  **Tabla de salida**  

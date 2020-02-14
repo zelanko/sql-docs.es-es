@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095992"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Consultas distribuidas de Microsoft SQL Server: Conectividad OLE DB
@@ -110,9 +110,9 @@ En una consulta distribuida se admite un cursor de conjunto de claves si se cump
 
 No se admiten cursores de conjunto de claves en consultas distribuidas que impliquen la función *OpenQuery*.
 
-#### <a name="updatable-keyset-cursor-requirements"></a>Requisitos de los cursores de conjunto de claves actualizables
+#### <a name="updatable-keyset-cursor-requirements"></a>Requisitos de los cursores dinámicos actualizables
 
-Una tabla remota se puede actualizar o eliminar mediante un cursor de conjunto de claves definido en una consulta distribuida, por ejemplo, `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. Estas son las condiciones bajo las que se permiten los cursores actualizables en las consultas distribuidas:
+Una tabla remota se puede actualizar o eliminar mediante un cursor de conjunto de claves definido en una consulta distribuida, por ejemplo, `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. Éstas son las condiciones que se deben cumplir para poder utilizar cursores actualizables en las consultas distribuidas:
 
 - Los cursores actualizables se permiten si el proveedor también cumple las condiciones para las actualizaciones y eliminaciones en la tabla remota. Para más información, vea \"Instrucciones UPDATE y DELETE\" más adelante en este artículo.
 
@@ -190,7 +190,7 @@ Estos son los pasos generales que realiza SQL Server cuando se conecta a un prov
 
    SQL Server recopila varias propiedades de proveedor que se usarán en la evaluación de la consulta distribuida; estas propiedades se recuperan mediante una llamada a `IDBProperties::GetProperties`. Todas estas propiedades son opcionales; pero si se admiten todas las propiedades relevantes, SQL Server puede sacar el máximo partido de las funciones del proveedor. Por ejemplo, se necesita `DBPROP_SQLSUPPORT` para determinar si SQL Server puede enviar consultas al proveedor. Si esta propiedad no se admite, SQL Server no usará el proveedor remoto como proveedor de comandos SQL aunque lo sea. En la tabla siguiente, en la columna Valor predeterminado se indica qué valor asume SQL Server si el proveedor no admite la propiedad.
 
-Propiedad| Valor predeterminado| Utilice |
+Propiedad| Valor predeterminado| Uso |
 |:----|:----|:----|
 |`DBPROP_DBMSNAME`|None|Se usa para mensajes de error.|
 |`DBPROP_DBMSVER` |None|Se usa para mensajes de error.|
@@ -308,7 +308,7 @@ Los tipos de datos de las consultas distribuidas se administran mediante uno de 
 
 Tabla de asignación de tipos de datos de SQL Server y OLE DB.
 
-| Tipo de OLE DB | `DBCOLUMNFLAG` | Tipo de datos de SQL Server |
+| Tipo de OLE DB | `DBCOLUMNFLAG` | Tipos de datos de SQL Server |
 |-----|-----|-----|
 |`DBTYPE_I1`*| |`numeric(3, 0)`|
 |`DBTYPE_I2`| |`smallint`|
@@ -323,7 +323,7 @@ Tabla de asignación de tipos de datos de SQL Server y OLE DB.
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>o Administrador de configuración de<br> Longitud máxima > 4000 caracteres|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>or<br> Longitud máxima > 4000 caracteres|ntext|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
 |`DBTYPE_IDISPATCH`| |Error|
@@ -332,16 +332,16 @@ Tabla de asignación de tipos de datos de SQL Server y OLE DB.
 |`DBTYPE_VARIANT`*| |NVARCHAR|
 |`DBTYPE_IUNKNOWN`| |Error|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>o Administrador de configuración de<br> Longitud máxima > 8000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, Tamaño de columna = 8 <br>o Administrador de configuración de<br> Longitud máxima no indicada. | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longitud máxima > 8000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, Tamaño de columna = 8 <br>or<br> Longitud máxima no indicada. | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>o Administrador de configuración de<br> Longitud máxima > 8000 caracteres <br>o Administrador de configuración de<br>   Longitud máxima no indicada. | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longitud máxima > 8000 caracteres <br>or<br>   Longitud máxima no indicada. | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>o Administrador de configuración de<br> Longitud máxima > 4000 caracteres <br>o Administrador de configuración de<br>   Longitud máxima no indicada. | `ntext`|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longitud máxima > 4000 caracteres <br>or<br>   Longitud máxima no indicada. | `ntext`|
 |`DBTYPE_UDT`| |Error|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime` (se requiere conversión explícita)|
@@ -495,13 +495,13 @@ Si el proveedor admite características de SQL que no se incluyen en el nivel de
 
 - SQLPROP_GROUPBY. Esta propiedad es de interés para un proveedor que admita el nivel Minimum (mínimo) de SQL. Esta propiedad indica que el proveedor admite las cláusulas GROUP BY y HAVING en la instrucción `SELECT`. Además, esta propiedad también indica que el proveedor admite las cinco funciones de agregado siguientes: MIN, MAX, SUM, COUNT y AVG. Es posible que el proveedor no admita DISTINCT en el argumento de estas funciones de agregado.
 
-- SQLPROP_SUBQUERIES. Esta propiedad es de interés para un proveedor que admita el nivel Minimum de SQL. Indica que el proveedor admite subconsultas, como se especifica en el nivel de entrada SQL-92. Esto incluye las subconsultas de la lista `SELECT` y la cláusula `WHERE` con compatibilidad con las subconsultas correlacionadas, y los operadores `IN`, `EXISTS`, `ALL` y `ANY`.
+- SQLPROP_SUBQUERIES. esta propiedad es de interés para un proveedor que admita el nivel Minimum de SQL. Indica que el proveedor admite subconsultas, como se especifica en el nivel de entrada SQL-92. Esto incluye las subconsultas de la lista `SELECT` y la cláusula `WHERE` con compatibilidad con las subconsultas correlacionadas, y los operadores `IN`, `EXISTS`, `ALL` y `ANY`.
 
 - SQLPROP_DATELITERALS. Esta propiedad es de interés para cualquier proveedor (incluidos los que admiten el nivel de entrada SQL-92). La compatibilidad con la sintaxis de literales estándar para los literales de fecha y hora no forma parte del nivel de entrada SQL-92. Esta propiedad específica de SQL Server indica que el proveedor admite la sintaxis de literales de fecha y hora, como se especifica en el estándar SQL-92.
 
 - SQLPROP_ANSILIKE. De interés para un proveedor que admita el nivel Minimum de SQL. Esta propiedad indica que el proveedor admite el operador `LIKE` según el nivel de entrada SQL-92 (\'%\' y \'_\' como caracteres comodín). Esto se usará en un proveedor que admita el nivel Minimum de SQL, ya que ese nivel no incluye compatibilidad con `LIKE`.
 
-- SQLPROP_INNERJOIN. Esta propiedad es de interés para los proveedores que admiten el nivel Minimum de SQL. Indica compatibilidad con varias tablas en la cláusula `FROM`. Esto se usará en un proveedor que solo admita el nivel Minimum de SQL, ya que ese nivel no incluye compatibilidad con las combinaciones. Esto no indica la compatibilidad con palabras clave JOIN explícitas ni con combinaciones OUTER. Solo indica que se admiten combinaciones implícitas a través de una lista de tablas en la cláusula `FROM`.
+- SQLPROP_INNERJOIN. esta propiedad es de interés para los proveedores que admiten el nivel Minimum de SQL. Indica compatibilidad con varias tablas en la cláusula `FROM`. Esto se usará en un proveedor que solo admita el nivel Minimum de SQL, ya que ese nivel no incluye compatibilidad con las combinaciones. Esto no indica la compatibilidad con palabras clave JOIN explícitas ni con combinaciones OUTER. Solo indica que se admiten combinaciones implícitas a través de una lista de tablas en la cláusula `FROM`.
 
 - SQLPROP_DYNAMICSQL. Indica compatibilidad con `?` como marcador de parámetro. El marcador de parámetro se debe admitir en lugar de un elemento escalar en una cláusula `WHERE` o en la lista `SELECT`. La compatibilidad con marcadores de parámetros `?` permite a SQL Server enviar consultas con parámetros al proveedor.
 
@@ -536,7 +536,7 @@ En el caso de los servidores vinculados de SQL Server, SQL Server determina de f
 
 Todavía se admite la opción Compatible con la intercalación admitida en SQL Server 7.0, por razones de compatibilidad con versiones anteriores. Establecerla en true equivale a establecer la opción Nombre de intercalación en la intercalación predeterminada de la base de datos maestra de SQL Server. Las nuevas aplicaciones deben usar la opción Nombre de intercalación en lugar de la opción Compatible con la intercalación.
 
-### <a name="indexed-access"></a>Acceso indexado
+### <a name="indexed-access"></a>Acceso indizado
 
 SQL Server usa un índice expuesto por el proveedor para evaluar determinados predicados de la consulta distribuida. Este escenario solo es posible en los proveedores de índices y cuando el usuario establece la opción de proveedor `Index as Access Path`. Estos son los principales pasos generales que SQL Server realiza en el proveedor mientras se usa un índice para ejecutar una consulta:
 
@@ -616,7 +616,7 @@ En la tabla siguiente se enumeran todas las interfaces de OLE DB que usa SQL Ser
 
 En el caso de las interfaces opcionales, en la columna Escenarios se indican uno o más de los seis escenarios en los que se usa la interfaz especificada. Por ejemplo, la interfaz `IRowsetChange` de los conjuntos de filas de tabla base es una interfaz opcional; se usa en las instrucciones `UPDATE` y DELETE, y en escenarios con instrucciones `INSERT`. Si no se admite esta interfaz, las instrucciones UPDATE, DELETE e `INSERT` no se admiten en ese proveedor. Algunas de las otras interfaces opcionales están marcadas con \"rendimiento\" en la columna Escenarios, lo que indica que la interfaz da como resultado un mejor rendimiento general. Por ejemplo, si no se admite la interfaz `IDBSchemaRowset`, SQL Server debe abrir el conjunto de filas dos veces: una para sus metadatos y otra para la ejecución de la consulta. Al admitir `IDBSchemaRowset`, se mejora el rendimiento de SQL Server.
 
-|Objeto|Interfaz|Obligatorio|Comentarios|Escenarios|
+|Object|Interfaz|Obligatorio|Comentarios|Escenarios|
 |:-----|:-----|:-----|:-----|:-----|
 |Objeto de origen de datos|`IDBInitialize`|Sí|Se inicializa y configura el contexto de datos y seguridad.| |
 | |`IDBCreateSession`|Sí|Se crea un objeto de sesión de base de datos.| |
@@ -640,7 +640,7 @@ En el caso de las interfaces opcionales, en la columna Escenarios se indican uno
 | |`IColumnsInfo`|Sí|Se obtiene información sobre las columnas de un conjunto de filas.|Acceso indexado, rendimiento.|
 | |`IRowsetInfo`|Sí|Se obtiene información sobre las propiedades del conjunto de filas.|Acceso indexado, rendimiento.|
 | |`IRowsetIndex`|Sí|Solo se necesita para los conjuntos de filas de un índice; se usa para la funcionalidad de indexación (establecimiento de intervalos, búsquedas).|Acceso indexado, rendimiento.|
-|Comando|`ICommand`|Sí| |Consulta remota, consulta de paso a través.|
+|Get-Help|`ICommand`|Sí| |Consulta remota, consulta de paso a través.|
 | |`ICommandText`|Sí|Se usa para definir el texto de la consulta.|Consulta remota, consulta de paso a través.|
 | |`IColumnsInfo`|Sí|Se usa para obtener metadatos de columna para los resultados de la consulta.|Consulta remota, consulta de paso a través.|
 | |`ICommandProperties`|Sí|Se usa para especificar propiedades necesarias en conjuntos de filas devueltos por el comando.|Consulta remota, consulta de paso a través.|

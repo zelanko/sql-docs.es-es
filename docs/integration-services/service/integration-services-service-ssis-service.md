@@ -23,10 +23,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296948"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servicio Integration Services (servicio SSIS)
@@ -38,7 +38,7 @@ ms.locfileid: "71296948"
   
  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena objetos, valores y datos operativos en la base de datos **SSISDB** para los proyectos que se han implementado en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante el modelo de implementación de proyectos. El servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que es una instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , hospeda la base de datos. Para obtener más información sobre la base de datos, vea [Catálogo de SSIS](../../integration-services/catalog/ssis-catalog.md). Para obtener más información sobre la implementación de proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Implementación de proyectos y paquetes de Integration Services [SSIS]).  
   
-## <a name="management-capabilities"></a>Capacidades de administración  
+## <a name="management-capabilities"></a>Funcionalidades de administración  
  El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es un servicio de Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] solo está disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Ejecutar el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona las siguientes capacidades de administración:  
@@ -71,7 +71,7 @@ ms.locfileid: "71296948"
  Al instalar el componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se instala también el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . De forma predeterminada, el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se inicia y el tipo de inicio del servicio se establece en automático. Sin embargo, también debe instalar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para usar el servicio y administrar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacenados y en ejecución.  
   
 > [!NOTE]
-> Para conectar directamente con una instancia del servicio Integration Services heredado, tendrá que usar la versión de SQL Server Management Studio (SSMS) alineada con la versión de SQL Server en la que se ejecuta el servicio Integration Services. Por ejemplo, para conectar con el servicio Integration Services heredado que se ejecuta en una instancia de SQL Server 2016, debe usar la versión de SSMS publicada para SQL Server 2016. [Descarga de SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+> Para conectar directamente con una instancia del servicio Integration Services heredado, tendrá que usar la versión de SQL Server Management Studio (SSMS) alineada con la versión de SQL Server en la que se ejecuta el servicio Integration Services. Por ejemplo, para conectar con el servicio Integration Services heredado que se ejecuta en una instancia de SQL Server 2016, debe usar la versión de SSMS publicada para SQL Server 2016. [Descargue SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 >
 >   En el cuadro de diálogo **Conectar con el servidor** de SSMS, no se puede escribir el nombre de un servidor en el que se está ejecutando una versión anterior del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . En cambio, para administrar paquetes almacenados en un servidor remoto, no tiene que conectarse a la instancia del servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en ese servidor remoto. En su lugar, modifique el archivo de configuración para el servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de manera que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muestre los paquetes almacenados en el servidor remoto.   
   
@@ -79,7 +79,7 @@ ms.locfileid: "71296948"
   
  Puede administrar el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante uno de los siguientes complementos de Microsoft Management Console (MMC): los servicios o el Administrador de configuración de SQL Server. Antes de que pueda administrar paquetes en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], asegúrese de que se ha iniciado el servicio.  
   
- De forma predeterminada, el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para administrar los paquetes de la base de datos msdb de la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se instala al mismo tiempo que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si no se instala al mismo tiempo una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para administrar paquetes de la base de datos msdb de la instancia local predeterminada del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para administrar paquetes que están almacenados en una instancia con nombre o remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)], o en varias instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)], tiene que modificar el archivo de configuración para el servicio.
+ De forma predeterminada, el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para administrar los paquetes de la base de datos msdb de la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se instala al mismo tiempo que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si no se instala al mismo tiempo una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para administrar paquetes de la base de datos msdb de la instancia local predeterminada del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para administrar paquetes que están almacenados en una instancia con nombre o remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)], o en varias instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)], tiene que modificar el archivo de configuración para el servicio.
   
  De manera predeterminada, el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está configurado para dejar de ejecutar paquetes cuando se detiene el servicio. Sin embargo, el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no espera a que los paquetes se detengan y es posible que algunos paquetes sigan ejecutándose después de detener el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71296948"
   
 ## <a name="set-the-properties-of-the-service"></a>Establecimiento de las propiedades del servicio
   
- El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] administra y supervisa los paquetes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]por primera vez, se inicia el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el tipo de inicio del servicio se establece como automático.  
+ El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] administra y supervisa los paquetes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]por primera vez, se inicia el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el tipo de inicio del servicio se establece como automático.  
   
  Una vez instalado el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede establecer sus propiedades mediante el Administrador de configuración de SQL Server o el complemento Servicios de componentes de MMC.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71296948"
         > [!NOTE]  
         >  La pestaña **Avanzadas** no contiene información para el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  En el menú **Archivo** , haga clic en **Salir** para cerrar el complemento **Administrador de configuración de SQL Server** .  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71296948"
   
 4.  En el cuadro de diálogo **Propiedades de SQL Server Integration Services** , puede hacer lo siguiente:  
   
-    -   Haga clic en la pestaña **General** . Para habilitar el servicio, seleccione el tipo de inicio manual o automático. Para deshabilitar el servicio, seleccione Deshabilitar en el cuadro **Tipo de inicio** . Si el servicio se está ejecutando, no se detendrá al seleccionar Deshabilitar.  
+    -   Haga clic en la pestaña **General**. Para habilitar el servicio, seleccione el tipo de inicio manual o automático. Para deshabilitar el servicio, seleccione Deshabilitar en el cuadro **Tipo de inicio** . Si el servicio se está ejecutando, no se detendrá al seleccionar Deshabilitar.  
   
          Si el servicio ya está habilitado, puede hacer clic en **Detener** para detenerlo o en **Iniciar** para iniciarlo.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "71296948"
   
     -   Haga clic en la pestaña **Dependencias** para ver una lista de los servicios dependientes. El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no tiene dependencias.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Opcionalmente, si el tipo de inicio es Manual o Automático, puede hacer clic con el botón derecho en **SQL Server Integration Services** y hacer clic en **Iniciar, Detener o Reiniciar**.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "71296948"
   
 2.  En el diálogo **Servicios de componentes**, expanda el nodo Servicios de componente > Equipos > Mi PC > Configuración DCOM.  
   
-3.  Haga clic con el botón derecho en **Microsoft SQL Server Integration Services 13.0** y, después, haga clic en **Propiedades**.  
+3.  Haga clic con el botón derecho en **Microsoft SQL Server Integration Services 13.0**y, después, haga clic en **Propiedades**.  
   
 4.  En la pestaña **Seguridad** , haga clic en **Editar** en la sección **Permisos de inicio y activación** .  
   
@@ -227,7 +227,7 @@ Cuando se instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)],
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file"></a>Modificación del archivo de configuración  
+### <a name="modify-the-configuration-file"></a>Modifique el archivo de configuración  
  Puede modificar el archivo de configuración para permitir que los paquetes se sigan ejecutando si se detiene el servicio, para mostrar carpetas raíz adicionales en el Explorador de objetos, o para especificar una carpeta distinta o carpetas adicionales del sistema de archivos que deban ser administradas por el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por ejemplo, puede crear carpetas raíz adicionales de tipo, **SqlServerFolder**, para administrar paquetes en las bases de datos msdb de instancias adicionales de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!NOTE]  
@@ -314,7 +314,7 @@ Cuando se instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)],
   
 3.  Seleccione **Integration Services** en la lista **Tipo de servidor** .  
   
-4.  Escriba el nombre de un servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el cuadro de texto **Nombre del servidor** .  
+4.  Escriba el nombre de un servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el cuadro de texto **Nombre del servidor**.  
   
     > [!NOTE]  
     >  El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no es específico de la instancia. La conexión al servicio se realiza utilizando el nombre del equipo en el que el servicio de Integration Services se está ejecutando.  

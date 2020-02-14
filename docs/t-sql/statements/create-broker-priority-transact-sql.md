@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064680"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73064680"
 
   Define un nivel de prioridad y el conjunto de criterios para determinar a qué conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] se debe asignar el nivel de prioridad. El nivel de prioridad se asignará a cualquier extremo de conversación que use la misma combinación de contratos y servicios especificados en la prioridad de conversación. El valor de las prioridades va de 1 (bajo) a 10 (alto). El valor predeterminado es 5.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -110,7 +110,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Especifica la prioridad que se asigna a cualquier extremo de conversación que utilice los contratos y servicios que se han especificado en la prioridad de conversación. *PriorityValue* debe ser un literal entero comprendido entre 1 (prioridad más baja) y 10 (prioridad más alta). El valor predeterminado es 5.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] asigna los niveles de prioridad a los extremos de conversación. Los niveles de prioridad controlan la prioridad de las operaciones asociadas al extremo. Cada conversación tiene dos extremos:  
   
 -   El extremo iniciador de conversación asocia un lado de la conversación con el servicio iniciador y con la cola del iniciador. El extremo iniciador de la conversación se crea cuando se ejecuta la instrucción BEGIN DIALOG. Las operaciones que realiza el extremo iniciador de conversación son:  

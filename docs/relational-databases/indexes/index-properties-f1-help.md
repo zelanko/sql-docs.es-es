@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68476298"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
@@ -95,10 +95,10 @@ ms.locfileid: "68476298"
  **Permitir valores NULL**  
  Muestra si la columna que participa en la clave de índice permite almacenar valores NULL en la columna de vista o tabla.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una columna a la clave de índice. Seleccione columnas de tabla del cuadro de diálogo **Seleccionar columnas de** *\<nombre de tabla>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
   
- **Quitar**  
+ **Remove**  
  Quita la columna seleccionada de la clave de índice.  
   
  **Subir**  
@@ -131,7 +131,7 @@ ms.locfileid: "68476298"
  **Identidad**  
  Muestra **Sí** para columnas de identidad y **No** cuando la columna no es una columna de identidad.  
   
- **Allow Nulls**  
+ **Permitir valores NULL**  
  Muestra **Sí** cuando la definición de la tabla permite valores NULL para la columna. Muestra **No** cuando la definición de la tabla no permite valores NULL para la columna.  
 
 ##  <a name="Options"></a> Opciones de la página Opciones
@@ -242,16 +242,16 @@ Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dej
   
  El panel muestra las coordenadas **(** _X-min_ **,** _Y-min_ **)** y **(** _X-max_ **,** _Y-max_ **)** del cuadro de límite. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo **geometry** , deberá especificar los valores de las coordenadas.  
   
- **X-min**  
+ **X mínima**  
  La coordenada x de la esquina inferior izquierda del cuadro de límite.  
   
- **Y-min**  
+ **Y mínima**  
  La coordenada y de la esquina inferior izquierda del cuadro de límite.  
   
- **X-max**  
+ **X máxima**  
  La coordenada x de la esquina superior derecha del cuadro de límite.  
   
- **Y-max**  
+ **Y máxima**  
  La coordenada y de la esquina superior derecha del cuadro de límite.  
   
 ### <a name="general"></a>General  
@@ -296,7 +296,7 @@ Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dej
  Use esta página para especificar el predicado de filtro para un índice filtrado. Para obtener más información, consulte [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **Expresión de filtro**  
- Define qué filas de datos para incluir en el índice filtrado. Por ejemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ Define qué filas de datos para incluir en el índice filtrado. Por ejemplo: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>Consulte también  
  [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md)   

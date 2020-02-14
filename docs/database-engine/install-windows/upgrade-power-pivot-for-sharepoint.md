@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892585"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Actualización de PowerPivot para SharePoint
@@ -67,9 +67,9 @@ ms.locfileid: "68892585"
   
  **SQL Server:**  
   
--   Si la instalación existente de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], se necesita [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) para realizar una actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Si la instalación existente de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], se necesita Service Pack 2 (SP2) de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] para una actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
--   Si la instalación existente de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], se necesita [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) para realizar una actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Si la instalación existente de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], se necesita Service Pack 1 (SP1) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para una actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
  **SharePoint 2010:**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68892585"
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> Actualizar una granja existente de SharePoint 2013  
  Para actualizar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] implementado en SharePoint 2013, haga lo siguiente:  
   
- ![actualizar powerpivot para sharepoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "actualizar powerpivot para sharepoint 2013")  
+ ![Actualización de PowerPivot para SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "Actualización de PowerPivot para SharePoint 2013")  
   
 1.  Ejecute el programa de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en los servidores back-end que ejecutan [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. Si el servidor hospeda varias instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], actualice al menos la instancia de **POWERPIVOT** . La lista siguiente es un resumen de pasos del Asistente para la instalación relacionados con una actualización de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] :  
   
@@ -94,13 +94,13 @@ ms.locfileid: "68892585"
   
 3.  Ejecute el complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**) en todos los servidores de la granja de SharePoint 2013 para instalar los proveedores de datos. La excepción está en los servidores donde se ejecutó el Asistente para la instalación de SQL Server, que también actualiza los proveedores de datos. Para más información, vea [Download Microsoft SQL Server 2014 Power Pivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) (Descarga de Microsoft SQL Server 2014 PowerPivot para Microsoft SharePoint 2013) e [Instalar o desinstalar el complemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-4.  **Ejecute el complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013** en uno de los servidores de aplicaciones de SharePoint para configurar la granja de servidores de SharePoint con los archivos de solución actualizados que el complemento ha instalado. No puede usar Administración central de SharePoint para este paso. Para obtener más información, vea:  
+4.  **Ejecute el complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013** en uno de los servidores de aplicaciones de SharePoint para configurar la granja de servidores de SharePoint con los archivos de solución actualizados que el complemento ha instalado. No puede usar Administración central de SharePoint para este paso. Para obtener más información, vea lo siguiente:  
   
     1.  En la página Inicio de Windows, escriba **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** y después, en los resultados de la búsqueda, haga clic en **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration**(Configuración de PowerPivot para SharePoint 2013). Tenga en cuenta la búsqueda puede devolver ambas versiones de la herramienta de configuración.  
   
-         ![dos herramientas de configuración de PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "dos herramientas de configuración de PowerPivot")  
+         ![Dos herramientas de configuración de PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "Dos herramientas de configuración de PowerPivot")  
   
-         o bien  
+         Or  
   
          En el menú **Inicio** , elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], en **Herramientas de configuración**y, después, en **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration Tool**(Herramienta de configuración de PowerPivot para SharePoint 2013). Observe que esta herramienta solo se enumera cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local.  
   
@@ -125,9 +125,9 @@ ms.locfileid: "68892585"
   
     8.  Haga clic en **Sí** para continuar.  
   
-    9. La actualización de soluciones y características de la granja puede tardar varios minutos en completarse. Durante este período, las solicitudes de conexión para los datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] **generarán errores** similares a "**No se pueden actualizar datos**" o "**Error al intentar realizar la acción solicitada. Inténtelo de nuevo**". Una vez finalizada la actualización, el servidor estará disponible y estos errores ya no se producirán.  
+    9. La actualización de soluciones y características de la granja puede tardar varios minutos en completarse. Durante este período, las solicitudes de conexión para los datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**generarán errores** similares a "**No se pueden actualizar datos**" o "**Error al intentar realizar la acción solicitada. Inténtelo de nuevo**". Una vez finalizada la actualización, el servidor estará disponible y estos errores ya no se producirán.  
   
-     Para obtener más información, vea:  
+     Para obtener más información, vea lo siguiente:  
   
     -   [Herramientas de configuración de Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68892585"
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> Actualizar una granja existente de SharePoint 2010  
  Para actualizar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] implementado en SharePoint 2010, haga lo siguiente:  
   
- ![actualizar powerpivot para sharepoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "actualizar powerpivot para sharepoint 2010")  
+ ![Actualización de PowerPivot para SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "Actualización de PowerPivot para SharePoint 2010")  
   
 1.  Descargue [Service Pack 2 para Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) y aplíquelo en todos los servidores de la granja. Compruebe que la instalación de SharePoint SP2 se ha realizado correctamente. En Administración central, en la página Actualización y migración, abra la página Verificar el estado de la instalación de productos y revisiones para ver el estado de los mensajes relacionados con SP2.  
   
@@ -201,13 +201,13 @@ ms.locfileid: "68892585"
   
     9. Haga clic en **Sí** para continuar.  
   
-    10. La actualización de soluciones y características de la granja puede tardar varios minutos en completarse. Durante este periodo, las solicitudes de conexión para los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] generarán errores similares a "No se pueden actualizar datos" o "Se ha producido un error al intentar realizar la acción solicitada. Inténtelo de nuevo". Una vez finalizada la actualización, el servidor estará disponible y estos errores ya no se producirán.  
+    10. La actualización de soluciones y características de la granja puede tardar varios minutos en completarse. Durante este periodo, las solicitudes de conexión para los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] generarán errores similares a "No se pueden actualizar datos" o "Se ha producido un error al intentar realizar la acción solicitada. Inténtelo de nuevo." Una vez finalizada la actualización, el servidor estará disponible y estos errores ya no se producirán.  
   
 8.  **Repita el proceso** para cada servicio SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) de la granja: 1) Ejecute el programa de instalación de SQL Server. 2) Ejecute la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
 9. Para comprobar que la actualización se ha efectuado correctamente, ejecute los pasos posteriores a la actualización y compruebe la versión de los servidores de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja de servidores. Para más información, vea [Tareas de comprobación posteriores a la actualización](#verify) en este artículo y la sección siguiente.  
   
-10. **Solucionar errores**  
+10. **Solución de errores**  
   
      Puede ver la información de error en el panel Parámetros para cada acción.  
   

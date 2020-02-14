@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927183"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
@@ -56,7 +56,7 @@ WITH
  *route_name*  
  Es el nombre de la ruta que se va a cambiar. No se pueden especificar nombres de servidor, base de datos o esquema.  
   
- por  
+ WITH  
  Presenta las cláusulas que definen la ruta que se va a modificar.  
   
  SERVICE_NAME **='** _service\_name_ **'**  
@@ -128,7 +128,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La tabla de enrutamiento en la que se almacenan las rutas es una tabla de metadatos que se puede leer mediante la vista de catálogo **sys.routes**. La tabla de enrutamiento solo se puede actualizar mediante las instrucciones CREATE ROUTE, ALTER ROUTE y DROP ROUTE.  
   
  Las cláusulas que no se especifican en el comando ALTER ROUTE no varían. Por consiguiente, no se puede aplicar ALTER a una ruta para especificar que dicha ruta no agota el tiempo de espera, que coincide con un nombre de servicio o que coincide con una instancia de agente. Para cambiar estas características de la ruta, debe quitar la ruta existente y crear otra ruta con la información nueva.  

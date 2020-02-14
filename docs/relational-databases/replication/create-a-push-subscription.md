@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059296"
 ---
 # <a name="create-a-push-subscription"></a>Creación de una suscripción de inserción
@@ -58,7 +58,7 @@ Cree una suscripción de inserción en el publicador o en el suscriptor con el A
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>Para crear una suscripción de inserción desde el publicador  
   
-1. Conéctese al publicador en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo del servidor.  
+1. Conéctese al publicador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y expanda el nodo de servidor.  
   
 2. Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -107,7 +107,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
      > [!NOTE]
      > Las conexiones que se realicen a través de la Autenticación integrada de Windows siempre usarán las credenciales de Windows que especifican **\@job_login** y **\@job_password**. El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
   
-   - (Opcional) El valor **0** para **\@subscriber_security_mode** y la información de inicio de sesión [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **\@subscriber_login** y **\@subscriber_password**. Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
+   - (Opcional) Un valor de **0** para **\@subscriber_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@subscriber_login** y **\@subscriber_password**. Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
   
    - Una programación para el trabajo del Agente de distribución de esta suscripción. Para obtener más información, consulte [Especificar programaciones de sincronización](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -177,7 +177,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
   
 5. Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obtener más información, consulte [Crear, modificar y eliminar bases de datos](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 7. Establezca las siguientes propiedades de la suscripción:  
   
@@ -217,7 +217,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
   
 5. Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obtener más información, consulte [Crear, modificar y eliminar bases de datos](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 7. Establezca las siguientes propiedades de la suscripción:  
   
@@ -258,7 +258,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades de una suscripción de inserción](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
  [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   

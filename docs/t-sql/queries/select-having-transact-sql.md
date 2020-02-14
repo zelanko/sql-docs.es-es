@@ -1,7 +1,7 @@
 ---
 title: HAVING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 01/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7cba43ad87b39122f6cd3d3ae7328b963e6fb1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a574e3f7348c4641665b067193c54604145386c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948436"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315615"
 ---
 # <a name="select---having-transact-sql"></a>SELECT: HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67948436"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-En \<condición_de_búsqueda> se especifican uno o más predicados que los grupos o agregados deben satisfacer. Para más información sobre los predicados y las condiciones de búsqueda, vea [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+En \<condición_de_búsqueda> se especifican uno o más predicados que los grupos o agregados deben satisfacer. Para obtener más información sobre los predicados y las condiciones de búsqueda, vea [Condiciones de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
  Los tipos de datos **text**, **image** y **ntext** no se pueden usar en una cláusula HAVING.  
   
@@ -60,7 +60,7 @@ ORDER BY SalesOrderID ;
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el ejemplo siguiente se usa una cláusula `HAVING` para recuperar el total de cada `SalesAmount` de la tabla `FactInternetSales` cuando la `OrderDateKey` está en el año 2004 o posterior.  
+ En el ejemplo siguiente se usa una cláusula `HAVING` para recuperar el total de cada `SalesAmount` que supera `80000` por cada `OrderDateKey` de la tabla `FactInternetSales`.  
   
 ```sql
 -- Uses AdventureWorks  

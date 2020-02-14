@@ -14,10 +14,10 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908598"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Crear una publicación a partir de una base de datos de Oracle
@@ -102,12 +102,12 @@ ms.locfileid: "72908598"
   
      Para obtener más información acerca de los permisos que necesita cada agente, vea [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) y [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md).  
   
-10. En la página **Acciones** del Asistente, puede crear un script para la publicación. Para obtener más información, consulte [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+10. En la página **Acciones** del Asistente, puede crear un script para la publicación. Para más información, consulte [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 11. En la página **Finalización del asistente** , especifique el nombre de la publicación.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
- Una vez configurada como publicador la base de datos de Oracle, puede crear una publicación transaccional o de instantáneas del mismo modo en que lo haría desde un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mediante procedimientos almacenados del sistema.  
+ Una vez configurada la base de datos de Oracle como publicador, puede crear una publicación transaccional o de instantáneas del mismo modo en que lo haría desde un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mediante procedimientos almacenados del sistema.  
   
 #### <a name="to-create-an-oracle-publication"></a>Para crear una publicación Oracle  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72908598"
         > [!NOTE]  
         >  El parámetro **\@job_login** debe coincidir con el inicio de sesión proporcionado en el paso 3. No proporcione información de seguridad del editor. El Agente de registro del LOG se conecta al publicador utilizando la información de seguridad proporcionada en el paso 3.  
   
-5.  En la base de datos de distribución del distribuidor, ejecute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) para crear la publicación. Para obtener más información, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+5.  En la base de datos de distribución del distribuidor, ejecute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) para crear la publicación. Para obtener más información, vea [Crear una suscripción](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 6.  En el distribuidor de la base de datos de distribución, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique el nombre de publicación usado en el paso 4 para **\@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **\@job_name** y **\@password**. Para usar la autenticación estándar de Oracle al conectarse al publicador, también debe especificar un valor de **0** para **\@publisher_security_mode** y la información de inicio de sesión de Oracle para **\@publisher_login** y **\@publisher_password**. Esto crea un trabajo de Agente de instantáneas para la publicación.  
   
@@ -147,6 +147,6 @@ ms.locfileid: "72908598"
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Configuración del trabajo del conjunto de transacciones para un publicador de Oracle&#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Información general de la publicación de Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)   
- [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
+ [Script para conceder permisos en Oracle](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
   
   

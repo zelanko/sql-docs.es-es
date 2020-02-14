@@ -22,10 +22,10 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296199"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Controladores de eventos de Integration Services (SSIS)
@@ -47,11 +47,11 @@ ms.locfileid: "71296199"
   
  El diagrama siguiente muestra un paquete simple que tiene un contenedor de bucles For que contiene una tarea Ejecutar SQL.  
   
- ![Paquete, bucle For, host de la tarea y tarea Ejecutar SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
+ ![Paquete, bucle For, host de tarea y tarea Ejecutar SQL](../integration-services/media/mw-dts-eventhandlerpkg.gif "Paquete, bucle For, host de tarea y tarea Ejecutar SQL")  
   
  Solo el paquete tiene un controlador de eventos, para su evento **OnError** . Si se produce un error cuando se ejecuta una tarea Ejecutar SQL, se ejecuta el controlador de eventos **OnError** para el paquete. El siguiente diagrama muestra la secuencia de llamadas que produce el controlador de eventos **OnError** para que se ejecute el paquete.  
   
- ![Flujo del controlador de eventos](../integration-services/media/mw-dts-eventhandlers.gif "Event handler flow")  
+ ![Flujo del controlador de eventos](../integration-services/media/mw-dts-eventhandlers.gif "Flujo del controlador de eventos")  
   
  Los controladores de eventos son miembros de una colección de controladores de eventos y todos los contenedores incluyen esta colección. Si crea el paquete mediante el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , puede ver los miembros de las colecciones de controladores de eventos en las carpetas **Controladores de eventos** en la pestaña **Explorador de paquetes** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
@@ -109,7 +109,7 @@ En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear
   
 3.  Haga clic en la pestaña **Controladores de eventos** .  
   
-     ![Captura de pantalla de la superficie de diseño con el controlador de eventos](../integration-services/media/eventhandlers.gif "Screenshot of design surface with event handler")  
+     ![Captura de pantalla de la superficie de diseño con el controlador de eventos](../integration-services/media/eventhandlers.gif "Captura de pantalla de la superficie de diseño con el controlador de eventos")  
   
      La creación del flujo de control y de los flujos de datos en un controlador de eventos se asemeja a la creación del flujo de control y de los flujos de datos en un paquete. Para obtener más información, consulte [Control Flow](../integration-services/control-flow/control-flow.md) y [Data Flow](../integration-services/data-flow/data-flow.md).  
   

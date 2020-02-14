@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896132"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Tutorial: Configuración de Escalabilidad horizontal de Integration Services (SSIS)
@@ -39,7 +39,7 @@ Para configurar la escalabilidad horizontal de [!INCLUDE[ssISnoversion_md](../..
 
 * [Habilitar el patrón de escalado horizontal](#EnableMaster)
 
-* [Habilitar el modo de autenticación de SQL Server](#EnableAuth)
+* [Habilitación del modo de autenticación de SQL Server](#EnableAuth)
 
 * [Habilitar el trabajador de escalado horizontal](#EnableWorker)
 
@@ -64,13 +64,13 @@ Para instalar la característica de patrón de escalabilidad horizontal, use el 
 
 3.  En la página **Configuración del patrón de escalado horizontal de Integration Services** , especifique el número de puerto que usa el patrón de escalado horizontal para comunicarse con el trabajador de escalado horizontal. El número de puerto predeterminado es 8391.  
 
-    ![Configuración del patrón](media/master-config.PNG "Configuración del patrón")
+    ![Configuración principal](media/master-config.PNG "Configuración principal")
 
 4.  Especifique el certificado SSL usado para proteger la comunicación entre el patrón y el trabajo de escalabilidad horizontal; para ello, siga uno de los siguientes pasos.
     * Deje que el proceso de instalación cree un certificado SSL autofirmado predeterminado; para ello, haga clic en **Crear un nuevo certificado SSL**.  El certificado predeterminado se instala en Entidades de certificación raíz de confianza, Equipo local. Puede especificar los CN en este certificado. El nombre de host del punto de conexión principal debe incluirse en los CN. De forma predeterminada, se incluyen el nombre de la máquina y la dirección IP del nodo principal.
     * Para seleccionar un certificado SSL existente del equipo local, haga clic en **Usar un certificado SSL existente** y en **Examinar**. La huella digital del certificado aparece en el cuadro de texto. Haga clic en **Examinar** para que se muestren los certificados almacenados en Entidades de certificación raíz de confianza, Equipo local. El certificado que vaya a seleccionar debe almacenarse aquí.       
 
-    ![Configuración del patrón 2](media/master-config-2.PNG "Configuración del patrón 2")
+    ![Configuración principal 2](media/master-config-2.PNG "Configuración principal 2")
   
 5.  Finalice el Asistente para la instalación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 
@@ -113,7 +113,7 @@ Para instalar la característica de trabajador de escalado horizontal, use el As
 
     - Para un entorno de **varios equipos**, el punto de conexión está formado por el nombre o la dirección IP del equipo que tiene instalado el patrón de escalabilidad horizontal y el número de puerto especificado durante la instalación del patrón de escalabilidad horizontal.
    
-    ![Configuración del trabajo 1](media/worker-config.PNG "Configuración del trabajo 1")    
+    ![Configuración del trabajador 1](media/worker-config.PNG "Configuración del trabajador 1")    
 
     > [!NOTE]
     > También puede omitir la configuración del trabajador en este momento y asociar el trabajador de escalabilidad horizontal al patrón de escalabilidad horizontal usando [Scale Out Manager](integration-services-ssis-scale-out-manager.md) tras la instalación.
@@ -122,7 +122,7 @@ Para instalar la característica de trabajador de escalado horizontal, use el As
   
     Haga clic en **Examinar** para buscar el archivo de certificado (*.cer). Para usar el certificado de SSL predeterminado, seleccione el archivo `SSISScaleOutMaster.cer`, que se encuentra en `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` en el equipo que contiene el patrón de escalabilidad horizontal.   
 
-    ![Configuración de trabajo 2](media/worker-config-2.PNG "Configuración de trabajo 2")
+    ![Configuración del trabajador 2](media/worker-config-2.PNG "Configuración del trabajador 2")
 
     > [!NOTE]
     > Si el certificado SSL que usa el patrón de escalabilidad horizontal está autofirmado, deberá haber un certificado SSL de cliente correspondiente instalado en el equipo que contiene el trabajador de escalabilidad horizontal. Si proporciona la ruta de acceso del archivo del certificado SSL de cliente en la página **Configuración del trabajo de escalabilidad horizontal de Integration Services**, se instalará automáticamente; en caso contrario, tendrá que instalar el certificado manualmente más adelante. 

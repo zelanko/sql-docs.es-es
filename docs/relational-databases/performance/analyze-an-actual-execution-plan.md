@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72289324"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Análisis de un plan de ejecución real
@@ -44,10 +44,10 @@ Para poder solucionar problemas de rendimiento de consulta, es necesario tener u
 
 2.  Haga clic en un área en blanco del plan de ejecución y haga clic en **Analizar el plan de ejecución real**. 
 
-    ![Hacer clic con el botón derecho en Analizar el plan de ejecución real](../../relational-databases/performance/media/plananalysismenuoption.png "Right-click Analyze Actual Execution Plan")   
+    ![Analizar el plan de ejecución real haciendo clic con el botón derecho](../../relational-databases/performance/media/plananalysismenuoption.png "Analizar el plan de ejecución real haciendo clic con el botón derecho")   
 
 3.  Se abre la ventana **Análisis del plan de presentación** en la parte inferior. La pestaña **Instrucción múltiple** es útil para analizar los planes con varias instrucciones, permitiendo que se analice la instrucción correcta.
 
 4.  Seleccione la pestaña Escenarios para ver detalles sobre los problemas encontrados en el plan de ejecución real. Para cada operador enumerado en el panel izquierdo, el panel derecho muestra detalles sobre el escenario en el vínculo *Para más información sobre este escenario, haga clic aquí* y se muestran los motivos posibles para explicar ese escenario.
 
-    ![Resultados del análisis del plan de ejecución](../../relational-databases/performance/media/plananalysis-scenarios.png "Execution Plan Analysis results") 
+    ![Resultados del análisis del plan de ejecución](../../relational-databases/performance/media/plananalysis-scenarios.png "Resultados del análisis del plan de ejecución") 

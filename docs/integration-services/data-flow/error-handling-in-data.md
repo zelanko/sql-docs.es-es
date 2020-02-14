@@ -23,10 +23,10 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292764"
 ---
 # <a name="error-handling-in-data"></a>Control de errores en los datos
@@ -53,7 +53,7 @@ ms.locfileid: "71292764"
   
  El siguiente diagrama muestra un flujo de datos simple que incluye una salida de error.  
   
- ![Flujo de datos con salida de error](../../integration-services/data-flow/media/mw-dts-11.gif "Data flow with error output")  
+ ![Flujo de datos con salida de error](../../integration-services/data-flow/media/mw-dts-11.gif "Flujo de datos con salida de error")  
   
  Para obtener más información, vea [Flujo de datos](../../integration-services/data-flow/data-flow.md) y [Rutas de Integration Services](../../integration-services/data-flow/integration-services-paths.md).  
 
@@ -150,7 +150,7 @@ Use el cuadro de diálogo **Configurar la salida de errores** para configurar la
 
 ## <a name="see-also"></a>Consulte también  
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)   
- [Transformar datos con transformaciones](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
+ [Transformación de datos con transformaciones](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [Conectar componentes con rutas de acceso](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Tarea Flujo de datos](../../integration-services/control-flow/data-flow-task.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  

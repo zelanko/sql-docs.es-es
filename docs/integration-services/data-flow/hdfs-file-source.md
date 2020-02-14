@@ -13,10 +13,10 @@ ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a06374e2803a5e482e6d5a7a665756e38cb7f2f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292444"
 ---
 # <a name="hdfs-file-source"></a>Origen de archivo HDFS
@@ -28,7 +28,7 @@ ms.locfileid: "71292444"
   
  Para configurar el componente de origen de archivo HDFS, arrastre y suelte el origen de archivo HDFS en el diseñador de flujo de datos y haga doble clic en el componente para abrir el editor.  
   
- ![Editor de origen de archivo HDFS](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS File Source Editor")  
+ ![Editor de origen de archivos HDFS](../../integration-services/data-flow/media/hdfs-file-source.png "Editor de origen de archivos HDFS")  
   
 ## <a name="options"></a>Opciones  
  Configure las opciones siguientes en la pestaña **General** del cuadro de diálogo **Hadoop File Source Editor** (Editor de origen de archivo Hadoop).  
@@ -45,6 +45,6 @@ ms.locfileid: "71292444"
   
 ## <a name="see-also"></a>Consulte también  
  [Administrador de conexiones de Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [HDFS File Destination](../../integration-services/data-flow/hdfs-file-destination.md)  
+ [Destino de archivo HDFS](../../integration-services/data-flow/hdfs-file-destination.md)  
   
   

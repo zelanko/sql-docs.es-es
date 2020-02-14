@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2efe63ae57e80e06d616938c0dcdf77dbe055ac6
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 77f07412551fd94737a3200a103c16904771d962
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929706"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315595"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Grupos de acciones y acciones de SQL Server Audit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "70929706"
  Todas las auditorías están deshabilitadas cuando se crean por primera vez.  
   
 ## <a name="server-level-audit-action-groups"></a>Grupos de acciones de auditoría de nivel de servidor  
- Los grupos de acciones de auditoría de nivel de servidor son acciones similares a las clases de eventos de Auditoría de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Los grupos de acciones de auditoría de nivel de servidor son acciones similares a las clases de eventos de Auditoría de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Referencia de las clase de eventos de SQL Server](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de servidor y se proporciona la clase de eventos de SQL Server equivalente cuando corresponda.  
   
@@ -94,6 +94,7 @@ ms.locfileid: "70929706"
 ](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Este evento se desencadena cuando una entidad de seguridad emite un comando DBCC. Equivalente a [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Indica que una entidad de seguridad intentó iniciar una sesión en una base de datos independiente y no pudo conseguirlo. Los eventos de esta clase los producen nuevas conexiones o conexiones reutilizadas de un grupo de conexiones. Equivalente a [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|    
+|FAILED_LOGIN_GROUP|Indica que una entidad de seguridad intentó iniciar una sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , pero no lo consiguió. Los eventos de esta clase los producen nuevas conexiones o conexiones reutilizadas de un grupo de conexiones. Equivalente a [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md). Esta auditoría no se aplica a Azure SQL Database.| 
 |FULLTEXT_GROUP|Indica que se produjo un evento de texto completo. Equivalente a [Audit Fulltext Event Class](../../../relational-databases/event-classes/audit-fulltext-event-class.md).|  
 |LOGIN_CHANGE_PASSWORD_GROUP|Este evento se desencadena cuando se cambia una contraseña de inicio de sesión mediante la instrucción ALTER LOGIN o el procedimiento almacenado sp_password. Equivalente a [Audit Login Change Password Event Class](../../../relational-databases/event-classes/audit-login-change-password-event-class.md).|  
 |LOGOUT_GROUP|Indica que una entidad de seguridad ha finalizado una sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los eventos de esta clase los producen nuevas conexiones o conexiones reutilizadas de un grupo de conexiones. Equivalente a [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
@@ -127,7 +128,7 @@ ms.locfileid: "70929706"
  > Debido a la sobrecarga implicada en habilitar la auditoría de nivel de transacción, a partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4, la auditoría de nivel de transacción está deshabilitada de forma predeterminada a menos que se haya habilitado Compatibilidad con criterio común.  Si se deshabilita Compatibilidad con criterio común, aún se podrá agregar una acción de TRANSACTION_GROUP a una especificación de auditoría, pero no recopilará realmente las acciones de transacción.  Si piensa configurar las acciones de auditoría desde TRANSACTION_GROUP, asegúrese de que la infraestructura de auditoría de nivel de transacción está habilitada al habilitar Compatibilidad con criterio común a partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 y versiones posteriores.  Tenga en cuenta que en [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] también se puede deshabilitar la auditoría de nivel de transacción con la marca de seguimiento 3427, partir de SP1 CU2.
   
 ## <a name="database-level-audit-action-groups"></a>Grupos de acciones de auditoría en el nivel de base de datos  
- Los grupos de acciones de auditoría en el nivel de base de datos son acciones similares a las clases de evento de auditoría de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información sobre las clases de eventos, vea [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Los grupos de acciones de auditoría en el nivel de base de datos son acciones similares a las clases de evento de auditoría de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información sobre las clases de eventos, vea [Referencia de las clase de eventos de SQL Server](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de base de datos y se proporciona la clase de eventos de SQL Server equivalente cuando corresponda.  
   

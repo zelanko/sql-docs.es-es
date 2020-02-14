@@ -20,10 +20,10 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd8ad58e96956e1ab0f7b542bab4168272b3f968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141291"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
@@ -58,7 +58,7 @@ _size_ es el número de bytes cuando se usan los tipos de datos **text** o **ima
 HOLDLOCK  
 Hace que se bloquee el valor de texto para lectura hasta el final de la transacción. Otros usuarios pueden leer el valor, pero no pueden modificarlo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Use la función [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) para obtener un valor _text\_ptr_ válido. TEXTPTR devuelve un puntero a la columna **text**, **ntext** o **image** de la fila especificada. TEXTPRT también puede devolver un puntero a la columna **text**, **ntext** o **image** de la última fila que la consulta devuelve si esta devuelve más de una fila. Debido a que TEXTPTR devuelve una cadena binaria de 16 bytes, se recomienda declarar una variable local para que contenga el puntero de texto y, a continuación, utilizar la variable con READTEXT. Para más información sobre la declaración de una variable local, vea [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pueden existir punteros de texto consecutivos, aunque quizás no sean válidos. Para más información sobre la opción **text in row**, vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para más información sobre cómo invalidar punteros de texto, vea [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  

@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099032"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funciones de texto e imagen - TEXTPTR (Transact-SQL)
@@ -48,10 +48,10 @@ TEXTPTR ( column )
  *column*  
  Se utilizará la columna **text**, **ntext** o **image**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **varbinary**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En las tablas con texto consecutivo, TEXTPTR devuelve un controlador para el texto que se va a procesar. Es posible obtener un puntero de texto válido aunque el valor del texto sea NULL.  
   
  La función TEXTPTR no se puede utilizar en columnas de vistas. Solo se puede utilizar en columnas de tablas. Para utilizar la función TEXTPTR en una columna de una vista, debe establecerse el nivel de compatibilidad en 80 mediante el [nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Si la tabla no dispone de texto consecutivo y la instrucción UPDATETEXT no ha inicializado una columna **text**, **ntext** o **image**, TEXTPTR devuelve un puntero NULL.  

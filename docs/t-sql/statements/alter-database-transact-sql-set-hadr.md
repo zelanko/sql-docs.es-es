@@ -24,10 +24,10 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065730"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
@@ -78,7 +78,7 @@ ALTER DATABASE database_name
   
  Para obtener más información, vea [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
- OFF  
+ Apagado  
  Quita la base de datos secundaria especificada del grupo de disponibilidad.  
   
  Quitar una base de datos secundaria puede ser útil si se ha retrasado con respecto a la base de datos principal y no desea esperar hasta que la base de datos secundaria se ponga al día. Después de quitar la base de datos secundaria, puede actualizarla restaurando una secuencia de copias de seguridad que termina con una copia de seguridad de registros reciente (mediante RESTORE… WITH NORECOVERY).  
@@ -123,7 +123,7 @@ ALTER DATABASE database_name
 ## <a name="database-states"></a>Estados de base de datos  
  Cuando una base de datos secundaria se une a un grupo de disponibilidad, la réplica secundaria local cambia el estado de la base de datos secundaria de RESTORING a ONLINE. Si se quita una base de datos secundaria del grupo de disponibilidad, la réplica secundaria local vuelve a establecerse al estado RESTORING. Esto permite aplicar copias de seguridad de registros subsiguientes de la base de datos principal a la base de datos secundaria.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
  Ejecute las instrucciones ALTER DATABASE fuera de transacciones y de lotes.  
   
 ## <a name="security"></a>Seguridad  

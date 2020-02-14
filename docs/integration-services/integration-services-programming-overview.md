@@ -21,10 +21,10 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296214"
 ---
 # <a name="integration-services-programming-overview"></a>Información general sobre la programación de Integration Services
@@ -36,7 +36,7 @@ ms.locfileid: "71296214"
   
  La imagen siguiente describe la arquitectura de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
- ![Arquitectura de Integration Services](../integration-services/media/mw-dts-01.gif "Integration Services architecture")  
+ ![Arquitectura de Integration Services](../integration-services/media/mw-dts-01.gif "Arquitectura de Integration Services")  
   
 ## <a name="integration-services-run-time-engine"></a>Motor en tiempo de ejecución de Integration Services  
  El motor en tiempo de ejecución de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] controla la administración y ejecución de paquetes, implementando la infraestructura que habilita el orden de ejecución, el registro, las variables y el control de eventos. La programación del motor en tiempo de ejecución de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite a los programadores automatizar la creación, configuración y ejecución de paquetes, así como crear tareas personalizadas y otras extensiones.  
@@ -69,7 +69,7 @@ ms.locfileid: "71296214"
 ## <a name="commonly-used-assemblies"></a>Ensamblados de uso frecuente  
  En la tabla siguiente se enumeran los ensamblados que se suelen usar al programar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
-|Ensamblado|Descripción|  
+|Assembly|Descripción|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|Contiene el motor en tiempo de ejecución administrado.|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|Contiene el ensamblado de interoperabilidad primario (PIA), o contenedor, para el motor en tiempo de ejecución nativo.|  

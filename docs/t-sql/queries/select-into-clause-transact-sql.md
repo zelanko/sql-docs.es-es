@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981725"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT: cláusula INTO (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "73981725"
 
 SELECT…INTO crea una tabla en el grupo de archivos predeterminado e inserta las filas resultantes de la consulta en ella. Para conocer la sintaxis completa de SELECT, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,7 +65,7 @@ SELECT…INTO crea una tabla en el grupo de archivos predeterminado e inserta la
  
  **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores
   
-## <a name="data-types"></a>Tipos de datos  
+## <a name="data-types"></a>Tipo de datos  
  El atributo FILESTREAM no transfiere a la nueva tabla. Los BLOB FILESTREAM se copian y se almacenan en la nueva tabla como BLOB **varbinary(max)** . Sin el atributo FILESTREAM, el tipo de datos **varbinary(max)** tiene una limitación de 2 GB. Si un FILESTREAM BLOB supera este valor, se produce el error 7119 y se detiene la instrucción.  
   
  Cuando se selecciona una columna de identidad existente en una nueva tabla, la nueva columna hereda la propiedad IDENTITY, a menos que se cumpla una de las siguientes condiciones:  
@@ -82,7 +82,7 @@ SELECT…INTO crea una tabla en el grupo de archivos predeterminado e inserta la
   
 Si se cumple alguna de estas condiciones, la columna se crea como NOT NULL en lugar de heredar la propiedad IDENTITY. Si una columna de identidad se requiere en la nueva tabla pero este tipo de columna no está disponible o desea un valor de inicialización o de incremento diferente de la columna de identidad de origen, defina la columna en la lista de selección utilizando la función IDENTITY. Vea "Crear una columna de identidad utilizando la función IDENTITY" en la sección Ejemplos siguiente.  
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 El funcionamiento de la instrucción `SELECT...INTO` consta de dos pasos: se crea la tabla y, después, se insertan filas.  Esto significa que si se produce un error en las operaciones de inserción, se revertirán todas, pero la tabla nueva (vacía) se conservará.  Si necesita que la operación sea correcta o no en su totalidad, use una [transacción explícita](../language-elements/begin-transaction-transact-sql.md).
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. Crear una tabla especificando las columnas de un origen de datos remoto  
  El ejemplo siguiente muestra tres métodos para crear una nueva tabla en el servidor local desde un origen de datos remoto. En el ejemplo se comienza creando un vínculo al origen de datos remoto. El nombre del servidor vinculado, `MyLinkServer,` se especifica en la cláusula FROM de la primera instrucción SELECT...INTO y en la función OPENQUERY de la segunda instrucción SELECT...INTO. La tercera instrucción SELECT...INTO utiliza la función OPENDATASOURCE, que especifica el origen de datos remoto directamente en lugar de utilizar el nombre del servidor vinculado.  
   
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores  
+ **Se aplica a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 ```sql
 USE master;  

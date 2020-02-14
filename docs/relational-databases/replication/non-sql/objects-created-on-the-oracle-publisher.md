@@ -13,29 +13,29 @@ ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b0bc02a31bcfd4cd4baef19a89b6f658195a24f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940316"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] La replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de base de datos en el publicador de Oracle para habilitar el seguimiento y reenvío de los cambios ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no instala ningún archivo binario en el publicador de Oracle). En la siguiente tabla se muestran los objetos que se crean en el publicador de Oracle cuando se identifica como publicador en el distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Las descripciones de los objetos se proporcionan solo como información. Estos objetos no se deben modificar.  
+  La replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de base de datos en el publicador de Oracle para habilitar el seguimiento y reenvío de cambios ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no instala ningún archivo binario en el publicador de Oracle). En la siguiente tabla se muestran los objetos que se crean en el publicador de Oracle cuando se identifica como publicador en el distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Las descripciones de los objetos se proporcionan solo como información. Estos objetos no se deben modificar.  
   
 |Nombre de objeto|Tipo de objeto|Descripción|  
 |-----------------|-----------------|-----------------|  
-|HREPL_ArticleNlog_V|Table|Tabla de seguimiento de cambios que se utiliza para almacenar información cuando se realizan cambios en la tabla publicada. Se crea una tabla de seguimiento de cambios para cada tabla publicada.|  
-|HREPL_Changes|Table|Tabla utilizada internamente por el trabajo Xactset para determinar el número de cambios que esperan ser asignados a un conjunto de transacciones. Para obtener más información sobre este trabajo, consulte [Optimizar el rendimiento de publicadores de Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
-|HREPL_Distributor|Table|Tabla de estado del distribuidor que se utiliza para mantener información acerca del distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle.|  
-|HREPL_Event|Table|Tabla de eventos que se utiliza para sincronizar instantáneas y solicitudes de recuento de filas.|  
-|HREPL_Mutex|Table|Tabla que se utiliza para garantizar que el procedimiento de paquetes de Oracle PopulatePollTable no se ejecute simultáneamente por el Agente de registro del LOG y el trabajo de la base de datos.|  
-|HREPL_Poll|Table|Tabla que se utiliza para identificar las entradas de la tabla de registro asociadas con conjuntos de cambios en las tablas publicadas.|  
-|HREPL_PublishedTables|Table|Tabla que contiene una entrada para cada artículo en una publicación transaccional.|  
-|HREPL_Publisher|Table|Tabla de estado del publicador que se utiliza para mantener información específica del publicador.|  
-|HREPL_SchemaFilter|Table|Tabla que contiene esquemas que no se muestran cuando se publica a través del Asistente para nueva publicación.|  
-|HREPL_XactsetCreateTimes|Table|Tabla que identifica la hora de creación asociada con cada conjunto de transacciones.|  
-|HREPL_XactsetJob|Table|Tabla con la configuración de parámetros actual para el trabajo Xactset.|  
+|HREPL_ArticleNlog_V|Tabla|Tabla de seguimiento de cambios que se utiliza para almacenar información cuando se realizan cambios en la tabla publicada. Se crea una tabla de seguimiento de cambios para cada tabla publicada.|  
+|HREPL_Changes|Tabla|Tabla utilizada internamente por el trabajo Xactset para determinar el número de cambios que esperan ser asignados a un conjunto de transacciones. Para obtener más información sobre este trabajo, consulte [Optimizar el rendimiento de publicadores de Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
+|HREPL_Distributor|Tabla|Tabla de estado del distribuidor que se utiliza para mantener información acerca del distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle.|  
+|HREPL_Event|Tabla|Tabla de eventos que se utiliza para sincronizar instantáneas y solicitudes de recuento de filas.|  
+|HREPL_Mutex|Tabla|Tabla que se utiliza para garantizar que el procedimiento de paquetes de Oracle PopulatePollTable no se ejecute simultáneamente por el Agente de registro del LOG y el trabajo de la base de datos.|  
+|HREPL_Poll|Tabla|Tabla que se utiliza para identificar las entradas de la tabla de registro asociadas con conjuntos de cambios en las tablas publicadas.|  
+|HREPL_PublishedTables|Tabla|Tabla que contiene una entrada para cada artículo en una publicación transaccional.|  
+|HREPL_Publisher|Tabla|Tabla de estado del publicador que se utiliza para mantener información específica del publicador.|  
+|HREPL_SchemaFilter|Tabla|Tabla que contiene esquemas que no se muestran cuando se publica a través del Asistente para nueva publicación.|  
+|HREPL_XactsetCreateTimes|Tabla|Tabla que identifica la hora de creación asociada con cada conjunto de transacciones.|  
+|HREPL_XactsetJob|Tabla|Tabla con la configuración de parámetros actual para el trabajo Xactset.|  
 |HREPL_Pollid|Secuencia|Secuencia que se utiliza para generar Id. de sondeo.|  
 |HREPL_Seq|Secuencia|Secuencia que se utiliza para ordenar comandos de cambio.|  
 |HREPL_Stmt|Secuencia|Secuencia que se utiliza para generar Id. de instrucción.|  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68062534"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar la longitud de campo mediante bcp (SQL Server)
@@ -66,9 +66,9 @@ ms.locfileid: "68062534"
 |**Texto**|0|  
 |**ntext**|0|  
 |**bit**|1|  
-|**binario**|Dos veces la longitud definida para la columna + 1|  
+|**binary**|Dos veces la longitud definida para la columna + 1|  
 |**varbinary**|Dos veces la longitud definida para la columna + 1|  
-|**imagen**|0|  
+|**image**|0|  
 |**datetime**|24|  
 |**smalldatetime**|24|  
 |**float**|30|  
@@ -100,9 +100,9 @@ ms.locfileid: "68062534"
 |Tipo de datos|Longitud predeterminada (caracteres)|  
 |---------------|-----------------------------------|  
 |**bit**|1|  
-|**binario**|Longitud definida para la columna|  
+|**binary**|Longitud definida para la columna|  
 |**varbinary**|Longitud definida para la columna|  
-|**imagen**|0|  
+|**image**|0|  
 |**datetime**|8|  
 |**smalldatetime**|4|  
 |**float**|8|  

@@ -14,10 +14,10 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c2a89293e0cfa3428723a19e7ee2938fd7e8ca6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294841"
 ---
 # <a name="change-data-capture-ssis"></a>Captura de datos modificados (SSIS)
@@ -40,7 +40,7 @@ ms.locfileid: "71294841"
   
  Cuando el administrador ha habilitado la captura de datos modificados en la base de datos, es posible crear un paquete que realiza una carga incremental de los datos modificados. El diagrama siguiente muestra los pasos necesarios para crear un paquete de este tipo que realiza una carga incremental desde una sola tabla:  
   
- ![Pasos de creación de un paquete de Change Data Capture](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Change Data Capture Package Creation Steps")  
+ ![Pasos de creación de paquetes de captura de datos modificados](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Pasos de creación de paquetes de captura de datos modificados")  
   
  Tal como se muestra en el diagrama anterior, la creación de un paquete que realiza una carga incremental de datos modificados conlleva los pasos siguientes:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "71294841"
  El proceso descrito en el diagrama y en los pasos anteriores conlleva una carga incremental a partir de una sola tabla. Cuando es preciso realizar una carga incremental a partir de varias tablas, el proceso general es el mismo. Sin embargo, hay que cambiar el diseño del paquete para adaptarlo al procesamiento de varias tablas. Para obtener más información sobre cómo crear un paquete que realiza una carga incremental a partir de varias tablas, vea [Realizar una carga incremental de varias tablas](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
 ## <a name="samples-of-change-data-capture-packages"></a>Ejemplos de paquetes de captura de datos modificados  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona dos ejemplos que muestran cómo usar la captura de datos modificados en paquetes. Para obtener más información, consulte los temas siguientes:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona dos ejemplos que muestran cómo usar la captura de datos modificados en paquetes. Para obtener más información, vea los temas siguientes:  
   
 -   [Léame del ejemplo de captura de datos modificados desde el paquete de la última solicitud](https://go.microsoft.com/fwlink/?LinkId=133507)  
   

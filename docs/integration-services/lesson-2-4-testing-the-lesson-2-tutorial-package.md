@@ -11,10 +11,10 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b17fc99cc7746739f381ba22f55a973d55497a1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283554"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Lección 2-4: Prueba del paquete del tutorial de la lección 2
@@ -33,11 +33,11 @@ Antes de probar el paquete, compruebe que los flujos de datos y de control del p
   
 **Flujo de control**  
   
-![Flujo de control del paquete](../integration-services/media/task4lesson2control.gif "Control flow in package")  
+![Flujo de control del paquete](../integration-services/media/task4lesson2control.gif "Flujo de control del paquete")  
   
 **Flujo de datos**  
   
-![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Data flow in package")  
+![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Flujo de datos del paquete")  
   
 ## <a name="test-the-lesson-2-tutorial-package"></a>Prueba del paquete del tutorial de la lección 2  
   
@@ -45,12 +45,12 @@ Antes de probar el paquete, compruebe que los flujos de datos y de control del p
   
     El paquete se ejecuta. Puede comprobar el estado de cada bucle en la ventana **Salida** o si hace clic en la pestaña **Progreso**. Por ejemplo, puede ver que se han agregado 1.097 líneas a la tabla de destino desde el archivo Currency_VEB.txt.  
   
-2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar**, haga clic en **Detener depuración**.  
+2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar**, seleccione **Detener depuración**.  
   
 ## <a name="go-to-next-lesson"></a>Ir a la lección siguiente  
 [Lección 3: Adición de registro con SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Ejecución de proyectos y paquetes](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140809"
 ---
 # <a name="cursors"></a>Cursores
@@ -71,7 +71,7 @@ Un cursor de solo avance se especifica como `FORWARD_ONLY` y `READ_ONLY`, y no a
   
  Aunque los modelos de cursor de la API de base de datos consideran el cursor de solo avance como un tipo más, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no establece esta distinción. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera que las opciones de desplazamiento de solo avance y de desplazamiento son las que se pueden aplicar a los cursores estáticos, a los controlados por conjunto de claves y a los dinámicos. [!INCLUDE[tsql](../includes/tsql-md.md)] cursores admiten cursores estáticos controlados por conjunto de claves y dinámicos que sean de solo avance. Los modelos de cursor de la API de bases de datos dan por sentado que los cursores estáticos, los controlados por conjunto de claves y los dinámicos siempre se pueden desplazar. Cuando se establece el atributo o propiedad de un cursor de la API de bases de datos como de solo avance, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lo implementa como cursor dinámico de solo avance.  
   
-### <a name="static"></a>Estático  
+### <a name="static"></a>estática  
  El conjunto de resultados completo de un cursor estático se genera en **tempdb** cuando se abre el cursor. Un cursor estático siempre muestra el conjunto de resultados tal como estaba al abrir el cursor. Los cursores estáticos detectan pocos cambios o ningún cambio, pero consumen relativamente pocos recursos al desplazarse.  
   
 El cursor no refleja las modificaciones realizadas en la base de datos que afectan a la pertenencia al conjunto de resultados o a los valores modificados en las columnas de las filas que forman el conjunto de resultados. Un cursor estático no muestra las nuevas filas insertadas en la base de datos después de abrir el cursor, aunque coincidan con las condiciones de búsqueda de la instrucción `SELECT` del cursor. Si otros usuarios actualizan las filas que conforman el conjunto de resultados, los nuevos valores de datos no se muestran en el cursor estático. El cursor estático muestra las filas eliminadas de la base de datos una vez que se ha abierto el cursor. Las operaciones `UPDATE`, `INSERT` o `DELETE` no se reflejan en un cursor estático (a menos que se cierre y se vuelva a abrir), ni tampoco las modificaciones realizadas con la misma conexión que abrió el cursor.  
@@ -89,7 +89,7 @@ El cursor no refleja las modificaciones realizadas en la base de datos que afect
 La pertenencia y el orden de las filas en un cursor dinámico se fijan al abrir el cursor. Los cursores dinámicos se supervisan mediante un conjunto de identificadores únicos (claves) denominado conjunto de claves. Las claves se generan a partir de un conjunto de columnas que identifican las filas del conjunto de resultados de forma unívoca. El conjunto de claves es el conjunto de valores de clave de todas las filas que han sido calificadas para la instrucción `SELECT` en el momento de abrirse el cursor. El conjunto de claves de un cursor dinámico se genera en **tempdb** al abrir el cursor.  
   
 ### <a name="dynamic"></a>Dinámica  
-Los cursores dinámicos son los opuestos a los cursores estáticos. Reflejan todas las modificaciones realizadas en las filas de su conjunto de resultados al desplazarse por el cursor. Los valores de datos, el orden y la pertenencia de las filas del conjunto de resultados pueden cambiar con cada captura. Todas las instrucciones `UPDATE`, `INSERT` y `DELETE` que realizan todos los usuarios son visibles a través del cursor. Las actualizaciones se muestran inmediatamente si se realizan a través del cursor mediante una función de API, como **SQLSetPos** o la cláusula `WHERE CURRENT OF` de [!INCLUDE[tsql](../includes/tsql-md.md)]. Las actualizaciones realizadas fuera del cursor no son visibles hasta que se confirman, a menos que el nivel de aislamiento de transacción del cursor sea de lectura no confirmada. Para obtener más información sobre los niveles de aislamiento, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
+Los cursores dinámicos son los opuestos a los cursores estáticos. Reflejan todas las modificaciones realizadas en las filas de su conjunto de resultados al desplazarse por el cursor. Los valores de datos, el orden y la pertenencia de las filas del conjunto de resultados pueden cambiar con cada captura. Todas las instrucciones `UPDATE`, `INSERT` y `DELETE` que realizan todos los usuarios son visibles a través del cursor. Las actualizaciones se muestran inmediatamente si se realizan a través del cursor mediante una función de API, como **SQLSetPos**, o la cláusula `WHERE CURRENT OF` de [!INCLUDE[tsql](../includes/tsql-md.md)]. Las actualizaciones realizadas fuera del cursor no son visibles hasta que se confirman, a menos que el nivel de aislamiento de transacción del cursor sea de lectura no confirmada. Para obtener más información sobre los niveles de aislamiento, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
  
 > [!NOTE]
 > Los planes de cursor dinámico no utilizan nunca índices espaciales.  

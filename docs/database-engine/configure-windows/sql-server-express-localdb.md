@@ -17,10 +17,10 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926036"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
@@ -31,7 +31,7 @@ Microsoft SQL Server Express LocalDB es una característica de [SQL Server Expre
 
 La instalación de LocalDB copia un conjunto de archivos mínimo necesario para iniciar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una vez que LocalDB está instalado, puede iniciar una conexión mediante una cadena de conexión especial. Cuando se realiza la conexión, se crea y se inicia automáticamente la infraestructura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesaria, permitiendo que la aplicación use la base de datos sin tareas de configuración complejas. Las herramientas de desarrollo pueden proporcionar a los desarrolladores de software un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que les permite escribir y probar el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] sin tener que administrar una instancia de servidor completa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
-## <a name="try-it-out"></a>Pruébelo. 
+## <a name="try-it-out"></a>pruébelo. 
 
 - Para descargar e instalar SQL Server Express LocalDB, vaya a las **[descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB es una característica que se selecciona durante la instalación y está disponible al descargar los medios. Si descarga los medios, elija **Express Advanced** o el paquete de LocalDB. En el **Instalador de Visual Studio**, puede instalar LocalDB de SQL Server Express como parte de la carga de trabajo de **desarrollo de escritorio de .NET** o como un componente individual.
 
@@ -50,9 +50,9 @@ Una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB s
 
 ## <a name="description"></a>Descripción
 
-El programa de instalación de LocalDB usa el programa `SqlLocalDB.msi` para instalar los archivos necesarios en el equipo. Una vez instalado, LocalDB es una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que puede crear y abrir bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los archivos de base de datos del sistema de la base de datos se almacenan en la ruta de acceso de AppData local, que suele estar oculta. Por ejemplo, `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Los archivos de base de datos de usuario se almacenan donde indica el usuario, normalmente en algún lugar de la carpeta `C:\Users\<user>\Documents\`.
+El programa de instalación de LocalDB usa el programa `SqlLocalDB.msi` para instalar los archivos necesarios en el equipo. Una vez instalado, LocalDB es una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que puede crear y abrir bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los archivos de base de datos del sistema de la base de datos se almacenan en la ruta de acceso de AppData local, que suele estar oculta. Por ejemplo, `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Los archivos de la base de datos de usuarios se almacenan donde designa el usuario, normalmente en alguna parte de la carpeta `C:\Users\<user>\Documents\`.
 
-Para más información sobre cómo incluir LocalDB en una aplicación, consulte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Introducción a los datos locales](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Crear una base de datos y agregar las tablas en Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
+Para más información sobre cómo incluir LocalDB en una aplicación, vea [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Introducción a los datos locales](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Crear una base de datos y agregar las tablas en Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
 
 Para más información sobre la API LocalDB, consulte [Referencia de SQL Server Express LocalDB](../../relational-databases/sql-server-express-localdb-reference.md).
 
@@ -60,7 +60,7 @@ La utilidad `SqlLocalDb` puede crear instancias de LocalDB e iniciar y detener u
 
 La intercalación de instancias de LocalDB está establecida en `SQL_Latin1_General_CP1_CI_AS` y no se puede cambiar. Normalmente se admiten las intercalaciones de nivel de base de datos, nivel de columna y nivel de expresión. Las bases de datos independientes siguen las reglas de metadatos e intercalaciones de `tempdb` definidas por [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md).
 
-### <a name="restrictions"></a>Restrictions
+### <a name="restrictions"></a>Restricciones
 
 - LocalDB no puede ser un suscriptor de replicación de mezcla.
 
@@ -90,7 +90,7 @@ Solo un administrador del equipo puede crear una instancia compartida de LocalDB
 
 ### <a name="connect-to-the-automatic-instance"></a>Conexión a la instancia automática
 
-La manera más fácil de usar LocalDB es conectarse a la instancia automática propiedad del usuario actual mediante la cadena de conexión `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Para conectarse a una base de datos específica con el nombre de archivo, conéctese con una cadena de conexión similar a `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
+La manera más fácil de usar LocalDB es conectarse a la instancia automática propiedad del usuario actual mediante la cadena de conexión `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Para conectarse a una base de datos específica usando el nombre de archivo, conéctese con una cadena de conexión similar a `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
 
 >[!NOTE]
 >La primera vez que un usuario de un equipo intenta conectarse a LocalDB, se debe crear e iniciar la instancia automática. El tiempo adicional para la creación de la instancia puede hacer que el intento de conexión deje de funcionar con un mensaje de fin de tiempo de espera. Cuando sucede esto, espere unos segundos para que el proceso de creación se complete y, a continuación, conéctese de nuevo.
@@ -117,7 +117,7 @@ REM Gather information about the instance of LocalDB
 |Nombre compartido|""|
 |Propietario|"\<Su usuario de Windows>"|
 |Creación automática|No|
-|State|ejecución|
+|State|en ejecución|
 |Última hora de inicio|\<Fecha y hora>|
 |Nombre de canalización de instancia|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
@@ -128,7 +128,7 @@ REM Gather information about the instance of LocalDB
 
 Para conectarse a una instancia compartida de LocalDB, agregue `\.\` (barra diagonal inversa + punto + barra diagonal inversa) a la cadena de conexión para hacer referencia al espacio de nombres reservado para las instancias compartidas. Por ejemplo, para conectarse a una instancia compartida de LocalDB denominada `AppData`, use una cadena de conexión, como `(localdb)\.\AppData`, como parte de la cadena de conexión. Un usuario que se conecta a una instancia compartida de LocalDB de la que no es propietario debe tener un inicio de sesión con autenticación de Windows o autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 Para información sobre cómo solucionar problemas de LocalDB, consulte la [página que trata la solución de problemas de SQL Server 2012 Express LocalDB](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).
 

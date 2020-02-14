@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68697491"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversión de tipos de datos (motor de base de datos)
@@ -56,7 +56,7 @@ Utilice CAST en lugar de CONVERT si desea que el código de programa de [!INCLUD
   
 En la ilustración siguiente se muestran todas las conversiones de tipos de datos explícitas e implícitas permitidas para los tipos de datos proporcionados por el sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algunas de ellas son **xml**, **bigint** y **sql_variant**. No existe una conversión implícita en la asignación del tipo de datos **sql_variant**, pero sí hay una conversión implícita en **sql_variant**.
   
-![Tabla de conversión de tipos de datos](../../t-sql/data-types/media/lrdatahd.png "Tabla de conversión de tipos de datos")
+![Tabla de conversión de tipo de datos](../../t-sql/data-types/media/lrdatahd.png "Tabla de conversión de tipo de datos")
 
 Si bien en el gráfico anterior se muestran todas las conversiones explícitas e implícitas permitidas en SQL Server, no se indica el tipo de datos resultante de la conversión. Cuando SQL Server realiza una conversión explícita, la instrucción misma determina el tipo de datos resultante. En las conversiones implícitas, las instrucciones de asignación, como establecer el valor de una variable o insertar un valor en una columna, general el tipo de datos definido por la declaración de la variable o la definición de la columna. En el caso de los operadores de comparación u otras expresiones, el tipo de datos resultante depende de las reglas de prioridad de los tipos de datos.
 
@@ -120,14 +120,14 @@ En los temas siguientes se describen los comportamientos de conversión que pres
   
 En la tabla siguiente se describen las conversiones de tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].
   
-|Tipo de datos de SQL Server|Tipo de datos de Visual Basic|  
+|Tipos de datos de SQL Server|Tipo de datos de Visual Basic|  
 |--------------------------|----------------------------|  
 |**char**, **varchar**, **text**, **nvarchar**, **ntext**|**String**|  
 |**decimal**, **numeric**|**String**|  
 |**bit**|**Boolean**|  
 |**binary**, **varbinary**, **image**|Matriz **Byte()** unidimensional|  
 |**int**|**Long**|  
-|**smallint**|**Integer**|  
+|**smallint**|**Entero**|  
 |**tinyint**|**Byte**|  
 |**float**|**Doble**|  
 |**real**|**Único**|  
@@ -135,11 +135,11 @@ En la tabla siguiente se describen las conversiones de tipos de datos de [!INCLU
 |**datetime**, **smalldatetime**|**Date**|  
 |Cualquiera establecido en NULL|**Variant** establecido en NULL|  
   
-Los valores únicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten a un valor único de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], con la excepción de los valores **binary**, **varbinary** e **image**. Estos valores se convierten a una matriz **Byte()** unidimensional en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Esta matriz tiene un intervalo de **Byte(** 0 a _length_ 1 **)** donde *length* es el número de bytes en los valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** o **image**.
+Los valores únicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten a un valor único de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], con la excepción de los valores **binary**, **varbinary** e **image**. Estos valores se convierten a una matriz **Byte()** unidimensional en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Esta matriz tiene un intervalo de **Byte(** 0 to _length_1 **)** donde *length* es el número de bytes en los valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**binary**, **varbinary** o **image**.
   
 A continuación se indican las conversiones de tipos de datos de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-|Tipo de datos de Visual Basic|Tipo de datos de SQL Server|  
+|Tipo de datos de Visual Basic|Tipos de datos de SQL Server|  
 |----------------------------|--------------------------|  
 |**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
@@ -148,9 +148,9 @@ A continuación se indican las conversiones de tipos de datos de [!INCLUDE[vbprv
 |**String** con 4000 caracteres o menos|**varchar**/**nvarchar**|  
 |**String** con más de 4000 caracteres|**text**/**ntext**|  
 |Matriz **Byte()** unidimensional con 8000 bytes o menos|**varbinary**|  
-|Matriz **Byte()** unidimensional con más de 8000 bytes|**imagen**|  
+|Matriz **Byte()** unidimensional con más de 8000 bytes|**image**|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Procedimientos almacenados de automatización OLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

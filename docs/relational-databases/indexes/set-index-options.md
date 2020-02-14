@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909554"
 ---
 # <a name="set-index-options"></a>Establecer opciones de índice
@@ -65,7 +65,7 @@ En este tema se describe cómo modificar las propiedades de un índice en [!INCL
 
 Requiere el permiso ALTER en la tabla o la vista.
 
-## <a name="SSMSProcedure"></a> Usar SQL Server Management Studio
+## <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
 
 ### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Para modificar las propiedades de un índice en el Diseñador de tablas
 
@@ -87,7 +87,7 @@ Requiere el permiso ALTER en la tabla o la vista.
 5. Haga clic con el botón derecho en el índice en el que quiere modificar las propiedades y seleccione **Propiedades**.
 6. Debajo de **Seleccionar una página**, seleccione **Opciones**.
 7. Cambie los valores de una o todas las propiedades para personalizar el índice.
-8. Para agregar, quitar o cambiar la posición de una columna de índice, seleccione la página **General** del cuadro de diálogo **Propiedades del índice:** _nombre_índice_ . Para obtener más información, consulte [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
+8. Para agregar, quitar o cambiar la posición de una columna de índice, seleccione la página **General** del cuadro de diálogo **Propiedades del índice:** _nombre de índice_. Para obtener más información, consulte [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
 
 ## <a name="TsqlProcedure"></a> Usar Transact-SQL
 

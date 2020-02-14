@@ -1,7 +1,7 @@
 ---
 title: Configurar los permisos y las cuentas de servicio de Windows | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ed0565a9cf5a5eecaff143f9a4583a763910d3d8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660276"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929146"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar los permisos y las cuentas de servicio de Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ En la tabla siguiente se enumeran las cuentas de servicio predeterminadas que ut
   
 Las cuentas de servicio administradas, las cuentas de servicio administradas de grupo y las cuentas virtuales están diseñadas para proporcionar a aplicaciones vitales como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el aislamiento de sus propias cuentas, mientras se elimina la necesidad de que un administrador administre manualmente el nombre de la entidad de seguridad del servicio (SPN) y las credenciales de estas cuentas. Estas cuentas facilitan en gran medida la administración a largo plazo de los usuarios de cuentas de servicio, las contraseñas y los SPN.  
   
--   <a name="MSA"></a> **Managed Service Accounts**  
+-   <a name="MSA"></a> **Cuentas de servicio administradas**  
   
      Una cuenta de servicio administrada (MSA) es un tipo de cuenta de dominio creada y administrada por el controlador de dominio. Se asigna a un solo equipo de miembro para usarla al ejecutar un servicio. El controlador de dominio administra la contraseña automáticamente. No puede utilizar MSA para iniciar sesión en un equipo, pero un equipo puede utilizar MSA para iniciar un servicio de Windows. Una MSA tiene la posibilidad de registrar un nombre de entidad de seguridad de servicio (SPN) en Active Directory cuando se proporcionan permisos servicePrincipalName de lectura y escritura. Una MSA se denomina con un sufijo **$** , por ejemplo, **DOMINIO\NOMBREDECUENTA$** . Al especificar MSA, deje en blanco la contraseña. Debido a que una MSA se asigna a un único equipo, no se puede utilizar en nodos diferentes de un clúster de Windows.  
   
@@ -195,7 +195,7 @@ Las cuentas de servicio administradas, las cuentas de servicio administradas de 
   
      En la tabla siguiente se muestran ejemplos de nombres de cuenta virtuales.  
   
-    |ssNoVersion|Nombre de cuenta virtual|  
+    |Servicio|Nombre de cuenta virtual|  
     |-------------|--------------------------|  
     |Instancia predeterminada del servicio del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|**NT SERVICE\MSSQLSERVER**|  
     |Instancia con nombre de un servicio de [!INCLUDE[ssDE](../../includes/ssde-md.md)] denominado **PAYROLL**|**NT SERVICE\MSSQL$PAYROLL**|  
@@ -242,7 +242,7 @@ En la tabla siguiente se muestran los servicios de [!INCLUDE[ssNoVersion](../../
 
 ###  <a name="Firewall"></a> Puerto de firewall
 
-En la mayoría de los casos, cuando se instala inicialmente, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede conectarse con herramientas como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] instaladas en el mismo equipo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no abre los puertos en el firewall de Windows. Las conexiones desde otros equipos pueden no ser posibles hasta que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] se configura para escuchar en un puerto TCP y el puerto adecuado se abre para las conexiones en el firewall de Windows. Para obtener más información vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+En la mayoría de los casos, cuando se instala inicialmente, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede conectarse con herramientas como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] instaladas en el mismo equipo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no abre los puertos en el firewall de Windows. Las conexiones desde otros equipos pueden no ser posibles hasta que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] se configura para escuchar en un puerto TCP y el puerto adecuado se abre para las conexiones en el firewall de Windows. Para más información, consulte [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ##  <a name="Serv_Perm"></a> Permisos de servicio
 
@@ -289,7 +289,7 @@ En esta sección se describen los permisos que el programa de instalación de [!
 |Servicio[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Permisos concedidos por el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Todos los derechos se conceden al SID por servicio. Instancia predeterminada: **NT SERVICE\MSSQLSERVER**. Instancia con nombre: **NT SERVICE\MSSQL$** nombreDeInstancia).|**Iniciar sesión como servicio** (SeServiceLogonRight)<br /><br /> **Reemplazar un token de nivel de proceso** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Omitir comprobación de recorrido** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar las cuotas de la memoria para un proceso** (SeIncreaseQuotaPrivilege)<br /><br /> Permiso para iniciar el objeto de escritura de SQL<br /><br /> Permiso para leer el servicio Registro de eventos<br /><br /> Permiso para leer el servicio Llamada a procedimiento remoto|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** \*<br /><br /> (Todos los derechos se conceden al SID por servicio. Instancia predeterminada: **NT Service\SQLSERVERAGENT**. Instancia con nombre: **NT Service\SQLAGENT$** _nombreDeInstancia_).|**Iniciar sesión como servicio** (SeServiceLogonRight)<br /><br /> **Reemplazar un token de nivel de proceso** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Omitir comprobación de recorrido** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar las cuotas de la memoria para un proceso** (SeIncreaseQuotaPrivilege)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente:** \*<br /><br /> (Todos los derechos se conceden al SID por servicio. Instancia predeterminada: **NT Service\SQLSERVERAGENT**. Instancia con nombre: **NT Service\SQLAGENT$** _nombreDeInstancia_).|**Iniciar sesión como servicio** (SeServiceLogonRight)<br /><br /> **Reemplazar un token de nivel de proceso** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Omitir comprobación de recorrido** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar las cuotas de la memoria para un proceso** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Todos los derechos se conceden a un grupo local de Windows. Instancia predeterminada: **SQLServerMSASUser$** _NombreDeEquipo_ **$MSSQLSERVER**. Instancia con nombre: **SQLServerMSASUser$** _NombreDeEquipo_ **$** _NombreDeInstancia_. Instancia de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$** _NombreDeEquipo_ **$** _PowerPivot_).|**Iniciar sesión como servicio** (SeServiceLogonRight)<br /><br /> Solo para modo tabular:<br /><br /> **Aumentar el espacio de trabajo de un proceso** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Ajustar las cuotas de la memoria para un proceso** (SeIncreaseQuotaPrivilege)<br /><br /> **Bloquear páginas en la memoria** (SeLockMemoryPrivilege): solo es necesario cuando la paginación está completamente desactivada.<br /><br /> Solo para la instalación de clústeres de conmutación por error:<br /><br /> **Aumentar prioridad de programación** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (Todos los derechos se conceden al SID por servicio. Instancia predeterminada: **NT SERVICE\ReportServer**. Instancia con nombre: **NT SERVICE\\ReportServer$** _NombreDeInstancia_).|**Iniciar sesión como servicio** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Todos los derechos se conceden al SID por servicio. Instancia predeterminada e instancia con nombre: **NT SERVICE\MsDtsServer130**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no tiene un proceso independiente para una instancia con nombre).|**Iniciar sesión como servicio** (SeServiceLogonRight)<br /><br /> Permiso para escribir en el registro de eventos de la aplicación<br /><br /> **Omitir comprobación de recorrido** (SeChangeNotifyPrivilege)<br /><br /> **Suplantar a un cliente tras la autenticación** (SeImpersonatePrivilege)|  
@@ -329,43 +329,41 @@ En esta sección se describen los permisos que el programa de instalación de [!
 ||Instid\MSSQL\Log|Lectura, Escritura, Eliminación, Ejecución|  
 ||130\com|Lectura, Ejecución|  
 ||130\shared|Lectura, Ejecución|  
-||130\shared\Errordumps|Lectura, Escritura|  
+||130\shared\Errordumps|Lectura, escritura|  
 ||ServerName\EventLog|Control total|  
 |FTS|Instid\MSSQL\FTData|Control total|  
 ||Instid\MSSQL\FTRef|Lectura, Ejecución|  
 ||130\shared|Lectura, Ejecución|  
-||130\shared\Errordumps|Lectura, Escritura|  
+||130\shared\Errordumps|Lectura, escritura|  
 ||Instid\MSSQL\Install|Lectura, Ejecución|  
-||Instid\MSSQL\jobs|Lectura, Escritura|  
+||Instid\MSSQL\jobs|Lectura, escritura|  
 |MSSQLServerOLAPService|130\shared\ASConfig|Control total|  
 ||Instid\OLAP|Lectura, Ejecución|  
 ||Instid\Olap\Data|Control total|  
-||Instid\Olap\Log|Lectura, Escritura|  
-||Instid\OLAP\Backup|Lectura, Escritura|  
-||Instid\OLAP\Temp|Lectura, Escritura|  
-||130\shared\Errordumps|Lectura, Escritura|  
-|SQLServerReportServerUser|Instid\Reporting Services\Log Files|Lectura, Escritura, Eliminación|  
+||Instid\Olap\Log|Lectura, escritura|  
+||Instid\OLAP\Backup|Lectura, escritura|  
+||Instid\OLAP\Temp|Lectura, escritura|  
+||130\shared\Errordumps|Lectura, escritura|  
+|ReportServer|Instid\Reporting Services\Log Files|Lectura, Escritura, Eliminación|  
 ||Instid\Reporting Services\ReportServer|Lectura, Ejecución|  
-||Instid\Reportingservices\Reportserver\global.asax|Control total|  
-||Instid\Reportingservices\Reportserver\Reportserver.config|Lectura|  
-||Instid\Reporting Services\reportManager|Lectura, Ejecución|  
-||Instid\Reporting Services\RSTempfiles|Lectura, Escritura, Ejecución, Eliminación|  
+||Instid\Reporting Services\ReportServer\global.asax|Control total|  
+||Instid\Reporting Services\ReportServer\rsreportserver.config|Lectura|  
+||Instid\Reporting Services\RSTempfiles|Lectura, Escritura, Ejecución, Eliminación| 
+||Instid\Reporting Services\RSWebApp|Lectura, Ejecución|   
 ||130\shared|Lectura, Ejecución|  
-||130\shared\Errordumps|Lectura, Escritura|  
+||130\shared\Errordumps|Lectura, escritura|  
 |MSDTSServer100|130\dts\binn\MsDtsSrvr.ini.xml|Lectura|  
 ||130\dts\binn|Lectura, Ejecución|  
 ||130\shared|Lectura, Ejecución|  
-||130\shared\Errordumps|Lectura, Escritura|  
+||130\shared\Errordumps|Lectura, escritura|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|130\shared\ASConfig|Lectura|  
 ||130\shared|Lectura, Ejecución|  
-||130\shared\Errordumps|Lectura, Escritura|  
+||130\shared\Errordumps|Lectura, escritura|  
 |SQLWriter|N/D (Se ejecuta como sistema local)||  
 |Usuario|Instid\MSSQL\binn|Lectura, Ejecución|  
 ||Instid\Reporting Services\ReportServer|Lectura, Ejecución, Mostrar el contenido de la carpeta|  
-||Instid\Reportingservices\Reportserver\global.asax|Lectura|  
-||Instid\Reporting Services\reportManager|Lectura, Ejecución|  
-||Instid\Reporting Services\ReportManager\pages|Lectura|  
-||Instid\Reporting Services\ReportManager\Styles|Lectura|  
+||Instid\Reporting Services\ReportServer\global.asax|Lectura|  
+||Instid\Reporting Services\RSWebApp|Lectura, Ejecución, Mostrar el contenido de la carpeta|    
 ||130\dts|Lectura, Ejecución|  
 ||130\tools|Lectura, Ejecución|  
 ||100\tools|Lectura, Ejecución|  
@@ -399,26 +397,23 @@ En esta sección se describen los permisos que el programa de instalación de [!
 
 Es posible que sea necesario conceder algunos permisos de control de acceso a cuentas integradas o a otras cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabla siguiente muestra las ACL adicionales que son establecidas mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Componente que realiza la solicitud|Cuenta|Recurso|Permisos|  
+|Componente que realiza la solicitud|Cuenta|Resource|Permisos|  
 |--------------------------|-------------|--------------|-----------------|  
 |MSSQLServer|Usuarios del registro de rendimiento|Instid\MSSQL\binn|Mostrar el contenido de la carpeta|  
-||Usuarios del monitor de sistema|Instid\MSSQL\binn|Mostrar el contenido de la carpeta|  
+||Usuarios de Monitor de rendimiento|Instid\MSSQL\binn|Mostrar el contenido de la carpeta|  
 ||Usuarios del registro de rendimiento, Usuarios del monitor de rendimiento|\WINNT\system32\sqlctr130.dll|Lectura, Ejecución|  
 ||Solo el administrador|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<sql_instance_name>\*|Control total|  
 ||Administradores, sistema|\tools\binn\schemas\sqlserver\2004\07\showplan|Control total|  
 ||Usuarios|\tools\binn\schemas\sqlserver\2004\07\showplan|Lectura, Ejecución|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Cuenta de servicio web del servidor de informes>|*\<instalación>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Identidad del grupo de aplicaciones del Administrador de informes, cuenta [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , Todos|*\<instalación>* \Reporting Services\ReportManager, *\<instalación>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<instalación>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<instalación>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Lectura|  
-||Identidad del grupo de aplicaciones del Administrador de informes|*\<instalación>* \Reporting Services\ReportManager\Pages\\*.\*|Lectura|  
-||\<Cuenta de servicio web del servidor de informes>|*\<instalación>* \Reporting Services\ReportServer|Lectura|  
-||\<Cuenta de servicio web del servidor de informes>|*\<instalación>* \Reporting Services\ReportServer\global.asax|Completo|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Cuenta de servicio Windows del servidor de informes|*\<instalación>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Cuenta de servicio Windows del servidor de informes|*\<instalación>* \Reporting Services\ReportServer|Lectura|  
+||Cuenta de servicio Windows del servidor de informes|*\<instalación>* \Reporting Services\ReportServer\global.asax|Completo|  
+||Cuenta de servicio Windows del servidor de informes|*\<install>* \Reporting Services\RSWebApp|Lectura, Ejecución|  
 ||Todos|*\<instalación>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||SERVICIO DE RED|*\<instalación>* \Reporting Services\ReportServer\ReportService.asmx|Completo|  
-||Todos|*\<instalación>* \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||Cuenta de servicios de Windows ReportServer|*\<instalación>* \Reporting Services\ReportServer\RSReportServer.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Cuenta de servicios de Windows ReportServer|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Todos|Claves del Servidor de informes (subárbol Instid)|Consultar valor<br /><br /> Enumerar subclaves<br /><br /> Notificar<br /><br /> Controles de lectura|  
-||Usuario de Terminal Services|Claves del Servidor de informes (subárbol Instid)|Consultar valor<br /><br /> Establecer valor<br /><br /> Crear subclave<br /><br /> Enumerar subclave<br /><br /> Notificar<br /><br /> DELETE<br /><br /> Controles de lectura|  
-||Usuarios avanzados|Claves del Servidor de informes (subárbol Instid)|Consultar valor<br /><br /> Establecer valor<br /><br /> Crear subclave<br /><br /> Enumerar subclaves<br /><br /> Notificar<br /><br /> DELETE<br /><br /> Controles de lectura|  
+||Usuario de Terminal Services|Claves del Servidor de informes (subárbol Instid)|Consultar valor<br /><br /> Establecer valor<br /><br /> Crear subclave<br /><br /> Enumerar subclave<br /><br /> Notificar<br /><br /> Eliminar<br /><br /> Controles de lectura|  
+||Usuarios avanzados|Claves del Servidor de informes (subárbol Instid)|Consultar valor<br /><br /> Establecer valor<br /><br /> Crear subclave<br /><br /> Enumerar subclaves<br /><br /> Notificar<br /><br /> Eliminar<br /><br /> Controles de lectura|  
   
  \*Este es el espacio de nombres del proveedor de WMI.  
   
@@ -526,7 +521,7 @@ En toda la instalación, el programa de instalación de [!INCLUDE[ssNoVersion](.
 ####  <a name="Agent"></a> Privilegios e inicio de sesión del Agente SQL Server  
  El SID por servicio del servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se proporciona como un inicio de sesión del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . El inicio de sesión del SID por servicio es un miembro del rol fijo de servidor **sysadmin** .  
   
-####  <a name="Hadron"></a> [!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)]  
+####  <a name="Hadron"></a> Instancia y privilegios de los clústeres de conmutación por error de [!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)] y SQL  
  Al instalar [!INCLUDE[ssDE](../../includes/ssde-md.md)] como una instancia de los clústeres de conmutación por error de SQL (SQL FCI) o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , **LOCAL SYSTEM** se proporciona en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Al inicio de sesión a **LOCAL SYSTEM** se le concede el permiso **ALTER ANY AVAILABILITY GROUP** (para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]) y el permiso **VIEW SERVER STATE** (para SQL FCI).  
   
 ####  <a name="Writer"></a> Objeto de escritura SQL y privilegios  
@@ -541,7 +536,7 @@ En toda la instalación, el programa de instalación de [!INCLUDE[ssNoVersion](.
 ###  <a name="SSAS"></a> Aprovisionamiento de SSAS  
  Los requisitos de cuentas de servicio de[!INCLUDE[ssAS](../../includes/ssas-md.md)] varían en función de cómo se implementa en el servidor. Si va a instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que se configure el servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ejecutarse en una cuenta de dominio. Las cuentas de dominio son necesarias para admitir la facilidad administrada de la cuenta que está integrada en SharePoint. Por esta razón, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporciona una cuenta de servicio predeterminada, como una cuenta virtual, para una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Para obtener más información sobre el aprovisionamiento de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, vea [Configurar las cuentas de servicio Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts).  
   
- Para todas las demás instalaciones independientes de [!INCLUDE[ssAS](../../includes/ssas-md.md)], puede aprovisionar el servicio para ejecutarse en una cuenta de dominio, una cuenta del sistema integrada, una cuenta administrada o una cuenta virtual. Para obtener más información sobre el aprovisionamiento de cuentas, vea [Configurar las cuentas de servicio &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).  
+ Para todas las demás instalaciones independientes de [!INCLUDE[ssAS](../../includes/ssas-md.md)] , puede aprovisionar el servicio para ejecutarse en una cuenta de dominio, una cuenta del sistema integrada, una cuenta administrada o una cuenta virtual. Para obtener más información sobre el aprovisionamiento de cuentas, vea [Configurar las cuentas de servicio &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).  
   
  Para instalaciones en clúster, debe especificar una cuenta de dominio o una cuenta del sistema integrada. Ni las cuentas administradas ni las cuentas virtuales se admiten en los clústeres de conmutación por error de [!INCLUDE[ssAS](../../includes/ssas-md.md)] .  
   
@@ -593,7 +588,7 @@ En toda la instalación, el programa de instalación de [!INCLUDE[ssNoVersion](.
 > [!NOTE]  
 >  Si configura la aplicación para utilizar una cuenta de dominio, puede aislar los privilegios de la aplicación, pero debe administrar manualmente contraseñas o crear una solución personalizada para administrar estas contraseñas. Muchas aplicaciones de servidor usan esta estrategia para mejorar la seguridad, pero requiere una administración adicional y conlleva una mayor complejidad. En estas implementaciones, los administradores de servicios emplean un tiempo considerable en las tareas de mantenimiento como la administración de las contraseñas de servicio y los nombres principales de servicio (SPN), que son necesarios para la autenticación Kerberos. Además, estas tareas de mantenimiento pueden interrumpir el servicio.  
   
- <a name="Local_User"></a> **Local User Accounts**  
+ <a name="Local_User"></a> **Cuentas de usuario locales**  
   
  Si el equipo no forma parte de un dominio, se recomienda usar una cuenta de usuario local sin permisos de administrador de Windows.  
   
@@ -642,7 +637,7 @@ En toda la instalación, el programa de instalación de [!INCLUDE[ssNoVersion](.
 |Idioma|Nombre de Servicio local|Nombre de Servicio de red|Nombre del sistema local|Nombre del grupo de administradores|  
 |--------------|----------------------------|------------------------------|---------------------------|--------------------------|  
 |Inglés<br /><br /> Chino simplificado<br /><br /> Chino tradicional<br /><br /> Coreano<br /><br /> Japonés|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
-|German|NT-AUTORITÄT\LOKALER DIENST|NT-AUTORITÄT\NETZWERKDIENST|NT-AUTORITÄT\SYSTEM|VORDEFINIERT\Administratoren|  
+|Alemán|NT-AUTORITÄT\LOKALER DIENST|NT-AUTORITÄT\NETZWERKDIENST|NT-AUTORITÄT\SYSTEM|VORDEFINIERT\Administratoren|  
 |Francés|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RÉSEAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators|  
 |Italiano|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
 |Español|NT AUTHORITY\SERVICIO LOC|NT AUTHORITY\SERVICIO DE RED|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  

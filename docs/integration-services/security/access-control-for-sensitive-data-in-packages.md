@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281975"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Control del acceso a la información confidencial en paquetes
@@ -142,13 +142,13 @@ ms.locfileid: "71281975"
  Para entender los requisitos y las opciones de la seguridad de paquetes, puede resultar útil ver el tema [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) (Información general sobre seguridad &#40;Integration Services&#41;).  
   
 ### <a name="options"></a>Opciones  
- **Package protection level**  
+ **Nivel de protección de paquetes**  
  Seleccione un nivel de protección de la lista.  
   
  **Contraseña**  
  Si usa el nivel de protección **Cifrar la información confidencial con una contraseña** o **Cifrar todos los datos con una contraseña** , escriba una contraseña.  
   
- **Vuelva a escribir la contraseña**  
+ **Volver a escribir la contraseña**  
  Escriba la contraseña nuevamente.  
 
 ## <a name="password_dialog"></a>Cuadro de diálogo Contraseña del paquete

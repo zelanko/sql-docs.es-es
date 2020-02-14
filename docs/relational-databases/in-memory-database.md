@@ -1,56 +1,66 @@
 ---
-title: Base de datos en memoria| Microsoft Docs
-ms.date: 05/22/2019
+title: Tecnologías y características de sistemas de base de datos en memoria
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
-- in-memory database
-- feature, in-memory database
+- in-memory systems
+- in-memory technologies
+- in-memory features
+- database, in-memory database
+- system, in-memory system
+- features, in-memory features
 - in-memory
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: d61ea85f5c1d7784faaf1d094e2fa858bffcd8c2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: df8bb9e603d5455a2e42393df4c40956000cb037
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255409"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831596"
 ---
-# <a name="in-memory-database"></a>Base de datos en memoria
+# <a name="in-memory-database-systems-and-technologies"></a>Tecnologías y sistemas de base de datos en memoria
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-“Base de datos en memoria” es un término genérico para las características de SQL Server que aprovechan las tecnologías basadas en memoria. A medida que se desarrollen nuevas características basadas en memoria, iremos actualizando esta página.
+Esta página está pensada para servir como página de referencia para las tecnologías y características en memoria de SQL Server. El concepto de un sistema de base de datos en memoria hace referencia a un sistema de base de datos diseñado para aprovechar las mayores capacidades de memoria disponibles en los sistemas de base de datos modernos. Una base de datos en memoria puede ser relacional o no relacional.
+
+Por lo general, se presupone que las ventajas de rendimiento de un sistema de base de datos en memoria están principalmente preparadas para que acceda más rápido a los datos que residen en la memoria en lugar de a los datos que se encuentran incluso en los subsistemas de disco más rápidos disponibles (de forma significativa). Pero muchas cargas de trabajo de SQL Server pueden ajustar todo el espacio de trabajo en la memoria disponible. Muchos sistemas de bases de datos en memoria pueden conservar los datos en el disco y es posible que no siempre puedan ajustar todo el conjunto de datos en la memoria disponible.
+
+Una memoria caché volátil rápida que se enfrenta a un medio considerablemente más lento pero duradero ha sido predominante para las cargas de trabajo de bases de datos relacionales. Requiere enfoques determinados para la administración de cargas de trabajo. Las oportunidades presentadas por velocidades de transferencia de memoria más rápidas, con mayor capacidad, o incluso memoria persistente, facilitan el desarrollo de nuevas tecnologías y características que pueden llevar nuevos enfoques a la administración de cargas de trabajo de bases de datos relacionales.
 
 ## <a name="hybrid-buffer-pool"></a>Grupo de búferes híbrido
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-El [grupo de búferes híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md) permite al motor de base de datos acceder directamente a las páginas de datos de los archivos de base de datos almacenados en dispositivos de memoria persistente (PMEM).
+[El grupo de búferes híbridos](../database-engine/configure-windows/hybrid-buffer-pool.md) expande el grupo de búferes para los archivos de base de datos que residen en dispositivos de almacenamiento de memoria persistente direccionables en byte para plataformas Windows y Linux con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-## <a name="memory-optimized-tempdb-metadata"></a>Metadatos tempdb optimizados para memoria
+## <a name="memory-optimized-tempdb-metadata"></a>Metadatos `tempdb` optimizados para memoria
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una nueva característica, [metadatos tempdb optimizados para memoria](./databases/tempdb-database.md#memory-optimized-tempdb-metadata), que quita de forma eficaz algunos cuellos de botella de contención y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de tempdb.
 
-## <a name="in-memory-oltp"></a>OLTP en memoria
+## <a name="in-memory-oltp"></a>OLTP en memoria (optimización en memoria
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[OLTP en memoria](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) es la tecnología principal disponible en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../includes/sssds-md.md)] para optimizar el rendimiento de escenarios de datos transitorios, carga de datos, ingesta de datos y procesamiento de transacciones.
+[OLTP en memoria](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) es una tecnología de base de datos disponible en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../includes/sssds-md.md)] para optimizar el rendimiento de escenarios de datos transitorios, carga de datos, ingesta de datos y procesamiento de transacciones.
 
-**Se aplica a:** desde [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] hasta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-
-## <a name="persistent-memory-support-for-linux"></a>Compatibilidad con memoria persistente para Linux
+## <a name="configuring-persistent-memory-support-for-linux"></a>Configuración de la compatibilidad con memoria persistente para Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] agrega compatibilidad para dispositivos de memoria persistente (PMEM) para Linux, con lo que se proporciona el esclarecimiento total de los archivos de registro de transacciones y datos colocados en la [memoria persistente](../linux/sql-server-linux-configure-pmem.md).
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] describe cómo configurar la memoria persistente (PMEM) con la [memoria persistente](../linux/sql-server-linux-configure-pmem.md) de la utilidad `ndctl`.
 
-**Se aplica a:** desde [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] hasta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+## <a name="persisted-log-buffer"></a>Búfer de registro persistente
+
+El Service Pack 1 de [!INCLUDE[ssSQL16](../includes/sssql16-md.md)] presentó una optimización de rendimiento para cargas de trabajo intensivas de escritura enlazadas por esperas WRITELOG. La memoria persistente se utiliza para almacenar el búfer de registro. Este búfer, que es pequeño (20 MB por base de datos de usuario), debe vaciarse en el disco para que las transacciones escritas en el registro de transacciones se protejan. En el caso de cargas de trabajo OLTP intensivas de escritura, este mecanismo de vaciado puede convertirse en un cuello de botella. Con el búfer de registro en la memoria persistente, se reduce el número de operaciones necesarias para proteger el registro, lo que mejora los tiempos de transacción generales y aumenta el rendimiento de la carga de trabajo. Este proceso se presentó como [Cola de almacenamiento en caché del registro]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Pero se ha producido un conflicto percibido con las [Copias de seguridad del registro de cola](./backup-restore/tail-log-backups-sql-server.md) y la comprensión tradicional de que el final del registro era la parte del registro de transacciones que se protegió, pero de la que aún no se ha realizado una copia de seguridad. Dado que el nombre de la característica oficial es Búfer de registro persistente, este es el nombre que se usa aquí.
+
+Vea [Adición de búfer de registro persistente a una base de datos](./databases/add-persisted-log-buffer.md).

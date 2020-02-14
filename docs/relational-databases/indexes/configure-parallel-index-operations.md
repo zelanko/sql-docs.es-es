@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908127"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operaciones de índice en paralelo
@@ -56,7 +56,7 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
   
 -   La opción de índice MAXDOP reemplaza la opción de configuración max degree of parallelism solo para la consulta que especifica esta opción. En la tabla siguiente se muestran los valores enteros válidos que se pueden especificar con la opción de configuración max degree of parallelism y la opción de índice MAXDOP.  
   
-    |Valor|Descripción|  
+    |Value|Descripción|  
     |-----------|-----------------|  
     |0|Especifica que el servidor determina el número de CPU que se usan, según la carga de trabajo del sistema actual. Éste es el valor predeterminado y recomendado.|  
     |1|Suprime la generación de planes paralelos. La operación se ejecutará en serie.|  
@@ -99,7 +99,7 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
   
 7.  Seleccione **Grado máximo de paralelismo**y, a continuación, escriba un valor entre 1 y 64.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
 
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -140,7 +140,7 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
     GO  
     ```  
  
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)   (Guía de arquitectura de procesamiento de consultas)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     

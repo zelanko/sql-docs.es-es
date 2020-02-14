@@ -22,10 +22,10 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ade0d29ed20bb8b39d9ac2a1762977abe24d8f65
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293516"
 ---
 # <a name="ado-net-source"></a>Origen de ADO NET
@@ -109,7 +109,7 @@ ms.locfileid: "71293516"
  **Administrador de conexiones de ADO.NET**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones mediante el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET** .  
   
  **Modo de acceso a datos**  
@@ -120,7 +120,7 @@ ms.locfileid: "71293516"
 |Tabla o vista|Recupera datos de una tabla o vista del origen de datos [!INCLUDE[vstecado](../../includes/vstecado-md.md)] .|  
 |Comando SQL|Recupera datos del origen de datos [!INCLUDE[vstecado](../../includes/vstecado-md.md)] mediante una consulta SQL.|  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . **Vista previa** puede mostrar hasta 200 filas.  
   
 > [!NOTE]  
@@ -139,7 +139,7 @@ ms.locfileid: "71293516"
  **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
- **Examinar**  
+ **Browse**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
 ## <a name="ado-net-source-editor-columns-page"></a>Editor de orígenes de ADO NET (página Columnas)
@@ -204,7 +204,7 @@ ms.locfileid: "71293516"
   
 ## <a name="see-also"></a>Consulte también  
  [Destino de DataReader](../../integration-services/data-flow/datareader-destination.md)   
- [Destino ADO NET](../../integration-services/data-flow/ado-net-destination.md)   
+ [Destino de ADO NET](../../integration-services/data-flow/ado-net-destination.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   

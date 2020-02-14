@@ -14,10 +14,10 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006048"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Opción de configuración del servidor external scripts enabled
@@ -26,7 +26,7 @@ ms.locfileid: "72006048"
 
 Utilice la opción **external scripts enabled** para habilitar la ejecución de scripts con determinadas extensiones de lenguaje remoto. Esta propiedad está DESACTIVADA de forma predeterminada. El programa de instalación, opcionalmente, puede establecer esta propiedad en true si **Advanced Analytics Services** (Servicios de análisis avanzado) está instalado.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Debe habilitar la opción de script externo habilitado antes de poder ejecutar un script externo mediante el procedimiento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) . Use **sp_execute_external_script** para ejecutar scripts escritos en un lenguaje compatible, como R o Python. 
 
@@ -55,7 +55,7 @@ Debe reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para qu
 
 Para obtener más información, consulte [Set up SQL Server Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md) (Configurar SQL Server Machine Learning).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 
@@ -63,4 +63,4 @@ Para obtener más información, consulte [Set up SQL Server Machine Learning](..
 
 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-[Servicios de aprendizaje de máquina SQL Server](../../advanced-analytics/r/sql-server-r-services.md)
+[SQL Server Machine Learning Services](../../advanced-analytics/r/sql-server-r-services.md)

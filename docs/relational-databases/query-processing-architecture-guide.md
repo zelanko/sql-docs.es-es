@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74866085"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909755"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -637,16 +637,16 @@ Las siguientes cláusulas de consulta no incluyen parámetros. Tenga en cuenta q
 
 * La <lista_de_selección> de cualquier instrucción `SELECT`. Esto incluye listas `SELECT` de subconsultas y `SELECT` listas dentro de instrucciones `INSERT`.
 * Instrucciones `SELECT` de subconsulta que aparezcan dentro de una instrucción `IF` .
-* las cláusulas `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`o `FOR XM`L de una consulta.
+* Las cláusulas `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO` o `FOR XML` de una consulta.
 * Argumentos, directos o como subexpresiones, a `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`, o a cualquier operador `FULLTEXT` .
 * Los argumentos pattern y escape_character de una cláusula `LIKE` .
 * El argumento de estilo de una cláusula `CONVERT` .
 * Constantes de tipo entero dentro de una cláusula `IDENTITY` .
 * Constantes especificadas mediante la sintaxis de extensiones ODBC.
-* Expresiones que admiten el doblado de constantes y son argumentos de los operadores +, -, \*, / y % Al considerar la posibilidad de que se pueda elegir la parametrización forzada, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene en cuenta que una expresión admite el doblado de constantes cuando se cumple alguna de las siguientes condiciones:  
+* Expresiones que admiten el doblado de constantes y son argumentos de los operadores `+`, `-`, `*`, `/` y `%`. Al considerar la posibilidad de que se pueda elegir la parametrización forzada, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene en cuenta que una expresión admite el doblado de constantes cuando se cumple alguna de las siguientes condiciones:  
   * No aparecen columnas, variables ni subconsultas en la expresión.  
   * La expresión contiene una cláusula `CASE` .  
-* Argumentos para cláusulas de sugerencias de consulta. Estos incluyen el argumento `number_of_rows` de la sugerencia de consulta `FAST` , el argumento `number_of_processors` de la sugerencia de consulta `MAXDOP` y el argumento de número de la sugerencia de consulta `MAXRECURSION` .
+* Argumentos para cláusulas de sugerencias de consulta. Estos incluyen el argumento *number_of_rows* de la sugerencia de consulta `FAST`, el argumento *number_of_processors* de la sugerencia de consulta `MAXDOP` y el argumento *number* de la sugerencia de consulta `MAXRECURSION`.
 
 La parametrización se produce a nivel de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] individuales. En otras palabras, las instrucciones individuales de un lote incluyen parámetros. Tras la compilación, una consulta con parámetros se ejecuta en el contexto del lote en el que se envió originalmente. Si un plan de ejecución de una consulta se almacena en caché, puede determinar si la consulta incluía parámetros haciendo referencia a la columna sql de la vista de administración dinámica sys.syscacheobjects. Si una consulta incluye parámetros, los nombres y tipos de datos de parámetros se anteponen al texto del lote enviado en esta columna, como (\@1 tinyint).
 

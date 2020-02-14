@@ -16,10 +16,10 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2551ad6702eea03fc440b52437faef8cea8dc75f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100445"
 ---
 # <a name="msdb-database"></a>Base de datos msdb
@@ -27,7 +27,7 @@ ms.locfileid: "68100445"
 
   El Agente **utiliza la base de datos** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programar alertas y trabajos. Otras características como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] y Correo electrónico de base de datos también usan esta base de datos.  
   
- Por ejemplo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene automáticamente un historial en línea de copias de seguridad y restauración completo dentro de las tablas de la base de datos **msdb**. Esta información incluye el nombre del autor de la copia de seguridad, la hora en que se realizó y los dispositivos o archivos en que está almacenada. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa esta información para sugerir un plan para restaurar una base de datos y aplicar las copias de seguridad de los registros de transacciones. Los eventos de copia de seguridad de todas las bases de datos se registran, aunque se hayan creado con aplicaciones personalizadas o herramientas de terceros. Por ejemplo, si usa una aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que llama a los objetos de Objetos de administración de SQL Server (SMO) para realizar operaciones de copia de seguridad, el evento se registrará en las tablas del sistema **msdb** , el registro de aplicaciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows y el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ayudar a proteger la información que está almacenada en **msdb**, recomendamos que considere colocar el registro de transacciones de **msdb** en un almacén tolerante a errores.  
+ Por ejemplo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene automáticamente un historial en línea de copias de seguridad y restauración completo dentro de las tablas de la base de datos **msdb**. Esta información incluye el nombre del autor de la copia de seguridad, la hora en que se realizó y los dispositivos o archivos en que está almacenada. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa esta información para sugerir un plan para restaurar una base de datos y aplicar las copias de seguridad de los registros de transacciones. Los eventos de copia de seguridad de todas las bases de datos se registran, aunque se hayan creado con aplicaciones personalizadas o herramientas de terceros. Por ejemplo, si usa una aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que llama a objetos de Objetos de administración de SQL Server (SMO) para realizar operaciones de copia de seguridad, el evento se registra en las tablas del sistema **msdb**, el registro de aplicaciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows y el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para ayudar a proteger la información que está almacenada en **msdb**, recomendamos que considere colocar el registro de transacciones de **msdb** en un almacén tolerante a errores.  
   
  La base de datos **msdb** utiliza el modelo de recuperación simple de forma predeterminada. Si utiliza las tablas del [historial de copias de seguridad y restauración](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) , recomendamos utilizar el modelo de recuperación completa para **msdb**. Para obtener más información, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md). Observe que, cuando se instala o se actualiza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y siempre que se utilice Setup.exe para volver a generar las bases de datos del sistema, el modelo de recuperación de **msdb** se establece automáticamente en simple.  
   
@@ -49,39 +49,39 @@ ms.locfileid: "68100445"
   
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
-|ANSI_NULL_DEFAULT|OFF|Sí|  
-|ANSI_NULLS|OFF|Sí|  
-|ANSI_PADDING|OFF|Sí|  
-|ANSI_WARNINGS|OFF|Sí|  
-|ARITHABORT|OFF|Sí|  
-|AUTO_CLOSE|OFF|Sí|  
-|AUTO_CREATE_STATISTICS|ON|Sí|  
-|AUTO_SHRINK|OFF|Sí|  
-|AUTO_UPDATE_STATISTICS|ON|Sí|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|No|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
+|ALLOW_SNAPSHOT_ISOLATION|ACTIVAR|No|  
+|ANSI_NULL_DEFAULT|Apagado|Sí|  
+|ANSI_NULLS|Apagado|Sí|  
+|ANSI_PADDING|Apagado|Sí|  
+|ANSI_WARNINGS|Apagado|Sí|  
+|ARITHABORT|Apagado|Sí|  
+|AUTO_CLOSE|Apagado|Sí|  
+|AUTO_CREATE_STATISTICS|ACTIVAR|Sí|  
+|AUTO_SHRINK|Apagado|Sí|  
+|AUTO_UPDATE_STATISTICS|ACTIVAR|Sí|  
+|AUTO_UPDATE_STATISTICS_ASYNC|Apagado|Sí|  
+|CHANGE_TRACKING|Apagado|No|  
+|CONCAT_NULL_YIELDS_NULL|Apagado|Sí|  
+|CURSOR_CLOSE_ON_COMMIT|Apagado|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
 |Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sí<br /><br /> Sí|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|ON|Sí|  
-|ENCRYPTION|OFF|No|  
-|MIXED_PAGE_ALLOCATION|ON|No|  
-|NUMERIC_ROUNDABORT|OFF|Sí|  
+|DATE_CORRELATION_OPTIMIZATION|Apagado|Sí|  
+|DB_CHAINING|ACTIVAR|Sí|  
+|ENCRYPTION|Apagado|No|  
+|MIXED_PAGE_ALLOCATION|ACTIVAR|No|  
+|NUMERIC_ROUNDABORT|Apagado|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
-|QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|QUOTED_IDENTIFIER|Apagado|Sí|  
+|READ_COMMITTED_SNAPSHOT|Apagado|No|  
 |RECOVERY|SIMPLE|Sí|  
-|RECURSIVE_TRIGGERS|OFF|Sí|  
+|RECURSIVE_TRIGGERS|Apagado|Sí|  
 |Opciones de Service Broker|ENABLE_BROKER|Sí|  
-|TRUSTWORTHY|ON|Sí|  
+|TRUSTWORTHY|ACTIVAR|Sí|  
   
  Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
  Las siguientes operaciones no se pueden realizar en la base de datos **msdb** :  
   
 -   Cambiar intercalaciones. La intercalación predeterminada es la intercalación de servidor.  

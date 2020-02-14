@@ -24,17 +24,17 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006343"
 ---
 # <a name="database-mirroring-sql-server"></a>Creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se usa [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
   
  *Creación de reflejo de la base de datos* es una solución para aumentar la disponibilidad de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La creación de reflejo se implementa en cada una de las bases de datos y solo funciona con las que utilizan el modelo de recuperación completa.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68006343"
  cola de envío  
  Entradas de registro de transacciones no enviadas que se han acumulado en el disco de registro del servidor principal.  
   
- sesión  
+ hora de sesión  
  Relación que se produce durante la creación de reflejo de la base de datos entre el servidor principal, el servidor reflejado y el servidor testigo (si está presente).  
   
  Después de una sesión de creación de reflejo de la base de datos, proceso por el que las entradas del registro de la base de datos principal acumuladas en el servidor principal se envían al servidor reflejado, que escribe las entradas del registro en el disco lo más rápidamente posible para ponerse al día con el servidor principal.  
@@ -145,7 +145,7 @@ ms.locfileid: "68006343"
   
  Existen dos modos de funcionamiento de la creación de reflejo. Uno de ellos, el *modo de alta seguridad* , admite el funcionamiento sincrónico. En el modo de alta seguridad, cuando se inicia una sesión, el servidor reflejado sincroniza la base de datos reflejada con la base de datos principal lo más rápido posible. Una vez sincronizadas las bases de datos, una transacción se confirma en ambos asociados, pero a costa de aumentar la latencia de las transacciones.  
   
- El segundo modo de funcionamiento, el *modo de alto rendimiento*, se ejecuta de manera asincrónica. El servidor reflejado intenta hacer frente a las entradas de registro enviadas por el servidor principal. La base de datos reflejada podría retrasarse ligeramente en relación con la base de datos principal. No obstante, lo habitual es que dicha diferencia sea pequeña. Sin embargo, la diferencia puede ser considerable si el servidor principal soporta una gran carga de trabajo o el sistema del servidor reflejado se encuentra sobrecargado.  
+ El segundo modo de funcionamiento, el *modo de alto rendimiento*, se ejecuta de manera asincrónica. El servidor reflejado intenta hacer frente a las entradas de registro enviadas por el servidor principal. La base de datos reflejada puede retrasarse un poco respecto a la base de datos principal. No obstante, lo habitual es que dicha diferencia sea pequeña. Sin embargo, la diferencia puede ser considerable si el servidor principal soporta una gran carga de trabajo o el sistema del servidor reflejado se encuentra sobrecargado.  
   
  En el modo de alto rendimiento, en cuanto el servidor principal envía una entrada de registro al servidor reflejado, el servidor principal envía una confirmación al cliente. No espera a una confirmación del servidor reflejado. Esto significa que las transacciones se confirman sin esperar a que el servidor reflejado escriba el registro en el disco. Este funcionamiento asincrónico permite que el servidor principal se ejecute con la mínima latencia de transacciones, pero a riesgo de una pérdida potencial de datos.  
   
@@ -182,13 +182,13 @@ ms.locfileid: "68006343"
   
  Hay tres formas de intercambiar roles.  
   
--   *Automatic failover*  
+-   *Conmutación por error automática*  
   
      Esta función requiere el modo de alta seguridad y la presencia del servidor reflejado y de un testigo. La base de datos ya debe estar sincronizada y el testigo debe estar conectado al servidor reflejado.  
   
      El rol del testigo es comprobar si un determinado servidor asociado está activo y en funcionamiento. Si el servidor reflejado pierde su conexión con el servidor principal, pero el testigo aún está conectado al servidor principal, el servidor reflejado no inicia una conmutación por error. Para obtener más información, vea [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
--   *Manual failover*  
+-   *Conmutación por error manual*  
   
      Esta función requiere el modo de alta seguridad. Los asociados deben estar conectados entre sí y la base de datos ya debe estar sincronizada.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "68006343"
 >  Dado que las bases de datos reflejadas son independientes entre sí, no pueden realizar la conmutación por error en grupo.  
   
 ###  <a name="ClientConnections"></a> Conexiones de cliente  
- El proveedor de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona compatibilidad con la conexión de cliente en sesiones de creación de reflejo de la base de datos. Para obtener más información, vea [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ El proveedor de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona compatibilidad con la conexión de cliente en sesiones de creación de reflejo de la base de datos. Para más información, consulte [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
   
 ###  <a name="ImpactOfPausing"></a> Impacto al pausar una sesión en el registro de transacciones del servidor principal  
@@ -291,13 +291,13 @@ ms.locfileid: "68006343"
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
- **Usar Transact-SQL**  
+ **Uso de Transact-SQL**  
   
 -   [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
   
 -   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [Permitir que un punto de conexión de creación de reflejo de la base de datos use certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -309,7 +309,7 @@ ms.locfileid: "68006343"
   
  **Usar Transact-SQL o SQL Server Management Studio**  
   
--   [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)  
+-   [Actualización de instancias reflejadas](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)  
   
 -   [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 69d0337fe66af61e66290117d94043cc01547524
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bd9ebe330a4ce1ed10b2e3946513d127b7719a8b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770710"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288139"
 ---
 # <a name="article-issues"></a>Problemas de los artículos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La página **Problemas de los artículos** muestra los problemas encontrados en los artículos y los cambios necesarios para solucionar dichos problemas. La siguiente tabla muestra los posibles problemas y las acciones necesarias para garantizar que la replicación y las aplicaciones existentes funcionen correctamente.  
   
-|Problema de los artículos|Detalles|Acción necesaria|  
+|Problema de los artículos|Detalles|Acción requerida|  
 |-------------------|-------------|---------------------|  
 |Se agregarán columnas uniqueidentifier a las tablas.|La replicación requiere una columna de tipo de datos **uniqueidentifier** para todos los artículos de una publicación de combinación o una publicación transaccional que permite suscripciones de actualización.|La replicación agrega automáticamente una columna de tipo de datos **uniqueidentifier** a las tablas publicadas que no tengan una durante la generación de la primera instantánea. Deberá comprobar que las instrucciones INSERT y UPDATE que hacen referencia a dichas tablas utilizan listas de columnas. Compruebe también que existe suficiente espacio en el disco para la columna adicional.|  
 |Las columnas IDENTITY requieren la opción NOT FOR REPLICATION.|La replicación requiere que todas las columnas IDENTITY utilicen la opción NOT FOR REPLICATION. Si una columna IDENTITY publicada no utiliza esta opción, es posible que los comandos INSERT no se repliquen correctamente.|Se aplica a las publicaciones creadas en publicadores que ejecutan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] y versiones anteriores. Deberá especificar la propiedad NOT FOR REPLICATION para todas las columnas IDENTITY.|  
@@ -34,6 +34,6 @@ ms.locfileid: "68770710"
   
 ## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md) (Creación de una publicación)  
   
   

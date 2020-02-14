@@ -13,10 +13,10 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297736"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicación de un paquete SSIS como una vista SQL
@@ -64,16 +64,16 @@ ms.locfileid: "71297736"
   
     3.  Inserte dos registros con los siguientes datos.  
   
-        |Id.|FirstName|LastName|  
+        |id|FIRSTNAME|LASTNAME|  
         |--------|---------------|--------------|  
         |1|John|Doe|  
-        |2|Jane|Doe|  
+        |2|Julia|Doe|  
   
     4.  Arrastre el componente **Origen de OLE DB** desde el **cuadro de herramientas de SSIS** hasta el **diseñador de flujos de datos**.  
   
     5.  Configure el componente para que extraiga datos de la tabla **Employee** de la base de datos **TestDB** . Seleccione **(local).TestDB** en **Administrador de conexiones OLE DB**, **Tabla o vista** en **Modo de acceso a datos**y **[dbo].[Employee]** en **Nombre de la tabla o la vista**.  
   
-         ![Destino de streaming de datos - Conexión OLE DB](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Data Streaming Destination - OLE DB Connection")  
+         ![Destino de streaming de datos: Conexión OLE DB](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Destino de streaming de datos: Conexión OLE DB")  
   
 6.  Ahora, arrastre el **Destino de streaming de datos** desde el cuadro de herramientas al flujo de datos. Este componente debería estar en la sección Común del cuadro de herramientas.  
   
@@ -96,17 +96,17 @@ ms.locfileid: "71297736"
   
 2.  Haga clic en **Siguiente** en la página **Introducción** .  
   
-     ![Asistente para publicar fuentes de distribución de datos - Página Introducción](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Data Feed Publishing Wizard - Introduction Page")  
+     ![Asistente para publicar fuentes de distribución de datos: página Introducción](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Asistente para publicar fuentes de distribución de datos: página Introducción")  
   
 3.  En la página **Configuración del paquete** , haga lo siguiente:  
   
     1.  Escriba el **nombre** de la instancia de SQL Server que contiene el catálogo de SSIS o haga clic en **Examinar** para seleccionar el servidor.  
   
-         ![Asistente para publicar fuentes de distribución de datos - Página Configuración del paquete](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Data Feed Publishing Wizard - Package Settings Pag")  
+         ![Asistente para publicar fuentes de distribución de datos: página Configuración del paquete](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Asistente para publicar fuentes de distribución de datos: página Configuración del paquete")  
   
     2.  Haga clic en **Examinar** junto al campo de ruta de acceso, vaya al catálogo de SSIS, seleccione el paquete SSIS que quiere publicar (por ejemplo: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**) y haga clic en **Aceptar**.  
   
-         ![Asistente para publicar fuentes de distribución de datos - Buscar paquete](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Data Feed Publishing Wizard - Browse for Package")  
+         ![Asistente para publicar fuentes de distribución de datos: Buscar paquete](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Asistente para publicar fuentes de distribución de datos: Buscar paquete")  
   
     3.  En las pestañas Parámetros de paquete, Parámetros de proyecto y Administradores de conexiones al final de la página, escriba los valores de configuración de los parámetros de paquete, los parámetros de proyecto o los administradores de conexiones relativos al paquete. También puede indicar que se use un entorno de referencia para ejecutar el paquete y enlazar los parámetros de paquete y de proyecto a variables de entorno.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71297736"
   
     1.  Seleccione la **base de datos** relativa a la vista que se va a crear.  
   
-         ![Asistente para publicar fuentes de distribución de datos - Página Configuración de publicación](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Data Feed Publishing Wizard - Publish Settings Pag")  
+         ![Asistente para publicar fuentes de distribución de datos: página Configuración de publicación](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Asistente para publicar fuentes de distribución de datos: página Configuración de publicación")  
   
     2.  Escriba un **nombre** para la **vista**. También puede seleccionar una vista existente de la lista desplegable.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "71297736"
   
 5.  En la página **Validación** , revise los resultados correspondientes a la validación de los valores de todas las configuraciones. En el siguiente ejemplo, se abre una **advertencia** sobre la existencia de un servidor vinculado, ya que no hay un servidor vinculado en la instancia de SQL Server seleccionada. Si ve **Error** en **Resultado**, mantenga el puntero sobre **Error** para ver más detalles al respecto. Por ejemplo, si no se habilitó la opción Permitir InProcess del proveedor SSISOLEDB, obtendrá un error en la acción de configuración del servidor vinculado.  
   
-     ![Asistente para publicar fuentes de distribución de datos - Página Validación](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Data Feed Publishing Wizard - Validation Page")  
+     ![Asistente para publicar fuentes de distribución de datos: página Validación](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Asistente para publicar fuentes de distribución de datos: página Validación")  
   
 6.  Haga clic en Guardar informe para guardar el informe como un archivo XML.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "71297736"
   
 8.  Revise la selección en la página **Resumen** y haga clic en **Publicar** para iniciar el proceso de publicación, en el que se creará el servidor vinculado (si aún no existe en el servidor) con el que, luego, se creará la vista.  
   
-     ![Asistente para publicar fuentes de distribución de datos - Página Resumen](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Data Feed Publishing Wizard - Summary Page")  
+     ![Asistente para publicar fuentes de distribución de datos: página Resumen](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Asistente para publicar fuentes de distribución de datos: página Resumen")  
   
      Ahora los datos de salida del paquete se pueden consultar mediante la ejecución de la siguiente instrucción SQL en la base de datos TestDB: SELECT * FROM [SSISPackageView].  
   

@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294964"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
@@ -76,7 +76,7 @@ ms.locfileid: "71294964"
   
 -   Carpeta  
   
--   Proyecto  
+-   proyecto  
   
 -   Entorno  
   
@@ -95,7 +95,7 @@ ms.locfileid: "71294964"
   
 -   La longitud del nombre debe ser mayor que 0 y menor o igual que 128.  
   
-###  <a name="Parameter"></a> Parámetro  
+###  <a name="Parameter"></a> Parameter  
  Tenga en cuenta las reglas siguientes cuando asigne un nombre a un parámetro.  
   
 -   El primer carácter del nombre debe ser una letra, tal como se define en el Estándar Unicode 2.0, o un carácter de subrayado (_).  
@@ -135,7 +135,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
  **Período de retención (días)**  
  Define la antigüedad máxima de los datos permitidos para las operaciones (en días). Se quitan los datos más antiguos.  
   
- El valor mínimo es un día. El valor máximo solo está limitado por el valor máximo de los datos **int** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información sobre este tipo de datos, vea [int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
+ El valor mínimo es un día. El valor máximo solo está limitado por el valor máximo de los datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int** data. Para más información sobre este tipo de datos, vea [int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
   
  **Quitar periódicamente versiones anteriores**  
  El paso de trabajo de limpieza de versiones del proyecto se ejecuta cuando esta propiedad se establece en **True**.  
@@ -164,7 +164,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
  Cambiar el algoritmo de cifrado es una operación que lleva mucho tiempo. En primer lugar, el servidor tiene que utilizar el algoritmo especificado previamente para descifrar todos los valores de configuración. A continuación, el servidor tiene que utilizar el nuevo algoritmo para volver a cifrar los valores. Durante este tiempo, no puede haber otras operaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor. Así, para que las operaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] continúen sin interrupción, el algoritmo de cifrado es un valor de solo lectura en el cuadro de diálogo de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Para cambiar la configuración de la propiedad **Algoritmo de cifrado** , establezca la base de datos de **SSISDB** en modo de usuario único y, luego, llame al procedimiento almacenado catalog.configure_catalog. Use ENCRYPTION_ALGORITHM para el argumento *property_name*. Para más información sobre los valores de propiedad admitidos, vea [catalog.catalog_properties &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Para más información sobre el procedimiento almacenado, vea [catalog.configure_catalog &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ Para cambiar la configuración de la propiedad **Algoritmo de cifrado** , establezca la base de datos de **SSISDB** en modo de usuario único y, luego, llame al procedimiento almacenado catalog.configure_catalog. Use ENCRYPTION_ALGORITHM para el argumento *property_name* . Para más información sobre los valores de propiedad admitidos, vea [catalog.catalog_properties &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Para más información sobre el procedimiento almacenado, vea [catalog.configure_catalog &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
  Para más información sobre el modo de usuario único, vea [Establecer una base de datos en modo de usuario único](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Para más información sobre el cifrado y los algoritmos de cifrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea los temas de la sección [Cifrado de SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -415,7 +415,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
     ```  
   
-3.  Use el cuadro de diálogo **Copia de seguridad de la base de datos** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para realizar una copia de seguridad de la base de datos de SSISDB. Para más información, vea [Cómo: Realizar una copia de seguridad de una base de datos (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Use el cuadro de diálogo **Copia de seguridad de la base de datos** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para realizar una copia de seguridad de la base de datos de SSISDB. Para más información, vea: [Cómo: Realizar una copia de seguridad de una base de datos (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Realice los procedimientos siguientes para generar el script CREATE LOGIN para ##MS_SSISServerCleanupJobLogin##. Para obtener más información, vea [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -466,7 +466,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
     ```  
   
-3.  Use el cuadro de diálogo **Restaurar base de datos** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para restaurar la base de datos de SSISDB a partir de una copia de seguridad. Para obtener más información, consulte los temas siguientes:  
+3.  Use el cuadro de diálogo **Restaurar base de datos** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para restaurar la base de datos de SSISDB a partir de una copia de seguridad. Para obtener más información, vea los temas siguientes:  
   
     -   [Restaurar la base de datos &#40;página General&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -555,13 +555,13 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
      Active la casilla para indicar que ha realizado la copia de seguridad de la base de datos SSISDB antes de ejecutar al asistente.  
   
-     ![Selección del servidor en el Asistente para actualización de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "Selección del servidor en el Asistente para actualización de SSISDB")  
+     ![Seleccionar el servidor en el Asistente para actualización de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "Seleccionar el servidor en el Asistente para actualización de SSISDB")  
   
 5.  Seleccione **Actualizar** para actualizar la base de datos Catálogo de SSIS.  
   
 6.  En la página **Resultado** , examine los resultados.  
   
-     ![Examen de resultados en el Asistente para actualización de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Examen de resultados en el Asistente para actualización de SSISDB")  
+     ![Revisar los resultados en el Asistente para actualización de SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Revisar los resultados en el Asistente para actualización de SSISDB")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>AlwaysOn para el catálogo de SSIS (SSISDB)
   La característica Grupos de disponibilidad AlwaysOn es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Un grupo de disponibilidad admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como “bases de datos de disponibilidad”, que realizan la conmutación por error conjuntamente. Para obtener más información, vea [Grupos de disponibilidad AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
@@ -620,7 +620,7 @@ Puede agregar la base de datos SSISDB a un grupo de disponibilidad AlwaysOn prá
   
 Escriba la contraseña que especificó al crear el catálogo de SSIS en la página **Seleccionar bases de datos** del asistente **Nuevo grupo de disponibilidad**.
 
-![Asistente para nuevo grupo de disponibilidad](../../integration-services/service/media/ssis-newavailabilitygroup.png "Asistente para nuevo grupo de disponibilidad")  
+![Nuevo grupo de disponibilidad](../../integration-services/service/media/ssis-newavailabilitygroup.png "Asistente para nuevo grupo de disponibilidad")  
   
 ####  <a name="Step3"></a> Paso 3: Habilitación de la compatibilidad con SSIS para Always On  
  Después de crear el catálogo de Integration Services, haga clic con el botón derecho en el nodo **Integration Service Catalogs** (Catálogos de Integration Services) y haga clic en **Enable AlwaysOn Support** (Habilitar compatibilidad con AlwaysOn). Verá el siguiente cuadro de diálogo: **Habilitar compatibilidad con AlwaysOn** . Si este elemento de menú está deshabilitado, confirme que tiene todos los requisitos previos instalados y haga clic en **Actualizar**.  

@@ -10,10 +10,10 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1610f98d77ba4a762a63f3ccf5a445393537d36b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296340"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server
@@ -31,7 +31,7 @@ El asistente usa archivos de asignación que [!INCLUDE[ssNoVersion](../../includ
  Si modifica un archivo de asignación existente o agrega un nuevo archivo de asignación a la carpeta, debe cerrar y volver a abrir el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para cargar el archivo de asignación nuevo o modificado.  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>Puede cambiar un archivo de asignación existente
-Si su empresa requiere diferentes asignaciones entre tipos de datos, puede actualizar los archivos de asignación para cambiar las asignaciones que usa el asistente. Por ejemplo, si quiere que el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** se asigne al tipo de datos **GRAPHIC** de DB2 en lugar de al tipo de datos **VARGRAPHIC** de DB2 al transferir datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, puede cambiar la asignación de **de** en el archivo de asignación **SqlClientToIBMDB2.xml** para que se use **GRAPHIC** en lugar de **VARGRAPHIC**de  
+Si su empresa requiere diferentes asignaciones entre tipos de datos, puede actualizar los archivos de asignación para cambiar las asignaciones que usa el asistente. Por ejemplo, si quiere que el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** se asigne al tipo de datos **GRAPHIC** de DB2 en lugar de al tipo de datos **VARGRAPHIC** de DB2 al transferir datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, puede cambiar la asignación de **nchar** en el archivo de asignación **SqlClientToIBMDB2.xml** para que se use **GRAPHIC** en lugar de **VARGRAPHIC.**  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>Puede agregar un archivo de asignación nuevo
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala asignaciones entre numerosas combinaciones de origen y de destino de uso frecuente. También puede agregar nuevos archivos de asignación en el directorio **MappingFiles** para admitir orígenes y destinos adicionales. Los nuevos archivos de asignación deben ajustarse al esquema XSD publicado y asignar entre una combinación única de origen y destino. El esquema de los archivos de asignación, **DataTypeMapping.xsd**, está publicado [aquí](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).

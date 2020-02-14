@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995629"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinar los permisos efectivos del motor de base de datos
@@ -92,7 +92,7 @@ Este sistema es flexible, lo que significa que puede ser complicado si los usuar
 
 Los permisos se pueden conceder en el nivel de servidor, el nivel de base de datos, el nivel de esquema o el nivel de objeto, etc. Hay 26 niveles (denominados clases). La lista completa de clases en orden alfabético es: `APPLICATION ROLE`, `ASSEMBLY`, `ASYMMETRIC KEY`, `AVAILABILITY GROUP`, `CERTIFICATE`, `CONTRACT`, `DATABASE`, `DATABASE` `SCOPED CREDENTIAL`, `ENDPOINT`, `FULLTEXT CATALOG`, `FULLTEXT STOPLIST`, `LOGIN`, `MESSAGE TYPE`, `OBJECT`, `REMOTE SERVICE BINDING`, `ROLE`, `ROUTE`, `SCHEMA`, `SEARCH PROPERTY LIST`, `SERVER`, `SERVER ROLE`, `SERVICE`, `SYMMETRIC KEY`, `TYPE`, `USER`, `XML SCHEMA COLLECTION`. (Algunas clases no están disponibles en algunos tipos de servidores SQL Server). Para proporcionar información completa sobre cada clase se requiere una consulta diferente.
 
-### <a name="principals"></a>Entidades de seguridad
+### <a name="principals"></a>Principals
 
 Los permisos se conceden a entidades de seguridad. Las entidades de seguridad pueden ser roles de servidor, inicios de sesión, roles de base de datos o usuarios. Los inicios de sesión pueden representar grupos de Windows que incluyen muchos usuarios de Windows. Dado que los grupos de Windows no se mantienen por SQL Server, SQL Server no siempre sabe quién es miembro de un grupo de Windows. Cuando un usuario de Windows se conecta a SQL Server, el paquete de inicio de sesión contiene los tokens de pertenencia a grupos de Windows para el usuario.
 

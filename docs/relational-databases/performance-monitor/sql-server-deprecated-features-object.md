@@ -16,10 +16,10 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093592"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
@@ -45,7 +45,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |Instancias del contador Características desusadas de SQL Server|Descripción|  
 |------------------------------------------------------|-----------------|  
 |'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|Se encontró un identificador que no contenía ningún carácter a parte de #. Utilice al menos un carácter adicional. Se produce una vez por cada compilación.|  
-|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplace por `SELECT column_list FROM` *< nombre_función>* `()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
+|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplace por `SELECT column_list FROM` *< nombre de función>* `()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
 |"\@" y nombres que empiezan por "\@\@" como identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por \@ o \@\@. No use \@, \@v@ ni ningún nombre que comience por \@\@ como identificadores. Se produce una vez por cada compilación.|  
 |ADDING TAPE DEVICE|Se encontró la característica en desuso sp_addumpdevice'**tape**'. Use sp_addumpdevice'**disk**' en su lugar. Se produce una vez en cada uso.|  
 |ALL Permission|Número total de veces que se encontró la sintaxis GRANT ALL, DENY ALL o REVOKE ALL. Modifique la sintaxis para denegar permisos concretos. Se produce una vez por cada consulta.|  
@@ -110,7 +110,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |Hindi|El evento se produce una vez por cada inicio de base de datos y una vez por cada uso de la intercalación. Prevea modificar las aplicaciones que usen esta intercalación. Utilice en su lugar Indic_General_90.|  
 |Sugerencia de la tabla HOLDLOCK sin paréntesis||  
 |IDENTITYCOL|Se encontró la sintaxis INDENTITYCOL. Rescriba las instrucciones para utilizar la sintaxis de $identity. Se produce una vez por cada compilación.|  
-|Lista de selección de índice de la vista sin COUNT_BIG(\*)|La lista de selección de una vista indizada de agregado debe contener COUNT_BIG (\*).|  
+|Lista de selección de índice de la vista sin COUNT_BIG(*)|La lista de selección de una vista indizada de agregado debe contener COUNT_BIG (\*).|  
 |INDEX_OPTION|Se encontró la sintaxis de CREATE TABLE, ALTER TABLE o CREATE INDEX sin paréntesis alrededor de las opciones. Reescriba la instrucción para utilizar la sintaxis actual. Se produce una vez por cada consulta.|  
 |INDEXKEY_PROPERTY|Se encontró la sintaxis de INDEXKEY_PROPERTY. Rescriba las instrucciones para consultar sys.index_columns. Se produce una vez por cada compilación.|  
 |Sugerencias TVF indirectas|La aplicación indirecta, a través de una vista, de sugerencias de tabla a una invocación de una función con valores de tabla de múltiples instrucciones se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -118,7 +118,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|El evento se produce una vez por cada inicio de base de datos y una vez por cada uso de la intercalación. Prevea modificar las aplicaciones que usen esta intercalación.|  
 |Lithuanian_Classic|El evento se produce una vez por cada inicio de base de datos y una vez por cada uso de la intercalación. Prevea modificar las aplicaciones que usen esta intercalación.|  
-|Macedonian|El evento se produce una vez por cada inicio de base de datos y una vez por cada uso de la intercalación. Prevea modificar las aplicaciones que usen esta intercalación. Use en su lugar Macedonian_FYROM_90.|  
+|Macedonio|El evento se produce una vez por cada inicio de base de datos y una vez por cada uso de la intercalación. Prevea modificar las aplicaciones que usen esta intercalación. Use en su lugar Macedonian_FYROM_90.|  
 |MODIFY FILEGROUP READONLY|Se encontró la sintaxis de MODIFY FILEGROUP READONLY. Reescriba las instrucciones para utilizar la sintaxis de READ_ONLY. Se produce una vez por cada compilación.|  
 |MODIFY FILEGROUP READWRITE|Se encontró la sintaxis de MODIFY FILEGROUP READWRITE. Rescriba las instrucciones para utilizar la sintaxis de READ_WRITE. Se produce una vez por cada compilación.|  
 |Nombre de columna de varias partes|Una consulta utilizó un nombre de 3 ó 4 partes en la lista de columnas. Cambie la consulta para que use nombres de 2 partes que cumplen el estándar. Se produce una vez por cada compilación.|  

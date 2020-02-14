@@ -22,13 +22,13 @@ ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a308225e96c740680b2df243f35cac216f53e3e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024304"
 ---
-# <a name="indexcol-transact-sql"></a>INDEX_COL (Transact-SQL)
+# <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve el nombre de columna indizado. Devuelve NULL para los índices XML.  
@@ -59,7 +59,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  *key_id*  
  Es la posición de la columna de clave de índice. *key_ID* es **int**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar (128** **)**  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -69,7 +69,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-indexcol-to-return-an-index-column-name"></a>A. Utilizar INDEX_COL para devolver un nombre de columna de índice  
+### <a name="a-using-index_col-to-return-an-index-column-name"></a>A. Utilizar INDEX_COL para devolver un nombre de columna de índice  
  En el ejemplo siguiente se devuelven los nombres de columna de las dos columnas de clave del índice `PK_SalesOrderDetail_SalesOrderID_LineNumber`.  
   
 ```  

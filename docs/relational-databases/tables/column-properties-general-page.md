@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085761"
 ---
 # <a name="column-properties-general-page"></a>Propiedades de columna (página General)
@@ -56,7 +56,7 @@ ms.locfileid: "68085761"
  Indica el valor de fila inicial de una columna de identidad.  
   
  **Incremento de identidad**  
- La propiedad **Incremento de identidad** especifica el valor que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrega al valor superior de identidad de fila existente cuando genera un valor de identidad para una fila que se inserta.  
+ La propiedad **Incremento de identidad** especifica el valor que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrega al valor superior de identidad de fila existente cuando genera un valor de identidad para una fila que se va a insertar.  
   
  **Enlace predeterminado**  
  El valor predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enlazado a la columna. Esta opción está en blanco si no existe ningún valor predeterminado enlazado.  

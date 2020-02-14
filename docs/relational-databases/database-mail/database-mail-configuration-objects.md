@@ -33,10 +33,10 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134429"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuración de Correo electrónico de base de datos
@@ -79,7 +79,7 @@ ms.locfileid: "68134429"
   
 -   El nombre del servidor de correo electrónico.  
   
--   El tipo de servidor de correo electrónico. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siempre es el Protocolo simple de transferencia de correo (SMTP).  
+-   El tipo de servidor de correo electrónico. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siempre es el Protocolo simple de transferencia de correo (SMTP).  
   
 -   El número de puerto del servidor de correo electrónico.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68134429"
   
 |Tarea de configuración|Vínculo de tema|  
 |------------------------|----------------|  
-|Describe cómo crear cuentas de Correo electrónico de base de datos|[Crear una nueva cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)|  
+|Describe cómo crear cuentas de Correo electrónico de base de datos|[Crear una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)|  
 |Describe cómo crear perfiles de Correo electrónico de base de datos|[Crear un perfil de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md)|  
 |Describe cómo configurar Correo electrónico de base de datos|[Configuración de Correo electrónico de base de datos](../../relational-databases/database-mail/configure-database-mail.md)|  
 |Describe cómo crear un script para la configuración de Correo electrónico de base de datos mediante plantillas||  

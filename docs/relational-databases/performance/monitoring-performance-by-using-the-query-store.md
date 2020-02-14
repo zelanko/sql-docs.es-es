@@ -15,10 +15,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909309"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
@@ -111,7 +111,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> Uso de la característica Consultas devueltas  
 Después de habilitar el Almacén de consultas, actualice la parte de la base de datos del panel del Explorador de objetos para agregar la sección **Almacén de consultas**.  
   
-![Árbol de Almacén de consultas de SQL Server 2016 en Explorar de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árbol de Almacén de consultas de SQL Server 2016 en Explorador de objetos de SSMS")   ![Árbol de Almacén de consultas de SQL Server 2017 en Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Árbol de Almacén de consultas de SQL Server 2017 en Explorador de objetos de SSMS") 
+![Árbol de Almacén de consultas de SQL Server 2016 en Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árbol de Almacén de consultas de SQL Server 2016 en Explorador de objetos de SSMS") ![Árbol de Almacén de consultas de SQL Server 2017 en Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Árbol de Almacén de consultas de SQL Server 2017 en Explorador de objetos de SSMS") 
   
 Seleccione **Regressed Queries** (Consultas devueltas) para abrir el panel del mismo nombre **Regressed Queries** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el panel Regressed Queries (Consultas devueltas) se muestran las consultas y los planes del Almacén de consultas. Use los cuadros desplegables de la parte superior para filtrar las consultas en función de varios criterios: **Duración (ms)** (valor predeterminado), Tiempo de CPU (ms), Lecturas lógicas (KB), Escrituras lógicas (KB), Lecturas físicas (KB), Tiempo de CLR (ms), DOP, Consumo de memoria (KB), Recuento de filas, Memoria usada (KB), Memoria de base de datos temporal utilizada (KB) y Tiempo de espera (ms).  
 Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, forzar y no forzar un plan de consulta, alternar entre los formatos de cuadrícula y gráfico, comparar los planes seleccionados (si se ha seleccionado más de uno) y actualizar la pantalla.  
@@ -142,9 +142,9 @@ Estos son algunos ejemplos de cómo se puede obtener más información sobre la 
 |||| 
 |-|-|-|  
 |Experiencia anterior|Nueva experiencia|Acción|
-|Altas esperas RESOURCE_SEMAPHORE por base de datos|Altas esperas de memoria en el Almacén de consultas para consultas concretas|Busque las consultas del Almacén de consultas que consumen más memoria. Estas consultas probablemente retrasan el progreso de las consultas afectadas. Considere la posibilidad de usar la sugerencia de consulta MAX_GRANT_PERCENT para estas consultas o para las consultas afectadas.|
-|Altas esperas LCK_M_X por base de datos|Altas esperas de bloqueo en el Almacén de consultas para consultas concretas|Compruebe los textos de consulta de las consultas afectadas e identifique las entidades de destino. En el Almacén de consultas, busque otras consultas que modifiquen la misma entidad, que se ejecuten con frecuencia o que tengan una gran duración. Tras identificar estas consultas, considere la posibilidad de cambiar la lógica de aplicación para mejorar la simultaneidad o use un nivel de aislamiento menos restrictivo.|
-|Altas esperas PAGEIOLATCH_SH por base de datos|Altas esperas de E/S del búfer en el Almacén de consultas para consultas concretas|Busque las consultas con un gran número de lecturas físicas en el Almacén de consultas. Si coinciden con las consultas con altas esperas de E/S, considere la posibilidad de introducir un índice en la entidad subyacente para llevar a cabo búsquedas en lugar de análisis y así minimizar la sobrecarga de E/S de las consultas.|
+|Altas esperas RESOURCE_SEMAPHORE por base de datos|Altas esperas de memoria en el Almacén de consultas para consultas concretas|Encuentre las consultas que más memoria consumen en el Almacén de consultas. Estas consultas probablemente retrasan el progreso de las consultas afectadas. Considere la posibilidad de usar la sugerencia de consulta MAX_GRANT_PERCENT para estas consultas o para las consultas afectadas.|
+|Altas esperas LCK_M_X por base de datos|Altas esperas de bloqueo en el Almacén de consultas para consultas concretas|Compruebe los textos de consulta para las consultas afectadas e identifique las entidades de destino. En el Almacén de consultas, busque otras consultas que modifiquen la misma entidad, que se ejecuten con frecuencia o que tengan una gran duración. Tras identificar estas consultas, considere la posibilidad de cambiar la lógica de aplicación para mejorar la simultaneidad o usar un nivel de aislamiento menos restrictivo.|
+|Altas esperas PAGEIOLATCH_SH por base de datos|Altas esperas de E/S del búfer en el Almacén de consultas para consultas concretas|Encuentre las consultas con un gran número de lecturas físicas en el Almacén de consultas. Si coinciden con las consultas con altas esperas de E/S, considere la posibilidad de introducir un índice en la entidad subyacente para llevar a cabo búsquedas en lugar de análisis y así minimizar la sobrecarga de E/S de las consultas.|
 |Altas esperas SOS_SCHEDULER_YIELD por base de datos|Altas esperas de CPU en el Almacén de consultas para consultas concretas|Busque las consultas del Almacén de consultas que consumen más CPU. Entre ellas, identifique las consultas cuya alta tendencia de CPU se correlaciona con altas esperas de CPU para las consultas afectadas. Céntrese en la optimización de las consultas: podría ser una regresión de plan o posiblemente un índice que falta.|
 
 ##  <a name="Options"></a> Opciones de configuración 
@@ -335,7 +335,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  Puede definir su propio procedimiento con una lógica diferente para borrar los datos que ya no necesite.  
   
- En el ejemplo anterior se usa el procedimiento almacenado extendido **sp_query_store_remove_query** para quitar datos innecesarios. También se puede usar:  
+ En el ejemplo anterior se usa el procedimiento almacenado extendido **sp_query_store_remove_query** para quitar datos innecesarios. También puede usar:  
   
 -   **sp_query_store_reset_exec_stats** para borrar las estadísticas de tiempo de ejecución de un plan determinado.  
 -   **sp_query_store_remove_plan** para quitar un único plan.  

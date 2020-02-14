@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155057"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS (cláusula de Transact-SQL)
@@ -105,7 +105,7 @@ DDL Triggers with Database Scope
   
  *login_name* no puede ser un grupo, rol, certificado, clave o cuenta integrada, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Como [!INCLUDE[ssDE](../../includes/ssde-md.md)] evalúa los permisos en los objetos a los que el módulo hace referencia, depende de la cadena de propiedad que existe entre los objetos que llaman y los objetos a los que se hace referencia. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la cadena de propiedad era el único método disponible para evitar tener que conceder al usuario que llama acceso a todos los objetos a los que se hace referencia.  
   
  La cadena de propiedad tiene las siguientes limitaciones:  
@@ -184,7 +184,7 @@ GO
   
  Para ver la definición del módulo con el contexto de ejecución especificado, use la vista de catálogo [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
-## <a name="best-practice"></a>Práctica recomendada  
+## <a name="best-practice"></a>Procedimiento recomendado  
  Especifique un inicio de sesión o usuario que tenga al menos los privilegios requeridos para realizar las operaciones definidas en el módulo. Por ejemplo, no especifique una cuenta de propietario de base de datos a menos que tenga los permisos requeridos.  
   
 ## <a name="permissions"></a>Permisos  

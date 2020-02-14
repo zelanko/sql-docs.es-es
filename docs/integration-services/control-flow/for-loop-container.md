@@ -18,10 +18,10 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294154"
 ---
 # <a name="for-loop-container"></a>Contenedor de bucles For
@@ -41,7 +41,7 @@ ms.locfileid: "71294154"
   
  El siguiente diagrama muestra un contenedor de bucles For con una tarea Enviar correo. Si la expresión de inicialización es `@Counter = 0`, la expresión de evaluación es `@Counter < 4`y la expresión de iteración es `@Counter = @Counter + 1`, el bucle se repetirá cuatro veces y enviará cuatro mensajes de correo electrónico.  
   
- ![Un contenedor de bucles Para repite una tarea cuatro veces](../../integration-services/control-flow/media/ssis-forloop.gif "A For Loop container repeats a task four times")  
+ ![Un contenedor de bucles For repite una tarea cuatro veces.](../../integration-services/control-flow/media/ssis-forloop.gif "Un contenedor de bucles For repite una tarea cuatro veces.")  
   
  Las expresiones deben ser expresiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] válidas.  
   

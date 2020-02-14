@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982755"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909825"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,11 +67,11 @@ Crea un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] 
  Use esta instrucción para crear un procedimiento permanente en la base de datos actual o un procedimiento temporal en la base de datos **tempdb**.  
   
 > [!NOTE]  
->  La integración de CLR de .NET Framework en SQL Server se describe en este tema. La integración de CLR no se aplica a Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+>  En este tema se describe la integración de CLR de .NET Framework en SQL Server. La integración de CLR no se aplica a Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
 Vaya directamente a [Ejemplos sencillos](#Simple) para omitir los detalles de la sintaxis y ver un ejemplo rápido de procedimiento almacenado básico.
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -199,7 +199,7 @@ OR ALTER
 VARYING  
  Especifica el conjunto de resultados admitido como parámetro de salida. Este parámetro lo crea de forma dinámica el procedimiento y su contenido puede variar. Solo se aplica a los parámetros **cursor**. Esta opción no es válida para los procedimientos CLR.  
   
-*default*  
+*valor predeterminado*  
  Valor predeterminado de un parámetro. Si se define un valor predeterminado para un parámetro, el procedimiento se puede ejecutar sin especificar ningún valor para ese parámetro. El valor predeterminado debe ser una constante o puede ser NULL. El valor constante puede tener el formato de un carácter comodín, lo que permite usar la palabra clave LIKE cuando se pase el parámetro al procedimiento.   
   
  Los valores predeterminados solo se registran en la columna **sys.parameters.default** de los procedimientos CLR. Esa columna es NULL para los parámetros de procedimientos de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -308,7 +308,7 @@ SERIALIZABLE
 -   Si otra transacción inserta filas nuevas con valores de clave que pudieran estar incluidos en el intervalo de claves leído por las instrucciones de la transacción actual, esta dará error.  
   
 SNAPSHOT  
- Especifica que los datos leídos por cualquier instrucción de una transacción son la versión coherente, desde el punto de vista transaccional, de los datos existentes al inicio de la transacción.  
+ especifica que los datos que ha leído cualquier instrucción de una transacción sean la versión coherente, desde el punto de vista transaccional, de los datos existentes al comienzo de la transacción.  
   
 DATEFIRST = *number*  
  **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
@@ -353,10 +353,10 @@ Proporcione un número de identificador de base de datos cuando se llame al proc
 
 Vea la sección [Ejemplos](#Examples) casi al final de este tema para ver muchos más ejemplos.     
     
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Aunque esta no es una lista de prácticas recomendadas exhaustiva, estas sugerencias pueden mejorar el rendimiento de los procedimientos.  
   
--   Use la instrucción SET NOCOUNT ON como la primera instrucción del cuerpo del procedimiento. Es decir, colóquela a continuación de la palabra clave AS. De esta forma, se desactivan los mensajes que devuelve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al cliente después de que se ejecute cualquier instrucción SELECT, INSERT, UPDATE, MERGE y DELETE. Esto mantiene la salida generada en un mínimo de claridad. Pero no hay ninguna ventaja de rendimiento mensurable en el hardware de hoy en día. Para más información, vea [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   Use la instrucción SET NOCOUNT ON como la primera instrucción del cuerpo del procedimiento. Es decir, colóquela a continuación de la palabra clave AS. De esta forma, se desactivan los mensajes que devuelve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al cliente después de que se ejecute cualquier instrucción SELECT, INSERT, UPDATE, MERGE y DELETE. Esto mantiene la salida generada en un mínimo de claridad. Pero no hay ninguna ventaja de rendimiento cuantificable en el hardware de hoy en día. Para más información, vea [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
 -   Use nombres de esquemas cuando cree o haga referencia a los objetos de base de datos del procedimiento. El tiempo de procesamiento para que [!INCLUDE[ssDE](../../includes/ssde-md.md)] resuelva los nombres de los objetos es menor si no tiene que buscar en varios esquemas. Si no se especifica el esquema al crear objetos, también se evitan problemas de permisos y acceso causados por el esquema predeterminado de un usuario que se asigna.  
   
@@ -489,7 +489,7 @@ GO
   
 ## <a name="Examples"></a> Ejemplos  
   
-|Categoría|Elementos de sintaxis ofrecidos|  
+|Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
 |[Sintaxis básica](#BasicSyntax)|CREATE PROCEDURE|  
 |[Pasar parámetros](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = predeterminado <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • Tipo de parámetro con valores de tabla <br> &nbsp;&nbsp; • CURSOR VARYING|  
@@ -957,7 +957,7 @@ AS
 GO  
 ```  
   
-#### <a name="n-creating-custom-permission-sets"></a>N. Crear conjuntos de permisos personalizados  
+#### <a name="n-creating-custom-permission-sets"></a>Hora Crear conjuntos de permisos personalizados  
  En el ejemplo siguiente se usa EXECUTE AS para crear permisos personalizados para una operación de base de datos. Algunas operaciones, como TRUNCATE TABLE, no tienen permisos que se puedan conceder. Si se incorpora la instrucción TRUNCATE TABLE en un procedimiento almacenado y se especifica la ejecución del procedimiento como un usuario con permisos para modificar la tabla, se pueden ampliar los permisos para truncar la tabla al usuario al que se concedan permisos EXECUTE en el procedimiento.  
   
 ```sql  

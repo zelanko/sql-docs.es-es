@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 149c351796af7741c4bd3ef512fe27ebcbdcf35a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5f744f0bb5d1ced6424fc8882a0a215042fbfc69
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245438"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920344"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server
 
@@ -42,7 +42,7 @@ ms.locfileid: "75245438"
   
 -   El uso de la opción `WITH COMPRESSION` durante la copia de seguridad puede reducir al mínimo los costos de almacenamiento y los costos de transacciones de almacenamiento. También puede reducir el tiempo necesario para completar el proceso de copia de seguridad.  
 
-- Establezca los argumentos `MAXTRANSFERSIZE` y `BLOCKSIZE` tal y como se recomienda en [Copia de seguridad en URL de SQL Server](./sql-server-backup-to-url.md).
+- Establezca los argumentos `MAXTRANSFERSIZE` y `BLOCKSIZE` tal como se recomienda en [Copia de seguridad en URL de SQL Server](./sql-server-backup-to-url.md).
   
 ## <a name="handling-large-files"></a>Controlar archivos grandes  
   

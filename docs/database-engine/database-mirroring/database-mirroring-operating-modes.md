@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006350"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de funcionamiento de la creación de reflejo de la base de datos
@@ -116,7 +116,7 @@ ms.locfileid: "68006350"
  Para que una sesión funcione de forma sincrónica, el servidor reflejado debe sincronizar la base de datos reflejada con la base de datos principal. Cuando la sesión se inicia, el servidor principal comienza a enviar su registro activo al servidor reflejado. El servidor reflejado escribe todos los registros de entrada en el disco lo antes posible. Las bases de datos se sincronizan cuando todos los registros recibidos se escriben en el disco. Las bases de datos se sincronizan siempre y cuando los asociados permanezcan en comunicación.  
   
 > [!NOTE]  
->  Utilice la clase de eventos **Database Mirroring State Change** para supervisar los cambios de estado en una sesión de creación de reflejo de la base de datos. Para más información, consulte [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
+>  Utilice la clase de eventos **Database Mirroring State Change** para supervisar los cambios de estado en una sesión de creación de reflejo de la base de datos. Para obtener más información, consulte [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
  Cuando finaliza la sincronización, cada transacción confirmada en la base de datos de principal también se confirma en el servidor reflejado, garantizando así la protección de los datos. Esto se consigue esperando la confirmación de una transacción en la base de datos principal hasta que el servidor principal recibe un mensaje del servidor reflejado indicando que ha reforzado el registro de transacciones en el disco. Tenga en cuenta que la espera de este mensaje aumenta la latencia de la transacción.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "68006350"
 ###  <a name="HighSafetyWithAutoFailover"></a> Modo de alta seguridad con conmutación automática por error  
  La conmutación automática por error ofrece una alta disponibilidad al garantizar que se pueda servir a la base de datos incluso después de la pérdida de un servidor. La conmutación automática por error requiere que la sesión disponga de una tercera instancia de servidor, el *testigo*, que idealmente reside en un tercer equipo. En la siguiente ilustración se muestra la configuración de una sesión en modo de alta seguridad que admite la conmutación automática por error.  
   
- ![El testigo y los dos asociados de una sesión](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "El testigo y los dos asociados de una sesión")  
+ ![El testigo y dos asociados de una sesión](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "El testigo y dos asociados de una sesión")  
   
  A diferencia de los dos asociados, el testigo no sirve a la base de datos. El testigo simplemente admite la conmutación automática por error al comprobar que el servidor principal se encuentre activo y en funcionamiento. El servidor reflejado inicia la conmutación automática por error solo si éste y el testigo permanecen mutuamente conectados después de haberse desconectado del servidor principal.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "68006350"
   
 |Modo de funcionamiento|Seguridad de las transacciones|Estado del testigo|  
 |--------------------|------------------------|-------------------|  
-|Modo de alto rendimiento|OFF|NULL (sin testigo)**|  
+|Modo de alto rendimiento|Apagado|NULL (sin testigo)**|  
 |Modo de alta seguridad sin conmutación automática por error|FULL|NULL (sin testigo)|  
 |Modo de seguridad alta con conmutación automática por error*|FULL|CONNECTED|  
   
@@ -249,9 +249,9 @@ ms.locfileid: "68006350"
   
 |Factor|Columnas|Descripción|  
 |------------|-------------|-----------------|  
-|Seguridad de las transacciones|**mirroring_safety_level** o **mirroring_safety_level_desc**|La configuración de seguridad de las transacciones para las actualizaciones de la base de datos reflejada es una de las siguientes:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= la base de datos no está en línea.|  
+|Seguridad de las transacciones|**mirroring_safety_level** o **mirroring_safety_level_desc**|La configuración de seguridad de las transacciones para las actualizaciones de la base de datos reflejada es una de las siguientes:<br /><br /> DESCONOCIDO<br /><br /> Apagado<br /><br /> FULL<br /><br /> NULL= la base de datos no está en línea.|  
 |¿Existe un testigo?|**mirroring_witness_name**|Nombre de servidor del testigo de creación de reflejo de la base de datos o NULL, que indica que no existe ningún testigo.|  
-|Estado del testigo|**mirroring_witness_state** o **mirroring_witness_state_desc**|Estado del testigo en la base de datos en un determinado asociado:<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL = no existe ningún testigo o la base de datos no está en línea.|  
+|Estado del testigo|**mirroring_witness_state** o **mirroring_witness_state_desc**|Estado del testigo en la base de datos en un determinado asociado:<br /><br /> DESCONOCIDO<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL = no existe ningún testigo o la base de datos no está en línea.|  
   
  Por ejemplo, en el servidor principal o el servidor reflejado, escriba:  
   
@@ -268,7 +268,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 |------------------------|----------------------------------------|-------------------|-------------------------------------|  
 |FULL|SYNCHRONIZED|CONNECTED|Se produce la conmutación automática por error.|  
 |FULL|SYNCHRONIZED|DISCONNECTED|El servidor reflejado se detiene; la conmutación por error no es posible y no se puede hacer que la base de datos esté disponible.|  
-|OFF|SUSPENDED o DISCONNECTED|NULL (sin testigo)|El servicio se puede forzar en el servidor reflejado (con posible pérdida de datos).|  
+|Apagado|SUSPENDED o DISCONNECTED|NULL (sin testigo)|El servicio se puede forzar en el servidor reflejado (con posible pérdida de datos).|  
 |FULL|SYNCHRONIZING o SUSPENDED|NULL (sin testigo)|El servicio se puede forzar en el servidor reflejado (con posible pérdida de datos).|  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  

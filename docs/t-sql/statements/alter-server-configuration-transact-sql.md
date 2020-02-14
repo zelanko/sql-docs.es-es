@@ -21,10 +21,10 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006067"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
@@ -146,10 +146,10 @@ Es la lista de uno o varios nodos NUMA. Los identificadores del nodo NUMA comien
 DIAGNOSTICS LOG  
 Inicia o detiene el registro de datos de diagnóstico que captura el procedimiento sp_server_diagnostics. Este argumento también establece los parámetros de configuración del registro SQLDIAG como el recuento de sustitución incremental de archivos de registro, el tamaño del archivo de registro y la ubicación del archivo. Para obtener más información, vea [Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
   
-ON  
+ACTIVAR  
 Inicia el registro de datos de diagnóstico de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] en la ubicación especificada en la opción de archivo PATH. Este es el argumento predeterminado.  
   
-OFF  
+Apagado  
 Detiene el registro de datos de diagnóstico.  
   
 PATH = { 'os_file_path' | DEFAULT }  
@@ -220,7 +220,7 @@ Para obtener más información, consulte [Cambiar el contexto de clúster de HAD
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
-ON  
+ACTIVAR  
 Habilita la opción de extensión del grupo de búferes. Esta opción extiende el tamaño del grupo de búferes con almacenamiento permanente. El almacenamiento permanente, como las unidades de estado sólido (SSD), conservan las páginas de datos limpias en el grupo. Para obtener más información sobre esta característica, vea [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md). La extensión del grupo de búferes no está disponible en todas las ediciones de SQL Server. Para obtener más información, consulte [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
@@ -231,7 +231,7 @@ Define el tamaño de la memoria caché. La especificación de tamaño predetermi
   
 Desactive BUFFER POOL EXTENSION para poder modificar el tamaño del archivo. Para especificar un tamaño menor que el actual, la instancia de SQL Server debe reiniciarse para reclamar memoria. De lo contrario, el tamaño especificado debe ser igual o mayor que el actual.  
   
-OFF  
+Apagado  
 Deshabilita la opción de extensión del grupo de búferes. Deshabilite la opción de extensión del grupo de búferes antes de modificar los parámetros asociados como el tamaño o el nombre de archivo. Cuando esta opción está deshabilitada, toda la información de configuración relacionada se quita del Registro.  
   
 > [!WARNING]  
@@ -241,10 +241,10 @@ Deshabilita la opción de extensión del grupo de búferes. Deshabilite la opci�
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
   
-ON  
+ACTIVAR  
 Permite la creación automática de particiones para dividir grandes nodos de hardware NUMA en nodos NUMA más pequeños. Para cambiar el valor de ejecución, es necesario reiniciar el motor de base de datos.  
   
-OFF  
+Apagado  
 Deshabilita la creación automática de particiones de software de grandes nodos de hardware NUMA en nodos NUMA más pequeños. Para cambiar el valor de ejecución, es necesario reiniciar el motor de base de datos.  
 
 > [!WARNING]
@@ -260,10 +260,10 @@ Deshabilita la creación automática de particiones de software de grandes nodos
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
-ON <br>
+ACTIVAR <br>
 Habilita todas las características en el nivel de instancia que forman parte de la familia de características de la [base de datos en memoria](../../relational-databases/in-memory-database.md). Esto incluye los [metadatos tempdb optimizados para memoria](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) y el [grupo de búferes híbrido](../../database-engine/configure-windows/hybrid-buffer-pool.md). Es necesario llevar a cabo un reinicio para que surta efecto.
 
-OFF <br>
+Apagado <br>
 Deshabilita todas las características en el nivel de instancia que forman parte de la familia de características de la base de datos en memoria. Es necesario llevar a cabo un reinicio para que surta efecto.
 
 TEMPDB_METADATA = ON | OFF <br>
@@ -294,7 +294,7 @@ La DLL de recursos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 ## <a name="examples"></a>Ejemplos  
   
-|Categoría|Elementos de sintaxis ofrecidos|  
+|Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
 |[Configuración de una afinidad de proceso](#Affinity)|CPU • NUMANODE • AUTO|  
 |[Configuración de opciones de registro de diagnóstico](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  

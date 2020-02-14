@@ -12,10 +12,10 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3d3019419538c05efc28ceabc5324d373500f65c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285133"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Seleccionar tablas y vistas de origen (Asistente para importación y exportación de SQL Server)
@@ -33,17 +33,17 @@ ms.locfileid: "71285133"
  
 En este ejemplo, la lista **Origen** contiene todas las tablas de la base de datos de ejemplo AdventureWorks. La fila seleccionada muestra que el usuario quiere copiar la tabla **Sales.Customer** del origen en la nueva tabla **Sales.CustomerNew** del destino. 
    
- ![Página Seleccionar tablas del Asistente para importación y exportación](../../integration-services/import-export-data/media/select-tables1.png "Página Seleccionar tablas del Asistente para importación y exportación")
+ ![Seleccione la página de tablas del Asistente para importar y exportar](../../integration-services/import-export-data/media/select-tables1.png "Seleccione la página de tablas del Asistente para importar y exportar")
   
 ## <a name="screen-shot---if-you-provided-a-query"></a>Captura de pantalla: si proporcionó una consulta  
  La siguiente captura de pantalla muestra un ejemplo de la página **Seleccionar tablas y vistas de origen** del asistente después de seleccionar la opción **Escribir una consulta para especificar los datos que se van a transferir** en la página **Especificar copia de tabla o consulta**. La lista **Origen** contiene solo una fila, en la cual el elemento denominado `[Query]` representa la consulta que proporcionó en la página **Proporcionar una consulta de origen**.
  
 En este ejemplo, el usuario quiere copiar los resultados de la consulta del origen en la tabla **Sales.CustomerNew** del destino.  
     
- ![Página Seleccionar tablas del Asistente para importación y exportación](../../integration-services/import-export-data/media/select-tables2.png "Página Seleccionar tablas del Asistente para importación y exportación")  
+ ![Seleccione la página de tablas del Asistente para importar y exportar](../../integration-services/import-export-data/media/select-tables2.png "Seleccione la página de tablas del Asistente para importar y exportar")  
 
 ## <a name="select-source-and-destination-tables"></a>Seleccionar tablas de destino y origen 
-**Source**  
+**Origen**  
 Utilice las casillas para seleccionar en la lista las tablas y vistas disponibles que deben copiarse en el destino. De forma predeterminada, los datos del origen de datos se copian sin cambios. Si crea una tabla de destino nueva, el esquema para la nueva tabla (es decir, la lista de columnas y sus propiedades) también se copia sin cambios desde el origen de datos.
 
 Si proporcionó una consulta, la lista contiene un solo elemento con el nombre `[Query]`. 
@@ -62,7 +62,7 @@ Si quiere, puede hacer clic en **Editar asignaciones** para ver el cuadro de di�
 
 Para más información, vea [Asignaciones de columnas](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
 
-**Vista previa**  
+**Versión preliminar**  
 Si quiere, puede hacer clic en **Vista previa** para obtener una vista previa de hasta 200 filas de datos de ejemplo en el cuadro de diálogo **Vista previa de los datos**. Esto confirma que el asistente va a copiar los datos que quiere copiar. Para más información, vea [Vista previa de los datos](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
   
 Después de obtener una vista previa de los datos, es posible que quiera cambiar las opciones que seleccionó en páginas anteriores del asistente. Para realizar estas modificaciones, vuelva a la página **Seleccionar tablas y vistas de origen** y después haga clic en **Atrás** para volver a las páginas anteriores en las que puede cambiar sus selecciones.  
@@ -91,7 +91,7 @@ Si va a exportar datos a Excel, puede especificar el destino de una de las tres 
 ## <a name="whats-next"></a>¿Qué sigue?  
  Después de seleccionar las tablas y vistas existentes que quiere copiar y de asignarlas a sus destinos, la página siguiente es **Guardar y ejecutar el paquete**. En esta página, especifique si quiere ejecutar la operación de copia inmediatamente. Según la configuración, también puede guardar el paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creado por el asistente para personalizarlo y volver a usarlo más adelante. Para más información, vea [Guardar y ejecutar paquete](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
- ## <a name="see-also"></a>Vea también
+ ## <a name="see-also"></a>Consulte también
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
 [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
 

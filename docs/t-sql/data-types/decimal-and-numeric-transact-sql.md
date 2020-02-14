@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682104"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal y numeric (Transact-SQL)
@@ -46,9 +46,9 @@ El número total máximo de dígitos decimales que se almacenarán. Este número
 >  Informatica solo admite 16 dígitos significativos, sin tener en cuenta la precisión y la escala especificada.  
   
 *s* (escala)  
-El número de dígitos decimales que se almacenarán a la derecha del separador decimal. Este número se extrae de *p* para determinar el número máximo de dígitos a la izquierda del separador decimal. La escala debe ser un valor comprendido entre 0 y *p*, y solo se puede especificar si se especifica la precisión. La escala predeterminada es 0, por lo que 0 < = *s* \<=  *p*. Los tamaños de almacenamiento máximo varían según la precisión.
+El número de dígitos decimales que se almacenarán a la derecha del separador decimal. Este número se extrae de *p* para determinar el número máximo de dígitos a la izquierda del separador decimal. La escala debe ser un valor comprendido entre 0 y *p*, y solo se puede especificar si se especifica la precisión. La escala predeterminada es 0, por lo que 0 < = *s* \<= *p*. Los tamaños de almacenamiento máximo varían según la precisión.
   
-|Precisión|Bytes de almacenamiento|  
+|Precision|Bytes de almacenamiento|  
 |---|---|
 |1 - 9|5|  
 |10-19|9|  
@@ -99,7 +99,7 @@ MyDecimalColumn                         MyNumericColumn
   
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

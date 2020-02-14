@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258569"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941136"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Actualización del trasvase de registros a SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "75258569"
  Mientras se actualiza el servidor de supervisión, la configuración de trasvase de registros continúa funcionando, pero su estado no se registra en las tablas del monitor. Cualquier alerta que se haya configurado no se desencadenará mientras el servidor de supervisión se esté actualizando. Después de la actualización, puede actualizar la información de las tablas del monitor ejecutando el procedimiento almacenado del sistema [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md).   Para obtener más información sobre el servidor de supervisión, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 ##  <a name="UpgradeSecondaries"></a> Actualización de instancias del servidor secundario  
- El proceso de actualización implica actualizar las instancias de los servidores secundarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de actualizar la instancia del servidor principal. Actualice siempre las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] secundario en primer lugar. El trasvase de registros continúa a lo largo del proceso de actualización porque las instancias se los servidores secundarios actualizados continúan restaurando las copias de seguridad de registros a partir de la instancia del servidor principal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si la instancia del servidor principal se actualizara antes que la instancia de un servidor secundario, se produciría un error en el trasvase de registros porque una copia de seguridad creada en una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede restaurar en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede actualizar las instancias secundarias de forma simultánea o en serie, pero todas las instancias secundarias deben actualizarse antes de actualizar la instancia principal para evitar un error de trasvase de registros.  
+ El proceso de actualización implica actualizar las instancias de los servidores secundarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de actualizar la instancia del servidor principal. Actualice siempre las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] secundario en primer lugar. El trasvase de registros continúa a lo largo del proceso de actualización porque las instancias se los servidores secundarios actualizados continúan restaurando las copias de seguridad de registros a partir de la instancia del servidor principal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si la instancia del servidor principal se actualizara antes que la instancia de un servidor secundario, se produciría un error en el trasvase de registros porque una copia de seguridad creada en una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede restaurar en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede actualizar las instancias secundarias de forma simultánea o en serie, pero todas las instancias secundarias deben actualizarse antes de actualizar la instancia principal a fin de evitar un error de trasvase de registros.  
   
  Mientras se actualiza la instancia del servidor secundario, no se ejecutan los trabajos de copia y restauración del trasvase de registros. Esto significa que las copias de seguridad del registro de transacciones sin restaurar se acumularán en el servidor principal y que debe tener espacio suficiente para alojar estas copias de seguridad sin restaurar. La cantidad de acumulación depende de la frecuencia de la copia de seguridad programada en la instancia de servidor principal y de la secuencia en que se actualicen las instancias secundarias. Además, si se ha configurado un servidor de supervisión independiente, se podrían generar alertas que indiquen que no se han realizado restauraciones durante más tiempo que el intervalo configurado.  
   

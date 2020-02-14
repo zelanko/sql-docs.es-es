@@ -12,10 +12,10 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296285"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Crear base de datos (Asistente para importación y exportación de SQL Server)
@@ -33,7 +33,7 @@ En el cuadro de diálogo **Crear base de datos** del asistente solo se proporcio
 ## <a name="screen-shot-of-the-create-database-page"></a>Captura de pantalla de la página Crear base de datos  
 En la siguiente captura de pantalla se muestra el cuadro de diálogo **Crear base de datos** del asistente.  
 
-![Página Crear base de datos del Asistente para importación y exportación](../../integration-services/import-export-data/media/create-database.png "Create database page of the Import and Export Wizard")  
+![Creación de una página de base de datos del Asistente para importar y exportar](../../integration-services/import-export-data/media/create-database.png "Creación de una página de base de datos del Asistente para importar y exportar")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>Proporcionar un nombre para la nueva base de datos  
 **Nombre**  

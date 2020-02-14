@@ -14,10 +14,10 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987365"
 ---
 # <a name="sql-server-access-methods-object"></a>Access Methods (objeto de SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "67987365"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** .  
+ En esta tabla se describen los contadores de **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores de Access Methods de SQL Server|Descripción|  
 |----------------------------------------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "67987365"
 |**Cookie de página de árbol utilizada**|Número de veces que una cookie de página de árbol se utiliza con éxito durante una búsqueda de índices porque no se produjo ningún cambio en la página primaria de la página de árbol. La cookie se utiliza para acelerar la búsqueda de índices.|  
 |**Archivos de trabajo creados/seg.**|Número de archivos de trabajo creados por segundo. Por ejemplo, los archivos de trabajo se pueden utilizar para almacenar los resultados temporales de las combinaciones hash y agregados hash.|  
 |**Tablas de trabajo creadas/seg.**|Número de tablas de trabajo creadas por segundo. Por ejemplo, las tablas de trabajo se pueden utilizar para almacenar los resultados temporales de una cola de consultas, variables lob, variables XML y cursores.|  
-|**Base de tablas de trabajo desde caché**|Exclusivamente para uso interno.|  
+|**Base de tablas de trabajo desde caché**|Solo para uso interno.|  
 |**Relación de tablas de trabajo desde caché**|Porcentaje de tablas de trabajo creadas donde las dos páginas iniciales de la tabla de trabajo no fueron asignadas pero estaban inmediatamente disponibles desde la caché de la tabla de trabajo. (Cuando se elimina una tabla de trabajo, dos páginas pueden permanecer asignadas y se devuelven a la caché de la tabla de trabajo. Esto aumenta el rendimiento.)|  
   
 ## <a name="see-also"></a>Consulte también  

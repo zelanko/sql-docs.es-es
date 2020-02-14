@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710492"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909635"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Supervisión y solución de problemas de PolyBase
 
@@ -142,7 +142,7 @@ Supervise y solucione problemas de las consultas de PolyBase con los siguientes 
 
 3. Haga clic con el botón derecho en el **operador de consulta remota** y seleccione **Propiedades**.
 
-4. Copie y pegue el valor de consulta remota en un editor de texto para ver el plan de consulta remota en formato XML. A continuación, se muestra un ejemplo.
+4. Copie y pegue el valor de consulta remota en un editor de texto para ver el plan de consulta remota en formato XML. A continuación se muestra un ejemplo.
 
    ```xml  
 
@@ -217,12 +217,12 @@ Después de configurar un conjunto de máquinas como parte de un grupo de escala
 
 Actualmente, PolyBase no se comunica con servicios de alta disponibilidad de NameNode como Zookeeper o Knox, pero existe una solución alternativa probada que se puede usar para ofrecer la funcionalidad.
 
-Solución alternativa: Usar un nombre DNS para volver a enrutar las conexiones al NameNode activo. Para ello, debe asegurarse de que el origen de datos externo usa un nombre DNS para comunicarse con el NameNode. Si se produce una conmutación por error de NameNode, deberá cambiar la dirección IP asociada al nombre DNS usado en la definición del origen de datos externo. Se volverán a enrutar todas las conexiones nuevas al NameNode correcto. Las conexiones existentes generarán un error si se produce una conmutación por error. Para automatizar este proceso, un "latido" puede hacer ping en el NameNode activo. Si se produce un error en el latido, se puede suponer que se ha producido una conmutación por error y pasar automáticamente a las direcciones IP secundarias.
+Solución alternativa: Usar un nombre DNS para volver a enrutar las conexiones al NameNode activo. Para ello, debe asegurarse de que el origen de datos externo usa un nombre DNS para comunicarse con el NameNode. Si se produce una conmutación por error de NameNode, deberá cambiar la dirección IP asociada al nombre DNS usado en la definición del origen de datos externo. Se volverán a enrutar todas las conexiones nuevas al NameNode correcto. Las conexiones existentes generarán un error si se produce una conmutación por error. Para automatizar este proceso, un "latido" puede hacer ping en el NameNode activo. Si se produce un error en el latido, se puede dar por hecho que se ha producido una conmutación por error y pasar automáticamente a las direcciones IP secundarias.
 
 ## <a name="error-messages-and-possible-solutions"></a>Mensajes de error y posibles soluciones
 
 Para solucionar los errores de tabla externa, vea el blog de Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Errores de instalación de PolyBase y posibles soluciones").
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Solución de problemas de conectividad de Kerberos con PolyBase](polybase-troubleshoot-connectivity.md)

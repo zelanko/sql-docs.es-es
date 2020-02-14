@@ -12,10 +12,10 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296259"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Guardar el paquete SSIS (Asistente para importación y exportación de SQL Server)
@@ -48,7 +48,7 @@ En la captura de pantalla siguiente se muestra la primera parte de la página **
 
  La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** del asistente si seleccionó la opción **SQL Server** en la página **Guardar y ejecutar el paquete**. 
   
-![Página Guardar el paquete SSIS del Asistente para importación y exportación](../../integration-services/import-export-data/media/save-package2.png "Página Guardar el paquete SSIS del Asistente para importación y exportación")  
+![Guardar el paquete SSIS del Asistente para importar y exportar de SQL Server](../../integration-services/import-export-data/media/save-package2.png "Guardar el paquete SSIS del Asistente para importar y exportar")  
 
 ## <a name="options-to-specify-target--sql-server"></a>Opciones que hay que especificar (Destino = SQL Server) 
 
@@ -64,7 +64,7 @@ Conéctese al servidor mediante la autenticación integrada de Windows. Éste es
  **Utilizar autenticación de SQL Server**  
 Conéctese al servidor mediante la autenticación de SQL Server.  
   
- **User name**  
+ **Nombre de usuario**  
 Si ha especificado la autenticación de SQL Server, escriba el nombre de usuario.  
   
  **Contraseña**  
@@ -74,7 +74,7 @@ Si ha especificado la autenticación de SQL Server, escriba la contraseña.
  
 La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** del asistente si seleccionó la opción **Sistema de archivos** en la página **Guardar y ejecutar el paquete**. 
   
-![Página Guardar el paquete SSIS del Asistente para importación y exportación](../../integration-services/import-export-data/media/save-package1.png "Página Guardar el paquete SSIS del Asistente para importación y exportación")  
+![Guardar el paquete SSIS del Asistente para importar y exportar](../../integration-services/import-export-data/media/save-package1.png "Guardar el paquete SSIS del Asistente para importar y exportar")  
 
 ## <a name="options-to-specify-target--file-system"></a>Opciones que hay que especificar (Destino = Sistema de archivos)
 
@@ -86,7 +86,7 @@ La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** 
 >   
 >  Recuerde dónde guarda el archivo de paquete.  
   
- **Examinar**  
+ **Browse**  
  Opcionalmente, examine para seleccionar la ruta de acceso del archivo de destino en el cuadro de diálogo **Guardar paquete**.  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Acerca de las dos páginas de opciones para guardar el paquete  

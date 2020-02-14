@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127302"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516556"
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68127302"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Registre todos los Service Pack y todas las revisiones que se hayan aplicado a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la intercalación actual. Deberá aplicar estas actualizaciones de nuevo después de volver a generar las bases de datos del sistema.  
+2.  Registre todas las correcciones aplicadas a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la intercalación actual. Debe aplicar estas correcciones de nuevo después de recompilar las bases de datos del sistema.  
   
     ```  
     SELECT  
@@ -100,13 +100,13 @@ ms.locfileid: "68127302"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=nombreDeInstancia /SQLSYSADMINACCOUNTS=cuentas [ /SAPWD=contraseñaSegura ] [ /SQLCOLLATION=nombreDeIntercalación]**  
   
-    |Nombre del parámetro|Descripción|  
+    |Nombre de parámetro|Descripción|  
     |--------------------|-----------------|  
     |/QUIET o /Q|Especifica que el programa de instalación se ejecute sin ninguna interfaz de usuario.|  
     |/ACTION=REBUILDDATABASE|Especifica que el programa de instalación vuelva a crear las bases de datos del sistema.|  
     |/INSTANCENAME=*InstanceName*|Es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la instancia predeterminada, escriba MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Especifica las cuentas individuales o de grupos de Windows que se agregarán al rol fijo de servidor **sysadmin** . Si especifica varias cuentas, sepárelas con un espacio en blanco. Escriba, por ejemplo, **BUILTIN\Administrators MyDomain\MyUser**. Cuando está especificando una cuenta que contiene un espacio en blanco dentro del nombre, agregue la cuenta entre comillas tipográficas. Escriba, por ejemplo, **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** . Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **&#42;&#42; Nota de seguridad &#42;&#42;** La cuenta **sa** es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de **sa** .<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
+    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta **sa** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **&#42;&#42; Nota de seguridad &#42;&#42;** La cuenta **sa** es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de **sa** .<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Especifica una nueva intercalación de nivel de servidor. Este parámetro es opcional. Cuando no se especifica, se usa la intercalación actual del servidor.<br /><br /> **\*\* Importante \*\*** Al cambiar la intercalación de nivel de servidor, no se cambia la de las bases de datos de usuario existentes. Todas las bases de datos de usuario nuevas usarán la nueva intercalación de manera predeterminada.<br /><br /> Para obtener más información, vea [Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=númeroDeArchivos ]|Especifica el número de archivos de datos de tempdb. Este valor se puede aumentar hasta 8 o hasta el número de núcleos, lo que sea mayor.<br /><br /> Valor predeterminado: 8 o el número de núcleos, lo que sea menor.|  
     |[ /SQLTEMPDBFILESIZE=tamañoDeArchivoEnMB ]|Especifica el tamaño inicial en MB de cada archivo de datos de tempdb. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 8|  
@@ -140,7 +140,7 @@ ms.locfileid: "68127302"
 -   Comprobar que los valores de configuración de todo el servidor coinciden con los valores registrados anteriormente.  
   
 ##  <a name="Resource"></a> Volver a generar la base de datos de recursos  
- Con el procedimiento siguiente se vuelve a generar la base de datos de recursos. Al volver a generar la base de datos de recursos, se pierden todos los Service Pack y las revisiones y, por lo tanto, se deben volver a aplicar.  
+ Con el procedimiento siguiente se vuelve a generar la base de datos de recursos. Al recompilar la base de datos de recursos, se pierden todas las correcciones y, por lo tanto, se deben volver a aplicar.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>Para volver a generar la base de datos de recursos:  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68127302"
   
 2.  Inicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la línea de comandos usando el comando: `NET START MSSQLSERVER /T3608`  
   
-     Para obtener más información, vea [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  En otra ventana de la línea de comandos, separe la base de datos **msdb** ejecutando el siguiente comando y reemplazando *\<servername>* por la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
@@ -180,7 +180,7 @@ ms.locfileid: "68127302"
   
 7.  Con el Bloc de notas de Windows, abra el archivo **instmsdb.out** y compruebe si hay errores en la salida.  
   
-8.  Vuelva a aplicar todos los Service Pack y todas las revisiones instaladas en la instancia.  
+8.  Vuelva a aplicar las correcciones instaladas en la instancia.  
   
 9. Vuelva a crear el contenido de usuario almacenado en la base de datos **msdb** , como los trabajos, la alerta, etc.  
   

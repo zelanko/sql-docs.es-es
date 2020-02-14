@@ -24,10 +24,10 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 651311d70b17ce4be761e7ecc246e8839ef34eb0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295830"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilidad de ejecución de paquetes (dtexecui)
@@ -35,7 +35,7 @@ ms.locfileid: "71295830"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede iniciar desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo **dtexecui** en el símbolo del sistema, es una alternativa a ejecutar paquetes con la herramienta del símbolo del sistema **DTExec** .  
+  Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede iniciar desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo **dtexecui** en el símbolo del sistema, es una alternativa a ejecutar paquetes con la herramienta del símbolo del sistema **DTExec** .  
   
  Los paquetes se ejecutan en el mismo proceso que la utilidad **dtexecui.exe** . Como esta utilidad es una herramienta de 32 bits, los paquetes que se ejecutan con **dtexecui.exe** en un entorno de 64 bits se ejecutan en Windows en Win32 (WOW). Al desarrollar y probar comandos mediante la utilidad dtexecui.exe en un equipo de 64 bits, debe probar los comandos en modo de 64 bits mediante la versión de 64 bits de **dtexecui.exe** antes de implementar o programar los comandos en un servidor de producción.  
   
@@ -70,8 +70,8 @@ ms.locfileid: "71295830"
   
 |||  
 |-|-|  
-|Valor|Descripción|  
-|**SQL Server**|Seleccione esta opción si el paquete reside en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporcione un nombre de usuario y una contraseña para llevar a cabo la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nombre de usuario y contraseña agrega las opciones **/USER** _username_ y **/PASSWORD** _password_ options to the commy prompt.|  
+|Value|Descripción|  
+|**SQL Server**|Seleccione esta opción si el paquete reside en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporcione un nombre de usuario y una contraseña para llevar a cabo la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nombre de usuario y contraseña agrega las opciones **/USER** _username_ y **/PASSWORD** _password_ al símbolo del sistema.|  
 |**Sistema de archivos**|Seleccione esta opción si el paquete reside en el sistema de archivos.|  
 |**Almacén de paquetes SSIS**|Seleccione esta opción si el paquete reside en el Almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71295830"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cerrar**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ### <a name="dynamic-options"></a>Opciones dinámicas  
@@ -101,11 +101,11 @@ ms.locfileid: "71295830"
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows.  
   
- **Paquete**  
+ **Package**  
  Escriba el nombre del paquete, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo **Seleccionar un paquete SSIS**.  
   
 #### <a name="package-source--file-system"></a>Origen del paquete = Sistema de archivos  
- **Paquete**  
+ **Package**  
  Escriba el nombre del paquete, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo Abrir. De forma predeterminada, el cuadro de diálogo solamente muestra archivos con la extensión .dtsx.  
   
 #### <a name="package-source--ssis-package-store"></a>Origen del paquete = Almacén de paquetes SSIS  
@@ -121,7 +121,7 @@ ms.locfileid: "71295830"
  **Utilizar autenticación de SQL Server**  
  Esta opción no está disponible si ejecuta un paquete almacenado en el **Almacén de paquetes SSIS**.  
   
- **Paquete**  
+ **Package**  
  Escriba el nombre del paquete, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo **Seleccionar un paquete SSIS**.  
   
 ## <a name="configurations-page"></a>Página Configuraciones  
@@ -137,38 +137,38 @@ ms.locfileid: "71295830"
 > [!NOTE]  
 >  Si varias configuraciones modifican la misma propiedad, se utiliza la configuración que se carga en último lugar.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar configuraciones mediante el cuadro de diálogo **Abrir** . De manera predeterminada, el cuadro de diálogo muestra una lista de los archivos que tienen la extensión .dtsconfig.  
   
- **Quitar**  
+ **Remove**  
  Seleccione un archivo de configuración de la lista y, después, haga clic en **Quitar**.  
   
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cerrar**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="command-files-page"></a>Página Archivos de comandos  
  Use la página **Archivos de comandos** del cuadro de diálogo **Utilidad de ejecución de paquetes** para seleccionar los archivos de comandos que quiere cargar en tiempo de ejecución.  
   
 ### <a name="options"></a>Opciones  
- **Command files**  
+ **Archivos de comandos**  
  Muestra los archivos de comandos que utiliza el paquete. Un paquete puede utilizar varios archivos para establecer las opciones de línea de comandos.  
   
  **Teclas de dirección**  
  Seleccione un archivo de comandos de la lista y utilice las teclas de dirección de la derecha para cambiar el orden de carga. Los archivos de comandos se cargarán en orden, comenzando por la parte superior de la lista.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar un archivo de comandos mediante el cuadro de diálogo **Abrir** .  
   
- **Quitar**  
+ **Remove**  
  Para quitar un archivo de comandos, selecciónelo en el cuadro de texto y haga clic en el botón **Quitar** .  
   
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cerrar**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="connection-managers-page"></a>Página Administradores de conexión  
@@ -187,7 +187,7 @@ ms.locfileid: "71295830"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cerrar**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="execution-options-page"></a>Página Opciones de ejecución  
@@ -209,7 +209,7 @@ ms.locfileid: "71295830"
  **Archivo de punto de comprobación**  
  Indique el archivo de punto de comprobación que utiliza el paquete si se han habilitado los puntos de comprobación de los paquetes.  
   
- **Examinar**  
+ **Browse**  
  Haga clic en el botón Examinar **(…)** para buscar el archivo de punto de control mediante el cuadro de diálogo **Abrir** si ha habilitado los puntos de control de los paquetes. Si ya se ha especificado un punto de comprobación, se sustituye por el archivo seleccionado.  
   
  **Omitir opciones de reinicio**  
@@ -218,10 +218,10 @@ ms.locfileid: "71295830"
  **Opción de reinicio**  
  Seleccione cómo deben utilizarse los puntos de comprobación si se reemplazan las opciones de reinicio.  
   
- **Execute**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cerrar**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="reporting-page"></a>Página de informe  
@@ -231,7 +231,7 @@ ms.locfileid: "71295830"
  **Eventos de consola**  
  Indica los eventos y los tipos de mensajes que se notificarán.  
   
- **Ninguno**  
+ **None**  
  Seleccione esta opción para no obtener elaborar ningún informe.  
   
  **Errores**  
@@ -249,7 +249,7 @@ ms.locfileid: "71295830"
  **Información**  
  Seleccione esta opción para notificar mensajes informativos.  
   
- **Verbose**  
+ **Detallado**  
  Seleccione esta opción para utilizar informes detallados.  
   
  **Registro de consolas**  
@@ -258,7 +258,7 @@ ms.locfileid: "71295830"
  **Nombre**  
  Seleccione esta opción para notificar el nombre de la persona que creó el paquete.  
   
- **Computer**  
+ **Equipo**  
  Seleccione esta opción para notificar el nombre del equipo donde se está ejecutando el paquete.  
   
  **Operador**  
@@ -273,7 +273,7 @@ ms.locfileid: "71295830"
  **GUID de ejecución**  
  Seleccione esta opción para notificar el GUID de la instancia de ejecución del paquete.  
   
- **de mensaje**  
+ **Mensaje**  
  Seleccione esta opción para notificar mensajes.  
   
  **Hora de inicio y finalización**  
@@ -282,7 +282,7 @@ ms.locfileid: "71295830"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cerrar**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="logging-page"></a>Página Registro  
@@ -295,13 +295,13 @@ ms.locfileid: "71295830"
  **Cadena de configuración**  
  Seleccione el nombre del administrador de conexiones del paquete que señala la ubicación del registro o escriba la cadena de conexión para la conexión al proveedor de registro.  
   
- **Quitar**  
+ **Remove**  
  Seleccione un proveedor de registro y haga clic para quitarlo.  
   
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cerrar**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="set-values-page"></a>Página Valores establecidos  
@@ -311,16 +311,16 @@ ms.locfileid: "71295830"
  **Ruta de acceso de la propiedad**  
  Escriba la ruta de acceso de la propiedad. En la sintaxis de la ruta se usa una barra diagonal inversa (\\) para indicar que el elemento siguiente es un contenedor, un punto (.) para indicar que el elemento siguiente es una propiedad y corchetes para indicar que es un miembro de una colección. Es posible identificar al miembro por su índice o nombre. Por ejemplo, la ruta de acceso de la propiedad de una variable de un paquete es \Package.Variables[MyVariable].Value.  
   
- **Value**  
+ **Valor**  
  Escriba el valor de la propiedad.  
   
- **Quitar**  
+ **Remove**  
  Seleccione una ruta de acceso a una propiedad y haga clic para quitarla.  
   
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cerrar**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="verification-page"></a>Página Comprobación  
@@ -333,7 +333,7 @@ ms.locfileid: "71295830"
  **Comprobar la generación del paquete**  
  Seleccione esta opción para comprobar la generación del paquete.  
   
- Compilar  
+ Build  
  Especifique el número secuencial de versión asociado a la compilación.  
   
  **Comprobar el Id. del paquete**  
@@ -345,13 +345,13 @@ ms.locfileid: "71295830"
  **Comprobar el Id. de versión**  
  Seleccione esta opción para comprobar el identificador de la versión.  
   
- Id. de versión  
+ Id. de la versión  
  Especifique el número de identificación de la versión.  
   
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cerrar**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="command-line-page"></a>Página Línea de comandos  
@@ -364,13 +364,13 @@ ms.locfileid: "71295830"
  **Editar la línea de comandos manualmente**  
  Haga clic para editar la línea de comandos en el cuadro de texto **Línea de comandos** .  
   
- **Command line**  
+ **Línea de comandos**  
  Muestra la línea de comandos actual. Podrá editarla si ha seleccionado la opción para editar la línea de comandos manualmente.  
   
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cerrar**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="see-also"></a>Consulte también  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322040"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910168"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Preguntas más frecuentes para administradores de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,7 +113,10 @@ ms.locfileid: "75322040"
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>¿Funciona la replicación a través de conexiones de poco ancho de banda? ¿Utiliza compresión?  
  Sí, la replicación funciona a través de conexiones de poco ancho de banda. En las conexiones sobre TCP/IP, utiliza la compresión proporcionada por el protocolo, pero no aporta compresión adicional. En las conexiones de sincronización web sobre HTTPS, utiliza la compresión proporcionada por el protocolo y también compresión adicional de los archivos XML utilizados para replicar cambios.  
-  
+
+### <a name="can-i-configure-replication-if-i-connect-to-the-server-by-using-the-ip-address"></a>¿Puedo configurar la replicación si me conecto al servidor mediante la dirección IP? 
+No, la replicación solo funciona cuando se usa el nombre real del servidor. A partir de SQL Server Management Studio (SSMS) 18.0 (y versiones posteriores), la replicación se puede configurar mediante el nombre real del servidor y el número de puerto. 
+
 ## <a name="logins-and-object-ownership"></a>Inicios de sesión y propiedad de los objetos  
   
 ### <a name="are-logins-and-passwords-replicated"></a>¿Se replican las contraseñas y los inicios de sesión?  

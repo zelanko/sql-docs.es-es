@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 78b372942de6ec62823dddecd08fdb7221cbe7a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68219685"
----
 
 
 ### <a name="index-stats-options"></a>Opciones de estadísticas de índice
@@ -32,7 +24,7 @@ Además, en versiones anteriores, la granularidad del control era menos restring
  El sistema debe consumir recursos para recopilar estadísticas de índice. Puede elegir entre consumir menos o más recursos relativamente, en función de cuánta precisión considere necesaria para las estadísticas de índice. La interfaz de usuario ofrece la siguiente lista de niveles de precisión de entre los que debe elegir uno:
 
 
-- Rápido
+- Fast (rápido)
 - Muestreado
 - Detallado
 

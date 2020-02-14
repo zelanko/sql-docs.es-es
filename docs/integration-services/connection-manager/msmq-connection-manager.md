@@ -18,10 +18,10 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298528"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ, administrador de conexiones
@@ -70,7 +70,7 @@ ms.locfileid: "71298528"
  **Descripción**  
  Describa el administrador de conexiones. Como método recomendado, describa el administrador de conexiones desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
- **Ruta de acceso**  
+ **Path**  
  Escriba la ruta de acceso completa de la cola de mensajes. El formato de la ruta de acceso depende del tipo de cola.  
   
 |Tipo de cola|Ruta de acceso de ejemplo|  
@@ -80,7 +80,7 @@ ms.locfileid: "71298528"
   
  Puede utilizar "." para representar el equipo local.  
   
- **Prueba**  
+ **Test**  
  Después de configurar el Administrador de conexiones MSMQ, confirme que la conexión es viable haciendo clic en **Probar**.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843630"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73843630"
   
  **Importante** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use en su lugar [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) y [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md). El uso continuado de la función PERMISSIONS puede producir un rendimiento más lento.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -54,10 +54,10 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  **'** *column* **'**  
  Es el nombre opcional de la columna cuya información de permisos se devuelve. Debe ser un nombre de columna válido de la tabla especificada con *objectid*.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Se puede utilizar PERMISSIONS para determinar si el usuario actual cuenta con los permisos necesarios para ejecutar una instrucción o para otorgar, con GRANT, un permiso a otro usuario.  
   
  La información de permisos devuelta es un mapa de bits de 32 bits.  
@@ -80,7 +80,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |32|0x20|CREATE DEFAULT|  
 |64|0x40|BACKUP DATABASE|  
 |128|0x80|BACKUP LOG|  
-|256|0x100|Reservado|  
+|256|0x100|Reserved|  
   
  En la siguiente tabla se indican los bits usados para los permisos de objetos que se devuelven cuando solo se especifica *objectid*.  
   

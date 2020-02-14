@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9ee002f5c835f8a6a69aa6afe69e1838c56c24e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013059"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918353"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,15 +48,15 @@ ms.locfileid: "68013059"
  Unidad de estado sólido (SSD)  
  Las unidades de estado sólido almacenan los datos en memoria (RAM) de forma persistente. Para obtener más información, vea [esta definición](https://en.wikipedia.org/wiki/Solid-state_drive).  
   
- Búfer  
+ Buffer  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un búfer es una página de 8 kB en memoria (el mismo tamaño que una página de índice o de datos). Por tanto, la memoria caché del búfer está dividida en páginas de 8 kB. Una página permanece en la memoria caché del búfer hasta que el administrador de búfer necesita el área del búfer para leer en ella más datos. Los datos solo vuelven a escribirse en el disco si se han modificado. Estas páginas modificadas en memoria se conocen como páginas desfasadas. Una página está limpia cuando es equivalente a su imagen de la base de datos en el disco. Los datos de la memoria caché del búfer se pueden modificar varias veces antes de que se vuelvan a escribir en el disco.  
   
  Grupo de búferes  
  También se llama memoria caché del búfer. El grupo de búferes es un recurso global compartido por todas las bases de datos para sus páginas de datos en caché. El tamaño máximo y mínimo de la memoria caché del grupo de búferes se determina durante el inicio o cuando la instancia de SQL Server se reconfigura dinámicamente mediante sp_configure. Este tamaño determina el número máximo de páginas que se pueden almacenar en memoria caché en el grupo de búferes en cualquier momento en la instancia en ejecución.  
   
- La máxima memoria que puede asignar la extensión de grupo de búferes puede verse limitada por las demás aplicaciones que se ejecutan en el equipo, en caso de que ejerzan una presión considerable sobre la memoria.  
+ La máxima memoria que puede confirmar la extensión de grupo de búferes puede verse limitada por las demás aplicaciones que se ejecutan en el equipo, en caso de que ejerzan una presión considerable sobre la memoria.  
   
- Punto de comprobación  
+ Punto de control  
  Un punto de comprobación crea un punto conocido correcto desde el que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede empezar a aplicar los cambios incluidos en el registro de transacciones durante la recuperación después de un cierre inesperado o un bloqueo del sistema. Un punto de comprobación escribe las páginas desfasadas y la información del registro de transacciones de la memoria al disco y, además, registra información acerca del registro de transacciones. Para obtener más información, vea [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ## <a name="buffer-pool-extension-details"></a>Detalles de la extensión del grupo de búferes  
@@ -68,7 +68,7 @@ ms.locfileid: "68013059"
   
  Cuando está habilitada, la extensión del grupo de búferes especifica el tamaño y la ruta de acceso del archivo de almacenamiento en caché del grupo de búferes en la SSD. Este archivo es una extensión contigua del almacenamiento en la SSD y se configura de forma estática durante el inicio de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las modificaciones de los parámetros de configuración del archivo solo se pueden hacer cuando la característica de extensión del grupo de búferes está deshabilitada. Cuando la extensión del grupo de búferes está deshabilitada, toda la configuración relacionada se quita del Registro. El archivo de la extensión del grupo de búferes se elimina tras el cierre de la instancia de SQL Server.  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Se aconseja seguir estas prácticas recomendadas.  
   
 -   Tras habilitar la extensión del grupo de búferes por primera vez, se recomienda reiniciar la instancia de SQL Server para aprovechar las ventajas derivadas de un rendimiento máximo.  
@@ -99,7 +99,7 @@ ms.locfileid: "68013059"
   
 |||  
 |-|-|  
-|**Descripción de la tarea**|**Tema**|  
+|**Descripción de la tarea**|**Tema.**|  
 |Habilitar y configurar la extensión del grupo de búferes|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Modificar la configuración de la extensión del grupo de búferes|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Ver la configuración de la extensión del grupo de búferes|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  

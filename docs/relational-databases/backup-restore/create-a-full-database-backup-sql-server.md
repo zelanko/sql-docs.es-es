@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710321"
 ---
 # <a name="create-a-full-database-backup"></a>Crear una copia de seguridad completa de base de datos
@@ -140,7 +140,7 @@ En este ejemplo, se creará una copia de seguridad de la base de datos `SQLTestD
 
 1. Expanda **Bases de datos**, haga clic con el botón derecho en `SQLTestDB`, seleccione **Tareas**y, luego, haga clic en **Copia de seguridad...**
 
-1. Haga clic en **Aceptar**.
+1. Haga clic en **OK**.
 
 1. Cuando la copia de seguridad se complete correctamente, haga clic en **Aceptar** para cerrar el cuadro de diálogo SQL Server Management Studio.
 
@@ -412,7 +412,7 @@ Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $back
 - [Restaurar una base de datos a una nueva ubicación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
 - [Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Solución de problemas de SQL Server de backup y restore de las operaciones ](https://support.microsoft.com/kb/224071)
 - [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)

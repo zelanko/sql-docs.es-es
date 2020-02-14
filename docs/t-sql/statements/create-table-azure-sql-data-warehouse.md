@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729866"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
@@ -187,7 +187,7 @@ Para obtener una tabla de conversiones de tipos de datos, vea la sección Conver
  `datetime2` [ ( *n* ) ]  
 Igual que `datetime`, salvo que puede se especificar el número de fracciones de segundo. El valor predeterminado de *n* es `7`.  
   
-|Valor *n*|Precisión|Escala|  
+|Valor *n*|Precision|Escala|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -213,7 +213,7 @@ Igual que `datetime`, salvo que puede se especificar el número de fracciones de
  `float` [ ( *n* ) ]  
  Tipo de datos numérico aproximado que se usa con datos numéricos de punto flotante. Los datos de punto flotante son aproximados, lo que significa que no todos los valores del rango del tipo de datos se pueden representar con exactitud. *n* especifica el número de bits que se usa para almacenar la mantisa del `float` en notación científica. *n* determina el tamaño de almacenamiento y la precisión. Si se especifica *n*, debe ser un valor entre `1` y `53`. El valor predeterminado de *n* es `53`.  
   
-| Valor *n* | Precisión | Tamaño de almacenamiento |  
+| Valor *n* | Precision | Tamaño de almacenamiento |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 dígitos  | 4 bytes      |  
 | 25-53  | 15 dígitos | 8 bytes      |  
@@ -231,10 +231,10 @@ Igual que `datetime`, salvo que puede se especificar el número de fracciones de
  *precisión*  
  El número total máximo de dígitos decimales que se puede almacenar, tanto a la izquierda como a la derecha del separador decimal. La precisión debe ser un valor comprendido entre `1` y la precisión máxima de `38`. La precisión predeterminada es `18`.  
   
- *escala*  
+ *scale*  
  El número máximo de dígitos decimales que se puede almacenar a la derecha del separador decimal. La *escala* debe ser un valor comprendido entre `0` y *precisión*. Solo se puede especificar *escala* si se especifica *precisión*. La escala predeterminada es `0` y, por tanto, `0` <= *escala* <= *precisión*. Los tamaños de almacenamiento máximo varían según la precisión.  
   
-| Precisión | Bytes de almacenamiento  |  
+| Precision | Bytes de almacenamiento  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
 | 10-19      |             9 |  
@@ -317,10 +317,10 @@ Una tabla de almacén de columnas es una tabla almacenada en el orden de columna
 
 Para cambiar una tabla de almacén de filas a una tabla de almacén de columnas, quite todos los índices existentes en la tabla y cree un índice de almacén de columnas agrupado. Para obtener un ejemplo, vea [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
-Para más información, vea estos artículos:
+Para obtener más información, consulte estos artículos:
 - [Resumen de las características de los índices de almacén de columnas para cada versión](https://msdn.microsoft.com/library/dn934994/)
 - [Indexación de tablas en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
-- [Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md) 
+- [Descripción de los índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
 <a name="LimitationsRestrictions"></a>  
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
@@ -583,7 +583,7 @@ WITH
 ```  
   
 <a name="SeeAlso"></a>
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  
 [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   

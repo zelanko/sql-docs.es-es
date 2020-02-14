@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981763"
 ---
 # <a name="hints-transact-sql---table"></a>Sugerencias (Tabla de Transact-SQL)
@@ -63,7 +63,7 @@ ms.locfileid: "73981763"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -354,7 +354,7 @@ Cuando se especifica UPDLOCK, las sugerencias de nivel de aislamiento READCOMMIT
 XLOCK  
 Especifica que se apliquen bloqueos exclusivos y se mantengan hasta que se complete la transacción. Si se especifica junto con ROWLOCK, PAGLOCK o TABLOCK, los bloqueos exclusivos se aplican al nivel de granularidad apropiado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Las sugerencias de tabla se pasan por alto si el plan de consulta no tiene acceso a la tabla. Esto puede deberse a que el optimizador elija no tener acceso a la tabla o a que, en su lugar, se tenga acceso a una vista indizada. En el último caso, el acceso a una vista indizada puede evitarse con la sugerencia de consulta OPTION (EXPAND VIEWS).  
   
 Todas las sugerencias de bloqueo se propagan a todas las tablas y vistas a las que tiene acceso el plan de consulta, incluidas las tablas y vistas a las que se hace referencia en una vista. Asimismo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lleva a cabo las comprobaciones de coherencia de bloqueo correspondientes.  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140301"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Ver las dependencias de una tabla
@@ -55,7 +55,7 @@ ms.locfileid: "68140301"
   
 2.  Haga clic con el botón derecho en una tabla y, después, haga clic en **Ver dependencias**.  
   
-3.  En el cuadro de diálogo **Dependencias del objeto** _\<nombre del objeto\>_ , seleccione **Objetos que dependen de** _\<nombre del objeto\>_ u **Objetos de los que** **depende** _\<nombre del objeto\>_ .  
+3.  En el cuadro de diálogo **Dependencias del objeto** _\<nombre de objeto\>_ , seleccione **Objetos que dependen de** _\<nombre de objeto\>_ u **Objetos de los que** _\<nombre de objeto\>_ **depende**.  
   
 4.  Seleccione un objeto en la cuadrícula **Dependencias** . El tipo de objeto (por ejemplo, "Desencadenador" o "Procedimiento almacenado"), aparece en el cuadro **Tipo** .  
   

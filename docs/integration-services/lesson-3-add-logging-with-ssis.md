@@ -11,10 +11,10 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ebbc82f5570fb97d7b1169563bfde7c67f5be0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296019"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>Lección 3: Adición de registro con SSIS
@@ -40,7 +40,7 @@ Los proveedores de registro crean los registros. Cada proveedor de registro pued
 En esta lección, creará una copia del paquete que ha creado en [Lección 2: Adición de bucles con SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). Con este nuevo paquete, luego agregará y configurará el registro para supervisar eventos específicos durante la ejecución del paquete. Si no ha completado ninguna de las lecciones anteriores, también puede copiar el paquete de la lección 2 finalizada incluido en el tutorial.  
 
 > [!NOTE]
-> Si todavía no lo ha hecho, vea los [requisitos previos de la lección 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+> Si todavía no lo ha hecho, consulte los [requisitos previos de la lección 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
 
 ## <a name="lesson-tasks"></a>Tareas de la lección  
 Esta lección contiene las siguientes tareas:  

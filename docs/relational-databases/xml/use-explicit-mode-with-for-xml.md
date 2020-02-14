@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001788"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar el modo EXPLICIT con FOR XML
@@ -56,7 +56,7 @@ ms.locfileid: "68001788"
   
     -   Para las filas con valor 2 en la columna **Tag**, las columnas **Order!2!id** y **Order!2!date** forman un grupo que se usa después para construir elementos, <`Order id=... date=... /`>.  
   
-    -   Para las filas con valor 3 en la columna **Tag**, las columnas **OrderDetail!3!id!id** y **OrderDetail!3!pid!idref** forman un grupo. Cada una de estas filas genera un elemento, <`OrderDetail id=... pid=...`>, a partir de estas columnas.  
+    -   Para las filas con valor 3 en la columna **Tag** , las columnas **OrderDetail!3!id!id** y **OrderDetail!3!pid!idref** forman un grupo. Cada una de estas filas genera un elemento, <`OrderDetail id=... pid=...`>, a partir de estas columnas.  
   
 -   Tenga en cuenta que, al generar la jerarquía en XML, las filas se procesan por orden. La jerarquía XML se determina como se indica a continuación:  
   

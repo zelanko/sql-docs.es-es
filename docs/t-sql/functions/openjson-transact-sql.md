@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68632139"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -42,7 +42,7 @@ Use **OPENJSON** para importar datos JSON a [!INCLUDE[ssNoVersion](../../include
 >
 > El nivel de compatibilidad 120 puede ser el valor predeterminado incluso en una base de datos nueva de Azure SQL Database.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema")[Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +60,7 @@ La función con valores de tabla **OPENJSON** analiza la *expresiónJSON* propor
 
 De forma predeterminada, la función con valores de tabla **OPENJSON** devuelve tres columnas, que contienen el nombre de clave, el valor y el tipo de cada par de {clave: valor} que se encuentra en *expresiónJSON*. Como alternativa, se puede especificar explícitamente el esquema del conjunto de resultados que **OPENJSON** devuelve proporcionando *cláusula_with*.
   
-### <a name="withclause"></a>cláusula_with
+### <a name="with_clause"></a>cláusula_with
   
 ![Sintaxis de la cláusula WITH en TVF OPENJSON](../../relational-databases/json/media/openjson-shema-syntax.png "Sintaxis de WITH de OPENJSON")
 
@@ -91,7 +91,7 @@ SELECT * FROM OpenJson(@json);
 
 **Resultados:**
 
-| Key                                | value                 | Tipo |
+| key                                | value                 | type |
 | :--                                | :----                 | :--- |
 | String_value                       | John                  | 1 |
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
@@ -126,9 +126,9 @@ SELECT [key], value
 FROM OPENJSON(@json,'$.path.to."sub-object"')
 ```  
   
- **Resultado**  
+ **Resultados**  
   
-|Key|Valor|  
+|Clave|Value|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -140,7 +140,7 @@ Cuando **OPENJSON** analiza una matriz JSON, la función devuelve los índices d
 
 La comparación que se usa para hacer coincidir los pasos de ruta de acceso con las propiedades de la expresión JSON distingue mayúsculas de minúsculas, e ignora la intercalación (es decir, una comparación BIN2). 
 
-### <a name="withclause"></a>*cláusula_with*
+### <a name="with_clause"></a>*cláusula_with*
 
 Define explícitamente el esquema de salida que va a devolver la función **OPENJSON**. La *cláusula_with* opcional puede contener los elementos siguientes:
 
@@ -148,7 +148,7 @@ Define explícitamente el esquema de salida que va a devolver la función **OPEN
   
 De forma predeterminada, **OPENJSON** usa el nombre de la columna para que coincida con una propiedad en el texto JSON. Por ejemplo, si especifica la columna *nombre* en el esquema, OPENJSON intenta rellenar esta columna con la propiedad "nombre" en el texto JSON. Puede invalidar esta asignación predeterminada mediante el argumento *column_path*.  
   
-*Tipo*  
+*type*  
 Es el tipo de datos para la columna de salida.  
 
 > [!NOTE]
@@ -212,9 +212,9 @@ WITH (
  )
 ```  
   
-**Resultado**
+**Resultados**
   
-|Number|date|Customer|Cantidad|Pedido de|  
+|Number|Date|Customer|Cantidad|Pedido de|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
@@ -231,10 +231,10 @@ Las columnas que devuelve la función OPENJSON dependen de la opción WITH.
         |------------------------------|--------------------|  
         |0|null|  
         |1|string|  
-        |2|INT|  
+        |2|int|  
         |3|true/false|  
         |4|array|  
-        |5|objeto|  
+        |5|object|  
   
      Solo se devuelven las propiedades de primer nivel. Se produce un error en la instrucción si el texto JSON no tiene el formato correcto.  
 
@@ -243,7 +243,7 @@ Las columnas que devuelve la función OPENJSON dependen de la opción WITH.
 > [!NOTE]  
 > Las columnas **Clave**, **Valor** y **Tipo** se devuelven solo cuando se usa OPENJSON con el esquema predeterminado y no están disponibles con un esquema explícito.
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 La *json_path* que se usa en el segundo argumento de **OPENJSON** o en la *cláusula_with* puede comenzar con la palabra clave **lax** o **strict**.
 
@@ -344,7 +344,7 @@ CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')
      AS location
 ```  
   
-**Resultado**
+**Resultados**
   
 |title|street|postcode|lon|lat|  
 |-----------|------------|--------------|---------|---------|  
@@ -375,7 +375,7 @@ DECLARE @json NVARCHAR(max)  = N'{
         dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Convert JSON Data to Rows and Columns with OPENJSON &#40;SQL Server&#41; [Convertir datos JSON en filas y columnas con OPENJSON &#40;SQL Server&#41;]](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   

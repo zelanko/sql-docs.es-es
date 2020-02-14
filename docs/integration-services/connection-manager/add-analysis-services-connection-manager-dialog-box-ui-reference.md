@@ -15,10 +15,10 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0de4fe433a1f34b49dbfb12082759c954e87a7a4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298566"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services
@@ -26,7 +26,7 @@ ms.locfileid: "71298566"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Utilice el cuadro de diálogo **Agregar administrador de conexiones con Analysis Services** para crear una conexión con un servidor que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o para editar propiedades de conexión.  
+  Utilice el cuadro de diálogo **Agregar administrador de conexiones con Analysis Services** para crear una conexión con un servidor que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o para editar propiedades de conexión.  
   
  Para obtener más información acerca del administrador de conexiones de Analysis Services, vea [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "71298566"
  **Crear una conexión con un equipo que ejecuta Analysis Services**  
  Use la conexión predeterminada con un servidor que ejecuta una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o haga clic en **Editar**para crear una nueva conexión.  
   
- **Editar**  
+ **Edición**  
  Use el cuadro de diálogo **Administrador de conexiones** para crear una conexión con un servidor que ejecuta una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y para editar propiedades de conexión.  
   
  **Crear una conexión con un proyecto de Analysis Services en esta solución**  

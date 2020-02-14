@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843433"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761676"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST y CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ CAST ( expression AS data_type [ ( length ) ] )
 CONVERT ( data_type [ ( length ) ] , expression [ , style ] )  
 ```  
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="arguments"></a>Argumentos  
 *expression*  
@@ -87,7 +87,7 @@ Para una *expression* que tenga el tipo de datos de fecha u hora, *style* puede 
 |**1**|**101**|EE. UU.|  1 = mm/dd/aa<br /> 101 = mm/dd/aaaa|  
 |**2**|**102**|ANSI|  2 = aa.mm.dd<br /> 102 = aaaa.mm.dd|  
 |**3**|**103**|Británico/Francés|  3 = dd/mm/aa<br /> 103 = dd/mm/aaaa|  
-|**4**|**104**|German|  4 = dd.mm.aa<br /> 104 = dd.mm.aaaa|  
+|**4**|**104**|Alemán|  4 = dd.mm.aa<br /> 104 = dd.mm.aaaa|  
 |**5**|**105**|Italiano|  5 = dd-mm-aa<br /> 105 = dd-mm-aaaa|  
 |**6**|**106** <sup>(1)</sup>|-|  6 = dd mes aa<br /> 106 = dd mes aaaa|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mes dd, aa<br /> 107 = Mes dd, aaaa|  
@@ -96,7 +96,7 @@ Para una *expression* que tenga el tipo de datos de fecha u hora, *style* puede 
 |**10**|**110**|EE. UU.| 10 = mm-dd-aa<br /> 110 = mm-dd-aaaa|  
 |**11**|**111**|JAPÓN| 11 = aa/mm/dd<br /> 111 = aaaa/mm/dd|  
 |**12**|**112**|ISO| 12 = aammdd<br /> 112 = aaaammdd|  
-|-|**13** o **113** (<sup>1,</sup><sup>2</sup>)|Europeo predeterminado + milisegundos|dd mes aaaa hh:mi:ss:mmm(24h)|  
+|-|**13** o **113** (<sup>1,</sup><sup>2</sup>)|Europao predeterminado + milisegundos|dd mes aaaa hh:mi:ss:mmm(24h)|  
 |**14**|**114**|-|hh:mi:ss:mmm (24h)|  
 |-|**20** o **120** (<sup>2</sup>)|ODBC canónico|aaaa-mm-dd hh:mi:ss(24h)|  
 |-|**21**, **25** o **121** (<sup>2</sup>)|ODBC canónico (con milisegundos), valor predeterminado para time, date, datetime2 y datetimeoffset|aaaa-mm-dd hh:mi:ss.mmm (24h)|  
@@ -131,7 +131,7 @@ Al convertir datos de caracteres en datos **datetimeoffset** con un estilo que i
 ## <a name="float-and-real-styles"></a>Estilos float y real
 En el caso de una *expression* **float** o **real**, *style* puede tener uno de los valores que se muestran en la siguiente tabla. Otros valores se procesan como 0.
   
-|Valor|Salida|  
+|Value|Output|  
 |---|---|
 |**0** (valor predeterminado)|Un máximo de 6 dígitos. Utilícelo en notación científica cuando proceda.|  
 |**1**|Siempre 8 dígitos. Utilícelo siempre en notación científica.|  
@@ -142,7 +142,7 @@ En el caso de una *expression* **float** o **real**, *style* puede tener uno de 
 ## <a name="money-and-smallmoney-styles"></a>Estilos money y smallmoney
 En el caso de una *expression* **money** o **smallmoney**, *style* puede tener uno de los valores que se muestran en la siguiente tabla. Otros valores se procesan como 0.
   
-|Valor|Salida|  
+|Value|Output|  
 |---|---|
 |**0** (valor predeterminado)|Sin separadores de millar cada tres dígitos a la izquierda del separador decimal y dos dígitos a la derecha del separador decimal<br /><br />Ejemplo: 4235,98.|  
 |**1**|Separadores de millar cada tres dígitos a la izquierda del separador decimal y dos dígitos a la derecha del separador decimal<br /><br />Ejemplo: 3.510,92.|  
@@ -152,7 +152,7 @@ En el caso de una *expression* **money** o **smallmoney**, *style* puede tener u
 ## <a name="xml-styles"></a>Estilos xml
 En el caso de una *expression* **xml**, *style* puede tener uno de los valores que se muestran en la siguiente tabla. Otros valores se procesan como 0.
   
-|Valor|Salida|  
+|Value|Output|  
 |---|---|
 |**0** (valor predeterminado)|Usa el comportamiento de análisis predeterminado que descarta los espacios en blanco insignificantes y no permite un subconjunto DTD interno.<br /><br />**Nota:** Al convertir al tipo de datos **xml**, los espacios en blanco insignificantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se controlan de forma distinta que en XML 1.0. Para más información, vea [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Conserva los espacios en blanco insignificantes. Esta configuración de estilo establece el control predeterminado de **xml:space** para emular el comportamiento de **xml:space="preserve"** .|  
@@ -162,10 +162,10 @@ En el caso de una *expression* **xml**, *style* puede tener uno de los valores q
 ## <a name="binary-styles"></a>Estilos binarios
 En el caso de una *expression* **binary(n)** , **char(n)** , **varbinary(n)** o **varchar(n)** , *style* puede tener uno de los valores que se muestran en la siguiente tabla. Los valores de estilo que no figuran en la tabla devolverán un error.
   
-|Valor|Salida|  
+|Value|Output|  
 |---|---|
 |**0** (valor predeterminado)|Traduce caracteres ASCII a bytes binarios o bytes binarios a caracteres ASCII. Cada carácter o byte se convierte con una proporción 1:1.<br /><br /> En el caso de un *data_type* binario, los caracteres 0x se agregan a la izquierda del resultado.|  
-|**1**, **2**|Para un *data_type* binario, la expresión debe ser de caracteres. *expression* debe tener un número **par** de dígitos hexadecimales (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Si *style* se establece en 1, los dos primeros caracteres deben ser 0x. Si la expresión contiene un número impar de caracteres o si alguno de los caracteres no es válido, se producirá un error.<br /><br /> Si la longitud de la expresión convertida supera la longitud de *data_type*, el resultado se truncará a la derecha.<br /><br /> Los *data_type* de longitud fija que sean mayores que el resultado convertido tienen ceros agregados a la derecha del resultado.<br /><br /> Los *data_type* con el tipo carácter necesitan una expresión binaria. Cada carácter binario se convierte en dos caracteres hexadecimales. Si la longitud de la expresión convertida supera la longitud de *data_type*, se truncará a la derecha.<br /><br /> En el caso de que *data_type* sea un tipo de caracteres de tamaño fijo y de que la longitud del resultado convertido sea menor que la longitud de *data_type*, se agregan espacios a la derecha de la expresión convertida para mantener un número par de dígitos hexadecimales.<br /><br /> Los caracteres 0x se agregarán a la izquierda del resultado convertido para *style* 1.|  
+|**1**, **2**|Para un *data_type* binario, la expresión debe ser de caracteres. *expression* debe tener un número **par** de dígitos hexadecimales (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Si *style* se establece en 1, los dos primeros caracteres de la expresión deben ser 0x. Si la expresión contiene un número impar de caracteres o si alguno de los caracteres no es válido, se producirá un error.<br /><br /> Si la longitud de la expresión convertida supera la longitud de *data_type*, el resultado se truncará a la derecha.<br /><br /> Los *data_type* de longitud fija que sean mayores que el resultado convertido tienen ceros agregados a la derecha del resultado.<br /><br /> Los *data_type* con el tipo carácter necesitan una expresión binaria. Cada carácter binario se convierte en dos caracteres hexadecimales. Si la longitud de la expresión convertida supera la longitud de *data_type*, se truncará a la derecha.<br /><br /> En el caso de que *data_type* sea un tipo de caracteres de tamaño fijo y de que la longitud del resultado convertido sea menor que la longitud de *data_type*, se agregan espacios a la derecha de la expresión convertida para mantener un número par de dígitos hexadecimales.<br /><br /> Los caracteres 0x se agregarán a la izquierda del resultado convertido para *style* 1.|  
   
 ## <a name="implicit-conversions"></a>Conversiones implícitas
 Las conversiones implícitas no requieren la especificación de la función CAST ni de la función CONVERT. Las conversiones explícitas requieren la especificación de la función CAST o de la función CONVERT. En la siguiente ilustración se muestran todas las conversiones de tipos de datos explícitas e implícitas permitidas para los tipos de datos proporcionados por el sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algunas de ellas son **bigint**, **sql_variant** y **xml**. No existe una conversión implícita en la asignación del tipo de datos **sql_variant**, pero sí hay una conversión implícita en **sql_variant**.
@@ -271,15 +271,15 @@ Al convertir tipos de datos que difieren en los decimales, [!INCLUDE[ssNoVersion
   
 |De|A|Comportamiento|  
 |---|---|---|
-|**numeric**|**numeric**|Redondear|  
-|**numeric**|**int**|Truncamiento|  
-|**numeric**|**money**|Redondear|  
-|**money**|**int**|Redondear|  
-|**money**|**numeric**|Redondear|  
-|**float**|**int**|Truncamiento|  
-|**float**|**numeric**|Redondear<br /><br /> La conversión de los valores **float** que usan la notación científica a **decimal** o **numeric** se restringe únicamente a los valores con una precisión de 17 dígitos. Cualquier valor con una precisión mayor de 17 se redondea a cero.|  
-|**float**|**datetime**|Redondear|  
-|**datetime**|**int**|Redondear|  
+|**numeric**|**numeric**|Round|  
+|**numeric**|**int**|Truncate|  
+|**numeric**|**money**|Round|  
+|**money**|**int**|Round|  
+|**money**|**numeric**|Round|  
+|**float**|**int**|Truncate|  
+|**float**|**numeric**|Round<br /><br /> La conversión de los valores **float** que usan la notación científica a **decimal** o **numeric** se restringe únicamente a los valores con una precisión de 17 dígitos. Cualquier valor con una precisión mayor de 17 se redondea a cero.|  
+|**float**|**datetime**|Round|  
+|**datetime**|**int**|Round|  
   
 Por ejemplo, los valores 10,6496 y-10,6496 se pueden truncar o redondear durante la conversión a los tipos **int** o **numeric**:
   
@@ -702,7 +702,7 @@ A partir de los valores `GETDATE()`, en este ejemplo se usa `CONVERT` para mostr
 |104|`SELECT CONVERT(nvarchar, GETDATE(), 104)`|23.08.2019|
 |105|`SELECT CONVERT(nvarchar, GETDATE(), 105)`|23-08-2019|
 |106|`SELECT CONVERT(nvarchar, GETDATE(), 106)`|23 ago 2019|
-|107|`SELECT CONVERT(nvarchar, GETDATE(), 107)`|Ago 23, 2019|
+|107|`SELECT CONVERT(nvarchar, GETDATE(), 107)`|23 de agosto de 2019|
 |110|`SELECT CONVERT(nvarchar, GETDATE(), 110)`|08-23-2019|
 |111|`SELECT CONVERT(nvarchar, GETDATE(), 111)`|2019/08/23|
 |112|`SELECT CONVERT(nvarchar, GETDATE(), 112)`|20190823|
@@ -802,7 +802,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 216         18.5043    0.05                  1  
 ```  
   
-### <a name="n-using-cast-with-the-like-clause"></a>N. Utilizar CAST con la cláusula LIKE  
+### <a name="n-using-cast-with-the-like-clause"></a>Hora Utilizar CAST con la cláusula LIKE  
 En este ejemplo se convierte `ListPrice` de la columna **money** a un tipo **int** y, luego, a un tipo **char(20)** , de modo que la cláusula LIKE pueda usarla. En este ejemplo se usa la base de datos `AdventureWorksDW2016`.  
   
 ```sql
@@ -848,7 +848,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 2010-07-25T13:50:38.544 07/25/2010 1:50:38 PM   07/25/2010 1:50:38 PM  
 ```  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Precedencia de tipo de datos (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)       
 [Conversión de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)     
 [FORMAT (Transact-SQL)](../../t-sql/functions/format-transact-sql.md)      

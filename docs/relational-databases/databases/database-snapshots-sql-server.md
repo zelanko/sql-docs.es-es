@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68300439"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantáneas de base de datos (SQL Server)
@@ -197,7 +197,7 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
     > [!NOTE]  
     >  Una instrucción SELECT que se ejecuta en una instantánea de base de datos no debe especificar una columna FILESTREAM; de lo contrario, se devolverá el mensaje de error siguiente: `Could not continue scan with NOLOCK due to data movement.`  
   
--   Cuando faltan las estadísticas de una instantánea de solo lectura o son obsoletas, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea y mantiene estadísticas temporales en tempdb. Para obtener más información, vea [Statistics](../../relational-databases/statistics/statistics.md).  
+-   Cuando faltan las estadísticas de una instantánea de solo lectura o son obsoletas, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea y mantiene estadísticas temporales en tempdb. Para más información, consulte [Estadísticas](../../relational-databases/statistics/statistics.md).  
   
 ###  <a name="DiskSpace"></a> Requisitos de espacio en disco  
  Las instantáneas de base de datos ocupan espacio en disco. Si una instantánea de base de datos se queda sin espacio en disco, se marca como sospechosa y debe quitarse. (Sin embargo, la base de datos de origen no se ve afectada; las acciones sobre ella continúan normalmente). No obstante, en comparación con una copia completa de una base de datos, las instantáneas ocupan poco espacio. Una instantánea solo requiere suficiente espacio para las páginas que cambian durante su duración. En general, las instantáneas se conservan durante un tiempo limitado, por lo que el tamaño no es un gran problema.  

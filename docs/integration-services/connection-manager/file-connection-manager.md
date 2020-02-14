@@ -20,10 +20,10 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6c2578e1f002878ade93551a5abc48dfd2144709
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294505"
 ---
 # <a name="file-connection-manager"></a>administrador de conexiones de archivos
@@ -38,7 +38,7 @@ ms.locfileid: "71294505"
   
  La tabla siguiente enumera los valores de **FileUsageType**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|El administrador de conexiones de archivos usa un archivo existente.|  
 |**1**|El administrador de conexiones de archivos crea un archivo.|  
@@ -79,7 +79,7 @@ ms.locfileid: "71294505"
  **Tipo de uso**  
  Especifica si el **Administrador de conexiones de archivos** se conecta a un archivo o una carpeta existente o si crea un nuevo archivo o una nueva carpeta.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Crear archivo|Crea un nuevo archivo en tiempo de ejecución.|  
 |Archivo existente|Utiliza un archivo existente.|  
@@ -91,7 +91,7 @@ ms.locfileid: "71294505"
   
  Si se trata de **Carpeta**, especifica la carpeta que se va a utilizar.  
   
- **Examinar**  
+ **Browse**  
  Seleccione el archivo o la carpeta mediante el cuadro de diálogo **Seleccionar archivo** o **Buscar carpeta** .  
   
   

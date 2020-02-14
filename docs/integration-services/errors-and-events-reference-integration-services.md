@@ -16,10 +16,10 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290618"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Referencia de errores y eventos (Integration Services)
@@ -46,7 +46,7 @@ ms.locfileid: "71290618"
 |DTS_E_CONNECTIONNOTFOUND|Indica que el paquete no se puede ejecutar porque no se puede encontrar el administrador de conexiones especificado.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Indica que el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] debe conectarse a un origen de datos para recuperar metadatos nuevos o actualizados para un origen o un destino, y que no se puede conectar al origen de datos.|  
 |DTS_E_MULTIPLECACHEWRITES|Indica que el paquete no se puede ejecutar porque se está intentando escribir una transformación de caché en caché en memoria. Sin embargo, otra transformación de caché ya ha escrito en la memoria caché en memoria.|  
-|DTS_E_PRODUCTLEVELTOLOW|Indica que el paquete no puede ejecutarse porque no está instalada la versión adecuada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
+|DTS_E_PRODUCTLEVELTOLOW|Indica que el paquete no puede ejecutarse porque no está instalada la versión adecuada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|  
 |DTS_E_READNOTFILLEDCACHE|Indica que una transformación de búsqueda está intentando leer datos de caché en memoria al mismo tiempo que una transformación de caché está escribiendo datos en la memoria caché.|  
 |DTS_E_UNPROTECTXMLFAILED|Indica que el sistema no ha descifrado un nodo XML protegido.|  
 |DTS_E_WRITEWHILECACHEINUSE|Indica que una transformación de caché está intentando escribir datos en caché en memoria al mismo tiempo que una transformación de búsqueda está leyendo datos en caché en memoria.|  

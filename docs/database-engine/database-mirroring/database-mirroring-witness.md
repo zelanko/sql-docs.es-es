@@ -15,10 +15,10 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043889"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
@@ -26,7 +26,7 @@ ms.locfileid: "68043889"
   Para admitir la conmutación automática por error, una sesión de creación de reflejo de la base de datos debe configurarse en modo de alta seguridad y tener una tercera instancia del servidor, denominada *testigo*. El testigo es una instancia opcional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que habilita al servidor reflejado en una sesión en modo de alta seguridad para que reconozca si se debe iniciar una conmutación automática por error. A diferencia de los dos asociados, el testigo no sirve a la base de datos. El único rol del testigo es hacer posible la conmutación automática por error.  
   
 > [!NOTE]  
->  En el modo de alto rendimiento, el testigo puede afectar negativamente a la disponibilidad. Si se configura un testigo para una sesión de creación de reflejo de la base de datos, el servidor principal debe conectarse al menos a otra de las instancias de servidor, el servidor reflejado o el testigo, o bien a ambos. De lo contrario, la base de datos no estará disponible y no se podrá forzar el servicio (con posible pérdida de datos). Por lo tanto, para el modo de alto rendimiento, se recomienda mantener el testigo establecido siempre en OFF. Para obtener información sobre las repercusiones de un testigo en el modo de alto rendimiento, vea [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
+>  En el modo de alto rendimiento, el testigo puede afectar negativamente a la disponibilidad. Si se configura un testigo para una sesión de creación de reflejo de la base de datos, el servidor principal debe conectarse al menos a otra de las instancias de servidor, el servidor reflejado o el testigo, o bien a ambos. De lo contrario, la base de datos no estará disponible y no se podrá forzar el servicio (con posible pérdida de datos). Por lo tanto, para el modo de alto rendimiento, se recomienda mantener el testigo establecido siempre en OFF. Para información sobre las repercusiones de un testigo en el modo de alto rendimiento, vea [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
  En la siguiente ilustración se muestra una sesión en modo de alta seguridad que incluye un testigo.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68043889"
 ##  <a name="InMultipleSessions"></a> Usar un testigo en varias sesiones  
  Una instancia de servidor específica puede actuar como testigo en sesiones de creación de reflejo de la base de datos simultáneas, cada una de ellas para una base de datos distinta. Sesiones diferentes pueden tener asociados diferentes. En la siguiente ilustración se muestra una instancia de servidor que actúa como testigo de dos sesiones de creación de reflejo de la base de datos con asociados diferentes.  
   
- ![Instancia de servidor que es testigo de 2 bases de datos](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Instancia de servidor que es testigo de 2 bases de datos")  
+ ![Instancia de servidor que es testigo de dos bases de datos](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Instancia de servidor que es testigo de dos bases de datos")  
   
  Una sola instancia de servidor también puede funcionar simultáneamente como testigo en unas sesiones y como asociado en otras. Sin embargo, en la práctica, las instancias de servidor suelen funcionar o como testigo o como asociado. Esto se debe a que los asociados requieren equipos complejos que tienen hardware suficiente para admitir una base de datos de producción, mientras que los testigos se pueden ejecutar en cualquier sistema de Windows disponible que admita [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

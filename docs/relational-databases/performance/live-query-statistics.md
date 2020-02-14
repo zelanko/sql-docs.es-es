@@ -18,10 +18,10 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983251"
 ---
 # <a name="live-query-statistics"></a>Estadísticas de consulta activa
@@ -58,14 +58,14 @@ También se puede acceder al plan de ejecución de consultas dinámicas desde el
   
  ![Botón Estadísticas de consulta activa en el Monitor de actividad](../../relational-databases/performance/media/livequerystatsactmon.png "Botón Estadísticas de consulta activa en el Monitor de actividad")  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La infraestructura de perfil de estadísticas debe estar habilitada para que las estadísticas de consulta activa puedan capturar información sobre el progreso de las consultas. Según la versión, la sobrecarga puede ser significativa. Para obtener más información sobre esta sobrecarga, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso de nivel de base de datos `SHOWPLAN` para rellenar la página de resultados de **Estadísticas de consultas dinámicas**, el permiso de nivel de servidor `VIEW SERVER STATE` para ver las estadísticas dinámicas y los permisos necesarios habituales para ejecutar la consulta.  
   
 ## <a name="see-also"></a>Consulte también  
- [Supervisar y optimizar el rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Abrir el Monitor de actividad &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
  [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md)     

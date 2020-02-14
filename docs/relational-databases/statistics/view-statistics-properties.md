@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908017"
 ---
 # <a name="view-statistics-properties"></a>Ver propiedades de estadísticas
@@ -59,9 +59,9 @@ ms.locfileid: "72908017"
   
 5.  Haga clic con el botón derecho en el objeto Estadísticas cuyas propiedades quiere ver y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Propiedades de estadísticas -** _nombre_de_estadísticas_ , en el panel **Seleccionar una página** , seleccione **Detalles**.  
+6.  En el cuadro de diálogo **Propiedades de estadísticas -** _nombre de estadísticas_, en el panel **Seleccionar una página**, seleccione **Detalles**.  
   
-     Las propiedades siguientes se muestran en la página **Detalles** en el cuadro de diálogo **Propiedades de estadísticas -** _nombre_de_estadísticas_ .  
+     Las propiedades siguientes se muestran en la página **Detalles** del cuadro de diálogo **Propiedades de estadísticas -** _nombre de estadísticas_.  
   
      **Nombre de tabla**  
      Muestra el nombre de la tabla descrita por las estadísticas.  
@@ -77,7 +77,7 @@ ms.locfileid: "72908017"
      **Nombre**  
      Nombre del objeto de estadísticas.  
   
-     **Actualizado**  
+     **Updated**  
      Fecha y hora de la última actualización de las estadísticas.  
   
      **Filas**  
@@ -132,7 +132,7 @@ ms.locfileid: "72908017"
      **AVG_RANGE_ROWS**  
      Número medio de filas que tienen valores de columna duplicados en un paso del histograma, sin incluir el límite superior (RANGE_ROWS/DISTINCT_RANGE_ROWS para DISTINCT_RANGE_ROWS > 0).  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
 
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

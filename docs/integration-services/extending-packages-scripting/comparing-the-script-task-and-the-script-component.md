@@ -16,10 +16,10 @@ ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e253e6a4e19982e5350161cde00bc7609ed7380d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297010"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparar la tarea Script y el componente de script
@@ -37,7 +37,7 @@ ms.locfileid: "71297010"
 |Dos modos en tiempo de diseño|Tanto en la tarea como en el componente, se comienza especificando las propiedades en el editor y, a continuación, se cambia al entorno de desarrollo para escribir código.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|Tanto la tarea como el componente usan el mismo IDE de VSTA y admiten código escrito en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.|  
 |Scripts precompilados|A partir de [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], todos los scripts están precompilados. En versiones anteriores, podía especificar si se precompilaban o no los scripts.<br /><br /> El script se precompila en código binario, lo que permite una ejecución más rápida, pero aumenta el tamaño del paquete.|  
-|depuración|La tarea y el componente admiten ambos puntos de interrupción y recorridos paso a paso por el código mientras se depura en el entorno de diseño. Para obtener más información, consulte [Codificar y depurar la tarea Script](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md) y [Codificar y depurar el componente de script](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).|  
+|Depuración|La tarea y el componente admiten ambos puntos de interrupción y recorridos paso a paso por el código mientras se depura en el entorno de diseño. Para obtener más información, consulte [Codificar y depurar la tarea Script](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md) y [Codificar y depurar el componente de script](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).|  
   
 ## <a name="differences-between-the-script-task-and-the-script-component"></a>Diferencias entre la tarea Script y el componente de script  
  La tarea Script y el componente de script tienen las siguientes diferencias notables.  
@@ -45,7 +45,7 @@ ms.locfileid: "71297010"
 |Característica|Tarea Script|Componente de script|  
 |-------------|-----------------|----------------------|  
 |Flujo de control/flujo de datos|La tarea Script se configura en la pestaña Flujo de control del diseñador y se ejecuta fuera del flujo de datos del paquete.|El componente de script se configura en la página Flujo de datos del diseñador y representa un origen, transformación o destino en la tarea Flujo de datos.|  
-|Finalidad|Una tarea Script puede realizar prácticamente cualquier tarea de uso general.|Con el componente de script, debe especificar si desea crear un origen, transformación o destino.|  
+|Propósito|Una tarea Script puede realizar prácticamente cualquier tarea de uso general.|Con el componente de script, debe especificar si desea crear un origen, transformación o destino.|  
 |Ejecución|Una tarea Script ejecuta código personalizado en algún punto del flujo de trabajo del paquete. Solo se ejecuta una vez, a menos que se incluya en un contenedor de bucles o en un controlador de eventos.|Un componente de Script también se ejecuta una vez, pero normalmente ejecuta su rutina de procesamiento principal una vez para cada fila de datos del flujo de datos.|  
 |Editor|El **Editor de la tarea Script** tiene tres páginas: **General**, **Script** y **Expresiones**. Solo las propiedades **ReadOnlyVariables**, **ReadWriteVariables** y **ScriptLanguage** afectan directamente al código que puede escribir.|El **Editor de transformación Script** tiene hasta cuatro páginas: **Columnas de entrada**, **Entradas y salidas**, **Script** y **Administradores de conexiones**. Los metadatos y propiedades que configura en cada una de estas páginas determinan los miembros de las clases base que se generan automáticamente para su uso en el código.|  
 |Interacción con el paquete|En el código escrito de una tarea Script, debe usar la propiedad **DTS** para obtener acceso a otras características del paquete. La propiedad **DTS** es miembro de la clase **ScriptMain**.|En el código del componente de script, utiliza propiedades de descriptor de acceso con tipo para tener acceso a ciertas características del paquete como variables y administradores de conexión.<br /><br /> El método **PreExecute** únicamente puede obtener acceso a variables de solo lectura. El método **PostExecute** puede obtener acceso a variables de solo lectura y de lectura/escritura.<br /><br /> Para obtener más información acerca de estos métodos, consulte [Codificar y depurar el componente de script](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).|  

@@ -23,7 +23,7 @@ ms.locfileid: "75253282"
 ---
 # <a name="advanced-save-options"></a>Opciones avanzadas para guardar
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Utilice este cuadro de diálogo para seleccionar un esquema de codificación de idioma y especificar los caracteres que se van a insertar al final de cada línea. To access the **Advanced Save Options** dialog box, on the **File** menu, click **Save** <query name>**.sql As** to open the **Save File As** dialog box, click on the down arrow on the **Save** button, and then click **Save with Encoding**.  
+Utilice este cuadro de diálogo para seleccionar un esquema de codificación de idioma y especificar los caracteres que se van a insertar al final de cada línea. Para tener acceso al cuadro de diálogo **Opciones avanzadas para guardar** , en el menú **Archivo**, haga clic en **Guardar** <query name> **.sql como** para abrir el cuadro de diálogo **Guardar archivo como** , haga clic en la flecha hacia abajo del botón **Guardar** y, luego, haga clic en **Guardar con codificación**.  
   
 ## <a name="options"></a>Opciones  
 **Encoding**  

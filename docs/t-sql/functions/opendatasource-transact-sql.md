@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342059"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71342059"
 
   Proporciona información de conexión ad hoc como parte de un nombre de objeto de cuatro partes sin utilizar un nombre de servidor vinculado.  
 
- ![Icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,14 +51,14 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
  > El anterior proveedor de Microsoft OLE DB para SQL Server (SQLOLEDB) y de OLE DB para SQL Server Native Client (SQLNCLI) permanece en desuso y no se recomienda utilizarlo para nuevos trabajos de desarrollo. En su lugar, use el nuevo [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), que se actualizará con las características de servidor más recientes.
  
  "*init_string*"  
- Es la cadena de conexión que se pasa a la interfaz IDataInitialize del proveedor de destino. La sintaxis de cadena del proveedor se basa en pares de palabra clave y valor separados por puntos y coma, como: **"** _palabra clave 1_=_valor_ **;** _palabra clave 2_=_valor_ **"** .  
+ Es la cadena de conexión que se pasa a la interfaz IDataInitialize del proveedor de destino. La sintaxis de cadena del proveedor se basa en pares palabra clave-valor separados por puntos y coma, como: **'** _palabra clave1_=_valor_ **;** _palabra clave2_=_valor_ **'** .  
   
  Para conocer los pares de palabra clave y valor admitidos, vea [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK. En esta documentación se define la sintaxis básica. En la siguiente tabla se muestran las palabras clave más utilizadas en el argumento *init_string*.  
   
 |Palabra clave|Propiedad OLE DB|Valores válidos y descripción|  
 |-------------|---------------------|----------------------------------|  
 |Origen de datos|DBPROP_INIT_DATASOURCE|Nombre del origen de datos al que se va a conectar. Distintos proveedores lo interpretan de formas distintas. Para un proveedor OLE DB de SQL Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , indica el nombre del servidor. Para un proveedor OLE DB para Jet, indica la ruta de acceso completa al archivo .mdb o al archivo .xls.|  
-|Ubicación|DBPROP_INIT_LOCATION|Ubicación de la base de datos a la que se va a conectar.|  
+|Location|DBPROP_INIT_LOCATION|Ubicación de la base de datos a la que se va a conectar.|  
 |Propiedades extendidas|DBPROP_INIT_PROVIDERSTRING|Cadena de conexión específica del proveedor.|  
 |Tiempo de espera de conexión|DBPROP_INIT_TIMEOUT|Valor de tiempo de espera después del cual se produce un error en el intento de conexión.|  
 |Id. de usuario|DBPROP_AUTH_USERID|Id. de usuario que se va a utilizar para la conexión.|  
@@ -66,7 +66,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Catálogo|DBPROP_INIT_CATALOG|Nombre del catálogo inicial o predeterminado al conectarse al origen de datos.|  
 |Seguridad integrada|DBPROP_AUTH_INTEGRATED|SSPI, para especificar la autenticación de Windows|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `OPENROWSET` siempre hereda la intercalación de la instancia, independientemente de la intercalación establecida para las columnas.
 
 `OPENDATASOURCE` se puede usar para tener acceso a datos remotos desde orígenes de datos de OLE DB solo cuando la opción de registro DisallowAdhocAccess está establecida explícitamente en 0 para el proveedor especificado y la opción de configuración avanzada Ad Hoc Distributed Queries está habilitada. Cuando no se establecen estas opciones, el comportamiento predeterminado no permite el acceso ad hoc.  

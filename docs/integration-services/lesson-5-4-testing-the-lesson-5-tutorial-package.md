@@ -11,10 +11,10 @@ ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 342845789df01a7803196076ea20c03a80dac9f9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283076"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>Lección 5-4: Probar el paquete de la lección 5
@@ -32,11 +32,11 @@ Antes de probar el paquete, compruebe que los flujos de datos y de control del p
   
 **Flujo de control**  
   
-![Flujo de control del paquete](../integration-services/media/task4lesson2control.gif "Control flow in package")  
+![Flujo de control del paquete](../integration-services/media/task4lesson2control.gif "Flujo de control del paquete")  
   
 **Flujo de datos**  
   
-![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Data flow in package")  
+![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Flujo de datos del paquete")  
   
 ## <a name="test-the-lesson-5-package"></a>Probar el paquete de la lección 5  
   
@@ -45,7 +45,7 @@ Antes de probar el paquete, compruebe que los flujos de datos y de control del p
 2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar**, seleccione **Detener depuración**.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 6: Uso de parámetros con el modelo de implementación de proyectos en SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+[Lección 6: Uso de parámetros con el modelo de implementación de proyectos en SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   
   

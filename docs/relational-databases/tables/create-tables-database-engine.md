@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ce6bea9e9f99cd5db4559c6f4b1d966e809f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123707"
 ---
 # <a name="create-tables-database-engine"></a>Crear tablas (motor de base de datos)
@@ -63,7 +63,7 @@ Esta tarea necesita el permiso CREATE TABLE en la base de datos y el permiso ALT
   
      Para obtener más información acerca de los esquemas, vea [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
   
-9. En el menú **Archivo** , elija **Guardar** *table name*.  
+9. En el menú **Archivo**, seleccione **Guardar** *nombre de tabla*.  
   
 10. En el cuadro de diálogo **Elegir nombre** , escriba un nombre para la tabla y haga clic en **Aceptar**.  
   

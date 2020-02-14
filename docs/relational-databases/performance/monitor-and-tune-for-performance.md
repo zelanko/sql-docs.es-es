@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68020249"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Supervisión y optimización del rendimiento
@@ -43,7 +43,7 @@ ms.locfileid: "68020249"
  La evaluación continua del rendimiento de la base de datos ayuda a minimizar los tiempos de respuesta y a maximizar el rendimiento, obteniendo como resultado un rendimiento óptimo. El tráfico de red, la E/S de disco y el uso de la CPU eficientes son factores clave para obtener un buen rendimiento. Es necesario analizar a fondo los requisitos de las aplicaciones, comprender la estructura lógica y física de los datos, evaluar el uso de la base de datos y negociar contrapartidas, como el procesamiento de transacciones en línea (OLTP) frente a los sistemas de ayuda para la toma de decisiones.  
   
 ## <a name="monitoring-and-tuning-databases-for-performance"></a>Supervisión y optimización de las bases de datos para el rendimiento  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el sistema operativo Microsoft Windows proporcionan herramientas para ver las condiciones actuales de la base de datos y realizar un seguimiento del rendimiento a medida que estas cambian. Existen diversas herramientas y técnicas que puede usar para supervisar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La supervisión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le ayuda a:  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el sistema operativo Microsoft Windows proporcionan herramientas para ver las condiciones actuales de la base de datos y realizar un seguimiento del rendimiento a medida que estas cambian. Existen diversas herramientas y técnicas que se pueden usar para supervisar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La supervisión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le ayuda a:  
   
 -   Determinar si el rendimiento se puede mejorar. Por ejemplo, al supervisar los tiempos de respuesta a las consultas usadas con frecuencia, puede determinar si es necesario cambiar la consulta o los índices de las tablas.  
   
@@ -69,7 +69,7 @@ A medida que aumenta el número de usuarios, aumenta la competencia para obtener
 |Tema| Tarea|  
 |-----------|----------------------|  
 |[Supervisar los componentes de SQL Server](../../relational-databases/performance/monitor-sql-server-components.md)|Pasos necesarios para supervisar cualquier componente de SQL Server, como Monitor de actividad, Eventos extendidos, Vistas y funciones de administración dinámica, etc.|  
-|[Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Muestra las herramientas de supervisión y optimización disponibles con SQL Server, como Estadísticas de consultas dinámicas y el Asistente para la optimización de motor de base de datos.|  
+|[Herramientas de optimización y supervisión del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Muestra las herramientas de supervisión y optimización disponibles con SQL Server, como Estadísticas de consultas dinámicas y el Asistente para la optimización de motor de base de datos.|  
 |[Actualización de bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|Se mantiene la estabilidad del rendimiento de carga de trabajo durante la actualización al nivel de compatibilidad de base de datos más reciente.|  
 |[Supervisión del rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|El almacén de consultas captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución, y las conserva para su revisión.|  
 |[Establecer una línea base del rendimiento](../../relational-databases/performance/establish-a-performance-baseline.md)|Proporciona información sobre cómo establecer una línea base de rendimiento.|  
@@ -80,7 +80,7 @@ A medida que aumenta el número de usuarios, aumenta la competencia para obtener
 |[Supervisión del grupo de recursos](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|Uso del Monitor de sistema (también conocido como perfmon) para medir el rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante contadores de rendimiento.|  
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración automatizada en una empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)    
  [Comparación y análisis de los planes de ejecución](../../relational-databases/performance/compare-and-analyze-execution-plans.md)    
  [Mostrar y guardar planes de ejecución](../../relational-databases/performance/display-and-save-execution-plans.md)    

@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981004"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287843"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73981004"
   
 
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73981004"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Login  
+ LOGIN  
  **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica que el contexto de ejecución que se va a suplantar es un inicio de sesión. El ámbito de la suplantación se produce en el nivel de servidor.  
@@ -63,7 +63,7 @@ ms.locfileid: "73981004"
 > [!NOTE]  
 >  Esta opción no está disponible en una base de datos independiente, Azure SQL Database ni Azure SQL Data Warehouse.  
   
- User  
+ USER  
  Especifica que el contexto de ejecución que se va a suplantar es un usuario de la base de datos actual. El ámbito de la suplantación se restringe a la base de datos actual. Un cambio de contexto a un usuario de base de datos no hereda los permisos de nivel de servidor de ese usuario.  
   
 > [!IMPORTANT]  
@@ -96,7 +96,7 @@ Cuando se utiliza fuera de un módulo, la instrucción no tiene ninguna acción.
  > [!NOTE]  
 >  Esta opción no está disponible en SQL Data Warehouse.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El cambio en el contexto de ejecución continúa efectivo hasta que sucede algo de lo siguiente:  
   
 -   Se ejecuta otra instrucción EXECUTE AS.  
@@ -120,7 +120,7 @@ Puede crear una pila de contextos de ejecución si llama a la instrucción EXECU
   
 Si el usuario está huérfano (el inicio de sesión asociado ya no existe) y no se creó con **WITHOUT LOGIN**, **EXECUTE AS** generará un error para el usuario.  
   
-## <a name="best-practice"></a>Práctica recomendada  
+## <a name="best-practice"></a>Procedimiento recomendado  
  Especifique un inicio de sesión o usuario que tenga al menos los privilegios requeridos para realizar las operaciones en la sesión. Por ejemplo, no especifique un nombre de inicio de sesión con permisos de nivel de servidor si solo se necesitan permisos de nivel de base de datos; o no especifique una cuenta de propietario de base de datos a menos que se necesiten esos permisos.  
   
 > [!CAUTION]  
@@ -129,9 +129,9 @@ Si el usuario está huérfano (el inicio de sesión asociado ya no existe) y no 
 ## <a name="using-with-no-revert"></a>Usar WITH NO REVERT  
  Cuando la instrucción EXECUTE AS incluye la cláusula opcional WITH NO REVERT, el contexto de ejecución de una sesión no se puede restablecer mediante REVERT o ejecutando otra instrucción EXECUTE AS. El contexto establecido por la instrucción permanece efectivo hasta que elimina la sesión.  
   
- Cuando se especifica la cláusula WITH NO REVERT COOKIE = @*varbinary_variable*, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pasa el valor de la cookie a @*varbinary_variable*. El contexto de ejecución establecido por esa instrucción solo se puede revertir al contexto anterior si la llamada a la instrucción REVERT WITH COOKIE = @*varbinary_variable* contiene el mismo valor *@varbinary_variable* .  
+ Cuando se especifica la cláusula WITH NO REVERT COOKIE = @*varbinary_variable*, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pasa el valor de la cookie a @*varbinary_variable*. El contexto de ejecución que establece esa instrucción se puede revertir al contexto anterior solo si la llamada a la instrucción REVERT WITH COOKIE = @*varbinary_variable* contiene el mismo valor *\@varbinary_variable*.  
   
- Esta opción es útil en un entorno donde se utiliza la agrupación de conexiones. La agrupación de conexiones es el mantenimiento de un grupo de base de datos que reutilizan las aplicaciones en un servidor de aplicaciones. Puesto que el valor pasado a *@varbinary_variable* solo lo conoce el autor de la llamada de la instrucción EXECUTE AS, el autor de la llamada puede garantizar que el contexto de ejecución que establece no puede cambiarlo nadie.  
+ Esta opción es útil en un entorno donde se utiliza la agrupación de conexiones. La agrupación de conexiones es el mantenimiento de un grupo de base de datos que reutilizan las aplicaciones en un servidor de aplicaciones. Puesto que el valor pasado a *\@varbinary_variable* solo lo conoce el autor de la llamada de la instrucción EXECUTE AS, el autor de la llamada puede garantizar que el contexto de ejecución que establece no puede cambiarlo nadie.  
   
 ## <a name="determining-the-original-login"></a>Determinar el inicio de sesión original  
  Use la función [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) para devolver el nombre de inicio de sesión que se ha conectado a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede utilizar esta función para devolver la identidad del inicio de sesión original en sesiones en las que hay varios cambios de contexto explícitos o implícitos.  

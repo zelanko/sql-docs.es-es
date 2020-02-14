@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: dd7cfe863fde1b4909caadca12b496705f956483
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ac6758c3856858f6b10b17184705022aa51a62e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768808"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288195"
 ---
 # <a name="enhance-general-replication-performance"></a>Aumentar el rendimiento de la replicación general
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68768808"
   
 ## <a name="server-and-network"></a>Servidor y red  
   
--   Defina la cantidad mínima y máxima de memoria asignada al [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
+-   Defina la cantidad mínima y máxima de memoria asignada a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
   
      De forma predeterminada, el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] cambia dinámicamente sus necesidades de memoria según los recursos del sistema disponibles. Para evitar la disponibilidad insuficiente de memoria durante las actividades de replicación, utilice la opción **min server memory** para establecer la memoria mínima disponible. Para evitar que el sistema operativo tenga que paginar en el disco para disponer de memoria, puede definir también una cantidad máxima de memoria con la opción **max server memory** . Para obtener más información, consulte [Opciones de configuración del servidor de memoria del servidor](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68768808"
   
      La lógica de negocios de los desencadenadores definidos por el usuario en el Suscriptor puede ralentizar la replicación de los cambios en el suscriptor.  
   
-    -   En la replicación transaccional, puede ser más eficaz incluir esta lógica en procedimientos almacenados personalizados que se utilizan para aplicar los comandos replicados. Para obtener más información, consulte [Especificar cómo se propagan los cambios para los artículos transaccionales](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
+    -   En la replicación transaccional, puede ser más eficaz incluir esta lógica en procedimientos almacenados personalizados que se utilizan para aplicar los comandos replicados. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
     -   En la replicación de mezcla, puede ser más eficaz utilizar controladores de lógica de negocios. Para obtener más información, consulte [Ejecutar lógica de negocios durante la sincronización de mezcla](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68768808"
   
      Los LOB requieren más espacio de almacenamiento y procesamiento que otros tipos de datos de columna. No incluya estas columnas en los artículos a menos que sea necesario para la aplicación. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** , respectivamente.  
   
-     Para la replicación transaccional, considere la posibilidad de utilizar el perfil de Agente de distribución denominado **Perfil de distribución para secuencias OLEDB**. Para más información, vea [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+     Para la replicación transaccional, considere la posibilidad de utilizar el perfil de Agente de distribución denominado **Perfil de distribución para secuencias OLEDB**. Para obtener más información, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="publication-design"></a>Diseño de la publicación  
   
@@ -98,9 +98,9 @@ ms.locfileid: "68768808"
   
      Para realizar particiones de cambios se pueden publicar subconjuntos de datos en cada suscriptor o hacer que una aplicación dirija los cambios de una fila determinada a un nodo en concreto:  
   
-    -   La replicación de mezcla admite la publicación de subconjuntos de datos utilizando filtros con parámetros con una sola publicación. Para más información, vea [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   La replicación de mezcla admite la publicación de subconjuntos de datos utilizando filtros con parámetros con una sola publicación. Para obtener más información, consulte [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-    -   La replicación transaccional admite la publicación de subconjuntos de datos utilizando filtros estáticos con varias publicaciones. Para obtener más información, consulte [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md).  
+    -   La replicación transaccional admite la publicación de subconjuntos de datos utilizando filtros estáticos con varias publicaciones. Para obtener más información, vea [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md).  
   
 -   Utilice los filtros de fila con prudencia.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68768808"
   
 -   Utilice suscripciones de extracción cuando haya un gran número de suscriptores.  
   
-     El Agente de distribución y el Agente de mezcla se ejecutan en el distribuidor para las suscripciones de inserción, y en los suscriptores para las suscripciones de extracción. El uso de las suscripciones de extracción puede mejorar el rendimiento desplazando el procesamiento de agentes del distribuidor a los suscriptores. Para obtener más información, consulte [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md).  
+     El Agente de distribución y el Agente de mezcla se ejecutan en el distribuidor para las suscripciones de inserción, y en los suscriptores para las suscripciones de extracción. El uso de las suscripciones de extracción puede mejorar el rendimiento desplazando el procesamiento de agentes del distribuidor a los suscriptores. Para obtener más información, vea [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md).  
   
 -   Considere la posibilidad de reinicializar la suscripción si los suscriptores están muy retrasados.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "68768808"
   
 -   Utilice el parámetro **–UseInprocLoader** del Agente de distribución y del Agente de mezcla (este parámetro no se puede utilizar si las tablas publicadas incluyen columnas XML). Con este parámetro, el agente utiliza el comando BULK INSERT cuando se aplica la instantánea.  
   
- Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
+ Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para más información, consulte:  
   
 -   [Trabajar con perfiles del Agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

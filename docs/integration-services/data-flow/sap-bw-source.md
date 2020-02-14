@@ -11,10 +11,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6f510f17f6a03320e8a20bf8a39e0452bfbeb718
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298071"
 ---
 # <a name="sap-bw-source"></a>Origen de SAP BW
@@ -22,7 +22,7 @@ ms.locfileid: "71298071"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  El origen de SAP BW es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Así, el origen de SAP BW extrae datos de un sistema SAP Netweaver BW de la versión 7 y hace que estos datos estén disponibles para el flujo de datos en un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  El origen de SAP BW es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Así, el origen de SAP BW extrae datos de un sistema SAP Netweaver BW de la versión 7 y hace que estos datos estén disponibles para el flujo de datos en un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Este origen tiene una salida y una salida de error.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71298071"
   
     2.  Para **Tipo de activación**, seleccione **Programa de servidor registrado**.  
   
-    3.  Para **Communication Type with Target System**(Tipo de comunicación con sistema de destino), seleccione **Non-Unicode (Inactive MDMP Settings)** (No Unicode (valores inactivos de MDMP)).  
+    3.  Para **Tipo de comunicación con sistema de destino**, seleccione **No Unicode (valores inactivos de MDMP)** .  
   
     4.  Asignar un identificador de programa adecuado  
   
@@ -139,7 +139,7 @@ ms.locfileid: "71298071"
   
 -   [Registro de solicitudes](../../integration-services/data-flow/request-log.md)  
   
--   [Vista previa](../../integration-services/data-flow/preview.md)  
+-   [Versión preliminar](../../integration-services/data-flow/preview.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Componentes de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  

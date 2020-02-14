@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959598"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76928004"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Introducción a la extensibilidad de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -273,8 +273,8 @@ En el panel, se proporcionan las siguientes variables de contexto:
 
 |variable de contexto| description|
 |:---|:---|
-|`connectionProvider` | Cadena del identificador del proveedor de la conexión actual. Por ejemplo, Columnas en la tabla de origen capturadas`connectionProvider == 'MSSQL'`|
-|`serverName`|Cadena del nombre de servidor de la conexión actual. Por ejemplo, Columnas en la tabla de origen capturadas`serverName == 'localhost'`|
-|`databaseName` | Cadena del nombre de base de datos de la conexión actual. Por ejemplo, Columnas en la tabla de origen capturadas`databaseName == 'master'`|
+|`connectionProvider` | Cadena del identificador del proveedor de la conexión actual. Por ejemplo, `connectionProvider == 'MSSQL'`.|
+|`serverName`|Cadena del nombre de servidor de la conexión actual. Por ejemplo, `serverName == 'localhost'`.|
+|`databaseName` | Cadena del nombre de base de datos de la conexión actual. Por ejemplo, `databaseName == 'master'`.|
 |`connection` | Objeto de perfil de conexión completo de la conexión actual (IConnectionProfile).|
 |`dashboardContext` | Una cadena del contexto de la página del panel está actualmente activada. "database" o "server". Por ejemplo, `dashboardContext == 'database'`|

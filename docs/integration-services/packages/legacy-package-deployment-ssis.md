@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295817"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implementación de paquetes heredada (SSIS)
@@ -116,7 +116,7 @@ ms.locfileid: "71295817"
 |Variable de entorno|Una variable de entorno contiene la configuración.|  
 |Entrada del Registro|Una entrada del Registro contiene la configuración.|  
 |Variable de paquete primario|Una variable del paquete contiene la configuración. Este tipo de configuración se utiliza habitualmente para actualizar las propiedades de los paquetes secundarios.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table|Una tabla de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene la configuración. La tabla puede incluir varias configuraciones.|  
+|Tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Una tabla de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene la configuración. La tabla puede incluir varias configuraciones.|  
   
 #### <a name="xml-configuration-files"></a>Archivos de configuración XML  
  Si selecciona el tipo de configuración **Archivo de configuración XML** , puede crear un archivo de configuración, reutilizar un archivo existente y agregarle configuraciones nuevas, o bien reutilizar un archivo existente sobrescribiendo el contenido actual.  
@@ -215,11 +215,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Cuando finaliza el asistente, la nueva configuración se agrega a la lista de configuraciones del cuadro de diálogo **Organizador de configuraciones de paquetes** .  
   
-> **NOTA:** La última página del Asistente para la configuración de paquetes, la página Finalización del asistente, enumera las propiedades de destino de la configuración. Si quiere actualizar propiedades cuando ejecuta paquetes mediante la utilidad del símbolo del sistema **dtexec**, puede generar las cadenas que representan las rutas de acceso a las propiedades con el Asistente para configuración de paquetes, y, después, copiarlas y pegarlas en la ventana del símbolo del sistema para usarlas con la opción establecida de **dtexec**.  
+> **NOTA:** La última página del Asistente para la configuración de paquetes, la página Finalización del asistente, enumera las propiedades de destino de la configuración. Si quiere actualizar propiedades cuando ejecuta paquetes mediante la utilidad del símbolo del sistema **dtexec** , puede generar las cadenas que representan las rutas de acceso a las propiedades con el Asistente para configuración de paquetes, y, después, copiarlas y pegarlas en la ventana del símbolo del sistema para usarlas con la opción establecida de **dtexec**.  
   
  En la tabla siguiente se describen las columnas de la lista de configuraciones del cuadro de diálogo **Organizador de configuraciones de paquetes** .  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |**Nombre de la configuración**|Nombre de la configuración.|  
 |**Tipo de configuración**|Tipo de configuración.|  
@@ -283,13 +283,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Propiedad de destino**  
  Presenta el nombre de la propiedad modificada por la configuración. La columna está en blanco si el tipo de configuración admite varias configuraciones.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una configuración empleando el Asistente para la configuración de paquetes.  
   
- **Editar**  
+ **Edición**  
  Edita una configuración existente volviendo a ejecutar el Asistente para la configuración de paquetes.  
   
- **Quitar**  
+ **Remove**  
  Seleccione una configuración y haga clic en **Quitar**.  
   
  **Flechas**  
@@ -321,7 +321,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Tipo de configuración**  
  Seleccione el tipo de origen en el que se almacenará la configuración, utilizando las siguientes opciones:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Archivo de configuración XML**|Almacenar la configuración como un archivo XML. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
 |**Variable de entorno**|Almacenar la configuración en una de las variables de entorno. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
@@ -338,15 +338,15 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Nombre del archivo de configuración**|Escriba la ruta de acceso del archivo de configuración que genera el asistente.|  
-|**Examinar**|Use el cuadro de diálogo **Seleccionar ubicación del archivo de configuración** para especificar la ruta de acceso del archivo de configuración que genera el asistente. Si el archivo no existe, el asistente lo crea.|  
+|**Browse**|Use el cuadro de diálogo **Seleccionar ubicación del archivo de configuración** para especificar la ruta de acceso del archivo de configuración que genera el asistente. Si el archivo no existe, el asistente lo crea.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se usa para especificar la variable de entorno donde se almacena la configuración.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -358,14 +358,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada del Registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<clave del Registro>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si quiere usar una clave del Registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\…> para identificarla.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde debe almacenarse la configuración.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -373,14 +373,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Variable primaria**|Especifique la variable del paquete primario que contiene la información de configuración.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se usa para especificar la variable de entorno donde se almacena la configuración.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -388,16 +388,16 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Conexión**|Seleccione una conexión de la lista o haga clic en **Nueva** para crear una nueva conexión.|  
+|**Connection**|Seleccione una conexión de la lista o haga clic en **Nueva** para crear una nueva conexión.|  
 |**Tabla de configuración**|Seleccione una tabla existente o haga clic en **Nueva** para escribir una instrucción SQL que cree la nueva tabla.|  
 |**Filtro de la configuración**|Seleccione un nombre de configuración existente o escriba uno nuevo.<br /><br /> Muchas de las configuraciones de SQL Server se pueden almacenar en la misma tabla, y cada configuración puede incluir varios elementos de configuración.<br /><br /> Este valor definido por el usuario se almacena en la tabla para identificar los elementos de configuración de una configuración determinada.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde se almacena la configuración.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -421,7 +421,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Nombre de la configuración**  
  Escriba el nombre de la configuración.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra los valores utilizados por el asistente para crear la configuración.  
   
  **Finalizar**  
@@ -506,7 +506,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 6.  Opcionalmente, actualice la ubicación de la utilidad de implementación modificando la propiedad **DeploymentOutputPath** .  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 8.  En el Explorador de soluciones, haga clic con el botón derecho en el proyecto y, después, haga clic en **Generar**.  
   
@@ -592,13 +592,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **Temas relacionados:** [Crear configuraciones de paquetes](../../integration-services/packages/create-package-configurations.md)  
   
- **Ruta de acceso**  
+ **Path**  
  Muestra la ruta de acceso de la propiedad que debe configurarse.  
   
  **Tipo**  
  Muestra el tipo de datos de la propiedad.  
   
- **Value**  
+ **Valor**  
  Especifique el valor de la configuración.  
   
  **Siguiente**  
@@ -651,7 +651,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Carpeta**  
  Permite especificar la ruta y la carpeta en la que se desea copiar el paquete y sus dependencias.  
   
- **Examinar**  
+ **Browse**  
  Permite ir a la carpeta de destino mediante el cuadro de diálogo **Buscar carpeta** .  
   
  **Siguiente**  
@@ -673,7 +673,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Utilizar autenticación de SQL Server**  
  Permite especificar si el paquete debe usar la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al iniciar una sesión en el servidor. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
- **User name**  
+ **Nombre de usuario**  
  Especifique un nombre de usuario.  
   
  **Contraseña**  

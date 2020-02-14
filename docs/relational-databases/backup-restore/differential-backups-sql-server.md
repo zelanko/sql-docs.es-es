@@ -14,17 +14,17 @@ ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: be0ff34acb9d7743ae096f8ecd2b0ad3ed8a4e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089844"
 ---
 # <a name="differential-backups-sql-server"></a>Copias de seguridad diferenciales (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tema de copias de seguridad y restauración es pertinente para todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Una copia de seguridad diferencial se basa en la copia de seguridad de datos completa más reciente existente. Una copia de seguridad diferencial captura solo los datos que han cambiado después de la última copia de seguridad completa. La copia de seguridad completa en la que se basa una diferencial se denomina *base* de la diferencial. Las copias de seguridad completas, a excepción de las de solo copia, pueden servir como base para una serie de copias de seguridad diferenciales, incluidas las de base de datos, las parciales, y las de archivos. La copia de seguridad de base de una copia de seguridad diferencial de archivos puede estar contenida en una copia de seguridad completa, una copia de seguridad de archivos o una copia de seguridad parcial.  
+ la copia de seguridad diferencial se basa en la copia de seguridad de datos completa anterior más reciente. Una copia de seguridad diferencial captura solo los datos que han cambiado después de la última copia de seguridad completa. La copia de seguridad completa en la que se basa una diferencial se denomina *base* de la diferencial. Las copias de seguridad completas, a excepción de las de solo copia, pueden servir como base para una serie de copias de seguridad diferenciales, incluidas las de base de datos, las parciales, y las de archivos. La copia de seguridad de base de una copia de seguridad diferencial de archivos puede estar contenida en una copia de seguridad completa, una copia de seguridad de archivos o una copia de seguridad parcial.  
   
   
 ##  <a name="Benefits"></a> Ventajas  
@@ -40,7 +40,7 @@ ms.locfileid: "68089844"
   
  En la siguiente ilustración se muestra cómo funciona una copia de seguridad diferencial. La ilustración muestra 24 extensiones de datos, 6 de las cuales han cambiado. La copia de seguridad diferencial solo contiene estas 6 extensiones de datos. La operación de copia de seguridad diferencial se basa en una página de mapa de bits que contiene un bit por cada extensión. Por cada extensión actualizada desde que se creó la base, el bit se establece en 1 en el mapa de bits.  
   
- ![El mapa de bits diferencial identifica extensiones modificadas](../../relational-databases/backup-restore/media/bnr-how-diff-backups-work.gif "El mapa de bits diferencial identifica extensiones modificadas")  
+ ![Mapa de bits diferencial que identifica las extensiones modificadas](../../relational-databases/backup-restore/media/bnr-how-diff-backups-work.gif "Mapa de bits diferencial que identifica las extensiones modificadas")  
   
 > [!NOTE]  
 >  El mapa de bits de la copia de seguridad diferencial no se actualiza con las copias de seguridad de solo copia. Por tanto, una copia de seguridad de solo copia no afecta a las copias de seguridad diferenciales subsiguientes.  

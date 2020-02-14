@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095317"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
@@ -65,7 +65,7 @@ En el modo monoestable, el trabajo de captura solicita que `sp_cdc_scan` realice
 En el modo continuo, el trabajo de captura solicita que `sp_cdc_scan` se ejecute continuamente. Esto permite que el procedimiento almacenado administre su propio bucle de espera proporcionando no solo los valores de los parámetros maxtrans y maxscans sino también un valor para el número de segundos entre el procesamiento de registros (el intervalo de sondeo). Al ejecutarse en este modo, el trabajo de captura sigue estando activo, ejecutando un `WAITFOR` entre el examen de registros.  
   
 > [!NOTE]  
-> Cuando el valor del intervalo de sondeo es mayor que 0, el mismo límite superior para el rendimiento del trabajo monoestable repetido se aplica también al funcionamiento del trabajo en el modo continuo. Es decir, (`maxtrans` \* `maxscans`) dividido entre un intervalo de sondeo distinto de cero impondrá un límite superior en el número medio de transacciones que puede procesar el trabajo de captura.  
+> Cuando el valor del intervalo de sondeo es mayor que 0, el mismo límite superior para el rendimiento del trabajo monoestable repetido se aplica también al funcionamiento del trabajo en el modo continuo. Es decir, (`maxtrans` \* `maxscans`) dividido por un intervalo de sondeo distinto de cero impone un límite superior en el número medio de transacciones que puede procesar el trabajo de captura.  
   
 ### <a name="capture-job-customization"></a>Personalización del trabajo de captura
 
@@ -77,7 +77,7 @@ En esta sección se proporciona información sobre cómo funciona el trabajo de 
   
 ### <a name="structure-of-the-cleanup-job"></a>Estructura del trabajo de limpieza
 
-La captura de datos modificados usa una estrategia de limpieza basada en la retención para administrar el tamaño de la tabla de cambios. El mecanismo de limpieza consta de un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] que se crea cuando se habilita la primera tabla de la base de datos. Un único trabajo de limpieza controla la limpieza para todas las tablas de cambios de base de datos y aplica el mismo valor de retención a todas las instancias de captura definidas.
+La captura de datos modificados usa una estrategia de limpieza basada en la retención para administrar el tamaño de la tabla de cambios. El mecanismo de limpieza consta de un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] que se crea cuando se habilita la primera tabla de la base de datos. Un único trabajo de limpieza controla la limpieza para todas las tablas de cambios de base de datos y aplica el mismo valor de retención a todas las instancias de captura definidas.
   
 El trabajo de limpieza se inicia ejecutando el procedimiento almacenado sin parámetros `sp_MScdc_cleanup_job`. Este procedimiento almacenado comienza extrayendo los valores configurados para la retención y el umbral del trabajo de limpieza de `msdb.dbo.cdc_jobs`. El valor de retención se utiliza para calcular una nueva marca de límite inferior para las tablas de cambios. El número especificado de minutos se resta del valor de `tran_end_time` máximo en la tabla `cdc.lsn_time_mapping` para obtener la nueva marca de límite inferior expresada como un valor datetime. A continuación, la tabla CDC.lsn_time_mapping se utiliza para convertir este valor datetime en un valor de `lsn` correspondiente. Si varias entradas comparten el mismo tiempo de confirmación en la tabla, el `lsn` que corresponde a la entrada que tiene el valor de `lsn` más bajo se elige como nueva marca de límite inferior. Este valor de `lsn` se pasa al procedimiento `sp_cdc_cleanup_change_tables` para quitar las entradas de las tablas de cambios de base de datos.  
   

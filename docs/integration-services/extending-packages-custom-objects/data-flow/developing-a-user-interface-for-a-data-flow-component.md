@@ -23,10 +23,10 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287776"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desarrollar una interfaz de usuario para un componente de flujo de datos
@@ -49,7 +49,7 @@ ms.locfileid: "71287776"
   
 -   Versión del archivo  
   
--   Culture  
+-   Referencia cultural  
   
 -   Token de clave pública  
   
@@ -93,7 +93,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Usar los servicios del Diseñador SSIS  
  El parámetro **IServiceProvide** del método <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> proporciona acceso a los siguientes servicios del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)]:  
   
-|ssNoVersion|Descripción|  
+|Servicio|Descripción|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Se usa para determinar si el componente se generó como parte de una operación de copiar y pegar o de cortar y pegar.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Se usa para obtener acceso a las conexiones existentes o crear nuevas conexiones en el paquete.|  
@@ -103,7 +103,7 @@ End Class
   
  Estos servicios proporcionan a los desarrolladores de componentes la capacidad de crear objetos en el paquete donde se carga el componente y de obtener acceso a ellos.  
   
-## <a name="sample"></a>Ejemplo  
+## <a name="sample"></a>Muestra  
  En el ejemplo de código siguiente se muestra la integración de una clase de interfaz de usuario personalizada que implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> y un formulario Windows Forms que actúa como editor de un componente.  
   
 ### <a name="custom-user-interface-class"></a>Clase de interfaz de usuario personalizada  

@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048520"
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
@@ -44,7 +44,7 @@ Los tipos simples incluyen:
 -   [LineString](../../relational-databases/spatial/linestring.md)  
 -   [CircularString](../../relational-databases/spatial/circularstring.md)  
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
--   [Polígono](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
 
 Los tipos de colección incluyen:  
@@ -80,7 +80,7 @@ Cuando el nivel de compatibilidad es 100 o menor en [!INCLUDE[ssCurrent](../../i
 En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** es un tipo especial de Polygon que abarca el mundo entero. **FullGlobe** tiene un área, pero no tiene bordes o vértices.  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anillos externos e internos no importantes en el tipo de datos `geography`  
-Las características simples de OGC para la especificación de SQL analizan los anillos externos e internos, pero esta distinción tiene poco sentido para el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** ; se puede tomar cualquier anillo de un polígono como anillo externo.  
+Las características simples de OGC para la especificación de SQL analizan los anillos externos e internos, pero esta distinción tiene poco sentido para el tipo de datos **geography** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; se puede tomar cualquier anillo de un polígono como anillo externo.  
 
 Para obtener más información acerca de las especificaciones de OGC, vea lo siguiente:  
 -   [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](https://go.microsoft.com/fwlink/?LinkId=93627)  

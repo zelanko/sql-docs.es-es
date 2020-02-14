@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903960"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
@@ -150,7 +150,7 @@ No se admite la creación de vistas asignadas de memoria (E/S asignada de memori
 
 ## <a name="related-tasks"></a>Related Tasks
 
-[Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
+[Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [crear una base de datos habilitada para FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
 [Crear una tabla para almacenar datos FILESTREAM](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)  
 [Obtener acceso a datos FILESTREAM con Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md) [Crear aplicaciones cliente para datos FILESTREAM](../../relational-databases/blob/create-client-applications-for-filestream-data.md)  

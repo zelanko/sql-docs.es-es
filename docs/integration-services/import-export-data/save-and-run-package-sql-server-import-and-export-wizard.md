@@ -12,10 +12,10 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284941"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Guardar y ejecutar el paquete (Asistente para importación y exportación de SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "71284941"
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>Captura de pantalla de la página Guardar y ejecutar el paquete  
 En la captura de pantalla siguiente se muestra la página **Guardar y ejecutar el paquete** del asistente. 
    
-![Página Guardar y ejecutar el paquete del Asistente para importación y exportación](../../integration-services/import-export-data/media/save-and-run.png "Página Guardar y ejecutar el paquete del Asistente para importación y exportación") 
+![Guardar y ejecutar la página del paquete del Asistente para importar y exportar](../../integration-services/import-export-data/media/save-and-run.png "Guardar y ejecutar la página del paquete del Asistente para importar y exportar") 
   
 ## <a name="run-and-save-the-package"></a>Ejecutar y guardar el paquete 
  Para continuar, deberá seleccionar al menos una de las dos opciones siguientes.  

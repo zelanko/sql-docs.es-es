@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 6dffa188f5641510f2ad47c17af3b40ad16a3ec9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056755"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941152"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Elegir un método de actualización del motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,8 +32,8 @@ Existen varios métodos que se deben considerar a la hora de planear la actualiz
   
 > [!NOTE]  
 >  También puede plantearse actualizar la base de datos SQL de Azure o virtualizar su entorno de SQL Server como parte de su plan de actualización. Estos artículos están fuera del ámbito de este artículo, pero aquí incluimos algunos vínculos:
->   - [Información general de SQL Server en máquinas virtuales de Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
+>   - [Información general sobre SQL Server en Azure Virtual Machines](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
+>   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
 >   - [Selección de una opción de SQL Server en Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   
 ## <a name="upgrade-in-place"></a>Actualización local  
@@ -62,11 +62,11 @@ Existen varios métodos que se deben considerar a la hora de planear la actualiz
  Para más información detallada, vea [Actualización a SQL Server mediante el Asistente para instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="migrate-to-a-new-installation"></a>Migración a una nueva instalación  
- Con este enfoque, conserva el entorno actual a la vez que crea un entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuevo, con frecuencia en nuevo hardware y con una nueva versión del sistema operativo. Después de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nuevo entorno, debe realizar una serie de pasos a fin de prepararlo para poder migrar las bases de datos de usuario existentes desde el entorno antiguo al nuevo y minimizar el tiempo de inactividad. En estos pasos se incluye la migración de los siguientes elementos:  
+ Con este método, conserva el entorno actual a la vez que crea un entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], con frecuencia en nuevo hardware y con una nueva versión del sistema operativo. Después de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nuevo entorno, debe realizar una serie de pasos a fin de prepararlo para poder migrar las bases de datos de usuario existentes desde el entorno antiguo al nuevo y minimizar el tiempo de inactividad. En estos pasos se incluye la migración de los siguientes elementos:  
   
 -   **Objetos del sistema:** Algunas aplicaciones dependen de información, entidades u objetos que se encuentran fuera del ámbito de una base de datos de usuario único. Normalmente, una aplicación depende de las bases de datos maestra y msdb, así como la de usuario. Cualquier elemento almacenado fuera de la base de datos de usuario que sea necesario para el funcionamiento correcto de dicha base de datos debe estar disponible en la instancia de servidor de destino. Por ejemplo, los inicios de sesión de una aplicación se almacenan como metadatos en la base de datos maestra y se deben volver a crear en el servidor de destino. Si una aplicación o un plan de mantenimiento de bases de datos dependen de trabajos del Agente SQL Server, cuyos metadatos estén almacenados en la base de datos msdb, dichos trabajos se deben volver a crear en la instancia de servidor de destino. De forma similar, los metadatos de un desencadenador de servidor se almacenan en la base de datos maestra.  
  
-   Si mueve la base de datos de una aplicación a otra instancia de servidor, debe volver a crear todos los metadatos de las entidades y objetos dependientes de las bases de datos maestra y msdb en la instancia de servidor de destino. Por ejemplo, si una aplicación de la base de datos usa desencadenadores de servidor, no basta con adjuntar o restaurar la base de datos en el nuevo sistema. La base de datos no funcionará según lo previsto a menos que se vuelvan a crear manualmente los metadatos para dichos desencadenadores en la base de datos maestra. Para más información detallada, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+   Si mueve la base de datos de una aplicación a otra instancia de servidor, debe volver a crear todos los metadatos de las entidades y los objetos dependientes de las bases de datos maestra y msdb en la instancia de servidor de destino. Por ejemplo, si una aplicación de la base de datos usa desencadenadores de servidor, no basta con adjuntar o restaurar la base de datos en el nuevo sistema. La base de datos no funcionará según lo previsto a menos que se vuelvan a crear manualmente los metadatos para dichos desencadenadores en la base de datos maestra. Para más información detallada, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 -   **Paquetes de Integration Services almacenados en MSDB:** si almacena paquetes en MSDB, debe incluirlos en un script mediante la [utilidad dtutil](../../integration-services/dtutil-utility.md) o volver a implementarlos en el nuevo servidor. Antes de usar los paquetes en el nuevo servidor, debe actualizarlos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   

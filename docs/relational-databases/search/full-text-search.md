@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72930273"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
@@ -156,7 +156,7 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
   
  En este ejemplo se presupone que se ha creado un índice de texto completo en la columna **Title** .  
   
-|DocumentID|Title|  
+|DocumentID|Título|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -183,9 +183,9 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
 |Bracket|1|3|3|  
-|Ensamblado|1|2|6|  
+|Assembly|1|2|6|  
 |3|1|2|7|  
-|Installation|1|3|4|  
+|Instalación|1|3|4|  
   
  La columna **Keyword** contiene una representación de un solo token extraído durante la indización. Los separadores de palabras determinan en qué consiste un token.  
   
@@ -198,7 +198,7 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
 ###  <a name="fragments"></a> Fragmentos de índices de texto completo  
  El índice de texto completo lógico normalmente se divide entre varias tablas internas. Cada tabla interna se conoce como un fragmento del índice de texto completo. Algunos de estos fragmentos podrían contener datos más recientes que otros. Por ejemplo, si un usuario actualiza la fila siguiente cuyo DocId es 3 y la tabla se somete automáticamente a seguimiento de los cambios, se crea un fragmento nuevo.  
   
-|DocumentID|Title|  
+|DocumentID|Título|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
@@ -227,7 +227,7 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
 |Reflector|1|2|5|  
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
-|Ensamblado|1|2|6|  
+|Assembly|1|2|6|  
 |3|1|2|7|  
 
 ### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>Diferencias entre los índices de texto completo y los índices normales de SQL Server:  

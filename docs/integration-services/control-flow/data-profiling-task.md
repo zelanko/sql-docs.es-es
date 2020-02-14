@@ -17,10 +17,10 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 309fb584db245ee3da6b67e475a4881347f39bd5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294207"
 ---
 # <a name="data-profiling-task"></a>Tarea de generación de perfiles de datos
@@ -96,7 +96,7 @@ ms.locfileid: "71294207"
   
  Los tipos numéricos incluyen los tipos **integer** (excepto **bit**), **money**, **smallmoney**, **decimal**, **float**, **real**y **numeric**.  
   
- \*\* **image**, **text**, **XML**, **udt**y **variant** solo se admiten para el perfil de proporción de columnas nulas.  
+ \*\***image**, **text**, **XML**, **udt**y **variant** solo se admiten para el perfil de proporción de columnas nulas.  
   
 ### <a name="valid-tables-and-columns"></a>Tablas y columnas válidas  
  Si la tabla o la columna está vacía, la tarea de generación de perfiles de datos realiza las acciones siguientes:  

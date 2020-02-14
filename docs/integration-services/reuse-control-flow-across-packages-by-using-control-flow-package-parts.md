@@ -16,10 +16,10 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fa693e4e5c8f21b9d8fc8ad02369bff7623b59e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295784"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Reutilización del flujo de control en paquetes mediante el uso de elementos del paquete de flujo de control
@@ -32,7 +32,7 @@ ms.locfileid: "71295784"
 ## <a name="create-a-new-control-flow-package-part"></a>Creación de un nuevo elemento del paquete de flujo de control  
  Para crear un nuevo elemento del paquete de flujo de control, en el Explorador de soluciones, expanda la carpeta **Package Parts** . Haga clic con el botón derecho en **Flujo de control** y seleccione **Nuevo elemento de paquete de flujo de control**.  
   
- ![Crear una nueva plantilla de flujo de control](../integration-services/media/control-flow-templates-create-new.png "Crear una nueva plantilla de flujo de control")  
+ ![Creación de una nueva plantilla de flujo de control](../integration-services/media/control-flow-templates-create-new.png "Creación de una nueva plantilla de flujo de control")  
   
  Se creará un archivo de elemento con la extensión ".dtsxp" en la carpeta **Elementos del paquete | Flujo de control** . A la vez, también se agrega un nuevo elemento con el mismo nombre al cuadro de herramientas de SSIS. (El elemento del cuadro de herramientas solo está visible mientras tenga un proyecto que contenga el elemento del paquete abierto en Visual Studio).  
   
@@ -76,9 +76,9 @@ ms.locfileid: "71295784"
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>Adición de una copia de un elemento del paquete de flujo de control existente o una referencia a un elemento existente  
  Para agregar una copia de un elemento existente en el sistema de archivos a un paquete, en el Explorador de soluciones, expanda la carpeta **Package Parts** . Haga clic con el botón derecho en **Flujo de control** y seleccione **Agregar elemento de paquete de flujo de control existente**.  
   
- ![Agregar una nueva plantilla de flujo de control desde el menú](../integration-services/media/control-flow-templates-add-from-menu.png "Agregar una nueva plantilla de flujo de control desde el menú")  
+ ![Agregar nuevas plantillas de flujo de control desde el menú](../integration-services/media/control-flow-templates-add-from-menu.png "Agregar nuevas plantillas de flujo de control desde el menú")  
   
- ![Cuadro de diálogo Add Copy of Existing Templates (Agregar copia de las plantillas existentes)](../integration-services/media/control-flow-templates-add-copy-dialog.png "Cuadro de diálogo Add Copy of Existing Templates (Agregar copia de las plantillas existentes)")  
+ ![Cuadro de diálogo Agregar copia de plantillas existentes](../integration-services/media/control-flow-templates-add-copy-dialog.png "Cuadro de diálogo Agregar copia de plantillas existentes")  
   
  **Opciones**  
   
@@ -102,7 +102,7 @@ ms.locfileid: "71295784"
 ### <a name="properties-tab"></a>Pestaña Propiedades  
  Utilice la pestaña **Propiedades** del cuadro de diálogo **Package Part Configuration**  (Configuración de elemento del paquete) para especificar las propiedades del elemento.  
   
- ![Ficha Propiedades del cuadro de diálogo Configuración de plantilla](../integration-services/media/template-configuration-properties-tab.png "Ficha Propiedades del cuadro de diálogo Configuración de plantilla")  
+ ![Pestaña Propiedades del cuadro de diálogo Configuración de plantilla](../integration-services/media/template-configuration-properties-tab.png "Pestaña Propiedades del cuadro de diálogo Configuración de plantilla")  
   
  En la jerarquía de vista de árbol del panel izquierdo se enumeran todas las propiedades configurables de la instancia del elemento.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "71295784"
 ### <a name="connection-managers-tab"></a>Pestaña Administradores de conexiones  
  Utilice la pestaña **Administradores de conexiones** del cuadro de diálogo **Package Part Configuration**  (Configuración de elemento del paquete) para especificar las propiedades de los administradores de conexiones de la instancia del elemento.  
   
- ![Ficha Propiedades del cuadro de diálogo Template Configuration (Configuración de plantillas)](../integration-services/media/template-configuration-connection-managers-tab.png "Ficha Propiedades del cuadro de diálogo Template Configuration (Configuración de plantillas)")  
+ ![Pestaña Administradores de conexión del cuadro de diálogo Configuración de plantilla](../integration-services/media/template-configuration-connection-managers-tab.png "Pestaña Administradores de conexión del cuadro de diálogo Configuración de plantilla")  
   
  En la tabla del panel izquierdo se enumeran todos los administradores de conexiones definidos en el elemento del flujo de control. Elija el administrador de conexiones que desea configurar.  
   
@@ -152,6 +152,6 @@ ms.locfileid: "71295784"
   
  En el diagrama siguiente, se muestra la relación entre los elementos (archivos “.dtsxp”), el Diseñador SSIS y el entorno de ejecución de SSIS.  
   
- ![Archivos y flujo de plantillas de flujo de control](../integration-services/media/control-flow-templates-intro.png "Archivos y flujo de plantillas de flujo de control")  
+ ![Flujo y archivos de plantillas de flujo de control](../integration-services/media/control-flow-templates-intro.png "Flujo y archivos de plantillas de flujo de control")  
   
   

@@ -13,10 +13,10 @@ ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071365"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (índices XML selectivos)
@@ -137,7 +137,7 @@ identifier
  [WITH **(** \<index_options> **)** ]  
  Solo se puede especificar \<index_options> cuando se usa ALTER INDEX sin la cláusula FOR. Cuando se usa ALTER INDEX para agregar o quitar rutas de acceso del índice, las opciones de índice no son argumentos válidos. Para saber más sobre las opciones de índice, vea [CREATE XML INDEX &#40;índices XML selectivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  Al ejecutar una instrucción ALTER INDEX, siempre se vuelve a generar el índice XML selectivo. Debe tener en cuenta el impacto de este proceso sobre los recursos de servidor.  

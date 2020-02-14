@@ -18,10 +18,10 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 92e0656fd3625f2b93a1e097d2f81291056d01cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298470"
 ---
 # <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea
@@ -113,7 +113,7 @@ ms.locfileid: "71298470"
  **administrador de conexiones de Analysis Services**  
  Seleccione un administrador de conexiones de Analysis Services de la lista o haga clic en **Nuevo** para crear uno.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones de Analysis Services nuevo.  
   
  **Temas relacionados:** [Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones de Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -126,10 +126,10 @@ ms.locfileid: "71298470"
 |**Opciones de proceso**|Seleccione una opción de procesamiento de la lista.<br /><br /> **Temas relacionados**: [Procesar un modelo multidimensional &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Configuración**|Enumera los valores de configuración de procesamiento para los objetos especificados.|  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a la lista.  
   
- **Quitar**  
+ **Remove**  
  Seleccione un objeto y haga clic en **Eliminar**.  
   
  **Análisis de impacto**  

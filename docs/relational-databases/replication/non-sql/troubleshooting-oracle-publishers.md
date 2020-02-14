@@ -14,10 +14,10 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907955"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionar problemas de los publicadores de Oracle
@@ -25,7 +25,7 @@ ms.locfileid: "72907955"
   En este tema se describen varios problemas que pueden surgir al configurar y utilizar un publicador de Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Aparece un error referente al cliente Oracle y al software de red  
- La cuenta con la que se ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el distribuidor debe tener permisos de lectura y escritura para el directorio (y todos los subdirectorios) en el que está instalado el software de red del cliente Oracle. Si no se conceden estos permisos o los componentes del cliente Oracle no están instalados correctamente, recibirá el siguiente mensaje de error:  
+ La cuenta con la que se ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el distribuidor debe tener permisos de lectura y ejecución para el directorio (y todos los subdirectorios) en el que está instalado el software de red del cliente de Oracle. Si no se conceden estos permisos o los componentes del cliente Oracle no están instalados correctamente, recibirá el siguiente mensaje de error:  
   
  "Error de conexión al servidor con [Proveedor Microsoft OLE DB para Oracle]. No se encontraron los componentes de cliente y de red de Oracle. Oracle Corporation proporciona estos componentes, que forman parte de la instalación del software de cliente de Oracle, versión 7.3.3 o posterior. El proveedor no funcionará hasta que se instalen estos componentes."  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72907955"
   
  Si el proveedor Oracle OLEDB está instalado, asegúrese de que está registrado. Para registrar el archivo DLL del proveedor, ejecute el siguiente comando desde el directorio en que esté instalado el archivo DLL y, a continuación, detenga y reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-1.  `regsvr32 OraOLEDB10.dll` o bien `regsvr32 OraOLEDB.dll`.  
+1.  `regsvr32 OraOLEDB10.dll` o `regsvr32 OraOLEDB.dll`.  
   
 ## <a name="sql-server-error-21626-or-error-21627-is-raised"></a>Aparece el error 21626 o 21627 de SQL Server  
  Para comprobar que el entorno de la publicación de Oracle está configurado correctamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] trata de conectarse al publicador de Oracle con las credenciales de inicio de sesión especificadas durante la configuración. Si el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se puede conectar al publicador de Oracle, se muestra el siguiente mensaje de error:  
@@ -240,11 +240,11 @@ ms.locfileid: "72907955"
   
 3.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor** , desactive la casilla del publicador de Oracle.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
  **Para quitar un publicador de Oracle (Transact-SQL)**  
   
--   Ejecute **sp_dropdistpublisher**. Para más información, vea [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
+-   Ejecute **sp_dropdistpublisher**. Para obtener más información, vea [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

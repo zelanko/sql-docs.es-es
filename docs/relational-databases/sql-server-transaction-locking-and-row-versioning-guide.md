@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095687"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
@@ -290,7 +290,7 @@ GO
 |Nivel de aislamiento de versiones de fila|Definición|  
 |------------------------------------|----------------|  
 |Instantánea de lectura confirmada|Cuando el valor de la opción de base de datos READ_COMMITTED_SNAPSHOT es ON, el aislamiento de lectura confirmada utiliza las versiones de fila para proporcionar una coherencia de lectura en las instrucciones. Las operaciones de lectura solo requieren bloqueos de tablas SCH-S, pero no bloqueos de páginas ni filas. Es decir, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos. Una función definida por el usuario puede devolver datos confirmados después del inicio de la instrucción que contiene que la UDF.<br /><br /> Cuando la opción de base de datos `READ_COMMITTED_SNAPSHOT` está establecida en OFF, que es el valor de configuración predeterminado, el aislamiento confirmado de lectura utiliza bloqueos compartidos para evitar que otras transacciones modifiquen filas mientras la transacción actual está ejecutando una operación de lectura. Los bloqueos compartidos impiden también que la instrucción lea las filas modificadas por otras transacciones hasta que la otra transacción haya finalizado. Ambas implementaciones cumplen la definición ISO del aislamiento de lectura confirmada.|  
-|Snapshot|El nivel de aislamiento de instantánea utiliza las versiones de fila para proporcionar una coherencia de lectura en las transacciones. No se adquiere ningún bloqueo de páginas ni filas en las operaciones de lectura, solo los bloqueos de tabla SCH-S. Cuando se leen filas modificadas por otras transacciones, se recupera la versión de la fila que existía cuando empezó la transacción. El aislamiento de instantánea solo se puede utilizar en una base de datos cuando la opción de base de datos `ALLOW_SNAPSHOT_ISOLATION` está establecida en ON. De forma predeterminada, el valor de esta opción es OFF para las bases de datos de usuarios.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no permite controlar las versiones de los metadatos. Por ello, hay restricciones en qué operaciones de DDL se puede realizar en una transacción explícita que se está ejecutando bajo el aislamiento de instantánea. No se permiten las siguientes instrucciones DDL en el aislamiento de instantánea después de una instrucción BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME o cualquier instrucción de DDL de Common Language Runtime (CLR). Estas instrucciones se admiten si se está utilizando el aislamiento de instantánea dentro de transacciones implícitas. Una transacción implícita, por definición, es una instrucción única que permite aplicar la semántica del aislamiento de instantánea, incluso con instrucciones de DDL. Las infracciones de este principio pueden producir el error 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|Instantánea|El nivel de aislamiento de instantánea utiliza las versiones de fila para proporcionar una coherencia de lectura en las transacciones. No se adquiere ningún bloqueo de páginas ni filas en las operaciones de lectura, solo los bloqueos de tabla SCH-S. Cuando se leen filas modificadas por otras transacciones, se recupera la versión de la fila que existía cuando empezó la transacción. El aislamiento de instantánea solo se puede utilizar en una base de datos cuando la opción de base de datos `ALLOW_SNAPSHOT_ISOLATION` está establecida en ON. De forma predeterminada, el valor de esta opción es OFF para las bases de datos de usuarios.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no permite controlar las versiones de los metadatos. Por ello, hay restricciones en qué operaciones de DDL se puede realizar en una transacción explícita que se está ejecutando bajo el aislamiento de instantánea. No se permiten las siguientes instrucciones DDL en el aislamiento de instantánea después de una instrucción BEGIN TRANSACTION: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME o cualquier instrucción de DDL de Common Language Runtime (CLR). Estas instrucciones se permiten cuando usa el aislamiento de la instantánea en transacciones implícitas. Una transacción implícita, por definición, es una instrucción única que permite aplicar la semántica del aislamiento de instantánea, incluso con instrucciones de DDL. Las infracciones de este principio pueden producir el error 3961: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  En la tabla siguiente se muestran los efectos secundarios de la simultaneidad habilitados por los distintos niveles de aislamiento.  
   
@@ -299,7 +299,7 @@ GO
 |**Lectura pendiente de confirmación**|Sí|Sí|Sí|  
 |**Lectura confirmada**|No|Sí|Sí|  
 |**Lectura repetible**|No|No|Sí|  
-|**Snapshot**|No|No|No|  
+|**Instantánea**|No|No|No|  
 |**Serializable**|No|No|No|  
   
  Para obtener más información sobre los tipos de bloqueo específicos o las versiones de fila que controlan cada nivel de aislamiento de transacción, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
@@ -340,7 +340,7 @@ GO
   
  En la siguiente tabla se muestran los recursos que el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] puede bloquear.  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |RID|Identificador de fila que se utiliza para bloquear una sola fila de un montón.|  
 |KEY|Bloqueo de fila dentro de un índice que se utiliza para proteger intervalos de claves en transacciones serializables.|  
@@ -350,7 +350,7 @@ GO
 |TABLE|Tabla completa, con todos los datos e índices.|  
 |FILE|Archivos de la base de datos.|  
 |APPLICATION|Recurso especificado por la aplicación.|  
-|METADATA|Bloqueos de metadatos.|  
+|METADATOS|Bloqueos de metadatos.|  
 |ALLOCATION_UNIT|Unidad de asignación.|  
 |DATABASE|Base de datos completa.|  
   
@@ -368,7 +368,7 @@ GO
 |Actualizar (U)|Se utiliza en recursos que se pueden actualizar. Evita una forma común de interbloqueo que se produce cuando varias sesiones leen, bloquean y actualizan recursos.|  
 |Exclusivo (X)|Se utiliza para operaciones de modificación de datos, como `INSERT`, `UPDATE` o `DELETE`. Garantiza que no puedan realizarse varias actualizaciones simultáneamente en el mismo recurso.|  
 |Intención|Se utiliza para establecer una jerarquía de bloqueos. Los tipos de bloqueo de intención son: intención compartido (IS), intención exclusivo (IX) y compartido con intención exclusivo (SIX).|  
-|esquema|Se utiliza cuando se ejecuta una operación que depende del esquema de una tabla. Hay dos tipos de bloqueo de esquema: modificación del esquema (Sch-M) y modificación de estabilidad (Sch-S).|  
+|Schema|Se utiliza cuando se ejecuta una operación que depende del esquema de una tabla. Hay dos tipos de bloqueo de esquema: modificación del esquema (Sch-M) y modificación de estabilidad (Sch-S).|  
 |Actualización masiva (BU)|Se utiliza cuando se copian datos de forma masiva en una tabla y se especifica la sugerencia `TABLOCK`.|  
 |Intervalo de claves|Protege el intervalo de filas que lee una consulta cuando se utiliza el nivel de aislamiento de transacciones serializables. Garantiza que otras transacciones no puedan insertar filas que podrían incluirse como respuesta de las consultas de la transacción serializable si las consultas se volvieran a ejecutar.|  
   
@@ -465,7 +465,7 @@ GO
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|Intervalo compartido, bloqueo de recurso compartido; recorrido de intervalo serializable.|  
     |RangeS|U|RangeS-U|Intervalo compartido, bloqueo de recurso de actualización; recorrido de actualización serializable.|  
-    |RangeI|NULL|RangeI-N|Intervalo de inserción, bloqueo de recurso nulo; se utiliza para comprobar los intervalos antes de insertar una nueva clave en un índice.|  
+    |RangeI|Null|RangeI-N|Intervalo de inserción, bloqueo de recurso nulo; se utiliza para comprobar los intervalos antes de insertar una nueva clave en un índice.|  
     |RangeX|X|RangeX-X|Intervalo exclusivo, bloqueo de recurso exclusivo; se utiliza al actualizar una clave de un intervalo.|  
   
 > [!NOTE]  
@@ -594,7 +594,7 @@ INSERT mytable VALUES ('Dan');
   
  Un interbloqueo es una condición que se puede dar en cualquier sistema con varios subprocesos, no solo en un sistema de administración de bases de datos relacionales, y puede producirse para recursos distintos a los bloqueos en objetos de base de datos. Por ejemplo, un subproceso en un sistema operativo con varios subprocesos puede adquirir uno o más recursos, como bloqueos de memoria. Si el recurso que se desea adquirir pertenece actualmente a otro subproceso, puede que el primer subproceso deba esperar a que el otro libere el recurso de destino. En consecuencia, se dice que el subproceso que está en espera depende del subproceso que posee ese recurso concreto. En una instancia del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], las sesiones pueden interbloquearse cuando adquieren recursos ajenos a la base de datos, como memoria o subprocesos.  
   
- ![interbloqueo](../relational-databases/media/deadlock.png)  
+ ![deadlock](../relational-databases/media/deadlock.png)  
   
  En la ilustración, la transacción T1 tiene una dependencia de la transacción T2 para el recurso de bloqueo de la tabla **Part**. Del mismo modo, la transacción T2 tiene una dependencia de la transacción T1 para el recurso de bloqueo de la tabla **Supplier**. Puesto que estas dependencias forman un ciclo, hay un interbloqueo entre las transacciones T1 y T2.  
   
@@ -1233,7 +1233,7 @@ BEGIN TRANSACTION
   
  sys.dm_tran_current_snapshot. Devuelve una tabla virtual que muestra todas las transacciones activas en el momento en que se inicia la transacción actual de aislamiento de instantánea. Si la transacción actual está usando un aislamiento de instantáneas, esta función no devuelve filas. La función sys.dm_tran_current_snapshot es similar a sys.dm_tran_transactions_snapshot, excepto en que solo devuelve las transacciones activas de la instantánea actual. Para obtener más información, consulte [sys.dm_tran_current_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql.md).  
   
-##### <a name="performance-counters"></a>Performance Counters  
+##### <a name="performance-counters"></a>Contadores de rendimiento  
  Los contadores de rendimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporcionan información sobre el rendimiento del sistema afectado por los procesos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los siguientes contadores de rendimiento supervisan tempdb y el almacén de versiones, así como las transacciones que utilizan versiones de fila. Los contadores de rendimiento se encuentran en el objeto de rendimiento SQLServer:Transactions.  
   
  **Espacio disponible en tempdb (KB)** . Supervisa la cantidad, en kilobytes (KB), de espacio libre en la base de datos tempdb. Debe haber suficiente espacio libre en tempdb para controlar el almacén de versiones que admite aislamiento de instantánea.  
@@ -1497,9 +1497,9 @@ ALTER DATABASE AdventureWorks2016
   
 |Estado del marco de aislamiento de instantánea para la base de datos actual|Descripción|  
 |----------------------------------------------------------------|-----------------|  
-|OFF|La compatibilidad de transacciones de aislamiento de instantánea no está activada. No se permiten transacciones de aislamiento de instantánea.|  
+|Apagado|La compatibilidad de transacciones de aislamiento de instantánea no está activada. No se permiten transacciones de aislamiento de instantánea.|  
 |PENDING_ON|La compatibilidad de transacciones de aislamiento de instantánea se encuentra en estado de transición (de OFF a ON). Las operaciones abiertas deben finalizar.<br /><br /> No se permiten transacciones de aislamiento de instantánea.|  
-|ON|La compatibilidad de transacciones de aislamiento de instantánea está activada.<br /><br /> Se permiten transacciones de instantáneas.|  
+|ACTIVAR|La compatibilidad de transacciones de aislamiento de instantánea está activada.<br /><br /> Se permiten transacciones de instantáneas.|  
 |PENDING_OFF|La compatibilidad de transacciones de aislamiento de instantánea se encuentra en estado de transición (de ON a OFF).<br /><br /> Las transacciones de instantáneas iniciadas con posterioridad no tienen acceso a esta base de datos. La actualización de transacciones sigue pagando el costo de crear versiones en esta base de datos. Las transacciones de instantáneas existentes siguen teniendo acceso a la base de datos sin problema. El estado PENDING_OFF no pasa a OFF hasta que finalicen las transacciones de instantáneas que estaban activas cuando el estado de aislamiento de instantánea de base de datos estaba en ON.|  
   
  Use la vista de catálogo `sys.databases` para determinar el estado de ambas opciones de base de datos para las versiones de fila.  

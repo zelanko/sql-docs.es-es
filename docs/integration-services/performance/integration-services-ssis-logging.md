@@ -30,10 +30,10 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282563"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
@@ -43,9 +43,9 @@ ms.locfileid: "71282563"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
   
- Puede configurar el ámbito del registro que se realiza durante la ejecución de un paquete en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para más información, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](#server_logging).  
+ Puede configurar el ámbito del registro que se realiza durante la ejecución de un paquete en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](#server_logging).  
   
- También puede incluir el registro al ejecutar un paquete con la utilidad del símbolo del sistema **dtexec** . Para obtener información acerca de los argumentos del símbolo del sistema que admiten registro, vea [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ También puede incluir el registro al ejecutar un paquete con la utilidad del símbolo del sistema **dtexec**. Para obtener información acerca de los argumentos del símbolo del sistema que admiten registro, vea [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
 ## <a name="configure-logging-in-sql-server-data-tools"></a>Configurar el registro en SQL Server Data Tools  
  Los registros se asocian a paquetes y se configuran en el nivel de paquete. Cada tarea o contenedor de un paquete puede registrar información en cualquier registro del paquete. Es posible habilitar las tareas y contenedores de un paquete para registro aunque el paquete no lo esté. Por ejemplo, puede habilitar el registro en una tarea Ejecutar SQL sin habilitar el registro en el paquete primario. Un paquete, un contenedor o una tarea pueden escribir en varios registros. Puede habilitar el registro solamente en el paquete, o en cualquier tarea o contenedor individual que incluya el paquete.  
@@ -71,7 +71,7 @@ ms.locfileid: "71282563"
   
  La siguiente tabla enumera los ProgID y ClassID para los proveedores de registro que incluye [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y la ubicación de los registros en los que los proveedores de registro escriben.  
   
-|Proveedor de registro|ProgID|ClassID|Ubicación|  
+|Proveedor de registro|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |Archivo de texto|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|El administrador de conexiones de archivos que utiliza el proveedor de registro especifica la ruta de acceso al archivo de texto.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|El administrador de conexiones de archivos que utiliza el proveedor de registro especifica la ruta de acceso al archivo usado por [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
@@ -102,7 +102,7 @@ ms.locfileid: "71282563"
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |Computer|Nombre del equipo en el que ocurrió el evento del registro.|  
-|Operador|La identidad del usuario que inició el paquete.|  
+|Operator|La identidad del usuario que inició el paquete.|  
 |SourceName|Nombre del contenedor o la tarea en los que ocurrió el evento del registro.|  
 |SourceID|Identificador único del paquete; el contenedor de bucles For, bucles Foreach o secuencias, o bien la tarea en la que ocurrió el evento del registro.|  
 |ExecutionID|GUID de la instancia de ejecución del paquete.<br /><br /> Nota: Al ejecutar un paquete único, se podrían crear entradas de registro con valores diferentes para el elemento ExecutionID. Por ejemplo, al ejecutar un paquete en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la fase de validación podría crear entradas de registro con un elemento ExecutionID que corresponda a [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Sin embargo, la fase de ejecución podría crear entradas de registro con un elemento ExecutionID que corresponda a dtshost.exe. Otro ejemplo de esta situación es cuando se ejecuta un paquete que contiene tareas Ejecutar paquete, cada una de las cuales ejecuta un paquete secundario. Estos paquetes secundarios podrían crear entradas de registro que tengan un elemento ExecutionID diferente al de las entradas de registro que crea el paquete principal.|  
@@ -182,7 +182,7 @@ ms.locfileid: "71282563"
   
 |Paso|Descripción|  
 |----------|-----------------|  
-|Validar|El componente comprueba los valores de configuración y los valores de propiedad válidos.|  
+|Validación|El componente comprueba los valores de configuración y los valores de propiedad válidos.|  
 |PreExecute|El componente realiza el procesamiento único antes de empezar a procesar filas de datos.|  
 |PostExecute|El componente realiza el procesamiento único después de haber procesado todas las filas de datos.|  
 |ProcessInput|El componente de transformación o de destino procesa las filas de datos entrantes que un origen o una transformación de nivel superior le han pasado.|  
@@ -232,7 +232,7 @@ ms.locfileid: "71282563"
   
 4.  En la columna **Configuración**, seleccione un administrador de conexiones o haga clic en **\<Nueva conexión>** para crear un nuevo administrador de conexiones del tipo apropiado para el proveedor de registro. En función del proveedor seleccionado, utilice uno de los siguientes administradores de conexión:  
   
-    -   Para archivos de texto, utilice un administrador de conexiones de archivos. Para obtener más información, consulte [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
+    -   Para archivos de texto, utilice un administrador de conexiones de archivos. Para más información, vea [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
     -   Para el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], utilice un administrador de conexiones de archivos.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "71282563"
   
 9. En la pestaña **Detalles** , haga clic en **Guardar**. Aparece el cuadro de diálogo **Guardar como** . Localice la carpeta en la que desee guardar la configuración de registro, escriba un nombre de archivo para la nueva configuración de registro y haga clic en **Guardar**.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
@@ -302,7 +302,7 @@ ms.locfileid: "71282563"
  **Tipo de proveedor**  
  Seleccione un tipo de proveedor de registro de la lista.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un registro del tipo especificado a la colección de proveedores de registro del paquete.  
   
  **Nombre**  
@@ -332,9 +332,9 @@ ms.locfileid: "71282563"
  **Avanzadas**  
  Seleccione o borre eventos para el registro, y seleccione o borre información que se va a registrar para cada evento. Haga clic en **Básicas** para ocultar todos los detalles de registro a excepción de la lista de eventos. La información siguiente está disponible para el registro:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Computer**|Nombre del equipo en el que ha tenido lugar el evento registrado.|  
+|**Equipo**|Nombre del equipo en el que ha tenido lugar el evento registrado.|  
 |**Operador**|El nombre de usuario de la persona que ha iniciado el paquete.|  
 |**SourceName**|El nombre del paquete, contenedor o tarea en la que ha tenido lugar el evento registrado.|  
 |**SourceID**|El nombre del identificador único global (GUID) del paquete, la tarea o el contenedor en el que ha tenido lugar el evento registrado.|  
@@ -342,7 +342,7 @@ ms.locfileid: "71282563"
 |**MessageText**|Mensaje asociado a la entrada del registro.|  
 |**DataBytes**|Reservado para uso futuro.|  
   
- **Básicas**  
+ **Basic**  
  Seleccione o borre los eventos de registro. Esta opción oculta los detalles de registro a excepción de la lista de eventos. Si selecciona un evento, se seleccionan todos los detalles de registro para el evento de forma predeterminada. Haga clic en **Avanzadas** para mostrar los detalles de registro.  
   
  **Cargar**  
@@ -413,7 +413,7 @@ ms.locfileid: "71282563"
 |Nivel de registro|Descripción|  
 |-------------------|-----------------|  
 |None|El registro está desactivado. Solo se registra el estado de ejecución del paquete.|  
-|Básico|Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Este es el valor predeterminado.|  
+|Básica|Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Este es el valor predeterminado.|  
 |RuntimeLineage|Recopila los datos necesarios para realizar un seguimiento de la información de linaje en el flujo de datos. Puede analizar esta información de linaje para asignar la relación de linaje entre las tareas. Los ISV y los desarrolladores pueden generar herramientas de asignación de linaje personalizadas con esta información.|  
 |Rendimiento|Solo se registran las estadísticas de rendimiento, y los eventos OnError y OnWarning.<br /><br /> El informe **Rendimiento de la ejecución** muestra el Tiempo activo y el TIempo total para los componentes de flujo de datos del paquete. Esta información está disponible cuando el nivel de registro de la última ejecución del paquete se estableció en **Performance** (Rendimiento) o **Verbose**(Detallado). Para obtener más información, consulte [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> La vista [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) muestra las horas de inicio y de finalización de los componentes de flujo de datos, para cada fase de una ejecución. Esta vista muestra esta información para estos componentes solo cuando el nivel de registro de la ejecución del paquete se estableció en **Rendimiento** o en **Detallado**.|  
 |Verbose|Se registran todos los eventos, incluidos los eventos personalizados y de diagnóstico.<br /><br /> Los eventos personalizados incluyen los eventos registrados por las tareas de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información sobre los eventos personalizados, vea [Custom Messages for Logging](#custom_messages).<br /><br /> Un ejemplo de un evento de diagnóstico es el evento **DiagnosticEx** . Cada vez que una tarea Ejecutar paquete ejecuta un paquete secundario, este evento captura los valores de parámetro que se pasan a los paquetes secundarios.<br /><br /> El evento **DiagnosticEx** también le ayuda a obtener los nombres de las columnas en las que se producen errores de nivel de fila. Este evento escribe un mapa de linaje de flujo de datos en el registro. Luego, puede buscar el nombre de columna en este mapa de linaje mediante el identificador de columna que captura una salida de error.  Para obtener más información, vea [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md) (Control de errores en los datos).<br /><br /> El valor de la columna de mensaje para **DiagnosticEx** es texto XML. Para ver el texto del mensaje de una ejecución de paquete, ejecute una consulta en la vista [catalog.operation_messages &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Tenga en cuenta que el evento **DiagnosticEx** no conserva el espacio en blanco en la salida XML para reducir el tamaño del registro. Para mejorar la legibilidad, copie el registro en un editor XML (en Visual Studio, por ejemplo) que admita el formato XML y el resaltado de sintaxis.<br /><br /> La vista [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) muestra una fila cada vez que un componente de flujo de datos envía datos a un componente de nivel inferior para una ejecución del paquete. El nivel de registro se debe establecer en **Detallado** para capturar esta información en la vista.|  
@@ -447,7 +447,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
   
  Los siguientes objetos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] poseen entradas del registro personalizadas:  
   
- [Paquete](#Package)  
+ [Package](#Package)  
   
  [Tarea Inserción masiva](#BulkInsert)  
   
@@ -509,7 +509,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**DTSBulkInsertTaskEnd**|Indica que finalizó la inserción masiva.|  
 |**DTSBulkInsertTaskInfos**|Proporciona información descriptiva sobre la tarea.|  
   
-####  <a name="DataFlow"></a> Tarea Flujo de datos  
+####  <a name="DataFlow"></a> Data Flow Task  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Flujo de datos.  
   
 |Entrada del registro|Descripción|  

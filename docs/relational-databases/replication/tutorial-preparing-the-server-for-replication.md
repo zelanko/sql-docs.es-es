@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 7d7582eca4c3934a43e3faa7c94fc84f5609d86e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320452"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910028"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Preparación de SQL Server para la replicación (publicador, distribuidor, suscriptor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,8 +181,9 @@ En este tutorial no se contempla la configuración de un publicador con un distr
    ![Comando Configurar la distribución en el menú contextual](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > Si se ha conectado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante **localhost** en lugar del nombre real del servidor, aparecerá una advertencia indicando que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar con **localhost**. En el cuadro de diálogo de advertencia, seleccione **Aceptar**. En el cuadro de diálogo **Conectar al servidor**, cambie el **nombre del servidor** de **localhost** al nombre del servidor. A continuación, seleccione **Conectar**.  
-  
+   > - Si se ha conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante **localhost** en lugar del nombre real del servidor, aparece una advertencia que indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar a **localhost o dirección IP**. En el cuadro de diálogo de advertencia, seleccione **Aceptar**. En el cuadro de diálogo **Conectar al servidor**, cambie **Nombre del servidor** de **localhost o dirección IP** al nombre del servidor. A continuación, seleccione **Conectar**.  
+   > - Actualmente hay un problema conocido con SQL Server Management Studio (SSMS) 18.0 (y versiones posteriores) que consiste en que _no_ se muestra un mensaje de advertencia al conectarse al distribuidor con la dirección IP, aunque esto sigue sin ser válido. Se debe usar el nombre real del servidor al conectarse al distribuidor. 
+   
    Se inicia el Asistente para configurar la distribución.  
   
 3. En la página **Distribuidor**, seleccione < *'NombreServidor'* >  **actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**. Luego, seleccione **Siguiente**.  

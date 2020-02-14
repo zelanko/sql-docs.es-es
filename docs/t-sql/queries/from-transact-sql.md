@@ -35,10 +35,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981971"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM más JOIN, APPLY, PIVOT (Transact-SQL)
@@ -59,7 +59,7 @@ En este artículo también se tratan las siguientes palabras clave, que se puede
 - APPLY
 - PIVOT
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -409,7 +409,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  Devuelve una tabla con los valores de todas las filas de la tabla actual y la tabla de historial.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La cláusula FROM admite la sintaxis SQL-92-SQL para las tablas combinadas y las tablas derivadas. La sintaxis SQL-92 proporciona los operadores de combinación INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER y CROSS.  
   
  En las vistas, tablas derivadas y subconsultas se admiten las operaciones UNION y JOIN dentro de una cláusula FROM.  
@@ -595,7 +595,7 @@ En el siguiente ejemplo se da por supuesto que las siguientes tablas y la funci�
 
 |Nombre de objeto|Nombres de columna|      
 |---|---|   
-|Departamentos|DeptID, DivisionID, DeptName, DeptMgrID|      
+|Departments|DeptID, DivisionID, DeptName, DeptMgrID|      
 |EmpMgr|MgrID, EmpID|     
 |Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
 |GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
@@ -699,7 +699,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-the-inner-join-syntax"></a>N. Usar la sintaxis INNER JOIN  
+### <a name="n-using-the-inner-join-syntax"></a>Hora Usar la sintaxis INNER JOIN  
  El ejemplo siguiente devuelve las columnas `SalesOrderNumber`, `ProductKey` y `EnglishProductName` de las tablas `FactInternetSales` y `DimProduct` donde la clave de combinación, `ProductKey`, coincide en ambas tablas. Las columnas `SalesOrderNumber` y `EnglishProductName` existen en una de las tablas únicamente, por lo que no es necesario especificar el alias de tabla con estas columnas, como se muestra; estos alias se incluyen por motivos de legibilidad. La palabra **AS** antes de un alias de nombre no es necesaria, pero se recomienda por motivos de legibilidad y para ajustarse al estándar ANSI.  
   
 ```sql

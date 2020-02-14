@@ -1,5 +1,5 @@
 ---
-title: Configuración de red de cliente | Microsoft Docs
+title: Configuración de red de cliente| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012963"
 ---
 # <a name="client-network-configuration"></a>Configuración de red de cliente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  El software de cliente permite que los equipos cliente se conecten a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de una red. Un "cliente" es una aplicación front-end que utiliza los servicios que proporciona un servidor, por ejemplo, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El equipo que hospeda esta aplicación recibe el nombre de *equipo cliente*.  
+  El software cliente permite que los equipos cliente se conecten a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una red. Un "cliente" es una aplicación front-end que utiliza los servicios que proporciona un servidor, por ejemplo, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El equipo que hospeda esta aplicación recibe el nombre de *equipo cliente*.  
   
  En su nivel más sencillo, un cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede residir en el mismo equipo que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, normalmente un cliente se conecta a uno o más servidores remotos mediante una red. La arquitectura cliente/servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite administrar sin ningún problema varios clientes y servidores de una red. Las configuraciones cliente predeterminadas son suficientes en la mayoría de los casos.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68012963"
   
 -   Clientes de DB-Library  
   
-     Estas aplicaciones incluyen la utilidad de símbolo del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** y clientes escritos en DB-Library. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La compatibilidad de las aplicaciones cliente que usan DB-Library se limita a las características de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.  
+     Estas aplicaciones incluyen la utilidad de símbolo del sistema **isql** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y clientes escritos para DB-Library. La compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con las aplicaciones cliente que usan DB-Library se limita a las características de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.  
   
 > [!NOTE]  
 >  Aunque [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sigue admitiendo conexiones de las aplicaciones existentes mediante las API DB-Library y SQL incrustado, no incluye los archivos ni la documentación necesarios para realizar los trabajos de programación en aplicaciones que utilizan estas API. Una versión futura del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] eliminará la compatibilidad para las conexiones desde aplicaciones de DB-Library o Embedded SQL. No utilice DB-Library ni Embedded SQL para desarrollar nuevas aplicaciones. Quite las dependencias de DB-Library o SQL incrustado para modificar las aplicaciones existentes. En lugar de estas API, use el espacio de nombres SQLClient o una API como OLE DB u ODBC. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no incluye la DLL DB-Library necesaria para ejecutar estas aplicaciones. Para ejecutar aplicaciones de DB-Library o SQL incrustado, debe estar disponible la DLL de DB-Library de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "68012963"
   
      Los componentes de red tanto del cliente como del servidor se administran mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que combina la Herramienta de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la Herramienta de red de cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el Administrador de servicios de versiones anteriores. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Administrador de configuración es un complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). También aparece como un nodo en el complemento de Administración de equipos de Windows. El Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sirve para habilitar, deshabilitar, configurar y otorgar el grado de prioridad a bibliotecas de red individuales.  
   
--   ssNoVersion  
+-   Configurar  
   
      Ejecute el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para instalar los componentes de red en un equipo cliente. Es posible habilitar o deshabilitar las bibliotecas de red individuales durante la instalación cuando ésta se inicia desde el símbolo del sistema.  
   

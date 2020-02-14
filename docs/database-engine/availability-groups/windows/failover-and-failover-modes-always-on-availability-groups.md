@@ -16,10 +16,10 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67949102"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
@@ -58,7 +58,7 @@ ms.locfileid: "67949102"
 -   [Contenido relacionado](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
- conmutación automática por error  
+ Conmutación por error automática  
  Conmutación por error que se produce automáticamente en la pérdida de la réplica principal. La conmutación por error automática solo se admite cuando la réplica principal actual y una réplica secundaria están configuradas con el modo de conmutación por error establecido en AUTOMATIC y la réplica secundaria está sincronizada actualmente.  Si el modo de conmutación por error de la réplica principal o la réplica secundaria es MANUAL, no puede producirse la conmutación por error automática.  
   
  Conmutación por error manual planeada (sin pérdida de datos)  
@@ -81,7 +81,7 @@ ms.locfileid: "67949102"
   
 ||Modo de confirmación asincrónica|Modo de confirmación sincrónica con modo de conmutación por error manual|Modo de confirmación sincrónica con modo de conmutación por error automática|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|conmutación automática por error|No|No|Sí|  
+|Conmutación por error automática|No|No|Sí|  
 |Conmutación por error manual planeada|No|Sí|Sí|  
 |conmutación por error forzada|Sí|Sí|Sí **&#42;**|  
   
@@ -114,7 +114,7 @@ ms.locfileid: "67949102"
   
  El comportamiento de conmutación por error para cada réplica secundaria dependerá de qué réplica de disponibilidad sea actualmente la réplica principal. Básicamente, para una réplica secundaria dada, el comportamiento de conmutación por error es el peor caso dada la réplica principal actual. En la ilustración siguiente se muestra cómo el comportamiento de la conmutación por error de réplicas secundarias varía en función de la réplica principal actual y si está configurada para el modo de confirmación asincrónica (con solo conmutación por error forzada) o el modo de confirmación sincrónica (con o sin conmutación automática por error).  
   
- ![Cómo la configuración de la réplica principal afecta a la conmutación por error](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "Cómo la configuración de la réplica principal afecta a la conmutación por error")  
+ ![Cómo afecta la configuración de la réplica principal a la conmutación por error](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "Cómo afecta la configuración de la réplica principal a la conmutación por error")  
   
 ##  <a name="AutomaticFailover"></a> Automatic Failover  
  Una conmutación por error automática hace que una réplica secundaria calificada realice la transición automática al rol principal después de que la réplica principal deje de estar disponible. La conmutación por error automática es más apropiada cuando el nodo de WSFC que hospeda la réplica principal es local para el nodo que hospeda la réplica secundaria. Esto se debe a que la sincronización de datos funciona mejor con una latencia de mensajes baja entre equipos y a que las conexiones de cliente pueden seguir siendo locales.  
@@ -164,7 +164,7 @@ ms.locfileid: "67949102"
 ###  <a name="EnableAutoFo"></a> Para configurar la conmutación automática por error  
  Una réplica de disponibilidad se puede configurar para admitir la conmutación por error automática en cualquier momento.  
   
- **To configure automatic failover**  
+ **Para configurar la conmutación automática por error**  
   
 1.  Asegúrese de que la réplica secundaria esté configurada para utilizar el modo de disponibilidad de confirmación sincrónica. Para obtener más información, vea [Cambiar el modo de disponibilidad de una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).  
   
@@ -183,7 +183,7 @@ ms.locfileid: "67949102"
   
 3.  El destino de la conmutación por error (en `Node02`) se convierte en la nueva réplica principal. Como se trata de una conmutación por error planeada, la réplica principal anterior se cambia al rol secundario durante la conmutación por error y pone inmediatamente sus bases de datos en línea como bases de datos secundarias.  
   
- ![Imagen de una conmutación por error manual planeada](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Imagen de una conmutación por error manual planeada")  
+ ![Ilustración de una conmutación por error manual planeada](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Ilustración de una conmutación por error manual planeada")  
   
  **En esta sección:**  
   
@@ -342,7 +342,7 @@ ms.locfileid: "67949102"
   
 -   [Configurar los valores de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Ver la configuración de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [Ver la configuración de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
 -   [Forzar el inicio de un clúster WSFC sin un quórum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   

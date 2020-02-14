@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902833"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -147,7 +147,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_PORT **=** _puertoDelAgenteDeEscucha_  
  Especifica el número de puerto que escucha el protocolo TCP/IP de Service Broker para las conexiones. Se usa 4022 por convención, pero cualquier número entre 1024 y 32767 es válido.  
   
- LISTENER_IP **=** ALL | **(** _dirección_IP_de_4_partes_ **)**  |  **(** "*dirección_IP_v6*" **)**  
+ LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  Especifica la dirección IP en la que escuchará el extremo. El valor predeterminado es ALL. Esto significa que la escucha aceptará una conexión en cualquier dirección IP válida.  
   
  Si configura la creación de reflejo de la base de datos con una dirección IP en lugar de con un nombre de dominio completo (`ALTER DATABASE SET PARTNER = partner_IP_address` o `ALTER DATABASE SET WITNESS = witness_IP_address`), tiene que especificar `LISTENER_IP =IP_address` en lugar de `LISTENER_IP=ALL` al crear los extremos de los reflejos.  
@@ -169,7 +169,7 @@ FOR DATABASE_MIRRORING (
  **\<authentication_options> ::=**  
   
  **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
- Especifica que el extremo se conecta mediante el protocolo de autenticación de Windows para autenticar los extremos. Ésta es la opción predeterminada.  
+ Especifica que el extremo se conecta mediante el protocolo de autenticación de Windows para autenticar los extremos. Este es el valor predeterminado.  
   
  Si especifica un método de autenticación (NTLM o KERBEROS), dicho método se utilizará siempre como el protocolo de autenticación. El valor predeterminado, NEGOTIATE, hace que el extremo utilice el protocolo de negociación de Windows para elegir NTLM o Kerberos.  
   
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
  Reenvía mensajes si dispone de una dirección de reenvío.  
   
  DISABLED  
- Descarta los mensajes para los servicios que están ubicados en otro lugar. Ésta es la opción predeterminada.  
+ Descarta los mensajes para los servicios que están ubicados en otro lugar. Este es el valor predeterminado.  
   
  MESSAGE_FORWARD_SIZE **=** _tamaño_del_reenvío_  
  Especifica la cantidad máxima de almacenamiento en megabytes que se va a asignar para que el extremo la utilice cuando almacene mensajes que se van a reenviar.  
@@ -256,7 +256,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  No existe ningún puerto predeterminado para DATABASE_MIRRORING.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las instrucciones ENDPOINT DDL no pueden ejecutarse en una transacción de usuario. Las instrucciones ENDPOINT DDL no generan errores aunque una transacción activa de nivel de aislamiento de instantáneas utilice el extremo que se modifica.  
   
  Pueden ejecutar las solicitudes en un elemento ENDPOINT:  
@@ -316,7 +316,7 @@ GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
 
 ```
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   

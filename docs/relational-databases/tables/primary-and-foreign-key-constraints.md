@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999438"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restricciones entre claves principales y claves externas
@@ -126,11 +126,11 @@ ms.locfileid: "67999438"
 |Describe cómo crear una clave principal.|[Crear claves principales](../../relational-databases/tables/create-primary-keys.md)|  
 |Describe cómo eliminar una clave principal.|[Eliminar claves principales](../../relational-databases/tables/delete-primary-keys.md)|  
 |Describe cómo modificar una clave principal.|[Modificar claves principales](../../relational-databases/tables/modify-primary-keys.md)|  
-|Describe cómo crear relaciones de clave externa|[Crear relaciones de clave externa](../../relational-databases/tables/create-foreign-key-relationships.md)|  
-|Describe cómo modificar las relaciones de clave externa.|[Modificar relaciones de claves externas.](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
-|Describe cómo eliminar relaciones de clave externa.|[Eliminar relaciones entre claves externas.](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
+|Describe cómo crear relaciones de clave externa|[Crear relaciones de claves externas](../../relational-databases/tables/create-foreign-key-relationships.md)|  
+|Describe cómo modificar las relaciones de clave externa.|[Modificar relaciones de claves externas](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
+|Describe cómo eliminar relaciones de clave externa.|[Eliminar relaciones de claves externas](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |Describe cómo ver las propiedades de clave externa.|[Ver las propiedades de clave externa](../../relational-databases/tables/view-foreign-key-properties.md)|  
-|Describe cómo deshabilitar restricciones de clave externa para replicación.|[Deshabilitar una restricción FOREIGN KEY para la replicación](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
-|Describe cómo deshabilitar las restricciones de clave externa durante una instrucción INSERT o UPDATE.|[Deshabilitar restricciones FOREIGN KEY con instrucciones INSERT y UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
+|Describe cómo deshabilitar restricciones de clave externa para replicación.|[Deshabilitar restricciones de clave externa para la replicación](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
+|Describe cómo deshabilitar las restricciones de clave externa durante una instrucción INSERT o UPDATE.|[Deshabilitar restricciones de clave externa con instrucciones INSERT y UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   

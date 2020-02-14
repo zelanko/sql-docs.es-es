@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4cf79aade8e74277ef7b5cbaa6e1bd3ae612e94b
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75924919"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76281873"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Herramientas de DevOps para SQL Server Integration Services (versión preliminar)
 
@@ -132,6 +132,12 @@ En estos momentos, la tarea de implementación de SSIS no admite los siguientes 
 - Implementación de paquetes en MSDB o en el almacén de paquetes de SSIS.
 
 ## <a name="release-notes"></a>Notas de la versión
+
+### <a name="version-013-preview"></a>Versión 0.1.3 (versión preliminar)
+
+Fecha de lanzamiento: 19 de enero de 2020
+
+- Se corrigió un problema que impedía la implementación de ISPAC si se cambiaba el nombre de archivo original.
 
 ### <a name="version-012-preview"></a>Versión preliminar 0.1.2
 

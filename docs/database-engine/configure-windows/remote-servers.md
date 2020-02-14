@@ -17,10 +17,10 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938182"
 ---
 # <a name="remote-servers"></a>Servidores remotos
@@ -36,7 +36,7 @@ ms.locfileid: "67938182"
   
  La mayoría de las veces, no debe establecer opciones de configuración para los servidores remotos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establece valores predeterminados en los equipos local y remoto a fin de permitir conexiones de servidores remotos.  
   
- Para que el acceso al servidor remoto funcione correctamente, la opción de configuración **remote access** se debe establecer en 1 tanto en el equipo local como en el remoto. (Esta es la configuración predeterminada).  **remote access** controla los inicios de sesión desde servidores remotos. Es posible restablecer esta opción de configuración con el procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para establecer la opción en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en la página **Conexiones de Propiedades del servidor** , use **Permitir conexiones remotas con este servidor**. Para llegar a la página **Conexiones de Propiedades del servidor** , en el Explorador de objetos, haga clic con el botón derecho en el nombre del servidor y, luego, haga clic en **Propiedades**. En la página **Propiedades del servidor** , haga clic en la página **Conexiones** .  
+ Para que el acceso al servidor remoto funcione correctamente, la opción de configuración **remote access** se debe establecer en 1 tanto en el equipo local como en el remoto. (Esta es la configuración predeterminada).  **remote access** controla los inicios de sesión desde servidores remotos. Es posible restablecer esta opción de configuración con el procedimiento almacenado **sp_configure** de [!INCLUDE[tsql](../../includes/tsql-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para establecer la opción en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en la página **Conexiones de Propiedades del servidor** , use **Permitir conexiones remotas con este servidor**. Para llegar a la página **Conexiones de Propiedades del servidor** , en el Explorador de objetos, haga clic con el botón derecho en el nombre del servidor y, luego, haga clic en **Propiedades**. En la página **Propiedades del servidor** , haga clic en la página **Conexiones** .  
   
  Desde el servidor local, puede deshabilitar una configuración de servidor remoto para impedir el acceso a ese servidor local por parte de usuarios que se encuentran en el servidor remoto con el que se complementa.  
   

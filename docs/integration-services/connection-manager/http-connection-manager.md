@@ -20,10 +20,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 106b0d08ec24143ba497fb5b631fcbd5003a4872
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294408"
 ---
 # <a name="http-connection-manager"></a>HTTP, administrador de conexiones
@@ -72,7 +72,7 @@ ms.locfileid: "71294408"
  **Utilizar credenciales**  
  Especifique si desea que el Administrador de conexiones HTTP utilice las credenciales de seguridad del usuario para la autenticación.  
   
- **User name**  
+ **Nombre de usuario**  
  Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
   
  **Contraseña**  
@@ -84,7 +84,7 @@ ms.locfileid: "71294408"
  **Utilizar certificado de cliente**  
  Especifique si desea que el Administrador de conexiones HTTP utilice un certificado de cliente para la autenticación.  
   
- **Certificado**  
+ **Certificate**  
  Seleccione un certificado de la lista mediante el cuadro de diálogo **Seleccionar certificado** . El cuadro de texto muestra el nombre asociado con este certificado.  
   
  **Tiempo de espera (en segundos)**  
@@ -114,7 +114,7 @@ ms.locfileid: "71294408"
  **Utilizar credenciales**  
  Especifique si desea que el Administrador de conexiones HTTP utilice credenciales de seguridad para el servidor proxy.  
   
- **User name**  
+ **Nombre de usuario**  
  Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
   
  **Contraseña**  
@@ -126,10 +126,10 @@ ms.locfileid: "71294408"
  **Lista de omisión de proxy**  
  Lista de direcciones para la que desea omitir el servidor proxy.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Escriba una dirección para la que no desee utilizar el servidor proxy.  
   
- **Quitar**  
+ **Remove**  
  Seleccione una dirección y quítela haciendo clic en **Quitar**.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710967"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286652"
 ---
 # <a name="change-publication-and-article-properties"></a>Cambiar las propiedades de la publicación y de los artículos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "71710967"
 |Cambiar la compresión de la instantánea|**sp_changepublication**|**compress_snapshot**|Nueva instantánea.|  
 |Cambiar una opción del protocolo de transferencia de archivos (FTP) de la instantánea|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|Nueva instantánea.|  
 |Cambiar la ubicación del script anterior o posterior a la instantánea|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nueva instantánea (también requerida si cambia el contenido del script ).<br /><br /> Se requiere la reinicialización para aplicar el nuevo script en el suscriptor.|  
-|Habilitar o deshabilitar la compatibilidad para los suscriptores que no sean de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|**sp_changepublication**|**is_enabled_for_het_sub**|Nueva instantánea.|  
+|Habilite o deshabilite la compatibilidad con los suscriptores que no sean de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|**sp_changepublication**|**is_enabled_for_het_sub**|Nueva instantánea.|  
 |Cambiar los informes de conflictos para las suscripciones de actualización en cola|**sp_changepublication**|**centralized_conflicts**|Se puede cambiar únicamente si no hay suscripciones activas.|  
 |Cambiar la directiva de resolución de conflictos para las suscripciones de actualización en cola|**sp_changepublication**|**conflict_policy**|Se puede cambiar únicamente si no hay suscripciones activas.|  
   
@@ -72,10 +72,10 @@ ms.locfileid: "71710967"
 |Cambiar el script anterior o posterior a la instantánea|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nueva instantánea (también requerida si cambia el contenido del script ).<br /><br /> Se requiere la reinicialización para aplicar el nuevo script en el suscriptor.|  
 |Agregar un filtro de combinación o un registro lógico|**sp_addmergefilter**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Quitar un filtro de combinación o un registro lógico|**sp_dropmergefilter**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
-|Cambiar un filtro de combinación o un registro lógico|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
+|Cambiar un filtro de combinación o un registro lógico|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Nueva instantánea<br /><br /> Reinicialice las suscripciones.|  
 |Deshabilitar el uso de filtros con parámetros (habilitar los filtros con parámetros no requiere ninguna acción especial)|**sp_changemergepublication**|Un valor de **false** para **dynamic_filters**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Habilitar o deshabilitar el uso de particiones precalculadas|**sp_changemergepublication**|**use_partition_groups**|Nueva instantánea.|  
-|Habilitar o deshabilitar la optimización de particiones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]|**sp_changemergepublication**|**keep_partition_changes**|Reinicialice las suscripciones.|  
+|Habilite o deshabilite la optimización de particiones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)].|**sp_changemergepublication**|**keep_partition_changes**|Reinicialice las suscripciones.|  
 |Habilitar o deshabilitar la validación de particiones del suscriptor|**sp_changemergepublication**|**validate_subscriber_info**|Reinicialice las suscripciones.|  
 |Cambiar el nivel de compatibilidad de la publicación a 80sp3 o inferior|**sp_changemergepublication**|**publication_compatibility_level**|Nueva instantánea.|  
   

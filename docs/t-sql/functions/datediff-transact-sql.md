@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68731128"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -57,11 +57,11 @@ DATEDIFF ( datepart , startdate , enddate )
 ## <a name="arguments"></a>Argumentos  
 
 *datepart*  
-Las unidades en las que **DATEDIFF** informa la diferencia entre _startdate_ y _enddate_ . Entre las unidades de _datepart_ usadas comúnmente se incluyen `month` o `second`.
+Las unidades en las que **DATEDIFF** informa la diferencia entre _startdate_y _enddate_. Entre las unidades de _datepart_ usadas comúnmente se incluyen `month` o `second`.
 
 No se puede especificar el valor _datepart_ en una variable, ni como una cadena entrecomillada, como `'month'`.
 
-En esta tabla se enumeran todos los valores válidos de _datepart_ . **DATEDIFF** acepta el nombre completo de _detepart_ o cualquier abreviatura indicada del nombre completo.
+En esta tabla se enumeran todos los valores válidos de _datepart_. **DATEDIFF** acepta el nombre completo de _detepart_ o cualquier abreviatura indicada del nombre completo.
 
 |nombre de *datepart*|abreviatura de *datepart*|  
 |-----------|------------|
@@ -97,7 +97,7 @@ Para evitar ambigüedades, use años de cuatro dígitos. Vea [Establecer la opci
 *enddate*  
 Vea *startdate*.
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **int**  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -138,7 +138,7 @@ SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 
 Si *startdate* y *enddate* tienen valores de año diferentes, pero tienen los mismos valores de semana del calendario, `DATEDIFF` devolverá 0 para *datepart* **week**.
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Use `DATEDIFF` en las cláusulas `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` y `ORDER BY`.
   
 `DATEDIFF` convierte implícitamente los literales de cadena como un tipo **datetime2**. Esto significa que `DATEDIFF` no admite el formato año-día-mes cuando la fecha se pasa como una cadena. La cadena se debe convertir explícitamente a un tipo **datetime** o **smalldatetime** para poder usar el formato año-día-mes.
@@ -375,7 +375,7 @@ SELECT FirstName, LastName,
 FROM dbo.DimEmployee;  
 ```  
   
-### <a name="n-specifying-an-aggregate-window-function-for-startdate"></a>N. Especificar una función de ventana agregada para startdate  
+### <a name="n-specifying-an-aggregate-window-function-for-startdate"></a>Hora Especificar una función de ventana agregada para startdate  
 En este ejemplo se usa una función de ventana agregada como argumento para *startdate*.
   
 ```sql
@@ -387,7 +387,7 @@ SELECT FirstName, LastName, DepartmentName,
 FROM dbo.DimEmployee  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   

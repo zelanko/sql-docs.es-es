@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530930"
 ---
 # <a name="restore-statements-transact-sql"></a>Instrucciones RESTORE (Transact-SQL)
@@ -63,7 +63,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ||||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -301,7 +301,7 @@ Las siguientes palabras clave no se incluyeron en [!INCLUDE[ssKatmai](../../incl
 |Palabra clave no incluida|Se reemplaza por…|Ejemplo de palabra clave de reemplazo|
 |--------------------------|------------------|------------------------------------|
 |LOAD|RESTORE|`RESTORE DATABASE`|
-|TRANSACTION|LOG|`RESTORE LOG`|
+|TRANSACTION|REGISTRO|`RESTORE LOG`|
 |DBO_ONLY|RESTRICTED_USER|`RESTORE DATABASE ... WITH RESTRICTED_USER`|
 
 ### <a name="restore-log"></a>RESTORE LOG

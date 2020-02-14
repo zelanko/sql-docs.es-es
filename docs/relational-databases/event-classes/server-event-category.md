@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c7aaa763c5764c87335532ced73cbc3c64f6e28a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911181"
 ---
 # <a name="server-event-category"></a>Servidor (categoría de eventos)
@@ -30,7 +30,7 @@ ms.locfileid: "67911181"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Mount Tape (clase de eventos)](../../relational-databases/event-classes/mount-tape-event-class.md)|Indica que se ha recibido una solicitud para montar una cinta.|  
-|[Server Memory Change (clase de eventos)](../../relational-databases/event-classes/server-memory-change-event-class.md)|Indica que se ha cambiado el uso de memoria de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Server Memory Change (clase de eventos)](../../relational-databases/event-classes/server-memory-change-event-class.md)|Indica que se ha cambiado el uso de memoria de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Trace File Close (clase de eventos)](../../relational-databases/event-classes/trace-file-close-event-class.md)|Indica que se ha cerrado un archivo de seguimiento durante la reversión de los archivos de seguimiento.|  
   
   

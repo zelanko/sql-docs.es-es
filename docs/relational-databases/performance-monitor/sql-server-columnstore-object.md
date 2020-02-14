@@ -11,10 +11,10 @@ ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 334a8388b7abc217123071fdc37c9e1091f6a3fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987136"
 ---
 # <a name="sql-server-columnstore-object"></a>Objeto Columnstore de SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "67987136"
 
   El objeto **SQLServer:Columnstore** proporciona contadores para supervisar la ejecución de índices de almacén de columnas en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- En la siguiente tabla se describen los contadores de rendimiento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** counters.  
+ En la siguiente tabla se describen los contadores de **Columnstore** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores de Columnstore|Descripción|  
 |--------------------------|-----------------|  
@@ -30,7 +30,7 @@ ms.locfileid: "67987136"
 |**Grupos de filas delta comprimidos**|Número de grupos de filas delta comprimidos.|  
 |**Grupos de filas delta creados**|Número de grupos de filas delta creados.|  
 |**Frecuencia de aciertos de caché de segmentos**|Porcentaje de segmentos de columna que se han encontrado en el grupo del almacén de columnas sin tener que incurrir en una lectura de disco.|  
-|**Base de frecuencia de aciertos de caché de segmento**|Exclusivamente para uso interno.|
+|**Base de frecuencia de aciertos de caché de segmento**|Solo para uso interno.|
 |**Lecturas de segmento por segundo**|Número de lecturas de segmento físico emitidas.|  
 |**Total de búferes de eliminación migrados**|Número de veces que el motor de tupla ha limpiado el búfer de eliminación.|  
 |**Total de evaluaciones de directiva de combinación**|Número de veces que se ha evaluado la directiva de combinación para el almacén de columnas.|  

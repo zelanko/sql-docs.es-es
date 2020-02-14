@@ -41,10 +41,10 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038828"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Iniciar, detener, pausar, reanudar o reiniciar los servicios de SQL Server
@@ -187,7 +187,7 @@ ms.locfileid: "68038828"
 3.  Cuando se le pregunte si desea realizar la acción, haga clic en **Sí**.  
   
 ##  <a name="CommandPrompt"></a> Desde la ventana del símbolo del sistema con los comandos net  
- Los servicios [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden iniciar, detener o pausar mediante comandos [!INCLUDE[msCoName](../../includes/msconame-md.md)] de **de** Windows.  
+ Los servicios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden iniciar, detener o pausar mediante comandos **net** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 ###  <a name="dbDefault"></a> Para iniciar la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -195,7 +195,7 @@ ms.locfileid: "68038828"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     -O bien-  
+     O bien  
   
      **net start MSSQLSERVER**  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68038828"
   
      **net start "SQL Server (** *instancename* **)"**  
   
-     -O bien-  
+     O bien  
   
      **net start MSSQL$** *instancename*  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68038828"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     -O bien-  
+     O bien  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -228,7 +228,7 @@ ms.locfileid: "68038828"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     -O bien-  
+     O bien  
   
      **net start SQLSERVERAGENT**  
   
@@ -238,7 +238,7 @@ ms.locfileid: "68038828"
   
      **net start "SQL Server Agent(** *instancename* **)"**  
   
-     -O bien-  
+     O bien  
   
      **net start SQLAgent$** *instancename*  
   
@@ -250,7 +250,7 @@ ms.locfileid: "68038828"
   
      **net start "SQL Server Browser"**  
   
-     -O bien-  
+     O bien  
   
      **net start SQLBrowser**  
   
@@ -358,7 +358,7 @@ ms.locfileid: "68038828"
  [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Iniciar SQL Server con la configuración mínima](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   
- [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+ [Características admitidas por las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
 

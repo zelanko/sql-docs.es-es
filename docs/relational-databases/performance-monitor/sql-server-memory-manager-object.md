@@ -14,10 +14,10 @@ ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bf2451fbebb26bd8b9f47bcfe25c34e741e98eea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093392"
 ---
 # <a name="sql-server-memory-manager-object"></a>Memory Manager (objeto de SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68093392"
 -   Si se puede mejorar el rendimiento de las consultas agregando memoria o aumentando la memoria disponible para la memoria caché de datos o las estructuras internas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="memory-manager-counters"></a>Contadores de Memory Manager  
- En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** .  
+ En esta tabla se describen los contadores de **Memory Manager** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores de Memory Manager de SQL Server|Descripción|  
 |----------------------------------------|-----------------|  
@@ -39,10 +39,10 @@ ms.locfileid: "68093392"
 |**Memoria disponible (KB)**|Especifica la cantidad de memoria asignada no utilizada por el servidor actualmente.|  
 |**Memoria de área de trabajo concedida (KB)**|Especifica la cantidad total de memoria concedida actualmente para la ejecución de procesos, como operaciones de hash, ordenación, copia masiva y creación de índices.|  
 |**Bloqueos de cierre**|Especificación del número actual de bloqueos de cierre en uso en el servidor (se actualiza periódicamente). Un bloqueo de cierre representa un recurso individual bloqueado, como una tabla, página o fila.|  
-|**Bloqueos de cierre asignados**|Especifica el número actual de bloqueos de cierre asignados. Al iniciar el servidor, el número de bloqueos de cierre asignados más el número de bloqueos de propietario de bloqueo asignados depende de la opción de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**de** . Si se necesitan más bloqueos de cierre, el valor aumenta.|  
+|**Bloqueos de cierre asignados**|Especifica el número actual de bloqueos de cierre asignados. Al iniciar el servidor, el número de bloqueos de cierre asignados más el número de bloqueos de propietario de bloqueo asignados depende de la opción de configuración **Bloqueos** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se necesitan más bloqueos de cierre, el valor aumenta.|  
 |**Memoria de bloqueos (KB)**|Especifica la cantidad total de memoria dinámica que el servidor utiliza para bloqueos.|  
 |**Bloqueos de propietario de bloqueo**|Especifica el número de bloqueos de propietario de bloqueo actualmente en uso en el servidor (se actualiza periódicamente). Un bloqueo de propietario de bloqueo representa la propiedad de un bloqueo sobre un objeto por parte de un subproceso individual. Por tanto, si cada uno de tres subprocesos tiene un bloqueo compartido (S) en una página, existirán tres bloqueos de propietario de bloqueo.|  
-|**Bloqueos de propietario de bloqueo asignados**|Especifica el número actual de bloqueos de propietario de bloqueo asignados. Al iniciar el servidor, el número de bloqueos de propietario de bloqueo asignados y el número de bloqueos de cierre asignados depende de la opción de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**de** . Si se necesitan más bloqueos de propietario de bloqueo, el valor aumenta dinámicamente.|  
+|**Bloqueos de propietario de bloqueo asignados**|Especifica el número actual de bloqueos de propietario de bloqueo asignados. Al iniciar el servidor, el número de bloqueos de propietario de bloqueo asignados y el número de bloqueos de cierre asignados depende de la opción de configuración **Bloqueos** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se necesitan más bloqueos de propietario de bloqueo, el valor aumenta dinámicamente.|  
 |**Memoria de grupo de registros (KB)**|Cantidad total de memoria dinámica que está usando el servidor para el grupo de registros.| 
 |**Memoria máxima del área de trabajo (KB)**|Indica la cantidad máxima de memoria disponible para la ejecución de procesos, como las operaciones de hash, ordenación, copia masiva y creación de índices.|  
 |**Concesiones de memoria otorgadas**|Especifica el número total de procesos que consiguieron una concesión de memoria del área de trabajo.|  

@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127502"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -81,7 +81,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
 >
 >   - [Sintaxis](#syntax-for-disk-based-tables)
 >   - [Ejemplos](#Example_Top)
-> - Tablas con optimización para memoria
+> - Tablas optimizadas para memoria
 >
 >   - [Sintaxis](#syntax-for-memory-optimized-tables)
 >   - [Ejemplos](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
@@ -400,7 +400,7 @@ El nombre del esquema al que pertenece la tabla.
 El nombre de la tabla que se va a modificar. Si la tabla no escla base de datos actual o no está contenida en el esquema propiedad del usuario actual, la base de datos y el esquema deben especificarse explícitamente.
 
 ALTER COLUMN  
-Especifica que la columna con nombre se va a cambiar o modificar.
+Especifica que la columna con nombre va a cambiarse o modificarse.
 
 La columna modificada no puede ser:
 
@@ -463,7 +463,7 @@ A continuación se indican los criterios de *type_name* en una columna modificad
 *precisión*  
 La precisión del tipo de datos especificado. Para más información sobre los valores de precisión válidos, vea [Precisión, escala y longitud](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).
 
-*escala*  
+*scale*  
 La escala del tipo de datos especificado. Para más información sobre los valores de escala válidos, vea [Precisión, escala y longitud](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).
 
 **max**  
@@ -475,7 +475,7 @@ Solo se aplica a los tipos de datos **varchar**, **nvarchar** y **varbinary** pa
 Solo se aplica al tipo de datos **xml** para asociar un esquema XML con el tipo. Antes de escribir una columna **xml** en una colección de esquemas, cree primero la colección de esquema en la base de datos mediante el uso de [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).
 
 COLLATE \< *nombre_de_intercalación* >  
-Especifica la nueva intercalación de la columna alterada. Si no se especifica, se asigna a la columna la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Para obtener una lista y más información, vea [Windows Collation Name](../../t-sql/statements/windows-collation-name-transact-sql.md) [Nombre de intercalación de Windows (Transact-SQL)] y [SQL Server Collation Name](../../t-sql/statements/sql-server-collation-name-transact-sql.md) [Nombre de intercalación de SQL Server (Transact-SQL)].
+Especifica la nueva intercalación para la columna alterada. Si no se especifica, se asigna a la columna la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Para obtener una lista y más información, vea [Windows Collation Name](../../t-sql/statements/windows-collation-name-transact-sql.md) [Nombre de intercalación de Windows (Transact-SQL)] y [SQL Server Collation Name](../../t-sql/statements/sql-server-collation-name-transact-sql.md) [Nombre de intercalación de SQL Server (Transact-SQL)].
 
 La cláusula COLLATE cambia únicamente las intercalaciones de las columnas con tipos de datos **char**, **varchar**, **nchar** y **nvarchar**. Para cambiar la intercalación de una columna de tipo de datos de alias definido por el usuario, use distintas instrucciones ALTER TABLE para cambiar la columna a un tipo de datos del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, cambie su intercalación y cambie la columna de nuevo a un tipo de datos de alias.
 
@@ -663,12 +663,12 @@ Para obtener más información, vea [Configurar operaciones de índice en parale
 ONLINE **=** { ON | **OFF** } \<tal como se aplica a drop_clustered_constraint_option>  
 Especifica si las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de índice. El valor predeterminado es OFF. Puede ejecutar REBUILD como una operación ONLINE.
 
-ON  
+ACTIVAR  
 Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. De esta forma, las consultas o actualizaciones realizadas sobre la tabla y los índices subyacentes pueden continuar. Al principio de la operación, se mantiene un bloqueo compartido (S) sobre el objeto de origen durante un breve espacio de tiempo. Al final de la operación, durante un breve período, se adquiere un bloqueo S (compartido) en el origen si se está creando un índice no agrupado. O bien, se adquiere un bloqueo SCH-M (modificación del esquema) cuando se crea o se pone en línea un índice agrupado y cuando se vuelve a compilar un índice agrupado o no. ONLINE no se puede establecer en ON cuando se crea un índice en una tabla temporal local. Solo se permite la operación de regeneración de montón de un único subproceso.
 
 Para ejecutar DDL para **SWITCH** o para regenerar el índice en línea, todas las transacciones activas de bloqueo que se ejecutan en una tabla determinada deben completarse. Cuando se ejecuta, **SWITCH** o la operación de regeneración impide que la nueva transacción se inicie y podría afectar significativamente al rendimiento de la carga de trabajo y retrasar temporalmente el acceso a la tabla base.
 
-OFF  
+Apagado  
 Los bloqueos de tabla se aplican durante la operación de índice. Una operación de índice sin conexión para crear, volver a crear o quitar un índice clúster, o para volver a crear o quitar un índice no clúster, adquiere un bloqueo de modificación del esquema (Sch-M) de la tabla. Este bloqueo evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación. Una operación de índice sin conexión que crea un índice no clúster adquiere un bloqueo compartido (S) en la tabla. Este bloqueo evita que se realicen actualizaciones en la tabla subyacente, pero permite la realización de operaciones de lectura, como instrucciones SELECT. Se permiten operaciones multiproceso de regeneración del montón.
 
 Para más información, vea [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md).
@@ -791,7 +791,7 @@ PARTITION = ALL
 Vuelve a generar todas las particiones al cambiar los valores de compresión de la partición.
 
 REBUILD WITH ( \<rebuild_option> )  
-Todas las opciones se aplican a una tabla con un índice agrupado. Si la tabla no tiene un índice agrupado, solo algunas de las opciones afectan a la estructura del montón.
+Todas las opciones se aplican a una tabla con un índice clúster. Si la tabla no tiene un índice agrupado, solo algunas de las opciones afectan a la estructura del montón.
 
 Cuando no se especifica un valor de compresión específico con la operación REBUILD, se usa el valor de compresión actual de la partición. Para devolver el valor actual, realice una consulta en la columna **data_compression** de la vista del catálogo **sys.partitions**.
 
@@ -823,13 +823,13 @@ Para volver a generar al mismo tiempo varias particiones, vea [index_option](../
 ONLINE **=** { ON | **OFF** } \<tal y como se aplica a single_partition_rebuild_option>  
 Especifica si una única partición de las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de indización. El valor predeterminado es OFF. Puede ejecutar REBUILD como una operación ONLINE.
 
-ON  
+ACTIVAR  
 Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Requiere un bloqueo S en la tabla al principio de la recompilación del índice y un bloqueo Sch-M en la tabla en el extremo de la recompilación de índice en línea. Aunque ambos bloqueos son bloqueos de metadatos cortos, el bloqueo Sch-M debe esperar a que todas las transacciones de bloqueo se completen. Durante el tiempo de espera, el bloqueo Sch-M bloquea las demás transacciones que esperen a este bloqueo al tener acceso a la misma tabla.
 
 > [!NOTE]
 > La regeneración de índice en línea puede establecer las opciones *low_priority_lock_wait* que se describen más adelante en esta sección.
 
-OFF  
+Apagado  
 Los bloqueos de tabla se aplican durante la operación de índice. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación.
 
 *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
@@ -867,20 +867,20 @@ Al habilitar Stretch para una tabla especificando `ON`, también tiene que espec
 
 **Requisitos previos**. Para poder habilitar Stretch para una tabla, primero tiene que habilitar Stretch en el servidor y en la base de datos. Para obtener más información, vea [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md) (Habilitar Stretch Database para una tabla).
 
-**Permisos**. Para habilitar Stretch para una base de datos o una tabla se necesitan permisos db_owner. Además, para habilitar Stretch para una tabla, también se requieren permisos ALTER en la tabla.
+**Permisos**. Para habilitar Stretch para una base de datos o una tabla se necesitan permisos db_owner. Además, para habilitar Stretch para una tabla se necesitan permisos ALTER en la tabla.
 
 **Deshabilitar Stretch Database para una tabla**
 
 Al deshabilitar Stretch para una tabla, tiene dos opciones para los datos remotos que ya se han migrado a Azure. Para obtener más información, vea [Deshabilitar Stretch Database y recuperar datos remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
 
-- Para deshabilitar Stretch para una tabla y copiar los datos remotos de la tabla de Azure en SQL Server, ejecute el siguiente comando. Este comando no se puede cancelar.
+- Si quiere deshabilitar Stretch para una tabla y copiar los datos remotos de ella de Azure a SQL Server, ejecute el siguiente comando. Este comando no se puede cancelar.
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
-Esta operación conlleva gastos de transferencia de datos y no se puede cancelar. Para obtener más información, consulte [Detalles de precios de Transferencias de datos](https://azure.microsoft.com/pricing/details/data-transfers/).
+Esta operación provoca costos de transferencia de datos y no se puede cancelar. Para obtener más información, consulte [Detalles de precios de Transferencias de datos](https://azure.microsoft.com/pricing/details/data-transfers/).
 
 Una vez que todos los datos remotos se han copiado desde Azure en SQL Server, se deshabilita Stretch para la tabla.
 
@@ -891,7 +891,7 @@ Una vez que todos los datos remotos se han copiado desde Azure en SQL Server, se
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
-Después de deshabilitar Stretch Database para una tabla, se detiene la migración de datos y los resultados de la consulta ya no incluyen los resultados de la tabla remota.
+Después de deshabilitar Stretch Database para una tabla, se detiene la migración de datos y los resultados de la consulta dejan de incluir los resultados de la tabla remota.
 
 Al deshabilitar Stretch no se quita la tabla remota. Si quiere eliminar la tabla remota, tiene que quitarla mediante Azure Portal.
 
@@ -913,7 +913,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 - Especifique `OUTBOUND` para migrar datos de SQL Server a Azure.
 - Especifique `INBOUND` para copiar los datos remotos de la tabla de Azure a SQL Server y deshabilite Stretch para la tabla. Para obtener más información, vea [Deshabilitar Stretch Database y recuperar datos remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
 
-    Esta operación conlleva gastos de transferencia de datos y no se puede cancelar.
+    Esta operación provoca costos de transferencia de datos y no se puede cancelar.
 
 - Especifique `PAUSED` para pausar o posponer la migración de datos. Para obtener más información, vea [Pausa y reanudación de la migración de datos (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
@@ -946,7 +946,7 @@ IF EXISTS
 
 Quita condicionalmente la columna o restricción solo si ya existe.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Para agregar nuevas filas de datos, utilice [INSERT](../../t-sql/statements/insert-transact-sql.md). Para quitar filas de datos, utilice [DELETE](../../t-sql/statements/delete-transact-sql.md) o [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md). Para cambiar los valores de las filas existentes, utilice [UPDATE](../../t-sql/queries/update-transact-sql.md).
 
@@ -1056,7 +1056,7 @@ La adición de una columna que actualiza las filas de la tabla requiere el permi
 
 ## <a name="Example_Top"></a> Ejemplos
 
-|Categoría|Elementos de sintaxis ofrecidos|
+|Category|Elementos de sintaxis ofrecidos|
 |--------------|------------------------------|
 |[Agregar columnas y restricciones](#add)|ADD • PRIMARY KEY con opciones de índice • columnas dispersas y conjuntos de columnas •|
 |[Quitar columnas y restricciones](#Drop)|DROP|
@@ -1937,7 +1937,7 @@ WITH
 
 En este ejemplo, la tabla `Orders` tiene las siguientes particiones. Cada partición contiene datos.
 
-|Partición|¿Tiene datos?|Intervalo de límite|
+|Partition|¿Tiene datos?|Intervalo de límite|
 |---------------|---------------|--------------------|
 |1|Sí|OrderDate < '2004-01-01'|
 |2|Sí|'2004-01-01' <= OrderDate < '2005-01-01'|

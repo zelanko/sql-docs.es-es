@@ -19,10 +19,10 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983267"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar y utilizar el Asistente para la optimización de motor de base de datos
@@ -50,7 +50,7 @@ ms.locfileid: "73983267"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>Para iniciar el Asistente para la optimización de motor de base de datos en SQL Server Management Studio  
   
-1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Herramientas** , haga clic en **Asistente para la optimización de motor de base de datos**.  
+1.  En el menú **Herramientas** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic en **Asistente para la optimización de motor de base de datos**.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Para iniciar el Asistente para la optimización de motor de base de datos desde el Editor de consultas de SQL Server Management Studio  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73983267"
   
     -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic en el menú **Herramientas** y, a continuación, haga clic en **SQL Server Profiler**.  
   
-2.  Cree un archivo o tabla de seguimiento, tal y como se describe en los procedimientos siguientes, que utilice la plantilla [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **del** :  
+2.  Cree un archivo o tabla de seguimiento, tal como se describe en los procedimientos siguientes, que use la plantilla **Tuning** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
     -   [Crear un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -308,7 +308,7 @@ Para más información, vea [Optimización de la base de datos mediante carga de
 ##  <a name="XMLInput"></a> Crear un archivo de entrada XML  
  Si el usuario es un desarrollador de XML experimentado, puede crear archivos con formato XML que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] podrá utilizar para optimizar cargas de trabajo. Para crear estos archivos XML, utilice las herramientas XML para modificar un archivo de ejemplo o para generar una instancia del esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- El esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] está disponible en la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en la ubicación siguiente:  
+ El esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] está disponible en la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la ubicación siguiente:  
   
  C:\Archivos de programa\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -509,7 +509,7 @@ database_name.owner_name.table_name
  **Estado**  
  Muestra el estado del paso de la acción.  
   
- **de mensaje**  
+ **Mensaje**  
  Contiene los mensajes generados por los pasos de la acción.  
   
  **Registro de optimización**  
@@ -517,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
+ [dta (utilidad)](../../tools/dta/dta-utility.md)  
   
   

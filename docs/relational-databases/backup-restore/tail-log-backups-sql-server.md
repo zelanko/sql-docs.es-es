@@ -18,10 +18,10 @@ ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041341"
 ---
 # <a name="tail-log-backups-sql-server"></a>Copias del final del registro (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68041341"
    ##  <a name="TailLogScenarios"></a> Escenarios que requieren una copia del final del registro  
  Recomendamos realizar una copia del final del registro en los siguientes escenarios:  
   
--   Si la base de datos está en línea y planea realizar una operación de restauración en la base de datos, comience con una copia del final del registro. Para evitar un error para una base de datos en línea, debe usar la opción ... WITH NORECOVERY de la instrucción [BACKUP](../../t-sql/statements/backup-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
+-   Si la base de datos está en línea y planea realizar una operación de restauración en la base de datos, comience con una copia del final del registro. Para evitar un error para una base de datos en línea, debe usar la opción ... Opción WITH NORECOVERY de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md).  
   
 -   Si una base de datos está sin conexión y no puede iniciarse y necesita restaurar la base de datos, primero haga una copia del final del registro. Debido a que no pueden producirse otras transacciones en este momento, el uso de WITH NORECOVERY es opcional.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68041341"
   
 -   **backup_set_id**  
 -   **filegroup_id**  
--   **tipo**  
+-   **type**  
 -   **type_desc**  
 -   **is_readonly**  
   

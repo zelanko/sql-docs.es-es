@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026194"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
@@ -50,7 +50,7 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>Argumentos  
 *datepart*  
-Es la parte de *date* a la que `DATEADD` agrega un valor *number* **entero**. En esta tabla se enumeran todos los argumentos válidos de *datepart*. 
+La parte de la *fecha* a la que `DATEADD` agrega un **número** *entero*. En esta tabla se enumeran todos los argumentos válidos de *datepart*. 
 
 > [!NOTE]
 > `DATEADD` no acepta los equivalentes de variables definidas por el usuario para los argumentos *datepart*. 
@@ -71,7 +71,7 @@ Es la parte de *date* a la que `DATEADD` agrega un valor *number* **entero**. En
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
   
-*number*  
+*número*  
 Expresión que se puede resolver como un valor [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) que `DATEADD` suma a un atributo *datepart* de *date*. `DATEADD` acepta valores de variables definidas por el usuario para *number*. `DATEADD` truncará un valor *number* especificado que tiene una fracción decimal. En esta situación no se redondeará el valor *number*.
   
 *date*  
@@ -127,14 +127,14 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Valores devueltos para una fecha smalldatetime y datepart de un segundo o fracciones de segundo  
-La parte correspondiente a los segundos de un valor [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) siempre es 00. Para un valor **date** *smalldatetime*, se aplica lo siguiente: 
+La parte correspondiente a los segundos de un valor [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) siempre es 00. Para un valor de **fecha** *smalldatetime*, se aplica lo siguiente: 
 
 -   Para un argumento *datepart* de **second** y un valor *number* comprendido entre -30 y +29, `DATEADD` no realiza ningún cambio.  
 -   Para un argumento *datepart* de **second** y un valor *number* menor que -30 o mayor de +29, `DATEADD` realiza la suma a partir de un minuto.  
 -   Para un argumento *datepart* de **millisecond** y un valor *number* comprendido entre -30001 y +29998, `DATEADD` no realiza ningún cambio.  
 -   Para un argumento *datepart* de **millisecond** y un valor *number* menor que -30001 o mayor de +29998, `DATEADD` realiza la suma a partir de un minuto.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Use `DATEADD` en las cláusulas siguientes:
 
 + GROUP BY
@@ -368,7 +368,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

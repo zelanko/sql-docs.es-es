@@ -22,10 +22,10 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028737"
 ---
 # <a name="server-memory-configuration-options"></a>Opciones de configuración de memoria del servidor
@@ -55,7 +55,7 @@ Las opciones de servidor **memoria de servidor mínima** y **memoria de servidor
 
 <a name="max_server_memory"></a>Use **max_server_memory** para garantizar que el sistema operativo no experimenta presión de memoria perjudicial. Para establecer la configuración de memoria de servidor máxima, supervise el consumo total del proceso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar los requisitos de memoria. Para ser más precisos con estos cálculos para una única instancia:
 - Desde la memoria total del sistema operativo, reserve entre 1 y 4 GB para el propio sistema.
-- Después, reste el equivalente de las asignaciones de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potenciales al control **Memoria de servidor máxima**, que está formado por **tamaño de la pila <sup>1</sup> \* subprocesos de trabajo máximos calculados <sup>2</sup>** . El resto debería ser la configuración de max_server_memory para la instalación de una única instancia.
+- Después reste el equivalente de las asignaciones de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potenciales al control **Memoria de servidor máxima**, que está formado por **tamaño de la pila <sup>1</sup> \* subprocesos de trabajo máximos calculados <sup>2</sup>** . El resto debería ser la configuración de max_server_memory para la instalación de una única instancia.
 
 <sup>1</sup> Consulte la [guía de arquitectura de administración de memoria](../../relational-databases/memory-management-architecture-guide.md#stacksizes) para obtener información sobre los tamaños de pila de subprocesos por arquitectura.
 
@@ -80,7 +80,7 @@ Esta directiva de Windows determina qué cuentas pueden usar un proceso para man
   
 Para deshabilitar la opción **Bloquear páginas en memoria** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quite el derecho de usuario *Bloquear páginas en memoria* a la cuenta con privilegios que ejecuta la cuenta de inicio de sqlservr.exe (la cuenta de inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
  
-La configuración de esta opción no afecta a la [administración dinámica de memoria](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lo que permite realizar expansiones y contracciones mediante solicitudes de otros distribuidores de memoria. Cuando se usa el derecho de usuario *Bloquear páginas en la memoria* se recomienda establecer un límite superior para la **memoria de servidor máxima**, tal y como [se describe anteriormente](#max_server_memory).
+La configuración de esta opción no afecta a la [administración dinámica de memoria](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lo que permite expandir o contraer a petición de otros distribuidores de memoria. Cuando se usa el derecho de usuario *Bloquear páginas en la memoria* se recomienda establecer un límite superior para la **memoria de servidor máxima**, tal y como [se describe anteriormente](#max_server_memory).
 
 > [!IMPORTANT]
 > Esta opción solo se debería usar en caso necesario, principalmente si hay algún indicio de que el proceso sqlservr se está transfiriendo al almacenamiento auxiliar. En este caso, se notificará el error 17890 en el registro de errores, similar al ejemplo siguiente: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`

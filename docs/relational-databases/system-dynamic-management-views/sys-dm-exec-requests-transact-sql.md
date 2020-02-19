@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,13 +18,14 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
+ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74307994"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429026"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -40,9 +40,9 @@ Devuelve información sobre cada una de las solicitudes que se [!INCLUDE[ssNoVer
 |start_time|**datetime**|Marca de tiempo de la llegada de la solicitud. No admite valores NULL.|  
 |status|**nvarchar(30**|Estado de la solicitud. Puede ser uno de los siguientes:<br /><br /> Información previa<br />En ejecución<br />Ejecutable<br />En espera<br />Suspended<br /><br /> No admite valores NULL.|  
 |command|**nvarchar (32)**|Identifica el tipo de comando actual que se está procesando. Los tipos de comandos comunes incluyen lo siguiente:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> El texto de la solicitud se puede recuperar mediante sys.dm_exec_sql_text con el correspondiente sql_handle para la solicitud. Los procesos internos del sistema establecen el comando según el tipo de tarea que realizan. Las tareas pueden incluir las siguientes:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> No admite valores NULL.|  
-|sql_handle|**varbinary (64)**|Es un token que identifica de forma única el lote o el procedimiento almacenado del que forma parte la consulta. Acepta valores NULL.|  
-|statement_start_offset|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que se inicia la instrucción que se está ejecutando actualmente. Se puede utilizar junto con la función de administración dinámica sql_handle, statement_end_offset y sys.dm_exec_sql_text para recuperar la instrucción de ejecución actual para la solicitud. Acepta valores NULL.|  
-|statement_end_offset|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que finaliza la instrucción que se está ejecutando actualmente. Se puede utilizar junto con la función de administración dinámica sql_handle, statement_end_offset y sys.dm_exec_sql_text para recuperar la instrucción de ejecución actual para la solicitud. Acepta valores NULL.|  
+|sql_handle|**varbinary (64)**|Es un token que identifica de forma única el lote o el procedimiento almacenado del que forma parte la consulta. Acepta valores NULL.| 
+|statement_start_offset|**int**|Indica, en bytes, empezando por 0, la posición inicial de la instrucción que se está ejecutando actualmente para el lote que se está ejecutando actualmente o el objeto almacenado. Se puede usar junto con `sql_handle`, `statement_end_offset`y la `sys.dm_exec_sql_text` función de administración dinámica para recuperar la instrucción que se está ejecutando actualmente para la solicitud. Acepta valores NULL.|  
+|statement_end_offset|**int**|Indica, en bytes, empezando por 0, la posición final de la instrucción que se está ejecutando actualmente para el lote que se está ejecutando actualmente o el objeto almacenado. Se puede usar junto con `sql_handle`, `statement_start_offset`y la `sys.dm_exec_sql_text` función de administración dinámica para recuperar la instrucción que se está ejecutando actualmente para la solicitud. Acepta valores NULL.|  
 |plan_handle|**varbinary (64)**|Es un token que identifica de forma única un plan de ejecución de consulta para un lote que se está ejecutando actualmente. Acepta valores NULL.|  
 |database_id|**smallint**|Identificador de la base de datos en la que se ejecuta la solicitud. No admite valores NULL.|  
 |user_id|**int**|Identificador del usuario que envió la solicitud. No admite valores NULL.|  
@@ -88,12 +88,12 @@ Devuelve información sobre cada una de las solicitudes que se [!INCLUDE[ssNoVer
 |group_id|**int**|Identificador del grupo de cargas de trabajo al que pertenece esta consulta. No admite valores NULL.|  
 |query_hash|**Binary(8**|Valor hash binario que se calcula en la consulta y que se usa para identificar consultas con una lógica similar. Puede usar el hash de consulta para determinar el uso de recursos agregados para las consultas que solo se diferencian en los valores literales.|  
 |query_plan_hash|**Binary(8**|Valor hash binario que se calcula en el plan de ejecución de consulta y que se usa para identificar planes de ejecución de consulta similares. Puede usar el hash del plan de consulta para buscar el costo acumulativo de las consultas con planes de ejecución similares.|  
-|statement_sql_handle|**varbinary (64)**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Identificador SQL de la consulta individual.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
-|statement_context_id|**BIGINT**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> La clave externa opcional para sys. query_context_settings.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
-|dop |**int** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> Grado de paralelismo de la consulta. |  
-|parallel_worker_count |**int** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> El número de trabajadores paralelos reservados si se trata de una consulta en paralelo.  |  
-|external_script_request_id |**uniqueidentifier** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR de solicitud de script externo asociado a la solicitud actual. |  
-|is_resumable |**bit** |**Válido para** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] y versiones posteriores.<br /><br /> Indica si la solicitud es una operación de índice reanudable. |  
+|statement_sql_handle|**varbinary (64)**|**Válido para **: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Identificador SQL de la consulta individual.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
+|statement_context_id|**BIGINT**|**Válido para **: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> La clave externa opcional para sys. query_context_settings.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
+|dop |**int** |**Válido para **: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> Grado de paralelismo de la consulta. |  
+|parallel_worker_count |**int** |**Válido para **: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> El número de trabajadores paralelos reservados si se trata de una consulta en paralelo.  |  
+|external_script_request_id |**uniqueidentifier** |**Válido para **: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR de solicitud de script externo asociado a la solicitud actual. |  
+|is_resumable |**bit** |**Válido para **: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] y versiones posteriores.<br /><br /> Indica si la solicitud es una operación de índice reanudable. |  
 |page_resource |**Binary(8** |**Se aplica a**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `wait_resource` columna contiene una página. Para obtener más información, vea [Sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**BIGINT**|**Se aplica a**: hiperescala Azure SQL Database<br /><br /> Número de lecturas del servidor de páginas realizadas por esta solicitud. No admite valores NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |

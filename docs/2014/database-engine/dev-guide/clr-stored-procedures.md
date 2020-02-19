@@ -7,7 +7,6 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: reference
 dev_langs:
-- TSQL
 - VB
 - CSharp
 helpviewer_keywords:
@@ -21,12 +20,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753827"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77213969"
 ---
 # <a name="clr-stored-procedures"></a>Procedimientos almacenados de CLR
   Los procedimientos almacenados son rutinas que no pueden usarse en expresiones escalares. A diferencia de las funciones escalares, pueden devolver mensajes y resultados tabulares al cliente, invocar instrucciones del lenguaje de definición de datos (DDL) e instrucciones del lenguaje de manipulación de datos (DML), así como devolver parámetros de salida. Para obtener información sobre las ventajas de la integración CLR y la elección entre [!INCLUDE[tsql](../../includes/tsql-md.md)]código administrado y, consulte [información general sobre la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
@@ -49,9 +48,9 @@ ms.locfileid: "62753827"
  La información puede devolverse de varios modos de los procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], entre los que se incluyen parámetros de salida, resultados tabulares y mensajes.  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>Parámetros OUTPUT y procedimientos almacenados CLR  
- Al igual que ocurre con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede devolverse información de los procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] mediante el uso de parámetros OUTPUT. La sintaxis DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se utiliza para crear procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] es igual que la que se utiliza para crear procedimientos almacenados escritos en [!INCLUDE[tsql](../../includes/tsql-md.md)]. El parámetro correspondiente en el código de implementación de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida del mismo modo en que lo hace Visual C#. Debe especificar el parámetro por referencia y aplicar el \<atributo out () > para representar un parámetro de salida, como se muestra a continuación:  
+ Al igual que ocurre con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede devolverse información de los procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] mediante el uso de parámetros OUTPUT. La sintaxis DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se utiliza para crear procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] es igual que la que se utiliza para crear procedimientos almacenados escritos en [!INCLUDE[tsql](../../includes/tsql-md.md)]. El parámetro correspondiente en el código de implementación de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida de la misma forma que en C#. Debe especificar el parámetro por referencia y aplicar el \<atributo out () > para representar un parámetro de salida, como se muestra a continuación:  
   
-```  
+```vb
 Imports System.Runtime.InteropServices  
 ...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
@@ -59,9 +58,7 @@ Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)
   
  A continuación se muestra un procedimiento almacenado que devuelve información a través de un parámetro OUTPUT:  
   
- C#  
-  
-```  
+```csharp  
 using System;  
 using System.Data.SqlTypes;  
 using System.Data.SqlClient;  
@@ -91,9 +88,7 @@ public class StoredProcedures
 }  
 ```  
   
- Visual Basic  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -129,7 +124,7 @@ End Class
   
  Cuando el ensamblado que contiene el procedimiento almacenado CLR anterior se ha compilado y creado en el servidor, [!INCLUDE[tsql](../../includes/tsql-md.md)] se utiliza lo siguiente para crear el procedimiento en la base de datos y se especifica *SUM* como parámetro de salida.  
   
-```  
+```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
 AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum  
 -- if StoredProcedures class was inside a namespace, called MyNS,  
@@ -150,9 +145,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 ###### <a name="returning-tabular-results"></a>Devolver resultados tabulares  
  Para enviar los resultados de una consulta directamente al cliente, use una de las sobrecargas del método `Execute` en el objeto `SqlPipe`. Se trata del modo más eficaz de devolver resultados al cliente, puesto que los datos se transfieren a los búferes de red sin copiarse en la memoria administrada. Por ejemplo:  
   
- [C#]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlTypes;  
@@ -177,9 +170,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -230,10 +221,8 @@ public class StoredProcedures
    }  
 }  
 ```  
-  
- [Visual Basic]  
-  
-```  
+ 
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -287,9 +276,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -339,9 +326,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -372,7 +357,7 @@ End Class
   
  Tenga en cuenta que se trata de ejemplos meramente ilustrativos. Las funciones CLR resultan más apropiadas que las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] simples para las aplicaciones que requieren un uso intensivo de los recursos para realizar cálculos. Un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] casi equivalente al ejemplo anterior es el siguiente:  
   
-```  
+```sql
 CREATE PROCEDURE HelloWorld() AS  
 BEGIN  
 PRINT('Hello world!')  
@@ -385,13 +370,13 @@ END;
   
  Si el código de Visual C# anterior se guarda en un archivo MyFirstUdp.cs y se compila con:  
   
-```  
+```console
 csc /t:library /out:MyFirstUdp.dll MyFirstUdp.cs   
 ```  
   
  O bien, si el código de Visual Basic anterior se guarda en un archivo MyFirstUdp.vb y se compila con:  
   
-```  
+```console
 vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb   
 ```  
   
@@ -400,7 +385,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
   
  Es posible registrar el ensamblado resultante y el punto de entrada invocado con el siguiente DDL:  
   
-```  
+```sql
 CREATE ASSEMBLY MyFirstUdp FROM 'C:\Programming\MyFirstUdp.dll';  
 CREATE PROCEDURE HelloWorld  
 AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;  

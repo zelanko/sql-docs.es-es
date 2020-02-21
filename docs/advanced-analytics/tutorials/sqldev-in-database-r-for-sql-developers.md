@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de R+T-SQL: Desarrollo del modelo'
+title: 'Tutorial de R y T-SQL: Desarrollo del modelo'
 description: Sepa cómo insertar código del lenguaje de programación R en procedimientos almacenados de SQL Server y en funciones de T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0734203a5b5e49ad344b2c0440208c6b652c080
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725466"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479414"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análisis de datos de R para desarrolladores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este tutorial para programadores de SQL se explica cómo integrar R creando e implementando una solución de aprendizaje automático basada en R mediante la base de datos [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) en SQL Server. Usará T-SQL, SQL Server Management Studio y una instancia del motor de base de datos con [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) y la compatibilidad con el lenguaje R.
+En este tutorial para programadores de SQL se explica cómo integrar R creando e implementando una solución de aprendizaje automático basada en R mediante la base de datos [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) en SQL Server. Se usará T-SQL, SQL Server Management Studio y una instancia del motor de base de datos con [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) y la compatibilidad con el lenguaje R.
 
 En este tutorial se presentan las funciones de R usadas en un flujo de trabajo de modelado de datos. Algunos de los pasos aquí descritos son la exploración de datos, la creación y el entrenamiento de un modelo de clasificación binaria y la implementación del modelo. El modelo que se va a compilar predice si es probable que un trayecto acabe en propina en función de la hora del día, la distancia recorrida y la ubicación de origen. 
 
@@ -52,7 +52,7 @@ Después de que el modelo se ha guardado en la base de datos, llame al modelo de
 
 Todas las tareas se pueden realizar mediante procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-En este tutorial, se da por hecho que está familiarizado con las operaciones básicas de base de datos (como la creación de bases de datos y tablas, la importación de datos y la escritura de consultas SQL), pero no con R, de ahí que se incluya todo el código de R. 
+En este tutorial se supone que está familiarizado con las operaciones básicas de base de datos, como la creación de bases de datos y tablas, la importación de datos y la escritura de consultas SQL. pero no con R, de ahí que se incluya todo el código de R. 
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) o [SQL Server Machine Learning Services con R habilitado](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 

@@ -7,10 +7,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265641"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integración del servidor de informes de Power BI (Administrador de configuración)
@@ -23,7 +23,7 @@ La página  **Integración de Power BI** del Administrador de configuración de 
 
 Además de una conexión activa a Internet para que pueda examinar el servicio [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , se requiere lo siguiente para completar la integración de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
-- **Azure Active Directory:** su organización debe usar Azure Active Directory, que proporciona administración de identidades y directorios para servicios de Azure y aplicaciones web. Para obtener más información, consulte [¿Qué es Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
+- **Azure Active Directory:** su organización debe usar Azure Active Directory, que proporciona administración de identidades y directorios para servicios de Azure y aplicaciones web. Para más información, consulte [¿Qué es Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
 - **Inquilino administrado:** el panel de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] en el que quiere anclar elementos de informe debe formar parte de un inquilino administrado de Azure AD.  La primera vez que su organización se suscribe a servicios de Azure, como Office 365 y Microsoft Intune, se crea automáticamente un inquilino administrado.   Actualmente no se admiten inquilinos virales.  Para obtener más información, vea las secciones "Qué es un inquilino de Azure AD" y "Obtención de un directorio de Azure AD" en [¿Qué es un directorio de Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
 
@@ -33,15 +33,15 @@ Además de una conexión activa a Internet para que pueda examinar el servicio [
 
 - Los informes desde los que quiera anclar elementos deben usar credenciales almacenadas. Esto no es un requisito de la integración de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] propiamente dicha, sino del proceso de actualización de los elementos anclados.  Al anclar un elemento de informe se crea una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para administrar la programación de actualización de los iconos de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requieren credenciales almacenadas. Si un informe no usa credenciales almacenadas, los usuarios seguirán pudiendo anclar elementos de informe, pero cuando la suscripción asociada intente actualizar los datos a [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], verán un mensaje de error similar al siguiente en la página **My Subscriptions** (Mis suscripciones).
 
-    PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: (Error de entrega de PowerBI: panel: ejemplo de análisis de gasto en TI, objeto visual: gráfico 2, error:) La acción actual no se puede completar. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. O bien la credencial del origen de datos del usuario.
+    Error de entrega de PowerBI: panel: objeto visual, IT Spend Analysis Sample: Chart2, error: No se puede completar la acción actual. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. O bien la credencial del origen de datos del usuario.
 
 Para más información sobre cómo almacenar credenciales, vea la sección "Configurar credenciales almacenadas para un origen de datos específico de informe (modo Nativo)" de [Almacenar credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Un administrador puede revisar los archivos de registro de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para obtener más información.  Verá mensajes similares a los siguientes. Una excelente manera de revisar y supervisar los archivos de registro de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query en los archivos.  Para obtener más información y ver un breve vídeo, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. (subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: error de entrega de PowerBI: panel: ejemplo de análisis de gasto en TI, visual: Chart2, error: La acción actual no se puede completar). Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario no estén almacenadas en la base de datos del servidor de informes, o bien que el origen de datos del usuario esté configurado para no requerir credenciales pero no se haya configurado la cuenta de ejecución desatendida.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error de entrega de PowerBI: panel: objeto visual, IT Spend Analysis Sample: Chart2, error: No se puede completar la acción actual. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario no estén almacenadas en la base de datos del servidor de informes, o bien que el origen de datos del usuario esté configurado para no requerir credenciales pero no se haya configurado la cuenta de ejecución desatendida.
 
-- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. (notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error al procesar la suscripción fcdb8581-d763-4b3b-ba3e-8572360df4f9: Error de entrega de PowerBI: panel: ejemplo de análisis de gasto en TI, objeto visual: gráfico 2, error: La acción actual no se puede completar). Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario no estén almacenadas en la base de datos del servidor de informes, o bien que el origen de datos del usuario esté configurado para no requerir credenciales pero no se haya configurado la cuenta de ejecución desatendida.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error al procesar la suscripción fcdb8581-d763-4b3b-ba3e-8572360df4f9: Error de entrega de PowerBI: panel: objeto visual, IT Spend Analysis Sample: Chart2, error: No se puede completar la acción actual. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario no estén almacenadas en la base de datos del servidor de informes, o bien que el origen de datos del usuario esté configurado para no requerir credenciales pero no se haya configurado la cuenta de ejecución desatendida.
 
 ## <a name="bkmk_steps2integrate"></a> Para integrar y registrar el servidor de informes
 
@@ -62,7 +62,7 @@ Complete los pasos siguientes desde el Administrador de configuración de [!INCL
 
 ## <a name="bkmk_unregister"></a> Anular el registro con Power BI
 
-**Anular el registro** : la anulación del registro del servidor de informes de Azure Active Directory tendrá como resultado lo siguiente:
+**Anular el registro:** la anulación del registro del servidor de informes de Azure Active Directory tendrá como resultado lo siguiente:
 
 - El vínculo **My Settings** (Mi configuración) ya no estará visible en la barra de menús del portal web.
 
@@ -80,7 +80,7 @@ Use la opción **Update Registration** (Actualizar el registro) si ha cambiado l
 
 - En el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , seleccione la **Dirección URL del Portal web**.
 
-     Seleccione **Avanzado**.
+     Seleccione **Advanced** (Avanzadas).
 
 - Seleccione **Agregar** para agregar una nueva identidad HTTP al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] y, después, seleccione **Aceptar**.
 
@@ -112,7 +112,7 @@ En esta sección se resumen los pasos básicos y las tecnologías implicadas en 
 
 1. Los usuarios obtienen una vista previa de los informes en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] y la primera vez que hacen clic para anclar un elemento de informe desde el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Se les redirigirá a la página de inicio de sesión de Azure AD. También pueden iniciar sesión desde la página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Cuando los usuarios inicien sesión en el inquilino administrado de Azure, se establecerá una relación entre su cuenta de Azure y los permisos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obtener más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
+2. Se les redirigirá a la página de inicio de sesión de Azure AD. También pueden iniciar sesión desde la página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **Mi configuración**. Cuando los usuarios inicien sesión en el inquilino administrado de Azure, se establecerá una relación entre su cuenta de Azure y los permisos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para más información, vea [La configuración de la integración de Power BI &#40;portal web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. Se devuelve un token de seguridad del usuario al servidor de informes.
 
@@ -124,7 +124,7 @@ En esta sección se resumen los pasos básicos y las tecnologías implicadas en 
 
 7. Se crea una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para administrar la actualización programada del elemento de informe en el icono del panel. La suscripción usa el token de seguridad que se creó cuando el usuario inició sesión.
 
-     El token es válido durante **90 días**. Transcurrido este tiempo, los usuarios deben iniciar sesión de nuevo para crear un nuevo token de usuario. Cuando el token expire, los iconos anclados seguirán mostrándose en el panel, pero ya no se actualizarán los datos.  Las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se usan para los elementos anclados generarán un error hasta que se cree un nuevo token de usuario. Vea [La configuración de la integración de Power BI &#40;portal web&#41;](../my-settings-for-power-bi-integration-web-portal.md). para obtener más información.
+     El token es válido durante **90 días**. Transcurrido este tiempo, los usuarios deben iniciar sesión de nuevo para crear un nuevo token de usuario. Cuando el token expire, los iconos anclados seguirán mostrándose en el panel, pero ya no se actualizarán los datos.  Las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se usan para los elementos anclados generarán un error hasta que se cree un nuevo token de usuario. Vea [La configuración de la integración de Power BI &#40;portal web&#41;](../my-settings-for-power-bi-integration-web-portal.md). para más información.
 
 La segunda vez que un usuario ancle un elemento, se omitirán los pasos de 1 a 4. En su lugar, se recuperarán el identificador de la aplicación y las direcciones URL de la base de datos ReportServer y el flujo continuará con el paso 5.
 

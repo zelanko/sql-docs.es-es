@@ -16,10 +16,10 @@ ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c36d7980355eed1e1a1e8f42fb53c75fdb70d0ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976948"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>Método jdbcCompliant (SQLServerDriver)
@@ -37,8 +37,8 @@ public boolean jdbcCompliant()
 ## <a name="return-value"></a>Valor devuelto  
  **true** si el controlador JDBC cumple los requisitos mínimos. De lo contrario, se devuelve el valor **False**.  
   
-## <a name="remarks"></a>Notas  
- Este método jdbcCompliant se especifica mediante el método jdbcCompliant de la interfaz java. SQL. driver.  
+## <a name="remarks"></a>Observaciones  
+ El método jdbcCompliant especifica este método jdbcCompliant en la interfaz java.sql.Driver.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

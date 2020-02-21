@@ -1,5 +1,5 @@
 ---
-title: Miembros de SQLServerDataSourceObjectFactory | Microsoft Docs
+title: Miembros SQLServerDataSourceObjectFactory | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 52c6b133-f7ed-468d-8f34-bc2e4b81553e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4212817f44485d0ceaf56b2dcbe40264a617269e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971321"
 ---
 # <a name="sqlserverdatasourceobjectfactory-members"></a>Miembros de SQLServerDataSourceObjectFactory
@@ -28,7 +28,7 @@ ms.locfileid: "67971321"
 |----------|-----------------|  
 |[SQLServerDataSourceObjectFactory ()](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|Inicializa una instancia nueva de la clase [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md).|  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
  Ninguno.  
   
 ## <a name="inherited-fields"></a>Campos heredados  

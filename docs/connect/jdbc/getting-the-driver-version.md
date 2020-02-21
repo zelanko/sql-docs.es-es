@@ -1,5 +1,5 @@
 ---
-title: Obtener la versión del controlador | Microsoft Docs
+title: Obtención de la versión del controlador | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db44a391c16a63d28057c99755018179d6c2c0b5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028042"
 ---
 # <a name="getting-the-driver-version"></a>Obtención de la versión del controlador
@@ -28,7 +28,7 @@ ms.locfileid: "69028042"
   
  Además, el nombre del controlador JDBC se puede devolver desde la llamada al método [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) de la clase SQLServerDatabaseMetaData. Devolverá, por ejemplo, "Controlador Microsoft JDBC 6.4 para SQL Server".  
   
- A continuación se muestra un ejemplo de la salida de las llamadas a los métodos de la clase SQLServerDatabaseMetaData:  
+ A continuación se muestra un ejemplo del resultado de las llamadas a los métodos de la clase SQLServerDatabaseMetaData:  
   
  `getDriverName = Microsoft JDBC Driver 6.4 for SQL Server`  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69028042"
   
  Donde "xxx.x" es el número de la versión final.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diagnóstico de problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

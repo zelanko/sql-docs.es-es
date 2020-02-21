@@ -16,10 +16,10 @@ ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4555dfb9256f3ffe2ba61e82fe90307991a5a580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975095"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>Método setBinaryStream (SQLServerBlob)
@@ -45,8 +45,8 @@ public java.io.OutputStream setBinaryStream(long pos)
 ## <a name="exceptions"></a>Excepciones  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notas  
- Este método setBinaryStream se especifica mediante el método setBinaryStream de la interfaz java. SQL. BLOB.  
+## <a name="remarks"></a>Observaciones  
+ El método setBinaryStream especifica este método setBinaryStream en la interfaz java.sql.Blob.  
   
  El flujo de salida sobrescribe los datos en el objeto BLOB a partir de la posición especificada y puede exceder la longitud inicial del BLOB. Si se especifica un valor position+1, se anexarán bytes. Si se pasan valores position+2 o superiores (o cero o menos), se producirá un error de la posición.  
   

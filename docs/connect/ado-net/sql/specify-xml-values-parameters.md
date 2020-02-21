@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5ef73529119245397932a3a2414ce65f381b55bd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452115"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251142"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Especificar valores XML como parámetros
 
@@ -29,11 +29,11 @@ Si una consulta requiere un parámetro cuyo valor es una cadena XML, los desarro
 En la siguiente aplicación de consola se crea una nueva tabla en la base de datos **AdventureWorks**. La nueva tabla incluye una columna denominada **SalesID** y una columna XML de nombre **SalesInfo**.  
   
 > [!NOTE]
->  De forma predeterminada, la base de datos de ejemplo **AdventureWorks** no se instala al instalar SQL Server. Puede instalarlo mediante la ejecución de SQL Server programa de instalación.  
+>  De forma predeterminada, la base de datos de ejemplo **AdventureWorks** no se instala al instalar SQL Server. Puede instalarlo mediante la ejecución del programa de instalación de SQL Server.  
   
 En el ejemplo se prepara un objeto <xref:Microsoft.Data.SqlClient.SqlCommand> para insertar una fila en la nueva tabla. Un archivo guardado proporciona los datos XML necesarios para la columna **SalesInfo**.  
   
-Para crear el archivo necesario para que se ejecute el ejemplo, cree un nuevo archivo de texto en la misma carpeta que el proyecto. Asigne al archivo el nombre nombre myteststoredata. Xml. Abra el archivo en el Bloc de notas y copie y pegue el texto siguiente:  
+Para crear el archivo necesario para que se ejecute el ejemplo, cree un archivo de texto en la misma carpeta que el proyecto. Asigne al archivo el nombre MyTestStoreData.xml. Abra el archivo en el Bloc de notas y copie y pegue el texto siguiente:  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

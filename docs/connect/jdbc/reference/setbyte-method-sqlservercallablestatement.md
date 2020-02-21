@@ -16,10 +16,10 @@ ms.assetid: 0fbb03a5-61ee-4fb8-9dea-dce5cb1a367e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0039322a86e0dd35c0da78e3173f835bcc47129d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975010"
 ---
 # <a name="setbyte-method-sqlservercallablestatement"></a>Método setByte (SQLServerCallableStatement)
@@ -47,7 +47,7 @@ public void setByte(java.lang.String sCol,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setByte especifica este método setByte en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

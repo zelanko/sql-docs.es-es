@@ -9,13 +9,13 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72252141"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adición de un parámetro al informe (Generador de informes)
 En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que los lectores del informe puedan filtrar los datos del informe para uno o más valores. 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -23,7 +23,7 @@ En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssR
 Los parámetros del informe se crean automáticamente para cada parámetro de la consulta que incluya en una consulta del conjunto de datos. El tipo de datos de parámetro determina cómo aparece en la barra de herramientas de visualización de informe. 
    
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 25 minutos.  
   
@@ -52,7 +52,7 @@ Cree un informe de matriz, un origen de datos y un conjunto de datos.
   
 7.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos de la lista o vaya al servidor de informes y seleccione uno. Seleccione cualquier origen de datos del tipo **SQL Server**.  
       
-8.  Haga clic en **Siguiente**.  
+8.  Haga clic en **Next**.  
 
     Puede que tenga que escribir sus credenciales.    
      
@@ -82,11 +82,11 @@ Cree un informe de matriz, un origen de datos y un conjunto de datos.
   
 11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ) para ver los datos.   
   
-    El conjunto de resultados consta de 11 filas de datos que muestran la cantidad de elementos vendidos para cada subcategoría de cuatro almacenes en las columnas siguientes: StoreID, Subcategory, Quantity. El nombre del almacén no forma parte del conjunto de resultados. Más adelante en este tutorial, buscará en otro conjunto de datos el nombre del almacén que corresponde al identificador del almacén.  
+    El conjunto de resultados consta de 11 filas de datos que muestran la cantidad de elementos vendidos en cada subcategoría de cuatro almacenes e incluye las columnas siguientes: StoreID, Subcategoría, Cantidad. El nombre del almacén no forma parte del conjunto de resultados. Más adelante en este tutorial, buscará en otro conjunto de datos el nombre del almacén que corresponde al identificador del almacén.  
   
     Esta consulta no contiene parámetros de consulta. Agregará los parámetros de consulta posteriormente en este tutorial.   
   
-12. Haga clic en **Siguiente**.  
+12. Haga clic en **Next**.  
   
 ## <a name="CompleteWizard"></a>2. Organizar datos y elegir el diseño en el asistente  
 El asistente proporciona un diseño inicial para mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar la tabla o el diseño de la matriz.  
@@ -101,15 +101,15 @@ El asistente proporciona un diseño inicial para mostrar los datos. El panel de 
   
     Ha organizado los valores de cantidad vendida en filas agrupadas por subcategoría, con una columna para cada almacén.  
   
-4.  Haga clic en **Siguiente**.  
+4.  Haga clic en **Next**.  
   
 5.  En la página **Elegir el diseño** , en **Opciones**, asegúrese de que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
     Al ejecutar el informe, la última columna mostrará la cantidad total de cada subcategoría para todos los almacenes y la última fila mostrará la cantidad total para todas las subcategorías de cada almacén.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
-8.  Haga clic en **Finalizar**.  
+8.  Haga clic en **Finalizar**  
   
     La matriz se agrega a la superficie de diseño. La matriz muestra tres columnas y tres filas. El contenido de las celdas de la primera fila es Subcategory, [StoreID] y Total. El contenido de las celdas de la segunda fila muestra expresiones que representan la subcategoría, la cantidad de artículos vendidos de cada almacén y el total de cada subcategoría de todos los almacenes. Las celdas de la última fila muestran los totales de cada almacén.  
       
@@ -136,7 +136,7 @@ Al agregar un parámetro de consulta a una consulta, el Generador de informes cr
   
 2.  En el panel Datos de informe, expanda la carpeta **Conjuntos de datos** , haga clic con el botón derecho en **DataSet1**y haga clic en **Consulta**.  
   
-3.  Agregue la siguiente cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** clause as the last line in the query:  
+3.  Agregue la siguiente cláusula **WHERE** de [!INCLUDE[tsql](../includes/tsql-md.md)] como última línea de la consulta:  
   
     ```  
     WHERE StoreID = (@StoreID)  
@@ -265,7 +265,7 @@ Puede especificar un valor predeterminado para cada parámetro de modo que el in
   
 7.  Obtenga una vista previa del informe.  
   
-Para *\@StoreID*, el visor de informes muestra el valor "Contoso North America Online Store", porque es el primer valor del conjunto de resultados del conjunto de datos **Almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
+Para *\@StoreID*, el visor de informes muestra el valor "Contoso Norteamérica Online Store", porque es el primer valor del conjunto de resultados del conjunto de datos **Almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Para especificar un valor predeterminado personalizado  
   
@@ -308,7 +308,7 @@ Un conjunto de datos podría contener el identificador y el campo de nombre corr
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    El encabezado de columna del almacén contiene el texto para mostrar de una expresión compleja: **Expr**.  
+    El encabezado de columna de almacén contiene el texto para mostrar de una expresión compleja: **Expr**.  
   
 8.  Obtenga una vista previa del informe.  
   
@@ -379,7 +379,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
 5.  En el panel Datos de informe, expanda la carpeta **Conjuntos de datos** , haga clic con el botón derecho en **DataSet1**y haga clic en **Consulta**.  
   
-6.  Cambie el **signo igual** (=) por **IN** en la cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** clause en la cláusula last line en la cláusula query:  
+6.  Cambie el **signo igual** (=) por **IN** en la cláusula [!INCLUDE[tsql](../includes/tsql-md.md)]**WHERE** de la última línea de la consulta:  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -492,11 +492,11 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
 4.  En **Nombre**, reemplace el nombre predeterminado por Ventas de productos con parámetros.  
   
-5.  Haga clic en **Guardar**.  
+5.  Haga clic en **Save**(Guardar).  
   
 El informe se guarda en el servidor de informes. El servidor de informes al que está conectado aparece en la barra de estado en la parte inferior de la ventana.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 De esta forma se concluye el tutorial sobre cómo agregar un parámetro a un informe. Para obtener más información sobre los parámetros, consulte [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Consulte también  

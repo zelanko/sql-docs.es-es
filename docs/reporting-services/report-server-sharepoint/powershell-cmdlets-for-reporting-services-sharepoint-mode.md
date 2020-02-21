@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892405"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets de PowerShell para el modo de SharePoint de Reporting Services
@@ -38,8 +38,8 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
   
  Si ve un mensaje de error similar al siguiente al escribir los ejemplos de PowerShell:  
   
--   Install-SPRSService : El término 'Install-SPRSService' no se reconoce como  
-    nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe la ortografía del nombre o si una ruta de acceso se incluyó, compruebe que la ruta de acceso es correcta e inténtelo de nuevo.  
+-   Install-SPRSService: El término 'Install-SPRSService' no se reconoce como  
+    nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.  
   
  Se está produciendo uno de los problemas siguientes:  
   
@@ -83,7 +83,7 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
 |cmdlet|Descripción|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Obtiene uno o más objetos de aplicación de servicio de Reporting Services.|  
-|New-SPRSServiceApplication|Crea una nueva aplicación de servicio de Reporting Services y las bases de datos asociadas.<br /><br /> Parámetro LogonType: especifica si el servidor de informes utiliza la cuenta del grupo de aplicaciones SSRS o un inicio de sesión de SQL Server para tener acceso a la base de datos del servidor de informes. Los valores válidos son:<br /><br /> 0 Autenticación de Windows<br /><br /> 1 SQL Server<br /><br /> 2 Cuenta del grupo de aplicaciones (valor predeterminado)|  
+|New-SPRSServiceApplication|Crea una nueva aplicación de servicio de Reporting Services y las bases de datos asociadas.<br /><br /> Parámetro LogonType: Especifica si el servidor de informes usa la cuenta del grupo de aplicaciones SSRS o un inicio de sesión de SQL Server para acceder a la base de datos del servidor de informes. Los valores válidos son:<br /><br /> 0 Autenticación de Windows<br /><br /> 1 SQL Server<br /><br /> 2 Cuenta del grupo de aplicaciones (valor predeterminado)|  
 |Remove-SPRSServiceApplication|Quita la aplicación de servicio de Reporting Services especificada. También se quitarán las bases de datos asociadas.|  
 |Set-SPRSServiceApplication|Edita las propiedades de una aplicación de servicio de Reporting Services existente.|  
 |New-SPRSServiceApplicationProxy|Crea un nuevo proxy de aplicación de servicio de Reporting Services.|  
@@ -109,7 +109,7 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
 |New-SPRSExtension|Registra una nueva extensión con una aplicación de servicio de Reporting Services.|  
 |Set-SPRSExtension|Establece las propiedades de una extensión de Reporting Services existente.|  
 |Remove-SPRSExtension|Quita una extensión de una aplicación de servicio de Reporting Services.|  
-|Get-SPRSExtension|Obtiene una o más extensiones de Reporting Services para un aplicación de servicio de Reporting Services.<br /><br /> Los valores válidos son:<br /><br /> <br /><br /> Entrega<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> Seguridad<br /><br /> Autenticación<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Diseñador<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Obtiene una o más extensiones de Reporting Services para un aplicación de servicio de Reporting Services.<br /><br /> Los valores válidos son:<br /><br /> <br /><br /> Entrega<br /><br /> DeliveryUI<br /><br /> Representación<br /><br /> data<br /><br /> Seguridad<br /><br /> Authentication<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Diseñador<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Obtiene los sitios de SharePoint basándose en si está habilitada la característica "ReportingService". De forma predeterminada, se devuelven los sitios que habilitan la característica "ReportingService".|  
   
 ## <a name="basic-samples"></a>Ejemplos básicos
@@ -259,7 +259,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 }  
 ```  
   
- **Salida de ejemplo:**  
+ **Ejemplo:**  
   
 -   `Name           ExtensionType`  
   
@@ -290,7 +290,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Lista de comprobación: usar PowerShell para comprobar PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[Lista de comprobación: Uso de PowerShell para comprobar PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
 [Obtener ayuda de SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

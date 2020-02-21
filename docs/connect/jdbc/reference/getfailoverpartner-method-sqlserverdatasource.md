@@ -16,10 +16,10 @@ ms.assetid: 885f927f-9c48-42e0-a7fb-fd936d2b8130
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b278df5cfa6e3bb80b2b309bf9abf195b249488
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983258"
 ---
 # <a name="getfailoverpartner-method-sqlserverdatasource"></a>Método getFailoverPartner (SQLServerDataSource)
@@ -37,7 +37,7 @@ public string getFailoverPartner()
 ## <a name="return-value"></a>Valor devuelto  
  Un valor **String** que contiene el nombre del asociado de conmutación por error o el valor NULL si no se establece ninguno.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor que devuelve este método refleja el conjunto de nombres del asociado de conmutación por error mediante el método [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md).  
   
 ## <a name="see-also"></a>Consulte también  

@@ -11,10 +11,10 @@ ms.assetid: 36571f7c-b335-4249-8f83-51dcb6923aec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e26b8c0eb4595403e3370a2e56aabfce63f0c80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981512"
 ---
 # <a name="getnclob-method-javalangstring-sqlserverresultset"></a>Método getNClob (java.lang.String) (SQLServerResultSet)
@@ -35,15 +35,15 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
  Valor **string** que contiene la etiqueta de columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto NClob.  
+ Un objeto NClob.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getNClob especifica este método getNClob en la interfaz java.sql.ResultSet.  
   
- Este método solo se admite en columnas **nvarchar (Max)** , **ntext**y **XML** . Si se utiliza este método en cualquier otro tipo de datos, provocará una excepción.  
+ Este método solo se admite en las columnas **nvarchar (Max)** , **ntext** y **xml**. Si se utiliza este método en cualquier otro tipo de datos, provocará una excepción.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   

@@ -11,10 +11,10 @@ ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61cd0ce3e23cec94cc1d8fe0dcf0dfd1505437b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977424"
 ---
 # <a name="isqlserverdatasource-interface"></a>Interfaz ISQLServerDataSource
@@ -33,7 +33,7 @@ ms.locfileid: "67977424"
 public interface ISQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta interfaz se implementa mediante la [clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
  Esta interfaz expone los siguientes métodos específicos del [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  

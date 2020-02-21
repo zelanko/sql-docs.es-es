@@ -1,10 +1,9 @@
 ---
-title: Descripción de la propiedad de un diagrama de base de datos (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Información sobre la propiedad del diagrama de base de datos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +15,20 @@ helpviewer_keywords:
 ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c331fb3e1b189d4362f91c9559f1ec6e28960c97
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: faebe8539698fbe605035dff737065864c70929b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263142"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241844"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>Descripción de la propiedad de un diagrama de base de datos (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Para usar el diseñador de diagramas de base de datos, debe primero configurarlo un miembro del rol db_owner (un rol de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) para controlar el acceso a los diagramas. Cada diagrama tiene un único propietario: el usuario que lo ha creado. Para más información sobre cómo configurar los diagramas, consulte [Configurar el Diseñador de diagramas de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
+
+Para usar el diseñador de diagramas de base de datos, debe primero configurarlo un miembro del rol db_owner (un rol de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) para controlar el acceso a los diagramas. Cada diagrama tiene un único propietario: el usuario que lo ha creado. Para más información sobre cómo configurar los diagramas, consulte [Configurar el Diseñador de diagramas de base de datos (../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 Conviene tener en cuenta algunos aspectos sobre la propiedad de los diagramas:  
   
@@ -35,7 +38,7 @@ Conviene tener en cuenta algunos aspectos sobre la propiedad de los diagramas:
   
 -   Si se ha eliminado de la base de datos el propietario de un diagrama, el diagrama permanecerá en la base de datos hasta que el miembro del rol db_owner intente abrirlo. En ese momento, el miembro de db_owner podrá decidir si asume su propiedad.  
   
-## <a name="see-also"></a>Consulte también  
-[Trabajar con diagramas de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Configurar el Diseñador de diagramas de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
-  
+## <a name="see-also"></a>Consulte también
+
+[Trabajar con diagramas de bases de datos](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Configurar el Diseñador de diagramas de base de datos](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)

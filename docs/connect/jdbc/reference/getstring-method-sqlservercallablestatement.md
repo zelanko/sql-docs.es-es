@@ -16,10 +16,10 @@ ms.assetid: 8e88614b-e1a9-4119-8db0-d1b8de9e7cda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a303136f34af84290907fd8aa24457d239b0417
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979421"
 ---
 # <a name="getstring-method-sqlservercallablestatement"></a>Método getString (SQLServerCallableStatement)

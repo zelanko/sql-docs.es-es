@@ -11,10 +11,10 @@ ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6277b3ecf0160078fa47bc79994d31f64519d9b7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028027"
 ---
 # <a name="handling-errors"></a>Control de errores
@@ -30,29 +30,29 @@ ms.locfileid: "69028027"
   
 -   `getNextException()` devuelve el siguiente objeto `SQLServerException` o nulo si no hay más objetos de excepción que devolver.
 
--   `getSQLServerError()`Devuelve el `SQLServerError` objeto que contiene información detallada sobre la excepción como recibida de SQL Server. Este método devuelve NULL si no se ha producido ningún error del servidor.
+-   `getSQLServerError()` devuelve el objeto `SQLServerError` que contiene información detallada sobre la excepción tal como se recibe de SQL Server. Este método devuelve NULL si no se ha producido ningún error de servidor.
 
-Los siguientes métodos de la `SQLServerError` clase se pueden utilizar para obtener detalles adicionales sobre el error generado desde el servidor.
+Los siguientes métodos de la clase `SQLServerError` se pueden usar para obtener detalles adicionales sobre el error generado a partir del servidor.
 
--   `SQLServerError.getErrorMessage()`Devuelve el mensaje de error tal y como se recibe del servidor.
+-   `SQLServerError.getErrorMessage()` devuelve el mensaje de error tal como se recibe del servidor.
 
--   `SQLServerError.getErrorNumber()`Devuelve un número que identifica el tipo de error.
+-   `SQLServerError.getErrorNumber()` devuelve un número que identifica el tipo del error.
 
--   `SQLServerError.getErrorState()`Devuelve un código de error numérico desde SQL Server que representa un mensaje de error, ADVERTENCIA o "no se encontraron datos".
+-   `SQLServerError.getErrorState()` devuelve un código de error numérico del servidor SQL Server que representa un error, advertencia o mensaje "no se encuentran datos".
 
--   `SQLServerError.getErrorSeverity()`Devuelve el nivel de gravedad del error recibido.
+-   `SQLServerError.getErrorSeverity()` devuelve el nivel de gravedad del error recibido.
 
--   `SQLServerError.getServerName()`Devuelve el nombre del equipo que ejecuta una instancia de SQL Server que generó el error.
+-   `SQLServerError.getServerName()` devuelve el nombre del equipo que ejecuta una instancia de SQL Server que generó el error.
 
--   `SQLServerError.getProcedureName()`Devuelve el nombre del procedimiento almacenado o llamada a procedimiento remoto (RPC) que generó el error.
+-   `SQLServerError.getProcedureName()` devuelve el nombre del procedimiento almacenado o la llamada a procedimiento remoto (RPC) que generó el error.
 
--   `SQLServerError.getLineNumber()`Devuelve el número de línea del procedimiento almacenado o lote de comandos de Transact-SQL que generó el error.
+-   `SQLServerError.getLineNumber()` obtiene el número de línea del procedimiento almacenado o lote de comandos de Transact-SQL que generó el error.
   
  En el siguiente ejemplo, se pasa a la función una conexión abierta a la base de datos de ejemplo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] y se construye una instrucción SQL incorrecta que no incluye una cláusula FROM. A continuación, se ejecuta la instrucción de SQL y se procesa una excepción de SQL.  
   
  [!code[JDBC#HandlingErrors1](../../connect/jdbc/codesnippet/Java/handling-errors_1.java)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diagnóstico de problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

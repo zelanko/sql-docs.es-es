@@ -1,23 +1,24 @@
 ---
-title: Personalización de la compilación e implementación de bases de datos con colaboradores de implementación y compilación | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Personalización de las implementaciones de bases de datos con colaboradores de implementación
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110572"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256250"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación
+
 Visual Studio proporciona puntos de extensibilidad que puede utilizar para modificar el comportamiento de las acciones de compilación e implementación de los proyectos de base de datos.  
   
 ## <a name="available-extensibility-points"></a>Puntos de extensibilidad disponibles  
@@ -25,9 +26,9 @@ Puede crear una extensión de los puntos de extensibilidad, como se muestra en l
   
 |**Acción**|**Tipo de colaborador**|**Notas**|  
 |--------------|------------------------|-------------|  
-|Compilar|BuildContributor|Este tipo de extensión se ejecuta al compilar el proyecto de SQL después de que el modelo de proyecto se ha validado por completo. El colaborador de compilación puede tener acceso al modelo completado, además de a todas las propiedades de la Tarea de compilación y cualquier argumento personalizado.|  
-|Implementar|DeploymentPlanModifier|Este tipo de extensión se ejecuta al implementar el proyecto de SQL, como parte de la canalización de implementación, después de generar el plan de implementación, pero antes de que este se ejecute. Puede utilizar un DeploymentPlanModifier para modificar el plan de implementación agregando o quitando pasos. Los colaboradores de implementación pueden tener acceso al plan de implementación, a los resultados de la comparación y a modelos de origen y de destino.|  
-|Implementar|DeploymentPlanExecutor|Este tipo de extensión se ejecuta cuando el plan de implementación se ejecuta y proporciona acceso de solo lectura al plan de implementación. El DeploymentPlanExectutor realiza las acciones con base en el plan de implementación.|  
+|Build|BuildContributor|Este tipo de extensión se ejecuta al compilar el proyecto de SQL después de que el modelo de proyecto se ha validado por completo. El colaborador de compilación puede tener acceso al modelo completado, además de a todas las propiedades de la Tarea de compilación y cualquier argumento personalizado.|  
+|Implementación|DeploymentPlanModifier|Este tipo de extensión se ejecuta al implementar el proyecto de SQL, como parte de la canalización de implementación, después de generar el plan de implementación, pero antes de que este se ejecute. Puede utilizar un DeploymentPlanModifier para modificar el plan de implementación agregando o quitando pasos. Los colaboradores de implementación pueden tener acceso al plan de implementación, a los resultados de la comparación y a modelos de origen y de destino.|  
+|Implementación|DeploymentPlanExecutor|Este tipo de extensión se ejecuta cuando el plan de implementación se ejecuta y proporciona acceso de solo lectura al plan de implementación. El DeploymentPlanExectutor realiza las acciones con base en el plan de implementación.|  
   
 ### <a name="supported-extensibility-scenarios"></a>Escenarios de extensibilidad admitidos  
 Puede implementar colaboradores de compilación o de implementación para habilitar los siguientes escenarios de ejemplo:  

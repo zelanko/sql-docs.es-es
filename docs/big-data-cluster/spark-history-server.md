@@ -1,22 +1,23 @@
 ---
 title: Depuración y diagnóstico de aplicaciones Spark
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Use el servidor de historial de Spark para depurar y diagnosticar aplicaciones Spark que se ejecutan en clústeres de macrodatos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd35de4111c5e18d8c8237e2935df5de458f19b1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: d81732079ddc549bb7a04abad938fc551eeed84a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706114"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243942"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones Spark en clústeres de macrodatos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con el servidor de historial de Spark
+# <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones Spark en clústeres de macrodatos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con el servidor de historial de Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -163,9 +164,9 @@ Seleccione el id. de trabajo y haga clic **Diagnóstico** en el menú de herrami
 ### <a name="data-skew"></a>Asimetría de datos
 Haga clic en **Asimetría de datos**. Las tareas sesgadas correspondientes se mostrarán en función de los parámetros especificados. 
 
-+ **Especificar parámetros**: en la primera sección se muestran los parámetros, que se usan para detectar la asimetría de datos. La regla integrada es: La lectura de los datos de la tarea es mayor que tres veces el promedio de lectura de los datos de la tarea y la lectura de los datos de la tarea es superior a 10 MB. Si desea definir su propia regla para las tareas sesgadas, puede elegir los parámetros; la **fase sesgada** y la sección **Char de sesgo** se actualizarán en consecuencia. 
++ **Especificar parámetros**: la primera sección muestra los parámetros que se usan para detectar la Asimetría de datos. La regla integrada es: La lectura de datos de tarea es tres veces mayor que la lectura de datos de tarea promedio y la lectura de datos de tarea es mayor que 10 MB. Si desea definir su propia regla para las tareas sesgadas, puede elegir los parámetros; la **fase sesgada** y la sección **Char de sesgo** se actualizarán en consecuencia. 
 
-+ **Fase sesgada**: la segunda sección muestra las fases, que tienen tareas sesgadas que cumplen los criterios especificados anteriormente. Si hay más de una tarea sesgada en una fase, la tabla de fase sesgada solo muestra la tarea más sesgada (por ejemplo, los datos más grandes para la asimetría de datos). 
++ **Fase sesgada**: la segunda sección muestra las fases que tienen tareas con desfase que cumplen los criterios especificados anteriormente. Si hay más de una tarea sesgada en una fase, la tabla de fase sesgada solo muestra la tarea más sesgada (por ejemplo, los datos más grandes para la asimetría de datos). 
 
     ![Sección de sesgo de datos 2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
@@ -176,7 +177,7 @@ Haga clic en **Asimetría de datos**. Las tareas sesgadas correspondientes se mo
 ### <a name="time-skew"></a>Desfase horario
 En la pestaña **Desfase horario** se muestran las tareas sesgadas en función del tiempo de ejecución de la tarea. 
 
-+ **Especificar parámetros**: en la primera sección se muestran los parámetros, que se usan para detectar el desfase horario. Los criterios predeterminados para detectar el sesgo horario son: el tiempo de ejecución de la tarea es superior a tres veces el tiempo medio de ejecución y el tiempo de ejecución de la tarea es superior a 30 segundos. Puede cambiar los parámetros en función de sus necesidades. La **fase sesgada** y el **gráfico de sesgo** muestran información sobre las fases y las tareas correspondientes del mismo modo que la pestaña **Asimetría de datos**.
++ **Especificar parámetros**: la primera sección muestra los parámetros que se usan para detectar el desfase horario. Los criterios predeterminados para detectar el desfase horario son: el tiempo de ejecución de la tarea es mayor que tres veces el tiempo de ejecución promedio y el tiempo de ejecución de la tarea es superior a 30 segundos. Puede cambiar los parámetros en función de sus necesidades. La **fase sesgada** y el **gráfico de sesgo** muestran información sobre las fases y las tareas correspondientes del mismo modo que la pestaña **Asimetría de datos**.
 
 + Haga clic en **Desfase horario** y el resultado filtrado se mostrará en la sección **Fase sesgada** según los parámetros establecidos en la sección **Especificar parámetros**. Haga clic en un elemento en la sección **Fase sesgada**. A continuación, el gráfico correspondiente se creará en la sección 3 y los detalles de la tarea se mostrarán en el panel inferior derecho.
 

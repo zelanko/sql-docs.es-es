@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259365"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de rectángulos y de proyección solar en Reporting Services 
@@ -115,7 +115,7 @@ La consulta devuelve los datos detallados de los pedidos de venta de AdventureWo
   
 1. **Obtener los datos**.  
   
-     La consulta de esta sección se basa en la base de datos de AdventureWorks, que puede descargar en GitHub: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
+     La consulta de esta sección se basa en la base de datos de AdventureWorks, que puede descargar en GitHub: [Copia de seguridad completa de AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
 
 2. **Crear un origen de datos**.  
   
@@ -172,7 +172,7 @@ La consulta devuelve los datos detallados de los pedidos de venta de AdventureWo
   
      Para más información sobre la creación de un conjunto de datos, vea [Crear un conjunto de datos compartido o un conjunto de datos insertado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Vista de diseño de conjunto de datos compartidos &#40;Generador de informes&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)
 

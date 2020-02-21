@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262905"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar una instalación de Reporting Services (modo nativo)
@@ -111,7 +111,7 @@ Para obtener más información sobre cómo migrar una implementación en modo de
   
 * Los certificados de cliente de Capa de sockets seguros (SSL) no se admiten en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ni en versiones posteriores. Si utiliza certificados SSL de cliente, debe rediseñar la solución de elaboración de informes antes de la migración.  
   
-* Si usa un tipo de autenticación distinto de la autenticación integrada de Windows, debe actualizar el elemento `<AuthenticationTypes>` en el archivo **RSReportServer.config** con un tipo de autenticación compatible. Los tipos de autenticación compatibles son NTLM, Kerberos, Negocie y Basic. Las autenticaciones implícita, anónima y .NET Passport no se admiten en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+* Si usa un tipo de autenticación distinto de la autenticación integrada de Windows, debe actualizar el elemento `<AuthenticationTypes>` en el archivo **RSReportServer.config** con un tipo de autenticación compatible. Los tipos de autenticación compatibles son NTLM, Kerberos, Negocie y Basic. Las autenticaciones implícita, anónima y .NET Passport no se admiten en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ni en versiones posteriores.  
   
 * Si usa hojas de estilo CSS personalizadas en el entorno de elaboración de informes, no se podrán migrar. Muévalas manualmente después de la migración.
   
@@ -203,7 +203,7 @@ Para obtener más información sobre los cambios en SQL Server Reporting Service
   
     * Las extensiones de representación personalizadas para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se deben reescribir con el Modelo de objetos de representación (ROM).  
   
-    * Los representadores OWC HTML y HTML 3.2 no se admiten en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones posteriores.  
+    * Los representadores OWC HTML y HTML 3.2 no se admiten en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ni en versiones posteriores.  
   
     * No debería ser necesario volver a compilar otros ensamblados personalizados.  
   
@@ -215,15 +215,15 @@ Para obtener más información sobre los cambios en SQL Server Reporting Service
   
     1. [Implementación de un ensamblado personalizado](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [Cómo implementar un elemento de informe personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [Cómo: Implementar un elemento de informe personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
-    3. [Implementar una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
+    3. [Implementación de una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   
-    4. [Implementar una extensión de entrega](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
+    4. [Implementación de una extensión de entrega](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
   
-    5. [Implementar una extensión de representación](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
+    5. [Implementación de una extensión de representación](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
   
-    6. [Implementar una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
+    6. [Implementación de una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
 
 ## <a name="bkmk_configure_reportserver"></a> Configurar el servidor de informes
 
@@ -256,10 +256,10 @@ Antes de eliminar las claves, se recomienda hacer primero una copia de seguridad
 
 Si modificó el archivo RSReportServer.config o el archivo RSWebApplication.config en la instalación anterior, debe realizar las mismas modificaciones en el nuevo archivo RSReportServer.config. En la lista siguiente se resumen algunas de las razones por las que podría haber tenido que modificar el archivo de configuración anterior y se proporcionan vínculos a información adicional sobre cómo configurar los mismos valores en SQL Server 2016.  
   
-|Personalización|Información|  
+|Personalización|Information|  
 |-------------------|-----------------|  
 |Entrega de correo electrónico del servidor de informes con los valores de configuración personalizados|[Configuración de correo electrónico * Modo nativo de Reporting Services](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
-|Valores de configuración de la información del dispositivo|[Personalizar los parámetros de extensión de representación en RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
+|Valores de configuración de la información del dispositivo|[Personalización de los parámetros de extensión de representación en RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
 ## <a name="bkmk_windowsservice_group"></a> Grupo de servicios de Windows y ACL de seguridad
 

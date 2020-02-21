@@ -16,10 +16,10 @@ ms.assetid: 19c0c15d-223f-45bd-a215-2867dfefecb0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb131223c59586d30fdf4cfbee84f63c483959f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984092"
 ---
 # <a name="getdatabaseproductversion-method-sqlserverdatabasemetadata"></a>Método getDatabaseProductVersion (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public java.lang.String getDatabaseProductVersion()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getDatabaseProductVersion se especifica mediante el método getDatabaseProductVersion en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getDatabaseProductVersion especifica este método getDatabaseProductVersion en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

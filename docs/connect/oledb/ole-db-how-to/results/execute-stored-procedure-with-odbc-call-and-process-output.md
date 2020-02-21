@@ -1,6 +1,6 @@
 ---
 title: Ejecutar un procedimiento almacenado con ODBC CALL y procesar la salida | Microsoft Docs
-description: Procesar códigos de retorno y parámetros de salida con OLE DB controlador para SQL Server
+description: Procesar códigos de retorno y parámetros de salida mediante OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015627"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Ejecutar procedimiento almacenado con ODBC CALL y procesar la salida
@@ -36,13 +36,13 @@ ms.locfileid: "68015627"
   
 2.  Cree un conjunto de enlaces (uno para cada creador de parámetro) mediante una matriz de estructura DBBINDING.  
   
-3.  Cree un descriptor de acceso para los parámetros definidos mediante el método **IAccessor:: CreateAccessor** . El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
+3.  Cree un descriptor de acceso para los parámetros definidos mediante el uso del método **IAccessor::CreateAccessor**. El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
   
 4.  Rellene la estructura DBPARAMS.  
   
 5.  Llame al comando **Execute** (en este caso, una llamada a un procedimiento almacenado).  
   
-6.  Procese el conjunto de filas y suéltelo mediante el método **IRowset:: Release** .  
+6.  Procese el conjunto de filas y libérelo mediante el método **IRowset::Release**.  
   
 7.  Procese el código de retorno y los valores de parámetro de salida que se reciben del procedimiento almacenado.  
   

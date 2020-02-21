@@ -11,10 +11,10 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68889841"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
@@ -73,7 +73,7 @@ ms.locfileid: "68889841"
   
  El panel de agrupación tiene dos modos:  
   
--   **Predeterminado:** Use el cuadro de diálogo **Predeterminado** para presentar todos los grupos de filas y columnas en un formato jerárquico que muestre la relación de grupos primarios, grupos secundarios, grupos adyacentes y grupos de detalles. Los grupos secundarios se muestra por debajo y en el siguiente nivel de sangría que los grupos primarios. Los grupos adyacentes se muestran en el mismo nivel de sangría que los grupos relacionados.  
+-   **Predeterminado.** Use el cuadro de diálogo **Predeterminado** para presentar todos los grupos de filas y columnas en un formato jerárquico que muestre la relación de grupos primarios, grupos secundarios, grupos adyacentes y grupos de detalles. Los grupos secundarios se muestra por debajo y en el siguiente nivel de sangría que los grupos primarios. Los grupos adyacentes se muestran en el mismo nivel de sangría que los grupos relacionados.  
   
      Use el modo predeterminado para agregar, modificar o eliminar grupos. Para los grupos basados en un único campo de conjunto de datos, puede arrastrar el campo al panel Grupos de filas o Grupos de columnas. Puede insertar el grupo por encima o por debajo de un grupo existente. Para agregar un grupo adyacente, haga clic con el botón secundario en el grupo relacionado y use el menú contextual. Para mostrar qué celdas de Tablix pertenecen a un grupo, seleccione el grupo en el panel de agrupación.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68889841"
 ###  <a name="bkmk_SolutionExplorer"></a> Explorador de soluciones  
  El Explorador de soluciones es un componente estándar de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] que muestra todos los elementos del proyecto. Para un proyecto de servidor de informes, se incluyen las carpetas para organizar los orígenes de datos compartidos, conjuntos de datos compartidos, informes y recursos. Los elementos de la carpeta se alfabetizan al abrir el archivo de solución. Para ver las propiedades de elementos del panel de propiedades, seleccione el elemento.  
   
-###  <a name="bkmk_Output"></a> Salida  
+###  <a name="bkmk_Output"></a> Output  
  La ventana de salida muestra los errores de procesamiento cuando se obtiene la vista previa de un informe y los errores de publicación cuando se implementa un informe en un origen de datos compartido.  
   
  Use las ventanas Salida y Esquema de documento para depurar los errores en las expresiones.  
@@ -175,7 +175,7 @@ ms.locfileid: "68889841"
   
 -   **Propiedades del informe** Seleccione esta opción para abrir el cuadro de diálogo **Propiedades del informe** . En este cuadro de diálogo pueden asignarse propiedades generales al informe, como el nombre de autor y el espaciado de cuadrícula, y especificar propiedades para el diseño del informe, como el número de columnas y el tamaño de página. También puede incluir código personalizado, referencias a ensamblados y clases, así como los nombres de los elementos del resultado, la transformación y los esquemas de los datos.  
   
--   **Vista** Pasa de una pestaña del Diseñador de informes a otra: Diseño y Vista previa.  
+-   **Vista** Cambie entre las dos pestañas del diseñador de informes: Diseño y Vista previa.  
   
 -   **Encabezado de página** Agregue un encabezado de página al informe o elimine un encabezado de página del informe. Al eliminar un encabezado de página, se eliminan todos los elementos del encabezado de página.  
   

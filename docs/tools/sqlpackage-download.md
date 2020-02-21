@@ -1,5 +1,5 @@
 ---
-title: Descarga e instalación de sqlpackage | Microsoft Docs
+title: Descarga e instalación de sqlpackage
 description: Descarga e instalación de sqlpackage para Windows, macOS o Linux
 ms.custom: tools|sos
 ms.date: 06/20/2018
@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: f966de4951e5c90dac8d6e48f00f8de6ff067e3c
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
-ms.translationtype: MTE75
+ms.openlocfilehash: 76c1814306bfe155e8dea6faca7b0d4fd5d3fde5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73033009"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257505"
 ---
 # <a name="download-and-install-sqlpackage"></a>Descarga e instalación de sqlpackage
 
@@ -22,14 +22,14 @@ sqlpackage se ejecuta en Windows, macOS y Linux.
 
 Descargue e instale la versión más reciente de .NET Framework y las versiones preliminares de macOS y Linux:
 
-|Plataforma|Descargar|Fecha de la versión|Versión|Compilar
+|Plataforma|Descargar|Fecha de la versión|Versión|Build
 |:---|:---|:---|:---|:---|
-|Windows (x64)|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2108813)|29 de octubre de 2019|18.4|15.0.4573.2|
-|macOS .NET Core (x64)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2108815)|29 de octubre de 2019| 18.4|15.0.4573.2|
-|Linux .NET Core (x64) |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2108814)|29 de octubre de 2019| 18.4|15.0.4573.2|
-|Windows .NET Core (x64) |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2109019)|29 de octubre de 2019| 18.4|15.0.4573.2|
+|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2113703)|13 de diciembre de 2019|18.4.1|15.0.4630.1|
+|macOS .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2113705)|13 de diciembre de 2019| 18.4.1|15.0.4630.1|
+|Linux .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2113331)|13 de diciembre de 2019| 18.4.1|15.0.4630.1|
+|Windows .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2113704)|13 de diciembre de 2019| 18.4.1|15.0.4630.1|
 
-Para más información sobre la última versión, consulte las [notas de la versión](release-notes-sqlpackage.md). Para descargar idiomas adicionales, consulte la sección [idiomas disponibles](#available-languages) .
+Para más información sobre la última versión, consulte las [notas de la versión](release-notes-sqlpackage.md). Para descargar idiomas adicionales, consulte la sección de [idiomas disponibles](#available-languages).
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -37,23 +37,23 @@ Para más información sobre la última versión, consulte las [notas de la vers
 
 En esta versión de sqlpackage se incluye una experiencia de instalación estándar de Windows y un archivo .zip: 
 
-1. Descargue y ejecute el [instalador de DacFramework.msi para Windows](https://go.microsoft.com/fwlink/?linkid=2108813).
+1. Descargue y ejecute el [instalador de DacFramework.msi para Windows](https://go.microsoft.com/fwlink/?linkid=2113703).
 2. Abra una nueva ventana del símbolo del sistema y ejecute sqlpackage.exe.
     - sqlpackage se instala en la carpeta ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```.
 
-## <a name="get-sqlpackage-net-core-for-windows"></a>Obtener sqlpackage .NET Core para Windows
+## <a name="get-sqlpackage-net-core-for-windows"></a>Descarga de sqlpackage .NET Core para Windows
 
-1. Descargue [sqlpackage para Windows](https://go.microsoft.com/fwlink/?linkid=2109019).
-2. Para extraer el archivo, haga clic con el botón derecho en el archivo en el explorador de Windows y seleccione "extraer todo..." y seleccione el directorio de destino.
+1. Descargue [sqlpackage para Windows](https://go.microsoft.com/fwlink/?linkid=2113704).
+2. Para extraer el archivo, haga clic con el botón derecho en el archivo en el explorador de Windows, seleccione "Extraer todo..." y seleccione el directorio de destino.
 3. Abra una nueva ventana de terminal y el CD en la ubicación donde se extrajo sqlpackage:
 
    ```cmd
    > sqlpackage
    ```
 
-## <a name="get-sqlpackage-net-core-for-macos"></a>Obtener sqlpackage .NET Core para macOS
+## <a name="get-sqlpackage-net-core-for-macos"></a>Descarga de sqlpackage .NET Core para macOS
 
-1. Descargue [sqlpackage para macOS](https://go.microsoft.com/fwlink/?linkid=2108815).
+1. Descargue [sqlpackage para macOS](https://go.microsoft.com/fwlink/?linkid=2113705).
 2. Para extraer el archivo e iniciar sqlpackage, abra una nueva ventana de terminal y escriba los siguientes comandos:
 
    ```bash
@@ -64,9 +64,9 @@ En esta versión de sqlpackage se incluye una experiencia de instalación están
    $ sqlpackage
    ```
 
-## <a name="get-sqlpackage-net-core-for-linux"></a>Obtener sqlpackage .NET Core para Linux
+## <a name="get-sqlpackage-net-core-for-linux"></a>Descarga de sqlpackage .NET Core para Linux
 
-1. Descargue [sqlpackage para Linux](https://go.microsoft.com/fwlink/?linkid=2108814) mediante uno de los instaladores o el archivo tar.gz:
+1. Descargue [sqlpackage para Linux](https://go.microsoft.com/fwlink/?linkid=2113331) mediante uno de los instaladores o el archivo tar.gz:
 2. Para extraer el archivo e iniciar sqlpackage, abra una nueva ventana de terminal y escriba los siguientes comandos:
 
    ```bash
@@ -113,7 +113,7 @@ Si ha instalado sqlpackage con el instalador de Windows, desinstale de la misma 
 
 Si ha instalado sqlpackage con un archivo .zip u otro archivo, elimine los archivos.
 
-## <a name="supported-operating-systems"></a>Sistemas operativos admitidos
+## <a name="supported-operating-systems"></a>Sistemas operativos compatibles
 
 sqlpackage se ejecuta en Windows, macOS y Linux, y es compatible con las siguientes plataformas:
 
@@ -142,19 +142,19 @@ sqlpackage se ejecuta en Windows, macOS y Linux, y es compatible con las siguien
 
 Esta versión de sqlpackage puede instalarse en los idiomas siguientes:
 
-Ventanas de sqlpackage:  
-[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x40a)
+sqlpackage para Windows:  
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2113703&clcid=0x40a)
 
-Windows sqlpackage .NET Core:  
-[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x40a)
+sqlpackage .NET Core para Windows:  
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2113704&clcid=0x40a)
 
-sqlpackage .NET Core macOS:  
-[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x40a)
+sqlpackage .NET Core para macOS:  
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2113705&clcid=0x40a)
 
-sqlpackage .NET Core Linux:  
-[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x40a)
+sqlpackage .NET Core para Linux:  
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2113331&clcid=0x40a)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 
 - Mas información sobre [sqlpackage](sqlpackage.md)
 

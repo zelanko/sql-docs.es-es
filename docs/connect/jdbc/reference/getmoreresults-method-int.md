@@ -16,10 +16,10 @@ ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981771"
 ---
 # <a name="getmoreresults-method-int"></a>Método getMoreResults (int)
@@ -51,8 +51,8 @@ public final boolean getMoreResults(int mode)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getMoreResults se especifica mediante el método getMoreResults en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ Este método getMoreResults especifica este método getMoreResults en la interfaz java.sql.Statement.  
   
  Si se llama al método getMoreResults antes de que se recuperen los resultados, se comporta tal como especificó el argumento *mode* y avanza al resultado siguiente.  
   

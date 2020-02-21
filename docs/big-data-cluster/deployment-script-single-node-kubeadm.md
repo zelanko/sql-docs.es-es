@@ -1,28 +1,29 @@
 ---
-title: Implementación con un script de bash en un clúster de kubeadm de un solo nodo
-titleSuffix: SQL Server big data clusters
+title: Implementación de un clúster kubeadm de un solo nodo
+titleSuffix: SQL Server Big Data Clusters
 description: Use un script de implementación de Bash para implementar un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] en un clúster de kubeadm de un solo nodo.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: f60256e58339387323f923c85d2b880459455663
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341840"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252097"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Implementación con un script de bash en un clúster de kubeadm de un solo nodo
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este tutorial, usará un script de implementación de bash de ejemplo para implementar un clúster de Kubernetes de un solo nodo con kubeadm y un clúster de macrodatos SQL Server en él.  
+En este tutorial, usará un script de implementación de bash de ejemplo para implementar un clúster de Kubernetes de un solo nodo con kubeadm y un clúster de macrodatos SQL Server en él.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Una máquina física o virtual de **servidor** de Vanilla Ubuntu 18.04 o 16.04. El script, que se ejecuta desde la máquina virtual, configura todas las dependencias.
 
@@ -79,7 +80,7 @@ En este tutorial, usará un script de implementación de bash de ejemplo para im
    azdata --version
    ```
 
-## <a name="cleanup"></a>Limpiar
+## <a name="cleanup"></a>Limpieza
 
 El script [cleanup-bdc.sh](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/cleanup-bdc.sh) se proporciona para facilitarle el restablecimiento del entorno si es necesario. Sin embargo, se recomienda usar una máquina virtual con fines de prueba y usar la funcionalidad de instantánea en el hipervisor para revertir la máquina virtual a un estado limpio.
 

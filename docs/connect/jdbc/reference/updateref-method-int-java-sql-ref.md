@@ -1,5 +1,5 @@
 ---
-title: Método updateRef (int, Java. SQL. Ref) | Microsoft Docs
+title: Método updateRef (int, java.sql.Ref) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: eab3ebae-3f68-4303-869a-fee06e3a9c71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 174be7f4e4a9a693a3beaac51d69ad40569bdf64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998404"
 ---
 # <a name="updateref-method-int-javasqlref"></a>Método updateRef (int, java.sql.Ref)
@@ -42,16 +42,16 @@ public void updateRef(int columnIndex,
   
  *x*  
   
- Objeto Ref.  
+ Un objeto Ref.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateRef especifica este método updateRef en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
- [Método &#40;updateRef SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
+ [Método updateRef &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

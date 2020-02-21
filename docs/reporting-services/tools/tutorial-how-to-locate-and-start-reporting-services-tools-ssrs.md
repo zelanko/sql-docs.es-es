@@ -1,10 +1,10 @@
 ---
-title: 'Tutorial: Cómo buscar e iniciar herramientas de Reporting Services (SSRS) | Microsoft Docs'
-ms.date: 05/15/2019
+title: 'Tutorial: Búsqueda e inicio de herramientas de Reporting Services | Microsoft Docs'
+description: En este tutorial se presentan las herramientas que se usan para configurar un servidor de informes, administrar las operaciones y el contenido del servidor de informes, y crear y publicar informes paginados y móviles de Reporting Services.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
-description: En este tutorial se presentan las herramientas que se usan para configurar un servidor de informes, administrar las operaciones y el contenido del servidor de informes, y crear y publicar informes paginados y móviles de Reporting Services.
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27e90deec22d20f65943f9c7e07cf425772c7737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: be9da26fc71dbcbf9fd47aa94c0ee721b160eed6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65875172"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245516"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Cómo buscar e iniciar herramientas de Reporting Services (SSRS)
 
@@ -42,7 +42,7 @@ ms.locfileid: "65875172"
 -   Administre las claves de cifrado.  
 -   Configure el procesamiento desatendido de informes y la entrega de informes por correo electrónico.  
   
-**Instalación:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala al instalar el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, consulte [Instalar el servidor de informes en modo nativo de Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
+**Instalación:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager se instala al instalar el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para más información, consulte [Instalar el servidor de informes en modo nativo de Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>Para iniciar el Administrador de configuración de Reporting Services  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65875172"
   
      ![administrador de configuración de Reporting Services al inicio](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "administrador de configuración de Reporting Services al inicio")  
   
-     **Or**  
+     **O**  
   
      Haga clic en **Inicio**, en **Programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, por último, en **Administrador de configuración de Reporting Services**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65875172"
   
      Si especifica un equipo remoto, haga clic en **Buscar** para establecer una conexión. Previamente, debe haber configurado el servidor de informes para la administración remota. Para obtener más información, vea [Configurar un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-3.  En **Enstance Name**, elija la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que desee configurar. En la lista solo aparecen instancias del servidor de informes de SQL Server 2008 y versiones posteriores. No es posible configurar versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+3.  En **Nombre de instancia**, elija la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que desee configurar. En la lista solo aparecen instancias del servidor de informes de SQL Server 2008 y versiones posteriores. No es posible configurar versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 4.  Haga clic en **Conectar**.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "65875172"
   
      ![Herramienta de configuración de Reporting Services](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Herramienta de configuración de Reporting Services")  
   
- **Próximos pasos:** [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) y [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+ **Pasos siguientes:** [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) y [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="web-portal-native-mode"></a>Portal web (modo nativo)  
  Use [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) para establecer permisos, administrar suscripciones y programaciones, y trabajar con informes. También puede usar el portal web para ver informes.  
   
- **Instalación:** el portal web se instala al instalar el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : [Instalar el servidor de informes en modo nativo de Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **Instalación:** el portal web se instala al instalar el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]: [Instalar el servidor de informes en modo nativo de Reporting Services](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  Antes de abrir el portal web, necesita tener permisos suficientes (inicialmente, solo los miembros del grupo de administradores locales tienen permisos que proporcionan acceso a las características del portal web). El portal web proporciona distintas páginas y opciones, según las asignaciones de roles del usuario actual. Los usuarios que no poseen permisos verán una página vacía. Los usuarios que posean permisos para ver informes contarán con vínculos en los que podrán hacer clic para abrir los informes. Para obtener más información sobre permisos, vea [Roles y permisos &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
@@ -94,11 +94,11 @@ ms.locfileid: "65875172"
   
 1.  En la pantalla de inicio de Windows, escriba **sql server** y, en los resultados de búsqueda de **Aplicaciones** , haga clic en **SQL Server Management Studio**.  
   
-     ![Management Studio desde la pantalla de Inicio de Windows](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Management Studio desde la pantalla de Inicio de Windows")  
+     ![management studio desde la pantalla de inicio de Windows](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "management studio desde la pantalla de inicio de Windows")  
   
-     **Or**  
+     **O**  
   
-     Haga clic en **Inicio**, en **Todos los programas**, en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, después, en **SQL Server Management Studio**. Aparece el cuadro de diálogo **Conectar al servidor** .  
+     Haga clic en **Inicio**, en **Todos los programas**, en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, después, en **SQL Server Management Studio**. Aparecerá el cuadro de diálogo **Conectar con el servidor** .  
   
 2.  Si no se muestra el cuadro de diálogo **Conectar con el servidor** , en el **Explorador de objetos**, haga clic en **Conectar** y luego seleccione **Reporting Services**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "65875172"
 5.  Haga clic en **Conectar**. Puede expandir el nodo raíz para establecer propiedades del servidor, modificar definiciones de roles o desactivar características del servidor de informes.  
   
 ##  <a name="bkmk_ssdt"></a> Herramientas de datos de SQL Server con el Diseñador de informes y el Asistente para informes  
- Puede usar dos herramientas diferentes para crear informes paginados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : el Diseñador de informes y el [Generador de informes](#bkmk_report_builder).  
+ Puede usar dos herramientas diferentes para crear informes paginados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    el Diseñador de informes y el [Generador de informes](#bkmk_report_builder).  
   
  El Diseñador de informes está disponible en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (Visual Studio). La superficie de diseño del Diseñador de informes incluye ventanas con pestañas, asistentes y menús que se utilizan para acceder a características de creación de informes. La herramienta del Diseñador de informes está disponible al elegir un proyecto de servidor de informes o una plantilla del Asistente del servidor de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para más información, vea [Reporting Services en SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). 
  
@@ -125,11 +125,11 @@ Descargar [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714
   
 4.  En la lista **Plantillas** , haga clic en **Proyecto de servidor de informes**. El siguiente diagrama muestra cómo aparecen las plantillas de proyecto en el cuadro de diálogo:  
   
-     ![Cuadro de diálogo Plantilla de proyecto nuevo](../../reporting-services/tools/media/rs-ui-newrsproject.gif "Cuadro de diálogo Plantilla de proyecto nuevo")  
+     ![Cuadro de diálogo Nueva plantilla de proyecto](../../reporting-services/tools/media/rs-ui-newrsproject.gif "Cuadro de diálogo Nueva plantilla de proyecto")  
   
 5.  Escriba un nombre y ubicación para el proyecto, o haga clic en **Examinar** y seleccione una ubicación.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se abre en la página de inicio de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . El Explorador de soluciones proporciona categorías para crear informes y orígenes de datos. Puede utilizar estas categorías para crear nuevos informes y orígenes de datos. Las ventanas con pestañas aparecen cuando crea una definición de informe. Las ventanas con pestañas son Datos, Diseño y Vista previa.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se abre en la página de inicio de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. El Explorador de soluciones proporciona categorías para crear informes y orígenes de datos. Puede utilizar estas categorías para crear nuevos informes y orígenes de datos. Las ventanas con pestañas aparecen cuando crea una definición de informe. Las ventanas con pestañas son Datos, Diseño y Vista previa.  
   
  Para empezar a crear su primer informe, vea [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Para más información sobre los diseñadores de consultas que puede usar en el Diseñador de informes, vea [Herramientas de diseño de consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
@@ -140,7 +140,7 @@ Cuando el informe paginado esté listo, puede publicarlo en un servidor de infor
   
  [Descargue el Generador de informes](https://go.microsoft.com/fwlink/?LinkID=219138) del Centro de descarga de Microsoft.  
   
-### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>Para iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+### <a name="to-start-ssrbnoversion"></a>Para iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  En el portal web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el menú  **New** (Nuevo), seleccione **Paginated Report**(Informe paginado).  
   
@@ -148,7 +148,7 @@ Cuando el informe paginado esté listo, puede publicarlo en un servidor de infor
   
 2.  Si [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] aún no está instalado en el equipo, seleccione **Get [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]** (Obtener el Publicador de informes móviles).  
   
-     o bien  
+     Or  
   
      [Descargue el Generador de informes](https://go.microsoft.com/fwlink/?LinkID=219138) del Centro de descarga de Microsoft.  
   
@@ -159,7 +159,7 @@ Cuando el informe paginado esté listo, puede publicarlo en un servidor de infor
   
  [Descargue el Publicador de informes móviles de SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527) desde el Centro de descarga de Microsoft.  
   
-### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>Para iniciar el [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
+### <a name="to-start-ss_mobilereptpub_short"></a>Para iniciar el [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
 1.  En el portal web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el menú  **New** (Nuevo), seleccione **Mobile Report**(Informe móvil).  
   
@@ -167,7 +167,7 @@ Cuando el informe paginado esté listo, puede publicarlo en un servidor de infor
   
 2.  Si [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] aún no está instalado en el equipo, seleccione **Get [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]** (Obtener el Publicador de informes móviles).  
   
-     o bien  
+     Or  
   
      [Descargue el Publicador de informes móviles de SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527) desde el Centro de descarga de Microsoft.  
   

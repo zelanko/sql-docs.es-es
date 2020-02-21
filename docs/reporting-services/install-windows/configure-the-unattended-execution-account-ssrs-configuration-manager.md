@@ -1,8 +1,10 @@
 ---
-title: Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+title: Configuración de la cuenta de ejecución desatendida (Administrador de configuración) | Microsoft Docs
+description: Reporting Services proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -15,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593308"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866322"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  
@@ -32,7 +34,7 @@ ms.locfileid: "73593308"
  El procesamiento de informes en modo desatendido hace referencia a cualquier proceso de ejecución de informe activado por un evento (sea un evento controlado por programación o de actualización de datos) y no por la solicitud de un usuario. El servidor de informes utiliza la cuenta de procesamiento de informes en modo desatendido para iniciar una sesión en el equipo que hospeda el origen de datos externo. Esta cuenta es necesaria porque las credenciales de la cuenta del servicio del servidor de informes no se han utilizado nunca para conectarse a otros equipos.  
   
 > [!IMPORTANT]  
->  La configuración de esta cuenta es opcional. No obstante, si no la configura, limitará sus opciones para conectarse a algunos orígenes de datos y es posible que no pueda recuperar archivos de imagen desde equipos remotos. Si configura la cuenta, debe mantenerla actualizada. Concretamente, si permite que una contraseña expire o se modifica la información de la cuenta en Active Directory, se producirá el siguiente error la próxima vez que se procese un informe: "Error de inicio de sesión (rsLogonFailed) Error de inicio de sesión: nombre de usuario desconocido o contraseña incorrecta". Resulta esencial el mantenimiento adecuado de la cuenta de procesamiento de informes en modo desatendido, aunque no recupere nunca imágenes externas o no envíe nunca solicitudes de conexión a equipos externos. Si configura la cuenta pero se da cuenta de que no la está utilizando, puede eliminarla para evitar las tareas rutinarias de mantenimiento de la cuenta.  
+>  La configuración de esta cuenta es opcional. No obstante, si no la configura, limitará sus opciones para conectarse a algunos orígenes de datos y es posible que no pueda recuperar archivos de imagen desde equipos remotos. Si configura la cuenta, debe mantenerla actualizada. En concreto, si permite que una contraseña expire o se cambie la información de cuenta en Active Directory, se producirá el siguiente error la próxima vez que se procese un informe: "Error de inicio de sesión (rsLogonFailed) Error de inicio de sesión: nombre de usuario desconocido o contraseña incorrecta". Resulta esencial el mantenimiento adecuado de la cuenta de procesamiento de informes en modo desatendido, aunque no recupere nunca imágenes externas o no envíe nunca solicitudes de conexión a equipos externos. Si configura la cuenta pero se da cuenta de que no la está utilizando, puede eliminarla para evitar las tareas rutinarias de mantenimiento de la cuenta.  
   
 ## <a name="how-to-configure-the-account"></a>Cómo configurar la cuenta  
  Debe usar una cuenta de usuario de dominio. Para cumplir su propósito específico, esta cuenta debería ser distinta de la que se utiliza para ejecutar el servicio del servidor de informes. Asegúrese de utilizar una cuenta que tenga permisos mínimos (son suficientes los permisos de acceso de solo lectura con conexión de red) y acceso limitado a aquellos equipos que proporcionan los orígenes de datos y los recursos al servidor de informes.  
@@ -50,7 +52,7 @@ ms.locfileid: "73593308"
   
 1.  Cree o seleccione una cuenta de dominio que tenga acceso a los equipos y servidores que proporcionen datos o servicios a un servidor de informes. Debe utilizar una cuenta que tenga permisos reducidos (por ejemplo, permisos de solo lectura).  
   
-2.  Abra un símbolo del sistema: en el menú **Inicio** , haga clic en **Ejecutar**, escriba **cmd**y haga clic en **Aceptar**.  
+2.  Abra el símbolo del sistema: En el menú **Inicio**, haga clic en **Ejecutar**, escriba **cmd** y luego haga clic en **Aceptar**.  
   
 3.  Escriba el siguiente comando para configurar la cuenta de una instancia de servidor de informes local:  
   

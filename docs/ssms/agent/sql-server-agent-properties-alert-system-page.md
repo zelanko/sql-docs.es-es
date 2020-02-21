@@ -1,10 +1,9 @@
 ---
-title: Propiedades de Agente SQL Server (página Sistema de alerta) | Microsoft Docs
-ms.custom: ''
+title: Propiedades de Agente SQL Server (página Sistema de alerta)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 92db1bf98b3a50aa619333ba0107034d24106855
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5b870368136055ea2df6e5473c1b33640cea57b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265309"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75234538"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propiedades de Agente SQL Server (página Sistema de alerta)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "68265309"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Use esta página para ver y modificar la configuración de los mensajes enviados por alertas del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Use esta página para ver y modificar la configuración de los mensajes enviados por alertas del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opciones  
 **Sesión de correo**  
@@ -53,7 +54,7 @@ Esta sección le permite especificar el formato de las direcciones y la línea d
 **Línea Para**  
 Especifica las opciones de la línea **Para** del mensaje  
   
-**Prefix**  
+**Prefijo**  
 Escriba cualquier tipo de texto fijo que su sistema exija al principio de la línea **Para** de los mensajes que se envían a un buscapersonas.  
   
 **Buscapersonas**  
@@ -65,7 +66,7 @@ Escriba cualquier tipo de texto fijo que su sistema de localización exija al fi
 **Línea CC**  
 Especifica las opciones de la línea **CC** del mensaje.  
   
-**Prefix**  
+**Prefijo**  
 Escriba cualquier tipo de texto fijo que su sistema exija al principio de la línea **CC** de los mensajes que se envían a un buscapersonas.  
   
 **Buscapersonas**  
@@ -74,10 +75,10 @@ Incluye la dirección de correo electrónico del mensaje entre el prefijo y el s
 **Sufijo**  
 Escriba cualquier tipo de texto fijo que su sistema de localización exija al final de la línea **CC** de los mensajes que se envían a un buscapersonas.  
   
-**Asunto**  
+**Subject**  
 Especifica las opciones del asunto del mensaje  
   
-**Prefix**  
+**Prefijo**  
 Escriba cualquier tipo de texto fijo que su sistema de localización exija al principio de la línea **Asunto** de los mensajes que se envían a un buscapersonas.  
   
 **Sufijo**  

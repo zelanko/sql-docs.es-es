@@ -1,20 +1,21 @@
 ---
-title: Administración de clústeres de macrodatos de SQL Server con cuadernos de Azure Data Studio
-titleSuffix: Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
+title: 'Administrar: Azure Data Studio Notebooks'
+titleSuffix: SQL Server Big Data Clusters
 description: Use un cuaderno de Azure Data Studio para administrar un clúster de macrodatos y solucionar problemas de este.
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
-ms.date: 09/09/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 860524daa5e6ab2db17fdf95cf5aa785aeb4fdf7
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: d2a051e297b48ed8d813fce0e0e8ffa748a84d16
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844285"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252018"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Administración de clústeres de macrodatos de SQL Server con cuadernos de Azure Data Studio
 
@@ -28,7 +29,7 @@ Puede usar cuadernos para implementar clústeres de macrodatos para [!INCLUDE[sq
 
 Además de los cuadernos, puede ver una colección de cuadernos, que se denomina "libro de Jupyter". Un libro de Jupyter proporciona una tabla de contenido que le permite examinar una colección de cuadernos para que pueda encontrar fácilmente el cuaderno que necesita, tanto para solucionar problemas de SQL Server como para ver el estado del clúster.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Deberá cumplir estos requisitos previos para abrir un cuaderno:
 

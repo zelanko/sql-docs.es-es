@@ -1,6 +1,6 @@
 ---
-title: Scripting del motor de base de datos | Microsoft Docs
-ms.custom: ''
+title: Scripting del motor de base de datos
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a057fbb73008fdab5febd2b9ccdcf07917776d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0ead4b8b90c6ef7a1fee0a0e4e28e6f7a15bce80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263518"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253981"
 ---
 # <a name="database-engine-scripting"></a>Scripting del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68263518"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] se suelen codificar interactivamente en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . El archivo se puede abrir después en uno de estos entornos:  
   
--   Use el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo**/**Abrir** para abrir el archivo en una nueva ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+-   Use el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo**/**Abrir** para abrir el archivo en una nueva ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   Use el parámetro **-i**_archivo_entrada_ para ejecutar el archivo con la utilidad **sqlcmd** .  
   

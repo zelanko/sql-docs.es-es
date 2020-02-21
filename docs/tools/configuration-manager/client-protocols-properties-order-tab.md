@@ -1,6 +1,6 @@
 ---
-title: Propiedades de los protocolos de cliente (pestaña pedido) | Microsoft Docs
-ms.custom: ''
+title: Propiedades de los protocolos de cliente (pestaña Ordenar)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbf7795da30f2a274201ce51e9774390b7611b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 59ffc1332b52d95221541a45ba90fe3e22a89caa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010241"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306527"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Propiedades de los protocolos de cliente (pestaña Ordenar)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "68010241"
   
 ## <a name="options"></a>Opciones  
  **Protocolos deshabilitados**  
- Enumera los protocolos que están instalados pero no se utilizan actualmente.  
+ Muestra los protocolos que están instalados, pero no se utilizan actualmente.  
   
  **Protocolos habilitados**  
- Enumera los protocolos que están disponibles para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los clientes de en este equipo.  
+ Muestra los protocolos que están disponibles para los clientes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo.  
   
  **>**  
  Habilita el protocolo que se encuentre resaltado en el cuadro **Protocolos deshabilitados** y lo mueve al cuadro **Protocolos habilitados** .  

@@ -9,16 +9,16 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d3eccb52c9a7164285627063f23dbb790b6dfa3c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594063"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244569"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo de conexión SQL Azure (SSRS)
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] es una base de datos relacional hospedada y basada en la nube, que se integra en las tecnologías de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para incluir en el informe los datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , debe tener un conjunto de datos que se base en un origen de datos de informe de tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilice este tipo de origen de datos para conectarse y recuperar datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] es una base de datos relacional hospedada y basada en la nube, que se integra en las tecnologías de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para incluir en el informe los datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , debe tener un conjunto de datos que se base en un origen de datos de informe de tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilice este tipo de origen de datos para conectarse y recuperar datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 Esta extensión de datos admite parámetros de varios valores, agregados del servidor y credenciales administrados con independencia de la cadena de conexión.  
   
@@ -43,7 +43,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 Además, se usa el cuadro de diálogo **Propiedades de orígenes de datos** para proporcionar credenciales como nombre de usuario y contraseña. Las opciones `User Id` y `Password` se agregan automáticamente a la cadena de conexión, no es necesario escribirlas como parte de dicha cadena.  
   
-Para obtener más información y ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+Para más información y ejemplos de cadenas de conexión, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ## <a name="Credentials"></a> Credenciales
 
@@ -57,7 +57,7 @@ Desde un cliente de creación de informes, están disponibles las siguientes opc
   
 - No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-Para obtener más información, vea [conexiones de datos, orígenes de datos y &#40;cadenas de conexión&#41; generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar información de credenciales y conexión para los orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
+Para más información, consulte [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="Query"></a> Consultas
 
@@ -160,7 +160,7 @@ Puede usar la base de datos SQL de Azure con la autenticación de paso a través
 
 Este escenario se admite al configurar correctamente los siguientes elementos:
 
-- [Biblioteca de autenticación de Active Directory para SQL Server (ADALSQL)](https://www.microsoft.com/en-us/download/details.aspx?id=48742) instalada en el servidor de informes.
+- [Biblioteca de autenticación de Active Directory para SQL Server (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742) instalada en el servidor de informes.
 - [Servicios de federación de Active Directory (ADFS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) configurados para federarse en Active Directory (AD) local y AAD.
 - [Delegación limitada de Kerberos (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) configurada desde el servidor de informes al servidor de ADFS.
 - Configure el origen de datos o de informes para autenticarse en [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) como el usuario que visualiza el informe.
@@ -184,7 +184,7 @@ Estas secciones de la documentación proporcionan información conceptual detall
 [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
-[Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 Proporciona información sobre las conexiones de datos y los orígenes de datos.  
   
 [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

@@ -1,10 +1,7 @@
 ---
-title: osql (Utilidad) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: osql (utilidad)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,17 +20,23 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: markingmyname
 ms.author: maghan
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cfd8bc56a642442e1a5c5f673ca70bd86eb3ef6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105751"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307359"
 ---
 # <a name="osql-utility"></a>osql (utilidad)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  La utilidad **osql** permite especificar archivos de script, procedimientos del sistema e instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] . Esta herramienta utiliza ODBC para comunicarse con el servidor.  
+
+La utilidad **osql** permite especificar archivos de script, procedimientos del sistema e instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] . Esta herramienta utiliza ODBC para comunicarse con el servidor.  
   
 > [!IMPORTANT]  
 >  Esta característica se quitará en una versión futura de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Evite utilizar esta característica en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice **sqlcmd** . Para obtener más información, consulte [sqlcmd Utility](../tools/sqlcmd-utility.md).  
@@ -95,7 +98,7 @@ C:\>osql
  **-E**  
  Utiliza una conexión de confianza en lugar de solicitar una contraseña.  
   
- **-S** _nombre\__ del servidor **\\** [ _nombre de instancia\__ ]  
+ **-S** _server\_name_[ **\\** _instance\_name_]  
  Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Especifique _nombre\_servidor_ **\\** _nombre\_instancia_ para conectar una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Si no se especifica ningún servidor, **osql** se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se ejecuta **osql** desde un equipo remoto conectado a la red.  
   
  **-H** _wksta_name_  
@@ -193,7 +196,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  Las opciones **-n**, **-O** y **-D** han dejado de admitirse en **osql**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La utilidad **osql** se inicia directamente desde el sistema operativo con las opciones en mayúsculas o en minúsculas, tal como se muestran aquí. Después de iniciar **osql**acepta instrucciones SQL y las envía a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma interactiva. Se da formato a los resultados y se muestran en la pantalla (**stdout**). Utilice QUIT o EXIT para salir de **osql**.  
   
  Si no especifica un nombre de usuario cuando inicia **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprueba las variables de entorno y las usa, por ejemplo, **osqluser=(** _user_ **)** u **osqlserver=(** _server_ **)** . Si no se establecen variables de entorno, se utilizará el nombre de usuario de la estación de trabajo. Si no especifica un servidor, se utilizará el nombre de la estación de trabajo.  
@@ -208,7 +211,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>Comandos OSQL  
  Además de las instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] de **osql**, los siguientes comandos también están disponibles.  
   
-|Comando|Descripción|  
+|Get-Help|Descripción|  
 |-------------|-----------------|  
 |GO|Ejecuta todas las instrucciones escritas después del último GO.|  
 |RESET|Borra cualquier instrucción que haya escrito.|  

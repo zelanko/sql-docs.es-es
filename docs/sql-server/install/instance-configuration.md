@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69609294"
 ---
 # <a name="installation-wizard-help"></a>Ayuda del Asistente para instalación
@@ -120,7 +120,7 @@ Si está instalando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)
 > [!NOTE]  
 > Control de cuentas de usuario (UAC) es una característica de seguridad de Windows que requiere que un administrador apruebe específicamente acciones administrativas o aplicaciones antes de que se puedan ejecutar. Dado que UAC está activado de forma predeterminada, se le solicitará que permita las operaciones concretas que requieren privilegios elevados. Puede configurar UAC para cambiar el comportamiento predeterminado o personalizarlo para programas concretos. Para más información sobre UAC y la configuración de UAC, consulte [Guía paso a paso de Control de cuentas de usuario](https://go.microsoft.com/fwlink/?linkid=196350) y el tema sobre [control de cuentas de usuario (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
   
 * [Configurar las cuentas de servicio &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Configuración de permisos y cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
@@ -154,7 +154,7 @@ Los directorios predeterminados de la tabla siguiente los puede configurar el us
   * En un sistema de archivos que usa compresión  
   * En un directorio que contiene archivos del sistema  
   
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
 
 Para obtener más información sobre los directorios, las ubicaciones de archivos y los nombres de identificador de instancia, consulte [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
@@ -187,7 +187,7 @@ Los directorios predeterminados de la tabla siguiente los puede configurar el us
   * En un sistema de archivos que usa compresión  
   * En un directorio que contiene archivos del sistema  
   
-#### <a name="see-also"></a>Vea también
+#### <a name="see-also"></a>Consulte también
 
 * Para obtener más información sobre los directorios, las ubicaciones de archivos y los nombres de identificador de instancia, consulte [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
 * [Share and NTFS permissions on a file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions) (Permisos NTFS y de uso compartido en un servidor de archivos)
@@ -196,7 +196,7 @@ Los directorios predeterminados de la tabla siguiente los puede configurar el us
 
 Use esta página para establecer el modo de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y para agregar grupos o usuarios de Windows como administradores de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Consideraciones para ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+### <a name="considerations-for-running-sscurrent"></a>Consideraciones para ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se aprovisionaba el grupo BUILTIN\Administrators como inicio de sesión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y los miembros del grupo local Administradores podían iniciar sesión con sus credenciales de administrador. Sin embargo, el uso de permisos elevados no es un procedimiento recomendado.
 
@@ -265,7 +265,7 @@ Una contraseña segura debe tener más de 8 caracteres de longitud y satisfacer 
   
 Las contraseñas que se escriben en esta página deben cumplir los requisitos de las directivas de contraseñas seguras. Si tiene alguna automatización que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], asegúrese de que la contraseña cumpla los requisitos de las directivas de contraseñas seguras.  
   
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
 
 Para obtener más información sobre elegir la autenticación de Windows en lugar de la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el tema [Elegir un modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md).  
 
@@ -279,7 +279,7 @@ Para especificar un recurso compartido de archivos SMB como directorio, deberá 
 
 `\\<ServerName>\<ShareName>\...`
 
-### <a name="standalone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="standalone-instance-of-ssnoversion"></a>Instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 Para instancias independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en la tabla siguiente se enumeran los tipos de almacenamiento admitidos y los directorios predeterminados que puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -294,7 +294,7 @@ Para instancias independientes de [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 \* Aunque se admiten discos compartidos, no se recomienda su uso con una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="failover-cluster-instance-of-ssnoversion"></a>Instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Para instancias de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados que puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -305,7 +305,7 @@ Para instancias de clúster de conmutación por error de [!INCLUDE[ssNoVersion](
 |**Directorio de registro de base de datos de usuario**|Almacenamiento compartido, servidor de archivos de SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Sugerencia**: Si selecciona un **disco compartido** en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realiza ninguna selección en la página **Selección de disco de clúster**.|Asegúrese de que el directorio de registro tenga espacio suficiente.|  
 |**Directorio de copia de seguridad**|Disco local, almacenamiento compartido y servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **Sugerencia**: Si selecciona un **disco compartido** en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realiza ninguna selección en la página **Selección de disco de clúster**.|Establezca los permisos apropiados para evitar la pérdida de datos y asegúrese de que la cuenta de usuario para el servicio de SQL Server tenga los permisos adecuados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
   
-### <a name="security-considerations"></a>Consideraciones relativas a la seguridad
+### <a name="security-considerations"></a>Consideraciones sobre la seguridad
   
 El programa de instalación configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.  
   
@@ -338,7 +338,7 @@ Para especificar un recurso compartido de archivos SMB como directorio, deberá 
 
 `\\<ServerName>\<ShareName>\....`
   
-### <a name="data-and-log-directories-for-a-standalone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Directorios de datos y de registro para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="data-and-log-directories-for-a-standalone-instance-of-ssnoversion"></a>Directorios de datos y de registro para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Para instancias independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados que puede configurar durante la instalación.  
   
@@ -349,7 +349,7 @@ Para instancias independientes de [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 \* Aunque se admiten discos compartidos, no se recomienda su uso con una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Directorios de datos y registro para una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-ssnoversion"></a>Directorios de datos y registro para una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Para instancias de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados que puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -391,7 +391,7 @@ Configure las opciones de **tempdb** según sus requisitos y la carga de trabajo
   
 * **Directorio de registro** es el directorio en el que se crean los archivos de registro de **tempdb** . Solo hay un directorio de registro de **tempdb**.  
   
-### <a name="security-considerations"></a>Consideraciones relativas a la seguridad
+### <a name="security-considerations"></a>Consideraciones sobre la seguridad
   
 El programa de instalación configura las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrumpe la herencia como parte de la configuración.  
 
@@ -406,7 +406,7 @@ Al servidor de archivos SMB se aplican las recomendaciones siguientes:
 > [!NOTE]
 > Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los componentes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también deben instalarse en directorios independientes.
   
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
 
 * [Configuración de permisos y cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
 * [Share and NTFS permissions on a file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions) (Permisos NTFS y de uso compartido en un servidor de archivos)  
@@ -437,7 +437,7 @@ Si se omite esta página durante la instalación, el valor de **memoria de servi
 
 ### <a name="uielement-list"></a>Lista de UIElement
   
-**Default**: Este botón de radio está seleccionado de forma predeterminada y establece la configuración de la **memoria de servidor mínima** y la **memoria de servidor máxima** en los valores predeterminados de [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. 
+**Valor predeterminado**: Este botón de radio está seleccionado de forma predeterminada y establece la configuración de la **memoria de servidor mínima** y la **memoria de servidor máxima** en los valores predeterminados de [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. 
 
 **Recomendado**: este botón de radio debe estar seleccionado para aceptar los valores recomendados calculados o para cambiar los valores calculados a los valores configurados por el usuario.  
   
@@ -463,7 +463,7 @@ Utilice esta página para habilitar FILESTREAM para esta instalación de [!INCLU
   
 **Permitir que los clientes remotos tengan acceso de transmisión por secuencias a los datos de FILESTREAM**: active esta casilla para permitir que los clientes remotos tengan acceso a los datos de FILESTREAM en este servidor.  
   
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
 
 * [Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)
 * [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

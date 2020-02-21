@@ -5,18 +5,18 @@ description: Obtenga información sobre cómo actualizar los clústeres de macro
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127442"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253109"
 ---
-# <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory
+# <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -49,7 +49,7 @@ En este artículo se hará referencia a este usuario como la *cuenta de servicio
 
 ### <a name="creating-an-ou"></a>Creación de una unidad organizativa
 
-En el controlador de dominio, abra **Usuarios y equipos de Active Directory**. En el panel izquierdo, haga clic con el botón derecho en el directorio en el que quiera crear la UO y seleccione Nuevo \> **Unidad organizativa** y, después, siga las indicaciones del asistente para crearla. También puede crear una UO con PowerShell:
+En el controlador de dominio, abra **Usuarios y equipos de Active Directory**. En el panel izquierdo, haga clic con el botón derecho en el directorio en el que quiera crear la UO y seleccione Nuevo \>**Unidad organizativa** y, después, siga las indicaciones del asistente para crearla. También puede crear una UO con PowerShell:
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
@@ -109,7 +109,7 @@ La cuenta de servicio de dominio (DSA) del BDC debe ser capaz de crear usuarios,
        - **Crear objetos de usuario**
        - **Eliminación de objetos de usuario**
 
-    - Haga clic en **Aceptar**.
+    - Haga clic en **Aceptar**
 
 - Haga clic en **Agregar**.
 
@@ -123,7 +123,7 @@ La cuenta de servicio de dominio (DSA) del BDC debe ser capaz de crear usuarios,
 
     - Desplácese hacia la parte superior y seleccione **Restablecer contraseña**.
 
-    - Haga clic en **Aceptar**.
+    - Haga clic en **Aceptar**
 
 - Haga clic en **Agregar**.
 
@@ -137,7 +137,7 @@ La cuenta de servicio de dominio (DSA) del BDC debe ser capaz de crear usuarios,
 
     - Desplácese hacia la parte superior y seleccione **Restablecer contraseña**.
 
-    - Haga clic en **Aceptar**.
+    - Haga clic en **Aceptar**
 
 - Haga clic en **Aceptar** dos veces más para cerrar los cuadros de diálogo abiertos.
 
@@ -170,17 +170,20 @@ La integración de AD necesita los parámetros siguientes. Agregue estos paráme
 
 - `security.domainControllerFullyQualifiedDns`: lista de FQDN del controlador de dominio. El FQDN contiene el nombre de host o de la máquina del controlador de dominio. Si tiene varios controladores de dominio, aquí se puede proporcionar una lista. Ejemplo: `HOSTNAME.CONTOSO.LOCAL`
 
-- **Parámetro opcional`security.realm`** : en la mayoría de casos, el dominio es igual al nombre de dominio. En los casos en los que no sean iguales, use este parámetro para definir el nombre del dominio (por ejemplo, `CONTOSO.LOCAL`).
+- **Parámetro opcional** `security.realm`: en la mayoría de casos, el dominio es igual al nombre de dominio. En los casos en los que no sean iguales, use este parámetro para definir el nombre del dominio (por ejemplo, `CONTOSO.LOCAL`).
 
 - `security.domainDnsName`: nombre del dominio (por ejemplo, `contoso.local`).
 
-- `security.clusterAdmins`: este parámetro toma *un grupo de AD. Los miembros de este grupo obtendrán permisos de administrador en el clúster. Esto significa que tendrán permisos sysadmin en SQL Server, permisos de superusuario en HDFS y de administrador en el controlador.
+- `security.clusterAdmins`: este parámetro toma **un grupo de AD**. Los miembros de este grupo obtendrán permisos de administrador en el clúster. Esto significa que tendrán permisos sysadmin en SQL Server, permisos de superusuario en HDFS y de administrador en el controlador. **Tenga en cuenta que este grupo debe existir en AD antes de comenzar la implementación. Recuerde también que este grupo no puede tener definido DomainLocal como ámbito en Active Directory. Un grupo de ámbito local de dominio producirá un error de implementación.**
 
-- `security.clusterUsers`: lista de los grupos de AD que son usuarios normales (sin permisos de administrador) en el clúster de macrodatos.
+- `security.clusterUsers`: lista de los grupos de AD que son usuarios normales (sin permisos de administrador) en el clúster de macrodatos. **Tenga en cuenta que estos grupos deben existir en AD antes de comenzar la implementación. Recuerde también que estos grupos no pueden tener definido DomainLocal como ámbito en Active Directory. Un grupo de ámbito local de dominio producirá un error de implementación.**
 
-- **Parámetro opcional`security.appOwners`** : lista de los grupos de AD que tienen permisos para crear, eliminar y ejecutar cualquier aplicación.
+- **Parámetro opcional** `security.appOwners`: lista de los grupos de AD que tienen permisos para crear, eliminar y ejecutar cualquier aplicación. **Tenga en cuenta que estos grupos deben existir en AD antes de comenzar la implementación. Recuerde también que estos grupos no pueden tener definido DomainLocal como ámbito en Active Directory. Un grupo de ámbito local de dominio producirá un error de implementación.**
 
-- **Parámetro opcional`security.appReaders`** : lista de usuarios o grupos de AD que tienen permisos para ejecutar cualquier aplicación. 
+- **Parámetro opcional** `security.appReaders`: lista de grupos de AD que tienen permisos para ejecutar cualquier aplicación. **Tenga en cuenta que estos grupos deben existir en AD antes de comenzar la implementación. Recuerde también que estos grupos no pueden tener definido DomainLocal como ámbito en Active Directory. Un grupo de ámbito local de dominio producirá un error de implementación.**
+
+**Comprobación del ámbito del grupo de AD:** 
+[haga clic aquí para obtener instrucciones](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) para comprobar el ámbito de un grupo de AD, con el fin de determinar si es DomainLocal.
 
 Si aún no ha inicializado el archivo de configuración de la implementación, puede ejecutar este comando para obtener una copia de la configuración.
 
@@ -199,6 +202,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 Además de la información anterior, también debe proporcionar nombres de DNS para los distintos puntos de conexión del clúster. Las entradas DNS que usan los nombres de DNS proporcionados se crearán automáticamente en el servidor DNS tras la implementación. Usará estos nombres al conectarse a los diferentes puntos de conexión del clúster. Por ejemplo, si el nombre de DNS de la instancia maestra de SQL es `mastersql`, usará `mastersql.contoso.local,31433` para conectarse a la instancia maestra desde las herramientas.
@@ -293,3 +297,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - Por el momento, el modo de AD seguro solo funcionará en entornos de implementación de `kubeadm`, pero no en AKS. De forma predeterminada, el perfil de implementación de `kubeadm-prod` incluye las secciones de seguridad.
 
 - Por ahora solo se permite un BDC por dominio. La habilitación de varios BDC por dominio está prevista para una versión futura.
+
+- Ninguno de los grupos de AD especificados en las configuraciones de seguridad puede tener definido el ámbito DomainLocal. Puede comprobar el ámbito de un grupo de AD siguiendo [estas instrucciones](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

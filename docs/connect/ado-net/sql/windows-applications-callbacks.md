@@ -9,30 +9,30 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5c2d46e3f2b26a8106e75f2bb116907e2f27a7b9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451903"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253381"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplicaciones Windows que usan devoluciones de llamada
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-En la mayoría de los escenarios de procesamiento asincrónico, desea iniciar una operación de base de datos y seguir ejecutando otros procesos sin esperar a que se complete la operación de base de datos. Sin embargo, muchos escenarios requieren hacer algo una vez que la operación de base de datos ha finalizado. En una aplicación para Windows, por ejemplo, puede que desee delegar la operación de larga duración a un subproceso en segundo plano, al mismo tiempo que permite que el subproceso de la interfaz de usuario siga respondiendo. Sin embargo, cuando se completa la operación de base de datos, desea utilizar los resultados para rellenar el formulario. Este tipo de escenario se implementa mejor con una devolución de llamada.  
+En la mayoría de los escenarios de procesamiento asincrónico, querrá iniciar una operación de base de datos y seguir ejecutando otros procesos sin esperar a que se complete la operación de base de datos. Sin embargo, muchos escenarios obligan a realizar alguna acción una vez que la operación de base de datos ha finalizado. En una aplicación Windows, por ejemplo, puede que quiera delegar la operación de larga duración a un subproceso en segundo plano, al mismo tiempo que permite que el subproceso de la interfaz de usuario siga respondiendo. Sin embargo, cuando se completa la operación de base de datos, desea utilizar los resultados para rellenar el formulario. Este tipo de escenario se implementa mejor con una devolución de llamada.  
   
-Una devolución de llamada se define especificando un <xref:System.AsyncCallback> delegado en el método <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Se llama al delegado cuando se completa la operación. Puede pasar al delegado una referencia al <xref:Microsoft.Data.SqlClient.SqlCommand> mismo, lo que facilita el acceso al objeto <xref:Microsoft.Data.SqlClient.SqlCommand> y llamar al método `End` adecuado sin tener que usar una variable global.  
+Una devolución de llamada se define especificando un delegado <xref:System.AsyncCallback> en el método <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Se llama al delegado cuando se completa la operación. Puede pasar a delegado una referencia a <xref:Microsoft.Data.SqlClient.SqlCommand>, lo que facilita el acceso al objeto <xref:Microsoft.Data.SqlClient.SqlCommand> y llama al método `End` adecuado sin tener que usar una variable global.  
   
 ## <a name="example"></a>Ejemplo  
-La siguiente aplicación de Windows muestra el uso del método <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, ejecutando una instrucción Transact-SQL que incluye un retraso de unos pocos segundos (emulando un comando de ejecución prolongada).  
+La siguiente aplicación Windows muestra el uso del método <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, que ejecuta una instrucción Transact-SQL que incluye un retraso de unos pocos segundos (emulando un comando de ejecución prolongada).  
   
 En este ejemplo se muestran varias técnicas importantes, como llamar a un método que interactúa con el formulario desde un subproceso independiente. Además, en este ejemplo se muestra cómo debe impedir que los usuarios ejecuten simultáneamente un comando varias veces y cómo debe asegurarse de que el formulario no se cierra antes de que se llame al procedimiento de devolución de llamada.  
   
-Para configurar este ejemplo, cree una nueva aplicación de Windows. Coloque un control <xref:System.Windows.Forms.Button> y dos controles <xref:System.Windows.Forms.Label> en el formulario (aceptando el nombre predeterminado de cada control). Agregue el código siguiente a la clase del formulario y modifique la cadena de conexión según sea necesario para su entorno.  
+Para configurar este ejemplo, cree una aplicación Windows. Coloque un control <xref:System.Windows.Forms.Button> y dos controles <xref:System.Windows.Forms.Label> en el formulario (aceptando el nombre predeterminado de cada control). Agregue el código siguiente a la clase del formulario y modifique la cadena de conexión según sea necesario para su entorno.  
   
 ```csharp  
 // Add these to the top of the class, if they're not already there:  

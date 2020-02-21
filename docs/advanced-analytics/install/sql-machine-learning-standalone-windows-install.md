@@ -1,29 +1,29 @@
 ---
 title: Instalación de Machine Learning Server (independiente)
-description: Realice una instalación independiente de Machine Learning Server no compatible con instancias para el desarrollo de R y Python con RevoScaleR, revoscalepy, MicrosoftML y otros paquetes.
+description: Configure un servidor de aprendizaje automático independiente para Python y R. Un servidor instalar instalado mediante el programa de instalación de SQL Server equivale funcionalmente a las versiones de Microsoft Machine Learning Server que no son de marca SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/03/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 319ae61fbdca64bc6f27143bdd4a42aec635d129
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727640"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76891734"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalación de Machine Learning Server (independiente) o R Server (independiente) con el programa de instalación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-El programa de instalación de SQL Server incluye una opción de **características compartidas** para instalar una versión de Machine Learning Server independiente no compatible con instancias que se ejecuta fuera de SQL Server. Se denomina **Machine Learning Server (independiente)** e incluye R y Python. 
+El programa de instalación de SQL Server incluye una opción de **características compartidas** para instalar un servidor aprendizaje automático independiente que se ejecuta fuera de SQL Server. Se denomina **Machine Learning Server (independiente)** e incluye Python y R. 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-El programa de instalación de SQL Server incluye una opción de **características compartidas** para instalar una versión de Machine Learning Server independiente no compatible con instancias que se ejecuta fuera de SQL Server. En SQL Server 2016, esta característica se denomina **R Server (independiente)** .  
+El programa de instalación de SQL Server incluye una opción de **características compartidas** para instalar un servidor aprendizaje automático independiente que se ejecuta fuera de SQL Server. En SQL Server 2016, esta característica se denomina **R Server (independiente)** .  
 ::: moniker-end
 
 Un servidor independiente instalado mediante el programa de instalación de SQL Server equivale funcionalmente a las versiones de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) que no son de marca SQL, y admite los mismos casos de uso y escenarios, a saber:
@@ -196,11 +196,7 @@ En los servidores desconectados, se requieren pasos extra. Hay que obtener la ac
 
 3. Si ha habilitado la ejecución de la operacionalización como nodos web y nodos de proceso en implementaciones de servicio web, haga una copia de seguridad del archivo **AppSettings.json** como medida de precaución. Este archivo se revisa al aplicar SQL Server 2017 CU13 o posterior, por lo que probablemente quiera conservar una copia de seguridad de la versión original.
 
-4. En un dispositivo conectado a Internet, haga clic en el vínculo de la actualización acumulativa correspondiente a la versión de SQL Server.
-
-  + Actualizaciones de SQL Server 2019 *(no hay actualizaciones disponibles todavía)*
-  + [Actualizaciones de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [Actualizaciones de SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+4. En una máquina conectada a Internet, descargue la actualización acumulativa más reciente para su versión desde [Actualizaciones más recientes de Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server).
 
 5. Descargue la actualización acumulativa más reciente. Es un archivo ejecutable.
 
@@ -214,7 +210,7 @@ En los servidores desconectados, se requieren pasos extra. Hay que obtener la ac
 
    + Haga doble clic en el archivo .exe para ejecutar el programa de instalación. Cuando se instala una actualización acumulativa en un servidor sin conectividad a Internet, se le pide que seleccione la ubicación de los archivos .CAB de R y Python.
 
-8. Después de la instalación, en un servidor donde se haya habilitado la operacionalización con nodos web y nodos de proceso, edite **AppSettings.json** y agregue una entrada "MMLResourcePath" directamente en "MMLNativePath". Por ejemplo:
+8. Después de la instalación, en un servidor donde se haya habilitado la implementación con nodos web y nodos de ejecución, edite **AppSettings.json** y agregue una entrada "MMLResourcePath" directamente en "MMLNativePath". Por ejemplo:
 
     ```json
     "ScorerParameters": {

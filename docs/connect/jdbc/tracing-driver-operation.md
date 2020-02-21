@@ -1,5 +1,5 @@
 ---
-title: Operación de seguimiento del controlador | Microsoft Docs
+title: Seguimiento del funcionamiento del controlador | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027593"
 ---
 # <a name="tracing-driver-operation"></a>Seguimiento del funcionamiento del controlador
@@ -25,7 +25,7 @@ ms.locfileid: "69027593"
 > [!NOTE]  
 >  En el caso del componente nativo (sqljdbc_xa.dll) que se incluye con el controlador JDBC, el marco de diagnósticos integrados (BID) habilita el seguimiento. Para obtener información sobre BID, vea la página sobre [seguimiento de acceso de datos de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=70042) (puede estar en inglés).  
   
- Al desarrollar la aplicación, puede realizar llamadas a objetos Logger, que a su vez crean objetos LogRecord que, después, se pasan a los objetos Handler para su procesamiento. Los objetos logger y handler usan niveles de registro y, opcionalmente, filtros de registro, para regular qué LogRecords se procesan. Una vez completadas las operaciones de registro, los objetos Handler pueden usar de forma opcional objetos Formatter para publicar la información de registro.  
+ Al desarrollar la aplicación, puede realizar llamadas a objetos Logger, que a su vez crean objetos LogRecord que, después, se pasan a los objetos Handler para su procesamiento. Ambos objetos registrador y controlador usan niveles de registro y, además, filtros de registro, para regular qué LogRecords se procesan. Una vez completadas las operaciones de registro, los objetos Handler pueden usar de forma opcional objetos Formatter para publicar la información de registro.  
   
  De forma predeterminada, el marco java.util.logging escribe los resultados en un archivo. Este archivo de registro de salida debe tener permisos de escritura para el contexto en que se ejecuta el controlador JDBC.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "69027593"
 |FINE|Proporciona información de seguimiento básica, que incluye todas las excepciones producidas por los métodos públicos.|  
 |FINER|Proporciona información de seguimiento detallada, que incluye todos los puntos de entrada y salida de los métodos públicos junto con los tipos de datos de parámetro asociados y todas las propiedades públicas de la clase pública. Además, los parámetros de entrada, los parámetros de salida y el método devuelven valores salvo los tipos de valor de devolución CLOB, BLOB, NCLOB, Reader y \<stream>.|  
 |FINEST|Proporciona información de seguimiento muy detallada. Se trata del nivel de registro mínimo.|  
-|OFF|Desactiva el registro.|  
+|Apagado|Desactiva el registro.|  
 |ALL|Habilita el registro de todos los mensajes.|  
   
  La tabla siguiente describe cada uno de los niveles de registro para categorías de registro internas.  
@@ -61,7 +61,7 @@ ms.locfileid: "69027593"
 |FINE|Proporciona información de seguimiento que incluye la creación y destrucción de objetos básicos. Además, incluye todas las excepciones producidas por los métodos públicos.|  
 |FINER|Proporciona información de seguimiento detallada, que incluye todos los puntos de entrada y salida de los métodos públicos junto con los tipos de datos de parámetro asociados y todas las propiedades públicas de la clase pública. Además, los parámetros de entrada, los parámetros de salida y el método devuelven valores salvo los tipos de valor de devolución CLOB, BLOB, NCLOB, Reader y \<stream>.<br /><br /> En la versión 1.2 del controlador JDBC existían las siguientes categorías de registro y tenían el nivel de registro FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA y [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Desde la versión 2.0, se han actualizado al nivel FINER.|  
 |FINEST|Proporciona información de seguimiento muy detallada. Se trata del nivel de registro mínimo.<br /><br /> En la versión 1.2 del controlador JDBC existían las siguientes categorías de registro y tenían el nivel de registro FINEST: TDS.DATA y TDS.TOKEN. Desde la versión 2.0, conservan el nivel de registro FINEST.|  
-|OFF|Desactiva el registro.|  
+|Apagado|Desactiva el registro.|  
 |ALL|Habilita el registro de todos los mensajes.|  
   
 ## <a name="logging-categories"></a>Categorías de registro  
@@ -87,7 +87,7 @@ ms.locfileid: "69027593"
 |SQLServerResultSet|Registra mensajes en la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md). La aplicación puede configurar el nivel de registro como FINE, FINER y FINEST.|  
 |SQLServerStatement|Registra mensajes en la clase [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). La aplicación puede configurar el nivel de registro como FINE, FINER y FINEST.|  
 |XA|Registra mensajes para todas las transacciones XA de la clase [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). La aplicación puede configurar el nivel de registro como FINE y FINER.|  
-|KerbAuthentication|Registra mensajes relativos a la autenticación Kerberos de tipo 4 (cuando la propiedad de conexión **authenticationScheme** está establecida en **Kerberos**). La aplicación puede configurar el nivel de registro como FINE o FINER.|  
+|KerbAuthentication|Registra mensajes relativos a la autenticación Kerberos de tipo 4 (cuando la propiedad de conexión **authenticationScheme** se establece en **JavaKerberos**). La aplicación puede configurar el nivel de registro como FINE o FINER.|  
 |TDS.DATA|Registra mensajes que contienen la conversación de nivel de protocolo TDS entre el controlador y SQL Server. Los contenidos detallados de cada paquete TDS enviado y recibido se registran en ASCII y como hexadecimales. No se registran las credenciales de inicio de sesión (nombres y contraseñas de usuarios). Todos los demás datos se registran.<br /><br /> Esta categoría crea mensajes muy detallados y solo se puede habilitar si se establece el nivel de registro en FINEST.|  
 |TDS.Channel|Esta categoría realiza un seguimiento del canal de comunicaciones TDS con SQL Server. El mensaje registrado incluye la apertura y cierre de sockets, así como lecturas y escrituras. También realiza seguimientos de mensajes relacionados con el establecimiento de una conexión de Capa de sockets seguros (SSL) con SQL Server.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINE, FINER o FINEST.|  
 |TDS.Writer|Esta categoría realiza un seguimiento de las escrituras en el canal TDS. Tenga en cuenta que solo se hace un seguimiento de la longitud de las escrituras, no de los contenidos. Esta categoría también hace un seguimiento de los problemas que se producen cuando una señal de atención es enviada al servidor para cancelar la ejecución de una instrucción.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINEST.|  
@@ -158,7 +158,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  Puede establecer las propiedades del archivo `logging.properties` con el objeto LogManager que forma parte de java.util.logging.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diagnóstico de problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

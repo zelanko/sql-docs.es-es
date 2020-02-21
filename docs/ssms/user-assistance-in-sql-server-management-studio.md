@@ -1,6 +1,6 @@
 ---
-title: Asistencia al usuario en SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Asistencia al usuario en SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46393ffe47252be2d445647d1b3ebed45f72f946
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263391"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252206"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Asistencia al usuario en SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ El **Contenido** y el **Índice** ofrecen una funcionalidad y una interfaz con l
   
     Proporciona un conjunto jerárquico de páginas vinculadas que contienen temas de utilidad relacionados con las tareas comunes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El contenido está organizado por componente y tarea, por ejemplo, temas sobre replicación.  
   
--   **Buscar**  
+-   **Búsqueda**  
   
     Busca por temas, con o sin filtros predefinidos. Buscar en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es una página con pestañas independiente. Los usuarios pueden restringir las búsquedas con uno o más filtros predefinidos de tipo de tema, lenguaje o tecnología. De forma predeterminada, Buscar no utiliza ninguno de los filtros predefinidos. Solo se busca en los temas de las colecciones instaladas.  
   
@@ -48,7 +48,7 @@ El **Contenido** y el **Índice** ofrecen una funcionalidad y una interfaz con l
 Ayuda sobre la Ayuda (Ayuda de [!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer) vincula a los usuarios con la documentación sobre el Visor de ayuda, pero los temas se encuentran en una colección independiente de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para más información acerca del Visor de ayuda, seleccione **Ayuda sobre la Ayuda** en el menú Ayuda de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online y comunidades de SQL Server  
-La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece a los usuarios formas de ponerse en contacto con MSDN Online y con comunidades centradas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en la Web para obtener información. Puede hacer lo siguiente:  
+La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece a los usuarios formas de ponerse en contacto con MSDN Online y con comunidades centradas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en la Web para obtener información. Puede:  
   
 -   Obtener acceso a las comunidades de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde la página Cómo.  
   
@@ -58,7 +58,7 @@ La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofre
   
 1.  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], en el menú **Ayuda** , haga clic en **Cómo**.  
   
-2.  Se abrirá la página [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Cómo** . En la barra lateral de vínculos de comunidad, haga clic en el nombre del sitio de la comunidad al que desea obtener acceso.  
+2.  Se abrirá la página [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Cómo**. En la barra lateral de vínculos de comunidad, haga clic en el nombre del sitio de la comunidad al que desea obtener acceso.  
   
     > [!NOTE]  
     > El equipo que ejecute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe disponer de una conexión directa a Internet.  
@@ -75,7 +75,7 @@ La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofre
   
 4.  Si **Comunidad de Codezone** es uno de los buscadores que activa, en la lista **Comunidad de Codezone** , active y desactive los elementos adecuados.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>Para buscar en MSDN Online y en comunidades centradas en SQL Server desde la página Buscar  
   

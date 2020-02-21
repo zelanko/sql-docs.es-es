@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e377fc94559600a98ee2cd03daadd59a5f3c2eb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
-ms.translationtype: MTE75
+ms.openlocfilehash: 31e191772d7c58d5dc1573f941d6744ffa08aefe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500084"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190677"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo de conexión de SAP NetWeaver BI (SSRS)
   Para incluir en un informe datos de un origen de datos de SAP NetWeaver® Business Intelligence externo, debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Este tipo de origen de datos integrado está basado en la extensión de datos del proveedor de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 para [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "66500084"
 DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
- Para más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para más ejemplos de cadenas de conexión, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Credenciales  
@@ -37,7 +37,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos.  
   
- Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión &#40;generador de informes y SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar credenciales y la información de conexión de orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Consultas  
@@ -81,13 +81,13 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
 |**Propiedad**|**Tipo**|**Descripción o valor esperado**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**Objeto**|Especifica el valor de los datos del campo.|  
+|**Valor**|**Object**|Especifica el valor de los datos del campo.|  
 |**IsMissing**|**Boolean**|Indica si se ha encontrado el campo en el conjunto de datos resultante.|  
 |**FormattedValue**|**String**|Devuelve un valor con formato para una cifra clave.|  
 |**BackgroundColor**|**String**|Devuelve el color de fondo del campo, definido en la base de datos.|  
 |**Color**|**String**|Devuelve el color de primer plano del elemento, definido en la base de datos.|  
-|**Key**|**Objeto**|Devuelve la clave de un nivel.|  
-|**LevelNumber**|**Integer**|En jerarquías de elementos primarios y secundarios, devuelve el número de nivel o dimensión.|  
+|**Clave**|**Object**|Devuelve la clave de un nivel.|  
+|**LevelNumber**|**Entero**|En jerarquías de elementos primarios y secundarios, devuelve el número de nivel o dimensión.|  
 |**ParentUniqueName**|**String**|En jerarquías de elementos primarios y secundarios, devuelve el nombre completo del nivel primario.|  
 |**UniqueName**|**String**|Devuelve el nombre completo de un nivel. Por ejemplo, el valor **UniqueName** de un empleado podría ser *[0D_Company].[10D_Department].[11]* .|  
   
@@ -116,7 +116,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Proporciona información sobre las conexiones de datos y los orígenes de datos.  
   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

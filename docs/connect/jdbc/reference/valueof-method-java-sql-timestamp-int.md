@@ -1,5 +1,5 @@
 ---
-title: Método valueto (Java. SQL. timestamp, int) | Microsoft Docs
+title: Método valueOf (java.sql.Timestamp, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c13438851fdc543a3567abdc001af5b5b9e726fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001560"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>Método valueOf (java.sql.Timestamp, int)
@@ -39,7 +39,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
  El desplazamiento en minutos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un objeto DateTimeOffset que representa el punto en el tiempo proporcionado por el objeto Java. SQL. timestamp en el desplazamiento especificado, en minutos, de GMT.  
+ Devuelve un objeto DateTimeOffset que representa el punto en el tiempo proporcionado por el objeto java.sql.Timestamp en el desplazamiento especificado (en minutos) desde GMT.  
   
 ## <a name="see-also"></a>Consulte también  
  [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   

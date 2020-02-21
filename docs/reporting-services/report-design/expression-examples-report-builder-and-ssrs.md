@@ -24,14 +24,14 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68661341"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresiones (Generador de informes y SSRS)
-Las expresiones se usan con frecuencia en los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para controlar el contenido y la apariencia del informe. Las expresiones se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]y pueden usar funciones integradas, código personalizado, variables de informe y de grupo, y variables definidas por el usuario. Las expresiones comienzan con un signo igual (=). Para más información sobre el editor de expresiones y los tipos de referencias que se pueden incluir, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) y [Agregar una expresión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+Las expresiones se usan con frecuencia en los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para controlar el contenido y la apariencia del informe. Las expresiones se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y pueden usar funciones integradas, código personalizado, variables de informe y de grupo, y variables definidas por el usuario. Las expresiones comienzan con un signo igual (=). Para más información sobre el editor de expresiones y los tipos de referencias que se pueden incluir, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) y [Agregar una expresión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Cuando se habilita el espacio seguro para RDL, solo se pueden usar algunos tipos y miembros en el texto de la expresión en el tiempo de publicación del informe. Para más información, consulte [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
@@ -62,11 +62,11 @@ Para obtener ejemplos de expresiones para usos específicos, vea los siguientes 
   
 Para más información sobre las expresiones simples y complejas, dónde se pueden usar las expresiones y los tipos de referencias que se pueden incluir en una expresión, vea los temas en [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Para más información sobre el contexto donde se evalúan las expresiones para calcular agregados, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-Para aprender a escribir expresiones que usan muchas de las funciones y operadores que también se usan en los ejemplos de expresiones de este tema, pero en el contexto de la escritura de un informe, vea [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+Para aprender a escribir expresiones que usan muchas de las funciones y operadores que también se usan en los ejemplos de expresiones de este tema, pero en el contexto de la escritura de un informe, consulte el [Tutorial: Introducción a las expresiones](../../reporting-services/tutorial-introducing-expressions.md).  
 
   
-## <a name="functions"></a>Funciones  
- Muchas expresiones de un informe contienen funciones. Con estas funciones, se puede dar formato a los datos, aplicar lógica y obtener acceso a los metadatos del informe. Puede escribir expresiones que usen funciones de la biblioteca en tiempo de ejecución de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y desde los espacios de nombres <xref:System.Convert> y <xref:System.Math> . Puede agregar referencias a las funciones desde otros ensamblados o desde código personalizado. También puede usar clases desde [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], incluida <xref:System.Text.RegularExpressions>.  
+## <a name="functions"></a>Functions  
+ Muchas expresiones de un informe contienen funciones. Con estas funciones, se puede dar formato a los datos, aplicar lógica y obtener acceso a los metadatos del informe. Puede escribir expresiones que usen funciones de la biblioteca en tiempo de ejecución de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y desde los espacios de nombres <xref:System.Convert> y <xref:System.Math>. Puede agregar referencias a las funciones desde otros ensamblados o desde código personalizado. También puede usar clases desde [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], incluida <xref:System.Text.RegularExpressions>.  
   
 ##  <a name="VisualBasicFunctions"></a> Funciones de Visual Basic  
  Las funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] se pueden usar para manipular los datos que se muestran en los cuadros de texto o que se emplean en los parámetros, las propiedades u otras áreas del informe. En esta sección se ofrecen ejemplos de algunas de estas funciones. Para obtener más información, vea [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
@@ -120,7 +120,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   La función **Year** muestra el año correspondiente a una fecha determinada. Puede utilizarse para agrupar las fechas o para mostrar el año como etiqueta para un conjunto de fechas. Esta expresión proporciona el año correspondiente a un determinado grupo de fechas de pedidos de venta. También es posible utilizar la función **Month** y otras funciones para manipular las fechas. Para obtener más información, vea la documentación de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+-   La función **Year** muestra el año correspondiente a una fecha determinada. Puede utilizarse para agrupar las fechas o para mostrar el año como etiqueta para un conjunto de fechas. Esta expresión proporciona el año correspondiente a un determinado grupo de fechas de pedidos de venta. También es posible utilizar la función **Month** y otras funciones para manipular las fechas. Para obtener más información, consulte la documentación de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -214,7 +214,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     Con la expresión siguiente se obtiene el mismo valor que con la anterior, pero se usan miembros de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> en lugar de funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] :  
+     Con la expresión siguiente se obtiene el mismo valor que con la anterior, pero se usan miembros de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> en lugar de funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]:  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -233,7 +233,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
   
     ```  
   
--   La función **Regex** de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> son útiles para cambiar el formato de cadenas existente (por ejemplo, para dar formato a un número de teléfono). La expresión siguiente usa la función **Replace** para cambiar el formato de un número de teléfono de diez dígitos de un campo de "*nnn*-*nnn*-*nnnn*" a "(*nnn*) *nnn*-*nnnn*":  
+-   Las funciones **Regex** de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> son útiles para cambiar el formato de cadenas existente (por ejemplo, para dar formato a un número de teléfono). La expresión siguiente usa la función **Replace** para cambiar el formato de un número de teléfono de diez dígitos de un campo de "*nnn*-*nnn*-*nnnn*" a "(*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -242,7 +242,7 @@ Para aprender a escribir expresiones que usan muchas de las funciones y operador
     > [!NOTE]  
     >  Compruebe que el valor de Fields!Phone.Value no tiene espacios adicionales y es del tipo <xref:System.String>.  
   
-### <a name="lookup"></a>Lookup  
+### <a name="lookup"></a>Búsqueda  
   
 -   Al especificar un campo clave, puede usar la función **Lookup** para recuperar un valor de un conjunto de datos para una relación uno a uno (por ejemplo, un par clave-valor). En la expresión siguiente se muestra el nombre de producto de un conjunto de datos ("Producto"), según el identificador de producto con el que se va a realizar la coincidencia:  
   

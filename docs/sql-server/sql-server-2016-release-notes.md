@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632919"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76909855"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de la versión de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73632919"
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 incluye todas las actualizaciones acumulativas publicadas después de 2016 SP1, hasta e incluyendo CU8.
 
-- [![Centro de descarga de Microsoft](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [Descargar Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)
+- [![Centro de descarga de Microsoft](../includes/media/download2.png)](https://www.microsoft.com/download/details.aspx?id=56836) [Descargar SQL Server 2016 Service Pack 2 (SP2)](https://www.microsoft.com/download/details.aspx?id=56836)
 - Para obtener una lista completa de las actualizaciones, vea [Información de versión de Service Pack 2 de SQL Server de 2016](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information).
 
 La instalación de SQL Server 2016 SP2 puede requerir el reinicio después de la instalación. Como procedimiento recomendado, se aconseja planear y llevar a cabo un reinicio después de la instalación de SQL Server 2016 SP2.
@@ -99,7 +99,7 @@ Están disponibles las siguientes características en las ediciones Standard, We
 - Auditoría específica
 - OLTP en memoria (no disponible en Base de datos local)
 - Varios contenedores de secuencias de archivos (no disponibles en Base de datos local)
-- Particiones
+- Creación de particiones
 - PolyBase
 - Seguridad de nivel de fila
 
@@ -131,7 +131,7 @@ La instalación de SQL Server 2016 SP1 puede requerir el reinicio después de la
 - [Descargar Service Pack 1 para Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 (SP1) publicado](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
 - [Información de lanzamiento de SQL Server 2016 Service Pack 1](https://support.microsoft.com/kb/3182545)
-- ![info_tip](../sql-server/media/info-tip.png) [Centro de actualización de SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) para obtener vínculos e información de todas las versiones compatibles, incluidos los Service Packs de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
+- ![info_tip](../sql-server/media/info-tip.png) [Centro de actualización de SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) para obtener vínculos e información de todas las versiones compatibles, incluidos los Service Packs de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
@@ -141,10 +141,10 @@ La instalación de SQL Server 2016 SP1 puede requerir el reinicio después de la
 -   [Almacén de consultas (disponibilidad general)](#bkmk_ga_query_store)
 -   [Documentación del producto (disponibilidad general)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA)
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Requisito de instalación de revisión (GA)
 **Problema e impacto en el cliente:** Microsoft ha identificado un problema que afecta a los archivos binarios del Runtime de Microsoft VC++ 2013 que SQL Server 2016 instala como requisito previo. Hay disponible una actualización para corregir este problema. Si esta actualización de los archivos binarios en tiempo de ejecución de VC++ no se instala, puede que SQL Server 2016 experimente problemas de estabilidad en determinados escenarios. Antes de instalar SQL Server 2016, compruebe si el equipo necesita la revisión descrita en [KB 3164398](https://support.microsoft.com/kb/3164398). La revisión también está incluida en el [paquete de actualizaciones acumulativas 1 (CU1) para SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338).
 
-**Solución:** Pruebe una de estas soluciones:
+**Resolución:** Pruebe una de estas soluciones:
 
 - Instale [la actualización de Visual C++ 2013 y del paquete redistribuible de Visual C++ (KB 3138367)](https://support.microsoft.com/kb/3138367). KB es el método preferido. Puede instalarla antes o después de instalar SQL Server 2016.
 

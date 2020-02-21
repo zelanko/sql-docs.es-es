@@ -1,6 +1,7 @@
 ---
-title: Buscar, ver y administrar informes (Generador de informes y SSRS) | Microsoft Docs
-ms.date: 05/20/2019
+title: Búsqueda, visualización y administración de informes (Generador de informes y SSRS) | Microsoft Docs
+description: En el Generador de informes y Diseñador de informes, puede buscar informes paginados, orígenes de datos compartidos, modelos y otros elementos de informe relacionados.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492865"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258104"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Buscar, ver y administrar informes (Generador de informes y SSRS)
-  En el Generador de informes, puede examinar las carpetas en un servidor de informes o un sitio de SharePoint para buscar informes, orígenes de datos compartidos, modelos y otros elementos de informe relacionados, y examinar su equipo para buscar informes locales. Para que buscar informes sea más fácil, el Generador de informes cuenta con una lista de servidores y sitios utilizados recientemente, y proporciona acceso directo a las carpetas Escritorio, Mis documentos y Mi PC del sistema de archivos del equipo.  
+  En el Generador de informes, puede examinar las carpetas en un servidor de informes o un sitio de SharePoint para buscar informes paginados, orígenes de datos compartidos, modelos y otros elementos de informe relacionados, y examinar su equipo para buscar informes locales. Para que buscar informes sea más fácil, el Generador de informes cuenta con una lista de servidores y sitios utilizados recientemente, y proporciona acceso directo a las carpetas Escritorio, Mis documentos y Mi PC del sistema de archivos del equipo.  
   
  En el Diseñador de informes, también puede examinar su equipo para buscar informes locales. Después de implementar informes en un servidor de informes o un sitio de SharePoint, podrá examinar el servidor de informes utilizando el portal web o buscar en el sitio de SharePoint para encontrar informes. Los informes y elementos relacionados siguen estando disponibles localmente después de implementarse.  
   
@@ -85,7 +86,7 @@ Después de ejecutar un informe, puede exportarlo a otro formato, como [!INCLUDE
 |Opción|Resultado|  
 |------------|------------|  
 |Botón**Actualizar** de la ventana del explorador|Muestra el informe almacenado en la memoria caché de la sesión. Cuando un usuario abre un informe, se crea una memoria caché de la sesión. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa las sesiones del explorador para mantener una experiencia de visualización coherente mientras permanece abierto un informe.|  
-|![Botón para actualizar el explorador de la barra de herramientas de informes](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/browser-refresh-button-on-report-toolbar.png)|Al hacer clic en el botón **Actualizar** de la barra de herramientas de informes, el servidor de informes vuelve a ejecutar la consulta y actualiza los datos del informe si este se ejecuta a petición. Si el informe está almacenado en la memoria caché o es una instantánea, **Actualizar** muestra el informe almacenado en la base de datos del servidor de informes.|  
+|![Botón para actualizar el explorador de la barra de herramientas](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/browser-refresh-button-on-report-toolbar.png)|Al hacer clic en el botón **Actualizar** de la barra de herramientas de informes, el servidor de informes vuelve a ejecutar la consulta y actualiza los datos del informe si este se ejecuta a petición. Si el informe está almacenado en la memoria caché o es una instantánea, **Actualizar** muestra el informe almacenado en la base de datos del servidor de informes.|  
 |Combinación de teclas CTRL+F5|Produce el mismo efecto que hacer clic en el botón **Actualizar** de la barra de herramientas de informe.|  
   
   
@@ -141,7 +142,7 @@ Después de ejecutar un informe, puede exportarlo a otro formato, como [!INCLUDE
  [Vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  Describe cómo obtener una vista previa de los informes mientras se crean o actualizan.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guardar informes &#40;Generador de informes&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Generador de informes en SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  

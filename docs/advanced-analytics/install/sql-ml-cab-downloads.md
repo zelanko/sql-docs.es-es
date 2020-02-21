@@ -1,37 +1,46 @@
 ---
 title: Descarga de actualizaciones para la instalación sin conexión
-description: Descargue los archivos de paquete y CAB de R y Python para SQL Server Machine Learning Services y SQL Server 2016 R Services.
+description: Descargue los archivos CAB de Python y R para SQL Server Machine Learning Services. Estos archivos CAB contienen actualizaciones de la característica Machine Learning Services (Python y R) y se usan al instalar SQL Server en un servidor sin acceso a Internet.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e7266d90e04071c242145fc0df2e59ce86d86a16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727627"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776542"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Descargas de CAB para actualizaciones acumulativas de instancias de análisis en base de datos de SQL Server
+# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>Descargas de CAB para actualizaciones acumulativas de SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Las instancias de SQL Server que están configuradas para análisis en base de datos incluyen características de R y Python. Estas características se incluyen en archivos CAB, se instalan y prestan servicio a través de la configuración de SQL Server. En los dispositivos conectados a Internet, las actualizaciones de CAB se aplican normalmente a través de Windows Update. En los servidores desconectados, los archivos CAB deben descargarse y aplicarse manualmente. 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Descargue los archivos CAB de Python y R para SQL Server Machine Learning Services. Estos archivos CAB contienen actualizaciones de la característica Machine Learning Services (Python y R) y se usan al instalar SQL Server en un servidor sin acceso a Internet.
+::: moniker-end
 
-En este artículo se proporcionan vínculos de descarga a archivos CAB para cada actualización acumulativa. Para obtener más información sobres las instalaciones sin conexión, vea [Instalación de componentes de aprendizaje automático de SQL Server sin acceso a Internet](sql-ml-component-install-without-internet-access.md#apply-cu).
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+Descargue los archivos CAB de Python y R para SQL Server 2016 R Services. Estos archivos CAB contienen actualizaciones de la característica R Services y se usan al instalar SQL Server en un servidor sin acceso a Internet.
+::: moniker-end
+
+A continuación, encontrará vínculos de descarga a archivos CAB para cada actualización acumulativa. Para obtener más información sobres las instalaciones sin conexión, vea [Instalación de componentes de aprendizaje automático de SQL Server sin acceso a Internet](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Comience con una instalación de línea base.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Comience con una instalación de línea base. En SQL Server Machine Learning Services, la versión inicial es la instalación de línea base. 
+::: moniker-end
 
-+ En SQL Server Machine Learning Services, la versión inicial es la instalación de línea base. 
-+ En SQL Server 2016 R Services, puede comenzar con la versión inicial, SP1 o SP2. 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+Comience con una instalación de línea base.  En SQL Server 2016 R Services, puede comenzar con la versión inicial, SP1 o SP2. 
+::: moniker-end
 
-También puede aplicar las actualizaciones acumulativas a un servidor independiente.
+También puede aplicar las actualizaciones acumulativas.
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
@@ -39,7 +48,7 @@ También puede aplicar las actualizaciones acumulativas a un servidor independie
 
 Los archivos CAB se enumeran en orden cronológico inverso. Cuando descargue los archivos CAB y los transfiera al equipo de destino, colóquelos en una carpeta adecuada, como **Descargas** o la carpeta %temp% del usuario de instalación.
 
-|Versión  |Componente | Vínculo de descarga  | Problemas tratados | 
+|Release  |Componente | Vínculo de descarga  | Problemas tratados | 
 |---------|----------|----------------|------------------|
 |**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Los binarios del paquete están ahora firmados. |
@@ -94,7 +103,7 @@ Los archivos CAB se enumeran en orden cronológico inverso. Cuando descargue los
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -102,7 +111,7 @@ Los archivos CAB se enumeran en orden cronológico inverso. Cuando descargue los
 
 Para SQL Server 2016 R Services, las versiones de línea base son la versión RTM o una versión del Service Pack.
 
-|Versión  |Vínculo de descarga  |
+|Release  |Vínculo de descarga  |
 |---------|---------------|
 |**SQL Server 2016 SP2 CU6**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|

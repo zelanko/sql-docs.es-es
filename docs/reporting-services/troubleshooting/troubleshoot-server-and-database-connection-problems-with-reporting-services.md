@@ -1,6 +1,7 @@
 ---
-title: Solución de problemas de conexión de base de datos y servidor con Reporting Services | Microsoft Docs
-ms.date: 05/28/2019
+title: Solución de problemas de conexión de base de datos y servidor | Microsoft Docs
+description: Utilice este tema para solucionar los problemas que surjan durante la conexión a un servidor de informes. Este tema también proporciona información sobre los mensajes de "Error inesperado".
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eda9f349cf53d77af14df10c842c9619fb6d370a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c6d91ea5d1daf7d63c56ae84b2cf76d3ee82846c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403177"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243632"
 ---
-# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Solución de problemas de conexión de base de datos y servidor con Reporting Services
+# <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Solución de problemas de conexión de base de datos y servidor con Reporting Services
 Utilice este tema para solucionar los problemas que surjan durante la conexión a un servidor de informes. Este tema también proporciona información sobre los mensajes de "Error inesperado". Para obtener más información sobre la configuración del origen de datos y cómo configurar la información de conexión del servidor de informes, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) y [Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>No se puede crear una conexión al origen de datos 'nombreDelOrigenDeDatos'. (rsErrorOpeningConnection)  
@@ -28,7 +29,7 @@ El usuario no tiene permiso de acceso al origen de datos. Si utiliza una base de
 Este error se produce cuando se envían credenciales a través de varias conexiones de equipo. Si utiliza la autenticación de Windows y el protocolo Kerberos versión 5 no está habilitado, este error se producirá cuando se envíen las credenciales a través de más de una conexión de equipo. Para solucionar este error, considere la posibilidad de utilizar credenciales almacenadas o solicitadas. Para obtener más información sobre cómo solucionar este problema, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ### <a name="an-error-has-occurred-while-establishing-a-connection-to-the-server"></a>Error al establecer una conexión al servidor.  
-La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir la conexión con SQL Server). La instancia del motor de base de datos que hospeda la base de datos del servidor de informes devuelve este error. En la mayoría de los casos, este error se produce porque se detiene el servicio SQL Server. O, si utiliza SQL Server Express con Advanced Services o una instancia con nombre, este error se producirá si la dirección URL del servidor de informes o la cadena de conexión para la base de datos del servidor de informes no son correctas. Para solucionar estos problemas, haga lo siguiente:  
+La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor de canalizaciones con nombre; error: 40 - No se pudo abrir una conexión a SQL Server). La instancia del motor de base de datos que hospeda la base de datos del servidor de informes devuelve este error. En la mayoría de los casos, este error se produce porque se detiene el servicio SQL Server. O, si utiliza SQL Server Express con Advanced Services o una instancia con nombre, este error se producirá si la dirección URL del servidor de informes o la cadena de conexión para la base de datos del servidor de informes no son correctas. Para solucionar estos problemas, haga lo siguiente:  
   
 * Compruebe si el servicio SQL Server (**MSSQLSERVER**) se ha iniciado. En el equipo que hospeda la instancia del motor de base de datos, haga clic en Inicio, Herramientas administrativas, Servicios y desplácese hasta SQL Server (**MSSQLSERVER**). Si no se ha iniciado, haga clic con el botón derecho en el servicio, seleccione Propiedades, en Tipo de inicio seleccione Automático; y haga clic en Aplicar, en Iniciar y, después, en Aceptar.   
 * Compruebe que la dirección URL del servidor de informes y la cadena de conexión para la base de datos del servidor de informes son correctas. Si Reporting Services o el motor de base de datos se han instalado como una instancia con nombre, la cadena de conexión predeterminada que se cree durante la instalación incluirá el nombre de la instancia. Por ejemplo, si instala una instancia predeterminada de SQL Server Express con Advanced Services en un servidor denominado DEVSRV01, la dirección URL del portal web es DEVSRV01\Reports$SQLEXPRESS. Además, el nombre del servidor de bases de datos en la cadena de conexión se parecerá a DEVSRV01\SQLEXPRESS. Para obtener más información sobre las direcciones URL y cadenas de conexión de origen de datos para SQL Server Express, consulte [Reporting Services en SQL Server Express con Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Si desea comprobar la cadena de conexión para la base de datos del servidor de informes, inicie la herramienta de configuración de Reporting Services y vea la página Instalación de base de datos.  
@@ -59,7 +60,7 @@ No se puede conectar a \<nombre del servidor>. El proveedor de WMI de Reporting 
   
 Para resolver este error, debe reinstalar el software. En todos los demás casos, como solución temporal, puede conectarse al servidor de informes a través del extremo SOAP:  
   
-* En el cuadro de diálogo **Conectar con el servidor** de Management Studio, en **Nombre del servidor**, escriba la dirección URL del servidor de informes. De manera predeterminada, es `https://<your server name>/reportserver`. Si utiliza SQL Server 2008 Express con Advanced Services, es `https://<your server name>/reportserver$sqlexpress`.  
+* En el cuadro de diálogo **Conectar con el servidor** de Management Studio, en **Nombre del servidor**, escriba la dirección URL del servidor de informes. De forma predeterminada, es `https://<your server name>/reportserver`. Si utiliza SQL Server 2008 Express con Advanced Services, es `https://<your server name>/reportserver$sqlexpress`.  
   
 Para resolver el error de forma que pueda conectarse mediante el proveedor de WMI, debe ejecutar el programa de instalación para reparar Reporting Services o volver a instalar Reporting Services.  
   
@@ -76,7 +77,7 @@ Este error se produce cuando el servidor de informes no puede conectarse a la ba
   
 Este error también puede producirse si la instancia del motor de base de datos donde se hospeda la base de datos del servidor de informes no está configurada para las conexiones remotas. La conexión remota está habilitada de manera predeterminada en algunas ediciones de SQL Server. Para comprobar si está habilitada en la instancia de motor de base de datos de SQL Server que esté usando, ejecute la herramienta Administrador de configuración de SQL Server. Debe habilitar TCP/IP y canalizaciones con nombre. Un servidor de informes utiliza ambos protocolos. Para obtener instrucciones sobre la forma de habilitar conexiones remotas, consulte la sección "Configurar las conexiones remotas a la base de datos del servidor de informes" del artículo [Configurar un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-Si el error incluye el siguiente texto adicional, significa que la contraseña ha expirado en la cuenta utilizada para ejecutar la instancia del motor de base de datos: "An error has occurred while establishing a connection to the server (Se ha producido un error al establecer una conexión al servidor). When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not permit remote connections (La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada). (**provider: SQL Server Network Interfaces, error: 26 - Error Locating Server/Instance Specified)** ((proveedor: Interfaces de red de SQL Server, error: 26 Error al localizar el servidor/instancia especificado))". Para resolver este error, restablezca la contraseña.   
+Si el error incluye el siguiente texto adicional, significa que la contraseña ha expirado en la cuenta utilizada para ejecutar la instancia del motor de base de datos: "An error has occurred while establishing a connection to the server (Se ha producido un error al establecer una conexión al servidor). When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not permit remote connections (La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada). (**proveedor: Interfaces de red SQL Server, error: 26 - Error al buscar el servidor/instancia especificados)** ". Para resolver este error, restablezca la contraseña.   
   
 ## <a name="rpc-server-is-not-listening"></a>"El servidor RPC no está en línea"  
 El servicio del servidor de informes usa el servidor de llamadas a procedimiento remoto (RPC) para algunas operaciones. Si obtiene el error "El servidor RPC no está en línea", compruebe que el servicio del servidor de informes se está ejecutando.  

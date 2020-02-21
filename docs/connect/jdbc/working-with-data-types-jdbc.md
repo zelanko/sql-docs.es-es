@@ -1,5 +1,5 @@
 ---
-title: Trabajar con tipos de datos (JDBC) | Microsoft Docs
+title: Trabajo con tipos de datos (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f45b8fdf1fa0ef03bdb014ee3553d2e8bf23d29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 19d75051b03a3d6d966961e681e9ce9d70396e86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025701"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934441"
 ---
 # <a name="working-with-data-types-jdbc"></a>Trabajo con tipos de datos (JDBC)
 
@@ -36,8 +36,8 @@ En los temas de esta sección se describe cómo usar los tipos de datos del cont
 |-----------|-----------------|  
 |[Ejemplo de tipos de datos básicos](../../connect/jdbc/basic-data-types-sample.md)|Describe cómo usar los métodos captadores del conjunto de resultados para recuperar valores de tipos de datos básicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cómo usar los métodos de actualización del conjunto de resultados para actualizar dichos valores.|  
 |[Ejemplo de tipos de datos SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Describe cómo almacenar datos XML en una base de datos relacional, cómo recuperar datos XML desde una base de datos y cómo analizar datos XML con el tipo de datos Java de **SQLXML**.|  
-|[Ejemplo de tipos de datos espaciales](../../connect/jdbc/spatial-data-types-sample.md)|Describe cómo almacenar y recuperar datos con los tipos de datos espaciales ' Geometry ' y ' Geography ' de la base de datos con tipos de Java de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo **Geometry** y **Geography** definidos por Microsoft JDBC driver.|
+|[Ejemplo de tipos de datos espaciales](../../connect/jdbc/spatial-data-types-sample.md)|Describe cómo almacenar y recuperar datos con los tipos de datos espaciales "Geometry" y "Geography" de la base de datos con tipos de Java de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo **Geometry** y **Geography** definidos por Microsoft JDBC driver.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Aplicaciones de ejemplo del controlador JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  

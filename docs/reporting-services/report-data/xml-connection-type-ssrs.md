@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 599059c2820bd55132ed98525a60fa9ba6baeec7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 96049f3ec8f0cd79a25a57ab0467dff29053ee27
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594022"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190491"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexión XML (SSRS)
   Para incluir los datos de un origen de datos XML en el informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo XML. Este tipo de origen de datos integrado se basa en la extensión de datos XML. Utilice este tipo de origen de datos para conectarse y recuperar datos de documentos XML, servicios web o XML incrustado en la consulta.  
@@ -29,7 +29,7 @@ ms.locfileid: "73594022"
   
 |Tipo de documento XML|Ejemplo de cadena de conexión|  
 |-----------------------|-------------------------------|  
-|servicio web|`https://adventure-works.com/results.aspx`|  
+|Servicio web|`https://adventure-works.com/results.aspx`|  
 |Documento XML|`https://localhost/XML/Customers.xml`|  
 |Documento XML incrustado|*Vacía*|  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73594022"
   
  Las credenciales almacenadas o solicitadas no están admitidas. Recuerde que si deshabilita la seguridad integrada de Windows, no podrá usarla para recuperar datos. Si especifica credenciales almacenadas o solicitadas, se producirá un error en tiempo de ejecución.  
   
- Para obtener más información, vea [conexiones de datos, orígenes de datos y &#40;cadenas de conexión&#41; generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar información de credenciales y conexión para los orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Para más información, consulte [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ##  <a name="Query"></a> Consultas  
  Una consulta especifica qué datos se van a recuperar para un conjunto de datos de informe. Las columnas del conjunto de resultados de una consulta rellenan la colección de campos de un conjunto de datos. Un informe procesa solamente el primer conjunto de resultados recuperado por una consulta.  
@@ -79,7 +79,7 @@ ms.locfileid: "73594022"
   
          `-- or --`  
   
-         `<SoapAction>` *acción soap* `</SoapAction>`  
+         `<SoapAction>`*acción soap*`</SoapAction>`  
   
          Elementos XML opcionales:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73594022"
   
     -   **Origen de datos XML es un documento XML**  
   
-         Elementos XML obligatorios: Ninguno  
+         Elementos XML obligatorios: None  
   
          Elementos XML opcionales:  
   
@@ -113,9 +113,9 @@ ms.locfileid: "73594022"
   
          `<ElementPath IgnoreNamespaces="true">`  *ruta de acceso de elemento*  `</ElementPath>`  
   
- Para obtener más información sobre la sintaxis de las consultas, vea [Sintaxis de consulta &#40;XML&#41;para SSRs de datos de informe XML](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
+ Para más información sobre la sintaxis de consulta, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Para obtener ejemplos, vea la página en que se describe cómo [usar orígenes de datos XML y de servicio web en Reporting Services](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Para obtener ejemplos, vea [Reporting Services: uso de XML y orígenes de datos del servicio web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisitos para recuperar datos del servicio web XML  
  La extensión de procesamiento de datos XML no detecta el esquema de forma automática. Por tanto, debe tener alguna manera de determinar los métodos SOAP que recuperarán los datos que desea. También debe comprender el esquema de direcciones o el espacio de nombres que utiliza el servicio web para sus datos.  
@@ -156,7 +156,7 @@ ms.locfileid: "73594022"
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Proporciona información sobre las conexiones de datos y los orígenes de datos.  
   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

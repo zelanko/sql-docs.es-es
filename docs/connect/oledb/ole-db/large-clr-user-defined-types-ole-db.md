@@ -1,5 +1,5 @@
 ---
-title: Tipos definidos por el usuario CLR grandes (OLE DB) | Microsoft Docs
+title: Tipos definidos por el usuario de CLR de gran tamaño (OLE DB) | Microsoft Docs
 description: Tipos definidos por el usuario de CLR grandes (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 228054b56d6b26bf4439c01363d6cad24422f938
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015222"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos por el usuario de CLR grandes (OLE DB)
@@ -26,14 +26,14 @@ ms.locfileid: "68015222"
 
   En este tema, se describen los cambios realizados en el controlador OLE DB para SQL Server para admitir tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) grandes.  
   
- Para obtener más información sobre la compatibilidad con los UDT de CLR grandes en OLE DB controlador para SQL Server, consulte [tipos CLR grandes definidos por el usuario](../../oledb/features/large-clr-user-defined-types.md). Para obtener un ejemplo, vea [usar UDT &#40;de CLR&#41;de gran tamaño OLE DB](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Para más información sobre la compatibilidad con UDT de CLR de gran tamaño en OLE DB Driver for SQL Server, consulte [Tipos definidos por el usuario CLR de gran tamaño](../../oledb/features/large-clr-user-defined-types.md). Para ver un ejemplo, consulte [Uso de UDT de CLR de gran tamaño &#40;OLE DB&#41](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato de datos  
  El controlador OLE DB para SQL Server usa ~0 para representar la longitud de valores de tamaño ilimitado en tipos de objeto grandes (LOB). ~0 también representa el tamaño de UDT CLR superiores a 8.000 bytes.  
   
  En la tabla siguiente se muestra la asignación de tipos de datos en parámetros y conjuntos de filas:  
   
-|Tipo de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Valor|  
+|Tipos de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
 |UDT CLR|DBTYPE_UDT|BYTE[](matriz de bytes\)|132 (oledb.h)|  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68015222"
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Asignar tipo de datos en ITableDefinition::CreateTable  
  Cuando se necesitan columnas UDT, ITableDefinition::CreateTable usa esta información en estructuras **DBCOLUMNDESC**:  
   
-|Tipo de datos OLE DB (*wType*)|*pwszTypeName*|Tipo de datos de SQL Server|*rgPropertySets*|  
+|Tipo de datos de OLE DB (*wType*)|*pwszTypeName*|Tipos de datos de SQL Server|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
 |DBTYPE_UDT|Omitido|UDT|Debe incluir un conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68015222"
 |Tipo de parámetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|"DBTYPE_UDT"|*n*|no definido|no definido|clear|  
-|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|"DBTYPE_UDT"|~0|no definido|no definido|conjunto|  
+|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|"DBTYPE_UDT"|~0|no definido|no definido|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  La información que se proporciona en la estructura DBPARAMBINDINFO debe cumplir lo siguiente:  
@@ -77,7 +77,7 @@ ms.locfileid: "68015222"
 |Tipo de columna|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
 |DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT|*n*|NULL|NULL|Desactivar|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|~0|NULL|NULL|Establecer|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|~0|NULL|NULL|Set|DB_ALL_EXCEPT_LIKE|0|  
   
  También se definen las columnas siguientes para los UDT:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68015222"
 |Tipo de parámetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
 |DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT|*n*|~0|~0|Desactivar|  
-|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|~0|~0|~0|Establecer|  
+|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|~0|~0|~0|Set|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Conjunto de filas COLUMNS (conjuntos de filas de esquema)  
  Para los tipos UDT se devuelven los siguientes valores de columna:  
@@ -102,7 +102,7 @@ ms.locfileid: "68015222"
 |Tipo de columna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
 |DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT|Desactivar|*n*|  
-|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|Establecer|0|  
+|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|DBTYPE_UDT|Set|0|  
   
  También se definen las siguientes columnas adicionales para los UDT:  
   
@@ -139,7 +139,7 @@ ms.locfileid: "68015222"
 |3|Los datos se convierten de datos binarios a una cadena hexadecimal.|  
 |4|Puede producirse una validación cuando se usa **CreateAccessor** o **GetNextRows**. El error es DB_E_ERRORSOCCURRED. El estado del enlace se establece en DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
 |5|Puede utilizarse BY_REF.|  
-|6|Los parámetros UDT pueden enlazarse como DBTYPE_IUNKNOWN en DBBINDING. El enlace a DBTYPE_IUNKNOWN indica que la aplicación quiere procesar los datos como un flujo mediante la interfaz ISequentialStream. Cuando un consumidor especifica *wType* en un enlace como tipo DBTYPE_IUNKNOWN, y la columna o el parámetro de salida correspondiente del procedimiento almacenado es un UDT, OLE DB controlador para SQL Server devolverá ISequentialStream. Para un parámetro de entrada, OLE DB controlador para SQL Server consultará para la interfaz ISequentialStream.<br /><br /> En el caso de UDT grandes, puede decidir no enlazar la longitud de los datos UDT mientras utiliza el enlace DBTYPE_IUNKNOWN. Sin embargo, la longitud debe enlazarse en los UDT pequeños. Un parámetro DBTYPE_UDT puede especificarse como un UDT grande si se cumplen una o varias de las siguientes condiciones:<br />*ulParamParamSize* es ~ 0.<br />DBPARAMFLAGS_ISLONG está establecido en la estructura DBPARAMBINDINFO.<br /><br /> Para los datos de fila, el enlace DBTYPE_IUNKNOWN solamente se permite en los UDT grandes. Puede averiguar si una columna es un tipo UDT grande mediante el método IColumnsInfo:: GetColumnInfo en el conjunto de filas o la interfaz IColumnsInfo de un objeto de comando. Una columna DBTYPE_UDT es una columna UDT grande si se cumplen una o varias de las siguientes condiciones:<br />La marca DBCOLUMNFLAGS_ISLONG se establece en el miembro *dwFlags* de la estructura DBCOLUMNINFO. <br />el miembro *ulColumnSize* de DBCOLUMNINFO es ~ 0.|  
+|6|Los parámetros UDT pueden enlazarse como DBTYPE_IUNKNOWN en DBBINDING. El enlace a DBTYPE_IUNKNOWN indica que la aplicación quiere procesar los datos como un flujo mediante la interfaz ISequentialStream. Cuando un consumidor especifica *wType* en un enlace como un tipo DBTYPE_IUNKNOWN y la columna o el parámetro de salida correspondiente del procedimiento almacenado es un UDT, OLE DB Driver for SQL Server devolverá ISequentialStream. Si el parámetro es de entrada, OLE DB Driver for SQL Server consultará la interfaz ISequentialStream.<br /><br /> En el caso de UDT grandes, puede decidir no enlazar la longitud de los datos UDT mientras utiliza el enlace DBTYPE_IUNKNOWN. Sin embargo, la longitud debe enlazarse en los UDT pequeños. Un parámetro DBTYPE_UDT puede especificarse como un UDT grande si se cumplen una o varias de las siguientes condiciones:<br />*ulParamParamSize* es ~0.<br />DBPARAMFLAGS_ISLONG está establecido en la estructura DBPARAMBINDINFO.<br /><br /> Para los datos de fila, el enlace DBTYPE_IUNKNOWN solamente se permite en los UDT grandes. Puede averiguar si una columna es un tipo UDT de gran tamaño con el método IColumnsInfo::GetColumnInfo en un conjunto de filas o la interfaz IColumnsInfo del objeto Command. Una columna DBTYPE_UDT es una columna UDT grande si se cumplen una o varias de las siguientes condiciones:<br />La marca DBCOLUMNFLAGS_ISLONG se establece en el miembro *dwFlags* de la estructura DBCOLUMNINFO. <br />El miembro *ulColumnSize* de DBCOLUMNINFO es ~0.|  
   
  DBTYPE_NULL y DBTYPE_EMPTY pueden enlazarse en parámetros de entrada, pero no en parámetros de salida ni en resultados. Cuando se enlazan en parámetros de entrada, el estado debe establecerse en DBSTATUS_S_ISNULL para DBTYPE_NULL o DBSTATUS_S_DEFAULT para DBTYPE_EMPTY. DBTYPE_BYREF no puede utilizarse con DBTYPE_NULL ni con DBTYPE_EMPTY.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68015222"
   
 |Versión del cliente|DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|  
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------|  
-|Resultado de|UDT|varbinary(max)|  
+|SQL Server 2005|UDT|varbinary(max)|  
 |SQL Server 2008 y posterior|UDT|UDT|  
   
  Cuando **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) se establece en "80", los tipos UDT grandes se muestran a los clientes del mismo modo que se muestran a los clientes de nivel inferior.  

@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653311"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75325438"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: ingerir datos en un grupo de datos de SQL Server con Transact-SQL
 
@@ -37,7 +37,7 @@ En este tutorial, aprenderá a:
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Crear una tabla externa en el grupo de datos
@@ -48,7 +48,7 @@ En los pasos siguientes, crearemos una tabla externa en el grupo de datos llamad
 
 1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
 
-   ![Consulta de la instancia maestra de SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
+   ![Consultar una instancia maestra de SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
 1. Ejecute el siguiente comando de Transact-SQL para cambiar el contexto de la base de datos **Ventas** de la instancia maestra.
 
@@ -77,8 +77,8 @@ En los pasos siguientes, crearemos una tabla externa en el grupo de datos llamad
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. En CTP 3.1, la creación del grupo de datos es asincrónica, pero aún no se puede determinar cuándo se ha completado. Espere dos minutos para asegurarse de que se haya creado el grupo de datos antes de continuar.
+
+La creación de la tabla externa del grupo de datos es una operación de bloqueo. El control se devuelve cuando se ha creado la tabla especificada en todos los nodos del grupo de datos de back-end. Si se produce un error durante la operación de creación, se devuelve un mensaje de error al autor de la llamada.
 
 ## <a name="load-data"></a>Cargar datos
 

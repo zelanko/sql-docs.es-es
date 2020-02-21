@@ -1,20 +1,21 @@
 ---
 title: Ingestión de datos con trabajos de Spark
-titleSuffix: SQL Server big data clusters
-description: En este tutorial se muestra cómo ingerir datos en el grupo de datos de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] mediante trabajos de Spark en Azure Data Studio.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: shivsood
-ms.date: 08/21/2019
+titleSuffix: SQL Server Big Data Clusters
+description: En este tutorial, se muestra cómo ingerir datos en el grupo de datos de un clúster de macrodatos de SQL Server con trabajos de Spark en Azure Data Studio.
+author: rajmera3
+ms.author: raajmera
+ms.reviewer: mikeray
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119195"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776548"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingestión de datos en un grupo de datos de SQL Server con trabajos de Spark
 
@@ -37,7 +38,7 @@ En este tutorial, aprenderá a:
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Crear una tabla externa en el grupo de datos
@@ -49,6 +50,23 @@ Siga este procedimiento para crear una tabla externa en el grupo de datos denomi
 1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
 
    ![Consultar una instancia maestra de SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
+
+1. Cree permisos para el conector MSSQL-Spark.
+   ```sql
+   USE Sales
+   CREATE LOGIN sample_user  WITH PASSWORD ='password123!#' 
+   CREATE USER sample_user FROM LOGIN sample_user
+
+   -- To create external tables in data pools
+   GRANT ALTER ANY EXTERNAL DATA SOURCE TO sample_user;
+
+   -- To create external table
+   GRANT CREATE TABLE TO sample_user;
+   GRANT ALTER ANY SCHEMA TO sample_user;
+
+   ALTER ROLE [db_datareader] ADD MEMBER sample_user
+   ALTER ROLE [db_datawriter] ADD MEMBER sample_user
+   ```
 
 1. Cree un origen de datos externo al grupo de datos (si aún no existe).
 
@@ -74,8 +92,15 @@ Siga este procedimiento para crear una tabla externa en el grupo de datos denomi
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. En CTP 3.1, la creación del grupo de datos es asincrónica, pero aún no se puede determinar cuándo se ha completado. Espere dos minutos para asegurarse de que se haya creado el grupo de datos antes de continuar.
+   
+1. Cree un inicio de sesión para los grupos de datos y proporcione permisos al usuario.
+   ```sql 
+   EXECUTE( ' Use Sales; CREATE LOGIN sample_user  WITH PASSWORD = ''password123!#'' ;') AT  DATA_SOURCE SqlDataPool;
+
+   EXECUTE('Use Sales; CREATE USER sample_user; ALTER ROLE [db_datareader] ADD MEMBER sample_user;  ALTER ROLE [db_datawriter] ADD MEMBER sample_user;') AT DATA_SOURCE SqlDataPool;
+   ```
+   
+La creación de la tabla externa del grupo de datos es una operación de bloqueo. El control se devuelve cuando se ha creado la tabla especificada en todos los nodos del grupo de datos de back-end. Si se produce un error durante la operación de creación, se devuelve un mensaje de error al autor de la llamada.
 
 ## <a name="start-a-spark-streaming-job"></a>Iniciar un trabajo de streaming de Spark
 
@@ -125,14 +150,14 @@ El paso siguiente es crear un trabajo de streaming de Spark que cargue datos de 
                   .option("dataPoolDataSource",datasource_name).save()
                }.start()
 
-      query.processAllAvailable()
       query.awaitTermination(40000)
+      query.stop()
       ```
 ## <a name="query-the-data"></a>Consultar los datos
 
 En los pasos siguientes, se muestra que el trabajo de streaming de Spark ha cargado los datos de HDFS en el grupo de datos.
 
-1. Antes de consultar los datos ingeridos, examine el estado de la ejecución de Spark, incluidos el identificador de aplicación de Yarn, la interfaz de usuario de Spark y los registros de controlador.
+1. Antes de consultar los datos ingeridos, examine el estado de la ejecución de Spark, incluidos el identificador de aplicación de Yarn, la interfaz de usuario de Spark y los registros de controlador. Esta información se mostrará en el cuaderno la primera vez que inicie la aplicación de Spark.
 
    ![Detalles de la ejecución de Spark](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 

@@ -1,10 +1,7 @@
 ---
-title: Agrupar filas en los resultados de la consulta (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Agrupar filas en los resultados de la consulta
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +11,18 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3208a3458098b85325a19c014d99bca3b4f05c4d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254477"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247197"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Agrupar filas en los resultados de la consulta (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Si desea crear subtotales o mostrar otra información de resumen para los subconjuntos de una tabla, debe crear grupos mediante una consulta de funciones agregadas. Cada grupo resume los datos para todas las filas de la tabla que tienen el mismo valor.  
   
@@ -71,7 +72,7 @@ El resultado de la consulta podría tener el siguiente aspecto:
   
 5.  En la celda de cuadrícula **Agrupar por** de la columna que se va a agregar, seleccione la función de agregado correspondiente.  
   
-    El Diseñador de consultas y vistas asigna automáticamente un alias a la columna que va a resumir. Puede sustituir este alias generado automáticamente por otro más significativo. Para más detalles, consulte [Crear alias de columna (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
+    El Diseñador de consultas y vistas asigna automáticamente un alias a la columna que va a resumir. Puede sustituir este alias generado automáticamente por otro más significativo. Para más detalles, consulte [Crear alias de columna](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
     ![Agregar un alias de columna al conjunto de resultados de la consulta](../../ssms/visual-db-tools/media/dv3w9e3.gif "Agregar un alias de columna al conjunto de resultados de la consulta")  
   
@@ -84,5 +85,5 @@ El resultado de la consulta podría tener el siguiente aspecto:
     ```  
   
 ## <a name="see-also"></a>Consulte también  
-[Ordenar y agrupar los resultados de una consulta (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Ordenar y agrupar los resultados de la consulta](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

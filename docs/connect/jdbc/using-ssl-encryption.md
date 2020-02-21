@@ -11,10 +11,10 @@ ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f769e35477d564365df702bd768ac1953c7affa
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71712971"
 ---
 # <a name="using-encryption"></a>Uso de cifrado
@@ -32,7 +32,7 @@ Al habilitar el cifrado TLS aumenta la seguridad de los datos que se transmiten 
 En los temas de esta sección se describe cómo la versión del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite el cifrado TLS, incluidas las nuevas propiedades de conexión, y cómo se puede configurar el almacén de confianza en el lado cliente.  
   
 > [!NOTE]  
-> Se recomienda la propiedad de conexión **hostNameInCertificate** para validar un certificado TLS.  
+> Se recomienda usar la propiedad de conexión **hostNameInCertificate** para validar un certificado TLS.  
 
 ## <a name="in-this-section"></a>En esta sección  
 
@@ -42,6 +42,6 @@ En los temas de esta sección se describe cómo la versión del [!INCLUDE[jdbcNo
 | [Conexión con cifrado](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Describe cómo conectarse a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con las nuevas propiedades de conexión específicas de TLS. |
 | [Configuración del cliente para el cifrado](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Describe cómo configurar el almacén de confianza predeterminado del lado cliente y cómo importar un certificado privado al almacén de confianza del equipo cliente.   |
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

@@ -1,10 +1,9 @@
 ---
-title: Especificar la ubicación de un servidor de destino | Microsoft Docs
-ms.custom: ''
+title: Especificación de la ubicación de un servidor de destino
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +12,17 @@ helpviewer_keywords:
 ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 99c67c3d0e3afbda0c05e3feb3ed1e0d6951f870
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: ad1eb886c611da105be9c999d8ebc323edb9eb6d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552471"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245801"
 ---
-# <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>Especificar la ubicación de un servidor de destino (SQL Server Management Studio)
+# <a name="specify-a-target-server39s-location"></a>Especificación de la ubicación de un servidor de destino
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -36,7 +37,7 @@ La realización de esta acción modifica el Registro. No se recomienda la modifi
   
 ### <a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permisos  
 Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  

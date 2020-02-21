@@ -1,6 +1,6 @@
 ---
-title: Usar sqlcmd con variables de script | Microsoft Docs
-ms.custom: ''
+title: Usar sqlcmd con variables de script
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.technology: scripting
@@ -18,18 +18,18 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142fd6bdd0ceb39003aba5c8ec8131c9df6427dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262858"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761619"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - Usar sqlcmd con variables de script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Las variables que se usan en scripts se denominan variables de scripting. Las variables de scripting posibilitan el uso de un script en varias situaciones. Por ejemplo, si desea ejecutar un script en varios servidores, en lugar de modificar el script para cada servidor, puede usar una variable de scripting para el nombre del servidor. Al cambiar el nombre del servidor proporcionado a la variable de scripting, el mismo script puede ejecutarse en diferentes servidores.  
   
- Las variables de scripting pueden definirse explícitamente mediante el comando **setvar** o implícitamente mediante la opción **sqlcmd-v** .  
+ Las variables de scripting pueden definirse explícitamente mediante el comando **setvar** o implícitamente mediante la opción **sqlcmd -v**.  
   
  Además, en este tema se proporcionan ejemplos en los que se definen variables de entorno en el símbolo del sistema Cmd.exe mediante **SET**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68262858"
   
 3.  Shell de comandos (**SET X=Y**) establecido en el símbolo del sistema antes de iniciar **sqlcmd**  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd -v** X=Y  
   
 5.  **:Setvar** X Y  
   
@@ -119,9 +119,9 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDLOGINTIMEOUT      | -l             | L/E | "8" (segundos)           |
 | SQLCMDSTATTIMEOUT       | -T             | L/E | "0" = esperar indefinidamente |
 | SQLCMDHEADERS           | -H             | L/E | "0"                     |
-| SQLCMDCOLSEP            | -S             | L/E | "                     |
+| SQLCMDCOLSEP            | -S             | L/E | " "                     |
 | SQLCMDCOLWIDTH          | -w             | L/E | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
+| SQLCMDPACKETSIZE        | -a             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | L/E | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | L/E | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | L/E | "0" = ilimitado         |
@@ -332,7 +332,7 @@ C:\> sqlcmd
   
 ## <a name="see-also"></a>Consulte también  
  [Usar la utilidad sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   
  [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -5,24 +5,24 @@ ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: cc35ec6b40e50f2fd2c89e0caf42163a94767d1f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 937e84c055f7da690542c7e74bb2abd036427ab1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452362"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250979"
 ---
 # <a name="overview-of-the-sqlclient-driver"></a>Información general sobre el controlador SqlClient
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Descargar ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
- El proveedor de datos SqlClient de Microsoft para SQL Server es un .NET Framework y un proveedor de datos .NET Core que se usa para conectarse a una base de datos, ejecutar comandos y recuperar resultados.  
+ El proveedor de datos SqlClient de Microsoft para SQL Server es un proveedor de datos de .NET Framework y .NET Core que se usa para conectarse a una base de datos, ejecutar comandos y recuperar resultados.  
   
  En los temas de esta sección se proporciona información general sobre el controlador SqlClient.
   
@@ -30,7 +30,7 @@ ms.locfileid: "72452362"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Introducción al espacio de nombres Microsoft.Data.SqlClient](introduction-microsoft-data-sqlclient-namespace.md)|Página de introducción del espacio de nombres Microsoft. Data. SqlClient.|  
+|[Introducción al espacio de nombres Microsoft.Data.SqlClient](introduction-microsoft-data-sqlclient-namespace.md)|Página de introducción al espacio de nombres Microsoft.Data.SqlClient.|  
 |[Descarga del proveedor de datos SqlClient de Microsoft para SQL Server](download-microsoft-sqlclient-data-provider.md)|Página de descarga de ADO.NET y el proveedor de datos SqlClient de Microsoft para SQL Server.|  
 |[Ciclo de vida de soporte del controlador SqlClient](sqlclient-driver-support-lifecycle.md)|Página que contiene información del ciclo de vida de soporte técnico.|  
 |[Búsqueda de información adicional del controlador SqlClient](find-additional-sqlclient-driver-information.md)|Página que contiene información útil sobre el controlador.|  

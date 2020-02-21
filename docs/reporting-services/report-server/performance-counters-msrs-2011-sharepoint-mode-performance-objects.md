@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892222"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Contadores de rendimiento de objetos de rendimiento de modo de SharePoint MSRS 2011
@@ -119,7 +119,7 @@ ms.locfileid: "68892222"
 |**Total de actualizaciones de instantánea**|Número total de actualizaciones de instantánea de ejecución de informes.|  
   
 ##  <a name="bkmk_powershell"></a> Usar cmdlets de PowerShell para devolver listas  
- ![Contenido relacionado con PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")El script de Windows PowerShell siguiente devolverá los conjuntos de contadores en los que CounterSetName comienza con "msr".  
+ ![Contenido relacionado con PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell")El script de Windows PowerShell siguiente devolverá los conjuntos de contadores en los que CounterSetName comienza con "msr".  
   
 ```  
 get-counter -listset msr*  

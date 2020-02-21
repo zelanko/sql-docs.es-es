@@ -1,5 +1,5 @@
 ---
-title: Analizando los resultados | Microsoft Docs
+title: Análisis de los resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,23 +12,23 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 127c97ec155ef1e19df4103b12a6e10b8b67fe74
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027862"
 ---
 # <a name="parsing-the-results"></a>Análisis de los resultados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-En este artículo se describe cómo SQL Server espera que los usuarios procesen por completo los resultados devueltos de cualquier consulta.
+En este artículo se describe cómo espera SQL Server que los usuarios procesen completamente los resultados devueltos de cualquier consulta.
 
 ## <a name="update-counts-and-result-sets"></a>Recuentos de actualizaciones y conjuntos de resultados
 
-En esta sección se explican los dos resultados más comunes devueltos por SQL Server: recuento de actualizaciones y conjunto de resultados. En general, cualquier consulta que ejecute un usuario hará que se devuelva uno de estos resultados; se espera que los usuarios controlen ambos al procesar los resultados.
+En esta sección se tratarán los dos resultados más habituales que devuelve SQL Server: recuento de actualizaciones y ResultSet. En general, cualquier consulta que ejecute un usuario hará que se devuelva uno de estos resultados; se espera que los usuarios administren ambos al procesarlos.
 
-El código siguiente es un ejemplo de cómo un usuario puede recorrer en iteración todos los resultados del servidor:
+En siguiente código es un ejemplo de cómo podría un usuario recorrer en iteración todos los resultados del servidor:
 ```java
 try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
     boolean resultsAvailable = statement.execute(USER_SQL);
@@ -48,9 +48,9 @@ try (Connection connection = DriverManager.getConnection(URL); Statement stateme
 ```
 
 ## <a name="exceptions"></a>Excepciones
-Cuando se ejecuta una instrucción que genera un error o un mensaje informativo, SQL Server responderá de manera diferente en función de si puede generar un plan de ejecución. El mensaje de error se puede iniciar inmediatamente después de la ejecución de la instrucción o podría requerir un conjunto de resultados independiente. En el último caso, las aplicaciones deben analizar el conjunto de resultados para recuperar la excepción.
+Al ejecutar una instrucción que produce un error o un mensaje informativo, SQL server responderá de forma diferente dependiendo de si puede generar un plan de ejecución. Se puede generar un mensaje de error inmediatamente después de la ejecución de instrucciones o podría requerir un conjunto de resultados independiente. En el último caso, las aplicaciones deben analizar el conjunto de resultados para recuperar la excepción.
 
-Cuando SQL Server no puede generar un plan de ejecución, la excepción se produce inmediatamente.
+Cuando SQL Server no puede generar un plan de ejecución, se inicia la excepción inmediatamente.
 
 ```java
 String SQL = "SELECT * FROM nonexistentTable;";
@@ -61,7 +61,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Cuando SQL Server devuelve un mensaje de error en un conjunto de resultados, el conjunto de resultados debe procesarse para recuperar la excepción.
+Cuando SQL Server devuelve un mensaje de error en un conjunto de resultados, dicho conjunto debe procesarse para recuperar la excepción.
 
 ```java
 String SQL = "SELECT 1/0;";
@@ -78,7 +78,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Si la ejecución de la instrucción genera varios conjuntos de resultados, cada conjunto de resultados debe procesarse hasta que se alcance el que tiene la excepción.
+Si la ejecución de instrucciones genera varios conjuntos de resultados, cada uno de ellos debe procesarse hasta alcanzarse el que tiene la excepción.
 
 ```java
 String SQL = "SELECT 1; SELECT * FROM nonexistentTable;";
@@ -99,9 +99,9 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-En el caso de `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, se produce una excepción inmediatamente `execute()` en `SELECT 1` y no se ejecuta en absoluto.
+En el caso de `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, se inicia la excepción inmediatamente en `execute()` y `SELECT 1` no se ejecuta en absoluto.
 
-Si el error de SQL Server tiene una gravedad `0` de `9`a, se considera un mensaje informativo y se devuelve `SQLWarning`como.
+Si el error de SQL Server tiene una gravedad de `0` a `9`, se considera un mensaje informativo y se devuelve como `SQLWarning`.
 
 ```java
 String SQL = "RAISERROR ('WarningLevel5', 5, 2);";
@@ -112,6 +112,6 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)

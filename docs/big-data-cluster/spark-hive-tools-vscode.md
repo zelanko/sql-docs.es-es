@@ -1,20 +1,21 @@
 ---
-title: Ejecución de trabajos de Spark con Spark & Hive Tools para VS Code en un clúster de macrodatos de SQL Server
-titleSuffix: SQL Server big data clusters
+title: 'Ejecutar trabajos: Herramientas de Spark y Hive para VS Code'
+titleSuffix: SQL Server Big Data Clusters
 description: Envíe trabajos de Spark con Spark & Hive Tools para Visual Studio Code en un clúster de macrodatos de SQL Server.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653728"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255918"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Envío de trabajos de Spark en un clúster de macrodatos de SQL Server en Visual Studio Code
 
@@ -23,7 +24,7 @@ Obtenga información sobre cómo usar Spark & Hive Tools para Visual Studio Code
 Spark & Hive Tools se puede instalar en las plataformas compatibles con Visual Studio Code, que son Windows, Linux y macOS. A continuación, encontrará los requisitos previos para las diferentes plataformas.
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Los elementos siguientes son necesarios para completar los pasos indicados en este artículo:
 
@@ -173,9 +174,9 @@ Para enviar consultas de PySpark interactivas, siga este procedimiento:
 
 ## <a name="apache-livy-configuration"></a>Configuración de Apache Livy
 
-Se admite la configuración de [Apache Livy](https://livy.incubator.apache.org/), que puede configurarse en el archivo **.VSCode\settings.json** de la carpeta del área de trabajo. Actualmente, la configuración de Livy solo admite scripts de Python. Para obtener más información, vea [Livy README](https://github.com/cloudera/livy/blob/master/README.rst ) (LÉAME de Livy).
+Se admite la configuración de [Apache Livy](https://livy.incubator.apache.org/), que puede configurarse en el archivo **.VSCode\settings.json** de la carpeta del área de trabajo. En la actualidad, la configuración de Livy solo admite el script de Python. Para obtener más información, vea [Livy README](https://github.com/cloudera/livy/blob/master/README.rst ) (LÉAME de Livy).
 
-### <a id="triggerlivyconf"></a>**Procedimiento para desencadenar la configuración de Livy**
+### <a id="triggerlivyconf"></a>**Cómo activar la configuración de Livy**
 
 #### <a name="method-1"></a>Método 1
 
@@ -200,7 +201,7 @@ Envíe un archivo; la carpeta `.vscode` se agregará automáticamente a la carpe
 
 **Cuerpo de la solicitud**
 
-| NAME | description | Tipo |
+| name | description | type |
 | :- | :- | :- |
 | archivo | Archivo que contiene la aplicación que se ejecutará | ruta (obligatorio) |
 | proxyUser | Usuario que se suplantará al ejecutar el trabajo | string |
@@ -210,22 +211,22 @@ Envíe un archivo; la carpeta `.vscode` se agregará automáticamente a la carpe
 | pyFiles | Archivos de Python que se usarán en esta sesión | Lista de cadenas |
 | files | Archivos que se usarán en esta sesión | Lista de cadenas |
 | driverMemory | Cantidad de memoria que se usará para el proceso del controlador | string |
-| driverCores | Número de núcleos que se usarán para el proceso del controlador | INT |
+| driverCores | Número de núcleos que se usarán para el proceso del controlador | int |
 | executorMemory | Cantidad de memoria que se usará por proceso de ejecutor | string |
-| executorCores | Número de núcleos que se usará para cada ejecutor | INT |
-| numExecutors | Número de ejecutores que se iniciarán para esta sesión | INT |
+| executorCores | Número de núcleos que se usará para cada ejecutor | int |
+| numExecutors | Número de ejecutores que se iniciarán para esta sesión | int |
 | archives | Archivos que se usarán en esta sesión | Lista de cadenas |
 | cola | Nombre de la cola de YARN al que se realizará el envío | string |
-| NAME | Nombre de esta sesión | string |
+| name | Nombre de esta sesión | string |
 | conf | Propiedades de configuración de Spark | Mapa de clave=valor |
 
 #### <a name="response-body"></a>Cuerpo de la respuesta
 
 Objeto por lotes creado.
 
-| NAME | description | Tipo |
+| name | description | type |
 | :- | :- | :- |
-| id | Identificador de la sesión | INT |
+| id | Identificador de la sesión | int |
 | appId | Identificador de aplicación de esta sesión | String |
 | appInfo | Información detallada sobre la aplicación | Mapa de clave=valor |
 | log | Líneas de registro | lista de cadenas |

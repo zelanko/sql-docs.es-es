@@ -1,5 +1,5 @@
 ---
-title: Creación de la dirección URL de conexión | Microsoft Docs
+title: Generar URL de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028452"
 ---
 # <a name="building-the-connection-url"></a>Generar URL de conexión
@@ -40,7 +40,7 @@ ms.locfileid: "69028452"
 -   **property** (opcional) es una o más propiedades de conexión de la opción. Para obtener más información, vea [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md). Se puede especificar cualquier propiedad de la lista. Las propiedades solo se pueden delimitar mediante punto y coma (";") y no se pueden duplicar.  
   
 > [!CAUTION]  
->  Por motivos de seguridad, debe evitar la generación de direcciones URL de conexión basadas en la entrada del usuario. Debe especificar solo el nombre del servidor y el controlador de la URL. Para los valores de nombre y contraseña, utilice las colecciones de propiedades de conexión. Para obtener más información sobre la seguridad en las aplicaciones JDBC, consulte [proteger aplicaciones de controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
+>  Por motivos de seguridad, debe evitar la generación de direcciones URL de conexión basadas en la entrada del usuario. Debe especificar solo el nombre del servidor y el controlador de la URL. Para los valores de nombre y contraseña, utilice las colecciones de propiedades de conexión. Para obtener más información acerca de la seguridad de las aplicaciones JDBC, consulte [Proteger las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
   
 ## <a name="connection-examples"></a>Ejemplos de conexión  
  Conexión a la base de datos predeterminada del equipo local con un nombre de usuario y una contraseña:  
@@ -73,7 +73,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Instancias de SQL Server múltiples y con nombre  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite la instalación de varias instancias de base de datos por servidor. Cada instancia se identifica con un nombre concreto. Para conectarse a una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar el número de puerto de la instancia con nombre (opción preferida) o bien el nombre de instancia como propiedad de URL de JDBC o propiedad **datasource**. Si no se especifica ningún nombre de instancia o propiedad de número de puerto, se crea una conexión a la instancia predeterminada. Vea los ejemplos siguientes:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite la instalación de varias instancias de base de datos por servidor. Cada instancia se identifica con un nombre concreto. Para conectarse a una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar el número de puerto de la instancia con nombre (opción preferida) o bien el nombre de instancia como propiedad de URL de JDBC o propiedad **datasource**. Si no se especifica ningún nombre de instancia o propiedad de número de puerto, se crea una conexión a la instancia predeterminada. Consulte los siguientes ejemplos:  
   
  Para usar un número de puerto, haga lo siguiente:  
   
@@ -96,9 +96,9 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  Los archivos sqljdbc_auth.dll se instalan en la siguiente ubicación:  
   
- \<*Directorio de instalación*>\<*idioma*de la*versión*>\\<de \sqljdbc_ > \auth\  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
   
- Para cualquier sistema operativo compatible con, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]consulte uso de la [autenticación integrada de Kerberos para conectarse a SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) para obtener una descripción de una [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] característica agregada en que permita a una aplicación conectarse a una base de datos mediante la integración de autenticación con Kerberos de tipo 4.  
+ Para cualquier sistema operativo compatible con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], consulte [Empleo de autenticación integrada de Kerberos para conectar con SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) para obtener una descripción de una característica agregada en [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] que permita a una aplicación conectarse a una base de datos con la autenticación integrada con Kerberos de tipo 4.  
   
 > [!NOTE]  
 >  Si está ejecutando una máquina virtual Java de (JVM, Java Virtual Machine) 32 bits, utilice el archivo sqljdbc_auth.dll en la carpeta x86, aun cuando la versión del sistema operativo sea la x64. Si está ejecutando una JVM de 64 bits en un procesador x64, utilice el archivo sqljdbc_auth.dll de la carpeta x64.  
@@ -122,7 +122,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

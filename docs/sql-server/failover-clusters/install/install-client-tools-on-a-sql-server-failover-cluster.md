@@ -1,7 +1,7 @@
 ---
-title: Instalar las herramientas de cliente en un clúster de conmutación por error de SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Instalación de herramientas de cliente: clúster de conmutación por error'
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 359548f6315535e324158cdecd015c1c03266d7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4918cdbb99a49bf577f9efad19ed0360c9a4911
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063945"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230499"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Instalar las herramientas de cliente en un clúster de conmutación por error de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68063945"
   
 ## <a name="installation-procedures"></a>Procedimientos de instalación  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-using-the-setup-user-interface"></a>Instalar las Herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando la interfaz de usuario del programa de instalación  
+#### <a name="installing-ssnoversion-client-tools-using-the-setup-user-interface"></a>Instalar las Herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando la interfaz de usuario del programa de instalación  
   
 1.  Inserte el medio de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . En la carpeta de instalación raíz, haga doble clic en Setup.exe. Para realizar la instalación desde el recurso compartido de red, localice la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68063945"
   
 5.  En la página **Selección de características** , seleccione las herramientas que desee instalar y siga realizando los pasos restantes del proceso de instalación.  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>Instalar las herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando el símbolo del sistema  
+#### <a name="installing-ssnoversion-client-tools-at-the-command-prompt"></a>Instalar las herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando el símbolo del sistema  
   
 1.  Para instalar las herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ejecute el comando siguiente: Setup.exe/q/Action=Install /Features=Tools  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68063945"
   
 3.  Para instalar todas las herramientas de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ejecute el comando siguiente: Setup.exe/q/Action=Install /Features=ADV_SSMS. Para obtener más información sobre los valores de parámetro de las características, vea [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Desinstalar las Herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="uninstalling-ssnoversion-client-tools"></a>Desinstalar las Herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Aparecen en Agregar o quitar programas en el Panel de control como **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** y se pueden quitar desde ahí. Si usa Quitar nodo para desinstalar una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del clúster de conmutación por error, los componentes cliente no se desinstalarán al mismo tiempo.  
   
 ## <a name="see-also"></a>Consulte también  

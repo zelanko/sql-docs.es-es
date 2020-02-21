@@ -1,23 +1,24 @@
 ---
-title: Comprobación del código de base de datos con pruebas unitarias de SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Comprobación del código de base de datos mediante v
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ab6cccf656d0951c5f8fd72bb5863bbe91f0e74d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140949"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243485"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Comprobar el código de base de datos con pruebas unitarias de SQL Server
+
 Puede usar las pruebas unitarias de SQL Server para establecer un estado de línea base para la base de datos y después para comprobar los cambios subsiguientes que realice en los objetos de base de datos.  
   
 Para establecer un estado de línea base para una base de datos, cree un proyecto de prueba y escriba los conjuntos de pruebas de Transact\-SQL que funcionan en los objetos de base de datos. Mediante el uso de estas pruebas puede comprobar en un entorno de desarrollo aislado si esos objetos funcionan como esperaba. Las pruebas unitarias de SQL Server funcionan bien en combinación con el desarrollo de bases de datos sin conexión que usan proyectos de base de datos de SQL Server(consulte [Desarrollo de bases de datos sin conexión orientado a proyectos](../ssdt/project-oriented-offline-database-development.md) para obtener más información). Una vez que haya establecido una línea base para las pruebas unitarias de SQL Server, puede usar estas pruebas para comprobar que la base de datos funciona correctamente antes de proteger los cambios en el control de versiones.  

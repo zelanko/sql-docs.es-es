@@ -1,22 +1,23 @@
 ---
-title: Ejecución de trabajos de Spark en Azure Toolkit for IntelliJ en un clúster de macrodatos de SQL
-titleSuffix: SQL Server big data clusters
+title: 'Ejecución de trabajos de Spark: Kit de herramientas de Azure para IntelliJ'
+titleSuffix: SQL Server Big Data Clusters
 description: Envíe trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
 ms.topic: conceptual
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653714"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244078"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Envío de trabajos de Spark en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en IntelliJ
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Envío de trabajos de Spark en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -51,16 +52,16 @@ Uno de los escenarios clave para [!INCLUDE[big-data-clusters-2019](../includes/s
 
 1. Inicie IntelliJ IDEA y, luego, cree un proyecto. En el cuadro de diálogo **Nuevo proyecto**, siga estos pasos: 
 
-   A. Seleccione **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Proyecto de Spark con ejemplos (Scala)).
+   a. Seleccione **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Proyecto de Spark con ejemplos (Scala)).
 
-   B. En la lista **Herramienta de compilación**, seleccione una de las siguientes, según sus necesidades:
+   b. En la lista **Herramienta de compilación**, seleccione una de las siguientes, según sus necesidades:
 
       * **Maven**, para la compatibilidad con el asistente para la creación de proyectos de Scala
       * **SBT**, para administrar las dependencias y compilar para el proyecto de Scala
 
     ![Cuadro de diálogo Nuevo proyecto](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
 
-2. Seleccione **Siguiente**.
+2. Seleccione **Next** (Siguiente).
 
 3. El asistente para la creación de proyectos de Scala detecta automáticamente si ha instalado el complemento Scala. Seleccione **Instalar**.
 
@@ -74,9 +75,9 @@ Uno de los escenarios clave para [!INCLUDE[big-data-clusters-2019](../includes/s
 
     ![Selección del SDK de Spark](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. Escriba un nombre de proyecto y una ubicación.
+   a. Escriba un nombre de proyecto y una ubicación.
 
-   B. En la lista desplegable **Project SDK** (SDK del proyecto), seleccione **Java 1.8** para el clúster de Spark 2.x o **Java 1.7** para el clúster de Spark 1.x.
+   b. En la lista desplegable **Project SDK** (SDK del proyecto), seleccione **Java 1.8** para el clúster de Spark 2.x o **Java 1.7** para el clúster de Spark 1.x.
 
    c. En la lista desplegable **Versión de Spark**, el asistente para la creación de proyectos de Scala integra la versión correcta del SDK de Spark y el SDK de Scala. Si la versión del clúster de Spark es anterior a 2.0, seleccione **Spark 1.x**. De lo contrario, seleccione **Spark2.x**. En este ejemplo se usa **Spark 2.0.2 (Scala 2.11.8)** .
 
@@ -84,9 +85,9 @@ Uno de los escenarios clave para [!INCLUDE[big-data-clusters-2019](../includes/s
 
 7. El proyecto de Spark crea automáticamente un artefacto. Para ver el artefacto, siga estos pasos:
 
-   A. En el menú **Archivo**, seleccione **Estructura del proyecto**.
+   a. En el menú **Archivo**, seleccione **Estructura del proyecto**.
 
-   B. En el cuadro de diálogo **Estructura del proyecto**, seleccione **Artefactos** para ver el artefacto predeterminado que se ha creado. También puede crear su propio artefacto si selecciona el signo más ( **+** ).
+   b. En el cuadro de diálogo **Estructura del proyecto**, seleccione **Artefactos** para ver el artefacto predeterminado que se ha creado. También puede crear su propio artefacto si selecciona el signo más ( **+** ).
 
       ![Información del artefacto en el cuadro de diálogo](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -139,7 +140,7 @@ Asegúrese de que cumple el requisito previo de WINUTILS.EXE.
 
 4. Proporcione los valores siguientes y seleccione **Aceptar**:
 
-    |Propiedad |Valor |
+    |Propiedad |Value |
     |----|----|
     |Clase principal del trabajo|el valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase si selecciona los puntos suspensivos ( **...** ) y elige otra clase.|
     |Variables de entorno|Asegúrese de que el valor de HADOOP_HOME sea correcto.|
@@ -173,7 +174,7 @@ La consola de sesión interactiva de Spark Livy (Scala) solo se admite en Intell
 
 4. Proporcione los valores siguientes y seleccione **Aceptar**:
 
-    |Propiedad |Valor |
+    |Propiedad |Value |
     |----|----|
     |Clústeres de Spark (solo Linux)|Seleccione el clúster de macrodatos de SQL Server en el que quiere ejecutar la aplicación.|
     |Nombre de clase principal|el valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase si selecciona los puntos suspensivos ( **...** ) y elige otra clase.|

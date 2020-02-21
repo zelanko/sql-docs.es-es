@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72278230"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega a recursos compartidos de archivos en Reporting Services
@@ -25,7 +25,7 @@ ms.locfileid: "72278230"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
  **En este tema:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72278230"
   
 -   Si el informe incluye gráficos, se utiliza la presentación predeterminada. Si el informe se vincula a otro informe, el vínculo se representa como texto estático.  
   
--   Si desea conservar las características interactivas de un informe entregado, utilice la entrega por correo electrónico. El correo electrónico contiene un vínculo al informe del servidor de informes, y los usuarios pueden usar las características interactivas. Para obtener más información, vea [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Si desea conservar las características interactivas de un informe entregado, utilice la entrega por correo electrónico. El correo electrónico contiene un vínculo al informe del servidor de informes, y los usuarios pueden usar las características interactivas. Para más información, vea [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 ##  <a name="bkmk_target_folders"></a> Carpetas de destino  
  Cuando defina una suscripción que utilice entrega a recursos compartidos de archivos, debe especificar una carpeta existente como la carpeta de destino. El servidor de informes no crea carpetas en el sistema de archivos. La carpeta que especifique debe ser accesible a través de una conexión de red.  
@@ -68,15 +68,15 @@ ms.locfileid: "72278230"
 ##  <a name="bkmk_file_options"></a> Opciones de archivo  
  Cuando se crea una suscripción de recurso compartido de archivos, puede configurar cómo se crea el nombre de archivo y si el archivo sobrescribe las versiones anteriores del informe. Un nombre de archivo completo tiene tres partes: un nombre, una extensión y texto o un número que se anexa al archivo para crear un nombre de archivo exclusivo.  
   
- **Nombre de archivo:** el nombre de archivo predeterminado se basa en el nombre del informe de origen, aunque es posible proporcionar un nombre personalizado en la suscripción. La extensión es opcional, pero si se especifica, el servidor de informes creará una extensión que corresponda al formato de representación.  
+ **Nombre de archivo:** nombre de archivo predeterminado se basa en el nombre del informe de origen, aunque es posible proporcionar un nombre personalizado en la suscripción. La extensión es opcional, pero si se especifica, el servidor de informes creará una extensión que corresponda al formato de representación.  
   
- **Sobrescribir:** se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
+ **Sobrescribir:** Se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
   
  Un método alternativo para crear archivos exclusivos para cada entrega consiste en incluir una marca de tiempo en el nombre del archivo. Para ello, agregue la variable **\@timestamp** al nombre del archivo (por ejemplo, *CompanySales@timestamp* ). De este modo, el nombre del archivo será exclusivo por definición, por lo que no se sobrescribirá nunca.  
   
  La imagen siguiente es un ejemplo de la configuración de una suscripción configurada para la entrega a recursos compartidos de archivos.  
   
- ![Suscripción a un recurso compartido de archivos](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "Suscripción a un recurso compartido de archivos")  
+ ![Suscripción a recurso compartido](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "Suscripción a recurso compartido")  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   

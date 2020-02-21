@@ -1,34 +1,28 @@
 ---
-title: Analizar interbloqueos con SQL Server Profiler | Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
+title: Análisis de interbloqueos
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- process nodes [SQL Server Profiler]
-- Profiler [SQL Server Profiler], deadlocks
-- deadlocks [SQL Server], identifying cause
-- resource nodes [SQL Server Profiler]
-- graphs [SQL Server Profiler]
-- SQL Server Profiler, deadlocks
-- events [SQL Server], deadlocks
-- edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab8914abdaa2056a71fdd4d0e1a277c89e200dc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/03/2017
+ms.openlocfilehash: 15d41ae2517a3eadb8305a359f4576fb4407020b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105633"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307378"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analizar interbloqueos con SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Use el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para identificar la causa de un interbloqueo. Un interbloqueo se produce cuando hay una dependencia cíclica entre dos o más subprocesos o procesos para algún conjunto de recursos en SQL Server. El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]le permite crear un seguimiento que registra, reproduce y muestra eventos de interbloqueo para su análisis.  
+
+Use el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para identificar la causa de un interbloqueo. Un interbloqueo se produce cuando hay una dependencia cíclica entre dos o más subprocesos o procesos para algún conjunto de recursos en SQL Server. El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]le permite crear un seguimiento que registra, reproduce y muestra eventos de interbloqueo para su análisis.  
   
  Para realizar un seguimiento de los eventos de interbloqueo, agregue la clase de evento **Deadlock graph** a un seguimiento. Esta clase de evento rellena la columna de datos **TextData** del seguimiento con datos XML acerca de los procesos y objetos implicados en el interbloqueo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pueden extraer el documento XML a un archivo XML de interbloqueo (.xdl) que puede ver después en SQL Server Management Studio. Puede configurar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para extraer eventos **Deadlock graph** en un solo archivo que contenga todos los eventos **Deadlock graph** o en archivos independientes. Esta extracción se puede hacer de las siguientes formas:  
   
@@ -47,7 +41,7 @@ ms.locfileid: "68105633"
  Nodo de recurso  
  Un objeto de la base de datos; por ejemplo, una tabla, un índice o una fila.  
   
- Borde  
+ perimetral  
  Una relación entre un proceso y un recurso. Un borde **request** se produce cuando un proceso espera un recurso. Un borde **owner** se produce cuando un recurso espera un proceso. El modo de bloqueo se incluye en la descripción del borde. Por ejemplo, **Modo: X**.  
   
 ## <a name="deadlock-process-node"></a>Nodo de proceso de interbloqueo  
@@ -62,8 +56,8 @@ ms.locfileid: "68105633"
 |Registro utilizado|Cantidad de espacio del registro utilizado por el proceso.|  
 |Id. de propietario|Id. de transacción de los procesos que están usando transacciones y que actualmente están esperando en un bloqueo.|  
 |Descriptor de transacción|Puntero al descriptor de transacción que describe el estado de la transacción.|  
-|Búfer de entrada|Búfer de entrada del proceso actual; define el tipo de evento y la instrucción que se está ejecutando. Los valores posibles incluyen:<br /><br /> **Lenguaje**<br /><br /> **RPC**<br /><br /> **Ninguno**|  
-|.|Tipo de instrucción. Los valores posibles son:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Desconocido**|  
+|Búfer de entrada|Búfer de entrada del proceso actual; define el tipo de evento y la instrucción que se está ejecutando. Los valores posibles son:<br /><br /> **Lenguaje**<br /><br /> **RPC**<br /><br /> **None**|  
+|.|Tipo de instrucción. Los valores posibles son:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>Nodo de recurso de interbloqueo  
  En un interbloqueo, dos procesos están esperando un recurso retenido por el otro recurso. En un gráfico de interbloqueo, los recursos se muestran como nodos de recursos.  

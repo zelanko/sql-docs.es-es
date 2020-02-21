@@ -12,10 +12,10 @@ ms.author: maggies
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: 9d0ff28e1e9c7784da2c1206f72573ba608797a1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68264990"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -24,11 +24,11 @@ ms.locfileid: "68264990"
 
   En este tema se proporciona información general sobre las opciones de actualización y migración de SQL Server Reporting Services. Hay dos enfoques generales para actualizar una implementación de SQL Server Reporting Services:  
  
--   **Actualizar:** se actualizan los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los servidores y las instancias donde están instalados actualmente. Habitualmente se denomina actualización "en contexto". No se admite la actualización en contexto de un modo de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro. Por ejemplo, no puede actualizar un servidor de informes en modo nativo a un servidor de informes en modo de SharePoint. Puede migrar los elementos de informe de un modo a otro. Para obtener más información, vea la sección "Escenario de migración del modo nativo al modo de SharePoint" más adelante en este documento.  
+-   **Actualización:** se actualizan los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los servidores y las instancias donde están instalados actualmente. Habitualmente se denomina actualización "en contexto". No se admite la actualización en contexto de un modo de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro. Por ejemplo, no puede actualizar un servidor de informes en modo nativo a un servidor de informes en modo de SharePoint. Puede migrar los elementos de informe de un modo a otro. Para obtener más información, vea la sección "Escenario de migración del modo nativo al modo de SharePoint" más adelante en este documento.  
   
--   **Migrar**: se instala y configura un nuevo entorno de SharePoint, se copian los elementos de informe y los recursos al nuevo entorno, y se configura el nuevo entorno para usar contenido existente. Una forma de nivel inferior de migración es copiar bases de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los archivos de configuración y, si se usa el modo de SharePoint, las bases de datos de contenido de SharePoint.  
+-   **Migración**: se instala y configura un nuevo entorno de SharePoint, se copian los elementos de informe y los recursos al nuevo entorno, y se configura el nuevo entorno para usar contenido existente. Una forma de nivel inferior de migración es copiar bases de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , los archivos de configuración y, si se usa el modo de SharePoint, las bases de datos de contenido de SharePoint.  
     
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
+> **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 
 > [!NOTE]
 > La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
@@ -83,7 +83,7 @@ ms.locfileid: "68264990"
   
 -   Haga copia de seguridad de las personalizaciones de los directorios virtuales de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] existentes en IIS.  
   
--   Quite los certificados SSL no válidos.  Se trata de los certificados expirados y que no piensa actualizar antes de actualizar Reporting Services.  Los certificados no válidos provocarán un error de actualización y la aparición de un mensaje de error similar al siguiente en el archivo de registro de Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: No se ha configurado ningún certificado SSL (Capa de sockets seguros) en el sitio web**.  
+-   Quite los certificados SSL no válidos.  Se trata de los certificados expirados y que no piensa actualizar antes de actualizar Reporting Services.  Los certificados no válidos provocarán un error de actualización y la aparición de un mensaje de error similar al siguiente en el archivo de registro de Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: No se configuró ningún certificado SSL (Capa de sockets seguros) en el sitio web.** .  
   
  Antes de actualizar un entorno de producción, ejecute siempre una actualización de prueba en un entorno de preproducción que tenga la misma configuración que el entorno de producción.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68264990"
   
  Sin embargo, es necesario **migrar** manualmente la instalación de un servidor de informes si se da alguna de las condiciones siguientes:  
   
--   Desea cambiar el tipo de servidor de informes usado en la implementación. Por ejemplo, no puede actualizar o convertir un servidor de informes en modo nativo al modo de SharePoint. Para obtener más información, vea [Migración del modo nativo al modo de SharePoint &#40;SSRS&#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
+-   Desea cambiar el tipo de servidor de informes usado en la implementación. Por ejemplo, no puede actualizar o convertir un servidor de informes en modo nativo al modo de SharePoint. Para más información, vea [Native to SharePoint Migration &#40;SSRS&#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md) (Migración nativa a SharePoint &#40;SSRS&#41;).  
   
 -   Desea minimizar la cantidad de tiempo que el servidor de informes está sin conexión durante el proceso de actualización. La instalación actual permanece en línea mientras copia datos de contenido en una instancia del servidor de informes y prueba la instalación sin cambiar el estado de la instalación del servidor de informes existente.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68264990"
 ##  <a name="bkmk_native_scaleout"></a> Actualizar una implementación escalada horizontalmente de Reporting Services en modo nativo  
  A continuación se muestra un resumen de cómo actualizar una implementación en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] escalada horizontalmente a más de un servidor de informes. Este proceso requiere un tiempo de inactividad de la implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
-1.  Haga copia de seguridad de las claves de cifrado y las bases de datos del servidor de informes. Para obtener más información, vea [Operaciones de copia de seguridad y restauración de Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) y [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
+1.  Haga copia de seguridad de las claves de cifrado y las bases de datos del servidor de informes. Para más información, vea [Operaciones de copia de seguridad y restauración de Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) y [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
 2.  Use el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y quite todos los servidores de informes de la implementación escalada. Para obtener más información, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68264990"
 > [!IMPORTANT]  
 >  Algunos de los escenarios siguientes necesitan un tiempo de inactividad del entorno de SharePoint debido a las diversas tecnologías que hay que actualizar. Si su situación no permite que haya tiempo de inactividad, necesitará completar una migración en lugar de una actualización en contexto.  
   
-### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>De [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a SQL Server Reporting Services  
+### <a name="sssql14-to-sql-server-reporting-services"></a>De [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a SQL Server Reporting Services  
  **Entorno inicial:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1, SharePoint 2010 o SharePoint 2013.  
   
  **Entorno final:** SQL Server Reporting Services, SharePoint 2013 o SharePoint 2016.   
@@ -171,8 +171,8 @@ ms.locfileid: "68264990"
   
      Si tiene una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada con SharePoint 2010, no puede realizar una actualización en contexto del servidor de SharePoint. Sin embargo, puede migrar las bases de datos de contenido y las bases de datos de aplicación de servicio de la granja de SharePoint 2010 a una granja de SharePoint 2013/2016.  
   
-### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>De [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a SQL Server Reporting Services  
- **Entorno inicial:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]y SharePoint 2010.  
+### <a name="sssql11-to-sql-server-reporting-services"></a>De [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a SQL Server Reporting Services  
+ **Entorno inicial:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] y SharePoint 2010.  
   
  **Entorno final:** SQL Server Reporting Services, SharePoint 2013 o SharePoint 2016.   
   
@@ -180,8 +180,8 @@ ms.locfileid: "68264990"
   
      Si tiene una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada con SharePoint 2010, no puede realizar una actualización en contexto del servidor de SharePoint. Sin embargo, puede migrar las bases de datos de contenido y las bases de datos de aplicación de servicio de la granja de SharePoint 2010 a una granja de SharePoint 2013/2016.  
   
-### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>De [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a SQL Server Reporting Services  
- **Entorno inicial:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]y SharePoint 2010.  
+### <a name="sskilimanjaro-to-sql-server-reporting-services"></a>De [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a SQL Server Reporting Services  
+ **Entorno inicial:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y SharePoint 2010.  
   
  **Entorno final:** SQL Server Reporting Services, SharePoint 2013 o SharePoint 2016.  
  
@@ -206,11 +206,11 @@ ms.locfileid: "68264990"
   
  Al mover una instalación del servidor de informes a otro equipo, invalidará el hash que protege las claves de cifrado que se usan para proteger los datos confidenciales almacenados en la base de datos del servidor de informes. Cada instancia del servidor de informes que utiliza la base de datos tiene su copia de la clave de cifrado, que se cifra con la identidad de la cuenta de servicio que está definida en el equipo actual. Si cambia los equipos, el servicio dejará de tener acceso a la clave, aunque utilice el mismo nombre de cuenta en el equipo nuevo.  
   
- Para volver a establecer el cifrado reversible en el nuevo equipo del servidor de informes, debe restaurar la clave de la que realizó anteriormente una copia de seguridad. El conjunto de claves completo que se almacena en la base de datos del servidor de informes está compuesto de un valor de clave simétrica más la información de identidad del servicio que se usa para restringir el acceso a la clave, para que solo pueda usarla la instancia del servidor de informes donde se almacenó. Durante la restauración de la clave, el servidor de informes reemplaza las copias existentes de la clave por las versiones nuevas. La versión nueva incluye los valores de identidad de servicio y de equipo definidos en el equipo actual. Para obtener más información, consulte los temas siguientes:  
+ Para volver a establecer el cifrado reversible en el nuevo equipo del servidor de informes, debe restaurar la clave de la que realizó anteriormente una copia de seguridad. El conjunto de claves completo que se almacena en la base de datos del servidor de informes está compuesto de un valor de clave simétrica más la información de identidad del servicio que se usa para restringir el acceso a la clave, para que solo pueda usarla la instancia del servidor de informes donde se almacenó. Durante la restauración de la clave, el servidor de informes reemplaza las copias existentes de la clave por las versiones nuevas. La versión nueva incluye los valores de identidad de servicio y de equipo definidos en el equipo actual. Para obtener más información, vea los temas siguientes:  
   
--   Modo de SharePoint: vea la sección "Administración de claves" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+-   Modo SharePoint: consulte la sección "Administración de claves" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
--   Modo nativo: vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
+-   Modo nativo: Consulte [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
   
 ### <a name="fixed-database-name"></a>Nombre fijo de la base de datos  

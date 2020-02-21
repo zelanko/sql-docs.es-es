@@ -15,10 +15,10 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593479"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Claves de cifrado de SSRS: almacenar datos cifrados del servidor de informes
@@ -39,7 +39,7 @@ ms.locfileid: "73593479"
   
      Esta cuenta se utiliza cuando se necesita una conexión a un equipo remoto y no hay más credenciales disponibles para realizar la conexión. Esta cuenta se utiliza principalmente para admitir el procesamiento de informes en modo desatendido de los informes que no utilizan credenciales para obtener acceso a un origen de datos. Si crea informes en función de los orígenes de datos que no requieren o utilizan credenciales cuando obtienen acceso a los datos, debe configurar esta cuenta para que el servidor de informes la utilice.  
   
-     Esta cuenta es necesaria en ciertas circunstancias y solo puede crearse mediante la herramienta de configuración de Reporting Services o **rsconfig**. Este valor también se almacena en el archivo rsreportserver.config. Esta cuenta debe crearse manualmente. Para obtener más información sobre esta cuenta y cómo se usa, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Esta cuenta es necesaria en ciertas circunstancias y solo puede crearse mediante la herramienta de configuración de Reporting Services o **rsconfig**. Este valor también se almacena en el archivo rsreportserver.config. Esta cuenta debe crearse manualmente. Para más información sobre esta cuenta y cómo se usa, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 -   Clave simétrica utilizada para el cifrado.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73593479"
   
  En una implementación escalada del servidor de informes en la que varias instancias compartan la misma base de datos, todos los nodos del servidor de informes utilizarán una única clave simétrica. Cada nodo debe tener una copia de la clave simétrica compartida. Cuando se configura la implementación escalada, automáticamente se crea una copia de la clave simétrica para cada nodo. Cada nodo cifra su copia de la clave simétrica utilizando la clave pública de un par de claves específico para su cuenta de servicio de Windows. Para obtener más información sobre cómo se crea la clave simétrica para implementaciones escaladas y de una sola instancia, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
  
- Además, a partir de 2019, la base de datos del servidor de informes se puede configurar con Cifrado de datos transparente en SQL Server para proporcionar protección adicional para los datos en reposo.
+ Además, a partir de 2019, la base de datos del servidor de informes se puede configurar con Cifrado de datos transparente en SQL Server para proporcionar protección adicional para los datos en reposo.
   
 > [!NOTE]  
 >  Cuando cambie la cuenta del servicio Servidor de informes de Windows, las claves asimétricas pueden dejar de ser válidas, lo que interrumpirá el funcionamiento del servidor. Para evitar que esto suceda, asegúrese de utilizar la herramienta de configuración de Reporting Services para modificar la configuración de la cuenta de servicio. Cuando utilice la herramienta de configuración, las claves se actualizarán automáticamente. Para obtener más información, vea [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  

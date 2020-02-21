@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 205a93fe5ce57a8b4c10fffb8648a1ef4c7b6506
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015460"
 ---
 # <a name="icommandwithparameters"></a>ICommandWithParameters
@@ -22,7 +22,7 @@ ms.locfileid: "68015460"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Las mejoras en el motor de base [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] de datos a partir de permiten ICommandWithParameters:: GetParameterInfo para obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por CommandWithParameters:: GetParameterInfo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]en versiones anteriores de. Para obtener más información, vea [Detección de metadatos](../../oledb/features/metadata-discovery.md).  
+  Las mejoras en el motor de base de datos a partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permiten a ICommandWithParameters::GetParameterInfo obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores que devuelve CommandWithParameters::GetParameterInfo en las versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Detección de metadatos](../../oledb/features/metadata-discovery.md).  
   
  También a partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], al llamar a ICommandWithParameters::SetParameterInfo, el último valor pasado al parámetro *pwszName* debe ser un identificador válido. Para obtener más información, vea [Database Identifiers](../../../relational-databases/databases/database-identifiers.md).  
   

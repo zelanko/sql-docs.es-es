@@ -1,10 +1,9 @@
 ---
-title: 'Propiedades de alerta: Nueva alerta (página General) | Microsoft Docs'
-ms.custom: ''
+title: Propiedades de alerta - Nueva alerta (página General)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4634821adee5021b986b3f9c87c0416bad33ec6a
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: d889dc5f93abb61dd3d92b736eb483a5a4ba2ff6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383809"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254559"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>Propiedades de alerta - Nueva alerta (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +28,13 @@ ms.locfileid: "70383809"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Utilice esta página para ver y modificar las propiedades generales de las alertas del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Utilice esta página para ver y modificar las propiedades generales de las alertas del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="options"></a>Opciones  
 **Nombre**  
 Cambie el nombre de la alerta.  
   
-**Habilitar**  
+**Habilitación**  
 Habilita la alerta. Si la alerta no está habilitada, no se producirán acciones especificadas en la alerta.  
   
 **Tipo**  
@@ -52,7 +53,7 @@ Especifica una base de datos para el evento o **todas las bases de datos** para 
 **Número de error**  
 Especifica que este evento responde a un error e indica el número de error.  
   
-**Severity**  
+**Gravedad**  
 Especifica que este evento responde a mensajes con un nivel de gravedad específico e indica dicho nivel.  
   
 **Mostrar alerta cuando el mensaje contenga**  
@@ -62,7 +63,7 @@ Filtra los eventos mediante una cadena específica. Cuando esta opción está se
 Especifica la cadena que se va a utilizar para filtrar eventos.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Alertas de condición de rendimiento de SQL Server  
-**Objeto**  
+**Object**  
 Especifica el objeto de rendimiento que se supervisará.  
   
 **Contador**  
@@ -74,14 +75,14 @@ Especifica la instancia del contador que se supervisará.
 **Alertar si contador**  
 Especifica el comportamiento del contador al que la alerta responde. Por ejemplo, si desea que la alerta responda a una condición en la que el valor del contador **Espacio disponible en tempdb (KB)** esté por debajo de un determinado valor, o bien que la alerta responda a una condición en la que las **Compilaciones SQL/seg.** estén por encima de un determinado valor.  
   
-**Value**  
+**Valor**  
 Especifica un valor para el contador.  
   
 ## <a name="wmi-event-alert-options"></a>Opciones de Alerta de evento WMI  
 **Espacio de nombres**  
 Especifica el espacio de nombres que se utilizará para la instrucción WQL (Lenguaje de consulta WMI). Solo se admite el espacio de nombres del equipo que ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-**Consulta**  
+**Consultar**  
 Especifica la instrucción WQL que identifica el evento al que responde la alerta.  
   
 ## <a name="see-also"></a>Consulte también  

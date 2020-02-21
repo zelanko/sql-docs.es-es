@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30568da0ea6f8b937fd87a4891058b9d68949fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580654"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957449"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Representar en HTML (Generador de informes y SSRS)
   La extensión de representación en HTML representa un informe paginado en formato HTML. La extensión de representación también puede generar páginas HTML completas o fragmentos de HTML para incrustarlos en otras páginas HTML. Todos los HTML se generan con la codificación UTF-8.  
 
  La extensión de representación en HTML es la predeterminada para los informes que se visualizan en un explorador, lo que incluye cuando se ejecutan en el portal web de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . La extensión de representación en HTML puede representar HTML como un fragmento o como un documento HTML completo. Si el HTML es un fragmento, se quitan las etiquetas **HEAD**, **HTML**y **BODY** del documento HTML. Solo se representa el contenido de la etiqueta **BODY** . Esto resulta de gran utilidad para incrustar el HTML en HTML generado en otra aplicación.  
   
- En algunos escenarios, los parámetros de informe se pueden utilizar para iniciar ataques de inserción de script al representar los informes en HTML. Para más información sobre cómo proteger informes, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  
+ En algunos escenarios, los parámetros de informe se pueden utilizar para iniciar ataques de inserción de script al representar los informes en HTML. Para obtener más información sobre cómo proteger informes, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  
   
  Para más información sobre exploradores, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
@@ -79,11 +79,13 @@ ms.locfileid: "65580654"
 ### <a name="hyperlinks-and-drillthrough"></a>Hipervínculos y obtención de detalles  
  Los hipervínculos y los vínculos de obtención de detalles se representan como hipervínculos en los elementos de informe que usan las etiquetas de delimitador HTML (\<a>) alrededor del elemento en el que están definidas.  
   
-### <a name="search"></a>Buscar  
+### <a name="search"></a>Search  
  La característica Buscar permite a los usuarios buscar una cadena de texto dentro del informe.  
   
  El control ReportViewer de formularios Web Forms proporciona funcionalidad adicional de búsqueda.  
   
+##  <a name="FontsOnClient"></a> Fuentes en el equipo cliente
+ Cuando una fuente personalizada se usa en el informe, el equipo que se usa para ver el informe (equipo cliente) debe tener la fuente personalizada instalada para que el informe se muestre correctamente. Si la fuente no está instalada en el equipo cliente, el informe mostrará una fuente predeterminada del sistema en lugar de la fuente personalizada.
   
 ##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Para cambiar algunos valores de configuración predeterminados para este representador, incluido el modo de representación, solo tiene que cambiar la configuración de la información del dispositivo. Para más información, consulte [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md).  

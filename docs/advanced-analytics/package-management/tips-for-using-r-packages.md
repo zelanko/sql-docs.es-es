@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e283ab478a6d65243e9962fd5c26f5f91d87c15
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 64799766b8b9d69a5577fd589c8f610be75ebb8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70196348"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479400"
 ---
 # <a name="tips-for-using-r-packages"></a>Sugerencias para usar paquetes de R
 
@@ -88,8 +88,13 @@ Si sigue las instrucciones que se indican a continuación, podrá evitar los err
 
 + Sepa qué biblioteca de paquetes está asociada a la instancia. Para más información, vea [Obtener información sobre paquetes de R](../package-management/r-package-information.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-+ [Instalación de paquetes de R adicionales](install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [Instalación de paquetes con herramientas de R](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [Instalación de nuevos paquetes de R con sqlmlutils](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [Instalación de paquetes de Python adicionales](../python/install-additional-python-packages-on-sql-server.md)
 + [Tutoriales, muestras y soluciones](../tutorials/machine-learning-services-tutorials.md)

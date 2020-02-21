@@ -11,23 +11,23 @@ ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68419257"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Paso 3: prueba de concepto de la conexión a SQL mediante Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Paso 3: Prueba de concepto de la conexión a SQL mediante Node.js
 
-![Download-flecha abajo: círculo](../../ssdt/media/download.png)[para descargar el controlador SQL de node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para descargar un controlador de SQL para Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Este ejemplo solo debe considerarse una prueba de concepto.  El código de ejemplo se simplifica para mayor claridad y no representa necesariamente las prácticas recomendadas recomendadas por Microsoft. Otros ejemplos que usan las mismas funciones cruciales están disponibles en github:
+Solo debe considerarse a este ejemplo una prueba de concepto.  El código de ejemplo se simplifica por claridad y no representa necesariamente los procedimientos recomendados que sugiere Microsoft. Otros ejemplos que usan las mismas funciones cruciales están disponibles en GitHub:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>Paso 1: conexión  
+## <a name="step-1-connect"></a>Paso 1: Conectar  
   
-La **nueva** función de conexión se utiliza para conectarse a SQL Database.  
+La función **new Connection** se utiliza para conectarse a SQL Database.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -53,10 +53,10 @@ La **nueva** función de conexión se utiliza para conectarse a SQL Database.
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Paso 2: Ejecutar una consulta  
+## <a name="step-2--execute-a-query"></a>Paso 2:  Ejecutar una consulta  
   
   
-Todas las instrucciones SQL se ejecutan mediante la **nueva función Request ()** . Si la instrucción devuelve filas, como una instrucción SELECT, puede recuperarlas mediante la función **request. on ()** . Si no hay ninguna fila, la función request. on () devuelve listas vacías.  
+Todas las instrucciones SQL se ejecutan utilizando la función **new Request()** . Si la instrucción devuelve filas, como una instrucción select, se podrán recuperar mediante la función **request.on()** . Si no hay ninguna fila, la función request.on() devuelve listas vacías.  
   
   
 ```javascript  
@@ -111,9 +111,9 @@ Todas las instrucciones SQL se ejecutan mediante la **nueva función Request ()*
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>Paso 3: insertar una fila  
+## <a name="step-3-insert-a-row"></a>Paso 3: Insertar una fila  
   
-En este ejemplo verá cómo ejecutar una instrucción [Insert](../../t-sql/statements/insert-transact-sql.md) de forma segura, pasar parámetros que protejan la aplicación del valor de [inyección de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
+En este ejemplo se muestra cómo ejecutar la instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) de forma segura, pasar parámetros que protejan la aplicación ante el valor [Inyección de código SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```javascript  

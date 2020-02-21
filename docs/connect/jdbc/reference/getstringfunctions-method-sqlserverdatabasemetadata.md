@@ -16,10 +16,10 @@ ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a17f4482c46b9e9650b9debbb8a1517f022f1bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979370"
 ---
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>Método getStringFunctions (SQLServerDatabaseMetaData)
@@ -35,12 +35,12 @@ public java.lang.String getStringFunctions()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **Cadena** que contiene las funciones de **cadena** .  
+ Un objeto **String** que contiene las funciones **String**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getStringFunctions especifica este método getStringFunctions en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  

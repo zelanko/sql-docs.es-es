@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155690"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -233,7 +233,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 + @v1 + @v2 + ... + @v199  
     ```  
   
-    Escribir:  
+    Escritura:  
   
     ```  
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
@@ -245,7 +245,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 +@v1 +@v2 +...+@v199  
     ```  
   
-    Escribir:  
+    Escritura:  
   
     ```  
     SELECT @v0 +@v1  
@@ -299,10 +299,10 @@ Si ya tiene el problema con valores no coincidentes de instance_id, la única ma
   
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo no se puede ejecutar en paralelo bajo ninguna de las siguientes condiciones:  
   
--   Complemento de[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint    
--   Servicio compartido de SharePoint de[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  
+-   Complemento de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint    
+-   Servicio compartido de SharePoint de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  
   
-La instalación en paralelo impide el inicio del servicio de Windows en modo nativo [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Aparecerán mensajes de error, similares a los que se muestran aquí, en el registro de eventos de Windows:  
+La instalación en paralelo impide el inicio del servicio de Windows en modo nativo [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Aparecerán mensajes de error, similares a los que se muestran aquí, en el registro de eventos de Windows:  
   
 ```  
 Log Name:   Application  
@@ -397,7 +397,7 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
 ### <a name="DQS"></a>Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>No hay compatibilidad entre versiones con Data Quality Services de Master Data Services  
-**Problema:** Los escenarios siguientes no se admiten:  
+**Problema:** Los siguientes escenarios no se admiten:  
   
 -   Master Data Services 2012 hospedado en una base de datos de motor de base de datos de SQL Server en SQL Server 2012 con Data Quality Services 2012 instalado.  
   

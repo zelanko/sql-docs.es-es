@@ -1,6 +1,6 @@
 ---
-title: SQLMAINT (utilidad) | Microsoft Docs
-ms.custom: ''
+title: sqlmaint, utilidad
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecc0a38acd6ea00656e67e9f582a55c05ca15583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986285"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306961"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint, utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ dbname_db_yyyyMMddhhmm.BAK
   
 ```  
   
- donde  
+ , donde  
   
 -   *dbname* es el nombre de la base de datos de la que se realiza una copia de seguridad.  
   
@@ -228,7 +228,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Si solo se especifica *number* , la parte de fecha predeterminada es **weeks**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La utilidad **sqlmaint** realiza operaciones de mantenimiento en una o varias bases de datos. Si se especifica **-D** , las operaciones especificadas en los modificadores restantes solo se realizan en la base de datos indicada. Si se especifica **-PlanName** o **-PlanID** , la única información que **sqlmaint** recupera del plan de mantenimiento indicado es la lista de bases de datos del plan. Todas las operaciones especificadas en los parámetros **sqlmaint** restantes se aplican en cada base de datos de la lista obtenida del plan. La utilidad **sqlmaint** no aplica ninguna de las actividades de mantenimiento definidas en el propio plan.  
   
  La utilidad **sqlmaint** devuelve 0 si se ejecuta correctamente o 1 si se produce algún error. Se informa del error:  

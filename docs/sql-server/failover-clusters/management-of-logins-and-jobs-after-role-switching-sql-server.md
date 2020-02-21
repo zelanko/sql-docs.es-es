@@ -1,6 +1,7 @@
 ---
-title: Administración de inicios de sesión y trabajos tras la conmutación de roles (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Administración de inicios de sesión y trabajos después de la conmutación por error del reflejo
+description: Aprenda a administrar inicios de sesión y trabajos después de la conmutación por error de la base de datos reflejada desde la base de datos principal a la secundaria.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2887cfe969afd8739b15646efb8ee4700c8affff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063853"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230220"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administración de inicios de sesión y trabajos tras la conmutación de roles (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68063853"
   
  Para obtener más información, vea [Usuarios huérfanos con creación de reflejo de la base de datos y trasvase de registros](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (un blog del motor de base de datos).  
   
-## <a name="jobs"></a>trabajos  
+## <a name="jobs"></a>Trabajos  
  Los trabajos, como, por ejemplo, los trabajos de copia de seguridad, requieren una consideración especial. Normalmente, tras una conmutación de roles, el propietario de la base de datos o el administrador del sistema deben volver a crear los trabajos de la nueva base de datos principal.  
   
  Cuando esté disponible la que antes era la instancia del servidor principal, debería eliminar los trabajos originales en dicha instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Observe que los trabajos de la base de datos reflejada actual generan un error porque la base de datos se encuentra en el estado RESTORING y, por lo tanto, no está disponible.  

@@ -1,20 +1,21 @@
 ---
-title: Administración de cuadernos en Azure Data Studio
-titleSuffix: SQL Server big data clusters
+title: 'Administración de cuadernos: Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: Aprenda a administrar cuadernos en Azure Data Studio. Esto incluye abrir cuadernos, guardarlos y cambiar la conexión del clúster de macrodatos.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 8cf37ff6a4ad5e2b627fa5d968391cc5a7597a4a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844273"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244091"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Cómo administrar cuadernos en Azure Data Studio
 
@@ -29,7 +30,7 @@ En este artículo se supone que ya tiene un cuaderno que quiere usar en Azure Da
 - [Implementar un clúster de macrodatos](quickstart-big-data-cluster-deploy.md).
 - [Herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
    - **kubectl**
 
 ## <a name="open-a-notebook"></a>Apertura de un cuaderno

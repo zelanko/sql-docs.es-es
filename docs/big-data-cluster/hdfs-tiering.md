@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706047"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190401"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Configuración de la organización en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Configuración de la organización en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,6 +25,11 @@ La organización en niveles de HDFS ofrece la posibilidad de montar un sistema d
 ## <a name="hdfs-tiering-overview"></a>Introducción a la organización en niveles de HDFS
 
 Con la organización en niveles, las aplicaciones pueden acceder sin problemas a los datos de diversos almacenes externos como si los datos residieran en el HDFS local. El montaje es una operación de metadatos, donde los metadatos que describen el espacio de nombres en el sistema de archivos externo se copian en el HDFS local. Estos metadatos incluyen información sobre los directorios y archivos externos con sus permisos y listas de control de acceso (ACL). Los datos correspondientes solo se copian a petición, cuando se accede a los propios datos a través de, por ejemplo, una consulta. Ahora se puede acceder a los datos externos del sistema de archivos desde el clúster de macrodatos de SQL Server. Puede ejecutar trabajos de Spark y consultas SQL en estos datos de la misma manera que los ejecutaría en los datos locales almacenados en HDFS en el clúster.
+
+En este vídeo de 7 minutos se proporciona información general sobre la organización en niveles de HDFS:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Unify-your-data-lakes-with-HDFS-tiering/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ### <a name="caching"></a>Almacenamiento en memoria caché
 En la actualidad, de forma predeterminada, el 1 % del almacenamiento total de HDFS se reservará para el almacenamiento en caché de los datos montados. El almacenamiento en caché es una configuración global entre los montajes.
@@ -76,4 +81,4 @@ En la lista siguiente se indican los problemas conocidos y las limitaciones actu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para más información sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vea [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].

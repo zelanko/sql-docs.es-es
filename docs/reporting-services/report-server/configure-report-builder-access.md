@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68255173"
 ---
 # <a name="configure-report-builder-access"></a>Configurar el acceso al Generador de informes
@@ -29,15 +29,15 @@ El acceso al Generador de informes depende de los factores siguientes:
 
 El Generador de informes no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-El equipo cliente debe tener [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instalado 4,6 o 4.6.1 para SSRS 2016 y 2017, respectivamente. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona la infraestructura para ejecutar aplicaciones [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+El equipo cliente debe tener instaladas las versiones 4.6 o 4.6.1 de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para SSRS 2016 y 2017, respectivamente. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona la infraestructura para ejecutar aplicaciones [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
-Debe usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 o posterior, u otro explorador moderno.  
+Debe utilizar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 o posterior, u otro explorador moderno.  
 
 El Generador de informes siempre se ejecuta con confianza total; no se puede configurar para ejecutarse con confianza parcial. En las versiones anteriores, era posible que el Generador de informes se ejecutara con confianza parcial, pero esa opción no se admite en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y en versiones posteriores.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Habilitar y deshabilitar el Generador de informes  
 
-El Generador de informes está habilitado de manera predeterminada. Los administradores del servidor de informes tienen la posibilidad de deshabilitar la característica Generador de informes; para ello, deben establecer la propiedad del sistema **ShowDownloadMenu** del servidor de informes en **false**. Al establecer esta propiedad, se deshabilitan las descargas de Generador de informes, Publicador de informes móviles y Power BI Mobile para ese servidor de informes.  
+El Generador de informes está habilitado de manera predeterminada. Los administradores del servidor de informes tienen la posibilidad de deshabilitar la característica Generador de informes; para ello, deben establecer la propiedad del sistema **ShowDownloadMenu** del servidor de informes en **false**. El establecimiento de esta propiedad deshabilitará las descargas del Generador de informes, el Publicador de informes móviles y Power BI Mobile para ese servidor de informes.  
 
  Para establecer las propiedades del sistema del servidor de informes, puede usar Management Studio o script:   
 
@@ -109,8 +109,8 @@ Después de crear las asignaciones de roles, los usuarios tendrán permiso para 
 
 1. Inicie el portal web.  
 
-2. Haga clic en el icono de engranaje en la parte superior derecha de la Página principal del portal web y seleccione **configuración del sitio** en el menú desplegable.  
-![icono y menú de engranaje del portal web](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. Haga clic en el icono de engranaje de la parte superior derecha de la página principal del portal web y seleccione **Configuración del sitio** en el menú desplegable.  
+![el menú y el icono de engranaje del portal web](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Haga clic en **Seguridad**.  
 
@@ -123,7 +123,7 @@ De lo contrario, haga clic en **Nueva asignación de roles**. En Grupo o usuario
 
 7. Haga clic en la pestaña **Configuración de carpeta** .  
 
-8. Haga clic en la pestaña **Seguridad** .  
+8. Haga clic en la pestaña **Security** (Seguridad).  
 
 9. Si ya existe una asignación de roles para el usuario o el grupo cuyo acceso al Generador de informes desea configurar, haga clic en **Editar**.  
 
@@ -145,7 +145,7 @@ Si utiliza niveles de permisos personalizados, debe incluir Agregar elementos y 
 
 En la tabla siguiente se describen los tipos de autenticación que admite el servidor de informes y si se necesita configuración adicional para tener acceso al Generador de informes.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 - [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)

@@ -11,10 +11,10 @@ ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0fdc853608cf1897e97e08aac673aff78df00aef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998545"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>Método updateNString (java.lang.String, java.lang.String)
@@ -37,15 +37,15 @@ public void updateNString(java.lang.String columnLabel,
   
  *nString*  
   
- Objeto de **cadena** .  
+ Un objeto **String**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateNString especifica este método updateNString en la interfaz java.sql.ResultSet.  
   
- Este método pasa la **cadena** de Java a las columnas **nchar**, **nvarchar (Max)** , **ntext**y **XML** seleccionadas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
+ Este método pasa **String** de Java a columnas **nchar**, **nvarchar(max)** , **ntext** y **xml** seleccionadas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
   
 ## <a name="see-also"></a>Consulte también  
  [updateNString (método) &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

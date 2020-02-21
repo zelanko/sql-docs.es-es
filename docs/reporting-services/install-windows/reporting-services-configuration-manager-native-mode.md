@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593781"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Administrador de configuración de Reporting Services (modo nativo)
@@ -82,7 +82,7 @@ El Administrador de configuración de Reporting Services se instala automáticam
 
 4. Si especifica un equipo remoto, haga clic en **Buscar** para establecer una conexión.
 
-5. En **Report Server Enstance**, seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que desee configurar. Solo las instancias del servidor de informes correspondientes a esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecen en la lista. No es posible configurar versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+5. En **Instancia del servidor de informes**, seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que quiera configurar. Solo las instancias del servidor de informes correspondientes a esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecen en la lista. No es posible configurar versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
 6. Seleccione **Conectar**.
 

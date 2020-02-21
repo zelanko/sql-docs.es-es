@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: beginTransaction | Microsoft Docs'
+title: PDO::beginTransaction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 739565ae633140cef7d0df6531b6adfd6389d1e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993304"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
@@ -32,7 +32,7 @@ bool PDO::beginTransaction();
 ## <a name="return-value"></a>Valor devuelto  
 Se devuelve el valor True si la llamada al método se realizó correctamente; en caso contrario, se devuelve False.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Cuando finalice la transacción iniciada con PDO::beginTransaction, se llamará a [PDO::commit](../../connect/php/pdo-commit.md) o [PDO::rollback](../../connect/php/pdo-rollback.md).  
   
 El valor de PDO::ATTR_AUTOCOMMIT no afecta a PDO::beginTransaction.  

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 231a33f4d149e442487a7c93c1e2b4c5cdfad8d5
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 31e5d851b6c049bdd7fd81a4c90be1de7ceff77f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76115420"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad
 
@@ -38,7 +38,7 @@ Estas son algunas de las funcionalidades que habilitan los grupos de disponibili
 - Se aprovisiona automáticamente un punto de conexión externo para conectarse a las bases de datos del grupo de disponibilidad. Este punto de conexión `master-svc-external` desempeña el rol de escucha de grupo de disponibilidad.
 - Se aprovisiona un segundo punto de conexión externo para las conexiones de solo lectura a las réplicas secundarias para escalar horizontalmente las cargas de trabajo de lectura.
 
-## <a name="deploy"></a>Implementar
+## <a name="deploy"></a>Implementación
 
 Para implementar la instancia maestra de SQL Server en un grupo de disponibilidad:
 
@@ -46,7 +46,7 @@ Para implementar la instancia maestra de SQL Server en un grupo de disponibilid
 1. Especifique el número de réplicas del grupo de disponibilidad (el mínimo es 3)
 1. Configure los detalles del segundo punto de conexión externo creado para las conexiones a las réplicas secundarias de solo lectura
 
-Puede usar los perfiles de configuración integrados `aks-dev-test-ha` o `kubeadm-prod` para empezar a personalizar el clúster de macrodatos. Estos perfiles incluyen la configuración necesaria para los recursos que permiten configurar alta disponibilidad adicional. Por ejemplo, a continuación hay una sección del archivo de configuración `bdc.json` que es relevante para habilitar grupos de disponibilidad para la instancia maestra de SQL Server.  
+Puede usar los perfiles de configuración integrados `aks-dev-test-ha` o `kubeadm-prod` para empezar a personalizar el clúster de macrodatos. Estos perfiles incluyen la configuración necesaria relativa a los recursos que permiten configurar alta disponibilidad extra. Por ejemplo, a continuación hay una sección del archivo de configuración `bdc.json` que es relevante para habilitar grupos de disponibilidad para la instancia maestra de SQL Server.  
 
 ```json
 {
@@ -200,8 +200,9 @@ Problemas y limitaciones conocidos de los grupos de disponibilidad de la instanc
 - Las bases de datos creadas como resultado de flujos de trabajo distintos a `CREATE DATABASE`, como `RESTORE DATABSE` y `CREATE DATABASE FROM SNAPSHOT`, no se agregan automáticamente al grupo de disponibilidad. [Conéctese a la instancia](#instance-connect) y agregue la base de datos al grupo de disponibilidad manualmente.
 - Determinadas operaciones, como la ejecución de la configuración de servidor con `sp_configure`, requieren una conexión a la base de datos `master` de la instancia de SQL Server, no a `master` del grupo de disponibilidad. No se puede usar el punto de conexión principal correspondiente. Siga las [instrucciones](#instance-connect) para exponer un punto de conexión y conectarse a la instancia de SQL Server y ejecutar `sp_configure`. Solo se puede usar autenticación SQL cuando se expone manualmente el punto de conexión para conectarse a la base de datos `master` de la instancia de SQL Server.
 - La configuración de alta disponibilidad debe crearse al implementar el clúster de macrodatos. No se puede habilitar la configuración de alta disponibilidad con grupos de disponibilidad después de la implementación.
+- Aunque la base de datos msdb independiente se incluye en el grupo de disponibilidad y los trabajos del Agente SQL se replican ahí, los trabajos no se desencadenan según una programación. La solución consiste en [conectarse a cada una de las instancias de SQL Server](#instance-connect) y crear los trabajos en la instancia msdb.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- Para obtener más información sobre el uso de archivos de configuración en implementaciones de clústeres de macrodatos, vea [Cómo implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes](deployment-guidance.md#configfile).
+- Para más información sobre cómo usar archivos de configuración en implementaciones de clústeres de macrodatos, vea [Cómo implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes](deployment-guidance.md#configfile).
 - Para obtener más información sobre la característica de grupos de disponibilidad para SQL Server, vea [Información general de los grupos de disponibilidad AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).

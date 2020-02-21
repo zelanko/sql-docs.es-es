@@ -1,6 +1,7 @@
 ---
-title: Agregar una acción de expandir y contraer a un elemento (Generador de informes y SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+title: Incorporación de una acción de expandir y contraer (Generador de informes y SSRS) | Microsoft Docs
+description: Puede permitir a los usuarios expandir o contraer interactivamente elementos en un informe paginado, o bien expandir o contraer las filas y columnas asociadas a un grupo para una tabla o una matriz.
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582124"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242552"
 ---
-# <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Agregar una acción de expandir y contraer a un elemento (Generador de informes y SSRS)
-  Podrá permitir a los usuarios expandir o contraer interactivamente elementos de informe o expandir o contraer las filas y columnas asociadas a un grupo para una tabla o una matriz. Para permitir a los usuarios expandir o contraer un elemento, debe establecer las propiedades de visibilidad del elemento. El establecimiento de la visibilidad funciona en un visor de informes HTML y en ocasiones se denomina acción *de obtención de detalles* .  
+# <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>Incorporación de una acción de expandir y contraer a un elemento (Generador de informes y SSRS)
+  Puede permitir a los usuarios expandir o contraer interactivamente elementos en un informe paginado, o bien expandir o contraer las filas y columnas asociadas a un grupo para una tabla o una matriz. Para permitir a los usuarios expandir o contraer un elemento, debe establecer las propiedades de visibilidad del elemento. El establecimiento de la visibilidad funciona en un visor de informes HTML y en ocasiones se denomina acción *de obtención de detalles* .  
   
  En la vista de diseño del informe, especifique el nombre del cuadro de texto donde desea mostrar los iconos de alternancia de expandir y contraer. En el informe representado, el cuadro de texto mostrará un signo más (+) o menos (-), además de su contenido. Cuando el usuario haga clic en el control de visibilidad, la presentación del informe se actualizará para mostrar u ocultar el elemento de informe en función de los valores de visibilidad actuales para los elementos del informe.  
   
@@ -65,7 +66,7 @@ ms.locfileid: "65582124"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Para agregar una acción de expandir y contraer a un elemento de informe  
   
-1.  En la vista de diseño del informe, haga clic con el botón derecho en el elemento de informe que quiera mostrar u ocultar y, después, haga clic en *Propiedades de \<elemento de informe>* **Propiedades**. Se abrirá el cuadro de diálogo *Propiedades de \<elemento de informe>* **Propiedades** del elemento de informe.  
+1.  En la vista de diseño del informe, haga clic con el botón derecho en el elemento de informe que quiera mostrar u ocultar y, después, haga clic en *\<elemento de informe>* **Propiedades**. Se abre el cuadro de diálogo *\<elemento de informe>* **Propiedades** del elemento de informe.  
   
 2.  Haga clic en **Visibilidad**.  
   
@@ -84,7 +85,7 @@ ms.locfileid: "65582124"
   
      En la siguiente imagen, la tabla está configurada para permitir a los usuarios expandirla y contraerla. La visualización de la tabla se alterna mediante el cuadro de texto de la tabla Products.  
   
-     ![Configurar una tabla de informe que debe expandirse](../../reporting-services/report-design/media/expandcollapse-reporttable.png "Configurar una tabla de informe que debe expandirse")  
+     ![Configuración de una tabla de informes que debe expandirse](../../reporting-services/report-design/media/expandcollapse-reporttable.png "Configuración de una tabla de informes que debe expandirse")  
   
     > [!NOTE]  
     >  El cuadro de texto que elija debe estar en el ámbito contenedor o actual de este elemento de informe (hasta el cuerpo del informe, inclusive). Por ejemplo, para alternar la visibilidad de un gráfico, seleccione un cuadro de texto que esté en el mismo ámbito contenedor que el gráfico; por ejemplo, un rectángulo o el cuerpo del informe. El cuadro de texto debe estar en la misma jerarquía contenedora o superior.  

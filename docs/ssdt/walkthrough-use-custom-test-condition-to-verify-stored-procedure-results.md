@@ -1,23 +1,24 @@
 ---
-title: 'Tutorial: Usar una condición de prueba personalizada para comprobar el resultado de un procedimiento almacenado | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Condición de prueba personalizada para comprobar los resultados de un procedimiento almacenado
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068981"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242656"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Tutorial: Uso de una condición de prueba personalizada para comprobar el resultado de un procedimiento almacenado
+
 En el tutorial de esta extensión de característica, creará una condición de prueba y comprobará su funcionalidad creando una prueba unitaria de SQL Server. El proceso incluye la creación de un proyecto de biblioteca de clases para la condición de prueba, así como su firma y su instalación. Si ya tiene una condición de prueba que desea actualizar, vea [Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 En este tutorial se muestran las tareas siguientes:  
@@ -63,7 +64,7 @@ Después, firme el proyecto.
   
 6.  En el menú **Archivo** , haga clic en **Guardar todo**.  
   
-7.  En el menú **Compilar** , haga clic en **Compilar solución**.  
+7.  En el menú **Compilar**, haga clic en **Compilar solución**.  
   
 Después, agregará las referencias necesarias al proyecto.  
   
@@ -344,7 +345,7 @@ namespace ColumnCountCondition
 Después, compilaremos el proyecto.  
   
 ## <a name="xxx"></a>Compilar el proyecto e instalar la condición de prueba  
-En el menú **Compilar** , haga clic en **Compilar solución**.  
+En el menú **Compilar**, haga clic en **Compilar solución**.  
   
 Después, copiará la información del ensamblado en el directorio Extensions. Cuando Visual Studio se inicie, identificará cualquier extensión del directorio %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions y sus subdirectorios, y hará que estén disponibles para su uso:  
   

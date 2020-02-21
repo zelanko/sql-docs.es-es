@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593871"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Habilitar los errores remotos (Reporting Services)
@@ -46,7 +46,7 @@ ms.locfileid: "73593871"
   
 5.  Haga clic en **Habilitar errores remotos** en la sección **Seguridad** .  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 #### <a name="enable-remote-errors-for-a-sharepoint-site"></a>Habilitar errores remotos para un sitio de SharePoint  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73593871"
   
 4.  Haga clic en **Habilitar los errores remotos en modo local**.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **Aceptar**  
   
 ##  <a name="bkmk_mgtStudio"></a> Habilitar los errores remotos a través de SQL Server Management Studio (modo nativo)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73593871"
   
 3.  Haga clic en **Avanzadas** para abrir la página de propiedades. Para obtener más información, consulte [Propiedades del servidor (página de opciones avanzadas) - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md).  
   
-4.  En la sección **seguridad** , en **EnableRemoteErrors**, seleccione **true**.  
+4.  En la sección **Seguridad**, en **EnableRemoteErrors**, seleccione **True**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

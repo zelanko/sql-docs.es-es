@@ -1,7 +1,7 @@
 ---
-title: Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Cambio de nombre de una instancia de clúster de conmutación por error
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 612f0171cbb7786374923dc5ed8c257224474a21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063878"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230717"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ ms.locfileid: "68063878"
   
 -   Corrija la configuración del Registro si el Agente SQL se configura para el reenvío de eventos. Para obtener más información, vea [Designar un servidor de reenvío de eventos &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   
--   Corregir los nombres de instancia de los servidores de destino (TSX) y el servidor maestro (MSX) cuando se cambie el nombre de red en clúster o equipos. Para obtener más información, consulte los temas siguientes:  
+-   Corregir los nombres de instancia de los servidores de destino (TSX) y el servidor maestro (MSX) cuando se cambie el nombre de red en clúster o equipos. Para obtener más información, vea los temas siguientes:  
   
     -   [Dar de baja varios servidores de destino desde un servidor maestro](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Crear un entorno multiservidor](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   Volver a configurar el trasvase de registros de modo que se use el nombre de servidor actualizado para realizar la copia de seguridad de los registros y para restaurarlos. Para obtener más información, consulte los temas siguientes:  
+-   Volver a configurar el trasvase de registros de modo que se use el nombre de servidor actualizado para realizar la copia de seguridad de los registros y para restaurarlos. Para obtener más información, vea los temas siguientes:  
   
     -   [Configurar el trasvase de registros &#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: Solucionar problemas de usuarios huérfanos (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Solución de problemas de usuarios huérfanos
+description: Los usuarios huérfanos surgen cuando un inicio de sesión de usuario de base de datos deja de existir en la base de datos maestra. En este tema se describe cómo identificar y resolver usuarios huérfanos.
+ms.custom: seo-lt-2019
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,14 +20,14 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063815"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822052"
 ---
-# <a name="troubleshoot-orphaned-users-sql-server"></a>Solucionar problemas de usuarios huérfanos (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>Solución de problemas de usuarios huérfanos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Los usuarios huérfanos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se producen cuando un usuario de base de datos se basa en un inicio de sesión en la base de datos **maestra** , pero ese inicio de sesión ya no existe en **master**. Esto puede suceder cuando se elimina el inicio de sesión o cuando la base de datos se mueve a otro servidor donde el inicio de sesión no existe. En este tema se describe cómo buscar usuarios huérfanos para reasignarles inicios de sesión.  
@@ -55,7 +56,7 @@ ms.locfileid: "68063815"
   
  Un usuario de base de datos (basado en un inicio de sesión) cuyo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondiente está sin definir o se ha definido de forma incorrecta en una instancia de servidor no podrá iniciar una sesión en la instancia. Es lo que se denomina un *usuario huérfano* de la base de datos en esa instancia de servidor. Otra manera de convertirse en huérfano es que el SID de inicio de sesión al que está asignado el usuario de la base de datos no esté presente en la instancia `master` . Un usuario de la base de datos puede convertirse en huérfano si una base de datos se restaura o se conecta a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde nunca se ha creado el inicio de sesión. También puede convertirse en huérfano si se quita el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondiente. Incluso si se vuelve a crear el inicio de sesión, tendrá un SID diferente, por lo que el usuario de la base de datos seguirá siendo huérfano.  
   
-## <a name="to-detect-orphaned-users"></a>Para detectar usuarios huérfanos  
+## <a name="detect-orphaned-users"></a>Detección de usuarios huérfanos  
 
 **Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y PDW**
 
@@ -95,7 +96,7 @@ La tabla `sys.server_principals` no está disponible en Base de datos SQL ni en 
 
 3. Compare las dos listas para determinar si hay SID de usuario en la tabla `sys.database_principals` de la base de datos de usuario que no coinciden con los SID de inicio de sesión de la tabla `sql_logins` de la base de datos maestra. 
   
-## <a name="to-resolve-an-orphaned-user"></a>Para resolver un usuario huérfano  
+## <a name="resolve-an-orphaned-user"></a>Resolución de un usuario huérfano  
 En la base de datos maestra, use la instrucción [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) con la opción SID para volver a crear un inicio de sesión que falte. Para ello, proporcione el `SID` del usuario de base de datos obtenido en la sección anterior:  
   
 ```  

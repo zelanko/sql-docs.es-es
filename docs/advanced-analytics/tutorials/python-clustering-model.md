@@ -1,22 +1,22 @@
 ---
 title: 'Tutorial de Python: Clasificación de usuarios por categorías'
-description: En esta serie de tutoriales de cuatro partes, realizará una agrupación de clientes en clústeres con el algoritmo k-means en una base de datos SQL mediante Python con SQL Server Machine Learning Services.
+description: En esta serie de tutoriales de cuatro partes, realizará una agrupación de clientes en clústeres con el algoritmo K-Means en una base de datos SQL mediante Python con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 245a1566bfbbf19821323d0b474669eaba1d2e6e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: f5d1254c6b5c478c7bcad63da0902f21f4db70a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727073"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306579"
 ---
 # <a name="tutorial-categorizing-customers-using-k-means-clustering-with-sql-server-machine-learning-services"></a>Tutorial: Clasificación de clientes por categorías mediante la agrupación en clústeres k-means con SQL Server Machine Learning Services
 
@@ -34,7 +34,7 @@ La agrupación en clústeres k-means es un algoritmo de *aprendizaje no supervis
 En este artículo, aprenderá a:
 
 > [!div class="checklist"]
-> * Restaurar una base de datos de ejemplo en una instancia de SQL Server
+> * Restauración de una base de datos de ejemplo en una instancia de SQL Server
 
 En la [parte dos](python-clustering-model-prepare-data.md), aprenderá a preparar los datos de una base de datos SQL para realizar la agrupación en clústeres.
 
@@ -42,31 +42,23 @@ En la [parte tres](python-clustering-model-build.md), aprenderá a crear y entre
 
 En la [parte cuatro](python-clustering-model-deploy.md), aprenderá a crear un procedimiento almacenado en una base de datos SQL que pueda realizar la agrupación en clústeres en Python basándose en datos nuevos.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 * [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) con la opción de lenguaje de Python: siga las instrucciones de instalación en la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md) o la [Guía de instalación para Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15).
 
-* IDE de Python: en este tutorial, se usa un cuaderno de Python en [Azure Data Studio](../../azure-data-studio/what-is.md). Para más información, vea [Uso de cuadernos en Azure Data Studio](../../azure-data-studio/sql-notebooks.md). También puede usar su propio IDE de Python, como un cuaderno de Jupyter o [Visual Studio Code](https://code.visualstudio.com/docs) con la [extensión de Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) y la [extensión de mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+* [Azure Data Studio](../../azure-data-studio/what-is.md) Usará un cuaderno en Azure Data Studio para Python y SQL. Para obtener más información sobre los cuadernos, vea [Uso de los cuadernos en Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 
-* Paquete [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package): el paquete **revoscalepy** se incluye en SQL Server Machine Learning Services. Para usar el paquete en un equipo cliente, vea [Configuración de un cliente de ciencia de datos para el desarrollo de Python](../python/setup-python-client-tools-sql.md) para conocer las opciones de instalación de este paquete en un entorno local.
+  * Python: También puede usar su propio IDE de Python, como un cuaderno de Jupyter Notebook o [Visual Studio Code](https://code.visualstudio.com/docs) con la [extensión de Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) y la [extensión de mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+  * SQL: También puede usar [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
 
-  Si usa un cuaderno de Python en Azure Data Studio, siga estos pasos adicionales para usar **revoscalepy**:
+* Paquetes de Python adicionales: en los ejemplos de esta serie de tutoriales, se usan paquetes de Python que puede que no estén instalados.
 
-  1. Procedimiento para abrir Azure Data Studio
-  1. En el menú **Archivo**, seleccione **Preferencias** y, después, **Configuración**.
-  1. Expanda **Extensiones** y seleccione **Configuración del cuaderno**.
-  1. En **Ruta de Python**, escriba la ruta donde ha instalado las bibliotecas (por ejemplo, `C:\path-to-python-for-mls`).
-  1. Asegúrese de que esté activada la opción **Usar Python existente**.
-  1. Reinicio de Azure Data Studio
-
-  Si usa otro IDE de Python, siga los pasos similares para su IDE.
-
-* Herramienta de consultas SQL: en este tutorial, se da por hecho que usa [Azure Data Studio](../../azure-data-studio/what-is.md). También puede usar [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
-
-* Paquetes de Python adicionales: en los ejemplos de esta serie de tutoriales, se usan paquetes de Python que puede que no estén instalados. Use los comandos siguientes de **pip** para instalar estos paquetes si fuera necesario.
+  Abra un **símbolo del sistema** y cambie a la ruta de instalación de la versión de Python que use en Azure Data Studio. Por ejemplo, `cd %LocalAppData%\Programs\Python\Python37-32`. A continuación, ejecute los siguientes comandos para instalar cualquiera de estos paquetes que no están ya instalados.
 
   ```console
   pip install matplotlib
+  pip install pandas
+  pip install pyodbc
   pip install scipy
   pip install sklearn
   ```
@@ -89,7 +81,7 @@ El conjunto de datos de ejemplo usado en este tutorial se ha guardado en un arch
     SELECT * FROM [dbo].[customer];
     ```
 
-## <a name="clean-up-resources"></a>Limpiar recursos
+## <a name="clean-up-resources"></a>Limpieza de recursos
 
 Si no quiere continuar con este tutorial, elimine la base de datos tpcxbb_1gb de la instancia de SQL Server.
 

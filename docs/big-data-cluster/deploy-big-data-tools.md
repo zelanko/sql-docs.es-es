@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo instalar las herramientas que se u
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 964b6db780564797e35c4a40377227d3b56e4a3e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532228"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721716"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalación de las herramientas de macrodatos de SQL Server 2019
 
@@ -26,17 +26,17 @@ En este artículo se describen las herramientas de cliente que se deben instalar
 
 En la tabla siguiente se indican herramientas comunes de clúster de macrodatos y cómo instalarlas:
 
-| Herramienta | Obligatorio | Descripción | Installation |
+| Herramienta | Obligatorio | Descripción | Instalación |
 |---|---|---|---|
 | `python` | Sí | Python es un lenguaje de programación de alto nivel, interpretado y orientado a objetos con semántica dinámica. Muchas partes de los clústeres de macrodatos para SQL Server usan Python. | [Instalación de Python](#python)|
-| `azdata` | Sí | Herramienta de línea de comandos para instalar y administrar un clúster de macrodatos. | [Instalar](deploy-install-azdata.md) |
+| `azdata` | Sí | Herramienta de línea de comandos para instalar y administrar un clúster de macrodatos. | [Instalación](deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | Sí | Herramienta de línea de comandos para supervisar el clúster de Kubernetes subyacente ([Más información](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
-| **Azure Data Studio** | Sí | Herramienta gráfica multiplataforma para consultar SQL Server. | [Instalar](https://aka.ms/getazuredatastudio) |
-| **Extensión de virtualización de datos** | Sí | Extensión de Azure Data Studio que proporciona un asistente para la virtualización de datos. | [Instalar](../azure-data-studio/data-virtualization-extension.md) |
-| **CLI de Azure**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para administrar servicios de Azure. Se usa con implementaciones de clústeres de macrodatos de AKS ([Más información](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Instalar](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **Azure Data Studio** | Sí | Herramienta gráfica multiplataforma para consultar SQL Server. | [Instalación](https://aka.ms/getazuredatastudio) |
+| **Extensión de virtualización de datos** | Sí | Extensión de Azure Data Studio que proporciona un asistente para la virtualización de datos. | [Instalación](../azure-data-studio/data-virtualization-extension.md) |
+| **CLI de Azure**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para administrar servicios de Azure. Se usa con implementaciones de clústeres de macrodatos de AKS ([Más información](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Instalación](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Opcional | Interfaz de línea de comandos moderna para consultar SQL Server ([Más información](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Para algunos scripts | Herramienta de línea de comandos heredada para consultar SQL Server ([Más información](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
-| `curl` <sup>3</sup> | Para algunos scripts | Herramienta de línea de comandos para transferir datos con direcciones URL. | [Windows](https://curl.haxx.se/windows/) \| Linux: Instalación de paquete curl |
+| `curl` <sup>3</sup> | Para algunos scripts | Herramienta de línea de comandos para transferir datos con direcciones URL. | [Windows](https://curl.haxx.se/windows/) \| Linux: instalación de paquete curl |
 
 <sup>1</sup> Debe usar la versión 1.13 de `kubectl` o posterior. Además, la versión de `kubectl` debe ser más o menos una versión secundaria del clúster de Kubernetes. Si quiere instalar una versión concreta en el cliente de `kubectl`, vea [Instalación de `kubectl` binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (en Windows 10, use cmd.exe y no Windows PowerShell para ejecutar curl).
 
@@ -58,7 +58,7 @@ En la tabla anterior se proporcionan todas las herramientas comunes que se usan 
 - `azdata`
 - `kubectl`
 - **Azure Data Studio**
-- **Extensión SQL Server 2019**
+- **Extensión de virtualización de datos**
 
 Las herramientas restantes solo son necesarias en determinados escenarios. La **CLI de Azure** se puede usar para administrar servicios de Azure asociados a las implementaciones de AKS. **mssql-cli** es una herramienta opcional, aunque útil, que permite conectarse a la instancia maestra de SQL Server del clúster y ejecutar consultas desde la línea de comandos. Y **sqlcmd** y `curl` son necesarios si piensa instalar datos de ejemplo con el script de GitHub.
 
@@ -80,7 +80,7 @@ Las herramientas restantes solo son necesarias en determinados escenarios. La **
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-## <a name="download-and-install-azure-data-studio"></a>Descargar e instalar Azure Data Studio
+## <a name="download-and-install-azure-data-studio"></a>Descarga e instalación de Azure Data Studio
 
 Azure Data Studio proporciona funcionalidades y características específicamente para clústeres de macrodatos de SQL Server.
 

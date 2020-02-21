@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 350856cc27bdec601e0db2998f9ff9953cdf6ec7
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381733"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74401531"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de la versión del controlador Microsoft OLE DB para SQL Server
 
@@ -38,14 +38,14 @@ Octubre de 2019
 | Característica agregada | Detalles |
 | :------------ | :------ |
 | Compatibilidad con la autenticación de Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Uso de Azure Active Directory](features/using-azure-active-directory.md). |
-| Compatibilidad con Biblioteca de autenticación de Active Directory incrustado (ADAL). | Una instalación independiente de ADAL ya no es necesaria para usar determinados métodos de autenticación. |
+| Incluye la biblioteca de autenticación de Azure Active Directory (ADAL) y el instalador. | Ahora incluido en la instalación del controlador base, actualizará las instalaciones existentes de la Biblioteca de autenticación de Active Directory para SQL Server, quitándolas de la lista de aplicaciones instaladas en Windows. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Errores corregidos
 
 | Error corregido | Detalles |
 | :-------- | :------ |
-| Lógica de Drop index corregida en [IIndexDefinition::D ropindex](https://go.microsoft.com/fwlink/?linkid=2106448). | Las versiones anteriores del controlador de OLE DB no pueden quitar un índice de clave principal cuando el ID. de esquema y el ID. de usuario del propietario del índice no son iguales. |
+| Se corrigió la lógica de DROP INDEX en [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Las versiones anteriores del controlador de OLE DB no pueden quitar un índice de clave principal cuando el identificador de esquema y el identificador de usuario del propietario del índice no son iguales. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1823"></a>18.2.3
@@ -56,7 +56,7 @@ Junio de 2019
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| Compatibilidad con las actualizaciones de controladores desde el SQL Server medios extraíbles. | Esta mejora permite actualizar controladores directamente desde el SQL Server medios extraíbles. |
+| Compatibilidad con las actualizaciones de controladores desde medios extraíbles de SQL Server. | Esta mejora permite actualizar controladores directamente desde medios extraíbles de SQL Server. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -90,7 +90,7 @@ Julio de 2018
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| Compatibilidad con la palabra clave de cadena de conexión `UseFMTONLY` y la propiedad de inicialización `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controla cómo se recuperan los metadatos al conectarse a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones más recientes.<br/><br/>Para obtener más información, consulte: [usar palabras clave de cadena de conexión con OLE DB controlador para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Compatibilidad con la palabra clave de cadena de conexión `UseFMTONLY` y la propiedad de inicialización `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controla cómo se recuperan los metadatos al conectarse a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones más recientes.<br/><br/>Para más información, consulte: [Uso de palabras clave de cadena de conexión con el controlador OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Errores corregidos
@@ -106,9 +106,9 @@ Julio de 2018
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| Compatibilidad con la palabra clave de cadena de conexión `MultiSubnetFailover` y la propiedad de inicialización `SSPROP_INIT_MULTISUBNETFAILOVER`. | Para obtener más información, vea:<br/>&bull; &nbsp; [Compatibilidad de OLE DB Driver for SQL Server con la alta disponibilidad y la recuperación ante desastres](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md),<br/>&bull; &nbsp; [Uso de palabras clave de cadena de conexión con el controlador OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Compatibilidad con la palabra clave de cadena de conexión `MultiSubnetFailover` y la propiedad de inicialización `SSPROP_INIT_MULTISUBNETFAILOVER`. | Para más información, consulte:<br/>&bull; &nbsp; [Compatibilidad de OLE DB Driver for SQL Server con la alta disponibilidad y la recuperación ante desastres](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)<br/>&bull; &nbsp; [Uso de palabras clave de cadena de conexión con OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controlador Microsoft OLE DB para SQL Server](oledb-driver-for-sql-server.md)

@@ -12,35 +12,35 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265177"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Conectar mediante autenticación de Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) es una tecnología de administración de ID. de usuario central que funciona como alternativa a la [autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD permite conexiones a Microsoft Azure SQL Database y SQL Data Warehouse con identidades federadas en Azure AD mediante un nombre de usuario y una contraseña, la autenticación integrada de Windows o un token de acceso Azure AD. Los controladores PHP para SQL Server ofrecen compatibilidad parcial con estas características.
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) es una tecnología de administración de identificador de usuario central que funciona como alternativa a la [autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD permite las conexiones a Microsoft Azure SQL Database y SQL Data Warehouse con identidades federadas en Azure AD mediante un nombre de usuario y una contraseña, Autenticación integrada de Windows o un token de acceso de Azure AD. Los controladores PHP para SQL Server ofrecen compatibilidad parcial con estas características.
 
-Para usar Azure AD, use las palabras clave **Authentication** o **AccessToken** (son mutuamente excluyentes), tal y como se muestra en la tabla siguiente. Para obtener más información técnica, consulte [uso de Azure Active Directory con el controlador ODBC](../../connect/odbc/using-azure-active-directory.md).
+Para usar Azure AD, use las palabras clave **Authentication** o **AccessToken** (se excluyen mutuamente), tal como se muestra en la siguiente tabla. Para obtener detalles más técnicos, consulte [Uso de Azure Active Directory con el controlador ODBC](../../connect/odbc/using-azure-active-directory.md).
 
 |Palabra clave|Valores|Descripción|
 |-|-|-|
-|**AccessToken**|No establecido (valor predeterminado)|Modo de autenticación determinado por otras palabras clave. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md). |
-||Una cadena de bytes|El token de acceso Azure AD extraído de una respuesta JSON de OAuth. La cadena de conexión no debe contener el ID. de usuario, la contraseña o la palabra clave de autenticación (requiere la versión 17 del controlador ODBC o posterior en Linux o macOS). |
-|**Autenticación**|No establecido (valor predeterminado)|Modo de autenticación determinado por otras palabras clave. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md). |
-||`SqlPassword`|Autentique directamente en una instancia de SQL Server (que puede ser una instancia de Azure) mediante un nombre de usuario y una contraseña. El nombre de usuario y la contraseña se deben pasar a la cadena de conexión mediante las palabras clave **UID** y **pwd** . |
-||`ActiveDirectoryPassword`|Autenticarse con una identidad de Azure Active Directory mediante un nombre de usuario y una contraseña. El nombre de usuario y la contraseña se deben pasar a la cadena de conexión mediante las palabras clave **UID** y **pwd** . |
-||`ActiveDirectoryMsi`|Realice la autenticación mediante una identidad administrada asignada por el sistema o una identidad administrada asignada por el usuario (requiere la versión de controlador ODBC 17.3.1.1 o posterior). Para obtener información general y tutoriales, consulte [¿Qué son las identidades administradas para los recursos de Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)|
+|**AccessToken**|Sin establecer (valor predeterminado)|Modo de autenticación determinado por otras palabras clave. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md). |
+||Una cadena de bytes|El token de acceso de Azure AD extraído de una respuesta JSON. La cadena de conexión no debe contener ningún identificador de usuario, ninguna contraseña o la palabra clave Authentication (requiere la versión 17 del controlador ODBC o una versión posterior en Linux o macOS). |
+|**Autenticación**|Sin establecer (valor predeterminado)|Modo de autenticación determinado por otras palabras clave. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md). |
+||`SqlPassword`|Autentíquese directamente en una instancia de SQL Server (que puede ser una instancia de Azure) mediante un nombre de usuario y una contraseña. El nombre de usuario y la contraseña deben pasarse a la cadena de conexión mediante las palabras clave **UID** y **PWD**. |
+||`ActiveDirectoryPassword`|Autentíquese con una identidad de Azure Active Directory mediante un nombre de usuario y una contraseña. El nombre de usuario y la contraseña deben pasarse a la cadena de conexión mediante las palabras clave **UID** y **PWD**. |
+||`ActiveDirectoryMsi`|Autentíquese mediante una identidad administrada asignada por el sistema o una identidad administrada asignada por el usuario (requiere la versión 17.3.1.1 del controlador ODBC o una versión posterior). Para obtener información general y tutoriales, consulte [¿Qué son las identidades administradas de los recursos de Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)|
 
-La palabra clave **Authentication** afecta a la configuración de seguridad de la conexión. Si se establece en la cadena de conexión, de forma predeterminada, la palabra clave **Encrypt** se establece en true, lo que significa que el cliente solicitará el cifrado. Además, el certificado de servidor se validará independientemente de la configuración de cifrado a menos que **TrustServerCertificate** se establezca en true (de forma predeterminada,**false** ). Esta característica se distingue del método de inicio de sesión antiguo y menos seguro, en el que el certificado de servidor solo se valida cuando el cifrado se solicita específicamente en la cadena de conexión.
+La palabra clave **Authentication** afecta a la configuración de seguridad de la conexión. Si se establece en la cadena de conexión, la palabra clave **Encrypt** se establecerá en true de forma predeterminada, lo que significa que el cliente solicitará el cifrado. Además, el certificado de servidor se validará con independencia de la configuración de cifrado a menos que **TrustServerCertificate** se establezca en true (**false** de forma predeterminada). Esta característica se distingue del método de inicio de sesión anterior y menos seguro, en el que el certificado de servidor se valida solo cuando se solicita de forma específica en la cadena de conexión.
 
-Al usar Azure AD con los controladores PHP para SQL Server en Windows, es posible que se le pida que instale el ayudante para el [Inicio de sesión de Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=41950) (no es necesario para ODBC 17 +).
+Al usar Azure AD con los controladores PHP para SQL Server en Windows, es posible que se le pida que instale [Microsoft Online Services - Ayudante para el inicio de sesión](https://www.microsoft.com/download/details.aspx?id=41950) (no es necesario para la versión 17 y posteriores de ODBC).
 
 #### <a name="limitations"></a>Limitaciones
 
-En Windows, el controlador ODBC subyacente admite un valor más para la palabra clave **Authentication** , **ActiveDirectoryIntegrated**, pero los controladores php no admiten este valor en ninguna plataforma.
+En Windows, el controlador ODBC subyacente admite un valor más para la palabra clave **Authentication**, **ActiveDirectoryIntegrated**, pero los controladores PHP no admiten este valor en ninguna plataforma.
 
 ## <a name="example---connect-using-sqlpassword-and-activedirectorypassword"></a>Ejemplo: conexión mediante SqlPassword y ActiveDirectoryPassword
 
@@ -82,7 +82,7 @@ if ($conn === false) {
 ?>
 ```
 
-## <a name="example---connect-using-the-pdosqlsrv-driver"></a>Ejemplo: conectar con el controlador PDO_SQLSRV
+## <a name="example---connect-using-the-pdo_sqlsrv-driver"></a>Ejemplo: conexión mediante el controlador PDO_SQLSRV
 
 ```php
 <?php
@@ -120,7 +120,7 @@ try {
 ?>
 ```
 
-## <a name="example---connect-using-azure-ad-access-token"></a>Ejemplo: conexión mediante el token de acceso Azure AD
+## <a name="example---connect-using-azure-ad-access-token"></a>Ejemplo: conexión mediante el token de acceso de Azure AD
 
 ### <a name="sqlsrv-driver"></a>Controlador SQLSRV
 
@@ -140,7 +140,7 @@ if ($conn === false) {
 ?>
 ```
 
-### <a name="pdosqlsrv-driver"></a>Controlador PDO_SQLSRV
+### <a name="pdo_sqlsrv-driver"></a>Controlador PDO_SQLSRV
 
 ```php
 <?php
@@ -163,7 +163,7 @@ try {
 
 ### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>Uso de la identidad administrada asignada por el sistema con el controlador SQLSRV
 
-Al conectarse mediante la identidad administrada asignada por el sistema, no use las opciones UID ni PWD.
+Al conectarse mediante la identidad administrada asignada por el sistema, no use las opciones UID o PWD.
 
 ```php
 <?php
@@ -198,11 +198,11 @@ if ($conn === false) {
 ?>
 ```
 
-### <a name="using-the-user-assigned-managed-identity-with-pdosqlsrv-driver"></a>Usar la identidad administrada asignada por el usuario con el controlador PDO_SQLSRV
+### <a name="using-the-user-assigned-managed-identity-with-pdo_sqlsrv-driver"></a>Uso de la identidad administrada asignada por el usuario con el controlador PDO_SQLSRV
 
-Una identidad administrada asignada por el usuario se crea como un recurso independiente de Azure. Azure crea una identidad en el inquilino de Azure AD que es de confianza para la suscripción en uso. Una vez creada la identidad, la identidad se puede asignar a una o varias instancias de servicio de Azure. Copie el `Object ID` de esta identidad y establézcalo como el nombre de usuario en la cadena de conexión. 
+Las identidades administrada asignadas por el usuario se crean como recursos de Azure independientes. Azure crea una identidad en el inquilino de Azure AD de confianza para la suscripción que se utiliza. Una vez creada la identidad, esta puede asignarse a una o varias instancias de servicio de Azure. Copie el `Object ID` de esta identidad y establézcalo como nombre de usuario en la cadena de conexión. 
 
-Por lo tanto, al conectarse mediante la identidad administrada asignada por el usuario, proporcione el identificador de objeto como nombre de usuario, pero omita la contraseña.
+Por tanto, al conectarse mediante la identidad administrada asignada por el usuario, proporcione el identificador de objeto como nombre de usuario, pero omita la contraseña.
 
 ```php
 <?php
@@ -239,4 +239,4 @@ try {
 ## <a name="see-also"></a>Consulte también
 [Uso de Azure Active Directory con el controlador ODBC](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)
 
-[¿Qué son las identidades administradas para los recursos de Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
+[¿Qué son las identidades administradas de los recursos de Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)

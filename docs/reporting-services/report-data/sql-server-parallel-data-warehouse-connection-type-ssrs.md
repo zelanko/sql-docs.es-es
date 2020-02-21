@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a7da810593c6b7dee9ab80af17d840ed3d0dc4d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 445057a5ac7144e7bb97f74f8d6eb20d8332f8e0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594039"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190624"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexión Almacenamiento de datos paralelo de SQL Server (SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "73594039"
   
  El dispositivo particiona tablas de base de datos grandes en varios nodos físicos, cada uno de los cuales ejecuta su propia instancia de SQL Server. Cuando un informe se conecta a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] para recuperar datos de informes, se conecta al nodo de control que administra el procesamiento de consultas, en la [!INCLUDE[ssDW](../../includes/ssdw-md.md)] dispositivo. Una vez realizada la conexión, no hay ninguna diferencia entre trabajar con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que esté o no en un [!INCLUDE[ssDW](../../includes/ssdw-md.md)] entorno.  
   
- Para incluir en el informe datos de [!INCLUDE[ssDW](../../includes/ssdw-md.md)] , debe tener un conjunto de datos que se base en un origen de datos de informe del tipo de Almacenamiento de datos paralelo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tipo de origen de datos integrado se basa en la extensión de datos de Almacenamiento de datos paralelo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilice este tipo de origen de datos para conectarse y recuperar datos de [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
+ Para incluir en el informe datos de [!INCLUDE[ssDW](../../includes/ssdw-md.md)], debe tener un conjunto de datos que se base en un origen de datos de informe del tipo de Almacenamiento de datos paralelo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de Almacenamiento de datos paralelo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilice este tipo de origen de datos para conectarse y recuperar datos de [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
   
  Esta extensión de datos admite parámetros de varios valores, agregados del servidor y credenciales administrados con independencia de la cadena de conexión.  
    
@@ -37,7 +37,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  Además, utilice el cuadro de diálogo **Propiedades de orígenes de datos** para proporcionar credenciales, como el nombre de usuario y la contraseña. Las opciones `User Id` y `Password` se anexan automáticamente a la cadena de conexión; no necesita escribirlos como parte de la cadena de conexión. La interfaz de usuario también proporciona opciones para especificar la dirección IP del nodo de control en el dispositivo [!INCLUDE[ssDW](../../includes/ssdw-md.md)] y el número de puerto. De forma predeterminada, el puerto es el 17000. El administrador puede configurar el puerto y su cadena de conexión puede utilizar un número de puerto diferente.  
   
- Para más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para más información sobre ejemplos de cadenas de conexión, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credenciales  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] proporciona su propia tecnología de seguridad para implementar y almacenar nombres de usuario y contraseñas. No podrá utilizar la autenticación de Windows. Si intenta conectarse a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] utilizando la autenticación de Windows, se producirá un error.  
@@ -50,7 +50,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
- Para obtener más información, vea [conexiones de datos, orígenes de datos y &#40;cadenas de conexión&#41; generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar información de credenciales y conexión para los orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Para más información, consulte [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Consultas  
@@ -141,7 +141,7 @@ WHERE EmployeeID = (@EmpID)
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Proporciona información sobre las conexiones de datos y los orígenes de datos.  
   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

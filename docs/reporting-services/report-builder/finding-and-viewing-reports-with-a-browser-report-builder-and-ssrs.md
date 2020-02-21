@@ -9,10 +9,10 @@ ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594004"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Buscar y ver informes con un explorador (Generador de informes y SSRS)
@@ -28,7 +28,7 @@ Carpetas en un explorador
 > [!NOTE]  
 >  Si obtiene acceso a un informe desde un dispositivo de mano, deberá utilizar el explorador para abrir los informes. El Administrador de informes todavía no ofrece compatibilidad con este tipo de dispositivos.  
   
- Para obtener más información acerca de los tipos de exploradores que puede usar, consulte [compatibilidad con exploradores para Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+ Para más información sobre los tipos de exploradores que puede usar, consulte [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

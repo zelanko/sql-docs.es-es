@@ -1,11 +1,7 @@
 ---
-title: Configuración del proyecto de base de datos | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Configuración del proyecto de base de datos
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
@@ -40,14 +36,19 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4921df6e1602d4cfc98aa6da3733452d6b5d33d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912854"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241682"
 ---
 # <a name="database-project-settings"></a>Configuración del proyecto de base de datos
+
 Utilice la configuración del proyecto de base de datos para controlar aspectos de las configuraciones de base de datos, depuración y compilación. Existen varias categorías de configuraciones.  
   
 -   [Configuración del proyecto](#bkmk_proj_settings)  
@@ -94,7 +95,7 @@ Los valores de configuración de la siguiente tabla se aplican a todas las confi
 |Esquema predeterminado|dbo|Especifica el esquema predeterminado en el que se crean tanto los objetos SQLCLR como los objetos Transact\-SQL. Si desea invalidar este valor, especifique el esquema directamente en los objetos."|  
 |Incluir nombre de esquema en nombre de archivo|no|Especifica si los nombres de archivo incluyen el esquema como prefijo (por ejemplo, dbo.Products.table.sql). Si se desactiva esta casilla, los nombres de archivo para los objetos adoptan el formato nombreDeObjeto.tipoDeObjeto.sql (por ejemplo, Products.table.sql).|  
 |Validar el uso de mayúsculas y minúsculas en identificadores|sí|Especifica si se validará el uso de mayúsculas y minúsculas en identificadores en los objetos SQL del proyecto durante la compilación del proyecto. Esta opción se aplica a los proyectos de base de datos que especifican una intercalación de la base de datos que distingue mayúsculas de minúsculas.|  
-|Configuración de base de datos|Configuración predeterminada basada en la configuración estándar para una base de datos|Entre las configuraciones que se pueden especificar se incluye el método de intercalación y el nivel de una base de datos de SQL Server.|  
+|Database Settings|Configuración predeterminada basada en la configuración estándar para una base de datos|Entre las configuraciones que se pueden especificar se incluye el método de intercalación y el nivel de una base de datos de SQL Server.|  
   
 ## <a name="bkmk_evf"></a>Comprobación extendida de Transact-SQL  
   
@@ -116,7 +117,7 @@ Las características que se basan en la configuración de la instancia o la base
   
 -   FileTables  
   
--   Seguimiento de los cambios  
+-   Seguimiento de cambios  
   
 -   Funciones Rowset - OPENROWSET, OPENQUERY, OPENDATASOURCE  
   
@@ -150,7 +151,7 @@ La característica de comprobación extendida puede usarse también al desarroll
   
 2.  En **Propiedades**, cambie la propiedad **Extended T-SQL Verification** (Comprobación extendida de T-SQL) a **False**.  
   
-![Propiedades de archivo](../ssdt/media/ssdt-evf.gif "Propiedades de archivo")  
+![Propiedades del archivo](../ssdt/media/ssdt-evf.gif "Propiedades del archivo")  
   
 ### <a name="special-considerations-for-collations"></a>Consideraciones especiales para las intercalaciones  
 Para obtener más información acerca de las intercalaciones en las bases de datos parcialmente independientes, vea [Intercalaciones en bases de datos independientes](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
@@ -177,7 +178,7 @@ Puede elegir una configuración de compilación para cada proyecto de base de da
   
 1.  En el **Explorador de soluciones**, haga clic en el nodo de solución para el que desea especificar una configuración de compilación.  
   
-2.  En el menú **Compilar** , haga clic en **Administrador de configuración**. Aparecerá el cuadro de diálogo **Administrador de configuración** .  
+2.  En el menú **Compilar**, haga clic en **Administrador de configuración**. Aparecerá el cuadro de diálogo **Administrador de configuración**.  
   
     Especifique los valores de configuración que vaya a utilizar para cada proyecto de la solución.  
   
@@ -221,8 +222,8 @@ Puede utilizar esta configuración para controlar la depuración del proyecto de
 |Cadena de conexión de destino|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Especifica la información de conexión del servidor de bases de datos que desea que sea el destino de la configuración de compilación especificada. La cadena de conexión predeterminada corresponde a una instancia de LocalDB y una base de datos de SQL Server creadas dinámicamente.|  
 |Implementar propiedades de base de datos|Sí|Especifica si se implementa o se actualiza la configuración de DatabaseProperties.DatabaseProperties al implementar el proyecto de base de datos.|  
 |Volver a crear siempre la base de datos|No|Especifica si se va a quitar y volver a crear la base de datos en lugar de realizar una actualización incremental. Seleccione esta casilla de verificación si desea ejecutar las pruebas unitarias de base de datos en una implementación limpia de la base de datos, por ejemplo. Si desactiva esta casilla, la base de datos existente se actualizará en lugar de eliminarse y volver a crearse.|  
-|Bloquear implementación incremental si puede dar lugar a pérdida de datos|sí|Especifica si la implementación debe detenerse si una actualización puede producir pérdida de datos. Si esta casilla está activada, los cambios que provocarían la pérdida de datos detendrían la implementación con un error, lo que impediría que se perdiesen los datos. Por ejemplo, la implementación se detendría si una columna `varchar(50)` se hubiera cambiado a `varchar(30)`.<br /><br />**NOTA:** La implementación solo se bloquea si las tablas en las que puede producirse pérdida de datos contienen datos. La implementación continúa si no se pierde ningún dato.|  
-|Objetos DROP en destino pero no en proyecto|no|Especifica si los objetos que están en la base de datos de destino pero no en el proyecto de base de datos se deben eliminar del script de implementación. Esto permite excluir algunos archivos del proyecto y quitarlos temporalmente del script de compilación. Sin embargo, es posible que le interese mantener las versiones existentes de estos objetos en la base de datos de destino. Esta casilla de verificación no tiene ningún efecto si la casilla de verificación **Volver a crear siempre la base de datos** está seleccionada, porque se quitará la base de datos.|  
+|Bloquear implementación incremental si puede dar lugar a pérdida de datos|Sí|Especifica si la implementación debe detenerse si una actualización puede producir pérdida de datos. Si esta casilla está activada, los cambios que provocarían la pérdida de datos detendrían la implementación con un error, lo que impediría que se perdiesen los datos. Por ejemplo, la implementación se detendría si una columna `varchar(50)` se hubiera cambiado a `varchar(30)`.<br /><br />**NOTA:** La implementación solo se bloquea si las tablas en las que puede producirse pérdida de datos contienen datos. La implementación continúa si no se pierde ningún dato.|  
+|Objetos DROP en destino pero no en proyecto|No|Especifica si los objetos que están en la base de datos de destino pero no en el proyecto de base de datos se deben eliminar del script de implementación. Esto permite excluir algunos archivos del proyecto y quitarlos temporalmente del script de compilación. Sin embargo, es posible que le interese mantener las versiones existentes de estos objetos en la base de datos de destino. Esta casilla de verificación no tiene ningún efecto si la casilla de verificación **Volver a crear siempre la base de datos** está seleccionada, porque se quitará la base de datos.|  
 |No usar instrucciones ALTER ASSEMBLY para actualizar tipos CLR|No|Especifica si deben usarse instrucciones ALTER ASSEMBLY para actualizar tipos CLR (Common Language Runtime) o si el objeto que crea la instancia del tipo CLR se va a quitar y volver a generar al implementar los cambios.|  
 |Avanzadas...|No|Botón de comando que permite especificar opciones que controlan eventos y el comportamiento de la implementación.|  
   

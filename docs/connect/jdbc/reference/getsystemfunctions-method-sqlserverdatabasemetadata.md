@@ -16,10 +16,10 @@ ms.assetid: 6d390ec5-9ee2-49c4-b661-a93b55691dd1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08df5c1c52712e8180d18dbe930cea271ca03e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979269"
 ---
 # <a name="getsystemfunctions-method-sqlserverdatabasemetadata"></a>Método getSystemFunctions (SQLServerDatabaseMetaData)
@@ -40,7 +40,7 @@ public java.lang.String getSystemFunctions()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getSystemFunctions especifica este método getSystemFunctions en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  

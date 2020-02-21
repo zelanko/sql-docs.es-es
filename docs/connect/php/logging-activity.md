@@ -13,10 +13,10 @@ ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993328"
 ---
 # <a name="logging-activity"></a>Actividad de registro
@@ -24,7 +24,7 @@ ms.locfileid: "67993328"
 
 De manera predeterminada, los errores y las advertencias generados por los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] no se registran. En este tema se describe cómo configurar la actividad de registro.  
   
-## <a name="logging-activity-using-the-pdosqlsrv-driver"></a>Actividad de registro con el controlador PDO_SQLSRV  
+## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>Actividad de registro con el controlador PDO_SQLSRV  
 La única configuración disponible para el controlador PDO_SQLSRV es la entrada pdo_sqlsrv.log_severity en el archivo php.ini.  
   
 Agregue lo siguiente al final del archivo php.ini:  
@@ -36,13 +36,13 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** puede ser uno de los siguientes valores:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |---------|---------------|  
 |0|El registro está deshabilitado (se trata del valor predeterminado si no se define ninguno).|  
 |-1|Especifica que se registran errores, advertencias y avisos.|  
 |1|Especifica que se registran los errores.|  
 |2|Especifica que se registran las advertencias.|  
-|4|Especifica que los avisos se registran.|  
+|4|Especifica que se registran los avisos.|  
   
 La información de registro se agrega al archivo phperrors.log.  
   
@@ -64,7 +64,7 @@ En la siguiente tabla se describen las constantes que se pueden utilizar como el
 |Valor (equivalente entero entre paréntesis)|Descripción|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Activa el registro de todos los subsistemas.|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|Desactiva el registro. Ésta es la opción predeterminada.|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|Desactiva el registro. Este es el valor predeterminado.|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|Activa el registro de la actividad de inicialización.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Activa el registro de la actividad de conexión.|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|Activa el registro de la actividad de instrucción.|  
@@ -95,9 +95,9 @@ En la tabla siguiente se describen las constantes que se pueden utilizar como el
 |Valor (equivalente entero entre paréntesis)|Descripción|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que se registran errores, advertencias y avisos.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que se registran los errores. Ésta es la opción predeterminada.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que se registran los errores. Este es el valor predeterminado.|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Especifica que se registran las advertencias.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Especifica que los avisos se registran.|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Especifica que se registran los avisos.|  
   
 Puede establecer más de un valor a la vez para la configuración **LogSeverity** con el operador lógico OR (|). Por ejemplo, la siguiente línea de código especifica que se deben registrar errores y advertencias:  
   

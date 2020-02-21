@@ -5,18 +5,19 @@ description: Consuma una aplicación implementada en clústeres de macrodatos de
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32b3884b48e20b73da186f8c0d80e6c85516a8ed
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73707176"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721410"
 ---
-# <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>Consumo de una aplicación implementada en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con un servicio web RESTful
+# <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Consumo de una aplicación implementada en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con un servicio web RESTful
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -28,13 +29,13 @@ En este artículo se explica cómo consumir una aplicación implementada en un c
 - [Utilidad de línea de comandos azdata](deploy-install-azdata.md)
 - Una aplicación implementada mediante [azdata](big-data-cluster-create-apps.md) o la [extensión de implementación de aplicaciones](app-deployment-extension.md)
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>Capacidades
 
 Después de haber implementado una aplicación en el [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], puede acceder a esa aplicación y consumirla mediante un servicio web RESTful. Esto permite la integración de esa aplicación desde otras aplicaciones o servicios (por ejemplo, una aplicación móvil o un sitio web). En la tabla siguiente se describen los comandos de implementación de aplicaciones que se pueden usar con **azdata** para obtener información sobre el servicio web RESTful de la aplicación.
 
-|Comando |Descripción |
+|Get-Help |Descripción |
 |:---|:---|
-|`azdata app describe` | Describe la aplicación. |
+|`azdata app describe` | Describe una aplicación. |
 
 Puede obtener ayuda con el parámetro `--help`, como en el ejemplo siguiente:
 
@@ -90,7 +91,16 @@ Otra de las diversas formas de obtener esta información es haciendo clic con el
 
 ## <a name="generate-a-jwt-access-token"></a>Generar un token de acceso JWT
 
-Para acceder al servicio web RESTful de la aplicación que ha implementado, primero debe generar un token de acceso JWT. Abra la siguiente dirección URL en el explorador: `https://[IP]:[PORT]/docs/swagger.json` con la dirección IP y el puerto que ha recuperado al ejecutar el comando `describe` arriba. Tiene que iniciar sesión con las mismas credenciales que ha usado para `azdata login`.
+Para acceder al servicio web RESTful de la aplicación que ha implementado, primero debe generar un token de acceso JWT. La dirección URL del token de acceso depende de la versión del clúster de macrodatos. 
+
+|Versión |URL|
+|------------|------|
+|GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
+|CU1 y versiones posteriores| `https://[IP]:[PORT]/api/v1/swagger.json`|
+
+> Para información sobre la versión, consulte el [historial de versiones](release-notes-big-data-cluster.md#release-history).
+
+Abra la dirección URL adecuada en el explorador con la dirección IP y el puerto que ha recuperado al ejecutar el comando [`describe`](#retrieve-the-endpoint) arriba. Inicie sesión con las mismas credenciales que ha usado para `azdata login`.
 
 Pegue el contenido de `swagger.json` en el [editor de Swagger](https://editor.swagger.io) para conocer qué métodos están disponibles:
 

@@ -1,23 +1,24 @@
 ---
-title: 'Procedimientos: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Escritura de una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119880"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246485"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procedimientos: Escritura de una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción
+
 Puede modificar las pruebas unitarias para ejecutarlas en el ámbito de una única transacción. Si elige este enfoque, puede revertir los cambios activados por la prueba una vez finalizada esta. Los procedimientos siguientes explican cómo:  
   
 -   Cree una transacción en el script de prueba Transact\-SQL que usa **BEGIN TRANSACTION** y **ROLLBACK TRANSACTION**.  

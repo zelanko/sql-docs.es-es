@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893240"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS)
@@ -38,7 +38,7 @@ ms.locfileid: "68893240"
 ##  <a name="bkmk_general"></a> Recomendaciones generales para el registro ULS  
  En la tabla siguiente se enumeran los niveles y categorías de eventos que se recomiendan para supervisar un entorno de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Cuando se registra un evento, cada entrada incluye el momento en que se registró, el nombre del proceso y el identificador de subproceso.  
   
-|Categoría|Nivel|Descripción|  
+|Category|Nivel|Descripción|  
 |--------------|-----------|-----------------|  
 |Base de datos|Verbose|Registra eventos que implican el acceso a bases de datos.|  
 |General|Verbose|Registra eventos que implican el acceso a los elementos siguientes:<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] páginas Web<br /><br /> Controlador HTTP del visor de informes<br /><br /> Acceso a informes (archivos .rdl)<br /><br /> Orígenes de datos (archivos .rsds)<br /><br /> Direcciones URL en el sitio de SharePoint (archivos .smdl)|  
@@ -85,9 +85,9 @@ Get-SPDiagnosticConfig
   
 1.  **Producto: SQL Server Reporting Services.**  
   
-2.  **Categoría:** los eventos relacionados con el servidor tendrán los caracteres "Servidor de informes" en el nombre. Por ejemplo, "Tiempo de ejecución de alertas del servidor de informes". Estos eventos se registran también en los archivos de registro del servidor de informes.  
+2.  **Categoría:** los eventos relacionados con el servidor tendrán los caracteres "Servidor de informes” al principio del nombre. Por ejemplo, "Tiempo de ejecución de alertas del servidor de informes". Estos eventos se registran también en los archivos de registro del servidor de informes.  
   
-3.  **Categoría**: los eventos relacionados o comunicados desde un componente front-end web no contendrán "Servidor de informes". Por ejemplo, "Proxy de aplicación de servicio - Tiempo de ejecución de alertas del servidor de informes". Las entradas de WFE contienen un CorrelationID pero no así las entradas del servidor.  
+3.  **Categoría:** los eventos relacionados o comunicados desde un componente front-end web no contienen "Servidor de informes". Por ejemplo, "Proxy de aplicación de servicio - Tiempo de ejecución de alertas del servidor de informes". Las entradas de WFE contienen un CorrelationID pero no así las entradas del servidor.  
   
 ##  <a name="bkmk_list"></a> Lista de eventos de SQL Server Reporting Services  
  La tabla siguiente contiene una lista de eventos de la categoría SQL Server Reporting Services:  
@@ -124,7 +124,7 @@ Get-SPDiagnosticConfig
 |Proveedor del servidor de informes||  
 |Representación del servidor de informes||  
 |Vista previa de informes del servidor de informes||  
-|Utilidad de recursos del servidor de informes|Entradas de ejemplo:<br /><br /> SKU de inicio de MediumReporting Services: evaluación<br /><br /> Copia de MediumEvaluation: expira en 180 días|  
+|Utilidad de recursos del servidor de informes|Entradas de ejemplo:<br /><br /> SKU de inicio de MediumReporting Services: Evaluación<br /><br /> Copia de MediumEvaluation: 180 días restantes|  
 |Trabajos en ejecución del servidor de informes||  
 |Solicitudes en ejecución del servidor de informes||  
 |Programación del servidor de informes||  

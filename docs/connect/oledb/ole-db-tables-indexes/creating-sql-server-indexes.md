@@ -1,6 +1,6 @@
 ---
-title: Crear índices de SQL Server | Microsoft Docs
-description: Crear índices de SQL Server con OLE DB controlador para SQL Server
+title: Creación de índices de SQL Server | Microsoft Docs
+description: Creación de índices de SQL Server con OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ca823023764a691eae0afc1e6df62bab91dd075d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015264"
 ---
 # <a name="creating-sql-server-indexes"></a>Crear índices de SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "68015264"
 
   El controlador OLE DB para SQL Server expone la función **IIndexDefinition::CreateIndex**, que permite a los consumidores definir índices nuevos en las tablas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- El controlador de OLE DB para SQL Server crea índices de tabla como índices o restricciones. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da privilegio de creación de restricciones al propietario de la tabla, el propietario de la base de datos y los miembros de ciertos roles administrativos. De forma predeterminada, solamente el propietario de la tabla puede crear un índice en una tabla. Por tanto, que la ejecución de **CreateIndex** sea correcta o no depende no solo de los derechos de acceso del usuario de la aplicación, sino también del tipo de índice creado.  
+ OLE DB Driver for SQL Server crea índices de tabla como índices o restricciones. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da privilegio de creación de restricciones al propietario de la tabla, el propietario de la base de datos y los miembros de ciertos roles administrativos. De forma predeterminada, solamente el propietario de la tabla puede crear un índice en una tabla. Por tanto, que la ejecución de **CreateIndex** sea correcta o no depende no solo de los derechos de acceso del usuario de la aplicación, sino también del tipo de índice creado.  
   
  Los consumidores especifican el nombre de tabla como una cadena de caracteres Unicode en el miembro *pwszName* de la unión *uName* en el parámetro *pTableID*. El miembro *eKind* de *pTableID* debe ser DBKIND_NAME.  
   
@@ -40,29 +40,29 @@ ms.locfileid: "68015264"
   
  El consumidor especifica la columna o columnas que participan en el índice por nombre. Para cada estructura de DBINDEXCOLUMNDESC usada en **CreateIndex**, el miembro *eKind* de *pColumnID* debe ser DBKIND_NAME. El nombre de la columna se especifica como una cadena de caracteres Unicode en el miembro *pwszName* de la unión *uName* en *pColumnID*.  
   
- El controlador de OLE DB para SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y admitir el orden ascendente de los valores del índice. El controlador OLE DB para SQL Server devuelve E_INVALIDARG si el consumidor especifica DBINDEX_COL_ORDER_DESC en cualquier estructura DBINDEXCOLUMNDESC.  
+ OLE DB Driver for SQL Server y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admiten el orden ascendente en los valores del índice. El controlador OLE DB para SQL Server devuelve E_INVALIDARG si el consumidor especifica DBINDEX_COL_ORDER_DESC en cualquier estructura DBINDEXCOLUMNDESC.  
   
  **CreateIndex** interpreta las propiedades del índice como sigue.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|L/E: lectura y escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: el controlador de OLE DB para SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_CLUSTERED|L/E: lectura y escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: controla la agrupación en clústeres de índices.<br /><br /> VARIANT_TRUE: el controlador de OLE DB para SQL Server intenta crear un índice clúster en la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite a lo sumo un índice clúster en cualquier tabla.<br /><br /> VARIANT_FALSE: el controlador de OLE DB para SQL Server intenta crear un índice no clúster en la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla.|  
-|DBPROP_INDEX_FILLFACTOR|L/E: lectura y escritura<br /><br /> Predeterminado: 0<br /><br /> Descripción: especifica el porcentaje de una página de índice utilizado para el almacenamiento. Para obtener más información, vea [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md).<br /><br /> El tipo del variant es VT_I4. El valor debe ser mayor o igual que 1 y menor o igual que 100.|  
-|DBPROP_INDEX_INITIALIZE|L/E: lectura y escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: el controlador de OLE DB para SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLCOLLATION|L/E: lectura y escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: el controlador de OLE DB para SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLS|L/E: lectura y escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: el controlador de OLE DB para SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_PRIMARYKEY|L/E: lectura y escritura<br /><br /> Valor predeterminado: VARIANT_FALSE. Descripción: crea el índice como una integridad referencial, restricción PRIMARY KEY.<br /><br /> VARIANT_TRUE: el índice se crea para admitir la restricción PRIMARY KEY de la tabla. Las columnas no deben admitir valores NULL.<br /><br /> VARIANT_FALSE: el índice no se utiliza como una restricción PRIMARY KEY para los valores de fila de la tabla.|  
-|DBPROP_INDEX_SORTBOOKMARKS|L/E: lectura y escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: el controlador de OLE DB para SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TEMPINDEX|L/E: lectura y escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: el controlador de OLE DB para SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TYPE|L/E: lectura y escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: el controlador de OLE DB para SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_UNIQUE|L/E: lectura y escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: crea el índice como una restricción UNIQUE en la columna o columnas participantes.<br /><br /> VARIANT_TRUE: el índice se utiliza para restringir de forma única los valores de fila de la tabla.<br /><br /> VARIANT_FALSE: el índice no restringe de forma exclusiva los valores de fila.|  
+|DBPROP_INDEX_AUTOUPDATE|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: None<br /><br /> Descripción: OLE DB Driver for SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_CLUSTERED|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: controla la agrupación en clústeres de índices.<br /><br /> VARIANT_TRUE: OLE DB Driver for SQL Server intenta crear un índice agrupado en la tabla [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite a lo sumo un índice clúster en cualquier tabla.<br /><br /> VARIANT_FALSE: OLE DB Driver for SQL Server intenta crear un índice no agrupado en la tabla [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|DBPROP_INDEX_FILLFACTOR|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: 0<br /><br /> Descripción: especifica el porcentaje de una página de índice usado para el almacenamiento. Para obtener más información, vea [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md).<br /><br /> El tipo del variant es VT_I4. El valor debe ser mayor o igual que 1 y menor o igual que 100.|  
+|DBPROP_INDEX_INITIALIZE|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: None<br /><br /> Descripción: OLE DB Driver for SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLCOLLATION|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: None<br /><br /> Descripción: OLE DB Driver for SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLS|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: None<br /><br /> Descripción: OLE DB Driver for SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_PRIMARYKEY|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: Descripción de VARIANT_FALSE: crea el índice como una restricción PRIMARY KEY de integridad referencial.<br /><br /> VARIANT_TRUE: el índice se crea para admitir la restricción PRIMARY KEY de la tabla. Las columnas no deben admitir valores NULL.<br /><br /> VARIANT_FALSE: el índice no se usa como una restricción PRIMARY KEY para los valores de fila de la tabla.|  
+|DBPROP_INDEX_SORTBOOKMARKS|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: None<br /><br /> Descripción: OLE DB Driver for SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TEMPINDEX|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: None<br /><br /> Descripción: OLE DB Driver for SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TYPE|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: None<br /><br /> Descripción: OLE DB Driver for SQL Server no admite esta propiedad. Los intentos de establecer la propiedad en **CreateIndex** producen un valor devuelto de DB_S_ERRORSOCCURRED. El miembro *dwStatus* de la estructura de propiedad indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_UNIQUE|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: crea el índice como una restricción UNIQUE en la columna o columnas participantes.<br /><br /> VARIANT_TRUE: el índice se usa para restringir de forma única los valores de fila de la tabla.<br /><br /> VARIANT_FALSE: el índice no restringe de forma exclusiva los valores de fila.|  
   
  En el conjunto de propiedades específico del proveedor DBPROPSET_SQLSERVERINDEX, el controlador OLE DB para SQL Server define las siguientes propiedades de información del origen de datos.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
-|SSPROP_INDEX_XML|Tipo: VT_BOOL (L/E)<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: cuando esta propiedad se especifica con un valor de VARIANT_TRUE con IIndexDefinition::CreateIndex, da como resultado la creación de un índice xml primario correspondiente a la columna que se está indizando. Si esta propiedad es VARIANT_TRUE, cIndexColumnDescs debe ser 1, de lo contrario es un error.|  
+|SSPROP_INDEX_XML|Escriba:  VT_BOOL (L/E)<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: cuando esta propiedad se especifica con un valor de VARIANT_TRUE con IIndexDefinition::CreateIndex, da como resultado la creación de un índice XML primario correspondiente a la columna que se indexa. Si esta propiedad es VARIANT_TRUE, cIndexColumnDescs debe ser 1, de lo contrario es un error.|  
   
  En este ejemplo se crea un índice de la clave principal:  
   

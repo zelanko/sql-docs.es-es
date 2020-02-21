@@ -8,10 +8,10 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
 ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68329363"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
@@ -26,10 +26,10 @@ Si usa KPI en SQL Server Reporting Services, podrá visualizar rápidamente las 
   
 - ¿Qué adelanto o atraso llevo?  
   
-- ¿Cuáles son las cantidades mínimas que he completado?  
+- ¿Cuáles son las cantidades mínimas que ha completado?  
 
 > [!NOTE]
-> Solo se puede acceder a los KPI en las ediciones Enterprise (Developer) del portal de SSRS.
+> Solo se puede obtener acceso a los KPI en las ediciones Enterprise (Developer) del portal SSRS.
 
 ## <a name="creating-a-dataset"></a>Creación de un conjunto de datos
 
@@ -55,13 +55,13 @@ Puede asignar valores estáticos o utilizar los datos de un conjunto de datos co
 | Campo | Descripción |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | Formato del valor | Se utiliza para cambiar el formato del valor que se muestra. |
-| Valor | El valor para mostrar del KPI. |
+| Value | El valor para mostrar del KPI. |
 | Objetivo | Se utiliza como comparación con un valor numérico y se muestra en forma de diferencia porcentual. |
-| Estado | Valor numérico que se usa para determinar el color del icono de KPI. Los valores válidos son 1 (verde), 0 (ámbar) y -1 (rojo). |
+| Status | Valor numérico que se usa para determinar el color del icono de KPI. Los valores válidos son 1 (verde), 0 (ámbar) y -1 (rojo). |
 | Conjunto de tendencias | Valores numéricos separados por comas usados para la visualización de gráficos. También puede establecerse en una columna de un conjunto de datos con valores que representen la tendencia. |
-| Contenido relacionado | La capacidad de establecer un vínculo de obtención de detalles. Este vínculo puede ser un informe móvil publicado en el portal o una dirección URL personalizada. |
+| Contenido relacionado | La capacidad de establecer un vínculo detallado. Este vínculo puede ser un informe móvil publicado en el portal o una dirección URL personalizada. |
   
-> **Advertencia**: Aunque puede usar el valor de palabra para el campo **Estado** en tiempo de diseño, debe utilizar el valor de número si va a actualizar un conjunto de datos. Si actualiza un conjunto de datos con el valor de palabra, en lugar del de número, se podría dañar los KPI en el servidor.  
+> **Advertencia**: Aunque puede usar el valor de palabra para el campo **Estado** en tiempo de diseño, debe usar el valor de número si va a actualizar un conjunto de datos. Si actualiza un conjunto de datos con el valor de palabra, en lugar del de número, se podría dañar los KPI en el servidor.  
 >
 > **Nota**: Los campos **Valor**, **Objetivo** y **Estado** solo pueden elegir un valor de la primera fila del resultado de un conjunto de datos. El campo **Trend set** (Conjunto de tendencias), sin embargo, puede elegir qué columna refleja la tendencia.  
   
@@ -95,13 +95,13 @@ Al elegir **Informe móvil**, puede elegir el destino en un cuadro de diálogo.
 
    ![Informe móvil](media/rscreatekpi-related-content-mobile-report.png)
 
-Al hacer clic en el KPI en el portal, se muestra una miniatura del informe móvil en el menú desplegable contenido relacionado. Al hacer clic en esta miniatura, puede ir directamente a este informe.
+Al hacer clic ahora en el KPI del portal, aparece una miniatura del informe móvil en el menú desplegable de contenido relacionado. Al hacer clic en esta miniatura, puede ir directamente a este informe.
 
-También puede especificar una dirección URL personalizada. Esta tarea puede ser cualquier cosa: un sitio web, un sitio de SharePoint, una dirección URL a un informe de SSRS (que le permitiría pasar parámetros codificados de forma rígida).
+También puede especificar una dirección URL personalizada. Esta tarea puede ser cualquier cosa: un sitio web, un sitio de SharePoint, una dirección URL de un informe SSRS (que le permitiría pasar parámetros codificados de forma rígida).
 
 ![Dirección URL personalizada](media/rscreatekpi-related-content-custom-url.png)
 
-Al hacer clic en el KPI, la dirección URL se muestra en contenido relacionado.
+Al hacer clic ahora en el KPI, la dirección URL aparece en el contenido relacionado.
 
 Solo es posible agregar un informe móvil o una dirección URL personalizada.
   

@@ -1,10 +1,9 @@
 ---
-title: Especificar varias condiciones de búsqueda en varias columnas | Microsoft Docs
-ms.custom: ''
+title: Especificar varias condiciones de búsqueda en varias columnas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1110e4ae1ca4268af611cbb039af2b148694b552
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 57269ce8ed6c9a63ba846b0287ea9130db409617
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265504"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255001"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>Especificar varias condiciones de búsqueda para varias columnas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,8 +78,8 @@ Para buscar en columnas de datos diferentes utilizando condiciones vinculadas co
 4.  Repita los pasos 2 y 3 para las demás condiciones que desee agregar.  
   
 ## <a name="see-also"></a>Consulte también  
-[Combinar condiciones cuando AND tiene prioridad (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
-[Combinar condiciones cuando OR tiene prioridad (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[Convenciones para combinar condiciones de búsqueda en el panel Criterios (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[Especificar criterios de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Combinación de condiciones cuando AND tiene prioridad](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
+[Combinar condiciones cuando OR tiene precedencia](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Convenciones para combinar condiciones de búsqueda en el panel Criterios](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[Especificar criterios de búsqueda](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

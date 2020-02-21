@@ -1,6 +1,6 @@
 ---
-title: Utilidad Profiler | Microsoft Docs
-ms.custom: ''
+title: Analizador (utilidad)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faaf063fc00964ec6d060d03f42acc3e1eaaa33a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105643"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307391"
 ---
 # <a name="profiler-utility"></a>Analizador (utilidad)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ profiler
  Especifica la conexión con la autenticación de Windows con las credenciales actuales del usuario.  
   
  **/S**  *sql_server_name*  
- Especifica una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E** . Para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
+ Especifica una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E** . Para conectar una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
   
  **/A**  *analysis_services_server_name*  
- Especifica una instancia de Analysis Services. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E** . Para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , use **/A** *analysis_services_server_name\instance_name*.  
+ Especifica una instancia de Analysis Services. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E** . Para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/A** *analysis_services_server_name\instance_name*.  
   
  **/D** *database*  
  Especifica el nombre de la base de datos que se utilizará con la conexión. Esta opción seleccionará la base de datos predeterminada para el usuario especificado si no se especifica ninguna base de datos.  
@@ -118,7 +118,7 @@ profiler
  **/Z**  *file_size*  
  Especifica el tamaño del archivo de seguimiento en megabytes (MB). El tamaño predeterminado es 5 MB. Si está habilitada la sustitución incremental de archivos, todos los archivos de sustitución incremental estarán limitados al valor especificado en el argumento.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para iniciar un seguimiento con una plantilla específica, use las opciones **/S** y **/T** juntas. Por ejemplo, para iniciar un seguimiento mediante la plantilla Standard en MyServer\MyInstance, escriba lo siguiente en el símbolo del sistema:  
   
 ```  

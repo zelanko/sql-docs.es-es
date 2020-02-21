@@ -16,10 +16,10 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593765"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar una base de datos del servidor de informes (Modo nativo de SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "73593765"
   
  Para administrar las bases de datos del servidor de informes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una amplia variedad de herramientas.  
   
--   Para realizar una copia de seguridad, restaurar, mover o recuperar una base de datos del servidor de informes, se puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], los comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] o las utilidades de símbolo del sistema de la base de datos. Para obtener instrucciones, consulte [Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   Para realizar una copia de seguridad, restaurar, mover o recuperar una base de datos del servidor de informes, puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], los comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] o las utilidades de símbolo del sistema de la base de datos. Para obtener instrucciones, consulte [Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Para copiar el contenido de una base de datos existente en otra base de datos del servidor de informes, puede adjuntar una copia de una base de datos del servidor de informes y utilizarla con una instancia distinta del servidor de informes. También puede crear y ejecutar un script que utilice llamadas SOAP para volver a crear contenido del servidor de informes en una nueva base de datos. Puede usar la utilidad **rs** para ejecutar el script.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73593765"
  Este error se debe a que el nombre ReportServerTempdb se almacena internamente y lo utilizan los procedimientos almacenados para realizar operaciones internas. Si se cambia el nombre de la base de datos temporal, no funcionarán correctamente los procedimientos almacenados.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Habilitar el aislamiento de instantánea en la base de datos del servidor de informes  
- No puede habilitar el aislamiento de instantánea en la base de datos del servidor de informes. Si se activa el aislamiento de instantánea, encontrará el error siguiente: "El informe seleccionado no está listo para su visualización. Aún se está representando o no hay disponible una instantánea de informe".  
+ No puede habilitar el aislamiento de instantánea en la base de datos del servidor de informes. Si está activado el aislamiento de instantánea, se producirá el siguiente error: "El informe seleccionado no está listo para su visualización. Aún se está representando o no hay disponible una instantánea de informe".  
   
  Si no habilitó explícitamente el aislamiento de instantánea, puede que el atributo lo estableciera otra aplicación o que la base de datos **modelo** tenga el aislamiento de instantánea habilitado, haciendo que todas las bases de datos nuevas heredaran el valor.  
   

@@ -11,10 +11,10 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049835"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Implementación del controlador JDBC
@@ -54,11 +54,11 @@ ms.locfileid: "73049835"
 
 ## <a name="legalities-of-driver-redistribution"></a>Legalidad de la redistribución del controlador
 
-Las versiones 6,0, 6,2, 6,4 y 7,0 del controlador JDBC son redistribuibles. Revise la cláusula _Código distribuible_ en los contratos de licencia.
+Las versiones 6.0, 6.2, 6.4 y 7.0 del controlador JDBC son redistribuibles. Revise la cláusula _Código distribuible_ en los contratos de licencia.
 
-Las versiones 4. x del controlador JDBC son antiguas y están obsoletas. La compatibilidad con 4. x expiró antes de 2018.
+Las versiones 4.x del controlador JDBC son antiguas y están obsoletas. La compatibilidad con 4.x expiró antes de 2018.
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

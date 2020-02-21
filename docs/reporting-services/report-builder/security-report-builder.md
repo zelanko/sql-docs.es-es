@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593840"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190095"
 ---
 # <a name="security-report-builder"></a>Seguridad (Generador de informes)
-  El Generador de informes es una aplicación cliente de creación de informes diseñada para que funcione con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El servidor de informes se puede configurar para funcione en modo nativo como un servidor independiente o en modo integrado de SharePoint, para que admita los informes de un sitio de SharePoint.  
+  El Generador de informes es una aplicación cliente de creación de informes diseñada para que funcione con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El servidor de informes se puede configurar para funcione en modo nativo como un servidor independiente o en modo integrado de SharePoint, para que admita los informes de un sitio de SharePoint.  
   
  En el Generador de informes puede crear informes, conjuntos de datos compartidos y elementos de informe reutilizables. Desde un servidor de informes o sitio de SharePoint, puede editar los informes y agregar orígenes de datos compartidos, conjuntos de datos compartidos y elementos de informe compartidos.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73593840"
   
  Para que otros usuarios puedan desplazarse a elementos que ha publicado para compartirlos, y puedan buscarlos, debe trabajar con el administrador del servidor de informes para establecer una organización de carpetas que proporcione acceso a los usuarios. Los permisos deben proporcionar acceso de creación de informes y de ejecución de informes publicados.  
   
- Para obtener más información, consulte los temas siguientes:  
+ Para obtener más información, vea los temas siguientes:  
   
 -   [Roles y permisos &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -90,10 +90,10 @@ ms.locfileid: "73593840"
   
  En el momento del diseño de informe, las credenciales se utilizan para ejecutar consultas de conjunto de datos y obtener la vista previa del informe. En tiempo de ejecución, las credenciales se utilizan para ejecutar el informe y almacenar en caché los resultados de la consulta. También puede almacenar en memoria caché por separado los resultados de la consulta del conjunto de datos compartido. Las credenciales del tiempo de diseño y las del tiempo de ejecución pueden ser distintas. Para más información, vea [Especificar credenciales en el Generador de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
- Para obtener más información acerca de la protección de datos, vea [Security Center para SQL Server motor de base de datos y Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
+ Para obtener más información sobre la protección de los datos, consulte [Centro de seguridad para el motor de base de datos de SQL Server y Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
   
   
- Para más información sobre orígenes de datos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para más información sobre orígenes de datos, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Models"></a> Descripción de los modelos y los filtros de seguridad  
@@ -107,7 +107,7 @@ ms.locfileid: "73593840"
   
 -   No utilice parámetros basados en parámetros de consulta y que son de tipo **Texto** , a menos que proporcione valores válidos. Una lista de valores disponibles ayuda al usuario a elegir solo valores válidos. Sin una lista de valores disponibles, no se pueden restringir los valores que puede especificar un usuario.  
   
--   No utilice el global [& UserID] para proteger datos privados. Como parámetro de informe, este valor se puede especificar en una dirección URL de informe mediante sintaxis de acceso a dirección URL. El uso de este valor en una expresión en un conjunto de datos compartido evita que el conjunto de datos se almacene en memoria caché. Para obtener más información, vea [referencia de parámetros de acceso URL](../../reporting-services/url-access-parameter-reference.md).  
+-   No utilice el global [& UserID] para proteger datos privados. Como parámetro de informe, este valor se puede especificar en una dirección URL de informe mediante sintaxis de acceso a dirección URL. El uso de este valor en una expresión en un conjunto de datos compartido evita que el conjunto de datos se almacene en memoria caché. Para más información, vea [Referencia de parámetros de acceso URL](../../reporting-services/url-access-parameter-reference.md).  
   
  Después de la publicación de elementos en un servidor de informes, el administrador del servidor de informes puede contribuir a protegerlos asignando seguridad del nivel de rol o seguridad del nivel de carpeta y elemento. Para obtener más información, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  
   

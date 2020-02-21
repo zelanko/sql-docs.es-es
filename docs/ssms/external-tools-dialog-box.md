@@ -1,6 +1,6 @@
 ---
-title: Herramientas externas (cuadro de diálogo) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Herramientas externas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 22b70fa3a33404cee302f12ccb98ea03dbdb9aed
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: deeb0a237d1982a92e08c056375fca277f095017
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265122"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245030"
 ---
 # <a name="external-tools-dialog-box"></a>Cuadro de diálogo Herramientas externas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use el cuadro de diálogo **Herramientas externas** para agregar herramientas externas como SQLCMD o el Bloc de notas al menú **Herramientas**. La adición de herramientas externas permite iniciar fácilmente otras aplicaciones mientras se trabaja en el entorno de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Cuando inicie la herramienta, podrá especificar argumentos y un directorio de trabajo. Además, el resultado de algunas herramientas puede verse en la **Ventana de resultados** . El cuadro de diálogo **Herramientas externas** está disponible en el menú **Herramientas** .  
+Use el cuadro de diálogo **Herramientas externas** para agregar herramientas externas como SQLCMD o el Bloc de notas al menú **Herramientas**. La adición de herramientas externas permite iniciar fácilmente otras aplicaciones mientras se trabaja en el entorno de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Cuando inicie la herramienta, podrá especificar argumentos y un directorio de trabajo. Además, el resultado de algunas herramientas puede verse en la **Ventana de resultados** . El cuadro de diálogo **Herramientas externas** está disponible en el menú **Herramientas** .  
   
 ## <a name="options"></a>Opciones  
 **Contenido del menú**  
@@ -35,16 +35,16 @@ Mueva la herramienta seleccionada a una posición superior en la lista de herram
 **Bajar**  
 Mueva la herramienta seleccionada a una posición inferior en la lista de herramientas que aparece en el menú **Herramientas** .  
   
-**Agregar**  
+**Add (Agregar)**  
 Borra los cuadros de texto de modo que se pueda especificar una herramienta nueva.  
   
 **Eliminar**  
 Quite la herramienta o el comando de la lista **Contenido del menú** y del menú **Herramientas** .  
   
-**Title**  
+**Título**  
 Especifique el nombre de la herramienta o el comando que aparecerá en el submenú **Herramientas externas** del menú **Herramientas** . Coloque una y comercial (&) antes de una letra del nombre de la herramienta para que esa letra sea un método abreviado de teclado. Por ejemplo, "&SQLCMD" mostraría SQLCMD en el menú **Herramientas**.  
   
-**Command**  
+**Comando**  
 Especifique la ruta de acceso al archivo que se va a iniciar.  
   
 **Argumentos**  
@@ -68,10 +68,10 @@ Cierra la ventana abierta por la herramienta cuando ésta se cierra.
 ## <a name="example"></a>Ejemplo  
 Al especificar los siguientes valores en el cuadro de diálogo **Herramientas externas** se creará un elemento de menú denominado "DAC" que, cuando se selecciona, abre un símbolo del sistema y ejecuta la utilidad **sqlcmd** con la conexión de administrador dedicada.  
   
-|Cuadro|Valor|  
+|Box|Value|  
 |-------|---------|  
-|**Title**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
+|**Título**|DAC|  
+|**Comando**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Argumentos**|-A|  
   
 ## <a name="see-also"></a>Consulte también  

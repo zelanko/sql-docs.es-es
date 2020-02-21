@@ -1,6 +1,7 @@
 ---
-title: Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Auditoría local para la colección de datos de uso y diagnóstico
+description: Obtenga información sobre la auditoría local usada que SQL Server usa para recopilar y enviar datos de uso y diagnóstico a Microsoft.
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -13,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984767"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558062"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server (CEIP)
 
@@ -30,7 +31,7 @@ Microsoft SQL Server contiene características habilitadas para Internet que pue
 
 A partir de SQL Server 2016 CU2, la auditoría local se puede configurar al nivel de instancia para Motor de base de datos de SQL Server y Analysis Services (SSAS). En SQL Server 2016 CU4 y SQL Server 2016 SP1, la auditoría local también está habilitada para SQL Server Integration Services (SSIS). Otros componentes de SQL Server que se instalan durante la configuración y herramientas de SQL Server que se descargan o instalan después de la configuración no cuentan con la funcionalidad de auditoría local para la recopilación de datos de uso y diagnóstico.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
  - No se admite la eliminación o deshabilitación del servicio CEIP de SQL. 
  - No se admite la eliminación de los recursos de CEIP de SQL del Grupo de clúster. 
@@ -64,7 +65,7 @@ Complete los pasos siguientes para obtener la cuenta de inicio de sesión del se
  
 1. Abra la consola **Servicios**. Para ello, presione la **tecla Windows + R** en el teclado para abrir el cuadro de diálogo **Ejecutar**. Después, escriba *services.msc* en el campo de texto y seleccione **Aceptar** para abrir la consola **Servicios**.  
 
-2. Vaya al servicio correspondiente. Por ejemplo, para el motor de base de datos, ubique **Servicio CEIP de SQL Server** **(*Nombre-Instancia*)** . En el caso de Analysis Services, busque **CEIP de SQL Server Analysis Services**  **(*Nombre-Instancia*)** . En el caso de Integration Services, busque **Servicio CEIP para SQL Server Integration Services**.
+2. Vaya al servicio correspondiente. Por ejemplo, para el motor de base de datos, ubique **Servicio CEIP de SQL Server**  **(*Nombre-Instancia*)** . En el caso de Analysis Services, busque **CEIP de SQL Server Analysis Services**  **(*Nombre-Instancia*)** . En el caso de Integration Services, busque **Servicio CEIP para SQL Server Integration Services**.
 
 3. Haga clic con el botón derecho en el servicio y elija **Propiedades**. 
 
@@ -79,10 +80,10 @@ Cree una carpeta nueva (directorio de auditoría local) donde la uditoría local
 
   ||Decisión de diseño|Recomendación|  
   |------|-----------------|----------|  
-  |![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Disponibilidad de espacio |En una carga de trabajo moderada con alrededor de 10 bases de datos, disponga de unos 2 MB de espacio en disco por base de datos por instancia.|  
-|![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Directorios independientes | Cree un directorio para cada instancia. Por ejemplo, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* para una instancia de SQL Server denominada `MSSQLSERVER`. Esto simplifica la administración de archivos.
-|![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Carpetas independientes |Use una carpeta específica para cada servicio. Por ejemplo, para un nombre de instancia determinado, debe tener una carpeta para el motor de base de datos. Si una instancia de Analysis Services usa el mismo nombre de instancia, cree una carpeta independiente para Analysis Services. Si tiene las instancias de Motor de base de datos y de Analysis Services configuradas en la misma carpeta, la auditoría local escribirá todo en el mismo archivo de registro desde ambas instancias.| 
-|![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Concesión de permisos a la cuenta de inicio de sesión del servicio de CEIP de SQL Server|Habilite **Mostrar el contenido de la carpeta**, el acceso de **lectura** y **escritura** a la cuenta de inicio de sesión del servicio CEIP de SQL Server.|
+  |![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|Disponibilidad de espacio |En una carga de trabajo moderada con alrededor de 10 bases de datos, disponga de unos 2 MB de espacio en disco por base de datos por instancia.|  
+|![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|Directorios independientes | Cree un directorio para cada instancia. Por ejemplo, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* para una instancia de SQL Server denominada `MSSQLSERVER`. Esto simplifica la administración de archivos.
+|![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|Carpetas independientes |Use una carpeta específica para cada servicio. Por ejemplo, para un nombre de instancia determinado, debe tener una carpeta para el motor de base de datos. Si una instancia de Analysis Services usa el mismo nombre de instancia, cree una carpeta independiente para Analysis Services. Si tiene las instancias de Motor de base de datos y de Analysis Services configuradas en la misma carpeta, la auditoría local escribirá todo en el mismo archivo de registro desde ambas instancias.| 
+|![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|Concesión de permisos a la cuenta de inicio de sesión del servicio de CEIP de SQL Server|Habilite **Mostrar el contenido de la carpeta**, el acceso de **lectura** y **escritura** a la cuenta de inicio de sesión del servicio CEIP de SQL Server.|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>Concesión de permisos a la cuenta de inicio de sesión del servicio de CEIP de SQL Server
@@ -111,19 +112,22 @@ Cree una carpeta nueva (directorio de auditoría local) donde la uditoría local
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Nombre-Instancia*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Nombre-Instancia*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*Nombre-Instancia*\\CPE |
    | &nbsp; | &nbsp; |
 
    | Versión | ***Analysis Services***: Clave del Registro |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Nombre-Instancia*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Nombre-Instancia*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*Nombre-Instancia*\\CPE |  
    | &nbsp; | &nbsp; |
 
-  | Versión | ***Integration Services***: Clave del Registro |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-  | &nbsp; | &nbsp; |
+   | Versión | ***Integration Services***: Clave del Registro |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
+   | &nbsp; | &nbsp; |
 
 1. Haga clic con el botón derecho en la ruta de CPE y elija **Nuevo**. Seleccione **Valor de cadena**.
 
@@ -156,6 +160,7 @@ CEIP de SQL Server debe reconocer inmediatamente la configuración de auditorí
     - Para Integration Services, 
         - Para SQL 2016, use *Servicio CEIP para SQL Server Integration Services 13.0*.
         - Para SQL 2017, use *Servicio CEIP para SQL Server Integration Services 14.0*.
+    - Para SQL 2019, use *Servicio CEIP para SQL Server Integration Services 15.0*.
 
 1. Haga clic con el botón derecho en el servicio y elija Reiniciar. 
 
@@ -188,7 +193,7 @@ La auditoría local generará un archivo de registro al día. Los archivos de re
 | Encabezado | emitTime, schemaVersion 
 | Máquina | operatingSystem 
 | Instancia | instanceUniqueID, correlationID y clientVersion 
-| Session | sessionID, traceName 
+| Sesión | sessionID, traceName 
 | Consultar | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
 | data |  datos 
 
@@ -374,5 +379,5 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Auditoría local para la recopilación de datos de uso y diagnóstico de SSMS](../ssms/sql-server-management-studio-telemetry-ssms.md)

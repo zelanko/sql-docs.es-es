@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904313"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831623"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guía de navegación de documentos de SQL Server 
 
@@ -37,7 +37,7 @@ Si quiere crear un archivo PDF, seleccione el vínculo **Descargar PDF** que se 
 
 ![Descargar PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## <a name="toc-navigation-hints"></a>Sugerencias de navegación por la TDC
+## <a name="toc-symbols"></a>Símbolos de la TDC 
 
 Las entradas de la tabla de contenido (TDC) que tienen un `>` al final de la entrada indican que se le dirigirá a documentación técnica con una tabla de contenido diferente. 
 
@@ -51,7 +51,7 @@ Si navega a una de estas páginas y quiere volver a la página técnica principa
 
 ![Volver a la TDC de SQL](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## <a name="toc-search-tip"></a>Sugerencia de búsqueda de TDC
+## <a name="toc-search"></a>Búsqueda de la TDC 
 En docs.microsoft.com, puede buscar en el contenido de la tabla de contenido mediante el cuadro de búsqueda de filtro de la parte superior: 
 
 ![Uso del cuadro de filtro](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
@@ -70,7 +70,6 @@ Al seleccionar **Todo SQL** \> **Hide nothing** (No ocultar nada), se asegura de
 Las rutas de navegación se pueden encontrar debajo del encabezado y encima de la tabla de contenido, e indican dónde se encuentra el artículo actual en la tabla de contenido.  Esto no solo ayuda a establece el contexto del tipo de contenido que está leyendo, sino que también permite navegar hacia atrás en el árbol de la tabla de contenido:
 
 ![Rutas de navegación de documentación de SQL](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
 
 ## <a name="article-section-navigation"></a>Navegación por las secciones de un artículo
 
@@ -95,4 +94,4 @@ También puede enviar comentarios y sugerencias generales sobre la documentació
 
 - Introducción a la [documentación técnica de SQL Server](index.yml).
 - Para más información sobre el envío de comentarios o la obtención de ayuda con SQL Server, consulte la página [Obtener ayuda](sql-server-get-help.md). 
-- Para acceder rápidamente a todas las guías de inicio rápido y tutoriales, vaya al [Centro de aprendizaje de SQL Server](../lp/sql-server/sql-education-center.md).
+- Para acceder rápidamente a todos los tutoriales e inicios rápidos, consulte [Recursos educativos de SQL](../sql-server/educational-sql-resources.yml).

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Creación de scripts de objetos en SQL Server Management Studio'
+title: Objetos de scripts de SSMS
 description: Tutorial para la creación de scripts de objetos en SSMS
 keywords: SQL Server, SSMS, SQL Server Management Studio, scripts, scripting
 author: MashaMSFT
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988415"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247296"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Creación de scripts de objetos en SQL Server Management Studio
 
@@ -115,7 +115,7 @@ En la siguiente sección se explica cómo crear un script de la base de datos co
 
 6. Seleccione **Reemplazar todo** para reemplazar todas las instancias de *AdventureWorks2016* por *AdventureWorks2016a*. 
 
-    ![Búsqueda y reemplazo](media/scripting-ssms/findandreplace.png)
+    ![Buscar y reemplazar](media/scripting-ssms/findandreplace.png)
 
 7. Seleccione **Ejecutar** para ejecutar la consulta y crear la nueva base de datos AdventureWorks2016a. 
 
@@ -135,9 +135,9 @@ En la siguiente sección se explica cómo crear un script de la base de datos co
 
 5. Seleccione **Siguiente** para abrir la página **Establecer opciones de scripting**. Aquí puede configurar dónde guardar el script y algunas opciones avanzadas adicionales. 
 
-    A. Seleccione **Guardar en nueva ventana de consulta**.
+    a. Seleccione **Guardar en nueva ventana de consulta**.
 
-    B. Seleccione **Opciones avanzadas** y compruebe que estas opciones estén establecidas:
+    b. Seleccione **Opciones avanzadas** y compruebe que estas opciones estén establecidas:
 
       * **Generar script de estadísticas** establecido en *Generar script de estadísticas*.
       * **Tipos de datos que se deben incluir en el script** establecido en *Solo esquema*.
@@ -148,7 +148,7 @@ En la siguiente sección se explica cómo crear un script de la base de datos co
    > [!NOTE]
    > Para crear un script de los datos para la base de datos, seleccione *Esquema y datos* para la opción **Tipos de datos que se deben incluir en el script**. Sin embargo, esto no es ideal con bases de datos grandes. Puede requerir más memoria de la que el SSMS puede asignar. Esta limitación está correcta para bases de datos pequeñas. Si desea mover datos para una base de datos más grande, utilice el [Asistente para importar y exportar](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-6. Seleccione **Aceptar**y luego seleccione **Siguiente**.
+6. Seleccione **Aceptar** y después **Siguiente**.
 
 7. Seleccione **Siguiente** en el **resumen**. Después, vuelva a seleccionar **Siguiente** para generar el script en una ventana **Nueva consulta**.
 

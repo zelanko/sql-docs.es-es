@@ -1,6 +1,6 @@
 ---
-title: Ayuda del menú de SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Ayuda del menú de SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d541d10f86e1ca0f12b421bee71b4923088214b7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5d44d4d2c4c825e671eb8f4210994324b3a0c094
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260141"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240530"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Ayuda del menú de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Esta sección contiene la Ayuda F1 de los cuadros de diálogo y las páginas disponibles de la barra de menús de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+Esta sección contiene la Ayuda F1 de los cuadros de diálogo y páginas disponibles desde la barra de menús de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 [Acerca de SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   
@@ -44,7 +44,7 @@ Esta sección contiene la Ayuda F1 de los cuadros de diálogo y las páginas dis
   
 [Guardar como](../../ssms/menu-help/save-as.md)  
   
-[Guardar cambios](../../ssms/menu-help/save-changes.md)  
+[Save Changes](../../ssms/menu-help/save-changes.md)  
   
 [Cuadro de diálogo Ventanas &#40;Ayuda de Microsoft Document Explorer&#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
   

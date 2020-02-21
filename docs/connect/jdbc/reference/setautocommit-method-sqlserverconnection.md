@@ -16,10 +16,10 @@ ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbf9b18fdc6b590f085b5be6babd64100006163a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975262"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>Método setAutoCommit (SQLServerConnection)
@@ -42,8 +42,8 @@ public void setAutoCommit(boolean value)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setAutoCommit se especifica mediante el método setAutoCommit en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método setAutoCommit especifica este método setAutoCommit en la interfaz java.sql.Connection.  
   
  Si una conexión está en modo de confirmación automática, todas sus instrucciones SQL se ejecutan y confirman como transacciones individuales. De lo contrario, sus instrucciones SQL se agrupan en transacciones que finalizan con una llamada al método [commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) o al método [rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md). De forma predeterminada, las nuevas conexiones están en modo de confirmación automática.  
   

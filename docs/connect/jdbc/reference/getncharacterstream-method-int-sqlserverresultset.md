@@ -11,10 +11,10 @@ ms.assetid: f1cfa4e4-3e1f-4504-b0de-cc626d653661
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 004f5d89eaaa4293ae7da0058733b261c01c7531
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981694"
 ---
 # <a name="getncharacterstream-method-int-sqlserverresultset"></a>Método getNCharacterStream (int) (SQLServerResultSet)
@@ -35,15 +35,15 @@ public java.io.Reader getNCharacterStream(int columnIndex)
  Valor **int** que indica el índice de la columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto de lector.  
+ Un objeto Reader.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getNCharacterStream se especifica mediante el método getNCharacterStream de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método getNCharacterStream especifica este método getNCharacterStream en la interfaz java.sql.ResultSet.  
   
- Este método se puede usar para recuperar el valor de una columna **nvarchar**, **nchar**, **nvarchar (Max)** , **ntext**o **XML** en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) . Si intenta utilizar este método para recuperar valores de otros tipos de datos, se producirá una excepción.  
+ Este método se puede usar para recuperar el valor de una columna **nvarchar**, **nchar**, **nvarchar(max)** , **ntext** o **xml** en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). Si intenta utilizar este método para recuperar valores de otros tipos de datos, se producirá una excepción.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

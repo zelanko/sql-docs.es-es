@@ -1,7 +1,7 @@
 ---
-title: Instalación de clúster de conmutación por error de SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Instalación de una instancia de clúster de conmutación por error
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdc11ab9550b0faaf1fcdc9aa3ba5d7d3fe09eaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063872"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230619"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Instalación de clúster de conmutación por error de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68063872"
     - FCI de SQL en el clúster con múltiples dominios.   
     - FCI de SQL en clústeres de dominio + grupo de trabajo. 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opciones de instalación de clústeres de conmutación por error  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opciones de instalación de clústeres de conmutación por error  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>Opción 1: instalación integrada con Agregar nodo  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrada consta de dos pasos:  
@@ -81,13 +81,13 @@ ms.locfileid: "68063872"
   
  **Nota** : se admiten las direcciones IP de IPV6.  Si configura tanto IPV4 como IPV6, se tratan como subredes diferentes y se espera que IPV6 se ponga primero en conexión.  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Clúster de conmutación por error de varias subredes  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Clúster de conmutación por error de varias subredes  
  Puede establecer dependencias OR cuando los nodos en el clúster están en subredes diferentes. Sin embargo, cada nodo del clúster de conmutación por error de varias redes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe ser un posible propietario de al menos una de las direcciones IP especificadas.  
   
 ## <a name="see-also"></a>Consulte también  
  [Antes de instalar los clústeres de conmutación por error](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
  [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Actualización de una instancia de clúster de conmutación por error de SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [Actualización de una instancia del clúster de conmutación por error de SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).  
   
   

@@ -11,10 +11,10 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027998"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Características internacionales del controlador JDBC
@@ -33,7 +33,7 @@ ms.locfileid: "69027998"
 ## <a name="handling-of-character-data"></a>Control de datos de caracteres  
  Los datos de caracteres en Java se tratan de forma predeterminada como Unicode, el objeto **String** de Java representa datos de caracteres Unicode. En el controlador JDBC, la única excepción a esta regla son los métodos establecedor y captador de flujos ASCII, que son casos especiales porque usan flujos de bytes con la presunción implícita de páginas de códigos únicas conocidas (ASCII).  
   
- Además, el controlador JDBC proporciona la propiedad de cadena de conexión **sendStringParametersAsUnicode** . Esta propiedad se puede usar para especificar que los parámetros preparados para los datos de caracteres se envíen como ASCII o juego de caracteres multibyte (MBCS) en lugar de Unicode. Para obtener más información sobre la propiedad de cadena de conexión **sendStringParametersAsUnicode** , vea [establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
+ Además, el controlador JDBC proporciona la propiedad de cadena de conexión **sendStringParametersAsUnicode**. Esta propiedad se puede usar para especificar que los parámetros preparados para los datos de caracteres se envíen como ASCII o juego de caracteres multibyte (MBCS) en lugar de Unicode. Para obtener más información sobre la propiedad de cadena de conexión **sendStringParametersAsUnicode**, consulte [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
 ### <a name="driver-incoming-conversions"></a>Conversiones entrantes del controlador  
  Los datos de texto Unicode que provengan del servidor no necesitan conversión. Se pasan directamente como Unicode. Los datos que no sean Unicode y provengan del servidor se convierten de una página de códigos de datos, en el nivel de la base de datos o de columna, a Unicode. El controlador JDBC emplea las rutinas de conversión de la Máquina Virtual Java (JVM) para realizar estas conversiones. Estas conversiones se realizan en todos los métodos establecedores de flujos String y Character.  
@@ -46,7 +46,7 @@ ms.locfileid: "69027998"
  Por otra parte, los métodos API de caracteres no nacionales (como los métodos setString, setCharacterStream y setClob de las clases [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)) envían sus valores al servidor de Unicode solamente cuando la propiedad **sendStringParametersAsUnicode** está establecida en "true", que es el valor predeterminado.  
   
 ## <a name="non-unicode-parameters"></a>Parámetros no Unicode  
- Para obtener un rendimiento óptimo con el tipo **Char**, **VARCHAR** o **longvarchar** de parámetros no Unicode, establezca la propiedad de cadena de conexión **sendStringParametersAsUnicode** en "false" y use los métodos de caracteres no nacionales.  
+ Para un rendimiento óptimo con el tipo de parámetros **CHAR**, **VARCHAR** o **LONGVARCHAR** que no son Unicode, configure la propiedad de cadena de conexión **sendStringParametersAsUnicode** en "false" y use métodos de caracteres que no sean nacionales.  
   
 ## <a name="formatting-issues"></a>Problemas de formato  
  En cuanto a la fecha, la hora y las divisas, el formato con datos localizados se aplica en el nivel de lenguaje Java empleando el objeto Locale y los diversos métodos de formato correspondientes a los tipos de datos **Date**, **Calendar** y **Number**. En el caso excepcional en el que el controlador JDBC debe pasar datos para los que el idioma sea importante en un formato localizado, se utiliza el formateador correspondiente con la configuración regional predeterminada de la JVM.  
@@ -62,7 +62,7 @@ ms.locfileid: "69027998"
 > [!NOTE]  
 >  La mayoría del software de resolver escrito para plataformas distintas de Windows se basa en los estándares DNS de Internet y, por tanto, es probable que use el formato Punycode para los IDN, mientras que un servidor de DNS basado en Windows en una red privada se puede configurar para permitir el uso de caracteres UTF-8 según el servidor.  Para más información, vea [Compatibilidad con caracteres Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

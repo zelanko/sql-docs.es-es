@@ -14,10 +14,10 @@ ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72278297"
 ---
 # <a name="report-server-namespace-management-methods"></a>Métodos de administración de los espacios de nombres del servidor de informes
@@ -28,7 +28,7 @@ ms.locfileid: "72278297"
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Cancela la ejecución de un trabajo.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Agrega una carpeta a la base de datos del servidor de informes o a la biblioteca de SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Agrega un nuevo elemento a una base de datos del servidor de informes o a la biblioteca de SharePoint. Este método se aplica a los tipos de elemento **Report**, **Model**, **Dataset**, **Component**, **Resource** y **DataSource**.|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession (System. String, System. String, System. Byte [], ReportService2010. WARNING [] @)|Crea una nueva sesión de edición de informes.|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String, System.String,System.Byte[],ReportService2010.Warning[]@)|Crea una nueva sesión de edición de informes.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|Quita un elemento de la base de datos del servidor de informes o biblioteca de SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|Devuelve los elementos de la base de datos del servidor de informes o biblioteca de SharePoint que coinciden con el criterio de búsqueda especificado.|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|Desencadena un evento basado en los parámetros proporcionados.|  

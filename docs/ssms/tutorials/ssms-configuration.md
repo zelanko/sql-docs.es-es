@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Componentes y configuración de SQL Server Management Studio'
+title: Configuración y componentes de SSMS
 description: Tutorial en el que se describen los componentes y las opciones de configuración básicas para su entorno de SQL Server Management Studio.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-ms.openlocfilehash: 68a99d74d96fc4d54c7c97bad8049447761f67c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267076"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247290"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Componentes y configuración de SQL Server Management Studio
 
@@ -25,7 +25,7 @@ En este tutorial se describen los distintos componentes de ventana que hay en SQ
 > * Identificar los componentes que conforman el entorno de SSMS
 > * Cambiar el diseño del entorno y restablecerlo a los valores predeterminados
 > * Maximizar el editor de consultas
-> * Cambio del tamaño de fuente
+> * Cambio de la fuente
 > * Configurar las opciones de inicio
 > * Restablecer la configuración predeterminada
 
@@ -116,7 +116,7 @@ En esta sección se describe cómo modificar algunas opciones básicas de SSMS d
 
     ![Personalizar una barra de herramientas](media/ssms-configuration/toolbar.png)
 
-### <a name="change-the-font"></a>Cambio del tamaño de fuente
+### <a name="change-the-font"></a>Cambio de la fuente
 
 * Para cambiar la fuente, seleccione **Herramientas** > **Opciones** > **Fuentes y colores**:
 

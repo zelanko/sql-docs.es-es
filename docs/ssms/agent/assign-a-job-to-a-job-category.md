@@ -1,5 +1,5 @@
 ---
-title: Asignar un trabajo a una categoría de trabajo | Microsoft Docs
+title: Asignar un trabajo a una categoría de trabajo
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -14,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff6fa55f2c4accc16a89758d0687519d76b51f6c
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4f4efb07aaa9264a74eeebe4f432d4e4351cefe1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553366"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252702"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Asignar un trabajo a una categoría de trabajo
 
@@ -55,7 +56,7 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 5.  En el cuadro de diálogo **Propiedades del trabajo** _nombre\_trabajo_, en la lista **Categoría**, seleccione la categoría de trabajo que quiere asignar al trabajo.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ## <a name="TSQL"></a>Usar Transact-SQL  
   

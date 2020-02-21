@@ -1,5 +1,5 @@
 ---
-title: Desarrollo con las API de REST para Reporting Services| Microsoft Docs
+title: Desarrollo con las API REST
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: ba424fa0c79249a8870962d0df4cdaf383c9aa39
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 48d3cea7dfb57ad771f512806fd0c95528566559
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263031"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75321830"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desarrollo con las API de REST para Reporting Services
 
@@ -32,10 +32,10 @@ Un par de solicitud/respuesta de una API de REST puede dividirse en cinco compon
 
 * El **URI de la solicitud**, que consta de: `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Aunque el URI de solicitud se incluye en el encabezado del mensaje de solicitud, aquí lo mencionamos por separado porque la mayoría de los lenguajes o marcos de trabajo le exigen que lo pase por separado desde el mensaje de solicitud.
 
-    * Esquema de URI: indica el protocolo usado para transmitir la solicitud. Por ejemplo, `http` o `https`.
+    * Esquema URI: indica el protocolo que se usa para transmitir la solicitud. Por ejemplo, `http` o `https`.
     * Host de URI: especifica el nombre de dominio o la dirección IP del servidor donde se hospeda el punto de conexión de servicio REST, como `myserver.contoso.com`.
-    * Ruta de acceso del recurso: especifica el recurso o una colección de recursos, que puede incluir varios segmentos usados por el servicio a la hora de determinar la selección de esos recursos. Por ejemplo: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` se puede usar para obtener las propiedades especificadas de CatalogItem.
-    * (Opcional) Cadena de consulta: proporciona más parámetros simples, como los criterios de selección de recursos o la versión de la API.
+    * Ruta de acceso del recurso: especifica el recurso o la colección de recursos, que puede incluir varios segmentos usados por el servicio a la hora de determinar la selección de esos recursos. Por ejemplo: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` se puede usar para obtener las propiedades especificadas de CatalogItem.
+    * Cadena de consulta (opcional): proporciona más parámetros simples, como los criterios de selección de recursos o la versión de la API.
 
 * Campos de encabezado de mensaje de solicitud HTTP:
 

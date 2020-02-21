@@ -11,10 +11,10 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027618"
 ---
 # <a name="troubleshooting-connectivity"></a>Solución de problemas de conectividad
@@ -28,7 +28,7 @@ ms.locfileid: "69027618"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, pero TCP/IP no se ha instalado como protocolo de red para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la Utilidad de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o el Administrador de configuraciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores.  
   
-    -   TCP/IP está instalado como un protocolo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no está escuchando en el puerto especificado en la dirección URL de conexión de JDBC. El puerto predeterminado es 1433, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede configurar durante la instalación del producto para que escuche en cualquier puerto. Asegúrese de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esté escuchando en el puerto 1433. O, si se ha cambiado el puerto, asegúrese de que el puerto especificado en la URL de conexión de JDBC coincide con el puerto modificado. Para obtener más información sobre las direcciones URL de conexión de JDBC, consulte [crear la dirección URL de conexión](../../connect/jdbc/building-the-connection-url.md).  
+    -   TCP/IP está instalado como un protocolo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no está escuchando en el puerto especificado en la dirección URL de conexión de JDBC. El puerto predeterminado es 1433, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede configurar durante la instalación del producto para que escuche en cualquier puerto. Asegúrese de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esté escuchando en el puerto 1433. O, si se ha cambiado el puerto, asegúrese de que el puerto especificado en la URL de conexión de JDBC coincide con el puerto modificado. Para obtener más información sobre las direcciones URL de conexión de JDBC, consulte [Creación de la dirección URL de conexión](../../connect/jdbc/building-the-connection-url.md).  
   
     -   La dirección del equipo especificado en la URL de conexión de JDBC no hace referencia a un servidor en el que esté instalado e iniciado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69027618"
   
 -   Cuando usa la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el controlador JDBC requiere que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esté instalado con Autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que no es la predeterminada. Asegúrese de que esta opción esté incluida cuando instale o configure su copia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diagnóstico de problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

@@ -1,21 +1,21 @@
 ---
 title: Conjuntos de resultados activos múltiples (MARS)
-description: Describe cómo tener más de un SqlDataReader abierto en una conexión cuando cada instancia de SqlDataReader se inicia desde un comando independiente.
+description: Describe cómo tener más de un objeto SqlDataReader abierto en una conexión cuando cada instancia de SqlDataReader se inicia desde un comando independiente.
 ms.date: 08/15/2019
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 7097dc3717966d441cd669ddccd189c2510211aa
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 60c27bd94162b4d6bf4d7370218e1fa7781e6491
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452147"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247699"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Conjuntos de resultados activos múltiples (MARS)
 
@@ -28,7 +28,7 @@ Los conjuntos de resultados activos múltiples (MARS) son una característica qu
 Describe cómo usar MARS con SQL Server.  
   
 [Manipulación de datos](manipulate-data.md)  
-Proporciona ejemplos de codificación de aplicaciones MARS.  
+Proporciona ejemplos de codificación de aplicaciones de MARS.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 [Operaciones asincrónicas](asynchronous-operations.md)  

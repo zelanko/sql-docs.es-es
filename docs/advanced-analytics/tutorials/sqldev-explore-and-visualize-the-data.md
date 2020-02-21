@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de R+T-SQL: exploración de datos'
+title: 'Tutorial de R y T-SQL: Exploración de datos'
 description: Tutorial en el que se muestra cómo explorar y visualizar datos de SQL Server con funciones de R.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 213db5ee9b88f7af34e3d000fc0f3b241d8e5791
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73725228"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lección 1: exploración y visualización de datos
@@ -113,9 +113,9 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
     EXEC [dbo].[RxPlotHistogram]
     ```
   
-    **Resultado**
+    **Resultados**
     
-    *trazado* *0xFFD8FFE000104A4649...*
+    *plot* *0xFFD8FFE000104A4649...*
   
 2. Abra un símbolo del sistema de PowerShell y ejecute el siguiente comando con el nombre de instancia, el nombre de la base de datos, el nombre de usuario y las credenciales adecuados como argumentos. Para aquellos que usan identidades de Windows, puede reemplazar **-U** y **-P** con **-T**.
   
@@ -144,7 +144,7 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
     Host filename [bcp.fmt]:
     ```
   
-    **Resultado**
+    **Resultados**
     
     ```powershell
     Starting copy...
@@ -248,7 +248,7 @@ Ejecute la siguiente instrucción para exportar datos de trazados binarios a for
 EXEC RPlotHist
 ```
 
-**Resultado**
+**Resultados**
     
 ```sql
 STDOUT message(s) from external script:

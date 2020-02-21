@@ -1,23 +1,24 @@
 ---
-title: 'Procedimientos: Usar objetos de Microsoft SQL Server 2012 en un proyecto | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Objetos de SQL Server 2012 en un proyecto
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 222b725e7e5497adaf679f710fa390dcea8aecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034979"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244253"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedimientos: Uso de objetos de Microsoft SQL Server 2012 en un proyecto
+
 En este ejemplo, agregará un objeto de secuencia a un proyecto de base de datos destinado a Microsoft SQL Server 2012.  
   
 Las secuencias se incluyeron en Microsoft SQL Server 2012. Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y puede repetirse cuando se solicite.  Para más información sobre los objetos de secuencia consulte [Números de secuencia](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Para obtener información sobre las novedades de Microsoft SQL Server 2012, vea [Novedades de SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
@@ -31,7 +32,7 @@ Las secuencias se incluyeron en Microsoft SQL Server 2012. Una secuencia es un o
   
 2.  Haga clic en **Programación** en el panel izquierdo y seleccione **Secuencia**. Haga clic en **Agregar** para agregar el nuevo objeto al proyecto.  
   
-3.  Reemplace el código predeterminado con lo siguiente.  
+3.  Reemplace el código predeterminado por el siguiente.  
   
     ```  
     CREATE SEQUENCE [dbo].[Seq1]  

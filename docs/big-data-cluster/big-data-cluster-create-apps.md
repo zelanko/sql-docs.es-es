@@ -1,22 +1,23 @@
 ---
-title: Implementación de aplicaciones mediante azdata
-titleSuffix: SQL Server big data clusters
+title: Implementación de aplicaciones con azdata
+titleSuffix: SQL Server Big Data Clusters
 description: Implemente un script de Python o R como una aplicación en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706692"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253147"
 ---
-# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Cómo implementar una aplicación en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Cómo implementar una aplicación en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -36,25 +37,25 @@ Se admiten los siguientes tipos de aplicaciones:
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
-- [Clústeres de macrodatos de SQL Server 2019](deployment-guidance.md)
+- [Clúster de macrodatos de SQL Server 2019](deployment-guidance.md)
 - [Utilidad de línea de comandos azdata](deploy-install-azdata.md)
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>Capacidades
 
 En SQL Server 2019, puede crear, eliminar, describir, inicializar, enumerar, ejecutar y actualizar la aplicación. En la tabla siguiente se describen los comandos de implementación de aplicaciones que puede usar con **azdata**.
 
-|Comando |Descripción |
+|Get-Help |Descripción |
 |:---|:---|
 |`azdata login` | Iniciar sesión en un clúster de macrodatos SQL Server |
-|`azdata app create` | Crear aplicación |
-|`azdata app delete` | Eliminar aplicación |
-|`azdata app describe` | Describir aplicación |
-|`azdata app init` | Comenzar el esqueleto de una aplicación nueva |
-|`azdata app list` | Enumerar aplicaciones |
-|`azdata app run` | Ejecutar aplicación |
-|`azdata app update`| Actualizar aplicación |
+|`azdata app create` | Crea una aplicación. |
+|`azdata app delete` | Elimina una aplicación. |
+|`azdata app describe` | Describe una aplicación. |
+|`azdata app init` | Inicio rápido de un nuevo esqueleto de la aplicación. |
+|`azdata app list` | Muestra una lista de aplicaciones. |
+|`azdata app run` | Ejecuta una aplicación. |
+|`azdata app update`| Actualiza una aplicación. |
 
 Puede obtener ayuda con el parámetro `--help`, como en el ejemplo siguiente:
 
@@ -89,7 +90,7 @@ Ejecute el comando siguiente para obtener la dirección IP en la que iniciar ses
 kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
-## <a name="create-an-app"></a>Crear una aplicación
+## <a name="create-an-app"></a>Creación de una aplicación
 
 Para crear una aplicación, use `azdata` con el comando `app create`. Estos archivos residen localmente en el equipo desde el que va a crear la aplicación.
 
@@ -253,7 +254,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>Describir una aplicación
 
-El comando describe proporciona información detallada sobre la aplicación, incluido el punto de conexión del clúster. Este comando lo suelen usar los desarrolladores de aplicaciones para compilar una aplicación con el cliente de Swagger y con el servicio WebService para interactuar con la aplicación de manera RESTful. Vea [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información.
+El comando describe proporciona información detallada sobre la aplicación, incluido el punto de conexión del clúster. Lo suelen usar los desarrolladores de aplicaciones para compilar una aplicación con el cliente de Swagger y con el servicio web para interactuar con la aplicación de manera RESTful. Vea [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información.
 
 ```json
 {

@@ -1,6 +1,7 @@
 ---
-title: 'Lección 4: Agregar una tabla al informe (Reporting Services) | Microsoft Docs'
-ms.date: 04/29/2019
+title: 'Lección 4: Adición de una tabla al informe | Microsoft Docs'
+description: Después de definir el conjunto de datos, puede empezar a diseñar el informe paginado. Cree el diseño de un informe; para ello, arrastre y coloque los objetos de informe desde el panel Cuadro de herramientas hasta la superficie de diseño.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,24 +9,24 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e925dec5eb14365a6c313349599a77ffe1d7ab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106007"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244299"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lección 4: Agregar una tabla al informe (Reporting Services)
+# <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>Lección 4: Adición de una tabla al informe (Reporting Services)
 
-Después de definir un conjunto de datos, puede comenzar a diseñar el diseño. Cree el diseño de un informe; para ello, arrastre y coloque los *objetos de informe* desde el panel **Cuadro de herramientas** hasta la **superficie de diseño**. Algunos de los tipos de objetos de informe son:
+Después de definir el conjunto de datos, puede empezar a diseñar el informe paginado. Cree el diseño de un informe; para ello, arrastre y coloque los *objetos de informe* desde el panel **Cuadro de herramientas** hasta la **superficie de diseño**. Algunos de los tipos de objetos de informe son:
 
-- Table
+- Tabla
 - Cuadro de texto
-- imagen
+- Imagen
 - Línea
 - Rectángulo
 - Gráfico
-- Mapa
+- Map
 
 Los elementos que contienen filas de datos repetidas procedentes de conjuntos de datos subyacentes se denominan *regiones de datos*. Después de agregar una región de datos, puede agregar campos a la misma. Un informe básico tendrá solo una región de datos. Puede agregar más para mostrar información adicional, como un gráfico.
 
@@ -52,9 +53,9 @@ Los elementos que contienen filas de datos repetidas procedentes de conjuntos de
 
     ![ssrs_tutorial_addcolumn](media/ssrs-tutorial-addcolumn.png)
 
-7. Agregue el campo `[LineTotal]` de la misma manera, para crear una quinta columna. La etiqueta de columna se agrega como "Line Total". El Diseñador de informes crea automáticamente un nombre descriptivo para la columna, para lo cual, divide "LineTotal" en dos palabras.
+7. Agregue el campo `[LineTotal]` de la misma manera, creando una quinta columna. La etiqueta de columna se agrega como "Line Total". El Diseñador de informes crea automáticamente un nombre descriptivo para la columna, para lo cual, divide "LineTotal" en dos palabras.
 
-En el diagrama siguiente se muestra una región de datos de tabla rellenada con estos campos: Date, Order, Product, Qty y LineTotal.
+En el diagrama siguiente se muestra una región de datos de tabla rellenada con estos campos: Date, Order, Product, Qty y Line Total.
 ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
 
 ## <a name="preview-your-report"></a>Obtener una vista previa del informe
@@ -69,7 +70,7 @@ Al obtener una vista previa de un informe, se puede ver el informe representado 
 
 El diagrama siguiente muestra parte del informe en la **Vista previa**.
 
-   ![Vista previa, filas de detalle de la tabla con cinco columnas](media/rs-basictabledetailspreview.png "Vista previa, filas de detalle de la tabla con cinco columnas")
+   ![Vista previa, filas de detalle de la tabla con 5 columnas](media/rs-basictabledetailspreview.png "Vista previa, filas de detalle de la tabla con 5 columnas")
 
 Examine los valores de Date y Line Total. En la siguiente lección, va a obtener información sobre cómo darles formato para que presenten más nitidez.
 
@@ -78,9 +79,9 @@ Examine los valores de Date y Line Total. En la siguiente lección, va a obtener
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ha agregado correctamente una región de datos de tabla al informe, ha agregado campos a la región de datos y ha obtenido una vista previa del informe. En la siguiente lección, va a obtener información sobre cómo dar formato a los encabezados de columna y a las expresiones de campo. A continuación, continúe con la [Lección 5: Aplicar formato a un informe &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
+Ha agregado correctamente una región de datos de tabla al informe, ha agregado campos a la región de datos y ha obtenido una vista previa del informe. En la siguiente lección, va a obtener información sobre cómo dar formato a los encabezados de columna y a las expresiones de campo. Luego, continúe con [Lección 5: Aplicación de formato a un informe &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Tablas &#40;Generador de informes y SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)  
 [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

@@ -1,10 +1,7 @@
 ---
-title: Utilidad ssbdiagnose (Service Broker) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: utilidad ssbdiagnose (Service Broker)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,16 +22,22 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a4f198a1b492719a6cf6916f4ee483424b3a7fa
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 5775600e5dc6e0bebd74104dcc9bfa350873de3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211403"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254204"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>utilidad ssbdiagnose (Service Broker)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  La utilidad **ssbdiagnose** informa de la existencia de problemas en las conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] o en la configuración de los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las comprobaciones de la configuración se pueden realizar en dos servicios o en un único servicio. La existencia de problemas se indica en la ventana del símbolo del sistema en forma de texto legible, o como XML con formato que se puede redirigir a un archivo o a otro programa.
+
+La utilidad **ssbdiagnose** informa de la existencia de problemas en las conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] o en la configuración de los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las comprobaciones de la configuración se pueden realizar en dos servicios o en un único servicio. La existencia de problemas se indica en la ventana del símbolo del sistema en forma de texto legible, o como XML con formato que se puede redirigir a un archivo o a otro programa.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -231,7 +234,7 @@ WHERE database_id = DB_ID();
  Si se especifica la opción **-P** sin una contraseña, **ssbdiagnose** usa la contraseña predeterminada (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Para obtener más información, consulte [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Para obtener más información, consulte [Contraseñas seguras](../../relational-databases/security/strong-passwords.md).  
   
  El mensaje de contraseña se muestra en la consola de la siguiente manera: `Password:`  
   
@@ -255,7 +258,7 @@ WHERE database_id = DB_ID();
  **-?**  
  Muestra la ayuda de la línea de comandos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Use **ssbdiagnose** para lo siguiente:  
   
 -   Confirmar que no hay errores de configuración en una aplicación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que se acaba de configurar.  

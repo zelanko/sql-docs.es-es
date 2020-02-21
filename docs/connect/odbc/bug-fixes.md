@@ -1,5 +1,5 @@
 ---
-title: Lista de errores corregidos | Microsoft Docs
+title: Lista de los errores corregidos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -10,84 +10,92 @@ ms.topic: conceptual
 helpviewer_keywords:
 - driver
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-author: v-makouz
+author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 2b939db6ac0f89075b39ba74eadb0e86e63e3980
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: a3143595a5e76331dfc61a8edca7b4f068cdc57c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041223"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911259"
 ---
-# <a name="list-of-bugs-fixed"></a>Lista de errores corregidos
+# <a name="list-of-bugs-fixed"></a>Lista de los errores corregidos
 
-Esta página contiene una lista de errores corregidos en cada versión, a partir de [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+Esta página contiene una lista de los errores corregidos en cada versión, a partir del Controlador ODBC 17 de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-1742-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el controlador ODBC de [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.4.2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17.5 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
- - Corrección para un problema en el que el identificador de proceso y el nombre de la aplicación no se enviarían correctamente a SQL Server (para el análisis de sys. DM _ exec_sessions) (Linux)
- - Se quitó la dependencia redundante en libuuid (Linux)
- - Corrección de un error con el envío de datos UTF8 a SQL Server 2019
- - Corrección de un error en el que las configuraciones regionales que terminan en "@euro" no se detectaban correctamente (Linux)
- - Corrección para los datos XML que se devuelven incorrectamente cuando se capturan como parámetro de salida mientras se usa Always Encrypted
+- Corrección del cálculo de hash de metadatos de AKV CMK en Linux/Mac
+- Corrección del error al cargar OpenSSL 1.0.0
+- Corrección de problemas de conversión al usar las páginas de código de ISO-8859-1 e ISO-8859-2
+- Corrección del nombre de la biblioteca interna en Mac para incluir el número de versión
+- Corrección del valor de un indicador NULL cuando se utilizan enlaces de indicador y longitud independientes
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el controlador ODBC de [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17,4 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-msconame-odbc-driver-1742-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17.4.2 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Corrección de bloqueo intermitente cuando se habilitan conjuntos de resultados activos múltiples (MARS)
-- Corrección de la resistencia de conexión bloqueada cuando está habilitada la notificación asincrónica
-- Corregir el bloqueo al recuperar registros de diagnóstico para intentos de conexión multiproceso
-- Corrección de ' cifrado no admitido ' tras la reconexión después de llamar a SQLGetInfo () con SQL_USER_NAME y SQL_DATA_SOURCE_READ_ONLY
-- Corregir el error de inicialización COM durante la autenticación interactiva de Azure Active Directory
-- Corrección de SQLGetData () para datos UTF8 de varios bytes
-- Corregir la recuperación de la longitud de las columnas sql_variant mediante SQLGetData ()
-- Corregir la importación de columnas sql_variant que contienen más de 7992 bytes mediante BCP
-- Corregir el envío de la codificación correcta al servidor para datos de caracteres estrechos
+ - Corrección de un problema en el que el identificador de proceso y el nombre de la aplicación no se enviarían correctamente a SQL Server (para el análisis de sys.dm_exec_sessions) (Linux)
+ - Se quitó la dependencia redundante de libuuid (Linux)
+ - Corrección de un error al enviar datos UTF8 a SQL Server 2019
+ - Corrección de un error en el que las configuraciones regionales que finalizan en "@euro" no se detectaban correctamente (Linux)
+ - Corrección para los datos XML que se devuelven de manera incorrecta cuando se capturan como parámetro de salida mientras se usa Always Encrypted
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el controlador ODBC de [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17,3 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-msconame-odbc-driver-174-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17.4 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Identificador de evento de notificación de envío TCP corregido
-- Problema de redefinición corregido de enumeración _SQL_FILESTREAM_DESIRED_ACCESS en el archivo de encabezado msodbcsql. h
-- Se corrigió el ACCESS_TOKEN que falta y la definición relacionada con la autenticación en el archivo de encabezado msodbcsql. h para Linux
+- Corrección del bloqueo intermitente cuando los Conjuntos de resultados activos múltiples (MARS) están habilitados
+- Corrección del bloqueo de resistencia de conexión cuando está habilitada la notificación asincrónica
+- Corrección del bloqueo al recuperar registros de diagnóstico para intentos de conexión multiproceso
+- Corrección del error de cifrado no compatible tras la reconexión después de llamar a SQLGetInfo() con SQL_USER_NAME y SQL_DATA_SOURCE_READ_ONLY
+- Corrección del error de inicialización COM durante la autenticación interactiva de Azure Active Directory
+- Corrección de SQLGetData() para datos UTF8 de varios bytes
+- Corrección de la recuperación de la longitud de las columnas sql_variant mediante SQLGetData()
+- Corrección de la importación de las columnas sql_variant que contienen más de 7992 bytes mediante bcp
+- Corrección del envío de la codificación correcta al servidor para datos de caracteres estrechos
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el controlador ODBC de [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17,2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-msconame-odbc-driver-173-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17.3 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Se corrigió un mensaje de error acerca de la autenticación de Azure Active Directory
-- Detección de codificación fija cuando las variables de entorno de la configuración regional se establecen de manera diferente
-- Se corrigió un bloqueo al desconectarse con la recuperación de la conexión en curso.
-- Detección corregida de la vida de la conexión
+- Se corrigió la fuga de memoria del identificador de eventos de notificación de envío de TCP
+- Se corrigió el problema de redefinición de la enumeración _SQL_FILESTREAM_DESIRED_ACCESS en el archivo de encabezado msodbcsql.h
+- Se corrigió la falta de una definición relacionada con ACCESS_TOKEN y AUTHENTICATION en el archivo de encabezado msodbcsql.h para Linux
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-172-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17.2 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Se corrigió un mensaje de error sobre la autenticación de Azure Active Directory
+- Se corrigió la detección de codificación cuando las variables de entorno de la configuración regional están establecidas de manera distinta
+- Se corrigió un bloqueo al desconectarse con la recuperación de la conexión en curso
+- Se corrigió la detección de la ejecución de la conexión
 - Se corrigió la detección incorrecta de los sockets cerrados
-- Se corrigió una espera infinita al intentar liberar un identificador de instrucción durante la recuperación con errores.
+- Se corrigió una espera infinita al intentar liberar un identificador de instrucción durante la recuperación con errores
 - Se corrigió el comportamiento incorrecto de la desinstalación cuando se instalan las versiones 13 y 17 en Windows
-- Comportamiento de descifrado fijo en la plataforma de Windows anterior (Windows 7, 8 y Server 2012)
+- Se corrigió el comportamiento de cifrado en una plataforma Windows anterior (Windows 7, 8 y Server 2012)
 - Se corrigió un problema de caché al usar la autenticación ADAL en Windows
-- Se corrigió un problema que bloqueaba y sobrescribe los registros de seguimiento en Windows
+- Se corrigió un problema que bloqueaba y sobrescribía los registros de seguimiento en Windows
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el controlador ODBC de [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17,1 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-msconame-odbc-driver-171-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17.1 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Retraso de 1 segundo fijo al llamar a SQLFreeHandle con MARS habilitado y el atributo de conexión "Encrypt = Yes"
-- Se corrigió un error 22003 al bloquearse en SQLGetData cuando el tamaño del búfer pasado es más pequeño que los datos que se recuperan (Windows)
-- Mensajes de error de ADAL truncados corregidos
-- Se corrigió un error poco frecuente en Windows de 32 bits al convertir un número de punto flotante en un entero.
-- Se corrigió un problema que hacía que la inserción de Double en el campo decimal con Always Encrypted activado devolvería un error de truncamiento de datos
+- Se corrigió el retraso de 1 segundo al llamar a SQLFreeHandle con MARS habilitado y el atributo de conexión "Encrypt=yes"
+- Se corrigió un error de bloqueo 22003 en SQLGetData cuando el tamaño del búfer pasado es más pequeño que los datos que se recuperan (Windows)
+- Se corrigieron los mensajes de error de ADAL truncados
+- Se corrigió un error poco frecuente en Windows de 32 bits al convertir un número de punto flotante en un entero
+- Se corrigió un problema que hacía que la inserción doble en el campo decimal con Always Encrypted devolvería un error de truncamiento de datos
 - Se corrigió una advertencia en el instalador de MacOS
-- Se corrigió el envío de un estado incorrecto al SQL Server durante el intento de recuperación de la sesión cuando se habilitan la resistencia de la conexión y la agrupación de conexiones, lo que provoca que el servidor Quite la sesión.
+- Se corrigió el envío de un estado incorrecto a SQL Server durante el intento de recuperación de la sesión cuando tanto la resistencia de la conexión como la agrupación de conexiones están habilitadas, lo que provoca que el servidor deje la sesión
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el controlador ODBC de [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-msconame-odbc-driver-17-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Se ha corregido un error por el que al usar la autenticación Kerberos, Bulk Insert podía producir el error "acceso denegado"
-- Se ha quitado la solución alternativa para un error unixODBC presente en la versión siguiente 2.3.1 (el controlador ha duplicado los tamaños de ciertos búferes pasados a unixODBC)
-- Corrección de resistencia de conexión fija (reconexión) cuando se usa ColumnEncryption = Enabled
-- Error de creación de DSN corregido, donde cuando se usa la opción "Active Directory autenticación interactiva", la ventana de autenticación de Azure podría dejar de responder (Windows)
+- Se corrigió un error en el que, al usar la autenticación de Kerberos, la inserción masiva podía generar el error de acceso denegado
+- Se quitó la solución alternativa para un error unixODBC presente en versiones anteriores a 2.3.1 (el controlador ha duplicado los tamaños de ciertos búferes pasados a unixODBC)
+- Se corrigió el bloque de la resistencia de la conexión (reconexión) al usar ColumnEncryption=Enabled
+- Se corrigió el error de creación de DSN donde, al usar la opción "Autenticación interactiva de Active Directory ", la ventana de autenticación de Azure podría dejar de responder (Windows)
 - Se corrigió un bloqueo inusual durante el cierre de ODBC cuando la ejecución asincrónica está habilitada (se produjo al borrar el identificador de conexión)
-- Se corrigió un problema en el que el controlador de SQL provocó un alto consumo de CPU al ejecutar procedimientos almacenados largos.
-- No se ha corregido la incapacidad de recuperar datos en una columna varbinary (Max) cifrada sin conversión
-- Se corrigió un problema por el que, después de que se capturase una columna cifrada VARCHAR (Max) null con SQLGetData () en un cursor estático, la columna siguiente también se ha null aunque tenga datos
-- Se corrigió un problema con la captura del campo varbinary (Max) con Always Encrypted activado
-- Se corrigió un problema de setlocale () que no funciona con Always Encrypted
+- Se corrigió un problema en el que el controlador de SQL generó un alto consumo de CPU al ejecutar procedimientos almacenados largos
+- Se corrigió la incapacidad de recuperar datos en una columna varbinary(max) cifrada sin conversión
+- Se corrigió un problema por el que, después de que se capture una columna cifrada varchar(max) NULL con SQLGetData() en un cursor estático, la columna siguiente también queda con valores NULL aunque tenga datos
+- Se corrigió un problema con la captura del campo varbinary(max) con Always Encrypted activado
+- Se corrigió un problema de setlocale() que no funciona con Always Encrypted
 - Se corrigió un problema con SQLDescribeParam () que devolvía un error al llamarlo en un parámetro de procedimiento almacenado de tipo XML con Always Encrypted activado
-- Carácter de subrayado de escape fijo no funcional en SQLTables
-- Se corrigió un error en el que los datos en Hebreo (varchar) se truncan cuando se devuelven como caracteres anchos en Linux.
-- Se corrigió un problema con la consulta de la aplicación Shift-JIS codificación CHAR/VARCHAR desde la aplicación UTF-8
-- Se corrigió el error en el que al llamar a SQLGetInfo con el parámetro SQL_DRIVER_NAME se devolvió un nombre de archivo de estilo Linux en MacOS
-- Se ha corregido un problema en el que la carga de datos de caracteres de Windows-1252, con archivos de entrada de más de 32 000 bytes en columnas VARCHAR mediante la utilidad BCP daría lugar a errores
+- Se corrigió un carácter de subrayado de escape que no funcionaba en SQLTables
+- Se corrigió un error en el que los datos en hebreo (varchar) se truncan cuando se devuelven como caracteres anchos en Linux
+- Se corrigió un problema con la consulta char/varchar con codificación Shift-JIS desde una aplicación UTF-8
+- Se corrigió el error en el que, al llamar a SQLGetInfo con el parámetro SQL_DRIVER_NAME, se devolvía un nombre de archivo de estilo Linux en MacOS
+- Se corrigió un problema en el que cargar datos de caracteres de Windows-1252, con archivos de entrada de más de 32 000 bytes en columnas VARCHAR mediante la utilidad BCP, daría lugar a errores

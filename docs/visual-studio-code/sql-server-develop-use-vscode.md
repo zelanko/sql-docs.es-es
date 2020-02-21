@@ -1,6 +1,5 @@
 ---
-title: Empleo de la extensión mssql de Visual Studio Code para SQL Server
-titleSuffix: SQL Server
+title: Uso de la extensión mssql de Visual Studio Code
 description: Use la extensión mssql de Visual Studio Code para editar y ejecutar scripts de Transact-SQL para SQL Server en Linux.
 ms.topic: conceptual
 ms.prod: sql
@@ -9,12 +8,12 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: 91cc06b4d0d2791f91a26ecc1800859713267d9b
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73588989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558460"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Empleo de Visual Studio Code para crear y ejecutar scripts de Transact-SQL
 
@@ -88,7 +87,7 @@ Siga estos pasos para crear un perfil de conexión y conectarse a SQL Server.
    | **Nombre del servidor o cadena de conexión ADO** | Especifique el nombre de la instancia de SQL Server. Use *localhost* para conectarse a una instancia de SQL Server en el equipo local. Para conectarse a una instancia remota de SQL Server, escriba el nombre del servidor SQL Server de destino o su dirección IP. Para conectarse a un contenedor de SQL Server, especifique la dirección IP del equipo host del contenedor. Si necesita especificar un puerto, use una coma para separarlo del nombre. Por ejemplo, en el caso de un servidor que escucha en el puerto 1401, escriba `<servername or IP>,1401`.<br/><br/>Como alternativa, puede escribir la cadena de conexión ADO de la base de datos aquí. |
    | **Nombre de la base de datos** (opcional) | Base de datos que se quiere usar. Para conectarse a la base de datos predeterminada, no especifique aquí ningún nombre de base de datos. |
    | **Tipo de autenticación** | Seleccione **Integrado** o **Inicio de sesión de SQL**. |
-   | **User name** | Si ha seleccionado **Inicio de sesión de SQL**, escriba el nombre de un usuario con acceso a una base de datos en el servidor. |
+   | **Nombre de usuario** | Si ha seleccionado **Inicio de sesión de SQL**, escriba el nombre de un usuario con acceso a una base de datos en el servidor. |
    | **Contraseña** | Escriba la contraseña del usuario especificado. |
    | **Guardar contraseña** | Presione **Entrar** para seleccionar **Sí** y guardar la contraseña. Seleccione **No** para que se le pida la contraseña cada vez que se use el perfil de conexión. |
    | **Nombre de perfil** (opcional) | Escriba un nombre para el perfil de conexión, como *localhost profile*. |
@@ -194,7 +193,7 @@ Como alternativa a los pasos anteriores, también puede crear y editar perfiles 
 
 2. Presione **Ctrl**+**Mayús**+**E** para ejecutar los comandos. Los dos conjuntos de resultados se muestran en la ventana **Resultados**.
 
-   ![Resultado](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
+   ![Results](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
 
 ## <a name="view-and-save-the-result"></a>Consulta y guardado del resultado
 

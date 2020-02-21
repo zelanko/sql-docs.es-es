@@ -1,5 +1,5 @@
 ---
-title: 'Python+T-SQL: Explorar datos'
+title: 'Python + T-SQL: Exploración de datos'
 description: Tutorial en el que se explica cómo insertar Python en procedimientos almacenados de SQL Server y en funciones de T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,15 +8,15 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba5f48b7788b6ebec63149175568777e6659017f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2aef2ed82803af2a6ca1966cde5f5bf6675ca016
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725063"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901844"
 ---
-# <a name="explore-and-visualize-the-data"></a>Exploración y visualización de los datos
+# <a name="explore-and-visualize-the-data"></a>exploración y visualización de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Este artículo forma parte de un tutorial, [Análisis de datos de Python en base de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 

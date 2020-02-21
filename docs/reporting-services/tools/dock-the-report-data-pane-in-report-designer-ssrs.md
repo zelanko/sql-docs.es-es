@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9720a4d5e975f6bf46c17d2008252e05cf7171f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2480d94a6a6815c18c7464a7441daad1dd3595db
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577858"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190422"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Acoplar el panel Datos de informe en el Diseñador de informes (SSRS)
   En el Diseñador de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el panel Datos de informe muestra una vista jerárquica de los objetos de datos que se pueden usar en un informe, como son orígenes de datos, conjuntos de datos, campos, parámetros e imágenes. Los orígenes de datos de esta vista pueden estar incrustados o ser referencias a orígenes de datos compartidos que se muestran en el Explorador de soluciones.  
@@ -42,6 +42,6 @@ ms.locfileid: "65577858"
   
 ## <a name="see-also"></a>Consulte también  
  [Panel Datos de informe](../../reporting-services/report-data/report-data-pane.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

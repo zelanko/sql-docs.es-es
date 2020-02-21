@@ -1,24 +1,26 @@
 ---
 title: ¿Qué es la implementación de la aplicación?
-titleSuffix: Big Data Clusters for SQL Server 2019
+titleSuffix: SQL Server Big Data Clusters
 description: En este artículo se describe la implementación de la aplicación en clústeres de macrodatos para SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653003"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831577"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>¿Qué es la implementación de la aplicación en un clúster de macrodatos de SQL Server 2019?
+# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>¿Qué es la implementación de la aplicación en un clúster de macrodatos?
 
-La implementación de la aplicación permite la implementación de aplicaciones en el clúster de macrodatos proporcionando interfaces para crear, administrar y ejecutar aplicaciones. Las aplicaciones implementadas en el clúster de macrodatos se benefician de la capacidad de cálculo del clúster y pueden tener acceso a los datos que están disponibles en el clúster. Esto aumenta la escalabilidad y el rendimiento de las aplicaciones, al tiempo que se administran las aplicaciones en las que residen los datos.
+La implementación de la aplicación permite la implementación de aplicaciones en el clúster de macrodatos proporcionando interfaces para crear, administrar y ejecutar aplicaciones. Las aplicaciones implementadas en el clúster de macrodatos se benefician de la capacidad de cálculo del clúster y pueden tener acceso a los datos que están disponibles en el clúster. Esto aumenta la escalabilidad y el rendimiento de las aplicaciones, al tiempo que se administran las aplicaciones en las que residen los datos. Los tiempos de ejecución de aplicaciones compatibles en los Clústeres de macrodatos de SQL Server son R, Python, SSIS, MLeap.
+
 En las secciones siguientes se describe la arquitectura y funcionalidad de la implementación de la aplicación.
 
 ## <a name="application-deployment-architecture"></a>Arquitectura de implementación de la aplicación

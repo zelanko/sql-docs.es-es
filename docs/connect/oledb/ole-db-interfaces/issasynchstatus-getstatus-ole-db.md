@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: GetStatus (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994378"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -44,7 +44,7 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>Argumentos  
  *hChapter*[in]  
- Identificador de capítulo. Si el objeto sondeado no es un objeto de conjunto de filas o la operación no se aplica a un capítulo, debe establecerse en DB_NULL_HCHAPTER, que es omitido por el proveedor.  
+ Identificador de capítulo. Si el objeto sondeado no es un objeto de conjunto de filas o si la operación no se aplica a un capítulo, debe establecerse en DB_NULL_HCHAPTER, para que el proveedor omita este valor.  
   
  *eOperation*[in]  
  Operación para la que se solicita el estado asincrónico. Se debe usar el siguiente valor:  
@@ -62,7 +62,7 @@ HRESULT GetStatus(
  Si *pulProgressMax* es un puntero NULL, no se devuelve ningún valor máximo esperado.  
   
  *peAsynchPhase*[out]  
- Puntero a la memoria en el que se devuelve información adicional relacionada con el progreso de la operación asincrónica. Los valores válidos incluyen:  
+ Puntero a la memoria en el que se devuelve información adicional relacionada con el progreso de la operación asincrónica. Los valores válidos son:  
   
  DBASYNCHPHASE_INITIALIZATION: el objeto se encuentra en fase de inicialización. Los argumentos *pulProgress* y *pulProgressMax* indican una proporción estimada de progreso. El objeto aún no se ha materializado por completo. Al intentar llamar a otras interfaces puede generarse un error y es posible que en el objeto no esté disponible el conjunto completo de interfaces. Si la operación asincrónica se realizó como resultado de llamar a **ICommand::Execute** en un comando que actualiza, elimina o inserta filas y si *cParamSets* es mayor que 1, *pulProgress* y *pulProgressMax* pueden indicar el progreso de un conjunto único de parámetros o de la matriz completa de conjuntos de parámetros.  
   
@@ -109,7 +109,7 @@ HRESULT GetStatus(
  E_FAIL  
  Se produjo un error específico del proveedor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método **ISSAsynchStatus::GetStatus** se comporta exactamente igual que el método **IDBAsynchStatus::GetStatus**, excepto que, si se anula la inicialización de un objeto de origen de datos, se devuelve E_UNEXPECTED en lugar de DB_E_CANCELED (aunque [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) devolverá DB_E_CANCELED). Esto se debe a que el objeto de origen de datos no queda en el estado inerte habitual después de una anulación para que puedan intentarse otras operaciones de inicialización.  
   
  Si el conjunto de filas se inicializa o rellena de forma asincrónica, debe admitir este método.  
@@ -126,6 +126,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>Consulte también  
  [Realizar operaciones asincrónicas](../../oledb/features/performing-asynchronous-operations.md)   
- [OLE DB &#40;ISSAsynchStatus&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

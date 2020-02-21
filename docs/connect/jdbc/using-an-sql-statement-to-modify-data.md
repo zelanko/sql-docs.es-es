@@ -1,5 +1,5 @@
 ---
-title: Usar una instrucción SQL para modificar datos | Microsoft Docs
+title: Empleo de una instrucción SQL para modificar datos | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9de31bad8ef2980e7322b529a6a2b68a12355c2
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026750"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>Empleo de una instrucción SQL para modificar datos
@@ -34,8 +34,8 @@ En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de eje
 >
 > Si la columna en que intenta insertar datos contiene caracteres especiales (por ejemplo, espacios), debe proporcionar los valores que se van a insertar incluso si se trata de valores predeterminados. En caso contrario, la operación de inserción no funciona.
 >
-> Si desea que el controlador JDBC devuelva todos los recuentos de actualizaciones, incluidos los recuentos de actualizaciones devueltos por todos los desencadenadores activados, establezca la propiedad de cadena de conexión lastUpdateCount en "false". Para obtener más información sobre la propiedad lastUpdateCount, vea [establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
+> Si desea que el controlador JDBC devuelva todos los recuentos de actualizaciones, incluidos los recuentos de actualizaciones devueltos por todos los desencadenadores activados, establezca la propiedad de cadena de conexión lastUpdateCount en "false". Para obtener más información sobre la propiedad lastUpdateCount, consulte [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Empleo de instrucciones con SQL](../../connect/jdbc/using-statements-with-sql.md)

@@ -1,6 +1,6 @@
 ---
 title: Visualización de datos mediante RevoScaleR
-description: Tutorial sobre cómo visualizar datos mediante el lenguaje R en SQL Server.
+description: 'Tutorial 6 de RevoScaleR: Visualización de datos mediante el lenguaje R en SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,30 +9,30 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 887c5790a7de70cf111f004be65e3a41748b47bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727122"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947371"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualizar datos de SQL Server mediante R (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Este es el tutorial 6 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-En esta lección, usará funciones de R para ver la distribución de valores de la columna *creditLine* por género.
+En este tutorial, usará funciones de R para ver la distribución de valores de la columna *creditLine* por género.
 
 > [!div class="checklist"]
 > * Creación de variables mínimo-máximo para entradas de histograma
 > * Visualización de datos en un histograma mediante **rxHistogram** de **RevoScaleR**
 > * Visualización de gráficos de dispersión con **levelplot** de **lattice** incluido en la distribución de R base
 
-Como se muestra en esta lección, puede combinar funciones de código abierto y específicas de Microsoft en el mismo script.
+Como se muestra en este tutorial, puede combinar funciones de código abierto y específicas de Microsoft en el mismo script.
 
 ## <a name="add-maximum-and-minimum-values"></a>Adición de valores máximos y mínimos
 
-Según las estadísticas de resumen calculadas de la lección anterior, ha descubierto alguna información útil sobre los datos que quiere insertar en el origen de datos para llevar a cabo cálculos adicionales. Por ejemplo, puede usar los valores mínimos y máximos para calcular histogramas. En este ejercicio, agregará los valores máximos y mínimos al origen de datos **RxSqlServerData**.
+Según las estadísticas de resumen calculadas del tutorial anterior, ha descubierto alguna información útil sobre los datos que quiere insertar en el origen de datos para llevar a cabo cálculos adicionales. Por ejemplo, puede usar los valores mínimos y máximos para calcular histogramas. En este ejercicio, agregará los valores máximos y mínimos al origen de datos **RxSqlServerData**.
 
 1. Empiece por configurar algunas variables temporales.
   
@@ -41,7 +41,7 @@ Según las estadísticas de resumen calculadas de la lección anterior, ha descu
     var <- sumDF$Name
     ```
   
-2. Use la variable *ccColInfo* que ha creado en la lección anterior para definir las columnas del origen de datos.
+2. Use la variable *ccColInfo* que ha creado en el tutorial anterior para definir las columnas del origen de datos.
   
    Agregue nuevas columnas calculadas (*numTrans*, *numIntlTrans* y *creditLine*) a la colección de columnas que reemplazan la definición original. El siguiente script agrega factores basados en los valores mínimos y máximos, obtenidos de sumOut, que almacena la salida en memoria de **rxSummary**. 
   
@@ -136,7 +136,7 @@ Los gráficos de dispersión se suelen usar durante la exploración de datos par
     levelplot(fraudRisk~numTrans*numIntlTrans, data = cubePlot)
     ```
   
-    **Resultado**
+    **Resultados**
   
     ![resultados del gráfico de dispersión](media/rsql-sue-scatterplotresults.jpg "resultados del gráfico de dispersión")
   

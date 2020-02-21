@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592313"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190687"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de datos incrustados y compartidos de informe (Generador de informes y SSRS)
   Un conjunto de datos especifica los datos que desea usar de una conexión de datos. Un conjunto de datos se basa en una conexión de datos guardada en el informe como un origen del datos incrustado o una referencia a un origen de datos compartido en un servidor de informes. El conjunto de datos incluye una consulta que especifica un conjunto de campos. Al arrastrar estos campos hacia la superficie de diseño, se crean expresiones que se evalúan como los datos reales cuando se ejecuta el informe.  
@@ -42,7 +42,7 @@ ms.locfileid: "73592313"
   
 6.  **Resultados de consulta** Puede ejecutar la consulta y ver un conjunto de resultados de ejemplo. Debe tener credenciales de tiempo de diseño para ejecutar una consulta.  
   
-7.  **Metadatos del esquema** El proveedor de datos ejecuta un comando de consulta de esquema de forma independiente de la consulta para recuperar los metadatos para la colección de campos de conjunto de datos. Por ejemplo, una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** statement returns the column names for a database table. Utilice el panel Datos de informe para expandir el conjunto de datos y ver la colección de campos del conjunto de datos.  
+7.  **Metadatos del esquema** El proveedor de datos ejecuta un comando de consulta de esquema de forma independiente de la consulta para recuperar los metadatos para la colección de campos de conjunto de datos. Por ejemplo, una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** devuelve los nombres de columna para una tabla de base de datos. Utilice el panel Datos de informe para expandir el conjunto de datos y ver la colección de campos del conjunto de datos.  
   
  Los datos también pueden incluirse en un informe utilizando conjuntos de datos compartidos y elementos de informe predefinidos. Estos elementos ya tienen la información de la conexión de datos que necesita. Para más información, vea [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) y [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
@@ -73,9 +73,9 @@ ms.locfileid: "73592313"
   
 -   Un conjunto de resultados de cualquier proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] registrado y configurado.  
   
--   Datos de un modelo de informe que se ha diseñado para un origen de datos concreto, con entidades, relaciones de entidad y campos predefinidos. Para obtener más información, vea "conjuntos de datos de informe" en la [documentación de Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+-   Datos de un modelo de informe que se ha diseñado para un origen de datos concreto, con entidades, relaciones de entidad y campos predefinidos. Para más información, vea "Conjuntos de datos de informe" en la [documentación de Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
- Cuando el informe se procesa en tiempo de ejecución, el conjunto de resultados real devuelto para una consulta puede tener cero o más filas. También es posible que las columnas definidas en la consulta no estén presentes en el origen de datos. Los valores NULL del origen de datos se asignan al valor de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **System.DBNull.Value**.  
+ Cuando el informe se procesa en tiempo de ejecución, el conjunto de resultados real devuelto para una consulta puede tener cero o más filas. También es posible que las columnas definidas en la consulta no estén presentes en el origen de datos. Los valores NULL del origen de datos se asignan al valor de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]**System.DBNull.Value**.  
   
  Para obtener más información sobre los campos del conjunto de datos, vea [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73592313"
   
  La diferencia entre los orígenes de datos incrustados y compartidos es la manera en que se crean, almacenan y administran. En la tabla siguiente se resumen las diferencias entre los orígenes de datos compartidos y los incrustados:  
   
-|Descripción|Origen de datos<br /><br /> Origen de datos|Compartidos<br /><br /> Origen de datos|  
+|Descripción|Insertado<br /><br /> Origen de datos|Compartido<br /><br /> Origen de datos|  
 |-----------------|------------------------------|----------------------------|  
 |La conexión de datos se incrusta en la definición de informe.|![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")||  
 |El puntero a la conexión de datos en el servidor de informes se incrusta en la definición de informe.||![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|  
@@ -144,9 +144,9 @@ ms.locfileid: "73592313"
 |--------------|--------------------------------------------|------------------------------------------|  
 |Texto de consulta|Configure la consulta y defínala como expresión.|No puede cambiar la consulta.|  
 |Parámetros de consulta|No puede hacer referencia a los parámetros de informe<br /><br /> Incluye los valores predeterminados<br /><br /> Incluye una marca de solo lectura|Configure los parámetros que no están marcados como de solo lectura en la definición|  
-|Filtros|Definir filtros|No se pueden ver ni cambiar los filtros de conjunto de datos que forman parte de la definición<br /><br /> Puede crear filtros adicionales|  
+|Filtros|Definición de filtros|No se pueden ver ni cambiar los filtros de conjunto de datos que forman parte de la definición<br /><br /> Puede crear filtros adicionales|  
 |Origen de datos|Debe ser un origen de datos compartido|No se puede cambiar el origen de datos|  
-|Campos|Campos en el comando de consulta<br /><br /> Los campos calculados no forman parte de la definición del conjunto de datos|Se ven los campos, pero no se pueden cambiar<br /><br /> La colección de campos es estática y está basada en la consulta en el momento que agregó el conjunto de datos compartido al informe. Para actualizar, haga clic en **Actualizar campos** en el cuadro de diálogo **Propiedades del conjunto de datos** . La colección de campos actual es cualquier la consulta actual que la definición devuelve.<br /><br /> Agregar campos calculados|  
+|Fields|Campos en el comando de consulta<br /><br /> Los campos calculados no forman parte de la definición del conjunto de datos|Se ven los campos, pero no se pueden cambiar<br /><br /> La colección de campos es estática y está basada en la consulta en el momento que agregó el conjunto de datos compartido al informe. Para actualizar, haga clic en **Actualizar campos** en el cuadro de diálogo **Propiedades del conjunto de datos** . La colección de campos actual es cualquier la consulta actual que la definición devuelve.<br /><br /> Agregar campos calculados|  
 |Dataset|Opciones de datos como la distinción entre mayúsculas y minúsculas|Invalidar las opciones de datos en la instancia|  
   
  Para obtener más información sobre cómo crear conjuntos de datos, consulte [Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) y [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md) en la [documentación de Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
@@ -219,7 +219,7 @@ ms.locfileid: "73592313"
   
 ## <a name="see-also"></a>Consulte también  
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

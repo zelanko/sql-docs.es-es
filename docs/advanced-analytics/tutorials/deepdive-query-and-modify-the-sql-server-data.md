@@ -1,6 +1,6 @@
 ---
 title: Modificar datos de SQL mediante RevoScaleR
-description: Tutorial sobre cómo consultar y modificar datos mediante el lenguaje R en SQL Server.
+description: 'Tutorial 3 de RevoScaleR: Consulta y modificación de datos mediante el lenguaje R en SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65db15d8c6778723ff04f82cde985c4827813339
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 48802f815515948c957c718e4bf666b0d7133670
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727189"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947085"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Consulta y modificación de datos de SQL Server (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Este es el tutorial 3 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-En la lección anterior, cargó los datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este paso, puede explorar y modificar los datos mediante **RevoScaleR**:
+En el tutorial anterior, cargó los datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este tutorial, puede explorar y modificar los datos mediante **RevoScaleR**:
 
 > [!div class="checklist"]
 > * Devolver información básica sobre las variables
@@ -39,7 +39,7 @@ En primer lugar, obtenga una lista de las columnas y sus tipos de datos. Use la 
 rxGetVarInfo(data = sqlFraudDS)
 ```
 
-**Resultado**
+**Resultados**
 
 ```R
 Var 1: custID, Type: integer
@@ -113,7 +113,7 @@ Asignar la columna a las abreviaturas antes de usarla como un factor mejora real
     rxGetVarInfo(data = sqlFraudDS)
     ```
 
-    **Resultado**
+    **Resultados**
     
     ```R
     Var 1: custID, Type: integer

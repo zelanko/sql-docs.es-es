@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68714959"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Creación de un inicio de sesión para SQLRUserGroup
@@ -33,26 +33,26 @@ Puede evitar el error de conexión creando un inicio de sesión para **SQLServer
 
 2. En el cuadro de diálogo **Inicio de sesión - Nuevo**, haga clic en **Buscar**. (No escriba nada en el cuadro todavía).
     
-     ![Haga clic en buscar para agregar un nuevo inicio de sesión para aprendizaje automático](media/implied-auth-login1.png "Click search to add new login for machine learning")
+     ![Haga clic en buscar para agregar un nuevo inicio de sesión para aprendizaje automático](media/implied-auth-login1.png "Haga clic en buscar para agregar un nuevo inicio de sesión para aprendizaje automático")
 
 3. En el cuadro **Seleccionar usuario o grupo**, haga clic en el botón **Tipos de objeto**.
 
-     ![Buscar tipos de objeto para agregar un nuevo inicio de sesión para aprendizaje automático](media/implied-auth-login2.png "Search object types to add new login for machine learning")
+     ![Busque tipos de objeto para agregar un nuevo inicio de sesión para aprendizaje automático](media/implied-auth-login2.png "Busque tipos de objeto para agregar un nuevo inicio de sesión para aprendizaje automático")
 
 4. En el cuadro de diálogo **Tipos de objeto**, seleccione **Grupos**. Desactive las demás casillas.
 
-     ![Seleccione Grupos en el cuadro de diálogo Tipos de objeto](media/implied-auth-login3.png "Select Groups in Object Types dialog box")
+     ![Seleccione Grupos en el cuadro de diálogo Tipos de objeto](media/implied-auth-login3.png "Seleccione Grupos en el cuadro de diálogo Tipos de objeto")
 
 4. Haga clic en **Avanzadas**, compruebe que la ubicación para buscar es el equipo actual y, después, haga clic en **Buscar ahora**.
 
-     ![Haga clic en Buscar ahora para obtener una lista de grupos](media/implied-auth-login4.png "Click Find Now to get list of groups")
+     ![Haga clic en Buscar ahora para obtener una lista de grupos](media/implied-auth-login4.png "Haga clic en Buscar ahora para obtener una lista de grupos")
 
 5. Desplácese por la lista de cuentas del grupo en el servidor hasta que encuentre una que comience por `SQLRUserGroup`.
     
     + El nombre del grupo que está asociado con el servicio Launchpad para la _instancia predeterminada_ siempre es **SQLRUserGroup**, independientemente de si instaló R, Python o ambos. Seleccione esta cuenta solo para la instancia predeterminada.
     + Si usa una _instancia con nombre_, el nombre de la instancia se anexa al nombre del grupo de trabajo predeterminado, `SQLRUserGroup`. Por ejemplo, si la instancia se denomina "MLTEST", el nombre del grupo de usuarios predeterminado para esta instancia sería **SQLRUserGroupMLTest**.
  
-    ![Ejemplo de grupos en el servidor](media/implied-auth-login5.png "Example of groups on server")
+    ![Ejemplo de grupos del servidor](media/implied-auth-login5.png "Ejemplo de grupos del servidor")
    
 5. Haga clic en **Aceptar** para cerrar el cuadro de diálogo de búsqueda avanzada.
 
@@ -66,4 +66,4 @@ Puede evitar el error de conexión creando un inicio de sesión para **SQLServer
 ## <a name="next-steps"></a>Pasos siguientes
 
 + [Información general sobre seguridad](../concepts/security.md)
-+ [Marco de extensibilidad](../concepts/extensibility-framework.md)
++ [Plataforma de extensibilidad](../concepts/extensibility-framework.md)

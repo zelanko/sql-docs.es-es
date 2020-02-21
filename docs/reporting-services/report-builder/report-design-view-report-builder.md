@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577986"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190041"
 ---
 # <a name="report-design-view-report-builder"></a>Vista de diseño de informe (Generador de informes)
   La ventana del Generador de informes está diseñada para ayudarle a organizar con facilidad sus recursos de informes y a generar rápidamente los informes paginados que necesita. La superficie de diseño se encuentra en el centro de la ventana, con la cinta de opciones y los paneles a su alrededor. La superficie de diseño es donde agrega y organiza sus elementos de informe. En este artículo se describen los paneles que se usan para agregar, seleccionar y organizar los recursos de informe y para cambiar las propiedades de los elementos de informe.  
   
- ![Vista de diseño del generador de informes](../../reporting-services/report-builder/media/ssrb-designview.png "Vista de diseño del Generador de informes")  
+ ![Vista de diseño del Generador de informes](../../reporting-services/report-builder/media/ssrb-designview.png "Vista de diseño del Generador de informes")  
   
 1.  Cinta de opciones  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65577986"
   
 -   [Imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
   
--   [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+-   [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
 -   [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
@@ -137,13 +137,13 @@ ms.locfileid: "65577986"
  En función de la propiedad, puede establecer un valor de propiedad desde una lista desplegable, escribir el valor o hacer clic en `<Expression>` para crear una expresión.  
   
 ### <a name="changing-the-properties-pane-view"></a>Cambiar la vista del panel de propiedades  
- De manera predeterminada, las propiedades que se muestran en el panel de propiedades se organizan en amplias categorías como Acción, Borde, Relleno, Fuente y General. Cada una de esas categorías cuenta con un conjunto de propiedades asociadas. Por ejemplo, las siguientes propiedades se enumeran en la categoría Fuente: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight y TextDecoration. Si lo prefiere, puede ordenar alfabéticamente todas las propiedades enumeradas en el panel. De esta manera se quitan las categorías y se enumeran todas las propiedades en orden alfabético independientemente de la categoría.  
+ De manera predeterminada, las propiedades que se muestran en el panel de propiedades se organizan en amplias categorías como Acción, Borde, Relleno, Fuente y General. Cada una de esas categorías cuenta con un conjunto de propiedades asociadas. Por ejemplo, las siguientes propiedades aparecen en la categoría Fuente: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight y TextDecoration. Si lo prefiere, puede ordenar alfabéticamente todas las propiedades enumeradas en el panel. De esta manera se quitan las categorías y se enumeran todas las propiedades en orden alfabético independientemente de la categoría.  
   
- El panel de propiedades tiene tres botones en la parte superior correspondientes a las opciones de categoría, alfabetización y páginas de propiedades. Haga clic en los botones de categoría y alfabetización para cambiar entre las diferentes vistas del panel de propiedades. Haga clic en el botón de **páginas de propiedades** para abrir el cuadro de diálogo de propiedades de un elemento de informe seleccionado.  
+ El panel de propiedades tiene tres botones en la parte superior: Categoría, Alfabetización y Páginas de propiedades. Haga clic en los botones de categoría y alfabetización para cambiar entre las diferentes vistas del panel de propiedades. Haga clic en el botón de **páginas de propiedades** para abrir el cuadro de diálogo de propiedades de un elemento de informe seleccionado.  
   
   
 ##  <a name="GroupPane"></a> Panel Agrupación (Generador de informes)  
- Los grupos se utilizan para organizar los datos del informe en una jerarquía visual y calcular los totales. Puede ver los grupos de filas y columnas dentro de una región de datos en la superficie de diseño y también en el Panel de agrupación. El Panel de agrupación tiene dos paneles: Grupos de filas y Grupos de columnas. Al seleccionar una región de datos, el Panel de agrupación muestra todos los grupos dentro de una región de datos como una lista jerárquica: los grupos secundarios aparecen con sangría aplicada bajo los grupos primarios.  
+ Los grupos se utilizan para organizar los datos del informe en una jerarquía visual y calcular los totales. Puede ver los grupos de filas y columnas dentro de una región de datos en la superficie de diseño y también en el Panel de agrupación. El panel Agrupación tiene dos paneles: Grupos de filas y Grupos de columnas. Al seleccionar una región de datos, el panel Agrupación muestra todos los grupos dentro de dicha región de datos como una lista jerárquica: los grupos secundarios aparecen con sangría aplicada bajo los grupos principales.  
   
  ![Grupos de filas del Generador de informes](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Grupos de filas del Generador de informes")  
   
@@ -162,7 +162,7 @@ ms.locfileid: "65577986"
  Obtenga más información en [Mostrar la vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ### <a name="running-a-report-with-parameters"></a>Ejecutar un informe con parámetros  
- Al ejecutar su informe, se procesa automáticamente. Si el informe contiene parámetros, todos ellos deben tener los valores predeterminados antes de que el informe se pueda ejecutar automáticamente. Si un parámetro no tiene un valor predeterminado, al ejecutar el informe necesita elegir un valor para ese parámetro y, a continuación, hacer clic en **Ver informe** en la pestaña Ejecutar. Para obtener más información, vea [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Al ejecutar su informe, se procesa automáticamente. Si el informe contiene parámetros, todos ellos deben tener los valores predeterminados antes de que el informe se pueda ejecutar automáticamente. Si un parámetro no tiene un valor predeterminado, al ejecutar el informe necesita elegir un valor para ese parámetro y, a continuación, hacer clic en **Ver informe** en la pestaña Ejecutar. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="print-preview"></a>Vista previa de impresión  
  La vista previa de un informe en modo de ejecución se parece a un informe generado en HTML. La vista previa no es HTML, pero el diseño y la paginación del informe son similares a la salida con formato HTML. Para cambiar la vista de manera que represente un informe impreso, cambie al modo de vista previa de impresión. Haga clic en el botón **Vista previa de impresión** en la pestaña **Ejecutar** . El informe se mostrará como si estuviera en una página física. Esta vista se asemeja a la salida que se obtiene mediante las extensiones de representación en imágenes y en PDF. La vista previa de impresión no es un archivo de imagen ni un archivo PDF, pero el diseño y la paginación del informe son similares al resultado de estos formatos.  

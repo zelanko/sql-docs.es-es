@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MTE75
+ms.openlocfilehash: 18b60a7359392a973a9486c9d4c8266e6997c9df
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542184"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516526"
 ---
 # <a name="url-access-parameter-reference"></a>Referencia de parámetros de acceso URL
   Puede usar los siguientes parámetros como parte de una dirección URL para configurar la apariencia de los informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Los parámetros más comunes se muestran en esta sección. Los parámetros distinguen entre mayúsculas y minúsculas y empiezan con el prefijo de parámetro *rs:* si se dirige al servidor de informes y *rc:* si se dirige a un Visor HTML. También puede especificar parámetros que son específicos de dispositivos o extensiones de representación. Para obtener más información sobre parámetros específicos del dispositivo, vea [Especificar la configuración de la información del dispositivo en una dirección URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "72542184"
     > [!IMPORTANT]  
     >  *rc:Toolbar*=**false** no funciona para las cadenas de acceso URL que usan una dirección IP, en lugar de un nombre de dominio, cuyo destino es un informe hospedado en un sitio de SharePoint.  
   
--   *Parameters* : muestra u oculta el área de parámetros de la barra de herramientas. Si establece este parámetro en el valor **true**, se muestra el área de parámetros de la barra de herramientas. Si establece este parámetro en **false**, el área de parámetros no se muestra y no puede ser mostrada por el usuario. Si establece este parámetro en un valor de **Collapsed**, no se mostrará el área de parámetros, pero el usuario final puede alternarla. El valor predeterminado de este parámetro es **true**.  
+-   *Parameters* : Muestra u oculta el área de parámetros de la barra de herramientas. Si establece este parámetro en el valor **true**, se muestra el área de parámetros de la barra de herramientas. Si establece este parámetro en **false**, el área de parámetros no se muestra y no puede ser mostrada por el usuario. Si establece este parámetro en un valor de **Collapsed**, no se mostrará el área de parámetros, pero el usuario final puede alternarla. El valor predeterminado de este parámetro es **true**.  
   
      Para ver un ejemplo en modo **Native** :  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72542184"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : establece el valor de ampliación del informe como un porcentaje entero o una constante de cadena. Los valores de cadena estándar incluyen **Page Width** y **Whole Page**. Las versiones de Internet Explorer anteriores a Internet Explorer 5.0 y todos los exploradores que no son de[!INCLUDE[msCoName](../includes/msconame-md.md)] omiten este parámetro. El valor predeterminado de este parámetro es **100**.  
+-   *Zoom* : Establece el valor de ampliación del informe como porcentaje entero o una constante de cadena. Los valores de cadena estándar incluyen **Page Width** y **Whole Page**. Las versiones de Internet Explorer anteriores a Internet Explorer 5.0 y todos los exploradores que no son de[!INCLUDE[msCoName](../includes/msconame-md.md)] omiten este parámetro. El valor predeterminado de este parámetro es **100**.  
   
      Por ejemplo, en modo **Native** :  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72542184"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
--   *Section* : establece qué página del informe se va a mostrar. Cualquier valor que sea mayor que el número de páginas en el informe muestra la última página. Cualquier valor que sea menor que **0** muestra la página 1 del informe. El valor predeterminado de este parámetro es **1**.  
+-   *Section* : Establece la página del informe que se mostrará. Cualquier valor que sea mayor que el número de páginas en el informe muestra la última página. Cualquier valor que sea menor que **0** muestra la página 1 del informe. El valor predeterminado de este parámetro es **1**.  
   
      Por ejemplo, para mostrar la página 2 del informe en el modo **Native** :  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72542184"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   *FindString*: busca un conjunto de texto específico en un informe.  
+-   *FindString*: Busca en un informe un conjunto específico de texto.  
   
      Por ejemplo, en modo **Native** .  
   
@@ -99,7 +99,7 @@ ms.locfileid: "72542184"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
--   *StartFind* : especifica la última sección en que se buscará. El valor predeterminado de este parámetro es la última página del informe.  
+-   *StartFind* : Especifica la última sección en que se buscará. El valor predeterminado de este parámetro es la última página del informe.  
   
      Por ejemplo, en modo **Native** busca la primera aparición del texto "Mountain-400" en el informe de ejemplo Product Catalog desde la página uno hasta la página cinco.  
   
@@ -107,22 +107,22 @@ ms.locfileid: "72542184"
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
--   *EndFind* : establece el número de la última página que se usará en la búsqueda. Por ejemplo, un valor de **5** indica que la última página que se va a buscar es la página 5 del informe. El valor predeterminado es el número de la página actual. Utilice este parámetro junto con el parámetro *StartFind* . Vea el ejemplo anterior.  
+-   *EndFind* : Establece el número de la última página que se utilizará en la búsqueda. Por ejemplo, un valor de **5** indica que la última página que se va a buscar es la página 5 del informe. El valor predeterminado es el número de la página actual. Utilice este parámetro junto con el parámetro *StartFind* . Vea el ejemplo anterior.  
   
--   *FallbackPage* : establece el número de la página que se mostrará si se produce un error en una búsqueda o en una selección de mapa del documento. El valor predeterminado es el número de la página actual.  
+-   *FallbackPage* : Establece el número de la página que se mostrará si se produce un error en una búsqueda o en una selección de mapa del documento. El valor predeterminado es el número de la página actual.  
   
--   *GetImage* : obtiene un icono determinado para la interfaz de usuario del Visor HTML.  
+-   *GetImage* : Obtiene un icono determinado para la interfaz de usuario del Visor HTML.  
   
--   *Icon* : obtiene el icono de una extensión de representación determinada.  
+-   *Icon* : Obtiene el icono de una extensión de representación determinada.  
   
--   *Stylesheet*: especifica una hoja de estilos que se va a aplicar al Visor HTML.  
+-   *Stylesheet*: Especifica una hoja de estilos que se va a aplicar al Visor HTML.  
   
--   Configuración de información del dispositivo: especifica una configuración de información del dispositivo en forma de `rc:tag=value`, donde *tag* es el nombre de la configuración de información de un dispositivo concreto de la extensión de representación que se usa actualmente (vea la descripción del parámetro *Format* ). Por ejemplo, puede usar la configuración de información del dispositivo *OutputFormat* para que la extensión de representación IMAGE represente el informe en imágenes JPEG con los siguientes parámetros en la cadena de acceso URL: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Para obtener más información sobre toda la configuración de información del dispositivo específica de la extensión, vea [Configuración de información de dispositivos para las extensiones de representación &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Device Information Setting: especifica una configuración de información del dispositivo en forma de `rc:tag=value`, donde *tag* es el nombre de la configuración de información de un dispositivo concreto para la extensión de representación que se usa actualmente (consulte la descripción del parámetro *Format*). Por ejemplo, puede usar la configuración de información del dispositivo *OutputFormat* para que la extensión de representación IMAGE represente el informe en imágenes JPEG con los siguientes parámetros en la cadena de acceso URL: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Para obtener más información sobre toda la configuración de información del dispositivo específica de la extensión, vea [Configuración de información de dispositivos para las extensiones de representación &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Comandos del servidor de informes (rs:)  
  Los comandos de servidor de informes tienen el prefijo *rs:* y se usan para establecer el servidor de informes como destino:  
   
--   *Command*:  
+-   *Comando*:  
                   Realiza una acción en un elemento de catálogo, según el tipo de elemento. El valor predeterminado se determina mediante el tipo de elemento de catálogo al que se hace referencia en la cadena de acceso URL. Los valores válidos son:  
   
     -   **ListChildren** y **GetChildren** muestran el contenido de una carpeta. Los elementos de carpeta se muestran dentro de una página genérica de navegación por elementos.  
@@ -212,9 +212,13 @@ ms.locfileid: "72542184"
   
     -   **IMAGE**  
   
-    -   **EXCEL**  
+    -   **EXCEL** (para .xls)
+    
+    -   **EXCELOPENXML** (para .xlsx)
   
-    -   **WORD**  
+    -   **WORD** (para .doc)
+    
+    -   **WORDOPENXML** (para .docx)
   
     -   **CSV**  
   
@@ -247,7 +251,7 @@ ms.locfileid: "72542184"
     https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Snapshot* : representa un informe según una instantánea del historial de informes. Para obtener más información, vea [Representar instantáneas del historial de informes mediante acceso URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
+-   *Snapshot* : Representa un informe basándose en una instantánea del historial de informes. Para obtener más información, vea [Representar instantáneas del historial de informes mediante acceso URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
   
      Por ejemplo, en modo **Native** , para recuperar una instantánea del historial de informes con fecha 2003-04-07 con una marca de tiempo de 13:40:02:  
   
@@ -278,7 +282,7 @@ ms.locfileid: "72542184"
 ##  <a name="bkmk_webpart"></a> Comandos de elemento web del visor de informes (rv:)  
  Los siguientes nombres de parámetros de informes reservados de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se usan para tener como destino el elemento web del Visor de informes cuando se integra con SharePoint. Estos nombres de parámetro tienen como prefijo *rv:* . El elemento web del visor de informes también acepta el parámetro *rs:ParameterLanguage* .  
   
--   *Toolbar*: controla la presentación de la barra de herramientas para el elemento web del Visor de informes. El valor predeterminado es **Full**. Los valores pueden ser:  
+-   *Toolbar*: Controla la presentación de la barra de herramientas para el elemento web del visor de informes. El valor predeterminado es **Full**. Los valores pueden ser:  
   
     -   **Full**: muestra la barra de herramientas completa.  
   
@@ -292,7 +296,7 @@ ms.locfileid: "72542184"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
--   *HeaderArea*: controla la presentación del encabezado para el elemento web del Visor de informes. El valor predeterminado es **Full**. Los valores pueden ser:  
+-   *HeaderArea*: Controla la presentación del encabezado para el elemento web del visor de informes. El valor predeterminado es **Full**. Los valores pueden ser:  
   
     -   **Full**: muestra el encabezado completo.  
   
@@ -306,9 +310,9 @@ ms.locfileid: "72542184"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
     ```  
   
--   *DocMapAreaWidth*: controla el ancho de la presentación, en píxeles, del área de parámetro en el elemento web del Visor de informes. El valor predeterminado es igual que el valor predeterminado del elemento web del visor de informes. Debe ser un número entero no negativo.  
+-   *DocMapAreaWidth*: Controla el ancho de la presentación, en píxeles, del área de parámetro en el elemento web del visor de informes. El valor predeterminado es igual que el valor predeterminado del elemento web del visor de informes. Debe ser un número entero no negativo.  
   
--   *AsyncRender*: controla si un informe se representa de forma asincrónica. El valor predeterminado es **true**, que especifica que un informe se representa de forma asincrónica. El valor debe ser un valor booleano de **true** o **false**.  
+-   *AsyncRender*: Controla si se representa un informe de forma asincrónica. El valor predeterminado es **true**, que especifica que un informe se representa de forma asincrónica. El valor debe ser un valor booleano de **true** o **false**.  
   
 -   *ParamMode*: controla cómo se muestra el área de mensajes de parámetros del elemento web del Visor de informes en la vista de página completa. El valor predeterminado es **Full**. Los valores válidos son:  
   
@@ -340,7 +344,7 @@ ms.locfileid: "72542184"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: controla qué elementos de la barra de herramientas se muestran. Es un valor de enumeración bit a bit. Para incluir un elemento de la barra de herramientas, agregue el valor del elemento al valor total. Por ejemplo: para un menú Acciones, use rv:ToolBarItemsDisplayMode=63 (o 0x3F), que es 1+2+4+8+16+32; solo para los elementos del menú Acciones, use rv:ToolBarItemsDisplayMode=960 (o 0x3C0). El valor predeterminado es **-1**, que incluye todos los elementos de la barra de herramientas. Los valores válidos son:  
+-   *ToolBarItemsDisplayMode*: Controla qué elementos de la barra de herramientas se muestran. Es un valor de enumeración bit a bit. Para incluir un elemento de la barra de herramientas, agregue el valor del elemento al valor total. Por ejemplo: para un menú Acciones, use rv:ToolBarItemsDisplayMode=63 (o 0x3F), que es 1+2+4+8+16+32; solo para los elementos del menú Acciones, use rv:ToolBarItemsDisplayMode=960 (o 0x3C0). El valor predeterminado es **-1**, que incluye todos los elementos de la barra de herramientas. Los valores válidos son:  
   
     -   1 (0x1): el botón **Atrás**  
   
@@ -372,6 +376,6 @@ ms.locfileid: "72542184"
   
 ## <a name="see-also"></a>Consulte también  
  [Acceso URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)  
+ [Exportación de un informe con el acceso URL](../reporting-services/export-a-report-using-url-access.md)  
   
   

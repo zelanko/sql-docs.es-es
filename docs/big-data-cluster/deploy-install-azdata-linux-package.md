@@ -5,29 +5,24 @@ description: Aprenda a instalar la herramienta azdata para instalar y administra
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d8d4a34e89de7c136e1e80b43929531a2d10eba
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532071"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75728586"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-linux"></a>Instalación de `azdata` para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Linux
+# <a name="install-azdata-with-apt"></a>Instalación de `azdata` con apt
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se explica cómo instalar `azdata` para clústeres de macrodatos de SQL Server 2019 en Linux. Antes de que estos administradores de paquetes estuviesen disponibles, la instalación de `azdata` exigía `pip`.
 
-Los administradores de paquetes están diseñados para distintos sistemas operativos y distribuciones.
-
-- En Windows y Linux (distribución de Ubuntu), se puede instalar con un [administrador de paquetes](./deploy-install-azdata-installer.md) a fin de simplificar la experiencia.
-- En Linux (Ubuntu), [instale `azdata` con `apt`](#azdata-apt).
-
-En este momento no hay ningún administrador de paquetes para instalar `azdata` en otros sistemas operativos o distribuciones. Para estas plataformas, vea [Instalación de `azdata` sin el administrador de paquetes](./deploy-install-azdata.md).
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## <a id="linux"></a>Instalar `azdata` para Linux
 
@@ -42,19 +37,27 @@ El paquete de instalación `azdata` está disponible para Ubuntu con `apt`.
 
     ```bash
     sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl apt-transport-https lsb-release -y
+    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
     ```
 
 2. Descargue e instale la clave de firma:
 
     ```bash
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+    gpg --dearmor |
+    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
     ```
 
-3. Agregue la información del repositorio `azdata`:
+3. Agregue la información del repositorio `azdata`.
 
+   Para el cliente Ubuntu 16.04, ejecute:
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    ```
+
+   Para el cliente Ubuntu 18.04, ejecute:
+    ```bash
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
     ```
 
 4. Actualice la información del repositorio e instale `azdata`:
@@ -70,7 +73,7 @@ El paquete de instalación `azdata` está disponible para Ubuntu con `apt`.
     azdata --version
     ```
 
-### <a name="update"></a>Update
+### <a name="update"></a>Actualizar
 
 Actualice `azdata` únicamente:
 
@@ -78,7 +81,7 @@ Actualice `azdata` únicamente:
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ```
 
-### <a name="uninstall"></a>Desinstalar
+### <a name="uninstall"></a>Desinstalación
 
 1. Desinstale con apt-get remove:
 
@@ -109,4 +112,4 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos, vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los clústeres de macrodatos.

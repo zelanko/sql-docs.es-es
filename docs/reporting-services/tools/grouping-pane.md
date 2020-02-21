@@ -14,10 +14,10 @@ ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892551"
 ---
 # <a name="grouping-pane"></a>Panel de agrupación
@@ -40,7 +40,7 @@ Cuando se diseñan informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsno
   
  El panel Agrupación muestra los grupos de filas y de columnas correspondientes. En la ilustración siguiente, el grupo basado en subcategorías se ha seleccionado en el panel Grupos de filas, y la celda de agrupamiento [Subcat] está seleccionada en la región de datos Tablix:  
   
- ![Panel de agrupación para grupos de filas y columnas anidadas](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para grupos de filas y columnas anidadas")  
+ ![Panel de agrupación para la fila anidada y grupos de columnas](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para la fila anidada y grupos de columnas")  
   
  En el panel Grupos de filas, el grupo basado en subcategorías es un grupo secundario del grupo basado en categorías. En el panel Grupos de columnas, el grupo de país/región es un grupo secundario del grupo de geografía. El grupo de años y los grupos de país/región son grupos adyacentes.  
   
@@ -67,7 +67,7 @@ Para modificar los valores predeterminados, debe seleccionar el miembro del grup
   
 -   **Hidden**: booleano. Indica si la fila o la columna debe estar oculta inicialmente.  
   
--   **ToggleItem** : cadena. Nombre del cuadro de texto al que se va a agregar la imagen de alternancia. El cuadro de texto debe estar en el mismo ámbito de grupo o en un ámbito contenedor.  
+-   **ToggleItem** String. Nombre del cuadro de texto al que se va a agregar la imagen de alternancia. El cuadro de texto debe estar en el mismo ámbito de grupo o en un ámbito contenedor.  
   
  Para más información sobre cómo se puede controlar este comportamiento en una región de datos Tablix, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   

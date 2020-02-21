@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a7195055e95abe07770633ec672d746c5927054d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577870"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190438"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Diseñar informes paginados de Reporting Services con el Diseñador de informes (SSRS)
 
@@ -44,7 +44,7 @@ La característica Proyectos de informe actúa como contenedor para las definici
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] es una herramienta de cliente. Puede probar la solución de elaboración de informes localmente en el equipo, implementarla un entorno de pruebas para probar la solución de servidor y, a continuación, implementarla en un entorno de producción. Después de la implementación, compruebe que las extensiones de procesamiento de origen de datos y las credenciales del origen de datos están configuradas para el entorno del servidor de informes. Puede usar el administrador de configuración para ayudar a administrar las propiedades de distintas implementaciones. Para obtener más información, vea [Reporting Services en SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- Para más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para más información, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
 ##  <a name="bkmk_SharedDatasets"></a> Conjuntos de datos compartidos  
  Use [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implementar conjuntos de datos compartidos para una solución de informes. Los conjuntos de datos compartidos pueden implementarse independientemente de otros elementos de un proyecto mediante las propiedades **OverwriteDatasets** y **TargetDatasetFolder** . Para más información, vea [Establecer propiedades de implementación &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
@@ -90,7 +90,7 @@ Los informes paginados son archivos que se almacenan en un proyecto de informe. 
  Los elementos de informe pueden implementarse independientemente de otros elementos de un proyecto mediante **TargetReportPartFolder** y otras propiedades. Para más información, vea [Establecer propiedades de implementación &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 ##  <a name="bkmk_Resources"></a> Recursos  
- Puede agregar al proyecto archivos relacionados con el informe, pero no procesados por el servidor de informes. Por ejemplo, puede agregar imágenes para las imágenes o archivos de forma ESRI para los datos espaciales. Para más información, consulte [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
+ Puede agregar al proyecto archivos relacionados con el informe, pero no procesados por el servidor de informes. Por ejemplo, puede agregar imágenes para las imágenes o archivos de forma ESRI para los datos espaciales. Para obtener más información, consulte [Recursos](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
 ##  <a name="bkmk_ReportLayout"></a> Diseño de informe paginado  
  Para crear el diseño del informe, arrastre los elementos del informe y las regiones de datos desde el cuadro de herramientas hasta la superficie de diseño y organícelos. Arrastre los campos de conjunto de datos a los elementos en la superficie de diseño para agregar datos al informe. Para organizar los datos en grupos dentro de una región de datos Tablix, arrastre los campos de conjunto de datos hasta el panel de agrupación. Dado que las herramientas de creación de informes son básicamente una manera de crear definiciones de informe, el enfoque del diseño de informe es muy similar entre el Generador de informes y el Diseñador de informes.  
@@ -118,7 +118,7 @@ Los informes paginados son archivos que se almacenan en un proyecto de informe. 
     > [!NOTE]  
     >  Para usar el modo de depuración, debe establecer un elemento de inicio. En el Explorador de soluciones, haga clic con el botón derecho en el proyecto de informe, haga clic en **Propiedades**y, en **StartItem**, seleccione el nombre del informe que quiere mostrar.  
   
-     Si quiere obtener la vista previa de un informe determinado que no es el elemento de inicio del proyecto, seleccione una configuración que genere el informe pero no lo implemente (por ejemplo, la configuración de depuración local), haga clic con el botón derecho en el informe y luego haga clic en **Ejecutar**. Debe elegir una configuración que no implemente el informe; de lo contrario, éste se publicará en el servidor de informes en lugar de mostrarse localmente en una ventana de vista previa.  
+     Si quiere obtener la vista previa de un informe determinado que no es el elemento de inicio del proyecto, seleccione una configuración que genere el informe pero no lo implemente (por ejemplo, la configuración de depuración local), haga clic con el botón derecho en el informe y, luego, haga clic en **Ejecutar**. Debe elegir una configuración que no implemente el informe; de lo contrario, éste se publicará en el servidor de informes en lugar de mostrarse localmente en una ventana de vista previa.  
   
 -   **Vista previa de impresión.**  
   
@@ -183,6 +183,6 @@ Los informes paginados son archivos que se almacenan en un proyecto de informe. 
 [Descargar SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [Reporting Services en SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [Herramientas de diseño de consulta](../../reporting-services/report-data/query-design-tools-ssrs.md)   
-[Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+[Implementación y compatibilidad de versiones en SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,23 +1,24 @@
 ---
-title: 'Procedimientos: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035092"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244290"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedimientos: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
+
 Puede usar Team Foundation Build para ejecutar las pruebas unitarias de SQL Server como parte de una prueba de comprobación de la compilación (BVT). Puede configurar las pruebas unitarias para implementar la base de datos, generar datos de prueba y ejecutar las pruebas seleccionadas. Si no está familiarizado con Team Foundation Build, debe revisar la siguiente información antes de seguir los procedimientos de este tema:  
   
 -   [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
@@ -259,7 +260,7 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
     La solución aparece en la lista **Archivos de la solución o del proyecto que se van a compilar**.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 10. En el grupo **Básico**, en **Pruebas automatizadas**, especifique las pruebas que desea ejecutar. De forma predeterminada, se ejecutarán las pruebas que se encuentran en los archivos denominados \*test\*.dll de la solución.  
   

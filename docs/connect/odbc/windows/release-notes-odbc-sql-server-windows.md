@@ -7,16 +7,16 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041159"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910932"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notas de la versión de ODBC a SQL Server en Windows
 
@@ -44,13 +44,21 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="175-january-2020"></a>17.5, enero de 2020
+
+| Característica agregada | Detalles |
+| :------------ | :------ |
+| Atributo de conexión SQL_COPT_SS_SPID para recuperar el SPID sin recorrido de ida y vuelta al servidor | Consulte [Atributos y palabras clave de cadena de conexión y DNS](../dsn-connection-string-attribute.md). |
+| Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2, octubre de 2019
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
 | Compatibilidad con puntos de conexión de Azure Key Vault adicionales | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
 | Compatibilidad con la configuración de la versión de clasificación de datos | Vea [Clasificación de datos](../data-classification.md#bkmk-version). |
-| El controlador instalará ahora la biblioteca de autenticación de Azure Active Drirectory (Adal. dll) que se usa para la autenticación en Azure | |
+| Incluye la biblioteca de autenticación de Azure Active Directory (ADAL) y el instalador. | Ahora incluido en la instalación del controlador base, actualizará las instalaciones existentes de la Biblioteca de autenticación de Active Directory para SQL Server, quitándolas de la lista de aplicaciones instaladas en Windows. |
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -59,7 +67,7 @@ GeneMi (and CraigG).  2019/03/30.
 | Característica agregada | Detalles |
 | :------------ | :------ |
 | Always Encrypted con enclaves seguros. | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
-| Configuración de mantenimiento de conexión TCP configurable. | Consulte [Conectarse a SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
+| Configuración de Mantener conexión TCP configurable. | Consulte [Conectarse a SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

@@ -1,7 +1,6 @@
 ---
-title: Revisar los resultados de la reproducción | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Revisar los resultados de la reproducción
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +9,20 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6b68d6e5376bdf24efb09c50e3df63ed5810373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949931"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306942"
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Una vez que la característica de reproducción distribuida de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados de cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay**. Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+
+Una vez que la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados de cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay** . Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  El elemento XML `<ResultDirectory>` del archivo de configuración del cliente, `DReplayClient.xml`, ubicado en cada cliente, especifica la ubicación donde se almacenan los archivos de seguimiento de resultados. Los archivos de seguimiento del directorio de resultados del cliente se sobrescriben en cada reproducción.  
   
@@ -30,7 +33,7 @@ ms.locfileid: "67949931"
 ## <a name="event-classes-captured-in-result-trace-files"></a>Clases de eventos capturadas en los archivos de seguimiento de resultados  
  En la tabla siguiente se enumeran todas las clases de eventos que se capturan el los datos de seguimiento de resultados.  
   
-|Categoría|Nombre de clase de eventos|Frecuencia de captura|Punto de captura|  
+|Category|Nombre de clase de eventos|Frecuencia de captura|Punto de captura|  
 |--------------|---------------------|-----------------------|----------------------|  
 |Eventos reproducibles|Audit Login|Una vez por cada evento Audit Login en los datos de seguimiento originales|Al completar el evento correctamente o con error|  
 ||Audit Logout|Una vez por cada evento Audit Logout en los datos de seguimiento originales|Al completar el evento correctamente o con error|  
@@ -43,7 +46,7 @@ ms.locfileid: "67949931"
 |Errores y advertencias|Error de reproducción interno|Una vez por cada error interno|Cuando se produce una situación de error interno|  
 ||Error de proveedor de reproducción|Una vez por cada error de proveedor|Cuando se produce una situación de error de proveedor|  
   
- Observe lo siguiente:  
+ Tenga en cuenta lo siguiente:  
   
 -   Para cada evento que se reproduce correctamente en el servidor de destino, hay una clase de eventos de salida correspondiente.  
   
@@ -52,7 +55,7 @@ ms.locfileid: "67949931"
 ## <a name="event-class-column-mapping"></a>Asignación de columnas de clase de eventos  
  La figura siguiente muestra las columnas del seguimiento de resultados que están disponibles para cada tipo de clase de eventos que se captura durante la reproducción.  
   
- ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
+ ![Asignación de columnas de clase de eventos](../../tools/distributed-replay/media/eventclassmappings.gif "Asignación de columnas de clase de eventos")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Descripciones de columna para el seguimiento de resultados  
  En la tabla siguiente se describen las columnas de los datos de seguimiento de resultados.  

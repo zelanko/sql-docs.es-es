@@ -1,7 +1,7 @@
 ---
-title: Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 08/25/2017
+title: Ubicación de archivos
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 033090c5650455b16e846200e8b8caf8a3940b48
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: da7f187cc388e08f4d1f0307ba6fae78c58e6489
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055201"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253478"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "74055201"
 >   
 >  No elimine ninguno de los directorios siguientes ni su contenido: Binn, Data, Ftdata, HTML o 1033. Si fuera necesario, puede eliminar otros directorios; no obstante, es posible que no pueda recuperar algunas de las funciones o datos perdidos sin tener que desinstalar y volver a instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No elimine ni modifique ninguno de los archivos .htm del directorio HTML. Son necesarios para que las herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionen correctamente.  
   
-## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Archivos compartidos para todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="shared-files-for-all-instances-of-ssnoversion"></a>Archivos compartidos para todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Los archivos comunes que usan todas las instancias en un único equipo se instalan en la carpeta [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*unidad*> es la letra de la unidad en la que se instalarán los componentes. El valor predeterminado es normalmente la unidad C. _nnn_ identifica la versión. En la tabla siguiente se identifican las versiones de las rutas de acceso. \{nn} es el valor de versión usado en el identificador de instancia y la ruta de acceso del registro. 
 
 |Versión|\*nnn*|{nn}|
@@ -109,8 +109,8 @@ ms.locfileid: "74055201"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] archivos de datos|\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<IdDeInstancia>\ |Configurable|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes|\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<IdDeInstancia>\Reporting Services\ReportServer\Bin\ |Configurable|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administrador de informes|\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<IdDeInstancia>\Reporting Services\ReportManager\ |Ruta de acceso fija|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Directorio de instalación>\nnn\DTS\\ <sup>1</sup> |Configurable |  
-|Componentes cliente (excepto bcp.exe y sqlcmd.exe)|\<Directorio de instalación>\nnn\Tools\\ <sup>1</sup> |Configurable |  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Directorio de instalación >\nnn\DTS\\ <sup>1</sup> |Configurable |  
+|Componentes cliente (excepto bcp.exe y sqlcmd.exe)|\<Directorio de instalación >\nnn\Tools\\ <sup>1</sup> |Configurable |  
 |Componentes cliente (bcp.exe y sqlcmd.exe)|\<Directorio de instalación>\Client SDK\ODBC\nnn\Tools\Binn|Ruta de acceso fija|  
 |Objetos COM del servidor y la replicación|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |Ruta de acceso fija|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DLL de componentes del motor en tiempo de ejecución de transformación de datos, el motor de canalización de transformación de datos y la utilidad de símbolo del sistema **dtexec**|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Ruta de acceso fija|  

@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bbb4c05a6760709fcb873cd8c39f301c37aeb2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706362"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190392"
 ---
-# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Introducción a los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019"></a>Introducción a los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se ofrece información general sobre cómo implementar [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
 
-Para otros escenarios de implementación, vea:
+Para otros escenarios de implementación, consulte:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
@@ -33,6 +33,11 @@ El artículo le da una idea sobre los conceptos y proporciona un marco para comp
 > [!TIP]
 > Para lograr rápidamente un entorno con Kubernetes y un clúster de macrodatos implementados que le ayude a aumentar sus capacidades, use uno de los scripts de ejemplo de la [sección de scripts](#scripts). Después de la implementación, para administrar el clúster, use las [herramientas de cliente](#tools) de la sección siguiente.
 
+Vea este vídeo de 9 minutos para obtener información general sobre cómo implementar clústeres de macrodatos:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ## <a id="tools"></a> Herramientas de cliente
 
 Los clústeres de macrodatos requieren un conjunto específico de herramientas de cliente. Antes de implementar un clúster de macrodatos en Kubernetes, debe instalar las herramientas siguientes:
@@ -42,7 +47,7 @@ Los clústeres de macrodatos requieren un conjunto específico de herramientas d
 | **azdata** | Implementa y administra clústeres de macrodatos. |
 | **kubectl** | Crea y administra el clúster de Kubernetes subyacente. |
 | **Azure Data Studio** | Interfaz gráfica para usar el clúster de macrodatos. |
-| **Extensión de SQL Server 2019** | Extensión de Azure Data Studio que habilita las características de clúster de macrodatos. |
+| **Extensión de SQL Server 2019** | Extensión de Azure Data Studio que habilita las características de clúster de macrodatos. |
 
 Se requieren otras herramientas para distintos escenarios. Cada artículo debe explicar las herramientas de requisitos previos para realizar una tarea específica. Para obtener una lista completa de las herramientas y los vínculos de instalación, consulte [Instalación de herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md).
 

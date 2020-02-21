@@ -1,20 +1,21 @@
 ---
-title: Consultar datos de HDFS en un grupo de almacenamiento
-titleSuffix: SQL Server big data clusters
+title: 'Consulta de datos de HDFS: grupo de almacenamiento'
+titleSuffix: SQL Server Big Data Clusters
 description: En este tutorial, se muestra cómo consultar datos de HDFS desde un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Cree una tabla externa con los datos en el grupo de almacenamiento y, después, ejecute una consulta.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652441"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226480"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: consultar HDFS en un clúster de macrodatos de SQL Server
 
@@ -31,12 +32,16 @@ En este tutorial, aprenderá a:
 > [!TIP]
 > Si lo prefiere, puede descargar y ejecutar un script con los comandos de este tutorial. Para obtener instrucciones, vea los [ejemplos de virtualización de datos](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) en GitHub.
 
+Este vídeo de 7 minutos le guía a través de la consulta de datos de HDFS en un clúster de macrodatos:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
+
 ## <a id="prereqs"></a> Requisitos previos
 
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>Crea una tabla externa a HDFS
@@ -47,7 +52,7 @@ El grupo de almacenamiento contiene datos de secuencias de clics web en un archi
 
 1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
 
-   ![Consulta de la instancia maestra de SQL Server](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
+   ![Consultar una instancia maestra de SQL Server](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
 1. Ejecute el siguiente comando de Transact-SQL para cambiar el contexto de la base de datos **Ventas** de la instancia maestra.
 

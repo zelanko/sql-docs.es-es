@@ -1,5 +1,5 @@
 ---
-title: Descripción de la compatibilidad con el cifrado | Microsoft Docs
+title: Descripción de la compatibilidad con cifrado | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71713298"
 ---
 # <a name="understanding-encryption-support"></a>Descripción de la compatibilidad con cifrado
@@ -28,19 +28,19 @@ Si la aplicación no solicita cifrado, [!INCLUDE[jdbcNoVersion](../../includes/j
 > [!NOTE]  
 > Asegúrese de que el valor pasado a **serverName** coincida exactamente con el nombre común (CN) o con el nombre DNS del nombre alternativo de sujeto (SAN) del certificado de servidor para que la conexión TLS se establezca correctamente.  
 >
-> Para obtener más información acerca de cómo configurar TLS para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Habilitar conexiones cifradas en el motor de base de datos](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> Para obtener más información sobre cómo configurar TLS para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Habilitar conexiones cifradas en el motor de base de datos](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Con el fin de permitir que las aplicaciones usen el cifrado TLS, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] incorpora las siguientes propiedades de conexión a partir de la versión 1.2: **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** y **hostNameInCertificate**. Para obtener más información, vea [Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
  En la tabla siguiente se resume cómo se comporta la versión de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] en los posibles escenarios de conexión TLS. Cada escenario usa un conjunto diferente de propiedades de conexión TLS. La tabla incluye:  
   
-- **Blank**: "la propiedad no existe en la cadena de conexión"  
+- **blank**: "La propiedad no existe en la cadena de conexión"  
   
-- **valor**: "la propiedad existe en la cadena de conexión y su valor es válido".  
+- **value**: "La propiedad existe en la cadena de conexión y su valor es válido"  
   
-- **any**: "no importa si la propiedad existe en la cadena de conexión o si su valor es válido".  
+- **any**: "No importa si la propiedad existe en la cadena de conexión o si su valor es válido"  
   
 > [!NOTE]  
 > El mismo comportamiento se aplica para la autenticación de usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la autenticación integrada de Windows.  
@@ -66,7 +66,7 @@ Si la propiedad encrypt se establece en **true**, [!INCLUDE[jdbcNoVersion](../..
   
 - Usar una JVM distinta  
   
-## <a name="validating-server-tls-certificate"></a>Validando certificado TLS de servidor  
+## <a name="validating-server-tls-certificate"></a>Validar un certificado TLS de servidor  
 
 Durante el protocolo de enlace TLS, el servidor envía su certificado de clave pública al cliente. El controlador JDBC o el cliente tienen que validar que una entidad de certificación en la que el cliente confíe emita el certificado de servidor. El controlador requiere que el certificado de servidor cumpla las condiciones siguientes:  
   
@@ -80,7 +80,7 @@ Durante el protocolo de enlace TLS, el servidor envía su certificado de clave p
   
 - Un nombre DNS puede incluir caracteres comodín. Pero [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] no admite la coincidencia de caracteres comodín. Es decir, abc.com no coincide con \*.com, pero \*.com sí coincide con \*.com.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso de cifrado](../../connect/jdbc/using-ssl-encryption.md)
 

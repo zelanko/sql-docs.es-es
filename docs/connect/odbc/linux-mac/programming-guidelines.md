@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
-ms.translationtype: MTE75
+ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742787"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911199"
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
 
@@ -64,7 +64,7 @@ Las siguientes características no están disponibles en esta versión del contr
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect (antes de la versión 17,2)
+-   SQLBrowseConnect (antes de la versión 17.2)
 -   Los tipos de intervalo de C como SQL_C_INTERVAL_YEAR_TO_MONTH (se trata en [Identificadores y descriptores de tipo de datos](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
 -   El valor SQL_CUR_USE_ODBC del atributo SQL_ATTR_ODBC_CURSORS de la función SQLSetConnectAttr.
 
@@ -73,6 +73,11 @@ Las siguientes características no están disponibles en esta versión del contr
 Para la versión 13 y 13.1 del controlador ODBC, los datos de SQLCHAR deben ser UTF-8. No se admite ninguna otra codificación.
 
 Para la versión 17 del controlador ODBC, se admiten datos de SQLCHAR en una de las siguientes codificaciones o conjuntos de caracteres:
+
+> [!NOTE]  
+> Debido a diferencias de `iconv` en `musl` y `glibc`, no se admiten muchas de estas configuraciones regionales en Alpine Linux.
+>
+> Para más información, consulte el artículo sobre las [diferencias funcionales de glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html).
 
 |Nombre|Descripción|
 |-|-|
@@ -85,7 +90,7 @@ Para la versión 17 del controlador ODBC, se admiten datos de SQLCHAR en una de
 |CP949|Coreano, EUC-KR|
 |CP950|Chino tradicional, Big5|
 |CP1251|Cirílico|
-|CP1253|Greek|
+|CP1253|Griego|
 |CP1256|Árabe|
 |CP1257|Báltico|
 |CP1258|Vietnamita|
@@ -118,10 +123,13 @@ Hay algunas diferencias de conversión de codificación entre Windows y varias v
 En ODBC Driver 13 y 13.1, cuando los caracteres multibyte UTF-8 o UTF-16 suplentes se dividen en búferes de SQLPutData, se producen daños en los datos. Los búferes se utilizan para transmitir datos de SQLPutData sin codificaciones de caracteres parciales. Esta limitación se ha quitado con la versión 17 del controlador ODBC.
 
 ## <a name="bkmk-openssl"></a>OpenSSL
-A partir de la versión 17,4, el controlador carga el OpenSSL dinámicamente, lo que permite que se ejecute en sistemas que tienen la versión 1,0 o 1,1 sin necesidad de archivos de controlador independientes. Cuando hay varias versiones de OpenSSL presentes, el controlador intentará cargar la más reciente. El controlador admite actualmente OpenSSL 1.0. x y 1.1. x
+A partir de la versión 17.4, el controlador carga OpenSSL de manera dinámica, lo que permite que se ejecute en sistemas que tienen la versión 1.0 o 1.1 sin necesidad de archivos de controlador independientes. Cuando hay varias versiones de OpenSSL presentes, el controlador intentará cargar la más reciente. El controlador admite actualmente OpenSSL 1.0.x y 1.1.x.
 
 > [!NOTE]  
-> Puede producirse un posible conflicto si la aplicación que usa el controlador (o uno de sus componentes) está vinculada a una versión diferente de OpenSSL o la carga dinámicamente. Si hay varias versiones de OpenSSL presentes en el sistema y la aplicación la utiliza, se recomienda encarecidamente que se asegure de que la versión cargada por la aplicación y el controlador no coinciden, ya que los errores podrían dañar la memoria y, por tanto, no incluirá necesariamente manifiestos de maneras obvias o coherentes.
+> Puede producirse un posible conflicto si la aplicación que usa el controlador (o uno de sus componentes) está vinculada a una versión diferente de OpenSSL o si la carga de manera dinámica. Si hay varias versiones de OpenSSL presentes en el sistema y la aplicación las utiliza, se recomienda encarecidamente que se asegure de que no haya un error de coincidencia entre la versión cargada por la aplicación y el controlador, ya que los errores podrían dañar la memoria y, por tanto, no incluirá necesariamente manifiestos de maneras obvias o coherentes.
+
+## <a name="bkmk-alpine"></a>Alpine Linux
+En el momento de redactar este documento, el tamaño predeterminado de la pila en MUSL es 128 K, que es suficiente para la funcionalidad básica del controlador ODBC, pero en función de lo que hace la aplicación no es difícil superar este límite, especialmente cuando se llama al controlador desde varios subprocesos. Se recomienda compilar una aplicación ODBC en Alpine Linux con `-Wl,-z,stack-size=<VALUE IN BYTES>` para aumentar el tamaño de la pila. Como referencia, el tamaño predeterminado de la pila en la mayoría de los sistemas GLIBC es de 2 MB.
 
 ## <a name="additional-notes"></a>Notas adicionales  
 
@@ -136,7 +144,7 @@ A partir de la versión 17,4, el controlador carga el OpenSSL dinámicamente, lo
     
 2.  El Administrador de controladores unixODBC devuelve el mensaje "Identificador de opción o atributo no válido" en todos los atributos de instrucción cuando se transmiten a través de SQLSetConnectAttr. En Windows, cuando SQLSetConnectAttr recibe un valor de atributo de instrucción, el controlador tiene que establecer ese valor en todas las instrucciones activas que pertenecen al identificador de conexión.  
 
-3.  Al usar el controlador con aplicaciones multiproceso, la validación del identificador de unixODBC puede convertirse en un cuello de botella de rendimiento. En estos escenarios, se puede obtener significativamente más rendimiento compilando unixODBC con `--enable-fastvalidate` la opción. Sin embargo, tenga cuidado de que esto puede hacer que las aplicaciones que pasan identificadores no válidos a las `SQL_INVALID_HANDLE` API de ODBC se bloqueen en lugar de devolver errores.
+3.  Al usar el controlador con aplicaciones multiproceso, la validación del identificador de unixODBC puede convertirse en un cuello de botella de rendimiento. En estos escenarios, se puede obtener significativamente más rendimiento compilando unixODBC con la opción `--enable-fastvalidate`. Sin embargo, tenga cuidado de que esto puede hacer que las aplicaciones que pasan identificadores no válidos a las API de ODBC se bloqueen en lugar de devolver errores de `SQL_INVALID_HANDLE`.
 
 ## <a name="see-also"></a>Consulte también  
 [Preguntas más frecuentes](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

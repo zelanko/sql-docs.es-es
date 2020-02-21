@@ -11,10 +11,10 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027789"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Notas de la versión para el controlador JDBC Driver de Microsoft
@@ -24,7 +24,7 @@ ms.locfileid: "69027789"
 En este artículo se enumeran las versiones del _controlador JDBC Driver de Microsoft para SQL Server_. Se nombran y describen los cambios en cada una de las versiones.
 ## <a name="741"></a>7.4.1
 
-### <a name="compliance"></a>Cumplimiento
+### <a name="compliance"></a>Cumplimiento normativo
 
 2 de agosto de 2019
 
@@ -32,7 +32,7 @@ En este artículo se enumeran las versiones del _controlador JDBC Driver de Micr
 | :---------------- | :------ |
 | Descargue las actualizaciones más recientes para el controlador JDBC Driver 7.4. | &bull; &nbsp; [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Totalmente compatible con la especificación 4.2 de la API de JDBC. | Los archivos JAR en el paquete 7.4 adquieren su nombre según la compatibilidad de la versión de Java.<br/><br/>Por ejemplo, el archivo mssql-jdbc-7.4.1.jre11.jar del paquete 7.4 debe usarse con Java 11. |
-| Compatible con el kit de desarrollo de Java (JDK), versión 12,0, 11,0 y 1,8. | Microsoft JDBC Driver 7.4 para SQL Server es compatible con Java Development Kit (JDK) versión 12.0, además de con JDK 11.0 y 1.8. |
+| Compatible con Java Development Kit (JDK) versión 12.0, 11.0 y 1.8. | Microsoft JDBC Driver 7.4 para SQL Server es compatible con Java Development Kit (JDK) versión 12.0, además de con JDK 11.0 y 1.8. |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-12"></a>Compatibilidad con JDK 12
@@ -43,15 +43,15 @@ Microsoft JDBC Driver 7.4 para SQL Server es compatible con Java Development Kit
 
 | Cambio de NTLM | Detalles |
 | :--------- | :------ |
-| Admite el modo de autenticación NTLM. | Este modo de autenticación permite que tanto los clientes de Windows como los que no son de Windows se autentiquen a sí mismos en SQL Server mediante usuarios del dominio de Windows. |
-| Más información y aplicación de ejemplo para usar este modo de autenticación. | Consulte [conexión mediante la autenticación NTLM](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
+| Admite el modo de autenticación NTLM. | Este modo de autenticación permite a los clientes de Windows y a los que no lo son autenticarse en SQL Server mediante usuarios de dominio de Windows. |
+| Más información y aplicación de ejemplo para usar este modo de autenticación. | Consulte [Conectando usando autenticación NTLM](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>Presenta la consulta de ParameterMetaData a través de _useFmtOnly_
 
-| cambio de useFmtOnly | Detalles |
+| Cambio de useFmtOnly | Detalles |
 | :---------- | :------ |
-| propiedad de conexión **useFmtOnly** agregada. | Esta característica permite a los usuarios consultar de forma opcional ParameterMetaData `SET FMTONLY ON` a través de la API heredada. Esto es útil para escenarios en `sp_describe_undeclared_parameters` los que no funciona según lo previsto. |
+| Propiedad de conexión **useFmtOnly** agregada. | Esta característica permite a los usuarios consultar de forma opcional ParameterMetaData a través de la API heredada `SET FMTONLY ON`. Esto es útil en escenarios donde `sp_describe_undeclared_parameters` no se ejecuta según lo previsto. |
 | Más detalles y limitaciones. | Consulte [Uso de useFmtOnly](../../connect/jdbc/using-usefmtonly.md). |
 | &nbsp; | &nbsp; |
 
@@ -69,12 +69,12 @@ Microsoft JDBC Driver 7.4 para SQL Server es compatible con Java Development Kit
 | Problemas conocidos | Detalles |
 | :----------- | :------ |
 | Al usar la autenticación NTLM. | Actualmente, no se permite habilitar la protección ampliada y las conexiones cifradas al mismo tiempo. |
-| Al usar useFmtOnly. | Hay algunos problemas con esta característica; su causa son las deficiencias en la lógica de análisis de SQL. Consulte [uso de useFmtOnly](../../connect/jdbc/using-usefmtonly.md) para obtener más información y sugerencias de solución. |
+| Al usar useFmtOnly. | Hay algunos problemas con esta característica; su causa son las deficiencias en la lógica de análisis de SQL. Consulte [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) para obtener más detalles y sugerencias de soluciones alternativas. |
 | &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
-### <a name="compliance"></a>Cumplimiento
+### <a name="compliance"></a>Cumplimiento normativo
 
 16 de abril de 2019
 
@@ -195,7 +195,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
             SQLServerKeyVaultAuthenticationCallback authenticationCallback) throws SQLServerException;
 ```
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>Se ha actualizado la versión 1.6.0 de "Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java".
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>Se ha actualizado la versión de "Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java": 1.6.0
 
 Microsoft JDBC Driver 7.0 para SQL Server ha actualizado su dependencia de Maven en la "Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java" a la versión 1.6.0. Para obtener más información sobre las dependencias, consulte [Dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
@@ -251,7 +251,7 @@ El controlador JDBC Driver ha implementado el almacenamiento en caché de metada
 
 JDBC Driver ahora admite la autenticación integrada de Azure Active Directory (Azure AD) en todos los sistemas operativos compatibles (Windows/Linux/Mac) con Kerberos. Como alternativa, en sistemas operativos de Windows, los usuarios pueden autenticarse con sqljdbc_auth.dll.
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>Se ha actualizado la versión 1.4.0 de "Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java".
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>Se ha actualizado la versión de "Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java": 1.4.0
 
 El controlador JDBC Driver ha actualizado su dependencia de Maven en la "Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java" a la versión 1.4.0. Para obtener más información sobre las dependencias, consulte [Dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
@@ -297,7 +297,7 @@ Microsoft JDBC Driver 6.1 para SQL Server es totalmente compatible con las espec
 
 Microsoft JDBC Driver 6.0 para SQL Server es totalmente compatible con las especificaciones 4.1 y 4.2 de JDBC. Los archivos JAR en el paquete 6.0 adquieren su nombre según su cumplimiento con la versión de API de JDBC. Por ejemplo, el archivo sqljdbc42.jar del paquete 6.0 es compatible con la API 4.2 de JDBC. De forma similar, el archivo sqljdbc41.jar es compatible con la API 4.1 de JDBC.
 
-Para asegurarse de que tiene el archivo sqljdbc42.jar o sqljdbc41.jar adecuado, ejecute las siguientes líneas de código. Si el resultado es "Driver version: 6.0.7507.100", tiene el paquete 6.0 del controlador JDBC.
+Para asegurarse de que tiene el archivo sqljdbc42.jar o sqljdbc41.jar adecuado, ejecute las siguientes líneas de código. Si el resultado es "Versión del controlador: 6.0.7507.100", tiene el paquete 6.0 del controlador JDBC.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -312,7 +312,7 @@ El controlador ya es compatible con la característica Always Encrypted en SQL S
 
 El controlador admite nombres de dominio internacionalizados (IDN) para nombres del servidor. Para obtener más información, vea "Using International Domain Names ("Uso de nombres de dominio internacionales") en el artículo [International Features of the JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md) (Características internacionales del controlador JDBC Driver).
 
-### <a name="parameterized-queries"></a>Consultas con parámetros
+### <a name="parameterized-queries"></a>Consulta con parámetros
 
 El controlador ahora admite la recuperación de metadatos de parámetros con instrucciones preparadas para consultas complejas, como subconsultas o combinaciones. Tenga en cuenta que esta mejora solo está disponible cuando se usa SQL Server 2012 y versiones más recientes.
 
@@ -330,11 +330,11 @@ Los parámetros con valores de tabla proporcionan una manera sencilla de seriali
 
 El controlador ahora admite conexiones transparentes a grupos de disponibilidad Always On. El controlador detecta rápidamente la topología Always On actual de la infraestructura de servidor y conecta con el servidor activo actual de forma transparente.
 
-## <a name="42"></a>4.2
+## <a name="42"></a>4,2
 
 Microsoft JDBC Driver 4.2 para SQL Server es totalmente compatible con las especificaciones 4.1 y 4.2 de JDBC. Los archivos JAR en el paquete 4.2 adquieren su nombre según su cumplimiento con la versión de API de JDBC. Por ejemplo, el archivo sqljdbc42.jar del paquete 4.2 es compatible con la API 4.2 de JDBC. De forma similar, el archivo sqljdbc41.jar es compatible con la API 4.1 de JDBC.
 
-Para asegurarse de que tiene el archivo sqljdbc42.jar o sqljdbc41.jar adecuado, ejecute las siguientes líneas de código. Si el resultado es "Driver version: 4.2.6420.100", tiene el paquete 4.2 del controlador JDBC.
+Para asegurarse de que tiene el archivo sqljdbc42.jar o sqljdbc41.jar adecuado, ejecute las siguientes líneas de código. Si el resultado es "Versión del controlador: 4.2.6420.100", tiene el paquete 4.2 del controlador JDBC.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -361,7 +361,7 @@ El controlador dispone de nuevas opciones de tiempo de espera para la reversión
 
 El controlador usa una nueva propiedad de conexión para facilitar la flexibilidad con las conexiones de Kerberos. Para obtener más información, vea [Using Kerberos Integrated Authentication to Connect to SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) (Uso de la autenticación integrada de Kerberos para conectar con SQL Server).
 
-## <a name="41"></a>4.1
+## <a name="41"></a>4,1
 
 ### <a name="support-for-jdk-7"></a>Compatibilidad con JDK 7
 
@@ -371,6 +371,6 @@ El controlador admite la versión 7.0 de JDK además de JDK 6.0 y 5.0.
 
 No se admite la ejecución de Microsoft JDBC Driver 6.4, 6.0, 4.2 y 4.1 para aplicaciones de SQL Server en un equipo Itanium.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)

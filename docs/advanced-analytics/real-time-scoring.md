@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 746a9cadfca28aae3bd2781a3daf71aabb8d6e5b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727327"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>Puntuación en tiempo real con sp_rxPredict en SQL Server Machine Learning
@@ -161,7 +161,7 @@ Debe habilitar esta característica para cada base de datos que quiera usar para
 > 
 > En SQL Server 2017, se aplican medidas de seguridad adicionales para evitar problemas con la integración de CLR. Estas medidas también imponen restricciones adicionales sobre el uso de este procedimiento almacenado. 
 
-### <a name="step-2-prepare-and-save-the-model"></a>Paso 2. Preparar y guardar el modelo
+### <a name="step-2-prepare-and-save-the-model"></a>Paso 2. Preparar y guardar el modelo
 
 El formato binario que sp\_rxPredict necesita es el mismo que el formato necesario para usar la función PREDICT. Por lo tanto, en el código de R, incluya una llamada a [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) y asegúrese de especificar `realtimeScoringOnly = TRUE`, como en este ejemplo:
 
@@ -169,7 +169,7 @@ El formato binario que sp\_rxPredict necesita es el mismo que el formato necesar
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sp_rxpredict"></a>Paso 3. Llamar a sp_rxPredict
+### <a name="step-3-call-sp_rxpredict"></a>Paso 3. Llamar a sp_rxPredict
 
 Llame a sp\_rxPredict como lo haría con cualquier otro procedimiento almacenado. En la versión actual, el procedimiento almacenado solo toma dos parámetros: _\@model_ para el modelo en formato binario y _\@inputData_ para los datos que se van a usar en la puntuación, definidos como una consulta SQL válida.
 

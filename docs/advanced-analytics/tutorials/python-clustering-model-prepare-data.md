@@ -1,22 +1,22 @@
 ---
 title: 'Tutorial de Python: Preparación de los datos del clúster'
-description: En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos de SQL Server para realizar la agrupación en clústeres en Python con SQL Server Machine Learning Services.
+description: En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de SQL para realizar la agrupación en clústeres en Python con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727092"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305545"
 ---
 # <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Tutorial: Preparación de los datos para clasificar clientes por categorías en Python con SQL Server Machine Learning Services
 
@@ -27,8 +27,8 @@ En la parte dos de esta serie de tutoriales de cuatro partes, restaurará y prep
 En este artículo, aprenderá a:
 
 > [!div class="checklist"]
-> * Separar los clientes en distintas dimensiones mediante Python
-> * Cargar los datos de la base de datos SQL en una trama de datos de Python
+> * Separación de los clientes en distintas dimensiones mediante Python
+> * Carga de datos de la base de datos SQL en una trama de datos de Python
 
 En la [parte uno](python-clustering-model.md), ha instalado los requisitos previos y ha restaurado la base de datos de ejemplo.
 
@@ -36,7 +36,7 @@ En la [parte tres](python-clustering-model-build.md), aprenderá a crear y entre
 
 En la [parte cuatro](python-clustering-model-deploy.md), aprenderá a crear un procedimiento almacenado en una base de datos SQL que pueda realizar la agrupación en clústeres en Python basándose en datos nuevos.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 * En la parte dos de este tutorial, se da por hecho que ha completado los requisitos previos de la [**parte uno**](python-clustering-model.md).
 
@@ -55,10 +55,10 @@ En la cadena de conexión, reemplace los detalles de conexión según correspond
 
 ```python
 # Load packages.
+import pyodbc
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import revoscalepy as revoscale
 from scipy.spatial import distance as sci_distance
 from sklearn import cluster as sk_cluster
 
@@ -69,7 +69,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -115,14 +115,10 @@ column_info = {
 
 ## <a name="load-the-data-into-a-data-frame"></a>Carga de los datos en una trama de datos
 
-Los resultados de la consulta se devuelven a Python mediante la función **RxSqlServerData** de revoscalepy. Como parte del proceso, usará la información sobre columnas que ha definido en el script anterior.
+Los resultados de la consulta se devuelven a Python mediante la función **read_sql** de Pandas. Como parte del proceso, usará la información sobre columnas que ha definido en el script anterior.
 
 ```python
-data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
-                                        connection_string=conn_str)
-revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-# import data source and convert to pandas dataframe.
-customer_data = pd.DataFrame(revoscale.rx_import(data_source))
+customer_data = pandas.read_sql(input_query, conn_str)
 ```
 
 Ahora, muestre el principio de la trama de datos para asegurarse de que sea correcta.
@@ -141,7 +137,7 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 4     2040.0    0.000000    0.000000       0.000000          0
 ```
 
-## <a name="clean-up-resources"></a>Limpiar recursos
+## <a name="clean-up-resources"></a>Limpieza de recursos
 
 Si no quiere continuar con este tutorial, elimine la base de datos tpcxbb_1gb de la instancia de SQL Server.
 

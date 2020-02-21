@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a5d87ab4f78a5f006e87c34fa774fd9f430aaae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979533"
 ---
 # <a name="getstatementhandlecacheentrycount-method-sqlserverconnection"></a>Método getStatementHandleCacheEntryCount (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Devuelve el número actual de identificadores de instrucción preparados agrupados.
+ Devuelve el número actual de identificadores de instrucción preparada agrupados.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ public int getStatementHandleCacheEntryCount()
 ```  
 
 ## <a name="return-value"></a>Valor devuelto
- **Entero** que contiene el número actual de identificadores de instrucción preparados agrupados.
+ Un **int** que contiene el número actual de identificadores de instrucción preparada agrupados.
 
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Notas  
- Este método está disponible en la versión 6,4 y posteriores del controlador JDBC.
+## <a name="remarks"></a>Observaciones  
+ Este método está disponible en la versión 6.4 y posteriores del controlador JDBC.
  
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

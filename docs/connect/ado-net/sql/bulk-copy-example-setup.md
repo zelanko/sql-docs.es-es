@@ -9,23 +9,23 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 68a453efa165d73df521bc2ce3a00984f843f4fd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 129dc64fc9bac2111cd0bc5cb61f3ce7f1d98ee1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452300"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247874"
 ---
 # <a name="bulk-copy-example-setup"></a>Configuración de ejemplo de copia masiva
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-La clase <xref:Microsoft.Data.SqlClient.SqlBulkCopy> solo se puede usar para escribir datos en SQL Server tablas. Los ejemplos de código que se muestran en este tema usan la base de datos de ejemplo de SQL Server, **AdventureWorks**. Para evitar modificar los ejemplos de código de las tablas existentes escriba los datos en tablas que tendrá que crear en primer lugar.  
+La clase <xref:Microsoft.Data.SqlClient.SqlBulkCopy> puede usarse para escribir datos solo en tablas de SQL Server. Los ejemplos de código que se muestran en este tema usan la base de datos de ejemplo de SQL Server, **AdventureWorks**. Para evitar modificar los ejemplos de código de las tablas existentes escriba los datos en tablas que tendrá que crear en primer lugar.  
   
-Las tablas **BulkCopyDemoMatchingColumns** y **BulkCopyDemoDifferentColumns** se basan en la tabla **Production.Products** de **AdventureWorks**. En los ejemplos de código que usan estas tablas, los datos se agregan desde la tabla **Production.Products** a una de estas tablas de muestra. La tabla **BulkCopyDemoDifferentColumns** se usa cuando el ejemplo muestra cómo asignar columnas de los datos de origen a la tabla de destino; **BulkCopyDemoMatchingColumns** se usa para la mayoría de los demás ejemplos.  
+Las tablas **BulkCopyDemoMatchingColumns** y **BulkCopyDemoDifferentColumns** se basan en la tabla **AdventureWorks** **Production.Products**. En los ejemplos de código que usan estas tablas, los datos se agregan desde la tabla **Production.Products** a una de estas tablas de muestra. La tabla **BulkCopyDemoDifferentColumns** se usa cuando el ejemplo muestra cómo asignar columnas de los datos de origen a la tabla de destino; **BulkCopyDemoMatchingColumns** se usa para la mayoría de los demás ejemplos.  
   
 Algunos de los ejemplos de código muestran cómo usar una clase <xref:Microsoft.Data.SqlClient.SqlBulkCopy> para escribir en varias tablas. En estos ejemplos, se usan las tablas **BulkCopyDemoOrderHeader** y **BulkCopyDemoOrderDetail** como tablas de destino. Estas tablas se basan en las tablas **Sales.SalesOrderHeader** y **Sales.SalesOrderDetail** de **AdventureWorks**.  
   

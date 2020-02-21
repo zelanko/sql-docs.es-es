@@ -1,5 +1,5 @@
 ---
-title: Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV | Microsoft Docs
+title: 'Procedimientos: Recuperación de los tipos de fecha y hora como objetos DateTime PHP mediante el controlador PDO_SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,26 +12,26 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68264566"
 ---
-# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV
+# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>Procedimientos: Recuperación de los tipos de fecha y hora como objetos DateTime PHP mediante el controlador PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Esta característica, agregada en la versión 5.6.0 del, solo es válida cuando se usa el controlador [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]PDO_SQLSRV para.
+Esta característica, agregada en la versión 5.6.0, solo es válida cuando se utiliza el controlador PDO_SQLSRV para dichos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
-### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Para recuperar tipos de fecha y hora como objetos DateTime
+### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Para recuperar los tipos de fecha y hora como objetos DateTime
 
-Cuando se usa PDO_SQLSRV, los tipos de fecha y hora (**smalldatetime**, **DateTime**, **Date**, **Time**, **datetime2**y **DateTimeOffset**) se devuelven de forma predeterminada como cadenas. Ni el atributo PDO:: ATTR_STRINGIFY_FETCHES ni el atributo PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE tienen ningún efecto. Para recuperar los tipos de fecha y hora como objetos [DateTime de php](http://php.net/manual/en/class.datetime.php) , establezca el atributo `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` Connection o Statement en **true** (de forma predeterminada, es **false** ).
+Al usar PDO_SQLSRV, los tipos de fecha y hora (**smalldatetime**, **datetime**, **date**, **time**, **datetime2** y **datetimeoffset**) se devuelven de forma predeterminada como cadenas. Ni el atributo PDO::ATTR_STRINGIFY_FETCHES ni PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE tienen ningún efecto. Para recuperar los tipos de fecha y hora como objetos [DateTime PHP](http://php.net/manual/en/class.datetime.php), establezca el atributo de conexión o instrucción `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` en **true** (es **false** de forma predeterminada).
 
 > [!NOTE]
-> Este atributo de conexión o instrucción solo se aplica a la captura normal de tipos de fecha y hora porque los objetos DateTime no se pueden especificar como parámetros de salida.
+> Este atributo de conexión o instrucción solo se aplica a la captura normal de tipos de fecha y hora, ya que los objetos DateTime no se pueden especificar como parámetros de salida.
 
-## <a name="example---use-the-connection-attribute"></a>Ejemplo: uso del atributo Connection
-En los siguientes ejemplos se omite la comprobación de errores para mayor claridad. En este, se muestra cómo establecer el atributo de conexión:
+## <a name="example---use-the-connection-attribute"></a>Ejemplo: usar el atributo de conexión
+En los siguientes ejemplos se omite la comprobación de errores para una mayor claridad. En este se muestra cómo establecer el atributo de conexión:
 
 ```php
 <?php
@@ -58,8 +58,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-attribute"></a>Ejemplo: usar el atributo Statement
-Este ejemplo muestra cómo establecer el atributo de instrucción:
+## <a name="example---use-the-statement-attribute"></a>Ejemplo: usar el atributo de instrucción
+En este ejemplo se muestra cómo establecer el atributo de instrucción:
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-option"></a>Ejemplo: uso de la opción Statement
-Como alternativa, el atributo Statement se puede establecer como una opción:
+## <a name="example---use-the-statement-option"></a>Ejemplo: usar la opción de instrucción
+Como alternativa, el atributo de instrucción se puede establecer como opción:
 
 ```php
 <?php
@@ -103,8 +103,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---retrieve-datetime-types-as-strings"></a>Ejemplo: recuperación de tipos DateTime como cadenas
-En el ejemplo siguiente se muestra cómo lograr el opuesto (que no es realmente necesario porque es false de forma predeterminada):
+## <a name="example---retrieve-datetime-types-as-strings"></a>Ejemplo: recuperar los tipos de fecha y hora como cadenas
+En el siguiente ejemplo se muestra cómo lograr lo contrario (que no es realmente necesario, puesto que es false de forma predeterminada):
 
 ```php
 <?php

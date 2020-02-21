@@ -1,29 +1,28 @@
 ---
-title: 'Inicio rápido: tipos de datos de Python'
-titleSuffix: SQL Server Machine Learning Services
-description: En esta guía de inicio rápido, aprenderá a trabajar con tipos de datos y objetos de datos en Python y SQL Server con SQL Server Machine Learning Services.
+title: 'Inicio rápido: estructuras de datos de Python'
+description: En este inicio rápido, aprenderá a trabajar con estructuras de datos y objetos de datos en Python y SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bac339105acdb7318b29426cd0bb4afdc2481e7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727018"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831900"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Inicio rápido: administración de tipos de datos y objetos mediante Python en SQL Server Machine Learning Services
+# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>Inicio rápido: estructuras de datos y objetos mediante Python en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En esta guía de inicio rápido se muestra cómo usar las estructuras de datos al usar Python en SQL Server Machine Learning Services.
+En este inicio rápido aprenderá a usar estructuras de datos cuando use Python en SQL Server Machine Learning Services.
 
-SQL Server se basa en el paquete **pandas** de Python, que es excelente para trabajar con datos tabulares. Sin embargo, no puede pasar un valor escalar desde Python a SQL Server y esperar que funcione. En esta guía de inicio rápido, revisará algunas definiciones de tipos de datos básicas para prepararle para problemas adicionales que podrían ocurrir al pasar datos tabulares entre Python y SQL Server.
+SQL Server se basa en el paquete **pandas** de Python, que es excelente para trabajar con datos tabulares. Sin embargo, no puede pasar un valor escalar desde Python a SQL Server y esperar que funcione. En esta guía de inicio rápido, revisará algunas definiciones de estructura de datos básicas para prepararle para problemas adicionales que podrían ocurrir al pasar datos tabulares entre Python y SQL Server.
 
 Los conceptos más comunes son:
 
@@ -38,9 +37,9 @@ Los conceptos más comunes son:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Esta guía de inicio rápido requiere acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con el lenguaje Python instalado.
+- Para este inicio rápido, es necesario tener acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) que tenga instalado el lenguaje de Python.
 
-- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de Python. Puede ejecutar estos scripts mediante cualquier herramienta de consulta o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar un procedimiento almacenado o una consulta T-SQL. En esta guía de inicio rápido se usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de Python. Puede ejecutar estos scripts con cualquier herramienta de consultas o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. En este inicio rápido, se usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="scalar-value-as-a-series"></a>Valor escalar como una serie
 
@@ -62,7 +61,7 @@ Este ejemplo realiza algunas operaciones matemáticas simples y convierte un val
 
    Dado que la serie no se ha convertido a data.frame, los valores se devuelven en la ventana mensajes, pero puede ver que los resultados se encuentran en un formato más tabular.
 
-   **Resultado**
+   **Resultados**
 
    ```text
    STDOUT message(s) from external script: 
@@ -87,7 +86,7 @@ Este ejemplo realiza algunas operaciones matemáticas simples y convierte un val
 
    Si no especifica un índice, se genera un índice con valores que empiezan por 0 y terminan con la longitud de la matriz.
 
-   **Resultado**
+   **Resultados**
 
    ```text
    STDOUT message(s) from external script: 
@@ -109,7 +108,7 @@ Este ejemplo realiza algunas operaciones matemáticas simples y convierte un val
    '
    ```
 
-   **Resultado**
+   **Resultados**
 
    ```text
    STDOUT message(s) from external script: 
@@ -143,7 +142,7 @@ Después de convertir los resultados matemáticos escalares en una estructura ta
 
    A continuación se muestra el resultado. Incluso si usa el índice para obtener valores específicos de data.Frame, los valores del índice no forman parte de la salida.
 
-   **Resultado**
+   **Resultados**
 
    |ResultValue|
    |------|
@@ -172,7 +171,7 @@ Ahora se mostrarán los valores específicos de dos series de resultados matemá
    WITH RESULT SETS((ResultValue FLOAT))
    ```
 
-   **Resultado**
+   **Resultados**
 
    |ResultValue|
    |------|
@@ -197,7 +196,7 @@ Ahora se mostrarán los valores específicos de dos series de resultados matemá
    WITH RESULT SETS((ResultValue FLOAT))
    ```
 
-   **Resultado**
+   **Resultados**
 
    |ResultValue|
    |------|
@@ -210,9 +209,9 @@ Ahora se mostrarán los valores específicos de dos series de resultados matemá
 Para obtener información sobre cómo escribir funciones avanzadas de Python en SQL Server, siga esta guía de inicio rápido:
 
 > [!div class="nextstepaction"]
-> [Escritura de funciones de Python avanzadas con SQL Server Machine Learning Services](quickstart-python-functions.md)
+> [Creación de funciones avanzadas de Python con SQL Server Machine Learning Services](quickstart-python-functions.md)
 
-Para obtener más información acerca del uso de Python en SQL Server Machine Learning Services, vea los siguientes artículos:
+Para más información sobre cómo usar Python en SQL Server Machine Learning Services, vea los artículos siguientes:
 
 - [Creación y puntuación de un modelo predictivo en Python](quickstart-python-train-score-model.md)
-- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
+- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)

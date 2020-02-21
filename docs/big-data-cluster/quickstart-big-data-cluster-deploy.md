@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706347"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831392"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Uso de un script de Python para implementar un clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -34,7 +34,7 @@ La implementación del clúster de macrodatos predeterminada que se usa aquí co
    - **azdata**
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
    - **CLI de Azure**
 
 ## <a name="log-in-to-your-azure-account"></a>Iniciar sesión en su cuenta
@@ -55,9 +55,9 @@ En un símbolo del sistema de Windows PowerShell o Bash de Linux, ejecute el sig
 curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/aks/deploy-sql-big-data-aks.py"
 ```
 
-## <a name="run-the-deployment-script"></a>Ejecute el script de implementación
+## <a name="run-the-deployment-script"></a>Ejecutar el script de implementación
 
-Siga estos pasos para ejecutar el script de implementación. Este script creará un servicio AKS en Azure y, a continuación, implementará un clúster de macrodatos de SQL Server 2019 en AKS. También puede modificar el script con otras [variables de entorno](deployment-guidance.md#configfile) para crear una implementación personalizada.
+Siga estos pasos para ejecutar el script de implementación en un símbolo del sistema de Windows PowerShell o Linux bash. Este script creará un servicio AKS en Azure y, a continuación, implementará un clúster de macrodatos de SQL Server 2019 en AKS. También puede modificar el script con otras [variables de entorno](deployment-guidance.md#configfile) para crear una implementación personalizada.
 
 1. Ejecute el script con el siguiente comando:
 
@@ -70,7 +70,7 @@ Siga estos pasos para ejecutar el script de implementación. Este script creará
 
 1. Cuando se le solicite, escriba la siguiente información:
 
-   | Valor | Descripción |
+   | Value | Descripción |
    |---|---|
    | **Id. de suscripción a Azure** | Identificador de suscripción de Azure que se usará para AKS. Puede enumerar todas las suscripciones y sus identificadores ejecutando `az account list` desde otra línea de comandos. |
    | **Grupo de recursos de Azure** | Nombre del grupo de recursos de Azure que se va a crear para el clúster de AKS. |
@@ -88,8 +88,6 @@ Siga estos pasos para ejecutar el script de implementación. Este script creará
    > La cuenta `sa` de SQL Server está deshabilitada durante la implementación del clúster de macrodatos. En la instancia maestra de SQL Server se aprovisiona un nuevo inicio de sesión de sysadmin con el mismo nombre especificado para la entrada **Nombre de usuario** y la contraseña correspondiente a la entrada **Contraseña**. Se usan los mismos valores **Nombre de usuario** y **Contraseña** para aprovisionar un usuario administrador de controlador. El único usuario compatible con la puerta de enlace (Knox) es **root** y la contraseña es la misma que arriba.
 
 1. El script se iniciará mediante la creación de un clúster de AKS con los parámetros especificados. Este paso tarda varios minutos.
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## <a name="monitor-the-status"></a>Supervisar el estado
 
@@ -158,7 +156,7 @@ Cuando finalice el script de implementación, la salida le notificará que se ha
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-El clúster de macrodatos de SQL Server ahora está implementado en AKS. Ahora puede usar Azure Data Studio para conectarse al clúster. Para más información, consulte [Conexión a un clúster de macrodatos de SQL Server con Azure Data Studio](connect-to-big-data-cluster.md).
+El clúster de macrodatos de SQL Server ahora está implementado en AKS. Ahora puede usar Azure Data Studio para conectarse al clúster. Para obtener más información, vea [Conectarse a un clúster de macrodatos de SQL Server con Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## <a name="clean-up"></a>Limpieza
 

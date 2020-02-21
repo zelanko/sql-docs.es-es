@@ -1,7 +1,7 @@
 ---
 title: Descarga de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 13da9b638f117bc84700b044c6c2e8e70ada8518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e752df73d1da04b5db870cb01be581811a137ea0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015089"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910453"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Descargar los controladores de Microsoft para PHP para SQL Server
 
@@ -22,8 +22,9 @@ ms.locfileid: "68015089"
 
 ## <a name="windows"></a>Windows
 
-Las siguientes versiones de los controladores para PHP en Windows están disponibles para su descarga:
+Estas versiones de los controladores para PHP en Windows están disponibles para descarga:
 
+- [Controladores de Microsoft 5.8 para PHP para SQL Server](https://download.microsoft.com/download/2/6/a/26a631f3-24e3-4a99-83a3-882ae78f3503/SQLSRV58.EXE)
 - [Controladores de Microsoft 5.6 para PHP para SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Controladores de Microsoft 5.3 para PHP para SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
 - [Controladores de Microsoft 5.2 para PHP para SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
@@ -32,14 +33,15 @@ Las siguientes versiones de los controladores para PHP en Windows están disponi
 
 ## <a name="linux-and-macos"></a>Linux y macOS
 
-Los controladores para PHP se descargan e instalan fácilmente con PECL en Linux y macOS. Para más información, consulte el [tutorial de instalación de Linux y MacOS](installation-tutorial-linux-mac.md) . Si necesita instalar manualmente los controladores para PHP en Linux y macOS, puede descargar las siguientes versiones:
+Los controladores para PHP se descargan e instalan fácilmente con PECL en Linux y macOS. Consulte el [tutorial de instalación en Linux y macOS](installation-tutorial-linux-mac.md) para más detalles. Si necesita instalar manualmente los controladores para PHP en Linux y macOS, puede descargar las versiones siguientes:
 
+- [Controladores de Microsoft 5.8 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
 - [Controladores de Microsoft 5.6 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Controladores de Microsoft 5.3 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
 - [Controladores de Microsoft 5.2 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
 - [Controladores de Microsoft 4.3 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Introducción a los controladores de Microsoft para PHP para SQL Server](getting-started-with-the-php-sql-driver.md)
 

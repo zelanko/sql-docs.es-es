@@ -14,14 +14,14 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/07/2019
-ms.openlocfilehash: 4fa84860e2d101b43b1ea4ebfe09d9580c0088ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5a31fb94fad2e063fe9846bd820957abb4ce9b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893225"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243897"
 ---
 # <a name="ssms-utility"></a>SSMS (Utilidad)
 
@@ -50,9 +50,9 @@ Puede especificar archivos que contienen consultas, proyectos o soluciones. Los 
  
  *solutionfile* Especifica una solución para abrirla. El parámetro debe contener la ruta completa al archivo de solución. 
  
-[ **-S** _servername_] Nombre del servidor
+[ **-S** _servername_] Nombre de servidor
  
-[ **-d** _databasename_] Nombre de la base de datos
+[ **-d** _databasename_] Nombre de base de datos
 
 [ **-G**] Conexión con la autenticación de Azure Active Directory. El tipo de conexión se determina en función de si se incluye **-U**.
 
@@ -69,7 +69,7 @@ Puede especificar archivos que contienen consultas, proyectos o soluciones. Los 
  
 [ **-?** ] Muestra la ayuda de la línea de comandos.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Todos los modificadores son opcionales y están separados por un espacio, excepto los archivos, que están separados por comas. Si no especifica modificadores, **Ssms** abre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] según se especifica en la configuración de **Opciones** del menú **Herramientas** . Por ejemplo, si en la página **Entorno/General**, la opción **Al iniciar** especifica **Abrir nueva ventana de consulta**, **Ssms** se abre con un Editor de consultas en blanco.
  

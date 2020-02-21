@@ -1,6 +1,6 @@
 ---
 title: Conjunto de datos de demostración de iris para tutoriales
-Description: Cree una base de datos que contenga el conjunto de datos de iris y una tabla para almacenar los modelos. Este conjunto de datos se usa en ejercicios en los que se muestra cómo ajustar el lenguaje R o el código Python en un procedimiento almacenado de SQL Server.
+Description: Cree una base de datos que contenga el conjunto de datos de iris y los modelos predictivos. Este conjunto de datos se utiliza en los tutoriales de R y Python para SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e580a4d3b8d0e294573cf19c0194cc9b8a103518
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c87b5c9fede3a8a9ab72add650447d1b02ac89c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727096"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908760"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Datos de demostración de iris para tutoriales de Python y R en SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ Entre los tutoriales y las guías de inicio rápido que usan este conjunto de da
 
 +  [Inicio rápido: crear, entrenar y usar un modelo de Python con procedimientos almacenados en SQL Server](quickstart-python-train-score-in-tsql.md)
 
-## <a name="create-the-database"></a>Crear la base de datos
+## <a name="create-the-database"></a>Creación de la base de datos
 
 1. Inicie SQL Server Management Studio y abra una nueva ventana **Consultas**.  
 

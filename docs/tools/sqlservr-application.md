@@ -1,6 +1,6 @@
 ---
-title: sqlservr (aplicación) | Microsoft Docs
-ms.custom: ''
+title: sqlservr (aplicación)
+ms.custom: seo-lt-2019
 ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: a4a35081f52ddc6f6e75c4bfa8ff56e1020cb0c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028973"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305783"
 ---
 # <a name="sqlservr-application"></a>sqlservr (aplicación)
 
@@ -45,7 +45,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 ## <a name="arguments"></a>Argumentos
 
-**-s** *nombre_instancia* Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que se va a conectar. Si no se especifica ninguna instancia con nombre, **sqlservr** inicia la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**-s** *instance_name* Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Si no se especifica ninguna instancia con nombre, **sqlservr** inicia la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!IMPORTANT]
 >Al iniciar una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], debe usar la aplicación **sqlservr** en el directorio correspondiente de esa instancia. Ejecute **sqlservr** desde el directorio \MSSQL\Binn para la instancia predeterminada. Ejecute **sqlservr** desde el directorio \MSSQL$*nombre_instancia*\Binn para la instancia con nombre.
@@ -59,9 +59,9 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-f** Inicia una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la configuración mínima. Esta opción resulta útil si el valor de una opción de configuración (por ejemplo, la confirmación excesiva de memoria) ha impedido el inicio del servidor.
 
-**-e** *error_log_path* Indica la ruta de acceso con autorización completa para el archivo de registro de errores. Si no se especifica, la ubicación predeterminada `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog` es para la instancia predeterminada `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog` y para una instancia con nombre. No hay espacios entre **-e** y *error_log_path*.
+**-e** *error_log_path* Indica la ruta de acceso completa para el archivo de registro de errores. Si no se especifica, la ubicación predeterminada es `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog` para la instancia predeterminada y `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog` para una instancia con nombre. No hay espacios entre **-e** y *error_log_path*.
 
-**-l** *master_log_path* Indica la ruta de acceso con autorización completa para el archivo de registro de transacciones de la base de datos **maestra**. No hay espacios entre **-l** y *master_log_path*.
+**-l** *master_log_path* Indica la ruta de acceso completa para el archivo de registro de transacciones de la base de datos **maestra**. No hay espacios entre **-l** y *master_log_path*.
 
 **-m** Indica que se inicie una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en modo de usuario único. Solo un usuario puede conectar cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia en modo de usuario único. No se inicia el mecanismo CHECKPOINT, que garantiza que se escriben con regularidad transacciones completadas desde la memoria caché del disco al dispositivo de base de datos. (Normalmente, esta opción se utiliza si se existen problemas en las bases de datos del sistema y necesitan repararse.) Habilita la opción **sp_configure allow updates**. De forma predeterminada, la opción **allow updates** está deshabilitada.
 
@@ -76,7 +76,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-x** Deshabilita el mantenimiento de estadísticas de tiempo de CPU y número de aciertos de caché. Permite el máximo rendimiento.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 En la mayoría de los casos, el programa sqlserver.exe solo se usa para solucionar problemas o realizar las tareas principales de mantenimiento. Si se inicia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema con sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se inicia como servicio, de forma que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se puede detener mediante los comandos **net** . Los usuarios pueden conectar con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero las herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muestran el estado del servicio, de forma que el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indica correctamente que el servicio se ha detenido. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] puede conectarse al servidor, pero también indica que el servicio está detenido.
 
 ## <a name="compatibility-support"></a>Soporte de compatibilidad
@@ -84,8 +84,8 @@ Los parámetros siguientes están obsoletos y no se admiten en [!INCLUDE[ssCurre
 
 |Parámetro | Más información|
 |:-----|:-----|
-|**-h** | En versiones anteriores de instancias de 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espacio de direcciones de memoria virtual para los metadatos de Agregar memoria sin interrupción cuando AWE está habilitado. Se admite [!INCLUDE[sssql14](../includes/sssql14-md.md)]a través de. Para obtener más información, vea [Características de SQL Server en desuso y descontinuadas en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
-|**-g** | *memoria_para_reserva*<br/><br>Se aplica a versiones anteriores de las instancias de 32 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bits de. Se admite [!INCLUDE[sssql14](../includes/sssql14-md.md)]a través de. Especifica un número entero de megabytes (MB) de memoria que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deja disponibles para las asignaciones de memoria en el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pero fuera del bloque de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información, consulte [la documentación de SQL Server 2014 sobre las opciones de configuración de memoria del servidor](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
+|**-h** | En versiones anteriores de instancias de 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espacio de direcciones de memoria virtual para los metadatos de Agregar memoria sin interrupción cuando AWE está habilitado. Se admite a través de [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Para obtener más información, vea [Características de SQL Server en desuso y descontinuadas en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
+|**-g** | *memoria_para_reserva*<br/><br>Se aplica a las versiones anteriores de las instancias de 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se admite a través de [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Especifica un número entero de megabytes (MB) de memoria que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deja disponibles para las asignaciones de memoria en el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pero fuera del bloque de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información, vea [la documentación de SQL Server 2014 sobre opciones de configuración de memoria de servidor](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Consulte también

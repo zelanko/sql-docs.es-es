@@ -8,14 +8,14 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0cddfe78555d5e5f57e57346aff1ead52f05cebf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844558"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831549"
 ---
-# <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
+# <a name="whats-new-in-sql-server-2019"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -29,9 +29,14 @@ Para obtener la mejor experiencia con [!INCLUDE[sql-server-2019](../includes/sss
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] para [!INCLUDE[sql-server](../includes/ssnoversion-md.md)]. También proporciona funciones y mejoras adicionales para el motor de base de datos de SQL Server, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server en Linux y SQL Server Master Data Services.
 
+En el vídeo siguiente se proporciona una introducción a SQL Server 2019 de 13 minutos:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
+
 En las secciones siguientes se proporciona información general sobre estas características.
 
-## <a name="data-virtualization-and-includebig-data-clusters-2019includesssbigdataclusters-ver15md"></a>Virtualización de datos y [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+## <a name="data-virtualization-and-big-data-clusters-2019"></a>Virtualización de datos y [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
 Hoy en día, las empresas son propietarias de ingentes cantidades de datos que constan de una amplia gama de conjuntos de datos en constante crecimiento y que están hospedados en orígenes de datos almacenados en toda la empresa. Obtenga información casi en tiempo real de todos sus datos con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] de SQL Server 2019, que proporcionan un entorno completo para trabajar con grandes conjuntos de datos, incluidas funciones de inteligencia artificial y aprendizaje automático.
 
@@ -70,7 +75,7 @@ Las tecnologías de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [b
 | &nbsp; | &nbsp; |
 
 ### <a name="intelligent-performance"></a>Rendimiento inteligente
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en las innovaciones en la base de datos inteligente de versiones anteriores para garantizar que [funciona más rápido](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/). Estas mejoras ayudan a superar cuellos de botella de recursos conocidos y proporcionan varias opciones para configurar el servidor de base de datos para que ofrezca un rendimiento predecible en todas las cargas de trabajo.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en las innovaciones en la base de datos inteligente de versiones anteriores para garantizar que [funciona más rápido](https://docs.microsoft.com/archive/blogs/bobsql/). Estas mejoras ayudan a superar cuellos de botella de recursos conocidos y proporcionan varias opciones para configurar el servidor de base de datos para que ofrezca un rendimiento predecible en todas las cargas de trabajo.
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
@@ -79,7 +84,7 @@ Las tecnologías de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [b
 |Regulación de recursos| El tipo de datos del valor configurable para la opción `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` y `ALTER WORKLOAD GROUP` se ha cambiado de "integer" a "float" para permitir un mayor control granular de los límites de la memoria. Consulte [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) y [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Recompilaciones reducidas para cargas de trabajo| Mejora el rendimiento cuando se usan tablas temporales en varios ámbitos al reducir las recompilaciones innecesarias. Vea [Recompilaciones reducidas para cargas de trabajo](../relational-databases/tables/tables.md#ctp23). |
 |Escalabilidad de puntos de control indirectos |Vea [Escalabilidad mejorada de puntos de control indirectos](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Actualizaciones de PFS simultáneas|[Las páginas PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) son páginas especiales dentro de un archivo de base de datos que SQL Server usa para ayudar a localizar espacio libre cuando asigna espacio para un objeto. La contención de bloqueos temporales de página en las páginas PFS normalmente se asocia con [TempDB](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), pero también se puede producir en las bases de datos de usuario cuando hay muchos subprocesos de asignación de objetos simultáneos. Esta mejora cambia la manera en que se administra la simultaneidad con las actualizaciones de PFS para que puedan actualizarse en un bloqueo temporal compartido, en lugar de un bloqueo exclusivo. Este comportamiento está activado de forma predeterminada en todas las bases de datos (incluida TempDB) a partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
+|Actualizaciones de PFS simultáneas|[Las páginas PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) son páginas especiales dentro de un archivo de base de datos que SQL Server usa para ayudar a localizar espacio libre cuando asigna espacio para un objeto. La contención de bloqueos temporales de página en las páginas PFS normalmente se asocia con [TempDB](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), pero también se puede producir en las bases de datos de usuario cuando hay muchos subprocesos de asignación de objetos simultáneos. Esta mejora cambia la manera en que se administra la simultaneidad con las actualizaciones de PFS para que puedan actualizarse en un bloqueo temporal compartido, en lugar de un bloqueo exclusivo. Este comportamiento está activado de forma predeterminada en todas las bases de datos (incluida TempDB) a partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 |Migración de trabajo con un programador |La migración de trabajos permite que un programador inactivo migre un trabajo de la cola de ejecutables de otro programador en el mismo nodo NUMA y que reanude inmediatamente la tarea de este trabajo migrado. Esta mejora proporciona un uso de CPU más equilibrado en situaciones en las que se asignan varias tareas de ejecución prolongada al mismo programador. Para obtener más información, consulte [Rendimiento inteligente de SQL Server 2019: migración de trabajo](https://techcommunity.microsoft.com/t5/SQL-Server/SQL-Server-2019-Intelligent-Performance-Worker-Migration/ba-p/939610). |
 | &nbsp; | &nbsp; |
 
@@ -101,7 +106,7 @@ La supervisión de las mejoras le permite obtener información de rendimiento de
 ## <a name="developer-experience"></a>Experiencia del desarrollador
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] sigue proporcionando una experiencia de desarrollo de primera clase con mejoras en los tipos de datos de gráficos y espaciales, con compatibilidad con UTF-8 y con un nuevo marco de extensibilidad que permite a los desarrolladores usar el lenguaje que prefieran para obtener información sobre sus datos.
 
-### <a name="graph"></a>Gráfico
+### <a name="graph"></a>Grafo
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
@@ -152,8 +157,9 @@ Cuando se produce un error en un proceso de extracción, transformación y carga
 |Nueva característica o actualización | Detalles |
 |:---|:---|
 |Always Encrypted con enclaves seguros|Expande Always Encrypted con cifrado en contexto y cálculos enriquecidos mediante la habilitación de cálculos en los datos de texto no cifrado dentro de un enclave seguro del lado servidor. El cifrado en contexto mejora el rendimiento y la confiabilidad de las operaciones criptográficas (cifrado de columnas, rotación de las claves de cifrado de columnas, etc.), puesto que evita mover los datos fuera de la base de datos.<br><br> La compatibilidad con cálculos enriquecidos (operaciones de coincidencia y comparación de patrones) abre Always Encrypted a un conjunto mucho más amplio de escenarios y aplicaciones que demandan protección de datos confidenciales, a la vez que requieren funciones más enriquecidas en las consultas de Transact-SQL. [Always Encrypted con enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
-|Administración de certificados en el Administrador de configuración de SQL Server|Vea [Administración de certificados (Administrador de configuración de SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
-|Clasificación y detección de datos|La clasificación y detección de datos proporciona funcionalidades avanzadas integradas de forma nativa en SQL Server para clasificar, etiquetar y proteger la información confidencial de las bases de datos. La clasificación de la información más confidencial (empresarial, financiera, sanitaria, personal, etc.) puede desempeñar un papel fundamental en el estado de protección de la información de la organización. Puede servir como infraestructura para lo siguiente:<ul><li>Ayudar a cumplir los requisitos de cumplimiento reglamentario y los estándares de privacidad de datos</li><li>Varios escenarios de seguridad, como la supervisión (auditoría) y las alertas por accesos anómalos a información confidencial.</li><li>Facilitar la identificación de dónde reside la información confidencial de la empresa, para que los administradores pueden adoptar los pasos adecuados para proteger la base de datos.</li></ul>La [auditoría](../relational-databases/security/auditing/sql-server-audit-database-engine.md) también se ha mejorado para incluir un nuevo campo en el registro de auditoría denominado `data_sensitivity_information`, que registra las clasificaciones de confidencialidad (etiquetas) de los datos reales que devuelve la consulta. Para obtener información detallada y ejemplos, vea [AGREGAR CLASIFICACIÓN DE SENSIBILIDAD](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
+|Administración de certificados en el Administrador de configuración de SQL Server|Las tareas de administración de certificados, como ver e implementar certificados, ahora son posibles mediante el uso del Administrador de configuración de SQL Server. Vea [Administración de certificados (Administrador de configuración de SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
+|Clasificación y detección de datos|La clasificación y detección de datos proporcionan funciones para clasificar y etiquetar columnas en las tablas de usuario. La clasificación de la información confidencial (empresarial, financiera, sanitaria, personal, etc.) puede desempeñar un papel fundamental en el estado de protección de la información de la organización. Puede servir como infraestructura para lo siguiente:<ul><li>Ayudar a cumplir los requisitos de cumplimiento reglamentario y los estándares de privacidad de datos</li><li>Varios escenarios de seguridad, como la supervisión (auditoría) y las alertas relacionadas con accesos anómalos a información confidencial</li><li>Facilitar la identificación de dónde reside la información confidencial de la empresa, para que los administradores pueden adoptar los pasos adecuados para proteger la base de datos.</li></ul>|
+|SQL Server Audit|La auditoría[auditoría](../relational-databases/security/auditing/sql-server-audit-database-engine.md) también se ha mejorado para incluir un campo nuevo `data_sensitivity_information` en el registro de auditoría, que contiene las clasificaciones de confidencialidad (etiquetas) de los datos reales que devuelve la consulta. Para información detallada y ejemplos, consulte [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>Alta disponibilidad
@@ -217,6 +223,7 @@ La manera más sencilla de empezar a trabajar con [!INCLUDE[ssNoVersion](../incl
 |:---|:---| 
 |Nuevas opciones de configuración de memoria | Durante la instalación, establece las configuraciones de servidor *memoria de servidor mínima (MB)* y *memoria de servidor máxima (MB)* . Consulte [Configuración del motor de base de datos: página de memoria](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) y los parámetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` y `SQLMAXMEMORY` en [Instalar SQL Server desde el símbolo del sistema](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). El valor propuesto se alinea con las directrices de configuración de memoria en [Opciones de configuración de memoria del servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
 |Opciones de configuración de nuevo paralelismo | Durante la instalación, establece la configuración del servidor *Grado máximo de paralelismo*. Consulte [Configuración del motor de base de datos: página de MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) y el parámetro `SQLMAXDOP` en [Instalar SQL Server desde el símbolo del sistema](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). El valor predeterminado se alinea con las directrices sobre el grado máximo de paralelismo en [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
+|Advertencia de configuración sobre la clave de producto de la licencia Server/CAL|Si se especifica una clave de producto de licencia Enterprise Server o CAL y el equipo tiene más de 20 núcleos físicos, o 40 núcleos lógicos si la tecnología Hyper-Threading está habilitada, se muestra una advertencia durante la instalación. Los usuarios pueden seguir confirmando la limitación y continuar con la instalación, o bien especificar una clave de licencia que admita el número máximo de procesadores del sistema operativo.|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> Machine Learning Services de SQL Server
@@ -250,7 +257,7 @@ Esta versión presenta nuevas características para mejorar las operaciones de a
 |Tarea de archivo flexible |Realice operaciones de archivo en el sistema de archivos local, Azure Blob Storage y Azure Data Lake Storage Gen2. Vea [Tarea de archivo flexible](../integration-services/control-flow/flexible-file-task.md).|
 |Origen y destino de archivo flexible |Lea y escriba datos para Azure Blob Storage y Azure Data Lake Storage Gen2. Vea [Origen de archivo flexible](../integration-services/data-flow/flexible-file-source.md) y [Destino de archivo flexible](../integration-services/data-flow/flexible-file-destination.md). |
 
-## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+## <a name="sql-server-master-data-services"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
 
 | Nueva característica o actualización | Detalles |
 |:---|:---|
@@ -262,7 +269,7 @@ Esta versión presenta nuevas características para mejorar las operaciones de a
 
 Esta versión de las características de SQL Server Reporting Services admite instancias administradas de Azure SQL, conjuntos de datos de Power BI Premium, accesibilidad mejorada, Azure Active Directory Application Proxy y cifrado de bases de datos transparente. También proporciona una actualización de la herramienta Generador de informes de Microsoft. Para obtener más información, consulte las [novedades de SQL Server Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [`SqlServer` Módulo de PowerShell](https://www.powershellgallery.com/packages/Sqlserver)
 - [Documentación de SQL Server PowerShell](../powershell/sql-server-powershell.md)

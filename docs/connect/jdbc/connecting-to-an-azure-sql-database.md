@@ -1,5 +1,5 @@
 ---
-title: Conexión a una base de datos SQL de Azure | Microsoft Docs
+title: Conectarse a una base de datos de Azure SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155111"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectarse a una base de datos de SQL Azure
@@ -25,14 +25,14 @@ En este artículo se tratan los problemas de uso de [!INCLUDE[jdbcNoVersion](../
   
 - [Base de datos de SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [Cómo conectar a SQL Azure mediante JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Cómo: Conectar a SQL Azure mediante JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Conectarse usando la autenticación de Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Detalles
 
-Al conectarse a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe conectarse a la base de datos maestra para llamar a **SQLServerDatabaseMetaData. getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] no es compatible con la devolución de todo el conjunto de catálogos de una base de datos de usuario. **SQLServerDatabaseMetaData. getCatalogs** use la vista sys. Databases para obtener los catálogos. Consulte la discusión de permisos en [Sys. Databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para comprender el [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]comportamiento de **SQLServerDatabaseMetaData. getCatalogs** en.  
+Al conectarse a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe conectarse a la base de datos maestra para llamar a **SQLServerDatabaseMetaData.getCatalogs**.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] no es compatible con la devolución de todo el conjunto de catálogos de una base de datos de usuario. **SQLServerDatabaseMetaData.getCatalogs** usa la vista sys.databases para obtener los catálogos. Consulte la explicación de los permisos en [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para entender el comportamiento **SQLServerDatabaseMetaData.getCatalogs** en una [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Conexiones eliminadas
 
@@ -44,11 +44,11 @@ Al conectar con una [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], un compon
   
 Para evitar que un componente de red elimine las conexiones inactivada, se debe establecer la siguiente configuración del Registro (o su equivalente si no es Windows) en el sistema operativo donde esté cargado el controlador:  
   
-|Configuración del Registro|Valor recomendado|  
+|Configuración del registro|Valor recomendado|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ TCPIP \ Parameters \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ TCPIP \ Parameters \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ TCPIP \ Parameters \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Reinicie el equipo para que surta efecto la configuración del Registro.  
 
@@ -80,7 +80,7 @@ Antes de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversio
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>El empleo de cifrado exige establecer hostNameInCertificate
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]Antes de la versión 7,2 de, al conectarse [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]a, debe especificar **hostNameInCertificate** si especifica Encrypt **= true** (si el nombre del servidor de la cadena de conexión es *nombre_corto*). *domainName*, establezca la propiedad **hostNameInCertificate** en \*. *domainName*). Esta propiedad es opcional a partir de la versión 7,2 del controlador.
+Antes de la versión 7.2 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], al conectarse a una [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe especificar **hostNameInCertificate** si especifica **encrypt=true** (si el nombre del servidor de la cadena de conexión es *shortName*.*domainName*, establezca la propiedad **hostNameInCertificate** en \*.*domainName*.). Esta propiedad es opcional a partir de la versión 7.2 del controlador.
 
 Por ejemplo:
 
@@ -88,6 +88,6 @@ Por ejemplo:
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

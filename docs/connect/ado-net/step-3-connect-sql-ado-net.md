@@ -1,36 +1,36 @@
 ---
 title: 'Paso 3: Prueba de concepto de la conexión a SQL con ADO.NET | Microsoft Docs'
-description: Contiene C# ejemplos de código para conectarse a SQL Server, ejecutar una consulta e insertar una fila.
+description: Contiene ejemplos de código de C# para conectarse a SQL Server, ejecutar una consulta e insertar una fila.
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 2819697746f810e0c0b19a9ab7d076fa79c15a2f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cff776c4881dcc012a825bcd48f6d6271b95bb75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451818"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247519"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Paso 3: Prueba de concepto de la conexión a SQL mediante ADO.NET
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Descargar ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- Artículo anterior:&nbsp;&nbsp;&nbsp;[Paso 2: Crear una base de datos SQL para el desarrollo de ADO.NET](step-2-create-sql-database-ado-net-development.md)  
-- Artículo siguiente &nbsp;&nbsp;&nbsp;[Paso 4: Conectar la resistencia a SQL con ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
+- Artículo anterior:&nbsp;&nbsp;&nbsp;[Paso 2: Creación de una base de datos SQL para el desarrollo de ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+- Siguiente artículo:&nbsp;&nbsp;&nbsp;[Paso 4: Conexión resistente a SQL con ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
 
   
-Este C# ejemplo de código se debe considerar solo una prueba de concepto. El código de ejemplo se simplifica para mayor claridad y no representa necesariamente las prácticas recomendadas recomendadas por Microsoft.  
+Este ejemplo de código de C# solo debe considerarse una prueba de concepto. El código de ejemplo se simplifica para mayor claridad y no representa necesariamente los procedimientos recomendados por Microsoft.  
   
-## <a name="step-1-connect"></a>Paso 1: conexión
+## <a name="step-1-connect"></a>Paso 1: Conectar
   
-El método **SqlConnection. Open** se utiliza para conectarse a la base de datos SQL.  
+El método **SqlConnection.Open** se utiliza para conectarse a la base de datos SQL.  
 
 
 ```csharp
@@ -67,9 +67,9 @@ Press any key to finish...
 ```  
 
 
-## <a name="step-2-execute-a-query"></a>Paso 2: ejecutar una consulta  
+## <a name="step-2-execute-a-query"></a>Paso 2: Ejecutar una consulta  
   
-El método SqlCommand. ExecuteReader:  
+El método SqlCommand.ExecuteReader:  
   
 - Emite la instrucción SQL SELECT para el sistema SQL.  
 - Devuelve una instancia de SqlDataReader para proporcionar acceso a las filas de resultados.  
@@ -153,14 +153,14 @@ Press any key to finish...
   
   
   
-## <a name="step-3-insert-a-row"></a>Paso 3: insertar una fila  
+## <a name="step-3-insert-a-row"></a>Paso 3: Insertar una fila  
   
   
 En este ejemplo se muestra cómo:  
   
-- Ejecutar una instrucción INSERT de SQL de forma segura mediante el paso de parámetros.  
-  - El uso de parámetros protege contra ataques por inyección de SQL.  
-- Recupere el valor generado automáticamente.  
+- Ejecutar una instrucción SQL INSERT de forma segura mediante el paso de parámetros.  
+  - El uso de parámetros protege contra ataques por inyección de código SQL.  
+- Recuperar el valor generado automáticamente.  
   
   
   

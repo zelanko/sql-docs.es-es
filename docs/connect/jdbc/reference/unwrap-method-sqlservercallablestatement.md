@@ -1,5 +1,5 @@
 ---
-title: Método Unwrap (SQLServerCallableStatement) | Microsoft Docs
+title: Método unwrap (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0dc8ddf82859b8bf47853a3d72a7461567388b87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995197"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>Método unwrap (SQLServerCallableStatement)
@@ -40,14 +40,14 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) queda definido por la interfaz java.sql.Wrapper, que se incorporó en las especificaciones de JDBC 4.0.  
   
  Es posible que las aplicaciones necesiten acceso a las extensiones para la API de JDBC que sean específicas de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. El método unwrap admite la desencapsulación para las clases públicas que extiende este objeto, si las clases tienen extensiones de proveedor.  
   
  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) implementa [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), que se extiende a partir de [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Cuando se llama a este método, el objeto desencapsula las siguientes clases: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- Para obtener más información, vea [contenedores e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Para más información, consulte [Contenedores e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
  En el siguiente ejemplo de código se muestra cómo utilizar los métodos isWrapperFor y unwrap para comprobar las extensiones del controlador e invocar a los métodos específicos del proveedor, como [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) y [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md).  
   

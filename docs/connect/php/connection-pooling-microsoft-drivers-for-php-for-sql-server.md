@@ -13,10 +13,10 @@ ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13e1075cd25fa352543837afa31ff2a3d540704f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015122"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Agrupación de conexiones (controladores de Microsoft para PHP para SQL Server)
@@ -26,7 +26,7 @@ A continuación, se muestran consideraciones importantes que hay tener cuenta so
   
 -   Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] utilizan la agrupación de conexiones ODBC.  
   
--   De forma predeterminada, la agrupación de conexiones está habilitada en Windows. En Linux y macOS, las conexiones se agrupan solo si la agrupación de conexiones está habilitada para ODBC (consulte [habilitación o](#enablingdisabling-connection-pooling)deshabilitación de la agrupación de conexiones). Cuando la agrupación de conexiones está habilitada y se conecta a un servidor, el controlador intenta usar una conexión agrupada antes de crear una nueva. Si no encuentra una conexión equivalente en el grupo, se crea una nueva conexión y se agrega al grupo. El controlador determina si las conexiones son equivalentes según una comparación de las cadenas de conexión.  
+-   De forma predeterminada, la agrupación de conexiones está habilitada en Windows. En Linux y macOS, las conexiones se agrupan solo si la agrupación de conexiones está habilitada para ODBC (consulte [Habilitación y deshabilitación de la agrupación de conexiones](#enablingdisabling-connection-pooling)). Cuando la agrupación de conexiones está habilitada y se conecta a un servidor, el controlador intenta usar una conexión agrupada antes de crear una. Si no encuentra una conexión equivalente en el grupo, se crea una nueva conexión y se agrega al grupo. El controlador determina si las conexiones son equivalentes según una comparación de las cadenas de conexión.  
   
 -   Cuando se utiliza una conexión del grupo, se restablece el estado de conexión.  
   
@@ -34,7 +34,7 @@ A continuación, se muestran consideraciones importantes que hay tener cuenta so
   
 Para obtener más información sobre la agrupación de conexiones, consulte [Agrupación de conexiones de administrador de controladores](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
-## <a name="enablingdisabling-connection-pooling"></a>Habilitar o deshabilitar la agrupación de conexiones
+## <a name="enablingdisabling-connection-pooling"></a>Habilitación o deshabilitación de la agrupación de conexiones
 ### <a name="windows"></a>Windows
 Puede forzar a que el controlador cree una nueva conexión en lugar de buscar una equivalente en la agrupación de conexiones mediante el establecimiento del valor del atributo *ConnectionPooling* de la cadena de conexión en **false** (o 0).  
   
@@ -42,11 +42,11 @@ Si el atributo *ConnectionPooling* se omite de la cadena de conexión, o si se e
   
 Para obtener información sobre otros atributos de conexión, consulte [Connection Options](../../connect/php/connection-options.md).  
 ### <a name="linux-and-macos"></a>Linux y macOS
-El atributo *ConnectionPooling* no se puede usar para habilitar o deshabilitar la agrupación de conexiones. 
+No se puede usar el atributo *ConnectionPooling* para habilitar o deshabilitar la agrupación de conexiones. 
 
-La agrupación de conexiones se puede habilitar o deshabilitar editando el archivo de configuración Odbcinst. ini. Se debe volver a cargar el controlador para que los cambios surtan efecto.
+La agrupación de conexiones se puede habilitar o deshabilitar mediante la edición del archivo de configuración odbcinst.ini. Se debe volver a cargar el controlador para que los cambios surtan efecto.
 
-Si `Pooling` se `Yes` establece en y `CPTimeout` un valor positivo en el archivo Odbcinst. ini, se habilita la agrupación de conexiones. 
+Si se establece `Pooling` en `Yes` y un valor de `CPTimeout` positivo en el archivo odbcinst.ini, se habilita la agrupación de conexiones. 
 ```
 [ODBC]
 Pooling=Yes
@@ -55,7 +55,7 @@ Pooling=Yes
 CPTimeout=<int value>
 ```
   
-Como mínimo, el archivo Odbcinst. ini debe tener un aspecto similar al de este ejemplo:
+Como mínimo, el archivo odbcinst.ini debe tener un aspecto similar al de este ejemplo:
 
 ```
 [ODBC]
@@ -68,16 +68,16 @@ UsageCount=1
 CPTimeout=120
 ```
 
-Establecer `Pooling`enenel archivo Odbcinst. ini obliga al controlador a crear una nueva conexión. `No`
+Al establecer `Pooling` en `No` en el archivo odbcinst.ini se obliga al controlador a crear una conexión.
 ```
 [ODBC]
 Pooling=No
 ```
 
-## <a name="remarks"></a>Notas
-- En Linux o macOS, todas las conexiones se agruparán si está habilitada la agrupación en el archivo Odbcinst. ini. Esto significa que la opción de conexión ConnectionPooling no tiene ningún efecto. Para deshabilitar la agrupación, establezca agrupación = no en el archivo Odbcinst. ini y vuelva a cargar los controladores.
-  - es posible que unixODBC < = 2.3.4 (Linux y macOS) no devuelva la información de diagnóstico adecuada, como mensajes de error, advertencias y mensajes informativos.
-  - por esta razón, es posible que los controladores SQLSRV y PDO_SQLSRV no puedan capturar correctamente datos largos (como XML, binario) como cadenas. Los datos largos se pueden capturar como secuencias como solución alternativa. Consulte el ejemplo siguiente para obtener más información sobre SQLSRV.
+## <a name="remarks"></a>Observaciones
+- En Linux o macOS, todas las conexiones se agruparán si está habilitada la agrupación en el archivo odbcinst.ini. Esto significa que la opción de conexión ConnectionPooling no tiene ningún efecto. Para deshabilitar la agrupación, establezca Pooling=No en el archivo odbcinst.ini y vuelva a cargar los controladores.
+  - Puede que unixODBC <= 2.3.4 (Linux y macOS) no devuelva la información de diagnóstico adecuada, como mensajes de error, advertencias y mensajes de información.
+  - Por esta razón, es posible que los controladores SQLSRV y PDO_SQLSRV no puedan capturar correctamente datos largos (por ejemplo, XML, binarios) como cadenas. Como solución temporal, los datos largos se pueden capturar como secuencias. Consulte el ejemplo siguiente para obtener más información sobre SQLSRV.
 
 ```
 <?php
@@ -125,7 +125,7 @@ function getColumn($conn)
 
 
 ## <a name="see-also"></a>Consulte también  
-[Conexión mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+[Cómo: Conexión mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Cómo: Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Usar la clasificación de datos con Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Uso de la clasificación de datos con Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -14,21 +14,21 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72041133"
 ---
 # <a name="data-classification"></a>Clasificación de datos
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>Información general
-Con el fin de administrar datos confidenciales, SQL Server y Azure SQL Server presentaron la capacidad de proporcionar columnas de base de datos con metadatos de confidencialidad que permitan a la aplicación cliente administrar distintos tipos de datos confidenciales (por ejemplo, estado, financiero, etc.). ) de acuerdo con las directivas de protección de datos.
+Con el fin de administrar datos confidenciales, SQL Server y Azure SQL Server presentaron la capacidad de proporcionar columnas de base de datos con metadatos confidenciales que permiten a la aplicación cliente administrar diferentes tipos de datos confidenciales (como datos de mantenimiento, financieros, etc.) según las directivas de protección de datos.
 
-Para obtener más información sobre cómo asignar una clasificación a las columnas, consulte [detección y clasificación de datos de SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
+Para obtener más información sobre cómo asignar una clasificación a las columnas, consulte [Clasificación y detección de datos de SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
 
-Microsoft ODBC driver 17,2 permite la recuperación de estos metadatos a través de SQLGetDescField con el identificador de campo SQL_CA_SS_DATA_CLASSIFICATION.
+Microsoft ODBC Driver 17.2 permite la recuperación de estos metadatos a través de SQLGetDescField mediante el identificador de campo SQL_CA_SS_DATA_CLASSIFICATION.
 
 ## <a name="format"></a>Formato
 SQLGetDescField tiene la siguiente sintaxis:
@@ -43,35 +43,35 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
- Entradas Identificador de IRD (descriptor de fila de implementación). Se puede recuperar mediante una llamada a SQLGetStmtAttr con el atributo de instrucción SQL_ATTR_IMP_ROW_DESC
+ [Entrada] Identificador de IRD (descriptor de fila de implementación). Se puede recuperar mediante una llamada a SQLGetStmtAttr con el atributo de instrucción SQL_ATTR_IMP_ROW_DESC
   
  *RecNumber*  
  [Input] 0
   
  *FieldIdentifier*  
- Entradas SQL_CA_SS_DATA_CLASSIFICATION
+ [Entrada] SQL_CA_SS_DATA_CLASSIFICATION
   
  *ValuePtr*  
- Genere Búfer de salida
+ [Salida] Búfer de salida
   
  *BufferLength*  
- Entradas Longitud del búfer de salida en bytes
+ [Entrada] Longitud del búfer de salida en bytes
 
- *StringLengthPtr* [output] puntero en el búfer en el que se va a devolver el número total de bytes disponibles que se van a devolver en *ValuePtr*.
+ *StringLengthPtr* [Salida] Puntero al búfer en el que se va a devolver el número total de bytes disponibles para devolver en *ValuePtr*.
  
 > [!NOTE]
-> Si se desconoce el tamaño del búfer, se puede determinar llamando a SQLGetDescField con *ValuePtr* como NULL y examinando el valor de *StringLengthPtr*.
+> Si no se conoce el tamaño del búfer, puede determinarse llamando a SQLGetDescField con *ValuePtr* como NULL y examinando el valor de *StringLengthPtr*.
  
-Si la información de clasificación de datos no está disponible, se devolverá un error de *Campo descriptor no válido* .
+Si la información de clasificación de datos no está disponible, se devolverá un error *Campo descriptor no válido*.
 
-Tras una llamada correcta a SQLGetDescField, el búfer al que apunta *ValuePtr* contendrá los datos siguientes:
+Tras una llamada correcta a SQLGetDescField, el búfer señalado por *ValuePtr* contendrá los siguientes datos:
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt` y `cc cc` son enteros multibyte, que se almacenan con el byte menos significativo en la dirección más baja.
+> `nn nn`, `tt tt` y `cc cc` son enteros multibyte, que se almacenan con el byte menos significativo en la dirección inferior.
 
-*`sensitivitylabel`* y *@no__t 3* tienen el formato
+*`sensitivitylabel`* y *`informationtype`* tienen el formato
 
  `nn [n bytes name] ii [i bytes id]`
 
@@ -79,17 +79,17 @@ Tras una llamada correcta a SQLGetDescField, el búfer al que apunta *ValuePtr* 
 
  `nn nn [n sensitivityprops]`
 
-Para cada columna *(c)* , *n* *`sensitivityprops`* de 4 bytes están presentes:
+En cada una de las columnas *(c)* , *`sensitivityprops`* de 4 bytes *n* están presentes:
 
  `ss ss tt tt`
 
-s-index en la matriz *`sensitivitylabels`* , `FF FF` Si no se etiqueta
+Índice s - en la matriz *`sensitivitylabels`* , `FF FF` si no se etiqueta
 
-Índice t en la matriz *`informationtypes`* , `FF FF` Si no se etiqueta
+Índice t - en la matriz *`informationtypes`* , `FF FF` si no se etiqueta
 
 
 <br><br>
-El formato de los datos se puede expresar como las siguientes pseudo-estructuras:
+El formato de los datos se puede expresar como las siguientes pseudoestructuras:
 
 ```
 struct IDnamePair {
@@ -116,8 +116,8 @@ struct {
 ```
 
 
-## <a name="code-sample"></a>Ejemplo de código
-Aplicación de prueba que muestra cómo leer los metadatos de clasificación de datos. En Windows, se puede compilar mediante `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` y ejecutar con una cadena de conexión y una consulta SQL (que devuelve columnas clasificadas) como parámetros:
+## <a name="code-sample"></a>Código de ejemplo
+Aplicación de prueba que muestra cómo leer los metadatos de clasificación de datos. En Windows, se puede compilar mediante `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` y ejecutar con una cadena de conexión, y una consulta SQL (que devuelve columnas clasificadas) como parámetros:
 
 ```
 #ifdef _WIN32
@@ -244,22 +244,22 @@ int main(int argc, char **argv)
 ```
 
 ## <a name="bkmk-version"></a>Versión admitida
-Microsoft ODBC driver 17,2 permite la información de clasificación de datos de recuperación a través de `SQLGetDescField` si `FieldIdentifier` está establecido en `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
+Microsoft ODBC Driver 17.2 permite la recuperación de información de clasificación de datos a través de `SQLGetDescField` si `FieldIdentifier` se establece en `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
 
-A partir de Microsoft ODBC driver 17.4.1.1 es posible recuperar la versión de la clasificación de datos admitida por un servidor a través de `SQLGetDescField` mediante el identificador de campo `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238). En 17.4.1.1, la versión de clasificación de datos admitida se establece en "2".
+A partir de Microsoft ODBC Driver 17.4.1.1, es posible recuperar la versión de clasificación de datos compatible con un servidor a través de `SQLGetDescField` mediante el identificador de campo `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238). En 17.4.1.1, la versión de clasificación de datos compatible se establece en "2".
 
  
 
-A partir de 17.4.2.1, se presentó la versión predeterminada de la clasificación de datos que se establece en "1" y es el controlador de versión que informa a SQL Server como compatible. El nuevo atributo de conexión `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) puede permitir que la aplicación cambie la versión compatible de la clasificación de datos de "1" hasta el máximo admitido.  
+A partir de 17.4.2.1, se presentó la versión predeterminada de clasificación de datos que se establece en "1" y es la versión notificada por el controlador a SQL Server como compatible. El nuevo atributo de conexión `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) puede permitir que la aplicación cambie la versión compatible de clasificación de datos de "1" hasta el máximo admitido.  
 
 Ejemplo: 
 
-Para establecer la versión, esta llamada debe realizarse justo antes de la llamada a SQLConnect o SQLDriverConnect:
+Para establecer la versión, debe realizarse esta llamada justo antes de la llamada a SQLConnect o SQLDriverConnect:
 ```
 ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
 ```
 
-El valor de la versión admitida actualmente de la clasificación de datos se puede retirved mediante la llamada a SQLGetConnectAttr: 
+El valor de la versión de clasificación de datos admitida actualmente se puede recuperar a través de la llamada a SQlGetConnectAttr: 
 ```
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```

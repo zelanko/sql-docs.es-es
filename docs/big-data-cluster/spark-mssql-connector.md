@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
-ms.sourcegitcommit: 043c0be0ceab09434c394bf0d72aea5b7ae88cb5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "76831187"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL
@@ -45,7 +45,7 @@ En la tabla siguiente se describen los parámetros de interfaz que han cambiado 
 
 El conector utiliza API de escritura masiva de SQL Server. El usuario puede pasar los parámetros de escritura masiva como parámetros opcionales, y el conector los pasa tal cual a la API subyacente. Para obtener más información sobre las operaciones de escritura masiva, vea [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Un [clúster de macrodatos de SQL Server](deploy-get-started.md)
 
@@ -78,7 +78,7 @@ El conector utiliza API de escritura masiva de SQL Server. El usuario puede pas
 
 Para demostrar el uso del conector de Spark MSSQL con estos datos, puede descargar un cuaderno de ejemplo, abrirlo en Azure Data Studio y ejecutar cada bloque de código. Para obtener más información sobre el trabajo con cuadernos, vea [Uso de los cuadernos en SQL Server](notebooks-guidance.md).
 
-1. Desde una línea de comandos de PowerShell o Bash, ejecute el siguiente comando para descargar el cuaderno de ejemplo **mssql_spark_connector_non_ad_pyspark.ipynb**:
+1. Desde una línea de comandos de PowerShell o Bash, ejecute el comando siguiente para descargar el cuaderno de ejemplo **mssql_spark_connector_non_ad_pyspark.ipynb**:
 
    ```PowerShell
    curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector_non_ad_pyspark.ipynb"

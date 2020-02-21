@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 49027d7b9ab230f80bb8154a746eb503846534f2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1803724f0dafccc1fe41d8e17060810a85e001
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727773"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252824"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>Crear un grupo de recursos para SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,9 +41,9 @@ El proceso incluye varios pasos:
 
     **Ejemplo de resultados**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
-    |2|predeterminados|0|100|0|100|100|0|0|
+    |2|default|0|100|0|100|100|0|0|
 
 2.  Compruebe los recursos asignados al grupo de recursos **externos** predeterminado.
   
@@ -53,9 +53,9 @@ El proceso incluye varios pasos:
 
     **Ejemplo de resultados**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
-    |2|predeterminados|100|20|0|2|
+    |2|default|100|20|0|2|
  
 3.  Con estos valores predeterminados de servidor, es probable que el tiempo de ejecución externo no tenga recursos suficientes para completar la mayoría de las tareas. Para cambiar esta configuración, se debe modificar el uso de recursos de servidor de la siguiente manera:
   
@@ -123,7 +123,7 @@ Una función de clasificación examina las tareas entrantes y determina si la ta
   
 2.  En la función clasificadora para cada grupo de recursos, defina el tipo de instrucciones o las solicitudes entrantes que se deben asignar al grupo de recursos.
   
-     Por ejemplo, la siguiente función devuelve el nombre del esquema asignado al grupo de recursos externos definido por el usuario si la aplicación que envió la solicitud es "Microsoft R Host" o "RStudio". De lo contrario, devuelve el grupo de recursos predeterminado.
+     Por ejemplo, la siguiente función devuelve el nombre del esquema asignado al grupo de recursos externos definido por el usuario si la aplicación que envió la solicitud es "Microsoft R Host", "RStudio" o "Mashup". De lo contrario, devuelve el grupo de recursos predeterminado.
   
     ```sql
     USE master
@@ -133,7 +133,7 @@ Una función de clasificación examina las tareas entrantes y determina si la ta
     WITH schemabinding
     AS
     BEGIN
-        IF program_name() in ('Microsoft R Host', 'RStudio') RETURN 'ds_wg';
+        IF program_name() in ('Microsoft R Host', 'RStudio', 'Mashup') RETURN 'ds_wg';
         RETURN 'default'
         END;
     GO
@@ -143,7 +143,7 @@ Una función de clasificación examina las tareas entrantes y determina si la ta
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH  (classifier_function = dbo.is_ds_apps);
-    ALTER RESOURCE GOVERNOR WITH reconfigure;
+    ALTER RESOURCE GOVERNOR RECONFIGURE;
     GO
     ```
 
@@ -163,10 +163,10 @@ Para comprobar que se han realizado los cambios, debe comprobar la configuració
 
     **Ejemplo de resultados**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
     |1|interno|Media|25|0|0|0|0|1|2|
-    |2|predeterminados|Media|25|0|0|0|0|2|2|
+    |2|default|Media|25|0|0|0|0|2|2|
     |256|ds_wg|Media|25|0|0|0|0|2|256|
   
 2.  Use la nueva vista de catálogo, [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), para ver todos los grupos de recursos externos.
@@ -177,9 +177,9 @@ Para comprobar que se han realizado los cambios, debe comprobar la configuració
 
     **Ejemplo de resultados**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
-    |2|predeterminados|100|20|0|2|
+    |2|default|100|20|0|2|
     |256|ds_ep|100|40|0|1|
   
      Para más información, vea [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md) (Vistas de catálogo de Resource Governor &#40;Transact-SQL&#41;).

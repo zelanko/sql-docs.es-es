@@ -1,22 +1,23 @@
 ---
-title: Creación y exportación de modelos de aprendizaje automático de Spark con MLeap
-titleSuffix: SQL Server big data clusters
+title: 'Creación y exportación de modelos de aprendizaje automático de Spark: MLeap'
+titleSuffix: SQL Server Big Data Clusters
 description: Use PySpark para entrenar y crear modelos de aprendizaje automático con Spark en clústeres de macrodatos de SQL Server. Expórtelo con MLeap y puntúe el modelo con Java en SQL Server.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9191ad90b05e9f48facab0cc4003bbf5adce11
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844230"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255912"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Creación, exportación y puntuación de modelos de aprendizaje automático de Spark en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Creación, exportación y puntuación de modelos de aprendizaje automático de Spark en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 En el siguiente ejemplo se muestra cómo crear un modelo con [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html), exportarlo a [MLeap](http://mleap-docs.combust.ml/) y puntuarlo en SQL Server con su [extensión de lenguaje Java](../language-extensions/language-extensions-overview.md). Esto se hace en el contexto de un clúster de macrodatos de SQL Server 2019.
 
@@ -24,7 +25,7 @@ En el siguiente diagrama se muestra el trabajo que se lleva a cabo en este ejemp
 
 ![Entrenamiento de la exportación de la puntuación con Spark](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Todos los archivos de este ejemplo se encuentran en [https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml).
 

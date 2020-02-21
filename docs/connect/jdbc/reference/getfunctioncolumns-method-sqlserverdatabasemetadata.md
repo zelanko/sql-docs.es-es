@@ -11,10 +11,10 @@ ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982964"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Método getFunctionColumns (SQLServerDatabaseMetaData)
@@ -55,7 +55,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getFunctionColumns especifica este método getFunctionColumns en la interfaz java.sql.DatabaseMetaData.  
   
  Este método devuelve solamente las funciones y parámetros que coinciden con el esquema, nombre de función y nombre de parámetro especificados dentro del catálogo indicado.  
@@ -66,23 +66,23 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|Nombre de la base de datos en que reside la función.|  
 |FUNCTION_SCHEM|**String**|Esquema para la función.|  
-|FUNCTION_NAME|**String**|Nombre de la función.|  
+|FUNCTION_NAME|**String**|El nombre de la función.|  
 |COLUMN_NAME|**String**|Nombre de un parámetro o columna.|  
-|COLUMN_TYPE|**short**|**Tipo de la columna. Puede ser uno de los siguientes valores:**<br /><br /> functionColumnUnknown (0): tipo desconocido.<br /><br /> functionColumnIn (1): parámetro de entrada.<br /><br /> functionColumnInOut (2): parámetro de entrada y salida.<br /><br /> functionColumnOut (3): parámetro de salida.<br /><br /> functionReturn (4): valor devuelto de una función.<br /><br /> functionColumnResult (5): un parámetro o columna es una columna en el conjunto de resultados.|  
+|COLUMN_TYPE|**short**|**Tipo de la columna. Puede ser uno de los siguientes valores:**<br /><br /> functionColumnUnknown (0): Tipo desconocido.<br /><br /> functionColumnIn (1): Parámetro de entrada.<br /><br /> functionColumnInOut (2): Parámetro de entrada o salida.<br /><br /> functionColumnOut (3): Parámetro de salida.<br /><br /> functionReturn (4): Valor devuelto de la función.<br /><br /> functionColumnResult (5): Un parámetro o columna es una columna en el conjunto de resultados.|  
 |DATA_TYPE|**smallint**|Valor del tipo de datos SQL de java.sql.Types.|  
 |TYPE_NAME|**String**|El nombre del tipo de datos.|  
 |PRECISION|**int**|Número total de dígitos significativos.|  
-|LENGTH|**int**|Longitud de los datos en bytes.|  
+|LENGTH|**int**|La longitud de los datos, en bytes.|  
 |SCALE|**short**|Número de dígitos que se encuentran a la derecha del separador decimal.|  
 |RADIX|**short**|Base de tipos numéricos.|  
-|NULLABLE|**short**|Indica si el parámetro o valor devuelto puede contener un valor **null**.<br /><br /> **Puede ser uno de los siguientes valores:**<br /><br /> functionNoNulls (0): no se permite un valor NULL.<br /><br /> functionNullable (1): se permite un valor NULL.<br /><br /> functionNullableUnknown (2): desconocido.|  
-|REMARKS|**String**|Comentarios sobre una columna o un parámetro.|  
+|NULLABLE|**short**|Indica si el parámetro o valor devuelto puede contener un valor **null**.<br /><br /> **Puede ser uno de los siguientes valores:**<br /><br /> functionNoNulls (0): El valor NULL no está permitido.<br /><br /> functionNullable (1): Se permite un valor NULL.<br /><br /> functionNullableUnknown (2): desconocida.|  
+|COMENTARIOS|**String**|Comentarios sobre una columna o un parámetro.|  
 |COLUMN_DEF|**String**|Valor predeterminado de la columna.<br /><br /> **Nota:** Esta información está disponible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es específica del controlador JDBC.|  
 |SQL_DATA_TYPE|**smallint**|Esta columna es igual que la columna **DATA_TYPE**, salvo por los tipos de datos **datetime** e **interval** de ISO.<br /><br /> **Nota:** Esta información está disponible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es específica del controlador JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|El subcódigo **datetime** ISO **interval** si el valor de **SQL_DATA_TYPE** es **SQL_DATETIME** o **SQL_INTERVAL**. En el caso de tipos de datos distintos de **DateTime** e **Interval**de ISO, esta columna es NULL.<br /><br /> **Nota:** Esta información está disponible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es específica del controlador JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|El subcódigo **datetime** ISO **interval** si el valor de **SQL_DATA_TYPE** es **SQL_DATETIME** o **SQL_INTERVAL**. Para tipos de datos distintos de **datetime** e **interval** de ISO, esta columna es NULL.<br /><br /> **Nota:** Esta información está disponible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es específica del controlador JDBC.|  
 |CHAR_OCTET_LENGTH|**int**|Longitud máxima de los parámetros o columnas basados en valores binarios o caracteres. Para los demás tipos de datos, es NULL.|  
 |ORDINAL_POSITION|**int**|Para los parámetros de entrada y salida, representa la posición a partir de 1.<br /><br /> Para las columnas de conjunto de resultados, es la posición de la columna en el conjunto de resultados a partir de 1.<br /><br /> Para el valor devuelto, es 0.|  
-|IS_NULLABLE|**String**|Determina la nulabilidad de un parámetro o columna.<br /><br /> Puede ser uno de los siguientes valores:<br /><br /> **Sí**: el parámetro o la columna puede incluir valores NULL.<br /><br /> **No**: el parámetro o la columna no puede incluir valores NULL.<br /><br /> Cadena vacía (""): desconocido.|  
+|IS_NULLABLE|**String**|Determina la nulabilidad de un parámetro o columna.<br /><br /> Puede ser uno de los siguientes valores:<br /><br /> **SÍ**: El parámetro o la columna puede incluir valores NULL.<br /><br /> **NO**: El parámetro o la columna no puede incluir valores NULL.<br /><br /> Cadena vacía (""): desconocida.|  
 |SS_TYPE_CATALOG_NAME|**String**|Nombre del catálogo que contiene el tipo definido por el usuario (UDT).|  
 |SS_TYPE_SCHEMA_NAME|**String**|Nombre del esquema que contiene el tipo definido por el usuario (UDT).|  
 |SS_UDT_CATALOG_NAME|**String**|Tipo definido por el usuario (UDT) del nombre completo.|  

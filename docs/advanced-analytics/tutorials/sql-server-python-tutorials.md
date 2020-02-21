@@ -1,6 +1,6 @@
 ---
 title: Tutoriales de Python
-description: En este artículo se describen los tutoriales de Python para SQL Server Machine Learning Services. Aprenda a ejecutar scripts de Python. Compile, entrene e implemente modelos de Python en SQL Server. Obtenga información sobre contextos de proceso locales y remotos. Explore los paquetes de Microsoft Python para ciencia de datos y aprendizaje automático.
+description: En este artículo se describen los tutoriales de Python para SQL Server Machine Learning Services. Obtenga información sobre cómo ejecutar scripts y crear modelos de aprendizaje automático en SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/04/2019
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f714810acd8c04c80fe0b8abe5214a456f6dd6
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: b8caa58c178f68ebcf773fcef8f18509b85ad24a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199407"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908749"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Tutoriales de Python para SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ En este artículo se describen los tutoriales e inicios rápidos de Python para 
 
 Si no está familiarizado con SQL Server Machine Learning Services, puede probar también los inicios rápidos de Python.
 
-| Inicio rápido | Descripción |
+| Guía de inicio rápido | Descripción |
 |-|-|
 | [Hola mundo en Python y SQL Server](quickstart-python-create-script.md) | Conozca los conceptos básicos sobre cómo llamar a Python en T-SQL con [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
 | [Control de tipos de datos y objetos mediante Python en SQL Server](quickstart-python-data-structures.md) | Muestra cómo SQL Server usa el paquete pandas de Python para administrar estructuras de datos. |
@@ -48,5 +48,5 @@ Si no está familiarizado con SQL Server Machine Learning Services, puede proba
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-+ [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
++ [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
 + [Extensión de Python en SQL Server](../concepts/extension-python.md)

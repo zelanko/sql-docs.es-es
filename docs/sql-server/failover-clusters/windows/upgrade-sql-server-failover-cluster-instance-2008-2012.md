@@ -1,6 +1,7 @@
 ---
-title: Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012 | Microsoft Docs
-ms.date: 01/25/2018
+title: 'Actualice instancias de SQL Server: Windows Server 2012 y clústeres anteriores'
+description: Describe cómo actualizar las instancias de clúster de conmutación por error de SQL Server que se ejecutan en Windows Server 2008, Windows Server 2008 R2 y Windows Server 2012.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8825d0d4c8ff0ac6d83b152b8606be6d9fd0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904961"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242854"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
@@ -116,7 +117,7 @@ Si tiene un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.m
     >[!NOTE]
     >Los errores derivados de nombres que ya se hayan usado en otros equipos desparecerán cuando se eliminen los registros DNS del nombre en cuestión.
 
-11. Una vez que se haya cambiado el nombre de todos las FCI, reinicie cada uno de los equipos en el nuevo clúster.
+11. Una vez que se haya cambiado el nombre de todas las FCI, reinicie cada uno de los equipos en el nuevo clúster.
 
 12. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el Administrador de clústeres de conmutación por error.
 
@@ -282,9 +283,9 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
     Los enlaces de servicio remoto funcionarán adecuadamente después de la migración, ya que se realizará correctamente la migración de cualquier usuario que use esta función.
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+### <a name="ssnoversion-agent"></a>e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
--   **Jobs**
+-   **Trabajos**
 
     Se realizará correctamente la migración de los trabajos junto con las bases de datos del sistema. Cualquier usuario que ejecute un trabajo del agente de SQL o el propio agente tendrá los mismos permisos en el equipo de destino, tal como se especifica en los requisitos previos.
 
@@ -320,6 +321,6 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 - [Completar la actualización motor de base de datos](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [Aprovechamiento de las nuevas características de SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
-- [Actualizar una instancia del clúster de conmutación por error de SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)
+- [Actualización de una instancia del clúster de conmutación por error de SQL Server](upgrade-a-sql-server-failover-cluster-instance.md).
 - [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Agregar características a una instancia de SQL Server 2016 (programa de instalación)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

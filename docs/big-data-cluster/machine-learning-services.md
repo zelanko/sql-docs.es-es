@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: 66bc987b71bb8b139eec5b69e78532aa54f1294d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531947"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252023"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Ejecución de scripts de Python y R con Machine Learning Services en clústeres de macrodatos de SQL Server
 
@@ -26,7 +26,7 @@ Se pueden ejecutar scripts de Python y R en la instancia maestra de [clústeres 
 
 ## <a name="enable-machine-learning-services"></a>Habilitar Machine Learning Services
 
-Machine Learning Services se instala de forma predeterminada en clústeres de macrodatos y precisa de una instalación independiente.
+Machine Learning Services se instala de forma predeterminada en clústeres de macrodatos y no precisa de una instalación independiente.
 
 Para habilitar Machine Learning Services, ejecute esta instrucción en la instancia maestra:
 
@@ -36,7 +36,7 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-## <a name="enable-always-on-availability-groups"></a>Habilitar los grupos de disponibilidad AlwaysOn
+## <a name="enable-always-on-availability-groups"></a>Habilitación de grupos de disponibilidad AlwaysOn
 
 Si usa clústeres de macrodatos de SQL Server con [Grupos de disponibilidad Always On](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), deberá realizar algunos pasos más para habilitar Machine Learning Services.
 
@@ -82,7 +82,7 @@ Ya está listo para ejecutar scripts de Python y R en la instancia maestra de cl
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-+ [Inicio rápido: Crear y ejecutar scripts de Python sencillos con SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-create-script.md)
++ [Inicio rápido: Crear y ejecutar scripts de Python simples con SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-create-script.md)
 + [Inicio rápido: Crear y puntuar un modelo predictivo en Python con SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
 + [Inicio rápido: Crear y ejecutar scripts de R sencillos con SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-create-script.md)
 + [Inicio rápido: Crear y puntuar un modelo predictivo en R con SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)

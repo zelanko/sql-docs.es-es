@@ -1,23 +1,24 @@
 ---
-title: Comparación y sincronización de datos de una o más tablas con datos de una base de datos de referencia | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Comparación y sincronización de datos de tablas con datos de una base de datos de referencia
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 055731473f94003440f4a78c6446ec965f1d0a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984667"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241697"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Comparar y sincronizar datos de una o más tablas con datos de una base de datos de referencia
+
 Puede comparar los datos de una base de datos de *origen* y una base de datos de *destino* y especificar qué tablas se deben comparar. Puede revisarlos y decidir qué cambios sincronizar. A continuación, puede actualizar el destino para sincronizar las bases de datos o exportar el script de actualización al editor de Transact\-SQL o a un archivo.  
   
 Por ejemplo, puede sincronizar las bases de datos para actualizar un servidor de ensayo con una copia de los datos de producción. También puede sincronizar una o varias tablas para poblarlas con datos de referencia de otra. Además, puede comparar datos antes y después de ejecutar pruebas como forma adicional de comprobación.  
@@ -55,9 +56,9 @@ En esta sección, puede encontrar descripciones de las tareas comunes que admite
 ## <a name="UnderstandingDataCompareResults"></a>Reconocimiento de los resultados de la comparación  
 La tabla siguiente describe las cinco columnas de la ventana **Comparación de datos**.  
   
-|columna|Notas|  
+|Columna|Notas|  
 |----------|---------|  
-|Objeto|Muestra el nombre de la tabla o vista y una casilla que indica si el destino se debe sincronizar al escribir actualizaciones o exportar el script de actualización. La casilla no está disponible para tablas o vistas que no contienen datos.|  
+|Object|Muestra el nombre de la tabla o vista y una casilla que indica si el destino se debe sincronizar al escribir actualizaciones o exportar el script de actualización. La casilla no está disponible para tablas o vistas que no contienen datos.|  
 |Varios registros|Muestra el número de registros en el destino con la misma clave pero no los mismos datos que en el origen. Los paréntesis incluyen el número de registros que se marcan para actualizar cuando se escriben actualizaciones o se exporta el script de actualización.|  
 |Solo en el origen|Muestra el número de registros en el origen que no se producen en el destino. Los paréntesis incluyen el número de registros que se marcan para agregarlos cuando se escriben actualizaciones o se exporta el script de actualización.|  
 |Sólo en destino|Muestra el número de registros en el destino que no se producen en el origen. Los paréntesis incluyen el número de los registros que se marcan para eliminar cuando se escriben actualizaciones o se exporta el script de actualización.|  

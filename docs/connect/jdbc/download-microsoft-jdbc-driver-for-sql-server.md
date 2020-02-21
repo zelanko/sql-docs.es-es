@@ -1,6 +1,6 @@
 ---
 title: Descarga de Microsoft JDBC Driver para SQL Server
-description: Descargue Microsoft JDBC driver para SQL Server para desarrollar aplicaciones Java que se conecten a SQL Server.
+description: Descargue Microsoft JDBC Driver para SQL Server para desarrollar aplicaciones Java que se conecten a SQL Server.
 ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,19 +11,19 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc273bccf054408f48e7bb2bd0409a31bb18bd18
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71682009"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Descarga de Microsoft JDBC Driver para SQL Server
 
-En este artículo se proporcionan vínculos de descarga a Microsoft JDBC driver para SQL Server. Este controlador permite desarrollar aplicaciones Java que se conectan a SQL Server.  
+En este artículo se proporcionan vínculos de descarga a Microsoft JDBC Driver para SQL Server. Este controlador le permite desarrollar aplicaciones Java que se conecten a SQL Server.  
 
 ## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Descargas disponibles del controlador JDBC Driver para SQL Server
 
-Use los vínculos de la tabla siguiente para descargar la versión más reciente de Microsoft JDBC driver para SQL Server que coincida con su Java Runtime Environment (JRE):
+Use los vínculos de la siguiente tabla para descargar la versión más reciente de Microsoft JDBC Driver para SQL Server que coincida con su entorno Java Runtime Environment (JRE):
 
 | Versión | Fecha de la versión | Versiones de Java |
 |---|---|---|
@@ -33,10 +33,10 @@ Use los vínculos de la tabla siguiente para descargar la versión más reciente
 | [Microsoft JDBC Driver 6.4](https://go.microsoft.com/fwlink/?linkid=868290)  | 26/3/2018 | JRE 7, 8, 9 |
 | [Microsoft JDBC Driver 6.2](https://go.microsoft.com/fwlink/?linkid=852460) | 12/2/2018 | JRE 7, 8 |
 | [Microsoft JDBC Driver 6.0](https://go.microsoft.com/fwlink/?LinkId=245496) | 27/2/2018 | JRE 7, 8 |
-| [Microsoft JDBC driver 4,2](https://go.microsoft.com/fwlink/?linkid=841534) | 26/2/2018 | JRE 7, 8 |
-| [Microsoft JDBC driver 4,1](https://go.microsoft.com/fwlink/?linkid=841533) | 27/2/2018 | JRE 7 |
+| [Microsoft JDBC Driver 4.2](https://go.microsoft.com/fwlink/?linkid=841534) | 26/2/2018 | JRE 7, 8 |
+| [Microsoft JDBC Driver 4.1](https://go.microsoft.com/fwlink/?linkid=841533) | 27/2/2018 | JRE 7 |
 
-Al descargar el controlador, hay varios archivos JAR. El nombre del archivo JAR indica la versión de Java que admite. Para obtener más información acerca de cada versión, vea las notas de la [versión](release-notes-for-the-jdbc-driver.md) y [los requisitos del sistema](system-requirements-for-the-jdbc-driver.md).
+Al descargar el controlador, hay varios archivos JAR. El nombre del archivo JAR indica la versión de Java que admite. Para obtener más información sobre cada versión, consulte las [notas de la versión](release-notes-for-the-jdbc-driver.md) y los [requisitos del sistema](system-requirements-for-the-jdbc-driver.md).
 
 ## <a name="using-the-jdbc-driver-with-maven-central"></a>Uso del controlador JDBC con Maven Central
 
@@ -56,4 +56,4 @@ Las versiones de controladores no compatibles no están disponibles para descarg
   
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre Microsoft JDBC driver para SQL Server, consulte [información general sobre el controlador JDBC](overview-of-the-jdbc-driver.md) y el [repositorio de github del controlador JDBC](https://github.com/microsoft/mssql-jdbc/blob/dev/README.md).
+Para obtener más información sobre Microsoft JDBC Driver para SQL Server, consulte [Introducción al controlador JDBC](overview-of-the-jdbc-driver.md) y el [repositorio de GitHub del controlador JDBC](https://github.com/microsoft/mssql-jdbc/blob/dev/README.md).

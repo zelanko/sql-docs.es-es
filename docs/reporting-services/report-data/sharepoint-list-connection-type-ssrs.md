@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 43f726dbddb9b9f3737a92a82987dc3832182d49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593957"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190693"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
 
@@ -28,7 +28,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  El diseñador de consultas muestra automáticamente las listas de SharePoint para las que el usuario tiene los permisos necesarios para obtener acceso.  
   
- Para obtener más información sobre ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para más ejemplos de cadenas de conexión, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credenciales  
  Se necesitan credenciales para ejecutar consultas y obtener una vista previa del informe localmente y desde el servidor de informes. Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos. Los tipos de credenciales que se pueden utilizar con esta extensión de datos dependen de la configuración de la tecnología de SharePoint para la lista de SharePoint que se esté utilizando como origen de datos.  
@@ -37,7 +37,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  La**tabla 1** es para los informes implementados en un sitio heredado de Windows SharePoint. Un sitio heredado de Windows solo admite Kerberos, NTLM y Autenticación basada en formularios (FBA). La**tabla 2** es para los informes implementados en un sitio de SharePoint basado en notificaciones.  
   
- **tabla 1**  
+ **Tabla 1**  
   
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
@@ -48,7 +48,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  *Autenticación de Windows, Autenticación basada en formularios (FBA), tokens de Secure Application Markup Language (SAML), otros proveedores de identidad o una combinación de más de uno de los proveedores de autenticación mencionados anteriormente.  
   
- **tabla 2**  
+ **Tabla 2**  
   
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
@@ -71,7 +71,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  Para obtener información sobre la compatibilidad con la autenticación basada en notificaciones en la pila de Microsoft BI, vea [Usar autenticación basada en notificaciones en la pila de Microsoft BI](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Para obtener más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Especificar credenciales e información de conexión para orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md) y [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Para obtener más información, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md) y [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Consultas  
  Para diseñar una consulta, cree un nuevo conjunto de datos basado en el origen de datos y, a continuación, abra el diseñador de consultas asociado. Para obtener más información, vea [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -169,7 +169,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Proporciona información sobre las conexiones de datos y los orígenes de datos.  
   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

@@ -1,28 +1,30 @@
 ---
-title: Usar el control ReportViewer de WebForms | Microsoft Docs
+title: Uso del control ReportViewer de WebForms
+description: Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WebForms para representarlos en una aplicación web.
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5ea5370cbb59d5fb70fa233f3695ac77e412669
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MTE75
+ms.openlocfilehash: 1271a159feaf20dd46d23c5fc3ff4a0cb2aa87be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687378"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796934"
 ---
-# <a name="using-the-webforms-reportviewer-control"></a>Usar el control ReportViewer de WebForms
+# <a name="use-the-webforms-reportviewer-control"></a>Uso del control ReportViewer de WebForms
   Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WebForms para representarlos en una aplicación web.  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Para usar el control ReportViewer en una aplicación web  
   
-1.  Cree un nuevo sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Cree un nuevo sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
      \- O bien  
   

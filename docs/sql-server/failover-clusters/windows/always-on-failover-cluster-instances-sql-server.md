@@ -1,6 +1,7 @@
 ---
-title: Instancias de clúster de conmutación por error de AlwaysOn (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Instancias de clúster de conmutación por error de AlwaysOn
+description: Descripción de la instancia de clúster de conmutación por error de Always On para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063801"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230187"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,10 +153,10 @@ ms.locfileid: "68063801"
   
 ##  <a name="RelatedTopics"></a> Temas relacionados  
   
-|**Descripciones del tema**|**Tema**|  
+|**Descripciones del tema**|**Tema.**|  
 |----------------------------|---------------|  
 |Describe cómo instalar una nueva FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Describe cómo actualizarse a un clúster de conmutación por error de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Actualización de una instancia de clúster de conmutación por error de SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
+|Describe cómo actualizarse a un clúster de conmutación por error de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Actualización de una instancia del clúster de conmutación por error de SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).|  
 |Describe los conceptos de clúster de conmutación por error de Windows y proporciona vínculos a las tareas relacionadas con el clúster de conmutación por error de Windows|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Información general de los clústeres de conmutación por error](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Información general de los clústeres de conmutación por error](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Describe las distinciones de conceptos entre nodos de una FCI y réplicas de un grupo de disponibilidad y las consideraciones para utilizar una FCI de modo que hospede una réplica para un grupo de disponibilidad.|[Clústeres de conmutación por error y grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   

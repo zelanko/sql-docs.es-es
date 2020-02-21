@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 70eed483eb7cb857e23b110b7149badff14ab46f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: d038b0a67923d7c475011b8f3d141f7d64358f61
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452293"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247858"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operaciones de copia masiva en SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "72452293"
 
 Microsoft SQL Server incluye una conocida utilidad de línea de comandos denominada **bcp** para copiar rápidamente y de forma masiva archivos grandes en tablas o vistas en bases de datos de SQL Server. La clase <xref:Microsoft.Data.SqlClient.SqlBulkCopy> permite escribir soluciones de código administrado que proporcionan una funcionalidad similar. Hay otras maneras de cargar datos en una tabla de SQL Server (las instrucciones INSERT, por ejemplo) pero <xref:Microsoft.Data.SqlClient.SqlBulkCopy> ofrece una importante ventaja de rendimiento sobre ellas.  
   
-Con la clase <xref:Microsoft.Data.SqlClient.SqlBulkCopy>, puede realizar lo siguiente:  
+Con la clase <xref:Microsoft.Data.SqlClient.SqlBulkCopy>, puede ejecutar:  
   
 - Una única operación de copia masiva.  
   

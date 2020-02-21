@@ -1,10 +1,7 @@
 ---
-title: Index (DTA, elemento) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Index, elemento (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e7b86c8ac990c7add4856e2c00e43550903f55a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034834"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307702"
 ---
 # <a name="index-element-dta"></a>Index, elemento (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contiene información acerca de un índice de una configuración especificada por el usuario que se desea crear o quitar.  
+
+Contiene información acerca de un índice de una configuración especificada por el usuario que se desea crear o quitar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +44,7 @@ ms.locfileid: "68034834"
   
 |Atributo Index|Tipo de datos|Descripción|  
 |---------------------|---------------|-----------------|  
-|**Clúster**|**boolean**|Opcional. Especifica un índice clúster. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Clustered="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".|  
+|**Agrupado**|**boolean**|Opcional. Especifica un índice clúster. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Clustered="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".|  
 |**Único**|**boolean**|Opcional. Especifica un índice único. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Unique="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".|  
 |**En línea**|**boolean**|Opcional. Especifica un índice que puede realizar operaciones mientras el servidor está en línea, lo que exige espacio temporal en disco. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Online="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".<br /><br /> Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).|  
 |**IndexSizeInMB**|**double**|Opcional. Especifica el tamaño máximo del índice en megabytes, por ejemplo:<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> Sin valor predeterminado.|  

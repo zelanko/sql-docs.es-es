@@ -1,10 +1,7 @@
 ---
-title: Seleccionar una cuenta para el servicio Agente SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 05/04/2017
+title: Seleccionar una cuenta para el servicio Agente SQL Server
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +18,20 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86ee07ffd09ab72fdce4bde1a247e37328c4b626
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811552"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253231"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Seleccionar una cuenta para el servicio Agente SQL Server
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,7 +41,7 @@ La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../i
   
 -   **Cuenta integrada**. Puede elegirla de una lista con las siguientes cuentas de servicio de Windows integradas:  
   
-    -   Cuenta de**sistema local** . El nombre de esta cuenta es NT AUTHORITY\System. Es una cuenta eficaz con acceso sin restricciones a todos los recursos del sistema local. Es miembro del grupo **Administradores** de Windows del equipo local y, por tanto, miembro del rol fijo de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **en** .  
+    -   Cuenta de**sistema local** . El nombre de esta cuenta es NT AUTHORITY\System. Es una cuenta eficaz con acceso sin restricciones a todos los recursos del sistema local. Es miembro del grupo **Administradores** de Windows del equipo local y, por tanto, miembro del rol fijo de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**.  
   
         > [!IMPORTANT]  
         > La opción **Cuenta del sistema local** se mantiene solo por motivos de compatibilidad con versiones anteriores. La cuenta del sistema local tiene permisos que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no necesita. Evite ejecutar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la cuenta del sistema local. Para mejorar la seguridad, utilice una cuenta de dominio de Windows con los permisos que se enumeran en la sección siguiente, "Permisos de cuentas de dominio de Windows".  
@@ -82,11 +84,11 @@ En la tabla siguiente se muestran los tipos de cuenta de Windows que se pueden u
   
 |Tipo de cuenta de servicio|Índice no agrupado|Servidor en clúster|Controlador de dominio (no agrupado)|  
 |------------------------|-------------------------|--------------------|--------------------------------------|  
-|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Cuenta de dominio de Windows (miembro del grupo de administradores de Windows)|Admitida|Admitida|Admitida|  
-|Cuenta de dominio de Windows (no administrativa)|Admitida<br /><br />Vea la limitación 1 a continuación.|Admitida<br /><br />Vea la limitación 1 a continuación.|Admitida<br /><br />Vea la limitación 1 a continuación.|  
-|Cuenta de servicio de red (NT AUTHORITY\NetworkService)|Admitida<br /><br />Vea las limitaciones 1, 3 y 4 a continuación.|No compatible|No compatible|  
-|Cuenta de usuario local (no administrativa)|Admitida<br /><br />Vea la limitación 1 a continuación.|No compatible|No aplicable|  
-|Cuenta del sistema local (NT AUTHORITY\System)|Admitida<br /><br />Vea la limitación 2 a continuación.|No compatible|Admitida<br /><br />Vea la limitación 2 a continuación.|  
+|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Cuenta de dominio de Windows (miembro del grupo de administradores de Windows)|Compatible|Compatible|Compatible|  
+|Cuenta de dominio de Windows (no administrativa)|Compatible<br /><br />Vea la limitación 1 a continuación.|Compatible<br /><br />Vea la limitación 1 a continuación.|Compatible<br /><br />Vea la limitación 1 a continuación.|  
+|Cuenta de servicio de red (NT AUTHORITY\NetworkService)|Compatible<br /><br />Vea las limitaciones 1, 3 y 4 a continuación.|No compatible|No compatible|  
+|Cuenta de usuario local (no administrativa)|Compatible<br /><br />Vea la limitación 1 a continuación.|No compatible|No aplicable|  
+|Cuenta del sistema local (NT AUTHORITY\System)|Compatible<br /><br />Vea la limitación 2 a continuación.|No compatible|Compatible<br /><br />Vea la limitación 2 a continuación.|  
 |Cuenta del servicio local (NT AUTHORITY\LocalService)|No compatible|No compatible|No compatible|  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitación 1: utilizar cuentas no administrativas para la administración multiservidor  
@@ -118,7 +120,7 @@ Para resolver este problema, reinicie el equipo donde se ejecuta [!INCLUDE[ssNoV
   
 **Para especificar el perfil de correo del Agente SQL Server**  
   
--   [Cómo: configurar el correo del Agente SQL Server para que utilice el Correo electrónico de base de datos (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Cómo: Configurar el Agente SQL Server para que use el Correo electrónico de base de datos](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe iniciarse cuando se inicie el sistema operativo.  

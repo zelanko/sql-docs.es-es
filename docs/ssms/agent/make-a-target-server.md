@@ -1,5 +1,5 @@
 ---
-title: Establecer un servidor de destino | Microsoft Docs
+title: Establecer un servidor de destino
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b151a51a9d68b8459b2564396c5e4bc4c1d00868
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 0c115e8d11a72bb7b066169e4f2a21d570adc366
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552840"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242858"
 ---
 # <a name="make-a-target-server"></a>Establecer un servidor de destino
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,14 +55,14 @@ Si se producen errores en los pasos de trabajo que utilizan cuentas de proxy dur
   
     Para resolver este error, asegúrese de que existe una cuenta de proxy en el servidor de destino con el mismo nombre que la cuenta de proxy del servidor maestro en la que se ejecuta el paso de trabajo.  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permisos  
 Los permisos de ejecución para este procedimiento corresponden de forma predeterminada a los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-make-a-target-server"></a>Para establecer un servidor de destino  
   
-1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]y, a continuación, expándala.  
+1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] y expándala.  
   
 2.  Haga clic con el botón derecho en **Agente SQL Server**, seleccione **Administración de multiservidor**y, luego, haga clic en **Establecer como destino**. El **Asistente para establecer servidor de destino** le guiará en el proceso de establecimiento de un servidor de destino.  
   
@@ -82,7 +83,7 @@ Los permisos de ejecución para este procedimiento corresponden de forma predete
   
 #### <a name="to-make-a-target-server"></a>Para establecer un servidor de destino  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

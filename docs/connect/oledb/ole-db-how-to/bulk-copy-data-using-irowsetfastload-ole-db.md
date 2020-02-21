@@ -1,6 +1,6 @@
 ---
-title: Copiar datos masiva con IRowsetFastLoad (OLE DB) | Microsoft Docs
-description: Copia masiva de datos en una tabla de SQL Server mediante la interfaz IRowsetFastLoad de OLE DB driver para SQL Server
+title: Copiar datos de forma masiva mediante IRowsetFastLoad (OLE DB) | Microsoft Docs
+description: Copiar datos de forma masiva en una tabla de SQL Server mediante la interfaz IRowsetFastLoad de OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 926cc4f4d3dd1f3022c2b653a32f12ee58492b24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015646"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copiar datos de forma masiva mediante IRowsetFastLoad (OLE DB)
@@ -29,7 +29,7 @@ ms.locfileid: "68015646"
 
   En este ejemplo se muestra el uso de IRowsetFastLoad para la copia masiva de los registros en una tabla.  
   
- El consumidor notifica OLE DB controlador para SQL Server de su necesidad de realizar copias masivas estableciendo el controlador de OLE DB para SQL Server propiedad específica del controlador SSPROP_ENABLEFASTLOAD en VARIANT_TRUE. Con la propiedad establecida en el origen de datos, el consumidor crea un controlador de OLE DB para SQL Server sesión. La nueva sesión permite al consumidor acceder a **IRowsetFastLoad**.  
+ El consumidor notifica a OLE DB Driver for SQL Server su necesidad de realizar una copia masiva estableciendo la propiedad SSPROP_ENABLEFASTLOAD específica del controlador OLE DB Driver for SQL Server en VARIANT_TRUE. Con la propiedad establecida en el origen de datos, el consumidor crea una sesión de OLE DB Driver for SQL Server. La nueva sesión permite el acceso del consumidor a **IRowsetFastLoad**.  
   
  Hay disponible un ejemplo completo donde se muestra el uso de **IRowsetFastLoad** para la copia masiva de los registros en una tabla. En este ejemplo, se agregan 10 registros a la tabla **IRFLTable**. Es necesario crear la tabla **IRFLTable** en la base de datos.  
   
@@ -42,17 +42,17 @@ ms.locfileid: "68015646"
   
 1.  Establezca una conexión con el origen de datos.  
   
-2.  Establezca el controlador de OLE DB para la propiedad de origen de datos específica del controlador de SQL Server SSPROP_ENABLEFASTLOAD en VARIANT_TRUE. Con esta propiedad establecida en VARIANT_TRUE, la nueva sesión permite el acceso del consumidor a **IRowsetFastLoad**.  
+2.  Establezca la propiedad de origen de datos SSPROP_ENABLEFASTLOAD específica del controlador OLE DB Driver for SQL Server en VARIANT_TRUE. Con esta propiedad establecida en VARIANT_TRUE, la nueva sesión permite el acceso del consumidor a **IRowsetFastLoad**.  
   
-3.  Cree una sesión que solicite la interfaz **IOpenRowset** .  
+3.  Cree una sesión que solicite la interfaz **IOpenRowset**.  
   
 4.  Llame a **IOpenRowset::OpenRowset** para abrir un conjunto de filas que incluya todas las filas de la tabla (donde los datos se copiarán mediante una operación de copia masiva).  
   
-5.  Realice los enlaces necesarios y cree un descriptor de acceso con **IAccessor:: CreateAccessor**.  
+5.  Realice los enlaces necesarios y cree un descriptor de acceso mediante **IAccessor::CreateAccessor**.  
   
 6.  Configure el búfer de memoria desde el que los datos se copiarán en la tabla.  
   
-7.  Llame a **IRowsetFastLoad:: InsertRow** para realizar una copia masiva de los datos de en la tabla.  
+7.  Llame a **IRowsetFastLoad::InsertRow** para copiar los datos en la tabla.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo, se agregan 10 registros a la tabla IRFLTable. Es necesario crear la tabla IRFLTable en la base de datos. Este ejemplo no es compatible con IA64.  

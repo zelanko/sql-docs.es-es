@@ -16,10 +16,10 @@ ms.assetid: 14b84409-5510-4642-a83b-732d8511c5b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d07f5026ccc4ee5a614f1f3fa5020502f9dcadd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973320"
 ---
 # <a name="setobject-method-javalangstring-javalangobject"></a>Método setObject (java.lang.String, java.lang.Object)
@@ -47,12 +47,12 @@ public void setObject(java.lang.String sCol,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setObject especifica este método setObject en la interfaz java.sql.CallableStatement.  
   
  Este método convierte el parámetro especificado en un tipo de datos CHAR si se especifica un valor NULL, antes de enviarlo a la base de datos. Si el parámetro se declara como un tipo de SQL binary, varbinary o image, se producirá una excepción cuando se ejecute la instrucción.  
   
- A partir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la 3,0 del controlador JDBC, el comportamiento de este método se modifica mediante la propiedad de conexión **sendTimeAsDatetime** ([estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md)) y [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ Desde el controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el comportamiento de este método queda modificado por la propiedad de conexión **sendTimeAsDatetime** ([Establecimiento de las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md)) y [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
  Para más información, vea [Configurar el modo en que los valores java.sql.Time se envían al servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   

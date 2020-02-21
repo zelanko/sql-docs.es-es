@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127374"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831604"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Procedimientos para implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes
+# <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Procedimientos para implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ Antes de implementar un clúster de macrodatos de SQL Server 2019, [instale pr
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- Extensión de SQL Server 2019 para Azure Data Studio
+- [Extensión de virtualización de datos](../azure-data-studio/data-virtualization-extension.md) para Azure Data Studio
 
 ## <a id="prereqs"></a> Requisitos previos de Kubernetes
 
@@ -193,7 +193,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> Debe utilizar el usuario `root` para la puerta de enlace de Knox con la contraseña anterior. `root` es el único usuario que se admite en esta configuración de autenticación básica (nombre de usuario y contraseña). Para la instancia maestra de SQL Server, el nombre de usuario aprovisionado que se va a usar con la contraseña anterior es `sa`.
+> Debe utilizar el usuario `root` para la puerta de enlace de Knox con la contraseña anterior. `root` es el único usuario que se admite en esta autenticación básica (nombre de usuario y contraseña).
+> Para conectarse a SQL Server con autenticación básica, utilice los mismos valores que las [variables de entorno](#env) AZDATA_USERNAME y AZDATA_PASSWORD. 
 
 
 Después de establecer las variables de entorno, debe ejecutar `azdata bdc create` para desencadenar la implementación. En este ejemplo se usa el perfil de configuración de clúster creado anteriormente:

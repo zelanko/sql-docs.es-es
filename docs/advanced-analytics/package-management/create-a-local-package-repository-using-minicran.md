@@ -3,19 +3,19 @@ title: Creación de un repositorio con miniCRAN
 description: Obtenga información sobre cómo instalar paquetes de R sin conexión mediante el paquete miniCRAN para crear un repositorio local de paquetes y dependencias.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b83a0c016cf16e4df8ef7fcb90b3711eabe4933
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727573"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479472"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Creación de un repositorio de paquetes de R local mediante miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Los repositorios de paquetes son útiles en estos escenarios:
 
 - **Seguridad**: muchos usuarios de R están acostumbrados a descargar e instalar nuevos paquetes de R a discreción, desde CRAN o desde uno de sus sitios reflejados. Sin embargo, por motivos de seguridad, los servidores de producción que ejecutan [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] normalmente no tienen conexión a Internet.
 
-- **Instalación sin conexión más sencilla**: para instalar un paquete en un servidor sin conexión, es necesario que también descargue todas las dependencias de paquete. El uso de miniCRAN hace que sea más fácil obtener todas las dependencias en el formato correcto. Mediante el uso de miniCRAN, puede evitar errores de dependencia de paquetes al preparar paquetes para instalarlos con la instrucción [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+- **Instalación sin conexión más sencilla**: para instalar un paquete en un servidor sin conexión, es necesario que también descargue todas las dependencias de paquete. El uso de miniCRAN hace que sea más fácil obtener todas las dependencias en el formato correcto y evitar errores de dependencia.
 
 - **Administración de versiones mejorada**: en un entorno de varios usuarios, existen buenas razones para evitar la instalación sin restricciones de varias versiones de paquetes en el servidor. Use un repositorio local para proporcionar un conjunto coherente de paquetes para los usuarios.
 
@@ -88,7 +88,7 @@ Después de instalar y cargar **miniCRAN**, cree una lista en que se especifique
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. Cree el repositorio local. Asegúrese de cambiar la versión de R, si es necesario, a la versión instalada en la instancia de SQL Server. Si ha actualizado algún componente, es posible que la versión sea más reciente que la versión original. Para obtener más información, consulte [Obtener información sobre paquetes de R](../package-management/r-package-information.md).
+3. Cree el repositorio local. Asegúrese de cambiar la versión de R, si es necesario, a la versión instalada en la instancia de SQL Server. Si ha actualizado algún componente, es posible que la versión sea más reciente que la versión original. Para más información, vea [Obtener información sobre paquetes de R](../package-management/r-package-information.md).
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -112,6 +112,11 @@ pdb[, c("Package", "Version", "License")]
 
 Una vez que tenga un repositorio local con los paquetes que necesita, mueva el repositorio de paquetes al equipo con SQL Server. En el procedimiento siguiente se describe cómo instalar los paquetes mediante herramientas de R.
 
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> El método recomendado para instalar paquetes es usar **sqlmlutils**. Consulte [Instalación de nuevos paquetes de R con sqlmlutils](install-additional-r-packages-on-sql-server.md).
+::: moniker-end
+
 1. Copie la carpeta que contiene el repositorio de miniCRAN, en su totalidad, en el servidor donde va a instalar los paquetes. Normalmente, la carpeta tiene esta estructura: 
 
    `<miniCRAN root>/bin/windows/contrib/version/<all packages>`
@@ -124,7 +129,7 @@ Una vez que tenga un repositorio local con los paquetes que necesita, mueva el r
    - Por ejemplo, la ubicación de archivo predeterminada para RGUI es `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
    - Por ejemplo, la ubicación de archivo para RGUI es `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
@@ -187,7 +192,7 @@ Una vez que tenga un repositorio local con los paquetes que necesita, mueva el r
     installed.packages()
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [Obtención de información de paquetes de R](../package-management/r-package-information.md)
 + [Tutoriales de R](../tutorials/sql-server-r-tutorials.md)

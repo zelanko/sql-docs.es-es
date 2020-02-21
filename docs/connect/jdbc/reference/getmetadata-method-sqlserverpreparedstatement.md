@@ -16,10 +16,10 @@ ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbc0a0493498f3d216c9e1395f651d8afec70711
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981863"
 ---
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>Método getMetaData (SQLServerPreparedStatement)
@@ -35,13 +35,13 @@ public final java.sql.ResultSetMetaData getMetaData()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto ResultSetMetaData.  
+ Un objeto ResultSetMetaData.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getMetaData lo especifica el método getMetaData en la interfaz java. SQL. PreparedStatement.  
+## <a name="remarks"></a>Observaciones  
+ El método getMetaData especifica este método getMetaData en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

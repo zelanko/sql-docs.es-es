@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d553d991bd07785a6a6a7592cee38a1e66badf29
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73723711"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479388"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implementación del modelo de R y su uso en SQL Server (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ Cree un procedimiento almacenado, *PredictTipBatchMode*, que genere varias predi
 
     + Use una instrucción SELECT para llamar al modelo almacenado desde una tabla SQL. El modelo se recupera de la tabla como datos **varbinary(max)** , se almacena en la variable SQL _\@lmodel2_ y se pasa como parámetro *mod* al procedimiento almacenado del sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Los datos que se usan como entradas de la puntuación se definen como una consulta SQL y se almacenan como una cadena en la variable SQL _\@input_. A medida que se recuperan datos de la base de datos, se van almacenando en una trama de datos llamada *InputDataSet*, que es sencillamente el nombre predeterminado de los datos de entrada en el procedimiento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Si lo necesita, puede establecer otro nombre de variable con el parámetro *_\@input_data_1_name_* .
+    + Los datos que se usan como entradas de la puntuación se definen como una consulta SQL y se almacenan como una cadena en la variable SQL _\@input_. A medida que se recuperan datos de la base de datos, se van almacenando en una trama de datos llamada *InputDataSet*, que es sencillamente el nombre predeterminado de los datos de entrada en el procedimiento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Si lo necesita, puede establecer otro nombre de variable con el parámetro _\@input_data_1_name_.
 
     + Para generar las puntuaciones, el procedimiento almacenado llama a la función rxPredict de la biblioteca **RevoScaleR**.
 

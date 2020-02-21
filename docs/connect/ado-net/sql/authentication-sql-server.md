@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: eb528eb1045788469b0eb31491fd654997831468
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 115b4810fbe890862dfb63e278a583b3e12dbf54
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452312"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250887"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticación en SQL Server
 
@@ -25,7 +25,7 @@ ms.locfileid: "72452312"
 
 SQL Server admite dos modos de autenticación, el modo de autenticación de Windows y el modo mixto.  
   
-- La autenticación de Windows es el modo predeterminado y a veces se le conoce como seguridad integrada porque este modelo de seguridad de SQL Server está estrechamente integrado en Windows. Se confía en las cuentas de usuario y Grupo específicas de Windows para iniciar sesión en SQL Server. Los usuarios de Windows que ya se han autenticado no tienen que presentar credenciales adicionales.  
+- La autenticación de Windows es el modo predeterminado y a veces se le conoce como seguridad integrada porque este modelo de seguridad de SQL Server está estrechamente integrado en Windows. Se confía en las cuentas de usuario y grupo específicas de Windows para iniciar sesión en SQL Server. Los usuarios de Windows que ya se han autenticado no tienen que presentar credenciales adicionales.  
   
 - El modo mixto admite la autenticación mediante Windows y SQL Server. Los pares de nombre de usuario y contraseña se mantienen en SQL Server.  
   
@@ -66,7 +66,7 @@ SQL Server admite tres tipos de inicios de sesión:
   
 - Una cuenta de usuario local de Windows o una cuenta de dominio de confianza. SQL Server se basa en Windows para autenticar las cuentas de usuario de Windows.  
   
-- Grupo de Windows. La concesión de acceso a un grupo de Windows concede acceso a todos los inicios de sesión de usuario de Windows que son miembros del grupo.  
+- Grupo de Windows. La concesión de acceso a un grupo de Windows otorga acceso a todos los inicios de sesión de usuario de Windows que son miembros del grupo.  
   
 - Inicio de sesión de SQL Server. SQL Server almacena el nombre de usuario y un hash de la contraseña en la base de datos master mediante métodos de autenticación internos para comprobar los intentos de inicio de sesión.  
   
@@ -80,12 +80,12 @@ Si tiene que usar la autenticación de modo mixto, debe crear inicios de sesión
 > SQL Server se instala con un inicio de sesión de SQL Server denominado `sa` (una abreviatura de "administrador del sistema"). Asigne una contraseña segura al inicio de sesión de `sa` y no use el inicio de sesión `sa` en la aplicación. El inicio de sesión de `sa` se asigna al rol fijo de servidor `sysadmin`, que tiene credenciales administrativas irrevocables en todo el servidor. No hay límites para los posibles daños si un atacante obtiene acceso como administrador del sistema. Todos los miembros del grupo `BUILTIN\Administrators` de Windows (el grupo de administradores locales) son miembros del rol `sysadmin` de forma predeterminada, pero se pueden quitar de ese rol.  
   
 > [!IMPORTANT]
-> La concatenación de cadenas de conexión a partir de datos proporcionados por el usuario puede dejar vulnerable a un ataque de inyección de cadenas de conexión. Utilice la <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> para crear cadenas de conexión sintácticamente válidas en tiempo de ejecución. 
+> La concatenación de cadenas de conexión a partir de datos proporcionados por el usuario puede dejarle vulnerable ante ataques de inyección de cadenas de conexión. Utilice <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> para crear cadenas de conexión sintácticamente válidas en tiempo de ejecución. 
   
 ## <a name="external-resources"></a>Recursos externos  
 Para obtener más información, vea los recursos siguientes.  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |[Entidades de seguridad](../../../relational-databases/security/authentication-access/principals-database-engine.md)|Describe los inicios de sesión y otras entidades de seguridad de SQL Server.|  
   

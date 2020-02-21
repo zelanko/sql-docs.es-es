@@ -16,10 +16,10 @@ ms.assetid: cd9773c1-b598-4adb-aaf6-0c0f589cbef5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18161201976c0a00a4d32989667198cd8998223c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979884"
 ---
 # <a name="getshort-method-int"></a>Método getShort (int)
@@ -35,17 +35,17 @@ public short getShort(int index)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Un valor **int** que indica el índice del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Valor **Short** .  
+ Un valor **short**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getShort especifica este método getShort en la interfaz java.sql.CallableStatement.  
   
  Este método solamente se admite en los tipos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que pueden devolver de forma segura un valor entero como **smallint**, **tinyint** y **bit**. Si se utiliza este método en cualquier otro tipo de datos, provocará una excepción.  

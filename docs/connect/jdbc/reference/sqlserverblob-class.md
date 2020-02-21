@@ -16,10 +16,10 @@ ms.assetid: 88bd8623-889d-4b5d-99ff-c85b32f3ff5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98880980d11775b3c906b6e51a2d9deef50316bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972024"
 ---
 # <a name="sqlserverblob-class"></a>Clase SQLServerBlob
@@ -40,7 +40,7 @@ ms.locfileid: "67972024"
 public class SQLServerBlob  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un objeto BLOB está almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como un tipo de datos IMAGE.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -16,10 +16,10 @@ ms.assetid: bf04fa73-b9f1-4403-b6a0-e53d0d27c671
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c1b6732f5cb22126ad9a102322a88df95606be7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955216"
 ---
 # <a name="datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata"></a>Método dataDefinitionCausesTransactionCommit (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean dataDefinitionCausesTransactionCommit()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método dataDefinitionCausesTransactionCommit se especifica mediante el método dataDefinitionCausesTransactionCommit en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método dataDefinitionCausesTransactionCommit especifica este método dataDefinitionCausesTransactionCommit en la interfaz the java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -16,10 +16,10 @@ ms.assetid: e1367f39-23d7-4e26-b160-6d988d7e6988
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4be0fdbc622b50ffe6e403a0d1bc05e1be7104b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954930"
 ---
 # <a name="execute-method-sqlserverstatement"></a>Método execute (SQLServerStatement)

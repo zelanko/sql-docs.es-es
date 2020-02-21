@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574347"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint de Reporting Services
@@ -26,7 +26,7 @@ En este tema se explica cómo hacer una copia de seguridad y restaurar una aplic
 > [!NOTE]
 > La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
-## <a name="before-you-begin"></a>Antes de comenzar
+## <a name="before-you-begin"></a>Antes de empezar
 
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
 
@@ -63,7 +63,7 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 2.  En el nodo **Servicios compartidos** , expanda **Aplicaciones de servicios compartidos** y seleccione la aplicación de servicio. Tendrá un tipo de **Aplicación del servicio SQL Server Reporting Services**.  
   
-3.  Seleccione **Siguiente**.  
+3.  Seleccione **Next** (Siguiente).  
   
 4.  Escriba la ruta de acceso en **Ubicación de copia de seguridad:** y seleccione **Iniciar copia de seguridad**.  
   
@@ -77,7 +77,7 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Comprobación de la cuenta de ejecución y autenticación de la base de datos
 
- **Cuenta de la ejecución:** para comprobar si la aplicación de servicio utiliza una cuenta de ejecución:  
+ **Cuenta de ejecución:** para comprobar si la aplicación de servicio utiliza una cuenta de ejecución:  
   
 1.  En Administración central de SharePoint, seleccione **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones**.  
   
@@ -87,7 +87,7 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 4.  Si se configura una cuenta de ejecución, tendrá que conocer las credenciales cuando llegue el momento de restaurar una copia de seguridad de la aplicación de servicio. No realice el procedimiento de copia de seguridad y restauración hasta que sepa cuáles son las credenciales correctas.  
   
- **Autenticación de la base de datos:** para comprobar si la aplicación de servicio utiliza la Autenticación de Windows para la autenticación de la base de datos:  
+ **Autenticación de base de datos:** para comprobar si la aplicación de servicio utiliza la Autenticación de Windows para la autenticación de la base de datos:  
   
 1.  En Administración central de SharePoint, seleccione **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones**.  
   
@@ -147,7 +147,7 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 5.  Seleccione **Aceptar**.  
   
- **Autenticación de la base de datos:** si la aplicación de servicio utilizaba la autenticación de Windows para la autenticación de la base de datos, realice el procedimiento siguiente:  
+ **Autenticación de base de datos:** si la aplicación de servicio utilizaba la autenticación de Windows para la autenticación de la base de datos, realice el procedimiento siguiente:  
   
 1.  En Administración central de SharePoint, seleccione **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones**.  
   
@@ -159,6 +159,6 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 5.  Escriba la cuenta y la contraseña. Seleccione **Usar como credenciales de Windows** si procede.  
   
-6.  Seleccione **Aceptar**.
+6.  Seleccione **OK** (Aceptar).
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

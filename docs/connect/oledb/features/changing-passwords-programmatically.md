@@ -1,6 +1,6 @@
 ---
-title: Cambiar las contraseñas mediante programación | Microsoft Docs
-description: Cambiar las contraseñas mediante programación con OLE DB controlador para SQL Server
+title: Cambio de las contraseñas mediante programación | Microsoft Docs
+description: Cambio de las contraseñas mediante programación con OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989133"
 ---
 # <a name="changing-passwords-programmatically"></a>Cambiar las contraseñas mediante programación
@@ -32,7 +32,7 @@ ms.locfileid: "67989133"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  En versiones anteriores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], cuando expiraba una contraseña de usuario, solo el administrador podía restablecerla. A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]de, OLE DB driver for SQL Server admite la administración de la expiración de contraseña mediante programación a través de OLE DB controlador y los cambios en los cuadros de diálogo **SQL Server inicio de sesión** .  
+  En versiones anteriores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], cuando expiraba una contraseña de usuario, solo el administrador podía restablecerla. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], OLE DB Driver for SQL Server permite administrar la expiración de contraseñas mediante programación a través del proveedor OLE DB Driver y a través de los cambios en los cuadros de diálogo **Inicio de sesión de SQL Server**.  
   
 > [!NOTE]  
 >  Cuando sea posible, solicite a los usuarios que escriban las credenciales en tiempo de ejecución y eviten almacenarlas en un formato guardado. Si tiene que conservar las credenciales, debe cifrarlas con la [API de cifrado de Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Para obtener más información sobre el uso de contraseñas seguras, vea [Contraseñas seguras](../../../relational-databases/security/strong-passwords.md).  
@@ -42,18 +42,18 @@ ms.locfileid: "67989133"
   
 |Código de error de SQL Server|Mensaje de error|  
 |---------------------------|-------------------|  
-|15113|Error de inicio de sesión del usuario '%. * ls'. Motivo: error de validación de contraseña. Se ha bloqueado la cuenta.|  
-|18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no se puede utilizar en este momento.|  
-|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
-|18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
-|18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
-|18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
-|18468|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. Error inesperado durante la validación de la contraseña.|  
-|18487|Error de inicio de sesión del usuario '%.*ls'. Motivo: la contraseña de la cuenta expiró.|  
-|18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: se debe cambiar la contraseña de la cuenta.|  
+|15113|Error de inicio de sesión del usuario "%.*ls" Motivo: Error de validación de contraseña. Se ha bloqueado la cuenta.|  
+|18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no se puede utilizar en este momento.|  
+|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
+|18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
+|18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
+|18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
+|18468|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. Error inesperado durante la validación de la contraseña.|  
+|18487|Error de inicio de sesión del usuario '%.*ls'. Motivo: La contraseña de la cuenta expiró.|  
+|18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: Se debe cambiar la contraseña de la cuenta.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Controlador OLE DB para SQL Server  
- El controlador de OLE DB para SQL Server admite la expiración de contraseña a través de una interfaz de usuario y mediante programación.  
+ OLE DB Driver for SQL Server admite la expiración de contraseñas a través de una interfaz de usuario y mediante programación.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Expiración de contraseñas de la interfaz de usuario de OLE DB  
  El controlador OLE DB para SQL Server admite la expiración de contraseñas mediante los cambios realizados en los cuadros de diálogo **Inicio de sesión de SQL Server**. Si el valor de DBPROP_INIT_PROMPT está establecido en DBPROMPT_NOPROMPT, se producirá un error en el intento de conexión inicial si la contraseña ha expirado.  
@@ -89,7 +89,7 @@ ms.locfileid: "67989133"
   
  Si el intento de cambiar la contraseña produce un error inesperadamente, el servidor devuelve el código de error 18468. Se devuelve un error OLEDB estándar del intento de conexión.  
   
- Para obtener más información sobre el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, consulte [propiedades de inicialización y autorización](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para más información sobre el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, consulte [Propiedades de inicialización y autorización](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
 ## <a name="see-also"></a>Consulte también  

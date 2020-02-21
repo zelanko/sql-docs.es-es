@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140380"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activar o desactivar las características de Reporting Services
@@ -96,7 +96,7 @@ ms.locfileid: "67140380"
   
 ##  <a name="WebPortal"></a> Portal web
   
-A partir de SQL Server 2016 Reporting Services actualización acumulativa 2, el portal web siempre estará habilitado.
+A partir de la Actualización acumulativa 2 de SQL Server 2016 Reporting Services, el portal web siempre estará habilitado.
   
 ##  <a name="WinIntSec"></a> Seguridad integrada de Windows  
   
@@ -114,7 +114,7 @@ A partir de SQL Server 2016 Reporting Services actualización acumulativa 2, el 
   
 4.  Seleccione **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Administrador de configuración de Reporting Services (modo nativo)](../install-windows/reporting-services-configuration-manager-native-mode.md)
 
  ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

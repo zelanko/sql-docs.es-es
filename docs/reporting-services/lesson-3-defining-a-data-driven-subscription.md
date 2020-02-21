@@ -9,18 +9,18 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826856"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lección 3: Definir una suscripción controlada por datos
 En esta lección del tutorial [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)], usará las páginas de suscripción controlada por datos de los portales web de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para conectarse a un origen de datos de suscripción, crear una consulta que recupere datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  
   
 > [!NOTE]  
 > Antes de empezar, compruebe que el servicio del **Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** esté en ejecución. Si no es así, no podrá guardar la suscripción.  Un método para comprobarlo es abrir el [Administrador de configuración de SQL Server](../relational-databases/sql-server-configuration-manager.md).
-En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, consulte [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, vea [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>Iniciar el Asistente para suscripciones controladas por datos  
   
@@ -33,7 +33,7 @@ En esta lección se supone que completó la lección 1 y la lección 2, y que el
 ## <a name="define-a-description"></a>Definir una descripción  
 1.  Escriba **Entrega de pedido de ventas** en la descripción.
 
-## <a name="type"></a>Escriba
+## <a name="type"></a>Tipo
 1.  Haga clic en **Suscripción controlada por datos**.  
 
 ## <a name="schedule"></a>Programación
@@ -41,10 +41,10 @@ En esta lección se supone que completó la lección 1 y la lección 2, y que el
 2. Haga clic en **Editar programación**.
 3. En **Detalles de programación**, haga clic en **Una vez**.  
 4. Especifique una hora de inicio que sea unos cuantos minutos después de la hora actual.  
-5. Especifique el **las fechas de inicio y finalización**.
+5. Establezca un valor en **Fechas de inicio y finalización**.
 6. Seleccione **Aplicar**.
 
-## <a name="destination"></a>Destino  
+## <a name="destination"></a>Destination  
 1.  En la sección Destino, seleccione **Recurso compartido de archivos de Windows** para el método de entrega.  
 
 ## <a name="dataset"></a>Dataset
@@ -82,13 +82,13 @@ Rellene los siguientes valores:
 Parámetro  |Origen del valor  | Valor/campo  
 ---------|---------|---------
 **Nombre de archivo**     |Obtener valor de conjunto de datos | Pedido de     
-**Ruta de acceso**     | Escribir valor  | En Valor, escriba el nombre de un recurso compartido de archivos público para el que disponga de permisos de escritura (por ejemplo, `\\mycomputer\public\myreports`). 
+**Path**     | Escribir valor  | En Valor, escriba el nombre de un recurso compartido de archivos público para el que disponga de permisos de escritura (por ejemplo, `\\mycomputer\public\myreports`). 
 **Formato de representación** | Obtener valor de conjunto de datos | Formato
 **Modo de escritura**| Escribir valor| Incremento automático    
 **Extensión de archivo** |Escribir valor |True
 **Nombre de usuario** | Escribir valor | Escriba su cuenta de usuario de dominio. Escríbalo con este formato: \<dominio>\\\<cuenta>. La cuenta de usuario tiene que disponer de permisos en la ruta de acceso que ha configurado. 
 **Contraseña** | Escribir valor | Escribir la contraseña
-**Usar cuenta de recurso compartido de archivos** | Escribir valor | False
+**Usar la cuenta de recurso compartido de archivos** | Escribir valor | False
 
 ## <a name="report-parameters"></a>Parámetros de informe
  1. En el campo **OrderNumber** , seleccione **Obtener valor del conjunto de datos**. En Valor, seleccione **Order**. 
@@ -103,13 +103,13 @@ La página de suscripción del portal web contendrá la fecha de **Última ejecu
 > [!NOTE]
 > Actualice la página cuando la suscripción se ejecute para ver la información actualizada.  
     
-![Resultados de la suscripción en el portal web](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "resultados de la suscripción en el portal web")  
+![Resultados de suscripción en el portal web](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Resultados de suscripción en el portal web")  
   
 Con este paso finaliza el tutorial "Definir una suscripción controlada por datos".   
   
 ## <a name="see-also"></a>Consulte también  
 [Suscripciones y entrega &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
 [Suscripciones controladas por datos](../reporting-services/subscriptions/data-driven-subscriptions.md)  
-[Cómo crear, modificar y eliminar suscripciones controladas por datos](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
+[Creación, modificación y eliminación de suscripciones controladas por datos](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
 [Usar un origen de datos externo para obtener información de los suscriptores &#40;suscripción controlada por datos&#41;](../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   

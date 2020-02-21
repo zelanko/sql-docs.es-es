@@ -16,10 +16,10 @@ ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b65281fbe6ba1f758bdd4e12ae834cee3347842
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980051"
 ---
 # <a name="getsearchstringescape-method-sqlserverdatabasemetadata"></a>Método getSearchStringEscape (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public java.lang.String getSearchStringEscape()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getSearchStringEscape se especifica mediante el método getSearchStringEscape en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getSearchStringEscape especifica este método getSearchStringEscape en la interfaz java.sql.DatabaseMetaData.  
   
  Este método solamente se utiliza para las búsquedas de modelos de metadatos. Devuelve "\\". Un modelo de búsqueda **String** puede establecer como caracteres de escape a los caracteres comodín ("%" y "_") y suministrarlos como literales anteponiendo una barra diagonal inversa. Esto convierte "\\%" en "[%]" y "\\\_" en "[\_]".  
   

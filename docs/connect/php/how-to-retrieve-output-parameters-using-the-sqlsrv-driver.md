@@ -1,5 +1,5 @@
 ---
-title: Recuperación de parámetros de salida con el controlador SQLSRV | Microsoft Docs
+title: 'Procedimientos: Recuperación de parámetros de salida con el controlador SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993401"
 ---
-# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Cómo recuperar parámetros de salida con el controlador SQLSRV
+# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procedimientos: Recuperación de los parámetros de salida con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 En este tema se muestra cómo llamar a un procedimiento almacenado en el que se ha definido un parámetro como parámetro de salida. Cuando se recupera un parámetro de salida o uno de entrada/salida, se deben usar todos los resultados que devuelve el procedimiento almacenado antes de que pueda accederse al valor del parámetro devuelto.  
@@ -32,7 +32,7 @@ Puede producirse un truncamiento de datos cuando se utilizan tipos de secuencia,
 En el ejemplo siguiente se llama a un procedimiento almacenado que devuelve las ventas hasta la fecha que ha realizado un determinado empleado. La variable PHP *$lastName* es un parámetro de entrada y *$salesYTD* es un parámetro de salida.  
   
 > [!NOTE]  
-> Al inicializar *$salesYTD* en 0,0, el valor del tipo PHPTYPE devuelto se establece en **float**. Para garantizar la integridad del tipo de datos, los parámetros de salida se deben inicializar antes de llamar al procedimiento almacenado, o bien hay que especificar el tipo PHPTYPE deseado. Para obtener información sobre cómo especificar el tipo PHPTYPE, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+> Al inicializar *$salesYTD* en 0,0, el valor del tipo PHPTYPE devuelto se establece en **float**. Para garantizar la integridad del tipo de datos, los parámetros de salida se deben inicializar antes de llamar al procedimiento almacenado, o bien hay que especificar el tipo PHPTYPE deseado. Para más información sobre cómo especificar el tipo PHPTYPE, consulte [Cómo especificar tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Dado que el procedimiento almacenado solo devuelve un resultado, *$salesYTD* contiene el valor devuelto del parámetro de salida inmediatamente después de ejecutar el procedimiento almacenado.  
   
@@ -120,10 +120,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Al enlazar un parámetro de salida a un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), tendrá que especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. De lo contrario, puede dar como resultado una excepción "valor fuera de intervalo".
+> Al enlazar un parámetro de salida a un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), deberá especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. De lo contrario, puede dar como resultado una excepción "valor fuera del intervalo".
 
 ## <a name="example-2"></a>Ejemplo 2
-En este ejemplo de código se muestra cómo enlazar un valor BIGINT grande como parámetro de salida.  
+En este ejemplo de código se muestra cómo enlazar un valor bigint largo como un parámetro de salida.  
 
 ```
 <?php
@@ -150,9 +150,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Consulte también  
-[Especificación de la dirección del parámetro con el controlador SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Cómo: Especificación de la dirección del parámetro con el controlador SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Recuperación de parámetros de entrada y salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
+[Cómo: Recuperación de los parámetros de entrada y salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
 
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
   

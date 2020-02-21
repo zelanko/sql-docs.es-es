@@ -11,10 +11,10 @@ ms.assetid: 6494300b-7fc0-4076-8311-22d35a96cdc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5891b971bcf6129ec3b5fcec4e9ae8f0301283b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973588"
 ---
 # <a name="setnstring-method-sqlservercallablestatement"></a>Método setNString (SQLServerCallableStatement)
@@ -36,13 +36,13 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
   
  *value*  
   
- Objeto de cadena.  
+ Un objeto String.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método se debe usar para los tipos de datos **nchar**, **nvarchar**, **ntext**y **XML** .  
+## <a name="remarks"></a>Observaciones  
+ Este método se debe usar para los tipos de datos **NCHAR**, **NVARCHAR**, **NTEXT** y **XML**.  
   
  El método setURL especifica este método setNString en la interfaz java.sql.CallableStatement.  
   

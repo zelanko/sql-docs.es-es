@@ -1,5 +1,5 @@
 ---
-title: Usar la agrupación de conexiones | Microsoft Docs
+title: Empleo de agrupación de conexiones | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026373"
 ---
 # <a name="using-connection-pooling"></a>Empleo de agrupación de conexiones
@@ -26,7 +26,7 @@ ms.locfileid: "69026373"
 > [!NOTE]  
 > Aunque el controlador JDBC es compatible con la agrupación de conexiones de Java EE, no proporciona una implementación propia de la agrupación. El controlador se basa en los servidores de aplicación Java de otros fabricantes para administrar las conexiones.  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Las clases para la implementación de la agrupación de conexiones son las siguientes:  
   
@@ -40,6 +40,6 @@ Las clases para la implementación de la agrupación de conexiones son las sigui
 > [!NOTE]  
 > El controlador JDBC no llama al procedimiento almacenado sp_reset_connection al devolver la conexión al grupo. En su lugar, el controlador se basa en servidores de aplicaciones Java para devolver las conexiones a su estado original.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

@@ -13,16 +13,16 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826894"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Servidor de informes de Reporting Services (modo nativo)
   Un servidor de informes configurado para el modo nativo se ejecuta como un servidor de aplicaciones que proporciona todas las funcionalidades de procesamiento y administración exclusivamente a través de los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el portal web para administrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] informes. Use el administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para administrar un servidor de informes en modo nativo.  
+ Puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el portal web para administrar informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Use el administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para administrar un servidor de informes en modo nativo.  
   
  Si el servidor de informes está configurado para el modo de SharePoint, debe usar las páginas de administración de contenido del sitio de SharePoint para administrar informes, orígenes de datos compartidos y otros elementos del servidor de informes.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66826894"
 |Cargar|Todos los archivos se cargan como recursos excepto los archivos de definición de informe (.rdl) y los de modelo de informe (.smdl).<br /><br /> Para cargar un recurso, debe usar el portal web si el servidor de informes se ejecuta en modo nativo o una página de aplicación de un sitio de SharePoint si el servidor se ejecuta en el modo integrado con SharePoint. Para más información, vea [Cargar un archivo o un informe en el servidor de informes](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) o [Cargar documentos en una biblioteca de SharePoint &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publicar|Todos los archivos de un proyecto se cargan como recursos salvo los archivos de origen de datos .rdl, .smdl y .rds. Para publicar un recurso, agregue un elemento existente a un proyecto en el Diseñador de informes y, a continuación, publique el proyecto en un servidor de informes.|  
   
- Todos los recursos se originan como archivos en un sistema de archivos, que se cargan posteriormente en un servidor de informes. No existen restricciones en los tipos de archivos que se puede cargar, hasta 1 GB de tamaños de archivos. Sin embargo, cuando se publica en un servidor de informes como un recurso, los tipos de archivos que tienen tipos MIME equivalentes resultan más óptimos que otros. Por ejemplo, los recursos que se basan en archivos HTML o JPG se abren en una ventana de explorador cuando el usuario hace clic en el recurso, representándose el archivo HTML como una página web y el archivo JPG como una imagen que el usuario puede ver. Por el contrario, los recursos que no tienen tipos MIME equivalentes, como archivos de aplicación de escritorio, por ejemplo, no se pueden representar en la ventana del explorador.  
+ Todos los recursos se originan como archivos en un sistema de archivos, que se cargan posteriormente en un servidor de informes. No existen restricciones en cuanto a los tipos de archivos que se pueden cargar y los tamaños de archivo son de hasta 1 GB. Sin embargo, cuando se publica en un servidor de informes como un recurso, los tipos de archivos que tienen tipos MIME equivalentes resultan más óptimos que otros. Por ejemplo, los recursos que se basan en archivos HTML o JPG se abren en una ventana de explorador cuando el usuario hace clic en el recurso, representándose el archivo HTML como una página web y el archivo JPG como una imagen que el usuario puede ver. Por el contrario, los recursos que no tienen tipos MIME equivalentes, como archivos de aplicación de escritorio, por ejemplo, no se pueden representar en la ventana del explorador.  
   
  Si un recurso puede ser visto o no por los usuarios de los informes depende de las opciones de visualización del explorador. Dado que los recursos no se procesan por el servidor de informes, el explorador debe proporcionar la capacidad de visualización para representar un tipo MIME concreto. Si el explorador no puede representar el contenido, los usuarios que vean el recurso solamente podrán ver las propiedades generales del recurso.  
   
@@ -104,8 +104,8 @@ ms.locfileid: "66826894"
   
  Para usar un recurso de imagen de un informe, agregue el archivo de imagen al proyecto y publíquelo junto con el informe. Una vez publicada la imagen, puede actualizar la referencia de la imagen en el informe de manera que señale al recurso del servidor de informes y, a continuación, vuelva a publicar únicamente el informe para guardar sus cambios. Puede actualizar ahora la imagen posteriormente con independencia del informe volviendo a publicar el recurso. El informe usa la versión más actual de la imagen disponible en el servidor de informes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Solucionar problemas en una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [Solución de problemas en una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   

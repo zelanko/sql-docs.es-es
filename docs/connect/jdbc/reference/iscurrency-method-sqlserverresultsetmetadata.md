@@ -16,10 +16,10 @@ ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33d21e8bfe8a774d8b5b21584ba9fd3f02246f4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977684"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>Método isCurrency (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public boolean isCurrency(int column)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método isCurrency se especifica mediante el método isCurrency de la interfaz java. SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método isCurrency especifica este método isCurrency en la interfaz java.sql.ResultSetMetaData.  
   
  Este método solamente devolverá **true** con tipos de datos money y smallmoney de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

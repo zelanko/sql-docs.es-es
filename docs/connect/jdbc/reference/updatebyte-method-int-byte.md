@@ -16,10 +16,10 @@ ms.assetid: e635d789-9218-488e-a213-2e3e09635acc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da7c1c07537ebd9cb258bbd2eba9c2e8718bfe40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996936"
 ---
 # <a name="updatebyte-method-int-byte"></a>Método updateByte (int, byte)
@@ -36,7 +36,7 @@ public void updateByte(int index,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Valor **int** que indica el índice de la columna.  
   
@@ -47,7 +47,7 @@ public void updateByte(int index,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateByte especifica este método updateByte en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

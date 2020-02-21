@@ -16,10 +16,10 @@ ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c91b965498c0b617a02c7707e369a2ba61c0065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976153"
 ---
 # <a name="preparestatement-method-javalangstring"></a>Método prepareStatement (java.lang.String)
@@ -38,13 +38,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql)
 Un valor **String** que contiene la instrucción SQL.
 
 ## <a name="return-value"></a>Valor devuelto
-Objeto PreparedStatement.
+Un objeto PreparedStatement.
 
 ## <a name="exceptions"></a>Excepciones  
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Notas
-Este método prepareStatement se especifica mediante el método prepareStatement en la interfaz java. SQL. Connection.
+## <a name="remarks"></a>Observaciones
+El método prepareStatement especifica este método prepareStatement en la interfaz java.sql.Connection.
 
 ## <a name="see-also"></a>Consulte también
 

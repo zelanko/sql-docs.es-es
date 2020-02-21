@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581249"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planeación del diseño y la implementación de informes | Reporting Services
@@ -46,26 +46,26 @@ En este tema se proporciona información general sobre la compatibilidad de defi
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Compatibilidad del servidor de informes y el esquema RDL  
  Un archivo de definición de informe se puede implementar en un servidor de informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] de las maneras siguientes:  
   
--   **Diseñador de informes** : implemente un informe desde el Diseñador de informes de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Diseñador de informes:** implemente un informe desde el Diseñador de informes de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Generador de informes** : guarde un informe en el servidor de informes desde el Generador de informes.  
+-   **Report Builder:** guarde un informe en el servidor de informes desde Report Builder.  
   
 -   **Portal web:** cargue un informe en un servidor de informes en modo nativo desde el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint** : cargue un informe en un sitio de SharePoint que esté configurado con un servidor de informes en modo de SharePoint.  
+-   **SharePoint:** cargue un informe en un sitio de SharePoint que esté configurado con un servidor de informes en modo de SharePoint.  
 
 ::: moniker-end
   
--   **Mediante programación** : publique un informe mediante programación usando las interfaces de API SOAP en un servidor de informes. Para obtener más información, consulte [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **Mediante programación:** publique un informe mediante programación usando las interfaces de API SOAP en un servidor de informes. Para obtener más información, vea [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  En la tabla siguiente se indica la versión de esquema rdl admitida según la versión del servidor de informes.  
   
 |Versión del servidor de informes|Versión de esquema RDL|  
 |---------------------------|------------------------|  
 |SQL Server 2016|RDL 2016<br /><br />RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000
-|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> o bien<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> o bien<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
   
  Cuando se carga una definición de informe en el servidor de informes o se actualiza un servidor de informes que contiene informes, el servidor de informes conserva la definición de informe en el formato original. **Cuando se usa por primera vez**, el servidor de informes actualiza el informe en la base de datos del servidor de informes a un formato binario que se conserva para vistas posteriores. La definición de informe (.rdl) propiamente dicha no se actualiza.  
@@ -91,7 +91,7 @@ En una implementación en modo de SharePoint, vaya a la biblioteca de documentos
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
 |Generador de informes de SQL Server 2016|Crea RDL 2016<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2016|RDL 2016|SQL Server 2016|
 |Diseñador de informes en SQL Server 2016 Data Tools - Business Intelligence para Microsoft Visual Studio 2015|Crea RDL 2016<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2016|RDL 2016|SQL Server 2016|
-|Diseñador de informes en SQL Server 2014 Data Tools - Business Intelligence para Microsoft Visual Studio 2012<br /><br /> o bien<br /><br /> Diseñador de informes en SQL Server 2012 Data Tools - Business Intelligence para Microsoft Visual Studio 2012<br /><br /> o bien<br /><br /> Diseñador de informes de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, incluido en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Crea RDL 2010<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2010|RDL 2010|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Diseñador de informes en SQL Server 2014 Data Tools - Business Intelligence para Microsoft Visual Studio 2012<br /><br /> Or<br /><br /> Diseñador de informes en SQL Server 2012 Data Tools - Business Intelligence para Microsoft Visual Studio 2012<br /><br /> Or<br /><br /> Diseñador de informes de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, incluido en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Crea RDL 2010<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2010|RDL 2010|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Diseñador de informes de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Crea RDL 2010<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2010|RDL 2010|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Diseñador de informes de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Crea RDL 2008<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2008|RDL 2008|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|
   
@@ -106,10 +106,10 @@ En una implementación en modo de SharePoint, vaya a la biblioteca de documentos
   
 |Control ReportViewer del producto|Versión de RDL para la vista previa local|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>o bien<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> o bien<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> o bien<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|RDL 2008|  
-|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> o bien<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|RDL 2005|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>Or<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Or<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|RDL 2008|  
+|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|RDL 2005|  
   
- Para obtener más información, vea:  
+ Para obtener más información, vea lo siguiente:  
   
 -   [Convertir archivos RDLC en archivos RDL](https://msdn.microsoft.com/library/ms252109.aspx)  
   

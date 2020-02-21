@@ -16,10 +16,10 @@ ms.assetid: 363d1008-1396-4fc0-8e27-c9ba2499e7f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f2e6148572d6ec6c7e9b52a704d79e8a9124ccf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977886"
 ---
 # <a name="insertrow-method-sqlserverresultset"></a>Método insertRow (SQLServerResultSet)
@@ -37,8 +37,8 @@ public void insertRow()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método insertRow se especifica mediante el método insertRow en la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método insertRow especifica este método insertRow en la interfaz java.sql.ResultSet.  
   
  Cuando se llama a este método, el cursor debe estar en la fila de inserción. Una vez se llame a este método, el cursor permanece en la fila de inserción y el conjunto de resultados permanece en modo de inserción.  
   

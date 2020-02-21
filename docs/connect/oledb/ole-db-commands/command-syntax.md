@@ -1,6 +1,6 @@
 ---
 title: Sintaxis de comandos | Microsoft Docs
-description: Procedimientos almacenados y sintaxis de comandos
+description: Sintaxis de comandos y procedimientos almacenados
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016121"
 ---
 # <a name="command-syntax"></a>Sintaxis de comandos
@@ -27,7 +27,7 @@ ms.locfileid: "68016121"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador de OLE DB para SQL Server reconoce la sintaxis de comandos especificada por la macro DBGUID_SQL. En el caso del controlador de OLE DB para SQL Server, el especificador indica que una amalgama de ODBC SQL, [!INCLUDE[tsql](../../../includes/tsql-md.md)] ISO y es una sintaxis válida. Por ejemplo, la siguiente instrucción SQL utiliza una secuencia de escape de ODBC SQL para especificar la función de cadena LCASE:  
+  OLE DB Driver for SQL Server reconoce la sintaxis de comando especificada por la macro DBGUID_SQL. Para OLE DB Driver for SQL Server, el especificador indica que una amalgama de ODBC SQL, ISO y [!INCLUDE[tsql](../../../includes/tsql-md.md)] es sintaxis válida. Por ejemplo, la siguiente instrucción SQL utiliza una secuencia de escape de ODBC SQL para especificar la función de cadena LCASE:  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  

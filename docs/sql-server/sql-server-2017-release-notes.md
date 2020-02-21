@@ -11,15 +11,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136484"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de la versión de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-En este artículo se describen las limitaciones y los problemas de SQL Server 2017. Para obtener información relacionada, consulte estos artículos:
+En este artículo se describen las limitaciones y los problemas de SQL Server 2017. Para obtener información relacionada, consulte:
 - [Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notas de la versión de SQL Server en Linux](../linux/sql-server-linux-release-notes.md)
 - [Actualizaciones acumulativas de SQL Server 2017](https://aka.ms/sql2017cu) para más información sobre la versión de la última actualización acumulativa (CU)

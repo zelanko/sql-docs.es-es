@@ -16,10 +16,10 @@ ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b52007528ee5c3d3caaabc83b158e50156b664e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975695"
 ---
 # <a name="rowinserted-method-sqlserverresultset"></a>Método rowInserted (SQLServerResultSet)
@@ -40,13 +40,13 @@ public boolean rowInserted()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- El método RowUpdated especifica este método rowUpdated en la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método rowUpdated especifica este método rowUpdated en la interfaz java.sql.ResultSet.  
   
  El valor que se devuelve depende de si este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) puede detectar inserciones visibles.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]no detecta filas insertadas para ningún tipo de cursor.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no detecta filas insertadas para ningún tipo de cursor.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

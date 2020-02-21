@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581740"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Cambiar leyendas de mapa, escala de colores y reglas asociadas (Generador de informes y SSRS)
@@ -221,7 +221,7 @@ ms.locfileid: "65581740"
   
 2.  Haga clic con el botón derecho en la capa que contenga los datos que desee y luego haga clic en **Regla** de _\<tipo de elemento de mapa>_ .  
   
-3.  Compruebe que esté seleccionado **Visualizar datos mediante el uso de** \<*tipo de regla*>.  
+3.  Compruebe que esté seleccionado **Visualizar datos mediante** \<*tipo de regla*.  
   
 4.  En **Campo de datos**, compruebe que los datos analíticos que está visualizando en la capa están seleccionados.  
   

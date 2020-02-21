@@ -1,6 +1,6 @@
 ---
-title: Usar tipos de datos XML | Microsoft Docs
-description: Usar tipos de datos XML con OLE DB driver for SQL Server
+title: Uso de tipos de datos XML | Microsoft Docs
+description: Uso de tipos de datos XML con OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -31,10 +31,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988791"
 ---
 # <a name="using-xml-data-types"></a>Usar tipos de datos XML
@@ -58,7 +58,7 @@ ms.locfileid: "67988791"
  `INSERT INTO xmltable(xmlcol) VALUES(N'<?xml version="1.0" encoding="UTF-8"?><doc/>')`  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Controlador OLE DB para SQL Server 
- DBTYPE_XML es un nuevo tipo de datos específico de XML en el controlador de OLE DB para SQL Server. Además, puede obtenerse acceso a los datos XML a través de los tipos OLE DB existentes DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT y DBTYPE_IUNKNOWN. Los datos almacenados en columnas de tipo XML pueden recuperarse de una columna de un conjunto de filas del controlador OLE DB para SQL Server con los formatos siguientes:  
+ DBTYPE_XML es un nuevo tipo de datos específico de XML de OLE DB Driver for SQL Server. Además, puede obtenerse acceso a los datos XML a través de los tipos OLE DB existentes DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT y DBTYPE_IUNKNOWN. Los datos almacenados en columnas de tipo XML pueden recuperarse de una columna de un conjunto de filas del controlador OLE DB para SQL Server con los formatos siguientes:  
   
 -   Una cadena de texto  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67988791"
 > [!NOTE]  
 >  En el controlador OLE DB para SQL Server no se incluye un lector SAX, pero el elemento **ISequentialStream** puede pasarse fácilmente a los objetos SAX y DOM en MSXML.  
   
- Para recuperar documentos XML de gran tamaño, es necesario usar el elemento **ISequentialStream**. Las mismas técnicas que se usan para otros tipos de valores grandes también se aplican a XML. Para obtener más información, vea [usar tipos de valor grande](../../oledb/features/using-large-value-types.md).  
+ Para recuperar documentos XML de gran tamaño, es necesario usar el elemento **ISequentialStream**. Las mismas técnicas que se usan para otros tipos de valores grandes también se aplican a XML. Para más información, consulte [Usar tipos de valor grande](../../oledb/features/using-large-value-types.md).  
   
  Una aplicación también puede recuperar, insertar o actualizar datos almacenados en columnas de tipo XML de un conjunto de filas mediante las interfaces habituales, como **IRow::GetColumns**, **IRowChange::SetColumns** e **ICommand::Execute**. Al igual que ocurre en la recuperación, un programa de aplicación puede pasar una cadena de texto o una interfaz **ISequentialStream** al controlador OLE DB para SQL Server.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "67988791"
 |DBTYPE_BYTES|Paso a través<sup>6,7</sup>|N/D<sup>2</sup>|Correcto<sup>11, 6</sup>|N/D <sup>2</sup>|  
 |DBTYPE_WSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_BSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
-|DBTYPE_STR|CORRECTO<sup>6, 9, 10</sup>|N/D <sup>2</sup>|Correcto<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
+|DBTYPE_STR|Correcto<sup>6, 9, 10</sup>|N/D <sup>2</sup>|Correcto<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Flujo de bytes mediante **ISequentialStream**<sup>7</sup>|N/D <sup>2</sup>|Flujo de bytes mediante **ISequentialStream**<sup>11</sup>|N/D <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Paso a través<sup>6,7</sup>|N/D <sup>2</sup>|N/D|N/D <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
@@ -125,7 +125,7 @@ ms.locfileid: "67988791"
   
  Las conversiones de datos que proporcionan los servicios principales de OLE DB (**IDataConvert**) no pueden aplicarse en DBTYPE_XML.  
   
- La validación se lleva a cabo cuando los datos se envían al servidor. La aplicación debe controlar la validación del lado cliente y los cambios de codificación. Se recomienda que no procese los datos XML directamente, sino que en su lugar debe usar un lector DOM o SAX para procesarlo.  
+ La validación se lleva a cabo cuando los datos se envían al servidor. La aplicación debe controlar la validación del lado cliente y los cambios de codificación. Se recomienda no procesar los datos XML directamente, sino que en su lugar debe usar un lector DOM o SAX para procesarlos.  
   
  DBTYPE_NULL y DBTYPE_EMPTY pueden enlazarse en parámetros de entrada, pero no en parámetros de salida ni en resultados. Cuando se enlazan para parámetros de entrada, el estado debe establecerse en DBSTATUS_S_ISNULL o DBSTATUS_S_DEFAULT.  
   
@@ -134,24 +134,24 @@ ms.locfileid: "67988791"
  DBTYPE_IUNKNOWN es un enlace compatible (como se mostraba en la tabla anterior), pero no hay ninguna conversión entre DBTYPE_XML y DBTYPE_IUNKNOWN. DBTYPE_IUNKNOWN no puede usarse con DBTYPE_BYREF.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Adiciones y cambios en los conjuntos de filas de OLE DB  
- OLE DB controlador para SQL Server agrega nuevos valores o cambios a muchos de los conjuntos de filas de esquema de OLE DB principales.  
+ OLE DB Driver for SQL Server agrega nuevos valores o cambios a muchos de los conjuntos de filas de esquema básicos de OLE DB.  
   
-#### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Los conjuntos de filas de esquema COLUMNS y PROCEDURE_PARAMETERS  
+#### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Los conjuntos de filas de esquema COLUMNS y PROCEDURE_PARAMETERS  
  En las adiciones a los conjuntos de filas de esquema COLUMNS y PROCEDURE_PARAMETERS, se incluyen las columnas siguientes:  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nombre del catálogo donde se define una colección de esquemas XML. Es NULL para una columna no XML o una columna XML sin tipo.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nombre de un esquema donde se define una colección de esquemas XML. Es NULL para una columna no XML o una columna XML sin tipo.|  
 |SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|Nombre de la colección de esquemas XML. Es NULL para una columna no XML o una columna XML sin tipo.|  
   
-#### <a name="the-providertypes-schema-rowset"></a>El conjunto de filas de esquema PROVIDER_TYPES  
+#### <a name="the-provider_types-schema-rowset"></a>El conjunto de filas de esquema PROVIDER_TYPES  
  En el conjunto de filas de esquema PROVIDER_TYPES, el valor de COLUMN_SIZE es 0 para el tipo de datos **xml** y DATA_TYPE es DBTYPE_XML.  
   
-#### <a name="the-ssxmlschema-schema-rowset"></a>El conjunto de filas de esquema SS_XMLSCHEMA  
+#### <a name="the-ss_xmlschema-schema-rowset"></a>El conjunto de filas de esquema SS_XMLSCHEMA  
  Se ha introducido un nuevo conjunto de filas de esquema SS_XMLSCHEMA para que los clientes recuperen información del esquema XML. El conjunto de filas SS_XMLSCHEMA contiene las columnas siguientes:  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catálogo al que pertenece una colección XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Esquema al que pertenece una colección XML.|  
@@ -166,9 +166,9 @@ ms.locfileid: "67988791"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Adiciones y cambios en los conjuntos de propiedades de OLE DB  
- OLE DB controlador para SQL Server agrega nuevos valores o cambios a muchos de los conjuntos de propiedades de OLE DB principales.  
+ OLE DB Driver for SQL Server agrega nuevos valores o cambios a muchos de los conjuntos de propiedades básicos de OLE DB.  
   
-#### <a name="the-dbpropsetsqlserverparameter-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER  
+#### <a name="the-dbpropset_sqlserverparameter-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER  
  Para admitir el tipo de datos **xml** mediante OLE DB, el controlador OLE DB para SQL Server implementa el nuevo conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER, que contiene los valores siguientes.  
   
 |Nombre|Tipo|Descripción|  
@@ -177,7 +177,7 @@ ms.locfileid: "67988791"
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nombre de un esquema XML de la colección de esquemas. Una de las partes del identificador de nombre de tres partes de SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|Nombre de la colección de esquemas XML del catálogo. Una de las partes del identificador de nombre de tres partes de SQL.|  
   
-#### <a name="the-dbpropsetsqlservercolumn-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN  
+#### <a name="the-dbpropset_sqlservercolumn-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN  
  Para admitir la creación de tablas en la interfaz **ITableDefinition**, el controlador OLE DB para SQL Server agrega las siguientes tres nuevas columnas al conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.  
   
 |Nombre|Tipo|Descripción|  
@@ -189,7 +189,7 @@ ms.locfileid: "67988791"
  Al igual que los valores de SSPROP_PARAM, todas estas propiedades son opcionales y su valor predeterminado es una cadena vacía. SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME y SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME solo pueden especificarse si se especifica SSPROP_COL_XML_SCHEMACOLLECTIONNAME. Al pasar XML al servidor, si se incluyen estos valores se comprueba su existencia (validez) en la base de datos actual y los datos de instancia se comprueban en el esquema. En todos los casos, para ser válidos, deben estar todos vacíos o todos rellenos.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Adiciones y cambios en las interfaces de OLE DB  
- OLE DB controlador para SQL Server agrega nuevos valores o cambios a muchas de las interfaces de OLE DB principales.  
+ OLE DB Driver for SQL Server agrega nuevos valores o cambios a muchas de las interfaces básicas de OLE DB.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>La interfaz ISSCommandWithParameters  
  Para admitir el tipo de datos **xml** mediante OLE DB, el controlador OLE DB para SQL Server implementa diversos cambios, incluida la adición de la interfaz [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md). Esta nueva interfaz hereda de la interfaz OLE DB básica **ICommandWithParameters**. Además de los tres métodos heredados de **ICommandWithParameters**, **GetParameterInfo**, **MapParameterNames** y **SetParameterInfo**, **ISSCommandWithParameters** proporciona los métodos [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) y [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md), que se usan para administrar tipos de datos específicos del servidor.  
@@ -200,7 +200,7 @@ ms.locfileid: "67988791"
 #### <a name="the-icolumnsrowset-interface"></a>La interfaz IColumnsRowset  
  El controlador OLE DB para SQL Server agrega las siguientes columnas específicas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al conjunto de filas devueltas por el método **IColumnRowset::GetColumnsRowset**. Estas columnas contienen el nombre de tres partes de una colección de esquemas XML. Para las columnas que no son XML o las columnas XML sin tipo, las tres columnas toman el valor predeterminado NULL.  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catálogo al que pertenece una colección de esquemas XML.<br /><br /> De lo contrario, NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Esquema al que pertenece una colección de esquemas XML. De lo contrario, NULL.|  
@@ -231,6 +231,6 @@ ms.locfileid: "67988791"
   
 ## <a name="see-also"></a>Consulte también  
  [Características del controlador OLE DB para SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [OLE DB &#40;ISSCommandWithParameters&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Blobs y objetos OLE | Microsoft Docs
+title: BLOB y objetos OLE | Microsoft Docs
 description: BLOB y objetos OLE
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988673"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB y objetos OLE
@@ -28,9 +28,9 @@ ms.locfileid: "67988673"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server expone la interfaz **ISequentialStream** para admitir el acceso del consumidor a tipos de datos xml y **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** y **varbinary(max)** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como objetos binarios grandes (BLOB). El método **Read** de **ISequentialStream** permite al consumidor recuperar muchos datos en fragmentos fáciles de administrar.  
+  OLE DB Driver for SQL Server expone la interfaz **ISequentialStream** para admitir el acceso del consumidor a tipos de datos xml y **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** y **varbinary(max)** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como objetos binarios grandes (BLOB). El método **Read** de **ISequentialStream** permite al consumidor recuperar muchos datos en fragmentos fáciles de administrar.  
   
- Para ver un ejemplo en el que se muestra esta característica, vea [set Large Data &#40;&#41;OLE DB](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Para obtener un ejemplo que muestra esta característica, consulte [Establecimiento de datos grandes &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  El controlador OLE DB para SQL Server puede usar una interfaz **IStorage** implementada por el consumidor cuando este proporciona el puntero de interfaz en un descriptor de acceso enlazado para la modificación de datos.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "67988673"
   
 -   Enlazar como DBTYPE_IUNKNOWN y usar la transmisión por secuencias.  
   
- Si se enlaza a DBTYPE_IUNKNOWN, se utiliza la funcionalidad de flujo de ISequentialStream. El controlador de OLE DB para SQL Server admite parámetros de salida de enlace como DBTYPE_IUNKNOWN para tipos de datos de valores grandes. Esto es para admitir escenarios en los que un procedimiento almacenado devuelve estos tipos de datos como valores devueltos, que se devolverán como DBTYPE_IUNKNOWN al cliente.  
+ Si se enlaza a DBTYPE_IUNKNOWN, se utiliza la funcionalidad de flujo de ISequentialStream. OLE DB Driver for SQL Server admite parámetros de salida de enlace como DBTYPE_IUNKNOWN para tipos de datos de valores grandes. Esto es para admitir escenarios en los que un procedimiento almacenado devuelve estos tipos de datos como valores devueltos, que se devolverán como DBTYPE_IUNKNOWN al cliente.  
   
 ## <a name="storage-object-limitations"></a>Limitaciones de los objetos de almacenamiento  
   
--   El controlador de OLE DB para SQL Server solo puede admitir un único objeto de almacenamiento abierto. Cuando se intenta abrir más de un objeto de almacenamiento (para obtener una referencia en más de un puntero de interfaz **ISequentialStream**), se recibe DBSTATUS_E_CANTCREATE.  
+-   OLE DB Driver for SQL Server solamente puede admitir un único objeto de almacenamiento abierto. Cuando se intenta abrir más de un objeto de almacenamiento (para obtener una referencia en más de un puntero de interfaz **ISequentialStream**), se recibe DBSTATUS_E_CANTCREATE.  
   
 -   En el controlador OLE DB para SQL Server, el valor predeterminado de la propiedad DBPROP_BLOCKINGSTORAGEOBJECTS de solo lectura es VARIANT_TRUE. Por tanto, si un objeto de almacenamiento está activo, algunos métodos (salvo aquellos que están en los objetos de almacenamiento) obtendrán un error con E_UNEXPECTED.  
   

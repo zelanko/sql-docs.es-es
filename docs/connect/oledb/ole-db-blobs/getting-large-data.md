@@ -1,6 +1,6 @@
 ---
-title: Obtención de datos de gran tamaño | Microsoft Docs
-description: Obtención de datos de gran tamaño mediante el controlador de OLE DB para SQL Server
+title: Obtención de datos grandes | Microsoft Docs
+description: Obtención de datos grandes mediante OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936533"
 ---
 # <a name="getting-large-data"></a>Obtener datos grandes
@@ -37,9 +37,9 @@ ms.locfileid: "67936533"
   
 -   ICommand::Execute  
   
- El consumidor solo debería capturar una única fila de datos en una llamada al método **GetNextRows** si la propiedad DBPROP_ACCESSORDER (del grupo de propiedades de conjunto de fila) se establece en DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Esto se debe a que los datos de BLOB no se almacenan en búfer. Si el valor de DBPROP_ACCESSORDER está establecido en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
+ El consumidor solo debería capturar una única fila de datos en una llamada al método **GetNextRows** si la propiedad DBPROP_ACCESSORDER (del grupo de propiedades de conjunto de fila) se establece en DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Esto se debe a que los datos BLOB no están almacenados en el búfer. Si el valor de DBPROP_ACCESSORDER está establecido en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
   
- El controlador de OLE DB para SQL Server no recupera datos grandes desde [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hasta que el consumidor lo solicite. El consumidor debe enlazar todos los datos cortos en un descriptor de acceso y, a continuación, utilizar uno o más descriptores de acceso temporales para recuperar los valores de datos grandes según se precise.  
+ OLE DB Driver for SQL Server no recupera datos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hasta que el consumidor lo solicita. El consumidor debe enlazar todos los datos cortos en un descriptor de acceso y, a continuación, utilizar uno o más descriptores de acceso temporales para recuperar los valores de datos grandes según se precise.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se recupera un valor de datos grandes de una única columna:  

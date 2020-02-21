@@ -9,13 +9,13 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65089659"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lección 6: Agregar grupos y totales (Reporting Services)
 
 En la última lección del tutorial, agregará grupos y totales al informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar y resumir los datos.  
 
@@ -23,12 +23,12 @@ En la última lección del tutorial, agregará grupos y totales al informe de [!
 
 1. Seleccione la pestaña **Diseño**.
 2. Si no ve el panel **Grupos de filas**, haga clic con el botón derecho en la superficie de diseño y seleccione **Ver** >**Agrupar**.
-3. En el panel **Datos de informe**, arrastre el campo `[Date]` al panel **Grupos de filas**. Sitúelo encima de la fila que se muestra como **= (Detalles)** .
+3. En el panel **Datos de informe**, arrastre el campo `[Date]` hasta el panel **Grupos de filas**. Sitúelo encima de la fila que se muestra como **= (Detalles)** .
 
     > [!NOTE]
     > Observe que el identificador de fila ahora tiene un corchete para indicar que se trata de un grupo. La tabla también tiene ahora dos columnas de expresión `[Date]`, una a ambos lados de una línea de puntos vertical.
     >
-    >![Grupo de fecha agregado](media/rs-basictablegroups1design.png "Grupo de fecha agregado")
+    >![grupo de fecha agregado](media/rs-basictablegroups1design.png "grupo de fecha agregado")
 4. En el panel **Datos de informe**, arrastre el campo `[Order]` hasta el panel **Grupos de filas**. Sitúelo debajo de **Date** y encima de **= (Detalles)** .
 
     ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
@@ -58,7 +58,7 @@ En la última lección del tutorial, agregará grupos y totales al informe de [!
 6. En el menú **Formato**, seleccione el cuadrado **Color de fondo** > **Gris claro**.
 7. Seleccione **Aceptar** para aplicar el formato.
 
-   ![Vista Diseño: tabla básica con total de pedidos](media/rs-basictablesumlinetotaldesign.gif "Vista Diseño: tabla básica con total de pedidos")
+   ![Vista de diseño: tabla básica con total general](media/rs-basictablesumlinetotaldesign.gif "Vista de diseño: tabla básica con total general")
 
 ## <a name="add-the-daily-total-to-the-report"></a>Agregar el total diario al informe
 
@@ -68,7 +68,7 @@ En la última lección del tutorial, agregará grupos y totales al informe de [!
 4. En el menú **Formato**, seleccione el cuadrado **Color de fondo** > **Naranja**.
 5. Seleccione **Aceptar** para aplicar el formato.
 
-   ![Establece el color de fondo en anaranjado](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
+   ![Establecer el color de fondo en naranja](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
 
 ## <a name="add-the-grand-total-to-the-report"></a>Agregar el total general al informe
 
@@ -78,7 +78,7 @@ En la última lección del tutorial, agregará grupos y totales al informe de [!
 4. En el menú **Formato**, seleccione el cuadrado **Color de fondo** > **Azul claro**.
 5. Seleccione **Aceptar** para aplicar el formato.
 
-    ![Vista Diseño: total general en tabla básica](media/rs-basictablesumgrandtotaldesign.gif "Vista Diseño: total general en tabla básica")
+    ![Vista de diseño: total general en la tabla básica](media/rs-basictablesumgrandtotaldesign.gif "Vista de diseño: total general en la tabla básica")
 
 ## <a name="preview-the-report"></a>Vista previa del informe
 
@@ -101,15 +101,15 @@ Un paso opcional consiste en publicar el informe completado en el servidor de in
 
     Si ve un mensaje similar al siguiente en la ventana **Salida**, indica que la implementación se realiza correctamente.
 
-    > ------ Compilación iniciada: proyecto: tutorial, configuración: depurar ------  
+    > ------ Compilación iniciada: Proyecto: tutorial, configuración: Debug ------  
     > Omitiendo 'Sales Orders.rdl'. El elemento está actualizado.  
     > Generación completa -- 0 errores, 0 advertencias  
-    > ------ Operación Implementar iniciada: proyecto: tutorial, configuración: depurar ------  
+    > ------ Deploy started: Proyecto: tutorial, configuración: Debug ------  
     > Implementando en `https://[server name]/reportserver`  
     > Implementando el informe '/tutorial/Sales Orders'.  
     > Implementación completa -- 0 errores, 0 advertencias  
-    > ========== Compilar: 1 correctos o actualizados, 0 incorrectos, 0 omitidos==========  
-    > ========== Implementar: 1 correctos, 0 incorrectos, 0 omitidos==========  
+    > ========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
+    > ========== Deploy: 1 con éxito, 0 con errores, 0 omitidos ==========  
 
     Si aparece un mensaje de error similar al siguiente, compruebe que dispone de los permisos apropiados en el servidor de informes y que ha iniciado [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegios de administrador.
     >
@@ -117,7 +117,7 @@ Un paso opcional consiste en publicar el informe completado en el servidor de in
 
 6. Abra un explorador con privilegios de administrador. Por ejemplo, haga clic con el botón derecho en el icono de Internet Explorer y seleccione **Ejecutar como administrador**.
 7. Vaya a la dirección URL del portal web.
-   - Columnas en la tabla de origen capturadas`https://<server name>/reports`
+   - `https://<server name>/reports`.
    - `https://localhost/reports` funciona si está diseñando el informe en el servidor de informes.
 
 8. Seleccione la carpeta Tutorial y, a continuación, seleccione el informe "Sales Orders" para verlo.
@@ -126,6 +126,6 @@ Un paso opcional consiste en publicar el informe completado en el servidor de in
 
 Ha completado correctamente el **tutorial Crear un informe de tabla básico**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)

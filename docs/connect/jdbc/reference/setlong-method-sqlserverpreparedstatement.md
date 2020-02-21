@@ -16,10 +16,10 @@ ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed2fa6801b1d81c209abeadece0f463b489091f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974010"
 ---
 # <a name="setlong-method-sqlserverpreparedstatement"></a>Método setLong (SQLServerPreparedStatement)
@@ -42,12 +42,12 @@ public final void setLong(int n,
   
  *x*  
   
- Un valor **Long** .  
+ Un valor **long**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setLong especifica este método setLong en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  

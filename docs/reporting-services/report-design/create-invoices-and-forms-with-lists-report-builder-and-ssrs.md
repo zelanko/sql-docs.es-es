@@ -9,16 +9,16 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581506"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Crear facturas y formularios con listas (Generador de informes y SSRS)
   Una región de datos de lista se repite con cada grupo o fila del conjunto de datos de informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las listas se pueden utilizar para crear informes o formularios de forma libre, por ejemplo facturas, o conjuntamente con otras regiones de datos. Puede definir listas que contengan cualquier número de elementos de informe. Una lista se puede anidar  
   
- Para empezar a usar listas rápidamente, vea [Tutorial: Crear un informe de forma libre &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Para obtener información acerca de las listas, vea [Tutorial: Creación de un informe de forma libre &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Puede publicar listas por separado de un informe como elementos de informe. Obtenga más información sobre [Elementos de informe (Generador de informes y SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "65581506"
   
  En la ilustración siguiente aparece una lista con información sobre un pedido, incluyendo estos campos: Date, Order, Qty, Product, LineTotal y una imagen.  
   
- ![Lista en vista de diseño, 4 campos y una imagen](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "Lista en vista de diseño, 4 campos y una imagen")  
+ ![Enumerar en vista de diseño, 4 campos y una imagen](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "Enumerar en vista de diseño, 4 campos y una imagen")  
   
  En la vista previa, la lista se repite para mostrar los datos de los campos en el formato de forma libre, como se muestra en la ilustración siguiente:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "65581506"
   
  En la vista previa, una tabla muestra las ventas totales para todas las subcategorías de bicicletas, y la otra muestra el desglose de las ventas por área geográfica. Se usa una expresión para especificar el color de fondo para la tabla y una paleta personalizada para el gráfico; la primera tabla también proporciona la leyenda para los colores del gráfico.  
   
- ![Vista previa, 2 tablas, una con gráfico anidado](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Vista previa, 2 tablas, una con gráfico anidado")  
+ ![Vista previa, dos tablas, una con gráfico anidado](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Vista previa, dos tablas, una con gráfico anidado")  
   
   
 ## <a name="see-also"></a>Consulte también  

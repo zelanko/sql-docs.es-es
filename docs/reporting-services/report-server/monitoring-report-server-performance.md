@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67412654"
 ---
 # <a name="monitoring-report-server-performance"></a>Supervisar el rendimiento del servidor de informes
@@ -72,8 +72,8 @@ SQL Server 2016 Reporting Services o posterior (SSRS) incluye los siguientes obj
   
 |Objeto de rendimiento|Notas|  
 |------------------------|-----------|  
-|**.NET CLR Data** y **.NET CLR Memory**|El portal web usa [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] los contadores de rendimiento. Para obtener más información, vea la página sobre cómo mejorar el rendimiento y la escalabilidad de aplicaciones de .NET en MSDN.|  
-|**Procesar**|Agregue los contadores de rendimiento **Elapsed Time** y **ID Process** para que una instancia de ReportingServicesService realice el seguimiento del tiempo de funcionamiento de un proceso mediante el identificador del proceso.|  
+|**.NET CLR Data** y **.NET CLR Memory**|El portal web utiliza los contadores de rendimiento de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Para obtener más información, vea la página sobre cómo mejorar el rendimiento y la escalabilidad de aplicaciones de .NET en MSDN.|  
+|**Proceso**|Agregue los contadores de rendimiento **Elapsed Time** y **ID Process** para que una instancia de ReportingServicesService realice el seguimiento del tiempo de funcionamiento de un proceso mediante el identificador del proceso.|  
   
 ## <a name="sharepoint-events"></a>Eventos de SharePoint  
  Además de los objetos de rendimiento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , también puede configurar eventos de SharePoint si está ejecutando un servidor de informes en modo integrado de SharePoint y ha configurado el entorno de informes para utilizar un producto de SharePoint. En esta sección, utilice Eventos para un servidor de informes en modo integrado de SharePoint para revisar los eventos de diagnóstico que pueden proporcionar información útil si el entorno de informes está integrado en SharePoint.  
@@ -90,7 +90,7 @@ SQL Server 2016 Reporting Services o posterior (SSRS) incluye los siguientes obj
 
 ::: moniker-end
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  

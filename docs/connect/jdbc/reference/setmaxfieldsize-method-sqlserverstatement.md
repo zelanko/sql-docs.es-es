@@ -16,10 +16,10 @@ ms.assetid: 38f7fc1d-acad-4d10-9fc8-3c0669d93b07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8958ffe76adbea75959dd15f87db58f28f0893b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973999"
 ---
 # <a name="setmaxfieldsize-method-sqlserverstatement"></a>Método setMaxFieldSize (SQLServerStatement)
@@ -42,8 +42,8 @@ public final void setMaxFieldSize(int max)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setMaxFieldSize se especifica mediante el método setMaxFieldSize en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ El método setMaxFieldSize especifica este método setMaxFieldSize en la interfaz java.sql.Statement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

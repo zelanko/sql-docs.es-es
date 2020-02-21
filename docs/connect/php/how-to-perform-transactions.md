@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: realizar transacciones | Microsoft Docs'
+title: 'Procedimientos: Realización de transacciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936436"
 ---
-# <a name="how-to-perform-transactions"></a>Cómo realizar transacciones
+# <a name="how-to-perform-transactions"></a>Procedimientos: Realización de transacciones
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 El controlador SQLSRV de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] proporciona 3 funciones para realizar transacciones:  
@@ -42,7 +42,7 @@ Para ver un ejemplo, consulte [PDO::beginTransaction](../../connect/php/pdo-begi
   
 En el resto del contenido de este tema se explica y muestra cómo usar el controlador SQLSRV para realizar transacciones.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Los pasos para ejecutar una transacción se pueden resumir del siguiente modo:  
   
 1.  Inicie la transacción con **sqlsrv_begin_transaction**.  
@@ -72,7 +72,7 @@ Las consultas posteriores (eliminación del pedido de ventas y actualización de
   
 En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 <?php  
@@ -150,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Comentarios  
-Con el fin de resaltar el comportamiento de las transacciones, en el ejemplo anterior no se incluyen algunos controles de errores recomendados. En el caso de una aplicación de producción, se recomienda comprobar si hay errores en cualquier llamada a una función de **sqlsrv** y controlarlos en consecuencia.
+Con el fin de resaltar el comportamiento de las transacciones, en el ejemplo anterior no se incluyen algunos controles de errores recomendados. En las aplicaciones de producción, se recomienda realizar la comprobación de la posible presencia de errores en todas las llamadas a una función de **sqlsrv** y controlar tales errores del modo pertinente.
   
 ## <a name="see-also"></a>Consulte también  
 [Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

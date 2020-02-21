@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un informe de forma libre (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Creación de un informe de forma libre (Generador de informes) | Microsoft Docs'
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499561"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Crear un informe de forma libre (Generador de informes)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Creación de un informe de forma libre (Report Builder)
 En este tutorial, creará un informe paginado que actúa como un boletín. Cada página muestra texto estático, objetos visuales de resumen y datos de ventas de ejemplo detallados.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -48,23 +48,23 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
 1.  En el panel Datos de informe, haga clic en **Nuevo** > **Origen de datos**.  
   
-2.  En el cuadro **Nombre** , escriba: **ListDataSource**.  
+2.  En el cuadro **Nombre**, escriba: **ListDataSource**  
   
 3.  Haga clic en **Usar una conexión incrustada en mi informe**.  
   
-4.  Compruebe que el tipo de conexión es Microsoft SQL Server y luego en el cuadro **Cadena de conexión**, escriba: **Origen de datos = \<nombre de servidor>** .  
+4.  Compruebe que el tipo de conexión sea Microsoft SQL Server y, luego, en el cuadro **Cadena de conexión** , escriba: **Data Source = \<nombre_de_servidor>**  
   
     **\<nombre de servidor>** , por ejemplo Report001, especifica un equipo en el que se ha instalado una instancia del motor de base de datos de SQL Server. Dado que los datos del informe no se extraen de una base de datos de SQL Server, no necesita incluir el nombre de una base de datos. Para analizar la consulta se usa la base de datos predeterminada en el servidor especificado.  
   
 5.  Haga clic en **Credenciales**e introduzca las credenciales necesarias para conectarse a la instancia del Motor de base de datos de SQL Server.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ### <a name="to-create-a-new-dataset"></a>Para crear un nuevo conjunto de datos  
   
 1.  En el panel Datos de informe, haga clic en **Nuevo** > **Conjunto de datos**.  
   
-2.  En el cuadro **Nombre** , escriba: **ListDataset**.  
+2.  En el cuadro **Nombre**, escriba: **ListDataset**.  
   
 3.  Haga clic en **Usar un conjunto de datos insertado en el informe**y compruebe que el origen de datos es **ListDataSource**.  
   
@@ -215,7 +215,7 @@ Puede agregar cuadros de texto para mostrar texto estático que se repite en cad
     *  **20 pt**.
     *  **Tomate**.  
   
-9. Coloque el cursor debajo del texto que ha escrito en el paso 3 y escriba: **Hola,** con un espacio después para separar el texto y el campo que se va a agregar en el paso siguiente.  
+9. Coloque el cursor debajo del texto que escribió en el paso 3 y escriba: **Hello** con un espacio después de la palabra, para separar el texto del campo que se va a agregar en el paso siguiente.  
  
 10. Arrastre el campo `[FullName]` de ListDataSet en el panel Datos de informe al cuadro de texto y colóquelo después de "Hola," y luego escriba dos puntos (:).  
    
@@ -244,7 +244,7 @@ Puede agregar cuadros de texto para mostrar texto estático que se repite en cad
       *  **10 pt**.
       *  **Negro**.  
  
-20. Coloque el cursor dentro del cuadro de texto, debajo del texto que carece de sentido y escriba: **Felicidades por sus ventas totales de**, con un espacio después de la palabra para separar el texto y el campo que agregará en el paso siguiente. 
+20. Coloque el cursor dentro del cuadro de texto, debajo del texto sin significado, y escriba: **Congratulations on your total sales of** con un espacio después de la palabra, para separar el texto del campo que se va a agregar en el paso siguiente. 
   
 21. Arrastre el campo Sales hasta el cuadro de texto, colóquelo después del texto que ha escrito en el paso anterior y luego escriba un signo de exclamación (!).  
 
@@ -295,15 +295,15 @@ Utilice el nuevo Asistente para tablas y matrices para agregar una tabla al info
   
 5.  Repita el paso 3 para SalesDate, Quantity y Sales. Coloque SalesDate bajo Product, Quantity bajo SalesDate y Sales bajo SalesDate.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Elegir el diseño** , vea el diseño de la tabla.  
   
     La tabla es simple: cinco columnas sin grupos de filas o columnas. Dado que no tiene ningún grupo, las opciones de diseño relacionadas con los grupos no están disponibles. Actualizará manualmente la tabla para incluir un total en una fase posterior del tutorial.  
   
-8.  Haga clic en **Siguiente**.  
+8.  Haga clic en **Next**.  
   
-9. Haga clic en **Finalizar**.  
+9. Haga clic en **Finalizar**  
   
 11. Arrastre la tabla bajo el cuadro de texto que agregó en la lección 4.  
   
@@ -345,7 +345,7 @@ En este tutorial, guarde el informe en un servidor de informes. Si no tiene acce
   
 4.  En **Nombre**, reemplace el nombre predeterminado por **SalesInformationByTerritory**.  
   
-5.  Haga clic en **Guardar**.  
+5.  Haga clic en **Save**(Guardar).  
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
@@ -357,7 +357,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 3.  En **Nombre**, reemplace el nombre predeterminado por **SalesInformationByTerritory**.  
   
-4.  Haga clic en **Guardar**.  
+4.  Haga clic en **Save**(Guardar).  
   
 ## <a name="Line"></a>7. (Opcional) Agregar una línea para separar áreas del informe  
 Agregue una línea para separar las áreas de editorial y detalles del informe.  
@@ -399,7 +399,7 @@ Los rectángulos le ayudan a controlar cómo se representa el informe. Coloque u
   
 5.  Arrastre Quantity hasta **Valores**y, después, haga clic en **Siguiente**.  
   
-6.  Haga clic en **Finalizar**.  
+6.  Haga clic en **Finalizar**  
   
 8.  Cambie el tamaño del gráfico que aparece en la esquina superior izquierda del informe, para que tenga aproximadamente 2,25 pulgadas de ancho y 3,6 de alto.  
   
@@ -436,7 +436,7 @@ Los rectángulos le ayudan a controlar cómo se representa el informe. Coloque u
   
     Valores se muestra en el eje vertical.  
   
-6.  Haga clic en **Finalizar**.  
+6.  Haga clic en **Finalizar**  
   
     Un gráfico de columnas se agrega a la esquina superior izquierda del informe.  
   
@@ -497,7 +497,7 @@ El informe muestra ahora los datos de ventas resumidos en gráficos circulares y
   
 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 Esto concluye el tutorial sobre cómo crear un informe de forma libre.  
   
 Para obtener más información sobre las listas, consulte: 

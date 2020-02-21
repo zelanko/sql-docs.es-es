@@ -16,10 +16,10 @@ ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17b42f50fe28ba9d727ea6c897280dcd36034038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969889"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>Método storesUpperCaseIdentifiers (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean storesUpperCaseIdentifiers()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método storesUpperCaseIdentifiers se especifica mediante el método storesUpperCaseIdentifiers en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método storesUpperCaseIdentifiers especifica este método storesUpperCaseIdentifiers en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

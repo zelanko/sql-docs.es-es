@@ -1,6 +1,6 @@
 ---
-title: Usar la creación de reflejo de la base de datos | Microsoft Docs
-description: Usar la creación de reflejo de la base de datos con OLE DB controlador para SQL Server
+title: Uso de la creación de reflejo de la base de datos | Microsoft Docs
+description: Uso de la creación de reflejo de la base de datos con OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9d61dfe1441029cfa1b742e3b56021e55764d4eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988870"
 ---
 # <a name="using-database-mirroring"></a>Usar la creación de reflejo de bases de datos
@@ -31,7 +31,7 @@ ms.locfileid: "67988870"
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Se usa [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en su lugar.  
   
  La creación de reflejo de la base de datos, introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], es una solución de software para aumentar la disponibilidad de la base de datos y la redundancia de datos. El controlador OLE DB para SQL Server es compatible de forma implícita con la creación de reflejo de la base de datos, de modo que el desarrollador no necesita escribir ningún código ni tomar ninguna otra medida una vez configurado para la base de datos.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67988870"
  Se puede utilizar un alias al especificar el nombre de la base de datos reflejada.  
   
 > [!NOTE]  
->  Para obtener información acerca de los intentos de conexión inicial y los intentos de reconexión a una base de datos reflejada, vea [conectar clientes a una sesión &#40;de creación de reflejo de la base de datos SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Para más información sobre los intentos de conexión inicial y de reconexión a una base de datos reflejada, consulte [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Consideraciones sobre la programación  
  Cuando el servidor principal genera un error, la aplicación cliente recibe mensajes de error como respuesta a las llamadas a la API que indican que se ha perdido la conexión a la base de datos. Cuando esto sucede, se pierde cualquier cambio no confirmado en la base de datos y se revierte la transacción actual. Si esto se produce, la aplicación debe cerrar la conexión (o liberar el objeto de origen de datos) y volverla a abrir. La conexión se redirige de forma transparente a la base de datos reflejada, que ahora actúa como servidor principal.  
@@ -54,18 +54,18 @@ ms.locfileid: "67988870"
  Cuando se establece una conexión, el servidor principal envía la identidad de su asociado de conmutación por error al cliente que se va a utilizar cuando se produzca la conmutación por error. Si una aplicación intenta establecer una conexión después de producirse un error en el servidor principal, el cliente no conocerá la identidad del asociado de conmutación por error. Para que los clientes tengan la oportunidad de solucionar esta situación, una propiedad de inicialización y una palabra clave de cadena de conexión asociada permiten al cliente especificar por sí solo la identidad del asociado de conmutación por error. El atributo de cliente solamente se utiliza en esta situación; si el servidor principal está disponible, no se utiliza. Si el servidor asociado de conmutación por error proporcionado por el cliente no corresponde a un servidor que actúa como asociado de conmutación por error, el servidor rechaza la conexión. Para que las aplicaciones puedan adaptarse a los cambios de configuración, se puede determinar la identidad del asociado de conmutación por error real inspeccionando el atributo una vez establecida la conexión. Conviene almacenar en la memoria caché la información del asociado para actualizar la cadena de conexión o concebir una estrategia de reintento en caso de que no se consiga establecer una conexión en el primer intento.  
   
 > [!NOTE]  
->  Debe especificar explícitamente la base de datos que va a ser utilizada por una conexión si desea usar esta característica en un nombre del origen de datos (DSN), una cadena de conexión, o un atributo o propiedad de conexión. OLE DB controlador de SQL Server no intentará realizar la conmutación por error en la base de datos del asociado si esto no se hace.  
+>  Debe especificar explícitamente la base de datos que va a ser utilizada por una conexión si desea usar esta característica en un nombre del origen de datos (DSN), una cadena de conexión, o un atributo o propiedad de conexión. OLE DB Driver for SQL Server no intentará realizar la conmutación por error a la base de datos asociada si no se hace esto.  
 >   
 >  La creación de reflejo es una característica de la base de datos. Puede darse el caso de que las aplicaciones que utilizan varias bases de datos no puedan utilizar esta característica.  
 >   
 >  Además, los nombres de servidor no distinguen mayúsculas de minúsculas, pero los nombres de base de datos sí lo hacen. Debe asegurarse, por lo tanto, de utilizar la misma grafía en los nombres de origen de datos (DSN) y en las cadenas de conexión.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Controlador OLE DB para SQL Server  
- El controlador OLE DB para SQL Server admite la creación de reflejo de la base de datos a través de los atributos de conexión y de cadena de conexión. Se ha agregado la propiedad SSPROP_INIT_FAILOVERPARTNER al conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, y la palabra clave **FailoverPartner** es un nuevo atributo de cadena de conexión para DBPROP_INIT_PROVIDERSTRING. Para obtener más información, vea [usar palabras clave de cadena de conexión con OLE DB controlador para SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ El controlador OLE DB para SQL Server admite la creación de reflejo de la base de datos a través de los atributos de conexión y de cadena de conexión. Se ha agregado la propiedad SSPROP_INIT_FAILOVERPARTNER al conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, y la palabra clave **FailoverPartner** es un nuevo atributo de cadena de conexión para DBPROP_INIT_PROVIDERSTRING. Para más información, consulte [Uso de palabras clave de cadena de conexión con OLE DB Driver for SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
  La memoria caché de conmutación por error se mantiene mientras esté cargado el proveedor, que es hasta que se llame a **CoUninitialize** o mientras la aplicación tenga una referencia a algún objeto administrado por el controlador OLE DB para SQL Server como un objeto de origen de datos.  
   
- Para obtener más información acerca del controlador de OLE DB para SQL Server compatibilidad con la creación de reflejo de la base de datos, consulte [propiedades de inicialización y autorización](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para más información acerca de la compatibilidad de OLE DB Driver for SQL Server con la creación de reflejo de la base de datos, consulte [Propiedades de inicialización y autorización](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
  
   
 ## <a name="see-also"></a>Consulte también  

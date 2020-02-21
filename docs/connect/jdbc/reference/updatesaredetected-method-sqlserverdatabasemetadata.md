@@ -16,10 +16,10 @@ ms.assetid: cb541175-d3a5-4bca-b327-64e2270c0df1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93b9fa705f7d3ed00431db9ca5ff507beffc890d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998340"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>Método updatesAreDetected (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean updatesAreDetected(int type)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Tipo*  
+ *type*  
   
  Un valor **int** que indica el tipo de conjunto de resultados, que puede ser uno de los siguientes valores como queda definido en java.sql.ResultSet o SQLServerResultSet:  
   
@@ -63,8 +63,8 @@ public boolean updatesAreDetected(int type)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método updatesAreDetected se especifica mediante el método updatesAreDetected en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ Este método updatesAreDetected se especifica mediante el método updatesAreDetected de la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

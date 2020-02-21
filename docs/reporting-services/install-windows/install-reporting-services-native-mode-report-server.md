@@ -12,10 +12,10 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513662"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalación del servidor de informes en modo nativo de Reporting Services 2016
@@ -86,7 +86,7 @@ Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../include
 |----------|-----------------|  
 |Prefijo|El prefijo predeterminado es HTTP. Si instaló anteriormente un certificado de Capa de sockets seguros (SSL), el programa de instalación intentará crear reservas de direcciones URL que usen el prefijo HTTPS.|  
 |Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes aceptará cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva como el equipo, incluidos `https://<computername>/reportserver`, `https://localhost/reportserver` o `https://<IPAddress>/reportserver`.|  
-|Puerto|El puerto predeterminado es 80. Tenga en cuenta que si utiliza cualquier puerto distinto del 80, tendrá que agregarlo explícitamente a la dirección URL cuando abra una aplicación web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una ventana del explorador.|  
+|Port|El puerto predeterminado es 80. Tenga en cuenta que si utiliza cualquier puerto distinto del 80, tendrá que agregarlo explícitamente a la dirección URL cuando abra una aplicación web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una ventana del explorador.|  
 |Directorio virtual|De forma predeterminada, los directorios virtuales se crean en el formato de ReportServer_\<*nombre_instancia*> para el servicio web del servidor de informes y Reports_\<*nombre_instancia*> para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **reportserver**. Para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], el directorio virtual predeterminado es **reports**.|  
   
  Un ejemplo de cadena de dirección URL completa podría ser el siguiente:  
@@ -134,7 +134,7 @@ Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../include
   
     -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **Configuración del servidor**: si piensa usar la característica de suscripción [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , en la página **Configuración del servidor** , configure el Agente SQL Server en el tipo de inicio **Automático** .   El valor predeterminado es manual.  
+6.  **Configuración del servidor**: si piensa usar la característica de suscripción [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], en la página **Configuración del servidor**, configure el Agente SQL Server en el tipo de inicio **Automático**.   El valor predeterminado es manual.  
   
 7.  Agregue los administradores de SQL Server en la página **Configuración del motor de base de datos** .  
   
@@ -147,7 +147,7 @@ Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../include
   
 9. Reglas de configuración de la característica: compruebe que se han superado las reglas. El asistente para la instalación avanza automáticamente a **Preparado para instalar** si se superan todas las reglas.  En concreto en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], las reglas comprueban que no existan ya un catálogo del servidor de informes ni una base de datos del catálogo temporal.  
   
-10. En la página **Preparado para instalar**, anote la ruta de acceso al archivo de configuración, ya que puede consultarlo más adelante para obtener un buen resumen de la configuración inicial de los servidores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluidos los componentes instalados, las cuentas de servicio y los administradores.  
+10. En la página **Preparado para instalar** , anote la ruta de acceso al archivo de configuración, ya que puede consultarlo más adelante para obtener un buen resumen de la configuración inicial de los servidores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluidos los componentes instalados, las cuentas de servicio y los administradores.  
   
 11. Una vez completado el asistente para la instalación de SQL Server, compruebe la instalación de modo nativo predeterminada con los siguientes pasos básicos.  
   
@@ -155,11 +155,11 @@ Un servidor de informes en modo nativo de [!INCLUDE[ssRSnoversion](../../include
   
     -   Abra el explorador **con privilegios de administrador** y conéctese al [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], por ejemplo `https://localhost/Reports`.  
   
-    -   Abra el explorador con privilegios de administrador y conéctese a la página del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo,  `https://localhost/ReportServer`  
+    -   Abra el explorador con privilegios de administrador y conéctese a la página del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo: `https://localhost/ReportServer`  
   
  Para obtener más información, consulte la sección Nativo de los dos temas siguientes:  
   
- [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
+ [Verificación de una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
  [Solución de problemas en una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
   

@@ -13,10 +13,10 @@ ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492752"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>Configurar las propiedades de ejecución para un informe
@@ -60,24 +60,24 @@ ms.locfileid: "67492752"
   
 Desde [el portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md):  
   
-1. Navegue hasta el informe para el que desea configurar las propiedades de ejecución.  
+1. Navegue al informe para el que desea configurar las propiedades de ejecución.  
   
-2. Haga clic en el informe y seleccione **administrar** en el menú desplegable.
+2. Haga clic con el botón derecho en el informe y seleccione **Administrar** en el menú desplegable.
 
-3. Seleccione el **instantáneas del historial** ficha para mostrar el **instantáneas del historial** página.  
+3. Seleccione la pestaña **Instantáneas del historial** para mostrar la página **Instantáneas del historial**.  
   
-4. Seleccione **programaciones y configuraciones** botón y comprobar **crear instantáneas del historial según una programación** si ya no está seleccionada.
+4. Seleccione el botón **Programaciones y configuración** y active la opción **Crear instantáneas del historial en un programa** si aún no está activada.
   
-5. Seleccione un **programación compartida** o un **programación específica del informe** como se desee.  
+5. Seleccione una **Programación compartida** o **Programación específica del informe** según estime oportuno.  
   
-6. En el **avanzadas** , seleccione deseado **retención** directiva para las instantáneas del historial.  
+6. En la sección **Avanzado**, seleccione la directiva de **Retención** que desee para las instantáneas del historial.  
   
 7. Seleccione **Aplicar**.  
   
    >[!NOTE]
-   >Si desea crear una instantánea inmediatamente, seleccione el **nueva instantánea del historial** botón en lugar de la **programaciones y configuraciones** botón y una instantánea de informe se creará inmediatamente.  
+   >Si desea crear una instantánea inmediatamente, seleccione el botón **Nueva instantánea del historial** en lugar del botón **Programaciones y configuración** y se creará una instantánea de informe inmediatamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Administración de contenido del servidor de informes (modo nativo de SSRS)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Establecimiento de las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   

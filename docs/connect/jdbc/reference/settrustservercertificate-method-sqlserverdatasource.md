@@ -16,10 +16,10 @@ ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd4059c3562d679e4f5f8bfdd133ca69a62c1fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972210"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>Método setTrustServerCertificate (SQLServerDataSource)
@@ -37,9 +37,9 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
 #### <a name="parameters"></a>Parámetros  
  *trustServerCertificate*  
   
- **true** si se debe confiar automáticamente en el certificado de servidor capa de sockets seguros (SSL) cuando el nivel de comunicación se cifra mediante SSL. De lo contrario, se devuelve el valor **False**.  
+ **true** si se confía automáticamente en el certificado de Capa de sockets seguros (SSL) cuando el nivel de comunicación se cifra mediante SSL. De lo contrario, se devuelve el valor **False**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si la propiedad trustServerCertificate se establece en **true**, se confía automáticamente en el certificado SSL de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando el nivel de comunicación está cifrado con SSL. Es decir, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] no validará el certificado SSL de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El valor predeterminado es **false**.  
   
  Si la propiedad trustServerCertificate se establece en **false**, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] validará el certificado SSL del servidor.  

@@ -16,10 +16,10 @@ ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d0d59186e15dc07d1d4e91ac673c456ec592d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952823"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>Método getConcurrency (SQLServerResultSet)
@@ -44,8 +44,8 @@ public int getConcurrency()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getConcurrency se especifica mediante el método getConcurrency de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método getConcurrency especifica este método getConcurrency en la interfaz java.sql.ResultSet.  
   
  El objeto [SQLServerStatementque](../../../connect/jdbc/reference/sqlserverstatement-class.md) creó el conjunto de resultados determina simultaneidad que se utiliza.  
   

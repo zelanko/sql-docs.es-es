@@ -1,5 +1,5 @@
 ---
-title: Envío y recuperación de datos UTF-8 gracias a la compatibilidad integrada con UTF-8 | Microsoft Docs
+title: 'Procedimientos: Envío y recuperación de datos UTF-8 gracias a la compatibilidad integrada con UTF-8 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74d64aa0a5a93587997bc66d064d0c5c47ffb132
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993383"
 ---
-# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Cómo enviar y recuperar datos UTF-8 gracias a la compatibilidad integrada con UTF-8
+# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Procedimientos: Envío y recuperación de datos UTF-8 gracias a la compatibilidad integrada con UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Si está utilizando el controlador PDO_SQLSRV, puede especificar la codificación con el atributo PDO::SQLSRV_ATTR_ENCODING. Para obtener más información, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
@@ -221,7 +221,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>Consulte también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)
 
-[Trabajar con datos ASCII en no Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+[Envío y recuperación de datos ASCII en Linux y Mac OS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 
 [Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 

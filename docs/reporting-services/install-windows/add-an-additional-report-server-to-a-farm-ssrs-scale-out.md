@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225699"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Agregar un servidor de informes adicional a una granja de servidores (escalado horizontal de SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "63225699"
   
 -   (4) Representa una solución de equilibrio de carga de red (NLB) de software o hardware  
   
- ![Adición de un servidor de aplicaciones de Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Adición de un servidor de aplicaciones de Reporting Services")  
+ ![Agregar un servidor de aplicaciones de Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Agregar un servidor de aplicaciones de Reporting Services")  
   
  En los siguientes pasos se supone que un administrador va a instalar y configurar el servidor. El servidor se configurará como un nuevo servidor de aplicaciones de la granja de servidores y no se usa como front-end web (WFE).  
   

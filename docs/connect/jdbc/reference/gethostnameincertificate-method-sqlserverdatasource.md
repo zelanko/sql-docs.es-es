@@ -16,10 +16,10 @@ ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 67978d2597a5167d3930c85ee453dc6d985f021e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982901"
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>Método getHostNameInCertificate (SQLServerDataSource)
@@ -37,7 +37,7 @@ public java.lang.String getHostNameInCertificate()
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto **String** que contiene el nombre de host o el valor NULL si no se establece ningún valor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El nombre de host se utiliza para validar el valor del certificado SSL de SQL cuando el nivel de comunicación se cifra mediante SSL.  
   
  Si no se establece el nombre de host, el método [getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md) devuelve el valor NULL.  

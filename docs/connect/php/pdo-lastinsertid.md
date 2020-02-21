@@ -11,16 +11,16 @@ ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936217"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Devuelve el identificador de la fila que se insertó más recientemente en una tabla de la base de datos. La tabla debe tener una columna IDENTITY NOT NULL. Si se proporciona un nombre de secuencia `lastInsertId` , devuelve el número de secuencia insertado más recientemente para el nombre de secuencia proporcionado (para obtener más información sobre los números de secuencia, vea [aquí](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Devuelve el identificador de la fila que se insertó más recientemente en una tabla de la base de datos. La tabla debe tener una columna IDENTITY NOT NULL. Si se proporciona un nombre de secuencia, `lastInsertId` devuelve el número de secuencia insertado más recientemente para el nombre de secuencia proporcionado (para más información sobre los números de secuencia, consulte [aquí](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,16 +33,16 @@ string PDO::lastInsertId ([ $name = NULL ] );
 $*name*: una cadena opcional que le permite especificar un nombre de secuencia. 
   
 ## <a name="return-value"></a>Valor devuelto  
-Si no se proporciona ningún nombre de secuencia, se trata de una cadena del identificador de la fila que se agregó más recientemente.
-Si se proporciona un nombre de secuencia, una cadena del identificador de la secuencia agregada más recientemente.
-Si se produce un error en la llamada al método, se devuelve una cadena vacía.
+Si no se proporciona un nombre de secuencia, una cadena del identificador de la fila que se agregó más recientemente.
+Si se proporciona un nombre de secuencia, una cadena del identificador de la secuencia que se agregó más recientemente.
+Si se produce un error en la llamada al método, se devuelve la cadena vacía.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
-Entre la versión 2,0 y 4,3, el parámetro opcional es un nombre de tabla y el valor devuelto es el identificador de la fila que se agregó más recientemente a la tabla proporcionada.
-A partir de 5,0, el parámetro opcional se considera un nombre de secuencia y el valor devuelto es la última secuencia agregada para el nombre de secuencia proporcionado.
-Si se proporciona un nombre de tabla para las versiones posteriores `lastInsertId` a 4,3, devuelve una cadena vacía.
-Solo se admiten secuencias en SQL Server 2012 y versiones posteriores.
+Entre las versiones 2.0 y 4.3, el parámetro opcional es un nombre de tabla y el valor devuelto es el identificador de la fila que se agregó más recientemente a la tabla proporcionada.
+A partir de la versión 5.0, el parámetro opcional se considera como un nombre de secuencia y el valor devuelto es la secuencia agregada más recientemente para el nombre de secuencia proporcionado.
+Si se proporciona un nombre de tabla para las versiones posteriores a la 4.3, `lastInsertId` devuelve una cadena vacía.
+Las secuencias solo se admiten en SQL Server 2012 y versiones posteriores.
   
 ## <a name="example"></a>Ejemplo
   

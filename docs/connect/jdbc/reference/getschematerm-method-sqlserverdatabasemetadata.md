@@ -16,10 +16,10 @@ ms.assetid: 3e4a400f-0859-4ac3-983e-c25633b33683
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0c2355ce38cbaabedeaa3e62da894ee6e67d67c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980070"
 ---
 # <a name="getschematerm-method-sqlserverdatabasemetadata"></a>Método getSchemaTerm (SQLServerDatabaseMetaData)
@@ -40,7 +40,7 @@ public java.lang.String getSchemaTerm()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getSchemaTerm especifica este método getSchemaTerm en la interfaz java.sql.DatabaseMetaData.  
   
  Cuando el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se usa con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método devuelve "esquema" como término preferido.  

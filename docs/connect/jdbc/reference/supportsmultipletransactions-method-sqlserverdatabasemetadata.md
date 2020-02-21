@@ -16,10 +16,10 @@ ms.assetid: 34ff8dcb-5487-46d1-a4c1-25e33eb3eee4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e16b4f5590057424cfe67491cf4943399d54c01c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969187"
 ---
 # <a name="supportsmultipletransactions-method-sqlserverdatabasemetadata"></a>Método supportsMultipleTransactions (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsMultipleTransactions()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **true** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si es compatible. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método supportsMultipleTransactions se especifica mediante el método supportsMultipleTransactions en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método supportsMultipleTransactions especifica este método supportsMultipleTransactions en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

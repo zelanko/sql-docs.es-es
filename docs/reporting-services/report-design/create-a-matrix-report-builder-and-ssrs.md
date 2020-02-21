@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aec3e79fbfbaf96475cf10457c9f21c8c3d78b6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581544"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Crear una matriz (Generador de informes y SSRS)
@@ -20,10 +20,10 @@ ms.locfileid: "65581544"
   
  Después del diseño inicial, puede continuar desarrollando la matriz para mejorar la experiencia de visualización del usuario. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Para empezar a trabajar rápidamente con matrices, vea [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
+ Para empezar a trabajar rápidamente con las matrices, consulte el [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
   
 > [!NOTE]  
->  Puede publicar listas por separado de un informe como elementos de informe. Lea más sobre [Elementos de informe (Generador de informes y SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+>  Puede publicar listas por separado de un informe como elementos de informe. Obtenga más información sobre [Elementos de informe (Generador de informes y SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 ##  <a name="AddingMatrix"></a> Agregar una matriz al informe  
  Agregue una matriz a la superficie de diseño desde la pestaña Insertar en la cinta de opciones. Tiene la opción de agregar una matriz mediante el Asistente para tabla o matriz, que incluye la creación de una conexión a un origen de datos y un conjunto de datos, y la configuración de la matriz o la adición de una matriz basada en la plantilla para matrices.  
@@ -33,7 +33,7 @@ ms.locfileid: "65581544"
   
  Para describir cómo configurar una tabla de principio a fin, en este tema se utiliza la plantilla para matrices.  Inicialmente, la matriz tiene un grupo de filas, un grupo de columnas, una celda de la esquina y una celda de datos, como se muestra en la ilustración siguiente.  
   
- ![Matriz en blanco con una fila y un grupo de columnas](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "Matriz en blanco con una fila y un grupo de columnas")  
+ ![Matriz en blanco con 1 fila y 1 grupo de columnas](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "Matriz en blanco con 1 fila y 1 grupo de columnas")  
   
  Al seleccionar una matriz en la superficie de diseño, aparecerán los identificadores de fila y de columna, como se muestra en la ilustración siguiente.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "65581544"
   
  En este ejemplo, la consulta ha filtrado los valores de los datos para incluir solo los valores correspondientes a Europa durante los años 2003 y 2004. Sin embargo, es posible activar los filtros en cada uno de los grupos de forma independiente. En la vista previa, el informe aparece como se muestra en la ilustración siguiente.  
   
- ![Vista previa de los grupos de columnas adyacentes](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "Vista previa de los grupos de columnas adyacentes")  
+ ![Vista previa de los grupos de columnas anexas](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "Vista previa de los grupos de columnas anexas")  
   
  Para agregar una columna de totales a un grupo de columnas adyacente, haga clic en la celda de definición de grupo de columnas y use el comando **Agregar total** . Se agrega una columna estática junto al grupo de columnas, con una suma agregada predeterminada para cada campo numérico de las filas existentes. Para cambiar la expresión, edite manualmente el agregado predeterminado; por ejemplo, `Avg([Sales])`. Para obtener más información, vea [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   

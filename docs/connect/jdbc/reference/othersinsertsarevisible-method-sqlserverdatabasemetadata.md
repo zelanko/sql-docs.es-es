@@ -16,10 +16,10 @@ ms.assetid: aa32f059-bb59-47f8-bac1-292f314df730
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d274dec50ef238e0f87f63524d47275bb386810d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976655"
 ---
 # <a name="othersinsertsarevisible-method-sqlserverdatabasemetadata"></a>Método othersInsertsAreVisible (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean othersInsertsAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Tipo*  
+ *type*  
   
  Un valor **int** que indica el tipo de conjunto de resultados, que puede ser uno de los siguientes valores como queda definido en java.sql.ResultSet o SQLServerResultSet:  
   
@@ -63,8 +63,8 @@ public boolean othersInsertsAreVisible(int type)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método othersInsertsAreVisible se especifica mediante el método othersInsertsAreVisible en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método othersInsertsAreVisible especifica este método othersInsertsAreVisible en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

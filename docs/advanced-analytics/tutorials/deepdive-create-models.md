@@ -1,6 +1,6 @@
 ---
 title: Creación de modelos de R con RevoScaleR
-description: Tutorial sobre cómo crear un modelo mediante el lenguaje R en SQL Server.
+description: 'Tutorial 7 de RevoScaleR: Compilación de un modelo mediante el lenguaje R en SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a23691e8ed4b5ec5290ae666455f789954fa95d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 11feb62609cba61a695dd60085461410a38ed0f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727263"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947254"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Creación de modelos de R (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Este es el tutorial 7 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Ha enriquecido los datos de entrenamiento. Ahora toca analizar los datos mediante un modelo de regresión. Los modelos lineales son una herramienta importante en el mundo del análisis predictivo. El paquete **RevoScaleR** incluye algoritmos de regresión que pueden subdividir la carga de trabajo y ejecutarla en paralelo.
+Ha enriquecido los datos de entrenamiento. En este tutorial, analizará los datos mediante un modelo de regresión. Los modelos lineales son una herramienta importante en el mundo del análisis predictivo. El paquete **RevoScaleR** incluye algoritmos de regresión que pueden subdividir la carga de trabajo y ejecutarla en paralelo.
 
 > [!div class="checklist"]
 > * Crear un modelo de regresión lineal
@@ -49,7 +49,7 @@ Quizás piense que es peculiar que una función de R sin formato como **summary*
 
 Por tanto, puede ejecutar comandos de R estándar en el modelo como si lo hubiera creado mediante el contexto "local".
 
-**Resultado**
+**Resultados**
 
 ```R
 Linear Regression Results for: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)

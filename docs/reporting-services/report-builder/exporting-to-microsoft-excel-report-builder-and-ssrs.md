@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580775"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportar a Microsoft Excel (Generador de informes y SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "65580775"
 ### <a name="sizes-of-excel-2003-xls-files"></a>Tamaño de los archivos de Excel 2003 (.xls)  
   
 > [!IMPORTANT]  
->  La extensión de representación de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 ha quedado obsoleta. Para obtener más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  La extensión de representación de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 ha quedado obsoleta. Para más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Cuando los informes se exportan y guardan en Excel 2003, no se benefician de la optimización de archivos que Excel aplica automáticamente a sus archivos de libro *.xls. El mayor tamaño del archivo puede producir problemas al enviar por correo electrónico suscripciones y datos adjuntos. Para reducir el tamaño de los archivos \*.xls de los informes exportados, abra los archivos \*.xls y vuelva a guardar los libros. Al guardar de nuevo los libros se suele reducir el tamaño de los archivos entre un 40 y un 50%.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "65580775"
 ### <a name="excel-2003-xls-renderer"></a>Representador de Excel 2003 (.xls)  
   
 > [!IMPORTANT]  
->  La extensión de representación de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 ha quedado obsoleta. Para obtener más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  La extensión de representación de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 ha quedado obsoleta. Para más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  La versión anterior del representador de Excel, compatible con Excel 2003, se denomina ahora Excel 2003 y aparece en los menús con ese nombre. El tipo de contenido de los archivos generados por este representador es **application/vnd.ms-excel** y la extensión del nombre de los archivos es .xls.  
   
@@ -161,15 +161,15 @@ ms.locfileid: "65580775"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- La extensión EXCELOPENXML define el representador de Excel para los archivos actuales de Excel (.xlsx). La extensión EXCEL define la versión de Excel 2003. `Visible = "false"` indica que el representador de Excel 2003 está oculto. Para obtener más información, vea [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) y [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ La extensión EXCELOPENXML define el representador de Excel para los archivos actuales de Excel (.xlsx). La extensión EXCEL define la versión de Excel 2003. `Visible = "false"` indica que el representador de Excel 2003 está oculto. Para más información, vea [El archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) y [Archivo de configuración RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>Diferencias entre el representador actual de Excel (.xlsx) y el representador de Excel 2003  
  Los informes, representados con el representador actual de Excel (.xlsx) o el representador de Excel 2003, suelen ser idénticos y solo en raras ocasiones observará diferencias entre los dos formatos. En la tabla siguiente se comparan los representadores de Excel y de Excel 2003.  
   
 |Propiedad|Excel 2003|Excel actual|  
 |--------------|----------------|-------------------|  
-|Número máximo de columnas por hoja de cálculo|256|16,384|  
-|Número máximo de filas por hoja de cálculo|65,536|1,048,576|  
+|Número máximo de columnas por hoja de cálculo|256|16 384|  
+|Número máximo de filas por hoja de cálculo|65 536|1,048,576|  
 |Número de colores permitido en una hoja de cálculo|56 (paleta)<br /><br /> Si en el informe se usan más de 56 colores, la extensión de representación hace coincidir el color requerido con uno de los 56 colores disponibles en la paleta personalizada.|Aproximadamente 16 millones (color de 24 bits)|  
 |Archivos comprimidos ZIP|None|Compresión ZIP|  
 |Familia de fuentes predeterminada|Arial|Calibri|  
@@ -204,7 +204,7 @@ ms.locfileid: "65580775"
 ##  <a name="DocumentProperties"></a> Propiedades de documento  
  El presentador de Excel escribe los metadatos siguientes en el archivo de Excel.  
   
-|Propiedades del elemento de informe|Description|  
+|Propiedades del elemento de informe|Descripción|  
 |-------------------------------|-----------------|  
 |Creado|Fecha y hora de ejecución del informe como un valor de fecha y hora de ISO.|  
 |Autor|Autor del informe|  

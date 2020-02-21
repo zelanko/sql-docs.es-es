@@ -1,5 +1,5 @@
 ---
-title: 'Método setNCharacterStream para el objeto Java. IO. Reader: Long | Microsoft Docs'
+title: 'Método setNCharacterStream para el objeto java.io.Reader: long | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76c59a5e367e3d3e8524a64f5ae7ac6dab85b529
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973950"
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>Método setNCharacterStream (int, java.io.Reader, long)
@@ -47,10 +47,10 @@ public final void setNCharacterStream(int parameterIndex,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setNCharacterStream se especifica mediante el método setNCharacterStream de la interfaz java. SQL. PreparedStatement.  
+## <a name="remarks"></a>Observaciones  
+ El método setNCharacterStream especifica este método setNCharacterStream en la interfaz java.sql.PreparedStatement.  
   
- Este método se debe usar para los tipos de datos **nchar**, **nvarchar**, **ntext**y **XML** .  
+ Este método se debe usar para los tipos de datos **NCHAR**, **NVARCHAR**, **NTEXT** y **XML**.  
   
  Si la longitud del flujo es distinta a la especificada en el parámetro *length*, el controlador JDBC produce una excepción cuando la fila se actualiza o se inserta.  
   

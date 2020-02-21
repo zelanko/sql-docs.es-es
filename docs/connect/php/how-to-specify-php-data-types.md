@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: especificar tipos de datos PHP | Microsoft Docs'
+title: 'Procedimientos: Especificación de los tipos de datos PHP | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936394"
 ---
-# <a name="how-to-specify-php-data-types"></a>Cómo especificar tipos de datos PHP
+# <a name="how-to-specify-php-data-types"></a>Procedimientos: Especificación de los tipos de datos PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cuando se utiliza el controlador PDO_SQLSRV, puede especificar el tipo de datos PHP cuando se recuperan datos del servidor con PDOStatement::bindColumn y PDOStatement::bindParam. Vea [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md) y [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) para obtener más información.  
@@ -33,7 +33,7 @@ En los pasos siguientes se resume cómo especificar los tipos de datos PHP cuand
   
 3.  Recupere los datos de campo de una fila devuelta mediante [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) con el tipo de datos PHP deseado especificado como el tercer parámetro opcional. Si no se especifica el tercer parámetro opcional, los datos se devuelven según los tipos de datos PHP predeterminado. Para obtener información sobre los tipos de valor devueltos de PHP predeterminado, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-    Para obtener información sobre las constantes que se usan para especificar el tipo de datos PHP, vea la sección de PHPTYPE de [Constantes &#40;Controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    Para información sobre las constantes que se usan para especificar el tipo de datos PHP, vea la sección de PHPTYPE de [Constantes &#40;Controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>Ejemplo  
 En el ejemplo siguiente se recuperan las filas de la tabla *Production.ProductReview* de la base de datos de AdventureWorks. En cada fila devuelta, el campo *ReviewDate* se recupera como una cadena, y el campo *Comments*, como una secuencia. Los datos de la secuencia se muestran mediante la función PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) .  
@@ -109,7 +109,7 @@ La recuperación del cuarto campo (*Comments*) como una secuencia se realiza con
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Recuperación de parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Cómo: Recuperación de los parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[Recuperación de parámetros de entrada y salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[Cómo: Recuperación de los parámetros de entrada y salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

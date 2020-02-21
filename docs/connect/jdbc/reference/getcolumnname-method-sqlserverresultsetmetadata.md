@@ -16,10 +16,10 @@ ms.assetid: 0330ca1d-5e24-4ce3-9d2a-b931f20a0fcf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 393eba0d3ac6df43427e4b5f5774479c43f9bedc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952892"
 ---
 # <a name="getcolumnname-method-sqlserverresultsetmetadata"></a>Método getColumnName (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public java.lang.String getColumnName(int column)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getColumnName se especifica mediante el método getColumnName de la interfaz java. SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getColumnName especifica este método getColumnName en la interfaz java.sql.ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

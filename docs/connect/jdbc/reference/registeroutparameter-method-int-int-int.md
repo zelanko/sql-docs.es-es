@@ -16,10 +16,10 @@ ms.assetid: d902d4e0-881f-4182-814c-0ede9a8da7fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b6948bf6b86160b1752a483b13f83abbfc467ef2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975942"
 ---
 # <a name="registeroutparameter-method-int-int-int"></a>Método registerOutParameter (int, int, int)
@@ -37,7 +37,7 @@ public void registerOutParameter(int index,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Valor **int** que indica la posición ordinal del parámetro.  
   
@@ -45,17 +45,17 @@ public void registerOutParameter(int index,
   
  Un código de tipo JDBC tal como se define en java.sql.Types.  
   
- *escala*  
+ *scale*  
   
  Valor **int** que indica el número de dígitos que se van a colocar a la derecha del signo decimal.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método registerOutParameter se especifica mediante el método registerOutParameter de la interfaz java. SQL. CallableStatement.  
+## <a name="remarks"></a>Observaciones  
+ El método registerOutParameter especifica este método registerOutParameter en la interfaz java.sql.CallableStatement.  
   
- Desde el controlador JDBC de 3,0, cuando *sqlType* es de tipo Java. SQL. types. Time, el comportamiento de este método se modifica mediante la propiedad de conexión **sendTimeAsDatetime** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Establecer las propiedades](../../../connect/jdbc/setting-the-connection-properties.md)de conexión) [y SQLServerDataSource.](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)setSendTimeAsDatetime.  
+ Desde el controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cuando *sqlType* es de tipo java.sql.Types.TIME, el comportamiento de este método queda modificado por la propiedad de conexión **sendTimeAsDatetime** ([Establecimiento de las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md)) y [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
  Para más información, vea [Configurar el modo en que los valores java.sql.Time se envían al servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   

@@ -16,10 +16,10 @@ ms.assetid: a766818e-cd05-4a07-a1ae-88966017448c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e5e2a85e2db6dd89e571185712514a27621e835
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953758"
 ---
 # <a name="getbinarystream-int"></a>getBinaryStream (int)
@@ -40,7 +40,7 @@ public final java.io.InputStream getBinaryStream(int paramIndex)
  Un valor **int** que indica el índice del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto InputStream.  
+ Un objeto InputStream.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

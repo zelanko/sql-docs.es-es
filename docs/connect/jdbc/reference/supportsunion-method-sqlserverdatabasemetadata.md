@@ -16,10 +16,10 @@ ms.assetid: a757ea51-ff2e-4848-adaf-d9373e418fa3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7dd44915a066753e367beb82d88258c3a0d3abf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968562"
 ---
 # <a name="supportsunion-method-sqlserverdatabasemetadata"></a>Método supportsUnion (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsUnion()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **true** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si es compatible. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método supportsUnion se especifica mediante el método supportsUnion en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método supportsUnion especifica este método supportsUnion en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

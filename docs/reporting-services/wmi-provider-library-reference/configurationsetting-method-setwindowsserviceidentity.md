@@ -16,10 +16,10 @@ ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b12b21fe8e51f8c03bf01efd7df63053c528781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570920"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>Método ConfigurationSetting - SetWindowsServiceIdentity
@@ -53,7 +53,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando el parámetro *UseBuiltInAccount* está establecido en **true** y el servidor de informes se está ejecutando en Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] o Windows XP, el valor de los parámetros *Nombre*, *Dominio*y *Contraseña* se omite y se usa la cuenta local del sistema.  
   
  Cuando el parámetro *UseBuiltInAccount* se establece en **true** y el servidor de informes se está ejecutando en Windows Server 2003, las propiedades *Dominio* y *Contraseña* se omiten, y el campo de nombre debe contener "Builtin\NetworkService", "Builtin\System" o "Builtin\LocalService".  

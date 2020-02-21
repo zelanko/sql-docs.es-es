@@ -11,10 +11,10 @@ ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1207c4c9688826b599548477a35ca123b9d39c28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579936"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>Método de ConfigurationSetting: ListIPAddresses
@@ -53,7 +53,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente; un código de error indica que la llamada no se realizó correctamente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las cadenas de*IPVersion* son V4 y V6.  
   
  Si *IsDhcpEnabled* es **True**, el valor de *IPAddress* es dinámico. No se debe usar para enlaces SSL.  

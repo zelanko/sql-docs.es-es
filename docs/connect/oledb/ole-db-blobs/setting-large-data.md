@@ -1,6 +1,6 @@
 ---
-title: Configuración de datos de gran tamaño | Microsoft Docs
-description: Configuración de datos de gran tamaño mediante el controlador de OLE DB para SQL Server
+title: Establecimiento de datos grandes | Microsoft Docs
+description: Establecimiento de datos grandes mediante OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 03baaafbc3fed654bcd463a2971bf1fca6712304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936528"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
@@ -28,7 +28,7 @@ ms.locfileid: "67936528"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Con el controlador de OLE DB para SQL Server, puede establecer datos de BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
+  Con OLE DB Driver for SQL Server, puede establecer datos BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
   
  El consumidor crea un objeto de almacenamiento que contiene los datos y pasa al proveedor un puntero a este objeto de almacenamiento. A continuación, el proveedor lee los datos del objeto de almacenamiento del consumidor y los escribe en la columna BLOB.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67936528"
   
 2.  Establezca las propiedades en el grupo de propiedades DBPROPSET_ROWSET de modo que el conjunto de filas sea actualizable.  
   
-3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establezca el elemento *wType* de la estructura DBBINDING en DBTYPE_IUNKNOWN y el elemento *pObject* que señale a la estructura DBOBJECT creada.  
+3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establezca el elemento *wType* de la estructura DBBINDING en DBTYPE_IUNKNOWN y el elemento *pObject* para que señale a la estructura DBOBJECT creada.  
   
 4.  Cree un descriptor de acceso utilizando la información de enlace de la matriz de estructuras DBBINDINGS.  
   

@@ -1,5 +1,5 @@
 ---
-title: Método TRUNCATE (SQLServerNClob) | Microsoft Docs
+title: Método truncate (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b7e8210d-a724-4bae-832a-ae4c63031c9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9ed19679cb1a173d015152a006f55660fe9f826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968461"
 ---
 # <a name="truncate-method-sqlservernclob"></a>Método truncate (SQLServerNClob)
@@ -37,8 +37,8 @@ public void truncate(long len)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método TRUNCATE se especifica mediante el método TRUNCATE en la interfaz java. SQL. NClob.  
+## <a name="remarks"></a>Observaciones  
+ El método truncate especifica este método truncate en la interfaz java.sql.NClob.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

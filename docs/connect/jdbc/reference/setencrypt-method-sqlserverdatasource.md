@@ -16,10 +16,10 @@ ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974290"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Método setEncrypt (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setEncypt(boolean encrypt)
   
  Es **true** si el cifrado de Capa de sockets seguros (SSL) está habilitado entre el cliente y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. De lo contrario, se devuelve el valor **False**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si la propiedad encrypt se establece en **true**, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] procura que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] use el cifrado SSL en todos los datos que se envíen entre el cliente y el servidor, si el servidor tiene un certificado instalado. El valor predeterminado es **false**.  
   
  El controlador JDBC detecta la máquina virtual Java (JVM) que se está ejecutando cuando se intenta establecer un protocolo de enlace SSL.  

@@ -16,10 +16,10 @@ ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b192f9055394393c48fa19eda697791ddfe3fa2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976159"
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>Método prepareStatement (java.lang.String, int, int)
@@ -50,13 +50,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
  Un valor **int** que indica el tipo de simultaneidad del conjunto de resultados.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto PreparedStatement.  
+ Un objeto PreparedStatement.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método prepareStatement se especifica mediante el método prepareStatement en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método prepareStatement especifica este método prepareStatement en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-methods.md)   

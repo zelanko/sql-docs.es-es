@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581500"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes (SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "65581500"
 2.  Obtener una vista previa de un informe con referencias a ensamblados personalizados en modo local.  
   
 ##  <a name="Common"></a> Incluir referencias a funciones de uso frecuente  
- Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. En las funciones comunes se incluyen clases de los espacios de nombres [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert> , así como funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Para mayor comodidad, puede ver las funciones de uso más frecuente en el cuadro de diálogo **Expresión** , donde aparecen agrupadas por categorías: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
+ Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. En las funciones comunes se incluyen clases de los espacios de nombres [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert>, así como funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Para mayor comodidad, puede ver las funciones más usadas en el cuadro de diálogo **Expresión**, donde aparecen agrupadas por categoría: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
   
  Para usar una función integrada, haga doble clic en el nombre de la función en el panel Elemento. En el panel Descripción, aparece una descripción de la función; en el panel Ejemplo, aparece un ejemplo de la llamada a la función. En el panel de código, al escribir el nombre de la función seguido por un paréntesis izquierdo **(** , la Ayuda de IntelliSense muestra la sintaxis válida para la llamada a la función. Por ejemplo, para calcular el valor máximo de un campo denominado `Quantity` en una tabla, agregue la expresión simple `=Max(` al panel de código y, a continuación, use las etiquetas inteligentes para ver todas las posibles sintaxis válidas para la llamada a la función. Para completar este ejemplo, escriba `=Max(Fields!Quantity.Value)`.  
   
@@ -115,7 +115,7 @@ End Function
  Para más información sobre las colecciones de objetos integradas y la inicialización, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) e [Inicializar objetos de ensamblados personalizados](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Incluir referencias a parámetros desde el código  
- Se puede hacer referencia a la colección global Parameters mediante código personalizado en un bloque de código de la definición de informe o en un ensamblado personalizado proporcionado por el usuario. La colección Parameters es de solo lectura y no tiene iteradores públicos. No se puede usar una construcción [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **de** para recorrer la colección. Debe conocer el nombre del parámetro definido en la definición de informe para poder hacer referencia a él en el código. Pero puede recorrer en iteración todos los valores de un parámetro de varios valores.  
+ Se puede hacer referencia a la colección global Parameters mediante código personalizado en un bloque de código de la definición de informe o en un ensamblado personalizado proporcionado por el usuario. La colección Parameters es de solo lectura y no tiene iteradores públicos. No se puede usar una construcción **For Each** de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para recorrer la colección. Debe conocer el nombre del parámetro definido en la definición de informe para poder hacer referencia a él en el código. Pero puede recorrer en iteración todos los valores de un parámetro de varios valores.  
   
  En la tabla siguiente se incluyen ejemplos de referencias a la colección integrada `Parameters` desde código personalizado:  
   
@@ -178,7 +178,7 @@ End Function
  Para obtener más información sobre cómo tener acceso al código, vea [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
 ##  <a name="collections"></a> Pasar colecciones integradas a ensamblados personalizados  
- Si quiere pasar colecciones integradas (como las colecciones *Globals* o *Parameters* ) a un ensamblado personalizado para su procesamiento, necesita agregar una referencia de ensamblado de su proyecto de código al ensamblado que define las colecciones integradas y el acceso al espacio de nombres correcto. Dependiendo de si desarrolla el ensamblado personalizado para un informe que se ejecuta en un servidor de informes (informe de servidor) o para un informe que se ejecuta localmente en una aplicación .NET (informe local), el ensamblado al que debe hacerse referencia será diferente. A continuación se incluye información detallada.  
+ Si quiere pasar colecciones integradas (como las colecciones *Globals* o *Parameters* ) a un ensamblado personalizado para su procesamiento, necesita agregar una referencia de ensamblado de su proyecto de código al ensamblado que define las colecciones integradas y el acceso al espacio de nombres correcto. Dependiendo de si desarrolla el ensamblado personalizado para un informe que se ejecuta en un servidor de informes (informe de servidor) o para un informe que se ejecuta localmente en una aplicación .NET (informe local), el ensamblado al que debe hacerse referencia será diferente. Consulte a continuación para más información.  
   
 -   **Espacio de nombres:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   

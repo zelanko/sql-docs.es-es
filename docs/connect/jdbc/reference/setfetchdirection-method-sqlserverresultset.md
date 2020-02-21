@@ -16,10 +16,10 @@ ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d801a0184259ae22f86ea5ec23391ef78b23ce38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974267"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>Método setFetchDirection (SQLServerResultSet)
@@ -51,8 +51,8 @@ public void setFetchDirection(int direction)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setFetchDirection se especifica mediante el método setFetchDirection de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método setFetchDirection especifica este método setFetchDirection en la interfaz java.sql.ResultSet.  
   
  El valor inicial de este método lo determina el objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) que ha generado este objeto SQLServerResultSet. La dirección de la captura puede cambiar en cualquier momento.  
   

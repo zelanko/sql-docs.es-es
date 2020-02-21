@@ -18,13 +18,13 @@ ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64ddca64f049ba95426dec542d68dc8a84e7d9dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015012"
 ---
-# <a name="sqlsrvgetfield"></a>sqlsrv_get_field
+# <a name="sqlsrv_get_field"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Recupera los datos del campo especificado de la fila actual. Se debe acceder a los datos del campo en orden. Por ejemplo, no se puede acceder a los datos del primer campo una vez que se haya accedido al segundo.  
@@ -40,18 +40,18 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: el índice del campo que se va a recuperar. Los índices comienzan en cero.  
   
-*$getAsType* [OPCIONAL]: constante **SQLSRV** (**SQLSRV_PHPTYPE_&#x2a;** ) que determina el tipo de datos PHP de los datos devueltos. Para obtener información sobre los tipos de datos compatibles, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Si no se especifica ningún tipo de valor devuelto, se devolverá un tipo de datos PHP predeterminado. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obtener información sobre cómo especificar los tipos de datos PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+*$getAsType* [OPTIONAL]: una constante **SQLSRV** (**SQLSRV_PHPTYPE_&#x2a;** ) que determina el tipo de datos de PHP de los datos devueltos. Para obtener información sobre los tipos de datos compatibles, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Si no se especifica ningún tipo de valor devuelto, se devolverá un tipo de datos PHP predeterminado. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para información sobre cómo especificar los tipos de datos PHP, consulte [Procedimiento: Especificación de los tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
-Los datos del campo. Puede especificar el tipo de datos PHP de los datos devueltos mediante el parámetro *$getAsType* . Si no se especifica ningún tipo de datos devuelto, se devolverá el tipo de datos PHP predeterminado. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obtener información sobre cómo especificar los tipos de datos PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+Los datos del campo. Puede especificar el tipo de datos PHP de los datos devueltos mediante el parámetro *$getAsType* . Si no se especifica ningún tipo de datos devuelto, se devolverá el tipo de datos PHP predeterminado. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para información sobre cómo especificar los tipos de datos PHP, consulte [Procedimiento: Especificación de los tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 La combinación de **sqlsrv_fetch** y **sqlsrv_get_field** proporciona acceso de solo avance a los datos.  
   
-La combinación de **sqlsrv_fetch**/**sqlsrv_get_field** carga solamente un campo de una fila de conjunto de resultados en memoria de script y permite la especificación del tipo de valor devuelto PHP. (Para obtener información sobre cómo especificar el tipo de valor devuelto PHP, vea [Cómo especificar tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md)). Esta combinación de funciones también permite que los datos se recuperen como una secuencia (Para obtener información sobre cómo recuperar datos como una secuencia, vea [Recuperación de datos como una secuencia con el controlador SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)).  
+La combinación de **sqlsrv_fetch**/**sqlsrv_get_field** carga solamente un campo de una fila de conjunto de resultados en memoria de script y permite la especificación del tipo de valor devuelto PHP. (Para información sobre cómo especificar el tipo de valor devuelto PHP, consulte [Procedimiento: Especificación de los tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md)). Esta combinación de funciones también permite que los datos se recuperen como una secuencia (Para obtener información sobre cómo recuperar datos como una secuencia, vea [Recuperación de datos como una secuencia con el controlador SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)).  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se recupera una fila de datos que contiene una reseña del producto y el nombre del autor. Para recuperar datos del conjunto de resultados, se usa **sqlsrv_get_field** . En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo siguiente se recupera una fila de datos que contiene una reseña del producto y el nombre del autor. Para recuperar datos del conjunto de resultados, se usa **sqlsrv_get_field**. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  

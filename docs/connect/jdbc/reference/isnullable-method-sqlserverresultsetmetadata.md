@@ -16,10 +16,10 @@ ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3918215f40a77fa5288dd345715856829b607dae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977524"
 ---
 # <a name="isnullable-method-sqlserverresultsetmetadata"></a>Método isNullable (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public int isNullable(int column)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método isNullable se especifica mediante el método isNullable en la interfaz java. SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método isNullable especifica este método isNullable en la interfaz java.sql.ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

@@ -16,10 +16,10 @@ ms.assetid: 92e30537-5fd9-4b67-8b0f-486c6e840e03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd7081c6ece290be866b395388ae28ee8b56b312
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982444"
 ---
 # <a name="getlong-method-javalangstring"></a>Método getLong (java.lang.String)
@@ -40,12 +40,12 @@ public long getLong(java.lang.String sCol)
  Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un valor **Long** .  
+ Un valor **long**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getLong especifica este método getLong en la interfaz java.sql.CallableStatement.  
   
  Este método solamente se admite en los tipos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que pueden devolver de forma segura un valor entero como **bigint**, **int**, **smallint**, **tinyint** y **bit**. Si se utiliza este método en cualquier otro tipo de datos, provocará una excepción.  

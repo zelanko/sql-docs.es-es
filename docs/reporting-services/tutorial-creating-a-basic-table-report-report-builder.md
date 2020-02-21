@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041211"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
@@ -74,7 +74,7 @@ En este tutorial, utilizará un origen del datos incrustado. Para obtener más i
   
     Volverá a la página **Elegir una conexión a un origen de datos** , donde aparece el nuevo origen de datos seleccionado.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 ## <a name="Query"></a>1b. Crear una consulta en el Asistente para tablas  
 En un informe puede usar un conjunto de datos compartido que tenga una consulta predefinida o crear un conjunto de datos incrustado para usarlo exclusivamente en ese informe. En este tutorial, creará un conjunto de datos incrustado.  
@@ -130,7 +130,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
     En el conjunto de resultados, los encabezados de columna están basados en los nombres de la consulta. En el conjunto de datos, los encabezados de columna se convierten en nombres de campo y se guardan en el informe. Después de completar el asistente, puede usar el panel Datos de informe para ver la colección de campos del conjunto de datos.  
   
-4.  Haga clic en **Siguiente**.  
+4.  Haga clic en **Next**.  
   
 ## <a name="Groups"></a>1c. Organizar datos en grupos en el Asistente para tablas  
 Al seleccionar los campos por los que desea agrupar, diseña una tabla que tiene filas y columnas en las que se muestran datos detallados y datos agregados.  
@@ -157,7 +157,7 @@ Al seleccionar los campos por los que desea agrupar, diseña una tabla que tiene
   
     Los pasos 4 y 5 organizan los valores de los campos primero por fecha y, después, por la subcategoría de producto de esa fecha.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 ## <a name="Subtotals"></a>1d. Agregar filas de subtotal y de total en el Asistente para tablas  
 Después de crear grupos, puede agregar filas y darles formato, para mostrar en ellas los valores agregados de los campos. Puede decidir si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
@@ -297,7 +297,7 @@ Guarde el informe un servidor de informes o en su equipo. Si no guarda el inform
   
 4.  En **Nombre**, reemplace **Sin título** con **Product_Sales**.  
   
-5.  Haga clic en **Guardar**.  
+5.  Haga clic en **Save**(Guardar).  
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
@@ -309,7 +309,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 3.  En **Nombre**, reemplace **Sin título** con **Product Sales**.  
   
-4.  Haga clic en **Guardar**.  
+4.  Haga clic en **Save**(Guardar).  
   
 ## <a name="Export"></a>7. Exportar el informe  
 Los informes se pueden exportar a diversos formatos, por ejemplo a archivos de Microsoft Excel y de valores separados por comas (CSV). Para más información, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
@@ -342,7 +342,7 @@ En este tutorial, exportará el informe a Excel y establecerá una propiedad en 
   
 5.  Compruebe que el tipo de archivo sea **Excel (\*.xlsx)** .  
   
-6.  Haga clic en **Guardar**.  
+6.  Haga clic en **Save**(Guardar).  
   
 ### <a name="to-view-the-report-in-excel"></a>Ver el informe en Excel.  
   
@@ -350,7 +350,7 @@ En este tutorial, exportará el informe a Excel y establecerá una propiedad en 
   
 2.  Compruebe que el nombre de la pestaña del libro es **Excel de Ventas del producto**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 Aquí termina el tutorial sobre la creación de un informe de tabla básico. Para obtener más información, consulte [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte también  

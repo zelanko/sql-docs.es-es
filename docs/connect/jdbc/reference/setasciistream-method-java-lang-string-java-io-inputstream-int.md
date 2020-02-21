@@ -1,5 +1,5 @@
 ---
-title: Método setAsciiStream para bytes de flujo de entrada-int | Microsoft Docs
+title: 'Método setAsciiStream para bytes de flujo de entrada: int | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6ea23386-201f-41af-8232-225de3476765
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f4ebed9ebad158ea445e726e8d0dbe0b60f57930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975505"
 ---
 # <a name="setasciistream-method--javalangstring-javaioinputstream-int"></a>Método setAsciiStream (java.lang.String, java.io.InputStream, int)
@@ -43,7 +43,7 @@ public void setAsciiStream(java.lang.String parameterName,
   
  *value*  
   
- Objeto InputStream.  
+ Un objeto InputStream.  
   
  *length*  
   
@@ -52,8 +52,8 @@ public void setAsciiStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setAsciiStream se especifica mediante el método setAsciiStream de la interfaz java. SQL. CallableStatement.  
+## <a name="remarks"></a>Observaciones  
+ El método setAsciiStream especifica este método setAsciiStream en la interfaz java.sql.CallableStatement.  
   
  Si la longitud del flujo es distinta a la especificada en el parámetro *length*, el controlador JDBC produce una excepción cuando la fila se actualiza o se inserta.  
   

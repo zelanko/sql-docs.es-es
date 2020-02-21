@@ -16,10 +16,10 @@ ms.assetid: 7dbbdacb-74ef-42e7-9bdc-a3229505dad8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74c2228b944dce2f9c59f4f8fcfc4bc0ac2e5753
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980990"
 ---
 # <a name="getparametercount-method-sqlserverparametermetadata"></a>Método getParameterCount (SQLServerParameterMetaData)
@@ -40,8 +40,8 @@ public int getParameterCount()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getParameterCount se especifica mediante el método getParameterCount de la interfaz java. SQL. ParameterMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getParameterCount especifica este método getParameterCount en la interfaz java.sql.ParameterMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

@@ -14,16 +14,16 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140267"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Cómo crear, modificar y eliminar suscripciones controladas por datos
   Una suscripción controlada por datos es una suscripción basada en consultas que obtiene los valores de los datos que se utilizan para procesar la suscripción en tiempo de ejecución. Cuando se desencadena la suscripción, se procesa una consulta para obtener información actualizada sobre destinatarios, opciones de entrega del informe, formatos de representación y valores de los parámetros. Los resultados de la consulta se combinan con la definición de la suscripción para crear una suscripción dinámica que utiliza datos que se mantienen en una base de datos de empleados, de clientes o de cualquier otro tipo que contenga información que se pueda utilizar como datos de suscriptor.  
   
- Para crear una nueva suscripción controlada por datos o modificar una suscripción existente, use el **administrar** > **suscripciones** página en el portal web. El **suscripciones** página le guiará a través de cada paso de creación o modificación de una suscripción. Para tener acceso a una suscripción una vez creada, utilice la página **Mis suscripciones** o la lista Suscripciones de un informe. Para más información sobre cómo crear una suscripción controlada por datos, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Para crear una nueva suscripción controlada por datos o modificar una existente, use la página **Administrar** > **Suscripción** en el portal web. La página **Suscripciones** le guía por los pasos necesarios para crear o modificar una suscripción. Para tener acceso a una suscripción una vez creada, utilice la página **Mis suscripciones** o la lista Suscripciones de un informe. Para más información sobre cómo crear una suscripción controlada por datos, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  En este artículo:  
   
@@ -36,9 +36,9 @@ ms.locfileid: "67140267"
 -   [Ejecutar la suscripción](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Administrar y eliminar una suscripción controlada por datos  
- Una suscripción controlada por datos que está en curso no puede ser detenida o eliminada a través del portal web. Por esta razón, resulta ventajoso usar una programación compartida para desencadenar la suscripción controlada por datos. De esa manera, si desea impedir temporalmente que se procese una suscripción, puede pausar la programación que la desencadena. Para obtener más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Una suscripción controlada por datos que se está procesando no puede detenerse o eliminarse mediante el portal web. Por esta razón, resulta ventajoso usar una programación compartida para desencadenar la suscripción controlada por datos. De esa manera, si desea impedir temporalmente que se procese una suscripción, puede pausar la programación que la desencadena. Para obtener más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- Para eliminar una suscripción controlada por datos, active la casilla junto al informe en el **suscripciones** página y, a continuación, seleccione **eliminar**.  
+ Para eliminar una suscripción controlada por datos, active la casilla situada junto al informe en la página **Suscripciones** y, después, seleccione **Eliminar**.  
   
  Para obtener instrucciones sobre cómo cancelar una suscripción controlada por datos, vea [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -47,11 +47,11 @@ ms.locfileid: "67140267"
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>Para crear una suscripción controlada por datos (modo nativo)  
   
-1. En el portal web, navegue hasta la carpeta que contiene el informe, haga clic en el informe y seleccione **administrar** en el menú desplegable.  
+1. En el portal web, vaya hasta la carpeta que contiene el informe, haga clic con el botón derecho en el informe y seleccione **Administrar** en el menú desplegable.  
   
 2. Seleccione la pestaña **Suscripciones** .  
   
-3. Seleccione **+ nueva suscripción** en el **suscripciones** página.  
+3. Seleccione **+ Nueva suscripción** en la página **Suscripciones**.  
   
 ### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>Para crear una suscripción controlada por datos (modo de SharePoint)  
   
@@ -61,11 +61,11 @@ ms.locfileid: "67140267"
   
 ### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>Para modificar una suscripción controlada por datos existente (modo nativo)  
   
-1. En el portal web, navegue hasta la carpeta que contiene el informe, haga clic en el informe y seleccione **administrar** en el menú desplegable.  
+1. En el portal web, vaya hasta la carpeta que contiene el informe, haga clic con el botón derecho en el informe y seleccione **Administrar** en el menú desplegable.  
   
 2. Seleccione la pestaña **Suscripciones** .  
   
-3. Active la casilla situada junto a la suscripción que desea modificar y seleccione **editar**. Las suscripciones controladas por datos tendrá el valor "controladas por datos" en el **tipo** columna.  
+3. Active la casilla situada junto a la suscripción que desea modificar y seleccione **Editar**. Las suscripciones controladas por datos tendrán el valor "Controlada por datos" en la columna **Tipo**.  
   
 ### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Para modificar una suscripción controlada por datos existente (modo de SharePoint)  
   
@@ -98,10 +98,10 @@ ms.locfileid: "67140267"
 ##  <a name="bkmk_run_subscription"></a> Ejecutar la suscripción  
  Se deben especificar las condiciones necesarias para procesar la suscripción. Puede especificar una programación o puede desencadenar la suscripción para que coincida con actualizaciones en una instantánea de ejecución de informes. El procesamiento de las suscripciones controladas por datos es igual al de las suscripciones estándar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [El portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Crear y administrar suscripciones para servidores de informes en modo nativo](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Trabajar con suscripciones (portal web)](../../reporting-services/working-with-subscriptions-web-portal.md) [usar Mis suscripciones (servidor de informes de modo nativo)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Trabajar con suscripciones (portal web)](../../reporting-services/working-with-subscriptions-web-portal.md) [Usar mis suscripciones (servidor de informes en modo nativo)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  

@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499878"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66499878"
   
 -   **Origen de datos espaciales.** La ubicación o conexión a un origen que proporcione los datos espaciales, como el nombre de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una base de datos que contenga los datos espaciales, o bien el nombre de un archivo de forma de Environmental Systems Research Institute, Inc. (ESRI).  
   
--   **.** Del origen de datos espaciales, un campo que contenga los conjuntos de coordenadas que especifican las ubicaciones.  
+-   **Spatial data.** Del origen de datos espaciales, un campo que contenga los conjuntos de coordenadas que especifican las ubicaciones.  
   
 -   **Datos analíticos.** Los datos analíticos que se usan para variar la presentación del mapa, por ejemplo, el almacén de ventas anuales.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66499878"
   
  Haga clic en el título de la página del asistente correspondiente al contenido de la Ayuda. Las páginas que se pueden ver cambian en función de las opciones de tipo de mapa, el origen de datos espaciales, y el origen de datos analíticos.  
   
-1.  [Elegir un origen de datos espaciales](#SpatialDataSource). Los datos espaciales pueden proceder de la galería de mapas, de un archivo de forma de Environmental Systems Research Institute, Inc. o de los datos espaciales de una base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+1.  [Elegir un origen de datos espaciales](#SpatialDataSource). Los datos espaciales pueden proceder de la galería de mapas, Environmental Systems Research Institute, Inc. o de los datos espaciales de una base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   [¿Qué son los datos espaciales?](#SpatialData)  
   
@@ -70,13 +70,13 @@ ms.locfileid: "66499878"
   
     -   [¿Cuál es la diferencia entre un mapa básico, un mapa de burbujas y un mapa analítico?](#MapType)  
   
-    -   Elegir visualización de mapa: polígonos  
+    -   Elegir la visualización de un mapa: Polígonos  
   
-    -   Elegir visualización de mapa: líneas  
+    -   Elegir la visualización de un mapa: Líneas  
   
-    -   Elegir visualización de mapa: puntos  
+    -   Elegir la visualización de un mapa: Puntos  
   
-4.  Elegir una conexión a un origen de datos. Elegir una visualización de mapa: puntos. Elija una conexión a un origen de datos o cree una conexión a un origen de datos externo que contenga los datos analíticos que se van a mostrar en el mapa.  
+4.  Elegir una conexión a un origen de datos. Elegir una visualización de mapa: Puntos. Elija una conexión a un origen de datos o cree una conexión a un origen de datos externo que contenga los datos analíticos que se van a mostrar en el mapa.  
   
 5.  Diseñar una consulta. Diseñe una consulta que especifique los datos analíticos.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66499878"
   
  Después de agregar un mapa o una capa de mapa, y obtener una vista previa del informe, puede cambiar las opciones del mapa y de la capa de mapa que estableció en los asistentes. Para más información, vea [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para más información sobre los mapas, vea [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Para obtener instrucciones paso a paso para agregar un mapa a un informe, vea [Tutorial: Informe de mapa &#40;Generador de informes&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
+ Para más información sobre los mapas, vea [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Para obtener instrucciones paso a paso para agregar un mapa a un informe, vea [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../../reporting-services/tutorial-map-report-report-builder.md)  
   
 ##  <a name="SpatialDataSource"></a> Elegir un origen de datos espaciales  
  En esta página, especifique el origen de datos espaciales y qué datos espaciales se incluirán. Los datos espaciales pueden proceder de la galería de mapas, un archivo de forma ESRI o una consulta del conjunto de datos que especifica los datos espaciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una base de datos de versión de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  
@@ -116,7 +116,7 @@ ms.locfileid: "66499878"
 > [!NOTE]  
 >  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([https://www.census.gov/](https://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para más información acerca de los archivos de forma TIGER/Line, vaya a [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) (Documentación técnica de los archivos de forma TIGER/Line y los archivos TIGER/Line). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
   
- Para extender la galería de mapas, puede agregar o quitar informes del directorio de la galería de mapas, y agregar carpetas para organizar los mapas. Para más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
+ Para extender la galería de mapas, puede agregar o quitar informes del directorio de la galería de mapas, y agregar carpetas para organizar los mapas. Para obtener más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
  Un archivo de forma ESRI es un conjunto de archivos con datos que cumplen el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). El conjunto de archivos suele incluir el archivo *\<nombreDeArchivo>* .shp que contiene datos espaciales y un archivo auxiliar, *\<nombreDeArchivo>* .dbf.  
@@ -134,7 +134,7 @@ ms.locfileid: "66499878"
  Una consulta espacial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una consulta de conjunto de datos que especifica datos de tipo SQLGeometry o SQLGeography de una base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Al definir un origen de datos en el asistente, verá diseñadores de consultas diferentes en la página Diseñar una consulta, en función del tipo de origen de datos al que se haya conectado. Para obtener más información, consulte [herramientas de diseño de consulta &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
+>  Al definir un origen de datos en el asistente, verá diseñadores de consultas diferentes en la página Diseñar una consulta, en función del tipo de origen de datos al que se haya conectado. Para más información, vea [Herramientas de diseño de consulta &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
  Al ejecutar la consulta en el diseñador de consultas, el conjunto de resultados muestra una columna con datos espaciales que aparece como texto. Por ejemplo, una fila podría contener datos espaciales que sean un único punto y la siguiente fila podría contener datos espaciales que definan un conjunto de puntos. Cada fila se convierte en un elemento de mapa. Puede variar la presentación de cada elemento de mapa como una unidad indivisible.  
   
@@ -181,11 +181,11 @@ ms.locfileid: "66499878"
   
 -   **Aéreo.** Muestra solo una vista aérea. En este modo no se muestra ningún texto.  
   
--   **Híbrido.** Muestra la combinación de las vistas **Carretera** y **Aéreo** .  
+-   **Híbridas.** Muestra la combinación de las vistas **Carretera** y **Aéreo** .  
   
  Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](https://go.microsoft.com/fwlink/?LinkId=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
- Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para más información, vea [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y [Planear un informe de mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
+ Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para obtener más información, consulte [Informes de solución de problemas: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y [Planear un informe de mapa](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
  Para más información sobre otras formas de personalizar una capa de mosaico, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -201,7 +201,7 @@ ms.locfileid: "66499878"
   
  Un **mapa analítico** comunica el valor relativo de uno o varios agregados de datos analíticos para cada elemento de mapa. Por ejemplo, almacenes de ventas como tamaño del marcador, intervalo de beneficios de las categorías de producto como color del marcador y productos de mayor venta como tipo de marcador.  
   
- Para más información, vea [Planear un informe de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Planear un informe de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
 ##  <a name="AnalyticalData"></a> Elegir el conjunto de datos analíticos  
  En esta página, especifique dónde obtener los datos analíticos para que se muestren en esta capa de mapa.  

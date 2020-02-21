@@ -16,10 +16,10 @@ ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3ee382716201c5e24b9ff7b23ae4f923ae18b77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978435"
 ---
 # <a name="getunicodestream-method-int"></a>Método getUnicodeStream (int)
@@ -43,12 +43,12 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
  Valor **int** que indica el índice de la columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto InputStream.  
+ Un objeto InputStream.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getUnicodeString especifica este método getUnicodeString en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

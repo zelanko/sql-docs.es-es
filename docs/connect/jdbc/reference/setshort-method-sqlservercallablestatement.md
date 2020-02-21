@@ -16,10 +16,10 @@ ms.assetid: d7031a89-e964-4ffd-87b7-63825799435d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4ad0910814cd4600b3d70c9037c03e1b9997888
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972853"
 ---
 # <a name="setshort-method-sqlservercallablestatement"></a>Método setShort (SQLServerCallableStatement)
@@ -42,12 +42,12 @@ public void setShort(java.lang.String sCol,
   
  *s*  
   
- Valor **Short** .  
+ Un valor **short**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setShort especifica este método setShort en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

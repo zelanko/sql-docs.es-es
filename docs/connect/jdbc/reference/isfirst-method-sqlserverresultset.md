@@ -16,10 +16,10 @@ ms.assetid: 2ff94b95-32ad-4378-8bb1-970030527bb2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b847361621ad8d44840aa4bab02e4877128e8f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977622"
 ---
 # <a name="isfirst-method-sqlserverresultset"></a>Método isFirst (SQLServerResultSet)
@@ -35,12 +35,12 @@ public boolean isFirst()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **true** si el cursor está en la primera fila. **false** si el cursor está en cualquier otra posición o si el conjunto de resultados no contiene ninguna fila.  
+ **true** si el cursor está en la primera fila. **false** si el cursor está en cualquier otra posición o si el conjunto de resultados no contiene filas.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método isFirst especifica este método isFirst en la interfaz java.sql.ResultSet.  
   
  Si este método se utiliza con cursores de avance y dinámicos, se producirá una excepción.  

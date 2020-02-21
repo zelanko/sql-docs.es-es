@@ -26,10 +26,10 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575629"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS)
@@ -58,8 +58,8 @@ ms.locfileid: "65575629"
   
 |Tipo de campo de categorías|Descripción|Ejemplo|  
 |-------------------------|-----------------|-------------|  
-|Numérico|Las categorías se muestran por orden numérico a lo largo del eje X.|Un informe de ventas por número de identificación de empleado muestra los números de identificación de los empleados a lo largo del eje X.|  
-|Fecha y hora|Las categorías se muestran por orden cronológico a lo largo del eje X.|Un informe de ventas por meses muestra las fechas con formato a lo largo del eje X.|  
+|Numeric|Las categorías se muestran por orden numérico a lo largo del eje X.|Un informe de ventas por número de identificación de empleado muestra los números de identificación de los empleados a lo largo del eje X.|  
+|Fecha/hora|Las categorías se muestran por orden cronológico a lo largo del eje X.|Un informe de ventas por meses muestra las fechas con formato a lo largo del eje X.|  
 |Cadenas|Las categorías se muestran en el orden en que aparecen por primera vez en el origen de datos a lo largo del eje X.|Un informe de ventas por regiones muestra los nombres de las regiones a lo largo del eje X.|  
   
  Todos los tipos de gráficos de dos ejes están diseñados para suprimir algunas etiquetas de los ejes cuando hay más categorías de las que caben, con objeto de obtener una imagen más limpia en el gráfico y evitar colisiones en las etiquetas.  

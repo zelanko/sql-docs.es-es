@@ -16,10 +16,10 @@ ms.assetid: fece19e9-3bf8-4299-9188-ac3df5ce9c19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: edfc9491f7652674293ef0a54a058e601608aff5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982034"
 ---
 # <a name="getmaxschemanamelength-method-sqlserverdatabasemetadata"></a>Método getMaxSchemaNameLength (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public int getMaxSchemaNameLength()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getMaxSchemaNameLength se especifica mediante el método getMaxSchemaNameLength en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getMaxSchemaNameLength especifica este método getMaxSchemaNameLength en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

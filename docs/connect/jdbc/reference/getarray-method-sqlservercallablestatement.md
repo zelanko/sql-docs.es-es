@@ -16,10 +16,10 @@ ms.assetid: c21cb48c-a45f-491c-a7cd-4e82d1e178d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ee0f7814bc1290e4a985e5fd4f7b32e4b29b138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954357"
 ---
 # <a name="getarray-method-sqlservercallablestatement"></a>Método getArray (SQLServerCallableStatement)

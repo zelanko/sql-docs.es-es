@@ -1,6 +1,6 @@
 ---
-title: Volver a sincronizar filas | Microsoft Docs
-description: Volver a sincronizar filas mediante OLE DB controlador para SQL Server
+title: Resincronización de filas | Microsoft Docs
+description: Resincronización de filas mediante OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2f1ea1a563e986914c5fe820740776da129c3b28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994175"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>Actualizar datos en conjuntos de filas: volver a sincronizar filas
@@ -27,7 +27,7 @@ ms.locfileid: "67994175"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador de OLE DB para SQL Server  admite **IRowsetResynch** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo en conjuntos de filas admitidos por el cursor. **IRowsetResynch** no está disponible a petición. El consumidor debe solicitar la interfaz antes de abrir el conjunto de filas.  
+  OLE DB Driver for SQL Server admite **IRowsetResynch** en conjuntos de filas compatibles con cursores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **IRowsetResynch** no está disponible a petición. El consumidor debe solicitar la interfaz antes de abrir el conjunto de filas.  
   
 ## <a name="see-also"></a>Consulte también  
  [Actualizar datos en conjuntos de filas](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  

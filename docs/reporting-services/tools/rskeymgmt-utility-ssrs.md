@@ -20,10 +20,10 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f64ee56ddbd88f2d981d35fb24d9e156b734ff88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571478"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
@@ -73,17 +73,17 @@ rskeymgmt {-?}
  **-j**  
  Configura una instancia del servidor de informes remoto para compartir la base de datos del servidor de informes que la instancia del servidor de informes local usa.  
   
- **-r**  *installationID*  
+ **-r**  *IDInstalación*  
  Quita la información de clave simétrica de una instancia de servidor de informes concreta y, por lo tanto, quita el servidor de informes de una implementación escalada. *installationID* es un valor de GUID que se puede encontrar en el archivo RSReportserver.config.  
   
- **-f**  *file*  
+ **-f**  *archivo*  
  Especifica una ruta válida al archivo que almacena una copia de seguridad de las claves simétricas.  
   
  Para **rskeymgmt -e**, la clave simétrica se escribe en el archivo especificado.  
   
  Para **rskeymgmt -a**, el valor de la clave simétrica almacenada en el archivo se aplica a la instancia del servidor de informes.  
   
- **-p**  *password*  
+ **-p**  *contraseña*  
  (Se requiere para **-f**). Especifica la contraseña que se usa para realizar una copia de seguridad o para aplicar una clave simétrica. Este valor no puede estar en blanco.  
   
  **-i**  
@@ -95,13 +95,13 @@ rskeymgmt {-?}
  **-n**  
  Especifica el nombre de la instancia del servidor de informes en un equipo remoto. Este argumento es opcional si ha instalado el servidor de informes en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminada (el valor predeterminado para **-n** es MSSQLSERVER). Si ha instalado el servidor de informes como una instancia con nombre, se requiere **-n** .  
   
- **-u**  *useraccount*  
+ **-u**  *cuentaDeUsuario*  
  Especifica la cuenta de administrador del equipo remoto que está combinando con la implementación escalada. Si no se especifica una cuenta, se usan las credenciales del usuario actual.  
   
- **-v**  *password*  
+ **-v**  *contraseña*  
  (Se requiere para **-u**). Especifica la contraseña de una cuenta de administrador del equipo remoto que quiere combinar con la implementación escalada.  
   
- **-t**  *trace*  
+ **-t**  *seguimiento*  
  Registra los mensajes de error en el registro de seguimiento. Este argumento no toma ningún valor. Para obtener más información, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ## <a name="permissions"></a>Permisos  
@@ -145,7 +145,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Implementación de ampliación horizontal del servidor de informes se refiere a un modelo de implementación en el que varias instancias del servidor de informes comparten la misma base de datos del servidor de informes. Una base de datos del servidor de informes la puede usar cualquier instancia del servidor de informes que almacene sus claves simétricas en la base de datos. Por ejemplo, si una base de datos del servidor de informes contiene información de clave para tres instancias del servidor de informes, las tres instancias se consideran miembros de la misma implementación de ampliación horizontal.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Combinar instancias del servidor de informes en el mismo equipo  
- Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos **-u** y **-v** si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos **-u** y **-v** se usan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, recibirá un error que indica que las credenciales de usuario no se pueden utilizar para las conexiones locales.  
+ Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos **-u** y **-v** si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos **-u** y **-v** se usan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, obtendrá el siguiente error: "No se pueden usar las credenciales de usuario para conexiones locales".  
   
  El ejemplo siguiente muestra la sintaxis para crear una implementación escalada con varias instancias locales. En este ejemplo, \<**initializedinstance**> es el nombre de una instancia que ya está inicializada para usar la base de datos del servidor de informes y \<**newinstance**> es el nombre de la instancia que quiere agregar a la implementación:  
   
@@ -156,7 +156,7 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 #### <a name="removing-encryption-keys-for-a-single-report-server-in-a-scale-out-deployment"></a>Quitar claves de cifrado para un único servidor de informes en una implementación de ampliación horizontal  
  Este ejemplo muestra cómo quitar claves de cifrado de un único servidor de informes en una implementación de ampliación horizontal del servidor de informes. Las claves se quitan de la base de datos del servidor de informes. Cuando se han quitado las claves de la instancia del servidor de informes, esa instancia del servidor de informes ya no puede tener acceso a los datos cifrados de la base de datos, y así se quita de forma efectiva de la implementación de ampliación horizontal.  
   
- Quitar una instancia del servidor de informes de una implementación escalada le exige que especifique un identificador de instalación. El identificador de instalación es un GUID almacenado en el archivo RSReportserver.config de la instancia del servidor de informes para la que desea quitar claves de cifrado. Debe ejecutar el siguiente comando en el equipo que desea quitar de la implementación de ampliación horizontal. Si el servidor de informes está instalado como una instancia con nombre, use el argumento **-i** para especificar la instancia. Para obtener más información, vea [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+ Quitar una instancia del servidor de informes de una implementación escalada le exige que especifique un identificador de instalación. El identificador de instalación es un GUID almacenado en el archivo RSReportserver.config de la instancia del servidor de informes para la que desea quitar claves de cifrado. Debe ejecutar el siguiente comando en el equipo que desea quitar de la implementación de ampliación horizontal. Si el servidor de informes está instalado como una instancia con nombre, use el argumento **-i** para especificar la instancia. Para más información, vea [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
 ```  
 rskeymgmt -r <installationID>  
@@ -165,7 +165,7 @@ rskeymgmt -r <installationID>
 ## <a name="file-location"></a>Ubicación del archivo  
  Rskeymgmt.exe se encuentra en **\<*unidad*>:\Archivos de programa\Microsoft SQL Server\110\Tools\Binn** o en **\<*unidad*>:\Archivos de programa (x86)\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El servidor de informes cifra las credenciales almacenadas y la información de la conexión. Para cifrar los datos, se utiliza una clave pública y una clave simétrica. Para que el servidor de informes funcione, la base de datos debe tener claves válidas. Puede usar **rskeymgmt** para realizar una copia de seguridad de las claves, eliminarlas o restaurarlas. Si las claves no se pueden restaurar, esta herramienta proporciona un método para eliminar el contenido cifrado que ya no se pueda usar.  
   
  La utilidad **rskeymgmt** se usa para administrar el conjunto de claves que se define durante la instalación o durante la inicialización. Conecta con el servicio Servidor de informes de Windows local mediante un punto final de llamada a procedimiento remoto (RPC). El servicio Servidor de informes de Windows debe estar en ejecución para que esta utilidad funcione.  

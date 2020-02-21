@@ -11,10 +11,10 @@ ms.assetid: e79b5b53-16b0-42a3-be4e-542a77a21e12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe4d41448fdd65d3cb4a56f873432e747f564ef6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977703"
 ---
 # <a name="isclosed-method-sqlserverstatement"></a>Método isClosed (SQLServerStatement)
@@ -35,8 +35,8 @@ public boolean isClosed()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método isClosed se especifica mediante el método isClosed en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ El método isClosed especifica este método isClosed en la interfaz java.sql.Statement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

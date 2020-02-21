@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008703"
 ---
 # <a name="using-integrated-authentication"></a>Uso de la autenticación integrada
@@ -24,7 +24,7 @@ ms.locfileid: "68008703"
 
 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y macOS admite conexiones que usan la autenticación integrada de Kerberos. Es compatible con el centro de distribución de claves (KDC) de Kerberos del MIT y funciona con API de servicios de seguridad genéricos (GSSAPI) y bibliotecas de Kerberos v5.
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>Uso de la autenticación integrada para conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde una aplicación ODBC  
+## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>Uso de la autenticación integrada para conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde una aplicación ODBC  
 
 Puede habilitar la autenticación integrada de Kerberos si especifica **Trusted_Connection = yes** en la cadena de conexión de **SQLDriverConnect** o **SQLConnect**. Por ejemplo:  
 
@@ -60,11 +60,11 @@ En este artículo sobre[el uso y la configuración de Kerberos](https://commons.
   
 ## <a name="tracking-access-to-a-database"></a>Seguimiento del acceso a una base de datos
 
-Los administradores de bases de datos pueden crear una pista de auditoría del acceso a una base de datos cuando se utilizan cuentas del sistema para acceder a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la autenticación integrada.  
+Los administradores de bases de datos pueden crear una pista de auditoría del acceso a una base de datos cuando se usan cuentas del sistema para acceder a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la autenticación integrada.  
   
-Para iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se utiliza la cuenta del sistema, y no existe ninguna función en Linux para suplantar el contexto de seguridad. Por lo tanto, se requieren más acciones para determinar el usuario.
+Para iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se usa la cuenta del sistema, y no existe ninguna función en Linux para suplantar el contexto de seguridad. Por lo tanto, se requieren más acciones para determinar el usuario.
   
-Para auditar las actividades realizadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en nombre de usuarios distintos a la cuenta del sistema, la aplicación debe usar **EXECUTE AS** de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+Para auditar las actividades de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en nombre de usuarios distintos a los de la cuenta del sistema, la aplicación debe usar **EXECUTE AS** de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 Para mejorar su rendimiento, las aplicaciones pueden utilizar la agrupación de conexiones con la autenticación integrada y la auditoría. Pero combinar la agrupación de conexiones, la autenticación integrada y la auditoría trae consigo un riesgo de seguridad, ya que el administrador de controladores unixODBC permite que distintos usuarios reutilicen las conexiones agrupadas. Para obtener más información, consulte este artículo sobre la [agrupación de conexiones ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
 
@@ -94,7 +94,7 @@ Para acceder a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] medi
   
 Usar `-T` con la opción `-U` o `-P` constituye un error.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>Sintaxis admitida para un SPN registrado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-ssnoversion"></a>Sintaxis admitida para un SPN registrado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 La sintaxis que usan los SPN en los atributos de cadena de conexión o atributos de conexión es la siguiente:  
 

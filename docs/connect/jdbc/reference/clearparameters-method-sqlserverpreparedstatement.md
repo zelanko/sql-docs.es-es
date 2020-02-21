@@ -16,10 +16,10 @@ ms.assetid: cb1d0f36-d2de-4685-b97a-626608e50e5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de9b950923f1b4729f44ddeac0d812bd1c6102c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955768"
 ---
 # <a name="clearparameters-method-sqlserverpreparedstatement"></a>Método clearParameters (SQLServerPreparedStatement)
@@ -37,8 +37,8 @@ public final void clearParameters()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método clearParameters se especifica mediante el método clearParameters de la interfaz java. SQL. PreparedStatement.  
+## <a name="remarks"></a>Observaciones  
+ El método clearParameters especifica este método clearParameters en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

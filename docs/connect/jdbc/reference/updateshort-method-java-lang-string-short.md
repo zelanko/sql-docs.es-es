@@ -1,5 +1,5 @@
 ---
-title: Método updateShort (Java. lang. String, Short) | Microsoft Docs
+title: Método updateShort (java.lang.String, short) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1e596e99-11ce-4a57-b247-e40078922036
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d084c129552b0979f773adc582d0b25ea6e3f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213643"
 ---
 # <a name="updateshort-method-javalangstring-short"></a>Método updateShort (java.lang.String, short)
@@ -42,12 +42,12 @@ public void updateShort(java.lang.String columnName,
   
  *x*  
   
- Valor **Short** .  
+ Un valor **short**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateShort especifica este método updateShort en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -9,10 +9,10 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579819"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ámbito de expresión para los totales, agregados y colecciones integradas
@@ -96,11 +96,11 @@ ms.locfileid: "65579819"
   
  Suponga que el conjunto de datos se llama DataSet1 y la tabla se llama Tablix1. En la siguiente tabla se ofrece una lista de la etiqueta de celda, el ámbito predeterminado y ejemplos. Los valores para el texto del marcador de posición se muestran en sintaxis de expresión.  
   
-|Celda|Ámbito predeterminado|Etiquetas de marcador de posición|Texto o valores de marcador de posición|  
+|Cell|Ámbito predeterminado|Etiquetas de marcador de posición|Texto o valores de marcador de posición|  
 |----------|-------------------|------------------------|--------------------------------|  
 |C01|Tablix1|[Sum(Qty)]|Agregados y ámbito<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C02|Grupo de columnas externo "Year"|[Year]<br /><br /> ([YearQty])|`=Fields!Year.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
-|C03|Tablix1|[Sum(Qty)]|Totals<br /><br /> `=Sum(Fields!Qty.Value)`|  
+|C03|Tablix1|[Sum(Qty)]|Totales<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C04|Grupo de columnas del mismo nivel "Territory"|([Total])|Territory<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C05|Grupo interno "Qtr"|[Qtr]<br /><br /> ([QtrQty])|Q<br /><br /> `=Fields!Qtr.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C06|Grupo de columnas del mismo nivel "Territory"|[Territory]<br /><br /> ([Tty])<br /><br /> [Pct]|`=Fields!Territory.Value`<br /><br /> `=Sum(Fields!Qty.Value)`<br /><br /> `=FormatPercent(Sum(Fields!Qty.Value,"Territory")/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  

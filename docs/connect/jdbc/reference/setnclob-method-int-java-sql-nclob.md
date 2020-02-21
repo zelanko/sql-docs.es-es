@@ -1,5 +1,5 @@
 ---
-title: Método setNClob (int, Java. SQL. NClob) | Microsoft Docs
+title: Método setNClob (int, java.sql.NClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 48c8aa2a-4185-4837-b592-830e60f8ca0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cfb93f1ee08a7b5791679d189a73f75c5506fda7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973759"
 ---
 # <a name="setnclob-method-int-javasqlnclob"></a>Método setNClob (int, java.sql.NClob)
@@ -42,7 +42,7 @@ public final void setNClob(int parameterIndex,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setNClob especifica este método setNClob en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  

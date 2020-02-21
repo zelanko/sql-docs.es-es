@@ -16,10 +16,10 @@ ms.assetid: 70920828-eda0-4064-be9f-c1e460db8f00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 344ae0104f527739bf3a954ed9138252d7efb58e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972930"
 ---
 # <a name="setservername-method-sqlserverdatasource"></a>Método setServerName (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setServerName(java.lang.String serverName)
   
  Objeto **String** que contiene el nombre del servidor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El nombre del servidor es el nombre de host del equipo de destino que ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se establece la propiedad serverName, [getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md) devuelve el valor predeterminado, que es NULL.  
   
 ## <a name="see-also"></a>Consulte también  

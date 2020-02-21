@@ -16,10 +16,10 @@ ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952838"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Método getColumns (SQLServerDatabaseMetaData)
@@ -60,7 +60,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getColumns especifica este método getColumns en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getColumns contendrá la siguiente información:  
@@ -78,7 +78,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|Escala de la columna.|  
 |NUM_PREC_RADIX|**smallint**|Base de la columna.|  
 |NULLABLE|**smallint**|Indica si la columna admite valores NULL. Puede ser uno de los siguientes valores:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**String**|Comentarios asociados con la columna.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] siempre devuelve null para esta columna.|  
+|COMENTARIOS|**String**|Comentarios asociados con la columna.<br /><br /> **Nota:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] siempre devuelve NULL para esta columna.|  
 |COLUMN_DEF|**String**|Valor predeterminado de la columna.|  
 |SQL_DATA_TYPE|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es igual que la columna DATA_TYPE, salvo por los tipos de datos datetime e interval de SQL-92. Esta columna siempre devuelve un valor.|  
 |SQL_DATETIME_SUB|**smallint**|Código de subtipo para los tipos de datos interval de SQL-92 y datetime. Para otros tipos de datos, esta columna devuelve NULL.|  
@@ -102,7 +102,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 > [!NOTE]  
 >  Para más información sobre los datos que devuelve el método getColumns, vea "sp_columns (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- En el controlador JDBC 3.0 de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], observará que existen los siguientes cambios de comportamiento con respecto a las versiones anteriores del controlador JDBC:  
+ En el controlador JDBC 3.0 de [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], observará que existen los siguientes cambios de comportamiento con respecto a las versiones anteriores del controlador JDBC:  
   
  La columna DATA_TYPE tiene los cambios siguientes:  
   
@@ -115,7 +115,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |nvarchar(max)|LONGVARCHAR (-1) o LONGNVARCHAR (JDBC 4) (-16)|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|  
 |ntext|LONGVARCHAR (-1)|VARCHAR (12)|  
 |time|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|TIME (-154)|  
-|Date|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|DATE (91)|  
+|date|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|DATE (91)|  
 |datetime2|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|TIMESTAMP (93)|  
 |datetimeoffset|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|microsoft.sql.Types.DATETIMEOFFSET  (-155)|  
   
@@ -124,10 +124,10 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |Tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo devuelto en el controlador JDBC 2.0|Tipo devuelto en el controlador JDBC 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (metadatos de base de datos)|  
-|xml|1073741823|2147483647 (metadatos de base de datos)|  
+|Xml|1073741823|2147483647 (metadatos de base de datos)|  
 |tipo definido por el usuario menor o igual que 8 KB|8 KB (conjunto de resultados y metadatos de parámetro)|Tamaño real que devuelve el procedimiento almacenado.|  
 |time||La longitud en caracteres de la representación de cadena del tipo (suponiendo la precisión máxima permitida del componente de fracciones de segundo).|  
-|Date||igual que time|  
+|date||igual que time|  
 |datetime2||igual que time|  
 |datetimeoffset||igual que time|  
   
@@ -141,7 +141,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
 |Tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo devuelto en el controlador JDBC 2.0|Tipo devuelto en el controlador JDBC 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
-|ntext|texto|varchar|  
+|ntext|text|varchar|  
 |varbinary(max)|imagen|varbinary|  
   
  La columna DECIMAL_DIGITS tiene los siguientes cambios:  
@@ -149,7 +149,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |Tipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Controlador JDBC 2.0|Controlador JDBC 3.0|  
 |--------------------------------------------------------------|---------------------|---------------------|  
 |time|null|7 (o menor si se especifica)|  
-|Date|null|null|  
+|date|null|null|  
 |datetime2|null|7 (o menor si se especifica)|  
 |datetimeoffset|null|7 (o menor si se especifica)|  
   
@@ -159,14 +159,14 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |ntext|-10|-9|  
 |nvarchar(max)|-1|-9|  
-|xml|-10|-152|  
+|Xml|-10|-152|  
 |tipo definido por el usuario menor o igual que 8 KB|-3|-151|  
 |tipo definido por el usuario mayor que 8 KB|No está disponible en el controlador JDBC 2.0|-151|  
 |geography|-4|-151|  
 |geometry|-4|-151|  
 |hierarchyid|-4|-151|  
 |time|-9|92|  
-|Date|-9|91|  
+|date|-9|91|  
 |datetime2|-9|93|  
 |datetimeoffset|-9|-155|  
   

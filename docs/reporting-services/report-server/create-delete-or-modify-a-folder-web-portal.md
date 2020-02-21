@@ -1,5 +1,5 @@
 ---
-title: Crear, eliminar o modificar una carpeta - Reporting Services | Microsoft Docs
+title: 'Creación, eliminación o modificación de una carpeta: Reporting Services | Microsoft Docs'
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492853"
 ---
-# <a name="create-delete-or-modify-a-folder---reporting-services"></a>Crear, eliminar o modificar una carpeta - Reporting Services
+# <a name="create-delete-or-modify-a-folder---reporting-services"></a>Creación, eliminación o modificación de una carpeta: Reporting Services
   Puede crear carpetas para organizar y administrar los elementos que publica en un servidor de informes. La creación de carpetas puede ayudar a los usuarios a buscar informes de su interés. Para administradores de contenido, las carpetas proporcionan un marco para aplicar permisos. Puede crear asignaciones de roles en carpetas concretas para restringir el acceso a los informes que se están desarrollando o que no se deberían distribuir de manera amplia.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
@@ -34,7 +34,7 @@ ms.locfileid: "67492853"
   
 5.  Seleccione **Ocultar en la vista de lista** si no desea mostrar la carpeta en la vista predeterminada de la página **Contenido** . La carpeta estará visible para los usuarios solo cuando hagan clic en **Mostrar detalles** en la página **Contenido** .  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ## <a name="to-delete-a-folder"></a>Para eliminar una carpeta  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67492853"
   
 6.  O bien, haga clic en **Eliminar**para quitar la carpeta y su contenido.  
   
-7.  Haga clic en **Aplicar** para guardar los cambios.  
+7.  Haga clic en **Apply** (Aplicar) para guardar los cambios.  
 
 ::: moniker-end
 
@@ -74,41 +74,41 @@ ms.locfileid: "67492853"
   
 1. Abra [el portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
-2. Navegue hasta la carpeta o subcarpeta donde desea ubicar la nueva carpeta. Seleccione el **inicio** carpeta seleccionando el **examinar** en la barra de herramientas en la parte superior izquierda de la página para crearlo en la parte superior de la jerarquía de carpetas.  
+2. Vaya a la carpeta o subcarpeta donde desea ubicar la nueva carpeta. Seleccione la carpeta **Inicio** eligiendo el botón **Examinar** en la barra de herramientas situada en la parte superior izquierda de la página para crearla en la parte superior de la jerarquía de carpetas.  
   
-3. Seleccione el **New** botón en la parte superior derecha de la barra de herramientas del servidor de informes y, a continuación, seleccione **carpeta** en el menú desplegable.  
+3. Seleccione el botón **Nuevo** en la parte superior derecha de la barra de herramientas del servidor de informes y luego elija **Carpeta** en el menú desplegable.  
   
-4. En el **cree una nueva carpeta (nombre de la carpeta actual)** diálogo cuadro, escriba el nombre de la nueva carpeta que se va a crear. Puede incluir espacios, pero no caracteres reservados que se utilicen para la codificación de direcciones URL: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. Tampoco se puede escribir una serie de nombres de carpetas para crear varias carpetas al mismo tiempo.  
+4. En el cuadro de diálogo **Cree una nueva carpeta en (nombre de carpeta actual)** , escriba el nombre de la nueva carpeta que se va a crear. Puede incluir espacios, pero no caracteres reservados que se utilicen para la codificación de direcciones URL: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. Tampoco se puede escribir una serie de nombres de carpetas para crear varias carpetas al mismo tiempo.  
   
-5. Seleccione **crear** para completar la acción.  
+5. Seleccione **Crear** para completar la acción.  
   
 ## <a name="to-delete-a-folder"></a>Para eliminar una carpeta  
   
-1. En el portal web, vaya a la jerarquía de carpetas y busque la carpeta que desea eliminar.  
+1. En el portal web, navegue por la jerarquía de carpetas y busque la carpeta que desea eliminar.  
   
-2. El derecho click carpeta y seleccione **eliminar** en el menú desplegable.  
+2. Haga clic con el botón derecho en la carpeta y seleccione **Eliminar** en el menú desplegable.  
   
-3. Seleccione el **eliminar** situado en la **eliminar <foldername>**  cuadro de diálogo para confirmar la eliminación.  
+3. Seleccione el botón **Eliminar** del cuadro de diálogo **Eliminar <foldername>** para confirmar la eliminación.  
   
 ## <a name="to-modify-a-folders-properties"></a>Para modificar las propiedades de una carpeta  
   
-1. En el portal web, vaya a la jerarquía de carpetas y busque la carpeta que desea eliminar.  
+1. En el portal web, navegue por la jerarquía de carpetas y busque la carpeta que desea eliminar.  
   
-2. El derecho click carpeta y seleccione **eliminar** en el menú desplegable.  
+2. Haga clic con el botón derecho en la carpeta y seleccione **Eliminar** en el menú desplegable.  
   
-3. Seleccione la pestaña **Propiedades**. El **propiedades** página se muestra de forma predeterminada.  
+3. Haga clic en la pestaña **Properties** (Propiedades). Se muestra la página **Propiedades** de forma predeterminada.  
   
-4. Puede cambiar el nombre de la carpeta en la *nombre** cuadro de texto.  
+4. Puede cambiar el nombre de la carpeta en el cuadro de texto *Nombre**.  
   
-5. Puede agregar o cambiar la descripción de la carpeta en la *descripción** cuadro de texto.  
+5. Puede Agregar o cambiar la descripción de la carpeta en el cuadro de texto *Descripción**.  
   
-6. Puede ocultar o mostrar la carpeta activando o desactivando la **ocultar este elemento** casilla de verificación, respectivamente.  
+6. Puede ocultar o anular la ocultación de la carpeta activando o desactivando la casilla de verificación **Ocultar este elemento** respectivamente.  
   
-7. Seleccione **aplicar** para guardar los cambios de propiedades.  
+7. Seleccione **Aplicar** para guardar los cambios de propiedades.  
   
-8. Si lo desea, puede mover o eliminar la carpeta seleccionando el **mover** o **eliminar** botones en la parte superior de la **propiedades** página. Consulte la [mover o eliminar un elemento (portal web)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md) artículo para obtener más información.  
+8. Opcionalmente, puede mover o eliminar la carpeta seleccionando los botones **Mover** o **Eliminar** de la parte superior de la página **Propiedades**. Para más información, consulte el artículo [Mover o eliminar un elemento (Administrador de informes)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación, eliminación o modificación de una carpeta (portal web)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)   
  [Administración de contenido del servidor de informes (modo nativo de SSRS)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)    

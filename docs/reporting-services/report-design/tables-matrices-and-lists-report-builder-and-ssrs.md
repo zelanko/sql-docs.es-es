@@ -34,10 +34,10 @@ ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a326ce7ea6701b1fe55f76861bced6c3c86174d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574676"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tablas, matrices y listas (Generador de informes y SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "65574676"
   
  ![RS_TableMatrixList](../../reporting-services/report-design/media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Para empezar a trabajar rápidamente con tablas, matrices y listas, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) y [Tutorial: Crear un informe de forma libre &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Para obtener información sobre tablas, matrices y listas, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) y [Tutorial: Creación de un informe de forma libre &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Puede publicar tablas, matrices y listas por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "65574676"
   
  ![Nueva matriz agregada desde el cuadro de herramientas, seleccionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nueva matriz agregada desde el cuadro de herramientas, seleccionada")  
   
- Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. En tiempo de ejecución, cuando se combinan las regiones de datos y los datos del informe, una matriz crece en horizontal y vertical en la página al irse agregando columnas a los grupos de columnas y filas a los grupos de filas. Las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Por ejemplo, si la matriz tiene un grupo de filas (Categoría) y dos grupos de columnas (Territorio y Año) que muestran la suma de las ventas, el informe muestra dos celdas con las sumas de ventas de cada valor del grupo de categorías. El ámbito de las celdas es las dos intersecciones: Categoría y Territorio y Categoría y Año. La matriz puede tener grupos anidados y adyacentes. Los grupos anidados tienen una relación primario-secundario y los adyacentes una relación del mismo nivel. Puede agregar los subtotales a cualquiera de los niveles de grupos anidados de filas y columnas de la matriz.  
+ Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. En tiempo de ejecución, cuando se combinan las regiones de datos y los datos del informe, una matriz crece en horizontal y vertical en la página al irse agregando columnas a los grupos de columnas y filas a los grupos de filas. Las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Por ejemplo, si la matriz tiene un grupo de filas (Categoría) y dos grupos de columnas (Territorio y Año) que muestran la suma de las ventas, el informe muestra dos celdas con las sumas de ventas de cada valor del grupo de categorías. El ámbito de las celdas son las dos intersecciones: Category y Territory, y Category y Year. La matriz puede tener grupos anidados y adyacentes. Los grupos anidados tienen una relación primario-secundario y los adyacentes una relación del mismo nivel. Puede agregar los subtotales a cualquiera de los niveles de grupos anidados de filas y columnas de la matriz.  
   
  Para que los datos de la matriz sean más legibles y resaltar los datos a los que desea dar énfasis, puede combinar celdas, dividir los datos en horizontal y en vertical, o aplicar formato a los datos y encabezados de grupo.  
   

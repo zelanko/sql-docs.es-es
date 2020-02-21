@@ -16,10 +16,10 @@ ms.assetid: 11013055-4fd3-45a9-b2da-28b2908dad52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f6f26909a0ad7c5f33bdf997c48f88c6e7b300a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973014"
 ---
 # <a name="setsavepoint-method-"></a>Método setSavepoint ()
@@ -35,13 +35,13 @@ public java.sql.Savepoint setSavepoint()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto de punto de retorno.  
+ Un objeto SavePoint.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setSavePoint se especifica mediante el método setSavePoint en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método setSavePoint especifica este método setSavePoint en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método setSavepoint &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   

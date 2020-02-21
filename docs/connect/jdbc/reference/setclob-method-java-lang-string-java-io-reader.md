@@ -11,10 +11,10 @@ ms.assetid: f7457b8a-df31-4999-883e-8cc386a48ceb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8695cd34f088f62ef5fa6f2b82c6103396801179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974543"
 ---
 # <a name="setclob-method-javalangstring-javaioreader"></a>Método setClob (java.lang.String, java.io.Reader)
@@ -37,12 +37,12 @@ public final void setClob(java.lang.String parameterName,
   
  *reader*  
   
- Objeto de lector.  
+ Un objeto Reader.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setClob especifica este método setClob en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -1,6 +1,6 @@
 ---
 title: Puntuación de datos mediante RevoScaleR
-description: Tutorial sobre cómo puntuar datos mediante el lenguaje R en SQL Server.
+description: 'Tutorial 8 de RevoScaleR: Puntuación de datos mediante el lenguaje R en SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf4198e4f8baa0c572f5da3d2b4cf457e695a4b7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 26f5c7b56298e6a3bd5f1fa9d8bc1d4db79d60af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727179"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947208"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Puntuación de datos nuevos (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Este es el tutorial 8 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-En este paso, se usa el modelo de regresión logística que creó en la lección anterior para puntuar otro conjunto de datos que use las mismas variables independientes como entradas.
+En este tutorial, se usa el modelo de regresión logística que creó en el tutorial anterior para puntuar otro conjunto de datos que use las mismas variables independientes como entradas.
 
 > [!div class="checklist"]
 > * Puntuación de nuevos datos
@@ -32,7 +32,7 @@ En este paso, se usa el modelo de regresión logística que creó en la lección
 
 ## <a name="generate-and-save-scores"></a>Generar y almacenar puntuaciones
   
-1. Actualice el origen de datos de sqlScoreDS (creado en la [lección dos](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) para usar la información de columna creada en la lección anterior.
+1. Actualice el origen de datos de sqlScoreDS (creado en el [tutorial dos](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) para usar la información de columna creada en el tutorial anterior.
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -125,7 +125,7 @@ Una vez creada la nueva tabla, calcule y muestre un histograma de las 10 000 pun
     minMaxVals <- as.vector(unlist(minMaxVals))
     ```
 
-    **Resultado**
+    **Resultados**
      
     ```R
     > minMaxVals
@@ -151,7 +151,7 @@ Una vez creada la nueva tabla, calcule y muestre un histograma de las 10 000 pun
     rxHistogram(~ccFraudLogitScore, data = sqlOutScoreDS)
     ```
   
-    **Resultado**
+    **Resultados**
   
     ![Histograma complejo creado por R](media/rsql-sue-complex-histogram.png "Histograma complejo creado por R")
   

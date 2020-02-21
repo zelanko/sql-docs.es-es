@@ -1,5 +1,5 @@
 ---
-title: Miembros de SQLServerPooledConnection | Microsoft Docs
+title: Miembros SQLServerPooledConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1c1c6a6330fec261de12a1ee64f7384f7e2ab59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970810"
 ---
 # <a name="sqlserverpooledconnection-members"></a>Miembros de SQLServerPooledConnection
@@ -25,7 +25,7 @@ ms.locfileid: "67970810"
 ## <a name="constructors"></a>Constructores  
  Ninguno.  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
  Ninguno.  
   
 ## <a name="inherited-fields"></a>Campos heredados  

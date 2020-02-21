@@ -11,10 +11,10 @@ ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140476"
 ---
 # <a name="create-the-rsexecrole"></a>Crear el RSExecRole
@@ -28,9 +28,9 @@ ms.locfileid: "67140476"
 -   Crear y aprovisionar el rol **RSExecRole** en la base de datos del sistema MSDB.  
   
 > [!NOTE]  
-> Las instrucciones de este tema están destinadas a los usuarios que no desean ejecutar un script o escribir código WMI para proporcionar la base de datos del servidor de informes. Si administra una implementación grande y va a mover las bases de datos habitualmente, debe escribir un script para automatizar estos pasos. Para más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+> Las instrucciones de este tema están destinadas a los usuarios que no desean ejecutar un script o escribir código WMI para proporcionar la base de datos del servidor de informes. Si administra una implementación grande y va a mover las bases de datos habitualmente, debe escribir un script para automatizar estos pasos. Para obtener más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-## <a name="before-you-start"></a>Antes de empezar  
+## <a name="before-you-start"></a>Antes de comenzar  
   
 -   Realice una copia de seguridad de las claves de cifrado para poder restaurarlas después de mover la base de datos. Este paso no afecta directamente a la capacidad personal para crear y proporcionar el rol **RSExecRole**, pero se debe disponer de una copia de seguridad de las claves para comprobar el trabajo. Para obtener más información, vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
@@ -59,23 +59,23 @@ ms.locfileid: "67140476"
   
 6.  Abra **Roles**.  
   
-7.  Haga clic con el botón derecho en **Roles de base de datos**y seleccione **Nuevo rol de la base de datos**. El **rol de base de datos - nuevo** aparece la página.  
+7.  Haga clic con el botón derecho en **Roles de base de datos**y seleccione **Nuevo rol de la base de datos**. Aparece la página **Rol de base de datos - Nuevo**.  
   
 8.  En **Nombre de rol**, escriba **RSExecRole**.  
   
 9. En **Propietario**, escriba **dbo**.  
   
-10. Página Seleccionar **elementos protegibles**.  
+10. Seleccione la página **Elementos protegibles**.  
   
 11. Haga clic en **Buscar**. Aparece el cuadro de diálogo **Agregar objetos** . La opción **Especificar objetos** está seleccionada de forma predeterminada.  
   
-12. Haga clic en **Aceptar**. Aparece el cuadro de diálogo **Seleccionar objetos** .  
+12. Haga clic en **OK**. Aparece el cuadro de diálogo **Seleccionar objetos** .  
   
 13. Haga clic en **Tipos de objeto**.  
   
 14. Haga clic en **Procedimientos almacenados extendidos**.  
   
-15. Haga clic en **Aceptar**.  
+15. Haga clic en **OK**.  
   
 16. Haga clic en **Examinar**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "67140476"
   
 18. Haga clic en **Aceptar**y, a continuación, vuelva a hacer clic en **Aceptar** .  
   
-19. En el **Execute** de fila, en el **Grant** columna, seleccione la casilla de verificación.  
+19. En la fila **Ejecutar**, en la columna **Conceder**, haga clic en la casilla.  
   
 20. Repita este paso con cada uno de los procedimientos almacenados restantes. **RSExecRole** debe tener concedidos permisos de ejecución para los tres procedimientos almacenados.  
 
@@ -116,17 +116,17 @@ ms.locfileid: "67140476"
   
 7.  En Propietario, escriba **dbo**.  
   
-8.  Seleccione el **elementos protegibles** página.  
+8.  Seleccione la página **Elementos protegibles**.  
   
 9.  Haga clic en **Buscar**. Aparece el cuadro de diálogo **Agregar objetos** . La opción **Especificar objetos** está seleccionada de forma predeterminada.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Haga clic en **Tipos de objeto**.  
   
 12. Haga clic en **Procedimientos almacenados**.  
   
-13. Haga clic en **Aceptar**.  
+13. Haga clic en **OK**.  
   
 14. Haga clic en **Examinar**.  
   
@@ -160,15 +160,15 @@ ms.locfileid: "67140476"
   
 19. Repita este paso con cada uno de los procedimientos almacenados restantes. Se deben conceder al rol RSExecRole permisos de ejecución para los diez procedimientos almacenados.  
   
-20. En el **elementos protegibles** página, haga clic en **búsqueda** nuevo. Aparece el cuadro de diálogo **Agregar objetos** . La opción **Especificar objetos** está seleccionada de forma predeterminada.  
+20. Todavía en la página **Elementos protegibles**, haga clic en **Buscar**. Aparece el cuadro de diálogo **Agregar objetos** . La opción **Especificar objetos** está seleccionada de forma predeterminada.  
   
-21. Haga clic en **Aceptar**.  
+21. Haga clic en **OK**.  
   
 22. Haga clic en **Tipos de objeto**.  
   
 23. Haga clic en **Tablas**.  
   
-24. Haga clic en **Aceptar**.  
+24. Haga clic en **OK**.  
   
 25. Haga clic en **Examinar**.  
   
@@ -210,9 +210,9 @@ ms.locfileid: "67140476"
   
 5.  Escriba el nombre del servidor del motor de base de datos. Si ha adjuntado las bases de datos del servidor de informes a una instancia con nombre, debe escribir el nombre de la instancia con este formato: \<nombreDeServidor>\\<nombreDeInstancia\>.  
   
-6.  Haga clic en **Probar conexión**. Debería ver un cuadro de diálogo que indica "Conexión de prueba correcto".
+6.  Haga clic en **Probar conexión**. Debería ver un cuadro de diálogo que indica "Prueba de conexión realizada correctamente".
   
-7.  Seleccione **Aceptar** para cerrar el cuadro de diálogo y, a continuación, seleccione **siguiente**.  
+7.  Seleccione **Aceptar** para cerrar el cuadro de diálogo y, a continuación, seleccione **Siguiente**.  
   
 8.  En Base de datos, seleccione la base de datos del servidor de informes.  
   

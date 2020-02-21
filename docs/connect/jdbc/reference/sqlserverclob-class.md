@@ -11,10 +11,10 @@ ms.assetid: 24170524-e1ab-4e80-8fd1-6688efacfbde
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1aea1cb4026096574e0fe3acfeb9ad4b7c123e16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971821"
 ---
 # <a name="sqlserverclob-class"></a>Clase SQLServerClob
@@ -35,7 +35,7 @@ ms.locfileid: "67971821"
 public class SQLServerClob  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un CLOB se almacena en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como un tipo de datos TEXT o NTEXT.  
   
 ## <a name="see-also"></a>Consulte también  

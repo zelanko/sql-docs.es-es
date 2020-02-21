@@ -1,5 +1,5 @@
 ---
-title: Clase SQLServerDataSource | Microsoft Docs
+title: Clase SQLServerDataSource () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971520"
 ---
 # <a name="sqlserverdatasource-class"></a>Clase SQLServerDataSource
@@ -33,8 +33,8 @@ ms.locfileid: "67971520"
 public class SQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Notas  
- Esta clase admite la desencapsulación en la clase SQLServerDataSource, la interfaz ISQLServerDataSource y la interfaz DataSource. Para obtener más información, vea [contenedores e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+## <a name="remarks"></a>Observaciones  
+ Esta clase admite la desencapsulación en la clase SQLServerDataSource, la interfaz ISQLServerDataSource y la interfaz DataSource. Para más información, consulte [Contenedores e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -14,10 +14,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18827d05bc5567b4566eaa006d88c249874132cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971074"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>Constructor SQLServerException (java.lang.String, java.lang.String, int, java.lang.Throwable)
@@ -38,7 +38,7 @@ public SQLServerException(java.lang.String errText,
 #### <a name="parameters"></a>Parámetros  
  *errText*  
   
- Cadena que contiene el texto del error.
+ Cadena que contiene el texto de error.
   
  *errState*  
   
@@ -46,7 +46,7 @@ public SQLServerException(java.lang.String errText,
  
  *errNum*  
   
- Un valor int que contiene el código de error para la excepción.
+ Un entero que contiene el código de error para la excepción.
  
  *cause*  
   

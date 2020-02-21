@@ -9,10 +9,10 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041670"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
@@ -27,7 +27,7 @@ Para variar la apariencia de los elementos de mapa, especifique un campo que ten
 En este tutorial, compilará un informe de mapa que muestre ubicaciones de almacenes en los condados del Estado de Nueva York.  
    
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 30 minutos.  
   
@@ -59,7 +59,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
     
     ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página **Elegir opciones de datos espaciales y vista de mapa** , acepte los valores predeterminados y haga clic en **Siguiente**. 
  
@@ -85,7 +85,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
     
     ![report-builder-map-choose-color-theme](../reporting-services/media/report-builder-map-choose-color-theme.png)
   
-14. Haga clic en **Finalizar**.  
+14. Haga clic en **Finalizar**  
   
     Se agrega el mapa a la superficie de diseño.  
   
@@ -131,7 +131,7 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
     > [!NOTE]  
     > El origen de datos que elija no importa, con tal de que tenga los permisos adecuados. No está recibiendo datos del origen de datos. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
   
@@ -174,12 +174,12 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
     *   **SellingArea**: el área disponible para la visualización del producto, que va de 138 a 342 metros cuadrados.
     *   **City**.
     *   **County**.
-    *   **Sales**: ventas totales. 
+    *   **Ventas**: Ventas totales. 
     *   **SpatialLocation**: ubicación en longitud y latitud. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
-10. Haga clic en **Siguiente**.  
+10. Haga clic en **Next**.  
   
     Se ha creado el conjunto de datos de informe denominado DataSet1. Después de completar el asistente, puede usar la colección de campos del panel Datos de informe.  
   
@@ -187,9 +187,9 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
   
     La vista de mapa muestra círculos para marcar la ubicación de cada almacén.  
   
-12. Haga clic en **Siguiente**.  
+12. Haga clic en **Next**.  
   
-13. En la página Elegir visualización de mapa, haga clic en **Mapa de burbujas** para un tipo de mapa que muestra marcadores que varían de tamaño, según los datos. Haga clic en **Siguiente**.  
+13. En la página Elegir visualización de mapa, haga clic en **Mapa de burbujas** para un tipo de mapa que muestra marcadores que varían de tamaño, según los datos. Haga clic en **Next**.  
   
 14. En la página **Elegir el conjunto de datos analíticos** , haga clic en DataSet1 y, después, en **Siguiente**. Este conjunto de datos contiene datos analíticos y datos espaciales que se mostrarán en la nueva capa de punto.   
   
@@ -199,7 +199,7 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
   
 18. Seleccione **Mostrar etiquetas**y, en **Campo de datos**, seleccione `[City]`.
 
-18. Haga clic en **Finalizar**.  
+18. Haga clic en **Finalizar**  
   
     La capa de mapa se agrega al informe. La leyenda muestra los tamaños de burbuja según los valores de SellingArea.  
   
@@ -242,7 +242,7 @@ Use el Asistente para capas de mapa para agregar una capa de mapa que muestre un
   
 5.  En **Elegir una conexión con un origen de datos espaciales de SQL Server**, seleccione el origen de datos que ha usado en el primer procedimiento.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**. El diseñador de consultas cambia al modo basado en texto.  
   
@@ -255,7 +255,7 @@ Use el Asistente para capas de mapa para agregar una capa de mapa que muestre un
        -73.4728622833178 44.7028831413324)' AS geography) as Route  
     ```  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
     En el mapa aparece una ruta de acceso que conecta tres almacenes.  
   
@@ -263,13 +263,13 @@ Use el Asistente para capas de mapa para agregar una capa de mapa que muestre un
   
     La vista de mapa muestra una ruta desde un almacén de la parte septentrional del Estado de Nueva York a otro de la parte meridional.  
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
 12. En la página **Elegir visualización de mapa** , haga clic en **Mapa de líneas básico**y, después, en **Siguiente**.  
   
 13. En **Elegir tema de color y visualización de datos**, seleccione la opción **Mapa de un color**. La ruta aparece en un color basado en el tema seleccionado.  
   
-14. Haga clic en **Finalizar**.  
+14. Haga clic en **Finalizar**  
 
     ![report-builder-map-line](../reporting-services/media/report-builder-map-line.png)
   
@@ -453,7 +453,7 @@ Para representar un nuevo almacén que aún no se ha generado, en esta sección 
   
 1.  Cambie a la vista de diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en **Agregar capa** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") y, después, en **Capa de punto**.  
+2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en **Agregar capa** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") y después en **Capa de punto**.  
   
     Una nueva capa de punto se agrega al mapa. De forma predeterminada, la capa de punto tiene el tipo de datos espaciales **Incrustado**.  
   
@@ -530,13 +530,13 @@ Este título aparecerá en la parte superior del informe. Cuando no hay ningún 
 
 3. Guárdelo en el equipo local o en un servidor de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .
   
-4. Haga clic en **Guardar**. 
+4. Haga clic en **Save**(Guardar). 
 
 Si lo guarda en un servidor de informes, puede verlo allí.
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 De esta forma se concluye el tutorial sobre cómo agregar un mapa a un informe.  
   
 Para obtener más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  

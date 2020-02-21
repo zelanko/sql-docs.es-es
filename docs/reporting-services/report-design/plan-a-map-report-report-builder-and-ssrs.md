@@ -9,10 +9,10 @@ ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8918251cccca5c04bd42bcb931c4efa5d1f9fd6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576326"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planear un informe de mapa (Generador de informes y SSRS)
@@ -105,12 +105,12 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
 |Icono del asistente|Estilo de la capa|Tipo de capa|Descripción y opciones|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa básico|Polygon|Mapa que solo muestra áreas, por ejemplo territorios de ventas.<br /><br /> Opciones: varíe el color según la paleta o utilice un único color. Una paleta es un conjunto predefinido de colores. Cuando se han asignado todos los colores de una paleta, se asignan las sombras de los colores.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa básico|Polygon|Mapa que solo muestra áreas, por ejemplo territorios de ventas.<br /><br /> Opciones: varíe el color según la paleta o use un único color. Una paleta es un conjunto predefinido de colores. Cuando se han asignado todos los colores de una paleta, se asignan las sombras de los colores.|  
 |![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mapa analítico de color|Polygon|Mapa que muestra los datos analíticos mediante la variación del color, por ejemplo los datos de ventas por área.|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de burbujas|Polygon|Mapa que muestra los datos analíticos variando el tamaño de burbuja centrada en las áreas, por ejemplo los datos de ventas por área.<br /><br /> Opciones: varíe los colores del área según un segundo campo analítico y especifique reglas de color.|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de líneas básico|Línea|Mapa que muestra únicamente líneas, por ejemplo las rutas de entrega.<br /><br /> Opciones: varíe el color según la paleta o utilice un único color.|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de líneas básico|Línea|Mapa que muestra únicamente líneas, por ejemplo las rutas de entrega.<br /><br /> Opciones: varíe el color según la paleta o use un único color.|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mapa de líneas analítico|Línea|Mapa que varía el color y ancho de las líneas, por ejemplo el número de paquetes entregados y las métricas de tiempo por ruta.<br /><br /> Opciones: varíe el ancho de línea con un campo analítico, varíe el color de línea con un segundo campo analítico y especifique las reglas de color.|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de marcadores básico|Punto|Mapa que muestra un marcador en cada ubicación, por ejemplo las ciudades.<br /><br /> Opciones: varíe el color por paleta o utilice un único color y cambie el estilo de marcador.|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de marcadores básico|Punto|Mapa que muestra un marcador en cada ubicación, por ejemplo las ciudades.<br /><br /> Opciones: varíe el color por paleta o use un único color y cambie el estilo de marcador.|  
 |![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Mapa de marcadores de burbuja|Punto|Mapa que muestra una burbuja para cada ubicación y varía el tamaño de burbuja mediante un campo de datos analíticos, por ejemplo los datos de ventas por ciudad.<br /><br /> Opciones: varíe el color de las burbujas con un segundo campo analítico y especifique las reglas de color.|  
 |![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Mapa de marcadores analítico|Punto|Mapa que muestra un marcador en cada ubicación y varía el color, el tamaño y el tipo de los marcadores según datos analíticos, por ejemplo los productos de mayores ventas, el intervalo de ganancia y la estrategia de descuentos.<br /><br /> Opciones: varíe el tipo de los marcadores con un campo analítico, varíe el tamaño de los marcadores con un segundo campo analítico, varíe el color de los marcadores con un tercer campo analítico y especifique las reglas de color.|  
   

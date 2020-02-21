@@ -1,5 +1,5 @@
 ---
-title: Miembros de SQLServerException | Microsoft Docs
+title: Miembros SQLServerException | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7df5cc4b13ed8896cdd140195bdecc10ea304b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971000"
 ---
 # <a name="sqlserverexception-members"></a>Miembros SQLServerException
@@ -28,7 +28,7 @@ ms.locfileid: "67971000"
 |----------|-----------------|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Inicializa una nueva instancia de la clase SQLServerException.|  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
  Ninguno.  
   
 ## <a name="inherited-fields"></a>Campos heredados  

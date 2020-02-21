@@ -13,10 +13,10 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578066"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de la biblioteca de SharePoint en Reporting Services
@@ -68,10 +68,10 @@ ms.locfileid: "65578066"
  Nombre y extensión de archivo  
  Especifique el nombre y la extensión de archivo del informe como desea que aparezca en la biblioteca de destino. Si no especifica ninguna extensión de archivo, el servidor de informes crea una basada en el formato de salida del informe. Este valor es necesario. El nombre de archivo no debe incluir los siguientes caracteres: : \ / * ? " < > | # { } %  
   
- Title  
+ Título  
  Especifica una propiedad **Title** opcional para el informe en la biblioteca de destino. Es una propiedad estándar para todos los elementos almacenados en una biblioteca. Los usuarios pueden especificar si se va a mostrar u ocultar esta propiedad al ver el contenido de la biblioteca en un sitio de SharePoint.  
   
- Ruta de acceso  
+ Path  
  Especifica una dirección URL completa a la biblioteca de SharePoint, incluidos la aplicación web y el sitio de SharePoint. Por ejemplo: `https://mySharePointWeb/MySite/MyDocLib`, donde `https://mySharePointWeb` indica la aplicación web, "MySite" es el sitio de SharePoint y "MyDocLib" es la biblioteca de SharePoint en la que se entrega el informe.  
   
  No puede especificar una página, un sitio o una lista. El contenedor de destino debe ser una biblioteca en el mismo sitio o conjunto de servidores.  

@@ -16,10 +16,10 @@ ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be54aea70e712d2209c04196d3e450bca488578b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972195"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>Método setTrustStore (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  Un objeto **string** que contiene la ruta de acceso (incluido el nombre de archivo) del archivo trustStore del certificado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si la propiedad trustStore no se especifica o se establece en NULL, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se basará en las reglas de búsqueda del generador del administrador de confianza para determinar qué almacén de certificados se usará. El generador TrustManagerFactory SunX509 predeterminado intenta buscar material de confianza en el orden de búsqueda de ubicaciones siguiente:  
   
 -   1. Un archivo especificado por la propiedad del sistema "javax.net.ssl.trustStore" de la máquina virtual Java (JVM).  

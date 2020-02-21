@@ -16,10 +16,10 @@ ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 75cda38839aa4ee8a32eb65595b0f8df204983b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580218"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Generador de informes y SSRS)
@@ -41,10 +41,10 @@ ms.locfileid: "65580218"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona conjuntos de indicadores integrados e iconos de indicadores para usarlos tal cual, y también puede personalizar iconos de indicadores individuales y conjuntos de indicadores para satisfacer sus necesidades.  
   
- Para obtener más información sobre el uso de indicadores como KPI, vea [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Para más información sobre el uso de indicadores como KPI, consulte el [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
   
 > [!NOTE]  
->  Puede publicar indicadores por separado de un informe como elementos de informe. Obtenga más información sobre [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+>  Puede publicar indicadores por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 ##  <a name="ComparingIndicatorsToGauges"></a> Comparar indicadores con medidores  
  Aunque parecen muy diferentes, los indicadores no son más que unos medidores sencillos. Los indicadores y los medidores muestran un valor de datos único. Las diferencias clave son que los medidores tienen elementos como marcos y punteros. Los indicadores solo tienen estados, iconos y (opcionalmente) etiquetas. Los estados de los indicadores son parecidos a los intervalos de los medidores.  

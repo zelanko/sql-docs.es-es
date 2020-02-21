@@ -12,10 +12,10 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503072"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visor HTML y la barra de herramientas del informe
@@ -30,7 +30,7 @@ ms.locfileid: "65503072"
   
  La barra de herramientas de informe es similar a la que se muestra en la siguiente ilustración. Es posible que la suya difiera un poco de la que se muestra en la ilustración, dependiendo de las características del informe o las opciones de representación disponibles.  
   
- ![Report toolbar](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Barra de herramientas de informe](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barra de herramientas de informe")  
   
  En la tabla siguiente se describen las características más comunes de la barra de herramientas de informe. Cada característica se identifica con el control que se utiliza para obtener acceso a ella.  
   

@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578777"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas
@@ -22,7 +22,7 @@ ms.locfileid: "65578777"
   
  A. Informe detallado  
   
- B. subinforme  
+ B. Subinforme  
   
  C. Regiones de datos anidadas  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65578777"
 ##  <a name="SummaryCharacteristics"></a> Resumen de características  
  En la tabla que figura a continuación se resumen estas características distintas. Los detalles se incluyen en secciones aparte más adelante en este tema. La obtención de detalles no se incluye en estas comparaciones porque su acción de mostrar u ocultar se puede aplicar a cualquier elemento de informe.  
   
-|Característica|Subinforme|detallados|está anidada|  
+|Característica|Subinforme|Obtención de detalles|está anidada|  
 |-----------|---------------|------------------|------------|  
 |Uso de conjuntos de datos del informe principal|Iguales o distintos|Iguales o distintos|Iguales|  
 |Recuperación de datos|Los datos se recuperan al mismo tiempo que el informe principal.|Los datos se recuperan en un informe detallado cada vez.|Los datos se recuperan todos al mismo tiempo que el informe principal.|  

@@ -16,10 +16,10 @@ ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bda879ceba5c6f1193ecdfa09995e851c2bcd6e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973148"
 ---
 # <a name="setreadonly-method-sqlserverconnection"></a>Método setReadOnly (SQLServerConnection)
@@ -45,8 +45,8 @@ public void setReadOnly(boolean readOnly)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setReadOnly se especifica mediante el método setReadOnly en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método setReadOnly especifica este método setReadOnly en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

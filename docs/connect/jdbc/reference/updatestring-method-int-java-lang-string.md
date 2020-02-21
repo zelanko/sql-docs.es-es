@@ -1,5 +1,5 @@
 ---
-title: Método updateString (int, Java. lang. String) | Microsoft Docs
+title: Método updateString (int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f8d2f620-0cdf-4a3b-8af4-5e8c4462a42d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad0f00eb57bfcf417e45a99ab6b9210ff2277e78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998251"
 ---
 # <a name="updatestring-method-int-javalangstring"></a>Método updateString (int, java.lang.String)
@@ -36,18 +36,18 @@ public void updateString(int index,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Valor **int** que indica el índice de la columna.  
   
  *x*  
   
- Objeto de **cadena** .  
+ Un objeto **String**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateString especifica este método updateString en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

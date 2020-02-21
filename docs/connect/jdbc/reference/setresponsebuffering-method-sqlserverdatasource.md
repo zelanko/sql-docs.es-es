@@ -16,10 +16,10 @@ ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5bfc0fb1d1a74131d0e8e71055356f958a9b508
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973102"
 ---
 # <a name="setresponsebuffering-method-sqlserverdatasource"></a>Método setResponseBuffering (SQLServerDataSource)
@@ -39,12 +39,12 @@ public void setResponseBuffering(java.lang.String value)
   
  Un valor **String** que contiene el modo de almacenamiento en búfer y de transmisión por secuencias. El modo válido puede ser uno de los siguientes valores String que no distinguen mayúsculas de minúsculas: **full** o **adaptive**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor **full** se especifica mediante la lectura del resultado completo desde el servidor en el tiempo de ejecución.  
   
  El valor **adaptive** especifica que se almacenen en búfer los menos datos posibles cuando sea necesario. El valor **adaptive** es el modo de almacenamiento en búfer predeterminado.  
   
- Para obtener más información sobre cómo usar el modo de almacenamiento en búfer de respuesta, vea [usar el almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Para más información sobre cómo utilizar el modo de almacenamiento en búfer de respuesta, vea [Empleo de almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

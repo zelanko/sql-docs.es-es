@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1cc42a09e455fa42d3f89b05903a22afc945424
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971126"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inicializa una nueva instancia de la clase [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) cuando se proporciona un **objeto**, un objeto de **cadena** , un objeto de **cadena** , un objeto **StreamError** y un **valor booleano**.
+  Inicializa una nueva instancia de la clase [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) cuando se proporciona un **objeto**, un objeto de **cadena**, un objeto de **cadena**, un objeto **StreamError** y un **valor booleano**.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,11 +41,11 @@ public SQLServerException(java.lang.Object obj,
 #### <a name="parameters"></a>Parámetros  
  *obj*  
   
- Búfer de e/s que generó la excepción.
+ Búfer de E/S que generó la excepción.
 
  *errText*  
   
- Cadena que contiene el texto del error.
+ Cadena que contiene el texto de error.
   
  *sqlState*  
   
@@ -53,7 +53,7 @@ public SQLServerException(java.lang.Object obj,
  
  *streamError*  
   
- Objeto StreamError que contiene los detalles sobre el error.
+ Objeto StreamError que contiene información sobre el error.
  
  *bStack*  
   

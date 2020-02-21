@@ -16,10 +16,10 @@ ms.assetid: a444da82-c1af-40a5-9774-02476416c92c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ff7fbebe710b9d52394b12bbd1524ff9785ba7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952808"
 ---
 # <a name="getcolumntypename-method-sqlserverresultsetmetadata"></a>Método getColumnTypeName (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public java.lang.String getColumnTypeName(int column)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getColumnTypeName se especifica mediante el método getColumnTypeName de la interfaz java. SQL. ResultSetMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getColumnTypeName especifica este método getColumnTypeName en la interfaz java.sql.ResultSetMetaData.  
   
  El controlador JDBC 3.0 de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene cambios de comportamiento en la columna TYPE_NAME. Vea [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) para más información.  
   

@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c03db76d1c8ad67bf9db43c1b4acfa728396b703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66428971"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Generador de informes y SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66428971"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- Para empezar a usar un mapa inmediatamente, vea [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../../reporting-services/tutorial-map-report-report-builder.md) o [Ejemplos de informes (Generador de informes y SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Para empezar a usar un mapa inmediatamente, consulte el [Tutorial: Informe de asignaciones &#40;Generador de informes&#41;](../../reporting-services/tutorial-map-report-report-builder.md) o [Report Samples (Report Builder and SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283) (Ejemplos de informes [Generador de informes y SSRS]).  
   
 > [!NOTE]  
 >  Puede guardar los mapas de forma independiente de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "66428971"
   
     -   **Datos espaciales.** Campo con datos espaciales que especifica la latitud y longitud de la ciudad.  
   
-    -   **Nombre.** Campo que contiene el nombre de la ciudad.  
+    -   **Nombre**. Campo que contiene el nombre de la ciudad.  
   
     -   **Área.** Campo que contiene el nombre de la región.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66428971"
   
     -   **Aéreo.** Muestra un estilo de imagen aérea sin texto.  
   
-    -   **Híbrido.** Muestra una combinación de los estilos **Carretera** y **Aéreo** .  
+    -   **Híbridas.** Muestra una combinación de los estilos **Carretera** y **Aéreo** .  
   
 -   Idioma del texto de la presentación en los mosaicos.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66428971"
   
  Si no obtiene el resultado deseado cuando vea un informe de un mapa, las causas pueden derivarse de problemas diversos. Para ayudarle a aislar y entender cada problema, es útil trabajar con una capa cada vez. Utilice el panel Mapa para seleccionar una capa y alternar su visibilidad con facilidad.  
   
- Para obtener más información sobre los problemas de los informes de un mapa, vea [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ Para más información sobre los problemas de asignación de informes, consulte [Solucionar problemas de informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
  En esta sección se enumeran procedimientos que muestran, paso a paso, cómo trabajar con mapas y asignar capas de mapa a un informe.  

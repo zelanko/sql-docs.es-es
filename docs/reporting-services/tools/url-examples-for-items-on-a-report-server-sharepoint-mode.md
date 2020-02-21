@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574016"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Ejemplos de direcciones URL para los elementos de un servidor de informes - Modo de SharePoint
@@ -29,7 +29,7 @@ ms.locfileid: "65574016"
   
  Pueden utilizarse los siguientes elementos de la jerarquía web para obtener acceso y proteger el contenido del servidor de informes. No se usan otros objetos, como listas y páginas, para obtener acceso al contenido del servidor de informes y, por lo tanto, no se describen en la siguiente tabla.  
   
-|Objeto|Descripción|  
+|Object|Descripción|  
 |------------|-----------------|  
 |Aplicación web de SharePoint|Una aplicación web de SharePoint puede instalarse como un servidor independiente o en un grupo de servidores que contenga una colección de servidores virtuales. Una aplicación web tiene una dirección URL (por ejemplo, `http:*//servername*`) y puede contener varios sitios.|  
 |Sitio|Un sitio es un sitio primario para una aplicación web o un subsitio.|  
@@ -49,7 +49,7 @@ ms.locfileid: "65574016"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>Dirección URL para un sitio o subsitio del servidor de SharePoint  
  Al implementar un informe o un origen de datos de informe, debe usar una dirección URL para el sitio y el subsitio de SharePoint, si lo hay. En la dirección URL, el nombre del sitio aparece justo después del nombre de servidor (por ejemplo, `https://*servername/site*` o `https://*servername/site/subsite*`).  
   
- En una aplicación web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , el sitio y el subsitio suelen corresponderse con las pestañas del sitio principal. Para buscar el nombre del sitio o el subsitio, haga clic en **Inicio**y, a continuación, en **Todo el contenido del sitio**. Desplácese hasta la parte inferior y busque **Áreas de trabajo y sitios**. Aparece la lista de sitios en esta sección.  
+ En una aplicación web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], el sitio y el subsitio suelen corresponderse con las pestañas del sitio principal. Para buscar el nombre del sitio o el subsitio, haga clic en **Inicio**y, a continuación, en **Todo el contenido del sitio**. Desplácese hasta la parte inferior y busque **Áreas de trabajo y sitios**. Aparece la lista de sitios en esta sección.  
   
 ### <a name="url-for-a-sharepoint-library"></a>Dirección URL para una biblioteca de SharePoint  
  Al implementar un informe o un elemento relacionado en una biblioteca de SharePoint, debe usar una dirección URL para la biblioteca de SharePoint. La dirección URL que se usa para la biblioteca varía según la versión de SharePoint usada.  
@@ -92,7 +92,7 @@ ms.locfileid: "65574016"
 ## <a name="examples-of-urls"></a>Ejemplos de direcciones URL  
  Al publicar elementos en una biblioteca de SharePoint, debe especificar direcciones URL completas a la biblioteca de destino. Una dirección URL completa de SharePoint incluye la aplicación web de SharePoint, el sitio, la biblioteca, la carpeta (opcional), el archivo y la extensión de nombre de archivo. Los siguientes ejemplos ilustran la sintaxis que debe utilizarse.  
   
-|Destino|Dirección URL de ejemplo|  
+|Destino|Example URL (URL de ejemplo)|  
 |------------|-----------------|  
 |Un servidor de SharePoint.|`https://TestServer`|  
 |Un sitio o subsitio del servidor de SharePoint.|`https://TestServer/toplevelsite/subsite`|  
@@ -135,6 +135,6 @@ ms.locfileid: "65574016"
 ## <a name="see-also"></a>Consulte también  
  [Publicar un informe en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publicación de un origen de datos compartido en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Páginas de propiedades del proyecto (cuadro de diálogo)](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [Cuadro Páginas de propiedades del proyecto](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   

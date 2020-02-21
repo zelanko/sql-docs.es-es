@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571592"
 ---
 # <a name="data-alert-designer"></a>Diseñador de alertas de datos
@@ -50,7 +50,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
 > [!NOTE]  
 >  Dado que la característica de alertas de datos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] solo está disponible cuando se instala [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en el modo de SharePoint, el informe en el que se quiere crear una alerta debe guardarse, implementarse o cargarse en una biblioteca de documentos de SharePoint.  
 >   
->  Las alertas de datos no se pueden crear en los informes que utilizan la Autenticación integrada de Windows o piden credenciales. Los informes deben usar credenciales almacenadas. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+>  Las alertas de datos no se pueden crear en los informes que utilizan la Autenticación integrada de Windows o piden credenciales. Los informes deben usar credenciales almacenadas. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Para abrir el Diseñador de alertas de datos, haga clic en la opción **Nueva alerta de datos** en el menú **Acciones** de la barra de herramientas de informe. Si no ve la opción **Nueva alerta de datos** , el informe no está configurado para usar credenciales almacenadas. Puede actualizar el tipo de credenciales actualizando el origen de datos del informe desde la biblioteca de SharePoint.  
   
@@ -206,7 +206,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
 ##  <a name="HowTo"></a> Tareas relacionadas  
  En esta sección se enumeran los procedimientos que muestran cómo crear y modificar alertas.  
   
--   [Modificar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Modificación de una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Creación de una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 

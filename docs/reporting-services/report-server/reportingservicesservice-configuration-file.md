@@ -13,10 +13,10 @@ ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66506632"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>archivo de configuración ReportingServicesService
@@ -26,7 +26,7 @@ ms.locfileid: "66506632"
 El archivo ReportingServicesService.exe.config incluye valores que configuran la traza.  
   
 ## <a name="file-location"></a>Ubicación del archivo  
-Este archivo podría estar ubicado en cualquiera de las rutas de acceso siguiente:  
+Este archivo puede encontrarse en cualquiera de las siguientes rutas de acceso:  
 
 ``` Paths  
 \Reporting Services\Report Server\Bin  
@@ -80,17 +80,17 @@ Este archivo podría estar ubicado en cualquiera de las rutas de acceso siguient
 |Configuración|Descripción|  
 |-------------|-----------------|  
 |**RStrace**|Especifica espacios de nombres utilizados para errores y traza.|  
-|**DefaultTraceSwitch**|Especifica el nivel de información que se incluye en el registro de seguimiento de ReportServerService. Cada nivel incluye la información proporcionada para todos los niveles inferiores. No se recomienda deshabilitar la traza. Los valores válidos incluyen:<br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado|  
+|**DefaultTraceSwitch**|Especifica el nivel de información que se incluye en el registro de seguimiento de ReportServerService. Cada nivel incluye la información proporcionada para todos los niveles inferiores. No se recomienda deshabilitar la traza. Los valores válidos son:<br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado|  
 |**FileName**|Especifica la primera parte del nombre del archivo de registro. El valor especificado en **Prefix** completa el resto del nombre. El nombre predeterminado es ReportServerService_.|  
 |**FileSizeLimitMb**|Especifica un límite superior para el tamaño del registro de seguimiento. El tamaño del archivo se indica en megabytes. Los valores válidos son de 0 a un número entero definido como máximo. El valor predeterminado es 32.|  
 |**KeepFilesForDays**|Especifica los días tras los que se elimina un archivo de registro de seguimiento. Los valores válidos son de 0 a un número entero definido como máximo. El valor predeterminado es 14.|  
-|**Prefix**|Especifica un valor generado que distingue una instancia de registro de otra. De manera predeterminada, se anexan valores de marca de tiempo a los nombres de los archivos de registro de seguimiento. Este valor se establece en " tid, time ". No modifique este parámetro.|  
-|**TraceListeners**|Especifica un destino de salida para el contenido del registro de seguimiento. Se pueden especificar varios destinos separados por comas. Los valores válidos incluyen:<br /><br /> DebugWindow (predeterminado)<br /><br /> File (predeterminado)<br /><br /> StdOut|  
+|**Prefijo**|Especifica un valor generado que distingue una instancia de registro de otra. De manera predeterminada, se anexan valores de marca de tiempo a los nombres de los archivos de registro de seguimiento. Este valor se establece en " tid, time ". No modifique este parámetro.|  
+|**TraceListeners**|Especifica un destino de salida para el contenido del registro de seguimiento. Se pueden especificar varios destinos separados por comas. Los valores válidos son:<br /><br /> DebugWindow (predeterminado)<br /><br /> File (predeterminado)<br /><br /> StdOut|  
 |**TraceFileMode**|Especifica si los registros de seguimiento incluyen datos de un período de 24 horas. Es recomendable tener un único registro de seguimiento para cada componente y día. Este valor se establece en "Unique (default)". No modifique este valor.|  
-|**Components**|Especifica los componentes para los que se crean registros de seguimiento. El valor predeterminado es **all**. Otros valores válidos para este parámetro son los nombres de los componentes internos. No modifique este valor.|  
+|**Componentes**|Especifica los componentes para los que se crean registros de seguimiento. El valor predeterminado es **all**. Otros valores válidos para este parámetro son los nombres de los componentes internos. No modifique este valor.|  
 |**Tiempo de ejecución**|Especifica valores de configuración que ofrecen compatibilidad con versiones anteriores. Los valores de tiempo de ejecución se utilizan para redirigir a la nueva versión las solicitudes destinadas a versiones anteriores de Microsoft.ReportingServices.Interfaces.<br /><br /> Todos los valores de configuración de esta sección están descritos en la documentación del producto [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obtener más información, vea la sección sobre los valores de esquema de tiempo de ejecución en el sitio web de MSDN o en la documentación de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
 [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

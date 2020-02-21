@@ -9,13 +9,13 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63043179"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (Generador de informes)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adición de un minigráfico a un informe (Generador de informes)
 
 En este tutorial del [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], puede crear una tabla básica con un minigráfico en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
   
@@ -69,7 +69,7 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. Haga clic en **Siguiente**.  
+13. Haga clic en **Next**.  
   
 ## <a name="Query"></a>2. Crear una consulta y un diseño de tabla en el Asistente para tablas  
 En un informe puede usar un conjunto de datos compartido que tenga una consulta predefinida o crear un conjunto de datos incrustado para usarlo exclusivamente en ese informe. En este tutorial, creará un conjunto de datos incrustado.  
@@ -122,7 +122,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
     La consulta se ejecuta y muestra el conjunto de resultados para los campos **SalesDate**, **Subcategory**, **Product**, **Sales**y **Quantity**.  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
 6.  En la página **Organizar campos** , arrastre **Sales** hasta **Valores**.  
   
@@ -134,7 +134,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
 
     ![generador-de-informes-minigráfico-organizar-campos](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 10. En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
@@ -148,9 +148,9 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
     
     ![generador-de-informes-minigráfico-elegir-diseño](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
-12. Haga clic en **Finalizar**.  
+12. Haga clic en **Finalizar**  
   
 14. La tabla se agrega a la superficie de diseño. La tabla tiene tres columnas y tres filas.  
   
@@ -235,7 +235,7 @@ Los minigráficos son difíciles de leer cuando todos no usan las mismas medidas
   
      Establece el alto de las barras en cada minigráfico con respecto a los demás. 
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  Haga clic con el botón derecho en el minigráfico y, después, haga clic en **Propiedades del eje horizontal**.  
   
@@ -243,7 +243,7 @@ Los minigráficos son difíciles de leer cuando todos no usan las mismas medidas
   
     Establece el ancho de las barras en cada minigráfico con respecto a los demás. Si algunos minigráficos tienen menos barras que otros, dichos minigráficos tendrán espacios en blanco correspondientes a los datos que faltan.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 8.  Para volver a obtener una vista previa de un informe, haga clic en **Ejecutar** .  
   
@@ -300,7 +300,7 @@ Guarde el informe un servidor de informes o en su equipo. Si no guarda el inform
   
 4.  En **Nombre**, reemplace el nombre predeterminado por **Ventas de producto**.  
   
-5.  Haga clic en **Guardar**.  
+5.  Haga clic en **Save**(Guardar).  
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
@@ -312,9 +312,9 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 3.  En **Nombre**, reemplace el nombre predeterminado por **Ventas de producto**.  
   
-4.  Haga clic en **Guardar**.  
+4.  Haga clic en **Save**(Guardar).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 
 Esto concluye el tutorial para crear un informe de tabla con minigráficos. Para obtener más información sobre los minigráficos, vea [Minigráficos y barras de datos](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Método setDate para Date y Calendar-String | Microsoft Docs
+title: 'Método setDate para fecha y calendario: string | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fd152ad6-dd5e-49ef-b166-917371a2cba6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f986b7fd5faadfbd24708ec9a339d3bd2f104f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974582"
 ---
 # <a name="setdate-method-javalangstring-javasqldate-javautilcalendar"></a>Método setDate (java.lang.String, java.sql.Date, java.util.Calendar)
@@ -43,16 +43,16 @@ public void setDate(java.lang.String sCol,
   
  *x*  
   
- Objeto Date.  
+ Un objeto Date.  
   
  *c*  
   
- Un objeto de calendario.  
+ Un objeto Calendar.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setDate especifica este método setDate en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

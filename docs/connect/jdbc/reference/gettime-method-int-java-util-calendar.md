@@ -16,10 +16,10 @@ ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33f5e25d45f1e08c30f3094a9200291de9510150
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979098"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>Método getTime (int, java.util.Calendar)
@@ -36,24 +36,24 @@ public java.sql.Time getTime(int index,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Un valor **int** que indica el índice del parámetro.  
   
  *cal*  
   
- Un objeto de calendario.  
+ Un objeto Calendar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto de hora.  
+ Un objeto Time.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getTime especifica este método getTime en la interfaz java.sql.CallableStatement.  
   
- Vea el gráfico titulado "conversiones de métodos captadores" en Descripción de las conversiones de [tipos](../../../connect/jdbc/understanding-data-type-conversions.md) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datos para ver qué tipos de datos se pueden recuperar con este método.  
+ Consulte el gráfico titulado "Conversiones de métodos de captador" en [Descripción de las conversiones de tipos de datos](../../../connect/jdbc/understanding-data-type-conversions.md) para ver los tipos datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se pueden recuperar con este método.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getTime &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

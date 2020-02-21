@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140215"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -34,9 +34,9 @@ ms.locfileid: "67140215"
 
 -   **Portal web:** en la pestaña **Programaciones** de la **Configuración del sitio**, revise los valores de los campos de fecha Última ejecución, Siguiente ejecución y Estado. Cuando una programación ya no se ejecuta porque ha expirado, aparece su fecha de expiración en el campo Estado. Para más información, vea [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
 
--   **SQL Server Management Studio:** viendo el **informes** página de una programación compartida específica. Esta página enumera todos los informes y los conjuntos de datos compartidos que utilizan la programación compartida. Para más información, consulte [Reporting Services en SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
+-   **SQL Server Management Studio:** visualice la página **Informes** de una programación compartida específica. Esta página enumera todos los informes y los conjuntos de datos compartidos que utilizan la programación compartida. Para más información, consulte [Reporting Services en SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
 
--  **Registros:** visualice los archivos de registro de ejecución de informes o registros de seguimiento para determinar si se han ejecutado los informes las veces especificadas por la programación. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).
+-  **Registros:** Viendo los archivos de registro de ejecución de informes o registros de seguimiento para determinar si se han ejecutado los informes las veces especificadas por la programación. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).
 
 ## <a name="when-you-delete-a-shared-schedule"></a>Cuándo eliminar una programación compartida
 Las programaciones compartidas se deben eliminar manualmente desde la página Programaciones del portal web o la carpeta Programaciones compartidas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Si se elimina una programación compartida que esté en uso, se sustituirán todas las referencias a la misma por programaciones específicas del informe.
@@ -64,20 +64,20 @@ Las programaciones específicas del informe que han expirado permanecen adjuntas
    >[!NOTE]  
    >Si **Configuración** no está disponible, significa que no tiene permiso de acceso a la configuración del sitio.  
 
-1. Seleccione **configuración del sitio** en el menú desplegable.
+1. Seleccione **Configuración del sitio** en el menú desplegable.
 1. Seleccione la pestaña **Programaciones** .
-1. Seleccione **+ nueva programación**. (Para modificar una programación existente, haga clic en el nombre de la programación).
+1. Seleccione **+ Nueva programación**. (Para modificar una programación existente, haga clic en el nombre de la programación).
 1. Escriba un nombre descriptivo para la programación.
 1. Haga clic en **Hora**, **Día**, **Semana**o **Mes**. Haga clic en **Una vez** para crear una programación que se ejecute solo una vez. Cuando se especifica la base de la programación, se muestran más opciones.
 1. Opcionalmente, puede seleccionar la fecha en que comenzará la programación. El valor predeterminado es el día actual. Elija una fecha posterior si desea posponer el inicio de la programación.
 1. Seleccione la fecha en que finalizará la programación (opcional). La programación se detiene en esa fecha pero no se elimina.
-1. Seleccione una hora para la programación se ejecute.
+1. Seleccione una hora para la ejecución de la programación.
 1. Seleccione **Aceptar**.
 
 ### <a name="to-delete-a-shared-schedule-web-portal"></a>Para eliminar una programación compartida (portal web)
 
 1. En el portal web, seleccione **Configuración** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png) en la barra de herramientas.
-2. Seleccione **configuración del sitio** en el menú desplegable.
+2. Seleccione **Configuración del sitio** en el menú desplegable.
 3. Seleccione la pestaña **Programaciones** .
 4. Active la casilla situada junto a la programación compartida que quiere eliminar y, a continuación, seleccione **Eliminar**.
 
@@ -131,7 +131,7 @@ Haga clic en **Cancelar**.
 6.  Elija una frecuencia. Dependiendo de la frecuencia que seleccione, las opciones de programación que aparecen en la página pueden cambiar para admitir esa frecuencia (por ejemplo, si selecciona **Mes**, el nombre de cada mes aparecerá en la página).
 7.  Defina la programación. Una sola programación no admite todas las combinaciones de programaciones.
 8.  Establezca una fecha de inicio y de fin.
-9. Haga clic en **Aceptar**.
+9. Haga clic en **OK**.
 
 ### <a name="delete-shared-schedules-sharepoint-mode"></a>Eliminar programaciones compartidas (modo SharePoint)
  Todas las programaciones, sean compartidas o específicas del informe, deben eliminarse manualmente. Si elimina una programación compartida que está utilizándose, todas las referencias a la misma se reemplazarán por programaciones personalizadas sin especificar (es decir, una programación personalizada que no incluye información de fecha u hora).
@@ -142,7 +142,7 @@ Haga clic en **Cancelar**.
 4.  Seleccione la programación y haga clic en **Eliminar**.
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  [Programaciones](../../reporting-services/subscriptions/schedules.md)  
  [Pausa y reanudación de programaciones compartidas](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)  
  [Informes almacenados en caché (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  

@@ -16,10 +16,10 @@ ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977877"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>Método insertsAreDetected (SQLServerDatabaseMetaData)
@@ -35,7 +35,7 @@ public boolean insertsAreDetected(int type)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Tipo*  
+ *type*  
   
  Un entero que indica el tipo de conjunto de resultados, el cual puede ser uno de los siguientes valores tal como quede definido en java.sql.ResultSet o SQLServerResultSet:  
   
@@ -63,11 +63,11 @@ public boolean insertsAreDetected(int type)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método insertsAreDetected se especifica mediante el método insertsAreDetected en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método insertsAreDetected especifica este método insertsAreDetected en la interfaz java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]no detecta filas insertadas para ningún tipo de cursor.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no detecta filas insertadas para ningún tipo de cursor.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

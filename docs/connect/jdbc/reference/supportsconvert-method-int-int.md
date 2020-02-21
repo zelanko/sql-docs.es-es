@@ -16,10 +16,10 @@ ms.assetid: 54741cfd-32ac-46c5-8b09-fd60fd8833d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae22b0f4149536977dd3ee7c9cc21758e7dcc980
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969604"
 ---
 # <a name="supportsconvert-method-int-int"></a>Método supportsConvert (int, int)
@@ -45,13 +45,13 @@ public boolean supportsConvert(int fromType,
  El tipo de JDBC al que se va realizar la conversión.  
   
 ## <a name="return-value"></a>Valor devuelto  
- **true** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si es compatible. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método supportsConvert se especifica mediante el método supportsConvert en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método supportsConvert especifica este método supportsConvert en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método supportsConvert &#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   

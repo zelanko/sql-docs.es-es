@@ -1,5 +1,5 @@
 ---
-title: Método Position (Java. SQL. CLOB, Long) | Microsoft Docs
+title: Método position (java.sql.Clob, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b2fb34d5-1d34-4764-a795-712d9c6aa313
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57b9af31e7701633e7cd73e8aaf0eb498b26c02c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976409"
 ---
 # <a name="position-method-javasqlclob-long"></a>Método position (java.sql.Clob, long)
@@ -50,11 +50,11 @@ public long position(java.sql.Clob searchstr,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método de posición se especifica mediante el método Position en la interfaz java. SQL. CLOB.  
+## <a name="remarks"></a>Observaciones  
+ El método position especifica este método position en la interfaz java.sql.Clob.  
   
 ## <a name="see-also"></a>Consulte también  
- [Position ( &#40;método) SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
+ [Método position &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
  [Métodos SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Miembros SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Clase SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  

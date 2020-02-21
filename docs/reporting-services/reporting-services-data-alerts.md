@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580069"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de datos de Reporting Services
@@ -58,9 +58,9 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
  Cuando instale [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo o en modo de SharePoint, o cuando use la versión independiente del Generador de informes, puede guardar informes en un servidor de informes, en el equipo o en una biblioteca de SharePoint. Para crear alertas de datos para los informes, estos se deben guardar o cargar en una biblioteca de SharePoint. Esto significa que no se pueden crear alertas para informes guardados en un servidor de informes en modo nativo o en su equipo. Además, no puede crear alertas incrustadas en aplicaciones personalizadas.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite diversos tipos de credenciales en los informes. Puede crear alertas de datos para informes cuyo origen de datos está configurado para utilizar la autenticación de Windows, credenciales almacenadas o no usar credenciales. No puede crear alertas para informes configurados para usar credenciales de seguridad integradas ni para los que pidan credenciales. El informe se ejecuta como parte del procesamiento de la definición de la alerta y el procesamiento produce un error si no dispone de las credenciales. Para obtener más información, vea:  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite diversos tipos de credenciales en los informes. Puede crear alertas de datos para informes cuyo origen de datos está configurado para utilizar la autenticación de Windows, credenciales almacenadas o no usar credenciales. No puede crear alertas para informes configurados para usar credenciales de seguridad integradas ni para los que pidan credenciales. El informe se ejecuta como parte del procesamiento de la definición de la alerta y el procesamiento produce un error si no dispone de las credenciales. Para obtener más información, vea lo siguiente:  
   
--   [Especificar información de credenciales y conexión para los orígenes de datos de informes](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+-   [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
 -   [Roles y permisos &#40;Reporting Services&#41;](../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -111,12 +111,12 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
  Si no se puede crear una instancia de alerta de datos o un mensaje de alerta de datos, se envía un mensaje de error a todos los destinatarios. En lugar de los resultados de la alerta, el mensaje incluye una descripción del error.  
   
- Para obtener más información, consulte [Data Alert Messages](../reporting-services/data-alert-messages.md).  
+ Para más información, consulte [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   
 ##  <a name="InstallAlerting"></a> Instalar alertas de datos  
  La característica de alertas de datos solo está disponible cuando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado en el modo de SharePoint. Cuando se instala [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, el programa de instalación crea automáticamente la base de datos de alertas donde se guardan las definiciones de alertas de datos y los metadatos de las alertas, y dos páginas de SharePoint para administrar alertas; también agrega el Diseñador de alertas de datos al sitio de SharePoint. No hay que realizar pasos especiales ni configurar opciones para las alertas durante la instalación.  
   
- Si desea obtener más información sobre cómo instalar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, incluido el servicio compartido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que es nuevo en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y la aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que debe crear y configurar para poder usar las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consulte [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) en MSDN Library.  
+ Si desea más información sobre cómo instalar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, incluido el servicio compartido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que es nuevo en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y la aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que debe crear y configurar para poder usar las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) en MSDN Library.  
   
  Como se muestra en el diagrama del tema anterior, las alertas de datos usan trabajos del Agente SQL Server. Para poder crear los trabajos, es necesario que el Agente SQL Server se esté ejecutando. Es posible que haya configurado el Agente SQL Server para que se inicie automáticamente cuando instaló [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Si no es así, puede iniciar el Agente SQL Server manualmente. Para obtener más información, vea [Configurar el Agente SQL Server](../ssms/agent/configure-sql-server-agent.md) e [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -131,7 +131,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
  En la tabla siguiente se enumeran los elementos de configuración de las alertas de datos, sus valores predeterminados, sus descripciones y sus ubicaciones.  
   
-|Configuración|Valor predeterminado|Descripción|Ubicación|  
+|Configuración|Valor predeterminado|Descripción|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Número de minutos entre inicios del ciclo de limpieza.|Archivo de configuración del servidor de informes|  
 |AlertingExecutionLogCleanupMinutes|10080|Número de minutos que se deben conservar las entradas del registro de ejecución.|Archivo de configuración del servidor de informes|  
@@ -207,7 +207,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
 |Tipo de usuario|Permiso de SharePoint|Descripción de la tarea|  
 |---------------|---------------------------|----------------------|  
-|Trabajador de la información|Ver elementos<br /><br /> Crear alertas|Ver elementos como informes y crear alertas de datos para los informes. Modificar y eliminar alertas.|  
+|Trabajador de la información|Ver elementos<br /><br /> Creación de alertas|Ver elementos como informes y crear alertas de datos para los informes. Modificar y eliminar alertas.|  
 |Administrador de alertas|Administrar alertas|Ver una lista de todas las alertas de datos guardadas en el sitio de SharePoint y eliminar alertas.|  
   
 ##  <a name="DiagnosticsLogging"></a> Diagnósticos y registro  
@@ -305,7 +305,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
 -   [Guardar un informe en una biblioteca de SharePoint &#40;Generador de informes&#41;](../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [Crear una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Creación de una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
 -   [Modificación de una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
@@ -313,7 +313,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
 -   [Administrar todas las alertas de datos de un sitio de SharePoint en el Administrador de alertas de datos](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
--   [Conceder permisos a los usuarios y alertar a los administradores](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
+-   [Concesión de permisos a los usuarios y envío de alertas a los administradores](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
 ## <a name="see-also"></a>Consulte también
 

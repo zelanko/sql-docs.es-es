@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: errorCode | Microsoft Docs'
+title: PDOStatement::errorCode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4161abec-c12b-444e-9de5-f1dac7b3e0e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78a7486d17d103bec3c8b1ef29d533da2f164c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936079"
 ---
 # <a name="pdostatementerrorcode"></a>PDOStatement::errorCode
@@ -32,7 +32,7 @@ string PDOStatement::errorCode();
 ## <a name="return-value"></a>Valor devuelto  
 Devuelve un valor de SQLSTATE de cinco caracteres como una cadena o Null si no hay ninguna operación en el identificador de instrucción.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
   
 ## <a name="example"></a>Ejemplo  

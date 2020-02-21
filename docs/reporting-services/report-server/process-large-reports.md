@@ -15,10 +15,10 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140261"
 ---
 # <a name="process-large-reports"></a>Procesar informes grandes
@@ -36,7 +36,7 @@ ms.locfileid: "67140261"
 ## <a name="configuration-recommendations"></a>Recomendaciones para la configuración  
  Entre las recomendaciones para la ejecución de informes, la representación de informes y el acceso a los informes, se contemplan los siguientes aspectos:  
   
--   El informe debe diseñarse para que admita paginación. El servidor de informes envía los informes página por página. Si el informe incluye paginación, podrá controlar el volumen de datos que se envía al explorador. Para obtener más información, consulte [cargar previamente la memoria caché (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
+-   El informe debe diseñarse para que admita paginación. El servidor de informes envía los informes página por página. Si el informe incluye paginación, podrá controlar el volumen de datos que se envía al explorador. Para más información, vea [Cargar previamente la memoria caché (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
   
 -   El informe debe configurarse para que se ejecute como una instantánea de informe programado y evitar que se ejecute a petición. No establezca un valor de tiempo de espera para la ejecución del informe. Ejecute el informe durante las horas de menor actividad.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67140261"
   
  Si desea utilizar la entrega de informes por correo electrónico, configure la suscripción para que incluya un vínculo. Evite enviar el informe como datos adjuntos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

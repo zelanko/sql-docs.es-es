@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: realizar consultas con parámetros | Microsoft Docs'
+title: 'Procedimientos: Realización de consultas con parámetros | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993501"
 ---
-# <a name="how-to-perform-parameterized-queries"></a>Cómo realizar consultas con parámetros
+# <a name="how-to-perform-parameterized-queries"></a>Procedimientos: Realización de consultas con parámetros
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 En este tema se resume y muestra cómo utilizar los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para realizar una consulta con parámetros.  
@@ -190,7 +190,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>Consulte también  
 [Conversión de tipos de datos](../../connect/php/converting-data-types.md)
 
-[Consideraciones de seguridad para los controladores de Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+[Consideraciones de seguridad de los controladores de Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)
 

@@ -1,6 +1,6 @@
 ---
 title: Fragmentación de análisis en RevoScaleR
-description: Tutorial sobre cómo fragmentar datos para realizar análisis distribuidos mediante el lenguaje R en SQL Server.
+description: 'Tutorial 12 de RevoScaleR: Fragmentación de datos para realizar análisis distribuidos mediante el lenguaje R en SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,22 +9,22 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0ad082c3a21292b782d5888b48b698c986c0b5b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727236"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947226"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Fragmentación de análisis con rxDataStep (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Este es el tutorial 12 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-En ella, usará la función **rxDataStep** para procesar datos en fragmentos, en lugar de requerir que el conjunto de datos completo se cargue en memoria y se procese de una vez, como ocurre en el lenguaje R tradicional. La función **rxDataStep** lee los datos en fragmentos, aplica funciones de R a cada fragmento de datos y, después, guarda los resultados de resumen de cada fragmento en un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] común. Cuando se lean todos los datos, se combinan los resultados.
+En este tutorial, usará la función **rxDataStep** para procesar datos en fragmentos, en lugar de requerir que el conjunto de datos completo se cargue en memoria y se procese de una vez, como ocurre en el lenguaje R tradicional. La función **rxDataStep** lee los datos en fragmentos, aplica funciones de R a cada fragmento de datos y, después, guarda los resultados de resumen de cada fragmento en un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] común. Cuando se lean todos los datos, se combinan los resultados.
 
 > [!TIP]
-> En esta lección, calculará una tabla de contingencia usando la función **table** de R. Este ejemplo se incluye únicamente con fines instructivos. 
+> En este tutorial, calculará una tabla de contingencia usando la función **table** de R. Este ejemplo se incluye únicamente con fines instructivos. 
 > 
 > Si necesita tabular conjuntos de datos reales, le recomendamos que use las funciones **rxCrossTabs** o **rxCube** de **RevoScaleR**, que se han optimizado para este tipo de operación.
 
@@ -103,7 +103,7 @@ En ella, usará la función **rxDataStep** para procesar datos en fragmentos, en
     finalResults
     ```
 
-    **Resultado**
+    **Resultados**
 
     1  |   2  |   3  |   4  |   5  |   6  |   7
     ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---

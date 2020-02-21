@@ -1,6 +1,6 @@
 ---
 title: Creación de una tabla mediante rxDataStep
-description: Tutorial sobre cómo crear una tabla de SQL Server usando el lenguaje R en SQL Server.
+description: 'Tutorial 11 de RevoScaleR: Creación de una tabla de SQL Server usando el lenguaje R en SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 99f693210b567523b74f851d1db68470cae2891d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727248"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947265"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Creación de una tabla de SQL Server con rxDataStep (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Este es el tutorial 11 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-En esta lección, aprenderá a mover datos entre las tramas de datos en memoria, el contexto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los archivos locales.
+En este tutorial, aprenderá a mover datos entre las tramas de datos en memoria, el contexto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y archivos locales.
 
 > [!NOTE]
-> En esta lección se usa un conjunto de datos diferente. El conjunto de datos Airline Delays es un conjunto de datos público que se usa profusamente en los experimentos de Machine Learning. Los archivos de datos que se usan en este ejemplo están disponibles en el mismo directorio que otros ejemplos de producto.
+> En este tutorial se usa un conjunto de datos diferente. El conjunto de datos Airline Delays es un conjunto de datos público que se usa profusamente en los experimentos de Machine Learning. Los archivos de datos que se usan en este ejemplo están disponibles en el mismo directorio que otros ejemplos de producto.
 
 ## <a name="load-data-from-a-local-xdf-file"></a>Carga de datos desde un archivo XDF local
 
-En la primera parte de este tutorial, usó la función **RxTextData** para importar datos en R de un archivo de texto y, después, la función **RxDataStep** para mover los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+En la primera parte de esta serie de tutoriales, usó la función **RxTextData** para importar datos en R de un archivo de texto y, después, la función **RxDataStep** para mover los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-En esta lección se usa un enfoque diferente, y se usan datos de un archivo guardado en [formato XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Después de realizar algunas transformaciones ligeras en los datos mediante el archivo XDF, los datos transformados se guardan en una nueva tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+En este tutorial se usa un enfoque diferente, y se usan datos de un archivo guardado en [formato XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Después de realizar algunas transformaciones ligeras en los datos mediante el archivo XDF, los datos transformados se guardan en una nueva tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 **¿Qué es XDF?**
 
@@ -56,7 +56,7 @@ El formato XDF es un estándar XML desarrollado para datos de gran dimensional
     rxGetVarInfo(xdfAirDemo)
     ```
 
-**Resultado**
+**Resultados**
 
 ```R
 Var 1: ArrDelay, Type: integer, Low/High: (-86, 1490)

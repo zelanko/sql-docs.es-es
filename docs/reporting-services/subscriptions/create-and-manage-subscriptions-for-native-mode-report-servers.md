@@ -12,10 +12,10 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403254"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
@@ -68,10 +68,10 @@ ms.locfileid: "66403254"
   
 8. En **Opciones de entrega (Recurso compartido de archivos de Windows)** , especifique:  
    - **Nombre de archivo**: escriba un nombre de archivo para el informe.
-   - **Agregar una extensión de archivo cuando se crea el archivo**: esta opción agrega una extensión de archivo de tres caracteres al nombre de archivo. La extensión de archivo está determinada por el formato de salida de informes seleccionado.  
+   - **Agregar una extensión de archivo cuando se crea el archivo**: Esta opción agrega una extensión de archivo de tres caracteres al nombre del archivo. La extensión de archivo está determinada por el formato de salida de informes seleccionado.  
    - **Ruta de acceso**: escriba una ruta UNC (convención de nomenclatura universal) para una carpeta existente en la que quiera entregar los informes (por ejemplo, \\<nombreDeServidor\>\<misInformes>). Incluya dos barras diagonales inversas al comienzo de la ruta de acceso. No escriba una barra diagonal inversa al final.  
   
-     ![Suscripción a un recurso compartido de archivos](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "Suscripción a un recurso compartido de archivos")  
+     ![Suscripción a recurso compartido de archivos](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "Suscripción a recurso compartido de archivos")  
   
    - **Formato de representación**: seleccione un formato de salida de informes para la entrega de archivos. Elija el formato correspondiente a la aplicación de escritorio que utilizará para abrir el informe. Evite formatos que no representen los informes en un solo flujo o que especifiquen una interactividad no admitida en un archivo estático (por ejemplo, HTML 4.0).  
   
@@ -112,9 +112,9 @@ El informe se entrega como un archivo estático. Si el informe contiene caracter
      >[!NOTE]  
      > Dependiendo de sus permisos, podrá escribir la dirección de correo electrónico donde desea recibir el informe. Para especificar varias direcciones de correo electrónico, sepárelas con un punto y coma (;). También puede escribir direcciones de correo electrónico adicionales en los cuadros de texto **CC**, **CCO**y **Responder a** . Esto requiere que tenga permiso para administrar todas las suscripciones.  
   
-   - **Asunto**: el valor predeterminado es "@ReportName se ejecutó a las @ExecutionTime". Puede editar el asunto, pero tenga en cuenta que @ReportName y @ExecutionTime son las únicas variables globales que se admiten en el campo **Asunto**.  
+   - **Firmante**: el valor predeterminado es "@ReportName se ejecutó a las @ExecutionTime". Puede editar el asunto, pero tenga en cuenta que @ReportName y @ExecutionTime son las únicas variables globales que se admiten en el campo **Asunto**.  
   
-     ![suscripción de correo electrónico](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "e-mail subscription")  
+     ![suscripción de correo electrónico](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "Suscripción de correo electrónico")  
 
    - **Incluir informe**: seleccione esta opción para insertar o adjuntar una copia del informe. El formato del informe lo determina el formato de representación de informes seleccionado. No elija esta opción si cree que el tamaño del informe superará el límite definido para el sistema de correo electrónico.  
   
@@ -135,7 +135,7 @@ El informe se entrega como un archivo estático. Si el informe contiene caracter
 ##  <a name="bkmk_modify_subscription"></a> Para modificar una suscripción  
  Puede modificar una suscripción en cualquier momento. Si modifica una suscripción mientras se está procesando, la configuración actualizada se usará si se guarda en el servidor de informes antes de que la extensión de entrega reciba los datos de la suscripción. De lo contrario, se utilizará la configuración existente.  
   
- El usuario que crea una suscripción es su propietario. Cada usuario puede modificar o eliminar las suscripciones de las que sea propietario. Puede cambiar el propietario del informe desde la página de propiedades de la suscripción o puede cambiar la propiedad mediante programación. Para obtener más información, vea:  
+ El usuario que crea una suscripción es su propietario. Cada usuario puede modificar o eliminar las suscripciones de las que sea propietario. Puede cambiar el propietario del informe desde la página de propiedades de la suscripción o puede cambiar la propiedad mediante programación. Para obtener más información, vea lo siguiente:  
   
 -   [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
@@ -163,7 +163,7 @@ Para cancelar una suscripción que se está procesando actualmente en el servido
   
  La suscripción se elimina automáticamente si se elimina el informe subyacente. Si elimina una suscripción mientras se está procesando, ésta se detiene si la operación de eliminación se produce antes de que la extensión de entrega reciba los datos de la suscripción. De lo contrario, se continúa procesando la suscripción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación y administración de suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
  [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)  

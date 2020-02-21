@@ -16,10 +16,10 @@ ms.assetid: 2e4fa385-8f61-4394-8f75-3e839930a57d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74cc1b97c121b5e1a6e7d55127ec18cd2caec4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955356"
 ---
 # <a name="createstatement-method-int-int-int"></a>Método createStatement (int, int, int)
@@ -39,7 +39,7 @@ public java.sql.Statement createStatement(int nType,
 #### <a name="parameters"></a>Parámetros  
  *resultSetType*  
   
- Valor **int** que representa el tipo de conjunto de resultados.  
+ El valor **int** que representa el tipo del conjunto de resultados.  
   
  *nConcur*  
   
@@ -50,13 +50,13 @@ public java.sql.Statement createStatement(int nType,
  El valor **int** que representa la capacidad de alojamiento.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto de instrucción.  
+ El objeto Statement.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método createStatement se especifica mediante el método createStatement en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método createStatement method especifica este método createStatement en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método createStatement &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

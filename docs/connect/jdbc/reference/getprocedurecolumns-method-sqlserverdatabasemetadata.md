@@ -16,10 +16,10 @@ ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980751"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>Método getProcedureColumns (SQLServerDatabaseMetaData)
@@ -60,8 +60,8 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getProcedureColumns se especifica mediante el método getProcedureColumns en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getProcedureColumns especifica este método getProcedureColumns en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getProcedureColumns contendrá la siguiente información:  
   
@@ -75,14 +75,14 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |DATA_TYPE|**smallint**|Tipo de datos SQL de java.sql.Types.|  
 |TYPE_NAME|**String**|El nombre del tipo de datos.|  
 |PRECISION|**int**|Número total de dígitos significativos.|  
-|LENGTH|**int**|Longitud de los datos en bytes.|  
+|LENGTH|**int**|La longitud de los datos, en bytes.|  
 |SCALE|**short**|Número de dígitos que se encuentran a la derecha del separador decimal.|  
 |RADIX|**short**|Base de tipos numéricos.|  
 |NULLABLE|**short**|Indica si la columna puede contener un valor NULL. Puede ser uno de los siguientes valores:<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
-|REMARKS|**String**|Descripción de esta columna de procedimientos.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no devuelve ningún valor relativo a esta columna.|  
+|COMENTARIOS|**String**|Descripción de esta columna de procedimientos.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no devuelve ningún valor relativo a esta columna.|  
 |COLUMN_DEF|**String**|Valor predeterminado de la columna.|  
 |SQL_DATA_TYPE|**smallint**|Esta columna es igual que la columna **DATA_TYPE**, salvo por los tipos de datos **datetime** e **interval** de ISO.|  
-|SQL_DATETIME_SUB|**smallint**|El subcódigo **datetime** ISO **interval** si el valor de **SQL_DATA_TYPE** es **SQL_DATETIME** o **SQL_INTERVAL**. En el caso de tipos de datos distintos de **DateTime** e **Interval**de ISO, esta columna es NULL.|  
+|SQL_DATETIME_SUB|**smallint**|El subcódigo **datetime** ISO **interval** si el valor de **SQL_DATA_TYPE** es **SQL_DATETIME** o **SQL_INTERVAL**. Para tipos de datos distintos de **datetime** e **interval** de ISO, esta columna es NULL.|  
 |CHAR_OCTET_LENGTH|**int**|Número máximo de bytes en la columna.|  
 |ORDINAL_POSITION|**int**|Índice de la columna en la tabla.|  
 |IS_NULLABLE|**String**|Indica si la columna admite valores NULL.|  
@@ -94,7 +94,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|Nombre de una colección de esquemas XML. Si no se puede encontrar el nombre, esta cadena estará vacía.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|Nombre del catálogo que contiene el tipo definido por el usuario (UDT).|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|Nombre del esquema que contiene el tipo definido por el usuario (UDT).|  
-|SS_DATA_TYPE|**tinyint**|Tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que utilizan los procedimientos almacenados extendidos.<br /><br /> <br /><br /> **Nota:** Para más información sobre los tipos de datos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devuelve, vea "Tipos de datos (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|SS_DATA_TYPE|**tinyint**|Tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que utilizan los procedimientos almacenados extendidos.<br /><br /> <br /><br /> **Nota:** Para más información sobre los tipos de datos que ha devuelto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte "Tipos de datos (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 > [!NOTE]  
 >  Para más información sobre los datos que devuelve el método getProcedureColumns, vea "sp_sproc_columns (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

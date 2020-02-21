@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de datos de conjunto de resultados de Caching | Microsoft Docs
+title: Almacenamiento en caché de ejemplo de datos de conjunto de resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33998300281a274067a0879775dc33c9d7635471
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028409"
 ---
 # <a name="caching-result-set-data-sample"></a>Almacenamiento en caché de ejemplo de datos de conjunto de resultados
@@ -29,7 +29,7 @@ En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../../includes/jdb
 Para establecer el límite del número de filas almacenadas en la memoria caché del cliente, primero debe usar un cursor de servidor para crear uno de los objetos Statement, para lo que debe especificar el tipo de cursor que se va a usar al crear el objeto Statement. Por ejemplo, JDBC Driver proporciona el tipo de cursor TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, que es un cursor de servidor de solo avance rápido y solo lectura para su uso con las bases de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> Una alternativa al tipo de cursor específico de SQL Server es usar la propiedad de cadena de conexión selectMethod y establecer su valor en "cursor". Para obtener más información sobre los tipos de cursor compatibles con el controlador JDBC, vea Descripción de los [tipos de cursor](../../../connect/jdbc/understanding-cursor-types.md).  
+> Una alternativa al tipo de cursor específico de SQL Server es usar la propiedad de cadena de conexión selectMethod y establecer su valor en "cursor". Para obtener más información sobre los tipos de cursor compatibles con el controlador JDBC, consulte [Descripción de los tipos de cursor](../../../connect/jdbc/understanding-cursor-types.md).  
   
 Una vez ejecutada la consulta en el objeto Statement y devueltos los datos al cliente como un conjunto de resultados, puede llamar al método setFetchSize para controlar la cantidad de datos recuperados desde la base de datos cada vez. Por ejemplo, si tiene una tabla que contiene 100 filas de datos y establece el tamaño de captura en 10, solo se almacenan en la memoria caché del cliente 10 filas de datos en todo momento. Aunque esto reduce la velocidad del procesamiento de datos, ofrece la ventaja de usar menos memoria en el cliente, lo que puede resultar especialmente útil si necesita procesar grandes cantidades de datos.  
   
@@ -41,7 +41,7 @@ El archivo de código de este ejemplo se denomina CacheResultSet.java y se encue
 
 ## <a name="requirements"></a>Requisitos  
 
-Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Además, debe tener acceso a la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obtener más información sobre cómo establecer la ruta de clases, vea [usar el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Además, debe tener acceso a la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obtener más información sobre cómo establecer la ruta de acceso de clase, consulte [Usar el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca del archivo JAR que se debe seleccionar, consulte [Requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
@@ -124,6 +124,6 @@ public class CacheResultSet {
 }
 ```
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 [Trabajo con conjuntos de resultados](../../../connect/jdbc/code-samples/working-with-result-sets.md)  

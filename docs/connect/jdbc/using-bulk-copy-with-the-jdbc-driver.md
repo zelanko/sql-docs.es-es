@@ -11,10 +11,10 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75ee40e0b7ca753efd32e0ab057340f61824acef
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026413"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Uso de la copia masiva con el controlador JDBC
@@ -582,7 +582,7 @@ public class BulkCopyExistingTransactions {
   
 5. Seleccione **Escribir una consulta para especificar los datos que se van a transferir** y haga clic en **Siguiente**.  Escriba la **instrucción SQL** SELECT ProductID, Name, ProductNumber FROM Production.Product y después haga clic en **Siguiente**.  
   
-6. Compruebe la configuración: puede dejar el delimitador de filas como {CR}{LF} y el delimitador de columnas como coma {,}.  Seleccione **Editar asignaciones** y compruebe que el **Tipo de datos** es correcto para cada columna (por ejemplo, entero para ProductID y cadena Unicode para las demás).  
+6. Comprobar la configuración: Puede dejar el delimitador de filas como {CR}{LF} y el delimitador de columna como coma {,}.  Seleccione **Editar asignaciones** y compruebe que el **Tipo de datos** es correcto para cada columna (por ejemplo, entero para ProductID y cadena Unicode para las demás).  
   
 7. Vaya directamente a **Finalizar** y ejecute la exportación.  
 
@@ -794,6 +794,6 @@ Limitaciones y notas de implementación:
 | Void setTimeWithTimezoneFormat(DateTimeForm atter dateTimeFormatter)                                   | Establece el formato para analizar los datos Time desde el archivo como java.sql.Types.TIME_WITH_TIMEZONE.           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | Establece el formato para analizar los datos Time desde el archivo como java.sql.Types.TIME_WITH_TIMEZONE.           |
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -1,6 +1,6 @@
 ---
 title: Tutoriales de base de datos para RevoScaleR
-description: Tutorial sobre cómo crear una base de datos de SQL Server para tutoriales de R.
+description: 'Tutorial 1 de RevoScaleR: Creación de una base de datos de SQL Server para tutoriales de R.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,25 +9,25 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 537bfb64562dfad9dbefbce70423892cd6e1e431
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: ae2fd2d200b6a231dd76f04556d6d221df00809f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727123"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947220"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Creación de una base de datos y permisos (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Este es el tutorial 1 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-La lección uno explica cómo configurar una base de datos SQL Server y los permisos necesarios para completar este tutorial. Use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) u otro editor de consultas para completar las tareas siguientes:
+En este tutorial se describe cómo crear una base de datos de SQL Server y cómo establecer los permisos necesarios para completar los demás tutoriales de esta serie. Use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) u otro editor de consultas para completar las tareas siguientes:
 
 > [!div class="checklist"]
 > * Crear una base de datos para almacenar los datos destinados a entrenar y puntuar dos modelos de R
 > * Crear un inicio de sesión de usuario de base de datos con permisos para crear y usar objetos de base de datos
   
-## <a name="create-the-database"></a>Crear la base de datos
+## <a name="create-the-database"></a>Creación de la base de datos
 
 Para este tutorial, se necesita una base de datos en la que se almacenen los datos y el código. Si no es administrador, pida a su DBA que cree la base de datos y que inicie su sesión automáticamente. Necesitará permisos para escribir y leer datos, así como para ejecutar scripts de R.
 
@@ -37,7 +37,6 @@ Para este tutorial, se necesita una base de datos en la que se almacenen los dat
   
 2. Escriba un nombre para la nueva base de datos: RevoDeepDive.
   
-
 ## <a name="create-a-login"></a>Creación de un inicio de sesión
   
 1. Haga clic en **Nueva consulta**y cambie el contexto de la base de datos a la base de datos maestra.
@@ -115,7 +114,7 @@ En esta sección se enumeran algunos problemas comunes que podrían surgir duran
   
 - **No tengo privilegios DDL. ¿Puedo ejecutar el tutorial igualmente?**
   
-    Sí, pero debe pedirle a alguien que cargue previamente los datos en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y vaya directamente a la lección siguiente. Siempre que sea posible, las funciones que requieren privilegios DDL estarán indicadas en el tutorial.
+    Sí, pero debe pedirle a alguien que cargue previamente los datos en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y vaya directamente al tutorial siguiente. Siempre que sea posible, las funciones que requieren privilegios DDL estarán indicadas en el tutorial.
 
     Además, pida a su administrador que le conceda el permiso EXECUTE ANY EXTERNAL SCRIPT. Se necesita para la ejecución del script de R, ya sea remota o mediante `sp_execute_external_script`.
 

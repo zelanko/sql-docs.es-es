@@ -1,5 +1,5 @@
 ---
-title: Pantalla del Asistente para orígenes de datos (controlador ODBC para SQL Server) | Microsoft Docs
+title: Pantalla del Asistente para orígenes de datos 3 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63391969f378fdefbfa9547c079dcce4ff259e22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936547"
 ---
 # <a name="data-source-wizard-screen-3"></a>Pantalla del Asistente para orígenes de datos 3
@@ -67,19 +67,19 @@ Declara el tipo de carga de trabajo de la aplicación al conectarse a un servido
 
 ### <a name="multi-subnet-failover"></a>Conmutación por error de múltiples subredes.
 
-Si la aplicación se está conectando a un grupo de disponibilidad (AG) de recuperación ante desastres (Grupos de disponibilidad AlwaysOn) de alta disponibilidad en distintas subredes, lo que permite **la conmutación por error de múltiples** subredes. configura el controlador ODBC para SQL Server para proporcionar una detección del servidor activo y una conexión con él más rápidas.
+Si su aplicación se está conectando a un grupo de disponibilidad (AG) de alta disponibilidad y recuperación ante desastres (Grupos de disponibilidad AlwaysOn) en diferentes subredes, habilite **Conmutación por error de múltiples subredes.** configura el controlador ODBC para SQL Server para proporcionar una detección del servidor activo y una conexión con él más rápidas.
 
 ### <a name="transparent-network-ip-resolution"></a>Resolución de IP de red transparente.
 
-Modifica el comportamiento de la **conmutación por error de varias subredes** para permitir una reconexión más rápida durante la conmutación por error. Para obtener más información, vea [Uso de resolución de IP de red transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md).
+Modifica el comportamiento de **Conmutación por error de múltiples subredes** para permitir una reconexión más rápida durante la conmutación por error. Para obtener más información, vea [Uso de resolución de IP de red transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md).
 
 ### <a name="column-encryption"></a>Cifrado de columnas.
 
-Habilita el descifrado y el cifrado automáticos de las transferencias de datos a y desde columnas cifradas con la característica [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) disponible en SQL Server 2016 y versiones posteriores.
+Habilita el descifrado y el cifrado automáticos de las transferencias de datos a columnas cifradas y desde estas con la característica [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) disponible en SQL Server 2016 y versiones posteriores.
 
-### <a name="use-fmtonly-metadata-discovery"></a>Usar la detección de metadatos de FMTONLY:
+### <a name="use-fmtonly-metadata-discovery"></a>Uso de la detección de metadatos FMTONLY:
 
-Use el método de detección de metadatos SET FMTONLY heredado al conectarse a SQL Server 2012 o una versión más reciente. Habilítelo solo cuando se usan consultas no admitidas por [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), como las que contienen tablas temporales. 
+Use el método de detección de metadatos SET FMTONLY heredado al conectarse a SQL Server 2012 o una versión más reciente. Habilítelo solo cuando se utilicen consultas no admitidas por [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), como las que contienen tablas temporales. 
 
 ### <a name="next"></a>Siguiente
 
@@ -87,7 +87,7 @@ Avanza a la siguiente pantalla del asistente.
 
 ### <a name="back"></a>Atrás
 
-Vuelve a la pantalla anterior del asistente.
+Vuelve a la pantalla del asistente anterior.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

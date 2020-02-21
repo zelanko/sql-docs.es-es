@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579005"
 ---
 # <a name="manage-a-running-process"></a>Administrar un proceso en ejecución
@@ -54,7 +54,7 @@ ms.locfileid: "65579005"
  Cuando se cancela un trabajo, únicamente se cancelan los procesos que están en ejecución en el servidor de informes. Dado que el servidor de informes no administra el procesamiento de datos que se produce en otros equipos, se deben cancelar manualmente los procesos de consulta que quedan huérfanos posteriormente en otros sistemas. Es aconsejable especificar valores de tiempo de espera para cancelar automáticamente las consultas que tardan demasiado en ejecutarse. Para más información, vea [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Para más información sobre cómo pausar de forma temporal un informe, vea [Deshabilitar o pausar el procesamiento de informes y suscripciones](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
->  En algunas circunstancias poco frecuentes, quizás resulte necesario reiniciar el servidor para cancelar un proceso. Para el modo de SharePoint, quizás necesite reiniciar el grupo de aplicaciones que hospeda la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
+>  En algunas circunstancias poco frecuentes, quizás resulte necesario reiniciar el servidor para cancelar un proceso. Para el modo de SharePoint, quizás necesite reiniciar el grupo de aplicaciones que hospeda la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
   
  En este tema:  
   
@@ -122,6 +122,6 @@ ms.locfileid: "65579005"
  [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Supervisar el rendimiento del servidor de informes](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Supervisión del rendimiento del servidor de informes](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

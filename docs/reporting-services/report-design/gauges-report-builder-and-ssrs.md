@@ -157,10 +157,10 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b65ca56f0cb942f5cc5c9fc6b01d4a9df7e0b88e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580278"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Generador de informes y SSRS)
@@ -178,7 +178,7 @@ ms.locfileid: "65580278"
   
  ![Diagrama de elementos de medidor](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagrama de elementos de medidor")  
   
- Para obtener más información sobre el uso de medidores como KPI, vea [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Para más información sobre el uso de medidores como KPI, consulte el [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
   
 > [!NOTE]  
 >  Puede publicar medidores por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -198,13 +198,13 @@ ms.locfileid: "65580278"
   
  ![rs_RadialGauge](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Las opciones de medidor radial: Radial, Radial con medidor mini, Dos escalas, 90 grados Noreste, 90 grados Noroeste, 90 grados Suroeste, 90 grados Sureste, 180 grados Norte, 180 grados Sur, 180 grados Oeste, 180 grados Este e Indicador.  
+ Opciones de medidor radial: Radial, Radial con medidor mini, Dos escalas, 90 grados Noreste, 90 grados Noroeste, 90 grados Suroeste, 90 grados Sureste, 180 grados Norte, 180 grados Sur, 180 grados Oeste, 180 grados Este y Medidor.  
   
  **Medidor lineal**  
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Las opciones de medidor lineal: Horizontal, Vertical, Varios punteros de barra, Dos escalas, Rango de tres colores, Logarítmico, Termómetro, Termómetro fahrenheit/celsius y Gráfico de viñetas.  
+ Opciones de medidor lineal: Horizontal, Vertical, Varios punteros de barra, Dos escalas, Rango de tres colores, Logarítmico, Termómetro, Termómetro fahrenheit/celsius y Gráfico de viñetas.  
   
 ##  <a name="AddingData"></a> Agregar datos a un medidor  
  Una vez que haya agregado un medidor a la superficie de diseño, arrastre un campo de conjunto de datos hasta el panel de datos del medidor. De forma predeterminada, el medidor agrega los valores del campo en un valor que se muestra en el medidor. Ese valor se adjunta al puntero mediante la propiedad Value. Dependiendo del tipo de datos del campo, el medidor utiliza el agregado SUM o COUNT. Al usar datos numéricos, indicados para agregar, el medidor usa la función SUM. De lo contrario, usa el agregado COUNT. El valor del puntero puede utilizar otro agregado distinto o ninguno.  

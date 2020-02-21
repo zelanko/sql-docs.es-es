@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572747"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaz de usuario del diseñador gráfico de consultas
@@ -30,11 +30,11 @@ ms.locfileid: "65572747"
  .  
   
 ## <a name="graphical-query-designer"></a>Diseñador gráfico de consultas  
- Este diseñador gráfico de consultas admite tres tipos de comandos de consulta: **Text**, **StoredProcedure**o **TableDirect**. Antes de crear una consulta para el conjunto de datos, debe seleccionar una opción de tipo de comando en la página Consulta del cuadro de diálogo [Propiedades del conjunto de datos](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
+ Este diseñador gráfico de consultas admite tres tipos de comandos de consulta: **Text**, **StoredProcedure** o **TableDirect**. Antes de crear una consulta para el conjunto de datos, debe seleccionar una opción de tipo de comando en la página Consulta del cuadro de diálogo [Propiedades del conjunto de datos](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
   
  Dispone de tres tipos de consultas:  
   
--   El tipo**Text** admite texto de consultas estándar de [!INCLUDE[tsql](../../includes/tsql-md.md)] para orígenes de datos de bases de datos relacionales, incluidas las extensiones de procesamiento de datos para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Oracle.  
+-   El tipo **Text** admite texto de consultas estándar de [!INCLUDE[tsql](../../includes/tsql-md.md)] para orígenes de datos de bases de datos relacionales, incluidas las extensiones de procesamiento de datos para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Oracle.  
   
 -   El tipo**TableDirect** selecciona todas las columnas de la tabla especificada. Por ejemplo, para una tabla denominada Customers, éste es el equivalente de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] de `SELECT * FROM Customers`.  
   

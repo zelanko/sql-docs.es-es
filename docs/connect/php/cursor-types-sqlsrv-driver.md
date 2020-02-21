@@ -11,45 +11,45 @@ ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac090ad8831397bf31c0911ab8a8db21486528db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015114"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (controlador SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-El controlador SQLSRV permite crear un conjunto de resultados con filas a las que se puede acceder en cualquier orden según el tipo de cursor.  En este tema se explican los cursores del lado cliente (almacenados en búfer) y de servidor (no almacenados en búfer).  
+El controlador SQLSRV permite crear un conjunto de resultados con filas a las que se puede acceder en cualquier orden según el tipo de cursor.  En este tema se explican los cursores del lado cliente (almacenados en búfer) y del lado servidor (no almacenados en búfer).  
   
 ## <a name="cursor-types"></a>Tipos de cursor  
-Cuando se crea un conjunto de resultados con [sqlsrv_query](../../connect/php/sqlsrv-query.md) o con [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md), se puede especificar el tipo de cursor. De forma predeterminada, se usa un cursor de solo avance, que permite desplazar una fila cada vez a partir de la primera fila del conjunto de resultados hasta llegar al final del conjunto de resultados.  
+Cuando se crea un conjunto de resultados con [sqlsrv_query](../../connect/php/sqlsrv-query.md) o con [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md), se puede especificar el tipo de cursor. De forma predeterminada, se usa un cursor de solo avance, que permite desplazar una fila cada vez comenzando en la primera fila del conjunto de resultados hasta llegar al final.  
   
-Puede crear un conjunto de resultados con un cursor desplazable, que le permite tener acceso a cualquier fila del conjunto de resultados, en cualquier orden. En la tabla siguiente se enumeran los valores que se pueden pasar a la opción **desplazable** en sqlsrv_query o sqlsrv_prepare.  
+Puede crear un conjunto de resultados con un cursor desplazable, que le permite tener acceso a cualquier fila del conjunto de resultados, en cualquier orden. En la tabla siguiente se muestran los valores que se pueden pasar a la opción **Scrollable** en sqlsrv_query o sqlsrv_prepare.  
   
 |Opción|Descripción|  
 |----------|---------------|  
-|SQLSRV_CURSOR_FORWARD|Permite desplazar una fila cada vez a partir de la primera fila del conjunto de resultados hasta llegar al final del conjunto de resultados.<br /><br />Este es el tipo de cursor predeterminado.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) devuelve un error para los conjuntos de resultados creados con este tipo de cursor.<br /><br />**Forward** es la forma abreviada de SQLSRV_CURSOR_FORWARD.|  
-|SQLSRV_CURSOR_STATIC|Permite tener acceso a las filas en cualquier orden, pero no reflejará los cambios en la base de datos.<br /><br />**static** es la forma abreviada de SQLSRV_CURSOR_STATIC.|  
-|SQLSRV_CURSOR_DYNAMIC|Permite tener acceso a las filas en cualquier orden y reflejará los cambios en la base de datos.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) devuelve un error para los conjuntos de resultados creados con este tipo de cursor.<br /><br />**Dynamic** es la forma abreviada de SQLSRV_CURSOR_DYNAMIC.|  
-|SQLSRV_CURSOR_KEYSET|Permite acceder a las filas en cualquier orden. Pero los cursores de conjunto de claves no actualizan el recuento de filas si se elimina una fila de la tabla (las filas eliminadas se devuelven sin valores).<br /><br />**Keyset** es la forma abreviada de SQLSRV_CURSOR_KEYSET.|  
-|SQLSRV_CURSOR_CLIENT_BUFFERED|Permite acceder a las filas en cualquier orden. Crea una consulta de cursor del lado cliente.<br /><br />**almacenado en búfer** es la forma abreviada de SQLSRV_CURSOR_CLIENT_BUFFERED.|  
+|SQLSRV_CURSOR_FORWARD|Permite desplazar una fila cada vez comenzando en la primera fila del conjunto de resultados hasta llegar al final.<br /><br />Este es el tipo de cursor predeterminado.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) devuelve un error para los conjuntos de resultados creados con este tipo de cursor.<br /><br />**forward** es la forma abreviada de SQLSRV_CURSOR_FORWARD.|  
+|SQLSRV_CURSOR_STATIC|Permite acceder a las filas en cualquier orden, pero no reflejará los cambios en la base de datos.<br /><br />**static** es la forma abreviada de SQLSRV_CURSOR_STATIC.|  
+|SQLSRV_CURSOR_DYNAMIC|Permite acceder a las filas en cualquier orden y reflejará los cambios en la base de datos.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) devuelve un error para los conjuntos de resultados creados con este tipo de cursor.<br /><br />**dynamic** es la forma abreviada de SQLSRV_CURSOR_DYNAMIC.|  
+|SQLSRV_CURSOR_KEYSET|Permite acceder a las filas en cualquier orden. Pero los cursores de conjunto de claves no actualizan el recuento de filas si se elimina una fila de la tabla (las filas eliminadas se devuelven sin valores).<br /><br />**keyset** es la forma abreviada de SQLSRV_CURSOR_KEYSET.|  
+|SQLSRV_CURSOR_CLIENT_BUFFERED|Permite acceder a las filas en cualquier orden. Crea una consulta de cursor del lado cliente.<br /><br />**buffered** es la forma abreviada de SQLSRV_CURSOR_CLIENT_BUFFERED.|  
   
-Si una consulta genera varios conjuntos de resultados, la opción **desplazable** se aplica a todos los conjuntos de resultados.  
+Si una consulta genera varios conjuntos de resultados, la opción **Scrollable** se aplica a todos ellos.  
   
-## <a name="selecting-rows-in-a-result-set"></a>Seleccionar filas en un conjunto de resultados  
-Después de crear un conjunto de resultados, puede usar [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md), [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)o [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) para especificar una fila.  
+## <a name="selecting-rows-in-a-result-set"></a>Selección de filas en un conjunto de resultados  
+Después de crear un conjunto de resultados, puede usar [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md), [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) o [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) para especificar una fila.  
   
-En la tabla siguiente se describen los valores que se pueden especificar en el parámetro *Row* .  
+En la tabla siguiente se describen los valores que se pueden especificar en el parámetro *row*.  
   
 |Parámetro|Descripción|  
 |-------------|---------------|  
-|SQLSRV_SCROLL_NEXT|Especifica la siguiente fila. Este es el valor predeterminado si no se especifica el parámetro *Row* para un conjunto de resultados desplazable.|  
-|SQLSRV_SCROLL_PRIOR|Especifica la fila anterior a la fila actual.|  
+|SQLSRV_SCROLL_NEXT|Especifica la siguiente fila. Este es el valor predeterminado si no se especifica el parámetro *row* para un conjunto de resultados desplazable.|  
+|SQLSRV_SCROLL_PRIOR|Especifica la fila delante de la fila actual.|  
 |SQLSRV_SCROLL_FIRST|Especifica la primera fila del conjunto de resultados.|  
 |SQLSRV_SCROLL_LAST|Especifica la última fila del conjunto de resultados.|  
-|SQLSRV_SCROLL_ABSOLUTE|Especifica la fila especificada con el parámetro *offset* .|  
-|SQLSRV_SCROLL_RELATIVE|Especifica la fila especificada con el parámetro *offset* de la fila actual.|  
+|SQLSRV_SCROLL_ABSOLUTE|Indica la fila especificada con el parámetro *offset*.|  
+|SQLSRV_SCROLL_RELATIVE|Indica la fila especificada con parámetro *offset* de la fila actual.|  
   
 ## <a name="server-side-cursors-and-the-sqlsrv-driver"></a>Cursores del lado servidor y el controlador SQLSRV  
 En el ejemplo siguiente se muestra el efecto de los distintos cursores. En la línea 33 del ejemplo, verá la primera de tres instrucciones de consulta que especifican cursores diferentes.  Dos de las instrucciones de consulta están comentadas. Cada vez que ejecute el programa, use un tipo de cursor diferente para ver el efecto de la actualización de la base de datos en la línea 47.  
@@ -119,15 +119,15 @@ sqlsrv_close( $conn );
 ```  
   
 ## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>Cursores del lado cliente y el controlador SQLSRV  
-Los cursores del lado cliente son una característica agregada en la versión [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3,0 del que permite almacenar en caché un conjunto de resultados completo en la memoria. El recuento de filas está disponible después de ejecutar la consulta cuando se usa un cursor del lado cliente.  
+Los cursores del lado cliente son una característica agregada a la versión 3.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] que permite almacenar en caché un conjunto de resultados completo en memoria. El recuento de filas está disponible después de ejecutar la consulta cuando se usa un cursor del lado cliente.  
   
-Los cursores del lado cliente deben usarse para conjuntos de resultados de tamaño pequeño a mediano. Utilice cursores del lado servidor para grandes conjuntos de resultados.  
+Los cursores del lado cliente deben usarse para conjuntos de resultados de tamaño pequeño a mediano. Con conjuntos de resultados grandes se deben usar cursores del lado servidor.  
   
-Una consulta devolverá FALSE si el búfer no es lo suficientemente grande como para contener todo el conjunto de resultados. Puede aumentar el tamaño del búfer hasta el límite de memoria PHP.  
+Una consulta devolverá False si el búfer no es lo suficientemente grande como para contener todo el conjunto de resultados. Puede aumentar el tamaño del búfer hasta el límite de memoria PHP.  
   
-Con el controlador SQLSRV, puede configurar el tamaño del búfer que contiene el conjunto de resultados con la configuración ClientBufferMaxKBSize para [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) devuelve el valor de ClientBufferMaxKBSize. También puede establecer el tamaño máximo del búfer en el archivo php. ini con sqlsrv. ClientBufferMaxKBSize (por ejemplo, sqlsrv. ClientBufferMaxKBSize = 1024).  
+Con el controlador SQLSRV, puede configurar el tamaño del búfer que contiene el conjunto de resultados con el valor ClientBufferMaxKBSize de [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) devuelve el valor de ClientBufferMaxKBSize. También puede establecer el tamaño máximo del búfer en el archivo php.ini con sqlsrv.ClientBufferMaxKBSize (por ejemplo, sqlsrv.ClientBufferMaxKBSize = 1024).  
   
-En el ejemplo siguiente se muestra:  
+El ejemplo siguiente muestra:  
   
 -   El recuento de filas siempre está disponible con un cursor del lado cliente.  
   

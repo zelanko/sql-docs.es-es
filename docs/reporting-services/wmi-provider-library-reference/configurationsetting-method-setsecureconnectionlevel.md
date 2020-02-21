@@ -16,10 +16,10 @@ ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5318d25ed1e6113e65f6e41d40add3ff0203856c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580998"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>Método ConfigurationSetting - SetSecureConnectionLevel
@@ -38,7 +38,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- *Nivel*  
+ *Level*  
  Un valor entero que representa un nivel de conexión segura.  
   
  *HRESULT*  
@@ -47,7 +47,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se realiza una llamada, la propiedad SecureConnectionLevel del servidor de informes se establece en el valor especificado. El valor 0 indica que SSL está desactivado. Un valor mayor o igual que 1 indica que SSL está activado.  
   
 -   Cuando se establece el valor, se cambia el elemento SecureConnectionLevel del archivo de configuración del servidor de informes y el elemento **URLRoot** en el archivo de configuración se establece para usar "https://" si el valor de *Level* es mayor o igual que 1, o bien "http://" si el valor de *Level* especificado es 0.  

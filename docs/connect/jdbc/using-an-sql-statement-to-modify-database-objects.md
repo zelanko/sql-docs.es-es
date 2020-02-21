@@ -11,10 +11,10 @@ ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de8e357328c151e3762f324dcbeba2525df53530
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026563"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>Empleo de una instrucción SQL para modificar objetos de base de datos
@@ -26,12 +26,12 @@ Para modificar objetos de la base de datos de [!INCLUDE[ssNoVersion](../../inclu
 Para ello, primero debe crear un objeto SQLServerStatement mediante el método [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
 
 > [!NOTE]  
-> Las instrucciones SQL que modifican objetos dentro de una base de datos, se llaman instrucciones de lenguaje de definición de datos (DDL). Incluyen instrucciones `CREATE TABLE`como, `DROP TABLE`, `CREATE INDEX`y. `DROP INDEX` Para obtener más información sobre los tipos de instrucciones DDL compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> Las instrucciones SQL que modifican objetos dentro de una base de datos, se llaman instrucciones de lenguaje de definición de datos (DDL). Estas incluyen instrucciones como `CREATE TABLE`, `DROP TABLE`, `CREATE INDEX`, y `DROP INDEX`. Para obtener más información sobre los tipos de instrucciones DDL compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 En el siguiente ejemplo, se pasa a la función una conexión abierta a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], se construye una instrucción SQL que crea el elemento TestTable simple en la base de datos y luego se ejecuta la instrucción y se muestra el valor devuelto.
 
 [!code[JDBC#UsingSQLToModifyDBObjects1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_0_1.java)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Empleo de instrucciones con SQL](../../connect/jdbc/using-statements-with-sql.md)

@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a893a9a25f4ad19dcc71f538b62110b5838fa3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573152"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
@@ -92,7 +92,7 @@ ms.locfileid: "65573152"
     |Tipo de datos de SQL|Tipo de datos de CLR|Descripción|  
     |-------------------|-------------------|-----------------|  
     |**Date**|**DateTime**|Solo fecha|  
-    |**Time**|**Timespan**|Solo hora|  
+    |**Time**|**TimeSpan**|Solo hora|  
     |**DateTimeTZ**|**DateTimeOffset**|Fecha y hora con ajuste de zona horaria|  
     |**DateTime2**|**DateTime**|Fecha y hora con fracciones de milisegundos|  
   

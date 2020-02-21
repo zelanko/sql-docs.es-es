@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578034"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Suscripciones y entrega (Reporting Services)
@@ -67,9 +67,9 @@ ms.locfileid: "65578034"
   
 -   [Suscripciones controladas por datos a informes](../../reporting-services/subscriptions/data-driven-subscriptions.md) Ofrece información sobre el uso de suscripciones controladas por datos para personalizar la salida de informes en tiempo de ejecución.  
   
--   [Supervisar suscripciones de Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
+-   [Supervisión de suscripciones de Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
--   [Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+-   [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 ##  <a name="bkmk_subscription_scenarios"></a> Escenarios de suscripción y entrega  
  Para cada suscripción, se pueden configurar las opciones de entrega y las opciones disponibles dependen de la extensión de entrega que seleccione. Una extensión de entrega es un módulo que admite alguna manera de distribución. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye varias extensiones de entrega y, además, la extensión de entrega puede estar disponible con proveedores de terceros.  
@@ -88,9 +88,9 @@ ms.locfileid: "65578034"
 ##  <a name="bkmk_standard_and_datadriven"></a> Suscripciones estándar y controladas por datos  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite dos tipos de suscripciones: **estándar** y **controladas por datos**. Las suscripciones estándar se crean y se administran por usuarios individuales. La suscripción estándar consta de valores estáticos que no pueden modificarse durante su procesamiento. Para cada suscripción estándar existe un único conjunto de opciones de presentación del informe, opciones de entrega y parámetros de informe.  
   
- Las suscripciones controladas por datos obtienen información de suscripción en tiempo de ejecución consultando un origen de datos externo que proporciona los valores usados para especificar un destinatario, parámetros de informe o un formato de aplicación. Las suscripciones controladas por datos están indicadas para listas de destinatarios extensas o para ocasiones en las que se desea cambiar el resultado del informe para cada destinatario. Este tipo de suscripciones requieren conocimientos sobre la creación de consultas y el uso de los parámetros. Las personas que crean y administran estas suscripciones suelen ser los administradores del servidor de informes. Para obtener más información, vea:  
+ Las suscripciones controladas por datos obtienen información de suscripción en tiempo de ejecución consultando un origen de datos externo que proporciona los valores usados para especificar un destinatario, parámetros de informe o un formato de aplicación. Las suscripciones controladas por datos están indicadas para listas de destinatarios extensas o para ocasiones en las que se desea cambiar el resultado del informe para cada destinatario. Este tipo de suscripciones requieren conocimientos sobre la creación de consultas y el uso de los parámetros. Las personas que crean y administran estas suscripciones suelen ser los administradores del servidor de informes. Para obtener más información, vea lo siguiente:  
   
--   [Suscripciones controladas por datos a informes](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
+-   [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
   
 -   [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "65578034"
 |Recurso compartido de archivos de Windows|Entrega un informe como un archivo de aplicación estática a una carpeta compartida accesible en la red.|  
 |Correo electrónico|Entrega una notificación o un informe como datos adjuntos de correo electrónico o como vínculo de dirección URL.|  
 |Biblioteca de SharePoint|Entrega un informe como un archivo de aplicación estática a una biblioteca de SharePoint accesible desde un sitio de SharePoint. El sitio se debe integrar con un servidor de informes que se ejecuta en el modo integrado con SharePoint.|  
-|NULL|El proveedor de entrega NULL es una extensión de entrega muy especializada que se usa para cargar previamente una memoria caché con informes con parámetros listos para ver. Este método no está disponible para los usuarios en suscripciones individuales. La entrega NULL la usan los administradores en suscripciones controladas por datos para mejorar el rendimiento del servidor de informes, mediante una carga previa en la memoria caché.|  
+|Null|El proveedor de entrega NULL es una extensión de entrega muy especializada que se usa para cargar previamente una memoria caché con informes con parámetros listos para ver. Este método no está disponible para los usuarios en suscripciones individuales. La entrega NULL la usan los administradores en suscripciones controladas por datos para mejorar el rendimiento del servidor de informes, mediante una carga previa en la memoria caché.|  
   
 > [!NOTE]  
 >  La entrega de informes es una parte extensible de la arquitectura de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Otros fabricantes pueden crear extensiones de entrega personalizadas para enrutar informes a distintas ubicaciones o dispositivos. Para obtener más información acerca de las extensiones de entrega personalizadas, vea [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
@@ -131,7 +131,7 @@ ms.locfileid: "65578034"
   
 -   Condiciones para procesar la suscripción, que se expresa como un evento.  
   
-     Normalmente, las condiciones para ejecutar un informe se basan en el tiempo. Por ejemplo, puede que desee ejecutar un informe concreto todos los martes a las 3 de la tarde de la zona horaria UTC. Sin embargo, si el informe se ejecuta como una instantánea, puede especificar que la suscripción se ejecute siempre que se actualice la instantánea.  
+     Normalmente, las condiciones para ejecutar un informe se basan en el tiempo. Por ejemplo, puede que desee ejecutar un informe concreto todos los martes a las 3 de la tarde hora UTC. Sin embargo, si el informe se ejecuta como una instantánea, puede especificar que la suscripción se ejecute siempre que se actualice la instantánea.  
   
 -   Parámetros utilizados al ejecutar el informe.  
   
@@ -182,6 +182,6 @@ ms.locfileid: "65578034"
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Programaciones](../../reporting-services/subscriptions/schedules.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Supervisar suscripciones de Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
+ [Supervisión de suscripciones de Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
   

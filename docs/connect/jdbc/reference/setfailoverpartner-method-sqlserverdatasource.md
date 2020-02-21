@@ -16,10 +16,10 @@ ms.assetid: 5310b7c2-9d10-474f-ad3a-218fe5da694b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d152001d1b0eb4ad47936d04ba6c74b8ae7f6e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974282"
 ---
 # <a name="setfailoverpartner-method-sqlserverdatasource"></a>Método setFailoverPartner (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setFailoverPartner(java.lang.String serverName)
   
  Unvalor de **String** que contiene el nombre de servidor de conmutación por error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor que establece este método se utiliza en caso de que se produzca un error en la conexión inicial con el servidor principal; una vez se haya establecido la conexión inicial, se ignora el valor. El método [setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md) también se debería utilizar junto con este método o se producirá una excepción.  
   
  El controlador no admite especificar el número de puerto del servidor de conmutación por error cuando se establece el nombre de servidor de conmutación por error. Sin embargo, se admite llamar al método [setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md) y al método [setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md) con el método [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md).  

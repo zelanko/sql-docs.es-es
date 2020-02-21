@@ -9,10 +9,10 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580735"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generar fuentes de distribución de datos a partir de informes (Generador de informes y SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "65580735"
   
  ![RS_Atom_PeerDynamicColumns](../../reporting-services/report-builder/media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- El documento de servicio de Atom generado con este informe incluye dos fuentes de distribución de datos, una para cada una de las columnas dinámicas del mismo nivel: Territory y Year. El diagrama siguiente muestra el contenido de cada fuente de distribución de datos.  
+ En el documento de servicio de Atom generado con este informe se incluyen dos fuentes de distribución de datos, una para cada una de las columnas dinámicas del mismo nivel: Territory y Year. El diagrama siguiente muestra el contenido de cada fuente de distribución de datos.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
@@ -169,16 +169,16 @@ ms.locfileid: "65580735"
   
 |Elemento|Comportamiento de la representación|  
 |----------|------------------------|  
-|Table|Realiza la representación mediante la expansión de la tabla y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila. No se admiten informes detallados.|  
-|Matriz|Realiza la representación mediante la expansión de la matriz y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila.|  
-|Lista|Representa un registro para cada instancia o fila de detalle de la lista.|  
+|Tabla|Realiza la representación mediante la expansión de la tabla y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila. No se admiten informes detallados.|  
+|Matrix|Realiza la representación mediante la expansión de la matriz y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila.|  
+|List|Representa un registro para cada instancia o fila de detalle de la lista.|  
 |Subinforme|El elemento primario se repite en todas las instancias del contenido.|  
 |Gráfico|Representa un registro con todas las etiquetas de gráfico de cada valor de gráfico. Las etiquetas de las series y las categorías de las jerarquías se quitan y se incluyen en la fila de un valor de gráfico.|  
 |Barra de datos|Se representa como un gráfico. Normalmente, una barra de datos no incluye jerarquías ni etiquetas.|  
 |Minigráfico|Se representa como un gráfico. Normalmente, un minigráfico no incluye jerarquías ni etiquetas.|  
-|Medidor|Se representa como un único registro con los valores máximo y mínimo de la escala lineal, los valores inicial y final del intervalo, y el valor del puntero.|  
+|Indicador|Se representa como un único registro con los valores máximo y mínimo de la escala lineal, los valores inicial y final del intervalo, y el valor del puntero.|  
 |Indicador|Se representa como un único registro con el nombre del estado activo, los estados disponibles y el valor de los datos.|  
-|Mapa|Genera una fuente de distribución de datos para cada región de datos del mapa. Si varias capas de mapa utilizan la misma región de datos, las fuentes de distribución de datos los incluyen a todos. Las fuentes de distribución de datos incluyen un registro con las etiquetas y valores para cada miembro de mapa de la capa de mapa.|  
+|Map|Genera una fuente de distribución de datos para cada región de datos del mapa. Si varias capas de mapa utilizan la misma región de datos, las fuentes de distribución de datos los incluyen a todos. Las fuentes de distribución de datos incluyen un registro con las etiquetas y valores para cada miembro de mapa de la capa de mapa.|  
   
   
 ##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  

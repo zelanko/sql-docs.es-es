@@ -14,16 +14,16 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503087"
 ---
 # <a name="feature-reference-reporting-services"></a>Referencia de características (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye varias herramientas y aplicaciones que se pueden usar para crear, administrar y ver informes. En esta sección, se proporcionan temas específicos en los que se describen los cuadros de diálogo, las páginas web y los asistentes de estas herramientas y aplicaciones.  
   
- Para obtener acceso a un tema de la interfaz de usuario mientras se ejecuta la herramienta o la aplicación, presione F1 o haga clic en **Ayuda** cuando esté abierto el cuadro de diálogo, la página web o el asistente. Para más información sobre cómo iniciar las herramientas de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Tutorial: Cómo buscar e iniciar herramientas de Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Para obtener acceso a un tema de la interfaz de usuario mientras se ejecuta la herramienta o la aplicación, presione F1 o haga clic en **Ayuda** cuando esté abierto el cuadro de diálogo, la página web o el asistente. Para obtener más información sobre cómo iniciar las herramientas de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Tutorial: Búsqueda e inicio de las herramientas de Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Diseñador de informes (Ayuda F1)](../reporting-services/tools/report-designer-f1-help.md)  
@@ -32,7 +32,7 @@ ms.locfileid: "65503087"
  [Temas de Ayuda del Administrador de configuración de Reporting Services](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Proporciona ayuda para la herramienta de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que se usa para implementar y administrar las instancias del servidor de informes.  
   
- [Servidor de informes en Management Studio ayuda F1](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Servidor de informes en Management Studio (Ayuda F1)](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  Proporciona ayuda para los cuadros de diálogo que se usan para administrar informes y servidores de informes en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
  [Visor HTML y la barra de herramientas del informe](../reporting-services/html-viewer-and-the-report-toolbar.md)  

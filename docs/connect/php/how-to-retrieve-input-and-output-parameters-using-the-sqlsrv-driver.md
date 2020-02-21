@@ -1,5 +1,5 @@
 ---
-title: Recuperación de parámetros de E/S con el controlador SQLSRV | Microsoft Docs
+title: 'Procedimientos: Recuperación de parámetros de E/S con el controlador SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993458"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Recuperación de parámetros de entrada y salida con el controlador SQLSRV
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Procedimientos: Recuperación de los parámetros de entrada y salida con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 En este tema se muestra cómo usar el controlador SQLSRV para llamar a un procedimiento almacenado en el que se ha definido un parámetro como parámetro de entrada/salida, y cómo recuperar los resultados. Cuando se recupera un parámetro de salida o uno de entrada/salida, se deben usar todos los resultados que devuelve el procedimiento almacenado antes de que pueda accederse al valor del parámetro devuelto.  
@@ -30,7 +30,7 @@ En este tema se muestra cómo usar el controlador SQLSRV para llamar a un proced
 En el ejemplo siguiente se llama un procedimiento almacenado que resta las horas de vacaciones utilizadas de las horas de vacaciones disponibles de un empleado determinado. La variable que representa las horas de vacaciones utilizadas, *$vacationHrs*, se transmite al procedimiento almacenado como un parámetro de entrada. Después de actualizar las horas de vacaciones disponibles, el procedimiento almacenado usa el mismo parámetro para devolver el número de horas de vacaciones restantes.  
   
 > [!NOTE]  
-> Al inicializar *$vacationHrs* en 4, el valor del tipo PHPTYPE devuelto se establece como un entero. Para garantizar la integridad del tipo de datos, los parámetros de entrada/salida se deben inicializar antes de llamar al procedimiento almacenado, o bien hay que especificar el tipo PHPTYPE deseado. Para obtener información sobre cómo especificar el tipo PHPTYPE, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+> Al inicializar *$vacationHrs* en 4, el valor del tipo PHPTYPE devuelto se establece como un entero. Para garantizar la integridad del tipo de datos, los parámetros de entrada/salida se deben inicializar antes de llamar al procedimiento almacenado, o bien hay que especificar el tipo PHPTYPE deseado. Para más información sobre cómo especificar el tipo PHPTYPE, consulte [ Especificación de los tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Dado que el procedimiento almacenado devuelve dos resultados, se debe llamar a [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) una vez que se haya ejecutado el procedimiento almacenado para que esté disponible el valor del parámetro de salida. Después de llamar a **sqlsrv_next_result**, *$vacationHrs* contiene el valor del parámetro de salida devuelto por el procedimiento almacenado.  
   
@@ -122,10 +122,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Al enlazar un parámetro de entrada/salida a un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), tendrá que especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. De lo contrario, puede dar como resultado una excepción "valor fuera de intervalo".
+> Al enlazar un parámetro de entrada o salida a un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), deberá especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. De lo contrario, puede dar como resultado una excepción "valor fuera del intervalo".
 
 ## <a name="example-2"></a>Ejemplo 2
-En este ejemplo de código se muestra cómo enlazar un valor BIGINT grande como parámetro de entrada/salida.  
+En este ejemplo de código se muestra cómo enlazar un valor bigint largo como un parámetro de entrada o salida.  
 
 ```
 <?php
@@ -152,9 +152,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Consulte también  
-[Especificación de la dirección del parámetro con el controlador SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Cómo: Especificación de la dirección del parámetro con el controlador SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Recuperación de parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Cómo: Recuperación de los parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
   

@@ -11,10 +11,10 @@ ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5f380123f0fc3f2b23a82b72871622e98c0f185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980089"
 ---
 # <a name="getschemas-method-string-string"></a>Método getSchemas (String, String)
@@ -45,7 +45,7 @@ public ResultSet getSchemas(java.lang.String catalog,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getSchemas especifica este método getSchemas en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getSchemas contiene la siguiente información:  

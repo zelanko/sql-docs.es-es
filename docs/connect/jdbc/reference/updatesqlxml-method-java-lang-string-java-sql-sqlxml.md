@@ -11,10 +11,10 @@ ms.assetid: 60021881-ef83-499b-9977-e20ff23c1312
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e2772b43c084e1780b8e65cd6425b67d01092f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998289"
 ---
 # <a name="updatesqlxml-method-javalangstring-javasqlsqlxml"></a>Método updateSQLXML (java.lang.String, java.sql.SQLXML)
@@ -37,13 +37,13 @@ public void updateSQLXML(java.lang.String columnLabel,
   
  *xmlObject*  
   
- Objeto SQLXML.  
+ Un objeto SQLXML.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método updateSQLXML se especifica mediante el método updateSQLXML de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ Este método updateSQLXML se especifica con el método updateSQLXML en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método updateSQLXML &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   

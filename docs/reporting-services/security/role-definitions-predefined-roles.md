@@ -13,10 +13,10 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67500188"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definiciones de roles: roles predefinidos
@@ -24,7 +24,7 @@ ms.locfileid: "67500188"
   
 ## <a name="how-to-use-predefined-roles"></a>Uso de los roles predefinidos  
   
-1. Revise los roles predefinidos para determinar si puede utilizarlos tal y como están. Si necesita ajustar las tareas o definir roles adicionales, conviene que lo haga antes de empezar a asignar usuarios a roles específicos. Para crear o modificar roles personalizados utilice SQL Server Management Studio. Para más información, consulte [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
+1. Revise los roles predefinidos para determinar si puede utilizarlos tal y como están. Si necesita ajustar las tareas o definir roles adicionales, conviene que lo haga antes de empezar a asignar usuarios a roles específicos. Para crear o editar roles, utilice SQL Server Management Studio. Para más información, consulte [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
   
 2. Identifique qué usuarios y grupos requieren acceso al servidor de informes y en qué nivel. A la mayoría de los usuarios se les debería asignar el rol **Explorador** o el rol **Generador de informes** . A un pequeño número de usuarios se les debería asignar el rol **Publicador** . A el rol **Administrador de contenido**conviene asignar muy pocos usuarios.  
 
@@ -37,7 +37,7 @@ ms.locfileid: "67500188"
   
  En la tabla siguiente se describe el ámbito predefinido de los roles:  
   
-|Rol predefinido|ámbito|Descripción|  
+|Rol predefinido|Ámbito|Descripción|  
 |---------------------|-----------|-----------------|  
 |[Rol Administrador de contenido](#bkmk_content)|Elemento|Puede administrar contenido en el servidor de informes. Esto incluye las carpetas, los informes y los recursos.|  
 |[Rol Publicador](#bkmk_publisher)|Elemento|Puede publicar informes e informes vinculados en el servidor de informes.|  
@@ -60,9 +60,9 @@ ms.locfileid: "67500188"
 |Usar informes|Permite leer definiciones de informes.|  
 |Crear informes vinculados|Crear informes vinculados que se basen en un informe no vinculado.|  
 |Administrar todas las suscripciones|Ver, modificar y eliminar cualquier suscripción para informes e informes vinculados, independientemente de quién sea su propietario. Esta tarea también permite crear suscripciones controladas por datos.|  
-|Administrar orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades del origen de datos.|  
+|Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades del origen de datos.|  
 |Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
-|Administrar modelos|Crear, ver y eliminar modelos; ver y modificar propiedades de modelos.|  
+|Administración de modelos|Crear, ver y eliminar modelos; ver y modificar propiedades de modelos.|  
 |Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados.|  
 |Administrar historial de informe|Cree, vea y elimine el historial del informe, vea las propiedades del historial del informe; vea y modifique la configuración que determina los límites del historial de instantáneas y cómo funciona el almacenamiento en caché.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionen contenido al informe, vea y modifique definiciones de informe y establezca directivas de seguridad de nivel de informe.|  
@@ -95,10 +95,10 @@ ms.locfileid: "67500188"
 |Tarea|Descripción|  
 |----------|-----------------|  
 |Crear informes vinculados|Cree informes vinculados y publíquelos en una carpeta del servidor de informes.|  
-|Administrar orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades de un origen de datos.|  
+|Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades de un origen de datos.|  
 |Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionan contenido al informe, vea y modifique definiciones de informe.|  
-|Administrar modelos|Cree, vea y elimine modelos de informe; vea y modifique propiedades de modelos de informe.|  
+|Administración de modelos|Cree, vea y elimine modelos de informe; vea y modifique propiedades de modelos de informe.|  
 |Administrar recursos|Cree, modifique y elimine recursos; vea y modifique propiedades de recursos.|  
   
 ### <a name="customizing-the-publisher-role"></a>Personalización del rol Publicador  
@@ -159,7 +159,7 @@ ms.locfileid: "67500188"
 |----------|-----------------|  
 |Crear informes vinculados|Cree informes vinculados que se basen en informes almacenados en la carpeta Mis informes del usuario.|  
 |Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
-|Administrar orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades del origen de datos.|  
+|Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades del origen de datos.|  
 |Administrar suscripciones individuales|Cree, vea, modifique y elimine suscripciones para informes e informes vinculados.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionan contenido al informe, vea y modifique definiciones de informe y establezca directivas de seguridad de nivel de informe.|  
 |Administrar recursos|Cree, modifique y elimine recursos, y vea y modifique sus propiedades.|  
@@ -186,7 +186,7 @@ ms.locfileid: "67500188"
 |Tarea|Descripción|  
 |----------|-----------------|  
 |Ejecutar definiciones de informe|Inicie la ejecución de la definición del informe sin publicarlo en un servidor de informes.|  
-|Administrar trabajos|Vea y cancele trabajos que se estén ejecutando. Para obtener más información, vea [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md).|  
+|Trabajos de administración|Vea y cancele trabajos que se estén ejecutando. Para obtener más información, vea [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md).|  
 |Administrar propiedades del servidor de informes|Vea y modifique propiedades que se apliquen al servidor de informes y a elementos administrados por el servidor de informes.<br /><br /> Esta tarea permite cambiar el nombre del portal web, habilitar Mis informes y establecer los valores predeterminados del historial del informe.|  
 |Administrar roles|Cree, vea, modifique y elimine definiciones de roles.<br /><br /> Los miembros del rol **Administrador del sistema** pueden utilizar la página Configuración del sitio para administrar roles.|  
 |Administrar programaciones compartidas|Cree, vea, modifique y elimine programaciones compartidas que sirven para ejecutar o actualizar informes.|  
@@ -209,7 +209,7 @@ En la tabla siguiente se muestran las tareas que se incluyen en la definición d
   
  El rol **Usuario del sistema** se puede utilizar para complementar la seguridad predeterminada. Puede incluir el rol en nuevas asignaciones de roles que amplíen el acceso al servidor de informes para usuarios de informes. Para obtener más información, consulte [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
 [Concesión a un usuario de acceso a un servidor de informes](../../reporting-services/security/grant-user-access-to-a-report-server.md)  
 [Asignaciones de roles: modificación o eliminación](../../reporting-services/security/role-assignments-modify-or-delete.md)  

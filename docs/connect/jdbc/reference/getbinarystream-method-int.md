@@ -16,10 +16,10 @@ ms.assetid: de22a6c4-1ba3-4ed0-91a2-bf235c2ceec3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0add171861f2ea9e021b9f9342968baf1601557
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953709"
 ---
 # <a name="getbinarystream-method-int"></a>Método getBinaryStream (int)
@@ -40,13 +40,13 @@ public java.io.InputStream getBinaryStream(int columnIndex)
  Valor **int** que indica el índice de la columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto InputStream.  
+ Un objeto InputStream.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getBinaryStream se especifica mediante el método getBinaryStream de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método getBinaryStream especifica este método getBinaryStream en la interfaz java.sql.ResultSet.  
   
  Este método solamente se puede utilizar con tipos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] binary, varbinary, varbinary(max) e image. Si se intenta utilizar con cualquier otro tipo de datos, provocará una excepción.  
   

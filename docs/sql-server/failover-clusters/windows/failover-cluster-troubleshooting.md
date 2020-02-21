@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68044789"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Solucionar problemas de clústeres de conmutación por error
@@ -67,7 +67,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
 -   Error de hardware en un nodo de un clúster de dos nodos. Este error de hardware podría estar causado por un error de la tarjeta SCSI o del sistema operativo.  
   
-     Para solucionar este error, quite el nodo en el que se ha producido el error de la instancia de clúster de conmutación por error mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], solucione el error de hardware con el equipo sin conexión, vuelva a conectar el equipo y, a continuación, agregue el nodo reparado a la instancia de clúster de conmutación por error.  
+     Para solucionar este error, quite el nodo en el que se ha producido el error de la instancia de clúster de conmutación por error mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solucione el error de hardware con el equipo sin conexión, vuelva a conectar el equipo y, a continuación, agregue el nodo reparado a la instancia de clúster de conmutación por error.  
   
      Para más información, consulte [Crear un nuevo clúster de conmutación por error de SQL Server &#40;Programa de instalación&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) y [Recuperarse de un error en una instancia de clúster de conmutación por error](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md).  
   
@@ -88,11 +88,11 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
  **Solución 1**: use el modificador **/qb** en lugar del **/qn**. Si usa el modificador **/qb** , se mostrará la interfaz de usuario básica en cada paso, incluidos los mensajes de error.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problema: SQL Server no puede iniciar una sesión en la red después de migrar a otro nodo  
- **Problema 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no pueden ponerse en contacto con un controlador de dominio.  
+ **Problema 1:** las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no pueden ponerse en contacto con un controlador de dominio.  
   
  **Solución 1**: compruebe los registros de eventos para ver si hay problemas de red, como errores de los adaptadores o problemas de DNS. Compruebe que puede hacer ping al controlador de dominio.  
   
- **Problema 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no son idénticas en todos los nodos de clúster o el nodo no reinicia un servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ha migrado desde un nodo con error.  
+ **Problema 2:** las contraseñas de las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no son idénticas en todos los nodos de clúster o el nodo no reinicia un servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ha migrado desde un nodo con error.  
   
  **Solución 2:** cambie las contraseñas de las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no lo hace y cambia las contraseñas de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un nodo, debe cambiar también las contraseñas de los demás nodos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lo hace automáticamente.  
   
@@ -106,12 +106,12 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
  **Solución 2:** las letras de unidad de los discos del clúster deben ser iguales en ambos servidores. Si no lo son, revise la instalación original del sistema operativo y del Servicio de Cluster Server de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MSCS).  
   
 ### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>Problema: un error en un servicio de SQL Server provoca una conmutación por error  
- **Solución:** para evitar que errores en servicios concretos hagan que el grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realice una conmutación por error, configure estos servicios mediante el Administrador de clústeres de Windows, de la forma siguiente:  
+ **Resolución:** para evitar que errores en servicios concretos hagan que el grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realice una conmutación por error, configure estos servicios mediante el Administrador de clústeres de Windows, de la forma siguiente:  
   
 -   Desactive la casilla **Afectar al grupo** de la pestaña **Avanzadas** , en el cuadro de diálogo **Propiedades de texto completo** . No obstante, si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] causa una conmutación por error, se reiniciará el servicio de búsqueda de texto completo.  
   
 ### <a name="problem-sql-server-does-not-start-automatically"></a>Problema: SQL Server no se inicia automáticamente  
- **Solución:** utilice el Administrador de clústeres de MSCS para iniciar automáticamente un clúster de conmutación por error. El servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe establecerse en inicio manual; el Administrador de clústeres debe estar configurado en MSCS para iniciar el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Administrar servicios](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
+ **Resolución:** utilice el Administrador de clústeres de MSCS para iniciar automáticamente un clúster de conmutación por error. El servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe establecerse en inicio manual; el Administrador de clústeres debe estar configurado en MSCS para iniciar el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Administrar servicios](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
   
 ### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>Problema: el nombre de red se encuentra sin conexión y no es posible conectar con SQL Server a través de TCP/IP  
  **Problema 1:** DNS genera un error con el recurso de clúster configurado para exigir DNS.  
@@ -141,12 +141,12 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
 ### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>Problema: el programa de instalación de SQL Server genera el error 11001 en un clúster  
  **Problema:** hay una clave del Registro huérfana en [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster]  
   
- **Solución:** asegúrese de que el subárbol del Registro de MSSQL.X no se está utilizando y, a continuación, elimine la clave del clúster.  
+ **Resolución:** asegúrese de que el subárbol del Registro de MSSQL.X no se está utilizando y, a continuación, elimine la clave del clúster.  
   
 ### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>Problema: error del programa de instalación del clúster: "El instalador no dispone de privilegios suficientes para obtener acceso a este directorio: \<unidad>\Microsoft SQL Server. La instalación no puede continuar. Inicie sesión como administrador o póngase en contacto con el administrador del sistema".  
  **Problema:** este error está provocado por una unidad compartida SCSI cuyas particiones no son correctas.  
   
- **Solución:** vuelva a crear una única partición en el disco compartido mediante estos pasos:  
+ **Resolución:** vuelva a crear una única partición en el disco compartido mediante estos pasos:  
   
 1.  Elimine el recurso de disco del clúster.  
   
@@ -163,7 +163,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
 ### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Problema: las aplicaciones no consiguen dar de alta los recursos de SQL Server en una transacción distribuida  
  **Problema:** como el Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MS DTC) no está completamente configurado en Windows, las aplicaciones puede que no consigan dar de alta los recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en una transacción distribuida. Este problema puede afectar a servidores vinculados, consultas distribuidas y procedimientos almacenados remotos que utilicen transacciones distribuidas. Para más configuración sobre cómo configurar MS DTC, consulte [Antes de instalar los clústeres de conmutación por error](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
- **Solución:** para evitar este tipo de problemas, deberá habilitar totalmente los servicios MS DTC en los servidores en que esté instalado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y esté configurado MS DTC.  
+ **Resolución:** para evitar este tipo de problemas, deberá habilitar totalmente los servicios MS DTC en los servidores en que esté instalado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y esté configurado MS DTC.  
   
  Para habilitar completamente MS DTC, lleve a cabo los siguientes pasos:  
   

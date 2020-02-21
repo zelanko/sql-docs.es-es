@@ -11,10 +11,10 @@ ms.assetid: 4c87e9d3-904a-4b86-90cc-3684034c86ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26b0386f0f206427580ee8ff85eb704512914106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970853"
 ---
 # <a name="sqlserverpooledconnection-class"></a>Clase SQLServerPooledConnection
@@ -35,7 +35,7 @@ ms.locfileid: "67970853"
 public final class SQLServerPoolingDataSource  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La clase SQLServerPooledConnection proporciona métodos para que el administrador del grupo de conexiones administre el grupo de conexiones. Por lo general, las aplicaciones no crean directamente instancias de estas conexiones.  
   
 ## <a name="see-also"></a>Consulte también  

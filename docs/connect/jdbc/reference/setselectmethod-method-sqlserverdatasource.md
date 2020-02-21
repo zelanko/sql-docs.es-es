@@ -16,10 +16,10 @@ ms.assetid: 7934276d-5ac9-4cbc-a2a0-2c65c93733ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e82bdcef16c854d0bcc1f11757b0bb2ed6030145
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973001"
 ---
 # <a name="setselectmethod-method-sqlserverdatasource"></a>Método setSelectMethod (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setSelectMethod(java.lang.String selectMethod)
   
  Un valor **String** que contiene el tipo de cursor predeterminado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El cursor selectMethod es el tipo de cursor predeterminado que se utiliza en un conjunto de resultados. Esta propiedad es útil cuando se estén abordando grandes conjuntos de resultados y no se quiera almacenar el conjunto de resultados entero del lado cliente. Si se establece la propiedad en "cursor", podrá crear un cursor en el lado del servidor que puede capturar fragmentos más pequeños de cada vez. Si no se establece la propiedad selectMethod, el método [getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md) devuelve el valor predeterminado "direct".  
   
 ## <a name="see-also"></a>Consulte también  

@@ -11,10 +11,10 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580318"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Aplicar formato a los elementos de informe (Generador de informes y SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "65580318"
   
  Para cambiar las opciones de formato, solo tiene que seleccionar el elemento al que desea dar formato y, a continuación, abrir el cuadro de diálogo de propiedades del elemento. Por ejemplo, si quiere dar formato al contenido de un cuadro de texto completo o a una palabra seleccionada dentro de dicho cuadro, haga clic con el botón derecho en el elemento y seleccione **Propiedades de cuadro de texto**. A continuación, puede aplicar los estilos de formato que desee.  
   
- Para más información, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Para empezar rápidamente, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -11,10 +11,10 @@ ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb073be8ef92d44f8821078f60622341638a010d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971647"
 ---
 # <a name="sqlserverconnectionpooldatasource-class"></a>Clase SQLServerConnectionPoolDataSource
@@ -35,7 +35,7 @@ ms.locfileid: "67971647"
 public class SQLServerConnectionPoolDataSource  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SQLServerConnectionPoolDataSource se utiliza normalmente en entornos de servidores de aplicación Java que admiten la agrupación de conexiones integradas y requieren ConnectionPoolDataSource para proporcionar conexiones físicas, como Java Platform, servidores de aplicación de Enterprise Edition (Java EE) que proporcionen agrupaciones de conexiones de las especificaciones de la API de JDBC 3.0.  
   
 ## <a name="see-also"></a>Consulte también  

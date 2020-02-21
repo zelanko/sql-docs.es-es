@@ -9,10 +9,10 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574737"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tablas (Generador de informes y SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65574737"
    
  Puede agrupar los datos por un solo campo, por varios campos o escribiendo su propia expresión. Puede crear grupos anidados o grupos adyacentes independientes. Para mostrar los valores agregados para los datos agrupados, agregue totales a los grupos. Dé formato a las filas y columnas para resaltar los datos a los que desea dar énfasis. Puede ocultar inicialmente los datos detallados o agrupados, e incluir controles de alternancia de obtención de detalles para permitir a los usuarios elegir interactivamente cuántos datos se van a mostrar.  
   
- Para empezar a usar tablas rápidamente, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) o [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+ Para empezar a trabajar rápidamente con las tablas, consulte el [Tutorial: Creación de un informe de tabla básico &#40;Generador de informes&#41; ](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) o [Creación de un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 > [!NOTE]  
 >  Puede publicar tablas por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "65574737"
   
  ![Plantilla de tabla en la superficie de diseño, seleccionada](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Plantilla de tabla en la superficie de diseño, seleccionada")  
   
- El identificador de fila para la fila Datos muestra el símbolo de detalles (![Identificador de fila con tres líneas paralelas para la fila de detalles](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de fila con tres líneas paralelas para la fila de detalles")). Para mostrar datos en estas filas, arrastre los campos desde el panel Datos de informe hasta las celdas de la tabla en la fila de encabezado o la fila de detalles. Ambas filas se rellenan simultáneamente. Para agregar columnas adicionales, arrastre el campo hacia la tabla hasta que vea un punto de inserción. Después de agregar campos de conjunto de datos a la tabla, puede cambiar el formato predeterminado de las fechas y la moneda para controlar su visualización en el informe. El diagrama siguiente muestra una región de datos de tabla con estos campos: Date, Order, Product, Qty, y Line Total.  
+ El identificador de fila para la fila Datos muestra el símbolo de detalles (![Identificador de fila con tres líneas paralelas para la fila de detalles](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de fila con tres líneas paralelas para la fila de detalles")). Para mostrar datos en estas filas, arrastre los campos desde el panel Datos de informe hasta las celdas de la tabla en la fila de encabezado o la fila de detalles. Ambas filas se rellenan simultáneamente. Para agregar columnas adicionales, arrastre el campo hacia la tabla hasta que vea un punto de inserción. Después de agregar campos de conjunto de datos a la tabla, puede cambiar el formato predeterminado de las fechas y la moneda para controlar su visualización en el informe. En el siguiente diagrama se muestra una región de datos de tabla con estos campos: Date, Order, Product, Qty y Line Total.  
   
  ![Diseño, Tabla con encabezados de columna en negrita](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "Diseño, Tabla con encabezados de columna en negrita")  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65574737"
 ### <a name="adding-totals-for-detail-data"></a>Agregar totales para datos detallados  
  Para agregar totales, seleccione celdas con datos numéricos y, a continuación, use el menú contextual para agregar automáticamente etiquetas y totales para los datos detallados de los campos numéricos. También puede especificar otras etiquetas y totales manualmente. En la ilustración siguiente se muestra una fila de totales típica que incluye totales especificados de forma automática y manual:  
   
- ![Fila de totales agregada a la tabla](../../reporting-services/report-design/media/rs-basictabledetailstotaldesign.gif "Fila de totales agregada a la tabla")  
+ ![Fila total agregada a una tabla](../../reporting-services/report-design/media/rs-basictabledetailstotaldesign.gif "Fila total agregada a una tabla")  
   
  En la vista previa, el informe muestra la fila de encabezado y la fila de detalles una vez para cada fila en el conjunto de resultados de la consulta de conjuntos de datos, así como la fila de totales. En la ilustración siguiente se muestran las últimas filas de la tabla, incluida la fila de totales.  
   

@@ -11,10 +11,10 @@ ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570960"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Método de ConfigurationSetting: GetDatabaseVersionDisplayName
@@ -40,14 +40,14 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la tabla siguiente se muestra la asignación de la versión de la base de datos para la cadena de nombre para mostrar.  
   
 |**Versión**|**Versión**|**Nombre para mostrar**|  
 |-----------------|-----------------|----------------------|  
 |RS 2005 SP2|@DBVersion = "C.0.8.54"|SQL Server 2005 SP2|  
 |RS 2005 SP1|@DBVersion = "C.0.8.43"|SQL Server 2005 SP1|  
-|RS 2005 RTM|@DBVersion = "C.0.8.40"|Resultado de|  
+|RS 2005 RTM|@DBVersion = "C.0.8.40"|SQL Server 2005|  
 |RS 2000 SP2|@DBVersion = "C.0.6.54"|SQL Server 2000 SP2|  
 |RS 2000 SP1|@DBVersion = "C.0.6.51"|SQL Server 2000 SP1|  
 |RS 2000 RTM|@DBVersion = "C.0.6.43"|SQL Server 2000|  

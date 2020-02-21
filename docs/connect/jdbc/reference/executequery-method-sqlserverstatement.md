@@ -16,10 +16,10 @@ ms.assetid: 599cf463-e19f-4baa-bacb-513cad7c6cd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d66ceda5c9afee28240de5af9fe833acd4e25bbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954776"
 ---
 # <a name="executequery-method-sqlserverstatement"></a>Método executeQuery (SQLServerStatement)
@@ -45,7 +45,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método executeQuery especifica este método executeQuery en la interfaz java.sql.Statement.  
   
  Se produce la excepción [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) si la instrucción SQL especificada genera algo que no sea un único objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  

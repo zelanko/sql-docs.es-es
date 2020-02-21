@@ -16,10 +16,10 @@ ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f7e87040fa74954435ed52f9923568e8bfed3fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954925"
 ---
 # <a name="execute-method-"></a>Método execute ()
@@ -35,12 +35,12 @@ public boolean execute()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **true** si la instrucción devuelve un conjunto de resultados. **false** si devuelve un recuento de actualizaciones o ningún resultado.  
+ **true**  si la instrucción devuelve un conjunto de resultados. **false** si devuelve un recuento de actualizaciones o no devuelve ningún resultado.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método execute especifica este método execute en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  

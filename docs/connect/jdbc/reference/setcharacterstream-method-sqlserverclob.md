@@ -16,10 +16,10 @@ ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da842fbc6240b072c7fe907aaa344d8d2ff1c6e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974653"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>Método setCharacterStream (SQLServerClob)
@@ -45,8 +45,8 @@ public java.io.Writer setCharacterStream(long pos)
 ## <a name="exceptions"></a>Excepciones  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notas  
- Este método setCharacterStream se especifica mediante el método setCharacterStream de la interfaz java. SQL. CLOB.  
+## <a name="remarks"></a>Observaciones  
+ El método setCharacterStream especifica este método setCharacterStream en la interfaz java.sql.Statement.  
   
  El sistema de escritura sobrescribe los datos de carácter del objeto CLOB a partir de la posición especificada y puede exceder la longitud inicial del CLOB. Si se especifica una valor position+1, se anexarán caracteres. Si se especifican valores position+2 o superiores (o cero o menos), se producirá un error de la posición.  
   

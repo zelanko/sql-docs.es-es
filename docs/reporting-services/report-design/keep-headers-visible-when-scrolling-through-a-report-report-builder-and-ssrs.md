@@ -9,10 +9,10 @@ ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 61263520f5d519c2b908c753b72c1d5ec7f67e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580140"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Mantener visibles los encabezados al desplazarse a través de un informe (Generador de informes y SSRS)
@@ -27,18 +27,18 @@ ms.locfileid: "65580140"
   
  En la ilustración siguiente se muestra una tabla.  
   
- ![Tabla](../../reporting-services/report-design/media/table.png "Tabla")  
+ ![Table](../../reporting-services/report-design/media/table.png "Tabla")  
   
  En la ilustración siguiente se muestra una matriz.  
   
- ![Matriz](../../reporting-services/report-design/media/matrix.png "Matriz")  
+ ![Matriz](../../reporting-services/report-design/media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>Para mantener visibles los encabezados de grupo de matrices al desplazarse  
   
-1.  Haga clic con el botón derecho en la fila, columna o controlador de tabla de una región de datos Tablix y, después, haga clic en **Propiedades de Tablix**.  
+1.  Haga clic con el botón derecho en la fila o columna o en el controlador de tabla de una región de datos Tablix y, después, haga clic en **Propiedades de Tablix**.  
   
 2.  En la pestaña **General** , bajo **Encabezados de fila** o **Encabezados de columna**, seleccione **El encabezado debe permanecer visible durante el desplazamiento**.  
   

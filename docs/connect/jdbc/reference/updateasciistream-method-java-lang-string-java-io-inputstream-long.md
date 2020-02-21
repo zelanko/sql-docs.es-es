@@ -11,10 +11,10 @@ ms.assetid: d426e8b9-62b7-49f8-9863-8697fd3a7085
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf88e18d8b68bff0f2d82d589e5760bfbb25d12e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67986277"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-long"></a>Método updateAsciiStream (java.lang.String, java.io.InputStream, long)
@@ -38,7 +38,7 @@ public void updateAsciiStream(java.lang.String columnName,
   
  *streamValue*  
   
- Objeto InputStream.  
+ Un objeto InputStream.  
   
  *length*  
   
@@ -47,8 +47,8 @@ public void updateAsciiStream(java.lang.String columnName,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método updateAsciiStream se especifica mediante el método updateAsciiStream de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método updateAsciiStream especifica este método updateAsciiStream en la interfaz java.sql.ResultSet.  
   
  Este método pasa caracteres ASCII (bytes) desde un objeto InputStream a las columnas de caracteres convertibles, que son el rango ASCII [0x00 - 0x7F] de Unicode y las páginas de códigos 874, 932, 936, 949, 950 y desde la 1250 a la 1258. Este método realiza una conversión en la página de intercalación de destino. Si se intenta actualizar una columna de destino no convertible se producirá una excepción. Para las columnas binarias, se pasan bytes sin formato.  
   

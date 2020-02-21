@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d8f4ad3463cce03e9c83c936d028e480aef52dd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972771"
 ---
 # <a name="setstatementpoolingcachesize-method-sqlserverconnection"></a>Método setStatementPoolingCacheSize (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Establece el tamaño de la memoria caché de instrucciones preparada para esta conexión. Funciona si disableStatementPooling está establecido en false y el valor > 0.
+ Establece el tamaño de la memoria caché de instrucciones preparadas para esta conexión. Funciona si disableStatementPooling se establece en false y un valor > 0.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,13 +37,13 @@ public void setStatementPoolingCacheSize(int statementPoolingCacheSize)
 #### <a name="parameters"></a>Parámetros  
  *statementPoolingCacheSize*  
   
- Nuevo valor de la propiedad de conexión **statementPoolingCacheSize** .  
+ Nuevo valor de la propiedad de conexión **statementPoolingCacheSize**.  
 
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Notas  
- Este método está disponible en la versión 6,4 y posteriores del controlador JDBC.
+## <a name="remarks"></a>Observaciones  
+ Este método está disponible en la versión 6.4 y posteriores del controlador JDBC.
  
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

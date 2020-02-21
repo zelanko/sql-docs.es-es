@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0974e9bd7e2e4c2306a5ada0a3a41f657073a267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580011"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar el elemento web Visor de informes
@@ -98,7 +98,7 @@ Puede usar el elemento web Visor de informes para ver informes que se ejecutan e
   
  En el área de parámetros, se proporcionan campos para especificar valores antes de ejecutar el informe. Solo se usa cuando la definición de un informe incluye parámetros. Cuando aparecen el área de parámetros o la de credenciales, la vista del informe se ajusta para usar el ancho restante del elemento web. Puede establecer las propiedades del elemento web para personalizar el ancho de Parámetros. También puede definir las etiquetas que aparecen junto a cada parámetro de la página. Para más información sobre cómo modificar etiquetas de parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Elemento web Visor de informes en un sitio de SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Agregar el elemento web Visor de informes a una página web](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  

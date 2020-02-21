@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 206bd656c1300a6436298c426697f6c1d47a9e86
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028381"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Clasificación y detección de datos de SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-En [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] esta aplicación de ejemplo se muestra cómo usar los métodos captadores [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del conjunto de resultados para recuperar la información de clasificación y detección de datos SQL de las tablas que contienen dicha información.
+Esta aplicación de ejemplo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] muestra cómo usar métodos de captador del conjunto de resultados para recuperar la "información de clasificación y detección de datos de SQL" de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de las tablas que contienen dicha información.
   
-El archivo de código para este ejemplo se denomina DataDiscoveryAndClassification. Java y se puede encontrar en la siguiente ubicación:  
+El archivo de código de este ejemplo se denomina DataDiscoveryAndClassification.java y se encuentra en la siguiente ubicación:  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  
@@ -30,7 +30,7 @@ El archivo de código para este ejemplo se denomina DataDiscoveryAndClassificati
 
 ## <a name="requirements"></a>Requisitos  
 
-Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Para obtener más información sobre cómo establecer la ruta de clases, vea [usar el controlador JDBC](../../jdbc/using-the-jdbc-driver.md).
+Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Para obtener más información sobre cómo establecer la ruta de acceso de clase, consulte [Usar el controlador JDBC](../../jdbc/using-the-jdbc-driver.md).
 
 ```java
 import java.sql.Connection;
@@ -182,6 +182,6 @@ public class DataDiscoveryAndClassification {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Aplicaciones de ejemplo del controlador JDBC](../../jdbc/code-samples/sample-jdbc-driver-applications.md)  

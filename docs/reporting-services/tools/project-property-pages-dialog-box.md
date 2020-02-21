@@ -13,10 +13,10 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578239"
 ---
 # <a name="project-property-pages-dialog-box"></a>Páginas de propiedades del proyecto (cuadro de diálogo)
@@ -29,14 +29,14 @@ ms.locfileid: "65578239"
   
 ## <a name="options"></a>Opciones  
  **Configuración**  
- Seleccione la configuración que desee editar. Inicialmente, están disponibles las configuraciones siguientes: **Debug**, **DebugLocal**y **Release**. La configuración activa aparece en primer lugar (por ejemplo, **Active(Debug)** ).  
+ Seleccione la configuración que desee editar. Inicialmente, están disponibles las configuraciones siguientes: **Debug**, **DebugLocal** y **Release**. La configuración activa aparece en primer lugar (por ejemplo, **Active(Debug)** ).  
   
  Para ver propiedades para más de una configuración al mismo tiempo, seleccione **Todas las config.** o **Varias configuraciones**.  
   
  Para crear más configuraciones, haga clic en **Administrador de configuración** en la barra de herramientas.  
   
  **Administrador de configuración**  
- Administre las configuraciones de toda la solución o agregue más configuraciones. Para obtener más información, vea la documentación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
+ Administre las configuraciones de toda la solución o agregue más configuraciones. Para más información, consulte la documentación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **OutputPath**  
  Escriba o pegue la ruta de acceso para almacenar la definición de informe utilizada en la comprobación de la compilación, implementación y vista previa de los informes. La ruta de acceso debe ser diferente de la que se utiliza para el proyecto y una ruta de acceso relativa que sea una carpeta secundaria bajo la ruta de acceso del proyecto.  
@@ -78,7 +78,7 @@ ms.locfileid: "65578239"
  Al publicar en un servidor de informes que se ejecute en el modo integrado de SharePoint, use una dirección URL a un sitio de nivel superior o un subsitio de SharePoint. Si no especifica ningún sitio, se usa el sitio de nivel superior predeterminado. Por ejemplo: 
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
-+ Columnas en la tabla de origen capturadas`http:\\<servername>\<site>\<subsite>`  
++ `http:\\<servername>\<site>\<subsite>`.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

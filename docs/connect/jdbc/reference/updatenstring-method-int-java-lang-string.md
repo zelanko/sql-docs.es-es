@@ -1,5 +1,5 @@
 ---
-title: Método updateNString (int, Java. lang. String) | Microsoft Docs
+title: Método updateNString (int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90aa44eda2af60ffdc73a65e01b3ae12b949d79f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998797"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>Método updateNString (int, java.lang.String)
@@ -37,15 +37,15 @@ public void updateNString(int columnIndex,
   
  *nString*  
   
- Objeto de **cadena** .  
+ Un objeto **String**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateNString especifica este método updateNString en la interfaz java.sql.ResultSet.  
   
- Este método pasa la **cadena** de Java a las columnas **nchar**, **nvarchar (Max)** , **ntext**y **XML** seleccionadas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
+ Este método pasa **String** de Java a columnas **nchar**, **nvarchar(max)** , **ntext** y **xml** seleccionadas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
   
 ## <a name="see-also"></a>Consulte también  
  [updateNString (método) &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

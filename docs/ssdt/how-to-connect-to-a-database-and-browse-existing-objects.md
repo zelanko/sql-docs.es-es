@@ -1,28 +1,29 @@
 ---
-title: 'Procedimientos: Conectar con una base de datos y examinar objetos existentes | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Conectar con una base de datos y examinar objetos existentes
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49049fbbff2397f6492cac385b10c23a66d48a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897325"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75755822"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Procedimientos: Conectar con una base de datos y examinar objetos existentes
+
 Una tarea muy frecuente que realizan los administradores y desarrolladores de bases de datos es conectarse a una base de datos activa, diseñar o examinar su esquema y realizar consultas de sus objetos. El Explorador de objetos de SQL Server de Visual Studio contiene ahora un nodo **SQL Server** dedicado bajo el cual están agrupadas todas las instancias conectadas de SQL Server y sus bases de datos, en una jerarquía similar a la de SSMS. Las instancias conectadas de SQL Server pueden ser una instancia local, como un servidor con SQL Server 2008 en ejecución, o una instancia remota de SQL Azure.  
   
-En el procedimiento siguiente se da por supuesto que ya ha instalado la base de datos de ejemplo AdventureWorks. Use [CodePlex](https://msftdbprodsamples.codeplex.com/) para encontrar e instalar bases de datos de ejemplo para distintas versiones de SQL Server. Si lo prefiere, también puede seguir los pasos y usar una base de datos existente en su servidor.  
+En el procedimiento siguiente se da por supuesto que ya ha instalado la base de datos de ejemplo AdventureWorks. Use [GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) para encontrar e instalar bases de datos de ejemplo para distintas versiones de SQL Server. Si lo prefiere, también puede seguir los pasos y usar una base de datos existente en su servidor.  
   
 ### <a name="to-connect-to-a-database-instance"></a>Para conectar con una instancia de base de datos  
   

@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 2c71bdf4628b74bd21346f37534339d8d83497b2
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
-ms.translationtype: MTE75
+ms.openlocfilehash: 79c2276174f0e8f3474350c6c91fb4d3ede0401d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984591"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911217"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -29,6 +29,29 @@ En este artículo se explica cómo instalar el controlador ODBC [!INCLUDE[msCoNa
 
 > [!IMPORTANT]
 > Si ha instalado el paquete `msodbcsql` v17 que estaba disponible brevemente, debe quitarlo antes de instalar el paquete `msodbcsql17`. Esto evitará conflictos. El paquete `msodbcsql17` se puede instalar en paralelo con el paquete `msodbcsql` v13.
+
+### <a name="alpine-linux"></a>Alpine Linux
+```
+#Download the desired package(s)
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.1.1-1_amd64.apk
+
+
+#(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.1.1-1_amd64.sig
+
+curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
+gpg --verify msodbcsql_17.5.1.1-1_amd64.sig msodbcsql_17.5.1.1-1_amd64.apk
+
+
+#Install the package(s)
+sudo apk add --allow-untrusted msodbcsql_17.5.1.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools_17.5.1.1-1_amd64.apk
+
+```
+> [!NOTE]
+> - Se requiere la versión del controlador 17.5 o posterior para la compatibilidad con Alpine.
 
 ### <a name="debian"></a>Debian
 ```
@@ -57,9 +80,15 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install unixodbc-dev
+# optional: kerberos library for debian-slim distributions
+sudo apt-get install libgssapi-krb5-2
 ```
 
-### <a name="redhat-enterprise-server"></a>RedHat Enterprise Server
+> [!NOTE]
+> - Puede sustituir el valor de la variable de entorno "ACCEPT_EULA" con el establecimiento de la variable debconf "msodbcsql/ACCEPT_EULA" en su lugar: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+
+
+### <a name="redhat-enterprise-server-and-oracle-linux"></a>RedHat Enterprise Server y Oracle Linux
 ```
 sudo su
 
@@ -72,7 +101,7 @@ curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/m
 #RedHat Enterprise Server 7
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
-#RedHat Enterprise Server 8
+#RedHat Enterprise Server 8 and Oracle Linux 8
 curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 exit
@@ -126,20 +155,14 @@ curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
-#Ubuntu 14.04
-curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
 #Ubuntu 16.04
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 #Ubuntu 18.04
 curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
-#Ubuntu 18.10
-curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-#Ubuntu 19.04
-curl https://packages.microsoft.com/config/ubuntu/19.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+#Ubuntu 19.10
+curl https://packages.microsoft.com/config/ubuntu/19.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update
@@ -154,7 +177,10 @@ sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
 > - Se requiere la versión del controlador 17.2 o posterior para la compatibilidad con Ubuntu 18.04.
-> - Se requiere la versión del controlador 17.3 o posterior para la compatibilidad con Ubuntu 18.10.   
+> - Se requiere la versión del controlador 17.3 o posterior para la compatibilidad con Ubuntu 18.10.
+
+> [!NOTE]
+> - Puede sustituir el valor de la variable de entorno "ACCEPT_EULA" con el establecimiento de la variable debconf "msodbcsql/ACCEPT_EULA" en su lugar: `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
 ### <a name="macos"></a>MacOS
 
@@ -385,12 +411,12 @@ Si prefiere o necesita que la versión 13 del controlador ODBC de [!INCLUDE[msCo
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Cada uno de estos paquetes a su vez tiene sus propias dependencias, que pueden o no estar presentes en el sistema. Para una solución general de este problema, consulte la documentación del administrador de paquetes de su distribución: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) y [SUSE](https://en.opensuse.org/Portal:Zypper).
+Cada uno de estos paquetes a su vez tiene sus propias dependencias, que pueden o no estar presentes en el sistema. Para una solución general de este problema, consulte la documentación del administrador de paquetes de su distribución: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) y [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 También es común descargar manualmente todos los paquetes dependientes y colocarlos juntos en el equipo de instalación, luego instalar manualmente cada paquete a su vez, finalizando con el paquete de la versión 13 del controlador ODBC de [!INCLUDE[msCoName](../../../includes/msconame_md.md)].
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - Descargue los `msodbcsql` `.rpm` más recientes aquí: https://packages.microsoft.com/rhel/7/prod/
+  - Descargue `msodbcsql` `.rpm` más recientes aquí: https://packages.microsoft.com/rhel/7/prod/
   - Instalar las dependencias y el controlador
   
 ```
@@ -399,7 +425,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- Descargue los `msodbcsql` `.deb` más recientes aquí: https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Descargue `msodbcsql` `.deb` más recientes aquí: https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - Instalar las dependencias y el controlador 
 
 ```
@@ -408,7 +434,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- Descargue los `msodbcsql` `.rpm` más recientes aquí: https://packages.microsoft.com/sles/12/prod/
+- Descargue `msodbcsql` `.rpm` más recientes aquí: https://packages.microsoft.com/sles/12/prod/
 - Instalar las dependencias y el controlador
 
 ```

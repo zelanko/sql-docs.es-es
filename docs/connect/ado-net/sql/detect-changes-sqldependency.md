@@ -9,25 +9,25 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 2d2c4c48a9085fa83d6104233be5f2e1c6b11318
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 6a003670c15ac95b6f0a5f70d0997c1c854b089e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452245"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247821"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Detección de cambios con SqlDependency
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Un objeto de <xref:Microsoft.Data.SqlClient.SqlDependency> se puede asociar a un <xref:Microsoft.Data.SqlClient.SqlCommand> para detectar cuándo se diferencian los resultados de la consulta de los recuperados originalmente. También puede asignar un delegado al evento `OnChange`, que se activará cuando cambien los resultados de un comando asociado. Debe asociar el <xref:Microsoft.Data.SqlClient.SqlDependency> con el comando antes de ejecutar el comando. La propiedad `HasChanges` del <xref:Microsoft.Data.SqlClient.SqlDependency> también se puede utilizar para determinar si los resultados de la consulta han cambiado desde que se recuperaron los datos por primera vez.
+Un objeto <xref:Microsoft.Data.SqlClient.SqlDependency> se puede asociar a <xref:Microsoft.Data.SqlClient.SqlCommand> para detectar cuándo se diferencian los resultados de la consulta de los recuperados originalmente. También puede asignar un delegado al evento `OnChange`, que se activará cuando cambien los resultados de un comando asociado. Debe asociar <xref:Microsoft.Data.SqlClient.SqlDependency> con el comando antes de ejecutar el comando. La propiedad `HasChanges` de <xref:Microsoft.Data.SqlClient.SqlDependency> también se puede utilizar para determinar si los resultados de la consulta han cambiado desde que se recuperaron los datos por primera vez.
 
-## <a name="security-considerations"></a>Consideraciones relativas a la seguridad
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad
 
-La infraestructura de dependencias se basa en un <xref:Microsoft.Data.SqlClient.SqlConnection> que se abre cuando se llama a <xref:Microsoft.Data.SqlClient.SqlDependency.Start%2A> para recibir notificaciones de que los datos subyacentes han cambiado para un comando determinado. La capacidad de un cliente de iniciar la llamada a `SqlDependency.Start` se controla mediante el uso de los atributos de seguridad de acceso del código y <xref:Microsoft.Data.SqlClient.SqlClientPermission>. Para obtener más información, consulte [habilitación de notificaciones de consulta](enable-query-notifications.md).
+La infraestructura de dependencias se basa en un objeto <xref:Microsoft.Data.SqlClient.SqlConnection> que se abre cuando se llama a <xref:Microsoft.Data.SqlClient.SqlDependency.Start%2A> para recibir notificaciones de que los datos subyacentes han cambiado para un comando determinado. La capacidad de un cliente de iniciar la llamada a `SqlDependency.Start` se controla mediante el uso de los atributos de seguridad de acceso del código y <xref:Microsoft.Data.SqlClient.SqlClientPermission>. Para obtener más información, consulte [Habilitación de notificaciones de consultas](enable-query-notifications.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -35,17 +35,17 @@ En los pasos siguientes se muestra cómo declarar una dependencia, ejecutar un c
 
 1. Inicie una conexión `SqlDependency` al servidor.
 
-2. Cree <xref:Microsoft.Data.SqlClient.SqlConnection> y <xref:Microsoft.Data.SqlClient.SqlCommand> objetos para conectarse al servidor y definir una instrucción Transact-SQL.
+2. Cree objetos <xref:Microsoft.Data.SqlClient.SqlConnection> y <xref:Microsoft.Data.SqlClient.SqlCommand> para conectarse al servidor y definir una instrucción Transact-SQL.
 
-3. Cree un nuevo objeto `SqlDependency`, o use uno existente y enlácelo al objeto `SqlCommand`. Internamente, crea un objeto <xref:Microsoft.Data.Sql.SqlNotificationRequest> y lo enlaza al objeto de comando según sea necesario. Esta solicitud de notificación contiene un identificador interno que identifica de forma única este objeto `SqlDependency`. También inicia el agente de escucha del cliente si aún no está activo.
+3. Cree un objeto `SqlDependency`, o bien use uno que ya exista y enlácelo al objeto `SqlCommand`. Internamente, esta acción crea un objeto <xref:Microsoft.Data.Sql.SqlNotificationRequest> y lo enlaza al objeto de comando según sea necesario. Esta solicitud de notificación contiene un identificador interno que identifica de forma única este objeto `SqlDependency`. También inicia el agente de escucha del cliente si aún no está activo.
 
-4. Suscribir un controlador de eventos al evento `OnChange` del objeto `SqlDependency`.
+4. Suscriba un controlador de eventos al evento `OnChange` del objeto `SqlDependency`.
 
 5. Ejecute el comando con cualquiera de los métodos `Execute` del objeto `SqlCommand`. Dado que el comando está enlazado al objeto de notificación, el servidor reconoce que debe generar una notificación y la información de la cola apunta a la cola de dependencias.
 
-6. Detenga la conexión `SqlDependency` al servidor.
+6. Se ha perdido la conexión de `SqlDependency` al servidor.
 
-Si cualquier usuario cambia posteriormente los datos subyacentes, Microsoft SQL Server detecta que hay una notificación pendiente para ese cambio y envía una notificación que se procesa y reenvía al cliente a través de la `SqlConnection` subyacente que creó. llamando a `SqlDependency.Start`. El agente de escucha del cliente recibe el mensaje de invalidación. A continuación, el agente de escucha del cliente busca el objeto de `SqlDependency` asociado y activa el evento `OnChange`.
+Si cualquier usuario cambia posteriormente los datos subyacentes, Microsoft SQL Server detecta que hay una notificación pendiente para ese cambio y envía una notificación que se procesa y reenvía al cliente a través del objeto `SqlConnection` subyacente que se creó mediante una llamada a `SqlDependency.Start`. El agente de escucha del cliente recibe el mensaje de invalidación. A continuación, el agente de escucha del cliente busca el objeto `SqlDependency` asociado y activa el evento `OnChange`.
 
 En el fragmento de código siguiente se muestra el patrón de diseño que se usaría para crear una aplicación de ejemplo.
 

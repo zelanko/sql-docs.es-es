@@ -9,18 +9,18 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632782"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252007"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Procedimiento para montar ADLS Gen2 para los niveles de HDFS en un clúster de macrodatos
 
-En las secciones siguientes se proporciona un ejemplo de cómo configurar los niveles de HDFS con un origen de datos de Azure Data Lake Storage Gen2.
+En las secciones siguientes se ofrece un ejemplo de cómo configurar la organización en niveles de HDFS con un origen de datos de Azure Data Lake Storage Gen2.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - [Clúster de macrodatos implementado](deployment-guidance.md)
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
@@ -84,7 +84,7 @@ Abra un símbolo del sistema en un equipo cliente que pueda acceder al clúster 
 También puede llevar a cabo el montaje con las claves de acceso que puede obtener para la cuenta de ADLS en Azure Portal.
 
  > [!TIP]
-   > Para obtener más información sobre cómo buscar la clave de acceso (`<storage-account-access-key>`) de la cuenta de almacenamiento, vea [Visualización de claves de cuenta y cadena de conexión](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
+   > Para obtener más información sobre cómo buscar la clave de acceso (`<storage-account-access-key>`) de la cuenta de almacenamiento, vea [Visualización de claves de cuenta y cadena de conexión](/azure/storage/common/storage-account-keys-manage#view-access-keys-and-connection-string).
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>Establecimiento de la variable de entorno para las credenciales de clave de acceso
 
@@ -159,4 +159,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para más información sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vea [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].

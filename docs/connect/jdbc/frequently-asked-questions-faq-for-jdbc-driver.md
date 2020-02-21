@@ -11,10 +11,10 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049819"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F) sobre el controlador JDBC
@@ -39,9 +39,9 @@ El controlador Microsoft JDBC Driver 7.4 admite especificaciones de JDBC 4.2 y 4
 
 | JAR                        | Especificación de JDBC            | Versión JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| MSSQL-JDBC-7.4.1. jre12. jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 12.0    |
-| MSSQL-JDBC-7.4.1. jre11. jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 11.0    |
-| MSSQL-JDBC-7.4.1. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.4.1.jre12.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1.jre11.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 El controlador Microsoft JDBC Driver 7.2 admite especificaciones de JDBC 4.2 y 4.3 (parcialmente) e incluye dos bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
@@ -110,16 +110,16 @@ A partir de la versión 1.2, el controlador admite el cifrado de capa de sockets
 **¿Qué tipos de autenticación admite Microsoft JDBC Driver para SQL Server?**  
 En la tabla siguiente se muestran las opciones de autenticación disponibles. La autenticación Kerberos pura de Java está disponible a partir de la versión 4.0 del controlador.
 
-| Plataforma    | Autenticación                        |
+| Plataforma    | Authentication                        |
 | ----------- | ------------------------------------- |
 | Distinta de Windows | Kerberos pura de Java                    |
 | Distinta de Windows | SQL Server                            |
-| Distinta de Windows | Autenticación de Azure Active Directory |
+| Distinta de Windows | Autenticación con Azure Active Directory |
 | Windows     | Kerberos pura de Java                    |
 | Windows     | SQL Server                            |
 | Windows     | Kerberos con copia de seguridad NTLM             |
 | Windows     | NTLM                                  |
-| Windows     | Autenticación de Azure Active Directory |
+| Windows     | Autenticación con Azure Active Directory |
 | &nbsp;      | &nbsp;                                |
 
 **¿El controlador es compatible con las direcciones de la versión 6 del protocolo de Internet (IPv6)?**  
@@ -129,7 +129,7 @@ Sí. El controlador admite el uso de direcciones IPv6. Use la colección de las 
 El almacenamiento en búfer adaptable se introdujo a partir de la versión 1.2 del controlador JDBC Driver de Microsoft SQL Server 2005. Se diseña para recuperar cualquier tipo de datos de valores grandes sin sufrir la sobrecarga de los cursores de servidor. La característica de almacenamiento en búfer adaptable de Microsoft SQL Server JDBC Driver proporciona una propiedad de cadena de conexión, responseBuffering, cuyos valores puede establecerse en "adaptive" o "full". En la versión 1.2, el modo del almacenamiento en búfer es "full" de manera predeterminada y la aplicación debe establecer el modo de almacenamiento en búfer adaptable explícitamente. A partir de Microsoft JDBC Driver 2.0, el comportamiento predeterminado del controlador es "adaptive". Por tanto, la aplicación no tiene que solicitar explícitamente el comportamiento adaptable para obtener dicho comportamiento. Para obtener más información, vea [Usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md) y la entrada de blog [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (¿Qué es el almacenamiento en búfer adaptable y por qué se debe usar?).
 
 **¿El controlador es compatible con la agrupación de conexiones?**  
-El controlador proporciona compatibilidad con la agrupación de conexiones de Java Platform, Enterprise Edition 5 (Java EE 5). El controlador implementa las interfaces necesarias de JDBC 3.0 para que pueda participar en la implementación de la agrupación de conexiones de los proveedores de servidores de aplicaciones de software intermedio. El controlador participa en las conexiones agrupadas en estos entornos. Para obtener más información, consulte [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). El controlador no proporciona su propia implementación de agrupación, sino que se basa en servidores de aplicaciones Java de terceros.
+El controlador proporciona compatibilidad con la agrupación de conexiones de Java Platform, Enterprise Edition 5 (Java EE 5). El controlador implementa las interfaces necesarias de JDBC 3.0 para que pueda participar en la implementación de la agrupación de conexiones de los proveedores de servidores de aplicaciones de software intermedio. El controlador participa en las conexiones agrupadas en estos entornos. Para más información, consulte [Usar agrupación de conexiones](../../connect/jdbc/using-connection-pooling.md). El controlador no proporciona su propia implementación de agrupación, sino que se basa en servidores de aplicaciones Java de terceros.
 
 **¿Hay servicios de soporte disponibles para el controlador?**  
 Existen varias opciones de soporte. Puede publicar su pregunta o problema en nuestro [repositorio de GitHub](https://github.com/microsoft/mssql-jdbc), que supervisa Microsoft. Los [foros](https://go.microsoft.com/fwlink/?LinkID=246673) se supervisan por Microsoft, los MVP y la comunidad. También puede ponerse en contacto con el equipo de asistencia al cliente de Microsoft. El equipo de desarrollo puede pedirle que reproduzca el problema fuera de los servidores de aplicaciones de terceros. Si el problema no se puede reproducir fuera del entorno de contenedor host de Java, tendrá que ponerse en contacto con el tercero relacionado para que el equipo pueda seguir ayudándolo. También puede que el equipo le pida que reproduzca el problema en un sistema operativo concreto, como Windows, para que podamos ofrecerle la mejor ayuda posible.
@@ -149,6 +149,6 @@ Los clientes que utilizan productos SAP y requieren compatibilidad con JRE 1.4, 
 **¿Puede el controlador comunicarse mediante algoritmos aprobados en FIPS?**  
 Microsoft JDBC Driver no contiene algoritmos criptográficos. Si un cliente utiliza algoritmos de sistemas operativos, aplicaciones y JVM que el estándar federal de procesamiento de información (FIPS) considera aceptables y configura el controlador para usar esos algoritmos, el controlador usa solo los designados para la comunicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)

@@ -1,5 +1,5 @@
 ---
-title: Trabajar con una conexión | Microsoft Docs
+title: Trabajo con una conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025470"
 ---
 # <a name="working-with-a-connection"></a>Trabajo con una conexión
@@ -93,7 +93,7 @@ Para conectarse a una base de datos específica de un servidor, use lo siguiente
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-Para obtener más ejemplos de URL de conexión, vea [crear la dirección URL de conexión](../../connect/jdbc/building-the-connection-url.md).
+Para ver más ejemplos de direcciones URL de conexión, consulte [Creación de la dirección URL de conexión](../../connect/jdbc/building-the-connection-url.md).
 
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>Crear una conexión con un tiempo de espera de inicio de sesión personalizado
 
@@ -124,6 +124,6 @@ De esta forma se liberarán los recursos de la base de datos que está usando el
 > [!NOTE]  
 > Si llama al método close, también se revertirán todas las transacciones pendientes.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -1,10 +1,7 @@
 ---
-title: Establecer la cuenta de inicio del servicio del Agente SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Establecimiento de la cuenta de inicio del servicio
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +11,20 @@ helpviewer_keywords:
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22dd09dceaf111429ae37be4aa28bc063a87df6c
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 536bba3034dc4aa80d0e0588e382aae085941b8b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552578"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75239211"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Establecer la cuenta de inicio del servicio para el Agente SQL Server (Administrador de configuración de SQL Server)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -40,7 +42,7 @@ La cuenta de inicio del servicio del Agente [!INCLUDE[ssNoVersion](../../include
   
 ### <a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permisos  
 Para realizar sus funciones, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe configurarse de modo que use las credenciales de una cuenta que sea miembro del rol fijo de servidor **sysadmin** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cuenta debe tener los siguientes permisos de Windows:  
   
 -   Iniciar sesión como servicio (SeServiceLogonRight)  
@@ -71,7 +73,7 @@ Para más información sobre los permisos de Windows necesarios para la cuenta d
   
 7.  En el cuadro de diálogo **Agente SQL Server** _(nombre\_servidor)_ **Propiedades**, en la pestaña **Iniciar sesión**, seleccione una de las opciones siguientes en **Iniciar sesión como**:  
   
-    -   **Cuenta integrada**: seleccione esta opción si los trabajos solo necesitan recursos del servidor local. Para información sobre cómo elegir un tipo de cuenta integrada de Windows, consulte [Seleccionar una cuenta para el servicio del Agente SQL Server.](https://msdn.microsoft.com/library/ms191543.aspx)  
+    -   **Cuenta integrada**: seleccione esta opción si los trabajos solo necesitan recursos del servidor local. Para información sobre cómo elegir un tipo de cuenta integrada de Windows, consulte [Seleccionar una cuenta para el servicio del Agente SQL Server](https://msdn.microsoft.com/library/ms191543.aspx).  
   
         > [!IMPORTANT]  
         > El servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no es compatible con la cuenta del **Servicio local** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -84,7 +86,7 @@ Para más información sobre los permisos de Windows necesarios para la cuenta d
   
         2.  En el cuadro **Contraseña** , escriba la contraseña para la cuenta. Vuelva a escribir la contraseña en el cuadro **Confirmar contraseña** .  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en el botón **Cerrar** .  
   

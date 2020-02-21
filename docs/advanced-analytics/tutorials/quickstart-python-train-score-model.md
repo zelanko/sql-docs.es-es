@@ -1,27 +1,26 @@
 ---
 title: 'Inicio rápido: Entrenamiento de un modelo en Python'
-titleSuffix: SQL Server Machine Learning Services
-description: Cree un sencillo modelo predictivo en Python mediante SQL Server Machine Learning Services y, después, realice una predicción de un resultado con datos nuevos.
+description: En este inicio rápido, creará y entrenará un modelo predictivo con Python. Guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir los valores de los datos nuevos con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/14/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fcf43d57488578020eed09080668156fb926d1b0
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726994"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831766"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Inicio rápido: Creación y puntuación de un modelo predictivo en Python con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este inicio rápido, creará y entrenará un modelo predictivo con Python, guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+En este inicio rápido, creará y entrenará un modelo predictivo con Python. Guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir los valores de los datos nuevos con [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
 Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. En el primero, se usa el conjunto de datos de flores Iris clásico y se genera un modelo de Bayes naive para predecir una especie de Iris basándose en las características florales. El segundo procedimiento es para puntuación: realiza una llamada al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en datos nuevos. Al colocar código de Python en un procedimiento almacenado en SQL, las operaciones se incluyen en SQL, son reutilizables y pueden recibir llamadas de otros procedimientos almacenados y aplicaciones cliente.
 
@@ -112,7 +111,7 @@ Los modelos almacenados para reutilizarlos en SQL Server se serializan como un 
     SELECT * FROM dbo.iris_models
     ```
 
-    **Resultado**
+    **Resultados**
 
     | model_name  | model |
     |---|-----------------|

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.date: 03/17/2017
 ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259615"
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentación para desarrolladores de Reporting Services
@@ -24,7 +24,7 @@ ms.locfileid: "68259615"
  Extender la plataforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye crear nuevos componentes y recursos que se pueden utilizar para el acceso a los datos, la entrega de informes, etcétera. Puede comercializar estos componentes y recursos para las compañías que utilizan [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en la organización.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye ejemplos de programación y tutoriales para ayudarle a empezar. Para más información, vea [Ejemplos de Reporting Services](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx) y [Guía del programador: Tutoriales (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx).  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye ejemplos de programación y tutoriales para ayudarle a empezar. Para más información, consulte [Ejemplos de Reporting Services](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx) y [Guía del programador: tutoriales (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Integración de Reporting Services en las aplicaciones](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  

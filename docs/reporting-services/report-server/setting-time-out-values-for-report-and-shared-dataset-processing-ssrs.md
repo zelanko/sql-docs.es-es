@@ -1,6 +1,7 @@
 ---
 title: Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS) | Microsoft Docs
-ms.date: 05/30/2019
+description: En Reporting Services, puede especificar valores de tiempo de espera para establecer límites sobre el uso de los recursos del sistema.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506438"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259415"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS)
-  Se puede usar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar valores de tiempo de espera para establecer límites sobre el uso de los recursos del sistema. El servidor de informes admite dos valores de tiempo de espera:  
+En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede especificar valores de tiempo de espera para establecer límites sobre el uso de los recursos del sistema. Los servidores de informes admiten dos valores de tiempo de espera:  
   
 - Un valor de tiempo de espera de consulta de un conjunto de datos incrustado es el número de segundos durante los que el servidor de informes espera una respuesta de la base de datos. Este valor se define en el informe.  
   
@@ -33,7 +34,10 @@ ms.locfileid: "66506438"
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Establecer un tiempo de espera de la consulta para un conjunto de datos incrustados en un informe  
  Los valores de tiempo de espera de la consulta se especifican durante la creación del informe como un conjunto de datos incrustado. El valor de tiempo de espera se almacena con el informe, en el elemento **Timeout** de la definición de informe. De forma predeterminada, este valor está establecido en 30 segundos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
-  
+ 
+ > [!NOTE]  
+ > Para los **informes paginados en Power BI**, el valor predeterminado se establece en **600 segundos**.
+ 
  Los usuarios con permisos para modificar las propiedades de un informe publicado pueden restablecer este valor mediante la edición del archivo de definición del informe.  
   
  También se puede especificar un valor de tiempo de espera de consulta para las suscripciones controladas por datos. Este valor se especifica en las páginas Suscripción controlada por datos. El valor que se define determina el tiempo que esperará el servidor de informes a que se complete el procesamiento de una consulta cuando se recuperan datos del origen de datos de suscriptores.  
@@ -52,7 +56,7 @@ ms.locfileid: "66506438"
 > [!NOTE]  
 > Se puede establecer el parámetro **RunningRequestsDbCycle** del archivo RSReportServer.config para cambiar la frecuencia con la que se evalúan los trabajos en ejecución.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)   

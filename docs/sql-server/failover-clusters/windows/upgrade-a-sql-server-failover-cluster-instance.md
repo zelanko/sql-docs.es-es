@@ -1,7 +1,8 @@
 ---
-title: Actualizar una instancia de clúster de conmutación por error de SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 10/01/2017
+title: Actualización de una instancia del clúster de conmutación por error
+description: Pasos para actualizar una instancia de clúster de conmutación por error de SQL Server mediante medios de instalación.
+ms.custom: seo-lt-2019
+ms.date: 11/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 681e944da0a49c6a1b485606e5ed1ed0bd8ffd0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24607a6372ba733165aa12fd159baea10f80ebd4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904983"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822024"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Actualizar una instancia del clúster de conmutación por error de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +62,82 @@ ms.locfileid: "67904983"
  Este proceso da lugar a un tiempo de inactividad limitado a un tiempo de conmutación por error y un tiempo de ejecución de script de actualización de bases de datos durante la actualización completa de los clústeres de conmutación por error.  
   
  Para controlar el comportamiento de la conmutación por error de los nodos en clúster durante el proceso de actualización, ejecute la operación de actualización en el símbolo del sistema y use el parámetro /FAILOVERCLUSTERROLLOWNERSHIP. Para más información, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+
+ ## <a name="upgrade-with-installation-media"></a>Actualización con medios de instalación 
+  
+1.  Desde el medio de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para la edición que coincide con la edición que actualiza, haga doble clic en setup.exe en la carpeta raíz. Puede que se le solicite que instale los requisitos previos si no se han instalado previamente.  
+  
+2.  Una vez instalados los requisitos previos, el Asistente para instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para actualizar una instancia existente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], seleccione la instancia.  
+  
+3.  Si son necesarios los archivos auxiliares del programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el citado programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se encarga de instalarlos. Si se le solicita que reinicie el equipo, hágalo antes de continuar.  
+  
+4.  El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
+  
+5.  En la página Clave del producto, escriba la clave de PID de la nueva edición de la versión, que debe ser la misma edición que la de la versión anterior del producto. Por ejemplo, para actualizar un clústeres de conmutación por error de Enterprise, debe especificar la clave de PID de [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Haga clic en **Siguiente** para continuar. Tenga en cuenta que la clave de PID que use para actualizar los clústeres de conmutación por error debe ser coherente en todos los nodos de clúster de conmutación por error de la misma instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  
+6.  En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Para continuar, haga clic en**Siguiente**. Para salir del programa de instalación, haga clic en **Cancelar**.  
+  
+7.  En la página Seleccionar instancia, especifique la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que desea a actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para continuar, haga clic en**Siguiente**.  
+  
+8.  En la página Selección de características aparecen seleccionadas las características que van a actualizarse. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Tenga en cuenta que no puede cambiar las características que se van a actualizar, y no puede agregar características durante la operación de actualización. Para agregar características a una instancia actualizada de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] una vez completada la operación de actualización, vea [Agregar características a una instancia de SQL Server 2016 &#40;programa de instalación&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+  
+     Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. La instalación de SQL Server instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento. Para ahorrar tiempo, debe instalar previamente estos requisitos previos en cada nodo.  
+  
+9. En la página Configuración de instancia, los campos se rellenan automáticamente con los valores de la instancia anterior. Si lo desea, puede especificar el nuevo valor de InstanceID.  
+  
+     **Id. de instancia** : de manera predeterminada, el nombre de instancia se usa como identificador de la instancia. Se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Con una instancia predeterminada, el nombre y el identificador serían MSSQLSERVER. Para utilizar un identificador de instancia no predeterminado, active la casilla **Id. de instancia** y proporcione un valor. Si invalida el valor predeterminado, deberá especificar el mismo identificador de instancia para la instancia que se está actualizando en todos los nodos de clúster de conmutación por error. El identificador de la instancia actualizada debe coincidir en todos los nodos.  
+  
+     **Características e instancias detectadas:** la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hay en el equipo en el que se ejecuta el programa de instalación. Para continuar, haga clic en**Siguiente**.  
+  
+10. La página Requisitos de espacio en disco calcula el espacio en disco necesario para las características especificadas y compara los requisitos con el espacio en disco disponible en el equipo donde se ejecuta el programa de instalación.  
+  
+11. En la página Actualización de la búsqueda de texto completo, especifique las opciones de actualización para las bases de datos que van a actualizarse. Para obtener más información, vea [Opciones de actualización de búsqueda de texto completo](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+  
+12. En la página **Informes de errores** , especifique la información que desee enviar a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] y que ayudará a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. De forma predeterminada, se habilitan las opciones de informes de errores.  
+  
+13. El Comprobador de configuración del sistema ejecuta uno o varios conjuntos de reglas para validar la configuración del equipo con las características de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que ha especificado antes de que comience la operación de actualización.  
+  
+14. La página Informe de actualización de clúster muestra la lista de nodos de la instancia de los clústeres de conmutación por error y la información de versión de la instancia para los componentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de cada nodo. También muestra el estado del script de base de datos y el estado del script de replicación. Además, muestra mensajes informativos sobre lo que ocurrirá al hacer clic en **Siguiente**. En función del número de nodos de clúster de conmutación por error que se han actualizado y del número total de nodos, el programa de instalación muestra el comportamiento de conmutación por error que tiene lugar cuando se hace clic en **Siguiente**. También le advierte del posible tiempo de inactividad innecesario que puede producirse si aún no ha instalado los requisitos previos.   
+  
+15. La página Listo para actualizar muestra una vista de árbol de las opciones de instalación que se especificaron durante la instalación. Para continuar, haga clic en **Actualizar**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] El programa de instalación instalará primero los requisitos previos necesarios para las características seleccionadas y a continuación realizará la instalación de características.  
+  
+16. Durante la actualización, la página Progreso muestra el estado para que pueda supervisar el progreso de la actualización en el nodo actual a medida que se ejecuta el programa de instalación.  
+  
+17. Tras la actualización del nodo actual, la página Informe de actualización de clúster muestra información sobre el estado de actualización de todos los nodos de clúster de conmutación por error, las características de cada uno de los nodos de clúster de conmutación por error y su información de versión. Confirme la información de versión que se muestra y prosiga con la actualización de los nodos restantes. En la página de estado también se indicará si se ha producido la conmutación por error a los nodos actualizados. También puede comprobarlo en la herramienta Administrador de clústeres de Windows de cara a una confirmación.  
+  
+18. Después de la actualización, la página Operación completada proporciona un vínculo al archivo de registro de resumen para la instalación y otras notas importantes. Para completar el proceso de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Cerrar**.  
+  
+19. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información sobre los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+  
+20. Para completar el proceso de actualización, repita estos pasos en todos los demás nodos del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  
+## <a name="upgrade-a-multi-subnet-failover-cluster"></a>Actualización de un clúster de conmutación por error de varias subredes  
+
+Siga estos pasos para actualizar la instancia del clúster de conmutación por error de SQL Server en un entorno de varias subredes. 
+  
+### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>Para actualizar a un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (el clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente es un clúster no de varias subredes).  
+  
+1.  Siga los pasos anteriores para actualizar el clúster.  
+  
+2.  Agregue un nodo en otra subred utilizando la acción AddNode Setup y confirme la dependencia de recurso de dirección IP a OR en la página **Configuración de red en clúster** . Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+  
+### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>Para actualizar un clúster de varias subredes que actualmente usa la tecnología de V-Lan elástica.  
+  
+1.  Siga los pasos anteriores para actualizar el clúster a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  
+2.  Cambie la configuración de red para mover el nodo remoto a una subred diferente.  
+  
+3.  Con la herramienta de administración de clústeres de conmutación por error de Windows, agregue una nueva dirección IP para la nueva subred, establezca la dependencia de recurso de dirección IP en OR.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Actualizar SQL Server con el Asistente para instalación &#40;programa de instalación&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Instalar SQL Server desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
+ Después de actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], complete las tareas siguientes:  
+  
+-   [Completar la actualización motor de base de datos](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
+  
+-   [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
+  
+-   [Aprovechamiento de las nuevas características de SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+  
+
   
   

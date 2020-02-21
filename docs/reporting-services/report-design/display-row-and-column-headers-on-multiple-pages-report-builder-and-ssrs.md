@@ -1,18 +1,19 @@
 ---
-title: Mostrar encabezados de fila y de columna en varias páginas (Generador de informes y SSRS) | Microsoft Docs
+title: Visualización de encabezados de columna y de fila en varias páginas (Generador de informes) | Microsoft Docs
+description: Puede controlar si se deben repetir los encabezados de fila y de columna en cada página de un informe paginado de Reporting Services de una región de datos Tablix (una tabla, matriz o lista) que abarca varias páginas.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
-ms.date: 03/01/2017
-ms.openlocfilehash: 1f1ae9d45e98cc847a89562c93040c4465e51efe
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 12/09/2019
+ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263333"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254590"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Mostrar encabezados de fila y de columna en varias páginas (Generador de informes y SSRS)
 
@@ -20,7 +21,7 @@ ms.locfileid: "68263333"
   
  El modo en que controle las filas y las columnas dependerá de si la región de datos Tablix tiene encabezados de grupo. Al hacer clic en una región de datos Tablix que tiene encabezados de grupo, una línea de puntos muestra las áreas Tablix, como se muestra en la figura siguiente:  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Descripción de las áreas de la región de datos Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Descripción de las áreas de la región de datos Tablix")  
   
  Los encabezados de grupo de filas y de columnas se crean automáticamente al agregar los grupos usando el asistente Nueva tabla o matriz o el asistente Nuevo gráfico, agregando los campos al Panel de agrupación o usando los menús contextuales. Si la región de datos Tablix tiene solamente un área de cuerpo de Tablix y ningún encabezado de grupo, las filas y columnas son miembros de Tablix.  
   

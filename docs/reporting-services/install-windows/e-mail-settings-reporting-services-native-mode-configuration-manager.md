@@ -1,8 +1,10 @@
 ---
-title: 'Configuración de correo electrónico: modo nativo de Reporting Services (Administrador de configuración) | Microsoft Docs'
-ms.date: 06/01/2016
+title: Configuración de correo electrónico en modo nativo de SSRS (Administrador de configuración) | Microsoft Docs
+description: SQL Server Reporting Services incluye una extensión de entrega por correo electrónico para distribuir informes por correo electrónico.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
@@ -11,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593818"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866008"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configuración de correo electrónico: Modo nativo de Reporting Services (Administrador de configuración)
-Reporting Services incluye una extensión de entrega por correo electrónico para distribuir informes por correo electrónico. Según cómo defina la suscripción del correo electrónico, una entrega podría estar compuesta de una notificación, un vínculo, datos adjuntos o un informe incrustado. La extensión de entrega por correo electrónico funciona con la tecnología de servidor de correo existente. El servidor de correo debe ser un servidor SMTP o un reenviador. El servidor de informes se conecta a un servidor SMTP a través de bibliotecas de Collaboration Data Objects (CDO), cdosys.dll, que el sistema operativo proporciona.
+SQL Server Reporting Services incluye una extensión de entrega por correo electrónico para distribuir informes por correo electrónico. Según cómo defina la suscripción del correo electrónico, una entrega podría estar compuesta de una notificación, un vínculo, datos adjuntos o un informe incrustado. La extensión de entrega por correo electrónico funciona con la tecnología de servidor de correo existente. El servidor de correo debe ser un servidor SMTP o un reenviador. El servidor de informes se conecta a un servidor SMTP a través de bibliotecas de Collaboration Data Objects (CDO), cdosys.dll, que el sistema operativo proporciona.
 
 La extensión de entrega por correo electrónico del servidor de informes no está configurada de manera predeterminada. Debe utilizar el Administrador de configuración de Reporting Services para configurar dicha extensión mínimamente. Para establecer propiedades avanzadas, debe editar el archivo RSReportServer.config. Si no puede configurar el servidor de informes para que utilice esta extensión, puede entregar los informes en una carpeta compartida. Para obtener más información, vea Entrega a recursos compartidos en Reporting Services.
 
@@ -109,7 +111,7 @@ El ejemplo siguiente muestra las opciones de configuración del archivo RSreport
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Opciones de configuración para establecer el campo Para: de un mensaje
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Opciones de configuración para configurar el campo Para: de un mensaje
 Las suscripciones definidas por el usuario que se crean según los permisos otorgados por la tarea Administrar suscripciones individuales contienen un nombre de usuario establecido previamente basado en la cuenta de usuario de dominio. Cuando el usuario crea la suscripción, el nombre del destinatario del campo **Para:** se rellena automáticamente a partir de la cuenta de usuario de dominio de la persona que está creando la suscripción.
 
 Si está utilizando un servidor SMTP o reenviador que emplee cuentas de correo electrónico distintas a la cuenta de usuario de dominio, la entrega del informe generará un error cuando el servidor SMTP intente entregar el informe al usuario.

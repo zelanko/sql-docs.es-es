@@ -11,10 +11,10 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008436"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resistencia de conexión en el controlador Windows ODBC
@@ -35,7 +35,7 @@ ms.locfileid: "68008436"
   
      Puede modificar el número de reintentos de conexión:  
   
-    -   Cuando defina o modifique un origen de datos que utiliza ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el control de **número de reintentos de conexión** .  
+    -   Cuando defina o modifique un origen de datos que utiliza ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el control de **número de reintentos de conexión**.  
   
     -   Cuando utilice la palabra clave de cadena de conexión **ConnectRetryCount** .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68008436"
   
      Puede modificar el intervalo de reintentos de conexión:  
   
-    -   Cuando defina o modifique un origen de datos que utiliza ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el control de **intervalo de reintentos de conexión** .  
+    -   Cuando defina o modifique un origen de datos que utiliza ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el control de **intervalo de reintentos de conexión**.  
   
     -   Cuando utilice la palabra clave de cadena de conexión **ConnectRetryInterval** .  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68008436"
   
  Cualquier función que ejecuta un comando en el servidor devuelve los siguientes códigos de estado:  
   
-|State|de mensaje|  
+|State|Message|  
 |-----------|-------------|  
 |IMC01|La conexión se interrumpe y no es posible realizar la recuperación. El controlador cliente intentó recuperar el error una o más veces y todos los intentos fallaron. Aumente el valor de ConnectRetryCount para aumentar el número de intentos de recuperación.|  
 |IMC02|El servidor no reconoció un intento de recuperación y no es posible recuperar la conexión.|  
@@ -71,7 +71,7 @@ ms.locfileid: "68008436"
 |IMC06|La conexión se interrumpe y no es posible realizar la recuperación. El controlador cliente marca la conexión como irrecuperable. No se ha intentado restaurar la conexión.|  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo contiene dos funciones. **func1** muestra cómo puede conectarse con un nombre de origen de datos (DSN) que usa ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows. El DSN utiliza la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y especifica el id. de usuario. a continuación, **FUNC1** recupera el número de reintentos de conexión con **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ El siguiente ejemplo contiene dos funciones. **func1** muestra cómo puede conectarse con un nombre de origen de datos (DSN) que usa ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows. El DSN utiliza la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y especifica el id. de usuario. **func1** recupera entonces el número de reintentos de conexión con **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** usa **SQLDriverConnect**, la palabra clave de conexión **ConnectRetryCount** y los atributos de conexión para recuperar la configuración de los reintentos de conexión y el intervalo de reintentos.  
   

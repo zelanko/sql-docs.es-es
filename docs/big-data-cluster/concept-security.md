@@ -1,7 +1,7 @@
 ---
 title: Conceptos de seguridad
 titleSuffix: SQL Server big data clusters
-description: En este artículo se describen los conceptos relativos a la seguridad de los clústeres de macrodatos de SQL Server. Incluye la descripción de los puntos de conexión del clúster y la autenticación del clúster.
+description: En este artículo se describen los conceptos relativos a la seguridad de los clústeres de macrodatos de SQL Server. Este contenido incluye la descripción de los puntos de conexión del clúster y la autenticación del clúster.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,24 +9,29 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 35eb5e0a3236d8f016ed5ca99b769d628a4d81ed
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532376"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253124"
 ---
-# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Conceptos de seguridad para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="security-concepts-for-big-data-clusters-2019"></a>Conceptos de seguridad para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se tratan los conceptos clave relacionados con la seguridad en los clústeres de macrodatos.
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] proporciona una autorización y una autenticación coherentes. Un clúster de macrodatos se puede integrar con Active Directory a través de una implementación totalmente automatizada que configura la integración de Active Directory en un dominio existente. Una vez que un clúster de macrodatos se configura con la integración de Active Directory, se pueden aprovechar las identidades y los grupos de usuarios existentes para el acceso unificado en todos los puntos de conexión. Además, una vez creadas las tablas externas en SQL Server, se puede controlar el acceso a los orígenes de datos mediante la concesión de acceso a tablas externas a los usuarios y grupos de Active Directory, centralizando así las directivas de acceso a datos en una sola ubicación.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] proporciona una autorización y una autenticación coherentes. Un clúster de macrodatos se puede integrar con Active Directory (AD) a través de una implementación totalmente automatizada que configura la integración de Active Directory en un dominio existente. Una vez que un clúster de macrodatos se configura con la integración de AD, se pueden aprovechar las identidades y los grupos de usuarios existentes para el acceso unificado en todos los puntos de conexión. Además, una vez creadas las tablas externas en SQL Server, se puede controlar el acceso a los orígenes de datos mediante la concesión de acceso a tablas externas a los usuarios y grupos de AD, centralizando así las directivas de acceso a datos en una sola ubicación.
 
-## <a name="authentication"></a>Autenticación
+En este vídeo de 14 minutos obtendrá información general sobre la seguridad del clúster de macrodatos:
 
-Los puntos de conexión de los clústeres externos admiten la autenticación de Active Directory. Esto significa que puede usar su identidad de AD para autenticarse en el clúster de macrodatos.
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Security/player?WT.mc_id=dataexposed-c9-niner]
+
+
+## <a name="authentication"></a>Authentication
+
+Los puntos de conexión de los clústeres externos admiten la autenticación de AD. Use su identidad de AD para autenticarse en el clúster de macrodatos.
 
 ### <a name="cluster-endpoints"></a>Puntos de conexión de clúster
 
@@ -34,7 +39,7 @@ Un clúster de macrodatos consta de cinco puntos de entrada.
 
 * Instancia maestra: punto de conexión TDS para acceder a la Instancia maestra de SQL Server en el clúster mediante las herramientas de las bases de datos y aplicaciones como SSMS o Azure Data Studio. Al usar los comandos de HDFS o SQL Server de azdata, la herramienta se conecta al resto de puntos de conexión, en función de la operación.
 
-* Puerta de enlace para acceder a archivos HDFS, Spark (Knox): se trata de un punto de conexión basado en HTTPS. Este punto de conexión se usa para acceder a servicios como webHDFS y Spark.
+* Puerta de enlace para acceder a archivos HDFS, Spark (Knox): punto de conexión HTTPS para acceder a servicios como webHDFS y Spark.
 
 * Punto de conexión del Servicio de administración de clústeres (controlador): servicio de administración de clústeres de macrodatos que expone las API REST para administrar el clúster. La herramienta azdata requiere conectarse a este punto de conexión.
 
@@ -46,7 +51,7 @@ Un clúster de macrodatos consta de cinco puntos de entrada.
 
 Actualmente, no hay ninguna opción para abrir puertos adicionales para acceder al clúster desde el exterior.
 
-## <a name="authorization"></a>Autorización
+## <a name="authorization"></a>Authorization
 
 En todo el clúster, al emitir consultas de Spark y SQL Server, la seguridad integrada entre los distintos componentes permite pasar la identidad del usuario original a HDFS. Tal como se ha mencionado anteriormente, los distintos puntos de conexión externos del clúster admiten la autenticación de AD.
 
@@ -64,15 +69,14 @@ Todas las comunicaciones de SQL Server a SQL Server, como la de la instancia m
 
 ## <a name="basic-administrator-login"></a>Inicio de sesión básico de administrador
 
-Puede elegir implementar el clúster en el modo de Active Directory, o bien usar solo el inicio de sesión básico de administrador. El uso exclusivo del inicio de sesión básico de administrador no representa un modo de seguridad admitido en el entorno de producción, y su finalidad es principalmente la evaluación del producto.
+Puede elegir implementar el clúster en el modo de AD, o bien usar solo el inicio de sesión básico de administrador. El uso exclusivo del inicio de sesión básico de administrador no representa un modo de seguridad admitido en el entorno de producción, y su finalidad es principalmente la evaluación del producto.
 
-Incluso aunque elija el modo de Active Directory, se crearán inicios de sesión básicos para el administrador de clústeres. Esto proporciona una "puerta trasera", en el caso de que la conectividad de AD esté fuera de servicio.
+Incluso aunque elija el modo de Active Directory, se crearán inicios de sesión básicos para el administrador de clústeres. Esta característica proporciona acceso alternativo, en caso de que la conectividad de AD esté desactivada.
 
-Tras la implementación, a este inicio de sesión básico se le concederán permisos de administrador en el clúster. Esto significa que el usuario será administrador del sistema en la Instancia maestra de SQL Server y administrador en el controlador de clústeres.
+Tras la implementación, a este inicio de sesión básico se le concederán permisos de administrador en el clúster. Esto significa que el usuario de inicio de sesión será administrador del sistema en la Instancia maestra de SQL Server y administrador en el controlador de clústeres.
 Los componentes de Hadoop no admiten la autenticación de modo mixto, lo que significa que no se puede usar un inicio de sesión básico de administrador para autenticarse en la puerta de enlace (Knox).
 
-
-Estas son las credenciales de inicio de sesión que se deben definir al realizar la implementación.
+Las credenciales de inicio de sesión que debe definir durante la implementación incluyen lo siguiente:
 
 Nombre de usuario del administrador del clúster:
  + `AZDATA_USERNAME=<username>`

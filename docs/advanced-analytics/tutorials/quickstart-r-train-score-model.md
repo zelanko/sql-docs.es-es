@@ -1,32 +1,31 @@
 ---
 title: 'Inicio rápido: entrenamiento de un modelo en R'
-titleSuffix: SQL Server Machine Learning Services
-description: Cree un sencillo modelo predictivo en R mediante SQL Server Machine Learning Services y, después, realice una predicción de un resultado con datos nuevos.
+description: En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd91191a84aac8c245bdcbbe0afd2bf3241aa6b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726516"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831719"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Inicio rápido: creación y puntuación de un modelo predictivo en R con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este inicio rápido, creará y entrenará un modelo predictivo con R, guardará el modelo en una tabla en su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. El primero usa el conjunto de datos **mtcars** incluido con R y genera un sencillo modelo lineal generalizado (GLM) que predice la probabilidad de que un vehículo tenga transmisión manual. El segundo procedimiento es para puntuación: llama al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en datos nuevos. Al colocar código de R en un procedimiento almacenado en SQL, las operaciones se incluyen en SQL, son reutilizables y pueden recibir llamadas de otros procedimientos almacenados y aplicaciones cliente.
+Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. El primero usa el conjunto de datos **mtcars** incluido con R y genera un sencillo modelo lineal generalizado (GLM) que predice la probabilidad de que un vehículo tenga transmisión manual. El segundo procedimiento es para puntuación: realiza una llamada al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en datos nuevos. Al colocar código de R en un procedimiento almacenado en SQL, las operaciones se incluyen en SQL, son reutilizables y pueden recibir llamadas de otros procedimientos almacenados y aplicaciones cliente.
 
 > [!TIP]
-> Para más información sobre los modelos lineales, pruebe este tutorial, donde se describe el proceso para adaptar un modelo mediante rxLinMod:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model) (Ajuste de modelos lineales)
+> Para más información sobre los modelos lineales, pruebe este tutorial, donde se describe el proceso para adaptar un modelo mediante rxLinMod:  [Ajuste de modelos lineales](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
 Después de completar este inicio rápido, aprenderá a:
 
@@ -80,7 +79,7 @@ Para crear el modelo, creará los datos de origen para el entrenamiento, creará
    ```
 
    > [!TIP]
-   > El runtime de R incluye muchos conjuntos de datos, pequeños y grandes. Para obtener una lista de los conjuntos de datos instalados en R, escriba `library(help="datasets")` desde un símbolo del sistema de R.
+   > Muchos conjuntos de datos, pequeños y grandes, se incluyen con el entorno en tiempo de ejecución de R. Para obtener una lista de los conjuntos de datos instalados en R, escriba `library(help="datasets")` desde un símbolo del sistema de R.
 
 ### <a name="create-and-train-the-model"></a>Creación y entrenamiento del modelo
 
@@ -107,7 +106,7 @@ GO
 ```
 
 - El primer argumento de `glm` es el parámetro *formula*, que define `am` como dependiente de `hp + wt`.
-- Los datos de entrada se almacenan en la variable `MTCarsData`, que se rellena con la consulta SQL. Si no asigna un nombre específico a los datos de entrada, el nombre predeterminado de la variable sería _InputDataSet_.
+- Los datos de entrada se almacenan en la variable `MTCarsData`, que se rellena con la consulta SQL. Si no asigna un nombre específico a los datos de entrada, el nombre predeterminado de la variable será _InputDataSet_.
 
 ### <a name="store-the-model-in-the-sql-database"></a>Almacenamiento del modelo en la base de datos SQL
 
@@ -132,7 +131,7 @@ A continuación, almacene el modelo en una base de datos SQL para que pueda usar
    ```
 
    > [!TIP]
-   > Si ejecuta este código una segunda vez, se mostrará el error siguiente: "Infracción de restricción de CLAVE PRINCIPAL… No se puede insertar una clave duplicada en el objeto dbo.stopping_distance_models". Una opción para evitar este error consiste en actualizar el nombre de cada nuevo modelo. Por ejemplo, podría cambiar el nombre por algo más descriptivo e incluir el tipo de modelo, el día en que lo creó, etc.
+   > Si ejecuta este código una segunda vez, se mostrará el error siguiente: "Infracción de restricción de CLAVE PRINCIPAL… No se puede insertar una clave duplicada en el objeto dbo.stopping_distance_models". Una opción para evitar este error consiste en actualizar el nombre de cada nuevo modelo. Por ejemplo, podría cambiar el nombre a algo más descriptivo e incluir el tipo de modelo, el día en que lo creó, etc.
 
      ```sql
      UPDATE GLM_models
@@ -202,18 +201,18 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 El script anterior realiza los pasos siguientes:
 
-- Use una instrucción SELECT para obtener un único modelo de la tabla y páselo como un parámetro de entrada.
+- Utilice una instrucción SELECT para obtener un modelo único de la tabla y pasarlo como parámetro de entrada.
 
 - Después de recuperar el modelo de la tabla, llame a la función `unserialize` en el modelo.
 
-- Use la función `predict` con los argumentos adecuados para el modelo y proporcione los nuevos datos de entrada.
+- Aplique la función `predict` con los argumentos apropiados al modelo y proporcione los nuevos datos de entrada.
 
 > [!NOTE]
 > En el ejemplo, la función `str` se agrega durante la fase de pruebas para comprobar el esquema de los datos que se devuelven desde R. Puede quitar la instrucción más tarde.
 >
 > Los nombres de columna usados en el script de R no tienen que pasarse necesariamente al resultado del procedimiento almacenado. Esta es la cláusula WITH RESULTS usada para definir nuevos nombres de columna.
 
-**Resultado**
+**Resultados**
 
 ![Conjunto de resultados para predecir la probabilidad de transmisión manual](./media/r-predict-am-resultset.png)
 

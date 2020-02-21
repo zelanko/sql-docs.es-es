@@ -16,10 +16,10 @@ ms.assetid: b22336a1-fe53-4e00-a5ff-ede8d3f2b9f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7de1531b16578cacf70c6493029edcd2d853f7fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998656"
 ---
 # <a name="updatenull-method-int"></a>Método updateNull (int)
@@ -35,18 +35,18 @@ public void updateNull(int index)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Valor **int** que indica el índice de la columna.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateNull lo especifica el método updateNull en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
- [Método &#40;updateNull SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   
+ [Método updateNull &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

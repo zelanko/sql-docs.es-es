@@ -16,10 +16,10 @@ ms.assetid: 63397a19-03a2-44bb-b661-7d62c95b6e4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62c639c73b629559c36300886781146f3cd14057
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975023"
 ---
 # <a name="setboolean-method-sqlserverpreparedstatement"></a>Método setBoolean (SQLServerPreparedStatement)
@@ -42,12 +42,12 @@ public final void setBoolean(int n,
   
  *x*  
   
- Un valor **booleano** , ya sea **true** o **false**.  
+ Debe ser un valor **booleano**: **true** o **false**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setboolean especifica este método setboolean en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  

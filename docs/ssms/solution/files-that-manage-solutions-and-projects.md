@@ -1,6 +1,6 @@
 ---
-title: Archivos que administran soluciones y proyectos | Microsoft Docs
-ms.custom: ''
+title: Archivos que administran soluciones y proyectos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fbaa867ae3ab2683507c773c411d965a46cf795b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ac5014ed3567af77b0389e5262925f6e7ae6de12
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262873"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251909"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Archivos que administran soluciones y proyectos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,10 +1,7 @@
 ---
-title: Ver el registro de errores del Agente SQL Server (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Ver el registro de errores del Agente SQL Server
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,20 @@ helpviewer_keywords:
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08ddb38c46c565e45f4112718d5c7ca48d340aa4
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9166b647ec2921efb460add27ae75a00ea6cb4eb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552109"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257554"
 ---
-# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
+# <a name="view-sql-server-agent-error-log"></a>Ver el registro de errores del Agente SQL Server
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -41,7 +43,7 @@ El Explorador de objetos solo muestra el nodo del Agente [!INCLUDE[ssNoVersion](
   
 ### <a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permisos  
 Para realizar sus funciones, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe configurarse de modo que use las credenciales de una cuenta que sea miembro del rol fijo de servidor **sysadmin** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cuenta debe tener los siguientes permisos de Windows:  
   
 -   Iniciar sesión como servicio (SeServiceLogonRight)  
@@ -56,7 +58,7 @@ Para más información sobre los permisos de Windows necesarios para la cuenta d
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
-#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>Para ver el registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-view-the-ssnoversion-agent-error-log"></a>Para ver el registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  En el **Explorador de objetos**, haga clic en el signo más para expandir el servidor que contiene el registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo nombre desea ver.  
   
@@ -71,19 +73,19 @@ Para más información sobre los permisos de Windows necesarios para la cuenta d
     **Cargar registro**  
     Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  
   
-    **Exportar**  
+    **Exportarar**  
     Abre un cuadro de diálogo que permite exportar la información que se muestra en la cuadrícula **Resumen de archivos de registro** a un archivo de texto.  
   
     **Actualizar**  
     Actualice la vista de los registros seleccionados. El botón **Actualizar** hace que se vuelvan a leer los registros seleccionados del servidor de destino al tiempo que se aplica una configuración de filtro.  
   
-    **Filtro**  
+    **Filter**  
     Abre un cuadro de diálogo que permite especificar la configuración que se usa para filtrar el archivo de registro, como **Conexión**, **Fecha**u otros criterios de filtro de **General** .  
   
-    **Buscar**  
+    **Búsqueda**  
     Permite buscar texto específico en el archivo de registro. No se admite la búsqueda con caracteres comodín.  
   
-    **Detener**  
+    **Detención**  
     Detiene la carga de las entradas del archivo de registro. Por ejemplo, puede utilizar esta opción si la carga de un archivo de registro remoto o sin conexión tarda mucho tiempo y solo desea ver las entradas más recientes.  
   
     **Resumen de archivos de registro**  
@@ -98,10 +100,10 @@ Para más información sobre los permisos de Windows necesarios para la cuenta d
     **Date**  
     Muestra la fecha del evento.  
   
-    **Source**  
+    **Origen**  
     Muestra la característica de origen desde la que se crea el evento, como el nombre del servicio (MSSQLSERVER, por ejemplo). No aparece para todos los tipos de registro.  
   
-    **de mensaje**  
+    **Mensaje**  
     Muestra todos los mensajes asociados al evento.  
   
     **Tipo de registro**  

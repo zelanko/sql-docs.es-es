@@ -1,9 +1,11 @@
 ---
-title: Integrar Reporting Services con SOAP | Microsoft Docs
+title: Integración mediante SOAP
+description: La API de SOAP de Reporting Services proporciona varios puntos de conexión de servicio web para desarrollar soluciones de informes personalizadas.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Report Server Web service, application integration
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67e87a097ed9b4aac773404b517ae3c69b54680c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c19676b59b2de393f7d68a6660ec33db50c29e09
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741748"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796959"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>Integrar Reporting Services con SOAP
   La API de SOAP de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona varios puntos de conexión de servicio web para desarrollar soluciones de informes personalizadas. Actualmente, los extremos pertenecen a dos categorías: administración y ejecución. La funcionalidad de administración se expone a través de los extremos <xref:ReportService2005>, <xref:ReportService2006> y <xref:ReportService2010>. El extremo <xref:ReportService2005> se utiliza para administrar un servidor de informes que se configura en modo nativo y el extremo <xref:ReportService2006> se utiliza para administrar un servidor de informes que se configura para el modo integrado de SharePoint. <xref:ReportService2010> combina las funcionalidades de <xref:ReportService2005> y <xref:ReportService2006>, y puede administrar o un servidor de informes que esté configurado para el modo nativo o integrado de SharePoint.  

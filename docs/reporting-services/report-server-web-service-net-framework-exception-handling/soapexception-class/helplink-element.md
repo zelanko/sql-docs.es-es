@@ -12,10 +12,10 @@ ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ed62c34095adc2e9c039d1780f616530679b601
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68307575"
 ---
 # <a name="helplink-element"></a>Elemento HelpLink
@@ -25,7 +25,7 @@ ms.locfileid: "68307575"
   
  En la tabla siguiente se enumeran los argumentos de la dirección URL **HelpLink**.  
   
-|Argumento|Valor|  
+|Argumento|Value|  
 |--------------|-----------|  
 |**EvtSrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**EvtID**|Código de error del servidor de informes, por ejemplo, rsReservedItem.|  

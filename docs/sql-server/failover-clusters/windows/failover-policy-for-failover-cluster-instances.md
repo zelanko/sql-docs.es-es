@@ -1,6 +1,7 @@
 ---
-title: Directiva de conmutación por error para instancias de clústeres de conmutación por error | Microsoft Docs
-ms.custom: ''
+title: Directiva de conmutación por error para instancias de clústeres de conmutación por error
+description: Una descripción de las distintas directivas de conmutación por error disponibles para una instancia de clúster de conmutación por error de SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044752"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258165"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Directiva de conmutación por error para instancias de clústeres de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "68044752"
   
 4.  io_subsystem  
   
-5.  eventos  
+5.  events  
   
  Los componentes system, resource y query process se utilizan para la detección de errores. Los componentes io_subsytem y events solo se utilizan con fines de diagnóstico.  
   
@@ -92,7 +93,7 @@ ms.locfileid: "68044752"
   
  Consulte [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), ya que este procedimiento almacenado del sistema juega un papel importante en los niveles de condiciones de error.  
   
-|Level|Condición|Descripción|  
+|Nivel|Condición|Descripción|  
 |-----------|---------------|-----------------|  
 |0|No hay conmutación automática por error ni reinicio|Indica que no se activará la conmutación por error ni el reinicio automáticamente si se dan condiciones de error. Este nivel solo tiene como finalidad el mantenimiento del sistema.|  
 |1|Conmutación por error o reinicio si el servidor tiene error|Indica que se reiniciará el servidor o se desencadenará una conmutación por error si se produce la siguiente condición:<br /><br /> El servicio SQL Server se apaga.|  

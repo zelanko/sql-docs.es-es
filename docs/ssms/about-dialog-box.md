@@ -1,6 +1,6 @@
 ---
-title: Cuadro de diálogo Acerca de | Microsoft Docs
-ms.custom: ''
+title: cuadro de diálogo Acerca de
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23ee5e291bc1007e11a1342968c9cafbc3440909
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ee278c968bbfc9e0bde214080fcdcf20f61e4198
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263311"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254571"
 ---
-# <a name="about-dialog-box"></a>Cuadro de diálogo Acerca de
+# <a name="about-dialog-box"></a>cuadro de diálogo Acerca de
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
 El cuadro de diálogo **Acerca de** proporciona información sobre el producto y permite obtener acceso a información acerca del equipo en el que se ejecuta dicho producto. En las copias de evaluación, la entrada [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] indica el número de días que restan hasta la expiración de la instalación. Este cuadro de diálogo está disponible en el menú **Ayuda** .  
   

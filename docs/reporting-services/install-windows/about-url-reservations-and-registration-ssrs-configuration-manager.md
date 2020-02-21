@@ -1,8 +1,10 @@
 ---
-title: Acerca de las reservas y el registro de direcciones URL (Administrador de configuración de SSRS) | Microsoft Docs
-ms.date: 06/20/2019
+title: Registro y reservas de URL (Configuration Manager) | Microsoft Docs
+description: Las direcciones URL de las aplicaciones de Reporting Services se definen como reservas de direcciones URL en HTTP.SYS.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -11,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259338"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Acerca de las reservas y el registro de resrvas de URL (Administrador de configuración de SSRS)
   Las direcciones URL de las aplicaciones de Reporting Services se definen como reservas de direcciones URL en HTTP.SYS. Una reserva de direcciones URL define la sintaxis de un extremo de dirección URL para una aplicación web. Las reservas de direcciones URL se definen tanto para el servicio web del servidor de informes como para el portal web al configurar las aplicaciones en el servidor de informes. Las reservas de direcciones URL se crean automáticamente al configurar direcciones URL a través del programa de instalación o de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -55,7 +57,7 @@ ms.locfileid: "67314036"
   
  Unos sencillos ejemplos ilustran el concepto de reserva de direcciones URL y cómo se relaciona con las direcciones URL que se usan para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Un punto clave que tener en cuenta es que la reserva de direcciones URL tiene una sintaxis diferente a la que la dirección URL utiliza para tener acceso a la aplicación:  
   
-|Reserva de direcciones URL en HTTP.SYS|Dirección URL|Explicación|  
+|Reserva de direcciones URL en HTTP.SYS|URL|Explicación|  
 |---------------------------------|---------|-----------------|  
 |`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|La reserva de direcciones URL especifica un carácter comodín (+) en el puerto 80. Esto coloca en la cola del servidor de informes cualquier solicitud entrante que especifique un host que se resuelva como el equipo del servidor de informes en el puerto 80. Observe que con esta reserva de direcciones URL se puede usar una cantidad cualquiera de direcciones URL para tener acceso al servidor de informes.<br /><br /> Ésta es la reserva de direcciones URL predeterminada para un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la mayoría de los sistemas operativos.|  
 |`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|Esta reserva de direcciones URL especifica una dirección IP y es mucho más restrictiva que la que tiene un carácter comodín. Solo las direcciones URL que incluyen la dirección IP se pueden utilizar para conectarse al servidor de informes. Dada esta reserva de dirección URL, se produciría un error en una solicitud a un servidor de informes en `https://<computername>/reportserver` o `https://localhost/reportserver`.|  
@@ -80,10 +82,10 @@ ms.locfileid: "67314036"
   
 -   [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]  
   
-|Tipo de instancia|Aplicación|Dirección URL predeterminada|Reserva de direcciones URL real en HTTP.SYS|  
+|Tipo de instancia|Application|Dirección URL predeterminada|Reserva de direcciones URL real en HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Instancia predeterminada|servicio web del servidor de informes|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
-|Instancia predeterminada|Portal web|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Instancia predeterminada|servicio web del servidor de informes|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Instancia predeterminada|Portal web|`https://<servername>/reports`|`https://<servername>:80/reports`|  
 |Instancia con nombre|servicio web del servidor de informes|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
 |Instancia con nombre|Portal web|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
 |SQL Server Express|servicio web del servidor de informes|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
@@ -102,7 +104,7 @@ ms.locfileid: "67314036"
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] y versiones posteriores incluyen nuevas características de seguridad para reducir el riesgo de ejecutar accidentalmente programas con privilegios elevados. Se necesitan pasos adicionales para habilitar la administración local en estos sistemas operativos. Para más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Sintaxis de reserva de direcciones URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   

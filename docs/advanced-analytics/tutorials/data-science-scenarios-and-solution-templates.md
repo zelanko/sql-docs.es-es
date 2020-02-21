@@ -1,6 +1,6 @@
 ---
 title: Plantillas de soluciones de ciencia de datos
-description: En este artículo se describen las plantillas que muestran los procedimientos recomendados y proporcionan los bloques de creación para ayudarle a implementar una solución de forma rápida. Cada plantilla está diseñada para resolver un problema específico, para un segmento o un sector en concreto.
+description: En este artículo se describen las plantillas específicas del sector que muestran los procedimientos recomendados y proporcionan los bloques de creación para ayudarle a implementar una solución de aprendizaje automático.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
@@ -9,17 +9,26 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01893edd0174ec7aeab262b8aeddc3babb8194f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727280"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947288"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Escenarios de ciencia de datos y plantillas de soluciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Las plantillas son soluciones de ejemplo que muestran los procedimientos recomendados y proporcionan los bloques de creación para ayudarle a implementar una solución rápida. Cada plantilla está diseñada para resolver un problema específico, para un segmento o un sector en concreto. Las tareas de cada plantilla permiten desde preparación de datos e ingeniería de características hasta el entrenamiento y la puntuación de modelos. Use estas plantillas para descubrir cómo funciona [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Después, no dude en personalizar la plantilla para que se adapte a su escenario y compilar una solución personalizada. 
+En este artículo se describe una serie de plantillas de solución de aprendizaje automático de SQL Server. Estas plantillas demuestran procedimientos recomendados y proporcionan los bloques de creación para ayudarle a implementar una solución de aprendizaje automático rápidamente. Cada plantilla está diseñada para resolver un problema específico de ciencia de datos, para un segmento o un sector en concreto.
+Las tareas de cada plantilla permiten desde preparación de datos e ingeniería de características hasta el entrenamiento y la puntuación de modelos. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Use estas plantillas para descubrir cómo funciona [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Después, no dude en personalizar la plantilla para que se adapte a su escenario y compilar una solución personalizada.
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Use estas plantillas para obtener información sobre el funcionamiento de SQL Server Machine Learning Services. Después, no dude en personalizar la plantilla para que se adapte a su escenario y compilar una solución personalizada.
+::: moniker-end
 
 Cada solución incluye datos de ejemplo, código de R o de Python y procedimientos almacenados de SQL, si procede. El código se puede ejecutar en el entorno de desarrollo de R o Python que prefiera, y los cálculos se realizan en SQL Server. En algunos casos, puede ejecutar código directamente mediante T-SQL y cualquier herramienta cliente de SQL, como SQL Server Management Studio.
 
@@ -29,7 +38,7 @@ Cada solución incluye datos de ejemplo, código de R o de Python y procedimient
 
 + Para obtener instrucciones de descarga y configuración, vea [Procedimiento para usar las plantillas](#bkmk_HowTo).
 
-## <a name="fraud-detection"></a>Detección de fraude
+## <a name="fraud-detection"></a>Detección de fraudes
 
 [Plantilla de detección de fraude en línea (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 

@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7abf0d389217535292260b6a5b055697eb4b19df
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028090"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Dependencias de características de Microsoft JDBC Driver para SQL Server
@@ -106,12 +106,12 @@ Los proyectos específicos que requieren cualquiera de las características ante
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Trabajo con autenticación de Azure Active Directory:
 
-- Versión del controlador JDBC Driver 7.4.1 - versiones de dependencia: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10) y sus dependencias
-- Versión del controlador JDBC Driver 7.2.2 - versiones de dependencia: Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5) y sus dependencias
-- Versión del controlador JDBC Driver 7.0.0 - versiones de dependencia: Adal4j (versión 1.6.0) y sus dependencias
-- Versión del controlador JDBC Driver 6.4.0 - versiones de dependencia: Adal4j (versión 1.4.0) y sus dependencias
-- Versión del controlador JDBC Driver 6.2.2 - versiones de dependencia: Adal4j (versión 1.4.0) y sus dependencias
-- Versión del controlador JDBC Driver 6.0.0 - versiones de dependencia: Adal4j (versión 1.3.0) y sus dependencias En esta versión del controlador, puede conectarse mediante el modo de autenticación de _ActiveDirectoryIntegrated_ solo en un sistema operativo de Windows y mediante sqljdbc_auth.dll y la Biblioteca de autenticación de Active Directory para SQL Server (ADALSQL.DLL).
+- Versión del controlador JDBC 7.4.1 - versiones de dependencia: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10) y sus dependencias
+- Versión del controlador JDBC 7.2.2 - versiones de dependencia: Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5) y sus dependencias
+- Versión del controlador JDBC 7.0.0 - versiones de dependencia: Adal4j (versión 1.6.0) y sus dependencias
+- Versión del controlador JDBC 6.4.0 - versiones de dependencia: Adal4j (versión 1.4.0) y sus dependencias
+- Versión del controlador JDBC 6.2.2 - versiones de dependencia: Adal4j (versión 1.4.0) y sus dependencias
+- Versión del controlador JDBC 6.0.0 - versiones de dependencia: Adal4j (versión 1.3.0) y sus dependencias. En esta versión del controlador, puede conectarse mediante el modo de autenticación de _ActiveDirectoryIntegrated_ solo en un sistema operativo de Windows y mediante sqljdbc_auth.dll y la Biblioteca de autenticación de Active Directory para SQL Server (ADALSQL.DLL).
 
 Desde la versión del controlador 6.4.0, las aplicaciones no necesariamente requieren el uso de ADALSQL.DLL en sistemas operativos Windows. En el caso de *sistemas operativos que no sean Windows*, el controlador requiere un vale de Kerberos para funcionar con la autenticación de ActiveDirectoryIntegrated. Para obtener más información sobre cómo conectarse a Active Directory mediante el uso de Kerberos, vea [Establecer el vale de Kerberos en Windows, Linux y Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
 
@@ -119,7 +119,7 @@ En el caso de *sistemas operativos Windows*, el controlador busca sqljdbc_auth.d
 
 Puede obtener una [aplicación de ejemplo](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md) que usa esta característica.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [JDBC Driver GitHub repository](https://github.com/microsoft/mssql-jdbc) (Repositorio de GitHub del controlador JDBC Driver)  
 [Referencia de API de JDBC Driver](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

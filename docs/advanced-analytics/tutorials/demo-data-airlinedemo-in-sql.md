@@ -1,6 +1,6 @@
 ---
 title: Datos de demostración de vuelos de líneas aéreas para tutoriales
-Description: Cree una base de datos que contenga el conjunto de datos para líneas aéreas de R y Python. Este conjunto de datos se usa en ejercicios en los que se muestra cómo ajustar el lenguaje R o el código Python en un procedimiento almacenado de SQL Server.
+Description: Cree una base de datos que contenga el conjunto de datos para líneas aéreas de R y Python. Este conjunto de datos se utiliza en los tutoriales de R y Python para SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 520a94f5f92c8b7e7d8bf7ba4efc851ce0c3e723
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727149"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908913"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Datos de demostración de la llegada de vuelos de líneas aéreas para tutoriales de Python y R de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ Entre los tutoriales y las guías de inicio rápido que usan este conjunto de da
 
 +  [Creación de un modelo de Python mediante revoscalepy](use-python-revoscalepy-to-create-model.md)
 
-## <a name="create-the-database"></a>Crear la base de datos
+## <a name="create-the-database"></a>Creación de la base de datos
 
 1. Inicie SQL Server Management Studio, conéctese a una instancia del motor de base de datos que tenga integración con R o Python.  
 

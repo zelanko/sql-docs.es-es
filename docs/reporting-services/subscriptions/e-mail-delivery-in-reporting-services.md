@@ -13,10 +13,10 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72305045"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega por correo electrónico en Reporting Services
@@ -26,13 +26,13 @@ ms.locfileid: "72305045"
   
  Para obtener los pasos detallados que le pueden guiar para crear una suscripción, consulte lo siguiente:  
   
--   [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+-   [Creación y administración de suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
 -   [Creación y administración de suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
 ## <a name="e-mail-delivery-options"></a>Opciones de entrega por correo electrónico  
  La entrega de correo electrónico del servidor de informes puede entregar informes de las siguientes maneras  
@@ -81,7 +81,7 @@ ms.locfileid: "72305045"
  Para un servidor de informes en modo nativo, la extensión de entrega de correo electrónico se configura con el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo y editando los archivos de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En el caso de un servidor de informes en modo SharePoint, la extensión de entrega de correo electrónico en páginas de administración de SharePoint y scripts de PowerShell.  
   
  
- Para obtener información sobre cómo configurar un servidor de informes en modo nativo, vea [Configuración de correo electrónico: Modo nativo de Reporting Services (Administrador de configuración)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
+ Para obtener información sobre cómo configurar un servidor de informes en modo nativo, vea [Configuración de correo electrónico: modo nativo de Reporting Services (Administrador de configuración)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  Para obtener información sobre cómo configurar un servidor de informes en modo de SharePoint, vea lo siguiente:  
@@ -90,7 +90,7 @@ ms.locfileid: "72305045"
 ## <a name="see-also"></a>Consulte también  
  [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Asignaciones de roles](../../reporting-services/security/role-assignments.md)  
   
   

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c46cf3fbc2138350c50e3f520871b0b6a8efde7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74317035"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173568"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes
 
@@ -30,7 +30,7 @@ Estos son algunos aspectos importantes que se deben tener en cuenta al planear l
 
 - Para que una implementación de clúster de macrodatos sea correcta, asegúrese de que hay disponible el número necesario de volúmenes persistentes. Si va a implementar en un clúster de Azure Kubernetes Service (AKS) y usa una clase de almacenamiento integrada (`default` o `managed-premium`), esta clase admite el aprovisionamiento dinámico de volúmenes persistentes. Por lo tanto, no es necesario crear los volúmenes persistentes previamente, pero deberá asegurarse de que los nodos de trabajo disponibles en el clúster de AKS pueden asociar tantos discos como volúmenes persistentes sean necesarios para la implementación. En función del [tamaño de máquina virtual](https://docs.microsoft.com/azure/virtual-machines/linux/sizes) especificado para los nodos de trabajo, cada nodo podrá asociar un número determinado de discos. En un clúster de tamaño predeterminado (sin alta disponibilidad), se requiere un mínimo de 24 discos. Si va a habilitar la alta disponibilidad o a escalar verticalmente un grupo, asegúrese de que haya como mínimo dos volúmenes persistentes por cada réplica de más, con independencia del recurso que se esté escalando verticalmente.
 
-- Si el aprovisionador de almacenamiento de la clase de almacenamiento que está proporcionando en la configuración no admite el aprovisionamiento dinámico, habrá que crear los volúmenes persistentes previamente. Por ejemplo, el aprovisionador `local-storage` no permite el aprovisionamiento dinámico. Vea este [script de ejemplo](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) para obtener instrucciones cómo llevar esto a cabo en un clúster de Kubernetes implementado con `kubeadm`.
+- Si el aprovisionador de almacenamiento de la clase de almacenamiento que está proporcionando en la configuración no admite el aprovisionamiento dinámico, habrá que crear los volúmenes persistentes previamente. Por ejemplo, el aprovisionador `local-storage` no permite el aprovisionamiento dinámico. Vea este [script de ejemplo](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) para obtener instrucciones cómo llevar esto a cabo en un clúster de Kubernetes implementado con `kubeadm`.
 
 - Al implementar un clúster de macrodatos, puede configurar la misma clase de almacenamiento para que la usen todos los componentes del clúster, pero como procedimiento recomendado en una implementación de producción, varios componentes requerirán distintas configuraciones de almacenamiento para acomodar diversas cargas de trabajo en términos de tamaño o rendimiento. Puede sobrescribir la configuración de almacenamiento predeterminada especificada en el controlador para cada uno de los grupos de almacenamiento, conjuntos de datos e instancias maestras de SQL Server. En este artículo se facilitan ejemplos de cómo hacerlo.
 

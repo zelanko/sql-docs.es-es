@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910148"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074463"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -75,13 +75,23 @@ OPENROWSET
 
 ## <a name="arguments"></a>Argumentos
 
-"*provider_name*" Es una cadena de caracteres que representa el nombre descriptivo (o PROGID) del proveedor OLE DB según se especifica en el Registro. *provider_name* no tiene valor predeterminado.
+### <a name="provider_name"></a>'*provider_name*'
+Es una cadena de caracteres que representa el nombre descriptivo (o PROGID) del proveedor OLE DB según se especifica en el Registro. *provider_name* no tiene valor predeterminado.
 
 "*datasource*" Es una constante de cadena que se corresponde a un origen de datos OLE DB determinado. *datasource* es la propiedad DBPROP_INIT_DATASOURCE que se pasará a la interfaz IDBProperties del proveedor para inicializarlo. Normalmente, esta cadena incluye el nombre del archivo de la base de datos, el nombre del servidor de bases de datos o un nombre comprensible para que el proveedor encuentre las bases de datos.
 
 "*user_id*" Es una constante de cadena que contiene el nombre de usuario que se pasa al proveedor OLE DB especificado. *user_id* indica el contexto de seguridad para la conexión y se pasa como la propiedad DBPROP_AUTH_USERID para inicializar el proveedor. *user_id* no puede ser un nombre de inicio de sesión de Microsoft Windows.
 
 "*password*" Es una constante de cadena que contiene la contraseña de usuario que se va a pasar al proveedor OLE DB. *password* se pasa como la propiedad DBPROP_AUTH_PASSWORD cuando el proveedor se inicializa. *password* no puede ser una contraseña de Microsoft Windows.
+
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
 
 "*provider_string*" Es una cadena de conexión específica del proveedor que se pasa como la propiedad DBPROP_INIT_PROVIDERSTRING para inicializar el proveedor OLE DB. Normalmente, *provider_string* encapsula toda la información de conexión necesaria para inicializar el proveedor. Para obtener una lista de palabras clave que el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pueda reconocer, vea [Initialization and Authorization Properties](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md) (Propiedades de inicialización y autorización).
 
@@ -91,9 +101,23 @@ OPENROWSET
 
 *object* Es el nombre del objeto que identifica de forma única al objeto con el que se va a trabajar.
 
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
+```
+
 "*query*" Es una constante de cadena que se envía al proveedor, que la ejecuta. La instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no procesa esta consulta, pero sí que procesa los resultados de la consulta devuelta por el proveedor (una consulta de paso a través). Las consultas de paso a través resultan útiles cuando se utilizan en proveedores que no muestran sus datos tabulares a través de nombres de tablas, sino solamente a través de un lenguaje de comandos. El servidor remoto admite las consultas de paso a través siempre y cuando el proveedor de consultas admita el objeto Command de OLE DB y sus interfaces obligatorias. Para más información, vea [Referencia de SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
-BULK Usa el proveedor de conjuntos de filas BULK para que OPENROWSET lea datos de un archivo. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET puede leer datos de un archivo sin necesidad de cargarlos en una tabla de destino. Esto le permite utilizar OPENROWSET con una instrucción SELECT simple.
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### <a name="bulk"></a>BULK
+Utiliza el proveedor de conjuntos de filas BULK para que OPENROWSET lea datos de un archivo. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET puede leer datos de un archivo sin necesidad de cargarlos en una tabla de destino. Esto le permite utilizar OPENROWSET con una instrucción SELECT simple.
 
 > [!IMPORTANT]
 > Azure SQL Database solo admite la lectura desde Azure Blob Storage.
@@ -181,10 +205,23 @@ Al leer *data_file* como ASCII, el contenido se devuelve como un conjunto de fil
 
 SINGLE_NCLOB Al leer *data_file* como UNICODE, el contenido se devuelve como un conjunto de filas de tipo **nvarchar(max)** de una sola fila y una sola columna, por medio de la intercalación de la base de datos actual.
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### <a name="input-file-format-options"></a>Opciones de formato de archivos de entrada
 
 FORMAT **=** "CSV" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Especifica un archivo de valores separados por comas conforme a la norma [RFC 4180](https://tools.ietf.org/html/rfc4180).
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 FORMATFILE ="*ruta_de_acceso_del_archivo_de_formato*" Especifica la ruta de acceso completa de un archivo de formato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos tipos de archivos de formato: XML y no XML.
 

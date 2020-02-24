@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403254"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971313"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
   Una suscripción estándar es la que crean usuarios individuales que desean recibir un informe por correo electrónico o en una carpeta compartida. Este tema proporciona información sobre las suscripciones estándar que los usuarios individuales crean y administran. Las suscripciones controladas por datos tienen diferentes requisitos y pasos, y se tratan en otro tema. Para obtener más información, vea [Cómo crear, modificar y eliminar suscripciones controladas por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "66403254"
   
  En este artículo no se explica cómo crear una suscripción controlada por datos. Para obtener instrucciones sobre cómo crear una suscripción controlada por datos, consulte [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> Para crear una suscripción a recursos compartidos de archivos  
+## <a name="bkmk_create_fileshare_subscription"></a> Para crear una suscripción a recursos compartidos de archivos  
   
 1. Examine [el portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66403254"
   
 El informe se entrega como un archivo estático. Si el informe contiene características interactivas, como por ejemplo, vínculos a otras filas y columnas, éstas no estarán disponibles.  
   
-###  <a name="bkmk_create_email_subscription"></a> Para crear una suscripción de correo electrónico  
+##  <a name="bkmk_create_email_subscription"></a> Para crear una suscripción de correo electrónico  
   
 1. Examine [el portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -170,4 +170,3 @@ Para cancelar una suscripción que se está procesando actualmente en el servido
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [El portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [Usar Mis suscripciones &#40;servidor de informes en modo nativo&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
-  

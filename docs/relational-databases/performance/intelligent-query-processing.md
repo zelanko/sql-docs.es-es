@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65b88c890dc16adf1a1b626dd0ddc91ad359505b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f555713a25db2068a4f6a923504db765d3f3a09e
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74821976"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256798"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
@@ -28,6 +28,7 @@ La familia de características de procesamiento de consultas inteligentes incluy
 ![Procesamiento de consultas inteligentes](./media/iqp-feature-family.png)
 
 Vea este vídeo de seis minutos para obtener información general sobre el procesamiento de consultas inteligentes:
+
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
 
 
@@ -47,7 +48,7 @@ En la siguiente tabla se detallan todas las características de procesamiento de
 | [Ejecución intercalada](#interleaved-execution-for-mstvfs) | Sí, en el nivel de compatibilidad 140| Sí, a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] en el nivel de compatibilidad 140|Use la cardinalidad real de la función con valores de tabla y múltiples instrucciones detectada en la primera compilación en lugar de una estimación fija.|
 | [Comentarios de concesión de memoria (modo por lotes)](#batch-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 140| Sí, a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] en el nivel de compatibilidad 140|Si una consulta de modo por lotes tiene operaciones que escriben en disco, agregue más memoria para las ejecuciones consecutivas. Si una consulta desperdicia más del 50 % de memoria que tiene asignada, reduzca el lado de concesión de memoria en las ejecuciones consecutivas.|
 | [Comentarios de concesión de memoria (modo de fila)](#row-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 150| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] en el nivel de compatibilidad 150|Si una consulta de modo de fila tiene operaciones que escriben en disco, agregue más memoria para las ejecuciones consecutivas. Si una consulta desperdicia más del 50 % de memoria que tiene asignada, reduzca el lado de concesión de memoria en las ejecuciones consecutivas.|
-| [Inserción de UDF escalar](#scalar-udf-inlining) | No | Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] en el nivel de compatibilidad 150|Los UDF escalares se transforman en expresiones relacionales equivalentes que se "insertan" en la consulta que realiza la llamada, lo que a menudo supone una notable mejora del rendimiento.|
+| [Inserción de UDF escalar](#scalar-udf-inlining) | Sin | Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] en el nivel de compatibilidad 150|Los UDF escalares se transforman en expresiones relacionales equivalentes que se "insertan" en la consulta que realiza la llamada, lo que a menudo supone una notable mejora del rendimiento.|
 | [Compilación diferida de variables de tabla](#table-variable-deferred-compilation) | Sí, en el nivel de compatibilidad 150| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] en el nivel de compatibilidad 150|Use la cardinalidad real de la variable de tabla detectada en la primera compilación en lugar de una estimación fija.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Combinaciones adaptables del modo por lotes

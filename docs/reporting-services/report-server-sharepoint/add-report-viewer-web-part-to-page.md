@@ -7,22 +7,22 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574787"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256736"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Muestre un informe, en SQL Server Reporting Services o en Power BI Report Server, agregando un elemento web Visor de informes a una página de SharePoint.
 
 ![Elemento web Visor de informes en una página de SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 * Para que los informes se carguen correctamente, las notificaciones del servicio de token de Windows (C2WTS) deben estar configuradas para la delegación restringida de Kerberos. Para más información sobre cómo configurar C2WTS, vea [Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
 

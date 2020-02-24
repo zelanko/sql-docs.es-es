@@ -15,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 233a96ee389e8ffa7b190fde4413a33d51d0c462
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910168"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173580"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Preguntas más frecuentes para administradores de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ No, la replicación solo funciona cuando se usa el nombre real del servidor. A p
   
 -   Para artículos de publicaciones que utilizan instantáneas en modo de carácter (que se utilizan para los que no son suscriptores de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y para los suscriptores de [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): de manera predeterminada, el propietario se deja en blanco. Como valor predeterminado del propietario se utiliza el propietario asociado con la cuenta utilizada por el Agente de distribución o el Agente de mezcla para conectarse con el suscriptor.  
   
- El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo - \<***Artículo***>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo: \<** _artículo_ **>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>¿Cómo pueden configurarse las concesiones en la base de datos de suscripciones para que coincidan con las de la base de datos de publicaciones?  
  De manera predeterminada, la replicación no ejecuta instrucciones GRANT en la base de datos de suscripciones. Si desea que los permisos de la base de datos de suscripciones coincidan con los de la base de datos de publicaciones, utilice uno de los siguientes métodos:  

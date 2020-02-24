@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2a3258dfa0fbb234cf4f888e4ae98f27c215993
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 570ac300f8f522d0ea4acfb711d78bd7cfaf7ef2
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67988521"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146295"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configuración de copias de seguridad en las réplicas secundarias de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo configurar la copia de seguridad en réplicas secundarias para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Para obtener una introducción a la copia de seguridad en réplicas secundarias, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Para obtener una introducción sobre la realización de copias de seguridad en las réplicas secundarias, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ##  <a name="Prerequisites"></a> Requisitos previos  
  Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
@@ -72,7 +72,7 @@ ms.locfileid: "67988521"
      Especifica que, de acuerdo con sus preferencias, los trabajos de copia de seguridad omitan el rol de las réplicas de disponibilidad cuando la réplica realiza copias de seguridad. Tenga en cuenta que los trabajos de copia de seguridad pueden evaluar otros factores, como la prioridad de copia de seguridad de cada réplica de disponibilidad junto con su estado operativo y de conexión.  
   
     > [!IMPORTANT]  
-    >  No se aplica la configuración de preferencia de copia de seguridad automatizada. La interpretación de esta preferencia depende de la lógica, si existe, del script de los trabajos de copia de seguridad para las bases de datos de un grupo de disponibilidad dado. La configuración de preferencia de copia de seguridad automatizada no tiene ningún efecto sobre las copias de seguridad ad hoc. Para obtener más información, vea [Seguimiento: después de configurar la copia de seguridad en las réplicas secundarias](#FollowUp) más adelante en este tema.  
+    >  No se aplica la configuración de preferencia de copia de seguridad automatizada. La interpretación de esta preferencia depende de la lógica, si existe, del script de los trabajos de copia de seguridad para las bases de datos de un grupo de disponibilidad dado. La configuración de preferencia de copia de seguridad automatizada no tiene ningún efecto sobre las copias de seguridad ad hoc. Para más información, vea [Seguimiento: después de configurar la copia de seguridad en las réplicas secundarias](#FollowUp) más adelante en este tema.  
   
 6.  Use la cuadrícula **Prioridades de copia de seguridad de réplica** para cambiar la prioridad de copia de seguridad de las réplicas de disponibilidad. Esta cuadrícula muestra la prioridad de copia de seguridad actual de cada instancia de servidor que hospeda una réplica para el grupo de disponibilidad. Las columnas de la cuadrícula son las siguientes:  
   
@@ -140,7 +140,7 @@ ms.locfileid: "67988521"
      Especifica que, de acuerdo con sus preferencias, los trabajos de copia de seguridad omitan el rol de las réplicas de disponibilidad cuando la réplica realiza copias de seguridad. Tenga en cuenta que los trabajos de copia de seguridad pueden considerar otros factores, como la prioridad de copia de seguridad de cada réplica de disponibilidad junto con su estado operativo y de conexión.  
   
     > [!IMPORTANT]  
-    >  No se aplica **AutomatedBackupPreference**. La interpretación de esta preferencia depende de la lógica, si existe, del script de los trabajos de copia de seguridad para las bases de datos de un grupo de disponibilidad dado. La configuración de preferencia de copia de seguridad automatizada no tiene ningún efecto sobre las copias de seguridad ad hoc. Para obtener más información, vea [Seguimiento: después de configurar la copia de seguridad en las réplicas secundarias](#FollowUp) más adelante en este tema.  
+    >  No se aplica **AutomatedBackupPreference**. La interpretación de esta preferencia depende de la lógica, si existe, del script de los trabajos de copia de seguridad para las bases de datos de un grupo de disponibilidad dado. La configuración de preferencia de copia de seguridad automatizada no tiene ningún efecto sobre las copias de seguridad ad hoc. Para más información, vea [Seguimiento: después de configurar la copia de seguridad en las réplicas secundarias](#FollowUp) más adelante en este tema.  
   
      Por ejemplo, el siguiente comando establece la propiedad **AutomatedBackupPreference** del grupo de disponibilidad `MyAg` en **SecondaryOnly**. Las copias de seguridad automatizadas de bases de datos en este grupo de disponibilidad nunca se producirán en la réplica principal, sino que se redirigirán a la réplica secundaria con la configuración de la prioridad de copia de seguridad más alta.  
   
@@ -162,11 +162,11 @@ ms.locfileid: "67988521"
 ##  <a name="FollowUp"></a> Seguimiento: después de configurar la copia de seguridad en las réplicas secundarias  
  Para tener en cuenta la preferencia de la copia de seguridad automatizada para un grupo de disponibilidad dado, en cada instancia de servidor que hospede una réplica de disponibilidad cuya prioridad de copia de seguridad sea mayor que cero (>0), se necesitan los scripts de trabajos de copia de seguridad para las bases de datos del grupo de disponibilidad. Para determinar si la réplica actual es la réplica de copia de seguridad preferida, use la función [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) en el script de copia de seguridad. Si la réplica de disponibilidad que está hospedada en la instancia de servidor actual es la réplica preferida para las copias de seguridad, esta función devuelve 1. De lo contrario, la función devuelve 0. Mediante la ejecución de un script simple en cada réplica de disponibilidad que consulta esta función, puede determinar qué réplica debe ejecutar un trabajo de copia de seguridad determinado. Por ejemplo, un fragmento de código típico de un script de trabajo de copia de seguridad sería:  
   
-```  
+```sql  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
       Select 'This is not the preferred replica, exiting with success';  
-      RETURN 0 - This is a normal, expected condition, so the script returns success  
+      RETURN 0 -- This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -191,10 +191,10 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

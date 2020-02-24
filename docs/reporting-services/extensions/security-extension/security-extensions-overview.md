@@ -1,5 +1,5 @@
 ---
-title: Información general de extensiones de seguridad (SSRS) | Microsoft Docs
+title: Información general de extensiones de seguridad | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c066c893833e1c8588be2460959ed298d6cf1b4e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5947d26c93dc9e79fc19c37e672f3342eb1d33d0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63225872"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082272"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>Información general de extensiones de seguridad: Reporting Services (SSRS)
   Una extensión de seguridad [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite la autenticación y autorización de usuarios o grupos; es decir, les permite a usuarios diferentes iniciar sesión en un servidor de informes y, en función de sus identidades, realizar tareas u operaciones diferentes. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza una extensión de autenticación basada en Windows que utiliza los protocolos de cuenta de Windows para comprobar las identidades de los usuarios que indican que tienen cuentas en el sistema. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza un sistema de seguridad basada en roles para autorizar a los usuarios. El modelo de seguridad basado en roles [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es similar a los modelos de seguridad basados en roles de otras tecnologías.  

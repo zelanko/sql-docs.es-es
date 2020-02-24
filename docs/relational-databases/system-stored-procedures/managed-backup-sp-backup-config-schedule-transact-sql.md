@@ -1,7 +1,7 @@
 ---
 title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 02/20/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942070"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507542"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ EXEC managed_backup.sp_backup_config_schedule
  La duración del período de tiempo de copia de seguridad. Tenga en cuenta que no hay ninguna garantía de que las copias de seguridad se completen durante @backup_begin_time el @backup_durationperíodo de tiempo definido por y. Las operaciones de copia de seguridad que se inician en este período de tiempo pero superan la duración de la ventana no se cancelarán.  
   
  @log_backup_freq  
- Esto determina la frecuencia de las copias de seguridad del registro de transacciones. Estas copias de seguridad se producen a intervalos regulares, en lugar de a la programación especificada para las copias de seguridad de base de datos. @log_backup_freqpuede ser en minutos u horas y 0 es válido, lo que indica que no hay copias de seguridad de registros. Deshabilitar las copias de seguridad de registros solo sería adecuado para las bases de datos con un modelo de recuperación simple.  
+ Esto determina la frecuencia de las copias de seguridad del registro de transacciones. Estas copias de seguridad se producen a intervalos regulares, en lugar de a la programación especificada para las copias de seguridad de base de datos. @log_backup_freqpuede ser en minutos u horas y `0:00` es válido, lo que indica que no hay copias de seguridad de registros. Deshabilitar las copias de seguridad de registros solo sería adecuado para las bases de datos con un modelo de recuperación simple.  
   
 > [!NOTE]  
->  Si el modelo de recuperación cambia de simple a completo, debe volver a configurar la log_backup_freq de 0 a un valor distinto de cero.  
+>  Si el modelo de recuperación cambia de simple a completo, debe volver a configurar la log_backup_freq de `0:00` en un valor distinto de cero.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto) o 1 (error)  

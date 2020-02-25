@@ -30,7 +30,7 @@ En este tema se describe cómo utilizar [!INCLUDE[ssSqlProfiler](../../includes/
   
      Aparecerá el cuadro de diálogo **Propiedades de seguimiento** .  
   
-    > **NOTA:** Si se ha seleccionado Iniciar el seguimiento inmediatamente tras realizar la conexión , no aparecerá el cuadro de diálogo **Propiedades de seguimiento** y, en su lugar, se iniciará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones** y desactive la casilla Iniciar el seguimiento inmediatamente tras realizar la conexión.  
+    > **NOTA:** Si se ha seleccionado **Iniciar el seguimiento inmediatamente tras realizar la conexión** , no aparecerá el cuadro de diálogo **Propiedades de seguimiento** y, en su lugar, se iniciará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones** y desactive la casilla Iniciar el seguimiento inmediatamente tras realizar la conexión.  
   
 2.  En el cuadro **Nombre de seguimiento** , escriba un nombre para el seguimiento.  
   

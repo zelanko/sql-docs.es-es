@@ -9,12 +9,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253124"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074433"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Conceptos de seguridad para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -66,6 +66,10 @@ La autorización en el contexto de macrodatos se suele realizar mediante listas 
 El cifrado de la comunicación entre los clientes y los puntos de conexión externos, así como entre los componentes dentro del clúster, se protege con TLS/SSL, mediante certificados.
 
 Todas las comunicaciones de SQL Server a SQL Server, como la de la instancia maestra SQL con un grupo de datos, se protegen mediante inicios de sesión SQL.
+
+> [!IMPORTANT]
+>  Los clústeres de macrodatos usan etcd para almacenar las credenciales. Como procedimiento recomendado, debe asegurarse de que el clúster de Kubernetes está configurado para usar el cifrado de etcd en reposo. De forma predeterminada, los secretos almacenados en etcd no están cifrados. En la documentación de Kubernetes se proporcionan detalles sobre esta tarea administrativa: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ y https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
 
 ## <a name="basic-administrator-login"></a>Inicio de sesión básico de administrador
 

@@ -1,7 +1,7 @@
 ---
 title: Implementación del controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049835"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004676"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Implementación del controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +30,8 @@ ms.locfileid: "73049835"
 >  Para obtener información sobre cómo implementar aplicaciones Java en general, vea el sitio web de Java.  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Implementar el controlador JDBC en sistemas Windows  
- Al implementar el controlador JDBC en sistemas operativos Windows, debe usar la versión del archivo zip ejecutable del paquete de instalación, que se suele denominar `sqljdbc_<version>_<language>.exe`.  
-  
- Para ejecutar el archivo zip ejecutable de forma silenciosa, debe usar la opción de línea de comandos `/auto` en la línea de comandos o en un archivo por lotes del modo siguiente:  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  Si usa la opción `/auto`, no será una instalación silenciosa en sentido estricto debido a que el cuadro de diálogo WinZip sigue apareciendo en la pantalla del usuario. No obstante, no necesita interactuar con dicho cuadro, que se cierra una vez que la operación de descompresión se ha completado.  
-  
+ Al implementar el controlador JDBC en sistemas operativos Windows, debe descomprimir el paquete de instalación comprimido, que se suele denominar `sqljdbc_<version>_<language>.zip`.
+
 ## <a name="deploying-the-driver-on-unix-systems"></a>Implementar el controlador en sistemas UNIX 
  Al implementar el controlador JDBC en los sistemas operativos UNIX, debe usar la versión del archivo gzip del paquete de instalación, que se suele llamar `sqljdbc_<version>_<language>.tar.gz`.  
   
@@ -54,7 +47,7 @@ ms.locfileid: "73049835"
 
 ## <a name="legalities-of-driver-redistribution"></a>Legalidad de la redistribución del controlador
 
-Las versiones 6.0, 6.2, 6.4 y 7.0 del controlador JDBC son redistribuibles. Revise la cláusula _Código distribuible_ en los contratos de licencia.
+Las versiones 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 y 8.2 del controlador JDBC son redistribuibles. Revise la cláusula _Código distribuible_ en los contratos de licencia.
 
 Las versiones 4.x del controlador JDBC son antiguas y están obsoletas. La compatibilidad con 4.x expiró antes de 2018.
 

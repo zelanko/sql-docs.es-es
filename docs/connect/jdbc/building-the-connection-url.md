@@ -1,7 +1,7 @@
 ---
 title: Generar URL de conexión | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028452"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004540"
 ---
 # <a name="building-the-connection-url"></a>Generar URL de conexión
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -92,18 +92,18 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 >  El espacio en blanco dentro de las llaves es literal y no se reduce.  
   
 ##  <a name="Connectingintegrated"></a> Conexión con autenticación integrada en Windows  
- El controlador JDBC admite el uso de la autenticación integrada de tipo 2 en los sistemas operativos Windows mediante la propiedad de cadena de conexión integratedSecurity. Para usar la autenticación integrada, copie el archivo sqljdbc_auth.dll en un directorio de la ruta del sistema de Windows en que esté instalado el controlador JDBC.  
+ El controlador JDBC admite el uso de la autenticación integrada de tipo 2 en los sistemas operativos Windows mediante la propiedad de cadena de conexión integratedSecurity. Para usar la autenticación integrada, copie el archivo mssql-jdbc_auth-\<versión>-\<arch>.dll en un directorio de la ruta del sistema de Windows del equipo en el que esté instalado el controlador JDBC.  
   
- Los archivos sqljdbc_auth.dll se instalan en la siguiente ubicación:  
+ Los archivos mssql-jdbc_auth-\<versión>-\<arch>.dll se instalan en la siguiente ubicación:  
   
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
   
  Para cualquier sistema operativo compatible con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], consulte [Empleo de autenticación integrada de Kerberos para conectar con SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) para obtener una descripción de una característica agregada en [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] que permita a una aplicación conectarse a una base de datos con la autenticación integrada con Kerberos de tipo 4.  
   
 > [!NOTE]  
->  Si está ejecutando una máquina virtual Java de (JVM, Java Virtual Machine) 32 bits, utilice el archivo sqljdbc_auth.dll en la carpeta x86, aun cuando la versión del sistema operativo sea la x64. Si está ejecutando una JVM de 64 bits en un procesador x64, utilice el archivo sqljdbc_auth.dll de la carpeta x64.  
+>  Si ejecuta una máquina virtual Java (JVM, Java Virtual Machine) de 32 bits, use el archivo mssql-jdbc_auth-\<versión>-\<arch>.dll de la carpeta x86, incluso si la versión del sistema operativo es x64. Si ejecuta una JVM de 64 bits en un procesador x64, use el archivo mssql-jdbc_auth-\<versión>-\<arch>.dll de la carpeta x64.  
   
- También puede especificar la propiedad del sistema java.libary.path para especificar el directorio de sqljdbc_auth.dll. Por ejemplo, si el controlador JDBC está instalado en el directorio predeterminado, puede especificar la ubicación de la DLL con el siguiente argumento de máquina virtual (VM) si la aplicación de Java se ha iniciado:  
+ También puede especificar la propiedad del sistema java.libary.path para especificar el directorio de mssql-jdbc_auth-\<versión>-\<arch>.dll. Por ejemplo, si el controlador JDBC está instalado en el directorio predeterminado, puede especificar la ubicación de la DLL con el siguiente argumento de máquina virtual (VM) si la aplicación de Java se ha iniciado:  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

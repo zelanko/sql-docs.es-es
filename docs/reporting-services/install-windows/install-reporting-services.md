@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71952741"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429056"
 ---
 # <a name="install-sql-server-reporting-services"></a>Instalar SQL Server Reporting Services
 
@@ -67,7 +67,7 @@ La instalación de un servidor de informes es sencilla. Solo se necesitan unos c
 
 7. Después de una instalación correcta, seleccione **Configurar el servidor de informes** para iniciar el Administrador de configuración de Reporting Services.
 
-## <a name="configuration-your-report-server"></a>Configuración del servidor de informes
+## <a name="configure-your-report-server"></a>Configuración del servidor de informes
 
 Después de seleccionar **Configurar el servidor de informes** en el programa de instalación, aparece el **Administrador de configuración del servidor de informes**. Para más información, vea [Administrador de configuración del servidor de informes](reporting-services-configuration-manager-native-mode.md).
 

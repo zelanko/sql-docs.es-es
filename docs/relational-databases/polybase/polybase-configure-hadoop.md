@@ -9,12 +9,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1e5a45aa66d7d49f2c7499e0dcf975e5ebcb5b78
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255442"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77147416"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
 
@@ -22,7 +22,7 @@ ms.locfileid: "75255442"
 
 En el artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en Hadoop.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Si no ha instalado PolyBase, consulte [Instalación de PolyBase](polybase-installation.md). En el artículo de instalación se explican los requisitos previos.
 
@@ -40,7 +40,7 @@ En el artículo se explica cómo usar PolyBase en una instancia de SQL Server pa
   - Cloudera CDH 4.3, 5.1 - 5.5, 5.9 - 5.13 en Linux
 
 > [!NOTE]
-> PolyBase admite las zonas de cifrado de Hadoop a partir de SQL Server 2016 SP1 CU7 y SQL Server 2017 CU3. Si se utilizan [grupos de escalabilidad horizontal PolyBase](polybase-scale-out-groups.md), todos los nodos de proceso deben estar también en una compilación que incluya compatibilidad con las zonas de cifrado de Haddop.
+> PolyBase admite las zonas de cifrado de Hadoop a partir de SQL Server 2016 SP1 CU7 y SQL Server 2017 CU3. Si se usan [grupos de escalabilidad horizontal de PolyBase](polybase-scale-out-groups.md), todos los nodos de proceso deben estar también en una compilación que incluya compatibilidad con las zonas de cifrado de Hadoop.
 
 ### <a name="configure-hadoop-connectivity"></a>Configurar la conectividad de Hadoop
 
@@ -155,7 +155,7 @@ Para consultar los datos en el origen de datos de Hadoop, debe definir una tabla
 
 PolyBase es adecuado para realizar tres funciones:  
   
-- Realizar consultas ad hoc en tablas externas.  
+- Consultas ad hoc en tablas externas.  
 - Importar datos.  
 - Exportar datos.  
 

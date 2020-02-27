@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c0f9d73dace4e17d87e1c93da703786fc920b2fb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e32889ceafa78d6c6eac716fca213f17badc5cea
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70176171"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363225"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Uso de Azure Active Directory con el controlador ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "70176171"
 Microsoft ODBC Driver for SQL Server con la versión 13.1 o superior permite que las aplicaciones ODBC se conecten a una instancia de SQL Azure mediante una identidad federada en Azure Active Directory con un nombre de usuario y contraseña, un token de acceso de Azure Active Directory, una identidad de servicio administrada de Azure Active Directory o autenticación integrada de Windows (_solo controlador de Windows_). Para la versión 13.1 del controlador ODBC, la autenticación de token de acceso de Azure Active Directory es _solo Windows_. La versión 17 del controlador ODBC y versiones posteriores admiten esta autenticación en todas las plataformas (Windows, Linux y Mac). En la versión 17.1 del controlador ODBC para Windows se incluye una nueva autenticación interactiva de Azure Active Directory con el identificador de inicio de sesión. Se agregó un nuevo método de autenticación de identidad de servicio administrada de Azure Active Directory en la versión 17.3.1.1 del controlador ODBC para las identidades asignadas por el sistema y por el usuario. Todo esto se logra mediante el uso de nuevas palabras clave de cadena de conexión y DSN con atributos de conexión.
 
 > [!NOTE]
-> El controlador ODBC en Linux y macOS no admite Servicios de federación de Active Directory (AD FS). Si usa la autenticación de nombre de usuario/contraseña de Azure Active Directory desde un cliente Linux o macOS y la configuración de Active Directory incluye servicios federados, puede producirse un error de autenticación.
+> El controlador ODBC en Linux y macOS solo admite la autenticación de Azure Active Directory directamente en Azure Active Directory. Si va a usar la autenticación de nombre de usuario y contraseña de Azure Active Directory desde un cliente Linux o macOS, y la configuración de Active Directory requiere que el cliente se autentique sobre un punto de conexión de Servicios de federación de Active Directory, se puede producir un error en la autenticación.
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>Palabras clave de cadena de conexión y DSN nuevas y/o modificadas
 

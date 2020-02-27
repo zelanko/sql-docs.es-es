@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558062"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256658"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server (CEIP)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75558062"
 
 Microsoft SQL Server contiene características habilitadas para Internet que pueden recopilar y enviar información sobre el equipo o dispositivo. Esto se denomina *información estándar del equipo*. El componente de auditoría local de [recopilación de datos de uso y diagnóstico de SQL Server](usage-and-diagnostic-data-configuration-for-sql-server.md) escribe los datos que recopila el servicio en una carpeta designada y que representa los datos (registros) que se enviarán a Microsoft. El propósito de la auditoría local es permitir que los clientes vean todos los datos que Microsoft recopila con esta característica, por motivos de cumplimiento, reglamentarios o por validación de privacidad.  
 
-A partir de SQL Server 2016 CU2, la auditoría local se puede configurar al nivel de instancia para Motor de base de datos de SQL Server y Analysis Services (SSAS). En SQL Server 2016 CU4 y SQL Server 2016 SP1, la auditoría local también está habilitada para SQL Server Integration Services (SSIS). Otros componentes de SQL Server que se instalan durante la configuración y herramientas de SQL Server que se descargan o instalan después de la configuración no cuentan con la funcionalidad de auditoría local para la recopilación de datos de uso y diagnóstico.
+A partir de SQL Server 2016 CU2 y CU3, la auditoría local se puede configurar en el nivel de instancia para Motor de base de datos de SQL Server y Analysis Services (SSAS). En SQL Server 2016 CU4, 2016 SP1 y versiones posteriores, la auditoría local también está habilitada para SQL Server Integration Services (SSIS). Otros componentes de SQL Server que se instalan durante la configuración y herramientas de SQL Server que se descargan o instalan después de la configuración no cuentan con la funcionalidad de auditoría local para la recopilación de datos de uso y diagnóstico.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -38,11 +38,11 @@ A partir de SQL Server 2016 CU2, la auditoría local se puede configurar al niv
 
 Para no participar en la recopilación de datos, vea [Activar o desactivar la auditoría local](#turning-local-audit-on-or-off).
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Prerrequisitos 
 
 A continuación, aparecen los requisitos previos para habilitar la auditoría local en cada instancia de SQL Server: 
 
-1. La instancia aplica una revisión a SQL Server 2016 RTM CU2 o a una versión posterior. En el caso de Integration Services, la revisión de la instancia se aplica a SQL 2016 RTM CU4 o a SQL 2016 SP1
+1. La instancia aplica una revisión a SQL Server 2016 RTM CU2 o a una versión posterior. En el caso de Integration Services, la revisión de la instancia se aplica a SQL 2016 RTM CU4, SQL 2016 SP1 o versiones posteriores.
 
 1. El usuario debe ser un administrador del sistema o debe tener un rol con acceso para agregar y modificar una clave del Registro, crear carpetas, administrar la seguridad de las carpetas y detener e iniciar un servicio de Windows.  
 
@@ -320,7 +320,7 @@ Estos archivos de registro están escritos en formato JSON. Cada línea será un
 No se escribirá ningún archivo de auditoría local.
 
 **¿Qué ocurre si no hay conectividad a Internet o si la máquina está detrás de un firewall?**
-No se enviarán comentarios sobre los datos de uso y diagnóstico de SQL Server 2016 a Microsoft. De todos modos, se intentarían escribir los registros de Auditoría local si la configuración es correcta.
+No se enviarán datos de uso y diagnóstico de SQL Server a Microsoft. De todos modos, se intentarían escribir los registros de Auditoría local si la configuración es correcta.
 
 **¿De qué manera los administradores de bases de datos deshabilitan la auditoría local?**
 Deshabilitan la entrada de la clave del Registro UserRequestedLocalAuditDirectory.
@@ -333,7 +333,7 @@ Los administradores de bases de datos deberán administrar automáticamente la l
 
 **¿Existe algún cliente o herramienta que se pueda usar para leer esta salida JSON?**
 Es posible leer la entrada con el Bloc de notas, Visual Studio o cualquier lector de JSON de su preferencia.
-De manera alternativa, puede leer el archivo JSON y analizar los datos de una instancia de SQL Server 2016 como se muestra a continuación. Para más detalles sobre cómo leer un archivo JSON en SQL Server, visite [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importación de archivos JSON a SQL Server con OPENROWSET [BULK] y OPENJSON [Transact-SQL]).
+Como alternativa, puede leer el archivo JSON y analizar los datos de una instancia de SQL Server como se muestra a continuación. Para más detalles sobre cómo leer un archivo JSON en SQL Server, visite [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importación de archivos JSON a SQL Server con OPENROWSET [BULK] y OPENJSON [Transact-SQL]).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251198"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173608"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar Azure Kubernetes Service para implementaciones de clúster de macrodatos de SQL Server
 
@@ -30,7 +30,7 @@ En este artículo, se describen los pasos para implementar Kubernetes en AKS con
 > [!TIP]
 > También puede crear un script de la implementación de AKS y un clúster de macrodatos en un único paso. Para obtener más información, vea cómo realizar este procedimiento en un [script de Python](quickstart-big-data-cluster-deploy.md) o en un [cuaderno](deploy-notebooks.md) de Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - [Implementar las herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md):
    - **Kubectl**
@@ -68,6 +68,12 @@ Un grupo de recursos de Azure es un grupo lógico en el que se implementan y adm
 
    ```azurecli
    az account set --subscription <subscription id>
+   ```
+
+1. Use este comando para identificar la región de Azure en la que quiere implementar el clúster y los recursos:
+
+   ```azurecli
+   az account list-locations -o table
    ```
 
 1. Para crear un grupo de recursos, use el comando **az group create**. En el ejemplo siguiente, se crea un grupo de recursos denominado `sqlbdcgroup` en la ubicación `westus2`.
@@ -132,7 +138,7 @@ Seleccione la versión disponible más reciente para el clúster. Anote el núme
    --kubernetes-version <version number>
    ```
 
-   Puede incrementar o disminuir el número de nodos del agente de Kubernetes; para hacerlo, cambie `--node-count <n>`, donde `<n>` es el número de nodos de agente que quiere usar. Esto no incluye el nodo de Kubernetes maestro, que se administra en segundo plano mediante AKS. En el ejemplo anterior, se usa un solo nodo con fines de evaluación.
+   Puede incrementar o disminuir el número de nodos del agente de Kubernetes; para hacerlo, cambie `--node-count <n>`, donde `<n>` es el número de nodos de agente que quiere usar. Esto no incluye el nodo de Kubernetes maestro, que se administra en segundo plano mediante AKS. En el ejemplo anterior, se usa un solo nodo con fines de evaluación. También puede cambiar el valor `--node-vm-size` para seleccionar un tamaño de máquina virtual adecuado que coincida con los requisitos de la carga de trabajo. Use el comando `az vm list-sizes --location westus2 -o table` para enumerar los tamaños de máquina virtual disponibles en la región.
 
    En unos minutos, terminará de ejecutarse el comando, que devuelve información con formato JSON sobre el clúster.
 
@@ -161,6 +167,7 @@ Si tiene problemas para crear una instancia de Azure Kubernetes Service con los 
 
 - Asegúrese de que ha instalado la versión más reciente de la [CLI de Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Pruebe los mismos pasos con otro grupo de recursos y nombre de clúster.
+- Vea la [documentación de solución de problemas de AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

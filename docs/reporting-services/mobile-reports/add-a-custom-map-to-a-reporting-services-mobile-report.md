@@ -1,6 +1,6 @@
 ---
 title: Agregar un mapa personalizado a un informe de Reporting Services móvil | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9410aac6b74fbb515010517a2fe0667f3c197802
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63141257"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971407"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Agregar un mapa personalizado a un informe de Reporting Services móvil
 Los mapas personalizados requieren dos archivos:  
@@ -22,11 +22,11 @@ Los mapas personalizados requieren dos archivos:
   
 Obtenga más información sobre los [Mapas personalizados en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).  
   
-Almacene ambos archivos en la misma carpeta. Los nombres de los dos archivos deben coincidir (por ejemplo, canada.shp y canada.dbf). Los metadatos (archivo DBF) deben incluir el campo "NAME" con el valor del nombre de la forma correspondiente (clave), que se usará para rellenar el mapa con datos.   
+Almacene ambos archivos en la misma carpeta. Los nombres de los dos archivos deben coincidir (por ejemplo, canada.shp y canada.dbf). La primera columna de metadatos (archivo DBF) se usa para comparar con el valor de clave del nombre de la forma correspondiente (clave), que se usará para rellenar el mapa con datos.
   
 ## <a name="load-a-custom-map"></a>Cargar un mapa personalizado  
   
-1. En la pestaña **Diseño** , seleccione un tipo de mapa: **Gradient Heat Map**(Mapa térmico de degradado), **Range Stop Heat Map**(Mapa térmico de umbrales de rangos) or **Bubble Map**(Mapa de burbujas), arrástrelo a la superficie de diseño y desígnele el tamaño que desee.  
+1. En la pestaña **Diseño**, seleccione un tipo de mapa: **Mapa término degradado**, **Mapa térmico de detención de rango** o **Mapa de burbujas**, arrástrelo a la superficie de diseño y desígnele el tamaño que desee.  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 149e83acd2a8e0e6d3022d74f929584190c91374
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68118471"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479674"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,11 @@ ms.locfileid: "68118471"
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC3_CHECK_CATALOG|  
-|Texto del mensaje|Mensaje de comprobación del catálogo ERROR nivel LEVEL estado STATE: MESSAGE.|  
-  
+|Texto del mensaje|Mensaje de comprobación del catálogo ERROR, nivel LEVEL, estado STATE: MESSAGE.|  
+
+> [!NOTE]
+> El mensaje de error 8992 hace referencia a otro mensaje específico (entre 3851 y 3858) sobre la incoherencia real.
+
 ## <a name="explanation"></a>Explicación  
 DBCC CHECKCATALOG o DBCC CHECKDB encontró una incoherencia en las tablas de metadatos de sistema para el objeto especificado. Es decir, hay una incoherencia entre el identificador de objeto registrado y el objeto especificado en el mensaje de error.  
   
@@ -40,23 +43,18 @@ Este error se puede producir cuando una o más tablas del sistema se han actuali
 Este error se puede producir al ejecutar DBCC CHECKDB contra una base de datos actualizada de SQL Server 2000 a SQL Server 2005 o posterior. En SQL Server 2000, DBCC CHECKDB no incluía la funcionalidad de DBCC CHECKCATALOG, de modo que el error no se detectara antes de la actualización a menos que DBCC CHECKCATALOG se ejecutara específicamente contra la base de datos en SQL Server 2000.  
   
 Puede ver alguno de los errores siguientes junto con el error 8992:  
-  
-Msg 3851 - Se encontró una fila no válida (%ls) en la tabla del sistema sys.%ls%ls.  
-  
-Msg 3852 - La fila (%ls) de sys.%ls%ls no tiene una fila coincidente (%ls) en sys.%ls%ls.  
-  
-3853 - El atributo (%ls) de la fila (%ls) de sys.%ls%ls no tiene una fila coincidente (%ls) en sys.%ls%ls.  
-  
-3854 - El atributo (%ls) de la fila (%ls) de sys.%ls%ls tiene una fila coincidente (%ls) en sys.%ls%ls que no es válida.  
-  
-3855 - El atributo (%ls) existe sin una fila (%ls) in sys.%ls%ls.  
-  
-3856 - El atributo (%ls) existe (aunque no debería) para una fila (%ls) de sys.%ls%ls.  
-  
-3857 - El atributo (%ls) requerido falta en una fila (%ls) de sys.%ls%ls.  
-  
-3858 - El atributo (%ls) de la fila (%ls) de sys.%ls%ls tiene un valor no válido.  
-  
+|||
+|-|-| 
+|Id. del mensaje|Texto del mensaje|
+|3851|Se encontró una fila no válida (%ls) en la tabla del sistema sys.%ls%ls.|
+|3852|La fila (%ls) de sys.%ls%ls no tiene una fila coincidente (%ls) en sys.%ls%ls.|
+|3853|El atributo (%ls) de la fila (%ls) de sys.%ls%ls no tiene una fila coincidente (%ls) en sys.%ls%ls.|
+|3854|El atributo (%ls) de la fila (%ls) de sys.%ls%ls tiene una fila coincidente (%ls) en sys.%ls%ls que no es válida.|
+|3855|El atributo (%ls) existe sin una fila (%ls) in sys.%ls%ls.|
+|3856|El atributo (%ls) existe (aunque no debería) para una fila (%ls) de sys.%ls%ls.|
+|3857|El atributo (%ls) requerido falta en una fila (%ls) de sys.%ls%ls.|
+|3858|El atributo (%ls) de la fila (%ls) de sys.%ls%ls tiene un valor no válido.|
+
 ## <a name="user-action"></a>Acción del usuario  
   
 ### <a name="drop-and-re-create-the-specified-object"></a>Quite y vuelva a crear el objeto especificado  
@@ -72,8 +70,22 @@ Si la copia de seguridad también contiene la incoherencia de metadatos, debe cr
 Este error no se puede reparar.  Si no puede restaurar la base de datos a partir de una copia de seguridad, póngase en contacto con el servicio de soporte técnico y atención al cliente (CSS) de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 ### <a name="do-not-manually-update-system-tables"></a>No actualice manualmente las tablas del sistema  
-No realice actualizaciones manuales de las tablas del sistema. SQL Server no admite los cambios manuales en las bases de datos del sistema. Si actualiza una tabla del sistema de una base de datos de SQL Server, se registran dos eventos (identificadores de evento 17659 y 3859). Para obtener más información, vea el artículo 2688307 de KB, "Se registran los identificadores de evento 17659 y 3859 al actualizar tablas del sistema en una base de datos de SQL Server".  
-  
-## <a name="see-also"></a>Consulte también  
-[Se registran los identificadores de evento 17659 y 3859 al actualizar tablas del sistema en una base de datos de SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
+
+No realice actualizaciones manuales de las tablas del sistema. SQL Server no admite los cambios manuales en las bases de datos del sistema. Si actualiza una tabla del sistema de una base de datos de SQL Server, se registran los eventos siguientes:
+
+#### <a name="when-a-system-table-is-manually-updated"></a>Cuando se actualiza manualmente una tabla del sistema
+
+Mensaje 17659: Advertencia: Se ha actualizado la tabla del sistema con id. <id> directamente en la base de datos con id. <id> y es posible que no se haya mantenido la coherencia de la caché. Debe reiniciar SQL Server.
+
+#### <a name="starting-a-database-with-a-system-table-that-was-manually-updated"></a>Inicio de una base de datos con una tabla del sistema que se ha actualizado manualmente
+
+Mensaje 3859: Advertencia: El catálogo del sistema se ha actualizado directamente en la base de datos con id. <id>, la última vez a las date_time
+
+#### <a name="when-you-execute-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>cuando se ejecuta el comando DBCC_CHECKDB después de actualizar manualmente una tabla del sistema
+
+Mensaje 3859: Advertencia: El catálogo del sistema se ha actualizado directamente en la base de datos con id. <id>, la última vez a las date_time.  
+
+## <a name="see-also"></a>Consulte también
+
+[Tablas base del sistema](../system-tables/system-base-tables.md)
   

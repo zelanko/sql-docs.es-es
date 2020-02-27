@@ -5,16 +5,16 @@ description: Aprenda a actualizar clústeres de macrodatos de SQL Server a una 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75831833"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256882"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Cómo actualizar los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -76,7 +76,7 @@ En esta sección se explica cómo actualizar un clúster de macrodatos de SQL S
 >Las etiquetas de imagen más recientes están disponibles en las [notas de la versión de los Clústeres de macrodatos de SQL Server 2019](release-notes-big-data-cluster.md).
 
 >[!IMPORTANT]
->Si usa un repositorio privado para extraer previamente las imágenes para implementar o actualizar BDC, asegúrese de que las imágenes de compilación actuales, así como las imágenes de compilación de destino se encuentran en el repositorio privado. Esto permite una reversión correcta, si es necesario. Además, si cambió las credenciales del repositorio privado desde la implementación original, actualice el secreto correspondiente en Kubernetes antes de la actualización. No se admite la actualización de las credenciales a través de las variables de entorno DOCKER_PASSWORD y DOCKER_USERNAME. Actualice el secreto mediante [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). No se admite la actualización mediante distintos repositorios privados para compilaciones actuales y de destino.
+>Si usa un repositorio privado para extraer previamente las imágenes para implementar o actualizar BDC, asegúrese de que las imágenes de compilación actuales, así como las imágenes de compilación de destino se encuentran en el repositorio privado. Esto permite una reversión correcta, si es necesario. Además, si ha cambiado las >credenciales del repositorio privado desde la implementación original, actualice las variables de entorno DOCKER_PASSWORD y >DOCKER_USERNAME correspondientes. No se admite la actualización mediante distintos repositorios privados para compilaciones actuales y de destino.
 
 ### <a name="increase-the-timeout-for-the-upgrade"></a>Aumento del tiempo de espera de la actualización
 
@@ -93,7 +93,15 @@ Se puede producir un tiempo de espera si no se actualizan determinados component
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-Para aumentar los tiempos de espera de una actualización, edite la asignación de configuración de la actualización. Para editar la asignación de configuración de la actualización:
+Para aumentar los tiempos de expiración de una actualización, use los parámetros **--controller-timeout** y **--component-timeout** para especificar valores más altos al emitir la actualización. Esta opción solo está disponible a partir de la versión SQL Server 2019 CU2. Por ejemplo:
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+**--controller-timeout** designa el número de minutos que se esperará a que finalice la actualización del controlador o de la base de datos del controlador.
+**--component-timeout** designa la cantidad de tiempo en que se debe completar cada fase posterior de la actualización.
+
+Para aumentar los tiempos de espera de una actualización antes de la versión SQL Server 2019 CU2, edite la asignación de configuración de la actualización. Para editar la asignación de configuración de la actualización:
 
 Ejecute el siguiente comando:
 

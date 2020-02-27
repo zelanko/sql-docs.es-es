@@ -1,5 +1,5 @@
 ---
-title: Referencia de funciones de agregado (Generador de informes y SSRS) | Microsoft Docs
+title: Referencia de funciones de agregado (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243f895c22621c3f83fab38a5bab47d1f7b7b490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893762"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081318"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funciones del Generador de informes: referencia de funciones de agregado
   Para incluir valores de agregado en un informe, puede utilizar las funciones de agregado integradas en las expresiones. La función de agregado predeterminada para los campos numéricos es SUM. Puede modificar la expresión y utilizar una función de agregado integrada diferente o especificar un ámbito diferente. El ámbito identifica qué conjunto de datos utilizar para el cálculo.  
@@ -72,18 +72,18 @@ ms.locfileid: "68893762"
 |Ubicación en informe|Fields|Parámetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Encabezado de página<br /><br /> Pie de página|Sí|Sí|A lo sumo uno<br /><br /> Nota 1|Sí|Sí|Sí|Sí|  
-|Body|Sí<br /><br /> Nota 2|Sí|Solo los elementos del ámbito actual o de un ámbito que lo contenga<br /><br /> Nota 3|No|Sí|Sí|Sí|  
-|Parámetro de informe|No|Solo los parámetros anteriores en la lista<br /><br /> Nota 4|No|No|No|No|No|  
-|Campo|Sí|Sí|No|No|No|No|No|  
-|Parámetro de consulta|No|Sí|No|No|No|No|No|  
-|Expresión de grupo|Sí|Sí|No|No|Sí|No|No|  
-|Expresión de ordenación|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 5|No|  
-|Expresión de filtro|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 6|No|  
-|Código|No|Sí<br /><br /> Nota 7|No|No|No|No|No|  
-|Idioma de los informes|No|Sí|No|No|No|No|No|  
-|variables|Sí|Sí|No|No|Sí|Ámbito actual o que lo contiene|No|  
-|Agregados|Sí|Sí|Solo en encabezado de página o pie de página|Solo en agregados de elementos de informe|Sí|No|No|  
-|Funciones de búsqueda|Sí|Sí|Sí|No|Sí|No|No|  
+|Body|Sí<br /><br /> Nota 2|Sí|Solo los elementos del ámbito actual o de un ámbito que lo contenga<br /><br /> Nota 3|Sin|Sí|Sí|Sí|  
+|Parámetro de informe|Sin|Solo los parámetros anteriores en la lista<br /><br /> Nota 4|Sin|Sin|Sin|Sin|Sin|  
+|Campo|Sí|Sí|Sin|Sin|Sin|Sin|Sin|  
+|Parámetro de consulta|Sin|Sí|Sin|Sin|Sin|Sin|Sin|  
+|Expresión de grupo|Sí|Sí|Sin|Sin|Sí|Sin|Sin|  
+|Expresión de ordenación|Sí|Sí|Sin|Sin|Sí|Sí<br /><br /> Nota 5|Sin|  
+|Expresión de filtro|Sí|Sí|Sin|Sin|Sí|Sí<br /><br /> Nota 6|Sin|  
+|Código|Sin|Sí<br /><br /> Nota 7|Sin|Sin|Sin|Sin|Sin|  
+|Idioma de los informes|Sin|Sí|Sin|Sin|Sin|Sin|Sin|  
+|variables|Sí|Sí|Sin|Sin|Sí|Ámbito actual o que lo contiene|Sin|  
+|Agregados|Sí|Sí|Solo en encabezado de página o pie de página|Solo en agregados de elementos de informe|Sí|Sin|Sin|  
+|Funciones de búsqueda|Sí|Sí|Sí|Sin|Sí|Sin|Sin|  
   
 -   **Nota 1.** ReportItems debe existir en la página del informe representado o su valor es Null. Si la visibilidad de un elemento de informe depende de una expresión que se evalúa como False, el elemento de informe no existe en la página.  
   
@@ -108,13 +108,13 @@ ms.locfileid: "68893762"
   
 |Context|RunningValue|RowNumber|Primero<br /><br /> Último|Previous|Funciones de suma y otras de ordenación previa|Agregados ReportItem|Funciones de búsqueda|Función de agregado|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valor actual|No|No|No|No|Sí|No|Sí|No|  
-|Primero<br /><br /> Último|No|No|No|No|Sí|No|No|No|  
-|Previous|Sí|Sí|Sí|No|Sí|No|Sí|No|  
-|Funciones de suma y otras de ordenación previa|No|No|No|No|Sí|No|Sí|No|  
-|Agregados ReportItem|No|No|No|No|No|No|No|No|  
-|Funciones de búsqueda|Sí|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|No|No|  
-|Función de agregado|No|No|No|No|No|No|No|No|  
+|Valor actual|Sin|Sin|Sin|Sin|Sí|Sin|Sí|Sin|  
+|Primero<br /><br /> Último|Sin|Sin|Sin|Sin|Sí|Sin|Sin|Sin|  
+|Previous|Sí|Sí|Sí|Sin|Sí|Sin|Sí|Sin|  
+|Funciones de suma y otras de ordenación previa|Sin|Sin|Sin|Sin|Sí|Sin|Sí|Sin|  
+|Agregados ReportItem|Sin|Sin|Sin|Sin|Sin|Sin|Sin|Sin|  
+|Funciones de búsqueda|Sí|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sin|Sin|  
+|Función de agregado|Sin|Sin|Sin|Sin|Sin|Sin|Sin|Sin|  
   
 -   **Nota 1.** Las funciones de agregado solo se permiten dentro de la expresión *Source* de una función de búsqueda si la función de búsqueda no está contenida en un agregado. Las funciones de agregado no se permiten dentro de las expresiones *Destination* o *Result* de una función Lookup.  
   

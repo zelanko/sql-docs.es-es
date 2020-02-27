@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906831"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179276"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -41,7 +41,7 @@ Para cambiar el nivel de compatibilidad de una base de datos, vea [Ver o cambiar
   
 ## <a name="syntax"></a>Sintaxis  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
 
@@ -62,6 +62,8 @@ Devuelve una tabla de una sola columna cuyas filas son las subcadenas. El nombre
 **STRING_SPLIT** introduce una cadena que tiene subcadenas delimitadas y un carácter que se usará como el delimitador o el separador. STRING_SPLIT da como resultado una tabla de una sola columna cuyas filas contienen las subcadenas. El nombre de la columna de resultados es **value**.
 
 Las filas de salida pueden estar en cualquier orden. _No_ se garantiza que el orden coincida con el de las subcadenas de la cadena de entrada. Puede invalidar el orden final usando una cláusula ORDER BY en la instrucción SELECT (`ORDER BY value`).
+
+0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en STRING_SPLIT.
 
 Las subcadenas vacías de longitud cero están presentes cuando la cadena de entrada contiene dos o más repeticiones consecutivas del carácter delimitador. Las subcadenas vacías se tratan de la misma forma que las subcadenas sin formato. Puede filtrar las filas que contienen la subcadena vacía usando la cláusula WHERE (`WHERE value <> ''`). Si la cadena de entrada es NULL, la función con valores de tabla STRING_SPLIT devuelve una tabla vacía.  
 

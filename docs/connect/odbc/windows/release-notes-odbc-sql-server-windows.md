@@ -11,18 +11,18 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 76ffaac48e8af454e887fd4fd30540eed4c4b453
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910932"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173518"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notas de la versión de ODBC a SQL Server en Windows
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-En este artículo de notas de la versión se describen las novedades de Microsoft ODBC Driver para SQL Server en Windows.
+En este artículo sobre notas de la versión se describen las novedades de Microsoft ODBC Driver para SQL Server en Windows.
 
 <!--
 PLEASE USE THE STANDARD 2-COLUMN TABLE FORMAT!

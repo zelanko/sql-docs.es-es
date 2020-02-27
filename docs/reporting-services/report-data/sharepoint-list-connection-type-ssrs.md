@@ -1,5 +1,5 @@
 ---
-title: Tipo de conexión de lista de SharePoint (SSRS) | Microsoft Docs
+title: Tipo de conexión de lista de SharePoint | Microsoft Docs
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 43f726dbddb9b9f3737a92a82987dc3832182d49
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4822b70912e847a2cc03a951468171d76ae63597
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190693"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081390"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
 
@@ -42,9 +42,9 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|No|  
-|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|Sin|  
+|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sin<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|Sin<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
   
  *Autenticación de Windows, Autenticación basada en formularios (FBA), tokens de Secure Application Markup Language (SAML), otros proveedores de identidad o una combinación de más de uno de los proveedores de autenticación mencionados anteriormente.  
   
@@ -53,9 +53,9 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|No|No|  
-|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|No|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sin|Sin|  
+|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sin<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sin|Sin<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
   
  *Autenticación de Windows, Autenticación basada en formularios (FBA), tokens de Secure Application Markup Language (SAML), otros proveedores de identidad o una combinación de más de uno de los proveedores de autenticación mencionados anteriormente.  
   

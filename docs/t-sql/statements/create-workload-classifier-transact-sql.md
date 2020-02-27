@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831612"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429036"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -144,13 +144,13 @@ Una solicitud puede coincidir con varios clasificadores.  Existe una ponderació
 Tenga en cuenta las siguientes configuraciones de clasificador.
 
 ```sql
-CREATE WORKLOAD CLASSIFIER classiferA WITH  
+CREATE WORKLOAD CLASSIFIER classifierA WITH  
 ( WORKLOAD_GROUP = 'wgDashboards'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = HIGH
  ,WLM_LABEL      = 'salereport' )
 
-CREATE WORKLOAD CLASSIFIER classiferB WITH  
+CREATE WORKLOAD CLASSIFIER classifierB WITH  
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
@@ -158,7 +158,7 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
  ,END_TIME       = '07:00' )
 ```
 
-El `userloginA` del usuario está configurado para ambos clasificadores.  Si userloginA ejecuta una consulta con una etiqueta igual a `salesreport` entre las 18:00 y las 07:00 UTC, la solicitud se clasificará en el grupo de cargas de trabajo wgDashboards con importancia ALTA.  Puede que la expectativa fuese clasificar la solicitud en wgUserQueries con importancia BAJA para los informes fuera de las horas de trabajo, pero el peso de WLM_LABEL es superior a START_TIME/END_TIME.  La ponderación de classiferA es 80 (64 para el usuario, más 16 para WLM_LABEL).  La ponderación de classifierB es 68 (64 para el usuario, 4 para START_TIME/END_TIME).  En este caso, puede agregar WLM_LABEL a classiferB.
+El `userloginA` del usuario está configurado para ambos clasificadores.  Si userloginA ejecuta una consulta con una etiqueta igual a `salesreport` entre las 18:00 y las 07:00 UTC, la solicitud se clasificará en el grupo de cargas de trabajo wgDashboards con importancia ALTA.  Puede que la expectativa fuese clasificar la solicitud en wgUserQueries con importancia BAJA para los informes fuera de las horas de trabajo, pero el peso de WLM_LABEL es superior a START_TIME/END_TIME.  La ponderación de classifierA es 80 (64 para el usuario, más 16 para WLM_LABEL).  La ponderación de classifierB es 68 (64 para el usuario, 4 para START_TIME/END_TIME).  En este caso, puede agregar WLM_LABEL a classifierB.
 
  Para obtener más información, vea la [ponderación de las cargas de trabajo](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 

@@ -10,14 +10,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/06/2019
+ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f4aaea790cf1e308b0675792b110ed129a55ed97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3f457b485994d2619e68b4315a308e66a05715cb
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76516270"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051675"
 ---
 # <a name="sql-tools-overview"></a>Información general de las herramientas de SQL
 
@@ -47,13 +47,13 @@ Las herramientas siguientes son las herramientas principales de la línea de com
 
 | Herramienta | Descripción | Sistema operativo |
 |:--|:--|:--|
+|[**bcp**](bcp-utility.md)|La utilidad de **p**rograma **d**e **p**copia masiva (**bcp**) hace copias masivas de los datos entre una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y un archivo de datos en un formato especificado por el usuario.| **Windows</br>macOS</br>Linux** |
 |[**mssql-cli (preview)** ](mssql-cli.md)|**mssql-cli** es una herramienta de línea de comandos interactiva para consultar SQL Server. Además, consulte SQL Server con una herramienta de línea de comandos que incluye IntelliSense, el resaltado de la sintaxis y mucho más. | **Windows</br>macOS</br>Linux** |
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** configura SQL Server que se ejecutan en Linux. | **Linux** |
+|[**mssql-scripter (versión preliminar)** ](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** es una experiencia de línea de comandos multiplataforma para la generación de scripts de bases de datos de SQL Server. | **Windows</br>macOS</br>Linux** |
+| [**sqlcmd**](sqlcmd-utility.md) |La utilidad **sqlcmd** le permite insertar instrucciones Transact-SQL, procedimientos del sistema y archivos de script en el símbolo del sistema. | **Windows</br>macOS</br>Linux** |
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** es una utilidad de línea de comandos que automatiza las tareas de desarrollo de base de datos siguientes. |**Windows</br>macOS</br>Linux** |
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** proporciona cmdlets para trabajar con SQL. | **Windows</br>macOS</br>Linux** |
-| [**sqlcmd**](sqlcmd-utility.md) |La utilidad **sqlcmd** le permite insertar instrucciones Transact-SQL, procedimientos del sistema y archivos de script en el símbolo del sistema. | **Windows</br>macOS</br>Linux** |
-|[**bcp**](bcp-utility.md)|La utilidad de **p**rograma **d**e **p**copia masiva (**bcp**) hace copias masivas de los datos entre una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y un archivo de datos en un formato especificado por el usuario.| **Windows</br>macOS</br>Linux** |
-|[**mssql-scripter (versión preliminar)** ](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** es una experiencia de línea de comandos multiplataforma para la generación de scripts de bases de datos de SQL Server. | **Windows</br>macOS</br>Linux** |
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** configura SQL Server que se ejecutan en Linux. | **Linux** |
 
 ## <a name="migration-and-other-tools"></a>Migración y otras herramientas
 
@@ -62,9 +62,10 @@ Estas herramientas se usan para migrar, configurar y proporcionar otras caracter
 | Herramienta | Descripción |
 |:--|:--|
 | **[Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | Use el Administrador de configuración de SQL Server para configurar los servicios de SQL Server y la conectividad de red. Configuration Manager se ejecuta en Windows|
-| **[SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)** | Use Microsoft SQL Server Migration Assistant para automatizar la migración de bases de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y Sybase.|
 | **[Asistente para experimentación con bases de datos](../dea/database-experimentation-assistant-overview.md)** | Use Asistente para experimentación con bases de datos para evaluar una versión de destino de SQL para una carga de trabajo determinada. |
+| **[Data Migration Assistant](../dma/dma-overview.md)** | La herramienta Data Migration Assistant ayuda a actualizar a una plataforma de datos moderna mediante la detección de problemas de compatibilidad que pueden afectar a la funcionalidad de la versión nueva de SQL Server o Azure SQL Database. |
 | **[Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)** | Use la característica Distributed Replay para ayudarlo a evaluar el impacto de la actualizaciones futuras de SQL Server. Utilice también Distributed Replay para ayudar a evaluar el impacto de las actualizaciones de hardware y del sistema operativo y la optimización de SQL Server. |
 | **[ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)** | La utilidad ssbdiagnose informa de la existencia de problemas en las conversaciones de Service Broker o en la configuración de los servicios de Service Broker. |
+| **[SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)** | Use Microsoft SQL Server Migration Assistant para automatizar la migración de bases de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y Sybase.|
 
-Si busca herramientas adicionales que no se mencionan en esta página, consulte [Utilidades del símbolo del sistema de SQL](command-prompt-utility-reference-database-engine.md).
+Si busca herramientas adicionales que no se mencionan en esta página, vea [Utilidades del símbolo del sistema de SQL](command-prompt-utility-reference-database-engine.md) y [Descarga de características y herramientas extendidas de SQL Server](download-sql-feature-packs.md)

@@ -1,7 +1,7 @@
 ---
 title: Conexión mediante autenticación de Azure Active Directory | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7019efd6e1071624eb3e89873918fb9eb2775833
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028121"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004645"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conexión mediante autenticación de Azure Active Directory
 
@@ -30,7 +30,7 @@ Las propiedades de conexión para admitir la autenticación de Azure Active Dire
     * **ActiveDirectoryMSI**
         * Compatible desde la versión **v7.2** del controlador, `authentication=ActiveDirectoryMSI` se puede usar para conectarse a Azure SQL Database/Data Warehouse desde dentro de un recurso de Azure con la compatibilidad con "Identidad" habilitada. Opcionalmente, **msiClientId** también se puede especificar en las propiedades de conexión/origen de datos junto con su modo de autenticación, que debe contener el identificador de cliente de una identidad de servicio administrada que se va a usar para adquirir el **accessToken** para establecer la conexión.
     * **ActiveDirectoryIntegrated**
-        * Compatible desde la versión **v6.0** del controlador, `authentication=ActiveDirectoryIntegrated` se puede usar para conectarse con Azure SQL Database/Data Warehouse mediante la autenticación integrada. Para usar este modo de autenticación, debe federar los Servicios de federación de Active Directory (ADFS) locales con Azure Active Directory en la nube. Una vez realizada la configuración, puede conectarse agregando la biblioteca nativa 'sqljdbc_auth.dll' a la ruta de acceso de clase de aplicación del sistema operativo Windows, o bien configurando un vale Kerberos para la compatibilidad con la autenticación multiplataforma. Podrá obtener acceso a Azure SQL DB/DW sin que se le soliciten credenciales al iniciar sesión en una máquina unida al dominio.
+        * Compatible desde la versión **v6.0** del controlador, `authentication=ActiveDirectoryIntegrated` se puede usar para conectarse con Azure SQL Database/Data Warehouse mediante la autenticación integrada. Para usar este modo de autenticación, debe federar los Servicios de federación de Active Directory (ADFS) locales con Azure Active Directory en la nube. Una vez realizada la configuración, puede conectarse si agrega la biblioteca nativa "mssql-jdbc_auth-\<versión>-\<arch>.dll" a la ruta de acceso de clase de aplicación del sistema operativo Windows, o bien si configura un vale Kerberos para la compatibilidad con la autenticación multiplataforma. Podrá obtener acceso a Azure SQL DB/DW sin que se le soliciten credenciales al iniciar sesión en una máquina unida al dominio.
     * **ActiveDirectoryPassword**
         * Compatible desde la versión **v6.0** del controlador, `authentication=ActiveDirectoryPassword` se puede usar para conectarse con Azure SQL Database/Data Warehouse mediante un nombre de entidad de seguridad de AD y una contraseña.
     * **SqlPassword**
@@ -107,7 +107,7 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Conexión con el modo de autenticación ActiveDirectoryIntegrated
 Con la versión 6.4, el controlador JDBC de Microsoft agrega compatibilidad con la autenticación ActiveDirectoryIntegrated mediante un vale Kerberos en varias plataformas (Windows, Linux y macOS).
-Para obtener más información, consulte [Establecimiento del vale Kerberos en Windows, Linux y Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) para más detalles. Como alternativa, en Windows, sqljdbc_auth.dll también se puede usar para la autenticación ActiveDirectoryIntegrated con el controlador JDBC.
+Para obtener más información, consulte [Establecimiento del vale Kerberos en Windows, Linux y Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) para más detalles. Como alternativa, en Windows también se puede usar mssql-jdbc_auth-\<versión>-\<arch>.dll para la autenticación ActiveDirectoryIntegrated con el controlador JDBC.
 
 > [!NOTE]
 >  Si usa una versión anterior del controlador, compruebe este [vínculo](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) para las dependencias correspondientes necesarias para usar este modo de autenticación. 

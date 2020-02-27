@@ -1,5 +1,5 @@
 ---
-title: Controlar saltos de página, encabezados, columnas y filas (Generador de informes y SSRS) | Microsoft Docs
+title: Control de saltos de página, encabezados, columnas y filas (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 321f6949208bbf73a3f6750806812f8d08ceae46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2199d84efbf16b2f9a21ca48b523215749ffc488
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65572288"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082302"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controlar saltos de página, encabezados, columnas y filas (Generador de informes y SSRS)
   Un salto de página divide un informe en páginas independientes que se pueden ver e imprimir. Los saltos de página determinan cómo se ajusta el contenido a una página del informe para su vista óptima al ofrecer una vista previa de un informe o exportarlo a un formato de archivo diferente.  

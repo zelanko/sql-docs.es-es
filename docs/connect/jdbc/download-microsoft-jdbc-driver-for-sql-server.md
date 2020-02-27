@@ -1,7 +1,7 @@
 ---
 title: Descarga de Microsoft JDBC Driver para SQL Server
 description: Descargue Microsoft JDBC Driver para SQL Server para desarrollar aplicaciones Java que se conecten a SQL Server.
-ms.date: 09/30/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dc273bccf054408f48e7bb2bd0409a31bb18bd18
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fcf034b332494750885d4808b54c9cb62c37077c
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71682009"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77013120"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Descarga de Microsoft JDBC Driver para SQL Server
 
@@ -27,6 +27,7 @@ Use los vínculos de la siguiente tabla para descargar la versión más reciente
 
 | Versión | Fecha de la versión | Versiones de Java |
 |---|---|---|
+| [Microsoft JDBC Driver 8.2](https://go.microsoft.com/fwlink/?linkid=2116870) | 31/1/2020 | JRE 8, 11, 13 |
 | [Microsoft JDBC Driver 7.4](https://go.microsoft.com/fwlink/?linkid=2099962) | 1/8/2019 | JRE 8, 11, 12 |
 | [Microsoft JDBC Driver 7.2](https://go.microsoft.com/fwlink/?linkid=2063159) | 17/4/2019 | JRE 8, 11 |
 | [Microsoft JDBC Driver 7.0](https://go.microsoft.com/fwlink/?linkid=2005972) | 31/7/2018 | JRE 8, 10 |
@@ -34,7 +35,6 @@ Use los vínculos de la siguiente tabla para descargar la versión más reciente
 | [Microsoft JDBC Driver 6.2](https://go.microsoft.com/fwlink/?linkid=852460) | 12/2/2018 | JRE 7, 8 |
 | [Microsoft JDBC Driver 6.0](https://go.microsoft.com/fwlink/?LinkId=245496) | 27/2/2018 | JRE 7, 8 |
 | [Microsoft JDBC Driver 4.2](https://go.microsoft.com/fwlink/?linkid=841534) | 26/2/2018 | JRE 7, 8 |
-| [Microsoft JDBC Driver 4.1](https://go.microsoft.com/fwlink/?linkid=841533) | 27/2/2018 | JRE 7 |
 
 Al descargar el controlador, hay varios archivos JAR. El nombre del archivo JAR indica la versión de Java que admite. Para obtener más información sobre cada versión, consulte las [notas de la versión](release-notes-for-the-jdbc-driver.md) y los [requisitos del sistema](system-requirements-for-the-jdbc-driver.md).
 
@@ -46,7 +46,7 @@ El controlador JDBC se puede agregar a un proyecto de Maven si se incorpora como
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.4.1.jre11</version>
+    <version>8.2.0.jre11</version>
 </dependency>
 ```  
 

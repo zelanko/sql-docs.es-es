@@ -9,17 +9,47 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 12/26/2019
-ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.date: 02/19/2020
+ms.openlocfilehash: 441679bbcf6d6a24e48233d4134d575ec526e0b2
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75521735"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479689"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](download.md)** .
+
+## <a name="february-hotfix"></a>Febrero (revisión)
+
+19 de febrero de 2019 &nbsp; / &nbsp; versión: 1.15.1
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Corrección del error #9149 Mostrar conexiones activas | [#9149](https://github.com/microsoft/azuredatastudio/issues/9149)  |
+| Corrección del error #9061 La cuadrícula de edición de datos no cambia de tamaño correctamente al mostrar u ocultar el panel SQL | [#9061](https://github.com/microsoft/azuredatastudio/issues/9061)  |
+| &nbsp; | &nbsp; |
+
+## <a name="february-2020"></a>Febrero de 2020
+
+13 de febrero de 2019 &nbsp; / &nbsp; versión: 1.15.0 
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Nueva mejora del inicio de sesión de Azure | Se ha agregado una experiencia mejorada de inicio de sesión de Azure, incluida la eliminación de la copia y pegado de código de dispositivo para lograr una experiencia de conexión directa. |
+| Compatibilidad con Buscar en cuaderno | Ahora los usuarios pueden usar Ctrl+F dentro de un cuaderno. La Compatibilidad con Buscar en cuaderno busca línea por línea a través de las celdas de texto y de código. |
+| Fusión de la versión 1.38 de VS Code en 1.42 | En esta versión se incluyen actualizaciones para VS Code de las tres versiones anteriores de VS Code. [Lea las notas de la versión](https://code.visualstudio.com/updates/v1_42) para obtener más información. |
+| Corrección para el problema de ["pantalla en blanco"](https://github.com/microsoft/azuredatastudio/issues/8775) comunicado por muchos usuarios. | |
+| Problemas y errores resueltos | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22February+2020%22). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>Problema conocido
+- Los usuarios de macOS Catalina tendrán que hacer clic con el botón derecho en Azure Data Studio y, después, hacer clic en Abrir.
 
 ## <a name="december-2019-hotfix"></a>Diciembre de 2019 (revisión)
 

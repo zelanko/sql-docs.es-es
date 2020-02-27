@@ -1,5 +1,5 @@
 ---
-title: Planear un informe de mapa (Generador de informes y SSRS) | Microsoft Docs
+title: Plan de informe de asignaciones (Generador de informes) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8918251cccca5c04bd42bcb931c4efa5d1f9fd6d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576326"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082421"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planear un informe de mapa (Generador de informes y SSRS)
 Los buenos informes presentan información que motiva acciones o conocimientos. Para presentar datos analíticos como totales de ventas o datos demográficos en un contexto geográfico, puede agregar un mapa al informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Un mapa puede contener varias capas, y en cada una se muestran elementos de mapa definidos por un tipo concreto de datos espaciales: puntos que representan ubicaciones, líneas que representan rutas o polígonos que representan áreas. Puede asociar los datos analíticos a elementos de mapa en cada capa.  

@@ -1,5 +1,5 @@
 ---
-title: Agregar estilos con bisel, relieve y textura a un gráfico (Generador de informes y SSRS) | Microsoft Docs
+title: Adición de estilos con bisel, relieve y textura a un gráfico (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 34f69e4c8c1b62e01f8cb73e26f84d05e427a9ed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9bbb097362d2569bcea8a16d451d33d931b82b35
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581655"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078752"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Efectos de gráfico: agregar bisel, relieve o textura (Generador de informes)
   Cuando use determinados tipos de gráficos, puede especificar efectos de dibujo que aumenten el impacto visual del gráfico. Estos efectos de dibujo solamente se aplican a las series del gráfico. No afectan a ningún otro elemento del gráfico.  

@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72906888"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256758"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configuración de los grupos de escalado horizontal de PolyBase en Windows
 
@@ -21,7 +21,7 @@ ms.locfileid: "72906888"
 
 En este artículo se describe cómo configurar un [grupo de escalado horizontal de PolyBase](polybase-scale-out-groups.md) en Windows. Esto crea un clúster de instancias de SQL Server para procesar grandes conjuntos de datos a partir de orígenes de datos externos, como Hadoop o Azure Blob Storage, en un modo de escalado horizontal para mejorar el rendimiento de las consultas.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
   
 - Más de una máquina en el mismo dominio  
   
@@ -61,7 +61,7 @@ En este tutorial se muestran los pasos necesarios para configurar un grupo de Po
   
 3. En la página Configuración del servidor, use la **cuenta de dominio** PQTH4A\PolyBaseUser para el motor y el servicio de movimiento de datos de SQL Server PolyBase.
   
-4. En la página PolyBase Configuration (Configuración de PolyBase), seleccione la opción **Use the SQL Server instance as part of a PolyBase scale-out group**(Usar la instancia de SQL Server como parte de un grupo de escalado horizontal de PolyBase). Se abrirá el firewall para permitir las conexiones entrantes a los servicios de PolyBase.
+4. En la página PolyBase Configuration (Configuración de PolyBase), seleccione la opción **Use the SQL Server instance as part of a PolyBase scale-out group**(Usar la instancia de SQL Server como parte de un grupo de escalado horizontal de PolyBase). Se abrirá el firewall para permitir las conexiones entrantes a los servicios de PolyBase. Si el nodo principal es una instancia con nombre, debe agregar manualmente el puerto de SQL Server al firewall de Windows en el nodo principal y también iniciar SQL Browser en el nodo principal.
   
 5. Una vez completada la instalación, ejecute **services.msc**. Compruebe que están ejecutando SQL Server, el motor de PolyBase y el servicio de movimiento de datos de PolyBase.
   
@@ -87,7 +87,7 @@ Una vez completada la instalación, las dos máquinas pueden funcionar como nodo
   
 4. Apague el motor de PolyBase y reinicie el servicio de movimiento de datos de PolyBase.
   
-## <a name="optional-remove-a-compute-node"></a>Opcional: eliminación un nodo de ejecución  
+## <a name="optional-remove-a-compute-node"></a>Opcional: eliminación de un nodo de ejecución.  
   
 1. Conéctese al nodo de ejecución de SQL Server (PQTH4A-CMP02).
   

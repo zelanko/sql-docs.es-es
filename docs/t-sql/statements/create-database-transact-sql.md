@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintaxis de creación de bases de datos para SQL Server, Azure SQL Database, Azure Synapse Analytics y Analytics Platform System
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 02/07/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: afca0210d61e23af7578e6805c5052c00c72f88a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2b809d3512c16a366f8f4add88cf8a0b091156d2
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952398"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074486"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -876,9 +876,9 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
-  | ( EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
+  | ( EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
   | SERVICE_OBJECTIVE =
-    { 'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+    { 'Basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -904,7 +904,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
-      { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+      { 'Basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -939,7 +939,7 @@ CATALOG_COLLATION especifica la intercalación predeterminada del catálogo de m
 
 EDITION especifica el nivel de servicio de la base de datos.
 
-Bases de datos únicas y agrupadas en un grupo elástico o una base de datos única. Los valores disponibles son: "basic", "standard", "premium", "GeneralPurpose", "BusinessCritical" e "Hyperscale".
+Bases de datos únicas y agrupadas en un grupo elástico o una base de datos única. Los valores disponibles son: "Basic", "Standard", "Premium", "GeneralPurpose", "BusinessCritical" e "Hyperscale".
 
 MAXSIZE especifica el tamaño máximo de la base de datos. El valor de MAXSIZE debe ser válido para el valor de EDITION (nivel de servicio) especificado A continuación se indican los valores de MAXSIZE admitidos y los valores predeterminados (D) de los niveles de servicio.
 
@@ -972,7 +972,7 @@ MAXSIZE especifica el tamaño máximo de la base de datos. El valor de MAXSIZE d
 |1024 GB|N/D|N/D|√|√|√ (D)|
 |Desde 1024 GB hasta 4096 GB en incrementos de 256 GB* |N/D|N/D|N/D|N/D|√|√|
 
-\* P11 y P15 permiten un valor de MAXSIZE de hasta 4 TB, con 1024 GB como tamaño predeterminado. P11 y P15 pueden usar hasta 4 TB de almacenamiento incluido sin cargos adicionales. En el nivel Premium, un valor de MAXSIZE mayor de 1 TB está actualmente disponible en las regiones siguientes: Este de EE. UU. 2, Oeste de EE. UU., US Gov Virginia, Oeste de Europa, Centro de Alemania, Sudeste Asiático, Japón Oriental, Este de Australia, Centro de Canadá y Este de Canadá. Para obtener más información sobre las limitaciones de recursos para el modelo de DTU, consulte [Límites de recursos de DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+\* P11 y P15 permiten un valor de MAXSIZE de hasta 4 TB, con 1024 GB como tamaño predeterminado. P11 y P15 pueden usar hasta 4 TB de almacenamiento incluido sin cargos adicionales. En el nivel Premium, un valor de MAXSIZE mayor de 1 TB está actualmente disponible en las regiones siguientes: Este de EE. UU. 2, Oeste de EE. UU., US Gov Virginia, Oeste de Europa, Centro de Alemania, Sudeste de Asia, Este de Japón, Este de Australia, Centro de Canadá y Este de Canadá. Para obtener más información sobre las limitaciones de recursos para el modelo de DTU, consulte [Límites de recursos de DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
 El valor MAXSIZE para el modelo de DTU, si se especifica, tiene que ser válido según lo que se indica en la tabla anterior para el nivel de servicio especificado.
 
@@ -1204,7 +1204,7 @@ CREATE DATABASE db_copy
 En el siguiente ejemplo se establece la intercalación de catálogo en DATABASE_DEFAULT durante la creación de la base de datos, lo que establece la intercalación de catálogo como la misma que la intercalación de base de datos.
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'basic')
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
 ```
 
@@ -1370,7 +1370,7 @@ La instrucción `CREATE DATABASE` debe ser la única de un lote [!INCLUDE[tsql](
 
 No se puede cambiar la intercalación de base de datos una vez creada la base de datos.
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+## <a name="examples-sssdwfull"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 
 ### <a name="a-simple-example"></a>A. Ejemplo sencillo
 Un ejemplo sencillo de cómo crear una base de datos de almacenamiento de datos. De esta forma se crea la base de datos con el tamaño más pequeño, 10 240 GB, la intercalación predeterminada, SQL_Latin1_General_CP1_CI_AS, y la potencia de proceso más reducida, DW100.
@@ -1490,7 +1490,7 @@ Toma un bloqueo compartido en el objeto DATABASE.
 
 Después de que esta operación se realice correctamente, aparecerá una entrada relativa a esta base de datos en las vistas de metadatos [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) y [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sspdw"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="a-basic-database-creation-examples"></a>A. Ejemplos básicos de creación de base de datos
 

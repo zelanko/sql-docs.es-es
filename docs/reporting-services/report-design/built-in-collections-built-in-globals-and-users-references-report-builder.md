@@ -1,5 +1,5 @@
 ---
-title: Referencias a campos globales y de usuario integrados (Generador de informes y SSRS) | Microsoft Docs
+title: Referencias a campos globales y de usuario integrados (Generador de informes) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581851"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082211"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Colecciones integradas: referencias a campos globales y de usuario integrados (Generador de informes)
   La colección de campos integrados, que incluye las colecciones **Globals** y **User** , representa valores globales proporcionados por Reporting Services al procesar un informe. La colección **Globals** proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección **User** proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  

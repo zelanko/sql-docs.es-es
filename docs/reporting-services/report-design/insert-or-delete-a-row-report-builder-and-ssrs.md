@@ -1,5 +1,5 @@
 ---
-title: Insertar o eliminar una fila (Generador de informes y SSRS) | Microsoft Docs
+title: Inserción o eliminación de una fila (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b20b95586e387484d536ad8005c6f57c1de4698
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6bdec71e808d577a764d2b0cc3fa99fc9cd522fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580171"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082018"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Insertar o eliminar una fila (Generador de informes y SSRS)
 Puede agregar o eliminar filas de una región de datos Tablix en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La región de datos Tablix puede ser una tabla, una matriz o una lista. Los procedimientos siguientes no se aplican a las regiones de datos Gráfico y Medidor.  

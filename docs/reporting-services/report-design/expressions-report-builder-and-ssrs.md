@@ -1,5 +1,5 @@
 ---
-title: Expresiones (Generador de informes y SSRS) | Microsoft Docs
+title: Expresiones (Generador de informes) | Microsoft Docs
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6083acaca377fdce5bcaed33ce57bb4e75cc3167
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579118"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080363"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expresiones (Generador de informes y SSRS)
   Las expresiones se utilizan ampliamente a lo largo de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para recuperar, calcular, mostrar, agrupar, ordenar, filtrar y parametrizar datos y darles formato. 

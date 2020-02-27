@@ -1,5 +1,5 @@
 ---
-title: Inicializar un servidor de informes (Administrador de configuración de SSRS) | Microsoft Docs
+title: Inicialización de un servidor de informes (Configuration Manager) | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fdb68c0e61d5b48db3a997af0315e7cabf302f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593542"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080831"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Claves de cifrado de SSRS: inicializar un servidor de informes
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], un servidor inicializado es el que puede cifrar y descifrar los datos de una base de datos del servidor de informes. La inicialización es un requisito para la operación del servidor de informes. La inicialización se produce cuando el servicio Servidor de informes se inicia por primera vez. También ocurre cuando se une el servidor de informes a la implementación existente o se vuelven a crear manualmente las claves como parte del proceso de recuperación. Para más información sobre cómo y por qué se usan claves de cifrado, vea [Claves de cifrado de SSRS: administrar claves de cifrado](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) y [Claves de cifrado de SSRS: almacenar datos del servidor de informes cifrados](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Las claves de cifrado se basan en parte en la información de perfil del servicio Servidor de informes. Si cambia la identidad del usuario que se utiliza para ejecutar el servicio Servidor de informes, debe actualizar las claves en consecuencia. Si utiliza la herramienta de configuración de Reporting Services para cambiar la identidad, el sistema controla automáticamente este paso.  
   
- Si por algún motivo se produce un error en la inicialización, el servidor de informes devuelve un error **RSReportServerNotActivated** en respuesta a las solicitudes del usuario y del servicio. En este caso, es posible que deba solucionar el problema de la configuración del sistema o del servidor. Para más información, consulte [SSRS: Solucionar problemas y errores con Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) en el wiki de TechNet.  
+ Si por algún motivo se produce un error en la inicialización, el servidor de informes devuelve un error **RSReportServerNotActivated** en respuesta a las solicitudes del usuario y del servicio. En este caso, es posible que deba solucionar el problema de la configuración del sistema o del servidor. Para más información, vea [SSRS: Solución de problemas y errores con Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) en la wiki de TechNet.  
   
 ## <a name="overview-of-the-initialization-process"></a>Información general sobre el proceso de inicialización  
  El proceso de inicialización crea y almacena una clave simétrica que se utiliza para el cifrado. Los Servicios de cifrado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows crean la clave simétrica que el servicio Servidor de informes utiliza para cifrar y descifrar los datos. La clave simétrica se cifra con una clave asimétrica.  

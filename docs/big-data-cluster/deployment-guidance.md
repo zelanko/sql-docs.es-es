@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831604"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256888"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Procedimientos para implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes
 
@@ -71,7 +71,7 @@ Después de haber configurado el clúster de Kubernetes, puede continuar con la 
 
 ## <a name="ensure-you-have-storage-configured"></a>Cómo asegurarse de que ha configurado el almacenamiento
 
-Conviene que la mayoría de las implementaciones de clúster de macrodatos tengan almacenamiento persistente. En este momento, debe asegurarse de tener un plan sobre cómo va a proporcionar almacenamiento persistente en el clúster de Kubernetes antes de implementar el BDC.
+La mayoría de las implementaciones de clúster de macrodatos deben tener almacenamiento persistente. En este momento, debe asegurarse de tener un plan sobre cómo va a proporcionar almacenamiento persistente en el clúster de Kubernetes antes de implementar el BDC.
 
 Si implementa en AKS, no es necesario realizar ninguna configuración de almacenamiento. AKS proporciona clases de almacenamiento integradas con aprovisionamiento dinámico. Puede personalizar la clase de almacenamiento (`default` o `managed-premium`) en el archivo de configuración de implementación. Los perfiles integrados usan una clase de almacenamiento `default`. Si va a realizar la implementación en un clúster de Kubernetes que se ha implementado mediante `kubeadm`, deberá asegurarse de tener suficiente espacio de almacenamiento para un clúster de la escala deseada disponible y configurado para su uso. Si quiere personalizar la forma en que se usa el almacenamiento, debe hacerlo antes de continuar. Vea [Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes](concept-data-persistence.md).
 

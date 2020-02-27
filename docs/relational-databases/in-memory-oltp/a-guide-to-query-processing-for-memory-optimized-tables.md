@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 652d37ec9f19ccc91e1e0d472cb98d734b65df52
+ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412819"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125292"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ Plan de consulta para una combinación hash de tablas basadas en disco.
   
  En esta consulta, las filas de la tabla Order se recuperan con el índice clúster. Ahora se utiliza el operador físico **Hash Match** para **Inner Join**. El índice clúster en la tabla Order no está ordenado en CustomerID y, por lo tanto, **Merge Join** requeriría un operador de ordenación, lo que afectaría al rendimiento. Tenga en cuenta el costo relativo del operador **Hash Match** (75 %) en comparación con el costo del operador **Merge Join** del ejemplo anterior (46 %). El optimizador habría considerado el operador **Hash Match** también en el ejemplo anterior pero concluyó que el operador **Merge Join** proporcionaba un rendimiento mejor.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Procesamiento de consultas para las tablas basadas en disco  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Procesamiento de consultas para las tablas basadas en disco  
  El siguiente diagrama muestra el flujo de procesamiento de consultas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las consultas ad hoc:  
   
  ![Canalización de procesamiento de consultas de SQL Server](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Canalización de procesamiento de consultas de SQL Server")  
@@ -119,7 +119,7 @@ Canalización de procesamiento de consultas de SQL Server
 
  Para la primera consulta del ejemplo, el motor de ejecución solicita filas del índice agrupado en la tabla Customer y el índice no agrupado en la tabla Order de Access Methods. Access Methods atraviesa las estructuras de índice del árbol B para recuperar las filas solicitadas. En este caso, todas las filas se recuperan como las llamadas de plan para los recorridos de índice completos.  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas con optimización para memoria  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>Acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas con optimización para memoria  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] también se denominan [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpretado hace referencia al hecho de que el plan de consulta es interpretado por el motor de ejecución de consulta para cada operador del plan de consultas. El motor de ejecución lee el operador y sus parámetros y realiza la operación.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado se puede utilizar para tener acceso a tablas optimizadas para memoria y a tablas basadas en disco. La ilustración siguiente muestra el procesamiento de consultas para el acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas optimizadas para memoria:  
@@ -225,7 +225,7 @@ Ejecución de los procedimientos almacenados compilados de forma nativa.
   
  La invocación de un procedimiento almacenado compilado de forma nativa se describe como sigue:  
   
-1.  El usuario emite una instrucción **EXEC**_usp_myproc_ .  
+1.  El usuario emite una instrucción **EXEC** _usp_myproc_.  
   
 2.  El analizador extrae los parámetros del nombre y del procedimiento almacenado.  
   

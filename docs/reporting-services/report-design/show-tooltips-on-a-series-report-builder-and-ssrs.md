@@ -1,5 +1,5 @@
 ---
-title: Mostrar la información sobre herramientas en una serie (Generador de informes y SSRS) | Microsoft Docs
+title: Representación de la información sobre herramientas en una serie (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 247a1ddeec14c38f2cc29d2d57df663c1c2368df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 69804b41ccfafe3edf7be7aba719088d7212c2ba
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581262"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080980"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Mostrar la información sobre herramientas en una serie (Generador de informes y SSRS)
   Puede agregar una información sobre herramientas a cada uno de los puntos de datos de la serie de un gráfico para mostrar información relacionada con el punto de datos, como el nombre del grupo, el valor del punto de datos o el porcentaje del punto de datos en relación con el total de la serie. Cuando los usuarios mantengan el mouse sobre el punto de datos en un informe paginado representado, verán esta información.  

@@ -1,5 +1,5 @@
 ---
-title: Imprimir informes (SSRS) | Microsoft Docs
+title: Impresión de informes | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45b38940afcd0fe73ad2c79abc59db9dc7b549b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4dd9fc438ba1ec30a85119ceef6d5e1503a5ea1f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581157"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082495"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>Imprimir informes: Reporting Services (SSRS)
   Después de guardar un informe en un servidor de informes, puede verlo e imprimirlo desde el portal web o cualquier aplicación que use para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  

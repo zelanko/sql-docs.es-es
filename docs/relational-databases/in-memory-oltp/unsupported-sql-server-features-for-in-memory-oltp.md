@@ -1,7 +1,7 @@
 ---
 title: 'Características no admitidas: OLTP en memoria'
 ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,19 +11,19 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412505"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558323"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Características de SQL Server no admitidas para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-En este tema se describen las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo uso no se admite con objetos optimizados para memoria.  
+En este tema se describen las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo uso no se admite con objetos optimizados para memoria. Además, en la sección final se enumeran las características no admitidas para OLTP en memoria, pero que después se han admitido.
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Características no admitidas para OLTP en memoria  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Características no admitidas para OLTP en memoria  
 
 Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se admiten en una base de datos que tiene objetos optimizados para memoria (incluido el grupo de archivos de datos optimizados para memoria).  
 
@@ -44,7 +44,7 @@ Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnover
 | Modo de fibra | El modo de fibra no se admite con tablas optimizadas para memoria:<br /><br />Si el modo de fibra está activo, no puede crear bases de datos con grupos de archivos optimizados para memoria ni agregar grupos de archivos optimizados para memoria a bases de datos existentes.<br /><br />Puede habilitar el modo de fibra si hay bases de datos con grupos de archivos optimizados para memoria. Sin embargo, para habilitar el modo de fibra hay que reiniciar el servidor. En esa situación, las bases de datos con grupos de archivos optimizados para memoria no se podrían recuperar. Luego vería un mensaje de error que recomendaría deshabilitar el modo de fibra para usar las bases de datos con grupos de archivos optimizados para memoria.<br /><br />Si el modo de fibra está activo, se produce un error al adjuntar y restaurar una base de datos con un grupo de archivos optimizados para memoria. Las bases de datos quedarían marcadas como sospechosas.<br /><br />Para obtener más información, consulte [lightweight pooling (opción de configuración del servidor)](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Limitación de Service Broker|No puede tener acceso a una cola desde un procedimiento almacenado compilado de forma nativa.<br /><br /> No puede tener acceso a una cola en una base de datos remota en una transacción que tiene acceso a tablas optimizadas para memoria.|  
 |Replicación en los suscriptores|La replicación transaccional en tablas optimizadas para memoria en suscriptores se admite pero con algunas restricciones. Para obtener más información, vea [Replicación en suscriptores de tablas con optimización para memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|  
-
+|||
 
 #### <a name="cross-database-queries-and-transcations"></a>Consultas y transacciones entre bases de datos
 
@@ -53,9 +53,9 @@ Con algunas excepciones, las transacciones entre bases de datos no se admiten. E
 
 |Bases de datos|Permitida|Descripción|  
 |---------------|-------------|-----------------|  
-| Bases de datos de usuario, **modelo** y **msdb**. | No | En la mayoría de los casos, las consultas y transacciones entre bases de datos *no* se admiten.<br /><br />Una consulta no puede acceder a otras bases de datos si usa una tabla optimizada para memoria o un procedimiento almacenado compilado de forma nativa. Esta restricción se aplica tanto a transacciones como a consultas.<br /><br />Las excepciones son las bases de datos del sistema **tempdb** y **master**. Aquí, la base de datos **master** está disponible para acceso de solo lectura. |
+| Bases de datos de usuario, **modelo** y **msdb**. | Sin | En la mayoría de los casos, las consultas y transacciones entre bases de datos *no* se admiten.<br /><br />Una consulta no puede acceder a otras bases de datos si usa una tabla optimizada para memoria o un procedimiento almacenado compilado de forma nativa. Esta restricción se aplica tanto a transacciones como a consultas.<br /><br />Las excepciones son las bases de datos del sistema **tempdb** y **master**. Aquí, la base de datos **master** está disponible para acceso de solo lectura. |
 | Base de datos de **recursos**, **tempdb** | Sí | En una transacción que toca los objetos OLTP en memoria, las bases de datos de **recursos** y **tempdb** del sistema se pueden usar sin una restricción agregada.
-
+||||
 
 ## <a name="scenarios-not-supported"></a>Escenarios no admitidos  
   
@@ -69,9 +69,7 @@ Con algunas excepciones, las transacciones entre bases de datos no se admiten. E
 - El tipo de datos ROWVERSION (TIMESTAMP) no se admite. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   
 - El cierre automático no se admite con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.  
-  
-- Las instantáneas de base de datos no se admiten para bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.  
-  
+
 - DDL transaccional, como las operaciones CREATE/ALTER/DROP de objetos OLTP en memoria, no se admite dentro de las transacciones de usuario.  
   
 - Notificación de eventos.  
@@ -82,7 +80,17 @@ Con algunas excepciones, las transacciones entre bases de datos no se admiten. E
 - La contención de base de datos ([Bases de datos contenidas](../../relational-databases/databases/contained-databases.md)) no es compatible con OLTP en memoria.
     - Se admite la autenticación de la base de datos independiente. En cambio, todos los objetos OLTP en memoria se marcan como "breaking containment" en la vista de administración dinámica (DMV) **dm_db_uncontained_entities**.
 
-  
-## <a name="see-also"></a>Consulte también  
+## <a name="recently-added-supports"></a>Compatibilidades agregadas recientemente
+
+En ocasiones, una versión más reciente de SQL Server agrega compatibilidad con una característica que anteriormente no se admitía. En esta sección se enumeran las características que no se solían admitir para OLTP en memoria, pero que después sí se han admitido.
+
+En la tabla siguiente, los valores _versión_ como `(15.x)` hacen referencia al valor devuelto por la instrucción `SELECT @@Version;` de Transact-SQL.
+
+| Nombre de característica | Versión de SQL Server | Comentarios |
+| :----------- | :-------------------- | :------- |
+| Instantáneas de base de datos | 2019 (15.x) | Ahora se admiten instantáneas de base de datos para bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA. |
+| &nbsp; | &nbsp; | &nbsp; |
+
+## <a name="see-also"></a>Consulte también
 
 - [Compatibilidad de SQL Server con OLTP en memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

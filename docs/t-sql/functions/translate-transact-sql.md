@@ -16,12 +16,12 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 374e9c1ba9bd93900e8a6677984f5e0e63a7c454
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68098827"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173586"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
@@ -51,7 +51,9 @@ Devuelve una expresión de caracteres del mismo tipo de datos que `inputString`,
 
 La función `TRANSLATE` devolverá un error si las expresiones *characters* y *translations* tienen longitudes diferentes. `TRANSLATE` devolverá NULL si alguno de los argumentos es NULL.  
 
-El comportamiento de la función `TRANSLATE` es equivalente a usar varias funciones [REPLACE](../../t-sql/functions/replace-transact-sql.md). Pero `TRANSLATE` no reemplaza un carácter más de una vez. Esto es diferente a varias funciones `REPLACE`, ya que en cada uso se reemplazarían todos los caracteres pertinentes. 
+El comportamiento de la función `TRANSLATE` es equivalente a usar varias funciones [REPLACE](../../t-sql/functions/replace-transact-sql.md). Pero `TRANSLATE` no reemplaza ningún carácter individual en `inputString` más de una vez. Un valor único en el parámetro `characters` puede reemplazar varios caracteres en `inputString`. 
+
+Esto es diferente al comportamiento de varias funciones `REPLACE`, ya que cada llamada de función reemplazaría todos los caracteres pertinentes, incluso si se hubieran reemplazado por una llamada de función `REPLACE` anidada anterior. 
 
 `TRANSLATE` siempre reconoce la intercalación de SC.
 

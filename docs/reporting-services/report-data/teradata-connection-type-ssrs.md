@@ -1,5 +1,5 @@
 ---
-title: Tipo de conexión de Teradata (SSRS) | Microsoft Docs
+title: Tipo de conexión de Teradata | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6c79de239689a2c0c72743139b874f5ba9d3d0a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7fffacee190197125cf283be6ad9263dfae1f1d1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190533"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081702"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Tipo de conexión de Teradata (SSRS)
   Para incluir en el informe los datos de Teradata, debe tener un conjunto de datos que se base en un origen de datos de informe de tipo Teradata. Este tipo de origen de datos integrado está basado en la extensión de procesamiento de datos del proveedor administrado de .NET para Teradata.  

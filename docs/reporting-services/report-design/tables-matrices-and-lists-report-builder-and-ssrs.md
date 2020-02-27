@@ -1,5 +1,5 @@
 ---
-title: Tablas, matrices y listas (Generador de informes y SSRS) | Microsoft Docs
+title: Tablas, matrices y listas (Generador de informes) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -33,12 +33,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a326ce7ea6701b1fe55f76861bced6c3c86174d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e3390f952eaa553c144d8dd50e906276d4f96649
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574676"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080884"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tablas, matrices y listas (Generador de informes y SSRS)
  En [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], las tablas, matrices y listas son *regiones de datos* en las que se muestran los datos del informe paginado en celdas organizadas en filas y columnas. Normalmente, las celdas contienen datos como texto, fechas y números, pero también pueden contener medidores, gráficos o elementos de informe como imágenes. Colectivamente, las tablas, matrices y listas se denominan a menudo regiones de datos *Tablix* .  

@@ -1,5 +1,5 @@
 ---
-title: Informes de Reporting Services (SSRS) | Microsoft Docs
+title: Informes de Reporting Services | Microsoft Docs
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a0b224d51daad95e4d19cc614d3a964779cd11b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190449"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082428"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Informes de Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Los informes paginados son definiciones de informes basados en XML donde se incluyen datos y elementos de diseño de informes. En un sistema de archivos de cliente, las definiciones de informe tienen la extensión de archivo .rdl. Una vez que se publica un informe paginado, se convierte en un elemento de informe que se almacena en el servidor de informes o en el sitio de SharePoint. Los informes paginados son una parte de la plataforma de generación de informes basada en servidor que proporciona [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. También puede [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  

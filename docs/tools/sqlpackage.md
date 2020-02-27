@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: c5f0b10d0b2bbd953b14873e76b938ecfdce6fd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74993013"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250600"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -44,7 +44,29 @@ La línea de comandos **SqlPackage.exe** permite especificar estas acciones junt
 ```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
-  
+
+### <a name="usage-examples"></a>Ejemplos de uso
+
+**Generación de una comparación entre las bases de datos mediante archivos .dacpac con una salida de script SQL**
+
+Empiece por crear un archivo .dacpac de los cambios de la base de datos más recientes:
+
+```
+sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+ 
+Cree un archivo .dacpac del destino de la base de datos (sin cambios):
+
+ ```
+ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+
+Cree un script SQL que genere las diferencias de dos archivos .dacpac:
+
+```
+sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
+ ```
+
 ### <a name="help-for-the-extract-action"></a>Ayuda para la acción Extract
 
 |Parámetro|Forma corta|Value|Descripción|
@@ -206,6 +228,7 @@ Una operación de publicación de SqlPackage.exe actualiza incrementalmente el e
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Especifica si las diferencias en cuanto al periodo durante el cual SQL Server conserva la ruta en la tabla de enrutamiento se deben omitir o si hay que actualizar al publicar en una base de datos.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Especifica si las diferencias en los caracteres de punto y coma entre las instrucciones T-SQL se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de tabla se ignorarán o se actualizarán al publicar en una base de datos.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de partición de tabla se ignorarán o se actualizarán al publicar en una base de datos.  Esta opción solo se aplica a bases de datos de almacenamiento de datos de Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Especifica si las diferencias en los objetos de configuración de usuario se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Especifica si las diferencias en los espacios en blanco se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Especifica si las diferencias en el valor de la cláusula WITH NOCHECK de las restricciones CHECK se omiten o hay que actualizar al publicar.|
@@ -433,6 +456,7 @@ Las acciones de informe **SqlPackage.exe** crean un informe XML de los cambios q
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Especifica si las diferencias en el tiempo durante el cual SQL Server conserva la ruta en la tabla de enrutamiento se deben ignorar o actualizar al publicar en una base de datos.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Especifica si las diferencias en los caracteres de punto y coma entre las instrucciones T-SQL se ignorarán o se actualizarán al publicar en una base de datos.| 
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de tabla se ignorarán o se actualizarán al publicar en una base de datos.| 
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de partición de tabla se ignorarán o se actualizarán al publicar en una base de datos.  Esta opción solo se aplica a bases de datos de almacenamiento de datos de Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Especifica si las diferencias en los objetos de configuración de usuario se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Especifica si las diferencias en los espacios en blanco se ignorarán o se actualizarán al publicar en una base de datos. |
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Especifica si las diferencias en el valor de la cláusula WITH NOCHECK para las restricciones CHECK se ignorarán o se actualizarán al publicar en una base de datos.| 
@@ -597,6 +621,7 @@ Las acciones del script **SqlPackage.exe** crean un script de actualización inc
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Especifica si las diferencias en cuanto al periodo durante el cual SQL Server conserva la ruta en la tabla de enrutamiento se deben omitir o si hay que actualizar al publicar en una base de datos.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Especifica si las diferencias en los caracteres de punto y coma entre las instrucciones T-SQL se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de tabla se ignorarán o se actualizarán al publicar en una base de datos.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de partición de tabla se ignorarán o se actualizarán al publicar en una base de datos.  Esta opción solo se aplica a bases de datos de almacenamiento de datos de Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Especifica si las diferencias en los objetos de configuración de usuario se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Especifica si las diferencias en los espacios en blanco se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Especifica si las diferencias en el valor de la cláusula WITH NOCHECK de las restricciones CHECK se omiten o hay que actualizar al publicar.|

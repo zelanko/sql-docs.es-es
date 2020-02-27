@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75002340"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144195"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ Sugerencias de consulta especifica que en toda la consulta se deben utilizar las
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -186,7 +187,7 @@ KEEPFIXED PLAN
 Fuerza al optimizador de consultas a no compilar de nuevo una consulta debido a cambios en las estadísticas. Al especificar KEEPFIXED PLAN, se asegura de que una consulta solo se vuelve a compilar si el esquema de las tablas subyacentes cambia o si **sp_recompile** se ejecuta en estas tablas.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores)  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y versiones posteriores.  
   
 Impide que la consulta use un índice no agrupado de almacén de columnas optimizado para memoria. Si la consulta contiene la sugerencia de consulta para evitar el uso del índice de almacén de columnas y una sugerencia de índice para usar un índice de almacén de columnas, las sugerencias están en conflicto y la consulta devuelve un error.  
   
@@ -240,7 +241,7 @@ OPTIMIZE FOR UNKNOWN
 Indica al optimizador de consultas que use datos estadísticos en lugar de los valores iniciales para todas las variables locales al compilar y optimizar la consulta. Esta optimización incluye los parámetros creados mediante parametrización forzada.  
   
 Si usa OPTIMIZE FOR @variable_name = _literal\_constant_ y OPTIMIZE FOR UNKNOWN en la misma sugerencia de consulta, el optimizador de consultas usará el valor _literal\_constant_ especificado para un valor determinado. El optimizador de consultas usará UNKNOWN para los valores de las variables restantes. Los valores se usan solo durante la optimización de la consulta y no durante la ejecución de la misma.  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 Especifica las reglas de parametrización que aplica el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se compila la consulta.  
   
@@ -249,6 +250,11 @@ Especifica las reglas de parametrización que aplica el optimizador de consultas
 > Para más información, vea [Especificar el comportamiento de parametrización de consultas por medio de guías de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
 SIMPLE indica al optimizador de consultas que intente la parametrización simple. FORCED indica al optimizador de consultas que intente la parametrización forzada. Para más información, vea [Parametrización forzada en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) y [Parametrización simple en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+
+QUERYTRACEON trace_flag    
+Esta opción permite habilitar una marca de seguimiento que afecte al plan solo durante la compilación de una única consulta. Como sucede con otras opciones de nivel de consulta, se puede usar junto con guías de plan para hacer coincidir el texto de una consulta que se ejecuta desde cualquier sesión y aplicar automáticamente una marca de seguimiento que afecte al plan al compilar esta consulta. La opción QUERYTRACEON solo se admite en las marcas de seguimiento del optimizador de consultas que se documentan en la tabla de la sección "Más información" y en [Marcas de seguimiento](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Pero esta opción no devolverá ningún error ni advertencia si se usa un número de marca de seguimiento no admitido. Si la marca de seguimiento especificada no afecta a un plan de ejecución de consulta, la opción se omitirá de forma silenciosa.
+
+Se puede especificar más de una marca de seguimiento en la cláusula OPTION si QUERYTRACEON trace_flag_number se duplica con otros números de marca de seguimiento.
 
 RECOMPILE  
 Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que genere un plan nuevo y temporal para la consulta y descarte de inmediato ese plan una vez que se completa la ejecución de la consulta. El plan de consulta generado no reemplaza un plan almacenado en caché cuando la misma consulta se ejecuta sin la sugerencia RECOMPILE. Sin especificar RECOMPILE, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena en la memoria caché planes de consulta y los reutiliza. Al compilar los planes de consulta, la sugerencia de consulta RECOMPILE utiliza los valores actuales de cualquier variable local en la consulta. Si la consulta está dentro de un procedimiento almacenado, los valores actuales se pasan a cualquier parámetro.  
@@ -599,7 +605,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>M. Uso de QUERYTRACEON HINT  
+ En el ejemplo siguiente se usan las sugerencias de consulta de QUERYTRACEON. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Puede habilitar todas las revisiones que afectan al plan controladas por la marca de seguimiento 4199 para una consulta determinada mediante la consulta siguiente:
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ También puede usar varias marcas de seguimiento como en la consulta siguiente:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>Consulte también  
 [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

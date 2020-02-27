@@ -1,5 +1,5 @@
 ---
-title: Enlazar un informe con un origen de datos compartido (SSRS) | Microsoft Docs
+title: Enlace de un informe con un origen de datos compartido | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e41ac864403dce2cad648790099496b53c4b6dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5aa5e504c8434d3634b903c08b6a03c0e62345c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190895"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081423"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Enlazar un informe con un origen de datos compartido (SSRS)
   En algunos casos (por ejemplo, al mover un informe de un servidor de prueba a uno de producción), es posible que quiera guardar el archivo en el equipo local y, después, cargarlo en otro servidor de informes. Al cargar el informe en el servidor nuevo, debe volver a enlazarlo con un origen de datos compartido almacenado en el servidor de informes nuevo. Si no vuelve a enlazar el informe, no funcionará correctamente cuando se acceda a él desde el servidor de informes nuevo.  

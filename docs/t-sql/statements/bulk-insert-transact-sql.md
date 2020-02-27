@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6802e2f93c4f171797198eda2132e8b0353621f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910138"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558360"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -59,7 +59,7 @@ BULK INSERT
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
    [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] KEEPIDENTITY ]
    [ [ , ] KEEPNULLS ]
    [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
@@ -166,7 +166,7 @@ FIRE_TRIGGERS Especifica que todos los desencadenadores de inserción definidos 
 
 Si no se especifica FIRE_TRIGGERS, no se ejecuta ningún desencadenador de inserción.
 
-FORMATFILE_DATASOURCE **=** "nombre_del_origen_de_datos" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
+FORMATFILE_DATA_SOURCE **=** "nombre_del_origen_de_datos" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
 Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo de formato que definirá el esquema de los datos importados. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 KEEPIDENTITY Especifica que se usará el valor o valores de identidad del archivo de datos importado para la columna de identidad. Si no se especifica KEEPIDENTITY, los valores de identidad de esta columna se comprueban pero no se importan y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos basados en los valores de inicialización y de incremento especificados durante la creación de la tabla. Si el archivo de datos no contiene valores para la columna de identidad de la tabla o vista, utilice un archivo de formato para especificar que se debe omitir la columna de identidad de la tabla o vista cuando se importen los datos; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos para la columna. Para obtener más información, vea [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
@@ -338,7 +338,9 @@ Cuando se importa desde Azure Blob Storage y los datos no son públicos (acceso 
 
 ### <a name="permissions"></a>Permisos
 
-Se requieren los permisos INSERT y ADMINISTER BULK OPERATIONS. En Azure SQL Database, se necesitan los permisos INSERT y ADMINISTER DATABASE BULK OPERATIONS. Además, es necesario el permiso ALTER TABLE si se da una o varias de las siguientes circunstancias:
+Se requieren los permisos INSERT y ADMINISTER BULK OPERATIONS. En Azure SQL Database, se necesitan los permisos INSERT y ADMINISTER DATABASE BULK OPERATIONS. No se admiten los permisos ADMINISTER BULK OPERATIONS o el rol bulkadmin para SQL Server en Linux. Solo `sysadmin` puede realizar inserciones masivas para SQL Server en Linux. 
+
+Además, es necesario el permiso ALTER TABLE si se da una o varias de las siguientes circunstancias:
 
 - Existen restricciones y no se ha especificado la opción CHECK_CONSTRAINTS.
 

@@ -1,7 +1,7 @@
 ---
 title: Preguntas más frecuentes (P+F) sobre el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1055b9b0422073d7b9875c748dcfe889af053dc2
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049819"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004624"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F) sobre el controlador JDBC
 
@@ -35,6 +35,15 @@ Vea la página [Matriz de compatibilidad de Microsoft JDBC Driver para SQL Serve
 Los archivos del controlador JDBC Driver disponibles en el repositorio GitHub para el controlador JDBC Driver de Microsoft son el núcleo del controlador JDBC Driver y están bajo la licencia de código abierto que se encuentra en el repositorio. Los paquetes del controlador del Centro de descarga de Microsoft incluyen bibliotecas adicionales para la autenticación integrada de Windows y la habilitación de transacciones XA con el controlador JDBC Driver. Esas bibliotecas adicionales están bajo la licencia incluida con el paquete descargable.
 
 **¿Qué debo saber al actualizar el controlador?**  
+El controlador Microsoft JDBC Driver 8.2 admite las especificaciones de JDBC 4.2 y 4.3 (parcialmente) e incluye tres bibliotecas de clases de archivo JAR en el paquete de instalación, como se muestra a continuación:
+
+| JAR                        | Especificación de JDBC            | Versión JDK |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-8.2.0.jre13.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.0.jre11.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 El controlador Microsoft JDBC Driver 7.4 admite especificaciones de JDBC 4.2 y 4.3 (parcialmente) e incluye tres bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
 
 | JAR                        | Especificación de JDBC            | Versión JDK |

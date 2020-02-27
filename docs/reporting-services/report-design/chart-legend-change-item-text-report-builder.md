@@ -1,5 +1,5 @@
 ---
-title: Cambiar el texto de un elemento de leyenda (Generador de informes y SSRS) | Microsoft Docs
+title: Cambio del texto de un elemento de leyenda (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc8b459c3ecfe9c34ff7552acb2565c1b25239a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5f592abd3f634865a432b31d2aba4764187b0d86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581685"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078699"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Leyenda del gráfico: cambiar texto de elementos (Generador de informes)
   Cuando se coloca un campo en el área Valores del gráfico, se genera automáticamente un elemento de leyenda que contiene el nombre de este campo. Cada elemento de leyenda se conecta a una serie individual del gráfico, a excepción de los gráficos de formas, donde la leyenda se conecta a puntos de datos individuales en lugar de a series individuales.  

@@ -1,5 +1,5 @@
 ---
-title: Especificar las rutas de acceso a los elementos externos (Generador de informes y SSRS) | Microsoft Docs
+title: Especificación de las rutas de acceso a los elementos externos (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9848a77ae760fc2c1fa4c4d0ddeaa5b1120ec1ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578477"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080909"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Especificar las rutas de acceso a los elementos externos (Generador de informes y SSRS)
   Especifique rutas de acceso en las propiedades de los elementos de informe para hacer referencia a elementos tales como informes detallados, subinformes y archivos de imagen que son externos al archivo de definición de informe y se guardan en un servidor de informes.  
@@ -37,9 +37,9 @@ ms.locfileid: "65578477"
   
 -   **Una ruta de acceso completa al elemento.**  
   
-    -   **En un servidor de informes:** la ruta de acceso empieza desde **/** , la carpeta particular. Por ejemplo, /Informes/TodosLosSubinformes/Subinforme1.  
+    -   **En un servidor de informes:** la ruta de acceso completa se inicia en **/** , la carpeta Inicio. Por ejemplo, /Informes/TodosLosSubinformes/Subinforme1.  
   
-    -   **En un sitio de SharePoint** : debe especificar el nombre del informe en una expresión, con la dirección URL completa del elemento y la extensión de archivo .rdl. Por ejemplo, `="https://server/site/library/folder/Report1.rdl"`.  
+    -   **En un sitio de SharePoint:** debe especificar el nombre del informe en una expresión, con la dirección URL completa del elemento y la extensión de archivo .rdl. Por ejemplo, `="https://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>Consulte también  
  [Agregar una imagen externa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   

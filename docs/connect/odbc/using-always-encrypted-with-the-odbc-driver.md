@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76706278"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363236"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ Always Encrypted permite a las aplicaciones cliente cifrar la información confi
 
 Para más información, consulte [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) y [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerrequisitos
 
 Configure Always Encrypted en su base de datos. Esto implica el aprovisionamiento de las claves Always Encrypted y la configuración del cifrado para las columnas de las bases de datos seleccionadas. Si todavía no tiene una base de datos configurada con Always Encrypted, siga las instrucciones de [Introducción a Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). En concreto, la base de datos debe contener las definiciones de metadatos para una clave maestra de columna (CMK), una clave de cifrado de columna (CEK) y una tabla que contiene una o varias columnas cifradas mediante dicha CEK.
 
@@ -381,7 +381,7 @@ El controlador ODBC para SQL Server incluye los siguientes proveedores de almac�
 Azure Key Vault (AKV) es una opción adecuada para almacenar y administrar claves maestras de columna para Always Encrypted (especialmente si sus aplicaciones se hospedan en Azure). El controlador ODBC para SQL Server en Linux, macOS y Windows incluye un proveedor de almacén de claves maestras de columna integrado para Azure Key Vault. Vea la [guía detallada sobre Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), la [introducción a Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) y el artículo sobre cómo [crear claves maestras de columna en Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) para obtener más información sobre cómo configurar una instancia de Azure Key Vault para Always Encrypted.
 
 > [!NOTE]
-> El controlador ODBC no admite los Servicios de federación de Active Directory (AD FS) para la autenticación de AKV. Si usa la autenticación de Azure Active Directory para AKV y la configuración de Active Directory incluye los servicios federados, se puede generar un error en la autenticación.
+> El controlador ODBC solo admite la autenticación de AKV directamente en Azure Active Directory. Si va a usar la autenticación de Azure Active Directory para AKV y la configuración de Active Directory requiere autenticación sobre un punto de conexión de Servicios de federación de Active Directory, se puede producir un error en la autenticación.
 > En Linux y macOS, para la versión 17.2 y versiones posteriores, `libcurl` debe utilizar este proveedor, pero no es una dependencia explícita, ya que otras operaciones con el controlador no la necesitan. Si detecta un error con respecto a `libcurl`, asegúrese de que está instalado.
 
 El controlador admite la autenticación en Azure Key Vault mediante los siguientes tipos de credencial:

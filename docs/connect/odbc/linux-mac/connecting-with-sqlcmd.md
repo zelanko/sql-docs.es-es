@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68005911"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971443"
 ---
 # <a name="connecting-with-sqlcmd"></a>Conexión con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ En la versión actual, están disponibles las siguientes opciones:
 - -e crear scripts de entrada en el dispositivo de salida estándar (stdout).
 
 - -E usa la conexión de confianza (autenticación integrada). Para más información sobre cómo establecer conexiones de confianza que usen la autenticación integrada desde un cliente Linux o macOS, consulte [Uso de la autenticación integrada](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+
+- -f página de códigos | i:página de códigos[,o:página de códigos] | o:página de códigos[,i:página de códigos] Especifica las páginas de códigos de entrada y de salida. El número de página de códigos es un valor numérico que especifica una página de códigos de Linux instalada.
+(disponible desde la versión 17.5.1.1)
 
 - -h *number_of_rows* especificar el número de filas que se van a imprimir entre los encabezados de columna.  
   
@@ -159,8 +162,6 @@ En la versión actual, están disponibles los siguientes comandos:
 En la versión actual, no están disponibles las siguientes opciones:  
 
 - -A iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con una conexión de administrador dedicada (DAC). Para obtener información sobre cómo realizar una conexión de administrador dedicada (DAC), vea [Instrucciones de programación](../../../connect/odbc/linux-mac/programming-guidelines.md).  
-  
-- -f *code_page* especificar las páginas de códigos de entrada y de salida.  
   
 - -L enumerar los equipos servidores configurados localmente y los nombres de los equipos servidores que se difunden en la red.  
   

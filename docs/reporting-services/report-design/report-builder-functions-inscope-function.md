@@ -1,5 +1,5 @@
 ---
-title: Función InScope (Generador de informes y SSRS) | Microsoft Docs
+title: Función InScope (Generador de informes) | Microsoft Docs
 ms.date: 03/08/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b6891ec497b3100206b812fbc8da7b0463fa4d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 02ba83e15f22e28d3378996c98af4468ae425366
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579504"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081260"
 ---
 # <a name="report-builder-functions---inscope-function"></a>Funciones del Generador de informes: función InScope
   Indica si la instancia actual de un elemento se encuentra en el ámbito especificado.  

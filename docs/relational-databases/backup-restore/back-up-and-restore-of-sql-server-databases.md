@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75320620"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256748"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Realizar copias de seguridad y restaurar bases de datos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ dispositivo de**copia de seguridad**
  No tendrá una estrategia de restauración hasta que compruebe las copias de seguridad. Es muy importante comprobar cuidadosamente la estrategia de copia de seguridad de cada una de las bases de datos restaurando una copia de la base de datos en un sistema de prueba. Debe comprobar la restauración de cada tipo de copia de seguridad que pretenda utilizar. También se recomienda que, una vez restaurada la copia de seguridad, realice comprobaciones de coherencia de la base de datos a través de DBCC CHECKDB de la base de datos para validar que el medio de copia de seguridad no se ha dañado. 
 
 ### <a name="verify-media-stability-and-consistency"></a>Comprobación de la estabilidad y la coherencia de los medios
-Use las opciones de comprobación proporcionadas por las utilidades de copia de seguridad (comando BACKUP de T-SQL, planes de mantenimiento de SQL Server, su solución o software de copia de seguridad, etc.). Para obtener un ejemplo, vea [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) Uso de características avanzadas como BACKUP CHECKSUM para detectar problemas con el medio de copia de seguridad en sí. Para más información,[ consulte ](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
+Use las opciones de comprobación proporcionadas por las utilidades de copia de seguridad (comando BACKUP de T-SQL, planes de mantenimiento de SQL Server, su solución o software de copia de seguridad, etc.). Para obtener un ejemplo, vea [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) Uso de características avanzadas como BACKUP CHECKSUM para detectar problemas con el medio de copia de seguridad en sí. Para más información, vea [Errores posibles de medios durante copia de seguridad y restauración (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
 
 ### <a name="document-backuprestore-strategy"></a>Estrategia de copia de seguridad y restauración de documentos 
 Se recomienda documentar los procedimientos de copia de seguridad y restauración, y mantener una copia de la documentación en su libro de documentación de procesos.

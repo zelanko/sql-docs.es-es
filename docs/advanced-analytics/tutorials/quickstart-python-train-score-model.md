@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
+ms.sourcegitcommit: acfdeacc80c112992c1201748e0b5c59a473032d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831766"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977549"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Inicio rápido: Creación y puntuación de un modelo predictivo en Python con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Después de completar este inicio rápido, aprenderá a:
 > - Pasar entradas en el código mediante entradas en el procedimiento almacenado
 > - Usar procedimientos almacenados para hacer operativos los modelos
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Para este inicio rápido, es necesario tener acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) que tenga instalado el lenguaje de Python.
 
@@ -174,7 +174,7 @@ Después de crear, entrenar y guardar un modelo, continúe con el paso siguiente
 
 En este ejercicio, ha aprendido a crear procedimientos almacenados dedicados a tareas distintas, donde cada procedimiento almacenado ha usado el procedimiento almacenado del sistema `sp_execute_external_script` para iniciar un proceso de Python. Las entradas en el proceso de Python se pasan a `sp_execute_external` como parámetros. Tanto el script de Python en sí como las variables de datos de una base de datos de SQL Server se pasan como entradas.
 
-Normalmente, solo se usará SSMS con código de Python correcto, o bien código de Python que devuelve resultados basados en filas. Como herramienta, SSMS admite lenguajes de consulta como T-SQL y devuelve conjuntos de filas planos. Si el código genera un resultado visual (como un diagrama de dispersión o un histograma), necesita una herramienta o una aplicación de usuario final que pueda representar la imagen.
+Normalmente, solo se usará SSMS con código de Python correcto, o bien código de Python que devuelve resultados basados en filas. Como herramienta, SSMS admite lenguajes de consulta como T-SQL y devuelve conjuntos de filas planos. Si el código genera un resultado visual como un diagrama de dispersión o un histograma, necesita una herramienta o una aplicación de usuario final independiente que pueda representar la imagen fuera del procedimiento almacenado.
 
 Puede que a algunos desarrolladores de Python, acostumbrados a escribir scripts con todo incluido y que procesan una amplia variedad de operaciones, les parezca innecesario organizar las tareas en procedimientos separados. Pero el entrenamiento y la puntuación tienen distintos casos de uso. Al separarlos, puede colocar cada tarea en una programación distinta y asignar permisos de ámbito distintos a cada operación.
 

@@ -1,5 +1,5 @@
 ---
-title: Función RunningValue (Generador de informes y SSRS) | Microsoft Docs
+title: Función RunningValue (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f90054a62168032ca29d99819061537e6a0b179a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577175"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081158"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Funciones del Generador de informes: función RunningValue
   Devuelve un agregado actualizado de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  

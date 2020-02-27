@@ -33,12 +33,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68116477"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074453"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -158,28 +158,30 @@ El optimizador de consultas utiliza las densidades para mejorar las estimaciones
 ## <a name="restrictions"></a>Restricciones  
  DBCC SHOW_STATISTICS no proporciona estadísticas de índices de almacén de columnas optimizadas en memoria xVelocity o espaciales.  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Para ver el objeto de estadísticas, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor `sysadmin`, del rol fijo de base de datos `db_owner` o del rol fijo de base de datos `db_ddladmin`.
-  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 modifica las restricciones de permisos y permite que los usuarios que disponen del permiso SELECT puedan usar este comando. Tenga en cuenta los siguientes requisitos para que los permisos SELECT sean suficientes para ejecutar el comando:
+## <a name="permissions-for-ssnoversion-and-sssds"></a>Permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+Para ver el objeto de estadísticas, el usuario debe tener el permiso SELECT en la tabla.
+Tenga en cuenta los siguientes requisitos para que los permisos SELECT sean suficientes para ejecutar el comando:
 -   Los usuarios deben tener permisos en todas las columnas del objeto de estadísticas  
 -   Los usuarios deben tener permiso en todas las columnas de una condición de filtro (si existe alguna)  
--   La tabla no puede tener una directiva de seguridad de nivel de fila.  
+-   La tabla no puede tener una directiva de seguridad de nivel de fila.
+-   Si alguna de las columnas de un objeto de estadísticas se enmascara con reglas de Enmascaramiento dinámico de datos, además del permiso SELECT, el usuario debe tener el permiso UNMASK
+
+En versiones anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor `sysadmin`, o bien de los roles fijos de base de datos `db_owner` o `db_ddladmin`.
+[!NOTE]
+Para volver a cambiar el comportamiento al anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, use la marca de seguimiento 9485.
   
-Para deshabilitar este comportamiento, use la marca de seguimiento 9485.
-  
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Permisos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="permissions-for-sssdw-and-sspdw"></a>Permisos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS requiere el permiso SELECT en la tabla o pertenecer a uno de los siguientes roles:
 -   rol fijo de servidor sysadmin  
 -   rol fijo de base de datos db_owner  
 -   rol fijo de base de datos db_ddladmin  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitaciones y restricciones de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Limitaciones y restricciones de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS muestra las estadísticas almacenadas en la base de datos de shell en el nivel del nodo de control. No muestra las estadísticas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea automáticamente en los nodos de ejecución.
   
 DBCC SHOW_STATISTICS no se admite en tablas externas.
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Ejemplos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-ssnoversion-and-sssds"></a>Ejemplos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. Devolver información de todas las estadísticas  
 En el siguiente ejemplo se muestra toda la información de estadísticas del índice `AK_Address_rowguid` de la tabla `Person.Address` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
@@ -196,7 +198,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Mostrar el contenido de un objeto de estadísticas  
  En el siguiente ejemplo se muestra el contenido de las estadísticas de Customer_LastName en la tabla DimCustomer.  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 18f91c30715dbf44058a204bd17f9ab1e6e393c6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67902016"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255992"
 ---
 # <a name="hints-transact-sql---join"></a>Sugerencias (Transact-SQL): combinación
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "67902016"
   
 ## <a name="arguments"></a>Argumentos  
  LOOP | HASH | MERGE  
- Especifica que la combinación de la consulta utiliza bucles, hash o mezclas. El uso de LOOP | HASH | MERGE JOIN aplica una combinación particular entre dos tablas. LOOP no se puede especificar junto con RIGHT o FULL como un tipo de combinación.  
+ Especifica que la combinación de la consulta utiliza bucles, hash o mezclas. El uso de LOOP | HASH | MERGE JOIN aplica una combinación particular entre dos tablas. LOOP no se puede especificar junto con RIGHT o FULL como un tipo de combinación. Para más información, vea [Combinaciones](../../relational-databases/performance/joins.md).
   
  REMOTE  
  Especifica que la operación de combinación se realice en el sitio de la tabla derecha. Esto es útil cuando la tabla izquierda es una tabla local y la tabla derecha es una tabla remota. REMOTE solo se debe utilizar cuando la tabla izquierda tenga menos filas que la tabla derecha.  

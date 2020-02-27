@@ -1,5 +1,5 @@
 ---
-title: Agregar una ordenación interactiva a una tabla o una matriz (Generador de informes y SSRS) | Microsoft Docs
+title: Adición de una ordenación interactiva a una tabla o una matriz (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962f07f5e5f6ce00bc21c362ce905bec2773c28c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ddc1796b4b3638d91c94acafbce1377128dfe1cd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893805"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081623"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Agregar una ordenación interactiva a una tabla o una matriz (Generador de informes y SSRS)
   Agregue botones de ordenación interactiva para que los usuarios puedan cambiar el criterio de ordenación de las filas y las columnas en las tablas y matrices. Esta característica solo es compatible con los formatos de representación que admiten la interacción con el usuario, como HTML.  

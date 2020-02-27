@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68137092"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146308"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,7 @@ Para aumentar la seguridad, en el mensaje de error que se devuelve al cliente se
 |12|El inicio de sesión es válido, pero se ha producido un error de acceso al servidor.|  
 |18|Se debe cambiar la contraseña.|  
 |38, 46|No se pudo encontrar la base de datos solicitada por el usuario.|
+|58| Cuando SQL Server está establecido para usar solo la autenticación de Windows y un cliente intenta iniciar sesión con la autenticación de SQL. Otro motivo es que los SID no coincidan.|
 |102 - 111|Error de AAD.|
 |122 - 124|Error debido a que el nombre de usuario o la contraseña están vacíos.|
 |126|La base de datos solicitada por el usuario no existe.|

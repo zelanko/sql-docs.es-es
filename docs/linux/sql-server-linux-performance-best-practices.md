@@ -1,19 +1,19 @@
 ---
 title: Procedimientos recomendados de rendimiento para SQL Server en Linux
 description: En este artículo se ofrecen instrucciones y procedimientos recomendados para ejecutar SQL Server en Linux.
-author: rgward
-ms.author: bobward
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68105440"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558346"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedimientos recomendados de rendimiento e instrucciones de configuración para SQL Server en Linux
 
@@ -57,7 +57,7 @@ Se trata de la configuración recomendada del sistema operativo Linux relacionad
 
 
 > [!Note]
-> En el caso de los usuarios de Red Hat Enterprise Linux (RHEL), el perfil de rendimiento configurará automáticamente estas opciones (excepto para C-States).
+> En el caso de los usuarios de Red Hat Enterprise Linux (RHEL), el perfil de rendimiento [optimizado](https://tuned-project.org) configura de forma automática estas opciones (excepto para C-States). A partir de RHEL 8.0, se ha desarrollado un perfil de mssql /usr/lib/tuned integrado conjuntamente con Red Hat y ofrece optimizaciones relacionadas con el rendimiento de Linux más precisas para cargas de trabajo de SQL Server. Este perfil incluye el perfil de rendimiento de RHEL y a continuación se presentan sus definiciones para que las revise con otras distribuciones de Linux y versiones de RHEL sin este perfil.
 
 En la tabla siguiente se proporcionan recomendaciones para la configuración de la CPU:
 
@@ -91,13 +91,79 @@ Es posible que la configuración predeterminada de **vm.max_map_count** (que es 
 sysctl -w vm.max_map_count=262144
 ```
 
+### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>Configuración propuesta de Linux mediante un perfil mssql optimizado
+
+```bash
+#
+# A tuned configuration for SQL Server on Linux
+#
+    
+[main]
+summary=Optimize for Microsoft SQL Server
+include=throughput-performance
+    
+[cpu]
+force_latency=5
+
+[sysctl]
+vm.swappiness = 1
+vm.dirty_background_ratio = 3
+vm.dirty_ratio = 80
+vm.dirty_expire_centisecs = 500
+vm.dirty_writeback_centisecs = 100
+vm.transparent_hugepages=always
+# For , use
+# vm.transparent_hugepages=madvice
+vm.max_map_count=1600000
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048576
+kernel.numa_balancing=0
+kernel.sched_latency_ns = 60000000
+kernel.sched_migration_cost_ns = 500000
+kernel.sched_min_granularity_ns = 15000000
+kernel.sched_wakeup_granularity_ns = 2000000
+```
+
+Para habilitar este perfil optimizado, guarde estas definiciones en un archivo **tuned.conf** en una carpeta /usr/lib/tuned/mssql y habilite el perfil mediante
+
+```bash
+chmod +x /usr/lib/tuned/mssql/tuned.conf
+tuned-adm profile mssql
+```
+
+Compruebe que se habilita con
+
+```bash
+tuned-adm active
+```
+or
+```bash
+tuned-adm list
+```
+
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>Deshabilitación de la última fecha y hora de acceso en los sistemas de archivos para los archivos de datos y de registro de SQL Server
 
 Use el atributo **noatime** con cualquier sistema de archivos que se use para almacenar archivos de datos y de registro de SQL Server. Consulte la documentación de Linux para obtener información sobre cómo establecer este atributo.
 
 ### <a name="leave-transparent-huge-pages-thp-enabled"></a>Habilitación de Transparent Huge Pages (THP)
 
-La mayoría de las instalaciones de Linux deben tener esta opción activada de forma predeterminada. Se recomienda que, para obtener un rendimiento más coherente, deje habilitada esta opción de configuración.
+La mayoría de las instalaciones de Linux deben tener esta opción activada de forma predeterminada. Se recomienda que, para obtener un rendimiento más coherente, deje habilitada esta opción de configuración. Pero, por ejemplo, en el caso de una actividad de paginación de memoria alta en implementaciones de SQL Server con varias instancias o la ejecución de SQL Server con otras aplicaciones que requieren mucha memoria del servidor, se recomienda probar el rendimiento de las aplicaciones después de ejecutar el comando siguiente 
+
+```bash
+echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+```
+o bien, modificar el perfil optimizado de mssql con la línea
+
+```bash
+vm.transparent_hugepages=madvice
+```
+y activarlo después de la modificación.
+```bash
+tuned-adm off
+tuned-amd profile mssql
+```
 
 ### <a name="swapfile"></a>Archivo de intercambio
 

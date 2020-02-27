@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245299"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179286"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Cada base de datos tiene un contador que se incrementa por cada operación de in
   
 **timestamp** es el sinónimo del tipo de datos **rowversion** y está sujeto al comportamiento de los sinónimos de tipos de datos. En las instrucciones DDL, use **rowversion** en lugar de **timestamp** siempre que sea posible. Para más información, vea [Sinónimos de tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-El tipo de datos [!INCLUDE[tsql](../../includes/tsql-md.md)]timestamp**de** es distinto del tipo de datos **timestamp** definido en el estándar ISO.
+El tipo de datos **timestamp** de [!INCLUDE[tsql](../../includes/tsql-md.md)] es distinto del tipo de datos **timestamp** definido en el estándar ISO.
   
 > [!NOTE]  
 >  La sintaxis de **timestamp** está en desuso. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-A continuación, puede utilizar las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] de ejemplo siguientes para implementar el control de simultaneidad optimista en la tabla `MyTest` durante la actualización.
+A continuación, puede utilizar las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] de ejemplo siguientes para implementar el control de simultaneidad optimista en la tabla `MyTest` durante la actualización. El script usa `<myRv>` para representar el valor **rowversion** desde la última vez que se ha leído la fila. Reemplace el valor por el valor **rowversion** real. Un ejemplo de un valor **rowversion** real es `0x00000000000007D3`.
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -89,7 +89,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myRv;  
+    AND RV = <myRv>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -99,12 +99,12 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myRv` es el valor de columna **rowversion** para la fila que indica la última vez que lee la fila. El valor **rowversion** real debe reemplazar a este valor. Un ejemplo del valor **rowversion** real es 0x00000000000007D3.
-  
+
+
 Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de ejemplo también se pueden incluir en una transacción. Al consultar la variable `@t` en el ámbito de la transacción, puede recuperar la columna `myKey` actualizada de la tabla sin consultar de nuevo la tabla `MyTest`.
-  
-En el siguiente ejemplo se usa la sintaxis de **timestamp**:
-  
+
+En el ejemplo siguiente se usa la sintaxis de **timestamp**. Reemplace `<myTS>` por un valor **timestamp** real.
+
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
     ,myValue int, TS timestamp);  
@@ -118,7 +118,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myTS;  
+    AND TS = <myTS>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

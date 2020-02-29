@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da115c8d4cf48cfbcd6190c88a83bee4e61ae5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
+ms.openlocfilehash: 372d3a1b5722b1a19e9560fe92f61e45b6744ace
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73240770"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180114"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>Sys. database_scoped_configurations (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-addw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Contiene una fila por cada configuración. 
 
@@ -35,9 +35,10 @@ Contiene una fila por cada configuración.
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|IDENTIFICADOR de la opción de configuración.|
 |**Name**|**nvarchar (60)**|Nombre de la opción de configuración. Para obtener información sobre las posibles configuraciones, vea [ALTER DATABASE scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-|**valor**|**SQLVARIANT**|Valor establecido para esta opción de configuración para la réplica principal.|
+|**value**|**SQLVARIANT**|Valor establecido para esta opción de configuración para la réplica principal.|
 |**value_for_secondary**|**SQLVARIANT**|Valor establecido para esta opción de configuración para las réplicas secundarias.|
 |**is_value_default**|**bit** |Especifica si el conjunto de valores es el valor predeterminado.|
+|**dw_compatibility_level**|**int**|Nivel de compatibilidad de la base de datos.  Valor predeterminado = 0 (automático)|
 
 ## <a name="Permissions"></a> Permisos
 

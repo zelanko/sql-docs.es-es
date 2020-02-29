@@ -15,156 +15,152 @@ ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9e2c29e97a360b9e595b972643645e2e8d549c67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d70d5570735d2861f8cf62d3b8c0c61a3bae938
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68892019"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78173104"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Almacenamiento de las credenciales en un origen de datos de Reporting Services
-  Es posible configurar credenciales almacenadas que un servidor de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] use para obtener acceso a los datos externos de un informe. Las credenciales almacenadas se utilizan si un informe se ejecuta de forma desatendida, por ejemplo, una suscripción [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que publica un informe como correo electrónico. El servidor de informes recupera y usa las credenciales cuando se programa o desencadena el procesamiento de informes. En este tema se explica cómo configurar credenciales almacenadas para los servidores de informes en modo Nativo y en modo de SharePoint.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modo de SharePoint|  
-  
- **En este tema:**  
-  
--   [Configurar credenciales almacenadas para un origen de datos específico del informe (modo nativo)](#bkmk_stored_credentials_data_source_native)  
-  
--   [Configurar credenciales almacenadas para un origen de datos específico del informe (modo de SharePoint)](#bkmk_stored_credentials_data_source_sharepoint)  
-  
--   [Configurar credenciales almacenadas para un origen de datos compartido (modo nativo)](#bkmk_stored_credentials_shared_data_source_native)  
-  
--   [Configurar credenciales almacenadas para un origen de datos compartido (modo de SharePoint)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
-  
-##  <a name="bkmk_top"></a>Requisitos de la Directiva de seguridad para credenciales almacenadas  
- ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Es necesario que la cuenta que usa para las credenciales almacenadas se configure para una de las siguientes directivas de seguridad en el servidor de informes. Se recomienda seleccionar la directiva con el nivel mínimo de permisos necesario para el entorno.  
-  
-1.  **Permitir el inicio de sesión local**. Para obtener más información, vea [Permitir el inicio de sesión local](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
-  
-2.  **Inicie sesión como un trabajo por lotes**. Para obtener más información, vea [Iniciar sesión como proceso por lotes](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
-  
-3.  Para obtener información general sobre directivas, vea [Modificar la configuración de seguridad en un objeto de directiva de grupo](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
-  
-##  <a name="bkmk_stored_credentials_data_source_native"></a>Configurar credenciales almacenadas para un origen de datos específico del informe (modo nativo)  
-  
-1.  En el modo Nativo del Administrador de informes, vaya a la carpeta que contiene el informe. Haga clic en el menú contextual del elemento ![en el administrador de informes para elementos de SSRS](../media/ssrs-report-manager-item-context-menu.png "menú contextual en el administrador de informes para elementos de ssrs").  
-  
-2.  Haga clic en **Administrar** y luego en **Orígenes de datos**.  
-  
-3.  Seleccione **Un origen de datos personalizado**.  
-  
-4.  En la lista **Tipo de origen de datos** , seleccione la extensión de procesamiento de datos que se usa para procesar los datos del origen de datos.  
-  
-5.  En **cadena de conexión**, especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. En el ejemplo siguiente se muestra una cadena de conexión que se utiliza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] para conectarse a la base de datos:  
-  
-    ```  
-    data source=<servername>;initial catalog=AdventureWorks2012  
-    ```  
-  
-6.  En **Conectar utilizando**, seleccione **Credenciales almacenadas de forma segura en el servidor de informes**.  
-  
-7.  Escriba un nombre de usuario y una contraseña.  
-  
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\>. Luego, seleccione **Usar como credenciales de Windows al conectarse al origen de datos.**  
-  
-    -   Si el nombre de usuario y la contraseña son credenciales de la base de datos, no seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**. Si el servidor de bases de datos admite la suplantación o la delegación, puede seleccionar **Suplantar al usuario autenticado después de realizar una conexión al origen de datos**.  
-  
-8.  Haga clic en **Aplicar**.  
-  
-     ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [requisitos de la Directiva de seguridad para credenciales almacenadas](#bkmk_top)  
-  
-##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a>Configurar credenciales almacenadas para un origen de datos específico del informe (modo de SharePoint)  
-  
-1.  Vaya a la biblioteca de documentos que contiene el informe y, a continuación, haga clic en el menú ![contextual de la biblioteca de documentos de menú abrir para elementos de SSRS](../media/ssrs-sharepoint-item-context-menu.png "menú contextual de la biblioteca de documentos para elementos de ssrs").  
-  
-2.  Haga clic en el menú ![contextual de la biblioteca de documentos de menú abierto para elementos de SSRS](../media/ssrs-sharepoint-item-context-menu.png "menú contextual de la biblioteca de documentos para elementos de ssrs") y luego haga clic en **administrar orígenes de datos**.  
-  
-3.  Haga clic en el nombre del origen de datos **personalizado** que quiere configurar con credenciales almacenadas.  
-  
-4.  En la lista **Tipo de origen de datos** , seleccione la extensión de procesamiento de datos que se usa para procesar los datos del origen de datos.  
-  
-5.  En **cadena de conexión**, especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. En el ejemplo siguiente se muestra una cadena de conexión que se utiliza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] para conectarse a la base de datos:  
-  
-    ```  
-    data source=<servername>;initial catalog=AdventureWorks2012  
-    ```  
-  
-6.  En **credenciales**, seleccione **credenciales almacenadas**.  
-  
-7.  Escriba un **nombre de usuario** y una **contraseña**.  
-  
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\>. Luego, seleccione **Usar como credenciales de Windows al conectarse al origen de datos.**  
-  
-    -   Si el nombre de usuario y la contraseña son credenciales de base de datos, no seleccione **Utilizar como credenciales de Windows**. Si el servidor de base de datos admite la suplantación o la delegación, puede seleccionar **Establecer contexto de ejecución en esta cuenta**.  
-  
-8.  Haga clic en **Aceptar**.  
-  
-     ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [requisitos de la Directiva de seguridad para credenciales almacenadas](#bkmk_top)  
-  
-##  <a name="bkmk_stored_credentials_shared_data_source_native"></a>Configurar credenciales almacenadas para un origen de datos compartido (modo nativo)  
-  
-1.  En el modo Nativo del Administrador de informes, vaya al elemento del origen de datos compartido. ![Icono de origen de datos compartido](../media/hlp-16datasource.png "Icono de origen de datos compartido")  
-  
-2.  Haga clic en el menú contextual del menú contextual del ![Administrador de informes para elementos de SSRS](../media/ssrs-report-manager-item-context-menu.png "menú contextual en el administrador de informes para elementos de ssrs") y, a continuación, haga clic en **administrar**.  
-  
-3.  En la lista **tipo de origen de datos** , especifique la extensión de procesamiento de datos que se utiliza para procesar datos del origen de datos.  
-  
+  Es posible configurar credenciales almacenadas que un servidor de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] use para obtener acceso a los datos externos de un informe. Las credenciales almacenadas se utilizan si un informe se ejecuta de forma desatendida, por ejemplo, una suscripción [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que publica un informe como correo electrónico. El servidor de informes recupera y usa las credenciales cuando se programa o desencadena el procesamiento de informes. En este tema se explica cómo configurar credenciales almacenadas para los servidores de informes en modo Nativo y en modo de SharePoint.
+
+||
+|-|
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modo de SharePoint|
+
+ **En este tema:**
+
+-   [Configurar credenciales almacenadas para un origen de datos específico del informe (modo nativo)](#bkmk_stored_credentials_data_source_native)
+
+-   [Configurar credenciales almacenadas para un origen de datos específico del informe (modo de SharePoint)](#bkmk_stored_credentials_data_source_sharepoint)
+
+-   [Configurar credenciales almacenadas para un origen de datos compartido (modo nativo)](#bkmk_stored_credentials_shared_data_source_native)
+
+-   [Configurar credenciales almacenadas para un origen de datos compartido (modo de SharePoint)](#bkmk_stored_credentials_shared_data_source_sharepoint)
+
+##  <a name="bkmk_top"></a>Requisitos de la Directiva de seguridad para credenciales almacenadas
+ ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Es necesario que la cuenta que usa para las credenciales almacenadas se configure para una de las siguientes directivas de seguridad en el servidor de informes. Se recomienda seleccionar la directiva con el nivel mínimo de permisos necesario para el entorno.
+
+1.  **Permitir el inicio de sesión local**. Para obtener más información, vea [Permitir el inicio de sesión local](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).
+
+2.  **Inicie sesión como un trabajo por lotes**. Para obtener más información, vea [Iniciar sesión como proceso por lotes](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).
+
+3.  Para obtener información general sobre directivas, vea [Modificar la configuración de seguridad en un objeto de directiva de grupo](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).
+
+##  <a name="bkmk_stored_credentials_data_source_native"></a>Configurar credenciales almacenadas para un origen de datos específico del informe (modo nativo)
+
+1.  En el modo Nativo del Administrador de informes, vaya a la carpeta que contiene el informe. Haga clic en el menú contextual del elemento ![en el administrador de informes para elementos de SSRS](../media/ssrs-report-manager-item-context-menu.png "menú contextual en el administrador de informes para elementos de ssrs").
+
+2.  Haga clic en **Administrar** y luego en **Orígenes de datos**.
+
+3.  Seleccione **Un origen de datos personalizado**.
+
+4.  En la lista **Tipo de origen de datos** , seleccione la extensión de procesamiento de datos que se usa para procesar los datos del origen de datos.
+
+5.  En **cadena de conexión**, especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. En el ejemplo siguiente se muestra una cadena de conexión que se utiliza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] para conectarse a la base de datos:
+
+    ```
+    data source=<servername>;initial catalog=AdventureWorks2012
+    ```
+
+6.  En **Conectar utilizando**, seleccione **Credenciales almacenadas de forma segura en el servidor de informes**.
+
+7.  Escriba un nombre de usuario y una contraseña.
+
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\>. Luego, seleccione **Usar como credenciales de Windows al conectarse al origen de datos.**
+
+    -   Si el nombre de usuario y la contraseña son credenciales de la base de datos, no seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**. Si el servidor de bases de datos admite la suplantación o la delegación, puede seleccionar **Suplantar al usuario autenticado después de realizar una conexión al origen de datos**.
+
+8.  Haga clic en **Aplicar**.
+
+     ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [requisitos de la Directiva de seguridad para credenciales almacenadas](#bkmk_top)
+
+##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a>Configurar credenciales almacenadas para un origen de datos específico del informe (modo de SharePoint)
+
+1.  Vaya a la biblioteca de documentos que contiene el informe y, a continuación, haga clic en el menú ![contextual de la biblioteca de documentos de menú abrir para elementos de SSRS](../media/ssrs-sharepoint-item-context-menu.png "menú contextual de la biblioteca de documentos para elementos de ssrs").
+
+2.  Haga clic en el menú ![contextual de la biblioteca de documentos de menú abierto para elementos de SSRS](../media/ssrs-sharepoint-item-context-menu.png "menú contextual de la biblioteca de documentos para elementos de ssrs") y luego haga clic en **administrar orígenes de datos**.
+
+3.  Haga clic en el nombre del origen de datos **personalizado** que quiere configurar con credenciales almacenadas.
+
+4.  En la lista **Tipo de origen de datos** , seleccione la extensión de procesamiento de datos que se usa para procesar los datos del origen de datos.
+
+5.  En **cadena de conexión**, especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. En el ejemplo siguiente se muestra una cadena de conexión que se utiliza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] para conectarse a la base de datos:
+
+    ```
+    data source=<servername>;initial catalog=AdventureWorks2012
+    ```
+
+6.  En **credenciales**, seleccione **credenciales almacenadas**.
+
+7.  Escriba un **nombre de usuario** y una **contraseña**.
+
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\>. Luego, seleccione **Usar como credenciales de Windows al conectarse al origen de datos.**
+
+    -   Si el nombre de usuario y la contraseña son credenciales de base de datos, no seleccione **Utilizar como credenciales de Windows**. Si el servidor de base de datos admite la suplantación o la delegación, puede seleccionar **Establecer contexto de ejecución en esta cuenta**.
+
+8.  Haga clic en **Aceptar**.
+
+     ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [requisitos de la Directiva de seguridad para credenciales almacenadas](#bkmk_top)
+
+##  <a name="bkmk_stored_credentials_shared_data_source_native"></a>Configurar credenciales almacenadas para un origen de datos compartido (modo nativo)
+
+1.  En el modo Nativo del Administrador de informes, vaya al elemento del origen de datos compartido. ![Icono de origen de datos compartido](../media/hlp-16datasource.png "Icono de origen de datos compartido")
+
+2.  Haga clic en el menú contextual del menú contextual del ![Administrador de informes para elementos de SSRS](../media/ssrs-report-manager-item-context-menu.png "menú contextual en el administrador de informes para elementos de ssrs") y, a continuación, haga clic en **administrar**.
+
+3.  En la lista **tipo de origen de datos** , especifique la extensión de procesamiento de datos que se utiliza para procesar datos del origen de datos.
+
 4.  En **cadena de conexión**, especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda que no especifique credenciales en la cadena de conexión.  
-  
-     En el ejemplo siguiente se muestra una cadena de conexión que se utiliza para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] conectarse a la base de datos local:  
-  
-    ```  
-    data source=<localservername>; initial catalog=AdventureWorks2012  
-    ```  
-  
-5.  Escriba un nombre de usuario y una contraseña.  
-  
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\>. Luego, seleccione **Usar como credenciales de Windows al conectarse al origen de datos.**  
-  
-    -   Si el nombre de usuario y la contraseña son credenciales de la base de datos, no seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**. Si el servidor de bases de datos admite la suplantación o la delegación, puede seleccionar **Suplantar al usuario autenticado después de realizar una conexión al origen de datos**.  
-  
-6.  Haga clic en **Aplicar**.  
-  
-     ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [requisitos de la Directiva de seguridad para credenciales almacenadas](#bkmk_top)  
-  
-##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a>Configurar credenciales almacenadas para un origen de datos compartido (modo de SharePoint)  
-  
-1.  En la biblioteca de documentos, busque el elemento de origen de datos compartido. ![Icono de origen de datos compartido](../media/hlp-16datasource.png "Icono de origen de datos compartido")  
-  
-2.  Haga clic en el menú contextual ![de la biblioteca de documentos menú contextual para elementos de SSRS](../media/ssrs-sharepoint-item-context-menu.png "menú contextual de la biblioteca de documentos para elementos de ssrs") y, a continuación, haga clic en el segundo menú contextual ![de la biblioteca de documentos](../media/ssrs-sharepoint-item-context-menu.png "menú contextual de la biblioteca de documentos para elementos de ssrs")del menú contextual  
-  
-3.  Haga clic en **Editar definición de origen de datos**.  
-  
-4.  En la lista **tipo de origen de datos** , especifique la extensión de procesamiento de datos que se utiliza para procesar datos del origen de datos.  
-  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda que no especifique credenciales en la cadena de conexión.
+
+     En el ejemplo siguiente se muestra una cadena de conexión que se utiliza para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] conectarse a la base de datos local:
+
+    ```
+    data source=<localservername>; initial catalog=AdventureWorks2012
+    ```
+
+5.  Escriba un nombre de usuario y una contraseña.
+
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\>. Luego, seleccione **Usar como credenciales de Windows al conectarse al origen de datos.**
+
+    -   Si el nombre de usuario y la contraseña son credenciales de la base de datos, no seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**. Si el servidor de bases de datos admite la suplantación o la delegación, puede seleccionar **Suplantar al usuario autenticado después de realizar una conexión al origen de datos**.
+
+6.  Haga clic en **Aplicar**.
+
+     ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [requisitos de la Directiva de seguridad para credenciales almacenadas](#bkmk_top)
+
+##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a>Configurar credenciales almacenadas para un origen de datos compartido (modo de SharePoint)
+
+1.  En la biblioteca de documentos, busque el elemento de origen de datos compartido. ![Icono de origen de datos compartido](../media/hlp-16datasource.png "Icono de origen de datos compartido")
+
+2.  Haga clic en el menú contextual ![de la biblioteca de documentos menú contextual para elementos de SSRS](../media/ssrs-sharepoint-item-context-menu.png "menú contextual de la biblioteca de documentos para elementos de ssrs") y, a continuación, haga clic en el segundo menú contextual ![de la biblioteca de documentos](../media/ssrs-sharepoint-item-context-menu.png "menú contextual de la biblioteca de documentos para elementos de ssrs")del menú contextual
+
+3.  Haga clic en **Editar definición de origen de datos**.
+
+4.  En la lista **tipo de origen de datos** , especifique la extensión de procesamiento de datos que se utiliza para procesar datos del origen de datos.
+
 5.  En **cadena de conexión**, especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda que no especifique credenciales en la cadena de conexión.  
-  
-     En el ejemplo siguiente se muestra una cadena de conexión que se utiliza para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] conectarse a la base de datos local:  
-  
-    ```  
-    data source=<localservername>; initial catalog=AdventureWorks2012  
-    ```  
-  
-6.  Escriba un nombre de usuario y una contraseña.  
-  
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela con este formato: \<dominio>\\<cuenta\> y seleccione **Usar como credenciales de Windows**.  
-  
-    -   Si el nombre de usuario y la contraseña son credenciales de base de datos, no seleccione **Utilizar como credenciales de Windows**. Si el servidor de base de datos admite la suplantación o la delegación, puede seleccionar **establecer contexto de ejecución en esta cuenta**.  
-  
-7.  Haga clic en **Aceptar**.  
-  
-     ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [requisitos de la Directiva de seguridad para credenciales almacenadas](#bkmk_top)  
-  
-## <a name="see-also"></a>Consulte también  
- [Especificar información de credenciales y conexión para los orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md)   
- [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Página de propiedades orígenes de datos &#40;Administrador de informes&#41;](../data-sources-properties-page-report-manager.md)   
- [Nueva página de origen de datos &#40;Administrador de informes&#41;](../new-data-source-page-report-manager.md)  
-  
-  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda que no especifique credenciales en la cadena de conexión.
+
+     En el ejemplo siguiente se muestra una cadena de conexión que se utiliza para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] conectarse a la base de datos local:
+
+    ```
+    data source=<localservername>; initial catalog=AdventureWorks2012
+    ```
+
+6.  Escriba un nombre de usuario y una contraseña.
+
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela con este formato: \<dominio>\\<cuenta\> y seleccione **Usar como credenciales de Windows**.
+
+    -   Si el nombre de usuario y la contraseña son credenciales de base de datos, no seleccione **Utilizar como credenciales de Windows**. Si el servidor de base de datos admite la suplantación o la delegación, puede seleccionar **establecer contexto de ejecución en esta cuenta**.
+
+7.  Haga clic en **Aceptar**.
+
+     ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [requisitos de la Directiva de seguridad para credenciales almacenadas](#bkmk_top)
+
+## <a name="see-also"></a>Consulte también
+ [Especificar información de credenciales y conexión para los orígenes de datos de informe](../../integration-services/connection-manager/data-sources.md) [configurar propiedades de orígenes de datos para un informe &#40;administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md) [crear, eliminar o modificar un origen de datos compartido &#40;administrador de informes página de](../create-delete-or-modify-a-shared-data-source-report-manager.md) [propiedades&#41;orígenes de datos](../data-sources-properties-page-report-manager.md) &#40;administrador de informes&#41;página de origen de [datos nueva](../new-data-source-page-report-manager.md) &#40;administrador de informes&#41;
+
+

@@ -12,18 +12,18 @@ ms.assetid: 53b4752b-055d-4716-b2bc-75b4cce84101
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11da8d77f5ea97dc435b9af23090d1d34da0f05c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 889158e04cbadb63c712ead73a61a7002ea61eae
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753125"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175374"
 ---
 # <a name="data-collector-programming"></a>Programar el recopilador de datos
-  La API del recopilador de datos en <xref:Microsoft.SqlServer.Management.Collector>, permite el control mediante programación de todas las operaciones de configuración a través del modelo de objetos. Además, muchas de las operaciones de recopilación de datos que utilizan la API se implementan como procedimientos almacenados que se instalan en el servidor.  
-  
- En la siguiente ilustración se muestran elementos clave del modelo de objetos del recopilador de datos.  
-  
- ![Modelo de objetos del recopilador de datos](../../../2014/database-engine/dev-guide/media/dc-objectmodel.gif "Modelo de objetos del recopilador de datos")  
-  
-  
+  La API del recopilador de datos en <xref:Microsoft.SqlServer.Management.Collector>, permite el control mediante programación de todas las operaciones de configuración a través del modelo de objetos. Además, muchas de las operaciones de recopilación de datos que utilizan la API se implementan como procedimientos almacenados que se instalan en el servidor.
+
+ En la siguiente ilustración se muestran elementos clave del modelo de objetos del recopilador de datos.
+
+ ![Modelo de objetos del recopilador de datos](../../../2014/database-engine/dev-guide/media/dc-objectmodel.gif "Modelo de objetos del recopilador de datos")
+
+

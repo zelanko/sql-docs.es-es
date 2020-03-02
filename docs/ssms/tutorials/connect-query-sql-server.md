@@ -5,18 +5,18 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein; maghan
-ms.topic: quickstart
+ms.topic: tutorial
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ac805437d716bbc7e8fdf95f491c64331ddb4658
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76162654"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575549"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Tutorial: Conexión a una instancia de SQL Server y realización de consultas con SQL Server Management Studio (SSMS)
 
@@ -31,7 +31,7 @@ En este tutorial aprenderá a usar SQL Server Management Studio (SSMS) para cone
 > * Usar la tabla de la ventana de consulta para comprobar las propiedades de la conexión
 > * Cambiar el servidor al que está conectada la ventana de consulta
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, así como acceso a una instancia de SQL Server. 
 

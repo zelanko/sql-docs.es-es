@@ -110,13 +110,13 @@ GO
   
 -   La base de datos de estadísticas semánticas de lenguaje es de solo lectura. No puede personalizar esta base de datos. Si modifica el contenido de la base de datos de la manera que fuere, los resultados de las futuras indizaciones semánticas son indeterministas. Para restaurar estos datos a su estado original, puede quitar la base de datos modificada. Después puede descargar y adjuntar una nueva copia sin modificar de la base de datos.  
   
--   Es posible desasociar o quitar la base de datos de estadísticas semánticas de lenguaje. If there are any active indexing operations that have read locks on the database, then the detach or drop operation will fail or time out. This is consistent with existing behavior. Después de quitar la base de datos, se producirá un error en cualquier operación de indización semántica.  
+-   Es posible desasociar o quitar la base de datos de estadísticas semánticas de lenguaje. Si hay operaciones de indización activas que tengan bloqueos de lectura en la base de datos, se producirá un error en la operación de separación o eliminación o se agotará el tiempo de espera. Esto es coherente con el comportamiento existente. Después de quitar la base de datos, se producirá un error en cualquier operación de indización semántica.  
  
 ##  <a name="HowToUnregister"></a> Quitar la base de datos de estadísticas semánticas de lenguaje  
 
 ###  <a name="unregister-detach-and-remove-the-semantic-language-statistics-database"></a>Eliminar del Registro, separar y quitar la base de datos de estadísticas de lenguaje semántico 
 
- **1. Unregister the semantic language statistics database.**
+ **1. Elimine del Registro la base de datos de estadísticas semánticas de lenguaje.**
    
  Llame al procedimiento almacenado [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md). No tiene que proporcionar el nombre de la base de datos ya que una instancia solo puede tener una base de datos de estadísticas semánticas de lenguaje.  
   
@@ -125,7 +125,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
- **2. Detach the semantic language statistics database.**  
+ **2. Separe la base de datos de estadísticas semánticas de lenguaje.**  
  
  Llame al procedimiento almacenado [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) y proporcione el nombre de la base de datos.  
   
@@ -137,7 +137,7 @@ EXEC sp_detach_db @dbname = N'semanticsdb';
 GO  
 ```  
   
- **3. Remove the semantic language statistics database.**  
+ **3. Quite la base de datos de estadísticas semánticas de lenguaje.**  
  
  Después de cancelar el registro y de separar la base de datos, puede eliminar el archivo de base de datos. No existe ningún programa de desinstalación ni hay ninguna entrada en la opción **Programas y características** en el Panel de control.  
   

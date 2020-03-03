@@ -30,11 +30,11 @@ El origen usa el administrador de conexiones de Teradata para conectarse al orig
 
 Puede registrar las llamadas que realiza el origen de Teradata a Teradata Parallel Transporter (TPT) API. Para ello, habilite el registro de paquetes y, luego, seleccione el evento **Diagnostic** en el nivel de paquete.
 
-Para registrar las llamadas de conectividad abierta de bases de datos (ODBC) que el origen de Teradata realiza al controlador ODBC de Teradata, puede habilitar el seguimiento del administrador de controladores ODBC. Para más información, consulte [cómo generar un seguimiento ODBC con el administrador de orígenes de datos ODBC](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
+Para registrar las llamadas de conectividad abierta de bases de datos (ODBC) que el origen de Teradata realiza al controlador ODBC de Teradata, puede habilitar el seguimiento del administrador de controladores ODBC. Para más información, consulte el artículo sobre [cómo generar un seguimiento ODBC con el administrador de orígenes de datos ODBC](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
 
 ## <a name="parallelism"></a>Paralelismo
 
-El origen de Teradata admite paralelismo, donde los trabajos de exportación pueden acceder a la misma tabla o a tablas diferentes al mismo tiempo. Una variable de base de datos denominada `MaxLoadTasks` establece el límite del número de trabajos de exportación que se pueden ejecutar al mismo tiempo. Este número máximo se puede establecer mediante la variable `MaxLoadTasks`.
+El origen de Teradata admite el paralelismo, donde los trabajos de exportación pueden acceder a la misma tabla o a tablas diferentes al mismo tiempo. Una variable de base de datos denominada `MaxLoadTasks` establece el límite del número de trabajos de exportación que se pueden ejecutar al mismo tiempo. Este número máximo se puede establecer mediante la variable `MaxLoadTasks`.
 
 ## <a name="teradata-source-custom-properties"></a>Propiedades personalizadas del origen de Teradata
 
@@ -48,11 +48,11 @@ En la tabla siguiente se enumeran las propiedades personalizadas del origen de T
 |BufferMode|Boolean|El valor predeterminado es *True*. El valor debe ser *True* si se usa la característica PutBuffer. Esta propiedad se encuentra en el panel **Editor avanzado**.|
 |DataEncryption|Boolean|El valor predeterminado es *False*. Si el valor es *true*, se usa el cifrado de seguridad completo.|
 |DefaultCodePage|Entero|La página de códigos que se usa cuando el origen de datos no tiene información sobre páginas de códigos. Esta propiedad se encuentra en el panel **Editor avanzado**.|
-|DetailedTracingLevel|Integer (enumeración)|Seleccione una de las siguientes opciones de seguimiento avanzado: <br> *Off*: sin registro avanzado. <br> *General*: se registra el seguimiento general de las actividades específicas del controlador. <br> *CLI*: se registra el seguimiento de actividades relacionadas con CLIv2. <br> *Notify Method* (Método de notificación): se registra el seguimiento de actividades relacionadas con la característica de notificación. <br> *Common Library*: se registra el seguimiento de actividades de la biblioteca opcommon. <br> *Todos*: se registra todo el seguimiento de actividad anterior. <br> El archivo de registro de seguimiento avanzado se define en la propiedad `DetailedTracingFile`. <br> La propiedad `DetailedTracingFile` se debe establecer si la opción no es *Off*. Esta propiedad se encuentra en el panel **Editor avanzado**.|
+|DetailedTracingLevel|Integer (enumeración)|Seleccione una de las siguientes opciones de seguimiento avanzado: <br> *Off*: sin registro avanzado. <br> *General*: se registra el seguimiento general de las actividades específicas del controlador. <br> *CLI*: se registra el seguimiento de actividades relacionadas con CLIv2. <br> *Notify Method* (Método de notificación): se registra el seguimiento de actividades relacionadas con la característica de notificación. <br> *Common Library* (Biblioteca común): se registra el seguimiento de actividades de la biblioteca opcommon. <br> *Todos*: se registra todo el seguimiento de actividad anterior. <br> El archivo de registro de seguimiento avanzado se define en la propiedad `DetailedTracingFile`. <br> La propiedad `DetailedTracingFile` se debe establecer si la opción no es *Off*. Esta propiedad se encuentra en el panel **Editor avanzado**.|
 |DetailedTracingFile|String|La ruta de acceso del archivo de registro que se genera automáticamente cuando *DetailedTracingLevel* no es *Off*. Esta propiedad se encuentra en el panel **Editor avanzado**.|
 |DiscardLargeRow|Boolean|El valor predeterminado es *False*. Si el valor es *true*, se descartan filas grandes (más de 64 KB).|
 |ExtendedStringColumnsAllocation|Boolean|Si es *true*, se usa *Maximal Transfer Character Allocation Factor*. <br> Este valor debe establecerse en *true* si la propiedad `Export Width Table ID` de la base de datos de Teradata está establecida en *Maximal Defaults*. <br> El valor predeterminado es *False*.|
-|JobMaxRowSize|Entero|Se puede admitir el tamaño máximo de la fila. Este valor es necesario si el valor de `DiscardLargeRow` es *true*.<br>Valores válidos: <br>*64* (valor predeterminado): se pueden admitir longitudes de fila de 2 bytes. <br>*1024*: se pueden admitir longitudes de fila de 4 bytes.|
+|JobMaxRowSize|Entero|Se puede admitir el tamaño máximo de la fila. Este valor es necesario si el valor de `DiscardLargeRow` es *true*.<br>Valores válidos:  <br>*64* (valor predeterminado): se pueden admitir longitudes de fila de 2 bytes. <br>*1024*: se pueden admitir longitudes de fila de 4 bytes.|
 |MaxSessions|Entero|El número máximo de sesiones que han iniciado sesión. Este valor debe ser superior a uno. El valor predeterminado es una sesión para cada procesador del módulo de acceso (AMP) disponible.|
 |MinSessions|Entero|Número mínimo de sesiones iniciadas. Este valor debe ser superior a uno. El valor predeterminado es una sesión por cada AMP disponible.|
 |QueryBandSessInfo|Varchar|Expresión de banda de consulta basada en sesión y definida por el usuario en un formato de cadena de conexión. Esta propiedad se usa para la supervisión y la regulación de recargos. Esta propiedad se encuentra en el panel **Editor avanzado**.|
@@ -94,11 +94,11 @@ Use el panel **Administrador de conexiones** para seleccionar la instancia del a
 
 **Connection manager**
 
-* Seleccione un administrador de conexiones existente de la lista o seleccione **Nuevo** para crear una instancia del administrador de conexiones de Teradata.
+* Seleccione un administrador de conexiones existente de la lista o elija **Nuevo** para crear una instancia del administrador de conexiones de Teradata.
 
 **Nuevo**
 
-* Seleccione **Nuevo**. Se abre el panel **	Editor del administrador de conexiones de Teradata**. En este panel puede crear un administrador de conexiones.
+* Seleccione **Nuevo**. Se abre el panel **Editor del administrador de conexiones de Teradata**. En este panel puede crear un administrador de conexiones.
 
 **Modo de acceso a los datos**
 
@@ -161,7 +161,7 @@ Use el panel **Salida de error** para seleccionar opciones de control de errores
   * Redirigir la fila
   * Hacer que el componente genere un error.
 
-**Temas relacionados:** : Consulte [Control de errores en los datos](error-handling-in-data.md).
+**Temas relacionados:**: Consulte [Control de errores en los datos](error-handling-in-data.md).
 
 **Truncamiento**
 

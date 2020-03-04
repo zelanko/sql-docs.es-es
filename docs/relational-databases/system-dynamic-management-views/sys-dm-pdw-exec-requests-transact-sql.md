@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 15d27881378a88c8f4ae6d65640be6218ecd3530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15049436b0d1769361ae1cfc47b52bfb503ba763
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632764"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256885"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>Sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -44,10 +44,26 @@ ms.locfileid: "73632764"
 |group_name|**sysname** |En el caso de las solicitudes que usan recursos, group_name es el nombre del grupo de cargas de trabajo en el que se ejecuta la solicitud.  Si la solicitud no emplea recursos, group_name es NULL.</br>Se aplica a: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Para las solicitudes que usan recursos, el nombre del clasificador utilizado para asignar recursos e importancia.||
 |resource_allocation_percentage|**decimal (5, 2)**|La cantidad de recursos asignados a la solicitud.</br>Se aplica a: Azure SQL Data Warehouse|
-|result_set_cache|**bit**|Detalla si una consulta finalizada era un acierto de caché de resultados (1) o no (0). </br>Se aplica a: Azure SQL Data Warehouse|0, 1|
+|result_set_cache|**bit**|Detalla si una consulta completada ha utilizado caché de conjunto de resultados.  </br>Se aplica a: Azure SQL Data Warehouse| 1 = acierto de caché de conjunto de resultados </br> 0 = error de caché de conjunto de resultados </br> Valores negativos = motivos por los que no se ha usado el almacenamiento en caché del conjunto de resultados.  Vea la sección Comentarios para obtener más información.|
 ||||
   
+## <a name="remarks"></a>Observaciones 
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
+
+ El result_set_cache es una máscara de máscara del uso de la memoria caché del conjunto de resultados de una consulta.  Esta columna puede ser la [| (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de estos valores:  
+  
+|Value|Descripción|  
+|-----------|-----------------|  
+|**1**|Acierto de caché de conjunto de resultados|  
+|-**0x00**|Error de caché de conjunto de resultados|  
+|-**0x01**|El almacenamiento en caché del conjunto de resultados está deshabilitado en la base de datos.|  
+|-**0x02**|El almacenamiento en caché del conjunto de resultados está deshabilitado en la sesión. | 
+|-**0x04**|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a que no hay orígenes de datos para la consulta.|  
+|-**0x08**|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a predicados de seguridad de nivel de fila.|  
+|-**0x10**|El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso de la tabla del sistema, la tabla temporal o la tabla externa en la consulta.|  
+|-**0x20**|El almacenamiento en caché del conjunto de resultados está deshabilitado porque la consulta contiene constantes de tiempo de ejecución, funciones definidas por el usuario o funciones no deterministas.|  
+|-**0x40**|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a que el tamaño del conjunto de resultados Estimado es demasiado grande (> 1 millón filas).|  
+|-**0x80**|El almacenamiento en caché del conjunto de resultados está deshabilitado porque el conjunto de resultados contiene filas con un tamaño grande (>64 KB).|  
   
 ## <a name="permissions"></a>Permisos
 

@@ -8521,7 +8521,7 @@
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
                     - name: Editor de consultas del motor de base de datos
-                      href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: Editor XML
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: Codificación de colores en el Editor de consultas

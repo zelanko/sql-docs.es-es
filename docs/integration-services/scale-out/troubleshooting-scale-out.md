@@ -1,5 +1,5 @@
 ---
-title: Solución de problemas de escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
+title: Solución de problemas de escalabilidad horizontal de SSIS | Microsoft Docs
 description: En este artículo se describe cómo solucionar problemas comunes con Escalabilidad horizontal de SSIS.
 ms.custom: performance
 ms.date: 01/09/2019
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 987217c1afe07b5e917f415b9a5bc0d784ab7c6d
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67896150"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903779"
 ---
 # <a name="troubleshoot-scale-out"></a>Solución de problemas de escalabilidad horizontal
 

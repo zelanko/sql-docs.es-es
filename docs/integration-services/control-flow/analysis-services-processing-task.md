@@ -1,10 +1,8 @@
 ---
 title: Tarea Procesamiento de Analysis Services | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92e0656fd3625f2b93a1e097d2f81291056d01cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e95fd78657a043683d04fa86fd66edd345e2f483
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298470"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634796"
 ---
 # <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea
 
@@ -84,7 +82,7 @@ ms.locfileid: "71298470"
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Editor de la tarea de procesamiento de Analysis Services (página General)
-  Use la página **General** del cuadro de diálogo **Editor de la tarea de procesamiento de Analysis Services** para describir y asignar un nombre a la tarea de procesamiento de Analysis Services.  
+  Use la página **General** del cuadro de diálogo **Editor de la tarea de procesamiento de Analysis Services** para describir dicha tarea y asignarle un nombre.  
   
 ### <a name="options"></a>Opciones  
  **Nombre**  
@@ -119,7 +117,8 @@ ms.locfileid: "71298470"
  **Temas relacionados:** [Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones de Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Lista de objetos**  
- |Propiedad|Descripción|  
+ 
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**Nombre de objeto**|Enumera los nombres de los objetos especificados.|  
 |**Tipo**|Enumera los tipos de los objetos especificados.|  
@@ -138,7 +137,8 @@ ms.locfileid: "71298470"
  **Temas relacionados:** [Impacto del cuadro de diálogo de análisis &#40;Analysis Services: datos multidimensionales&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Resumen de configuración de lotes**  
- |Propiedad|Descripción|  
+ 
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**Orden de procesamiento**|Especifica si los objetos se procesan de manera secuencial o en un lote; si se utiliza el procesamiento paralelo, especifica el número de objetos que se deben procesar simultáneamente.|  
 |**Modo de transacción**|Especifica el modo de transacción para el procesamiento secuencial.|  
@@ -150,4 +150,3 @@ ms.locfileid: "71298470"
  Cambie las opciones de procesamiento y el control de errores en las claves de dimensiones.  
   
  **Temas relacionados:** [Cuadro de diálogo Cambiar configuración &#40;(Analysis Services: datos multidimensionales)&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
-  

@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982806"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634814"
 ---
 # <a name="statistics"></a>Estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ Para crear el histograma, el optimizador de consultas ordena los valores de colu
 Más concretamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea el **histograma** del conjunto ordenado de valores de columna en tres pasos:
 
 - **Inicialización del histograma**: en el primer paso, se procesa una secuencia de valores desde el principio del conjunto ordenado y se recopila un máximo de 200 valores de *range_high_key*, *equal_rows*, *range_rows* y *distinct_range_rows* (*range_rows* y *distinct_range_rows* son siempre cero durante este paso). El primer paso finaliza cuando se han agotado todas las entradas o cuando se han encontrado 200 valores. 
-- **Examen con combinación de depósito**: cada valor adicional de la columna inicial de la clave de estadísticas se procesa en el segundo paso, de forma ordenada; cada valor sucesivo se agrega al último rango o se crea un rango nuevo al final (esto es posible porque los valores de entrada están ordenados). Si se crea un rango nuevo, un par de rangos existentes colindantes se contrae en un solo rango. Este par de rangos se selecciona para minimizar la pérdida de información. Este método usa un algoritmo de *diferencias máximas* para minimizar el número de pasos del histograma a la vez que maximiza las diferencias entre los valores de límite. El número de pasos después de contraer los rangos permanece en 200 a lo largo de este paso.
+- **Examen con combinación de depósito**: cada valor adicional de la columna inicial de la clave de estadísticas se procesa en el segundo paso, de forma ordenada; cada valor sucesivo se agrega al último rango o se crea un rango al final (esto es posible porque los valores de entrada están ordenados). Si se crea un rango nuevo, un par de rangos existentes colindantes se contrae en un solo rango. Este par de rangos se selecciona para minimizar la pérdida de información. Este método usa un algoritmo de *diferencias máximas* para minimizar el número de pasos del histograma a la vez que maximiza las diferencias entre los valores de límite. El número de pasos después de contraer los rangos permanece en 200 a lo largo de este paso.
 - **Consolidación del histograma**: en el tercer paso, es posible que se contraigan más rangos si no se pierde una cantidad significativa de información. El número de pasos del histograma puede ser menor que el número de valores distintos, incluso para las columnas con menos de 200 puntos de límite. Por lo tanto, incluso si la columna tiene más de 200 valores únicos, es posible que el histograma tenga menos de 200 pasos. Para una columna formada solamente por valores únicos, el histograma consolidado tendrá un mínimo de tres pasos.
 
 > [!NOTE]
@@ -159,6 +159,9 @@ Para obtener más información sobre el control de AUTO_UPDATE_STATISTICS, consu
  El Optimizador de consultas ya permite crear las estadísticas de las siguientes formas:  
   
 1.  El Optimizador de consultas crea las estadísticas para índices en tablas o vistas cuando se crea el índice. Estas estadísticas se crean en las columnas de clave del índice. Si el índice es un índice filtrado, el Optimizador de consultas crea las estadísticas filtradas en el mismo subconjunto de filas especificado para el índice filtrado. Para obtener más información sobre los índices filtrados, vea [Crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md) y [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+
+    > [!NOTE]
+    > A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], las estadísticas no se crean examinando todas las filas de la tabla cuando se crea o se vuelve a compilar un índice con particiones. En su lugar, el Optimizador de consultas usa el algoritmo de muestreo predeterminado para generar estadísticas. Después de actualizar una base de datos con índices con particiones, puede observar una diferencia en los datos del histograma para estos índices. Este cambio de comportamiento puede no afectar al rendimiento de las consultas. Para obtener estadísticas sobre índices con particiones examinando todas las filas de la tabla, use `CREATE STATISTICS` o `UPDATE STATISTICS` con la cláusula `FULLSCAN`. 
   
 2.  El optimizador de consultas crea las estadísticas para las columnas únicas de predicados de consulta cuando [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) está activada.  
 
@@ -199,7 +202,7 @@ En este ejemplo, el objeto de estadísticas `LastFirst` tiene densidades para lo
 ### <a name="query-selects-from-a-subset-of-data"></a>La consulta realiza la selección entre un subconjunto de datos  
 Cuando el Optimizador de consultas crea las estadísticas para las columnas únicas e índices, crea las estadísticas para los valores de todas las filas. Cuando las consultas realizan la selección de entre un subconjunto de filas, y ese subconjunto de filas tiene una distribución de datos única, las estadísticas filtradas pueden mejorar los planes de consulta. Puede crear estadísticas filtradas usando la instrucción [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) con la cláusula [WHERE](../../t-sql/queries/where-transact-sql.md) para definir la expresión del predicado de filtro.  
   
-Por ejemplo, utilizando [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada producto de la tabla `Production.Product` pertenece a una de las cuatro categorías de la tabla `Production.ProductCategory`: Bikes, Components, Clothing y Accessories. Cada una de las categorías tiene una distribución de datos diferente en función del peso: el peso de las bicicletas (bikes) va de 13,77 a 30,0, el de los componentes (components) de 2,12 a 1050,00 con algunos valores NULL, todos los pesos de la ropa (clothing) son NULL, lo mismo que los de los accesorios (accessories).  
+Por ejemplo, con [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada producto de la tabla `Production.Product` pertenece a una de las cuatro categorías de la tabla `Production.ProductCategory`: Bikes, Components, Clothing y Accessories. Cada una de las categorías tiene una distribución de datos diferente en función del peso: el peso de las bicicletas (bikes) va de 13,77 a 30,0, el de los componentes (components) de 2,12 a 1050,00 con algunos valores NULL, todos los pesos de la ropa (clothing) son NULL, lo mismo que los de los accesorios (accessories).  
   
 Utilizando las bicicletas (Bikes) como ejemplo, las estadísticas filtradas para todos los pesos de las bicicletas proporcionarán estadísticas más precisas al Optimizador de consultas y podrán mejorar la calidad del plan de consulta en comparación con las estadísticas de tabla completa o las estadísticas no existentes en la columna del peso (Weight). La columna de peso de bicicleta es una buena candidata para las estadísticas filtradas, pero no necesariamente para un índice filtrado si el número de búsquedas de peso es relativamente pequeño. La ganancia de rendimiento para las búsquedas que proporciona un índice filtrado no podría ser mayor que el mantenimiento adicional y el costo de almacenamiento de agregar un índice filtrado a la base de datos.  
   

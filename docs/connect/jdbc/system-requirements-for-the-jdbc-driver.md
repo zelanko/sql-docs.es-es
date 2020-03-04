@@ -1,7 +1,7 @@
 ---
 title: Requisitos del sistema para el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e9e74d080ed0e7cd91dcde6cbaa2ca2e32f04dc6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 1a6aac999ef6877356f66f4db1d6d6763cc0f1ea
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004556"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903732"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos del sistema para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "77004556"
 
 **Microsoft JDBC Driver 8.2 para SQL Server:**  
 
-  JDBC Driver 8.2 incluye tres bibliotecas de clases JAR en cada paquete de instalación: **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** y **mssql-jdbc-8.2.0.jre13.jar**.
+  El controlador JDBC Driver 8.2 incluye tres bibliotecas de clases JAR en cada paquete de instalación: **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** y **mssql-jdbc-8.2.1.jre13.jar**.
 
   JDBC Driver 8.2 está diseñado para funcionar con todas las máquinas virtuales Java principales y ser compatible con ellas, aunque solo se ha probado en OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 y Azul Zulu JRE 13.0.
   
@@ -55,9 +55,9 @@ ms.locfileid: "77004556"
   
   |JAR|Cumplimiento con la versión JDBC|Versión de Java recomendada|Descripción|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.0.jre8.jar|4,2|8|Requiere la versión 1.8 de Java Runtime Environment (JRE). El uso de JRE 1.7 o anterior lanza una excepción.<br /><br /> Las nuevas características de la versión 8.2 incluyen lo siguiente: Compatibilidad con JDK 13, Always Encrypted con enclaves seguros y mejoras de rendimiento del tipo de datos temporal. |
-|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Requiere Java Runtime Environment (JRE) 11.0. El uso de JRE 10.0 o anterior lanza una excepción.<br /><br /> Las nuevas características de la versión 8.2 incluyen lo siguiente: Compatibilidad con JDK 13, Always Encrypted con enclaves seguros y mejoras de rendimiento del tipo de datos temporal. |
-|mssql-jdbc-8.2.0.jre13.jar|4.3|13|Requiere la versión 13.0 de Java Runtime Environment (JRE). El uso de JRE 11.0 o anterior lanza una excepción.<br /><br /> Las nuevas características de la versión 8.2 incluyen lo siguiente: Compatibilidad con JDK 13, Always Encrypted con enclaves seguros y mejoras de rendimiento del tipo de datos temporal. |
+|mssql-jdbc-8.2.1.jre8.jar|4,2|8|Requiere la versión 1.8 de Java Runtime Environment (JRE). El uso de JRE 1.7 o anterior lanza una excepción.<br /><br /> Las nuevas características de la versión 8.2 incluyen lo siguiente: Compatibilidad con JDK 13, Always Encrypted con enclaves seguros y mejoras de rendimiento del tipo de datos temporal. |
+|mssql-jdbc-8.2.1.jre11.jar|4.3|11|Requiere Java Runtime Environment (JRE) 11.0. El uso de JRE 10.0 o anterior lanza una excepción.<br /><br /> Las nuevas características de la versión 8.2 incluyen lo siguiente: Compatibilidad con JDK 13, Always Encrypted con enclaves seguros y mejoras de rendimiento del tipo de datos temporal. |
+|mssql-jdbc-8.2.1.jre13.jar|4.3|13|Requiere la versión 13.0 de Java Runtime Environment (JRE). El uso de JRE 11.0 o anterior lanza una excepción.<br /><br /> Las nuevas características de la versión 8.2 incluyen lo siguiente: Compatibilidad con JDK 13, Always Encrypted con enclaves seguros y mejoras de rendimiento del tipo de datos temporal. |
 
 
   El controlador JDBC Driver 8.2 también está disponible en el repositorio central de Maven y se puede agregar a un proyecto de Maven si se agrega el siguiente código en POM.XML:  
@@ -66,7 +66,7 @@ ms.locfileid: "77004556"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
 </dependency>
 ```
 

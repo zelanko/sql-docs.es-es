@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Configuración de Escalabilidad horizontal de SQL Server Integration Services | Microsoft Docs'
+title: 'Tutorial: Configuración de la escalabilidad horizontal de SSIS | Microsoft Docs'
 description: Este artículo le guiará a través de la instalación y configuración de Escalabilidad horizontal de SSIS.
 ms.custom: performance
 ms.date: 12/13/2017
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67896132"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903672"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Tutorial: Configuración de Escalabilidad horizontal de Integration Services (SSIS)
 

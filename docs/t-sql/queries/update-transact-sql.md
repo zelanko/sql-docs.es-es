@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7bf485ec7f6295ed3ee0f9ca04e3f088e5d9cb5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74687377"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176695"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -461,7 +461,7 @@ ID     Value
  Una instrucción UPDATE siempre adquiere un bloqueo exclusivo (X) en la tabla que modifica y retiene ese bloqueo hasta que se completa la transacción. Con un bloqueo exclusivo, ninguna otra transacción puede modificar los datos. Puede especificar sugerencias de tabla para invalidar este comportamiento predeterminado durante la ejecución de la instrucción UPDATE especificando otro método de bloqueo, sin embargo se recomienda que solo los desarrolladores y administradores de bases de datos experimentados usen las sugerencias y únicamente como último recurso. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Comportamiento del registro  
- La instrucción UPDATE se registra, pero las actualizaciones parciales de tipos de datos de valores grandes mediante la cláusula **.** WRITE se registran mínimamente. Para obtener más información, vea “Actualizar tipos de datos de valores grandes” en la sección anterior “Tipos de datos”.  
+ La instrucción UPDATE se registra, pero las actualizaciones parciales de tipos de datos de valores grandes mediante la cláusula **\.WRITE** se registran mínimamente. Para obtener más información, vea “Actualizar tipos de datos de valores grandes” en la sección anterior “Tipos de datos”.  
   
 ## <a name="security"></a>Seguridad  
   
@@ -1067,7 +1067,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="ad-using-a-simple-update-statement"></a>AD. Usar una instrucción UPDATE simple  
  En los ejemplos siguientes se muestra cómo se pueden ver afectadas todas las filas si no se usa una cláusula WHERE para especificar la fila o las filas que se deben actualizar.  

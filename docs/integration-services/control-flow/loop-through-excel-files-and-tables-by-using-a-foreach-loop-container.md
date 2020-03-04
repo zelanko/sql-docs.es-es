@@ -1,5 +1,5 @@
 ---
-title: Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles Para cada uno | Microsoft Docs
+title: Creación de bucles entre archivos y tablas de Excel mediante un contenedor de bucles Foreach | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c636138358dda82c758ab2db70fab8d315f9b9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c82f5f361bf04b7d3d4a4c7012cee92d2a85ebfd
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71294031"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903771"
 ---
-# <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
+# <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Creación de bucles entre archivos y tablas de Excel mediante un contenedor de bucles Foreach
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

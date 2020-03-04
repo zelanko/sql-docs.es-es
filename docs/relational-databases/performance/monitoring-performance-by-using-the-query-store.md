@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0f11b1e7300027d024b5961f73ffa71c7b07a2bd
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909309"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608498"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72909309"
 ##  <a name="Enabling"></a> Habilitar el Almacén de consultas  
  El Almacén de consultas no está activo para nuevas bases de datos de manera predeterminada.  
   
-#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Use la página del Almacén de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+#### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Use la página del Almacén de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en una base de datos y, luego, haga clic en **Propiedades**.  
   
@@ -595,7 +595,7 @@ Al usar **sp_query_store_force_plan** solo puede forzar los planes que se grabar
 
 #### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Plan para forzar la compatibilidad con cursores estáticos y de avance rápido
   
-A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3, el Almacén de consultas admite la capacidad de forzar planes de ejecución de consulta para los cursores de API y [!INCLUDE[tsql](../../includes/tsql-md.md)] estáticos y de avance rápido. Se admite el forzado mediante `sp_query_store_force_plan` o a través de los informes del Almacén de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y Azure SQL Database (todos lo modelos de implementación), el Almacén de consultas admite la capacidad de forzar planes de ejecución de consulta para los cursores de API y [!INCLUDE[tsql](../../includes/tsql-md.md)] estáticos y de avance rápido. Se admite el forzado mediante `sp_query_store_force_plan` o a través de los informes del Almacén de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 ### <a name="remove-plan-forcing-for-a-query"></a>Quitar el forzado de un plan para una consulta
 

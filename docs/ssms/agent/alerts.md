@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252686"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608473"
 ---
 # <a name="alerts"></a>Alertas
 
@@ -104,6 +104,12 @@ Puede especificar una alerta para que se active en respuesta a una condición de
   
     > [!NOTE]  
     > Se muestrean periódicamente los datos de rendimiento, lo que puede causar una pequeña demora (unos segundos) entre el momento en que se alcanza el umbral y la activación de la alerta relativa al rendimiento.  
+  
+    > [!NOTE]  
+    > Las variables de registro de eventos que almacenan los nombres de los servidores están limitadas a 32 caracteres. Por lo tanto, si el tamaño del nombre de host y el de la instancia combinados es superior a 32 caracteres, es posible que reciba el siguiente error:
+    
+    Advertencia [466] No se pudo copiar el nombre del servidor LONGNAMESQLSERV\LONGINSTANCENAME al generar alertas de contador de rendimiento.
+  
   
 ## <a name="selecting-a-wmi-event"></a>Seleccionar un evento de WMI  
 Puede especificar que una alerta tenga lugar como respuesta a un determinado evento de WMI. Para seleccionar un evento de WMI, debe definir lo siguiente en la página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] General **del cuadro de diálogo** Nueva alerta **o** Propiedades de alerta **del Agente** :  

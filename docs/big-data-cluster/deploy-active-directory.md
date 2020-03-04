@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo actualizar los clústeres de macro
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544873"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200966"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory
 
@@ -311,6 +311,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Por el momento, el modo de AD seguro solo funcionará en entornos de implementación de `kubeadm`, pero no en AKS. De forma predeterminada, el perfil de implementación de `kubeadm-prod` incluye las secciones de seguridad.
 
-- Por ahora solo se permite un BDC por dominio. La habilitación de varios BDC por dominio está prevista para una versión futura.
+- Por el momento solo se permite un BDC por dominio (Active Directory). La habilitación de varios BDC por dominio está prevista para una versión futura.
 
 - Ninguno de los grupos de AD especificados en las configuraciones de seguridad puede tener definido el ámbito DomainLocal. Puede comprobar el ámbito de un grupo de AD siguiendo [estas instrucciones](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

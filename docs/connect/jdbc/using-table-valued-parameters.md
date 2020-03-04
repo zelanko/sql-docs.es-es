@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74249714"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575336"
 ---
 # <a name="using-table-valued-parameters"></a>Empleo de parámetros con valores de tabla
 
@@ -156,7 +156,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>Paso de un parámetro con valores de tabla como un objeto ResultSet  
 
-En este ejemplo se muestra cómo transmitir por secuencias filas de datos de un objeto ResultSet a un parámetro con valores de tabla. El código recupera primero los datos de una tabla de origen y crea un objeto SQLServerDataTable, define su esquema y rellena la tabla con datos. A continuación, el código configura un objeto SQLServerPreparedStatement que pasa esta tabla de datos como un parámetro con valores de tabla a SQL Server.  
+En este ejemplo se muestra cómo transmitir por secuencias filas de datos de un objeto ResultSet a un parámetro con valores de tabla. En primer lugar, el código recupera los datos de una tabla de origen en un objeto SQLServerDataTable, define su esquema y rellena la tabla con datos. A continuación, el código configura un objeto SQLServerPreparedStatement que pasa esta tabla de datos como un parámetro con valores de tabla a SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */

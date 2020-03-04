@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70846737"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705873"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -358,7 +359,10 @@ replmerg [-?]
   
  **-SyncToAlternate** [ **0|1**]  
  Especifica si el Agente de mezcla está sincronizando entre un Suscriptor y un Publicador alternativo. Un valor de **1** indica que es un publicador alternativo. El valor predeterminado es **0**.  
-  
+ 
+ **-T** [**101|102**]  
+ Marcas de seguimiento que habilitan funcionalidad adicional para el Agente de mezcla. Un valor de **101** permite obtener más información detallada de registro para ayudar a determinar cuánto tiempo tarda cada paso del proceso de sincronización de la replicación de mezcla. Un valor de **102** escribe las mismas estadísticas que la marca de seguimiento **101**, pero, en su lugar, en la tabla <Distribution server>..msmerge_history. Habilite el registro del agente de mezcla cuando use la marca de seguimiento 101 mediante los parámetros `-output` y `-outputverboselevel`.  Por ejemplo, agregue los parámetros siguientes al agente de mezcla y, después, reinícielo: `-T 101, -output, -outputverboselevel`. 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  Es el número de generaciones que se va a procesar en un lote único mientras se cargan los cambios desde el Suscriptor al Publicador. Una generación se define como un grupo lógico de cambios por artículo. El valor predeterminado para un vínculo de comunicación confiable es **100**. El valor predeterminado para un vínculo de comunicación no confiable es **1**.  
   
@@ -394,7 +398,12 @@ replmerg [-?]
   
  Para iniciar el agente de mezcla, ejecute **replmerg.exe** desde el símbolo del sistema. Para obtener información, vea [Aplicaciones ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
+ ### <a name="troubleshooting-merge-agent-performance"></a>Solución de problemas de rendimiento del Agente de mezcla 
  El historial del agente de mezcla de la sesión actual no se quita mientras se está ejecutando de forma continua. Una ejecución prolongada del agente puede tener como resultado un gran número de entradas en las tablas del historial de mezcla, lo que puede afectar al rendimiento. Para resolver este problema cambie al modo programado o siga usando el modo continuado, pero cree un trabajo dedicado para reiniciar periódicamente el agente de mezcla, o reduzca el nivel de detalle para reducir el número de filas y, en consecuencia, reducir el impacto en el rendimiento.  
+ 
+  En algunos casos, el Agente de mezcla de replicación puede tardar mucho tiempo en replicar los cambios. Para determinar qué paso del proceso de sincronización de la replicación de mezcla tarda más tiempo, use la marca de seguimiento 101 junto con el registro del Agente de mezcla. Con tal fin, use los parámetros siguientes para los parámetros del Agente de mezcla y, después, reinícielo:   <br/>-T 101   <br/>-output   <br/>-outputverboselevel
+
+Además, si tiene que escribir estadísticas en la tabla <Distribution server>..msmerge_history, use la marca de seguimiento -T 102.
   
 ## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)  

@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257673"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705910"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ofrece la posibilidad de acceder a información en tiempo de ejecución sobre los planes de ejecución de consultas. Una de las acciones más importantes cuando se produce un problema de rendimiento es obtener una descripción precisa de la carga de trabajo que se está ejecutando y de cómo se controla el uso de recursos. Por eso es importante el acceso al [plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
@@ -119,9 +119,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera v3
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] incluye una versión recién revisada de la generación de perfiles ligera que recopila información de recuento de filas para todas las ejecuciones. La generación de perfiles ligera está habilitada de forma predeterminada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y la marca de seguimiento 7412 no tiene ningún efecto. Se puede deshabilitar la generación de perfiles ligera en el nivel de base de datos mediante la [configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] incluyen una versión recién revisada de la generación de perfiles ligera que recopila información de recuento de filas para todas las ejecuciones. La generación de perfiles ligera está habilitada de forma predeterminada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la marca de seguimiento 7412 no tiene ningún efecto. Se puede deshabilitar la generación de perfiles ligera en el nivel de base de datos mediante la [configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
 Se ha introducido una nueva DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) para devolver el equivalente del último plan de ejecución real conocido para la mayoría de las consultas, y se llama *últimas estadísticas de plan de consulta*. Las últimas estadísticas de plan de consulta se pueden habilitar en el nivel de base de datos mediante la [configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LAST_QUERY_PLAN_STATS: `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 

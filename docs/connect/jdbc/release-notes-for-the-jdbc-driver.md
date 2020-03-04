@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión para el controlador JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6d55a856096a830172ced69f9fb28f66c11733e7
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 76607fbe96ef954ce90c7d24daf9a12b69a3fce6
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004546"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903744"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Notas de la versión para el controlador JDBC Driver de Microsoft
 
@@ -23,28 +23,28 @@ ms.locfileid: "77004546"
 
 En este artículo se enumeran las versiones del _controlador JDBC Driver de Microsoft para SQL Server_. Se nombran y describen los cambios en cada una de las versiones.
 
-## <a name="820"></a>8.2.0
+## <a name="821"></a>8.2.1
 
 ### <a name="compliance"></a>Cumplimiento normativo
 
-29 de enero de 2020
+26 de febrero de 2020
 
 | Cambio respecto del cumplimiento | Detalles |
 | :---------------- | :------ |
-| Descargue las actualizaciones más recientes para JDBC Driver 8.2. | &bull; &nbsp; [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub, 8.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| Totalmente compatible con la especificación 4.2 de la API de JDBC. | Los archivos JAR del paquete 8.2 reciben su nombre según la compatibilidad de la versión de Java.<br/><br/>Por ejemplo, el archivo mssql-jdbc-8.2.0.jre11.jar del paquete 8.2 se debe usar con Java 11. |
+| Descargue las actualizaciones más recientes para JDBC Driver 8.2. | &bull; &nbsp; [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub, 8.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Totalmente compatible con la especificación 4.2 de la API de JDBC. | Los archivos JAR del paquete 8.2 reciben su nombre según la compatibilidad de la versión de Java.<br/><br/>Por ejemplo, el archivo mssql-jdbc-8.2.1.jre11.jar del paquete 8.2 se debe usar con Java 11. |
 | Compatible con Java Development Kit (JDK) versión 13.0, 11.0 y 1.8. | Microsoft JDBC Driver 8.2 para SQL Server es compatible con Java Development Kit (JDK) versión 13.0, además de con JDK 11.0 y 1.8. |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-13"></a>Compatibilidad con JDK 13
 
-Microsoft JDBC Driver 8.2.0 para SQL Server es compatible con Java Development Kit (JDK) versión 13.0, además de con JDK 11.0 y 1.8.
+Microsoft JDBC Driver 8.2.1 para SQL Server ahora es compatible con Java Development Kit (JDK), versión 13.0, además de con JDK 11.0 y 1.8.
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 
 | Cambio de Always Encrypted | Detalles |
 | :--------- | :------ |
-| Ahora Microsoft JDBC Driver 8.2.0 para SQL Server admite Always Encrypted con enclaves seguros. Los detalles se pueden encontrar aquí: Always Encrypted con enclaves seguros. |
+| Microsoft JDBC Driver 8.2.1 para SQL Server ahora admite Always Encrypted con enclaves seguros. Los detalles se pueden encontrar aquí: Always Encrypted con enclaves seguros. |
 | Más información y código de ejemplo. | [Always Encrypted con enclaves seguros](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
 | &nbsp; | &nbsp; |
 
@@ -52,7 +52,7 @@ Microsoft JDBC Driver 8.2.0 para SQL Server es compatible con Java Developmen
 
 | Cambio de los tipos de datos temporales | Detalles |
 | :---------- | :------ |
-| Microsoft JDBC Driver 8.2.0 para SQL Server ha mejorado el rendimiento al recuperar tipos de datos temporales de SQL Server. | Este cambio elimina las conversiones de tipos de datos temporales innecesarias mediante la eliminación del uso de java.util.Calendar siempre que sea posible. |
+| Microsoft JDBC Driver 8.2.1 para SQL Server presenta un rendimiento mejorado al recuperar tipos de datos temporales de SQL Server. | Este cambio elimina las conversiones de tipos de datos temporales innecesarias mediante la eliminación del uso de java.util.Calendar siempre que sea posible. |
 | En la lista siguiente se muestran los tipos de datos temporales que se han visto afectados por esta mejora en el rendimiento; el formato es el tipo de datos de SQL Server seguido de la asignación de Java correspondiente. | date (java.sql.Date), datetime (java.sql.Timestamp), datetime2 (java.sql.Timestamp), smalldatetime (java.sql.Timestamp), and time (java.sql.Time). |
 | &nbsp; | &nbsp; |
 
@@ -63,7 +63,7 @@ Microsoft JDBC Driver 8.2.0 para SQL Server es compatible con Java Developmen
 
 | Cambio de sqljdbc_auth.dll | Detalles |
 | :------------------- | :------ |
-| A partir de Microsoft JDBC Driver 8.2.0 para SQL Server, el controlador se basa en mssql-jdbc_auth-\<versión>-\<arch>.dll en lugar de sqljdbc_auth.dll para usar la característica Autenticación de Azure Active Directory. | &nbsp; |
+| A partir de Microsoft JDBC Driver 8.2.1 para SQL Server, el controlador se basa en mssql-jdbc_auth-\<version>-\<arch>.dll, en lugar de en sqljdbc_auth.dll, para usar la característica Autenticación de Azure Active Directory. | &nbsp; |
 | El archivo DLL también se ha cargado en el repositorio de Maven para facilitar el acceso. | Vea [esta página](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
 | &nbsp; | &nbsp; |
 

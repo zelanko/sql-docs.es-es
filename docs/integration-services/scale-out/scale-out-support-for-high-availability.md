@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con la escalabilidad horizontal de SQL Server Integration Services (SSIS) para una alta disponibilidad | Microsoft Docs
+title: Compatibilidad con la escalabilidad horizontal para una alta disponibilidad | Microsoft Docs
 description: En este artículo se describe cómo configurar Escalabilidad horizontal de SSIS para lograr alta disponibilidad.
 ms.custom: performance
 ms.date: 05/23/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028754"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903682"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
@@ -31,7 +31,7 @@ Como alternativa, la alta disponibilidad en el lado del servicio principal de es
 
 Para configurar la alta disponibilidad en el lado del servicio principal de escalabilidad horizontal con AlwaysOn para el catálogo de SSIS, haga lo siguiente:
 
-## <a name="1-prerequisites"></a>1. Prerequisites
+## <a name="1-prerequisites"></a>1. Prerrequisitos
 Configure un clúster de conmutación por error de Windows. Vea la entrada de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalación de las herramientas y la característica de clúster de conmutación por error para Windows Server 2012) para obtener instrucciones. Instale la característica y las herramientas en todos los nodos del clúster.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Instalación del Servicio principal de escalabilidad horizontal en el nodo principal

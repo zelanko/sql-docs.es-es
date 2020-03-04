@@ -1,6 +1,6 @@
 ---
 title: 'Paso 4: Conexión resistente a SQL con ADO.NET | Microsoft Docs'
-description: Describe cómo establecer una conexión resistente a SQL.
+description: En este artículo se describe cómo establecer una conexión a SQL de forma resistente.
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c323880153939b4f7229e5f04cf4b9a9ed16b99
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b52267870338065589de9bb54e5a332b923348fd
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253320"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568104"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Paso 4: Conexión de forma resistente a SQL con ADO.NET
 

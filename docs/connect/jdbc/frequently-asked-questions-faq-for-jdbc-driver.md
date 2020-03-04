@@ -1,7 +1,7 @@
 ---
 title: Preguntas más frecuentes (P+F) sobre el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1055b9b0422073d7b9875c748dcfe889af053dc2
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004624"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903622"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F) sobre el controlador JDBC
 
@@ -39,9 +39,9 @@ El controlador Microsoft JDBC Driver 8.2 admite las especificaciones de JDBC 
 
 | JAR                        | Especificación de JDBC            | Versión JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.0.jre13.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.0.jre11.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 El controlador Microsoft JDBC Driver 7.4 admite especificaciones de JDBC 4.2 y 4.3 (parcialmente) e incluye tres bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
@@ -124,6 +124,7 @@ En la tabla siguiente se muestran las opciones de autenticación disponibles. La
 | Distinta de Windows | Kerberos pura de Java                    |
 | Distinta de Windows | SQL Server                            |
 | Distinta de Windows | Autenticación con Azure Active Directory |
+| Distinta de Windows | NTLM                                  |
 | Windows     | Kerberos pura de Java                    |
 | Windows     | SQL Server                            |
 | Windows     | Kerberos con copia de seguridad NTLM             |

@@ -14,12 +14,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71127374"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608514"
 ---
 # <a name="tables"></a>Tablas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,7 +46,7 @@ Las tablas temporales se almacenan en **tempdb**. Hay dos tipos de tablas tempor
 
 #### <a name="ctp23"></a> Recompilaciones reducidas para cargas de trabajo mediante tablas temporales en varios ámbitos
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] reduce recompilaciones para cargas de trabajo mediante tablas temporales en varios ámbitos. Antes de esta característica, al hacer referencia a una tabla temporal con una instrucción de lenguaje de manipulación de datos DML (`SELECT`, `INSERT`, `UPDATE` o `DELETE`), si la tabla temporal se había creado mediante un lote de ámbito externo, el resultado era una recompilación de la instrucción DML en cada ejecución. Con esta mejora, SQL Server realiza comprobaciones ligeras adicionales para evitar recompilaciones innecesarias:
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)], en todos los niveles de compatibilidad de la base de datos, reduce las recompilaciones para cargas de trabajo mediante tablas temporales en varios ámbitos. Esta característica también está habilitada en Azure SQL Database en el nivel de compatibilidad de la base de datos 150 para todos los modelos de implementación.  Antes de esta característica, al hacer referencia a una tabla temporal con una instrucción de lenguaje de manipulación de datos DML (`SELECT`, `INSERT`, `UPDATE` o `DELETE`), si la tabla temporal se había creado mediante un lote de ámbito externo, el resultado era una recompilación de la instrucción DML en cada ejecución. Con esta mejora, SQL Server realiza comprobaciones ligeras adicionales para evitar recompilaciones innecesarias:
 
 - Se comprueba si el módulo de ámbito externo que se usa para crear la tabla temporal en tiempo de compilación es el mismo que el de las ejecuciones consecutivas. 
 - Se realiza el seguimiento de los cambios de lenguaje de definición de datos (DDL) realizados en la compilación inicial y se comparan con las operaciones DDL para ejecuciones consecutivas.

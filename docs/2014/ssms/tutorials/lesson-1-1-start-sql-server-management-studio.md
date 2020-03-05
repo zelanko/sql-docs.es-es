@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632797"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288983"
 ---
 # <a name="start-sql-server-management-studio"></a>Iniciar SQL Server Management Studio
   Para empezar este tutorial, veamos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "73632797"
     > [!NOTE]  
     >  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no está instalado de forma predeterminada. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible, ejecute el programa de instalación para instalarlo. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express está disponible como descarga gratuita en el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=7593), pero tiene una interfaz de usuario diferente a la que se describe en este tutorial.  
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express está disponible como descarga gratuita en el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=14630), pero tiene una interfaz de usuario diferente a la que se describe en este tutorial.  
   
 2.  En el cuadro de diálogo **Conectar al servidor** , compruebe la configuración predeterminada y, después, haga clic en **Conectar**. Para conectarse, el cuadro **nombre del servidor** debe contener el nombre del equipo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el que está instalado. Si [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una instancia con nombre, el cuadro **nombre del servidor** también debe contener el nombre de la instancia en el formato \< *computer_name*>\\<*instance_name*>.  
   

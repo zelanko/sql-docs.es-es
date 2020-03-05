@@ -64,7 +64,7 @@ Puede usar el Explorador de objetos para especificar un valor predeterminado de 
    > [!NOTE]
    > Para especificar un valor predeterminado numérico, escriba el número. Para un objeto o función, escriba su nombre. Para un valor predeterminado alfanumérico escriba el valor entre comillas simples.
 
-4. En el menú **Archivo**, haga clic en ***Guardar** _nombre de tabla_.
+4. En el menú **Archivo**, haga clic en **Guardar** _nombre de tabla_.
 
 ## <a name="TsqlProcedure"></a> Usar Transact-SQL para especificar un valor predeterminado
 

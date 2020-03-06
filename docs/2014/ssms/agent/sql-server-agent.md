@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68188827"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339098"
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]El agente es un servicio de Microsoft Windows que ejecuta tareas administrativas programadas, denominadas *trabajos* en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -84,10 +84,9 @@ ms.locfileid: "68188827"
   
  Una alerta puede responder a una de las condiciones siguientes:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ceso  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventos  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condiciones de rendimiento  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condiciones de rendimiento  
   
 -   Eventos del Instrumental de administración de Windows (WMI) en el equipo en el que se ejecuta el Agente SQL Server  
   

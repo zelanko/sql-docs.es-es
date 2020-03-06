@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74ec775d958c6842f284dea5bc90e5d45955423b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175077"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339218"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Administración de contenido del servidor de informes (Modo nativo de SSRS)
   En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], la administración de contenido hace referencia a la administración de elementos del servidor de informes. Es posible administrar todos los elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido.

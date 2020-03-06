@@ -11,11 +11,11 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728071"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338089"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
 
@@ -46,7 +46,7 @@ Para obtener vínculos a los vídeos y a otros recursos de aprendizaje de [!INCL
 - Al instalar [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en un equipo con Windows Server 2012, podría tener que configurar la seguridad mejorada de Internet Explorer para permitir el scripting para el sitio de la aplicación web. De lo contrario, la exploración al sitio en el equipo servidor producirá errores.
 - Para trabajar en la aplicación web, Silverlight 5 debe estar instalado en el equipo cliente. Si no tiene la versión necesaria de Silverlight, se le pedirá que la instale cuando navegue a un área de la aplicación web que la necesite. Puede instalar Silverlight 5 **[aquí](https://www.microsoft.com/silverlight/)**.
 
-## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>
+## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>
   [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en una máquina virtual de Azure
 De forma predeterminada, cuando se pone en marcha una máquina virtual [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] de Azure con [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] ya instalado, también se instala. 
 

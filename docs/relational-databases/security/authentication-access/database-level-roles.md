@@ -39,11 +39,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68742843"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339453"
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
 
@@ -86,7 +86,7 @@ No se pueden cambiar los permisos asignados a los roles fijos de base de datos. 
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>Roles especiales para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>Roles especiales para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
 Estos roles de base de datos solo existen en la base de datos maestra virtual. Sus permisos están restringidos a las acciones realizadas en la base de datos maestra. Solo los usuarios de base de datos en la base de datos maestra se pueden agregar a estos roles. Los inicios de sesión no se pueden agregar a estos roles, pero los usuarios se pueden crear basados en inicios de sesión y, luego, esos usuarios se pueden agregar a los roles. Los usuarios de bases de datos independientes en la base de datos maestra también se pueden agregar a estos roles. Sin embargo, los usuarios de la base de datos independiente que se agregaron al rol **dbmanager** en la base de datos maestra no se pueden usar para crear bases de datos nuevas.
 

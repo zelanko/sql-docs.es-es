@@ -35,14 +35,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70153822"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339036"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar el Asistente para planes de mantenimiento
-  En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asistente para planes de mantenimiento crea un plan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de mantenimiento que el agente puede ejecutar periódicamente. Esto permite realizar diversas tareas de administración de bases de datos, incluidas copias de seguridad, comprobaciones de integridad de la base de datos o actualizaciones de las estadísticas de la base de datos a intervalos especificados.  
+  En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asistente para planes de mantenimiento crea un plan de mantenimiento que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar periódicamente. Esto permite realizar diversas tareas de administración de bases de datos, incluidas copias de seguridad, comprobaciones de integridad de la base de datos o actualizaciones de las estadísticas de la base de datos a intervalos especificados.  
   
  **En este tema**  
   

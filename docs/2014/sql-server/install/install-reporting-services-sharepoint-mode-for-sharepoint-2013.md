@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798338"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339233"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Instalar el modo de SharePoint de Reporting Services para SharePoint 2013
   Los procedimientos de este tema le guían por la instalación en un solo servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint. Los pasos incluyen la ejecución del Asistente para la instalación de SQL Server, así como tareas de configuración que usan Administración central de SharePoint. El tema también se puede usar para ver procedimientos individuales para actualizar una instalación existente, como crear una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -122,7 +122,7 @@ ms.locfileid: "72798338"
   
     -   **Reporting Services complemento para productos de SharePoint**.  
   
-         ![Nota:](../../../2014/reporting-services/media/rs-fyinote.png "note") La opción del Asistente para la instalación de para instalar el complemento es nueva [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en la versión.  
+         ![Nota:](../../../2014/reporting-services/media/rs-fyinote.png "nota") La opción del Asistente para la instalación de para instalar el complemento es nueva [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en la versión.  
   
     -   Si aún no tiene una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]de SQL Server, también podría seleccionar **Servicios de Motor de base de datos** y **Herramientas de administración - Completa** para un entorno completo.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72798338"
   
 12. Si seleccionó los servicios del Motor de base de datos, acepte la instancia predeterminada de **MSSQLSERVER** en la página **Configuración de instancia** y haga clic en **Siguiente**.  
   
-     ![Nota:](../../../2014/reporting-services/media/rs-fyinote.png "note") La arquitectura de servicio de SharePoint de Reporting Services no se basa en una SQL Server "instancia" como era la arquitectura de Reporting Services anterior.  
+     ![Nota:](../../../2014/reporting-services/media/rs-fyinote.png "nota") La arquitectura de servicio de SharePoint de Reporting Services no se basa en una SQL Server "instancia" como era la arquitectura de Reporting Services anterior.  
   
 13. Examine la página **Requisitos de espacio en disco** y haga clic en **Siguiente**.  
   
@@ -414,7 +414,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 ## <a name="see-also"></a>Consulte también  
  [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Actualización y migración de Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Mapa de ruta de contenido: configuración y configuración de SharePoint Server y SQL Server BI](https://technet.microsoft.com/library/dn205112.aspx)   
  [Características admitidas por las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services las aplicaciones de servicio y servicio de SharePoint](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)

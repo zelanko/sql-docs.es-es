@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079759"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339078"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operaciones de registro en Analysis Services
   Una instancia de Analysis Services registrará las notificaciones, los errores y las advertencias del servidor en el archivo msmdsrv. log, uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](https://support.microsoft.com/kb/2965035).  
@@ -45,8 +45,8 @@ ms.locfileid: "66079759"
 |Nombre de archivo o ubicación|Tipo|Se usa para|Activado de forma predeterminada|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Registro de errores|Supervisión rutinaria y solución de problemas básicos|Sí|  
-|Tabla OlapQueryLog en una base de datos relacional|Registro de consultas|Recopilación de entradas para el Asistente de optimización de uso|No|  
-|Archivos sqldmp\<guid>. MDMP|Errores y excepciones|Solución de problemas a fondo|No|  
+|Tabla OlapQueryLog en una base de datos relacional|Registro de consultas|Recopilación de entradas para el Asistente de optimización de uso|Sin|  
+|Archivos sqldmp\<guid>. MDMP|Errores y excepciones|Solución de problemas a fondo|Sin|  
   
  Se recomienda encarecidamente consultar el siguiente vínculo para obtener recursos de información adicionales que no se tratan en este tema: [Initial data collection tips from Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Consejos para la recolección de datos inicial de Soporte técnico de Microsoft).  
   

@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70176127"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339301"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Características compatibles con las ediciones de SQL Server 2014
 
@@ -109,7 +109,7 @@ ms.locfileid: "70176127"
 |Agregar memoria y CPU<sup>2</sup> en caliente|Sí|||||||  
 |Asistente para recuperación de base de datos|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |Copia de seguridad cifrada|Sí|Sí|Sí|||||  
-|Copia de seguridad inteligente|Sí|Sí|Sí|No||||  
+|Copia de seguridad inteligente|Sí|Sí|Sí|Sin||||  
   
  <sup>1</sup> Para obtener más información sobre [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] cómo instalar en Server Core, consulte [instalación de SQL Server 2014 en Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
@@ -166,10 +166,10 @@ ms.locfileid: "70176127"
 |SQL CMD (herramienta del símbolo del sistema)|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Management Studio|Sí|Sí|Sí|Sí|Sí|Sí||  
 |Distributed Replay: herramienta de administración|Sí|Sí|Sí|Sí|Sí|Sí||  
-|Distributed Replay: cliente|Sí|No|Sí|Sí||||  
-|Distributed Replay: controlador|Sí (Enterprise admite hasta 16 clientes, Developer admite solo 1 cliente)|No|Sí (solo admite 1 cliente)|Sí (solo admite 1 cliente)||||  
+|Distributed Replay: cliente|Sí|Sin|Sí|Sí||||  
+|Distributed Replay: controlador|Sí (Enterprise admite hasta 16 clientes, Developer admite solo 1 cliente)|Sin|Sí (solo admite 1 cliente)|Sí (solo admite 1 cliente)||||  
 |SQL Profiler|Sí|Sí|Sí|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Directivas|Sí|Sí|Sí|Sí||||  
+|e[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Sí|Sí|Sí|Sí||||  
 |Paquete de administración de Microsoft System Center Operations Manager|Sí|Sí|Sí|Sí||||  
 |Asistente para la optimización de motor de base de datos (DTA)|Sí|Sí|Sí<sup>3</sup>|Sí<sup>3</sup>||||  
 |Implementar una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos en un asistente para VM de Azure|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  

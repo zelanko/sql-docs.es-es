@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63144621"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338279"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
   Todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen un registro de transacciones que registra todas las transacciones y las modificaciones que cada transacción realiza en la base de datos. El registro de transacciones se debe truncar periódicamente para evitar que se llene. Sin embargo, algunos factores pueden retrasar el truncamiento del registro, por lo que es importante supervisar el tamaño del registro. Algunas operaciones se pueden registrar mínimamente para reducir su impacto sobre el tamaño del registro de transacciones.  

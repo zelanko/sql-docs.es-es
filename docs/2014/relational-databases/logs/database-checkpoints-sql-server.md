@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206104"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339313"
 ---
 # <a name="database-checkpoints-sql-server"></a>Puntos de comprobación de base de datos (SQL Server)
   En este tema se proporciona información general de los puntos de comprobación de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un *punto de comprobación* crea un buen punto conocido desde donde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede empezar a aplicar cambios incluidos en el registro durante la recuperación después de un cierre inesperado o un bloqueo del sistema.  
@@ -70,8 +70,7 @@ ms.locfileid: "68206104"
 |>0|No aplicable.|Puntos de comprobación indirectos cuyo tiempo de recuperación de destino lo determina la configuración TARGET_RECOVERY_TIME, expresado en segundos.|  
   
 ###  <a name="AutomaticChkpt"></a>Puntos de comprobación automáticos  
- Un punto de comprobación automático se produce cada vez que el número de entradas de registro [!INCLUDE[ssDE](../../includes/ssde-md.md)] alcanza el número que estima que puede procesar durante el `recovery interval` tiempo especificado en la opción de configuración del servidor. En cada base de datos sin un tiempo de recuperación de destino definido por el usuario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera puntos de comprobación automáticos. La frecuencia de los puntos de comprobación automáticos `recovery interval` depende de la opción de configuración avanzada del servidor, que especifica el tiempo máximo que una determinada instancia de servidor debe usar para recuperar una base de datos durante el reinicio del sistema. 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula el número máximo de entradas de registro que puede procesar durante el intervalo de recuperación. Cuando una base de datos que usa puntos de comprobación automáticos alcanza el número máximo de entradas de registro, [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite un punto de comprobación en la base de datos. El intervalo de tiempo entre puntos de comprobación puede ser muy variable. Una base de datos con una carga de trabajo de transacciones considerable tendrá más puntos de comprobación frecuentes que otra que se usa principalmente para operaciones de solo lectura.  
+ Un punto de comprobación automático se produce cada vez que el número de entradas de registro [!INCLUDE[ssDE](../../includes/ssde-md.md)] alcanza el número que estima que puede procesar durante el `recovery interval` tiempo especificado en la opción de configuración del servidor. En cada base de datos sin un tiempo de recuperación de destino definido por el usuario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera puntos de comprobación automáticos. La frecuencia de los puntos de comprobación automáticos `recovery interval` depende de la opción de configuración avanzada del servidor, que especifica el tiempo máximo que una determinada instancia de servidor debe usar para recuperar una base de datos durante el reinicio del sistema. [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula el número máximo de entradas de registro que puede procesar durante el intervalo de recuperación. Cuando una base de datos que usa puntos de comprobación automáticos alcanza el número máximo de entradas de registro, [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite un punto de comprobación en la base de datos. El intervalo de tiempo entre puntos de comprobación puede ser muy variable. Una base de datos con una carga de trabajo de transacciones considerable tendrá más puntos de comprobación frecuentes que otra que se usa principalmente para operaciones de solo lectura.  
   
  Además, según el modelo de recuperación simple, un punto de comprobación automático también se pone en cola si el registro se llena al 70%.  
   

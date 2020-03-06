@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63065712"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339243"
 ---
 # <a name="hierarchical-data-sql-server"></a>Datos jerárquicos (SQL Server)
   El tipo de `hierarchyid` datos integrado facilita el almacenamiento y la consulta de datos jerárquicos. `hierarchyid`está optimizado para representar árboles, que son el tipo más común de datos jerárquicos.  

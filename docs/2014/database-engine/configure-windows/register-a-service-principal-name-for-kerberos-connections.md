@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62782000"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339088"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos
   El uso de la autenticación Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que se cumplan las siguientes condiciones:  

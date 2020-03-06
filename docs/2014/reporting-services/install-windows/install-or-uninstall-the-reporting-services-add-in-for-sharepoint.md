@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63f45fa174296e4ce79985236da2d97d3f11e937
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78173744"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339303"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Instalar o desinstalar el complemento de Reporting Services para SharePoint (SharePoint 2010 y SharePoint 2013)
   Ejecute el complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paquete de instalación para productos de SharePoint (rsSharePoint. msi) en los servidores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint para habilitar las características de en una implementación de SharePoint. Entre las características se incluyen Power View, un elemento web Visor de informes, un extremo de proxy URL, tipos de contenido y páginas de aplicación para que pueda crear, ver y administrar informes, modelos de informe, orígenes de datos y otro contenido de un servidor de informes en un sitio de SharePoint. El complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint es un componente necesario para un servidor de informes que se ejecute en modo de SharePoint. El complemento se puede instalar desde el Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o descargando el archivo rsSharePoint.msi desde el Feature Pack de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener una lista de las versiones del complemento, así como de las páginas de descarga, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).

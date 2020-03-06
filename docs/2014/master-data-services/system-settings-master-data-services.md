@@ -14,11 +14,11 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65478820"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339153"
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
   Para todas las aplicaciones web y servicios web asociados a la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , puede configurar las opciones del sistema.  

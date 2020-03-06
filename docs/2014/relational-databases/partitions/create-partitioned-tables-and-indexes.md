@@ -29,11 +29,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62519168"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339143"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Crear tablas e índices con particiones
   Puede crear una tabla o índice con particiones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los datos en tablas e índices con particiones se dividen horizontalmente en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Las particiones pueden hacer que las tablas y los índices grandes sean más escalables y fáciles de administrar.  
@@ -88,7 +88,7 @@ ms.locfileid: "62519168"
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos en la que quiere crear una tabla con particiones y seleccione **Propiedades**.  
   
-2.  En el cuadro de diálogo **Propiedades de la base de datos -** *nombre_base_de_datos*, en **Seleccionar una página**, haga clic en **Grupos de archivos**.  
+2.  En el cuadro de diálogo **Propiedades de la base de datos -** *nombre de base de datos*, en **Seleccionar una página**, seleccione **Grupos de archivos**.  
   
 3.  En **Filas**, haga clic en **Agregar**. En la nueva fila, escriba el nombre del grupo de archivos.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62519168"
   
 #### <a name="to-create-a-partitioned-table"></a>Para crear una tabla con particiones  
   
-1.  Haga clic con el botón derecho en la tabla donde quiere crear las particiones, seleccione **Almacenamiento** y, después, haga clic en **Crear partición...**.  
+1.  Haga clic con el botón derecho en la tabla donde quiere crear las particiones, seleccione **Almacenamiento** y, después, haga clic en **Crear partición...** .  
   
 2.  En el **Asistente para la creación de particiones**, en la página **Asistente para la creación de particiones** , haga clic en **Siguiente**.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62519168"
   
      En esta página están disponibles las opciones siguientes:  
   
-     **Colocar esta tabla en la tabla con particiones seleccionada**  
+     **Colocar esta tabla en la tabla con partición seleccionada**  
      Permite seleccionar una tabla con particiones que contenga los datos relacionados para combinar con esta tabla en la columna de partición. Las tablas con particiones combinadas en las columnas de partición suelen dar lugar a consultas más eficientes.  
   
      **Alinear almacenamiento de índices no únicos e índices únicos con una columna de partición indizada**  
@@ -144,7 +144,7 @@ ms.locfileid: "62519168"
      **Establecer límites...**  
      Abre el cuadro de diálogo **Establecer valores límite** para seleccionar los valores límite y los rangos de fechas que desea para las particiones. Esta opción solo está disponible cuando ha seleccionado una columna de partición que contiene uno de los tipos de datos siguientes: `date`, `datetime`, `smalldatetime`, `datetime2` o `datetimeoffset`.  
   
-     **Calcular almacenamiento**  
+     **Estimar almacenamiento**  
      Calcula el número de filas, el espacio necesario y el espacio disponible para el almacenamiento de cada grupo de archivos especificado para las particiones. Estos valores se muestran en la cuadrícula como valores de solo lectura.  
   
      El cuadro de diálogo **Establecer valores límite** admite las opciones adicionales siguientes:  
@@ -256,7 +256,7 @@ ms.locfileid: "62519168"
   
      Cuando termine, haga clic en **Cerrar**.  
   
- El Asistente para la creación de particiones crea la función y el esquema de partición y aplica las particiones a la tabla especificada. Para comprobar las particiones de tabla, en el Explorador de objetos, haga clic con el botón derecho en la tabla y seleccione **Propiedades**. Haga clic en la página **Almacenamiento**. La página muestra información como el nombre de la función y el esquema de partición y el número de particiones.  
+ El Asistente para la creación de particiones crea la función y el esquema de partición y aplica las particiones a la tabla especificada. Para comprobar las particiones de tabla, en el Explorador de objetos, haga clic con el botón derecho en la tabla y seleccione **Propiedades**. Haga clic en la página **Almacenamiento** . La página muestra información como el nombre de la función y el esquema de partición y el número de particiones.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095687"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339683"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -258,7 +258,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] permite el uso de una serie de controles de simultaneidad. Los usuarios especifican el tipo de control de simultaneidad seleccionando niveles de aislamiento de transacción para las conexiones u opciones de simultaneidad en cursores. Estos atributos se pueden definir mediante instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] o bien mediante las propiedades y los atributos de interfaces de programación de aplicaciones (API) de bases de datos como ADO, ADO.NET, OLE DB y ODBC.  
   
-#### <a name="isolation-levels-in-the-includessdenoversionincludesssdenoversion-mdmd"></a>Niveles de aislamiento en [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+#### <a name="isolation-levels-in-the-ssdenoversion"></a>Niveles de aislamiento en [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
  Las transacciones especifican un nivel de aislamiento que define el grado en que se debe aislar una transacción de las modificaciones de recursos o datos realizadas por otras transacciones. Los niveles de aislamiento se describen en cuanto a los efectos secundarios de la simultaneidad que se permiten, como las lecturas desfasadas o fantasma.  
   
  Control de los niveles de aislamiento de transacción:  
@@ -275,7 +275,7 @@ GO
   
  Un nivel de aislamiento menor significa que los usuarios tienen un mayor acceso a los datos simultáneamente, con lo que aumentan los efectos de simultaneidad que pueden experimentar, como las lecturas desfasadas o la pérdida de actualizaciones. Por el contrario, un nivel de aislamiento mayor reduce los tipos de efectos de simultaneidad, pero requiere más recursos del sistema y aumenta las posibilidades de que una transacción bloquee otra. El nivel de aislamiento apropiado depende del equilibrio entre los requisitos de integridad de los datos de la aplicación y la sobrecarga de cada nivel de aislamiento. El nivel de aislamiento superior, que es serializable, garantiza que una transacción recuperará exactamente los mismos datos cada vez que repita una operación de lectura, aunque para ello aplicará un nivel de bloqueo que puede afectar a los demás usuarios en los sistemas multiusuario. El nivel de aislamiento inferior, de lectura sin confirmar, puede recuperar datos modificados pero no confirmados por otras transacciones. En este nivel se pueden producir todos los efectos secundarios de simultaneidad, pero no hay bloqueos ni versiones de lectura, por lo que se minimiza la sobrecarga.  
   
-##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Niveles de aislamiento  
+##### <a name="ssdenoversion-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Niveles de aislamiento  
  El estándar ISO define los niveles de aislamiento siguientes, todos ellos compatibles con el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]:  
   
 |Nivel de aislamiento|Definición|  
@@ -297,10 +297,10 @@ GO
 |Nivel de aislamiento|Lectura desfasada|Lectura no repetible|Fantasma|  
 |---------------------|----------------|------------------------|-------------|  
 |**Lectura pendiente de confirmación**|Sí|Sí|Sí|  
-|**Lectura confirmada**|No|Sí|Sí|  
-|**Lectura repetible**|No|No|Sí|  
-|**Instantánea**|No|No|No|  
-|**Serializable**|No|No|No|  
+|**Lectura confirmada**|Sin|Sí|Sí|  
+|**Lectura repetible**|Sin|Sin|Sí|  
+|**Instantánea**|Sin|Sin|Sin|  
+|**Serializable**|Sin|Sin|Sin|  
   
  Para obtener más información sobre los tipos de bloqueo específicos o las versiones de fila que controlan cada nivel de aislamiento de transacción, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -433,12 +433,12 @@ GO
 ||Modo concedido existente||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**Modo solicitado**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**Intención compartida (IS)**|Sí|Sí|Sí|Sí|Sí|No|  
-|**Compartido (S)**|Sí|Sí|Sí|No|No|No|  
-|**Actualizado (U)**|Sí|Sí|No|No|No|No|  
-|**Intención exclusiva (IX)**|Sí|No|No|Sí|No|No|  
-|**Compartido con intención exclusiva (SIX)**|Sí|No|No|No|No|No|  
-|**Exclusivo (X)**|No|No|No|No|No|No|  
+|**Intención compartida (IS)**|Sí|Sí|Sí|Sí|Sí|Sin|  
+|**Compartido (S)**|Sí|Sí|Sí|Sin|Sin|Sin|  
+|**Actualizado (U)**|Sí|Sí|Sin|Sin|Sin|Sin|  
+|**Intención exclusiva (IX)**|Sí|Sin|Sin|Sí|Sin|Sin|  
+|**Compartido con intención exclusiva (SIX)**|Sí|Sin|Sin|Sin|Sin|Sin|  
+|**Exclusivo (X)**|Sin|Sin|Sin|Sin|Sin|Sin|  
   
 > [!NOTE]  
 > Un bloqueo con intención exclusivo (IX) es compatible con un modo de bloqueo IX, porque IX indica la intención de actualizar solamente algunas de las filas, no todas. También se permite que otras transacciones intenten leer o actualizar algunas filas, siempre y cuando no se trate de las mismas filas que están actualizando las demás transacciones. Además, si dos transacciones intentan actualizar la misma fila, se permitirá a ambas transacciones un bloqueo IX en el nivel de tabla y de página. Sin embargo, un bloqueo X en el nivel de fila solo se permitirá a una transacción. La otra transacción deberá esperar a que se quite el bloqueo en el nivel de fila.  
@@ -476,13 +476,13 @@ GO
 ||Modo concedido existente|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**Modo solicitado**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**Compartido (S)**|Sí|Sí|No|Sí|Sí|Sí|No|  
-|**Actualizado (U)**|Sí|No|No|Sí|No|Sí|No|  
-|**Exclusivo (X)**|No|No|No|No|No|Sí|No|  
-|**RangeS-S**|Sí|Sí|No|Sí|Sí|No|No|  
-|**RangeS-U**|Sí|No|No|Sí|No|No|No|  
-|**RangeI-N**|Sí|Sí|Sí|No|No|Sí|No|  
-|**RangeX-X**|No|No|No|No|No|No|No|  
+|**Compartido (S)**|Sí|Sí|Sin|Sí|Sí|Sí|Sin|  
+|**Actualizado (U)**|Sí|Sin|Sin|Sí|Sin|Sí|Sin|  
+|**Exclusivo (X)**|Sin|Sin|Sin|Sin|Sin|Sí|Sin|  
+|**RangeS-S**|Sí|Sí|Sin|Sí|Sí|Sin|Sin|  
+|**RangeS-U**|Sí|Sin|Sin|Sí|Sin|Sin|Sin|  
+|**RangeI-N**|Sí|Sí|Sí|Sin|Sin|Sí|Sin|  
+|**RangeX-X**|Sin|Sin|Sin|Sin|Sin|Sin|Sin|  
   
 #### <a name="lock_conversion"></a> Bloqueos de conversión  
  Los bloqueos de conversión se crean cuando un bloqueo de intervalos con clave se superpone a otro bloqueo.  

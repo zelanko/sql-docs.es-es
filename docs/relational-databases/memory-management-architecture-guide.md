@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68115268"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338571"
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
 
@@ -47,7 +47,7 @@ Uno de los principales objetivos de diseño de todo el software de base de datos
 > [!NOTE]
 > En un sistema con mucha carga y mucha presión de la memoria, las consultas con combinaciones de mezcla, orden y mapa de bits en el plan de consulta pueden quitar el mapa de bits si no obtienen la memoria mínima necesaria para dicho mapa de bits. Esto puede afectar al rendimiento de la consulta y, si el proceso de ordenación no cabe en la memoria, puede aumentar el uso de las tablas de trabajo en la base de datos tempdb, lo que hace que tempdb crezca. Para resolver este problema, agregue memoria física u optimice las consultas para que usen otro plan de consulta más rápido.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>Proporcionar la cantidad máxima de memoria a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>Proporcionar la cantidad máxima de memoria a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar las siguientes cantidades de memoria al Motor de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 
 
@@ -72,7 +72,7 @@ Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar la
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Cambios en la administración de memoria a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>Cambios en la administración de memoria a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), la asignación de memoria se realizaba mediante cinco mecanismos diferentes:
 -  **Asignador de página única (SPA)** , que incluye solo las asignaciones de memoria menores o iguales a 8 KB en el proceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las opciones de configuración *memoria de servidor máxima (MB)* y *memoria de servidor mínima (MB)* determinaban los límites de la memoria física que podía consumir el SPA. El grupo de búferes era el mecanismo para SPA y el mayor consumidor de asignaciones de página única.
@@ -91,10 +91,10 @@ En la tabla siguiente se indica si un tipo de asignación de memoria específico
 |Tipo de asignación de memoria| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Asignaciones de página única|Sí|Sí, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
-|Asignaciones de varias páginas|No|Sí, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
-|Asignaciones de CLR|No|Sí|
-|Memoria de pilas de subprocesos|No|No|
-|Asignaciones directas de Windows|No|No|
+|Asignaciones de varias páginas|Sin|Sí, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
+|Asignaciones de CLR|Sin|Sí|
+|Memoria de pilas de subprocesos|Sin|Sin|
+|Asignaciones directas de Windows|Sin|Sin|
 
 A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podría asignar más memoria que el valor especificado en el valor de memoria de servidor máxima. Esto puede ocurrir cuando el valor de **_Memoria total del servidor (KB_** ) ya ha alcanzado la configuración de **_Memoria total del servidor (KB)_** (tal y como se especifica en la memoria de servidor máxima). Si no hay memoria libre contigua suficiente para atender a la demanda de solicitudes de memoria de varias páginas (más de 8 KB) debido a la fragmentación de memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede realizar compromisos por encima de lo indicado en vez de rechazar las solicitudes de memoria. 
 
@@ -107,7 +107,7 @@ Este comportamiento se observa normalmente durante las siguientes operaciones:
 -  Operaciones de seguimiento que tienen que almacenar parámetros de entrada grandes.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>Cambios en "memory_to_reserve" a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>Cambios en "memory_to_reserve" a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 En versiones anteriores de SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), el administrador de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reservaba una parte del espacio de direcciones virtuales (VAS) del proceso para que la usasen el **asignador de varias páginas (MPA)** , el **asignador de CLR**, las asignaciones de memoria para **pilas de subprocesos** en el proceso de SQL Server, y las **asignaciones de Windows directas (DWA)** . Esta parte del espacio de direcciones virtuales también se conoce como región "Mem-To-Leave" o "grupo sin búferes".
 
 El espacio de direcciones virtuales que está reservado para las asignaciones viene determinado por la opción de configuración _**memory\_to\_reserve**_ . El valor predeterminado que usa [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es 256 MB. Para invalidar el valor predeterminado, use el parámetro de inicio *-g* de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Consulte la página de documentación sobre [Opciones de inicio del servicio de motor de base de datos](../database-engine/configure-windows/database-engine-service-startup-options.md) para obtener información sobre el parámetro de inicio *-g*.
@@ -118,7 +118,7 @@ En la tabla siguiente se indica si un tipo específico de la asignación de memo
 
 |Tipo de asignación de memoria| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Asignaciones de página única|No|No, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
+|Asignaciones de página única|Sin|No, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
 |Asignaciones de varias páginas|Sí|No, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
 |Asignaciones de CLR|Sí|Sí|
 |Memoria de pilas de subprocesos|Sí|Sí|

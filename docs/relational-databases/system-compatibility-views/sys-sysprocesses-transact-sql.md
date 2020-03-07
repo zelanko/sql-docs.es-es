@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74947164"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866377"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "74947164"
 |kpid|**smallint**|Identificador de subproceso de Windows.|  
 |blocked|**smallint**|Id. de la sesión que bloquea la solicitud. Si esta columna es NULL, la solicitud no está bloqueada o la información de la sesión de bloqueo no está disponible (o no puede ser identificada).<br /><br /> -2 = El recurso de bloqueo es propiedad de una transacción distribuida huérfana.<br /><br /> -3 = El recurso de bloqueo es propiedad de una transacción de recuperación diferida.<br /><br /> -4 = No se pudo determinar el Id. de sesión del propietario del bloqueo temporal a causa de transiciones internas de estado del bloqueo temporal.|  
 |waittype|**binario (2)**|Reservado.|  
-|waittime|**BIGINT**|Tiempo de espera actual (en milisegundos).<br /><br /> 0 = El proceso no está en espera.|  
+|waittime|**bigint**|Tiempo de espera actual (en milisegundos).<br /><br /> 0 = El proceso no está en espera.|  
 |lastwaittype|**NCHAR (32)**|Cadena que indica el nombre del último tipo de espera, o del actual.|  
 |waitresource|**NCHAR (256)**|Representación textual de un recurso de bloqueo.|  
 |dbid|**smallint**|Identificador de la base de datos que el proceso utiliza actualmente.|  
 |uid|**smallint**|Identificador del usuario que ha ejecutado el comando. Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
 |cpu|**int**|Tiempo de CPU acumulado para el proceso. La entrada se actualiza para todos los procesos, independientemente de si la opción SET STATISTICS TIME está establecida en ON o en OFF.|  
-|physical_io|**BIGINT**|Número de lecturas y escrituras en disco acumuladas para el proceso.|  
+|physical_io|**bigint**|Número de lecturas y escrituras en disco acumuladas para el proceso.|  
 |memusage|**int**|Número de páginas de la memoria caché de procedimientos que están asignadas actualmente al proceso. Un número negativo indica que el proceso está liberando memoria asignada por otro proceso.|  
 |login_time|**datetime**|Hora a la que un proceso de cliente inició una sesión en el servidor.|  
 |last_batch|**datetime**|Hora a la que un proceso de cliente ejecutó por última vez una llamada a un procedimiento almacenado remoto o una instrucción EXECUTE.|  
@@ -58,7 +58,7 @@ ms.locfileid: "74947164"
 |hostname|**NCHAR (128)**|Nombre de la estación de trabajo.|  
 |program_name|**NCHAR (128)**|Nombre del programa de aplicación.|  
 |hostprocess|**NCHAR (10)**|Número de identificación de proceso de la estación de trabajo.|  
-|cmd|**NCHAR (26)**|Comando que se está ejecutando actualmente.|  
+|cmd|**NCHAR (52)**|Comando que se está ejecutando actualmente.|  
 |nt_domain|**NCHAR (128)**|Dominio de Windows para el cliente, si se utiliza la autenticación de Windows o una conexión de confianza.|  
 |nt_username|**NCHAR (128)**|Nombre de usuario de Windows del proceso, si se utiliza la autenticación de Windows una conexión de confianza.|  
 |net_address|**NCHAR (12)**|Identificador único asignado al adaptador de red de la estación de trabajo de cada usuario. Cuando un usuario inicia una sesión, este identificador se inserta en la columna net_address.|  

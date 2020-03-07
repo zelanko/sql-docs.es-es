@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74564811"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338561"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ Es un identificador válido de la expresión de tabla común. *expression_name* 
  *CTE_query_definition*  
  Especifica una instrucción SELECT cuyo conjunto de resultados llena la expresión de tabla común. La instrucción SELECT de *CTE_query_definition* debe cumplir los mismos requisitos que en la creación de una vista, excepto que una expresión CTE no puede definir otra expresión CTE. Para más información, vea la sección Comentarios y [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Si se definen varios parámetros *CTE_query_definition*, las definiciones de consulta deben combinarse mediante uno de estos operadores de conjunto: UNION ALL, UNION, EXCEPT o INTERSECT.  
+ Si se define más de una *definición_de_consulta_de_CTE*, es preciso unir las definiciones de consulta mediante uno de estos operadores de conjuntos: UNION ALL, UNION, EXCEPT o INTERSECT.  
   
 ## <a name="remarks"></a>Observaciones  
   
@@ -142,7 +142,7 @@ Las instrucciones siguientes se aplican a expresiones de tabla comunes no recurs
   
 -   Las funciones analíticas y de agregado de la parte recursiva del CTE se aplican al conjunto para el nivel de recursividad actual y no al conjunto para el CTE. Las funciones como `ROW_NUMBER` solo funcionan sobre el subconjunto de datos que les pasa el nivel de recursividad actual y no sobre todo el conjunto de datos pasados a la parte recursiva de la CTE. Para más información, vea el ejemplo K "Utilizar funciones analíticas en una CTE recursiva" más abajo.  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Características y limitaciones de las expresiones de tabla comunes en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="features-and-limitations-of-common-table-expressions-in-sssdw-and-sspdw"></a>Características y limitaciones de las expresiones de tabla comunes en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  La implementación actual de CTE en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] presenta las siguientes características y limitaciones:  
   
 -   Una CTE se puede especificar en una instrucción `SELECT`.  
@@ -568,7 +568,7 @@ Lvl  N
   
  `N` devuelve 1 para cada paso de la parte recursiva del CTE, porque solo el subconjunto de datos para ese nivel de recursividad se pasa a `ROWNUMBER`. Por cada iteración de la parte recursiva de la consulta solo se pasa una fila a `ROWNUMBER`.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. Usar una expresión de tabla común en una instrucción CREATE TABLE AS SELECT  
  En el siguiente ejemplo se crea una tabla que contiene el número total de pedidos de venta por año de cada representante de ventas en [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  

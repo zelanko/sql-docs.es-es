@@ -186,7 +186,7 @@ Microsoft SQL Server Profiler y el Asistente para la optimización utilizan este
 |---|---
 |**SQL Server**|Especifica la instancia de SQL Server conectada actualmente. Este campo se llena automáticamente y no puede actualizarse.  
 |**Base de datos**|Especifica la base de datos en la que se ubica la tabla de seguimiento.  
-|**Propietario**|Specifies the owner of the trace table. Este campo se llena automáticamente como **dbo**.  
+|**Propietario**|Especifica el propietario de la tabla de seguimiento. Este campo se llena automáticamente como **dbo**.  
 |**Table**|Especifica el nombre de la tabla de seguimiento desde la que debe leerse el seguimiento.  
 
 ## <a name="destination-table"></a>Tabla de destino
@@ -196,7 +196,7 @@ Utilice el cuadro de diálogo **Tabla de destino** para especificar una tabla do
 |---|---
 |**SQL Server**|Especifica la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectada actualmente. Este campo se llena automáticamente y no puede actualizarse. Para cambiar el servidor, haga clic en **Cancelar** y conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde desea almacenar la tabla de seguimiento.  
 |**Base de datos**|Especifique la base de datos donde desea almacenar la tabla de seguimiento.  
-|**Propietario**|Specifies the owner of the trace table. Este campo se llena automáticamente como **dbo**.  
+|**Propietario**|Especifica el propietario de la tabla de seguimiento. Este campo se llena automáticamente como **dbo**.  
 |**Table**|Especifique el nombre de la tabla donde desea almacenar el seguimiento.  
 
 ## <a name="replay-configuration"></a>Configuración de reproducción

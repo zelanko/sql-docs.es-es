@@ -5,16 +5,16 @@ description: Aprenda a implementar clústeres de macrodatos de SQL Server con al
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
-ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
+ms.openlocfilehash: a73259663f710cfc5df5dc40745ecda9fdbd8f13
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259208"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338109"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad
 
@@ -32,7 +32,7 @@ Estas son algunas de las funcionalidades que habilitan los grupos de disponibili
 - Todas las bases de datos se agregan automáticamente al grupo de disponibilidad, incluidas todas las bases de datos del usuario y el sistema, como `master` y `msdb`. Esta funcionalidad proporciona una vista de un solo sistema de las réplicas del grupo de disponibilidad. Se usan otras bases de datos modelo (`model_replicatedmaster` y `model_msdb`) para inicializar la parte replicada de las bases de datos del sistema. Además de estas bases de datos, aparecen las bases de datos `containedag_master` y `containedag_msdb` si se conecta directamente a la instancia. Las bases de datos `containedag` representan `master` y `msdb` dentro del grupo de disponibilidad.
 
   > [!IMPORTANT]
-  > En el momento del lanzamiento de SQL Server 2019 CU1, solo se agregaban automáticamente al grupo de disponibilidad las bases de datos creadas como resultado de una instrucción CREATE DATABASE. Las bases de datos creadas en la instancia como resultado de otros flujos de trabajo como la restauración todavía no se agregaban al grupo de disponibilidad y el administrador del clúster de macrodatos tenía que hacerlo manualmente. Vea la sección [Conectarse a la instancia de SQL Server](#instance-connect) para obtener instrucciones.
+  > En el momento del lanzamiento de SQL Server 2019 CU1, solo se agregaban automáticamente al grupo de disponibilidad las bases de datos creadas como resultado de una instrucción CREATE DATABASE. Las bases de datos creadas en la instancia como resultado de otros flujos de trabajo como adjuntar la base de datos todavía no se agregaban al grupo de disponibilidad y el administrador del clúster de macrodatos tenía que hacerlo manualmente. Vea la sección [Conectarse a la instancia de SQL Server](#instance-connect) para obtener instrucciones. Antes de la versión SQL Server 2019 CU2, las bases de datos creadas como resultado de una instrucción RESTORE tenían el mismo comportamiento y requerían la incorporación manual de las bases de datos al grupo de disponibilidad contenido.
   >
 - Las bases de datos de configuración de Polybase no se incluyen en el grupo de disponibilidad porque incluyen metadatos de nivel de instancia específicos de cada réplica.
 - Se aprovisiona automáticamente un punto de conexión externo para conectarse a las bases de datos del grupo de disponibilidad. Este punto de conexión `master-svc-external` desempeña el rol de escucha de grupo de disponibilidad.
@@ -129,12 +129,15 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a id="instance-connect"></a> Conectarse a la instancia de SQL Server
 
-En determinadas operaciones, como el establecimiento de configuraciones de nivel de servidor o la incorporación manual de una base de datos al grupo de disponibilidad, debe conectarse a la instancia de SQL Server. Operaciones como `sp_configure`, `RESTORE DATABASE` o cualquier DDL de grupos de disponibilidad requieren este tipo de conexión. De forma predeterminada, el clúster de macrodatos no incluye un punto de conexión que habilite la conexión de la instancia, así que debe exponer este punto de conexión de forma manual. 
+En determinadas operaciones, como el establecimiento de configuraciones de nivel de servidor o la incorporación manual de una base de datos al grupo de disponibilidad, debe conectarse a la instancia de SQL Server. Antes de SQL Server 2019 CU2, operaciones como `sp_configure`, `RESTORE DATABASE` o cualquier DDL de grupos de disponibilidad requieren este tipo de conexión. De forma predeterminada, el clúster de macrodatos no incluye un punto de conexión que habilite la conexión de la instancia, así que debe exponer este punto de conexión de forma manual. 
 
 > [!IMPORTANT]
 > El punto de conexión expuesto para las conexiones de la instancia de SQL Server solo admite autenticación SQL, incluso en clústeres en los que Active Directory está habilitado. De forma predeterminada, durante la implementación de un clúster de macrodatos, el inicio de sesión `sa` está deshabilitado y se aprovisiona un nuevo inicio de sesión `sysadmin` basado en los valores proporcionados en el momento de la implementación para las variables de entorno `AZDATA_USERNAME` y `AZDATA_PASSWORD`.
 
 Este es un ejemplo que muestra cómo exponer este punto de conexión y luego agregar la base de datos creada con un flujo de trabajo de restauración al grupo de disponibilidad. Se aplican instrucciones similares para configurar una conexión a la instancia maestra de SQL Server cuando se quieren cambiar las configuraciones de servidor con `sp_configure`.
+
+> [!NOTE]
+> A partir de SQL Server 2019 CU2, las bases de datos creadas como resultado de un flujo de trabajo de restauración se agregan automáticamente al grupo de disponibilidad contenido.
 
 - Determine el pod que hospeda la réplica principal; para ello, conéctese al punto de conexión `sql-server-master` y ejecute:
 
@@ -197,10 +200,10 @@ Este es un ejemplo que muestra cómo exponer este punto de conexión y luego agr
 
 Problemas y limitaciones conocidos de los grupos de disponibilidad de la instancia maestra de SQL Server en el clúster de macrodatos:
 
-- Las bases de datos creadas como resultado de flujos de trabajo distintos a `CREATE DATABASE`, como `RESTORE DATABASE` y `CREATE DATABASE FROM SNAPSHOT`, no se agregan de forma automática al grupo de disponibilidad. [Conéctese a la instancia](#instance-connect) y agregue la base de datos al grupo de disponibilidad manualmente.
+- Antes de SQL Server 2019 CU2, las bases de datos creadas como resultado de flujos de trabajo distintos a `CREATE DATABASE` y `RESTORE DATABASE`, como `CREATE DATABASE FROM SNAPSHOT`, no se agregan automáticamente al grupo de disponibilidad. [Conéctese a la instancia](#instance-connect) y agregue la base de datos al grupo de disponibilidad manualmente.
 - Determinadas operaciones, como la ejecución de la configuración de servidor con `sp_configure`, requieren una conexión a la base de datos `master` de la instancia de SQL Server, no a `master` del grupo de disponibilidad. No se puede usar el punto de conexión principal correspondiente. Siga las [instrucciones](#instance-connect) para exponer un punto de conexión y conectarse a la instancia de SQL Server y ejecutar `sp_configure`. Solo se puede usar autenticación SQL cuando se expone manualmente el punto de conexión para conectarse a la base de datos `master` de la instancia de SQL Server.
 - La configuración de alta disponibilidad debe crearse al implementar el clúster de macrodatos. No se puede habilitar la configuración de alta disponibilidad con grupos de disponibilidad después de la implementación.
-- Aunque la base de datos msdb independiente se incluye en el grupo de disponibilidad y los trabajos del Agente SQL se replican ahí, los trabajos no se desencadenan según una programación. La solución consiste en [conectarse a cada una de las instancias de SQL Server](#instance-connect) y crear los trabajos en la instancia msdb.
+- Aunque la base de datos msdb independiente se incluye en el grupo de disponibilidad y los trabajos del Agente SQL se replican ahí, los trabajos no se desencadenan según una programación. La solución consiste en [conectarse a cada una de las instancias de SQL Server](#instance-connect) y crear los trabajos en la instancia msdb. A partir de SQL Server 2019 CU2, solo se admiten los trabajos creados en cada una de las réplicas de la instancia maestra.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

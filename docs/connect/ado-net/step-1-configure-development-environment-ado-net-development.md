@@ -5,22 +5,22 @@ ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fd1b2327271fb29d75a529670d9e0800b2dc30a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 6ef7c4e9a1040783f535f58e595b0c9840e94cec
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253327"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895847"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Paso 1: Configuración del entorno de desarrollo para el desarrollo de ADO.NET
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Descargar ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 - Siguiente artículo:&nbsp;&nbsp;&nbsp;[Paso 2: Creación de una base de datos SQL para el desarrollo de ADO.NET](step-2-create-sql-database-ado-net-development.md)  
 
@@ -30,7 +30,7 @@ En el ejemplo de código actual se usa ADO.NET del .NET Framework, para Windows
 
 ### <a name="adonet-for-windows"></a>ADO.NET, para Windows
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para descargar e instalar .NET Framework, incluido ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para descargar e instalar .NET Framework, incluido ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 - Instale Visual Studio Community o un entorno de desarrollo integrado (IDE) similar para escribir y compilar código fuente de C#. Microsoft ahora ofrece Visual Studio Community *gratis*.  
     - [Descargar Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
@@ -41,4 +41,4 @@ En el ejemplo de código actual se usa ADO.NET del .NET Framework, para Windows
 
 Los vínculos para descargar .NET Core, para una variedad de sistemas operativos, están disponibles en:
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para descargar e instalar .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para descargar e instalar .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

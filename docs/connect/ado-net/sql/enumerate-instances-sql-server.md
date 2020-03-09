@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d1b5742d082fdb40b03663cf2db719399290a010
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd0dbbedcb2fa33af80e0a1a1d593bf7df27edb6
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247772"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896954"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Enumeración de instancias de SQL Server (ADO.NET)
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server permite que las aplicaciones busquen instancias de SQL Server en la red actual. La clase <xref:System.Data.Sql.SqlDataSourceEnumerator> expone esta información al desarrollador de la aplicación y proporciona un <xref:System.Data.DataTable> que contiene información sobre todos los servidores visibles. Esta tabla devuelta contiene una lista de las instancias de servidor disponibles en la red que coincide con la lista proporcionada cuando un usuario intenta crear una nueva conexión y amplía la lista desplegable que contiene todos los servidores disponibles en el cuadro de diálogo **Propiedades de conexión**. Los resultados mostrados no siempre están completos.  
   

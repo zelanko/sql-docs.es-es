@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: af8402a7ff58e5d5b90d655547abcaf159bb67b4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e572b8fcf1550562c7a9f1841eec1c311f18c3f8
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247722"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896703"
 ---
 # <a name="large-udts"></a>UDT grandes
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Los tipos definidos por el usuario (UDT) permiten a los desarrolladores extender el sistema de tipo escalar del servidor mediante el almacenamiento de objetos de Common Language Runtime (CLR) en una base de datos de SQL Server. Los UDT pueden contener varios elementos y tener comportamientos, a diferencia de los tipos de datos de alias tradicionales, que se componen de un solo tipo de datos de sistema de SQL Server.  
   
@@ -110,3 +110,4 @@ reader.close
   
 ## <a name="next-steps"></a>Pasos siguientes
 - [Datos binarios y datos de valores grandes de SQL Server](sql-server-binary-large-value-data.md)
+ 

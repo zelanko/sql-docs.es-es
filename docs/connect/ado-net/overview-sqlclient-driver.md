@@ -5,22 +5,22 @@ ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 937e84c055f7da690542c7e74bb2abd036427ab1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 0831e307ca0868cd80d92d22f6077070ca1730ea
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250979"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897093"
 ---
 # <a name="overview-of-the-sqlclient-driver"></a>Información general sobre el controlador SqlClient
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Descargar ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
  El proveedor de datos SqlClient de Microsoft para SQL Server es un proveedor de datos de .NET Framework y .NET Core que se usa para conectarse a una base de datos, ejecutar comandos y recuperar resultados.  
   

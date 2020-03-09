@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 46edb611f29c447f7e1ca2228212ef3e0d594fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244039"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896540"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de datos de SQL Server en ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server y .NET se basan en sistemas de tipos diferentes, lo que puede dar lugar a una posible pérdida de datos. Para conservar la integridad de los datos, el proveedor de datos SqlClient de Microsoft para SQL Server (<xref:Microsoft.Data.SqlClient>) proporciona métodos de descriptor de acceso con tipo para trabajar con datos de SQL Server. Puede usar las enumeraciones de las clases <xref:System.Data.SqlDbType> para especificar tipos de datos <xref:Microsoft.Data.SqlClient.SqlParameter>.  
   

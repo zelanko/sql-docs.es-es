@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25519d06df8b948d5cfc5d387029cf09beafc856
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: afa9863d955ef7f075ffd8c8c68844130bcfd9ca
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67936277"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866505"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Información general de los controladores de Microsoft para PHP para SQL Server
 
@@ -29,7 +29,7 @@ Para usar [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], debe tener 
   
 |Tema|Descripción|  
 |---------|---------------|  
-| ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para descargar los controladores para PHP para SQL Server](download-drivers-php-sql-server.md) | Vínculos para descargar los controladores de Microsoft para PHP para SQL Server. |
+| ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para descargar los controladores para PHP para SQL Server](download-drivers-php-sql-server.md) | Vínculos para descargar los controladores de Microsoft para PHP para SQL Server. |
 |[Notas de la versión de los controladores de Microsoft para PHP para SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Enumera las características que se agregaron en las versiones 4.0, 3.2, 3.1, 3.0 y 2.0.|  
 |[Recursos de soporte para los controladores de Microsoft para PHP para SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Proporciona vínculos a recursos que pueden ser útiles cuando desarrolle aplicaciones que usan los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)|Proporciona información que podría resultar útil al ejecutar los ejemplos de código de esta documentación.|  

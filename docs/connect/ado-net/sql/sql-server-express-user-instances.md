@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b81b179657fc3564105a113712929ca8f3e10da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246969"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896244"
 ---
 # <a name="sql-server-express-user-instances"></a>Instancias de usuario de SQL Server Express
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server Express Edition (SQL Server Express) admite la característica de la instancia de usuario, que solo está disponible cuando se usa el proveedor de datos SqlClient de Microsoft para SQL Server. Una instancia de usuario es una instancia independiente del motor de base de datos de SQL Server Express generada por una instancia primaria. Las instancias de usuario permiten a los usuarios que no son administradores de sus equipos locales adjuntar bases de datos de SQL Server Express y conectarse a ellas. Cada instancia se ejecuta en el contexto de seguridad del usuario individual, en un modelo de una instancia por usuario.  
   

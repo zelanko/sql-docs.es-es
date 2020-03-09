@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a49f0ffe4de2f3242daf147ecb80dc950f8d8a9f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: b7c0e54f4193fcb918a5b4b5a362e1bbd9fee646
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177405"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866465"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Descarga del controlador Microsoft OLE DB para SQL Server
 
@@ -24,8 +24,8 @@ OLE DB Driver for SQL Server es una interfaz de programación de aplicaciones (
 
 Microsoft OLE DB Driver 18.3 para SQL Server es la última versión de disponibilidad general (GA). Si tiene instalada una versión anterior de Microsoft OLE DB Driver 18 para SQL Server, al instalar la versión 18.3 se actualizará a esta última.
 
-**[![Descargar](../../ssdt/media/download.png) Descarga de Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
-**[![Descargar](../../ssdt/media/download.png) Descarga de Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
+**[![Descargar](../../ssms/media/download-icon.png) Descarga de Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
+**[![Descargar](../../ssms/media/download-icon.png) Descarga de Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
 
 ### <a name="version-information"></a>Información de la versión
 

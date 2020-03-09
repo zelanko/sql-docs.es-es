@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 354b3ef1f0db45c64363d508d4bb055ee32d6416
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247829"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896997"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Creación de reflejos de base de datos en SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 La creación de reflejo de la base de datos de SQL Server permite mantener una copia, o reflejo, de una base de datos de SQL Server en un servidor en espera. La creación de reflejo garantiza que existan dos copias independientes de los datos en todo momento, lo que proporciona una alta disponibilidad y una redundancia completa de los datos. El proveedor de SqlClient de Microsoft para SQL Server ofrece compatibilidad implícita con la creación de reflejo de la base de datos, de modo que el desarrollador no tiene que realizar ninguna acción ni escribir ningún código una vez que se ha configurado para una base de datos de SQL Server. Además, el objeto <xref:Microsoft.Data.SqlClient.SqlConnection> admite un modo de conexión explícita que permite proporcionar el nombre de un servidor asociado de conmutación por error en <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   

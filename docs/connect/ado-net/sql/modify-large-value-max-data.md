@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4fd43dae7d45e1b2491f34efe4102499517bd5de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9acbd8fb795fe1a14e77e5d746f729d37c11cc8d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247711"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896686"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificación de datos de valores grandes (max) en ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Los tipos de datos de objeto grande (LOB) son aquellos que superan el tamaño máximo de fila de 8 kilobytes (KB). SQL Server proporciona un especificador `max` para los tipos de datos `varchar`, `nvarchar` y `varbinary` que permite el almacenamiento de valores tan grandes como 2^32 bytes. Las columnas de tabla y las variables de Transact-SQL pueden especificar tipos de datos `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. En .NET, los tipos de datos `max` se pueden obtener mediante `DataReader`, y también se pueden especificar como valores de parámetro de entrada y salida sin ningún control especial. En el caso de los tipos de datos `varchar` grandes, los datos se pueden recuperar y actualizar incrementalmente.  
   

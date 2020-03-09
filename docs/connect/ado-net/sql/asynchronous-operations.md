@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7a070d71b653b0afc9e94c898653432e7e388d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc2a921e3aec0068c11b2baab45c396d853a1a36
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250934"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897061"
 ---
 # <a name="asynchronous-operations"></a>Operaciones asincrónicas
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden tardar mucho tiempo en completarse. En estos casos, las aplicaciones con un único subproceso deben bloquear otras operaciones y esperar hasta que el comando finaliza antes de continuar con otras operaciones. En cambio, el poder asignar la operación de ejecución prolongada a un subproceso en segundo plano permite que el subproceso en primer plano permanezca activo durante toda la operación. En una aplicación Windows, por ejemplo, delegar la operación de larga duración a un subproceso en segundo plano permite que el subproceso de la interfaz de usuario siga respondiendo.  
   

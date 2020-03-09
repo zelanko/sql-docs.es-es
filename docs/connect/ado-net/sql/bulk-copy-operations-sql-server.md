@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d038b0a67923d7c475011b8f3d141f7d64358f61
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c827ae70d9aa344f52de1d76c482beaef90c09aa
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247858"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897032"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operaciones de copia masiva en SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server incluye una conocida utilidad de línea de comandos denominada **bcp** para copiar rápidamente y de forma masiva archivos grandes en tablas o vistas en bases de datos de SQL Server. La clase <xref:Microsoft.Data.SqlClient.SqlBulkCopy> permite escribir soluciones de código administrado que proporcionan una funcionalidad similar. Hay otras maneras de cargar datos en una tabla de SQL Server (las instrucciones INSERT, por ejemplo) pero <xref:Microsoft.Data.SqlClient.SqlBulkCopy> ofrece una importante ventaja de rendimiento sobre ellas.  
   

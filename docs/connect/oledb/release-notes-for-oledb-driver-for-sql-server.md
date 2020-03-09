@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 90da0d1d42878fcbe65b1086663775d546751c80
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 8c06b83241f377aa05d7e5c0e4cb0d83a424f15a
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177365"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866238"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de la versión del controlador Microsoft OLE DB para SQL Server
 
@@ -31,8 +31,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-![descargar](../../ssdt/media/download.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2117515)  
-![descargar](../../ssdt/media/download.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2117517)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2117517)  
 
 Fecha de publicación: Octubre de 2019
 
@@ -61,8 +61,8 @@ Para descargar las versiones anteriores del controlador OLE DB, haga clic en los
 
 ## <a name="1823"></a>18.2.3
 
-![descargar](../../ssdt/media/download.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2119554)  
-![descargar](../../ssdt/media/download.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2119738)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2119738)  
 
 Fecha de publicación: Junio de 2019
 
@@ -79,8 +79,8 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 
 ## <a name="1822"></a>18.2.2
 
-![descargar](../../ssdt/media/download.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118512)  
-![descargar](../../ssdt/media/download.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118415)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118415)  
 
 Fecha de publicación: Mayo de 2019
 
@@ -97,8 +97,8 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 
 ## <a name="1821"></a>18.2.1
 
-![descargar](../../ssdt/media/download.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118511)  
-![descargar](../../ssdt/media/download.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118278)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118278)  
 
 Fecha de publicación: Febrero de 2019
 
@@ -116,8 +116,8 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 
 ## <a name="1810"></a>18.1.0
 
-![descargar](../../ssdt/media/download.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118506)  
-![descargar](../../ssdt/media/download.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118509)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118509)  
 
 Fecha de publicación: Julio de 2018
 
@@ -141,8 +141,8 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 
 ## <a name="1802"></a>18.0.2
 
-![descargar](../../ssdt/media/download.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118504)  
-![descargar](../../ssdt/media/download.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118277)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118277)  
 
 Fecha de publicación: Marzo de 2018
 

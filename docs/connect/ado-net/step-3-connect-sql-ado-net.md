@@ -5,22 +5,22 @@ ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cff776c4881dcc012a825bcd48f6d6271b95bb75
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e3e062aa9c0418bb76209e5e8f45c973b7a0f816
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247519"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895973"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Paso 3: Prueba de concepto de la conexión a SQL mediante ADO.NET
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Descargar ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 - Artículo anterior:&nbsp;&nbsp;&nbsp;[Paso 2: Creación de una base de datos SQL para el desarrollo de ADO.NET](step-2-create-sql-database-ado-net-development.md)  
 - Siguiente artículo:&nbsp;&nbsp;&nbsp;[Paso 4: Conexión resistente a SQL con ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  

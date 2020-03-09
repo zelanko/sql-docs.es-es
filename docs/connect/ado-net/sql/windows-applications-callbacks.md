@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253381"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895999"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplicaciones Windows que usan devoluciones de llamada
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 En la mayoría de los escenarios de procesamiento asincrónico, querrá iniciar una operación de base de datos y seguir ejecutando otros procesos sin esperar a que se complete la operación de base de datos. Sin embargo, muchos escenarios obligan a realizar alguna acción una vez que la operación de base de datos ha finalizado. En una aplicación Windows, por ejemplo, puede que quiera delegar la operación de larga duración a un subproceso en segundo plano, al mismo tiempo que permite que el subproceso de la interfaz de usuario siga respondiendo. Sin embargo, cuando se completa la operación de base de datos, desea utilizar los resultados para rellenar el formulario. Este tipo de escenario se implementa mejor con una devolución de llamada.  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75258548"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896287"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para la alta disponibilidad con recuperación de desastres
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 En este tema se describe la compatibilidad del proveedor de datos SqlClient de Microsoft para SQL Server con los grupos de disponibilidad AlwaysOn de alta disponibilidad y recuperación ante desastres.  La característica Grupos de disponibilidad AlwaysOn se ha incorporado a SQL Server 2012. Para obtener más información sobre los grupos de disponibilidad AlwaysOn, vea los Libros en pantalla de SQL Server.  
   

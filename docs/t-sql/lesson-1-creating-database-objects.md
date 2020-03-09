@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257024"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280945"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lección 1: Creación y consulta de objetos de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ En esta lección se muestra cómo crear una base de datos, crear una tabla en la
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] se pueden escribir y enviar a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las siguientes maneras:  
   
--   Mediante el uso de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. En este tutorial se supone que se usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], pero también puede usarse [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible como descarga gratuita en el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=7593).  
+-   Mediante el uso de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. En este tutorial se supone que se usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], pero también puede usarse [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible como descarga gratuita en el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=14630).  
   
 -   Mediante el uso de la [utilidad sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -34,7 +34,7 @@ El código se ejecuta en [!INCLUDE[ssDE](../includes/ssde-md.md)] de la misma fo
   
 Para ejecutar instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] en [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], abra [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] y conéctese a una instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, así como acceso a una instancia de SQL Server. 
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

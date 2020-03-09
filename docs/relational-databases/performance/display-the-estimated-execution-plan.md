@@ -20,12 +20,12 @@ ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d0d5930734bb48c0914300a735f81e3ca2ced38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 224b7023df4187702c14b41f17caad7c0b53b911
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67946867"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256868"
 ---
 # <a name="display-the-estimated-execution-plan"></a>Mostrar el plan de ejecución estimado
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,3 +53,7 @@ ms.locfileid: "67946867"
  
 > [!NOTE] 
 > También puede usar [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) para devolver la información del plan de ejecución de cada instrucción sin tener que ejecutarla. Si se usa en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], la pestaña *Resultados* tendrá un vínculo para abrir el plan de ejecución en un formato gráfico.   
+  
+## <a name="see-also"></a>Consulte también  
+ [Planes de ejecución](../../relational-databases/performance/execution-plans.md)    
+ [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md)  

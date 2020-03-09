@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 741fce0949ce1a07f0f164c7f131579c220d4cfc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d1c9bd306cf30ee0974aff2396946c131bfb824
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253808"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261870"
 ---
 # <a name="manage-code-formatting"></a>Administrar formato de código
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "75253808"
 3.  Para convertir texto en minúsculas, pulse CTRL+MAYÚS+L o haga clic en **Poner en minúsculas** en el submenú **Avanzado** del menú **Editar** .  
   
 > [!NOTE]  
->  Para obtener una lista completa de las teclas de método abreviado, vea [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+>  Para obtener una lista completa de las teclas de método abreviado, vea [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="displaying-and-linking-to-urls"></a>Mostrar direcciones URL y crear vínculos  
  En el código, puede crear y mostrar direcciones URL en las que se puede hacer clic. De manera predeterminada, las direcciones URL:  

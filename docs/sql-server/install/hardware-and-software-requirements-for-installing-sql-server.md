@@ -45,11 +45,11 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 25f925b53f93a1d03282a7113ce6946679283c2b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75657027"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340347"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware y software para instalar SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -173,15 +173,15 @@ La siguiente tabla muestra qué ediciones de SQL Server 2016 y 2017 son compati
 | Windows Server 2012 Standard      |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2012 Essentials    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2012 Foundation    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| Windows 10 IoT Enterprise         |    No      |    Sí    |    Sí   | No  |   Sí   |
-| Windows 10 Enterprise             |    No      |    Sí    |    Sí   | No  |   Sí   |
-| Windows 10 Professional           |    No      |    Sí    |    Sí   | No  |   Sí   |
-| Windows 10 Home                   |    No      |    Sí    |    Sí   | No  |   Sí   |
-| Windows 8.1 Enterprise            |    No      |    Sí    |    Sí   | No  |   Sí   |
-| Windows 8.1 Pro                   |    No      |    Sí    |    Sí   | No  |   Sí   |
-| Windows 8.1 Enterprise            |    No      |    Sí    |    Sí   | No  |   Sí   |
-| Windows 8 Pro                     |    No      |    Sí    |    Sí   | No  |   Sí   |
-| Windows 8                         |    No      |    Sí    |    Sí   | No  |   Sí   | 
+| Windows 10 IoT Enterprise         |    Sin      |    Sí    |    Sí   | Sin  |   Sí   |
+| Windows 10 Enterprise             |    Sin      |    Sí    |    Sí   | Sin  |   Sí   |
+| Windows 10 Professional           |    Sin      |    Sí    |    Sí   | Sin  |   Sí   |
+| Windows 10 Home                   |    Sin      |    Sí    |    Sí   | Sin  |   Sí   |
+| Windows 8.1 Enterprise            |    Sin      |    Sí    |    Sí   | Sin  |   Sí   |
+| Windows 8.1 Pro                   |    Sin      |    Sí    |    Sí   | Sin  |   Sí   |
+| Windows 8.1 Enterprise            |    Sin      |    Sí    |    Sí   | Sin  |   Sí   |
+| Windows 8 Pro                     |    Sin      |    Sí    |    Sí   | Sin  |   Sí   |
+| Windows 8                         |    Sin      |    Sí    |    Sí   | Sin  |   Sí   | 
 
 > [!NOTE]  
 > Dos excepciones a la compatibilidad de sistema operativo indicada en esta sección son las siguientes características de Business Intelligence para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones anteriores, que se pueden instalar en Windows Server 2008 R2 SP1 o posteriores:  

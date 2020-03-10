@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412518"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339438"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Características admitidas en los módulos T-SQL compilados de forma nativa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "74412518"
 
 Se admiten las siguientes construcciones de consulta:  
 
-Expresión CASE: se puede usar CASE en cualquier instrucción o cláusula que permita una expresión válida.
+Expresión CASE: CASE se puede utilizar en cualquier instrucción o cláusula que permite una expresión válida.
    - **Se aplica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] se admiten las instrucciones CASE para módulos T-SQL compilados de forma nativa.
 
@@ -244,13 +244,13 @@ Se admiten las siguientes instrucciones DML.
 ##  <a name="los"></a> Limitaciones de ordenación  
  Puede ordenar más de 8000 filas en una consulta que use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). Pero sin la [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) puede ordenar hasta 8000 filas (si hay combinaciones, menos filas).  
 
- Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento *\<<nombreDeProcedimiento>* , línea *\<númeroDeLínea>* El operador TOP puede devolver un máximo de 8192 filas; el número solicitado es *\<número>* .**  
+ Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas, obtiene el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento *\<<nombre_procedimiento>* , línea *\<número_línea>* El operador TOP puede devolver un máximo de 8192 filas; el número solicitado es *\<número>* .**  
 
  Si no tiene una cláusula TOP, puede ordenar cualquier número de filas con ORDER BY.  
 
  Si no utiliza una cláusula ORDER BY, puede utilizar un valor entero con el operador TOP.  
 
- Ejemplo con TOP n = 8192: se compila  
+ Ejemplo con TOP N = 8192: se compila.  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -263,7 +263,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- Ejemplo con TOP N > 8192: error al compilar.  
+ Ejemplo con TOP N > 8192: no se compila.  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -278,7 +278,7 @@ GO
 
  La limitación de 8192 filas solo se aplica a `TOP N` donde `N` es una constante, como en los ejemplos anteriores.  Si necesita un número `N` mayor que 8192 puede asignar el valor a una variable y utilizar esa variable con `TOP`.  
 
- Ejemplo usando una variable: se compila  
+ Ejemplo con una variable: se compila.  
 
 ```sql  
 CREATE PROCEDURE testTop  

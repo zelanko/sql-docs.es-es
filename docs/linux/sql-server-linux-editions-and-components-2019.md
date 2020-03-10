@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
 ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75776555"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340497"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Ediciones y características admitidas de SQL Server 2019 en Linux
 
@@ -49,7 +49,7 @@ Para obtener una lista de las características de SQL Server no disponibles en L
     
 [Descarga de SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Ediciones de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
+## <a name="ssnoversion-editions"></a>Ediciones de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  En la siguiente tabla se describen las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
 |Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Definición|  
@@ -60,11 +60,11 @@ Para obtener una lista de las características de SQL Server no disponibles en L
 |Desarrollador|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition permite a los desarrolladores compilar cualquier tipo de aplicación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Incluye toda la funcionalidad de la edición Enterprise, pero tiene licencias para usarse como sistema de prueba y desarrollo, no como un servidor de producción. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer es una opción ideal para las personas que compilan y prueban aplicaciones.|  
 |Express edition|Express Edition es una base de datos gratuita para principiantes y es ideal para aprender a compilar pequeñas aplicaciones de servidor y de escritorio orientadas a datos. Es la mejor opción para los fabricantes de software independientes, los desarrolladores y los aficionados que compilan aplicaciones cliente. Si necesita características de base de datos más avanzadas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express se puede actualizar sin problemas a otras versiones superiores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Uso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con aplicaciones cliente/servidor  
+## <a name="using-ssnoversion-with-clientserver-applications"></a>Uso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con aplicaciones cliente/servidor  
 
 Puede instalar solo los componentes de cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un equipo en el que se ejecuten aplicaciones cliente/servidor conectadas directamente a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Una instalación de componentes de cliente también es una buena opción si administra una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un servidor de bases de datos, o si tiene pensado desarrollar aplicaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>Componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="ssnoversion-components"></a>Componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
 
 SQL Server 2019 en Linux es compatible con el motor de base de datos de SQL Server. En la tabla siguiente se indican las características del motor de base de datos.   
   
@@ -94,23 +94,23 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 |Característica|Enterprise|Estándar|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Trasvase de registros|Sí|Sí|Sí|No|  
-|Compresión de copia de seguridad|Sí|Sí|No|No| 
-|Instantáneas de base de datos|Sí|No|No|No|
-|Instancia de clúster de conmutación por error AlwaysOn<sup>1</sup>|Sí|Sí|No|No| 
-|Grupos de disponibilidad AlwaysOn<sup>2</sup>|Sí|No|No|No|
-|Grupos de disponibilidad básica<sup>3</sup>|No|Sí|No|No|
-|Grupo de disponibilidad de confirmación de réplica mínima|Sí|Sí|No|No|
-|Grupo de disponibilidad sin clúster|Sí|Sí|No|No|
-|Restauración de archivos y páginas en línea|Sí|No|No|No|
-|Índices en línea|Sí|No|No|No|
-|Recompilaciones de índices en línea reanudables|Sí|No|No|No|
-|Cambio de esquema en línea|Sí|No|No|No|
-|Recuperación rápida|Sí|No|No|No|
-|Copias de seguridad reflejadas|Sí|No|No|No|
-|Agregar memoria y CPU sin interrupción|Sí|No|No|No|
-|Copia de seguridad cifrada|Sí|Sí|No|No|
-|Copia de seguridad híbrida en Azure (copia de seguridad en dirección URL)|Sí|Sí|No|No|
+|Trasvase de registros|Sí|Sí|Sí|Sin|  
+|Compresión de copia de seguridad|Sí|Sí|Sin|Sin| 
+|Instantáneas de base de datos|Sí|Sin|Sin|Sin|
+|Instancia de clúster de conmutación por error AlwaysOn<sup>1</sup>|Sí|Sí|Sin|Sin| 
+|Grupos de disponibilidad AlwaysOn<sup>2</sup>|Sí|Sin|Sin|Sin|
+|Grupos de disponibilidad básica<sup>3</sup>|Sin|Sí|Sin|Sin|
+|Grupo de disponibilidad de confirmación de réplica mínima|Sí|Sí|Sin|Sin|
+|Grupo de disponibilidad sin clúster|Sí|Sí|Sin|Sin|
+|Restauración de archivos y páginas en línea|Sí|Sin|Sin|Sin|
+|Índices en línea|Sí|Sin|Sin|Sin|
+|Recompilaciones de índices en línea reanudables|Sí|Sin|Sin|Sin|
+|Cambio de esquema en línea|Sí|Sin|Sin|Sin|
+|Recuperación rápida|Sí|Sin|Sin|Sin|
+|Copias de seguridad reflejadas|Sí|Sin|Sin|Sin|
+|Agregar memoria y CPU sin interrupción|Sí|Sin|Sin|Sin|
+|Copia de seguridad cifrada|Sí|Sí|Sin|Sin|
+|Copia de seguridad híbrida en Azure (copia de seguridad en dirección URL)|Sí|Sí|Sin|Sin|
   
 <sup>1</sup> En Enterprise Edition, el número de nodos es el máximo del sistema operativo. En Standard Edition hay compatibilidad con dos nodos. 
 
@@ -124,19 +124,19 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |-------------|----------------|--------------|---------|------------------------| 
 |Almacén de columnas <sup>1</sup>|Sí|Sí|Sí|Sí|  
 |Archivos binarios de objetos de gran tamaño en índices de almacén de columnas en clúster|Sí|Sí|Sí|Sí|  
-|Recompilación de índices de almacén de columnas no en clúster en línea|Sí|No|No|No|
+|Recompilación de índices de almacén de columnas no en clúster en línea|Sí|Sin|Sin|Sin|
 |OLTP en memoria <sup>1</sup>|Sí|Sí|Sí|Sí|
 |Memoria principal persistente|Sí|Sí|Sí|Sí|
 |Particiones de tabla e índice|Sí|Sí|Sí|Sí|  
 |Compresión de datos|Sí|Sí|Sí|Sí|
-|regulador de recursos|Sí|No|No|No|  
-|Paralelismo de tabla con particiones|Sí|No|No|No|
-|Asignación de memoria de página grande habilitada para NUMA y matriz de búferes|Sí|No|No|No|
-|Regulación de recursos de E/S|Sí|No|No|No|  
+|regulador de recursos|Sí|Sin|Sin|Sin|  
+|Paralelismo de tabla con particiones|Sí|Sin|Sin|Sin|
+|Asignación de memoria de página grande habilitada para NUMA y matriz de búferes|Sí|Sin|Sin|Sin|
+|Regulación de recursos de E/S|Sí|Sin|Sin|Sin|  
 |Perdurabilidad diferida|Sí|Sí|Sí|Sí|
-|Ajuste automático|Sí|No|No|No|
-|Combinaciones adaptables de modo de proceso por lotes|Sí|No|No|No|
-|Comentarios de concesión de memoria de modo de proceso por lotes|Sí|No|No|No|
+|Ajuste automático|Sí|Sin|Sin|Sin|
+|Combinaciones adaptables de modo de proceso por lotes|Sí|Sin|Sin|Sin|
+|Comentarios de concesión de memoria de modo de proceso por lotes|Sí|Sin|Sin|Sin|
 |Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones|Sí|Sí|Sí|Sí|
 |Mejoras de inserción masiva|Sí|Sí|Sí|Sí|
 
@@ -152,10 +152,10 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Enmascaramiento de datos dinámicos|Sí|Sí|Sí|Sí|   
 |Auditoría básica|Sí|Sí|Sí|Sí| 
 |Auditoría específica|Sí|Sí|Sí|Sí| 
-|Cifrado de base de datos transparente|Sí|No|No|No|   
+|Cifrado de base de datos transparente|Sí|Sin|Sin|Sin|   
 |Roles definidos por el usuario|Sí|Sí|Sí|Sí| 
 |Bases de datos independientes|Sí|Sí|Sí|Sí| 
-|Cifrado para copias de seguridad|Sí|Sí|No|No|  
+|Cifrado para copias de seguridad|Sí|Sí|Sin|Sin|  
 
 ##  <a name="RDBMSM"></a> Capacidad de administración de RDBMS  
   
@@ -164,17 +164,17 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Conexión de administración dedicada|Sí|Sí|Sí|Sí, con marca de seguimiento|   
 |Compatibilidad con PowerShell scripting|Sí|Sí|Sí|Sí| 
 |Compatibilidad con las operaciones de componentes de aplicación de capa de datos: extracción, implementación, actualización, eliminación|Sí|Sí|Sí|Sí| 
-|Automatización de directivas (comprobar en la programación y cambio)|Sí|Sí|Sí|No|  
-|Recopilador de datos de rendimiento|Sí|Sí|Sí|No|
-|Informes de rendimiento estándar|Sí|Sí|Sí|No|
-|Guías del plan y congelación del plan para las guías del plan|Sí|Sí|Sí|No| 
+|Automatización de directivas (comprobar en la programación y cambio)|Sí|Sí|Sí|Sin|  
+|Recopilador de datos de rendimiento|Sí|Sí|Sí|Sin|
+|Informes de rendimiento estándar|Sí|Sí|Sí|Sin|
+|Guías del plan y congelación del plan para las guías del plan|Sí|Sí|Sí|Sin| 
 |Consulta directa de vistas indexadas (mediante la sugerencia NOEXPAND)|Sí|Sí|Sí|Sí| 
-|Mantenimiento automático de vistas indexadas|Sí|Sí|Sí|No|
-|Vistas distribuidas con particiones|Sí|No|No|No| 
-|Operaciones indizadas en paralelo|Sí|No|No|No|  
-|Uso automático de vistas indexadas por el optimizador de consultas|Sí|No|No|No| 
-|Comprobación de coherencia en paralelo|Sí|No|No|No| 
-|Punto de control de la utilidad de SQL Server|Sí|No|No|No|    
+|Mantenimiento automático de vistas indexadas|Sí|Sí|Sí|Sin|
+|Vistas distribuidas con particiones|Sí|Sin|Sin|Sin| 
+|Operaciones indizadas en paralelo|Sí|Sin|Sin|Sin|  
+|Uso automático de vistas indexadas por el optimizador de consultas|Sí|Sin|Sin|Sin| 
+|Comprobación de coherencia en paralelo|Sí|Sin|Sin|Sin| 
+|Punto de control de la utilidad de SQL Server|Sí|Sin|Sin|Sin|    
 
 ##  <a name="Programmability"></a> Programmability  
   
@@ -191,7 +191,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Búsqueda de texto completo y semántica|Sí|Sí|Sí|Sí|
 |Especificación de idioma en la consulta|Sí|Sí|Sí|Sí|
 |Service Broker (mensajería)|Sí|Sí|No (solo cliente)|No (solo cliente)|
-|Transact-SQL, extremos|Sí|Sí|Sí|No|
+|Transact-SQL, extremos|Sí|Sí|Sí|Sin|
 |Grafo|Sí|Sí|Sí|Sí|  
 
 

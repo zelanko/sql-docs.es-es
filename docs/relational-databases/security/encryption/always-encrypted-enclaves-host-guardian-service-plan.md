@@ -11,11 +11,11 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74317952"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339863"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planificación de la atestación del Servicio de protección de host
 
@@ -93,7 +93,7 @@ Del mismo modo, la atestación de clave de host sigue siendo valiosa en situacio
 Todavía puede usar muchas de las características de seguridad mencionadas anteriormente, incluido el arranque seguro y un módulo de TPM 1.2, para proteger mejor VBS y el sistema operativo en su conjunto.
 Pero, dado que no hay forma de que HGS compruebe que el equipo tiene esta configuración habilitada con la atestación de clave de host, el cliente no está seguro de que el host realmente use todas las protecciones disponibles.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 ### <a name="hgs-server-prerequisites"></a>Requisitos previos del servidor HGS
 
@@ -112,7 +112,7 @@ Los requisitos de almacenamiento para los datos de atestación son mínimos, en 
 
 No una los equipos HGS a un dominio antes de empezar.
 
-### <a name="include-ssnoversion-mdincludesssnoversion-mdmd-computer-prerequisites"></a>Requisitos previos de los equipos con [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
+### <a name="ssnoversion-md-computer-prerequisites"></a>Requisitos previos de los equipos con [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
 Los equipos que ejecutan [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] deben cumplir los [requisitos para instalar SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) y los [requisitos de hardware de Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
 

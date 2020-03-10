@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73532472"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339873"
 ---
-# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Copia de seguridad y restauración de bases de datos con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-name-sos"></a>Copia de seguridad y restauración de bases de datos con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para:
 > [!div class="checklist"]
@@ -27,7 +27,7 @@ En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos](..
 > * Restaurar una base de datos
 > * Ver el estado de la tarea de restauración
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Para este tutorial, es necesario usar *TutorialDB* de SQL Server. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 

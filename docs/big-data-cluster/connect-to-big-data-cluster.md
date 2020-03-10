@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73882393"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338816"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conexión a un clúster de macrodatos de SQL Server con Azure Data Studio
 
@@ -21,7 +21,7 @@ ms.locfileid: "73882393"
 
 En este artículo se explica cómo conectarse a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] desde Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Tener implementado un [clúster de macrodatos de SQL Server 2019](deployment-guidance.md).
 - [Herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md):

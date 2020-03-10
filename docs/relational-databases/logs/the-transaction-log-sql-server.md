@@ -15,11 +15,11 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75493585"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338739"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Para obtener información sobre la arquitectura del registro de transacciones y 
 ### <a name="individual-transaction-recovery"></a>Recuperación de transacciones individuales
 Si una aplicación emite una instrucción `ROLLBACK` o si [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta un error, como la pérdida de comunicación con un cliente, los registros se utilizan para revertir todas las modificaciones efectuadas por una transacción incompleta. 
 
-### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>Recuperación de todas las transacciones incompletas cuando se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="recovery-of-all-incomplete-transactions-when-ssnoversion-is-started"></a>Recuperación de todas las transacciones incompletas cuando se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 Si un servidor produce errores, las bases de datos pueden quedar en un estado en que algunas modificaciones no han llegado a escribirse desde la caché del búfer a los archivos de datos; estos pueden contener modificaciones como resultado de transacciones incompletas. Cuando se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se ejecuta la recuperación de todas las bases de datos. Todas las modificaciones del registro que no se hayan podido escribir en los archivos de datos se ponen al día. Las transacciones incompletas que se encuentren en el registro de transacciones se revierten para asegurar la integridad de la base de datos. Para más información, vea [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Puesta al día de una base de datos, un archivo, un grupo de archivos o una página restaurados hasta el momento exacto del error
@@ -133,7 +133,7 @@ El*registro mínimo* implica registrar únicamente la cantidad de información n
   
  Las operaciones siguientes, que se registran completamente en el modelo de recuperación completa, se registran mínimamente en el modelo de recuperación simple y en el optimizado para cargas masivas de registros:  
   
--   Operaciones de importación en bloque ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Para obtener más información sobre cuándo se registra mínimamente una importación masiva en una tabla, vea [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Operaciones de importación en bloque ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Para obtener más información sobre cuándo se registra mínimamente una importación masiva en una tabla, vea [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Cuando la replicación transaccional está habilitada, las operaciones `BULK INSERT` se registran por completo en el modelo de recuperación optimizado para cargas masivas de registros.  
   

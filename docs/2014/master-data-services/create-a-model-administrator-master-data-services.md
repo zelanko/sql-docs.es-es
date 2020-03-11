@@ -12,20 +12,20 @@ ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
+ms.sourcegitcommit: 39d8d2d504d0ab70bac5ae3e981657e15dfb7bee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65483405"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78964368"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Crear un administrador de modelo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un administrador de modelo cuando desee que un grupo o usuario tenga el permiso **Actualizar** para todos los objetos de uno o varios modelos.  
   
 > [!TIP]  
->  Para simplificar la administración, cree un grupo local o de Windows, y configúrelo como adminstrator de modelo. Puede agregar usuarios al grupo y quitarlos a continuación sin tener acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+>  Para simplificar la administración, cree un grupo local o de Windows y configúrelo como administrador del modelo. Puede agregar usuarios al grupo y quitarlos a continuación sin tener acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  

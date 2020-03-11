@@ -20,12 +20,12 @@ ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ca8b0f6e700e97c5cbc33964cc450ad54ea1a7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67899712"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027946"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "67899712"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**total_physical_memory_kb**|**BIGINT**|Tamaño total de la memoria física disponible para el sistema operativo, en kilobytes (KB).|  
-|**available_physical_memory_kb**|**BIGINT**|Tamaño de la memoria física disponible, en KB.|  
-|**total_page_file_kb**|**BIGINT**|Tamaño del límite de confirmación indicado por el sistema operativo, en KB|  
-|**available_page_file_kb**|**BIGINT**|Cantidad total del archivo de paginación que no se usa, en KB.|  
-|**system_cache_kb**|**BIGINT**|Cantidad total de la memoria caché del sistema, en KB.|  
-|**kernel_paged_pool_kb**|**BIGINT**|Cantidad total del bloque de kernel paginado, en KB.|  
-|**kernel_nonpaged_pool_kb**|**BIGINT**|Cantidad total del bloque de kernel no paginado, en KB.|  
+|**total_physical_memory_kb**|**bigint**|Tamaño total de la memoria física disponible para el sistema operativo, en kilobytes (KB).|  
+|**available_physical_memory_kb**|**bigint**|Tamaño de la memoria física disponible, en KB.|  
+|**total_page_file_kb**|**bigint**|Tamaño del límite de confirmación indicado por el sistema operativo, en KB|  
+|**available_page_file_kb**|**bigint**|Cantidad total de archivo de paginación que no se usa, en KB.|  
+|**system_cache_kb**|**bigint**|Cantidad total de la memoria caché del sistema, en KB.|  
+|**kernel_paged_pool_kb**|**bigint**|Cantidad total del bloque de kernel paginado, en KB.|  
+|**kernel_nonpaged_pool_kb**|**bigint**|Cantidad total del bloque de kernel no paginado, en KB.|  
 |**system_high_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria alta del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria alta. Para obtener más información, vea [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) en MSDN Library.|  
 |**system_low_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria baja del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria baja. Para obtener más información, vea [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) en MSDN Library.|  
 |**system_memory_state_desc**|**nvarchar(256)**|Descripción del estado de la memoria. Consulte la siguiente tabla.|  

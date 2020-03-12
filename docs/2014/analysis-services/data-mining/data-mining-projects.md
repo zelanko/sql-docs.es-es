@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73705295"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112154"
 ---
 # <a name="data-mining-projects"></a>Proyectos de minería de datos
   Un proyecto de minería de datos forma parte de una solución de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante el proceso de diseño, los objetos que crea en este proyecto están disponibles para probarlos y consultarlos como parte de una base de datos del área de trabajo. Cuando desee que los usuarios puedan consultar o examinar los objetos del proyecto, debe implementarlo en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecute en modo multidimensional.  
@@ -161,7 +161,7 @@ ms.locfileid: "73705295"
   
  Estas visualizaciones son temporales y se cierran sin guardar cuando se cierra la sesión con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por consiguiente, si necesita exportar estas visualizaciones a otra aplicación para mostrarlas o realizar un análisis adicional, utilice los comandos **Copiar** que se proporcionan en cada pestaña o panel de la interfaz del visor.  
   
- Los Complementos de minería de datos de Excel también proporcionan una plantilla de Visio que puede utilizar para representar modelos en un diagrama de Visio y para comentar y modificar el diagrama mediante las herramientas de Visio. Para obtener más información, vea [Complementos de minería de datos de Microsoft SQL Server 2008 para Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=7294).
+ Los Complementos de minería de datos de Excel también proporcionan una plantilla de Visio que puede utilizar para representar modelos en un diagrama de Visio y para comentar y modificar el diagrama mediante las herramientas de Visio. Para obtener más información, vea [Complementos de minería de datos de Microsoft SQL Server 2008 para Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=8569).
   
 ###  <a name="bkmk_Validate"></a>Probar y validar modelos  
  Después de crear un modelo, puede investigar los resultados y decidir qué modelos se comportan mejor.  

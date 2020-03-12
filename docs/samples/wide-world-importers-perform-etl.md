@@ -1,5 +1,6 @@
 ---
 title: 'WideWorldImportersDW: flujo de trabajo ETL | Microsoft Docs'
+description: Use el paquete ETL con SQL Server Integration Services (SSIS) para migrar periódicamente datos de la base de datos WideWorldImporters a WideWorldImportersDW.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 000d12b97eb2eefbfcd9a6a73e02c0098b2afdbb
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067623"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112399"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flujo de trabajo ETL de WideWorldImportersDW
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ El procesamiento principal comienza rellenando la tabla de dimensiones Date. El 
 
 A continuación, una serie de tareas flujo de datos carga cada dimensión. A continuación, carga cada hecho.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - SQL Server 2016 (o posterior), con las bases de datos WideWorldImporters y WideWorldImportersDW (en la misma instancia o en instancias diferentes de SQL Server)
 - SQL Server Management Studio
@@ -62,7 +63,7 @@ Para que el código fuente vuelva a crear la base de datos de ejemplo, consulte 
    2. Escriba un nombre, por ejemplo, *WIDEWORLDIMPORTERS ETL*.
    3. Agregue un **paso de trabajo** del tipo **SQL Server Integration Services paquete**.
    4. Seleccione el servidor que contiene el catálogo de Integration Services y, a continuación, seleccione el paquete *ETL diario* .
-   5. En **** > **administradores de conexión**de configuración, asegúrese de que las conexiones con el origen y el destino están configuradas correctamente. El valor predeterminado es conectarse a la instancia local.
+   5. En **Configuration** > **administradores de conexión**de configuración, asegúrese de que las conexiones con el origen y el destino están configuradas correctamente. El valor predeterminado es conectarse a la instancia local.
    6. Seleccione **Aceptar** para crear el trabajo.
 
 3. Ejecute o programe el trabajo.

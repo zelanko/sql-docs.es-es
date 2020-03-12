@@ -11,12 +11,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d6a27c171fafc8480cbbcdb03c4683816ec30d4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637876"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112186"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Dónde encontrar el complemento Reporting Services para Productos de SharePoint
 
@@ -57,7 +57,7 @@ ms.locfileid: "73637876"
 ##  <a name="bkmk_sql2008sp2"></a>SQL Server 2008 SP2 Reporting Services complemento para productos y tecnologías de SharePoint 2007  
  El complemento Reporting Services de Microsoft SQL Server 2008 SP2 es una versión actualizada de los complementos de 2008 que agregan integración de compatibilidad de los servidores de informes 2008 R2 con los productos de SharePoint 2007.  
   
- La versión más actualizada de este archivo está disponible en línea en el sitio web Centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , en [Complemento Reporting Services de Microsoft SQL Server 2008 SP2 para tecnologías de Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=793).  
+ La versión más actualizada de este archivo está disponible en línea en el sitio web Centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , en [Complemento Reporting Services de Microsoft SQL Server 2008 SP2 para tecnologías de Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=43344).  
   
 ##  <a name="bkmk_sql2008"></a>SQL Server 2008 Reporting Services complemento para productos y tecnologías de SharePoint 2007  
  El complemento Reporting Services de Microsoft SQL Server 2008 para Tecnologías de Microsoft SharePoint proporciona las características necesarias para ejecutar un servidor de informes en una implementación de Microsoft Windows SharePoint Services 3.0 o Microsoft Office SharePoint Server 2007.  

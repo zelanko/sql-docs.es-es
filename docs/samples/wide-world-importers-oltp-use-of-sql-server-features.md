@@ -1,5 +1,6 @@
 ---
 title: Uso de SQL Server características y capacidades | Microsoft Docs
+description: Obtenga información sobre SQL Server características y capacidades, y su uso en la base de datos de ejemplo WideWorldImporters.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 69f0027041b4acf45a54d8d8d655bc8772417dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: abf7cff6bfcd1640f2115c2a7f097ba4fccb499d
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811545"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112411"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Uso de SQL Server características y capacidades
 

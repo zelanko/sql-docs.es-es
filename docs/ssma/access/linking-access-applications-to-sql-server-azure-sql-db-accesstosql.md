@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: c4e6d16645b8a7ecab9ed2e814ed345834e80f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245917"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112061"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Vinculación de aplicaciones de acceso a SQL Server: Azure SQL DB (AccessToSQL)
 Si desea usar las aplicaciones de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede vincular las tablas de Access originales a las tablas migradas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. La vinculación modifica la base de datos de Access de forma que las consultas, los formularios, los informes y las páginas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de acceso a datos usan los datos de la base de datos o SQL Azure en lugar de los datos de la base de datos de Access.  
@@ -56,7 +56,7 @@ Al abrir una tabla en Access, los datos se recuperan mediante un cursor de conju
   
 > [!IMPORTANT]  
 > Para vincular las tablas de Access con una base de datos de Azure, necesita SQL Server Native Client (SNAC) versión 10,5 o posterior.   
-> Puede obtener la versión más reciente de SNAC del [Feature Pack de Microsoft® SQL Server® 2008 R2](https://www.microsoft.com/download/details.aspx?id=16978).  
+> Puede obtener la versión más reciente de SNAC del [Feature Pack de Microsoft® SQL Server® 2008 R2](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## <a name="unlinking-access-tables"></a>Desvincular tablas de acceso  
 Al desvincular una tabla de Access de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una tabla o SQL Azure, SSMA restaura la tabla de acceso original y sus datos.  

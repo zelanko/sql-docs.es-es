@@ -20,15 +20,15 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833798"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112160"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexiones de Integration Services (SSIS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]los paquetes utilizan conexiones para realizar diferentes tareas y para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementar características: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+  Los paquetes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizan conexiones para realizar diferentes tareas y para implementar características de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
   
 -   Conectar con almacenes de datos de origen y destino tales como archivos de texto, archivos XML, libros de Excel y bases de datos relacionales para extraer y cargar datos.  
   
@@ -51,12 +51,11 @@ ms.locfileid: "62833798"
  Para realizar estas conexiones, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utiliza administradores de conexión, descritos en la siguiente sección.  
   
 ## <a name="connection-managers"></a>Administradores de conexión  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa el administrador de conexiones como una representación lógica de una conexión. En tiempo de diseño, se establecen las propiedades de un administrador de conexiones para que describan la conexión física que crea [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando se ejecuta el paquete. Por ejemplo, un administrador de conexiones incluye la propiedad `ConnectionString` que se establece en el tiempo de diseño. En el tiempo de ejecución, se crea una conexión física mediante el valor de la propiedad de la cadena de conexión.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa el administrador de conexiones como una representación lógica de una conexión. En tiempo de diseño, se establecen las propiedades de un administrador de conexiones para que describan la conexión física que crea [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando se ejecuta el paquete. Por ejemplo, un administrador de conexiones incluye la propiedad `ConnectionString` que se establece en el tiempo de diseño. En el tiempo de ejecución, se crea una conexión física mediante el valor de la propiedad de la cadena de conexión.  
   
  Un paquete puede usar varias instancias de un tipo de administrador de conexiones y se pueden establecer las propiedades de cada instancia. En el tiempo de ejecución, cada instancia de un tipo de administrador de conexiones crea una conexión que tiene diferentes atributos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona diferentes tipos de administradores de conexión que permiten que los paquetes se conecten a una variedad de orígenes de datos y servidores:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona diferentes tipos de administradores de conexión que permiten que los paquetes se conecten a una serie de orígenes de datos y servidores:  
   
 -   Se trata de administradores de conexión integrados que el programa de instalación instala al instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -73,13 +72,13 @@ ms.locfileid: "62833798"
 |ADO.NET|Se conecta a un origen de datos mediante un proveedor .NET.|[Administrador de conexiones ADO.NET](ado-net-connection-manager.md)|  
 |CACHE|Lee los datos del flujo de datos o de un archivo caché (.caw) y puede guardar los datos en el archivo caché.|[Administrador de conexiones de caché](cache-connection-manager.md)|  
 |DQS|Conecta a un servidor de Data Quality Services y una base de datos de Data Quality Services en el servidor.|[Administrador de conexiones de limpieza de DQS](dqs-cleansing-connection-manager.md)|  
-|EXCEL|Se conecta a un archivo de libro de Excel.|[Administrador de conexiones con Excel](excel-connection-manager.md)|  
+|EXCEL|Se conecta a un archivo de libro de Excel.|[Administrador de conexiones de Excel](excel-connection-manager.md)|  
 |FILE|Se conecta a un archivo o carpeta.|[administrador de conexiones de archivos](file-connection-manager.md)|  
 |FLATFILE|Se conecta a los datos en un solo archivo plano.|[Administrador de conexiones de archivos planos](flat-file-connection-manager.md)|  
 |FTP|Se conecta a un servidor FTP.|[FTP, administrador de conexiones](ftp-connection-manager.md)|  
 |HTTP|Se conecta a un servidor web.|[HTTP, administrador de conexiones](http-connection-manager.md)|  
 |MSMQ|Se conecta a una cola de mensajes.|[MSMQ, administrador de conexiones](msmq-connection-manager.md)|  
-|MSOLAP100|Se conecta a una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un proyecto de.|[administrador de conexiones de Analysis Services](analysis-services-connection-manager.md)|  
+|MSOLAP100|Se conecta a una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un proyecto de.|[Administrador de conexiones de Analysis Services](analysis-services-connection-manager.md)|  
 |MULTIFILE|Se conecta a varios archivos y carpetas.|[administrador de conexiones de varios archivos](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Se conecta a varios archivos y carpetas de datos.|[administrador de conexiones de varios archivos planos](multiple-flat-files-connection-manager.md)|  
 |OLEDB|Se conecta a un origen de datos mediante un proveedor OLE DB.|[OLE DB, administrador de conexiones](ole-db-connection-manager.md)|  
@@ -100,7 +99,7 @@ ms.locfileid: "62833798"
 |ORACLE|Se conecta a un \<servidor de> de información de versión de Oracle.|El administrador de conexiones de Oracle es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Se conecta a un sistema SAP NetWeaver BI versión 7.|El administrador de conexiones de SAP BI es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=262016).|  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=30440).|  
 |TERADATA|Se conecta a un \<servidor de> de información de versión de Teradata.|El administrador de conexiones de Teradata es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity. 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   

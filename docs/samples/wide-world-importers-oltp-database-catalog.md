@@ -1,5 +1,6 @@
 ---
 title: Catálogo de base de datos OLTP de WideWorldImporters-SQL | Microsoft Docs
+description: Comprenda los esquemas, las tablas, los procedimientos almacenados y las consideraciones de diseño para el catálogo de base de datos de ejemplo WideWorldImporters.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2560043ca6acc4b5df141bcbc898ac09b21f97a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811531"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112406"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de base de datos WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -10,20 +10,20 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637773"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112222"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Características de SQL Server no disponibles en SQL Server 2014
   En este tema se describen las características que ya no están disponibles tras actualizar a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a>Características no incluidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Características no incluidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-sssql11"></a>Características no incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>Servicio del asistente de Active Directory no incluido  
  El Servicio del asistente de Active Directory los componentes relacionados se han quitado. En la siguiente tabla se muestran los componentes asociados que se quitan como resultado:  
@@ -41,7 +41,7 @@ ms.locfileid: "73637773"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Características de SQL Server no incluidas en SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL-DMO no está disponible desde la instalación de SQL Server Express  
- SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ha quitado de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Le recomendamos que modifique las aplicaciones que actualmente utilicen esta característica tan pronto como le sea posible. Si debe admitir SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, instale los componentes de compatibilidad con versiones anteriores [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] desde el Feature Pack desde el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=24793). Use Objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) en nuevos trabajos de desarrollo.  
+ SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ha quitado de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Le recomendamos que modifique las aplicaciones que actualmente utilicen esta característica tan pronto como le sea posible. Si debe admitir SQL-DMO para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, instale los componentes de compatibilidad con versiones anteriores [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] desde el Feature Pack desde el [centro de descarga de Microsoft](https://www.microsoft.com/download/). Use Objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) en nuevos trabajos de desarrollo.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Opción no incluida para Asistente de Web  
  La opción `sp_configure` para habilitar el Asistente de Web se ha quitado de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Se recomienda utilizar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en su lugar.  

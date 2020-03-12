@@ -1,5 +1,6 @@
 ---
 title: Wide World Importers-base de datos de ejemplo para SQL | Microsoft Docs
+description: Obtenga información sobre cómo las bases de datos de ejemplo WideWorldImporters admiten los flujos de trabajo de la empresa ficticia WideWorldImporters.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 872892d307883bb7df31b08de701b2030d9aeb1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68794605"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112383"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Bases de datos de ejemplo de Wide World Importers para Microsoft SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

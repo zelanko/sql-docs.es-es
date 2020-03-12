@@ -13,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: df31dd31192d3aa877301c63ac425af6477dedd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cdcfe6cd4f0c48a6774b8e2518968b8c3d1997f2
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75255530"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280929"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Restricción CHECK (cuadro de diálogo, Visual Database Tools)
 
@@ -44,7 +44,7 @@ Elimina la restricción seleccionada de la tabla. Para cancelar la adición de u
 Se expande para mostrar el campo de la propiedad **Expresión** .  
   
 **Expression**  
-Muestra la expresión de la restricción CHECK seleccionada. En las restricciones nuevas, debe especificar la expresión antes de salir del cuadro. También puede editar las restricciones CHECK existentes. Para obtener más información, vea [Trabajar con restricciones(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Muestra la expresión de la restricción CHECK seleccionada. En las restricciones nuevas, debe especificar la expresión antes de salir del cuadro. También puede editar las restricciones CHECK existentes. Para más información, consulte [Trabajar con restricciones](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
   
 **Categoría Identidad**  
 Se expande para mostrar las propiedades de **Nombre** y **Descripción**.  

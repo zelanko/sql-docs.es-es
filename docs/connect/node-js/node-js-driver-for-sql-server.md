@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fa534b756084f74606e9d40a8c1c69934b240d1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 66e45137b75eaa22e4945113101d0cc0d91901cd
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67916053"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896786"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Controlador Node.js de SQL Server
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para descargar un controlador de SQL para Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para descargar un controlador de SQL para Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-El módulo tedioso es una implementación Java del protocolo TDS, que es compatible con todas las versiones actuales de SQL Server. El controlador es un proyecto de código abierto disponible en Github.  
+El módulo tedioso es una implementación JavaScript del protocolo TDS, que es compatible con todas las versiones actuales de SQL Server. El controlador es un proyecto de código abierto disponible en GitHub.  
   
 Puede conectarse a una instancia de SQL Database mediante Node.js en Windows, Linux o Mac.  
   
@@ -32,7 +32,7 @@ Puede conectarse a una instancia de SQL Database mediante Node.js en Windows, Li
   
 ## <a name="documentation"></a>Documentación  
   
-[Documentación de módulo tediosa en Github](https://tediousjs.github.io/tedious/)  
+[Documentación del módulo tedioso en GitHub](https://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>Comunidad  
 * [Centro para desarrolladores de Node.js de Azure](https://azure.microsoft.com/develop/nodejs/)  

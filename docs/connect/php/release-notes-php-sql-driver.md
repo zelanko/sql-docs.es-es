@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-dapugl, kenvh
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5e279ba446e790a2262e5f0effe160632065dcba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: edc5d8122f1cb2c0fad747e480843c559f650434
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76941219"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866515"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notas de la versión de los controladores de Microsoft para PHP para SQL Server
 
@@ -41,7 +41,17 @@ For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
 
-## <a name="whats-new-in-version-58"></a>Novedades de la versión 5.8
+## <a name="58"></a>5.8
+
+![descargar](../../ssms/media/download-icon.png) [Descargar el paquete de Windows](https://go.microsoft.com/fwlink/?linkid=2120362)  
+[Etiqueta de versión de GitHub (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
+
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 5.8.0
+- Fecha de publicación: 31 de enero de 2020
+
+## <a name="whats-new-in-58"></a>Novedades de la versión 5.8
 
 | Nuevo elemento | Detalles |
 | :------- | :------ |
@@ -61,7 +71,38 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 <sup>1</sup> La compatibilidad con Alpine Linux es experimental para la versión 5.8.
 
-## <a name="whats-new-in-version-56"></a>Novedades de la versión 5.6
+## <a name="previous-releases"></a>Versiones anteriores
+
+## <a name="561"></a>5.6.1
+
+![descargar](../../ssms/media/download-icon.png) [Descargar el paquete de Windows](https://go.microsoft.com/fwlink/?linkid=2120446)  
+[Etiqueta de versión de GitHub (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.1)
+
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 5.6.1
+- Fecha de publicación: 19 de marzo de 2019
+
+## <a name="whats-new-in-561"></a>Novedades de la versión 5.6.1
+
+| Nuevo elemento | Detalles |
+| :------- | :------ |
+| Corrección de errores | Se han corregido supuestos que se realizaban al calcular metadatos de campo o de columna que podrían haber dado lugar a la finalización de la aplicación. |
+| Corrección de errores | Se modificó el archivo de configuración sqlsrv para que se pueda compilar de forma independiente de pdo_sqlsrv. |
+| Corrección de errores | Se corrigió PDOStatement::getColumnMeta() para que se devuelva false cuando algo sale mal. |
+| &nbsp; | &nbsp; |
+
+## <a name="56"></a>5.6
+
+![descargar](../../ssms/media/download-icon.png) [Descargar el paquete de Windows](https://go.microsoft.com/fwlink/?linkid=2120450)  
+[Etiqueta de versión de GitHub (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
+
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 5.6.0
+- Fecha de publicación: 21 de febrero de 2019
+
+## <a name="whats-new-in-56"></a>Novedades de la versión 5.6
 
 | Nuevo elemento | Detalles |
 | :------- | :------ |
@@ -78,7 +119,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Rendimiento mejorado al almacenar en caché los metadatos en las capturas y acelerar las conversiones de cadenas Unicode. | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## <a name="whats-new-in-version-53"></a>Novedades de la versión 5.3
+## <a name="53"></a>5.3
+
+![descargar](../../ssms/media/download-icon.png) [Descargar el paquete de Windows](https://go.microsoft.com/fwlink/?linkid=2120447)  
+[Etiqueta de versión de GitHub (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
+
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 5.3.0
+- Fecha de publicación: 20 de julio de 2018
+
+## <a name="whats-new-in-53"></a>Novedades de la versión 5.3
 
 - Compatibilidad con Microsoft ODBC Driver 17.2 en todas las plataformas.
 - Compatibilidad con macOS High Sierra (requiere el controlador ODBC 17 y versiones posteriores).
@@ -86,7 +137,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Compatibilidad con Ubuntu 18.04 LTS (requiere el controlador ODBC 17.2).
 - Compatibilidad con la resistencia de conexión en Linux o macOS también (requiere el controlador ODBC 17.2).
 
-## <a name="whats-new-in-version-52"></a>Novedades de la versión 5.2
+## <a name="52"></a>5.2
+
+![descargar](../../ssms/media/download-icon.png) [Descargar el paquete de Windows](https://go.microsoft.com/fwlink/?linkid=2120451)  
+[Etiqueta de versión de GitHub (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
+
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 5.2.0
+- Fecha de publicación: 23 de marzo de 2018
+
+## <a name="whats-new-in-52"></a>Novedades de la versión 5.2
 
 - Compatibilidad con PHP 7.2.1 y superior en Windows, y 7.2.0 y superior en otras plataformas.
 - Compatibilidad con Microsoft ODBC Driver 17
@@ -101,7 +162,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Compatibilidad con Azure SQL Data Warehouse
 - Compatibilidad con Instancia administrada de Azure SQL.
 
-## <a name="whats-new-in-version-43"></a>Novedades de la versión 4.3
+## <a name="43"></a>4.3
+
+![descargar](../../ssms/media/download-icon.png) [Descargar el paquete de Windows](https://go.microsoft.com/fwlink/?linkid=2120616)  
+[Etiqueta de versión de GitHub (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
+
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 4.3.0
+- Fecha de publicación: 6 de julio de 2017
+
+## <a name="whats-new-in-43"></a>Novedades de la versión 4.3
 
 - Compatibilidad con PHP 7.1
 - Compatibilidad con macOS Sierra y macOS el Capitan.
@@ -113,24 +184,53 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Compatibilidad con la agrupación de conexiones para Linux y macOS. Para obtener más información, vea [Connection Pooling](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md) (Agrupación de conexiones).
 - Compatibilidad con la autenticación de Azure Active Directory con ActiveDirectoryPassword y SqlPassword. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md).
 
-## <a name="whats-new-in-version-40"></a>Novedades de la versión 4.0
+## <a name="40"></a>4.0
+
+![descargar](../../ssms/media/download-icon.png) [Descargar el paquete de Windows](https://go.microsoft.com/fwlink/?linkid=2120448)  
+[Etiqueta de versión de GitHub (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
+
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 4.0
+- Fecha de publicación: 1 de julio de 2016
+
+## <a name="whats-new-in-40"></a>Novedades de la versión 4.0
 
 - Compatibilidad con PHP 7.0  
 - Compatibilidad completa con 64 bits
 - Compatibilidad con Ubuntu 15.04, Ubuntu 16.04 y RedHat 7
 
-## <a name="whats-new-in-version-32"></a>Novedades de la versión 3.2
+## <a name="32"></a>3.2
 
-- Admite PHP 5.6.   
-- Incluye las actualizaciones más recientes para las versiones anteriores de PHP 5.5 y 5.4.   
+![descargar](../../ssms/media/download-icon.png) [Descargar el paquete de Windows](https://go.microsoft.com/fwlink/?linkid=2120449)  
+[Etiqueta de versión de GitHub (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
+
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 3.2
+- Fecha de publicación: 9 de marzo de 2015
+
+## <a name="whats-new-in-32"></a>Novedades de la versión 3.2
+
+- Admite PHP 5.6.  
+- Incluye las actualizaciones más recientes para las versiones anteriores de PHP 5.5 y 5.4.  
 - Requiere Microsoft ODBC Driver 11 for SQL Server  
 
-## <a name="whats-new-in-version-31"></a>Novedades de la versión 3.1
+## <a name="31"></a>3.1
+
+[Etiqueta de versión de GitHub (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
+
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 3.1
+- Fecha de publicación: 12 de diciembre de 2014
+
+## <a name="whats-new-in-31"></a>Novedades de la versión 3.1
 
 - Admite PHP 5.5.  
 - Requiere Microsoft ODBC Driver 11 for SQL Server. Las versiones anteriores requerían SQL Native Client.  
 
-## <a name="whats-new-in-version-30"></a>Novedades de la versión 3.0  
+## <a name="whats-new-in-30"></a>Novedades de la versión 3.0  
 
 - Admite PHP 5.4.  PHP 5.2 no es compatible con la versión 3 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 - Se agrega la opción de conexión AttachDBFileName. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md).  
@@ -140,7 +240,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Admite cursores de cliente (almacenamiento en caché de un conjunto de resultados en memoria). Para obtener más información, vea [Cursor Types &#40;SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador SQLSRV&#41;)](../../connect/php/cursor-types-sqlsrv-driver.md) y [Cursor Types &#40;PDO_SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador PDO_SQLSRV&#41;)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 - Se ha agregado el atributo PDO::ATTR_EMULATE_PREPARES. Para obtener más información, vea [PDO::prepare](../../connect/php/pdo-prepare.md).  
 
-## <a name="whats-new-in-version-20"></a>Novedades de la versión 2.0
+## <a name="whats-new-in-20"></a>Novedades de la versión 2.0
 
 En la versión 2.0, se ha agregado la compatibilidad con el controlador PDO_SQLSRV. Para obtener más información, vea [Referencia del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md).  
 

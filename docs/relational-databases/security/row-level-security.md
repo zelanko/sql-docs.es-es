@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68809948"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288975"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
 
@@ -63,7 +63,7 @@ RLS admite dos tipos de predicados de seguridad.
   
  Los predicados de filtro y de bloqueo y las directivas de seguridad tienen el siguiente comportamiento:  
   
-- Puede definir una función de predicado que se combine con otra tabla o invoque una función. Si la directiva de seguridad se crea con `SCHEMABINDING = ON`, entonces se puede acceder a la función o combinación desde la consulta y funciona como se espera sin comprobaciones de permisos adicionales. Si la directiva de seguridad se crea con `SCHEMABINDING = OFF`, entonces los usuarios necesitarán los permisos **SELECT** o **EXECUTE** en estas funciones y tablas adicionales para consultar la tabla de destino.
+- Puede definir una función de predicado que se combine con otra tabla o invoque una función. Si la directiva de seguridad se crea con `SCHEMABINDING = ON` (el valor predeterminado), entonces se puede acceder a la función o combinación desde la consulta, y funciona como se espera sin comprobaciones de permisos adicionales. Si la directiva de seguridad se crea con `SCHEMABINDING = OFF`, entonces los usuarios necesitarán los permisos **SELECT** en estas funciones y tablas adicionales para consultar la tabla de destino. Si la función de predicado invoca una función escalar de CLR, se necesita además el permiso **EXECUTE**.
   
 - Puede emitir una consulta a una tabla que tenga un predicado de seguridad definido pero deshabilitado. Todas las filas que se han filtrado o bloqueado no se ven afectadas.  
   
@@ -121,7 +121,7 @@ RLS admite dos tipos de predicados de seguridad.
   
 ## <a name="Best"></a> Procedimientos recomendados  
   
-- Se recomienda crear un esquema independiente para los objetos RLS, función de predicado y directiva de seguridad.  
+- Se recomienda crear un esquema independiente para los objetos RLS: función de predicado y directivas de seguridad. Esto ayuda a separar los permisos que son necesarios en estos objetos especiales de las tablas de destino. Puede ser necesario separar adicionalmente las distintas directivas y funciones de predicado en las bases de datos multinquilino, pero no por norma en cada caso.
   
 - El permiso **ALTER ANY SECURITY POLICY** está destinado a los usuarios con privilegios elevados (como un administrador de directivas de seguridad). El administrador de directivas de seguridad no necesita el permiso **SELECT** en las tablas que protege.  
   

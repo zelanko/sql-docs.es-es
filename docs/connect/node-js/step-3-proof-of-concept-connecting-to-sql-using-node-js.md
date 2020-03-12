@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7925b376fa7ec751faf0b109b6598ab86a348b3f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68419257"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897156"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Paso 3: Prueba de concepto de la conexión a SQL mediante Node.js
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para descargar un controlador de SQL para Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para descargar un controlador de SQL para Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Solo debe considerarse a este ejemplo una prueba de concepto.  El código de ejemplo se simplifica por claridad y no representa necesariamente los procedimientos recomendados que sugiere Microsoft. Otros ejemplos que usan las mismas funciones cruciales están disponibles en GitHub:
+Solo debe considerarse a este ejemplo una prueba de concepto.  El código de ejemplo se simplifica para mayor claridad y no representa necesariamente los procedimientos recomendados por Microsoft. Otros ejemplos que usan las mismas funciones cruciales están disponibles en GitHub:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
@@ -111,9 +111,9 @@ Todas las instrucciones SQL se ejecutan utilizando la función **new Request()**
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>Paso 3: Insertar una fila  
+## <a name="step-3-insert-a-row"></a>Paso 3: Inserción de una fila  
   
-En este ejemplo se muestra cómo ejecutar la instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) de forma segura, pasar parámetros que protejan la aplicación ante el valor [Inyección de código SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+En este ejemplo se muestra cómo ejecutar una instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) de forma segura y pasar parámetros que protejan la aplicación de los valores de [inyección de código SQL](../../relational-databases/security/sql-injection.md).    
   
   
 ```javascript  

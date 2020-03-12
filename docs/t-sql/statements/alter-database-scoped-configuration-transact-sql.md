@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180080"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288965"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -121,7 +121,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
 }
 ```
 
@@ -397,7 +397,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 Permite controlar si un predicado de [seguridad de nivel de fila](../../relational-databases/security/row-level-security.md) (RLS) afecta a la cardinalidad del plan de ejecución de la consulta de usuario general. Cuando ISOLATE_SECURITY_POLICY_CARDINALITY está activada, un predicado RLS no afecta a la cardinalidad de un plan de ejecución. Por ejemplo, imagine una tabla que contiene 1 millón de filas y un predicado RLS que restringe el resultado a 10 filas para un usuario específico que emite la consulta. Con esta configuración de ámbito de base de datos desactivada, la estimación de cardinalidad de este predicado será 10. Cuando esta configuración de ámbito de base de datos está activada, la optimización de consultas calculará 1 millón de filas. Se recomienda usar el valor predeterminado de la mayoría de las cargas de trabajo.
 
-DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL (versión preliminar) **=** {**AUTO** | 10 | 20 }
 
 **SE APLICA A**: Azure Synapse Analytics solo (anteriormente SQL DW)
 

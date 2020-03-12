@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
-ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
+ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634854"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280899"
 ---
 # <a name="bcp-utility"></a>bcp (utilidad)
 
@@ -128,11 +128,11 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 -   **in**<a name="in"></a> copia desde un archivo en la vista o la tabla de la base de datos.  
   
--   **out**<a name="out"></a> copia desde la tabla o la vista de la base de datos a un archivo. Si se especifica un archivo ya existente, este se sobrescribe. Al extraer datos, tenga en cuenta que la utilidad **bcp** representa una cadena vacía como nula y una cadena nula como vacía.  
+-   **out**<a name="out"></a> copia desde la tabla o la vista de la base de datos a un archivo. Si se especifica un archivo ya existente, este se sobrescribe. Al extraer datos, la utilidad **bcp** representa una cadena vacía como nula y una cadena nula como vacía.  
   
 -   **queryout**<a name="qry_out"></a> copia desde una consulta y debe especificarse solo cuando se copian datos de forma masiva desde una consulta.  
   
--   **format**<a name="format"></a> crea un archivo de formato basado en la opción especificada ( **-n**, **-c**, **-w**o **-N**) y los delimitadores de la vista o de la tabla. Cuando se copian datos en bloque, el comando **bcp** puede hacer referencia a un archivo de formato, lo que evita tener que especificar de nuevo la información de formato interactivamente. La opción **format** necesita la opción **-f** ; la creación de un archivo de formato XML también requiere la opción **-x** . Para obtener más información, vea [Crear un archivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Hay que especificar **nul** como el valor (**format nul**).  
+-   **format**<a name="format"></a> crea un archivo de formato basado en la opción especificada ( **-n**, **-c**, **-w**o **-N**) y los delimitadores de la vista o de la tabla. Cuando se copian datos de forma masiva, el comando **bcp** puede hacer referencia a un archivo de formato, lo que evita tener que especificar de nuevo la información de formato interactivamente. La opción **format** necesita la opción **-f** ; la creación de un archivo de formato XML también requiere la opción **-x** . Para obtener más información, vea [Crear un archivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Hay que especificar **nul** como el valor (**format nul**).  
   
  _**owner**_ <a name="schema"></a>  
  Es el nombre del propietario de la tabla o vista. *owner* es opcional si el usuario que realiza la operación es propietario de la tabla o vista especificada. Si *owner* no se especifica y el usuario que realiza la acción no es el propietario de la tabla o la vista especificada, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] devuelve un mensaje de error y se cancela la operación.  
@@ -187,10 +187,11 @@ Hace que el valor transmitido a la opción `bcp` `-S` se interprete como un nomb
   
  Si *err_file* comienza con un guión (-) o una barra diagonal (/), no incluya un espacio entre **-e** y el valor de *err_file* .  
   
- **-E**<a name="E"></a>   
- Especifica que se usará el valor o valores de identidad del archivo de datos importado para la columna de identidad. Si no se especifica **-E** , se omiten los valores de identidad de esta columna en el archivo de datos que se importa y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] asigna automáticamente valores únicos basados en los valores de inicialización y de incremento especificados durante la creación de la tabla.  
+**-E**<a name="E"></a>
+
+Especifica que se usará el valor o valores de identidad del archivo de datos importado para la columna de identidad. Si no se especifica **-E** , se omiten los valores de identidad de esta columna en el archivo de datos que se importa y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] asigna automáticamente valores únicos basados en los valores de inicialización y de incremento especificados durante la creación de la tabla.  Para más información, consulte [DBCC CHECKDB](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
   
- Si el archivo de datos no contiene valores para la columna de identidad de la tabla o la vista, use un archivo de formato para especificar que se debe omitir la columna de identidad de la tabla o la vista al importar los datos; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] asigna automáticamente valores únicos para la columna. Para obtener más información, vea [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ Si el archivo de datos no contiene valores para la columna de identidad de la tabla o la vista, use un archivo de formato para especificar que se debe omitir la columna de identidad de la tabla o la vista al importar los datos; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] asigna automáticamente valores únicos para la columna.
   
  La opción **-E** tiene un requisito de permisos especial. Para más información, consulte la sección "[Comentarios](#remarks)" que aparece más adelante en este tema.  
    
@@ -228,13 +229,13 @@ Hace que el valor transmitido a la opción `bcp` `-S` se interprete como un nomb
 
     En el ejemplo siguiente se exportan datos mediante el nombre de usuario y la contraseña de Azure AD, donde el usuario y la contraseña es una credencial de AAD. En el ejemplo se exporta la tabla `bcptest` desde la base de datos `testdb` desde el servidor de Azure `aadserver.database.windows.net` y se almacenan los datos en el archivo `c:\last\data1.dat`:
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     En el ejemplo siguiente se importan datos mediante el nombre de usuario y la contraseña de Azure AD, donde el usuario y la contraseña es una credencial de AAD. En el ejemplo se importan datos desde el archivo `c:\last\data1.dat` en la tabla `bcptest` para la base de datos `testdb` en el servidor de Azure `aadserver.database.windows.net` con el usuario y la contraseña de Azure AD:
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +245,13 @@ Hace que el valor transmitido a la opción `bcp` `-S` se interprete como un nomb
 
     En el ejemplo siguiente se exportan datos mediante la cuenta de Azure AD integrado. En el ejemplo se exporta la tabla `bcptest` desde la base de datos `testdb` con Azure AD integrado desde el servidor de Azure `aadserver.database.windows.net` y los datos se almacenan en el archivo `c:\last\data2.dat`:
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     En el ejemplo siguiente se importan datos mediante la autenticación de Azure AD integrado. En el ejemplo se importan datos desde el archivo `c:\last\data2.txt` en la tabla `bcptest` para la base de datos `testdb` en el servidor de Azure `aadserver.database.windows.net` con la autenticación de Azure AD integrado:
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +267,13 @@ Hace que el valor transmitido a la opción `bcp` `-S` se interprete como un nomb
 
    El modo interactivo requiere que se especifique una contraseña manualmente, o en el caso de las cuentas que tengan la autenticación multifactor habilitada, complete el método de autenticación MFA configurado.
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    En caso de que un usuario de Azure AD sea un usuario federado de dominio con una cuenta de Windows, el nombre de usuario que se requiera en la línea de comandos contendrá su cuenta de dominio (por ejemplo, joe@contoso.com; consulte a continuación):
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +449,7 @@ Realiza la operación de copia masiva con los tipos de datos nativos (de la base
     
     Para determinar dónde están instaladas todas las versiones de la utilidad bcp, escriba en el símbolo del sistema:
     
-    ```console
+    ```cmd
     where bcp.exe
     ```
 
@@ -604,7 +605,7 @@ END
 
 En el símbolo del sistema, escriba el siguiente comando:
 
-```console
+```cmd
 bcp -v
 ```
   
@@ -616,7 +617,7 @@ En los siguientes ejemplos se ilustra la opción **out** de la tabla `WideWorldI
 
   En el símbolo del sistema, escriba el siguiente comando:
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +639,7 @@ En el siguiente ejemplo se ilustra la opción **out** de la tabla `WideWorldImpo
 
 En el símbolo del sistema, escriba el siguiente comando: \(El sistema le solicitará la contraseña.\)
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +651,7 @@ Los ejemplos siguientes ilustran la opción **in** en la tabla `WideWorldImporte
 
   En el símbolo del sistema, escriba el siguiente comando:
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +659,7 @@ Los ejemplos siguientes ilustran la opción **in** en la tabla `WideWorldImporte
   
 En el símbolo del sistema, escriba el siguiente comando:
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +671,7 @@ Para copiar una columna específica, puede usar la opción **queryout** .  El si
   
 En el símbolo del sistema, escriba el siguiente comando:
 
-```console
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +681,7 @@ Para copiar una fila específica, puede usar la opción **queryout** . El siguie
   
 En el símbolo del sistema, escriba el siguiente comando:
 
-```console
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +691,7 @@ Para copiar el conjunto de resultados de una instrucción Transact-SQL en un arc
 
 En el símbolo del sistema, escriba el siguiente comando:
 
-```console
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +701,7 @@ El ejemplo siguiente crea tres archivos de formato distintos para la tabla `Ware
 
 En un símbolo del sistema, escriba los comandos siguientes:
 
-```console
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +723,7 @@ Para usar un archivo de formato creado anteriormente al importar datos a una ins
 
 En el símbolo del sistema, escriba el siguiente comando:
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

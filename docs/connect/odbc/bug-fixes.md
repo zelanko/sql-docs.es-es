@@ -13,16 +13,20 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a3143595a5e76331dfc61a8edca7b4f068cdc57c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911259"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896771"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de los errores corregidos
 
 Esta página contiene una lista de los errores corregidos en cada versión, a partir del Controlador ODBC 17 de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-1752-for-ssnoversion"></a>Correcciones de errores en el controlador ODBC 17.5.2 de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Se ha agregado msodbcsql.h al paquete de Alpine Linux.
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17.5 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

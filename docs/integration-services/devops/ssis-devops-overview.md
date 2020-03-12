@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
+ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76281873"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78225920"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Herramientas de DevOps para SQL Server Integration Services (versión preliminar)
 
@@ -38,6 +38,8 @@ Las **herramientas de DevOps de SSIS** incluyen la tarea **de compilación de SS
 
 Ruta de acceso de la carpeta o el archivo del proyecto que se va a compilar. Si se especifica una ruta de acceso de carpeta, la tarea de compilación de SSIS buscará todos los archivos dtproj de forma recursiva en esta carpeta y los compilará todos.
 
+La ruta de acceso del proyecto no puede estar *vacía*; establézcala como **.** para realizar la compilación desde la carpeta raíz del repositorio.
+
 #### <a name="project-configuration"></a>Configuración de proyecto
 
 Nombre de la configuración del proyecto que se va a usar para la compilación. Si no se proporciona, el valor predeterminado es la primera configuración de proyecto definida en cada archivo dtproj.
@@ -50,9 +52,19 @@ Ruta de acceso de una carpeta independiente para guardar los resultados de la co
 
 - La tarea de compilación de SSIS se basa en Visual Studio y en el diseñador de SSIS, que es obligatorio en los agentes de compilación. Por lo tanto, para ejecutar la tarea de compilación de SSIS en la canalización, debe elegir **vs2017-win2016** para los agentes hospedados en Microsoft o bien instalar Visual Studio y el diseñador de SSIS (ya sea VS2017 + SSDT2017 o VS2019 + la extensión de proyectos de SSIS) en agentes autohospedados.
 
-- Para compilar proyectos de SSIS mediante el uso de componentes integrados (incluido Azure Feature Pack de SSIS y otros componentes de terceros), los componentes integrados deben instalarse en el equipo en el que se ejecuta el agente de canalización.  Para el agente hospedado por Microsoft, el usuario puede agregar una [tarea PowerShell Script](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) o una [Command Line Script](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) para descargar e instalar los componentes antes de que se ejecute la tarea de compilación de SSIS.
+- Para compilar proyectos de SSIS mediante el uso de componentes integrados (incluido Azure Feature Pack de SSIS y otros componentes de terceros), los componentes integrados deben instalarse en el equipo en el que se ejecuta el agente de canalización.  Para el agente hospedado por Microsoft, el usuario puede agregar una [tarea PowerShell Script](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) o una [Command Line Script](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) para descargar e instalar los componentes antes de que se ejecute la tarea de compilación de SSIS. A continuación se muestra el script de PowerShell de ejemplo para instalar Azure Feature Pack: 
+
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
 
 - En la tarea de compilación de SSIS no se admiten los niveles de protección **EncryptSensitiveWithPassword** y **EncryptAllWithPassword**. Asegúrese de que todos los proyectos de SSIS del código base no usan ninguno de estos dos niveles de protección para evitar que la tarea de compilación de SSIS se bloquee y agote el tiempo de espera durante la ejecución.
+
+- **ConnectByProxy** es una nueva propiedad agregada recientemente en SSDT. SSDT instalado en el agente hospedado por Microsoft no está actualizado, por lo que debe usar el agente autohospedado como solución alternativa.
 
 ## <a name="ssis-deploy-task"></a>Tarea de implementación de SSIS
 
@@ -128,7 +140,7 @@ Especifica si TP continúa con la implementación de los proyectos o archivos re
 En estos momentos, la tarea de implementación de SSIS no admite los siguientes escenarios:
 
 - Configuración del entorno en el catálogo de SSIS.
-- Implemente ISPAC en Azure SQL Server o en la instancia administrada de Azure SQL, ya que solo admite la autenticación multifactor (MFA).
+- Implemente ISPAC en Azure SQL Server o Instancia administrada de Azure SQL, que solo admite la autenticación multifactor (MFA).
 - Implementación de paquetes en MSDB o en el almacén de paquetes de SSIS.
 
 ## <a name="release-notes"></a>Notas de la versión

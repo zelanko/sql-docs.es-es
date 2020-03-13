@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339219"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289563"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Diseñar informes con el Diseñador de informes (SSRS)
   Use el Diseñador de informes para crear informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y soluciones de informes completos. El Diseñador de informes proporciona una interfaz gráfica en la que se pueden definir orígenes de datos, conjuntos de datos y consultas, posiciones de diseño del informe para las regiones de datos y campos, y características interactivas como parámetros y conjuntos de informes que funcionan conjuntamente.  
@@ -120,7 +120,7 @@ ms.locfileid: "78339219"
      Si utiliza una configuración de proyecto que genera el informe pero no lo implementa, el informe especificado en la propiedad `StartItem` de la configuración actual se abrirá en una ventana de vista previa distinta.  
   
     > [!NOTE]  
-    >  Para usar el modo de depuración, debe establecer un elemento de inicio. En Explorador de soluciones, haga clic con el botón secundario en el **** proyecto de informe, `StartItem`haga clic en propiedades y, en, seleccione el nombre del informe que desea mostrar.  
+    >  Para usar el modo de depuración, debe establecer un elemento de inicio. En Explorador de soluciones, haga clic con el botón secundario en el **Properties**proyecto de informe, `StartItem`haga clic en propiedades y, en, seleccione el nombre del informe que desea mostrar.  
   
      Si quiere obtener la vista previa de un informe determinado que no es el elemento de inicio del proyecto, seleccione una configuración que genere el informe pero no lo implemente (por ejemplo, la configuración de depuración local), haga clic con el botón derecho en el informe y, luego, haga clic en **Ejecutar**. Debe elegir una configuración que no implemente el informe; de lo contrario, éste se publicará en el servidor de informes en lugar de mostrarse localmente en una ventana de vista previa.  
   

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e52b36ff9cb8c7d0f4f7fc6086563616325cdc92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72289365"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289933"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "72289365"
 |**resource_subtype**|**nvarchar (60)**|Representa un subtipo de **resource_type**. Adquirir un bloqueo de subtipo sin mantener un bloqueo sin subtipos del tipo primario es técnicamente válido. Los diferentes subtipos no entran en conflicto, ni entre sí, ni con el tipo primario sin subtipos. No todos los tipos de recurso tienen subtipos.|  
 |**resource_database_id**|**int**|Id. de la base de datos en la que se centra este recurso. Todos los recursos manejados por el administrador de bloqueos tienen como ámbito el Id. de la base de datos.|  
 |**resource_description**|**nvarchar(256)**|Descripción del recurso que solo contiene información que no está disponible en otras columnas de recurso.|  
-|**resource_associated_entity_id**|**BIGINT**|Id. de la entidad en una base de datos a la que se asocia un recurso. Puede ser un Id. de objeto, de Hobt o de unidad de asignación, dependiendo del tipo de recurso.|  
+|**resource_associated_entity_id**|**bigint**|Id. de la entidad en una base de datos a la que se asocia un recurso. Puede ser un Id. de objeto, de Hobt o de unidad de asignación, dependiendo del tipo de recurso.|  
 |**resource_lock_partition**|**Inter**|Id. de la partición de bloqueo para un recurso de bloqueo dividido. El valor para recursos de bloqueo sin particiones es 0.|  
 |**request_mode**|**nvarchar (60)**|Modo de la solicitud. En el caso de solicitudes concedidas, se trata del modo concedido; en el caso de solicitudes en espera, se trata del modo que se está solicitando.|  
 |**request_type**|**nvarchar (60)**|Tipo de solicitud. El valor es LOCK.|  
@@ -54,7 +54,7 @@ ms.locfileid: "72289365"
 |**request_exec_context_id**|**int**|Id. del contexto de ejecución del proceso que posee actualmente esta solicitud.|  
 |**request_request_id**|**int**|Id. de solicitud (Id. de lote) del proceso que posee actualmente esta solicitud. Este valor cambiará cada vez que cambie la conexión activa del conjunto de resultados activos múltiples (MARS) para una transacción.|  
 |**request_owner_type**|**nvarchar (60)**|Tipo de entidad que posee la solicitud. Las solicitudes del administrador de bloqueos pueden ser propiedad de varios tipos de entidades. Los valores posibles son:<br /><br /> TRANSACTION = La solicitud es propiedad de una transacción.<br /><br /> CURSOR = La solicitud es propiedad de un cursor.<br /><br /> SESSION = La solicitud es propiedad de una sesión de usuario.<br /><br /> SHARED_TRANSACTION_WORKSPACE = La solicitud es propiedad de la parte compartida del área de trabajo de la transacción.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = La solicitud es propiedad de la parte exclusiva del área de trabajo de la transacción.<br /><br /> NOTIFICATION_OBJECT = La solicitud es propiedad de un componente interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este componente ha solicitado al administrador de bloqueos que le notifique cuándo otro componente está a la espera del bloqueo. La característica FileTable es un componente que utiliza este valor.<br /><br /> **Nota:** Los espacios de trabajo se utilizan internamente para mantener bloqueos para sesiones dadas de alta.|  
-|**request_owner_id**|**BIGINT**|Identificador del propietario específico de esta solicitud.<br /><br /> Si una transacción es la propietaria de la solicitud, este valor contiene el identificador de transacción<br /><br /> Cuando un objeto FileTable es el propietario de la solicitud, **request_owner_id** tiene uno de los valores siguientes.<br /><br /> <br /><br /> -4: una FileTable ha tomado un bloqueo de base de datos.<br /><br /> -3: un objeto FileTable ha tomado un bloqueo de tabla.<br /><br /> Otro valor: el valor representa un identificador de archivo. Este valor también aparece como **fcb_id** en la vista de administración dinámica [sys. dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
+|**request_owner_id**|**bigint**|Identificador del propietario específico de esta solicitud.<br /><br /> Si una transacción es la propietaria de la solicitud, este valor contiene el identificador de transacción<br /><br /> Cuando un objeto FileTable es el propietario de la solicitud, **request_owner_id** tiene uno de los valores siguientes.<br /><br /> <br /><br /> -4: una FileTable ha tomado un bloqueo de base de datos.<br /><br /> -3: un objeto FileTable ha tomado un bloqueo de tabla.<br /><br /> Otro valor: el valor representa un identificador de archivo. Este valor también aparece como **fcb_id** en la vista de administración dinámica [sys. dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|GUID del propietario específico de esta solicitud. Este valor solo se utiliza en una transacción distribuida cuando el valor corresponde al GUID del servicio MS DTC para esa transacción.|  
 |**request_owner_lockspace_id**|**nvarchar (32)**|
   [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Este valor representa el Id. del espacio de bloqueo del solicitante. El Id. del espacio de bloqueo determina si dos solicitantes son compatibles entre sí y si pueden tener bloqueos en modos que, de otra forma, entrarían en conflicto entre sí.|  

@@ -10,12 +10,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b6516c427f15c960c6bfb459c4fc375e798b798
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67046671"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217065"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propiedades de cadena de conexión (Analysis Services)
   En este tema se documentan las propiedades de cadena de conexión que puede establecer en una de las herramientas de diseñador o de administración, o ver en las cadenas de conexión generadas por las aplicaciones cliente que se conectan a Analysis Services y consultan datos. Por tanto, solo se tratan un subconjunto de las propiedades disponibles. La lista completa incluye numerosas propiedades de servidor y base de datos, lo que permite personalizar una conexión para una aplicación específica, independientemente de cómo esté configurada la instancia o la base de datos en el servidor.  
@@ -34,7 +34,7 @@ ms.locfileid: "67046671"
   
  [Reservado para uso futuro](#bkmk_reserved)  
   
- [Cadenas de conexión de ejemplo](#bkmk_examples)  
+ [Ejemplos de cadena de conexión](#bkmk_examples)  
   
  [Formatos de cadena de conexión usados en Analysis Services](#bkmk_supportedstrings)  
   
@@ -50,12 +50,12 @@ ms.locfileid: "67046671"
   
 |Propiedad|Descripción|Ejemplo|  
 |--------------|-----------------|-------------|  
-|`Data Source`de`DataSource`|Especifica la instancia del servidor. Esta propiedad es necesaria para todas las conexiones. Los valores válidos incluyen el nombre de red o la dirección IP del servidor, local o localhost para las conexiones locales, una dirección URL si el servidor está configurado para acceso HTTP o HTTPS, o el nombre de un archivo de cubo (.cub) local.|
+|`Data Source` o `DataSource`|Especifica la instancia del servidor. Esta propiedad es necesaria para todas las conexiones. Los valores válidos incluyen el nombre de red o la dirección IP del servidor, local o localhost para las conexiones locales, una dirección URL si el servidor está configurado para acceso HTTP o HTTPS, o el nombre de un archivo de cubo (.cub) local.|
   `Data source=AW-SRV01` para la instancia predeterminada y el puerto (TCP 2383).<br /><br /> 
   `Data source=AW-SRV01$Finance:8081` para una instancia con nombre ($Finance) y un puerto fijo.<br /><br /> 
   `Data source=AW-SRV01.corp.Adventure-Works.com` para un nombre de dominio completo, suponiendo la instancia y el puerto predeterminados.<br /><br /> 
   `Data source=172.16.254.1` para una dirección IP del servidor, omitiendo la búsqueda del servidor DNS, que es útil para solucionar problemas de conexión.|  
-|`Initial Catalog`de`Catalog`|Especifica el nombre de la base de datos de Analysis Services a la que se va a conectar. La base de datos se debe implementar en Analysis Services y debe tener permiso para conectarse a ella. Esta propiedad es opcional para las conexiones de AMO, pero es obligatoria para ADOMD.NET.|`Initial catalog=AdventureWorks2012`|  
+|`Initial Catalog` o `Catalog`|Especifica el nombre de la base de datos de Analysis Services a la que se va a conectar. La base de datos se debe implementar en Analysis Services y debe tener permiso para conectarse a ella. Esta propiedad es opcional para las conexiones de AMO, pero es obligatoria para ADOMD.NET.|`Initial catalog=AdventureWorks2012`|  
 |`Provider`|Entre los valores válidos se incluyen MSOLAP o MSOLAP. \<versión>, donde \<versión> es 3, 4 o 5. En el sistema de archivos, el nombre del proveedor de datos es msolap110.dll para la versión SQL Server 2012, msolap100.dll para SQL Server 2008 y 2008 R2, y msolap90.dll para SQL Server 2005.<br /><br /> La versión actual es MSOLAP.5. Esta propiedad es opcional. De forma predeterminada, las bibliotecas de cliente leen la versión actual del proveedor OLE DB del Registro. Solo necesita establecer esta propiedad si necesita una versión específica del proveedor de datos, por ejemplo para conectarse a una instancia de SQL Server 2008.<br /><br /> Los proveedores de datos corresponden a las versiones de SQL Server. Si su organización usa la versión actual y versiones anteriores de Analysis Services, lo más probable es que tenga que especificar manualmente qué proveedor usará en las cadenas de conexión que cree. Puede que también sea necesario descargar e instalar versiones específicas del proveedor de datos en aquellos equipos que no tengan la versión necesaria. Puede descargar el proveedor OLE DB desde las páginas de SQL Server Feature Pack del Centro de descarga. Vaya a [Microsoft SQL Server 2012 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=296473) para descargar el proveedor OLE DB de Analysis Services para SQL Server 2012.<br /><br /> MSOLAP.4 se publicó tanto en SQL Server 2008 como en SQL Server 2008 R2. La versión 2008 R2 admite libros PowerPivot en ocasiones debe instalarse manualmente en los servidores de SharePoint. Para distinguir entre estas versiones, debe comprobar el número de compilación en las propiedades de archivo del proveedor: vaya a Archivos de programa\Microsoft Analysis Services\AS OLEDB\10. Haga clic con el botón secundario en msolap110.dll y seleccione **Propiedades**. Haga clic en **Detalles**. Vea la información de la versión del archivo. La versión debe incluir 10,50. \<BuildNumber> para SQL Server 2008 R2. Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) y [Proveedores de datos usados para las conexiones de Analysis Services](data-providers-used-for-analysis-services-connections.md).<br /><br /> MSOLAP. 3 se lanzó en SQL Server 2005.<br /><br /> MSOLAP. 4 se publicó en SQL Server 2008 y de nuevo SQL Server 2008 R2<br /><br /> MSOLAP. 5 se publicó en SQL Server 2012|
   `Provider=MSOLAP.3` se usa para las conexiones que necesitan la versión SQL Server 2005 del proveedor OLE DB para Analysis Services.|  
 |`Cube`|Nombre del cubo o nombre de la perspectiva. Una base de datos puede contener varios cubos y perspectivas. Cuando hay varios destinos posibles, incluya el nombre del cubo o de la perspectiva en la cadena de conexión.|
@@ -76,7 +76,7 @@ ms.locfileid: "67046671"
 |`Integrated Security`|La identidad de Windows del autor de la llamada se usa para conectarse a Analysis Services. Los valores válidos son en blanco, SSPI y BASIC.<br /><br /> `Integrated Security`=`SSPI`es el valor predeterminado para las conexiones TCP, que permite la autenticación NTLM, Kerberos o anónima. El valor predeterminado es dejarla en blanco para las conexiones HTTP.<br /><br /> Cuando se usa `SSPI`, `ProtectionLevel` debe establecerse en uno de los valores siguientes: `Connect`, `PktIntegrity`, `PktPrivacy`.|  
 |`Persist Encrypted`|Establezca esta propiedad cuando la aplicación cliente necesite que el objeto de origen de datos conserve información confidencial de autenticación, como una contraseña, en formato cifrado. De forma predeterminada, la información de autenticación no se guarda.|  
 |`Persist Security Info`|Los valores válidos son True y False. Cuando se establece en True, se puede obtener de la conexión la información de seguridad, como la identidad del usuario o la contraseña especificada anteriormente en la cadena de conexión, una vez realizada la conexión. El valor predeterminado es False.|  
-|`ProtectionLevel`|Determina el nivel de seguridad usado en la conexión. Los valores válidos son:<br /><br /> `None`. Conexiones no autenticadas o anónimas. No realiza ninguna autenticación sobre los datos enviados al servidor.<br /><br /> `Connect`. Conexiones autenticadas. Solo se realiza la autenticación cuando el cliente establece una relación con un servidor.<br /><br /> `PktIntegrity`. Conexiones cifradas. Comprueba que se reciben todos los datos del cliente y que no se han cambiado durante el tránsito.<br /><br /> `PktPrivacy`. Cifrado firmado, solo se admite para XMLA. Comprueba que se reciben todos los datos del cliente, que no han cambiado en el tránsito y protege la privacidad de los datos cifrándolos.<br /><br /> <br /><br /> Para obtener más información, vea [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).|  
+|`ProtectionLevel`|Determina el nivel de seguridad usado en la conexión. Los valores válidos son:<br /><br /> `None`. Conexiones no autenticadas o anónimas. No realiza ninguna autenticación sobre los datos enviados al servidor.<br /><br /> `Connect`. Conexiones autenticadas. Solo se realiza la autenticación cuando el cliente establece una relación con un servidor.<br /><br /> `PktIntegrity`. Conexiones cifradas. Comprueba que se reciben todos los datos del cliente y que no se han cambiado durante el tránsito.<br /><br /> `PktPrivacy`. Cifrado firmado, solo se admite para XMLA. Comprueba que se reciben todos los datos del cliente, que no han cambiado en el tránsito y protege la privacidad de los datos cifrándolos.<br /><br /> <br /><br /> Para obtener más información, vea [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).|  
 |`Roles`|Especifique una lista delimitada por comas de los roles predefinidos para conectarse a un servidor o una base de datos mediante los permisos propios de ese rol. Si se omite esta propiedad, se usan todos los roles y los permisos vigentes son la combinación de todos los roles. Si se establece la propiedad en un valor vacío (por ejemplo, roles = ' '), la conexión de cliente no tiene pertenencia a roles.<br /><br /> Un administrador que usa esta propiedad se conecta con los permisos concedidos por el rol. Pueden producirse errores en algunos comandos si el rol no proporciona suficientes permisos.|  
 |`SSPI`|Especifica explícitamente qué paquete de seguridad se va a usar para la autenticación de cliente cuando `Integrated Security` se ha establecido en `SSPI`. SSPI admite varios paquetes, pero puede usar esta propiedad para especificar un paquete determinado. Los valores válidos son Negociar, Kerberos, NTLM y Usuario anónimo. Si no se establece esta propiedad, todos los paquetes estarán disponibles para la conexión.|  
 |`Use Encryption for Data`|Cifra las transmisiones de datos. Los valores válidos son True y False.|  
@@ -127,7 +127,7 @@ ms.locfileid: "67046671"
   
 -   Modo de depuración  
   
--   Modo  
+-   Mode  
   
 -   SQLCompatibility  
   

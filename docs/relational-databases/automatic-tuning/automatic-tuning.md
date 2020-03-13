@@ -14,12 +14,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 365834e3c1cd239a245c1523947a359b7c2dcc57
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67934554"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289123"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Sin el ajuste automático, los usuarios deberán supervisar el sistema de forma 
 Los planes forzados manualmente no se deben forzar de [!INCLUDE[ssde_md](../../includes/ssde_md.md)] manera permanente, ya que debe ser capaz de aplicar los planes óptimos. El usuario o DBA no debe forzar el plan con `sp_query_store_unforce_plan` el procedimiento y dejar que [!INCLUDE[ssde_md](../../includes/ssde_md.md)] encuentre el plan óptimo. 
 
 > [!TIP]
-> Alternativelly, use las **consultas con planes forzados** almacén de consultas vista para buscar y no aplicar planes.
+> Como alternativa, puede usar las **consultas con planes forzados** almacén de consultas vista para buscar y no aplicar planes.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona todas las vistas y los procedimientos necesarios para supervisar el rendimiento y solucionar problemas en Almacén de consultas.
 
@@ -188,5 +188,5 @@ Sin la administración automática de índices, el usuario tendría que consulta
  [Planes de ejecución](../../relational-databases/performance/execution-plans.md)    
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Supervisar el rendimiento mediante el Almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

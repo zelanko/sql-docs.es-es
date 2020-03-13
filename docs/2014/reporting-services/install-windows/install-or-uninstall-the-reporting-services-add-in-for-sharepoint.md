@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63f45fa174296e4ce79985236da2d97d3f11e937
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339303"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289443"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Instalar o desinstalar el complemento de Reporting Services para SharePoint (SharePoint 2010 y SharePoint 2013)
-  Ejecute el complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paquete de instalación para productos de SharePoint (rsSharePoint. msi) en los servidores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint para habilitar las características de en una implementación de SharePoint. Entre las características se incluyen Power View, un elemento web Visor de informes, un extremo de proxy URL, tipos de contenido y páginas de aplicación para que pueda crear, ver y administrar informes, modelos de informe, orígenes de datos y otro contenido de un servidor de informes en un sitio de SharePoint. El complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint es un componente necesario para un servidor de informes que se ejecute en modo de SharePoint. El complemento se puede instalar desde el Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o descargando el archivo rsSharePoint.msi desde el Feature Pack de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener una lista de las versiones del complemento, así como de las páginas de descarga, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
+  Ejecute el paquete de instalación del complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint (rsSharePoint.msi) en los servidores de SharePoint para proporcionar características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dentro de una implementación de SharePoint. Entre las características se incluyen Power View, un elemento web Visor de informes, un extremo de proxy URL, tipos de contenido y páginas de aplicación para que pueda crear, ver y administrar informes, modelos de informe, orígenes de datos y otro contenido de un servidor de informes en un sitio de SharePoint. El complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint es un componente necesario para un servidor de informes que se ejecute en modo de SharePoint. El complemento se puede instalar desde el Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o descargando el archivo rsSharePoint.msi desde el Feature Pack de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener una lista de las versiones del complemento, así como de las páginas de descarga, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
 
 ||
 |-|
@@ -40,7 +40,7 @@ ms.locfileid: "78339303"
 
 -   [Cómo reparar rssharepoint. msi desde la línea de comandos](#bkmk_repair)
 
--   [Archivos de registro de instalación](#bkmk_logfiles)
+-   [Archivos de registro del programa de instalación](#bkmk_logfiles)
 
 -   [Actualización](#bkmk_upgrade)
 
@@ -59,7 +59,7 @@ ms.locfileid: "78339303"
 
 -   Para ver diagramas de implementaciones de ejemplo con el complemento, vea [topologías de implementación para las características de SQL Server BI en SharePoint](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).
 
-##  <a name="bkmk_whatinstalled"></a>¿Qué instala el complemento?
+##  <a name="bkmk_whatinstalled"></a> ¿Qué instala el complemento?
  El proceso de instalación del complemento consta de dos fases, las cuales se completan automáticamente al completar una instalación estándar:
 
 -   La primera fase es instalar los archivos en las carpetas correspondientes. Las carpetas son estándar para las implementaciones de SharePoint. Uno de los archivos que se instala es rsCustomAction.exe.
@@ -87,17 +87,17 @@ ms.locfileid: "78339303"
 
  La Herramienta de preparación de Productos de SharePoint 2013 **no** instala el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint.
 
-##  <a name="bkmk_3ways_to_install"></a>Información general de los métodos de instalación
+##  <a name="bkmk_3ways_to_install"></a> Información general de los métodos de instalación
  El [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complemento para productos de SharePoint se puede instalar con uno de los dos métodos siguientes:
 
 -   **Asistente para la instalación:** ![Nota](../../../2014/reporting-services/media/rs-fyinote.png "nota")nuevo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]con, el complemento se puede instalar con el asistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la instalación de. Elija **Complemento de Reporting Services para productos de SharePoint** en la página **Selección de características** del asistente.
 
--   **rsSharepoint. msi:** El complemento se puede instalar directamente desde el disco de instalación de o descargado e instalado. rsSharepoint.msi admite la instalación desde una interfaz gráfica de usuario y desde una línea de comandos. Debe ejecutar el archivo .msi con privilegios de administrador; para ello, primero abra una ventana del símbolo del sistema con permisos elevados y, a continuación, ejecute rsSharepoint.msi desde la línea de comandos. Para obtener más información, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
+-   **rsSharepoint.msi:** el complemento se puede instalar directamente desde el disco de instalación o descargarse e instalarse. rsSharepoint.msi admite la instalación desde una interfaz gráfica de usuario y desde una línea de comandos. Debe ejecutar el archivo .msi con privilegios de administrador; para ello, primero abra una ventana del símbolo del sistema con permisos elevados y, a continuación, ejecute rsSharepoint.msi desde la línea de comandos. Para obtener más información, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
 
     > [!NOTE]
     >  Si usa el modificador **q** para una instalación silenciosa desde la línea de comandos, el contrato de licencia para el usuario final no se mostrará. Independientemente del método de instalación, el uso de este software se rige por un contrato de licencia y usted es responsable de su cumplimiento.
 
-##  <a name="bkmk_install_rssharepoint"></a>Instalar el complemento mediante el archivo de instalación rsSharePoint. msi
+##  <a name="bkmk_install_rssharepoint"></a> Instalar el complemento mediante el archivo de instalación rsSharePoint.msi
  Esta sección está relacionada con la instalación directa de rssharepoint.msi, ya sea ejecutando el asistente para la instalación de .msi o una instalación desde la línea de comandos. Si ha instalado el complemento utilizando el Asistente para la instalación de SQL Server, no necesita seguir estos pasos.
 
  Puede ver una lista completa de modificadores de la línea de comandos ejecutando el comando siguiente:
@@ -118,7 +118,7 @@ Rssharepoint.msi /?
 
 3.  Configure los parámetros del servidor de informes y la activación de características en Administración central de SharePoint. . Para obtener más información sobre la instalación y configuración del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consulte [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).
 
-###  <a name="bkmk_files_only_installation"></a>Instalación de solo archivos
+###  <a name="bkmk_files_only_installation"></a> Instalación de solo archivos
  Para instalar los archivos, pero omitir la fase de instalación de acciones personalizadas, ejecute rssharepoint.msi desde la línea de comandos con la opción SKIPCA:
 
 1.  Abra un símbolo del sistema **con permisos de administrador**.
@@ -140,7 +140,7 @@ Rssharepoint.msi /?
 
     1.  Navegue hasta la carpeta que contiene el archivo `rsCustomAction.exe`. La instalación de solo archivos del complemento copiará este archivo al equipo. `rsCustomAction.exe`se encuentra en el directorio **% temp%** . Para navegar hasta el archivo, escriba lo siguiente desde el símbolo del sistema:
 
-         **CD% Temp%**.
+         **CD %temp%** .
 
          El archivo debe estar en **\Usuarios\\<su nombre\>\AppData\Local\Temp**
 
@@ -168,7 +168,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi /q
     ```
 
-##  <a name="bkmk_remove_addin"></a>Cómo quitar el complemento de Reporting Services
+##  <a name="bkmk_remove_addin"></a> Quitar el complemento Reporting Services
  Puede desinstalar el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint en el panel de control de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows o en la línea de comandos.
 
 1.  Con el panel de control se ejecutará una desinstalación completa de los archivos en el equipo actual **Y** se quitará el objeto y las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la granja de SharePoint. Cuando se quitan el objeto y las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ya no se pueden revisar ni actualizar los informes.
@@ -183,7 +183,7 @@ Rssharepoint.msi /?
 
  Al desinstalar el complemento no se quitará lo siguiente:
 
--   Los inicios de sesión creados para la cuenta de servicio del servidor de informes que se usan para tener acceso a la configuración y a las bases de datos de contenido de SharePoint. Debe eliminar todos los inicios de sesión de la cuenta de servicio del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] servidor de informes de la instancia de que se usa para hospedar las bases de datos de SharePoint.
+-   Los inicios de sesión creados para la cuenta de servicio del servidor de informes que se usan para tener acceso a la configuración y a las bases de datos de contenido de SharePoint. Debe eliminar cualquier inicio de sesión para la cuenta del servicio Servidor de informes de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se use para hospedar las bases de datos SharePoint.
 
 -   Los permisos o grupos que haya creado para los usuarios de informes. Si creó niveles de permisos personalizados o grupos de SharePoint para conceder acceso a las características del servidor de informes, debe revocar todos los permisos que ya no son necesarios.
 
@@ -238,7 +238,7 @@ Rssharepoint.msi /?
 
  En los pasos anteriores se supone que completó una instalación de .msi con SkipCA=1 y que el archivo rscusstomaction.exe está disponible. Para obtener más información, vea la sección que describe la instalación de solo archivos.
 
-##  <a name="bkmk_repair"></a>Cómo reparar rssharepoint. msi desde la línea de comandos
+##  <a name="bkmk_repair"></a> Reparar rssharepoint.msi desde la línea de comandos
  Para reparar o desinstalar el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mediante la línea de comandos, complete los siguientes pasos:
 
 1.  Abra un símbolo del sistema **con permisos de administrador**.
@@ -249,8 +249,8 @@ Rssharepoint.msi /?
     msiexec.exe /f rssharepoint.msi
     ```
 
-##  <a name="bkmk_logfiles"></a>Archivos de registro de instalación
- Cuando se ejecuta el programa de instalación, la información se guarda en un archivo de registro en la carpeta **%temp%** del usuario que instaló el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Por ejemplo, **c:\Usuarios\\<nombreDeUsuario\>\AppData\Local\Temp**. El nombre de archivo es **RS_SP_\<número>.log** (por ejemplo, **RS_SP_0.log**). Los errores que aparecen en el registro empiezan con la cadena "SSRSCustomActionError".
+##  <a name="bkmk_logfiles"></a> Archivos de registro del programa de instalación
+ Cuando se ejecuta el programa de instalación, la información se guarda en un archivo de registro en la carpeta **%temp%** del usuario que instaló el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo, **c:\Usuarios\\<nombreDeUsuario\>\AppData\Local\Temp**. El nombre de archivo es **RS_SP_\<número>.log** (por ejemplo, **RS_SP_0.log**). Los errores que aparecen en el registro empiezan con la cadena "SSRSCustomActionError".
 
 > [!NOTE]
 >  AppData es una carpeta oculta en el sistema operativo Windows. Puede que necesite modificar la configuración de carpetas del Explorador de Windows para poder ver carpetas y archivos ocultos.
@@ -279,11 +279,11 @@ Rssharepoint.msi /?
     Get-Content -Path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | Select-String "ssrscustomactionerror"
     ```
 
-2.  El resultado será similar al siguiente:
+2.  La salida tendrá una apariencia parecida a la siguiente:
 
      `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`.
 
-##  <a name="bkmk_upgrade"></a>Actualización
+##  <a name="bkmk_upgrade"></a> Actualización
  Si ya dispone de una instalación del complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puede actualizarla a la versión actual. El programa de instalación del complemento detectará la versión existente y solicitará que confirme la actualización. El mensaje será similar al siguiente:
 
  **Se ha detectado en el sistema una versión anterior de este producto. ¿Desea actualizar la instalación existente?**
@@ -292,7 +292,7 @@ Rssharepoint.msi /?
 
  Tenga en cuenta que el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no reconoce las instancias. Solo puede tener una instancia del complemento en cada equipo. No puede ejecutar versiones diferentes en paralelo con la versión actual.
 
-##  <a name="bkmk_rscustomaction"></a>RsCustomAction. exe
+##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe
  En la siguiente tabla se resumen los modificadores de rscustomaction.exe:
 
 |Switch|Descripción|

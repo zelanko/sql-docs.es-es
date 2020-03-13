@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225400"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217077"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurar el acceso HTTP a Analysis Services en Internet Information Services (IIS) 8.0
   En este artículo se explica cómo configurar un extremo HTTP para acceder a una instancia de Analysis Services. Puede habilitar el acceso HTTP configurando MSMDPUMP.dll, una extensión ISAPI que se ejecuta en Internet Information Services (IIS) y transfiere datos entre las aplicaciones cliente y un servidor de Analysis Services. Este método proporciona una alternativa para conectarse a Analysis Services cuando una solución BI necesita las capacidades siguientes:  
@@ -52,7 +52,7 @@ ms.locfileid: "75225400"
   
 -   [Prueba de la configuración](#bkmk_test)  
   
-##  <a name="bkmk_overview"></a>Visión  
+##  <a name="bkmk_overview"></a> Información general  
  MSMDPUMP es una extensión ISAPI que se carga en IIS y permite la redirección a una instancia de Analysis Services local o remota. Al configurar esta extensión ISAPI, crea un extremo HTTP a una instancia de Analysis Services.  
   
  Debe crear y configurar un directorio virtual para cada extremo HTTP. Cada extremo tendrá su propio conjunto de archivos MSMDPUMP para cada instancia de Analysis Services a la que desee conectarse. Un archivo de configuración en este conjunto de archivos especifica el nombre de la instancia de Analysis Services que se usa para cada extremo HTTP.  
@@ -78,11 +78,11 @@ ms.locfileid: "75225400"
   
  A la configuración predeterminada de IIS 8.0 le faltan componentes necesarios para el acceso HTTP a Analysis Services. Estos componentes, que se encuentran en las áreas de funciones **Seguridad** y **desarrollo de aplicaciones** del rol **servidor Web (IIS)** , incluyen los siguientes:  
   
--   **** | **Autenticación de Windows**de seguridad, **autenticación básica**y cualquier otra característica de seguridad necesaria para el escenario de acceso a datos.  
+-   **Security** | **Autenticación de Windows**de seguridad, **autenticación básica**y cualquier otra característica de seguridad necesaria para el escenario de acceso a datos.  
   
--   **** | **Cgi** de desarrollo de aplicaciones  
+-   **Application Development** | **Cgi** de desarrollo de aplicaciones  
   
--   **** | **Extensiones ISAPI** de desarrollo de aplicaciones  
+-   **Application Development** | **Extensiones ISAPI** de desarrollo de aplicaciones  
   
  Para comprobar o agregar estos componentes, use **Administrador del servidor** | **administrar** | **Agregar roles y características**. Siga los pasos del asistente hasta llegar a **Roles de servidor**. Desplácese hacia abajo hasta encontrar **Servidor Web (IIS)**.  
   
@@ -293,7 +293,7 @@ ms.locfileid: "75225400"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- Para obtener más información acerca de la configuración de la conexión mediante programación, vea [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
+ Para obtener más información acerca de la configuración de la conexión mediante programación, vea [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
   
  Como paso final, asegúrese de realizar las pruebas de forma más rigurosa con un equipo cliente que se ejecute en el entorno de red desde el que se vayan a originar las conexiones.  
   

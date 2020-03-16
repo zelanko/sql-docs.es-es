@@ -220,6 +220,10 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: Usar el servidor de historial de Spark extendido
               href: big-data-cluster/spark-history-server.md
+        - name: Solución de problemas
+          items:
+            - name: Implementación de Active Directory
+              href: big-data-cluster/troubleshoot-active-directory.md
     - name: Referencia
       items:
         - name: Referencia de implementación

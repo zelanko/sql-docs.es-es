@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893910"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198422"
 ---
 # <a name="sql-data-developer"></a>Desarrollador de datos SQL
 Use la plataforma de datos SQL de Microsoft para crear soluciones basadas en datos en dispositivos móviles y escritorios para servidores web, servidores empresariales y la nube.  
@@ -23,7 +23,7 @@ Use la plataforma de datos SQL de Microsoft para crear soluciones basadas en dat
 ## <a name="sql-data-storage"></a>Almacenamiento de datos SQL
 * [Motor de base de datos de SQL Server](../database-engine/configure-windows/sql-server-database-engine.md): use el Motor de base de datos de SQL Server para crear bases de datos relacionales para el procesamiento de transacciones en línea o el procesamiento de datos analíticos en línea. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): use SQL Azure para trasladar su base de datos a la nube. 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): SQL Server Compact para compilar aplicaciones independientes y conectadas de manera ocasional para dispositivos móviles, escritorios y clientes web.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): SQL Server Compact para compilar aplicaciones independientes y conectadas de manera ocasional para dispositivos móviles, escritorios y clientes web.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): use LocalDB durante el desarrollo para escribir y probar código Transact-SQL sin tener que administrar una instancia de servidor de SQL Server.
 
 ## <a name="sql-data-tools"></a>SQL Data Tools

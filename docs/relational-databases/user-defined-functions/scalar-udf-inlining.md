@@ -16,11 +16,11 @@ author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339226"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287409"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
@@ -36,7 +36,7 @@ Las UDF escalares suelen tener un rendimiento deficiente debido a las razones si
 
 - **Invocación iterativa:** las UDF se invocan de forma iterativa, una vez por cada tupla certificada. Esto supone costos adicionales de cambio de contexto repetido debido a la invocación de funciones. En concreto, las UDF que ejecutan consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] en su definición se ven gravemente afectadas.
 
-- **Falta de costos:** durante la optimización, solo se calcula el costo de los operadores relacionales, mientras que de los operadores escalares no. Antes de la introducción de las UDF escalares, otros operadores escalares eran normalmente baratos y no requerían una estimación de los costos. Un pequeño costo de CPU agregado para una operación escalar era suficiente. Hay escenarios donde el costo real es significativo y, aun así, se sigue representando de forma insuficiente.
+- **Falta de costos:** durante la optimización, solo se calcula el costo de los operadores relacionales, mientras que el de los operadores escalares no. Antes de la introducción de las UDF escalares, otros operadores escalares eran normalmente baratos y no requerían una estimación de los costos. Un pequeño costo de CPU agregado para una operación escalar era suficiente. Hay escenarios donde el costo real es significativo y, aun así, se sigue representando de forma insuficiente.
 
 - **Ejecución interpretada:** las UDF se evalúan como un lote de instrucciones, y se ejecutan instrucción por instrucción. Se compila cada instrucción y el plan compilado se almacena en caché. Aunque esta estrategia de almacenamiento en caché ahorra algo de tiempo porque evita las recompilaciones, cada instrucción se ejecuta de forma aislada. No se realizan optimizaciones entre instrucciones.
 

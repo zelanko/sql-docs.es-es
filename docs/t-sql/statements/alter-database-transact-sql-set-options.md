@@ -31,11 +31,11 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
 ms.openlocfilehash: 7bcd9b29686acfbc0f5833a4459b4fb9394d0bd9
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338602"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286969"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -1033,21 +1033,21 @@ No todas las opciones de base de datos usan la cláusula WITH \<termination> ni 
 |\<db_user_access_option>|Sí|Sí|
 |\<db_update_option>|Sí|Sí|
 |\<delayed_durability_option>|Sí|Sí|
-|\<external_access_option>|Sí|Sin|
-|\<cursor_option>|Sí|Sin|
-|\<auto_option>|Sí|Sin|
-|\<sql_option>|Sí|Sin|
-|\<recovery_option>|Sí|Sin|
-|\<target_recovery_time_option>|Sin|Sí|
-|\<database_mirroring_option>|Sin|Sin|
-|ALLOW_SNAPSHOT_ISOLATION|Sin|Sin|
-|READ_COMMITTED_SNAPSHOT|Sin|Sí|
+|\<external_access_option>|Sí|No|
+|\<cursor_option>|Sí|No|
+|\<auto_option>|Sí|No|
+|\<sql_option>|Sí|No|
+|\<recovery_option>|Sí|No|
+|\<target_recovery_time_option>|No|Sí|
+|\<database_mirroring_option>|No|No|
+|ALLOW_SNAPSHOT_ISOLATION|No|No|
+|READ_COMMITTED_SNAPSHOT|No|Sí|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Sí|Sí|
-|\<service_broker_option>|Sí|Sin|
+|\<service_broker_option>|Sí|No|
 |DATE_CORRELATION_OPTIMIZATION|Sí|Sí|
 |\<parameterization_option>|Sí|Sí|
 |\<change_tracking_option>|Sí|Sí|
-|\<db_encryption_option>|Sí|Sin|
+|\<db_encryption_option>|Sí|No|
 
 La memoria caché de planes para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se borra si se establece alguna de las opciones siguientes:
 
@@ -1815,20 +1815,20 @@ No todas las opciones de base de datos usan la cláusula WITH \<termination> ni 
 
 |Categoría de opciones|Se puede especificar con otras opciones|Puede usar la cláusula WITH \<termination>|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|Sí|Sin|
+|\<auto_option>|Sí|No|
 |\<change_tracking_option>|Sí|Sí|
-|\<cursor_option>|Sí|Sin|
-|\<db_encryption_option>|Sí|Sin|
+|\<cursor_option>|Sí|No|
+|\<db_encryption_option>|Sí|No|
 |\<db_update_option>|Sí|Sí|
 |\<db_user_access_option>|Sí|Sí|
 |\<delayed_durability_option>|Sí|Sí|
 |\<parameterization_option>|Sí|Sí|
-|ALLOW_SNAPSHOT_ISOLATION|Sin|Sin|
-|READ_COMMITTED_SNAPSHOT|Sin|Sí|
+|ALLOW_SNAPSHOT_ISOLATION|No|No|
+|READ_COMMITTED_SNAPSHOT|No|Sí|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Sí|Sí|
 |DATE_CORRELATION_OPTIMIZATION|Sí|Sí|
-|\<sql_option>|Sí|Sin|
-|\<target_recovery_time_option>|Sin|Sí|
+|\<sql_option>|Sí|No|
+|\<target_recovery_time_option>|No|Sí|
 
 ## <a name="examples"></a>Ejemplos
 

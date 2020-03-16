@@ -12,12 +12,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 832e7eaa4490df5b7946d1187de74fc494d36e21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5a023389a6c3d0ea087d003af09464481af2089c
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76364127"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198330"
 ---
 # <a name="upgrade-sql-server"></a>Actualizar SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ Esta sección contiene los siguientes artículos:
  [Actualizar Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Actualizar bases de datos replicadas](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Actualizar Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
- [Best Practices Analyzer para SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=15289)   
+ [Best Practices Analyzer para SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=436)   
  [Compatibilidad con versiones anteriores](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

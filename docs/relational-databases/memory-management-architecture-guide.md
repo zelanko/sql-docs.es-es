@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338571"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287949"
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
 
@@ -91,10 +91,10 @@ En la tabla siguiente se indica si un tipo de asignación de memoria específico
 |Tipo de asignación de memoria| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Asignaciones de página única|Sí|Sí, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
-|Asignaciones de varias páginas|Sin|Sí, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
-|Asignaciones de CLR|Sin|Sí|
-|Memoria de pilas de subprocesos|Sin|Sin|
-|Asignaciones directas de Windows|Sin|Sin|
+|Asignaciones de varias páginas|No|Sí, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
+|Asignaciones de CLR|No|Sí|
+|Memoria de pilas de subprocesos|No|No|
+|Asignaciones directas de Windows|No|No|
 
 A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podría asignar más memoria que el valor especificado en el valor de memoria de servidor máxima. Esto puede ocurrir cuando el valor de **_Memoria total del servidor (KB_** ) ya ha alcanzado la configuración de **_Memoria total del servidor (KB)_** (tal y como se especifica en la memoria de servidor máxima). Si no hay memoria libre contigua suficiente para atender a la demanda de solicitudes de memoria de varias páginas (más de 8 KB) debido a la fragmentación de memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede realizar compromisos por encima de lo indicado en vez de rechazar las solicitudes de memoria. 
 
@@ -118,7 +118,7 @@ En la tabla siguiente se indica si un tipo específico de la asignación de memo
 
 |Tipo de asignación de memoria| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Asignaciones de página única|Sin|No, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
+|Asignaciones de página única|No|No, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
 |Asignaciones de varias páginas|Sí|No, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
 |Asignaciones de CLR|Sí|Sí|
 |Memoria de pilas de subprocesos|Sí|Sí|

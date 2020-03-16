@@ -14,11 +14,11 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307634"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285749"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lección 2: Uso del Asistente para la optimización de motor de base de datos
 
@@ -26,7 +26,7 @@ ms.locfileid: "75307634"
 
 El Asistente para la optimización de motor de base de datos le permite optimizar bases de datos, administrar sesiones de optimización y ver recomendaciones. Los usuarios con conocimientos avanzados de estructuras de diseño físico pueden utilizar esta herramienta para realizar un análisis de exploración de optimización de la base de datos. Los principiantes en optimizaciones de bases de datos también pueden utilizar esta herramienta para determinar cuál es la mejor configuración de las estructuras de diseño físico para las cargas de trabajo que optimicen. Esta lección proporciona una práctica básica para los administradores que no conocen la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos y los administradores del sistema que no tengan amplios conocimientos acerca de las estructuras de diseño físico.  
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Prerrequisitos 
 
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 

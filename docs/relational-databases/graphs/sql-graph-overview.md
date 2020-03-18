@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096086"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79428156"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de procesamiento con SQL Server y Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "74096086"
 
 ## <a name="what-is-a-graph-database"></a>¿Qué es una base de datos de grafos?  
 Una base de datos de gráficos es una colección de nodos (o vértices) y bordes (o relaciones). Un nodo representa una entidad (por ejemplo, una persona o una organización) y un borde representa una relación entre los dos nodos que conecta (por ejemplo, "Me gusta" o amigos). Tanto los nodos como los bordes pueden tener propiedades asociadas. Estas son algunas características que hacen que una base de datos de grafos sea única:  
--   Los bordes o las relaciones son entidades de primera clase en una base de datos de grafos y pueden tener atributos o propiedades asociados a ellas. 
--   Un solo borde puede conectar flexiblemente varios nodos en una base de datos de grafos.
--   Puede expresar fácilmente coincidencias de patrones y consultas de navegación en saltos múltiples.
--   Puede expresar fácilmente consultas polimórficas y cierres transitivos.
+-    Los bordes o las relaciones son entidades de primera clase en una base de datos de grafos y pueden tener atributos o propiedades asociados a ellas. 
+-    Un solo borde puede conectar flexiblemente varios nodos en una base de datos de grafos.
+-    Puede expresar fácilmente coincidencias de patrones y consultas de navegación en saltos múltiples.
+-    Puede expresar fácilmente consultas polimórficas y cierres transitivos.
 
 ## <a name="when-to-use-a-graph-database"></a>Cuándo usar una base de datos de grafos
 
-No hay nada que una base de datos de grafos puede conseguir, que no se puede lograr mediante una base de datos relacional. Sin embargo, una base de datos de gráficos puede facilitar la rápida expresión de determinados tipos de consultas. Además, con optimizaciones específicas, algunas consultas pueden funcionar mejor. La decisión para elegir una u otra puede basarse en los siguientes factores:  
--   La aplicación tiene datos jerárquicos. El tipo de texto HierarchyID se puede usar para implementar jerarquías, pero tiene algunas limitaciones. Por ejemplo, no permite almacenar varios elementos primarios para un nodo.
--   La aplicación tiene relaciones de varios a varios complejas; a medida que la aplicación evoluciona, se agregan nuevas relaciones.
--   Necesita analizar las relaciones y los datos interconectados.
+Una base de datos relacional puede lograr todo lo que puede hacer una base de datos de gráficos. Sin embargo, una base de datos de gráficos facilita la rápida expresión de determinados tipos de consultas. Además, con optimizaciones específicas, algunas consultas pueden funcionar mejor. La decisión de elegir una base de datos relacional o de grafos se basa en los siguientes factores:  
+-    La aplicación tiene datos jerárquicos. El tipo de texto HierarchyID se puede usar para implementar jerarquías, pero tiene algunas limitaciones. Por ejemplo, no permite almacenar varios elementos primarios para un nodo.
+-    La aplicación tiene relaciones de varios a varios complejas; a medida que la aplicación evoluciona, se agregan nuevas relaciones.
+-    Necesita analizar las relaciones y los datos interconectados.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Características de gráficos introducidas en[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>Características de gráficos introducidas en[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Vamos a empezar a agregar extensiones de grafos a SQL Server para facilitar el almacenamiento y la consulta de datos de gráfico. Las siguientes características se incluyen en la primera versión. 
 
 
@@ -68,7 +68,7 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Totalmente integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el motor 
+### <a name="fully-integrated-in-ssnoversion-engine"></a>Totalmente integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el motor 
 Las extensiones de grafos están [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] totalmente integradas en el motor. Use el mismo motor de almacenamiento, metadatos, procesador de consultas, etc. para almacenar y consultar los datos del gráfico. Realizar consultas en los datos de gráfico y relacionales en una sola consulta. Combinación de funcionalidades de gráficos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con otras tecnologías, como almacén de columnas, ha, R Services, etc. La base de datos de SQL Graph también es compatible con todas las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]características de seguridad y cumplimiento disponibles con.
  
 ### <a name="tooling-and-ecosystem"></a>Herramientas y ecosistema

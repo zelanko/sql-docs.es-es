@@ -1,5 +1,5 @@
 ---
-title: Requisitos de hardware y software para la instalación de SQL Server 2014 | Microsoft Docs
+title: 'SQL Server 2014: requisitos de hardware & software'
 ms.custom: ''
 ms.date: 07/10/2018
 ms.prod: sql-server-2014
@@ -45,14 +45,14 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 664422d0875ade408e48166920852ee66162a885
+ms.sourcegitcommit: 976a246a92bd6d1665882484a3f49a6d3edd2b8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245664"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79433822"
 ---
-# <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Requisitos de hardware y software para instalar SQL Server 2014
+# <a name="sql-server-2014-hardware-and-software-requirements"></a>SQL Server 2014: requisitos de hardware y software
 
  > - Pruebe SQL Server 2016 mediante la instalación de la ** [edición gratuita para desarrolladores](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer).**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75245664"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Archivos auxiliares del programa de instalación  
+    -   Archivos auxiliares del programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Para conocer los requisitos mínimos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión [!INCLUDE[win8srv](../../includes/win8srv-md.md)] para [!INCLUDE[win8](../../includes/win8-md.md)]instalar en o, consulte [instalación de SQL Server en Windows Server 2012 o Windows 8](https://support.microsoft.com/kb/2681562) (https://support.microsoft.com/kb/2681562).  
   
@@ -94,8 +94,13 @@ ms.locfileid: "75245664"
   
 -   [Instalación de SQL Server en un controlador de dominio](hardware-and-software-requirements-for-installing-sql-server.md#DC_support)  
   
-##  <a name="hwswr"></a>Requisitos de hardware y software  
- Los siguientes requisitos se aplican a todas las instalaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] :  
+##  <a name="hwswr"></a> Requisitos de hardware y software  
+
+
+En la tabla de esta sección se enumeran los requisitos mínimos para ejecutar SQL Server. También hay opciones de configuración recomendadas para obtener un [rendimiento óptimo](https://support.microsoft.com/help/2964518). 
+
+Los siguientes requisitos de software se aplican a todas las instalaciones:  
+
   
 |Componente|Requisito|  
 |---------------|-----------------|  
@@ -106,22 +111,21 @@ ms.locfileid: "75245664"
 |Virtualización|
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se admite en entornos de máquina virtual que se ejecutan en el rol Hyper-V de:<br />-<br />                    
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard, Enterprise y Datacenter<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 Standard, Enterprise y Datacenter Edition.<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)]Ediciones Datacenter y Standard.<br /><br /> Además de los recursos que necesita la partición primaria, a cada máquina virtual (partición secundaria) se le deben proporcionar suficientes recursos de procesador, memoria y recursos de disco para su instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Los requisitos se enumeran más adelante en este tema.\*<br /><br /> Dentro del rol Hyper-V de [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 o [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, se puede asignar un máximo de 4 (cuatro) procesadores virtuales a las máquinas virtuales que ejecutan ediciones de 32 o 64 bits de [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2, de 64 bits de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o de 64 bits de [!INCLUDE[win8srv](../../includes/win8srv-md.md)] .<br /><br /> Dentro del rol Hyper-V de [!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />Se puede asignar un máximo de 8 (ocho) procesadores virtuales a las máquinas virtuales que ejecutan ediciones de 32 y 64 bits de [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2.<br />Se puede asignar un máximo de 64 (sesenta y cuatro) procesadores virtuales a las máquinas virtuales que ejecutan ediciones de 64 bits de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o de [!INCLUDE[win8srv](../../includes/win8srv-md.md)] .<br /><br /> Para obtener más información sobre los límites de la capacidad de cálculo para distintas ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y sus diferencias en entornos físicos y virtualizados con los procesadores hyperthreaded, vea [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md). Para obtener más información sobre el rol Hyper-V, vea el [sitio web de Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=182820).<br /><br /> ** \* Importante \* \* ** Los clústeres de conmutación por error [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]invitados se admiten en. Para obtener más información sobre las versiones admitidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los sistemas operativos para los clústeres de conmutación por error de invitado, y la compatibilidad con la virtualización, vea el tema [Directiva de soporte técnico para productos de Microsoft SQL Server que se ejecutan en un entorno virtual de hardware](https://go.microsoft.com/fwlink/?LinkId=151676).|  
-|Disco duro|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] requiere un mínimo de 6 GB de espacio disponible en disco.<br /><br /> Las necesidades de espacio en disco variarán según los componentes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que instale. Para obtener más información, vea [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) , más adelante en este tema. Para obtener información acerca de los tipos de almacenamiento admitidos para los archivos de datos, vea [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)|  
+|Disco duro|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] requiere un mínimo de 6 GB de espacio disponible en disco.<br /><br /> Las necesidades de espacio en disco variarán según los componentes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que instale. Para obtener más información, vea [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) , más adelante en este tema. Para obtener información acerca de los tipos de almacenamiento admitidos para los archivos de datos, vea [Tipos de almacenamiento para los archivos de datos](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)|  
 |Unidad|Para la instalación desde disco se necesita una unidad de DVD.|  
-|Supervisión|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]requiere monitor Super VGA (800x600) o de resolución superior.|  
+|Supervisión|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] requiere Super VGA (800x600) o un monitor de una resolución mayor.|  
 |Internet|La funcionalidad de Internet necesita acceso a Internet (no necesariamente de carácter gratuito).|  
   
  * La [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ejecución en una máquina virtual será más lenta que la ejecución de forma nativa debido a la sobrecarga de la virtualización.  
   
-##  <a name="pmosr"></a>Requisitos de procesador, memoria y sistema operativo  
+##  <a name="pmosr"></a> Requisitos de procesador, memoria y sistema operativo  
  Los siguientes requisitos de memoria y procesador se aplican a todas las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 |Componente|Requisito|  
 |---------------|-----------------|  
-|Memoria<sup>[1]</sup>|**Cantidad**<br /><br /> Ediciones Express: 512 MB<br /><br /> Todas las demás ediciones: 1 GB<br /><br /> **Recomendar**<br /><br /> Ediciones Express: 1 GB<br /><br /> Todas las demás ediciones: al menos 4 GB y debe aumentar a medida que el tamaño de la base de datos aumente para asegurar un rendimiento óptimo.|  
-|Velocidad del procesador|**Cantidad**<br /><br /> Procesador x86: 1,0 GHz<br /><br /> Procesador x64: 1,4 GHz<br /><br /> **Recomendado:** 2,0 GHz o más rápido|  
-|Tipo de procesador|Procesador x64: AMD Opteron, AMD Athlon 64, Intel Xeon compatible con Intel EM64T Intel Pentium IV compatible con EM64T<br /><br /> Procesador x86: compatible con Pentium III o superior|  
+|Memoria<sup>[1]</sup>|**Mínimo:**<br /><br /> Ediciones Express: 512 MB<br /><br /> Las demás ediciones: 1 GB<br /><br /> **Se recomienda que use:**<br /><br /> Ediciones Express: 1 GB<br /><br /> Las demás ediciones: Al menos 4 GB, que debe aumentar a medida que el tamaño de la base de datos aumente para asegurar un rendimiento óptimo.|  
+|Velocidad del procesador|**Mínimo:**<br /><br /> Procesador x86: 1,0 GHz<br /><br /> Procesador x64: 1,4 GHz<br /><br /> **Se recomienda que use:** 2.0 GHz o superior|  
+|Tipo de procesador|Procesador x64: AMD Opteron, AMD Athlon 64, Intel Xeon compatible con Intel EM64T, Intel Pentium IV compatible con EM64T<br /><br /> Procesador x86: compatible con Pentium III o superior|  
   
  <sup>[1]</sup> La memoria mínima necesaria para instalar el [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] componente en [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) es 2 GB de RAM, que es diferente del requisito [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de memoria mínima. Para obtener información acerca de cómo instalar DQS, vea [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
   
@@ -433,7 +437,7 @@ ms.locfileid: "75245664"
 -   SQL Server 2008 R2  
     y SQL Server 2008 no se admiten en Windows 10.  
   
-##  <a name="CrossLanguageSupport"></a>Compatibilidad entre idiomas  
+##  <a name="CrossLanguageSupport"></a> Compatibilidad entre idiomas  
  Para más información sobre la compatibilidad entre idiomas y consideraciones sobre la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en idiomas localizados, consulte [Versiones en idioma local en SQL Server](local-language-versions-in-sql-server.md).  
   
 ##  <a name="ess"></a>Compatibilidad con sistemas extendidos  
@@ -446,10 +450,8 @@ ms.locfileid: "75245664"
   
 |**Característica**|**Requisito de espacio en disco**|  
 |-----------------|--------------------------------|  
-|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] y archivos de datos, replicación, búsqueda de texto completo y Data Quality Services|811 MB|  
-|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y archivos de datos|345 MB|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] y archivos de datos, replicación, búsqueda de texto completo y Data Quality Services|811 MB|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y archivos de datos|345 MB|  
 |
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y Administrador de informes|304 MB|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|591 MB|  
@@ -459,7 +461,7 @@ ms.locfileid: "75245664"
   
  <sup>1</sup> El requisito de espacio en disco para el contenido descargado de los libros en pantalla es 200 MB.  
   
-##  <a name="StorageTypes"></a>Tipos de almacenamiento para archivos de datos  
+##  <a name="StorageTypes"></a> Tipos de almacenamiento para los archivos de datos  
  Los tipos admitidos de almacenamiento para los archivos de datos son:  
   
 -   Disco local  
@@ -472,12 +474,10 @@ ms.locfileid: "75245664"
   
     > **IMPORTANTE:** El almacenamiento SMB podría estar hospedado en un servidor de archivos Windows o en un dispositivo de almacenamiento SMB de terceros. Si se utiliza un servidor de archivos Windows, la versión de Windows File Server debería ser 2008 o posterior. Para obtener más información sobre la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un recurso compartido de archivos SMB como opción de almacenamiento, vea [Instalar SQL Server con el recurso compartido de archivos SMB como opción de almacenamiento](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
-    > **ADVERTENCIA!!!!**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el disco local solo para instalar los archivos tempdb. Asegúrese de que la ruta de acceso especificada para los archivos de datos y de registro de tempdb es válida en **todos** los nodos del clúster. Durante la conmutación por error, si los directorios de tempdb no están disponibles en el nodo de destino de la conmutación por error, el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá ponerse en línea.  
+    > **¡ADVERTENCIA!**  La instalación de clústeres de conmutación por error de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el disco local solo para instalar los archivos tempdb. Asegúrese de que la ruta de acceso especificada para los archivos de datos y de registro de tempdb es válida en **todos** los nodos del clúster. Durante la conmutación por error, si los directorios de tempdb no están disponibles en el nodo de destino de la conmutación por error, el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá ponerse en línea.  
   
 ##  <a name="DC_support"></a>Instalación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de en un controlador de dominio: limitaciones  
- Por razones de seguridad, se recomienda que no se instale [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un controlador de dominio. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no bloqueará la instalación en un equipo que sea un controlador de dominio, pero se aplican las limitaciones siguientes:  
+ Por razones de seguridad, se recomienda que no se instale [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un controlador de dominio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no bloqueará la instalación en un equipo que sea un controlador de dominio, pero se aplican las limitaciones siguientes:  
   
 -   No puede ejecutar los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio bajo una cuenta del servicio local.  
   
@@ -490,6 +490,6 @@ ms.locfileid: "75245664"
 -   El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede crear grupos de seguridad ni suministrar cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio de solo lectura. En este escenario, se producirá un error de instalación.  
   
 ## <a name="see-also"></a>Consulte también  
- [Planeación de una instalación de SQL Server](planning-a-sql-server-installation.md)   
+ [Planear una instalación de SQL Server](planning-a-sql-server-installation.md)   
  [Consideraciones de seguridad para una instalación de SQL Server](security-considerations-for-a-sql-server-installation.md)   
  [Especificaciones de producto para SQL Server 2014](../../getting-started/sql-server-2014-product-specifications.md)  

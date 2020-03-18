@@ -17,17 +17,20 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
+ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68120229"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448332"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Asigna un usuario de base de datos existente a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [ALTER User](../../t-sql/statements/alter-user-transact-sql.md) en su lugar.  
+  Asigna un usuario de base de datos existente a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  
+ > [!IMPORTANT]
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [ALTER User](../../t-sql/statements/alter-user-transact-sql.md) en su lugar.  
   
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -75,7 +78,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserSID|**varbinary(85)**|Identificador de seguridad del usuario.|  
   
 ## <a name="remarks"></a>Observaciones  
- Use sp_change_users_login para vincular un usuario de la base de datos actual a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si ha cambiado el inicio de sesión para el usuario, utilice sp_change_users_login para vincular el usuario al nuevo inicio de sesión sin que se pierdan los permisos del usuario. El nuevo *Inicio de sesión* no puede ser SA y el *usuario*no puede ser DBO, guest o un usuario INFORMATION_SCHEMA.  
+ Use sp_change_users_login para vincular un usuario de la base de datos actual a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si ha cambiado el inicio de sesión para el usuario, utilice sp_change_users_login para vincular el usuario al nuevo inicio de sesión sin que se pierdan los permisos del usuario. El nuevo *Inicio de sesión* no puede ser SA y el *usuario* no puede ser DBO, guest o un usuario INFORMATION_SCHEMA.  
   
  sp_change_users_login no se puede utilizar para asignar usuarios de la base de datos a entidades de seguridad de Windows, certificados o claves asimétricas.  
   
@@ -121,7 +124,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREAR inicio de sesión &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

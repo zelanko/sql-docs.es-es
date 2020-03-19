@@ -10,12 +10,12 @@ ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757637"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525436"
 ---
 # <a name="tabular-model-programming"></a>Programación de modelo tabular
   Los modelos tabulares utilizan estructuras relacionales para modelar los datos de Analysis Services utilizados por aplicaciones analíticas y de informes. Estos modelos se ejecutan en una instancia de Analysis Services configurada para el modo tabular, usando un motor de análisis en memoria para el almacenamiento y recorridos de tabla rápidos que agregan y calculan datos conforme se solicitan.  
@@ -25,11 +25,11 @@ ms.locfileid: "62757637"
  Esta sección proporciona más información sobre cómo se puede trabajar mediante programación con entidades de modelo tabular y sus propiedades.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Descripción del modelo de objetos tabulares](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Referencia técnica para las anotaciones de BI en CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
+ [Referencia técnica para las anotaciones de BI en CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
   
  [Interfaz IMDEmbedded](imdembeddeddata-interface.md)  
   

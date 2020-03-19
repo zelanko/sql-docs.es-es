@@ -10,12 +10,12 @@ ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757959"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525456"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Anotaciones de CSDL para Business Intelligence (CSDLBI)
   
@@ -36,7 +36,7 @@ ms.locfileid: "62757959"
   
  El esquema CSDLBI lo genera el servidor de Analysis Services en respuesta a una solicitud de una definición de modelo realizada por un cliente como [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. La aplicación cliente envía una consulta XML al servidor de Analysis Services que hospeda los datos del modelo. En respuesta, el servidor envía un mensaje XML que contiene una definición de las entidades del modelo, utilizando las anotaciones CSDLBI. El cliente de informes usa la información para mostrar los campos, las agregaciones y las medidas disponibles en el modelo. Las anotaciones CSDLBI también proporcionan información sobre cómo agrupar, ordenar y dar formato a los datos.  
   
- Para obtener información general sobre CSDLBI, vea [conceptos de CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Para obtener información general sobre CSDLBI, vea [conceptos de CSDLBI](/analysis-services/csdlbi/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Trabajar con CSDL  
  El conjunto de anotaciones CSDLBI que representa cualquier modelo tabular determinado es un documento XML que contiene una colección de entidades, tanto simples como complejas. Las entidades definen las tablas (o dimensiones), las columnas (atributos), las asociaciones (relaciones) y las fórmulas incluidas en las columnas calculadas, medidas o KPI.  
@@ -72,12 +72,12 @@ ms.locfileid: "62757959"
   
 -   Compatibilidad con las perspectivas.  
   
- Para obtener información detallada sobre los elementos individuales de las anotaciones CSDLBI, vea [referencia técnica para anotaciones de BI en CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Para obtener información sobre la especificación de CSDL principal, vea la [especificación CSDL V3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
+ Para obtener información detallada sobre los elementos individuales de las anotaciones CSDLBI, vea [referencia técnica para anotaciones de BI en CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl). Para obtener información sobre la especificación de CSDL principal, vea la [especificación CSDL V3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
   
   
 ## <a name="see-also"></a>Consulte también  
  [Descripción del modelo de objetos tabulares](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [Conceptos de CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [Conceptos de CSDLBI](/analysis-services/csdlbi/csdlbi-concepts)   
  [Descripción del modelo de objetos tabulares](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

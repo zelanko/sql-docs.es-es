@@ -3,17 +3,17 @@ title: Configuración de repositorios de Linux para SQL Server 2017 y 2019
 description: Vea y configure repositorios de origen para SQL Server 2019 y SQL Server 2017 en Linux. El repositorio de origen afecta a la versión de SQL Server que se aplica durante la instalación y la actualización.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/07/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75776382"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198432"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configuración de repositorios para instalar y actualizar SQL Server en Linux
 
@@ -157,11 +157,14 @@ En caso necesario, quite el repositorio antiguo. Use uno de los siguientes coman
 ::: zone pivot="ld2-ubuntu"
 En caso necesario, quite el repositorio antiguo. Use uno de los siguientes comandos en función del tipo de repositorio configurado previamente.
 
+> [!NOTE]
+> A partir de SQL Server 2019 CU3, se admite Ubuntu 18.04. Si usa Ubuntu 16.04, cambie la ruta de acceso siguiente a `/ubuntu/16.04` en lugar de `/ubuntu/18.04`.
+
 | Repositorio | Comando para quitar |
 |---|---|
 | **Versión preliminar (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019 xenial main'` | 
-| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 xenial main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr xenial main'` |
 | **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -204,6 +207,11 @@ Configure el nuevo repositorio que se va a usar para las instalaciones y las act
 ::: zone pivot="ld2-ubuntu"
 Configure el nuevo repositorio que se va a usar para las instalaciones y las actualizaciones de SQL Server.
 
+> [!NOTE]
+> A partir de SQL Server 2019 CU3, se admite Ubuntu 18.04. Los siguientes comandos para SQL Server 2019 apuntan al repositorio de Ubuntu 18.04.
+>
+> Si usa Ubuntu 16.04, cambie la ruta de acceso siguiente a `/ubuntu/16.04` en lugar de `/ubuntu/18.04`.
+
 1. Importe las claves de GPG del repositorio público.
 
    ```bash
@@ -214,8 +222,8 @@ Configure el nuevo repositorio que se va a usar para las instalaciones y las act
 
    | Repositorio | Versión | Get-Help |
    |---|---|---|
-   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
-   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
+   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"` |
+   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019-gdr.list)"` |
    | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363236"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285849"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -390,12 +390,15 @@ El controlador admite la autenticación en Azure Key Vault mediante los siguient
 
 - Id. de cliente/secreto: con este método, las credenciales son un identificador de cliente y un secreto de la aplicación.
 
+- Identidad administrada (17.5.2+): asignada por el sistema o por el usuario; vea [Identidades administradas para los recursos de Azure](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/) para más información.
+
 Para permitir que el controlador use las CMK almacenadas en AKV para el cifrado de columnas, utilice las siguientes palabras clave solo para la cadena de conexión:
 
 |Tipo de credencial| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |Nombre de usuario y contraseña| `KeyVaultPassword`|Nombre principal del usuario|Contraseña|
 |Id. de cliente/secreto| `KeyVaultClientSecret`|Id. de cliente|Secreto|
+|Identidad administrada|`KeyVaultManagedIdentity`|Identificador de objeto (opcional, solo para las asignadas por el usuario)|(no especificado)|
 
 #### <a name="example-connection-strings"></a>Ejemplos de cadena de conexión
 
@@ -413,7 +416,23 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
+**Identidad administrada (asignada por el sistema)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**Identidad administrada (asignada por el usuario)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 Ningún otro cambio de la aplicación ODBC deben usar AKV para el almacenamiento de CMK.
+
+> [!NOTE]
+> El controlador contiene una lista de puntos de conexión de AKV en los que confía. A partir de la versión 17.5.2 del controlador, esta lista es configurable: establezca la propiedad `AKVTrustedEndpoints` en el controlador o la clave del Registro ODBCINST.INI u ODBC.INI del DSN (Windows), o bien la sección de archivo `odbcinst.ini` u `odbc.ini` (Linux/Mac) en una lista delimitada por punto y coma. La configuración en el DSN tiene prioridad sobre la configuración en el controlador. Si el valor comienza con un punto y coma, extiende la lista predeterminada; en caso contrario, la reemplaza. La lista predeterminada (a partir de 17.5) es `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Uso del proveedor para el Almacén de certificados de Windows
 

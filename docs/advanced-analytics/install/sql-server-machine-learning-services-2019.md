@@ -3,17 +3,17 @@ title: Cambios de aislamiento para Windows
 description: En este artículo se describen los cambios en el mecanismo de aislamiento de Machine Learning Services en SQL Server 2019 en Windows. Estos cambios afectan a SQLRUserGroup, las reglas de firewall, los permisos de archivo y la autenticación implícita.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 03/05/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ad95817a7b1eb9afb8377b06d20a577eda49ea23
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69531044"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285919"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>SQL Server 2019 en Windows: Cambios de aislamiento para Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,26 @@ Como parte del cambio a contenedores AppContainer, hay nuevas reglas de firewall
 > [!Note]
 > Si se requieren llamadas de red, puede deshabilitar las reglas de salida en Firewall de Windows.
 
-## <a name="program-file-permissions"></a>Permisos de archivos de programa
+<a name="file-permissions"></a>
+
+## <a name="file-permissions"></a>Permisos de archivo
+
+De forma predeterminada, los scripts externos de Python y R solo tienen permiso de acceso de lectura en sus directorios de trabajo. 
+
+Si los scripts de Python o R necesitan acceso a cualquier otro directorio, debe proporcionar permisos de **Lectura y ejecución** y/o **Escritura** en la cuenta de usuario del servicio **NT Service\MSSQLLaunchpad** y **TODOS LOS PAQUETES DE APLICACIONES** en este directorio.
+
+Siga los pasos siguientes para conceder el acceso.
+
+1. En el Explorador de archivos, haga clic con el botón derecho en la carpeta que quiera usar como directorio de trabajo y seleccione **Propiedades**.
+1. Seleccione **Seguridad** y haga clic en **Editar...** para cambiar los permisos.
+1. Haga clic en **Agregar...** .
+1. Asegúrese de que el valor de **Desde esta ubicación** sea el nombre del equipo local.
+1. Escriba **TODOS LOS PAQUETES DE APLICACIONES** en **Escriba los nombres de objeto que desea seleccionar** y haga clic en **Comprobar nombres**. Haga clic en **OK**.
+1. Seleccione **Leer y ejecutar** en la columna **Permitir**.
+1. Seleccione **Escribir** en la columna **Permitir**, si quiere conceder permisos de escritura.
+1. Haga clic en **Aceptar** y en **Aceptar**.
+
+### <a name="program-file-permissions"></a>Permisos de archivos de programa
 
 Al igual que en las versiones anteriores, el **SQLRUserGroup** sigue proporcionando permisos de lectura y ejecución en los archivos ejecutables de los directorios de SQL Server **Binn**, **R_SERVICES** y **PYTHON_SERVICES**. En esta versión, el único miembro de **SQLRUserGroup** es la cuenta del servicio SQL Server Launchpad.  Cuando el servicio Launchpad inicia un entorno de ejecución de R o Python, el proceso se ejecuta como servicio LaunchPad.
 

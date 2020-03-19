@@ -16,19 +16,19 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 32c25c3ded07e84e436b69af5baac5634909998c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9955b61f8c04aa890c156234838816976f41a585
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75255246"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198452"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Quitar tablas de las consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Puede quitar una tabla, o cualquier objeto con valores de tabla, de la consulta.  
   
 > [!NOTE]  
-> Si se quitan tablas u objetos con valores de tabla, no se eliminan de la base de datos; solo se quitan de la consulta actual. Para obtener información detallada sobre cómo quitar una tabla de una base de datos, vea [Procedimientos para: Eliminar tablas de una base de datos(https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
+> Si se quitan tablas u objetos con valores de tabla, no se eliminan de la base de datos; solo se quitan de la consulta actual. Para obtener información detallada sobre cómo quitar una tabla de una base de datos, vea [Procedimientos para: eliminar tablas de una base de datos](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>Para quitar una tabla o un objeto con estructura de tabla  
   

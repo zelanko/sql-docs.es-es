@@ -1,5 +1,6 @@
 ---
-title: Funcionalidad del motor de base de datos no incluida | Microsoft Docs
+title: Funcionalidad del motor de base de datos no incluida
+description: Obtenga información sobre la funcionalidad y las características del motor de base de datos que se han suspendido en SQL Server 2019 (15.x), SQL Server 2016 (13.x) y versiones anteriores.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -35,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db10b57b5eda73cb2bb2105f4f99fb6e5cbed733
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 25da4c94448a6527e50fe759e6c75cdbad10b007
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258120"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190537"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funcionalidad del motor de base de datos no incluida en SQL Server
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describen las características del [!INCLUDE[ssDE](../includes/ssde-md.md)] que ya no están disponibles en [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
 
-## <a name="discontinued-features-in-includesssqlv15includessssqlv15-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+## <a name="discontinued-features-in-sssqlv15"></a>Características no incluidas en [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
 
 - Las siguientes opciones de configuración con ámbito de base de datos no se incluyen:
 
@@ -60,7 +61,7 @@ Para obtener las opciones de configuración actuales, vea [ALTER DATABASE SCOPED
 >[!NOTE]
 >Ninguna característica se ha dejado de incluir en [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
 
-## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
+## <a name="discontinued-features-in-sssql15"></a>Características no incluidas en [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
 
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] es una aplicación de 64 bits. La instalación de 32 bits está descontinuada, a pesar de que algunos de los elementos se ejecutan como componentes de 32 bits.  
 

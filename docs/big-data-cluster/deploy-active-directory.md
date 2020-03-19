@@ -2,19 +2,19 @@
 title: Implementación en el modo de Active Directory
 titleSuffix: SQL Server Big Data Cluster
 description: Obtenga información sobre cómo actualizar los clústeres de macrodatos de SQL Server en un dominio Active Directory.
-author: NelGson
-ms.author: negust
+author: mihaelablendea
+ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200966"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190581"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory
 
@@ -174,16 +174,27 @@ La integración de AD necesita los parámetros siguientes. Agregue estos paráme
 
 - `security.activeDirectory.domainDnsName`: nombre del dominio (por ejemplo, `contoso.local`).
 
-- `security.activeDirectory.clusterAdmins`: este parámetro toma **un grupo de AD**. Los miembros de este grupo obtendrán permisos de administrador en el clúster. Esto significa que tendrán permisos sysadmin en SQL Server, permisos de superusuario en HDFS y de administrador en el controlador. **Tenga en cuenta que este grupo debe existir en AD antes de comenzar la implementación. Recuerde también que este grupo no puede tener definido DomainLocal como ámbito en Active Directory. Un grupo de ámbito local de dominio producirá un error de implementación.**
+- `security.activeDirectory.clusterAdmins`: este parámetro toma un grupo de AD. El ámbito del grupo de AD debe ser universal o global del dominio. Los miembros de este grupo obtienen permisos de administrador en el clúster. Esto significa que tendrán permisos `sysadmin` en SQL Server, permisos de superusuario en HDFS y de administrador en el controlador. 
 
-- `security.activeDirectory.clusterUsers`: lista de los grupos de AD que son usuarios normales (sin permisos de administrador) en el clúster de macrodatos. **Tenga en cuenta que estos grupos deben existir en AD antes de comenzar la implementación. Recuerde también que estos grupos no pueden tener definido DomainLocal como ámbito en Active Directory. Un grupo de ámbito local de dominio producirá un error de implementación.**
+  >[!IMPORTANT]
+  >Cree este grupo en AD antes de comenzar la implementación. Si el ámbito de este grupo de AD es el dominio local, se produce un error en la implementación.
 
-- **Parámetro opcional** `security.activeDirectory.appOwners`: lista de los grupos de AD que tienen permisos para crear, eliminar y ejecutar cualquier aplicación. **Tenga en cuenta que estos grupos deben existir en AD antes de comenzar la implementación. Recuerde también que estos grupos no pueden tener definido DomainLocal como ámbito en Active Directory. Un grupo de ámbito local de dominio producirá un error de implementación.**
+- `security.activeDirectory.clusterUsers`: lista de los grupos de AD que son usuarios normales (sin permisos de administrador) en el clúster de macrodatos. La lista puede incluir grupos de AD cuyo ámbito sean grupos de dominio universal o global. No pueden ser grupos de dominio local.
 
-- **Parámetro opcional** `security.activeDirectory.appReaders`: lista de grupos de AD que tienen permisos para ejecutar cualquier aplicación. **Tenga en cuenta que estos grupos deben existir en AD antes de comenzar la implementación. Recuerde también que estos grupos no pueden tener definido DomainLocal como ámbito en Active Directory. Un grupo de ámbito local de dominio producirá un error de implementación.**
+  >[!IMPORTANT]
+  >Cree estos grupos en AD antes de comenzar la implementación. Si el ámbito de cualquiera de estos grupos de AD es el dominio local, se produce un error en la implementación.
 
-**Comprobación del ámbito del grupo de AD:** 
-[haga clic aquí para obtener instrucciones](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) para comprobar el ámbito de un grupo de AD, con el fin de determinar si es DomainLocal.
+- **Parámetro opcional** `security.activeDirectory.appOwners`: lista de grupos de AD que tienen permisos para crear, eliminar y ejecutar cualquier aplicación. La lista puede incluir grupos de AD cuyo ámbito sean grupos de dominio universal o global. No pueden ser grupos de dominio local.
+
+  >[!IMPORTANT]
+  >Cree estos grupos en AD antes de comenzar la implementación. Si el ámbito de cualquiera de estos grupos de AD es el dominio local, se produce un error en la implementación.
+
+- **Parámetro opcional** `security.activeDirectory.appReaders`: lista de grupos de AD que tienen permisos para ejecutar cualquier aplicación. La lista puede incluir grupos de AD cuyo ámbito sean grupos de dominio universal o global. No pueden ser grupos de dominio local.
+
+  >[!IMPORTANT]
+  >Cree estos grupos en AD antes de comenzar la implementación. Si el ámbito de cualquiera de estos grupos de AD es el dominio local, se produce un error en la implementación.
+
+[Compruebe el ámbito del grupo de AD](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), para determinar si es DomainLocal.
 
 Si aún no ha inicializado el archivo de configuración de la implementación, puede ejecutar este comando para obtener una copia de la configuración.
 

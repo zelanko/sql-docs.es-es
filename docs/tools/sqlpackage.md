@@ -1,19 +1,20 @@
 ---
 title: SqlPackage.exe
 ms.prod: sql
-ms.technology: ssdt
-ms.date: 06/28/2018
-ms.reviewer: alayu; sstein
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.reviewer: alayu; sstein
+ms.date: 06/28/2018
+ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250600"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286489"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -228,7 +229,7 @@ Una operación de publicación de SqlPackage.exe actualiza incrementalmente el e
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Especifica si las diferencias en cuanto al periodo durante el cual SQL Server conserva la ruta en la tabla de enrutamiento se deben omitir o si hay que actualizar al publicar en una base de datos.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Especifica si las diferencias en los caracteres de punto y coma entre las instrucciones T-SQL se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de tabla se ignorarán o se actualizarán al publicar en una base de datos.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de partición de tabla se ignorarán o se actualizarán al publicar en una base de datos.  Esta opción solo se aplica a bases de datos de almacenamiento de datos de Azure Synapse Analytics.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de partición de tabla se ignorarán o se actualizarán al publicar en una base de datos.  Esta opción solo se aplica a bases de datos del grupo de SQL de Azure Synapse Analytics (almacenamiento de datos).|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Especifica si las diferencias en los objetos de configuración de usuario se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Especifica si las diferencias en los espacios en blanco se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Especifica si las diferencias en el valor de la cláusula WITH NOCHECK de las restricciones CHECK se omiten o hay que actualizar al publicar.|

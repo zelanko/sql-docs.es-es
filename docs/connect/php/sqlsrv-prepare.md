@@ -18,11 +18,11 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68014989"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286549"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,11 +37,11 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-*$conn*: el recurso de conexión asociado a la instrucción creada.  
+*$conn*: recurso de conexión asociado a la instrucción creada.  
   
-*$tsql*: expresión Transact-SQL que corresponde a la instrucción creada.  
+*$tsql*: expresión Transact-SQL que se corresponde a la instrucción creada.  
   
-*$params* [OPCIONAL]: **matriz** de valores que corresponden a parámetros de una consulta con parámetros. Cada elemento de la matriz puede ser uno de los siguientes:
+*$params* [OPCIONAL]: **matriz** de valores que se corresponden con parámetros de una consulta con parámetros. Cada elemento de la matriz puede ser uno de los siguientes:
   
 -   Un valor literal  
   
@@ -65,7 +65,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |*$phpType*[OPCIONAL]|Constante **SQLSRV_PHPTYPE_\*** que especifica el tipo de datos PHP del valor devuelto.|  
     |*$sqlType*[OPCIONAL]|Constante **SQLSRV_SQLTYPE_\*** que especifica el tipo de datos de SQL Server del valor de entrada.|  
   
-*$options* [OPCIONAL]: matriz asociativa que establece <a name="properties">propiedades de consulta</a>. En la siguiente tabla se indican las claves admitidas y los valores correspondientes:
+*$options* [OPCIONAL]: matriz asociativa que establece <a name="properties">propiedades de consultas</a>. En la siguiente tabla se indican las claves admitidas y los valores correspondientes:
 
 |Clave|Valores admitidos|Descripción|  
 |-------|--------------------|---------------|  
@@ -73,7 +73,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 |DecimalPlaces|Un número entero comprendido entre 0 y 4, ambos incluidos|Especifica los lugares decimales al dar formato a los valores de moneda obtenidos.<br /><br />Se omitirá cualquier entero negativo o un valor mayor que 4.<br /><br />Esta opción funciona sólo cuando es FormatDecimals es **true**.|
 |FormatDecimals|**true** o **false**<br /><br />El valor predeterminado es **false**.|Especifica si se agregan ceros iniciales a las cadenas decimales cuando sea apropiado y habilita la opción `DecimalPlaces` para dar formato a los tipos de moneda.<br /><br />Para obtener más información, consulte [Aplicación de formato a cadenas decimales y valores de moneda (controlador SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
 |QueryTimeout|Un entero positivo|Establece el tiempo de espera de consulta en segundos. De manera predeterminada, el controlador espera indefinidamente los resultados.|  
-|ReturnDatesAsStrings|**true** o **false**<br /><br />El valor predeterminado es **false**.|Configura la instrucción para recuperar los tipos de fecha y hora como cadenas (**true**). Para más información, consulte [Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
+|ReturnDatesAsStrings|**true** o **false**<br /><br />El valor predeterminado es **false**.|Configura la instrucción para recuperar los tipos de fecha y hora como cadenas (**true**). Para obtener más información, vea [Procedimiento: Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |De desplazamiento|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Para obtener más información sobre estos valores, vea [Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
 |SendStreamParamsAtExec|**true** o **false**<br /><br />El valor predeterminado es **true**.|Configura el controlador para enviar todos los datos de flujo en el momento de la ejecución (**true**) o para enviar los datos de flujo en fragmentos (**false**). De manera predeterminada, este valor se establece como **True**. Para obtener más información, consulte [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
@@ -87,7 +87,7 @@ La combinación de **sqlsrv_prepare** y **sqlsrv_execute** separa la preparació
   
 Para consultar estrategias alternativas de lectura y escritura de grandes cantidades de información, diríjase a [Batches of SQL Statements](../../odbc/reference/develop-app/batches-of-sql-statements.md) (Lotes de instrucciones SQL) y [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Para obtener más información, consulte [Cómo recuperar parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Para más información, vea: [Cómo: Recuperación de los parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Ejemplo  
 En el ejemplo siguiente se prepara y se ejecuta una instrucción. Cuando se ejecuta la instrucción (vea [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), se actualiza un campo de la tabla *Sales.SalesOrderDetail* de la base de datos AdventureWorks. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
@@ -252,11 +252,11 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Realización de consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)
+[Cómo: Realización de consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Envío de datos como una secuencia](../../connect/php/how-to-send-data-as-a-stream.md)
+[Cómo: Envío de datos en forma de secuencia](../../connect/php/how-to-send-data-as-a-stream.md)
 
 [Uso de parámetros direccionales](../../connect/php/using-directional-parameters.md)
 

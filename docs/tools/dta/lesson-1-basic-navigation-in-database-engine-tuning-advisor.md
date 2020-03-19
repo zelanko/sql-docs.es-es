@@ -14,12 +14,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9bb0911a0aa678ee160894e6297e5636644bf475
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307655"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286649"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Lección 1: Navegación básica en el Asistente para la optimización de motor de base de datos (DTA)
 
@@ -27,7 +27,7 @@ ms.locfileid: "75307655"
 
 El Asistente para la optimización de motor de base de datos ofrece una interfaz gráfica de usuario (GUI) para ver sesiones de optimización e informes de recomendaciones de optimización. Esta lección muestra cómo iniciar la herramienta y configurar la presentación. Al final de esta lección, habrá aprendido las diferentes formas de iniciar la herramienta y cómo configurar su presentación para proporcionar compatibilidad con las tareas de optimización que realiza regularmente.  
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Prerrequisitos 
 
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 
@@ -57,7 +57,7 @@ De manera predeterminada, el Asistente para la optimización de motor de base de
 ![Ventana predeterminada del Asistente para la optimización del motor de base de datos](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> En la pestaña **Monitor de sesión** se muestra el nombre de la sesión, que es el nombre del usuario conectado y los datos actuales. 
+> En la pestaña **Monitor de sesión** se muestra el nombre de la sesión, que es el nombre del usuario conectado y la fecha actual. 
   
 Cuando se abre por primera vez, aparecen dos paneles principales en la GUI del Asistente para la optimización de motor de base de datos.  
   

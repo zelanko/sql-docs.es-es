@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 71fd26df641c1ac551dcc430c0fef555fc3c5df8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0c919ad9202c99c7b010b6aee9c921e76784eb24
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68037147"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027961"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>Iniciar SQL Server con la configuración mínima
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,8 @@ ms.locfileid: "68037147"
 -   No se ejecutan los procedimientos almacenados de inicio.  
 
 -   `tempdb` se configura con el tamaño más pequeño posible.
+
+-   La auditoría se deshabilitará pero todavía se puede emitir la auditoría de DDL. En la práctica, **-m** debe ser suficiente para la mayoría de los casos que requieran la reconfiguración de la auditoría de SQL Server. Para obtener más información sobre la seguridad en la configuración de auditoría, vea [Auditoría en SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security).
   
  Después de iniciar el servidor con la configuración mínima, debe modificar los valores que haga falta del servidor, detenerlo y después reiniciarlo.  
   

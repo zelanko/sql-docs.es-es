@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903882"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288389"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] procesa consultas en varias arquitecturas de almacenamiento de datos como tablas locales, tablas con particiones y tablas distribuidas en varios servidores. En los temas siguientes se trata el modo en que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procesa las consultas y optimiza la reutilización de consultas a través del almacenamiento en caché de los planes de ejecución.
 
@@ -86,7 +86,7 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>Optimización de las instrucciones SELECT
-Una instrucción `SELECT` no es de procedimiento, ya que no expone los pasos exactos que el servidor de la base de datos debe usar para recuperar los datos solicitados. Esto significa que el servidor de la base de datos debe analizar la instrucción para determinar la manera más eficaz de extraer los datos solicitados. Este proceso se denomina optimizar la instrucción `SELECT` . El componente que lo lleva a cabo se denomina Optimizador de consultas. La entrada al Optimizador de consultas consta de la consulta, el esquema de la base de datos (definiciones de tabla e índice) y las estadísticas de base de datos. La salida del Optimizador de consultas es un plan de ejecución de consultas, en ocasiones denominado plan de consulta o simplemente plan. El contenido de un plan de consulta se describe con más detalle posteriormente en este tema.
+Una instrucción `SELECT` no es de procedimiento, ya que no expone los pasos exactos que el servidor de la base de datos debe usar para recuperar los datos solicitados. Esto significa que el servidor de la base de datos debe analizar la instrucción para determinar la manera más eficaz de extraer los datos solicitados. Este proceso se denomina optimizar la instrucción `SELECT` . El componente que lo lleva a cabo se denomina Optimizador de consultas. La entrada al Optimizador de consultas consta de la consulta, el esquema de la base de datos (definiciones de tabla e índice) y las estadísticas de base de datos. La salida del Optimizador de consultas es un plan de ejecución de consultas, en ocasiones denominado plan de consulta o simplemente plan de ejecución. El contenido de un plan de ejecución se describe con más detalle posteriormente en este tema.
 
 En el siguiente diagrama se muestran las entradas y salidas del optimizador de consultas durante la optimización de una única instrucción `SELECT`:
 
@@ -100,17 +100,19 @@ Una instrucción `SELECT` define únicamente los siguientes elementos:
 
 Un plan de ejecución de consulta es una definición de los siguientes elementos: 
 
-* La secuencia en la que se tiene acceso a las tablas de origen.  
-  Normalmente, hay muchas secuencias diferentes en las que el servidor de la base de datos puede tener acceso a las tablas base para generar el conjunto de resultados. Por ejemplo, si la instrucción `SELECT` hace referencia a tres tablas, el servidor de la base de datos podría tener acceso primero a `TableA`, utilizar los datos de `TableA` para extraer las filas que coincidan con las de `TableB`y, finalmente, utilizar los datos de `TableB` para extraer datos de `TableC`. Las demás secuencias en las que el servidor de base de datos podría tener acceso a las tablas son:  
+- **La secuencia en la que se tiene acceso a las tablas de origen.** Normalmente, hay muchas secuencias diferentes en las que el servidor de la base de datos puede tener acceso a las tablas base para generar el conjunto de resultados. Por ejemplo, si la instrucción `SELECT` hace referencia a tres tablas, el servidor de la base de datos podría tener acceso primero a `TableA`, utilizar los datos de `TableA` para extraer las filas que coincidan con las de `TableB`y, finalmente, utilizar los datos de `TableB` para extraer datos de `TableC`. Las demás secuencias en las que el servidor de base de datos podría tener acceso a las tablas son:  
   `TableC`, `TableB`, `TableA`o  
   `TableB`, `TableA`, `TableC`o  
   `TableB`, `TableC`, `TableA`o  
   `TableC`, `TableA`, `TableB`  
 
-* Los métodos que se utilizan para extraer los datos de cada tabla.  
+- **Los métodos que se usan para extraer los datos de cada tabla.**  
   Por lo general, hay métodos diferentes para tener acceso a los datos de cada tabla. Si solo se necesitan unas cuantas filas con valores de clave específicos, el servidor de la base de datos puede utilizar un índice. Si se necesitan todas las filas de una tabla, el servidor de la base de datos puede omitir los índices y realizar un recorrido de la tabla. Si se necesitan todas las filas de la tabla, pero hay un índice cuyas columnas de clave están ordenadas con `ORDER BY`, realizar un recorrido del índice en lugar de un recorrido de la tabla puede evitar otra ordenación del conjunto de resultados. Si la tabla es muy pequeña, el recorrido de la misma puede ser el método más eficaz para la mayoría de los accesos a la tabla.
+  
+- **Los métodos que se usan para realizar cálculos, y cómo filtrar, agregar y ordenar los datos de cada tabla.**  
+  A medida que se tiene acceso a los datos desde las tablas, existen distintos métodos para realizar cálculos sobre ellos (por ejemplo, calcular valores escalares), para agregarlos y ordenarlos tal como se define en el texto de la consulta, por ejemplo, cuando se usa una cláusula `GROUP BY` o `ORDER BY`, y cómo filtrarlos, por ejemplo, cuando se usa una cláusula `WHERE` o `HAVING`.
 
-El proceso de selección de un plan de ejecución entre varios planes posibles se conoce como optimización. El optimizador de consultas es uno de los componentes más importantes de un sistema de base de datos SQL. Mientras que parte de la carga de trabajo se debe al análisis de la consulta y selección de un plan por parte del optimizador de consultas, esta carga suele reducirse cuando dicho optimizador elige un plan de ejecución eficaz. Por ejemplo, se pueden dar a dos constructoras planos idénticos para una casa. Si una de las constructoras tarda unos días más en planear cómo construirá la casa y la otra comienza a construir inmediatamente sin planear, la que ha planeado su proyecto probablemente terminará antes.
+El proceso de selección de un plan de ejecución entre varios planes posibles se conoce como optimización. El optimizador de consultas es uno de los componentes más importantes de [!INCLUDE[ssde_md](../includes/ssde_md.md)]. Mientras que parte de la carga de trabajo se debe al análisis de la consulta y selección de un plan por parte del optimizador de consultas, esta carga suele reducirse cuando dicho optimizador elige un plan de ejecución eficaz. Por ejemplo, se pueden dar a dos constructoras planos idénticos para una casa. Si una de las constructoras tarda unos días más en planear cómo construirá la casa y la otra comienza a construir inmediatamente sin planear, la que ha planeado su proyecto probablemente terminará antes.
 
 El optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un optimizador basado en el costo. Cada plan de ejecución posible tiene asociado un costo en términos de la cantidad de recursos del equipo que se utilizan. El optimizador de consultas debe analizar los planes posibles y elegir el de menor costo estimado. Algunas instrucciones `SELECT` complejas tienen miles de planes de ejecución posibles. En estos casos, el optimizador de consultas no analiza todas las combinaciones posibles. En lugar de esto, utiliza algoritmos complejos para encontrar un plan de ejecución que tenga un costo razonablemente cercano al mínimo posible.
 
@@ -121,6 +123,12 @@ El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 <sup>1</sup> La densidad define la distribución de valores únicos que existen en los datos, o bien el promedio de valores duplicados para una columna determinada. A medida que disminuye la densidad, aumenta la selectividad de un valor.
 
 El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es importante porque permite que el servidor de la base de datos se ajuste dinámicamente a las condiciones cambiantes de la base de datos, sin necesitar la entrada de un programador o de un administrador de base de datos. Esto permite a los programadores centrarse en la descripción del resultado final de la consulta. Pueden estar seguros de que el Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creará un plan de ejecución eficaz para el estado de la base de datos cada vez que se ejecuta la instrucción.
+
+> [!NOTE]
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tiene tres opciones para mostrar los planes de ejecución:        
+> -  El ***[plan de ejecución estimado](../relational-databases/performance/display-the-estimated-execution-plan.md)***, que es el plan compilado, generado por el optimizador de consultas.        
+> -  El ***[Plan de ejecución real](../relational-databases/performance/display-an-actual-execution-plan.md)***, que es el mismo que el plan compilado más su contexto de ejecución. Esto incluye la información de tiempo de ejecución disponible una vez completada la ejecución, como advertencias de ejecución o, en versiones más recientes del [!INCLUDE[ssde_md](../includes/ssde_md.md)], el tiempo transcurrido y el tiempo de CPU usado durante la ejecución.        
+> -  Las ***[Estadísticas de consulta activa](../relational-databases/performance/live-query-statistics.md)***, que es lo mismo que el plan compilado más su contexto de ejecución. Esto incluye información en tiempo de ejecución durante el progreso de la ejecución y se actualiza cada segundo. La información en tiempo de ejecución incluye, por ejemplo, el número real de filas que fluyen a través de los operadores.       
 
 ### <a name="processing-a-select-statement"></a>Procesar una instrucción SELECT
 Los pasos básicos que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza para procesar una única instrucción SELECT incluyen lo siguiente: 
@@ -450,12 +458,6 @@ Los planes de ejecución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
   Cada usuario que ejecuta la consulta tiene una estructura de datos que alberga los datos específicos de su ejecución, como los valores de los parámetros. Esta estructura de datos se conoce como contexto de ejecución. Las estructuras de datos del contexto de ejecución se vuelven a utilizar, pero su contenido no. Si otro usuario ejecuta la misma consulta, las estructuras de datos se reinicializan con el contexto del nuevo usuario. 
 
   ![execution_context](../relational-databases/media/execution-context.gif)
-
-> [!NOTE]
-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tiene tres opciones para mostrar los planes de ejecución:        
-> -  El ***[Plan de ejecución estimado](../relational-databases/performance/display-the-estimated-execution-plan.md)***, que es el plan compilado.        
-> -  El ***[Plan de ejecución real](../relational-databases/performance/display-an-actual-execution-plan.md)***, que es el mismo que el plan compilado más su contexto de ejecución. Esto incluye la información de tiempo de ejecución disponible una vez completada la ejecución, como advertencias de ejecución o, en versiones más recientes del [!INCLUDE[ssde_md](../includes/ssde_md.md)], el tiempo transcurrido y el tiempo de CPU usado durante la ejecución.        
-> -  Las ***[Estadísticas de consulta activa](../relational-databases/performance/live-query-statistics.md)***, que es lo mismo que el plan compilado más su contexto de ejecución. Esto incluye información en tiempo de ejecución durante el progreso de la ejecución y se actualiza cada segundo. La información en tiempo de ejecución incluye, por ejemplo, el número real de filas que fluyen a través de los operadores.       
 
 Al ejecutar una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssde_md](../includes/ssde_md.md)] busca primero en la caché de planes para comprobar la existencia de un plan de ejecución para la misma instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. La instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] se considera existente si coincide literalmente con una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] ejecutada anteriormente con un plan en caché, carácter a carácter. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vuelve a usar cualquier plan existente que encuentra, de forma que se ahorra la sobrecarga de volver a compilar la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. Si no existe ningún plan de ejecución, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera uno nuevo para la consulta.
 

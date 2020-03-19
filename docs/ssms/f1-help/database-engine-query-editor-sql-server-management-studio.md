@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef5bdc57a5fb5f0a2cbeed6be3356aade1ba491
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335767"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198542"
 ---
 # <a name="ssms-query-editor"></a>Editor de consultas SSMS
 
@@ -116,7 +116,7 @@ También puede seleccionar **Opciones de consulta** en el [menú contextual](#qu
 
 Especifica si la funcionalidad de IntelliSense está disponible en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Esta opción está establecida de forma predeterminada.
 
-También puede seleccionar **IntelliSense habilitado** con Ctrl + B y, luego, Ctrl I, o en el [menú contextual](#intellisense-enabled-using-the-context-menu).
+También puede seleccionar **IntelliSense habilitado** si presiona Ctrl + B y luego Ctrl I, o bien en el [menú contextual](#intellisense-enabled-using-the-context-menu).
 
 ### <a name="include-actual-execution-plan-using-the-editor-toolbar"></a>Inclusión del plan de ejecución real mediante la barra de herramientas del editor
 
@@ -164,7 +164,7 @@ También puede convertir en comentario una línea con Ctrl + K y Ctrl + C.
 
 Convierte la línea actual en una instrucción de código activo quitando los operadores de comentario (--) del principio de la línea.
 
-También puede convertir en comentario una línea con Ctrl + K y, luego, Ctrl + U.
+También puede quitar la marca de comentario de una línea si presiona Ctrl + K y, luego, Ctrl + U.
 
 ### <a name="decrease-indent-using-the-editor-toolbar"></a>Reducción de la sangría mediante la barra de herramientas del editor
 

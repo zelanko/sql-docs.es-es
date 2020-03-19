@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 0315f181aad5c61b7d9c5fe7d46f3d81b27c9758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76a6e99d06061ae581b753ce0edd96a5a82d0f95
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73589139"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946719"
 ---
 # <a name="sql-assessment-api"></a>API de SQL Assessment
 
@@ -66,31 +66,31 @@ Repase estos ejemplos para empezar.
     Get-SqlInstance -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-2. Obtenga una lista de las comprobaciones disponibles para todas las bases de datos de la instancia. Aquí vamos a usar el cmdlet Get-Item y una ruta de acceso implementada con el proveedor de SQL Server de Windows PowerShell para obtener una lista de las bases de datos y, luego, canalizarla con el cmdlet Get-SqlDatabase.
+2. Obtenga una lista de las comprobaciones disponibles para todas las bases de datos de la instancia. Aquí se va a usar el cmdlet Get-Item y una ruta de acceso implementada con el proveedor de SQL Server de Windows PowerShell para obtener una lista de las bases de datos y, luego, canalizarla con el cmdlet Get-SqlDatabase.
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     Además, puede usar el cmdlet Get-SqlDatabase para hacer lo mismo.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-3. Obtenga una lista de las comprobaciones disponibles para todas las bases de datos de la instancia. Aquí vamos a usar el cmdlet Get-Item y una ruta de acceso implementada con el proveedor de SQL Server de Windows PowerShell para obtener una lista de las bases de datos y, luego, canalizarla con el cmdlet Get-SqlDatabase.
+3. Obtenga una lista de las comprobaciones disponibles para todas las bases de datos de la instancia. Aquí se va a usar el cmdlet Get-Item y una ruta de acceso implementada con el proveedor de SQL Server de Windows PowerShell para obtener una lista de las bases de datos y, luego, canalizarla con el cmdlet Get-SqlDatabase.
 
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     Además, puede usar el cmdlet Get-SqlDatabase para hacer lo mismo.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-4. Invoque la valoración de la instancia y guarde los resultados en una tabla SQL. En este ejemplo, se canaliza la salida del cmdlet Get-SqlInstance al cmdlet Invoke-SqlAssessment, cuyos resultados se canalizan al cmdlet Write-SqlTableData. Tenga en cuenta que, en este ejemplo, el cmdlet Invoke-Assessment se ejecuta con el parámetro `-FlattenOutput`. Este parámetro hace que la salida sea adecuada para el cmdlet Write-SqlTableData. En el último caso, se produce un error si se omite el parámetro.
+4. Invoque la valoración de la instancia y guarde los resultados en una tabla SQL. En este ejemplo, se canaliza la salida del cmdlet Get-SqlInstance al cmdlet Invoke-SqlAssessment, cuyos resultados se canalizan al cmdlet Write-SqlTableData. En este ejemplo, el cmdlet Invoke-Assessment se ejecuta con el parámetro `-FlattenOutput`. Este parámetro hace que la salida sea adecuada para el cmdlet Write-SqlTableData. En el último caso, se produce un error si se omite el parámetro.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |
@@ -131,7 +131,7 @@ Las reglas específicas tienen umbrales que se comparan con el valor actual de u
 Puede encadenar conjuntos de reglas agregando uno o más archivos JSON como parámetros a la llamada API SQL Server Assessment. Su organización podría escribir esos archivos u obtenerlos de un tercero. Por ejemplo, puede tener el archivo JSON que deshabilite reglas específicas del conjunto de reglas de Microsoft y otro archivo JSON de un experto del sector que incluya reglas que le resulten útiles para su entorno, seguido de otro archivo JSON que cambie algunos valores de umbral en ese archivo JSON.
 
 > [!IMPORTANT]  
->  Le recomendamos que no utilice conjuntos de reglas que provengan de fuentes que no sean de confianza hasta que los haya revisado detenidamente para asegurarse de que sean seguros.
+> Le recomendamos que no utilice conjuntos de reglas que provengan de fuentes que no sean de confianza hasta que los haya revisado detenidamente para asegurarse de que sean seguros.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

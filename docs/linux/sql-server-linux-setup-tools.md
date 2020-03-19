@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: En este artículo se explica cómo instalar las herramientas de SQL Server en Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/07/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340427"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288789"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalación de las herramientas de línea de comandos sqlcmd y bcp de SQL Server en Linux
 
@@ -94,7 +94,10 @@ Use los pasos siguientes para instalar **mssql-tools** en Red Hat Enterprise Lin
 
 ## <a id="ubuntu"></a>Instalación de herramientas en Ubuntu 16.04
 
-Siga estos pasos para instalar **mssql-tools** en Ubuntu. 
+Siga estos pasos para instalar **mssql-tools** en Ubuntu.
+
+> [!NOTE]
+> Ubuntu 18.04 se admite a partir de SQL Server 2019 CU3. Si usa Ubuntu 18.04, cambie la ruta de acceso del repositorio de `/ubuntu/16.04` a `/ubuntu/18.04`.
 
 1. Importe las claves de GPG del repositorio público.
 

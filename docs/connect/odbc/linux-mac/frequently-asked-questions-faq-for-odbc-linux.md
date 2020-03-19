@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cc31a8ae385f2dbb28db30b299377ab5b38058f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cab35e67c7c93ce0634a2bf1cd5a8c3c5677179d
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68702774"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058808"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Preguntas más frecuentes (P+F) sobre ODBC en Linux y macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,4 +46,6 @@ Consulte el artículo sobre el [uso de muestras de ODBC con C++ de MSDN existent
 No, los controladores ODBC en Linux y macOS no son un producto de código abierto.  
 
 ## <a name="see-also"></a>Consulte también
-[Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+
+- [Instalación de Microsoft ODBC Driver for SQL Server en Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Instalación de Microsoft ODBC Driver for SQL Server en macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)

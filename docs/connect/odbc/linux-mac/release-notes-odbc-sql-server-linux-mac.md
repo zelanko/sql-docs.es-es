@@ -1,7 +1,7 @@
 ---
-title: Notas de la versión de ODBC en Linux y macOS | Microsoft Docs
+title: Notas de la versión de ODBC Driver for SQL Server en Linux y macOS
 ms.custom: ''
-ms.date: 06/30/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896763"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090504"
 ---
-# <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Notas de la versión de Microsoft ODBC Driver para SQL Server en Linux y macOS
+# <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notas de la versión de Microsoft ODBC Driver for SQL Server en Linux y macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -51,7 +51,7 @@ GeneMi.  2019/04/03.
 | :------------ | :------ |
 | Atributo de conexión SQL_COPT_SS_SPID para recuperar el SPID sin recorrido de ida y vuelta al servidor | Consulte [Atributos y palabras clave de cadena de conexión y DNS](../dsn-connection-string-attribute.md). |
 | Compatibilidad para indicar la aceptación del CLUF a través de `debconf` en Debian y Ubuntu | COnsulte [Instalación del controlador](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
-| Nuevas distribuciones compatibles. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| Nuevas distribuciones compatibles. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -66,7 +66,7 @@ GeneMi.  2019/04/03.
 
 **Problema conocido:**
 
-Cuando se usa Always Encrypted con enclaves seguros y Azure Key Vault, las longitudes de las rutas de acceso de clave impares pueden provocar errores de comprobación de la firma de CMK. Si se produce este problema, pruebe cambiar la longitud de la ruta de clave en un carácter cambiando el nombre de la clave AKV.
+Cuando se usa Always Encrypted con enclaves seguros y Azure Key Vault, las longitudes de las rutas de acceso de clave impares pueden provocar errores de comprobación de la firma de CMK. Si se produce este problema, intente modificar la longitud de la ruta de clave en un carácter cambiando el nombre de la clave AKV.
 
 ## <a name="174-august-2019"></a>17.4, agosto de 2019
 
@@ -82,9 +82,9 @@ Cuando se usa Always Encrypted con enclaves seguros y Azure Key Vault, las longi
 
 | Nuevo elemento | Detalles |
 | :------- | :------ |
-| Nuevas distribuciones compatibles. | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| Nuevas distribuciones compatibles. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Modo de autenticación de Azure Active Directory Managed Service Identity (del sistema y asignado por el usuario). | Consulte [Uso de Azure Active Directory con el controlador ODBC](../using-azure-active-directory.md). |
-| Capacidad de transmitir en secuencias los parámetros de entrada con columnas Always Encrypted. | Para obtener más información, vea [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted) (Limitaciones del controlador ODBC al usar Always Encrypted). |
+| Capacidad de transmitir en secuencias los parámetros de entrada con columnas Always Encrypted. | Para obtener más información, vea [Limitaciones del controlador ODBC al usar Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Transacciones distribuidas XA. | Vea [Uso de las transacciones XA](../use-xa-with-dtc.md).<br/><br/>"XA" son las siglas de _eXtended Architecture (arquitectura ampliada)_ , que es un estándar para la ejecución de una transacción global que accede a más de un sistema de almacenamiento de datos del servidor. |
 | &nbsp; | &nbsp; |
 
@@ -122,7 +122,7 @@ Compatibilidad con Always Encrypted para la API de BCP
 
 El nuevo atributo de cadena de conexión UseFMTOnly hace que el controlador use metadatos heredados en casos especiales que requieren tablas temporales.
 
-Compatibilidad con Instancia administrada de Azure SQL (versión preliminar privada ampliada). 
+Compatibilidad con Instancia administrada de Azure SQL. 
 > [!NOTE]
 > Hay varias diferencias cuando se usa Instancia administrada:
 > -   No se admite FILESTREAM. 
@@ -140,7 +140,7 @@ Compatibilidad con Instancia administrada de Azure SQL (versión preliminar pri
 
 La versión 13.1 del controlador ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agrega compatibilidad con Always Encrypted y Azure Active Directory cuando se usa junto con Microsoft SQL Server 2016.
 
-**Nuevas distribuciones compatibles**: OS X 10.11 y macOS 10.12 se admiten en la primera versión del controlador ODBC en macOS. También ya se admite Ubuntu 16.10, junto con Red Hat 6, 7 y SUSE 12. Cada plataforma tiene un paquete de plataforma correspondiente (RPM o DEB) para facilitar la instalación y configuración.  Vea [Instalación del controlador](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) para obtener instrucciones de instalación.
+**Nuevas distribuciones compatibles**: OS X 10.11 y macOS 10.12 se admiten en la primera versión del controlador ODBC en macOS. También ya se admite Ubuntu 16.10, junto con Red Hat 6, 7 y SUSE 12. Cada plataforma tiene un paquete de plataforma correspondiente (RPM o DEB) para facilitar la instalación y configuración. Para obtener más información, vea las instrucciones de instalación del controlador ODBC para [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) y [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 **Cambios de compatibilidad con el Administrador de controladores unixODBC 2.3.1**: el controlador ODBC ya no depende del empaquetado personalizado para el administrador de controladores unixODBC (excepto en RedHat 6) y en su lugar se basa en el administrador de paquetes de distribución para resolver la dependencia de UnixODBC desde los repositorios de distribución.
 

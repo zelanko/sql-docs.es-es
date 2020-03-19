@@ -1,6 +1,6 @@
 ---
 title: Elección entre el acceso URL y SOAP
-description: 'Hay dos maneras de integrar Reporting Services en las aplicaciones personalizadas: el acceso URL y la API de SOAP de Reporting Services. Cuál usar depende de varios factores.'
+description: 'Hay dos maneras de integrar Reporting Services en las aplicaciones personalizadas: el acceso URL y la API de SOAP de Reporting Services. Descubra cómo elegir.'
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d401c7d95cff5011dffbfaac2ebcc9bfa5ea5c24
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 115ff4521e347c1eb905f63c579df04f0a11adae
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796913"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198223"
 ---
 # <a name="choose-between-url-access-and-soap-in-reporting-services"></a>Elección entre acceso URL y SOAP en Reporting Services
 

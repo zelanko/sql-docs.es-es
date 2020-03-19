@@ -1,5 +1,6 @@
 ---
 title: Notas de la versión de SQL Server 2019 | Microsoft Docs
+description: Obtenga información sobre las limitaciones de SQL Server 2019 (15.x), los problemas conocidos, los recursos de ayuda y otras notas de la versión.
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -9,14 +10,14 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d27209448ece622a4906f6ba2cae28268c0210a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74096119"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190608"
 ---
-# <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>Notas de la versión de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
+# <a name="sql-server-2019-release-notes"></a>Notas de la versión de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describen las limitaciones y los problemas conocidos de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Para obtener información relacionada, consulte:

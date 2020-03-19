@@ -1,6 +1,6 @@
 ---
 title: Uso del acceso URL en las aplicaciones web
-description: El acceso URL en Reporting Services está diseñado específicamente para habilitar el acceso a informes individuales a través de una red.
+description: El acceso URL en Reporting Services permite acceder a los informes a través de una red, lo que facilita la integración de la visualización y navegación de informes en una aplicación web personalizada.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de2ae80c7bb4a8e6d5b7eb4b0131a8c69ffdf7c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 731ed382c029fb2115c4351d306bf5b33d294a48
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796973"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198522"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Integración de Reporting Services con el acceso URL: aplicación web
   El acceso URL en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está diseñado específicamente para habilitar el acceso a informes individuales a través de una red. Este tipo de acceso es mejor para integrar la visualización y navegación por los informes en una aplicación web personalizada. Para utilizar el acceso URL en las aplicaciones web, puede:  

@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a73259663f710cfc5df5dc40745ecda9fdbd8f13
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338109"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286049"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad
 
@@ -201,6 +201,7 @@ Este es un ejemplo que muestra cómo exponer este punto de conexión y luego agr
 Problemas y limitaciones conocidos de los grupos de disponibilidad de la instancia maestra de SQL Server en el clúster de macrodatos:
 
 - Antes de SQL Server 2019 CU2, las bases de datos creadas como resultado de flujos de trabajo distintos a `CREATE DATABASE` y `RESTORE DATABASE`, como `CREATE DATABASE FROM SNAPSHOT`, no se agregan automáticamente al grupo de disponibilidad. [Conéctese a la instancia](#instance-connect) y agregue la base de datos al grupo de disponibilidad manualmente.
+- Para restaurar de forma correcta una base de datos habilitada para TDE a partir de una copia de seguridad creada en otro servidor, debe asegurarse de que los [certificados necesarios](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) se restauren tanto en la instancia maestra de SQL Server como en el grupo de disponibilidad maestro contenido. [Aquí](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) puede ver un ejemplo de cómo realizar una copia de seguridad de los certificados y restaurarlos.
 - Determinadas operaciones, como la ejecución de la configuración de servidor con `sp_configure`, requieren una conexión a la base de datos `master` de la instancia de SQL Server, no a `master` del grupo de disponibilidad. No se puede usar el punto de conexión principal correspondiente. Siga las [instrucciones](#instance-connect) para exponer un punto de conexión y conectarse a la instancia de SQL Server y ejecutar `sp_configure`. Solo se puede usar autenticación SQL cuando se expone manualmente el punto de conexión para conectarse a la base de datos `master` de la instancia de SQL Server.
 - La configuración de alta disponibilidad debe crearse al implementar el clúster de macrodatos. No se puede habilitar la configuración de alta disponibilidad con grupos de disponibilidad después de la implementación.
 - Aunque la base de datos msdb independiente se incluye en el grupo de disponibilidad y los trabajos del Agente SQL se replican ahí, los trabajos no se desencadenan según una programación. La solución consiste en [conectarse a cada una de las instancias de SQL Server](#instance-connect) y crear los trabajos en la instancia msdb. A partir de SQL Server 2019 CU2, solo se admiten los trabajos creados en cada una de las réplicas de la instancia maestra.

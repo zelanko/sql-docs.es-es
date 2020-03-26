@@ -185,12 +185,12 @@ GO
 |Símbolo|Significado|  
 |------------|-------------|  
 |LIKE ‘5[%]’|5 %|  
-|LIKE ‘[_]n’|_n|  
+|LIKE ‘[\_]n’|_n|  
 |LIKE ‘[a-cdf]’|a, b, c, d o f|  
 |LIKE ‘[-acdf]’|-, a, c, d o f|  
 |LIKE ‘[ [ ]’|[|  
 |LIKE ']'|]|  
-|LIKE 'abc[_]d%'|abc_d y abc_de|  
+|LIKE 'abc[\_]d%'|abc_d y abc_de|  
 |LIKE 'abc[def]'|abcd, abce y abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>Operación de búsqueda de coincidencias de patrón con la cláusula ESCAPE  

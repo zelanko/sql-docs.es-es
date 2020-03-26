@@ -44,7 +44,7 @@ ms.locfileid: "79286669"
 
  Para tener información completa sobre las construcciones no admitidas y sobre cómo evitar algunas de las características no admitidas en los módulos compilados de forma nativa, consulte [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Para obtener más información sobre las características no compatibles, vea [Construcciones Transact-SQL no admitidas por OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
-##  <a name="qsancsp"></a> Área expuesta de consulta en los módulos nativos  
+##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> Área expuesta de consulta en los módulos nativos  
 
 Se admiten las siguientes construcciones de consulta:  
 
@@ -142,7 +142,7 @@ Sin embargo, una constante en la cláusula **TOP** produce un rendimiento mejor 
 Estas restricciones en [!INCLUDE[tsql](../../includes/tsql-md.md)] compilado de forma nativa no se aplican al acceso mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas optimizadas para memoria.  
 
 
-##  <a name="dml"></a> Modificación de datos  
+##  <a name="data-modification"></a><a name="dml"></a> Modificación de datos  
 
 Se admiten las siguientes instrucciones DML.  
 
@@ -154,7 +154,7 @@ Se admiten las siguientes instrucciones DML.
 
 -   Se admite WHERE con instrucciones UPDATE y DELETE.  
 
-##  <a name="cof"></a> Idioma de control de flujo  
+##  <a name="control-of-flow-language"></a><a name="cof"></a> Idioma de control de flujo  
  Se admiten las siguientes construcciones de lenguaje de control de flujo.  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -175,7 +175,7 @@ Se admiten las siguientes instrucciones DML.
 
 -   BEGIN ATOMIC (en el nivel externo del procedimiento almacenado). Para más información, consulte [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
-##  <a name="so"></a> Operadores admitidos  
+##  <a name="supported-operators"></a><a name="so"></a> Operadores admitidos  
  Se admiten los siguientes operadores.  
 
 -   [Operadores de comparación &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (por ejemplo, >, \<, >= y <=)  
@@ -194,7 +194,7 @@ Se admiten las siguientes instrucciones DML.
     - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], el operador APPLY se admite en los módulos compilados de forma nativa.
 
-##  <a name="bfncsp"></a> Funciones integradas en módulos compilados de forma nativa  
+##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Funciones integradas en módulos compilados de forma nativa  
  Las funciones siguientes se admiten en restricciones de tablas optimizadas para memoria y en módulos T-SQL compilados de forma nativa.  
 
 -   Todas las [funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -223,12 +223,12 @@ Se admiten las siguientes instrucciones DML.
 
 -   Se pueden anidar las ejecuciones de módulos nativos.
 
-##  <a name="auditing"></a> Auditoría  
+##  <a name="auditing"></a><a name="auditing"></a> Auditoría  
  Se admite la auditoría a nivel de procedimiento en los procedimientos almacenados compilados de forma nativa.  
 
  Para obtener más información sobre la auditoría, vea [Crear una especificación de auditoría de servidor y de auditoría de base de datos](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
 
-##  <a name="tqh"></a> Sugerencias de consulta y tabla  
+##  <a name="table-and-query-hints"></a><a name="tqh"></a> Sugerencias de consulta y tabla  
  Se admite lo siguiente:  
 
 -   Las sugerencias INDEX, FORCESCAN y FORCESEEK, ya sea en la sintaxis de sugerencias de tabla o en la [cláusula OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) de la consulta. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
@@ -241,7 +241,7 @@ Se admiten las siguientes instrucciones DML.
 
  Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
 
-##  <a name="los"></a> Limitaciones de ordenación  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> Limitaciones de ordenación  
  Puede ordenar más de 8000 filas en una consulta que use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). Pero sin la [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) puede ordenar hasta 8000 filas (si hay combinaciones, menos filas).  
 
  Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas, obtiene el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento *\<<nombre_procedimiento>* , línea *\<número_línea>* El operador TOP puede devolver un máximo de 8192 filas; el número solicitado es *\<número>* .**  

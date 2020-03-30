@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f6e1eaa9670a5cea38bbf617675d42737b13f796
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055917"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Uso del formato nativo para importar o exportar datos (SQL Server)
@@ -45,7 +45,7 @@ El uso del formato nativo entre tablas idénticas evita la conversión innecesar
 |[Ejemplos](#examples)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato nativo para exportar datos](#bcp_native_export)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato nativo para importar datos sin un archivo de formato](#bcp_native_import)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato nativo para importar datos con un archivo de formato no XML](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[Usar BULK INSERT y el formato nativo sin un archivo de formato](#bulk_native)<br />&emsp;&#9679;&emsp;[Usar BULK INSERT y el formato nativo con un archivo de formato no XML](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[Usar OPENROWSET y el formato nativo con un archivo de formato no XML](#openrowset_native_fmt)|
 |[Tareas relacionadas](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
-## Restricciones<a name="restrictions"></a>  
+## <a name="restrictions"></a>Restricciones<a name="restrictions"></a>  
 Para importar datos con formato nativo correctamente, asegúrese de lo siguiente:  
   
 -   El archivo de datos tiene formato nativo.  
@@ -59,7 +59,7 @@ Para importar datos con formato nativo correctamente, asegúrese de lo siguiente
   
  Una importación correcta no daña la tabla de destino.  
   
-## Cómo trata bcp los datos con formato nativo<a name="considerations"></a>
+## <a name="how-bcp-handles-data-in-native-format"></a>Cómo trata bcp los datos con formato nativo<a name="considerations"></a>
  Esta sección aborda una serie de consideraciones especiales sobre el modo en que la utilidad **bcp** exporta e importa datos con formato nativo.  
   
 -   Datos que no son caracteres  
@@ -81,7 +81,7 @@ Para importar datos con formato nativo correctamente, asegúrese de lo siguiente
   
      Para obtener más información sobre la conversión de datos, vea [Conversiones de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
-## Opciones de comando para el formato nativo<a name="command_options"></a>  
+## <a name="command-options-for-native-format"></a>Opciones de comando para el formato nativo<a name="command_options"></a>  
 Puede importar datos con formato nativo a una tabla mediante el uso de [bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) o [INSERT... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md).  Para un comando [bcp](../../tools/bcp-utility.md) o una instrucción [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), puede especificar el formato de datos en la instrucción.  Para una instrucción [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md), debe especificar el formato de datos en un archivo de formato.  
 
 El formato nativo admite las siguientes opciones de comando:  
@@ -99,10 +99,10 @@ El formato nativo admite las siguientes opciones de comando:
 >  Otra posibilidad es especificar el formato por campo en un archivo de formato. Para obtener más información, vea [Archivos de formato para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
   
 
-## Condiciones de prueba de ejemplo<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Condiciones de prueba de ejemplo<a name="etc"></a>  
 Los ejemplos de este tema se basan en la tabla y en el archivo de formato definidos a continuación.
 
-### **Tabla de ejemplo**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Tabla de ejemplo**<a name="sample_table"></a>
 El siguiente script crea una base de datos de prueba, una tabla denominada `myNative` , y la rellena con algunos valores iniciales.  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -129,7 +129,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
-### **Archivo de formato no XML de ejemplo**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**Archivo de formato no XML de ejemplo**<a name="nonxml_format_file"></a>
 SQL Server admite dos tipos de archivos de formato: XML y no XML.  El formato no XML es el formato original compatible con versiones anteriores de SQL Server.  Revise [Archivos de formato no XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para obtener información detallada.  El siguiente comando hará uso de la [utilidad BCP](../../tools/bcp-utility.md) para generar un archivo de formato no XML, `myNative.fmt`, basado en el esquema de `myNative`.  Si quiere usar un comando [BCP](../../tools/bcp-utility.md) para crear un archivo de formato, especifique el argumento **format** y use **null** en lugar de una ruta de acceso de archivo de datos.  La opción format también requiere la opción **-f** .  Además, en este ejemplo, el calificador **c** se usa para especificar los datos de caracteres, mientras que **T** se usa para especificar una conexión de confianza que usa la seguridad integrada.  En un símbolo del sistema, escriba los comandos siguientes:
 
 ```cmd
@@ -145,10 +145,10 @@ Notepad D:\BCP\myNative.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## Ejemplos<a name="examples"></a>
+## <a name="examples"></a>Ejemplos<a name="examples"></a>
 En los siguientes ejemplos se usan la base de datos y los archivos de formato creados anteriormente.
 
-### **Usar bcp y el formato nativo para exportar datos**<a name="bcp_native_export"></a>
+### <a name="using-bcp-and-native-format-to-export-data"></a>**Usar bcp y el formato nativo para exportar datos**<a name="bcp_native_export"></a>
 Modificador **-n** y comando **OUT** .  Nota: el archivo de datos creado en este ejemplo se usará en todos los ejemplos siguientes.  En un símbolo del sistema, escriba los comandos siguientes:
 
 ```cmd
@@ -158,7 +158,7 @@ REM Review results
 NOTEPAD D:\BCP\myNative.bcp
 ```
 
-### **Usar bcp y el formato nativo para importar datos sin un archivo de formato**<a name="bcp_native_import"></a>
+### <a name="using-bcp-and-native-format-to-import-data-without-a-format-file"></a>**Usar bcp y el formato nativo para importar datos sin un archivo de formato**<a name="bcp_native_import"></a>
 Modificador **-n** y comando **IN** .  En un símbolo del sistema, escriba los comandos siguientes:
 
 ```cmd
@@ -172,7 +172,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
-### **Usar bcp y el formato nativo para importar datos con un archivo de formato no XML**<a name="bcp_native_import_fmt"></a>
+### <a name="using-bcp-and-native-format-to-import-data-with-a-non-xml-format-file"></a>**Usar bcp y el formato nativo para importar datos con un archivo de formato no XML**<a name="bcp_native_import_fmt"></a>
 Modificadores **-n** y **-f** switches y **IN** commy.  En un símbolo del sistema, escriba los comandos siguientes:
 
 ```cmd
@@ -186,7 +186,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
-### **Usar BULK INSERT y el formato nativo sin un archivo de formato**<a name="bulk_native"></a>
+### <a name="using-bulk-insert-and-native-format-without-a-format-file"></a>**Usar BULK INSERT y el formato nativo sin un archivo de formato**<a name="bulk_native"></a>
 Argumento**DATAFILETYPE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -201,7 +201,7 @@ BULK INSERT TestDatabase.dbo.myNative
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
-### **Usar BULK INSERT y el formato nativo con un archivo de formato no XML**<a name="bulk_native_fmt"></a>
+### <a name="using-bulk-insert-and-native-format-with-a-non-xml-format-file"></a>**Usar BULK INSERT y el formato nativo con un archivo de formato no XML**<a name="bulk_native_fmt"></a>
 Argumento**FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -216,7 +216,7 @@ BULK INSERT TestDatabase.dbo.myNative
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
-### **Usar OPENROWSET y el formato nativo con un archivo de formato no XML**<a name="openrowset_native_fmt"></a>
+### <a name="using-openrowset-and-native-format-with-a-non-xml-format-file"></a>**Usar OPENROWSET y el formato nativo con un archivo de formato no XML**<a name="openrowset_native_fmt"></a>
 Argumento**FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -232,7 +232,7 @@ INSERT INTO TestDatabase.dbo.myNative
 SELECT * FROM TestDatabase.dbo.myNative;
 ```
   
-## Tareas relacionadas<a name="RelatedTasks"></a>
+## <a name="related-tasks"></a>Tareas relacionadas<a name="RelatedTasks"></a>
 Para usar formatos de datos para la importación o exportación masivas 
   
 -   [Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

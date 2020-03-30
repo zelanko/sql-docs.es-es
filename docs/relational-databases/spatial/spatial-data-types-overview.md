@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048520"
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
@@ -28,7 +28,7 @@ ms.locfileid: "68048520"
 Hay dos tipos de datos espaciales. El tipo de datos **geometry** admite datos planares o euclidianos (planisferio). El tipo de datos **geometry** se ajusta tanto a las características simples de Open Geospatial Consortium (OGC) para la especificación SQL versión 1.1.0 como a SQL MM (estándar ISO).
 Además, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el tipo de datos **geography** , que almacena datos elipsoidales (tierra redonda), como coordenadas de latitud y longitud GPS.
 
-##  <a name="objects"></a> Objetos de datos espaciales  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> Objetos de datos espaciales  
 Los tipos de datos **geometry** y **geography** admiten dieciséis objetos de datos espaciales o tipos de instancia. Pero solo se pueden *crear instancias*de once de estos tipos de instancia; puede crear y trabajar con estas instancias (o crear instancias de ellas) en una base de datos. Estas instancias obtienen determinadas propiedades de sus tipos de datos primarios que los distinguen como **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** o como varias instancias de **geometry** o **geography** en una **GeometryCollection**. El tipo**Geography** tiene un tipo de instancia adicional, **FullGlobe**.  
 
 La figura siguiente describe la jerarquía de **geometry** en la que se basan los tipos de datos **geometry** y **geography** . Los tipos a partir de los que pueden crearse instancias de **geometry** y **geography** se indican en azul.  
@@ -53,7 +53,7 @@ Los tipos de colección incluyen:
 -   [MultiPolígono](../../relational-databases/spatial/multipolygon.md)  
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> Diferencias entre los tipos de datos geometry y geography  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Diferencias entre los tipos de datos geometry y geography  
 Los dos tipos de datos espaciales se comportan a menudo de manera bastante similar pero hay algunas diferencias clave en la manera en la que los datos se almacenan y se manipulan.  
 
 ### <a name="how-connecting-edges-are-defined"></a>Definición de bordes de conexión  
@@ -86,7 +86,7 @@ Para obtener más información acerca de las especificaciones de OGC, vea lo sig
 -   [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [Especificaciones de OGC, acceso a características simples, parte 2: opciones de SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
-##  <a name="circular"></a> Segmentos de arco circular  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> Segmentos de arco circular  
 Tres tipos de los que se pueden crear instancias pueden tomar segmentos de arco circular: **CircularString**, **CompoundCurve** y **CurvePolygon**.  Un segmento de arco circular se define mediante tres puntos en un plano bidimensional y el tercer punto no puede ser igual que el primero.  
 
 Las figuras A y B muestran segmentos de arco circular. Observe que cada uno de los tres puntos pertenece al perímetro de un círculo.  

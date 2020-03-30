@@ -11,10 +11,10 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557950"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Ejecutar los pasos Windows PowerShell del Agente SQL Server
@@ -37,13 +37,13 @@ Hay varios tipos de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../includ
 
 - Use un paso de trabajo de símbolo del sistema para ejecutar PowerShell.exe y especificar un script que importa el módulo **sqlps** .
 
-### <a name="LimitationsRestrictions"></a> Precaución sobre el consumo de memoria
+### <a name="caution-about-memory-consumption"></a><a name="LimitationsRestrictions"></a> Precaución sobre el consumo de memoria
 
 Cada paso de trabajo del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que ejecuta PowerShell con el módulo **sqlps** inicia un proceso que consume aproximadamente **20 MB** de memoria. Si ejecuta muchos pasos de trabajo de Windows PowerShell simultáneos, el rendimiento se puede ver afectado adversamente.  
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="PShellJob"></a> Crear un paso de trabajo de PowerShell  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a> Crear un paso de trabajo de PowerShell  
  **Para crear un paso de trabajo de PowerShell**  
   
 1.  Expanda el **Agente SQL Server**, cree un trabajo o haga clic con el botón derecho en uno existente y, después, haga clic en **Propiedades**. Para obtener más información acerca de cómo crear un trabajo, vea [Crear trabajos](../ssms/agent/create-jobs.md).  
@@ -60,7 +60,7 @@ Cada paso de trabajo del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-m
   
 7.  Haga clic en la página **Avanzadas** para establecer las siguientes opciones de paso de trabajo: acción que se llevará a cabo si el paso de trabajo progresa o no, número de veces que el Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe intentar ejecutar el paso de trabajo y frecuencia de los intentos.  
   
-##  <a name="CmdExecJob"></a> Crear un paso de trabajo del símbolo del sistema  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a> Crear un paso de trabajo del símbolo del sistema  
  **Para crear un paso de trabajo de CmdExec**  
   
 1.  Expanda el **Agente SQL Server**, cree un trabajo o haga clic con el botón derecho en uno existente y, después, haga clic en **Propiedades**. Para obtener más información acerca de cómo crear un trabajo, vea [Crear trabajos](../ssms/agent/create-jobs.md).  

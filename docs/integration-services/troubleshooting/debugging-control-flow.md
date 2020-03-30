@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295132"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
@@ -118,7 +118,7 @@ ms.locfileid: "71295132"
 |Output|Muestra mensajes de estado para las características en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Inmediata|Se usa para depurar y evaluar expresiones e imprimir valores de variable.|  
 
-## <a name="debug"></a> Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor
+## <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a><a name="debug"></a> Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor
   Este procedimiento describe cómo establecer puntos de interrupción en un paquete, una tarea, un contenedor de bucles For o Foreach o un contenedor de secuencias.  
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>Para establecer puntos de interrupción en un paquete, una tarea o un contenedor  

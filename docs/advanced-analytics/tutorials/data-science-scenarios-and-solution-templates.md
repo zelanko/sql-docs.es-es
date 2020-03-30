@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947288"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Escenarios de ciencia de datos y plantillas de soluciones
@@ -96,7 +96,7 @@ Cada solución incluye datos de ejemplo, código de R o de Python y procedimient
 **Cómo:** esta plantilla usa SQL Server R Services para predecir la demanda de electricidad. El modelo usado para la predicción es un modelo de regresión de bosque aleatorio basado en **rxDForest**, un algoritmo de aprendizaje automático de alto rendimiento incluido en Microsoft R Server. La solución incluye un simulador de demanda, todo el código de R y T-SQL necesario para entrenar un modelo y los procedimientos almacenados que puede usar para generar y presentar las predicciones. 
 
 
-## <a name="bkmk_HowTo"></a>Procedimiento para usar las plantillas
+## <a name="how-to-use-the-templates"></a><a name="bkmk_HowTo"></a>Procedimiento para usar las plantillas
 
 Para descargar los archivos incluidos en cada plantilla, puede usar los comandos de GitHub o puede abrir el vínculo y hacer clic en **Descargar Zip** para guardar todos los archivos en el equipo.  Una vez descargada, la solución suele contener estas carpetas:
   

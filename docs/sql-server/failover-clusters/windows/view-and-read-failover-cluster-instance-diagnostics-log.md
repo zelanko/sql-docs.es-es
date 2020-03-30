@@ -11,10 +11,10 @@ ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242882"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error
@@ -27,21 +27,21 @@ ms.locfileid: "75242882"
   
 -   **Para configurar el registro de diagnósticos mediante:** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
  De forma predeterminada, los SQLDIAG se almacenan en una carpeta LOG local del directorio de la instancia de SQL Server, por ejemplo, "C\Archivos de programa\Microsoft SQL Server\MSSQL13.\<nombre de instancia>\MSSQL\LOG" del nodo propietario de la instancia de clúster de conmutación por error (FCI) AlwaysOn. El tamaño de cada archivo de registro de SQLDIAG se fija en 100 MB. Diez archivos de registro se almacenan en el equipo antes de que se reciclen para los nuevos registros.  
   
  Los registros usan el formato de archivo extendido de eventos. La función del sistema **sys.fn_xe_file_target_read_file** se puede usar para leer los archivos creados por eventos extendidos. Se devuelve un evento, en formato XML, por cada fila. Consulte la vista del sistema para analizar los datos XML como conjunto de resultados. Para obtener más información, vea [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  El permiso VIEW SERVER STATE es necesario para ejecutar **fn_xe_file_target_read_file**.  
   
  Abra SQL Server Management Studio como administrador.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver los archivos de registro de diagnóstico:**  
   
 1.  En el menú **Archivo** , seleccione **Abrir**, **Archivo**y elija el archivo de registro de diagnóstico que desea ver.  
@@ -56,7 +56,7 @@ ms.locfileid: "75242882"
   
 4.  Puede filtrar y ordenar los datos de evento mediante el menú **ExtendedEvents** y la selección de la opción **Filtrar** .  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para ver los archivos de registro de diagnóstico:**  
   
  Para ver todos los elementos en el archivo de registro SQLDIAG, use la siguiente consulta:  
@@ -88,7 +88,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  Puede filtrar los resultados para los componentes específicos o con estado la cláusula WHERE.  
   
-##  <a name="TsqlConfigure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Usar Transact-SQL  
  **Para configurar las propiedades de registro de diagnóstico**  
   
 > [!NOTE]  
@@ -96,9 +96,9 @@ ORDER BY Time;
   
  Con la instrucción de lenguaje de definición de datos (DDL) **ALTER SERVER CONFIGURATION**, puede iniciar o detener el registro de los datos de diagnóstico capturados por el procedimiento [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) y establecer parámetros de configuración del registro de SQLDIAG como el recuento de sustitución incremental del archivo de registro, el tamaño del archivo de registro y la ubicación del archivo. Para obtener información detallada sobre la sintaxis, vea [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
-###  <a name="ConfigTsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Ejemplos (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Setting diagnostic log options  
+####  <a name="setting-diagnostic-log-options"></a><a name="TsqlExample"></a> Setting diagnostic log options  
  En los ejemplos de esta sección se muestra cómo establecer los valores para la opción de registro de diagnóstico.  
   
 ##### <a name="a-starting-diagnostic-logging"></a>A. Iniciar el registro de diagnóstico  

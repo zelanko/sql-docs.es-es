@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287399"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implementación de paquetes heredada (SSIS)
@@ -427,7 +427,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Finalizar**  
  Crea la configuración y sale del **Asistente para configuración de paquetes**.  
 
-## <a name="child"></a>Uso de los valores de variables y parámetros en un paquete secundario
+## <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a><a name="child"></a>Uso de los valores de variables y parámetros en un paquete secundario
   Este procedimiento describe cómo crear una configuración de paquete que utiliza el tipo de configuración de variables primarias. Este tipo de configuración habilita un paquete secundario que se ejecuta desde un paquete primario para tener acceso a una variable del elemento primario.  
   
 > [!NOTE]  

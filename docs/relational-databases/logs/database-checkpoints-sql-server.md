@@ -28,17 +28,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288349"
 ---
 # <a name="database-checkpoints-sql-server"></a>Puntos de comprobación de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
  Un *punto de comprobación* crea un buen punto conocido desde donde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede empezar a aplicar cambios incluidos en el registro durante la recuperación después de un cierre inesperado o un bloqueo del sistema.
 
-##  <a name="Overview"></a> Información general   
+##  <a name="overview"></a><a name="Overview"></a> Información general   
 Por motivos de rendimiento, [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza modificaciones en las páginas de la base de datos en memoria, en la memoria caché de búfer, y no escribe estas páginas en el disco después de cada cambio. En su lugar, [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite periódicamente un punto de comprobación en cada base de datos. Un *punto de comprobación* escribe las páginas modificadas en memoria actuales (denominadas *páginas desfasadas*) y la información del registro de transacciones de la memoria en el disco y, además, registra la información del registro de transacciones.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] admite varios tipos de puntos de comprobación: automáticos, indirectos, manuales e internos. En la tabla siguiente se resumen los tipos de **puntos de comprobación**:
@@ -58,7 +58,7 @@ Por motivos de rendimiento, [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza 
 > [!IMPORTANT]
 > Las transacciones no confirmadas de larga ejecución aumentan el tiempo de recuperación para todos los tipos de puntos de comprobación.   
   
-##  <a name="InteractionBwnSettings"></a> Interacción de las opciones TARGET_RECOVERY_TIME y "recovery interval"  
+##  <a name="interaction-of-the-target_recovery_time-and-recovery-interval-options"></a><a name="InteractionBwnSettings"></a> Interacción de las opciones TARGET_RECOVERY_TIME y "recovery interval"  
  En la tabla siguiente se resume la interacción entre la configuración de **sp_configure "** recovery interval **"** que afecta a todo el servidor y la configuración específica `ALTER DATABASE ... TARGET_RECOVERY_TIME`.  
   
 |target_recovery_time|"recovery interval"|Tipo de punto de comprobación usado|  
@@ -67,7 +67,7 @@ Por motivos de rendimiento, [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza 
 |0|>0|Los puntos de comprobación automáticos cuyo intervalo de recuperación de destino lo especifica la configuración definida por el usuario de la opción **"intervalo de recuperación" sp_configure**.|  
 |>0|No aplicable.|Puntos de comprobación indirectos cuyo tiempo de recuperación de destino lo determina la configuración TARGET_RECOVERY_TIME, expresado en segundos.|  
   
-##  <a name="AutomaticChkpt"></a> Puntos de comprobación automáticos  
+##  <a name="automatic-checkpoints"></a><a name="AutomaticChkpt"></a> Puntos de comprobación automáticos  
 Un punto de comprobación automático se produce cada vez que el número de entradas de registro alcanza el número que [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula que puede procesar durante el tiempo especificado en la opción de configuración del servidor **recovery interval** . Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).
  
 En cada base de datos sin un tiempo de recuperación de destino definido por el usuario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera puntos de comprobación automáticos. La frecuencia de los puntos de comprobación automáticos depende de la opción de configuración de servidor avanzada **recovery interval** , que especifica el tiempo máximo que una determinada instancia de servidor debe usar para recuperar una base de datos durante un reinicio del sistema. [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula el número máximo de entradas de registro que puede procesar durante el intervalo de recuperación. Cuando una base de datos que usa puntos de comprobación automáticos alcanza el número máximo de entradas de registro, [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite un punto de comprobación en la base de datos. 
@@ -78,7 +78,7 @@ Según el modelo de recuperación simple, a menos que algún factor retrase el t
   
 Después de un bloqueo del sistema, el periodo de tiempo necesario para recuperar una determinada base de datos depende en gran medida de la cantidad de E/S necesaria para rehacer las páginas que estaban desfasadas en el momento del bloqueo. Esto significa que la configuración **recovery interval** no es confiable. No puede determinar una duración de recuperación precisa. Además, cuando punto de comprobación automático está en curso, la actividad de E/S general de los datos aumenta considerablemente y es bastante impredecible.  
    
-###  <a name="PerformanceImpact"></a> Repercusión del intervalo de recuperación en el rendimiento de recuperación  
+###  <a name="impact-of-recovery-interval-on-recovery-performance"></a><a name="PerformanceImpact"></a> Repercusión del intervalo de recuperación en el rendimiento de recuperación  
 En un sistema de procesamiento de transacciones en línea (OLTP) con transacciones cortas, la opción **recovery interval** es el factor principal que determina la duración de la recuperación. Pero la opción **recovery interval** no afecta al tiempo necesario para deshacer una transacción de ejecución prolongada. La recuperación de una base de datos con una transacción de ejecución prolongada puede tardar mucho más que lo especificado en el valor de **intervalo de recuperación**. 
  
 Por ejemplo, si una transacción de ejecución prolongada tardó dos horas en realizar actualizaciones antes de que se deshabilitara el servidor, la recuperación real tarda un tiempo considerablemente superior al valor de **recovery interval** para recuperar la transacción de ejecución prolongada. Para obtener más información sobre la repercusión de una transacción de ejecución prolongada en el tiempo de recuperación, vea [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). Para más información sobre el proceso de recuperación, vea [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
@@ -91,7 +91,7 @@ Normalmente, los valores predeterminados proporciona un rendimiento de recuperac
   
 Si decide aumentar la configuración **recovery interval** , es recomendable que lo haga gradualmente en pequeños incrementos y evaluando el efecto de cada aumento incremental en el rendimiento de recuperación. Este planteamiento es importante ya que a medida que aumenta la configuración **recovery interval** , se multiplica el tiempo que tarda en completarse la recuperación de la base de datos. Por ejemplo, si cambia **intervalo de recuperación** a 10 minutos, la recuperación tarda aproximadamente 10 veces más en completarse que cuando **intervalo de recuperación** se establece en 1 minuto.  
   
-##  <a name="IndirectChkpt"></a> Puntos de comprobación indirectos
+##  <a name="indirect-checkpoints"></a><a name="IndirectChkpt"></a> Puntos de comprobación indirectos
 Los puntos de control indirectos, presentados en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], proporcionan una alternativa de nivel de base de datos configurable a los puntos de comprobación automáticos. Esto se puede configurar mediante la especificación de la opción de configuración de la base de datos **Tiempo de recuperación de destino**. Para obtener más información, vea [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).
 Si se produce un bloqueo del sistema, los puntos de comprobación indirectos proporcionan un tiempo de recuperación más rápido y predecible que los puntos de comprobación automáticos. Los puntos de comprobación indirectos proporcionan las siguientes ventajas:  
   
@@ -109,10 +109,10 @@ Pero una carga de trabajo transaccional en línea en una base de datos que esté
 > El punto de comprobación indirecto es el comportamiento predeterminado para nuevas bases de datos creadas en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], incluidas las bases de datos Model y TempDB.          
 > Las bases de datos que se actualizan in situ o se restauraron a partir de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usarán el comportamiento de punto de comprobación automático anterior, a menos que explícitamente se modifique para usar el punto de comprobación indirecto.       
 
-### <a name="ctp23"></a> Escalabilidad mejorada de puntos de control indirectos
+### <a name="improved-indirect-checkpoint-scalability"></a><a name="ctp23"></a> Escalabilidad mejorada de puntos de control indirectos
 Antes de [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)], es posible que experimente errores de programador que no rinde cuando hay una base de datos que genera un gran número de páginas desfasadas, como `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]se presenta una mejor escalabilidad para los puntos de control indirectos, lo que debería evitar estos errores en las bases de datos con una gran carga de trabajo `UPDATE`/`INSERT`.
   
-##  <a name="EventsCausingChkpt"></a> Puntos de comprobación internos  
+##  <a name="internal-checkpoints"></a><a name="EventsCausingChkpt"></a> Puntos de comprobación internos  
 Hay distintos componentes del servidor que generan puntos de comprobación internos para garantizar que las imágenes de disco coinciden con el estado actual del registro. Los puntos de comprobación internos se generan en respuesta a los siguientes eventos:  
   
 -   Se han agregado o eliminado archivos de base de datos mediante ALTER DATABASE.  
@@ -127,7 +127,7 @@ Hay distintos componentes del servidor que generan puntos de comprobación inter
   
 -   Poner fuera de línea una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .      
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **Para cambiar el intervalo de recuperación en una instancia de servidor**  
   
 -   [Establecer la opción de configuración del servidor Intervalo de recuperación](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  

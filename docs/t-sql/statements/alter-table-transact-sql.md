@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288309"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -1054,7 +1054,7 @@ Si ha definido alguna columna de la instrucción ALTER TABLE para que sea un tip
 
 La adición de una columna que actualiza las filas de la tabla requiere el permiso **UPDATE** en ella. Por ejemplo, agregar una columna **NOT NULL** con un valor predeterminado o agregar una columna de identidad si la tabla no está vacía.
 
-## <a name="Example_Top"></a> Ejemplos
+## <a name="examples"></a><a name="Example_Top"></a> Ejemplos
 
 |Category|Elementos de sintaxis ofrecidos|
 |--------------|------------------------------|
@@ -1065,7 +1065,7 @@ La adición de una columna que actualiza las filas de la tabla requiere el permi
 |[Deshabilitar y habilitar restricciones y desencadenadores](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
-### <a name="add"></a>Agregar columnas y restricciones
+### <a name="adding-columns-and-constraints"></a><a name="add"></a>Agregar columnas y restricciones
 
 En los ejemplos de esta sección se muestra cómo agregar columnas y restricciones a una tabla.
 
@@ -1295,7 +1295,7 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
 ```
 
-### <a name="Drop"></a>Quitar columnas y restricciones
+### <a name="dropping-columns-and-constraints"></a><a name="Drop"></a>Quitar columnas y restricciones
 
 En los ejemplos de esta sección se muestra cómo quitar columnas y restricciones.
 
@@ -1380,7 +1380,7 @@ DROP TABLE Person.ContactBackup ;
 
 ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Ejemplos](#Example_Top)
 
-### <a name="alter_column"></a> Modificar una definición de columna
+### <a name="altering-a-column-definition"></a><a name="alter_column"></a> Modificar una definición de columna
 
 #### <a name="a-changing-the-data-type-of-a-column"></a>A. Cambiar el tipo de datos de una columna
 
@@ -1474,7 +1474,7 @@ ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCR
 GO
 ```
 
-### <a name="alter_table"></a> Modificar una definición de tabla
+### <a name="altering-a-table-definition"></a><a name="alter_table"></a> Modificar una definición de tabla
 
 En los ejemplos de esta sección se muestra cómo modificar la definición de una tabla.
 
@@ -1592,7 +1592,7 @@ ALTER TABLE Person.Person
 DISABLE CHANGE_TRACKING;
 ```
 
-### <a name="disable_enable"></a>Deshabilitar y habilitar restricciones y desencadenadores
+### <a name="disabling-and-enabling-constraints-and-triggers"></a><a name="disable_enable"></a>Deshabilitar y habilitar restricciones y desencadenadores
 
 #### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. Deshabilitar y volver a habilitar una restricción
 
@@ -1659,7 +1659,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a>Operaciones en línea
+### <a name="online-operations"></a><a name="online"></a>Operaciones en línea
 
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. Volver a generar el índice en línea mediante opciones de espera de prioridad baja
 
@@ -1697,7 +1697,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a> Control de versiones del sistema
+### <a name="system-versioning"></a><a name="system_versioning"></a> Control de versiones del sistema
 
 Los cuatro ejemplos siguientes le ayudarán a familiarizarse con la sintaxis para usar el control de versiones del sistema. Para obtener más ayuda, consulte [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
 

@@ -47,10 +47,10 @@ author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75924965"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -644,12 +644,12 @@ En los equipos con varios procesadores, `ALTER INDEX REBUILD`, al igual que otra
 > [!IMPORTANT]
 > No es posible volver a organizar o generar un índice si el grupo de archivos en el que se encuentra está sin conexión o está definido como de solo lectura. Cuando se especifica la palabra clave ALL y hay uno o más índices en un grupo de archivos sin conexión o de solo lectura, se produce un error en la instrucción.  
   
-## <a name="rebuilding-indexes"></a> Regenerar índices  
+## <a name="rebuilding-indexes"></a><a name="rebuilding-indexes"></a> Regenerar índices  
 El proceso de volver a crear un índice quita y vuelve a crear el índice. Quita la fragmentación, utiliza espacio en disco al compactar las páginas según el valor de factor de relleno especificado o existente y vuelve a ordenar las filas del índice en páginas contiguas. Cuando se especifica ALL, todos los índices de la tabla se quitan y se vuelven a generar en una única transacción. No es necesario quitar las restricciones FOREIGN KEY por adelantado. Cuando se regeneran índices con 128 extensiones o más, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] difiere las cancelaciones de asignación de página y sus bloqueos asociados hasta después de la confirmación de la transacción.  
  
 Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
   
-## <a name="reorganizing-indexes"></a> Reorganizar índices
+## <a name="reorganizing-indexes"></a><a name="reorganizing-indexes"></a> Reorganizar índices
 La reorganización de un índice usa muy pocos recursos del sistema. Desfragmenta el nivel hoja de los índices agrupados y no clúster de las tablas y las vistas al volver a ordenar físicamente las páginas de nivel hoja para que coincidan con el orden lógico de los nodos hoja, de izquierda a derecha. La reorganización también compacta las páginas de índice. La compactación se basa en el valor de factor de relleno existente. 
   
 Cuando se especifica `ALL`, se reorganizan los índices relacionales, tanto agrupados como no clúster, y los índices XML. Cuando se especifica ALL, se aplican algunas restricciones; vea la definición de ALL en la sección Argumentos de este artículo.  
@@ -659,7 +659,7 @@ Para obtener más información, vea [Reorganizar y volver a generar índices](..
 > [!IMPORTANT]
 > Para una tabla de Azure SQL Data Warehouse con un índice de almacén de columnas agrupadas ordenado, `ALTER INDEX REORGANIZE` no reordenará los datos. Para reordenar los datos, use `ALTER INDEX REBUILD`.
   
-## <a name="disabling-indexes"></a> Deshabilitar índices  
+## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Deshabilitar índices  
 Al deshabilitar un índice, se impide que el usuario tenga acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición de índice permanece en el catálogo del sistema. La deshabilitación de un índice no clúster o agrupado en una vista elimina físicamente los datos del índice. La deshabilitación de un índice clúster evita el acceso a los datos, aunque éstos permanecen en el árbol b hasta que el índice se quita o se vuelve a generar. Para ver el estado de un índice habilitado o deshabilitado, realice una consulta en la columna **is_disabled** de la vista de catálogo **sys.indexes**.  
   
 Si una tabla se encuentra en una publicación de replicación transaccional, no puede deshabilitar ningún índice que esté asociado con las columnas de clave principal. Estos índices son necesarios para la replicación. Para deshabilitar un índice, primero debe quitar la tabla de la publicación. Para obtener más información sobre la creación de publicaciones, vea [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
@@ -682,7 +682,7 @@ Si se especifica ALL al establecer las opciones de bloqueo de fila o página, la
 |ALLOW_PAGE_LOCKS = ON|Al montón y a cualquier índice no clúster asociado.|  
 |ALLOW_PAGE_LOCKS = OFF|Completamente a los índices no clúster. Esto significa que no se permite ningún bloqueo de página en los índices no clúster. En el montón, los únicos bloqueos no permitidos para la página son los bloqueos compartidos (S), de actualización (U) y exclusivos (X). El [!INCLUDE[ssDE](../../includes/ssde-md.md)] aún puede adquirir un bloqueo de página de intención (IS, IU o IX) por motivos internos.|  
   
-## <a name="online-index-operations"></a> Operaciones de índice en línea  
+## <a name="online-index-operations"></a><a name="online-index-operations"></a> Operaciones de índice en línea  
 Cuando se vuelve a generar un índice y la opción ONLINE está establecida en ON, los objetos subyacentes, las tablas y los índices asociados están disponibles para las consultas y la modificación de datos. También puede regenerar en línea una parte de un índice que resida en una sola partición. Los bloqueos de tabla exclusivos solo se mantienen un espacio de tiempo muy reducido durante el proceso de modificación.  
   
 La reorganización de un índice siempre se realiza en línea. El proceso no mantiene bloqueos a largo plazo y, por ello, no bloquea las consultas o las actualizaciones en ejecución.  
@@ -695,7 +695,7 @@ La reorganización de un índice siempre se realiza en línea. El proceso no man
   
 Se producirá un error en todas las operaciones de índice en línea que se realizan al mismo momento. Por ejemplo, no es posible volver a generar dos o más índices en la misma tabla de forma simultánea ni crear un índice nuevo mientras se regenera un índice existente en la misma tabla.  
 
-### <a name="resumable-indexes"></a> Operaciones de índice reanudable
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> Operaciones de índice reanudable
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 

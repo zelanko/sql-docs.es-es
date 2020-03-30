@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 3eedcac9715dec28d3a0ee785effa450d7309c89
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77479724"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342914"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ La instalación de LocalDB copia un conjunto de archivos mínimo necesario para 
 
 ## <a name="try-it-out"></a>pruébelo. 
 
-- Para descargar e instalar SQL Server Express LocalDB, vaya a las **[descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB es una característica que se selecciona durante la instalación y está disponible al descargar los medios. Si descarga los medios, elija **Express Advanced** o el paquete de LocalDB. En el **Instalador de Visual Studio**, puede instalar LocalDB de SQL Server Express como parte de la carga de trabajo de **desarrollo de escritorio de .NET** o como un componente individual.
+- Para descargar e instalar SQL Server Express LocalDB, vaya a las **[descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB es una característica que se selecciona durante la instalación y está disponible al descargar los medios. Si descarga los medios, elija **Express Advanced** o el paquete de LocalDB. En el **Instalador de Visual Studio**, puede instalar LocalDB de SQL Server Express como parte de la carga de trabajo de **desarrollo de escritorio de .NET** o como un componente individual.
 
  >[!TIP]
  > También puede instalar LocalDB como parte de Visual Studio. Durante la instalación de Visual Studio, seleccione la carga de trabajo de **desarrollo de escritorio de .NET**, que incluye LocalDB de SQL Server Express.
@@ -116,7 +116,7 @@ REM Gather information about the instance of LocalDB
 |Versión|\<Versión actual>|
 |Nombre compartido|""|
 |Propietario|"\<Su usuario de Windows>"|
-|Creación automática|Sin|
+|Creación automática|No|
 |State|en ejecución|
 |Última hora de inicio|\<Fecha y hora>|
 |Nombre de canalización de instancia|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|

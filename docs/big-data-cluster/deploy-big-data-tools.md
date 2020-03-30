@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173633"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalación de las herramientas de macrodatos de SQL Server 2019
@@ -62,7 +62,7 @@ En la tabla anterior se proporcionan todas las herramientas comunes que se usan 
 
 Las herramientas restantes solo son necesarias en determinados escenarios. La **CLI de Azure** se puede usar para administrar servicios de Azure asociados a las implementaciones de AKS. **mssql-cli** es una herramienta opcional, aunque útil, que permite conectarse a la instancia maestra de SQL Server del clúster y ejecutar consultas desde la línea de comandos. Y **sqlcmd** y `curl` son necesarios si piensa instalar datos de ejemplo con el script de GitHub.
 
-### <a id="python"></a> Instalación de Python sin conexión
+### <a name="install-python-offline"></a><a id="python"></a> Instalación de Python sin conexión
 
 1. En un equipo con acceso a Internet, descargue uno de los siguientes archivos comprimidos que contienen Python:
 

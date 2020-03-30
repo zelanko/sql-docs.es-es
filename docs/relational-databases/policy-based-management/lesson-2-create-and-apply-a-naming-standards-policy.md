@@ -12,10 +12,10 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558700"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lección 2: Creación y aplicación de una directiva de normas de denominación
@@ -23,7 +23,7 @@ ms.locfileid: "75558700"
 Algunos tipos de directivas de administración basada en directivas pueden crear desencadenadores para exigir el cumplimiento futuro con la directiva. En esta lección, va a crear una directiva que exige una denominación estándar para tablas. A continuación, va a probar la directiva intentando crear una tabla que infrinja dicha directiva.  
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio y acceso a un servidor que ejecute SQL Server.
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

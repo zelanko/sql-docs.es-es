@@ -14,10 +14,10 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7e0e50e22fc257b3a8429e556fe7fd2cec2c97d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017502"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Introducción a los grupos de disponibilidad Always On
@@ -26,21 +26,21 @@ ms.locfileid: "68017502"
 En este tema se describen los pasos para las instancias de configuración de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para admitir [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y crear, administrar, y supervisar la disponibilidad de grupo.  
   
   
-##  <a name="RecommendedReading"></a> Lecturas recomendadas  
+##  <a name="recommended-reading"></a><a name="RecommendedReading"></a> Lecturas recomendadas  
  Antes de crear el primer grupo de disponibilidad, recomendamos leer los siguientes temas:  
   
 -   [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 -   [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
-##  <a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
+##  <a name="configuring-an-instance-of-sql-server-to-support-always-on-availability-groups"></a><a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
   
 ||Paso|Vínculos|  
 |------|----------|-----------|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|**Habilite [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].** La característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] debe habilitarse en cada instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que va a participar en un grupo de disponibilidad.<br /><br /> **Requisitos previos:**  El equipo host debe ser en un nodo de clúster de conmutación por error de Windows Server (WSFC).<br /><br /> Para obtener información sobre otros requisitos previos, vea "Requisitos previos y restricciones de las instancias de SQL Server" en [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|[Habilitar y deshabilitar grupos de disponibilidad AlwaysOn](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|**Crear un extremo de creación de reflejo de la base de datos (si no hay ninguno)** Asegúrese de que cada instancia del servidor posee un [extremo de creación de reflejo de la base de datos](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md). La instancia de servidor utiliza este extremo para recibir conexiones de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de otras instancias de servidor.|Para determinar si existe un extremo de creación de reflejo de la base de datos: <br />                    [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)<br /><br /> **Para la autenticación de Windows:**  Para crear un extremo de creación de reflejo de la base de datos con:<br /><br /> [Asistente para nuevo grupo de disponibilidad](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **Para la autenticación de certificado**. Para crear un punto de conexión de creación de reflejo de la base de datos con:[Transact-SQL](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
-##  <a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
+##  <a name="creating-and-configuring-a-new-availability-group"></a><a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
   
 ||Paso|Vínculos|  
 |------|----------|-----------|  
@@ -52,7 +52,7 @@ En este tema se describen los pasos para las instancias de configuración de [!I
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|**Dé el nombre de host DNS de la escucha a los desarrolladores de aplicaciones.**  Los desarrolladores tienen que especificar este nombre DNS en las cadenas de conexión para dirigir las solicitudes de conexión a la escucha del grupo de disponibilidad. Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).|"Seguimiento: después de crear un agente de escucha de grupo de disponibilidad" en [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|**Configure dónde se debe hacer la copia de seguridad de los trabajos.**  Si desea realizar copias de seguridad de las bases de datos secundarias, debe crear un script de trabajo de copia de seguridad que tenga en cuenta la preferencia de copia de seguridad automatizada. Cree un script para cada base de datos del grupo de disponibilidad en cada instancia de servidor que hospede una réplica de disponibilidad para el grupo de disponibilidad.|"Seguimiento: después de configurar la copia de seguridad en las réplicas secundarias" en [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)|  
   
-##  <a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
+##  <a name="managing-availability-groups-replicas-and-databases"></a><a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
   
 > [!NOTE]  
 >  Para obtener información sobre las propiedades de la réplica y los grupos de disponibilidad, vea [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md).  
@@ -72,7 +72,7 @@ En este tema se describen los pasos para las instancias de configuración de [!I
 |Solucionar problemas de las operaciones para agregar archivos. Esto puede ser necesario si la base de datos principal y una base de datos secundaria tienen distintas rutas de acceso.|[Solucionar problemas de una operación ADD-FILE](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|  
 |Alterar las propiedades de una réplica de disponibilidad.|[Cambiar el modo de disponibilidad.](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)<br /><br /> [Cambiar el modo de conmutación por error](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)<br /><br /> [Configurar la prioridad de copia de seguridad (y las preferencias de automatizada)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)<br /><br /> [Configurar el acceso de solo lectura](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)<br /><br /> [Configurar el enrutamiento de solo lectura](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)<br /><br /> [Cambiar el período de tiempo de espera de la sesión](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)|  
   
-##  <a name="MonitorAGsEtc"></a> Supervisar grupos de disponibilidad  
+##  <a name="monitoring-availability-groups"></a><a name="MonitorAGsEtc"></a> Supervisar grupos de disponibilidad  
  Para supervisar las propiedades y el estado de un grupo de disponibilidad AlwaysOn, puede usar las siguientes herramientas.  
   
 |Herramienta|Breve descripción|Vínculos|  
@@ -84,7 +84,7 @@ En este tema se describen los pasos para las instancias de configuración de [!I
 |Monitor de sistema|El objeto de rendimiento **SQLServer:Availability Replica** contiene contadores de rendimiento que proporcionan información sobre las réplicas de disponibilidad.|[SQL Server, réplica de disponibilidad](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |Monitor de sistema|El objeto de rendimiento **SQLServer:Database Replica** contiene contadores de rendimiento que proporcionan información sobre las bases de datos secundarias en una réplica secundaria dada.<br /><br /> El objeto **SQLServer:Databases** de SQL Server contiene contadores de rendimiento que supervisan las actividades del registro de transacciones, entre otras cosas. Los siguientes contadores son especialmente importantes para supervisar la actividad de registro de transacciones en bases de datos de disponibilidad: **Tiempo de escritura de vaciados de registros (ms)** , **Vaciados de registro/s.** , **Errores de caché del grupo de registros/s.** , **Lecturas de disco del grupo de registros/s** y **Solicitudes del grupo de registros/s**.|[SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   **Vídeo Introducción a Always On:**  [Microsoft SQL Server Code-Named "Denali", Serie Always On, parte 1: Introducción a la solución de alta disponibilidad de próxima generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

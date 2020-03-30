@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 2bcd54ab83429b1f7961480210c12eb546a2aa70
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896737"
 ---
 # <a name="handling-null-values"></a>Tratamiento de valores NULL
@@ -127,7 +127,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Comparación de valores NULL con tipos SqlTypes y CLR  
-Al comparar valores NULL, es importante comprender la diferencia entre la forma en que el método `Equals` evalúa los valores NULL en <xref:System.Data.SqlTypes> en comparación con el modo en que funciona con tipos CLR. Todos los métodos `Equals` de <xref:System.Data.SqlTypes>utilizan la semántica de base de datos para evaluar valores NULL: si uno o ambos de los valores son NULL, la comparación da como resultado NULL. Por otro lado, el uso del método `Equals` de CLR en dos <xref:System.Data.SqlTypes> dará como resultado true si ambos son NULL. Esto refleja la diferencia entre el uso de un método de instancia como el método `String.Equals` de CLR y el uso del método estático o compartido, `SqlString.Equals`.  
+Al comparar valores NULL, es importante comprender la diferencia entre la forma en que el método `Equals` evalúa los valores NULL en <xref:System.Data.SqlTypes> en comparación con el modo en que funciona con tipos CLR. Todos los métodos <xref:System.Data.SqlTypes> de `Equals`utilizan la semántica de base de datos para evaluar valores NULL: si uno o ambos de los valores son NULL, la comparación da como resultado NULL. Por otro lado, el uso del método `Equals` de CLR en dos <xref:System.Data.SqlTypes> dará como resultado true si ambos son NULL. Esto refleja la diferencia entre el uso de un método de instancia como el método `String.Equals` de CLR y el uso del método estático o compartido, `SqlString.Equals`.  
   
 En el ejemplo siguiente se muestra la diferencia en los resultados entre el método `SqlString.Equals` y el método `String.Equals` cuando cada uno de ellos pasa un par de valores NULL y, a continuación, un par de cadenas vacías.  
   

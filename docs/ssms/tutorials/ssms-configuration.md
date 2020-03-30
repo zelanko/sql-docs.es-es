@@ -11,10 +11,10 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247290"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Componentes y configuración de SQL Server Management Studio
@@ -44,22 +44,22 @@ En esta sección se describen los distintos componentes de ventana que están di
 
     ![Menú Ver](media/ssms-configuration/viewmenu.png)
 
-* **Explorador de objetos** (F8): El Explorador de objetos es una vista de árbol de todos los objetos de base de datos que contiene un servidor. Esta vista incluye las bases de datos de Motor de base de datos de SQL Server, SQL Server Analysis Services, SQL Server Reporting Services y SQL Server Integration Services. El Explorador de objetos incluye información de todos los servidores a los que está conectado. 
+* **Explorador de objetos** (F8): el Explorador de objetos es una vista de árbol de todos los objetos de base de datos que contiene un servidor. Esta vista incluye las bases de datos de Motor de base de datos de SQL Server, SQL Server Analysis Services, SQL Server Reporting Services y SQL Server Integration Services. El Explorador de objetos incluye información de todos los servidores a los que está conectado. 
 
     ![Explorador de objetos](media/ssms-configuration/objectexplorer.png)
-* **Ventana de consulta** (Ctrl+N): después de seleccionar **Nueva consulta**, escriba las consultas de Transact-SQL (T-SQL) en esta ventana. Los resultados de las consultas también aparecerán aquí.
+* **Ventana Consulta** (Ctrl + N): después de seleccionar **Nueva consulta**, escriba las consultas de Transact-SQL (T-SQL) en esta ventana. Los resultados de las consultas también aparecerán aquí.
 
     ![Ventana Nueva consulta](media/ssms-configuration/newquery.png)
 
-* **Propiedades** (F4): puede ver la vista Propiedades cuando se abre la ventana de consulta. La vista muestra las propiedades básicas de la consulta. Por ejemplo, se muestra la hora de inicio de una consulta, el número de filas devueltas o los detalles de conexión.  
+* **Propiedades** (F4): puede ver la vista Propiedades cuando la ventana Consulta esté abierta. La vista muestra las propiedades básicas de la consulta. Por ejemplo, se muestra la hora de inicio de una consulta, el número de filas devueltas o los detalles de conexión.  
 
     ![Propiedades](media/ssms-configuration/properties.png)
 
-* **Explorador de plantillas** (Ctrl+Alt+T): el Explorador de plantillas tiene diversas plantillas predefinidas de T-SQL. Puede usar estas plantillas para llevar a cabo varias funciones, como crear una base de datos o hacer una copia de seguridad de la base de datos. 
+* **Explorador de plantillas** (Ctrl + Alt + T): el Explorador de plantillas tiene varias plantillas de T-SQL predefinidas. Puede usar estas plantillas para llevar a cabo varias funciones, como crear una base de datos o hacer una copia de seguridad de la base de datos. 
 
     ![Explorador de plantillas](media/ssms-configuration/templates.png)
 
-* **Detalles del Explorador de objetos** (F7): esta vista es más pormenorizada que la vista del Explorador de objetos. Puede usar Detalles del Explorador de objetos para manipular varios objetos a la vez. Por ejemplo, en esta ventana puede seleccionar varias bases de datos y, después, eliminarlas o generar un script para ellas de forma simultánea. 
+* **Detalles del Explorador de objetos** (F7): esta vista está más granular que la vista del Explorador de objetos. Puede usar Detalles del Explorador de objetos para manipular varios objetos a la vez. Por ejemplo, en esta ventana puede seleccionar varias bases de datos y, después, eliminarlas o generar un script para ellas de forma simultánea. 
 
     ![Detalles del Explorador de objetos](media/ssms-configuration/objectexplorerdetails.PNG) 
 

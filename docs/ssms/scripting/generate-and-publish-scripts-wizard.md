@@ -44,10 +44,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253901"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
@@ -61,17 +61,17 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
 ## <a name="before-you-begin"></a>Antes de empezar  
  Las bases de datos de origen y de destino pueden estar en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o en una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que ejecuta [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior.  
   
-###  <a name="PubHostSvc"></a> Publicar en un servicio hospedado  
+###  <a name="publishing-to-a-hosted-service"></a><a name="PubHostSvc"></a> Publicar en un servicio hospedado  
  Además de crear scripts, el **Asistente Generar y publicar scripts** se puede usar para publicar una base de datos en un tipo específico de servicio web hospedado de SQL Server. El SQL Server Hosting Toolkit proporciona Database Publishing Services como un proyecto de origen compartido en CodePlex. Los proveedores del hospedaje web pueden usar el proyecto Database Publishing Services para generar un conjunto de servicios web que faciliten a sus clientes la implementación de bases de datos en el servicio web. Para obtener más información sobre cómo descargar el SQL Server Hosting Toolkit, vea [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  Para publicar una base de datos a un servicio de hospedaje web, seleccione la opción **Publicar en servicio web** en la página **Establecer opciones de scripting** del asistente.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  El permiso mínimo para publicar una base de datos es la pertenencia al rol fijo de base de datos db_ddladmin en la base de datos de origen. El permiso mínimo para publicar un script de base de datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el proveedor de hospedaje es la pertenencia al rol fijo de base de datos db_ddladmin en la base de datos de destino.  
   
  Para publicar con el asistente, el usuario también debe proporcionar un nombre de usuario y una contraseña para tener acceso a su cuenta en el proveedor de hospedaje. La base de datos destino se debe crear en el proveedor del hospedaje antes de que la base de datos de origen se publique. Al publicar, se sobrescriben los objetos presentes en la base de datos.  
   
-##  <a name="GenPubScriptWiz"></a> Usar el Asistente Generar y publicar scripts  
+##  <a name="using-the-generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> Usar el Asistente Generar y publicar scripts  
  **Para generar y publicar un script**  
   
 1.  En **Explorador de objetos**, expanda el nodo de la instancia que contiene la base de datos que se va a incluir en el script.  
@@ -92,14 +92,14 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
     -   [Página Resumen](#Summary)   
     -   [Página Guardar o publicar scripts](#SavePubScripts)  
   
-###  <a name="Introduction"></a> Página Introducción  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para generar o publicar un script.  
   
  **No volver a mostrar esta página** : omite esta página la próxima vez que inicie el **asistente Generar y publicar scripts**.  
   
   ![Página Introducción](media/generate-and-publish-scripts-wizard/intro.png)
   
-###  <a name="ChooseObjects"></a> Página Elegir objetos  
+###  <a name="choose-objects-page"></a><a name="ChooseObjects"></a> Página Elegir objetos  
  Use esta página para elegir los objetos que desea incluir en los scripts generados por el asistente. En la siguiente página del asistente, podrá guardar estos scripts en la ubicación que elija o usarlos para publicar objetos de base de datos en un proveedor de hospedaje web remoto que tenga instalado [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  **Opción de incluir en el script toda la base de datos** : haga clic en esta opción para generar scripts para todos los objetos de la base de datos e incluir un script para la propia base de datos. 
@@ -116,7 +116,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
 
    ![Específico de la creación de scripts](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
-###  <a name="SetScriptOpt"></a> Página Establecer opciones de scripting  
+###  <a name="set-scripting-options-page"></a><a name="SetScriptOpt"></a> Página Establecer opciones de scripting  
  Use esta página para especificar si desea que el asistente guarde los scripts en la ubicación que elija o usarlos para publicar objetos de base de datos en un proveedor de hospedaje web remoto. Para publicar, debe tener acceso a un servicio web que se haya instalado mediante el servicio web Database Publishing Services Web.  
   
  **Opciones** : si quiere que el asistente guarde los scripts en la ubicación que elija, seleccione **Guardar scripts en una ubicación específica**. Posteriormente, podrá ejecutar los scripts con respecto a una instancia del motor de base de datos o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Si desea que el asistente publique los objetos de base de datos en un proveedor de hospedaje web remoto, seleccione **Publicar en servicio web**.  
@@ -141,7 +141,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 -   **Base de datos de destino** : seleccione la base de datos de destino donde quiere publicar los objetos que ha seleccionado. Debe seleccionar un proveedor antes de seleccionar una base de datos de destino.  
   
-###  <a name="AdvScriptOpt"></a> Página Opciones de scripting avanzadas  
+###  <a name="advanced-scripting-options-page"></a><a name="AdvScriptOpt"></a> Página Opciones de scripting avanzadas  
  Use esta página para especificar cómo desea que este asistente genere los scripts. Hay disponibles numerosas opciones. Las opciones se atenúan si no se admiten en la versión de SQL Server o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] especificada en **Tipo de motor de base de datos**.  
 
 ![Opciones avanzadas](media/generate-and-publish-scripts-wizard/advanced.png)
@@ -214,7 +214,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 -   **Generar script de claves únicas** : incluye en el script la creación de claves únicas en las tablas. Las claves únicas evitan que se especifiquen datos duplicados. El valor predeterminado es **True**. Para más información, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
-###  <a name="MgProviders"></a> Página Proveedores administrados  
+###  <a name="manage-providers-page"></a><a name="MgProviders"></a> Página Proveedores administrados  
  Use este cuadro de diálogo para ver, agregar, modificar, eliminar o probar las conexiones del proveedor de hospedaje. Un proveedor de hospedaje especifica la información de conexión para un servicio web que se haya creado con el proyecto Database Publishing Services en SQL Server Hosting Toolkit en CodePlex.  
   
  **Proveedores configurados** : enumera el nombre y la dirección de servicio **web** de cada proveedor de hospedaje que se ha guardado.  
@@ -231,7 +231,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
  **Cancelar** : deshace todos los cambios realizados en el cuadro de diálogo **Proveedor de hospedaje** .  
   
-###  <a name="AdvPubOpts"></a> Página Opciones de publicación avanzadas  
+###  <a name="advanced-publishing-options-page"></a><a name="AdvPubOpts"></a> Página Opciones de publicación avanzadas  
  Use esta página para especificar cómo desea que este asistente publique una base de datos. Hay disponibles numerosas opciones. Las opciones se atenúan si no se admiten en la versión de SQL Server o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] especificada en **Tipo de motor de base de datos**.  
 
   ![Publicación avanzada](media/generate-and-publish-scripts-wizard/advancedpublish.png)
@@ -288,7 +288,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 9. **Publicar opciones de compresión de datos** : incluye las opciones de compresión de datos en el proceso de publicación, si se han configurado en la base de datos de origen o en las tablas de la base de datos de origen. El valor predeterminado es **True**. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-###  <a name="ProvConfig"></a> Página Configuración de proveedor  
+###  <a name="provider-configuration-page"></a><a name="ProvConfig"></a> Página Configuración de proveedor  
  Use este cuadro de diálogo para ver o modificar la configuración del proveedor de hospedaje. La información de este cuadro de diálogo se puede utilizar para:  
   
 -   Ver, agregar o modificar la información de conexión a un proveedor de hospedaje.  
@@ -321,12 +321,12 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
  **Cancelar** : deshacer todos los cambios que haya realizado en este cuadro de diálogo y vuelve al asistente.  
   
-###  <a name="Summary"></a> Página Resumen  
+###  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  En esta página se resumen las opciones que ha seleccionado en este asistente. Para cambiar una opción, haga clic en **Anterior**. Para empezar a generar los scripts que se guardarán o publicarán, haga clic en **Siguiente**.  
   
  **Revisar opciones seleccionadas** : muestra las selecciones que ha realizado en cada página del asistente. Expanda un nodo para ver las opciones seleccionadas de la página correspondiente.  
   
-###  <a name="SavePubScripts"></a> Página Guardar o publicar scripts  
+###  <a name="save-or-publish-scripts-page"></a><a name="SavePubScripts"></a> Página Guardar o publicar scripts  
  Use esta página para supervisar el progreso del asistente a medida que se produce.  
   
  **Detalles** : vea en la columna **Acción** el progreso del asistente. Después de generar los scripts, el asistente los guarda en un archivo o los usa para publicar en un servicio web, según las selecciones. Cuando cada uno de estos pasos se haya completado, haga clic en el valor de la columna **Resultado** para ver el resultado del paso correspondiente.  

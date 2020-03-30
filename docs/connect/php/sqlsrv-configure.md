@@ -17,10 +17,10 @@ ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935803"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
@@ -55,7 +55,7 @@ Si se llama a **sqlsrv_configure** con un valor o una configuración no compatib
   
 2\) Para obtener más información sobre la actividad de registro, consulte [Logging Activity](../../connect/php/logging-activity.md) (Actividad de registro).  
   
-(3) Para más información sobre cómo configurar el control de errores y advertencias, consulte [Procedimientos: Configuración del control de errores y advertencias con el controlador SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
+3\) Para obtener más información sobre cómo configurar el control de errores y advertencias, vea [Cómo configurar el control de errores y advertencias con el controlador SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
   
 ## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)

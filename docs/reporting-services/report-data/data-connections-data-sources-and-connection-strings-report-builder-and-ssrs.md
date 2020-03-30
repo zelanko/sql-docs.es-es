@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190914"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>Creación de cadenas de conexión de datos - Generador de informes y SSRS
@@ -20,10 +20,10 @@ ms.locfileid: "74190914"
 
   Para incluir datos en informes paginados de [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es preciso que antes cree una *cadena de conexión* para su *origen de datos*. En este artículo, se explica cómo crear cadenas de conexión de datos y se ofrece información importante relacionada con las credenciales de los orígenes de datos. Un origen de datos incluye el tipo de origen de datos, la información de conexión y el tipo de credenciales que se han de usar. Para obtener más información, consulte [Introducción a los datos de informe en SQL Server Reporting Services (SSRS)](report-data-ssrs.md).
   
-##  <a name="bkmk_DataConnections"></a> Extensiones de datos integradas  
+##  <a name="built-in-data-extensions"></a><a name="bkmk_DataConnections"></a> Extensiones de datos integradas  
  Las extensiones de datos predeterminadas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluyen Microsoft SQL Server, Microsoft Azure SQL Database y Microsoft SQL Server Analysis Services. Para obtener una lista completa de los orígenes de datos y las versiones que admite [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-##  <a name="bkmk_connection_examples"></a> Ejemplos de cadenas de conexión comunes  
+##  <a name="common-connection-string-examples"></a><a name="bkmk_connection_examples"></a> Ejemplos de cadenas de conexión comunes  
  Las cadenas de conexión son la representación en texto de las propiedades de conexión para un proveedor de datos. En la tabla siguiente se muestran ejemplos de cadenas de conexión para diversos tipos de conexión.  
  
  > [!NOTE]  
@@ -53,10 +53,10 @@ ms.locfileid: "74190914"
   
  Para obtener más información sobre las configuraciones necesarias para conectar con estos tipos de orígenes de datos, vea el artículo sobre conexiones de datos específicas en [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) y [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-##  <a name="bkmk_special_password_characters"></a> Caracteres especiales en una contraseña  
+##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> Caracteres especiales en una contraseña  
  Si configura el origen de datos ODBC o SQL para que le solicite una contraseña o la incluya en la cadena de conexión y un usuario especifica una contraseña con caracteres especiales, como por ejemplo signos de puntuación, algunos controladores de origen de datos subyacentes no podrán validar los caracteres especiales. Cuando procese el informe, es posible que aparezca un mensaje para indicarle que la contraseña no es válida. Si cambiar la contraseña resulta poco práctico, hable con el administrador de la base de datos para almacenar las credenciales adecuadas en el servidor como parte de un nombre del origen de datos OBDC (DSN) del sistema. Para obtener información, vea [OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring) en la documentación de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-##  <a name="bkmk_Expressions_in_connection_strings"></a> Cadenas de conexión basadas en expresiones  
+##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a> Cadenas de conexión basadas en expresiones  
  Las cadenas de conexión basadas en expresiones se evalúan en tiempo de ejecución. Por ejemplo, puede especificar el origen de datos como un parámetro, incluir la referencia de parámetro en la cadena de conexión y permitir al usuario elegir un origen de datos para el informe. Por ejemplo, imagine que una empresa multinacional tiene servidores de datos en varios países. Con una cadena de conexión basada en una expresión, un usuario que ejecute un informe de ventas puede seleccionar un origen de datos para un país determinado antes de ejecutar el informe.  
   
  El ejemplo siguiente ilustra el uso de una expresión de origen de datos en una cadena de conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el ejemplo se da por hecho que se ha creado un parámetro de informe denominado `ServerName`:  

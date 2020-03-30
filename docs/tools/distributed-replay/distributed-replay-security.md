@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: aada983ac80116cce2001b5027b89b8824bd151f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307010"
 ---
 # <a name="distributed-replay-security"></a>Seguridad de reproducción distribuida
@@ -33,7 +33,7 @@ Antes de instalar y usar la característica [!INCLUDE[msCoName](../../includes/m
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|Puede ser una cuenta de usuario de dominio o una cuenta de usuario local. Si usa una cuenta de usuario local, el controlador, el cliente, y el destino SQL Server deben ejecutarse en el mismo equipo.<br /><br /> **\*\* Nota de seguridad \*\*** Se recomienda que la cuenta no sea un miembro del grupo local Administradores de Windows.|  
 |Cuenta de usuario interactivo que se usa para ejecutar la herramienta de administración de Distributed Replay|Puede ser una cuenta de usuario local o de usuario de dominio. Para utilizar una cuenta de usuario local, la herramienta de administración y el controlador se deben estar ejecutando en el mismo equipo.|  
   
- **Importante**: Al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios de cliente de Distributed Replay. La lista siguiente es una relación de las cuentas admitidas:  
+ **Importante**: al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
   
 -   Cuenta de usuario de dominio  
   
@@ -74,7 +74,7 @@ Antes de instalar y usar la característica [!INCLUDE[msCoName](../../includes/m
   
  Para configurar los permisos DCOM del controlador, siga estos pasos.  
   
-1.  **Abra dcomcnfg.exe, el complemento de Servicios de componentes**: Esta es la herramienta que se utiliza para configurar los permisos de DCOM.  
+1.  **Abra dcomcnfg.exe, el complemento Servicios de componentes**: esta es la herramienta que se usa para configurar permisos DCOM.  
   
     1.  En el equipo del controlador, haga clic en **Inicio**.  
   
@@ -82,9 +82,9 @@ Antes de instalar y usar la característica [!INCLUDE[msCoName](../../includes/m
   
     3.  Presione ENTRAR.  
   
-2.  **Configure los permisos DCOM para todo el equipo**: conceda los permisos correspondientes DCOM a todos los equipos para cada cuenta que aparece en la tabla siguiente. Para más información sobre cómo establecer permisos a todos los equipos, consulte [Lista de comprobación: administrar aplicaciones DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configure los permisos DCOM de todos los equipos**: conceda los permisos correspondientes DCOM a todos los equipos para cada cuenta que aparece en la tabla siguiente. Para obtener más información sobre cómo establecer permisos a todos los equipos, vea [Lista de comprobación: administrar aplicaciones DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Configure los permisos DCOM específicos de la aplicación**: concede los permisos DCOM específicos de la aplicación correspondiente para cada cuenta que se muestra en la tabla siguiente. El nombre de aplicación DCOM para el servicio del controlador es **DReplayController**. Para más información sobre cómo establecer permisos específicos de la aplicación, consulte [Lista de comprobación: administrar aplicaciones DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configure los permisos DCOM específicos de la aplicación**: conceda los permisos correspondientes DCOM específicos de la aplicación para cada cuenta que aparece en la tabla siguiente. El nombre de aplicación DCOM para el servicio del controlador es **DReplayController**. Para obtener más información sobre cómo establecer permisos específicos de la aplicación, vea [Lista de comprobación: administrar aplicaciones DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  En la tabla siguiente se describen los permisos DCOM necesarios para la cuenta de usuario interactivo de herramienta de administración y las cuentas de servicio de cliente:  
   

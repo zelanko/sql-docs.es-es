@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 30b1023ab732bdc711afa2a15b70df5646a90826
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242423"
 ---
 # <a name="disable-or-enable-a-job"></a>Deshabilitar o habilitar un trabajo
@@ -32,12 +32,12 @@ ms.locfileid: "75242423"
 
 En este tema se describe cómo deshabilitar un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al deshabilitar un trabajo, éste no se elimina y se puede habilitar de nuevo cuando sea necesario.  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
 Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-job"></a>Para deshabilitar o habilitar un trabajo  
   
@@ -49,7 +49,7 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 4.  Para deshabilitar un trabajo, haga clic en **Deshabilitar**. Para habilitar un trabajo, haga clic en **Habilitar**.  
   
-## <a name="TSQL"></a>Usar Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Usar Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-job"></a>Para deshabilitar o habilitar un trabajo  
   

@@ -13,10 +13,10 @@ ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 031dade1cb1f5535a1b0ccacc0efe4ca8b241ccb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194049"
 ---
 # <a name="debugging-data-processing-extension-code"></a>Depurar el código de extensión de procesamiento de datos
@@ -26,7 +26,7 @@ ms.locfileid: "63194049"
   
 1.  Inicie [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] y abra el proyecto de extensión de procesamiento de datos.  
   
-2.  Genere el proyecto e implemente el ensamblado de extensión de procesamiento de datos y el archivo .pdb acompañante en el Diseñador de informes. Para más información acerca de cómo implementar, consulte [Procedimientos: Implementación de una extensión de procesamiento de datos en el Diseñador de informes](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md).  
+2.  Genere el proyecto e implemente el ensamblado de extensión de procesamiento de datos y el archivo .pdb acompañante en el Diseñador de informes. Para más información sobre la implementación, vea [How to: Deploy a Data Processing Extension to Report Designer](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md) (Cómo implementar una extensión de procesamiento de datos en el Diseñador de informes).  
   
 3.  Abra un nuevo proyecto de informe en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] al tiempo que deja el código de la extensión de procesamiento de datos abierto en una ventana independiente de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   

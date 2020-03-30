@@ -11,10 +11,10 @@ ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81e533e32504df219155259e9639c83c3be4c647
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985594"
 ---
 # <a name="unwrap-method-sqlserverpreparedstatement"></a>Método unwrap (SQLServerPreparedStatement)
@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  Es posible que las aplicaciones necesiten acceso a las extensiones para la API de JDBC que sean específicas de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. El método unwrap admite la desencapsulación para las clases públicas que extiende este objeto, si las clases tienen extensiones de proveedor.  
   
- Cuando se llama a este método, el objeto desencapsula las clases siguientes: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) y [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
+ Cuando se llama a este método, el objeto desencapsula las siguientes clases: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) y [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
   
  Para obtener código de ejemplo, consulte [Método unwrap &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
   

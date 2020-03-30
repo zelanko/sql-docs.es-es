@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077056"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "77077056"
   
  Para obtener más información sobre cómo se almacenan y mantienen las direcciones URL o sobre problemas de interoperabilidad, consulte [Acerca de las reservas y el registro de reservas de URL (Administrador de configuración de SSRS)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar Reporting Services e Internet Information Services en paralelo (modo nativo de SSRS)](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Antes de crear o modificar una dirección URL, recuerde los puntos siguientes:  
   
 -   Debe ser miembro del grupo local de administradores en el equipo del servidor de informes.  
@@ -162,7 +162,7 @@ ms.locfileid: "77077056"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>Direcciones URL para varias instancias del servidor de informes en el mismo equipo  
  Si está reservando direcciones URL para varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debería seguir las convenciones de nomenclatura para poder evitar conflictos de nombres. Para obtener más información, vea [Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
   
-##  <a name="URLExamples"></a> Ejemplos de configuraciones de direcciones URL  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> Ejemplos de configuraciones de direcciones URL  
  En la lista siguiente se muestran algunos ejemplos de la apariencia que puede tener una dirección URL del servidor de informes:  
   
 -   `https://localhost/reportserver`  

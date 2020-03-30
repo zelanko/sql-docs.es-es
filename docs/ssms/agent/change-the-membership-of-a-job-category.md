@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fc3bf68b927cfd162694cc78983a9a6155b25786
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254729"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
@@ -34,12 +34,12 @@ En este tema se describe cómo cambiar la pertenencia de la categoría de trabaj
   
 Las categorías de trabajo le ayudan a organizar los trabajos para poder filtrarlos y agruparlos fácilmente. Puede crear sus propias categorías de trabajo. También puede cambiar la pertenencia de los trabajos del Agente Microsoft SQL Server en categorías de trabajo.  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
 Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Para cambiar la pertenencia a una categoría de trabajo  
   
@@ -57,7 +57,7 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 7.  En el cuadro de diálogo **Administrar categorías de trabajos**_nombre_servidor_ .  
   
-## <a name="TSQL"></a>Usar Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Usar Transact-SQL  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Para cambiar la pertenencia a una categoría de trabajo  
   
@@ -79,7 +79,7 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 Para más información, consulte [sp_update_job (Transact-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623).  
   
-## <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usar Objetos de administración de SQL Server  
 **Para cambiar la pertenencia a una categoría de trabajo**  
   
 Use la clase **JobCategory** mediante un lenguaje de programación de su elección, como Visual Basic, Visual C# o PowerShell.  

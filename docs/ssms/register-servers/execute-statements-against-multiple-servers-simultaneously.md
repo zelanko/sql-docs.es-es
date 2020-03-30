@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
 ms.openlocfilehash: 89e6e64f4e4dc5f3ae7c8f9adf1db3a392530989
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246559"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Ejecutar instrucciones en varios servidores simultáneamente
@@ -33,7 +33,7 @@ Los resultados que devuelve la consulta se pueden combinar en un único panel de
 > **NOTA:** Antes de ejecutar los procedimientos siguientes, cree un Servidor de administración central y un grupo de servidores. Para obtener más información, vea [Crear un servidor de administración central y un grupo de servidores &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md).  
 
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Dado que las conexiones que mantiene un Servidor de administración central se ejecutan en el contexto del usuario, si se usara la autenticación de Windows, los permisos vigentes en los servidores registrados podrían variar. Por ejemplo, el usuario podría ser miembro del rol fijo de servidor sysadmin en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A, pero tener permisos limitados en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B.  
   
  ## <a name="execute-statements-against-multiple-configuration-targets-simultaneously"></a>Ejecutar instrucciones con varios destinos de configuración simultáneamente  

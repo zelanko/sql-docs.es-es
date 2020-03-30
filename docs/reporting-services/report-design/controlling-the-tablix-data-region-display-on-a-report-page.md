@@ -9,10 +9,10 @@ ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581525"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controlar la presentación de la región de datos Tablix en una página de informe
@@ -50,7 +50,7 @@ Las regiones de datos de tabla, matriz y lista son ejemplos de regiones de datos
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Controlar cómo se representan grupos de filas y columnas de Tablix  
  Para controlar cómo se representa un grupo de región de datos Tablix, hay que tener en cuenta la estructura de grupo. Una región de datos Tablix puede tener cuatro áreas, tal y como se muestra en la ilustración siguiente:  
   
- ![Áreas de la región de datos Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Áreas de la región de datos Tablix")  
+ ![Descripción de las áreas de la región de datos Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Descripción de las áreas de la región de datos Tablix")  
   
  El área del grupo de filas y el área del grupo de columnas contienen encabezados de grupo. Cuando una región de datos Tablix tiene encabezados de grupo, puede controlar la repetición de las filas y las columnas estableciendo las propiedades en la página **General** del cuadro de diálogo **Propiedades de Tablix** .  
   

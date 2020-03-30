@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285869"
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
@@ -122,13 +122,13 @@ Hay algunas diferencias de conversión de codificación entre Windows y varias v
 
 En ODBC Driver 13 y 13.1, cuando los caracteres multibyte UTF-8 o UTF-16 suplentes se dividen en búferes de SQLPutData, se producen daños en los datos. Los búferes se utilizan para transmitir datos de SQLPutData sin codificaciones de caracteres parciales. Esta limitación se ha quitado con la versión 17 del controlador ODBC.
 
-## <a name="bkmk-openssl"></a>OpenSSL
+## <a name="openssl"></a><a name="bkmk-openssl"></a>OpenSSL
 A partir de la versión 17.4, el controlador carga OpenSSL de manera dinámica, lo que permite que se ejecute en sistemas que tienen la versión 1.0 o 1.1 sin necesidad de archivos de controlador independientes. Cuando hay varias versiones de OpenSSL presentes, el controlador intentará cargar la más reciente. El controlador admite actualmente OpenSSL 1.0.x y 1.1.x.
 
 > [!NOTE]  
 > Puede producirse un posible conflicto si la aplicación que usa el controlador (o uno de sus componentes) está vinculada a una versión diferente de OpenSSL o si la carga de manera dinámica. Si hay varias versiones de OpenSSL presentes en el sistema y la aplicación las utiliza, se recomienda encarecidamente que se asegure de que no haya un error de coincidencia entre la versión cargada por la aplicación y el controlador, ya que los errores podrían dañar la memoria y, por tanto, no incluirá necesariamente manifiestos de maneras obvias o coherentes.
 
-## <a name="bkmk-alpine"></a>Alpine Linux
+## <a name="alpine-linux"></a><a name="bkmk-alpine"></a>Alpine Linux
 En el momento de redactar este documento, el tamaño predeterminado de la pila en MUSL es 128 K, que es suficiente para la funcionalidad básica del controlador ODBC, pero en función de lo que hace la aplicación no es difícil superar este límite, especialmente cuando se llama al controlador desde varios subprocesos. Se recomienda compilar una aplicación ODBC en Alpine Linux con `-Wl,-z,stack-size=<VALUE IN BYTES>` para aumentar el tamaño de la pila. Como referencia, el tamaño predeterminado de la pila en la mayoría de los sistemas GLIBC es de 2 MB.
 
 ## <a name="additional-notes"></a>Notas adicionales  

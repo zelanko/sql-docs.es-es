@@ -9,10 +9,10 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 117b3cb90970c03c836964d47d91c37f0e65a294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080458"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Informes detallados (Generador de informes y SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "77080458"
 > [!NOTE]  
 >  Cuando trabaja con el Generador de informes, para ver el informe detallado que se abre al hacer clic en el vínculo de obtención de detalles del informe principal, debe estar conectado a un servidor de informes.  
   
- Para empezar a usar rápidamente los informes detallados, consulte el [Tutorial: Crear informes principales y de obtención de detalles &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
+ Para empezar a usar rápidamente los informes detallados, vea [Tutorial: Crear informes principales y de obtención de detalles &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Parámetros de los informes detallados  
  Un informe detallado suele incluir parámetros que le ha pasado el informe de resumen. En el ejemplo de informe de resumen de ventas, el informe incluye el campo [OrderNumber] en un cuadro de texto de una celda de la tabla. El informe detallado contiene un parámetro que toma como valor el número de pedido. Al establecer el vínculo de informe detallado en el cuadro de texto para [OrderNumber], también establece el parámetro para el informe de destino en [OrderNumber]. Cuando el usuario hace clic en el número de pedido del informe de resumen, se abre el informe detallado de destino, que muestra la información relativa a ese número de pedido. Para ver instrucciones sobre cómo personalizar informes detallados basados en valores de parámetros, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) y [Función InScope &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  

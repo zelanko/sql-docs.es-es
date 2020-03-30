@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727472"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Crear un procedimiento almacenado mediante sqlrutils
@@ -21,7 +21,7 @@ ms.locfileid: "73727472"
 
 En este artículo se detallan los pasos para convertir el código R de modo que se ejecute como un procedimiento almacenado de T-SQL. Para obtener el mejor resultado posible, es posible que sea necesario modificar ligeramente el código a fin de garantizar que todas las entradas se puedan parametrizar.
 
-## <a name="bkmk_rewrite"></a>Paso 1. Reescritura de scripts de R
+## <a name="step-1-rewrite-r-script"></a><a name="bkmk_rewrite"></a>Paso 1. Reescritura de scripts de R
 
 Para obtener los mejores resultados, debe reescribir el código de R para encapsularlo como una sola función.
 
@@ -145,7 +145,7 @@ El proceso general de llamada al procedimiento almacenado de SQL preparado es el
 2. Defina `$query` o establezca `$value` para cada parámetro de entrada.
 3. Use `executeStoredProcedure` para ejecutar el procedimiento almacenado desde el entorno de desarrollo de R, pasando la lista de objetos de parámetro de entrada que establezca.
 
-## <a name = "samples"></a>Ejemplo
+## <a name="example"></a><a name = "samples"></a>Ejemplo
 
 En este ejemplo se muestran las versiones anterior y posterior de un script de R que obtiene datos de una base de datos de SQL Server, realiza algunas transformaciones en los datos y los guarda en una base de datos diferente.
 

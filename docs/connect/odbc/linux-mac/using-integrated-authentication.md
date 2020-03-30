@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008703"
 ---
 # <a name="using-integrated-authentication"></a>Uso de la autenticación integrada
@@ -64,7 +64,7 @@ Los administradores de bases de datos pueden crear una pista de auditoría del a
   
 Para iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se usa la cuenta del sistema, y no existe ninguna función en Linux para suplantar el contexto de seguridad. Por lo tanto, se requieren más acciones para determinar el usuario.
   
-Para auditar las actividades de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en nombre de usuarios distintos a los de la cuenta del sistema, la aplicación debe usar **EXECUTE AS** de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+Para auditar las actividades de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en nombre de usuarios distintos a los de la cuenta del sistema, la aplicación debe usar [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE AS**de**.  
   
 Para mejorar su rendimiento, las aplicaciones pueden utilizar la agrupación de conexiones con la autenticación integrada y la auditoría. Pero combinar la agrupación de conexiones, la autenticación integrada y la auditoría trae consigo un riesgo de seguridad, ya que el administrador de controladores unixODBC permite que distintos usuarios reutilicen las conexiones agrupadas. Para obtener más información, consulte este artículo sobre la [agrupación de conexiones ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
 

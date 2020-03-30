@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c758a55b39eeecde4a3a713bc13462f01aa77a32
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015177"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>Nombres de entidad de seguridad del servicio (SPN) en conexiones cliente (OLE DB)
@@ -59,7 +59,7 @@ ms.locfileid: "68015177"
 |IDBInitialize::Initialize|Si están habilitados los mensajes configurando DBPROP_INIT_PROMPT en las propiedades de inicialización de origen de datos, se mostrará el cuadro de diálogo Inicio de sesión de OLE DB. Esto permite escribir SPN tanto para el servidor principal como para su asociado de conmutación por error.<br /><br /> La cadena de proveedor de DPPROP_INIT_PROVIDERSTRING, si se establece, reconoce las nuevas palabras clave **ServerSPN** y **FailoverPartnerSPN** y usa sus valores, si están presentes, para inicializar SSPROP_INIT_SERVER_SPN y SSPROP_INIT_FAILOVER_PARTNER_SPN.<br /><br /> Se puede llamar a IDBProperties::SetProperties para establecer las propiedades SSPROP_INIT_SERVER_SPN y SSPROP_INIT_FAILOVER_PARTNER_SPN antes de llamar a IDBInitialize::Initialize. Ésta es una alternativa a utilizar una cadena de proveedor.<br /><br /> Si una propiedad se establece en más de un lugar, un valor establecido mediante programación tiene precedencia sobre un conjunto de valores en la cadena de proveedor. Un conjunto de valores en una cadena de inicialización tiene precedencia sobre un conjunto de valores en un cuadro de diálogo de inicio de sesión.<br /><br /> Si la misma palabra clave aparece más de una vez en la cadena del proveedor, el valor de primera aparición tiene prioridad.|  
 |IDBProperties::GetProperties|Se puede llamar a IDBProperties::GetProperties para obtener los valores de las nuevas propiedades de inicialización de origen de datos SSPROP_INIT_SERVERSPN y SSPROP_INIT_FAILOVERPARTNERSPN y de las nuevas propiedades de origen de datos SSPROP_AUTHENTICATIONMETHOD y SSPROP_MUTUALLYAUTHENTICATED.|  
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo incluirá las nuevas propiedades de inicialización de origen de datos SSPROP_INIT_SERVERSPN y SSPROP_INIT_FAILOVERPARTNERSPN, o bien las nuevas propiedades de origen de datos SSPROP_AUTHENTICATION_METHOD y SSPROP_MUTUALLYAUTHENTICATED.|  
-|IDBProperties::SetProperties|Se puede llamar a IDBProperties::SetProperties para establecer los valores de las nuevas propiedades de inicialización de origen de datos SSPROP_INITSERVERSPN y SSPROP_INIT_FAILOVERPARTNERSPN.<br /><br /> Estas propiedades se pueden establecer en cualquier momento, pero si el origen de datos ya está abierto, se devolverá el siguiente error: DB_E_ERRORSOCCURRED, "La operación de OLE DB de varios pasos generó errores. Compruebe los valores de estado de OLE DB si es posible. No se realizó ningún trabajo."|  
+|IDBProperties::SetProperties|Se puede llamar a IDBProperties::SetProperties para establecer los valores de las nuevas propiedades de inicialización de origen de datos SSPROP_INITSERVERSPN y SSPROP_INIT_FAILOVERPARTNERSPN.<br /><br /> Estas propiedades se pueden devolver en cualquier momento, pero si el origen de datos ya está abierto, se devolverá el error siguiente: DB_E_ERRORSOCCURRED, "La operación de múltiples pasos de OLE DB generó errores. Compruebe los valores de estado de OLE DB si es posible. No se realizó ningún trabajo."|  
   
 ## <a name="see-also"></a>Consulte también  
  [Programación del controlador OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

@@ -13,10 +13,10 @@ ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d227b5d6b6681ecebbef9c2b910f9525e877cad8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72907879"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Recursos de soporte para los controladores de Microsoft para PHP para SQL Server
@@ -27,9 +27,9 @@ En este tema se enumeran los recursos que pueden serle de ayuda a la hora de des
 ## <a name="ssdriverphp-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Recursos de soporte  
 Para obtener la documentación más reciente, vea [Controlador de Microsoft para PHP para SQL Server](../../connect/php/microsoft-php-driver-for-sql-server.md) para el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-Para obtener soporte de colegas, visite el [foro](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp) de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Para obtener soporte de colegas, visite el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]foro[ de ](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
   
-Para proporcionar comentarios, realizar preguntas o conocer lo que está considerando el equipo de desarrollo, visite el [blog del equipo](https://blogs.msdn.microsoft.com/sqlphp/) de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Para proporcionar comentarios, realizar preguntas o conocer lo que está considerando el equipo de desarrollo, visite el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]blog del equipo[ de ](https://blogs.msdn.microsoft.com/sqlphp/).  
   
 [Código fuente de los controladores de Microsoft para PHP para SQL Server en Github](https://github.com/Microsoft/msphpsql)  
   

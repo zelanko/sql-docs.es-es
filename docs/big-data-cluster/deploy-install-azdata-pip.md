@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5360e7aa9718fef0d17bf73b9064c2d1a61a4577
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75726952"
 ---
 # <a name="install-azdata-with-pip"></a>Instalación de `azdata` con `pip`
@@ -24,9 +24,9 @@ En este artículo se explica cómo instalar la herramienta `azdata` en Windows o
 
 Para Windows y Linux (distribución de Ubuntu), se puede realizar la instalación con un [administrador de paquetes](./deploy-install-azdata-installer.md) a fin de obtener una experiencia más sencilla.
 
-## <a id="prerequisites"></a> Requisitos previos
+## <a name="prerequisites"></a><a id="prerequisites"></a> Requisitos previos
 
-`azdata` es una utilidad de línea de comandos escrita en Python que permite a los administradores de clústeres arrancar y administrar el clúster de macrodatos mediante las API REST. La versión mínima de Python necesaria es v3.5. Para descargar e instalar la herramienta `azdata` se requiere `pip`. Las instrucciones siguientes proporcionan ejemplos para Windows y Ubuntu. Para instalar Python en otras plataformas, consulte la [documentación de Python](https://wiki.python.org/moin/BeginnersGuide/Download).
+`azdata` es una utilidad de línea de comandos escrita en Python que permite a los administradores de clústeres arrancar y administrar el clúster de macrodatos mediante las API REST. La versión mínima de Python necesaria es v3.5. Para descargar e instalar la herramienta `pip` se requiere `azdata`. Las instrucciones siguientes proporcionan ejemplos para Windows y Ubuntu. Para instalar Python en otras plataformas, consulte la [documentación de Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 Además, instale y actualice la versión más reciente del paquete Python `requests`:
 
 ```bash
@@ -36,7 +36,7 @@ pip3 install -U requests
 > [!IMPORTANT]
 > Si va a instalar una versión más reciente de los clústeres de macrodatos, haga una copia de seguridad de los datos y elimine el clúster anterior actualizando `azdata` e instalando la versión nueva. Para obtener más información, consulte el artículo sobre [actualización a una nueva versión](deployment-upgrade.md).
 
-## <a id="windows"></a> Instalación de `azdata` en Windows
+## <a name="windows-azdata-installation"></a><a id="windows"></a> Instalación de `azdata` en Windows
 
 1. En un cliente de Windows, descargue el paquete de Python necesario desde [https://www.python.org/downloads/](https://www.python.org/downloads/). Para Python 3.5.3 y versiones posteriores, al instalar Python también se instala pip3. 
 
@@ -63,7 +63,7 @@ pip3 install -U requests
    pip3 install -r https://aka.ms/azdata
    ```
 
-## <a id="linux"></a> Instalación de `azdata` en Linux
+## <a name="linux-azdata-installation"></a><a id="linux"></a> Instalación de `azdata` en Linux
 
 En Linux, debe instalar Python 3.5 y, después, actualizar pip. En el ejemplo siguiente se muestran los comandos que funcionarían para Ubuntu. Para otras plataformas Linux, consulte la [documentación de Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 
@@ -105,7 +105,7 @@ En Linux, debe instalar Python 3.5 y, después, actualizar pip. En el ejemplo si
    > [!NOTE]
    > El modificador `--user` instala `azdata` en el directorio de instalación del usuario de Python. En Linux, habitualmente es `~/.local/bin`. Agregue este directorio a la ruta de acceso o bien navegue hasta el directorio de instalación del usuario y ejecute `./azdata` desde allí.
 
-## <a id="macOSX"></a> Instalación de `azdata` en macOS u OS X
+## <a name="install-azdata-on-macos-or-os-x"></a><a id="macOSX"></a> Instalación de `azdata` en macOS u OS X
 
 Para instalar `azdata` en macOS u OS X complete estos pasos. Para cada paso, ejecute el ejemplo en Terminal.
 

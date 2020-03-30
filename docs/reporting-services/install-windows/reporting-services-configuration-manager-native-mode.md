@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593781"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Administrador de configuración de Reporting Services (modo nativo)
@@ -29,7 +29,7 @@ Utilice el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../inc
 > [!NOTE]
 > La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016. A partir de la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no está diseñado para administrar servidores de informes en modo de SharePoint. El modo de SharePoint se administra y se configura mediante scripts de Administración central de SharePoint y scripts PowerShell.  
   
-##  <a name="bkmk_scenarios"></a> Escenarios para usar el Administrador de configuración de Reporting Services  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Escenarios para usar el Administrador de configuración de Reporting Services  
  Puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para realizar las tareas siguientes:  
   
 -   Configurar la cuenta del servicio del servidor de informes La cuenta se configura inicialmente durante la instalación, pero se puede modificar utilizando el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si se actualiza la contraseña o se desea utilizar otra cuenta.  
@@ -48,7 +48,7 @@ Utilice el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../inc
   
  El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no ayuda a administrar el contenido del servidor de informes, habilitar características adicionales ni conceder acceso al servidor. La implementación completa requiere que también se use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar características adicionales o modificar los valores predeterminados, y el portal web para conceder a los usuarios acceso al servidor.
 
-##  <a name="bkmk_requirements"></a> Requisitos
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> Requisitos
 
 El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es específico de la versión. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se instala con esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede usar para configurar una versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si ejecuta versiones anteriores y más recientes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en paralelo en el mismo equipo, debe usar el Administrador de configuración de Reporting Services, que se incluye con cada versión para configurar cada instancia.  
 
@@ -64,7 +64,7 @@ Para utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../
 
 El Administrador de configuración de Reporting Services se instala automáticamente al instalar SQL Server Reporting Services.
 
-##  <a name="bkmk_start_configuration_manager"></a> Para iniciar el Administrador de configuración de Reporting Services
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Para iniciar el Administrador de configuración de Reporting Services
 
 1.  Use el paso siguiente correspondiente a su versión de Microsoft Windows:
 

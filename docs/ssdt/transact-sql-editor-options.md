@@ -28,10 +28,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256318"
 ---
 # <a name="transact-sql-editor-options"></a>Opciones del Editor de Transact-SQL
@@ -42,7 +42,7 @@ Este tema contiene información sobre algunas de las opciones del Editor de Tran
   
 [Resultados de la consulta](#QueryResults)  
   
-## <a name="QueryExecution"></a>Ejecución de la consulta  
+## <a name="query-execution"></a><a name="QueryExecution"></a>Ejecución de la consulta  
   
 |Propiedad|Descripción|  
 |------------|---------------|  
@@ -70,7 +70,7 @@ Este tema contiene información sobre algunas de las opciones del Editor de Tran
 |**SET ANSI_WARNINGS**|Especifica el comportamiento estándar de SQL-92 para varias condiciones de error. Para más información, consulte [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758).|  
 |**SET ANSI_NULLS**|Especifica el comportamiento conforme a SQL-92 para los operadores de comparación Igual que ( **=** ) y Distinto de ( **<>** ) cuando se usan con valores NULL. Para más información, consulte [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
   
-## <a name="QueryResults"></a>Resultados de la consulta  
+## <a name="query-results"></a><a name="QueryResults"></a>Resultados de la consulta  
   
 |Propiedad|Descripción|  
 |------------|---------------|  

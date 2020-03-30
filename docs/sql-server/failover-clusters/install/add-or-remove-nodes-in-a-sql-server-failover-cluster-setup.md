@@ -18,10 +18,10 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cba52dccb916e7dc1400d36b17eb3fd884c9faee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230890"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Agregar o quitar nodos en un clúster de conmutación por error de SQL Server (programa de instalación)
@@ -43,7 +43,7 @@ ms.locfileid: "75230890"
 > [!IMPORTANT]  
 >  La letra de unidad del sistema operativo de las ubicaciones de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe coincidir en todos los nodos agregados al clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Add"></a> Agregar nodo  
+##  <a name="add-node"></a><a name="Add"></a> Agregar nodo  
   
 #### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>Para agregar un nodo a un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente  
   
@@ -83,7 +83,7 @@ ms.locfileid: "75230890"
   
 15. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras completar el programa de instalación. Para obtener más información sobre los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="Remove"></a> Quitar nodo  
+##  <a name="remove-node"></a><a name="Remove"></a> Quitar nodo  
   
 #### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>Para quitar un nodo de un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente  
   

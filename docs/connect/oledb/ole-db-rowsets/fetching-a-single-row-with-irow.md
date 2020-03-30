@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994293"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Capturar una única fila con IRow
@@ -31,7 +31,7 @@ ms.locfileid: "67994293"
 
   La implementación de la interfaz **IRow** en OLE DB Driver for SQL Server se ha simplificado para aumentar el rendimiento. **IRow** permite un acceso directo a las columnas de un único objeto de fila. Si sabe de antemano que el resultado de una ejecución de comandos generará exactamente una fila, **IRow** recuperará las columnas de esa fila. Si el conjunto de resultados incluye varias filas, **IRow** solo expondrá la primera.  
   
- La implementación de **IRow** no permite cualquier navegación de la fila. A cada columna de la fila solo se puede acceder una vez con una excepción: se puede acceder a una columna una vez para buscar el tamaño de la columna y otra para capturar los datos.  
+ La implementación de **IRow** no permite cualquier navegación de la fila. Solo se obtiene acceso una vez a cada columna de la fila, con una excepción: se puede obtener acceso a una columna una primera vez para buscar el tamaño de la columna y una segunda vez para capturar los datos.  
   
 > [!NOTE]  
 >  **IRow::Open** solo permite la apertura de objetos de tipo DBGUID_STREAM y DBGUID_NULL.  

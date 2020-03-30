@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1025ea1de1e349e640b285174ffab694f791fd21
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68221645"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Configurar el correo electrónico para una aplicación de servicio de Reporting Services
@@ -50,7 +50,7 @@ ms.locfileid: "68221645"
   
 1.  Si el entorno de correo electrónico requiere la autenticación NTLM y no permite el acceso anónimo, necesita modificar la configuración de la extensión de entrega por correo electrónico para las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo, si ve el mensaje siguiente en **Últimos resultados** en la página **Administrar suscripciones** : suscripciones.  
   
-    -   Error al enviar correo: el servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.1 No se autenticó el cliente. No se reenviará el correo.  
+    -   Error al enviar el correo: el servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.1 cliente autenticó. No se reenviará el correo.  
   
      Cambie **SMTPAuthenticate** para usar un valor de "2". Este valor no se puede cambiar desde la interfaz de usuario. En el ejemplo de script de PowerShell siguiente se actualiza la configuración completa de la extensión de entrega por correo electrónico del servidor de informes para la aplicación de servicio denominada "SSRS_TESTAPPLICATION". Tenga en cuenta que algunos de los nodos enumerados en el script también se pueden establecer desde la interfaz de usuario, por ejemplo la dirección "De".  
   

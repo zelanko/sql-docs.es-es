@@ -20,10 +20,10 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082149"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
@@ -145,7 +145,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Implementación de ampliación horizontal del servidor de informes se refiere a un modelo de implementación en el que varias instancias del servidor de informes comparten la misma base de datos del servidor de informes. Una base de datos del servidor de informes la puede usar cualquier instancia del servidor de informes que almacene sus claves simétricas en la base de datos. Por ejemplo, si una base de datos del servidor de informes contiene información de clave para tres instancias del servidor de informes, las tres instancias se consideran miembros de la misma implementación de ampliación horizontal.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Combinar instancias del servidor de informes en el mismo equipo  
- Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos **-u** y **-v** si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos **-u** y **-v** se usan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, obtendrá el siguiente error: "No se pueden usar las credenciales de usuario para conexiones locales".  
+ Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos **-u** y **-v** si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos **-u** y **-v** se usan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, recibirá un error que indica que las credenciales de usuario no se pueden utilizar para las conexiones locales.  
   
  El ejemplo siguiente muestra la sintaxis para crear una implementación escalada con varias instancias locales. En este ejemplo, \<**initializedinstance**> es el nombre de una instancia que ya está inicializada para usar la base de datos del servidor de informes y \<**newinstance**> es el nombre de la instancia que quiere agregar a la implementación:  
   

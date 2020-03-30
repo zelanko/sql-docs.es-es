@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68262905"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar una instalación de Reporting Services (modo nativo)
@@ -50,7 +50,7 @@ Para obtener más información sobre cómo migrar una implementación en modo de
   
 * Encontró un problema que bloquea la actualización.
 
-## <a name="bkmk_nativemode_migration_overview"></a> Información general de la migración en modo nativo
+## <a name="native-mode-migration-overview"></a><a name="bkmk_nativemode_migration_overview"></a> Información general de la migración en modo nativo
 
  El proceso de migración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye pasos manuales y automatizados. A continuación se exponen las tareas necesarias para la migración de un servidor de informes:  
   
@@ -79,7 +79,7 @@ Para obtener más información sobre cómo migrar una implementación en modo de
   
 * [Crear una base de datos del servidor de informes](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
   
-## <a name="bkmk_fixed_database_name"></a> Nombre fijo de la base de datos
+## <a name="fixed-database-name"></a><a name="bkmk_fixed_database_name"></a> Nombre fijo de la base de datos
 
  No se puede cambiar el nombre de la base de datos del servidor de informes. La identidad de la base de datos se registra en los procedimientos almacenados del servidor de informes cuando se crea la base de datos. El cambio del nombre de las bases de datos temporales o principales del servidor de informes hace que se produzcan errores al ejecutar los procedimientos, lo que invalida la instalación del servidor de informes.  
   
@@ -91,7 +91,7 @@ Para obtener más información sobre cómo migrar una implementación en modo de
   
 * Si solo tiene unos pocos elementos, puede volver a publicar los informes y los orígenes de datos compartidos del Diseñador de informes, del Diseñador de modelos y del Generador de informes en el nuevo servidor de informes. Vuelva a crear las asignaciones de roles, suscripciones, programaciones compartidas, calendarios de instantáneas de informes, propiedades personalizadas que establezca en informes u otros elementos, seguridad de elementos de modelo y propiedades que establezca en el servidor de informes. Prepárese para perder el historial de informes y los datos del registro de ejecución de informes si sigue estas acciones.
   
-## <a name="bkmk_before_you_start"></a> Antes de empezar
+## <a name="before-you-start"></a><a name="bkmk_before_you_start"></a> Antes de empezar
 
  Aunque esté realizando una migración de la instalación en lugar de actualizarla, considere la posibilidad de ejecutar el Asesor de actualizaciones en la instalación existente como ayuda para identificar los problemas que pueden afectar a la migración. Este paso es especialmente útil si está migrando un servidor de informes que no instaló o configuró. Al ejecutar el Asesor de actualizaciones, puede descubrir valores personalizados que quizás no se admitan en una instalación nueva de SQL Server.  
   
@@ -117,7 +117,7 @@ Para obtener más información sobre cómo migrar una implementación en modo de
   
 Para obtener más información sobre los cambios en SQL Server Reporting Services, vea la documentación del Asesor de actualizaciones y [Novedades de Reporting Services &#40;SSRS&#41;](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
-## <a name="bkmk_backup"></a> Realizar una copia de seguridad de los archivos y los datos
+## <a name="backup-files-and-data"></a><a name="bkmk_backup"></a> Realizar una copia de seguridad de los archivos y los datos
 
  Antes de instalar una instancia nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], no olvide hacer una copia de seguridad de todos los archivos de la instalación actual.  
   
@@ -141,7 +141,7 @@ Para obtener más información sobre los cambios en SQL Server Reporting Service
   
     7. Machine.config para [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] si lo modificó para las operaciones del servidor de informes.  
 
-## <a name="bkmk_install_ssrs"></a> Instalar SQL Server Reporting Services
+## <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> Instalar SQL Server Reporting Services
 
  Instale una instancia nueva del servidor de informes en modo de solo archivos para que pueda configurarlo para usar valores no predeterminados. Para realizar una instalación desde la línea de comandos, use el argumento **FilesOnly**. En el Asistente para la instalación, seleccione la opción **Instalar, pero no configurar el servidor**.  
   
@@ -151,7 +151,7 @@ Para obtener más información sobre los cambios en SQL Server Reporting Service
   
 * [Instalar SQL Server desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
-## <a name="bkmk_move_database"></a> Mover la base de datos del servidor de informes
+## <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> Mover la base de datos del servidor de informes
 
  La base de datos del servidor de informes contiene los informes, modelos, orígenes de datos compartidos, calendarios, recursos, suscripciones y carpetas publicados. También contiene las propiedades de los elementos y del sistema, y los permisos para tener acceso al contenido del servidor de informes.  
   
@@ -191,7 +191,7 @@ Para obtener más información sobre los cambios en SQL Server Reporting Service
   
  Recuerde que tanto la base de datos del servidor de informes como la base de datos temporal son interdependientes y deben moverse conjuntamente. No copie las bases de datos; la copia no transfiere todas las configuraciones de seguridad a la nueva instalación. No mueva los trabajos del Agente SQL Server para las operaciones del servidor de informes programadas. El servidor de informes vuelve a crear estos trabajos de forma automática.  
 
-## <a name="bkmk_move_custom"></a> Mover las extensiones o ensamblados personalizados
+## <a name="move-custom-assemblies-or-extensions"></a><a name="bkmk_move_custom"></a> Mover las extensiones o ensamblados personalizados
 
  Si la instalación incluye elementos de informe, ensamblados o extensiones personalizados, debe implementar de nuevo los componentes personalizados. Si no usa componentes personalizados, vaya a la sección [Configurar el servidor de informes](#bkmk_configure_reportserver).  
   
@@ -215,7 +215,7 @@ Para obtener más información sobre los cambios en SQL Server Reporting Service
   
     1. [Implementación de un ensamblado personalizado](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [Cómo: Implementar un elemento de informe personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [Implementación de un elemento de informe personalizado](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [Implementación de una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -225,7 +225,7 @@ Para obtener más información sobre los cambios en SQL Server Reporting Service
   
     6. [Implementación de una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
 
-## <a name="bkmk_configure_reportserver"></a> Configurar el servidor de informes
+## <a name="configure-the-report-server"></a><a name="bkmk_configure_reportserver"></a> Configurar el servidor de informes
 
  Configure las direcciones URL para el servicio web del servidor de informes y el portal web, y configure la conexión con la base de datos del servidor de informes.  
   
@@ -252,7 +252,7 @@ Antes de eliminar las claves, se recomienda hacer primero una copia de seguridad
   
 6. Si quiere administrar el servidor de informes en modo nativo localmente, necesita configurar el sistema operativo para permitir la administración local con el portal web. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
 
-## <a name="bkmk_copy_custom_config"></a> Copiar los valores de configuración personalizados en el archivo RSReportServer.config
+## <a name="copy-custom-configuration-settings-to-rsreportserverconfig-file"></a><a name="bkmk_copy_custom_config"></a> Copiar los valores de configuración personalizados en el archivo RSReportServer.config
 
 Si modificó el archivo RSReportServer.config o el archivo RSWebApplication.config en la instalación anterior, debe realizar las mismas modificaciones en el nuevo archivo RSReportServer.config. En la lista siguiente se resumen algunas de las razones por las que podría haber tenido que modificar el archivo de configuración anterior y se proporcionan vínculos a información adicional sobre cómo configurar los mismos valores en SQL Server 2016.  
   
@@ -261,17 +261,17 @@ Si modificó el archivo RSReportServer.config o el archivo RSWebApplication.conf
 |Entrega de correo electrónico del servidor de informes con los valores de configuración personalizados|[Configuración de correo electrónico * Modo nativo de Reporting Services](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Valores de configuración de la información del dispositivo|[Personalización de los parámetros de extensión de representación en RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
-## <a name="bkmk_windowsservice_group"></a> Grupo de servicios de Windows y ACL de seguridad
+## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Grupo de servicios de Windows y ACL de seguridad
 
  En [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] hay un grupo de servicios, el grupo de servicios [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de Windows, que se usa para crear listas de control de acceso (ACL) de seguridad para todas las claves del Registro, archivos y carpetas que se instalan con SQL Server Reporting Services. Este nombre de grupo de Windows aparece con el formato SQLServerReportServerUser$\<*nombreDeEquipo*>$\<*nombreDeInstancia*>.  
 
-## <a name="bkmk_verify"></a> Comprobar la implementación
+## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Comprobar la implementación
 
 1. Compruebe los directorios virtuales del servido de informes y del [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ; para ello, abra un explorador y escriba la dirección URL. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
 2. Compruebe los informes para ver si contienen los datos esperados. Revise la información del origen de datos para ver si todavía está especificada la información de conexión del origen de datos. El servidor de informes utiliza el modelo de objetos de informe al procesar y representar los informes, pero no reemplaza las construcciones de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] por elementos nuevos del lenguaje de definición de informes (RDL). Para obtener más información sobre cómo se ejecutan los informes existentes en una nueva versión de un servidor de informes , vea [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md).  
 
-## <a name="bkmk_remove_unused"></a> Quitar los programas y archivos que no se usan
+## <a name="remove-unused-programs-and-files"></a><a name="bkmk_remove_unused"></a> Quitar los programas y archivos que no se usan
 
 Una vez que haya migrado correctamente el servidor de informes a una nueva instancia, se recomienda seguir estos pasos para quitar los programas y archivos que ya no sean necesarios.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedimientos: Recuperación de los tipos de fecha y hora como objetos DateTime PHP mediante el controlador PDO_SQLSRV | Microsoft Docs'
+title: Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,13 +12,13 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68264566"
 ---
-# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>Procedimientos: Recuperación de los tipos de fecha y hora como objetos DateTime PHP mediante el controlador PDO_SQLSRV
+# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Esta característica, agregada en la versión 5.6.0, solo es válida cuando se utiliza el controlador PDO_SQLSRV para dichos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].

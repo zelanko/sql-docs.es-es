@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
 ms.openlocfilehash: b9fca7d522d21706681ddfa714d45e8d18b3d4c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307324"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>Correlacionar un seguimiento con los datos del registro de rendimiento de Windows
@@ -24,13 +24,13 @@ ms.locfileid: "75307324"
 
 El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]permite abrir un registro de rendimiento de Microsoft Windows, elegir los contadores que desea correlacionar con un seguimiento y ver los contadores de rendimiento seleccionados junto con el seguimiento en la interfaz gráfica de usuario del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Al seleccionar un evento en la ventana de seguimiento, una barra vertical roja en el panel de la ventana de datos del Monitor de sistema del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] indica los datos del registro de rendimiento que se correlacionan con el evento de seguimiento seleccionado.  
   
- Para correlacionar un seguimiento con contadores de rendimiento, abra un archivo o una tabla de seguimiento que contenga las columnas de datos **StartTime** y **EndTime** y luego haga clic en **Importar datos de rendimiento** del menú **Archivo** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Puede abrir un registro de rendimiento y seleccionar los objetos y contadores del Monitor de sistema que desea correlacionar con el seguimiento.  
+ Para correlacionar un seguimiento con contadores de rendimiento, abra un archivo o una tabla de seguimiento que contenga las columnas de datos **StartTime** y **EndTime** y luego haga clic en **Importar datos de rendimiento** del menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Archivo**de**. Puede abrir un registro de rendimiento y seleccionar los objetos y contadores del Monitor de sistema que desea correlacionar con el seguimiento.  
   
 ### <a name="to-correlate-a-trace-with-performance-log-data"></a>Para establecer correlaciones de un seguimiento con datos del registro de rendimiento  
   
 1.  En [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], abra un archivo de seguimiento o una tabla de seguimiento guardados. No puede establecer correlaciones de un seguimiento en ejecución que aún está recopilando datos de eventos. Para lograr una correlación precisa con los datos del Monitor de sistema, el seguimiento debe contener las columnas de datos **StartTime** y **EndTime** .  
   
-2.  En el menú **Archivo** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], haga clic en **Importar datos de rendimiento**.  
+2.  En el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Archivo**de**, haga clic en **Importar datos de rendimiento**.  
   
 3.  En el cuadro de diálogo **Abrir** , seleccione un archivo que contenga un registro de rendimiento. Los datos del registro de rendimiento deben haber sido capturados durante el mismo período de tiempo en que se capturaron los datos de seguimiento.  
   

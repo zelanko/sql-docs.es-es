@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190401"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Configuración de la organización en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -57,7 +57,7 @@ Se admite la conexión con Azure Data Lake Storage Gen2 y Amazon S3. Puede encon
 - [Cómo montar ADLS Gen2 en niveles de HDFS en un clúster de macrodatos](hdfs-tiering-mount-adlsgen2.md)
 - [Cómo montar S3 en niveles de HDFS en un clúster de macrodatos](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> Limitaciones y problemas conocidos
+## <a name="known-issues-and-limitations"></a><a id="issues"></a> Limitaciones y problemas conocidos
 
 En la lista siguiente se indican los problemas conocidos y las limitaciones actuales al usar la organización en niveles de HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]:
 
@@ -81,4 +81,4 @@ En la lista siguiente se indican los problemas conocidos y las limitaciones actu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+Vea [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]¿Qué son los [?[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para obtener más información sobre los ](big-data-cluster-overview.md).

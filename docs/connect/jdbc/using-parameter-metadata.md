@@ -11,10 +11,10 @@ ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80ff8cebcc4141e8363c25f83821cb4924e6c46a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026076"
 ---
 # <a name="using-parameter-metadata"></a>Empleo de metadatos del parámetro
@@ -32,8 +32,8 @@ En el siguiente ejemplo, una conexión abierta a la base de datos de ejemplo [!I
 > [!NOTE]  
 > Hay varias limitaciones a la hora de usar la clase SQLServerParameterMetaData con instrucciones preparadas.
 >
-> **Con Microsoft JDBC Driver 6.0 (o superior) para SQL Server**: al usar SQL Server 2008 o 2008 R2, el controlador JDBC admite las instrucciones SELECT, DELETE, INSERT y UPDATE siempre y cuando estas no contengan subconsultas o combinaciones.
+> **Con Microsoft JDBC Driver 6.0 (o superior) para SQL Server**: al usar SQL Server 2008 o 2008 R2, el controlador JDBC admite las instrucciones SELECT, DELETE, INSERT y UPDATE siempre y cuando estas no contengan subconsultas ni combinaciones.
 
 Las consultas MERGE tampoco se admiten para la clase SQLServerParameterMetaData al usar SQL Server 2008 o 2008 R2. Para SQL Server 2012 y versiones superiores, se admiten metadatos de parámetros con consultas complejas.
 
-No se admite la recuperación de metadatos de parámetros para columnas cifradas. **Con Microsoft JDBC Driver 4.1 o 4.2 para SQL Server**: el controlador JDBC admite las instrucciones SELECT, DELETE, INSERT y UPDATE siempre y cuando estas no contengan subconsultas o combinaciones. Las consultas MERGE tampoco se admiten para la clase SQLServerParameterMetaData.
+No se admite la recuperación de metadatos de parámetros para columnas cifradas. **Con Microsoft JDBC Driver 4.1 o 4.2 para SQL Server**: el controlador JDBC admite las instrucciones SELECT, DELETE, INSERT y UPDATE siempre y cuando estas no contengan subconsultas ni combinaciones. Las consultas MERGE tampoco se admiten para la clase SQLServerParameterMetaData.

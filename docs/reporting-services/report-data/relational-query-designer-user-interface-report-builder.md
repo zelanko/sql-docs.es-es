@@ -15,10 +15,10 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593387"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas relacionales (Generador de informes)
@@ -66,10 +66,10 @@ ms.locfileid: "73593387"
  [Resultados de la consulta](#QueryResults)  
  Muestra datos de ejemplo para el conjunto de resultados de la consulta generada automáticamente.  
   
-###  <a name="DatabaseView"></a> Panel Vista de base de datos  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Panel Vista de base de datos  
  El panel Vista de base de datos muestra los metadatos de los objetos de base de datos que el usuario tiene permiso para ver, que se determinan mediante la conexión a un origen de datos y las credenciales. La vista jerárquica muestra objetos de base de datos organizados por esquema de la base de datos. Expanda el nodo de cada esquema para ver las tablas, vistas, procedimientos almacenados y funciones con valores de tabla. Expanda una tabla o vista para ver las columnas.  
   
-###  <a name="SelectedFields"></a> Panel Campos seleccionados  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Panel Campos seleccionados  
  El panel Campos seleccionados muestra los campos en el conjunto de datos de informe y los grupos y agregados para incluir en la consulta.  
   
  Se muestran las siguientes opciones:  
@@ -114,14 +114,14 @@ ms.locfileid: "73593387"
 |Var Distinct|Devuelve varianzas estadísticas únicas. Implementa una combinación del agregado VAR y la palabra clave DISTINCT.|  
 |VarP Distinct|Devuelve varianzas estadísticas únicas. Implementa una combinación del agregado VARP y la palabra clave DISTINCT.|  
   
-###  <a name="FunctionParameters"></a> Panel Parámetros de función  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> Panel Parámetros de función  
  El panel Parámetros de función muestra los parámetros para un procedimiento almacenado o función con valores de tabla. Se muestran las siguientes columnas:  
   
 -   **Nombre de parámetro** : muestra el nombre del parámetro definido por el procedimiento almacenado o la función con valores de tabla.  
   
 -   **Valor** : valor que se usa para el parámetro cuando la consulta se ejecuta a fin de recuperar los datos que deben mostrarse en el panel Resultados de la consulta en tiempo de diseño. Este valor no se usa cuando el informe se ejecuta en el tiempo de ejecución.  
   
-###  <a name="Relationships"></a> Panel Relaciones  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> Panel Relaciones  
  El panel Relaciones muestra las relaciones de la combinación. Las relaciones pueden detectarse automáticamente en las relaciones de clave externa que se recuperan a partir de los metadatos de base de datos, o bien puede crearlas usted mismo.  
   
  Se muestran las siguientes opciones:  
@@ -159,7 +159,7 @@ ms.locfileid: "73593387"
   
 -   **Campos de combinación** : muestra los pares de campos combinados; si una relación tiene varias condiciones de combinación, los pares de campos combinados están separados por comas (,).  
   
-###  <a name="AppliedFilters"></a> Panel Filtros aplicados  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Panel Filtros aplicados  
  El panel Filtros aplicados muestra los criterios que se usan para limitar el número de filas de datos que deben recuperarse en tiempo de ejecución. Los criterios especificados en este panel se usan para generar una cláusula WHERE de SQL. Al seleccionar la opción de parámetro, se crea automáticamente un parámetro de informe. Los parámetros de informe basados en los parámetros de consulta permiten a un usuario especificar valores para que la consulta controle los datos del informe.  
   
  Se muestran las siguientes columnas:  
@@ -172,7 +172,7 @@ ms.locfileid: "73593387"
   
 -   **Parámetro** : muestra la opción de agregar un parámetro de consulta a la consulta. Use las propiedades del conjunto de datos para ver la relación que existe entre el parámetro de consulta y el parámetro de informe.  
   
-###  <a name="QueryResults"></a> Panel Resultados de la consulta  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Panel Resultados de la consulta  
  El panel Resultados de la consulta muestra los resultados de la consulta generada automáticamente que se especifica mediante selecciones en los otros paneles. Las columnas del conjunto de resultados son los campos que se especifican en el panel Campos seleccionados y los datos de fila quedan limitados por los filtros especificados en el panel Filtros aplicados. Si la consulta incluye agrega el conjunto de resultados incluye las nuevas columnas agregadas. Por ejemplo, si la columna **Color** se agrega utilizando el agregado Count, los resultados de la consulta incluyen una nueva columna. De forma predeterminada, esta columna se denomina **Count_Color**.  
   
  Estos datos representan los valores del origen de datos en el momento de ejecución de la consulta. Los datos no se guardan en la definición de informe. Los datos reales del informe se recuperar al procesar el informe.  

@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2b5721464d63893a917bb0036491eacbb7ca4c8f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245942"
 ---
 # <a name="create-a-job-category"></a>Crear una categoría de trabajo
@@ -33,15 +33,15 @@ En este tema se describe cómo crear una categoría de trabajo en [!INCLUDE[ssCu
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente proporciona categorías de trabajo integradas a las que puede asignar trabajos, o bien puede crear una categoría de trabajo y asignarle trabajos. Las categorías de trabajo le ayudan a organizar los trabajos para poder filtrarlos y agruparlos fácilmente. Por ejemplo, puede organizar todos los trabajos de copia de seguridad de las bases de datos en la categoría Mantenimiento de bases de datos. También puede crear sus propias categorías.  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Restrictions"></a>Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitaciones y restricciones  
 Las categorías multiservidor existen solo en los servidores maestros. Solo hay una categoría de trabajo predeterminada disponible en un servidor maestro: [**Sin categoría (Multiservidor)** ]. Cuando se descarga un trabajo multiservidor, su categoría se cambia a **Trabajos del servidor principal** en el servidor de destino.  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
 Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-create-a-job-category"></a>Para crear una categoría de trabajo  
   
@@ -63,7 +63,7 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 Para más información sobre estos cuadros de diálogo, consulte [Categorías de trabajo - Administrar categorías de trabajo](../../ssms/agent/job-categories-manage-job-categories.md) y [Propiedades de categorías de trabajo - Nueva categoría de trabajo](../../ssms/agent/job-categories-properties-new-job-category.md).  
   
-## <a name="TSQL"></a>Usar Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Usar Transact-SQL  
   
 #### <a name="to-create-a-job-category"></a>Para crear una categoría de trabajo  
   
@@ -86,7 +86,7 @@ Para más información sobre estos cuadros de diálogo, consulte [Categorías de
   
 Para más información, consulte [sp_add_category (Transact-SQL)](https://msdn.microsoft.com/6cca32cd-d941-4378-aed6-a7c90cb7520a).  
   
-## <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usar Objetos de administración de SQL Server  
 **Para crear una categoría de trabajo**  
   
 Llame a la clase **JobCategory** mediante un lenguaje de programación de su elección, como Visual Basic, Visual C# o PowerShell. Para el código de ejemplo, consulte [Programar tareas administrativas automáticas en el Agente SQL Server](../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md).  

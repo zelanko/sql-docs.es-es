@@ -10,10 +10,10 @@ ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ffa11ae9d6c0d539accb4bbf6d796019cbc3371e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254598"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Mostrar valores de porcentaje en un gráfico circular (Generador de informes y SSRS)
@@ -21,7 +21,7 @@ En informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversio
 
 ![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
- Para el [Tutorial: Agregar un gráfico circular a un informe (generador de informes)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) le guía a lo largo del proceso de agregar porcentajes a segmentos del gráfico circular, si primero quiere probar esto con datos de ejemplo.
+ El [Tutorial: Agregar un gráfico circular a un informe (Generador de informes)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) le guía a lo largo del proceso de adición de porcentajes a segmentos del gráfico circular, si primero quiere probar esto con datos de ejemplo.
  
   
 ## <a name="to-display-percentage-values-as-labels-on-a-pie-chart"></a>Para mostrar los valores de porcentaje como etiquetas en un gráfico circular  
@@ -43,7 +43,7 @@ En informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversio
 2.  En **Leyenda**, escriba **#PERCENT** para la propiedad **Texto de leyenda personalizado** .  
   
 ## <a name="see-also"></a>Consulte también  
-* [Tutorial: Agregar un gráfico circular a un informe (generador de informes)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [Tutorial: agregar un gráfico circular a un informe (Generador de informes)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
 *  [Gráficos circulares &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
 *  [Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

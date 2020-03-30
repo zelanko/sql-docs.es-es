@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.openlocfilehash: 148b887497cf9411aad72936a201805000c717ec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558568"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migración de una base de datos SQL Server de Windows a Linux mediante Copia de seguridad y restauración
@@ -83,7 +83,7 @@ Para restaurar la base de datos, primero debe transferir el archivo de copia de 
 
 1. Abra una sesión de Bash en Windows.
 
-## <a id="scp"></a> Copia del archivo de copia de seguridad en Linux
+## <a name="copy-the-backup-file-to-linux"></a><a id="scp"></a> Copia del archivo de copia de seguridad en Linux
 
 1. En la sesión de Bash, vaya al directorio que contiene el archivo de copia de seguridad. Por ejemplo:
 

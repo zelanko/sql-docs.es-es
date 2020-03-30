@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3436ac152de56d06d5e928d271f8b143b695ba70
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 36f66c64cb3055aad20dee7a87d429065ca54cc6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79126008"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510226"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
 
@@ -36,7 +36,7 @@ En este artículo se muestran los tamaños y números máximos de diversos objet
 >[!NOTE]
 >Además de la información de este artículo, también puede encontrar útiles los vínculos siguientes:
 >
->* [Descarga de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads_)
+>* [Descarga de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 >* [Requisitos de hardware y software para instalar SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 >* [Comprobación de los parámetros del Comprobador de configuración del sistema](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 >
@@ -45,7 +45,7 @@ En este artículo se muestran los tamaños y números máximos de diversos objet
 
 Tamaño y número máximo de diversos objetos definidos en las bases de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o a los que se hace referencia en las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] .
 
-|Objeto de [!INCLUDE[ssDE](../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Tamaños o cifras máximas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bits)|Información adicional|
+|Objeto de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [!INCLUDE[ssDE](../includes/ssde-md.md)]||Tamaños o cifras máximas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bits)|Información adicional|
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|
 |Tamaño de lote||65 536 <sup>*</sup> (Tamaño del paquete de red)|El tamaño del paquete de red es el tamaño de los paquetes de flujo TDS que se usan para la comunicación entre aplicaciones y el [!INCLUDE[ssDE](../includes/ssde-md.md)] relacional. El tamaño del paquete predeterminado es 4 KB y se controla mediante la opción de configuración Tamaño de paquete de red.|
 |Bytes por columna de cadenas cortas||8,000||

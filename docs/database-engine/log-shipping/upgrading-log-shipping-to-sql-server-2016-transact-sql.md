@@ -13,10 +13,10 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941136"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Actualización del trasvase de registros a SQL Server 2016 (Transact-SQL)
@@ -38,18 +38,18 @@ ms.locfileid: "76941136"
   
 -   [Actualización de la instancia principal](#UpgradePrimary)  
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Antes de empezar, revise la siguiente información importante:  
   
--   [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   [Elegir un método de actualización del motor de base de datos](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
+-   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
   
--   [Planeación y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, así como la lista de comprobación previa a la actualización, y desarrolle y pruebe el plan de actualización.  
+-   [Planeamiento y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, la lista de comprobación previa a la actualización y desarrolle y pruebe el plan de actualización.  
   
--   [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
+-   [Requisitos de hardware y software para instalar SQL Server 2016:](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
   
-##  <a name="ProtectData"></a> Proteger los datos antes de la actualización  
+##  <a name="protect-your-data-before-the-upgrade"></a><a name="ProtectData"></a> Proteger los datos antes de la actualización  
  Como práctica recomendada, es aconsejable que proteja sus datos antes de realizar una actualización del trasvase de registros.  
   
  **Para proteger los datos**  
@@ -63,12 +63,12 @@ ms.locfileid: "76941136"
 > [!IMPORTANT]  
 >  Asegúrese de que haya espacio suficiente en el servidor principal para almacenar las copias de seguridad del registro durante el tiempo previsto que vaya a durar la actualización de los servidores secundarios.  Si conmuta por error a un elemento secundario, este punto se aplica también al secundario (el nuevo elemento principal).  
   
-##  <a name="UpgradeMonitor"></a> Actualización de la instancia del servidor de supervisión (opcional)  
+##  <a name="upgrading-the-optional-monitor-server-instance"></a><a name="UpgradeMonitor"></a> Actualización de la instancia del servidor de supervisión (opcional)  
  La instancia del servidor de supervisión, si existe, se puede actualizar en cualquier momento. Sin embargo, no es necesario actualizar el servidor de supervisión opcional al actualizar los servidores principal y secundarios.  
   
  Mientras se actualiza el servidor de supervisión, la configuración de trasvase de registros continúa funcionando, pero su estado no se registra en las tablas del monitor. Cualquier alerta que se haya configurado no se desencadenará mientras el servidor de supervisión se esté actualizando. Después de la actualización, puede actualizar la información de las tablas del monitor ejecutando el procedimiento almacenado del sistema [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md).   Para obtener más información sobre el servidor de supervisión, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-##  <a name="UpgradeSecondaries"></a> Actualización de instancias del servidor secundario  
+##  <a name="upgrading-the-secondary-server-instances"></a><a name="UpgradeSecondaries"></a> Actualización de instancias del servidor secundario  
  El proceso de actualización implica actualizar las instancias de los servidores secundarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] antes de actualizar la instancia del servidor principal. Actualice siempre las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] secundario en primer lugar. El trasvase de registros continúa a lo largo del proceso de actualización porque las instancias se los servidores secundarios actualizados continúan restaurando las copias de seguridad de registros a partir de la instancia del servidor principal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si la instancia del servidor principal se actualizara antes que la instancia de un servidor secundario, se produciría un error en el trasvase de registros porque una copia de seguridad creada en una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede restaurar en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede actualizar las instancias secundarias de forma simultánea o en serie, pero todas las instancias secundarias deben actualizarse antes de actualizar la instancia principal a fin de evitar un error de trasvase de registros.  
   
  Mientras se actualiza la instancia del servidor secundario, no se ejecutan los trabajos de copia y restauración del trasvase de registros. Esto significa que las copias de seguridad del registro de transacciones sin restaurar se acumularán en el servidor principal y que debe tener espacio suficiente para alojar estas copias de seguridad sin restaurar. La cantidad de acumulación depende de la frecuencia de la copia de seguridad programada en la instancia de servidor principal y de la secuencia en que se actualicen las instancias secundarias. Además, si se ha configurado un servidor de supervisión independiente, se podrían generar alertas que indiquen que no se han realizado restauraciones durante más tiempo que el intervalo configurado.  
@@ -81,7 +81,7 @@ ms.locfileid: "76941136"
 > [!IMPORTANT]  
 >  La opción RESTORE WITH STANDBY no se admite para una base de datos que requiere actualizarse. Si una base de datos secundaria actualizada se ha configurado utilizando RESTORE WITH STANDBY, los registros de transacciones ya no se pueden restaurar después de la actualización. Para reanudar el trasvase de registros en esa base de datos secundaria, tendrá que configurarlo de nuevo en ese servidor de reserva. Para obtener más información sobre la opción STANDBY, vea [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-##  <a name="UpgradePrimary"></a> Actualizar la instancia del servidor principal  
+##  <a name="upgrading-the-primary-server-instance"></a><a name="UpgradePrimary"></a> Actualizar la instancia del servidor principal  
  Puesto que el trasvase de registros es principalmente una solución de recuperación ante desastres, el escenario más sencillo y más común consiste en actualizar la instancia principal en contexto y la base de datos simplemente no está disponible durante la actualización. Una vez actualizado el servidor, la base de datos se vuelve a poner en línea automáticamente, lo que hace que se actualice. Una vez actualizada la base de datos, los trabajos de trasvase de registros se reanudan.  
   
 > [!NOTE]  

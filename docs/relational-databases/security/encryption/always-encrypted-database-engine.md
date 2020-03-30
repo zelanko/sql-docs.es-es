@@ -18,10 +18,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254831"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
@@ -93,7 +93,7 @@ Para actualizar correctamente la columna, haga lo siguiente:
  >[!IMPORTANT]
  > En este escenario, los datos se descifrarán cuando se envíen al servidor, ya que la columna de destino es varchar normal que no acepta datos cifrados. 
   
-## <a name="selecting--deterministic-or-randomized-encryption"></a> Selección del cifrado determinista o aleatorio  
+## <a name="selecting-deterministic-or-randomized-encryption"></a><a name="selecting--deterministic-or-randomized-encryption"></a> Selección del cifrado determinista o aleatorio  
  El motor de base de datos nunca funciona en los datos de texto no cifrado almacenados en columnas cifradas, pero sigue admitiendo algunas consultas en datos cifrados, según el tipo de cifrado de la columna. Always Encrypted admite dos tipos de cifrado: el cifrado aleatorio y el determinista.  
   
 - El cifrado determinista genera siempre el mismo valor cifrado para cualquier valor de texto no cifrado concreto. El empleo del cifrado determinista permite búsquedas de puntos, combinaciones de igualdad, agrupaciones e indexación en columnas cifradas. Pero también puede permitir que usuarios no autorizados adivinen información sobre los valores cifrados al examinar los patrones de la columna cifrada, especialmente si hay un pequeño conjunto de posibles valores cifrados, como verdadero o falso, o como la región norte, sur, este u oeste. El cifrado determinista debe usar una intercalación de columna con un criterio de ordenación binario 2 para columnas de caracteres.

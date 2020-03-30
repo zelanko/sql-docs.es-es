@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028891"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial completo
@@ -63,7 +63,7 @@ Puede crear un origen de datos compartido para los informes móviles desde cualq
   
 Lea más información sobre los [orígenes de datos compartidos en Reporting Services](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
    
-## <a name="shared-dataset">Creación de un conjunto de datos compartido</a>  
+## <a name=""></a><a name="shared-dataset">Creación de un conjunto de datos compartido</a>  
   
 Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existente, como Diseñador de informes en [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para crear el conjunto de datos compartido.  Este tutorial usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale el Generador de informes](../install-windows/install-report-builder.md) o ábralo desde el portal web. Creará tres conjuntos de datos, uno para: el valor del KPI, la tendencia del KPI y otro con más campos para el informe móvil de Reporting Services.     
   
@@ -93,7 +93,7 @@ Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnov
    
 Ahora puede usar el conjunto de datos como base para sus KPI e informes móviles.  Puede crear varios conjuntos de datos con el mismo origen de datos. También puede crear varios KPI e informes móviles a partir de estos conjuntos de datos compartidos.   
   
-## <a name="create-KPI">Crear un KPI</a>  
+## <a name=""></a><a name="create-KPI">Crear un KPI</a>  
 Puede crear KPI directamente en el portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .    
   
 1. En la esquina superior derecha del portal web, haga clic en **Nuevo** > **Nuevo KPI**.   
@@ -133,7 +133,7 @@ Puede crear KPI directamente en el portal web de [!INCLUDE[PRODUCT_NAME](../../i
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">Creación de un informe móvil de Reporting Services</a>  
+## <a name=""></a><a name="create-mobile-report">Creación de un informe móvil de Reporting Services</a>  
    
 Para crear un informe móvil de Reporting Services, [instale Publicador de informes móviles de SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766)o inícielo desde el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 

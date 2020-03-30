@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173608"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar Azure Kubernetes Service para implementaciones de clúster de macrodatos de SQL Server
@@ -30,7 +30,7 @@ En este artículo, se describen los pasos para implementar Kubernetes en AKS con
 > [!TIP]
 > También puede crear un script de la implementación de AKS y un clúster de macrodatos en un único paso. Para obtener más información, vea cómo realizar este procedimiento en un [script de Python](quickstart-big-data-cluster-deploy.md) o en un [cuaderno](deploy-notebooks.md) de Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Implementar las herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md):
    - **Kubectl**
@@ -161,7 +161,7 @@ Seleccione la versión disponible más reciente para el clúster. Anote el núme
    kubectl get nodes
    ```
 
-## <a id="troubleshoot"></a> Solucionar problemas
+## <a name="troubleshooting"></a><a id="troubleshoot"></a> Solucionar problemas
 
 Si tiene problemas para crear una instancia de Azure Kubernetes Service con los comandos anteriores, pruebe las soluciones siguientes:
 

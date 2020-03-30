@@ -11,10 +11,10 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
 ms.openlocfilehash: 441adf8e3623f06bfa98718ebc6c01c314c94828
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004714"
 ---
 # <a name="using-always-encrypted-with-the-secure-enclaves"></a>Uso de Always Encrypted con enclaves seguros
@@ -24,7 +24,7 @@ En esta página se proporciona información sobre cómo desarrollar aplicaciones
 
 Enclaves seguros es una adición a la característica [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) existente. El propósito de los enclaves seguros es solucionar las limitaciones cuando se trabaja con datos de Always Encrypted. Anteriormente, los usuarios solo podían realizar comparaciones de igualdad en los datos de Always Encrypted y tenían que recuperar y descifrar los datos para realizar otras operaciones. Los enclaves seguros solucionan esta limitación al permitir realizar cálculos en datos de texto no cifrado dentro de un enclave seguro en el lado del servidor. Un enclave seguro es una región de memoria protegida dentro del proceso de SQL Server y sirve como un entorno de ejecución de confianza para procesar información confidencial dentro del motor de SQL Server. Un enclave seguro aparece como una caja negra para el resto de SQL Server y otros procesos en la máquina servidor. No hay ninguna manera de ver los datos ni el código que se encuentran dentro del enclave desde el exterior, incluso si se cuenta con un depurador.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Prerequisites
 - Asegúrese de que Microsoft JDBC Driver 8.2 (o posterior) para SQL Server está instalado en el equipo de desarrollo. 
 
 > [!Note]

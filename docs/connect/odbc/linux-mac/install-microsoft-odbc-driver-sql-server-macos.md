@@ -11,10 +11,10 @@ author: rothja
 ms.author: v-jizho2
 manager: jroth
 ms.openlocfilehash: 7ad2b810092fae850a667a1611880f4b03b6a9a8
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79078958"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Instalación de Microsoft ODBC Driver for SQL Server (macOS)
@@ -41,7 +41,7 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 
 En las secciones siguientes se proporcionan instrucciones para instalar versiones anteriores de Microsoft ODBC Driver en macOS.
 
-## <a id="13.1"></a> ODBC 13.1
+## <a name="odbc-131"></a><a id="13.1"></a> ODBC 13.1
 
 Use los comandos siguientes para instalar Microsoft ODBC Driver 13.1 for SQL Server en OS X 10.11 (El Capitan) y macOS 10.12 (Sierra):
 

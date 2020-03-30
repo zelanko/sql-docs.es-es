@@ -16,10 +16,10 @@ ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78b4d49029c6a0f2696cc93348bff7b32767bc13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974830"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>Método setCatalog (SQLServerConnection)
@@ -45,7 +45,7 @@ public void setCatalog(java.lang.String catalog)
 ## <a name="remarks"></a>Observaciones  
  El método setCatalog especifica este método setCatalog en la interfaz java.sql.Connection.  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] elude automáticamente el argumento *catalog*. Al utilizar este método, se establece la propiedad de catálogo para el objeto Connection. No se establece implícitamente de cualquier otra manera.  
+ *elude automáticamente el argumento*catalog[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Al utilizar este método, se establece la propiedad de catálogo para el objeto Connection. No se establece implícitamente de cualquier otra manera.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

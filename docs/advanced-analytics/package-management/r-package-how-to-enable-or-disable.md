@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485240"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitación o deshabilitación de la administración remota de paquetes para SQL Server
@@ -31,7 +31,7 @@ La [habilitación](#bkmk_enable) de esta característica es un proceso de dos pa
 
 La [deshabilitación](#bkmk_disable) de la característica de administración de paquetes también requiere varios pasos: quite los permisos y los paquetes de nivel de base de datos (una vez por base de datos) y, luego, quite los roles del servidor (una vez por instancia).
 
-## <a name="bkmk_enable"></a> Habilitación de la administración de paquetes
+## <a name="enable-package-management"></a><a name="bkmk_enable"></a> Habilitación de la administración de paquetes
 
 1. En SQL Server, abra un símbolo del sistema con privilegios elevados y navegue hasta la carpeta donde se encuentra la utilidad, RegisterRExt.exe. La ubicación predeterminada es `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
@@ -76,7 +76,7 @@ La [deshabilitación](#bkmk_disable) de la característica de administración de
 
 Después de habilitar esta característica, puede usar la función RevoScaleR para instalar o desinstalar paquetes desde un cliente remoto de R.
 
-## <a name="bkmk_disable"></a> Deshabilitación de la administración de paquetes
+## <a name="disable-package-management"></a><a name="bkmk_disable"></a> Deshabilitación de la administración de paquetes
 
 1. Desde un símbolo del sistema con privilegios elevados, ejecute de nuevo la utilidad RegisterRExt y deshabilite la administración de paquetes en el nivel de base de datos:
 

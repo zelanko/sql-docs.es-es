@@ -19,10 +19,10 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578444"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos
@@ -41,7 +41,7 @@ ms.locfileid: "65578444"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Rules"></a> Descripción de las reglas  
+##  <a name="understanding-rules"></a><a name="Rules"></a> Descripción de las reglas  
  Puede establecer cuatro tipos de reglas que permiten al procesador de informes ajustar automáticamente las propiedades de presentación de los elementos de mapa en una capa. Las reglas varían en función del tipo de elemento de mapa: polígonos, líneas o puntos.  
   
 -   **Polígonos.** Varíe el color del polígono.  
@@ -52,7 +52,7 @@ ms.locfileid: "65578444"
   
 -   **Puntos.** Para los marcadores que se muestran para cada punto, varíe el color, el tamaño y el tipo de marcador.  
   
-##  <a name="Color"></a> Descripción de las reglas de color  
+##  <a name="understanding-color-rules"></a><a name="Color"></a> Descripción de las reglas de color  
  Las reglas de color se aplican a los colores de relleno para los polígonos, líneas y marcadores que representan puntos o puntos centrales del polígono.  
   
  Las reglas de color admiten cuatro opciones:  
@@ -74,28 +74,28 @@ ms.locfileid: "65578444"
   
  Para quitar los valores que no desee en la escala de colores, borre la opción correspondiente para cada regla de color de cada capa.  
   
-##  <a name="Width"></a> Descripción de las reglas de ancho de línea  
+##  <a name="understanding-line-width-rules"></a><a name="Width"></a> Descripción de las reglas de ancho de línea  
  Las reglas de ancho se aplican a las líneas. Admiten dos opciones:  
   
 -   Usar ancho de línea predeterminado. Especifique el ancho de línea en puntos.  
   
 -   Visualizar datos mediante el uso de ancho de línea. Establezca los anchos máximo y mínimo para la línea, especifique el campo de datos que desea utilizar para variar el ancho y, a continuación, especifique las opciones de distribución que se aplicarán a esos datos.  
   
-##  <a name="Size"></a> Descripción de las reglas del tamaño de marcador  
+##  <a name="understanding-marker-size-rules"></a><a name="Size"></a> Descripción de las reglas del tamaño de marcador  
  Las reglas de tamaño se aplican a los marcadores que representan puntos o puntos centrales de polígono. Las reglas de tamaño admiten dos opciones:  
   
 -   Usar tamaño de marcador predeterminado. Especifique el tamaño en puntos.  
   
 -   Visualizar datos mediante el uso de tamaño. Establezca los tamaños máximo y mínimo para el marcador, especifique el campo de datos que desea utilizar para variar el tamaño y, a continuación, especifique las opciones de distribución que se aplicarán a esos datos.  
   
-##  <a name="Marker"></a> Descripción de las reglas del tipo de marcador  
+##  <a name="understanding-marker-type-rules"></a><a name="Marker"></a> Descripción de las reglas del tipo de marcador  
  Las reglas de tipo de marcador se aplican a los marcadores que representan puntos o puntos centrales de polígono. Las reglas de tipo de marcador admiten dos opciones:  
   
 -   Usar tipo de marcador predeterminado. Especifique uno de los tipos de marcador disponibles.  
   
 -   Visualizar datos mediante el uso de marcadores. Especifique un conjunto de marcadores y el orden en el que desea utilizarlos. Entre los tipos de marcadores se incluyen: **Circle**, **Diamond**, **Pentagon**, **PushPin**, **Rectangle**, **Star**, **Triangle**, **Trapezoid**y **Wedge**.  
   
-##  <a name="Distribution"></a> Descripción de las opciones de distribución  
+##  <a name="understanding-distribution-options"></a><a name="Distribution"></a> Descripción de las opciones de distribución  
  Para crear una distribución de valores, puede dividir los datos en intervalos. Especifique el tipo de distribución, el número de subintervalos y los valores mínimo y máximo del intervalo.  
   
  En la lista siguiente, suponga que tiene tres elementos de mapa y seis valores analíticos relacionados que van de 1 a 9999 con los valores siguientes: 1, 10, 200, 2000, 4777 y 8999.  
@@ -110,7 +110,7 @@ ms.locfileid: "65578444"
   
  Las reglas utilizan los valores de distribución para variar los valores de presentación de los elementos de mapa.  
   
-##  <a name="Legends"></a> Descripción de las leyendas y sus elementos  
+##  <a name="understanding-legends-and-legend-items"></a><a name="Legends"></a> Descripción de las leyendas y sus elementos  
  Las reglas que se especifican para cada capa crean automáticamente los elementos de leyenda. Las opciones de regla controlan cuántos elementos se crean y en qué leyenda aparecen. De forma predeterminada, todos los elementos de todas las reglas se agregan a la primera leyenda. Para retirar los elementos de la primera leyenda, cree tantas leyendas adicionales como sean necesarias y, para cada regla, especifique la leyenda que se utilizará para mostrar los elementos que sean resultado de la regla. Para ocultar los elementos en función de una regla, especifique un nombre de leyenda en blanco.  
   
  Para controlar dónde aparece una leyenda, utilice el cuadro de diálogo Propiedades de la leyenda a fin de especificar una posición en relación a la ventanilla del mapa. Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  

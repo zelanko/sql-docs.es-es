@@ -157,10 +157,10 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6fb9864d97975b15711ec9cc1264251e8aac8c76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082125"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Generador de informes y SSRS)
@@ -178,12 +178,12 @@ ms.locfileid: "77082125"
   
  ![Diagrama de elementos de medidor](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagrama de elementos de medidor")  
   
- Para más información sobre el uso de medidores como KPI, consulte el [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+ Para obtener más información sobre el uso de medidores como KPI, vea [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Puede publicar medidores por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="GaugeTypes"></a> Tipos de medidor  
+##  <a name="gauge-types"></a><a name="GaugeTypes"></a> Tipos de medidor  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona dos tipos de medidores: radial y lineal. Normalmente, el medidor radial se utiliza cuando los datos se quieren expresar como una velocidad. El medidor lineal se usa para expresar los datos como una temperatura o valor de escala.  
   
  Las diferencias principales entre los dos tipos son la forma del medidor y los punteros de medidor disponibles. Los medidores radiales son circulares, o partes de un círculo, y se parecen a los indicadores de velocidad. Los punteros del medidor suelen ser agujas, pero pueden ser marcadores o barras.  
@@ -198,15 +198,15 @@ ms.locfileid: "77082125"
   
  ![rs_RadialGauge](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Opciones de medidor radial: Radial, Radial con medidor mini, Dos escalas, 90 grados Noreste, 90 grados Noroeste, 90 grados Suroeste, 90 grados Sureste, 180 grados Norte, 180 grados Sur, 180 grados Oeste, 180 grados Este y Medidor.  
+ Las opciones de medidor radial: Radial, Radial con medidor mini, Dos escalas, 90 grados Noreste, 90 grados Noroeste, 90 grados Suroeste, 90 grados Sureste, 180 grados Norte, 180 grados Sur, 180 grados Oeste, 180 grados Este e Indicador.  
   
  **Medidor lineal**  
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Opciones de medidor lineal: Horizontal, Vertical, Varios punteros de barra, Dos escalas, Rango de tres colores, Logarítmico, Termómetro, Termómetro fahrenheit/celsius y Gráfico de viñetas.  
+ Las opciones de medidor lineal: Horizontal, Vertical, Varios punteros de barra, Dos escalas, Rango de tres colores, Logarítmico, Termómetro, Termómetro fahrenheit/celsius y Gráfico de viñetas.  
   
-##  <a name="AddingData"></a> Agregar datos a un medidor  
+##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a> Agregar datos a un medidor  
  Una vez que haya agregado un medidor a la superficie de diseño, arrastre un campo de conjunto de datos hasta el panel de datos del medidor. De forma predeterminada, el medidor agrega los valores del campo en un valor que se muestra en el medidor. Ese valor se adjunta al puntero mediante la propiedad Value. Dependiendo del tipo de datos del campo, el medidor utiliza el agregado SUM o COUNT. Al usar datos numéricos, indicados para agregar, el medidor usa la función SUM. De lo contrario, usa el agregado COUNT. El valor del puntero puede utilizar otro agregado distinto o ninguno.  
   
  Puede agregar agrupación al medidor para ver grupos individuales o filas individuales en el mismo. Cuando se aplican la agrupación y el filtrado, el medidor usa el valor del puntero para mostrar el último grupo o la última fila del conjunto de datos devuelto.  
@@ -248,7 +248,7 @@ ms.locfileid: "77082125"
   
  Es posible que desee agregar un grupo al medidor si, por ejemplo, está mostrando varios medidores en una tabla o una lista y desea mostrar datos agregados por grupo. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="PositioningData"></a> Colocar elementos en un medidor  
+##  <a name="positioning-elements-in-a-gauge"></a><a name="PositioningData"></a> Colocar elementos en un medidor  
  El panel de medidores es el contenedor de nivel superior que contiene uno o más medidores. Para ver el cuadro de diálogo **Propiedades del panel de medidores** , haga clic fuera del medidor. Cada medidor, a su vez, contiene varios elementos: una escala del medidor, un intervalo del medidor y un puntero del medidor. Cuando use el medidor, deberá entender cómo se miden los elementos en el panel de medidores para poder modificar el tamaño y ubicación de dichos elementos.  
   
 ### <a name="understanding-size-and-position-measurements"></a>Descripción de las medidas de tamaño y ubicación  
@@ -275,7 +275,7 @@ ms.locfileid: "77082125"
 ### <a name="maintaining-aspect-ratio-on-a-linear-gauge"></a>Mantener la relación de aspecto en un medidor lineal  
  El medidor radial adopta una forma circular, por lo que este tipo de medidor normalmente mantiene los mismos valores de ancho y alto. Sin embargo, en un medidor lineal, que adopta una forma rectangular, la proporción entre el ancho y el alto suele ser desigual. La relación de aspecto de un medidor determina la proporción de ancho y alto que se debe mantener al cambiar el tamaño del medidor. Por ejemplo, si este valor se establece en 2, el ancho del medidor siempre será el doble que el alto, independientemente del tamaño que adopte el medidor. Para establecer la relación de aspecto, puede establecer la propiedad AspectRatio en el cuadro de diálogo **Propiedades de medidor lineal** .  
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Temas de procedimientos  
  En esta sección se describen procedimientos que muestran, paso a paso, cómo trabajar con medidores en los informes; cómo obtener datos para mostrarlos eficazmente en medidores, y cómo agregar y configurar los medidores y sus elementos.  
   
 -   [Agregar un medidor a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
@@ -286,7 +286,7 @@ ms.locfileid: "77082125"
   
 -   [Especificar una imagen como puntero en un medidor (Generador de informes y SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
   
-##  <a name="InThisSection"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> En esta sección  
  En los siguientes temas se proporciona información adicional acerca de cómo trabajar con medidores.  
   
 |||  

@@ -9,13 +9,13 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72252141"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adición de un parámetro al informe (Generador de informes)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
 En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que los lectores del informe puedan filtrar los datos del informe para uno o más valores. 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -23,14 +23,14 @@ En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssR
 Los parámetros del informe se crean automáticamente para cada parámetro de la consulta que incluya en una consulta del conjunto de datos. El tipo de datos de parámetro determina cómo aparece en la barra de herramientas de visualización de informe. 
    
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 25 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
 Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Setup"></a>1. Crear un informe de matriz y un conjunto de datos en el Asistente para tabla o matriz  
+## <a name="1-create-a-matrix-report-and-dataset-in-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. Crear un informe de matriz y un conjunto de datos en el Asistente para tabla o matriz  
 Cree un informe de matriz, un origen de datos y un conjunto de datos.  
   
 > [!NOTE]  
@@ -82,13 +82,13 @@ Cree un informe de matriz, un origen de datos y un conjunto de datos.
   
 11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ) para ver los datos.   
   
-    El conjunto de resultados consta de 11 filas de datos que muestran la cantidad de elementos vendidos en cada subcategoría de cuatro almacenes e incluye las columnas siguientes: StoreID, Subcategoría, Cantidad. El nombre del almacén no forma parte del conjunto de resultados. Más adelante en este tutorial, buscará en otro conjunto de datos el nombre del almacén que corresponde al identificador del almacén.  
+    El conjunto de resultados consta de 11 filas de datos que muestran la cantidad de elementos vendidos para cada subcategoría de cuatro almacenes en las columnas siguientes: StoreID, Subcategory, Quantity. El nombre del almacén no forma parte del conjunto de resultados. Más adelante en este tutorial, buscará en otro conjunto de datos el nombre del almacén que corresponde al identificador del almacén.  
   
     Esta consulta no contiene parámetros de consulta. Agregará los parámetros de consulta posteriormente en este tutorial.   
   
 12. Haga clic en **Next**.  
   
-## <a name="CompleteWizard"></a>2. Organizar datos y elegir el diseño en el asistente  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. Organizar datos y elegir el diseño en el asistente  
 El asistente proporciona un diseño inicial para mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar la tabla o el diseño de la matriz.  
   
 ### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -127,7 +127,7 @@ El informe se ejecuta en el servidor de informes y muestra el título y la hora 
   
 Hasta el momento, los encabezados de columna muestran el identificador del almacén, pero no su nombre. Más adelante agregará una expresión para buscar el nombre del almacén en un conjunto de datos que contiene pares identificador/nombre de almacén.  
   
-## <a name="Query"></a>3. Agregar un parámetro de consulta para crear un parámetro de informe  
+## <a name="3-add-a-query-parameter-to-create-a-report-parameter"></a><a name="Query"></a>3. Agregar un parámetro de consulta para crear un parámetro de informe  
 Al agregar un parámetro de consulta a una consulta, el Generador de informes crea automáticamente un parámetro de informe de un solo valor con propiedades predeterminadas para el nombre, mensaje y tipo de datos.  
   
 ### <a name="to-add-a-query-parameter"></a>Para agregar un parámetro de consulta  
@@ -136,7 +136,7 @@ Al agregar un parámetro de consulta a una consulta, el Generador de informes cr
   
 2.  En el panel Datos de informe, expanda la carpeta **Conjuntos de datos** , haga clic con el botón derecho en **DataSet1**y haga clic en **Consulta**.  
   
-3.  Agregue la siguiente cláusula **WHERE** de [!INCLUDE[tsql](../includes/tsql-md.md)] como última línea de la consulta:  
+3.  Agregue la siguiente cláusula [!INCLUDE[tsql](../includes/tsql-md.md)]WHERE**de** como última línea de la consulta:  
   
     ```  
     WHERE StoreID = (@StoreID)  
@@ -162,7 +162,7 @@ Tenga en cuenta que ahora hay un parámetro de informe denominado *\@StoreID* y 
   
 ¿No ve un panel Parámetros? En el menú **Ver** , seleccione **Parámetros**.  
   
-## <a name="ChangeDefaultProperties"></a>4. Cambiar el tipo de datos predeterminado y otras propiedades de un parámetro de informe  
+## <a name="4-change-default-data-type-and-other-properties-for-a-report-parameter"></a><a name="ChangeDefaultProperties"></a>4. Cambiar el tipo de datos predeterminado y otras propiedades de un parámetro de informe  
 Después de crear un parámetro de informe, puede ajustar los valores predeterminados de las propiedades.  
   
 ### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Para cambiar el tipo de datos predeterminado para un parámetro de informe  
@@ -185,7 +185,7 @@ De manera predeterminada, el parámetro que ha creado tiene el tipo de datos **T
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
-## <a name="AddDataset"></a>4a. Agregar un conjunto de datos para proporcionar los valores disponibles y nombres para mostrar  
+## <a name="4a-add-a-dataset-to-provide-available-values-and-display-names"></a><a name="AddDataset"></a>4a. Agregar un conjunto de datos para proporcionar los valores disponibles y nombres para mostrar  
 Para asegurarse de que los lectores del informe solo pueden escribir valores válidos para un parámetro, puede crear una lista desplegable de valores entre los que elegir. Los valores pueden proceder de un conjunto de datos o de una lista que se especifique. Se deben proporcionar valores disponibles de un conjunto de datos con una consulta que no contenga una referencia al parámetro.  
   
 ### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>Para crear un conjunto de datos para los valores válidos de un parámetro  
@@ -215,7 +215,7 @@ Para asegurarse de que los lectores del informe solo pueden escribir valores vá
   
     El panel Datos de informe muestra los campos StoreID y StoreName bajo el nodo de conjunto de datos **Almacenes** .  
   
-## <a name="AvailableValues"></a>4b. Especificar valores disponibles para mostrar en una lista 
+## <a name="4b-specify-available-values-to-show-in-a-list"></a><a name="AvailableValues"></a>4b. Especificar valores disponibles para mostrar en una lista 
 Después de crear un conjunto de datos para proporcionar los valores disponibles, cambie las propiedades de informe para especificar qué conjunto de datos y qué campo usar para rellenar la lista desplegable de valores válidos de la barra de herramientas del visor de informes.  
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para proporcionar los valores disponibles para un parámetro desde un conjunto de datos  
@@ -246,7 +246,7 @@ Después de crear un conjunto de datos para proporcionar los valores disponibles
   
 El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
   
-## <a name="DefaultValues"></a>4c. Especificar un valor predeterminado 
+## <a name="4c-specify-a-default-value"></a><a name="DefaultValues"></a>4c. Especificar un valor predeterminado 
 Puede especificar un valor predeterminado para cada parámetro de modo que el informe se ejecute automáticamente.  
   
 ### <a name="to-specify-a-default-value-from-a-dataset"></a>Para especificar un valor predeterminado de un conjunto de datos  
@@ -283,7 +283,7 @@ Para *\@StoreID*, el visor de informes muestra el valor "Contoso Norteamérica O
   
 Para *\@StoreID*, el visor de informes muestra "Contoso Catalog Store", porque es el nombre para mostrar del identificador de almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
   
-## <a name="NameValue"></a>4d. Buscar un par Nombre/Valor  
+## <a name="4d-look-up-a-namevalue-pair"></a><a name="NameValue"></a>4d. Buscar un par Nombre/Valor  
 Un conjunto de datos podría contener el identificador y el campo de nombre correspondiente. Si solo tiene un identificador, puede buscar el nombre correspondiente en un conjunto de datos que haya creado y que tenga pares de nombre/valor.  
   
 ### <a name="to-look-up-a-value-from-a-dataset"></a>Para buscar un valor de un conjunto de datos  
@@ -308,13 +308,13 @@ Un conjunto de datos podría contener el identificador y el campo de nombre corr
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    El encabezado de columna de almacén contiene el texto para mostrar de una expresión compleja: **Expr**.  
+    El encabezado de columna del almacén contiene el texto para mostrar de una expresión compleja: **Expr**.  
   
 8.  Obtenga una vista previa del informe.  
   
 El encabezado de columna de la parte superior de cada columna muestra el nombre del almacén en lugar del identificador del almacén.  
   
-## <a name="Expression"></a>5. Mostrar el valor de parámetro seleccionado en el informe  
+## <a name="5-display-the-selected-parameter-value-in-the-report"></a><a name="Expression"></a>5. Mostrar el valor de parámetro seleccionado en el informe  
 Si los lectores del informe tienen preguntas sobre un informe, resulta útil saber qué valores de parámetro han elegido. Puede conservar los valores seleccionados por el usuario para cada parámetro del informe. Una forma de hacerlo es mostrar los parámetros en un cuadro de texto en el pie de página.  
   
 ### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>Para mostrar el valor del parámetro seleccionado y etiquetarlo en un pie de página  
@@ -335,7 +335,7 @@ Si los lectores del informe tienen preguntas sobre un informe, resulta útil sab
   
 7.  Obtenga una vista previa del informe.  
   
-## <a name="Filter"></a>6. Utilizar el parámetro de informe en un filtro  
+## <a name="6-use-the-report-parameter-in-a-filter"></a><a name="Filter"></a>6. Utilizar el parámetro de informe en un filtro  
 Los filtros ayudan a controlar qué datos se deben usar en un informe una vez que se han recuperado de un origen de datos externo. Para permitir que los lectores del informe controlen los datos que quieren ver, puede incluir el parámetro de informe en un filtro para la matriz.  
   
 ### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>Para especificar un parámetro en un filtro de la matriz  
@@ -364,7 +364,7 @@ Los filtros ayudan a controlar qué datos se deben usar en un informe una vez qu
   
 La matriz muestra los datos correspondientes al almacén que había seleccionado.  
   
-## <a name="Multivalued"></a>7. Cambiar el parámetro de informe a fin de que acepte varios valores  
+## <a name="7-change-the-report-parameter-to-accept-multiple-values"></a><a name="Multivalued"></a>7. Cambiar el parámetro de informe a fin de que acepte varios valores  
 Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la consulta y todas las expresiones que contienen una referencia al parámetro, incluidos los filtros. Un parámetro de varios valores es una matriz de valores. En una consulta de conjunto de datos, la sintaxis de la consulta debe comprobar la inclusión de un valor en un conjunto de valores. En una expresión de informe, la sintaxis de la expresión debe tener acceso a una matriz de valores y no a un valor individual.  
   
 ### <a name="to-change-a-parameter-from-single-to-multivalued"></a>Para cambiar un parámetro de un solo valor a varios valores  
@@ -424,7 +424,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
     ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
-## <a name="Boolean"></a>8. Agregar un parámetro booleano para obtener visibilidad condicional  
+## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. Agregar un parámetro booleano para obtener visibilidad condicional  
   
 ### <a name="to-add-a-boolean-parameter"></a>Para agregar un parámetro booleano  
   
@@ -468,7 +468,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
     El cuadro de texto del pie de página aparece y muestra todos los nombres de almacén que haya seleccionado.  
   
-## <a name="Title"></a>9. Agregar un título de informe  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. Agregar un título de informe  
   
 ### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
 
@@ -478,7 +478,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
 2.  Escriba Parameterized Product Sales y, a continuación, haga clic fuera del cuadro de texto.  
   
-## <a name="Save"></a>10. Guardar el informe  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. Guardar el informe  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  
   

@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
 ms.openlocfilehash: 24375bafa9123c5bba4adf83fce81427f39722e4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307858"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Cuadros de diálogo de SQL Server Profiler
@@ -59,7 +59,7 @@ Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedad
 
 ## <a name="trace-template-properties"></a>Propiedades de la plantilla de seguimiento 
 ### <a name="new-general-tab"></a>Nuevo (pestaña General)
-Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para crear nuevas plantillas de seguimiento mediante las siguientes opciones. Para acceder a este cuadro de diálogo, en el menú **Archivo** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], coloque el cursor sobre **Plantillas** y haga clic en **Nuevo**.
+Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para crear nuevas plantillas de seguimiento mediante las siguientes opciones. Para acceder a este cuadro de diálogo, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Archivo**de**, coloque el cursor sobre **Plantillas** y haga clic en **Nuevo**.
 
 |Elemento|Descripción
 |---|---
@@ -69,7 +69,7 @@ Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plant
 |**Usar como plantilla predeterminada para tipo de servidor seleccionado**|Utilice esta plantilla como valor predeterminado en seguimientos creados para este tipo de servidor.  
 
 ### <a name="edit-general-tab"></a>Editar (pestaña General)
- Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para ver o editar las plantillas de seguimiento existentes utilizando las opciones que se muestran a continuación. Para obtener acceso a este cuadro de diálogo, en el menú **Archivo** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], seleccione **Plantillas** y, a continuación, haga clic en **Editar plantilla**.  
+ Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para ver o editar las plantillas de seguimiento existentes utilizando las opciones que se muestran a continuación. Para obtener acceso a este cuadro de diálogo, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Archivo**de**, seleccione **Plantillas** y, a continuación, haga clic en **Editar plantilla**.  
 
 |Elemento|Descripción
 |---|---
@@ -186,7 +186,7 @@ Microsoft SQL Server Profiler y el Asistente para la optimización utilizan este
 |---|---
 |**SQL Server**|Especifica la instancia de SQL Server conectada actualmente. Este campo se llena automáticamente y no puede actualizarse.  
 |**Base de datos**|Especifica la base de datos en la que se ubica la tabla de seguimiento.  
-|**Propietario**|Especifica el propietario de la tabla de seguimiento. Este campo se llena automáticamente como **dbo**.  
+|**Propietario**|Specifies the owner of the trace table. Este campo se llena automáticamente como **dbo**.  
 |**Table**|Especifica el nombre de la tabla de seguimiento desde la que debe leerse el seguimiento.  
 
 ## <a name="destination-table"></a>Tabla de destino
@@ -196,7 +196,7 @@ Utilice el cuadro de diálogo **Tabla de destino** para especificar una tabla do
 |---|---
 |**SQL Server**|Especifica la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectada actualmente. Este campo se llena automáticamente y no puede actualizarse. Para cambiar el servidor, haga clic en **Cancelar** y conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde desea almacenar la tabla de seguimiento.  
 |**Base de datos**|Especifique la base de datos donde desea almacenar la tabla de seguimiento.  
-|**Propietario**|Especifica el propietario de la tabla de seguimiento. Este campo se llena automáticamente como **dbo**.  
+|**Propietario**|Specifies the owner of the trace table. Este campo se llena automáticamente como **dbo**.  
 |**Table**|Especifique el nombre de la tabla donde desea almacenar el seguimiento.  
 
 ## <a name="replay-configuration"></a>Configuración de reproducción
@@ -243,7 +243,7 @@ Utilice el cuadro de diálogo **Buscar** para buscar un seguimiento para palabra
 |**Coincidir mayúsculas y minúsculas**|Busca texto en el que se usen las mismas mayúsculas y minúsculas que en el cuadro **Buscar** . Desactive esta casilla para buscar ejemplos del seguimiento que tengan caracteres tanto en mayúscula como en minúscula.  
 |**Solo palabras completas**|Limita la búsqueda a palabras completas. Desactive la casilla **Solo palabras completas** si desea realizar la búsqueda de algunos caracteres de una palabra.  
 |**Buscar siguiente**|Busca el ejemplo siguiente de los caracteres del cuadro **Buscar** .  
-|**Buscar anterior**|Realiza una búsqueda hacia atrás en el seguimiento, para buscar el ejemplo anterior de los caracteres del cuadro **Buscar** .  
+|**Buscar anterior**|Realiza una búsqueda hacia atrás en el seguimiento, para buscar el ejemplo anterior de los caracteres del cuadro **Buscar**.  
 
  ## <a name="organize-columns"></a>Organizar columnas
 Utilice el cuadro de diálogo **Organizar columnas** para seleccionar columnas de datos y agrupar o agregar eventos que se muestran en un seguimiento; esto facilita la lectura y el análisis de los archivos o tablas de seguimiento grandes.  
@@ -251,7 +251,7 @@ Utilice el cuadro de diálogo **Organizar columnas** para seleccionar columnas d
 - La agrupación organiza todas las clases de evento de un tipo específico en una ventana de seguimiento. Sin embargo, los eventos no se contraen bajo el tipo de clase de evento.  
 
 Cuando agrupa o agrega eventos en una ventana de seguimiento, las columnas seleccionadas para agrupar o agregar permanecen fijas en la ventana, pero puede desplazarse a la derecha o la izquierda para ver las demás columnas de datos.  
-Para tener acceso a este cuadro de diálogo, abra un archivo o una tabla de seguimiento existente y haga clic en **Propiedades** en el menú **Archivo** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. En el cuadro de diálogo **Propiedades de seguimiento** , haga clic en la pestaña **Selección de eventos** y, a continuación, haga clic en **Organizar columnas**. También puede hacer clic en **Organizar columnas** en la pestaña **Selección de eventos** cuando crea un nuevo seguimiento.  
+Para tener acceso a este cuadro de diálogo, abra un archivo o una tabla de seguimiento existente y haga clic en **Propiedades** en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Archivo**de**. En el cuadro de diálogo **Propiedades de seguimiento** , haga clic en la pestaña **Selección de eventos** y, a continuación, haga clic en **Organizar columnas**. También puede hacer clic en **Organizar columnas** en la pestaña **Selección de eventos** cuando crea un nuevo seguimiento.  
 Desplaza los nombres de columnas de datos bajo **Grupos** para agrupar o agregar clases de eventos en la ventana de seguimiento.
 - Para agregar eventos, desplace una columna de datos a **Grupos**. De este modo, todos los eventos de un tipo específico se contraen bajo el nombre del tipo de clase de evento en la ventana de seguimiento. A la izquierda del nombre de clase de eventos aparece un signo más ( **+** ). Haga clic en el signo más para expandir el tipo de clase de evento y ver todos sus eventos. Puede activar y desactivar la agregación y la agrupación si hace clic en **Vista agregada** o **Vista agrupada** en el menú **Ver** .
 - Para agrupar eventos, desplace varias columnas de datos a **Grupos**. De este modo, todos los eventos de un tipo específico se agrupan en la ventana de seguimiento, pero no se contraen bajo el nombre del tipo de clase de evento. Puede cambiar entre una vista agrupada y una vista no agrupada si hace clic en **Vista agrupada** en el menú Ver. Cuando se desplaza más de una columna de datos a **Grupos**, la opción para cambiar a **Vista agregada** deja de estar disponible.
@@ -268,7 +268,7 @@ Utilice el cuadro de diálogo **Editar filtro** para crear y modificar filtros d
  >Para las columnas de tipo de datos de cadena, los criterios de filtro aparecerán como un valor de cadena LIKE o NOT LIKE.  
 
 ## <a name="select-template-name"></a>Seleccionar nombre de plantilla
-Utilice el cuadro de diálogo **Seleccionar nombre de plantilla** para seleccionar una plantilla de seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existente para exportarla a un archivo del sistema operativo. También puede utilizar este cuadro de diálogo para seleccionar o escribir un nombre distinto para guardar una plantilla de seguimiento como cuando se edita una plantilla de seguimiento existente. Para tener acceso a este cuadro de diálogo cuando se exporta una plantilla, en el menú **Archivo** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], seleccione **Plantillas** y, a continuación, haga clic en **Exportar plantilla**. Para tener acceso a este cuadro de diálogo cuando se cambia el nombre de una plantilla, en el menú **Archivo** , seleccione **Plantillas**, **Editar plantilla**y, a continuación, haga clic en **Guardar como**.  
+Utilice el cuadro de diálogo **Seleccionar nombre de plantilla** para seleccionar una plantilla de seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existente para exportarla a un archivo del sistema operativo. También puede utilizar este cuadro de diálogo para seleccionar o escribir un nombre distinto para guardar una plantilla de seguimiento como cuando se edita una plantilla de seguimiento existente. Para tener acceso a este cuadro de diálogo cuando se exporta una plantilla, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Archivo**de**, seleccione **Plantillas** y, a continuación, haga clic en **Exportar plantilla**. Para tener acceso a este cuadro de diálogo cuando se cambia el nombre de una plantilla, en el menú **Archivo** , seleccione **Plantillas**, **Editar plantilla**y, a continuación, haga clic en **Guardar como**.  
 
 |Elemento|Descripción
 |---|---

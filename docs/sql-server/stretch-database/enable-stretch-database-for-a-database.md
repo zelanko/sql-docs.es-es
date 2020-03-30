@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844588"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
@@ -41,7 +41,7 @@ ms.locfileid: "73844588"
   
 -   Disponga de la información de conexión e inicio de sesión que necesita para crear un nuevo servidor de Azure o para seleccionar un servidor existente de Azure.  
   
-##  <a name="EnableTSQLServer"></a> Requisito previo: habilitar Stretch Database en el servidor  
+##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> Requisito previo: habilitar Stretch Database en el servidor  
  Antes de poder habilitar Stretch Database en una base de datos o una tabla, tendrá que hacerlo en el servidor local. Esta operación requiere permisos sysadmin o serveradmin.  
   
 -   Si tiene los permisos administrativos necesarios, el asistente **Habilitar base de datos para Stretch** configurará el servidor para Stretch.  
@@ -60,10 +60,10 @@ GO
   
  Para obtener más información, vea [Configure the remote data archive Server Configuration Option (Configuración de la opción de configuración del servidor Archivo de datos remotos)](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md) y [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-##  <a name="Wizard"></a> Uso del Asistente para habilitar Stretch Database en una base de datos  
+##  <a name="use-the-wizard-to-enable-stretch-database-on-a-database"></a><a name="Wizard"></a> Uso del Asistente para habilitar Stretch Database en una base de datos  
  Para obtener información sobre el asistente Habilitar base de datos para Stretch, incluidos los datos que se deben especificar y las decisiones que hay que tomar, vea [Get started by running the Enable Database for Stretch Wizard (Introducción mediante la ejecución del Asistente para Habilitar base de datos para Stretch)](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
   
-##  <a name="EnableTSQLDatabase"></a> Uso de Transact-SQL para habilitar Stretch Database en una base de datos  
+##  <a name="use-transact-sql-to-enable-stretch-database-on-a-database"></a><a name="EnableTSQLDatabase"></a> Uso de Transact-SQL para habilitar Stretch Database en una base de datos  
  Antes de habilitar Stretch Database en tablas individuales, debe habilitarlo en la base de datos.  
   
  Para habilitar Stretch Database en una base de datos o tabla, se requieren permisos db_owner. La habilitación de Stretch Database en una base de datos también requiere permisos CONTROL DATABASE.  

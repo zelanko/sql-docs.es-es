@@ -1,4 +1,4 @@
-- name: "Documentación de SQL\_Server\_2014"
+- name: "Documentación de SQL Server\_2014"
   href: index.yml
 - name: Analysis Services +
   href: ../analysis-services/analysis-services.md

@@ -9,10 +9,10 @@ ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081936"
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de datos de informe (SSRS)
@@ -36,12 +36,12 @@ ms.locfileid: "77081936"
   
  Además, puede agregar conjuntos de datos a un informe agregando elementos de informe que incluyan los conjuntos de datos de los que dependen. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para obtener información sobre cómo crear un informe que muestre datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Para compilar un informe que incluya sus propios datos, vea [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Para aprender a crear un informe donde se muestren datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Para crear un informe que contenga sus propios datos, vea [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a> Agregar los datos del informe  
+##  <a name="adding-report-data"></a><a name="Methods"></a> Agregar los datos del informe  
  En el Generador de informes, puede agregar los datos del informe de las siguientes formas.  
   
 -   Agregar a un informe elementos de informe de un servidor de informes. Cada elemento de informe es autónomo e incluye los conjuntos de datos dependientes. Los conjuntos de datos están predefinidos.  
@@ -76,7 +76,7 @@ ms.locfileid: "77081936"
 -   [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-##  <a name="QuickStart"></a> Agregar datos con los elementos de informe  
+##  <a name="adding-data-with-report-parts"></a><a name="QuickStart"></a> Agregar datos con los elementos de informe  
  Los elementos de informe contienen los conjuntos de datos de los que dependen. Estos conjuntos de datos se generan en orígenes de datos compartidos disponibles en el servidor de informes. En el Generador de informes, cuando agregue un elemento de informe a un informe, también se agregan los conjuntos de datos dependientes, como si los hubiera agregado manualmente. Por ejemplo, un gráfico predefinido contiene un conjunto de datos. Para ver los datos, obtenga una vista previa del informe.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "77081936"
 -   Para más información, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) y [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
   
-##  <a name="Queries"></a> Consultas y diseñadores de consultas  
+##  <a name="queries-and-query-designers"></a><a name="Queries"></a> Consultas y diseñadores de consultas  
  Para especificar los datos que desee de un origen de datos, compile un comando de consulta. Cada tipo de origen de datos proporciona un *diseñador de consultas* relacionado para ayudarle a compilar la consulta. El diseñador de consultas puede ser gráfico o estar basado en texto. En un diseñador gráfico de consultas, puede ver los metadatos que representan los datos del origen de datos externo y crear interactivamente una consulta arrastrando campos o entidades hasta la superficie de diseño de la consulta. En un diseñador de consultas basado en texto, debe escribir, o importar, consultas en la sintaxis de consulta admitida por el origen de datos externo.  
   
  En el diseñador de consultas, puede ejecutar la consulta para ver datos de ejemplo y validar la sintaxis del comando de consulta. Los nombres de columna del conjunto de resultados se convierten en los nombres de campo que se ven en el panel Datos de informe. El conjunto de resultados debe ser un conjunto único de filas y columnas en el que existe el mismo número de valores para cada fila de datos. No se admiten varios conjuntos de resultados de una única consulta. Las jerarquías desiguales, que no tienen un número constante de columnas y pueden generar un número distinto de valores de datos para cada fila, no se admiten.  
@@ -97,7 +97,7 @@ ms.locfileid: "77081936"
  Los proveedores de datos se ocupan de la comunicación entre una extensión de datos y el origen de datos externo. Cada proveedor de datos determina la compatibilidad con la sintaxis de comandos de consulta, los parámetros de consulta y los tipos de datos de los valores en el conjunto de resultados. Para más información, vea el tema del tipo específico de extensión de datos y [Herramientas de diseño de consulta &#40;SSRS&#41;](query-design-tools-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Temas de procedimientos  
  [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
@@ -117,7 +117,7 @@ ms.locfileid: "77081936"
  [Definir parámetros en el diseñador de consultas MDX para Analysis Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
   
-##  <a name="Section"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="Section"></a> En esta sección  
  [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
  [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

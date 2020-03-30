@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043043"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Dar formato a texto (Generador de informes)
@@ -30,7 +30,7 @@ Tiempo estimado para completar este tutorial: 20 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateReport"></a>Crear un Informe en blanco con un origen de datos y un conjunto de datos  
+## <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>Crear un Informe en blanco con un origen de datos y un conjunto de datos  
   
 ### <a name="to-create-a-blank-report"></a>Para crear un informe en blanco  
   
@@ -119,7 +119,7 @@ Para obtener información sobre los requisitos, vea [Requisitos previos para los
 
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="AddField"></a>Agregar un campo a la superficie de diseño del informe  
+## <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>Agregar un campo a la superficie de diseño del informe  
 Si desea que un campo del conjunto de datos aparezca en un informe, su primer impulso puede ser arrastrarlo hasta la superficie de diseño directamente. En este ejercicio se describe por qué eso no funciona y lo que se ha de hacer en su lugar.  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Para agregar un campo al informe (y obtener el resultado incorrecto)  
@@ -174,7 +174,7 @@ Si desea que un campo del conjunto de datos aparezca en un informe, su primer im
   
 7.  Seleccione el cuadro de lista y presione la tecla ELIMINAR.  
   
-## <a name="AddTable"></a>Agregar un tabla a la superficie de diseño del informe  
+## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Agregar un tabla a la superficie de diseño del informe  
 Cree esta tabla para tener un lugar donde colocar los hipervínculos y el texto girado.   
   
 1.  En la pestaña **Insertar** > **Tabla** > **Asistente para tablas**.  
@@ -209,7 +209,7 @@ Cree esta tabla para tener un lugar donde colocar los hipervínculos y el texto 
     
     ![generador-de-informes-formato-un-total](../reporting-services/media/report-builder-format-one-total.png)
   
-## <a name="AddHyperlink"></a>Agregar un hipervínculo al informe  
+## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Agregar un hipervínculo al informe  
 En esta sección, agrega un hipervínculo al texto de la tabla desde la sección anterior.  
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
@@ -234,7 +234,7 @@ En esta sección, agrega un hipervínculo al texto de la tabla desde la sección
   
 10. Haga clic en un vínculo. Si el equipo está conectado a Internet, un explorador abrirá a un tema de la Ayuda del Generador de informes.  
   
-## <a name="RotateText"></a>Girar texto en el informe  
+## <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>Girar texto en el informe  
 En esta sección, girará parte del texto de la tabla de las secciones anteriores.  
  
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
@@ -260,7 +260,7 @@ Ahora el texto de la celda `[Territory]` está situado verticalmente desde la pa
 
 ![generador-de-informes-formato-girar-270](../reporting-services/media/report-builder-format-rotate-270.png)
 
-## <a name="FormatCurrency"></a>Dar formato a moneda  
+## <a name="format-currency"></a><a name="FormatCurrency"></a>Dar formato a moneda  
   
 1.  Haga clic en **Diseño** para cambiar a la vista de diseño.  
   
@@ -280,7 +280,7 @@ El informe muestra ahora datos dados con formato y es más fácil de leer.
 
 ![informe-generar-formato-informe](../reporting-services/media/report-build-format-report.png)
     
-## <a name="FormatHTML"></a>Mostrar texto con formato HTML  
+## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Mostrar texto con formato HTML  
   
 1.  Haga clic en **Diseño** para cambiar a la vista de diseño.  
   
@@ -322,7 +322,7 @@ El texto del cuadro de texto se muestra como un encabezado, párrafo y lista con
   
 ![generador-de-informes-formato-html](../reporting-services/media/report-builder-format-html.png)
 
-## <a name="Save"></a>Guardar el informe  
+## <a name="save-the-report"></a><a name="Save"></a>Guardar el informe  
 Puede guardar los informes en un servidor de informes, en una biblioteca de SharePoint o en su equipo.  
   
 En este tutorial, guarde el informe en un servidor de informes. Si no tiene acceso a un servidor de informes, guarde el informe en su equipo.  

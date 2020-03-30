@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082628"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>¿Qué es SQL Server Reporting Services (SSRS)?
@@ -63,7 +63,7 @@ Esta carga de trabajo esencial de BI sigue existiendo en la actualidad, por lo q
 * Hemos actualizado todos los estilos y paletas de colores predeterminados, de manera que puede crear informes con un nuevo estilo moderno y minimalista de forma predeterminada.
 * Hemos actualizado el panel de parámetros para que pueda organizar los parámetros como quiera.
 * Puede exportar a nuevos formatos, como PowerPoint. Las visualizaciones de Reporting Services en PowerPoint son activas y se pueden editar; es decir, no son capturas de pantalla.
-* Puede crear una experiencia de Power BI o Reporting Services híbrida:  en lugar de volver a crear los informes locales de Reporting Services en Power BI, puede anclar elementos visuales de estos informes en los paneles de Power BI. Luego puede supervisarlo todo desde un lugar en el panel de Power BI.
+* Puede crear una experiencia híbrida de Power BI o de Reporting Services: en lugar de volver a crear los informes locales de Reporting Services en Power BI, puede anclar elementos visuales de estos informes en los paneles de Power BI. Luego puede supervisarlo todo desde un lugar en el panel de Power BI.
 
 ## <a name="mobile-reports"></a>Informes móviles
 
@@ -83,7 +83,7 @@ A medida que cree visualizaciones, el Publicador de informes móviles genera dat
 
 Para los usuarios finales de Reporting Services en modo nativo, la entrada principal es un portal web moderno que se puede ver en la mayoría de los exploradores. En el nuevo portal puede acceder a todos los informes paginados y móviles y KPI de Reporting Services. Los KPI pueden hacer que en el explorador aparezcan métricas empresariales clave para que pueda echarles un vistazo sin tener que abrir ningún informe.
 
-El nuevo portal web es una versión totalmente nueva del Administrador de informes. Ahora es una aplicación HTML5 de una página basada en estándares optimizada para los exploradores modernos: Microsoft Edge, Internet Explorer 10 and 11, Chrome, Firefox, Safari y todos los exploradores importantes.
+El nuevo portal web es una versión totalmente nueva del Administrador de informes. Ahora se trata de una aplicación HTML5 de una sola página y basada en estándares, para la que están optimizados los exploradores modernos: Microsoft Edge, Internet Explorer 10 y 11, Chrome, Firefox, Safari y todos los exploradores principales.
 
 El contenido en el portal web está organizado por tipo:
 

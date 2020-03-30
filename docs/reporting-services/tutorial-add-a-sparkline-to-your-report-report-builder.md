@@ -9,13 +9,13 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043179"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adición de un minigráfico a un informe (Generador de informes)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (Generador de informes)
 
 En este tutorial del [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], puede crear una tabla básica con un minigráfico en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
   
@@ -28,7 +28,7 @@ Tiempo estimado para completar este tutorial: 30 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateTable"></a>1. Crear un informe con una tabla  
+## <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. Crear un informe con una tabla  
   
 1.  [Inicie el Generador de informes](../reporting-services/report-builder/start-report-builder.md) desde el equipo, el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o el modo integrado de SharePoint.  
   
@@ -71,7 +71,7 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
 13. Haga clic en **Next**.  
   
-## <a name="Query"></a>2. Crear una consulta y un diseño de tabla en el Asistente para tablas  
+## <a name="2-create-a-query-and-table-layout-in-the-table-wizard"></a><a name="Query"></a>2. Crear una consulta y un diseño de tabla en el Asistente para tablas  
 En un informe puede usar un conjunto de datos compartido que tenga una consulta predefinida o crear un conjunto de datos incrustado para usarlo exclusivamente en ese informe. En este tutorial, creará un conjunto de datos incrustado.  
   
 > [!NOTE]  
@@ -160,7 +160,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 15. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
 
-### <a name="FormatCurrency"></a>2a. Dar formato a los datos como moneda  
+### <a name="2a-format-data-as-currency"></a><a name="FormatCurrency"></a>2a. Dar formato a los datos como moneda  
 De manera predeterminada, los datos de resumen del campo **Sales** se muestran en forma de número general. Aplíquele el formato adecuado para mostrar el número como moneda. Alterne **Estilos de marcador de posición** para mostrar los cuadros de texto con formato y el texto de marcador de posición como valores de ejemplo.  
   
 1.  Haga clic en **Diseño** para cambiar a la vista de diseño.  
@@ -177,7 +177,7 @@ De manera predeterminada, los datos de resumen del campo **Sales** se muestran e
     
     ![generador-de-informes-botón-valor-marcador-de-posición](../reporting-services/media/report-builder-placeholder-value-button.png)
    
-### <a name="FormatDates"></a>2b. (Opcional) Dar formato a datos como fechas  
+### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (Opcional) Dar formato a datos como fechas  
 De manera predeterminada, en el campo **SalesDate** se muestra información de fecha y hora. Puede darle formato para mostrar solo la fecha.  
   
 1.  Haga clic en la celda que contiene `[SalesDate]`.  
@@ -190,7 +190,7 @@ De manera predeterminada, en el campo **SalesDate** se muestra información de f
   
 Los valores **SalesDate** se muestran en el formato de fecha predeterminado, y los valores de resumen para **Sales** se muestran como moneda.   
   
-## <a name="Sparkline"></a>3. Agregar un minigráfico    
+## <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. Agregar un minigráfico    
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
@@ -224,7 +224,7 @@ Los valores **SalesDate** se muestran en el formato de fecha predeterminado, y l
   
      ![generador-de-informes-minigráfico-desalineados](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
-## <a name="AlignSparklines"></a>4. Alinear los minigráficos vertical y horizontalmente  
+## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. Alinear los minigráficos vertical y horizontalmente  
 Los minigráficos son difíciles de leer cuando todos no usan las mismas medidas. Los ejes horizontal y vertical de cada uno tienen que coincidir con el resto.  
    
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
@@ -251,7 +251,7 @@ Ahora todas las barras de cada minigráfico se alinean con las barras de los otr
   
 ![generador-de-informes-minigráfico-alineados](../reporting-services/media/report-builder-sparkline-aligned.png)
   
-## <a name="Width"></a>7. (Opcional) Cambiar el ancho de columna  
+## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (Opcional) Cambiar el ancho de columna  
 De forma predeterminada, cada celda de una tabla contiene un cuadro de texto. Un cuadro de texto se expande verticalmente para alojar el texto cuando se representa la página. En el informe representado, cada fila se expande hasta el alto del cuadro de texto más alto representado de la fila. El alto de la fila en la superficie de diseño no tiene efecto alguno en el alto de la fila en el informe representado.  
   
 Para reducir la cantidad de espacio vertical que ocupa cada fila, expanda el ancho de columna para dar cabida en una línea al contenido previsto de los cuadros de texto de la columna.  
@@ -266,7 +266,7 @@ Para reducir la cantidad de espacio vertical que ocupa cada fila, expanda el anc
   
 4.  Haga clic en **Ejecutar** para obtener una vista previa del informe y ver si tiene un ancho suficiente.  
   
-## <a name="Title"></a>8. (Opcional) Agregar un título de informe  
+## <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. (Opcional) Agregar un título de informe  
 Los títulos de informe aparecen en la parte superior. Puede situar el título del informe en un encabezado de informe o, si el informe no lo utiliza, en un cuadro de texto en la parte superior del cuerpo del informe. En este tutorial, deberá utilizar el cuadro de texto que se coloca automáticamente en la parte superior del cuerpo del informe.  
   
 El texto se puede mejorar aún más aplicando estilos de fuente, tamaños y colores diferentes a las frases y caracteres individuales. Para obtener más información, vea [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -285,7 +285,7 @@ El texto se puede mejorar aún más aplicando estilos de fuente, tamaños y colo
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>9. Guardar el informe  
+## <a name="9-save-the-report"></a><a name="Save"></a>9. Guardar el informe  
 Guarde el informe un servidor de informes o en su equipo. Si no guarda el informe en el servidor de informes, varias características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como los elementos de informe y los subinformes, no estarán disponibles.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  

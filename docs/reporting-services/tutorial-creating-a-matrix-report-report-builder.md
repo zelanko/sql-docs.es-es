@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63294663"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz (Generador de informes)
@@ -27,7 +27,7 @@ Tiempo estimado para completar este tutorial: 20 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obtener información sobre los requisitos, consulte [Requisitos previos para los tutoriales](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
   
-## <a name="CreateMatrix"></a>1. Crear un informe de matriz y un conjunto de datos desde el nuevo Asistente para tablas o matrices  
+## <a name="1-create-a-matrix-report-and-dataset-from-the-new-table-or-matrix-wizard"></a><a name="CreateMatrix"></a>1. Crear un informe de matriz y un conjunto de datos desde el nuevo Asistente para tablas o matrices  
 En esta sección, elegirá un origen de datos compartido, creará un conjunto de datos insertado y, después, mostrará los datos en una matriz.  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ En esta sección, elegirá un origen de datos compartido, creará un conjunto de
 
 11. Haga clic en **Next**.  
   
-## <a name="Groups"></a>2. Organizar datos y elegir el diseño desde el Asistente para nueva tabla o matriz  
+## <a name="2-organize-data-and-choose-layout-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2. Organizar datos y elegir el diseño desde el Asistente para nueva tabla o matriz  
 Utilice el asistente para proporcionar un diseño inicial en el que mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar el diseño de la matriz.  
   
 1.  En la página **Organizar campos** , arrastre Territory desde **Campos disponibles** a **Grupos de filas**.  
@@ -145,7 +145,7 @@ Utilice el asistente para proporcionar un diseño inicial en el que mostrar los 
 
 ![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
   
-## <a name="FormatData"></a>3. Dar formato a datos  
+## <a name="3-format-data"></a><a name="FormatData"></a>3. Dar formato a datos  
 De forma predeterminada, los datos de resumen para el campo Sales muestran un número general y el campo SalesDate muestra información de fecha y de hora. En esta sección, dará formato al campo Sales para mostrar el número como moneda y al campo SalesDate para mostrar solo la fecha. Alterne **Estilos de marcador de posición** para mostrar los cuadros de texto con formato y el texto de marcador de posición como valores de ejemplo.  
   
 ### <a name="to-format-fields"></a>Para dar formato a los campos  
@@ -170,7 +170,7 @@ De forma predeterminada, los datos de resumen para el campo Sales muestran un n�
   
 Los valores de fecha solo muestran fechas y los valores de ventas se muestran como moneda.  
   
-## <a name="AdjacentGroup"></a>4. Agregar grupo de columnas adyacente  
+## <a name="4-add-adjacent-column-group"></a><a name="AdjacentGroup"></a>4. Agregar grupo de columnas adyacente  
 Puede anidar grupos de filas y de columnas en relaciones de elementos primarios y secundarios o adyacentes en relaciones del mismo nivel.  
   
 En esta sección, agregará un grupo de columnas adyacente al grupo de columnas de Subcategory, copiará las celdas para rellenar el nuevo grupo de columnas y, después, usará una expresión para crear el valor del encabezado de grupo de columnas.  
@@ -216,7 +216,7 @@ El informe incluye columnas denominadas Monday y Tuesday. El conjunto de datos s
 > [!NOTE]  
 > Si los datos incluyeran otros días, el informe también incluiría las columnas correspondientes. Cada columna tiene el encabezado de columna **Sales**y los totales de ventas por territorio.  
   
-## <a name="Width"></a>5. Cambiar el ancho de columna  
+## <a name="5-change-column-widths"></a><a name="Width"></a>5. Cambiar el ancho de columna  
 Un informe que incluye una matriz normalmente se expande horizontalmente así como verticalmente cuando se ejecuta. Controlar la expansión horizontal es particularmente importante si piensa exportar el informe a los formatos como Microsoft Word o Adobe PDF, que se utilizan para los informes impresos. Si el informe se expande horizontalmente por varias páginas, el informe impreso es difícil de entender. Para minimizar la expansión horizontal, puede cambiar el tamaño de las columnas para que tengan solo el ancho necesario para mostrar los datos sin ajustar. También puede cambiar el nombre de las columnas para que sus títulos con el ancho necesario para mostrar los datos.  
   
 ### <a name="to-rename-and-resize-the-columns"></a>Cambiar el nombre y el tamaño de las columnas  
@@ -245,7 +245,7 @@ Un informe que incluye una matriz normalmente se expande horizontalmente así co
   
 Las columnas que contienen cantidades son ahora más estrechas y se denominan QTY.  
   
-## <a name="MergeCells"></a>6. Combinar las celdas de la matriz  
+## <a name="6-merge-matrix-cells"></a><a name="MergeCells"></a>6. Combinar las celdas de la matriz  
 El área de la esquina está en la esquina superior izquierda de la matriz Dependiendo del número de grupos de filas y columnas de la matriz, el número de celdas en el área de la esquina varía. La matriz generada en este tutorial tiene cuatro celdas en su área de esquina. Las celdas se disponen en dos filas y dos columnas, reflejando la profundidad de las jerarquías de grupos de filas y columnas. Las cuatro celdas no se utilizan en este informe y los combinará en una.  
   
 ### <a name="to-merge-matrix-cells"></a>Para combinar las celdas de la matriz  
@@ -268,7 +268,7 @@ El área de la esquina está en la esquina superior izquierda de la matriz Depen
   
 La celda en la esquina superior de la matriz ya no está visible. 
   
-## <a name="HeaderTitle"></a>7. Agregar un encabezado y un título del informe  
+## <a name="7-add-a-report-header-and-report-title"></a><a name="HeaderTitle"></a>7. Agregar un encabezado y un título del informe  
 Los títulos de informe aparecen en la parte superior. Puede situar el título del informe en un encabezado de informe o, si el informe no lo utiliza, en un cuadro de texto en la parte superior del cuerpo del informe. En este tutorial, quitará el cuadro de texto de la parte superior del informe y agregará un título al encabezado.  
   
 ### <a name="to-add-a-report-header-and-report-title"></a>Para agregar un encabezado y un título del informe  
@@ -293,7 +293,7 @@ Los títulos de informe aparecen en la parte superior. Puede situar el título d
   
 El informe incluye un título de informe en el encabezado del informe.  
   
-## <a name="Save"></a>8. Guardar el informe  
+## <a name="8-save-the-report"></a><a name="Save"></a>8. Guardar el informe  
 Puede guardar los informes en un servidor de informes, en una biblioteca de SharePoint o en su equipo.  
   
 En este tutorial, guarde el informe en un servidor de informes. Si no tiene acceso a un servidor de informes, guarde el informe en su equipo.  
@@ -324,7 +324,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 4.  Haga clic en **Save**(Guardar).  
   
-## <a name="RotateTextBox"></a>9. (Opcional) Girar 270 grados el cuadro de texto  
+## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (Opcional) Girar 270 grados el cuadro de texto  
 Un informe con matrices se puede expandir horizontal y verticalmente cuando se ejecuta. Girando los cuadros de texto verticalmente o 270 grados, puede ahorrar espacio horizontal. El informe representado se hace más estrecho y, si se exporta a un formato como Microsoft Word, tendrá más posibilidades de ajustar en una página impresa.  
   
 Un cuadro de texto también puede mostrar el texto como horizontal o como, vertical (de arriba abajo). Para más información, vea [Cuadros de texto &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  

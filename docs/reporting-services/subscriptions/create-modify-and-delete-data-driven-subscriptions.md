@@ -14,10 +14,10 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140267"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Cómo crear, modificar y eliminar suscripciones controladas por datos
@@ -35,14 +35,14 @@ ms.locfileid: "67140267"
   
 -   [Ejecutar la suscripción](#bkmk_run_subscription)  
   
-##  <a name="bkmk_manage_and_delete"></a> Administrar y eliminar una suscripción controlada por datos  
+##  <a name="managing-and-deleting-a-data-driven-subscription"></a><a name="bkmk_manage_and_delete"></a> Administrar y eliminar una suscripción controlada por datos  
  Una suscripción controlada por datos que se está procesando no puede detenerse o eliminarse mediante el portal web. Por esta razón, resulta ventajoso usar una programación compartida para desencadenar la suscripción controlada por datos. De esa manera, si desea impedir temporalmente que se procese una suscripción, puede pausar la programación que la desencadena. Para obtener más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
  Para eliminar una suscripción controlada por datos, active la casilla situada junto al informe en la página **Suscripciones** y, después, seleccione **Eliminar**.  
   
  Para obtener instrucciones sobre cómo cancelar una suscripción controlada por datos, vea [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
-##  <a name="bkmk_create_and_modify"></a> Crear y modificar una suscripción controlada por datos  
+##  <a name="creating-and-modifying-a-data-driven-subscription"></a><a name="bkmk_create_and_modify"></a> Crear y modificar una suscripción controlada por datos  
  Para crear una suscripción controlada por datos, seleccione un informe que utilice credenciales almacenadas o que no utilice ninguna credencial. Cuando cree la suscripción controlada por datos, considere la posibilidad de usar una convención de nomenclatura en los campos de descripción para que pueda diferenciar fácilmente las suscripciones estándar de las suscripciones controladas por datos.  
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>Para crear una suscripción controlada por datos (modo nativo)  
@@ -88,14 +88,14 @@ ms.locfileid: "67140267"
   
 -   **Requisitos de usuarios** El autor de la suscripción debe tener permiso para "Administrar informes" y "Administrar todas las suscripciones". Para más información sobre los permisos de tarea de nivel de elemento, vea [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md). El autor también debe disponer de las credenciales necesarias para obtener acceso al origen de datos externo que contiene los datos de los suscriptores.  
   
-##  <a name="bkmk_define_query"></a> Definir una consulta que recupera información de suscripción  
+##  <a name="defining-a-query-that-retrieves-subscription-information"></a><a name="bkmk_define_query"></a> Definir una consulta que recupera información de suscripción  
  En una suscripción controlada por datos se debe especificar una consulta o un comando que recupere los datos de los suscriptores. La consulta debería producir una fila por suscriptor. Si utiliza la extensión de entrega por correo electrónico, la consulta debería devolver un alias de correo electrónico válido para cada suscriptor. El número de entregas que se realice se basa en el número de filas que devuelva la consulta. Si el conjunto de filas contiene 10.000 filas, la suscripción entregará 10.000 informes.  
   
  Si la consulta tarda mucho en ejecutarse, puede aumentar el valor de tiempo de espera para adaptarse al procesamiento adicional.  
   
  Para este paso, la consulta debe validarse antes de continuar. La validación no procesa la consulta, sino que devuelve una lista de todas las columnas del conjunto de filas para que pueda hacer referencia a ellas en selecciones posteriores. Si la consulta no se valida, no podrá continuar. Una consulta no se valida si su sintaxis es incorrecta o si la conexión al origen de datos no es válida. Use el botón **Atrás** para hacer correcciones en el origen de datos.  
   
-##  <a name="bkmk_run_subscription"></a> Ejecutar la suscripción  
+##  <a name="running-the-subscription"></a><a name="bkmk_run_subscription"></a> Ejecutar la suscripción  
  Se deben especificar las condiciones necesarias para procesar la suscripción. Puede especificar una programación o puede desencadenar la suscripción para que coincida con actualizaciones en una instantánea de ejecución de informes. El procesamiento de las suscripciones controladas por datos es igual al de las suscripciones estándar.  
   
 ## <a name="see-also"></a>Consulte también  

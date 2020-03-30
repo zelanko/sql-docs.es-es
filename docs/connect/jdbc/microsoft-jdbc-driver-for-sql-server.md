@@ -11,10 +11,10 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027885"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver para SQL Server
@@ -28,8 +28,8 @@ El controlador JDBC de Microsoft para SQL Server se ha probado con servidores de
 ## <a name="getting-started"></a>Introducción  
 
 * [Paso 1: Configurar el entorno de desarrollo para el desarrollo de Java](step-1-configure-development-environment-for-java-development.md)  
-* [Paso 2: Crear una base de datos SQL para el desarrollo de Java](step-2-create-a-sql-database-for-java-development.md)  
-* [Paso 3: Prueba de concepto de la conexión a SQL mediante Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [Paso 2: Crear una base de datos SQL para el desarrollo de Java ](step-2-create-a-sql-database-for-java-development.md)  
+* [Paso 3: Prueba de concepto que se conecta a SQL con Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Documentación  
 

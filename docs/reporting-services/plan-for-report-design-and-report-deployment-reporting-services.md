@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581249"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planeación del diseño y la implementación de informes | Reporting Services
@@ -22,7 +22,7 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
  Los archivos RDL se crean en el Diseñador de informes en los proyectos de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] y en el Generador de informes. Los archivos RDLC se crean mediante los controles ReportViewer que se incluyen en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
   
-##  <a name="bkmk_rdl_schema_versions"></a> Versiones de esquema RDL  
+##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> Versiones de esquema RDL  
  En la tabla siguiente se enumera cada versión de esquema disponible y la abreviatura que se usa de aquí en adelante:  
   
 |Abreviatura|Versión de esquema|  
@@ -43,22 +43,22 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
  Para más información sobre los controles ReportViewer, vea [Controles ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> Compatibilidad del servidor de informes y el esquema RDL  
+##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Compatibilidad del servidor de informes y el esquema RDL  
  Un archivo de definición de informe se puede implementar en un servidor de informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] de las maneras siguientes:  
   
--   **Diseñador de informes:** implemente un informe desde el Diseñador de informes de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Diseñador de informes** : implemente un informe desde el Diseñador de informes de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Report Builder:** guarde un informe en el servidor de informes desde Report Builder.  
+-   **Generador de informes** : guarde un informe en el servidor de informes desde el Generador de informes.  
   
 -   **Portal web:** cargue un informe en un servidor de informes en modo nativo desde el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint:** cargue un informe en un sitio de SharePoint que esté configurado con un servidor de informes en modo de SharePoint.  
+-   **SharePoint** : cargue un informe en un sitio de SharePoint que esté configurado con un servidor de informes en modo de SharePoint.  
 
 ::: moniker-end
   
--   **Mediante programación:** publique un informe mediante programación usando las interfaces de API SOAP en un servidor de informes. Para obtener más información, vea [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **Mediante programación** : publique un informe mediante programación usando las interfaces de API SOAP en un servidor de informes. Para obtener más información, vea [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  En la tabla siguiente se indica la versión de esquema rdl admitida según la versión del servidor de informes.  
   
@@ -82,7 +82,7 @@ En una implementación en modo de SharePoint, vaya a la biblioteca de documentos
   
  Para más información sobre actualizaciones de informes y las versiones de esquema que se admiten, vea [Actualizar informes](../reporting-services/install-windows/upgrade-reports.md).  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> Compatibilidad de creación e implementación de informes  
+##  <a name="report-authoring-and-deployment-support"></a><a name="bkmk_report_authoring_and_deployment"></a> Compatibilidad de creación e implementación de informes  
  Los entornos de creación de informes son el Diseñador de informes en los proyectos de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] y el Generador de informes. Los entornos de creación de informes proporcionan una gran variedad de características de compatibilidad para la actualización de informes, el diseño de informes, la presentación de vistas previas de informes en modo local, la presentación de vistas previas de informes en el servidor de informes y la implementación de informes.  
   
  En la tabla siguiente se muestra un resumen de características de compatibilidad para la creación e implementación de definiciones de informe para diferentes versiones de esquema:  
@@ -101,7 +101,7 @@ En una implementación en modo de SharePoint, vaya a la biblioteca de documentos
   
 -   [SQL Server Data Tools para Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-##  <a name="bkmk_reportviewer"></a> Controles ReportViewer  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a> Controles ReportViewer  
  Un control ReportViewer de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] puede mostrar un informe .rdlc en el modo de vista previa local o, en modo remoto, el control puede mostrar un archivo .rdl hospedado en un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . En la tabla siguiente se muestra la lista de versiones RDL que admiten los controles ReportViewer para el procesamiento local (.rdlc). La compatibilidad con el lenguaje RDL de servidor se resume en la sección [Compatibilidad del servidor de informes y el esquema RDL](#bkmk_report_server_rdl_schema_support).  
   
 |Control ReportViewer del producto|Versión de RDL para la vista previa local|  

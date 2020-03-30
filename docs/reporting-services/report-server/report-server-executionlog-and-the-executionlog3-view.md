@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65619693"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
@@ -23,7 +23,7 @@ ms.locfileid: "65619693"
   
  Los servidores de informes configurados para el modo de SharePoint, también pueden usar los registros de ULS de SharePoint. Para obtener más información, vea [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> Ver la información del registro  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> Ver la información del registro  
  La ejecución del servidor de informes registra datos sobre la ejecución de informes en una tabla interna de la base de datos. La información de la tabla está disponible en las vistas de SQL Server.  
   
  El registro de la ejecución de informes se almacena en la base de datos del servidor de informes que se denomina **ReportServer**de forma predeterminada. Las vistas de SQL proporcionan la información del registro de la ejecución. Las vistas "2" y "3" se agregaron en versiones más recientes y contienen campos nuevos o campos con nombres más descriptivos que las versiones anteriores. Permanece en el producto las vistas antiguas para que no se vean afectadas las aplicaciones personalizadas que dependen de ellas. Si no tiene una dependencia en una vista anterior, por ejemplo ExecutionLog, se recomienda utilizar la vista más reciente, ExecutionLog**3**.  
@@ -42,7 +42,7 @@ ms.locfileid: "65619693"
   
 -   [Campos de registro (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> Configuración para un servidor de informes en modo de SharePoint  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> Configuración para un servidor de informes en modo de SharePoint  
  Puede activar o desactivar la ejecución de informes en la configuración del sistema de una aplicación de servicios de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  De forma predeterminada, las entradas de registro se mantienen 60 días. Las entradas que superan esta fecha se quitan a las 2:00 a. m. todos los días. En instalaciones antiguas, solo habrá 60 días de información disponibles en cualquier momento.  
@@ -69,7 +69,7 @@ ms.locfileid: "65619693"
   
 2.  Cambie **ExecutionLogLevel** a **detallado**. Este campo es un campo de entrada de texto y los dos valores posibles son **detallado** y **normal**.  
   
-##  <a name="bkmk_native"></a> Configuración de un servidor de informes en modo nativo  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> Configuración de un servidor de informes en modo nativo  
  Puede activar o desactivar la ejecución de informes en la página propiedades del servidor en SQL Server Management Studio. **EnableExecutionLogging** es una propiedad avanzada.  
   
  De forma predeterminada, las entradas de registro se mantienen 60 días. Las entradas que superan esta fecha se quitan a las 2:00 a. m. todos los días. En instalaciones antiguas, solo habrá 60 días de información disponibles en cualquier momento.  
@@ -96,7 +96,7 @@ ms.locfileid: "65619693"
   
 2.  En la sección **Definido por el usuario** , cambie **ExecutionLogLevel** a **detallado**. Este campo es un campo de entrada de texto y los dos valores posibles son **detallado** y **normal**.  
   
-##  <a name="bkmk_executionlog3"></a> Campos de registro (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> Campos de registro (ExecutionLog3)  
  En esta vista, se agregaron nodos de diagnóstico adicionales en la columna **AdditionalInfo** basada en XML. La columna AdditionalInfo contiene una estructura XML de 1 a muchos campos adicionales de información. La siguiente es una instrucción Transact-SQL de ejemplo para recuperar filas de la vista ExecutionLog3. En el ejemplo se supone que la base de datos del servidor de informes se denomina **ReportServer**:  
   
 ```  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RowCount|Número de filas devueltas de consultas.|  
 |AdditionalInfo|Un contenedor de propiedades XML que incluye información adicional sobre la ejecución. El contenido puede ser diferente para cada fila.|  
   
-##  <a name="bkmk_additionalinfo"></a> El campo AdditionalInfo  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> El campo AdditionalInfo  
  El campo AdditionalInfo es un contenedor de propiedades o estructura XML que incluye información adicional sobre la ejecución. El contenido puede ser diferente para cada fila del registro.  
   
  Estos son algunos ejemplos de los contenidos del campo AddtionalInfo para el registro estándar y el registro detallado:  
@@ -307,7 +307,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> Campos de registro (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> Campos de registro (ExecutionLog2)  
  Esta vista ha agregado algunos campos nuevos y ha cambiado el nombre de otros. La siguiente es una instrucción Transact-SQL de ejemplo para recuperar filas de la vista ExecutionLog2. En el ejemplo se supone que la base de datos del servidor de informes se denomina **ReportServer**:  
   
 ```  
@@ -338,7 +338,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|Número de filas devueltas de consultas.|  
 |AdditionalInfo|Un contenedor de propiedades XML que incluye información adicional sobre la ejecución.|  
   
-##  <a name="bkmk_executionlog"></a> Campos de registro (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> Campos de registro (ExecutionLog)  
  La siguiente es una instrucción Transact-SQL de ejemplo para recuperar filas de la vista ExecutionLog. En el ejemplo se supone que la base de datos del servidor de informes se denomina **ReportServer**:  
   
 ```  

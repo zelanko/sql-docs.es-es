@@ -11,10 +11,10 @@ ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ea30d2280ffea4c2ccf09d1f884a03751ed843
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027492"
 ---
 # <a name="understanding-cursor-types"></a>Descripción de los tipos de cursor
@@ -35,7 +35,7 @@ ms.locfileid: "69027492"
 > [!NOTE]  
 >  Para obtener una descripción completa de los tipos de cursor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el tema "Cursor Types (Database Engine)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- La especificación JDBC proporciona compatibilidad con los cursores de solo avance y los cursores desplazables que son sensibles o no a los cambios que realizan otros trabajos, y pueden ser de solo lectura o actualizables. La clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona esta funcionalidad.  
+ La especificación JDBC proporciona compatibilidad con los cursores de solo avance y los cursores desplazables que son sensibles o no a los cambios que realizan otros trabajos, y pueden ser de solo lectura o actualizables. La clase [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]SQLServerResultSet[ del ](../../connect/jdbc/reference/sqlserverresultset-class.md) proporciona esta funcionalidad.  
   
 ## <a name="remarks"></a>Observaciones  
  El controlador JDBC es compatible con los siguientes tipos de cursor:  

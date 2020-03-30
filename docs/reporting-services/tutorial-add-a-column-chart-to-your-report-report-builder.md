@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041397"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
@@ -35,7 +35,7 @@ Tiempo estimado para completar este tutorial: 15 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Crear un informe de gráfico a partir del Asistente para gráficos  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. Crear un informe de gráfico a partir del Asistente para gráficos  
 En esta sección, usará el Asistente para gráficos con el fin de crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico de columnas.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
   
 9. Haga clic en **Next**.  
   
-## <a name="ChartType"></a>2. Elegir el tipo de gráfico  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Elegir el tipo de gráfico  
 Puede elegir entre varios tipos de gráfico predefinidos y luego modificar el gráfico después de completar el asistente.  
   
 ### <a name="to-add-a-column-chart"></a>Para agregar un gráfico de columnas  
@@ -114,7 +114,7 @@ Puede elegir entre varios tipos de gráfico predefinidos y luego modificar el gr
 
 Tenga en cuenta que el gráfico no etiqueta todas las categorías del eje horizontal. De forma predeterminada, solo se incluyen las etiquetas que caben a lo largo del eje. 
   
-## <a name="Horizontal"></a>3. Dar formato a una fecha en el eje horizontal  
+## <a name="3-format-a-date-on-the-horizontal-axis"></a><a name="Horizontal"></a>3. Dar formato a una fecha en el eje horizontal  
 De forma predeterminada, el eje horizontal muestra los valores en un formato general que se escala automáticamente para ajustarse al tamaño del gráfico.  
   
 1.  Cambie a la vista de diseño del informe.  
@@ -159,7 +159,7 @@ En el gráfico, las etiquetas se giran.
 
 ![generador-informes-gráfico-columnas-girar-eje-x-vista-previa](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
-## <a name="Legend"></a>5. Mover la leyenda  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Mover la leyenda  
 La leyenda se crea automáticamente a partir de los datos de las categorías y las series. Puede mover la leyenda debajo del área de gráfico de un gráfico de columnas.  
   
 1.  Cambie a la vista de diseño del informe.  
@@ -176,7 +176,7 @@ La leyenda se crea automáticamente a partir de los datos de las categorías y l
   
 6.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-## <a name="ChartTitle"></a>6. Titular el gráfico  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. Titular el gráfico  
     
 1.  Cambie a la vista de diseño del informe.  
   
@@ -184,7 +184,7 @@ La leyenda se crea automáticamente a partir de los datos de las categorías y l
   
 3.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-## <a name="Vertical"></a>7. Dar formato al eje vertical y etiquetarlo  
+## <a name="7-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>7. Dar formato al eje vertical y etiquetarlo  
 De forma predeterminada, el eje vertical muestra los valores en un formato general que se escala automáticamente para ajustarse al tamaño del gráfico.   
   
 1.  Cambie a la vista de diseño del informe.  
@@ -235,7 +235,7 @@ Observe que solo se muestran algunas de las etiquetas del eje x. En esta secció
     
     Ahora el gráfico muestra todas sus etiquetas.
   
-## <a name="Average"></a>9. Agregar una media móvil con una serie calculada  
+## <a name="9-add-a-moving-average-with-a-calculated-series"></a><a name="Average"></a>9. Agregar una media móvil con una serie calculada  
 
 Una media móvil es una media de los datos de la serie, calculada en el tiempo. La media móvil puede identificar tendencias.
   
@@ -261,7 +261,7 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
 
 ![generador-informes-gráfico-columnas-media-móvil](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
-## <a name="Title"></a>10. Agregar un título de informe  
+## <a name="10-add-a-report-title"></a><a name="Title"></a>10. Agregar un título de informe  
   
 1.  Cambie a la vista de diseño del informe.  
   
@@ -283,7 +283,7 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
   
 7.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-## <a name="Save"></a>11. Guardar el informe  
+## <a name="11-save-the-report"></a><a name="Save"></a>11. Guardar el informe  
   
 ### <a name="to-save-the-report"></a>Para guardar el informe  
   

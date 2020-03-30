@@ -15,10 +15,10 @@ ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256227"
 ---
 # <a name="registered-servers-f1-help"></a>Servidores registrados (Ayuda F1)
@@ -63,7 +63,7 @@ ms.locfileid: "75256227"
  **Recordar contraseña**  
  Guarda la contraseña que ha escrito. Esta opción solo se encuentra disponible si ha seleccionado **Autenticación básica** o **Autenticación de formularios**.  
   
-> **NOTA:** Si ha guardado la contraseña y ya no quiere conservarla, desactive esta casilla y luego haga clic en **Guardar**.  
+> **NOTA:** Si almacenó la contraseña y ya no quiere conservarla, desactive esta casilla y, luego, haga clic en **Guardar**.  
   
  **Nombre del servidor registrado**  
  El nombre que desea que aparezca en Servidores registrados. Este nombre no tiene que coincidir con el cuadro **Nombre del servidor** .  

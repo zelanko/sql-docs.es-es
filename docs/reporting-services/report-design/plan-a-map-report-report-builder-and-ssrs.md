@@ -9,10 +9,10 @@ ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082421"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planear un informe de mapa (Generador de informes y SSRS)
@@ -21,7 +21,7 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a> Especificar el propósito del mapa  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> Especificar el propósito del mapa  
  Un diseño de informe apropiado proporciona información que ayuda a los usuarios a tomar medidas para resolver los problemas. Para crear una presentación de mapa útil y fácilmente entendible, decida qué cuestiones desea que el mapa ayude a responder. Por ejemplo, en un mapa puede visualizar los tipos siguientes de datos para identificar oportunidades de mercado:  
   
 -   Ventas relativas de cada almacén.  
@@ -34,7 +34,7 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
  Después de identificar el propósito de la presentación del mapa, debe analizar qué datos necesita. Los datos analíticos proceden de conjuntos de datos de informe. Los datos de ubicación proceden de orígenes de datos espaciales que debe especificar.  
   
-##  <a name="Data"></a> Especificar los datos espaciales y analíticos  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> Especificar los datos espaciales y analíticos  
  Debe especificar qué datos espaciales y analíticos necesita.  
   
  Los datos analíticos pueden proceder de un conjunto de datos de informe, de los datos de ejemplo de un mapa de la galería de mapas o de los datos analíticos incluidos con los datos espaciales en un archivo de forma ESRI.  
@@ -92,7 +92,7 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
  Cuando haya identificado el origen de datos espaciales, los datos espaciales, el origen de datos analíticos, los datos analíticos y los campos coincidentes, estará en disposición de decidir qué tipo de mapa agregar al informe.  
   
-##  <a name="MapType"></a> Elegir un tipo de mapa  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> Elegir un tipo de mapa  
  Al ejecutar el Asistente para mapas, agrega al informe un mapa y la primera capa de mapa. El asistente le permite agregar uno de los tipos siguientes de mapas a un informe:  
   
 -   Un mapa básico que muestra las ubicaciones sin datos analíticos asociados.  
@@ -105,12 +105,12 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
 |Icono del asistente|Estilo de la capa|Tipo de capa|Descripción y opciones|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa básico|Polygon|Mapa que solo muestra áreas, por ejemplo territorios de ventas.<br /><br /> Opciones: varíe el color según la paleta o use un único color. Una paleta es un conjunto predefinido de colores. Cuando se han asignado todos los colores de una paleta, se asignan las sombras de los colores.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mapa básico|Polygon|Mapa que solo muestra áreas, por ejemplo territorios de ventas.<br /><br /> Opciones: varíe el color según la paleta o utilice un único color. Una paleta es un conjunto predefinido de colores. Cuando se han asignado todos los colores de una paleta, se asignan las sombras de los colores.|  
 |![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mapa analítico de color|Polygon|Mapa que muestra los datos analíticos mediante la variación del color, por ejemplo los datos de ventas por área.|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mapa de burbujas|Polygon|Mapa que muestra los datos analíticos variando el tamaño de burbuja centrada en las áreas, por ejemplo los datos de ventas por área.<br /><br /> Opciones: varíe los colores del área según un segundo campo analítico y especifique reglas de color.|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de líneas básico|Línea|Mapa que muestra únicamente líneas, por ejemplo las rutas de entrega.<br /><br /> Opciones: varíe el color según la paleta o use un único color.|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mapa de líneas básico|Línea|Mapa que muestra únicamente líneas, por ejemplo las rutas de entrega.<br /><br /> Opciones: varíe el color según la paleta o utilice un único color.|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mapa de líneas analítico|Línea|Mapa que varía el color y ancho de las líneas, por ejemplo el número de paquetes entregados y las métricas de tiempo por ruta.<br /><br /> Opciones: varíe el ancho de línea con un campo analítico, varíe el color de línea con un segundo campo analítico y especifique las reglas de color.|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de marcadores básico|Punto|Mapa que muestra un marcador en cada ubicación, por ejemplo las ciudades.<br /><br /> Opciones: varíe el color por paleta o use un único color y cambie el estilo de marcador.|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mapa de marcadores básico|Punto|Mapa que muestra un marcador en cada ubicación, por ejemplo las ciudades.<br /><br /> Opciones: varíe el color por paleta o utilice un único color y cambie el estilo de marcador.|  
 |![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Mapa de marcadores de burbuja|Punto|Mapa que muestra una burbuja para cada ubicación y varía el tamaño de burbuja mediante un campo de datos analíticos, por ejemplo los datos de ventas por ciudad.<br /><br /> Opciones: varíe el color de las burbujas con un segundo campo analítico y especifique las reglas de color.|  
 |![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Mapa de marcadores analítico|Punto|Mapa que muestra un marcador en cada ubicación y varía el color, el tamaño y el tipo de los marcadores según datos analíticos, por ejemplo los productos de mayores ventas, el intervalo de ganancia y la estrategia de descuentos.<br /><br /> Opciones: varíe el tipo de los marcadores con un campo analítico, varíe el tamaño de los marcadores con un segundo campo analítico, varíe el color de los marcadores con un tercer campo analítico y especifique las reglas de color.|  
   
@@ -118,7 +118,7 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
  Puede personalizar las opciones de datos o de presentación de cada capa de forma independiente. Para más información sobre cómo personalizar un mapa después de ejecutar un asistente, vea [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a> Planear las leyendas  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> Planear las leyendas  
  Para ayudar a los usuarios a interpretar un mapa, puede agregar varias leyendas de mapa, una escala de colores y una escala de distancia. Al diseñar un mapa, planee donde desea que se muestren las leyendas. Puede especificar la información siguiente sobre cada leyenda:  
   
 -   **Ubicación de la leyenda.** Por ejemplo, las leyendas se pueden mostrar dentro o fuera de la ventanilla, y en 12 ubicaciones discretas en relación con la ventanilla.  
@@ -135,7 +135,7 @@ Los buenos informes presentan información que motiva acciones o conocimientos. 
   
  Para más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md) y [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Embedding"></a> Equilibrar el tamaño de la definición de informe y el tiempo de procesamiento del informe  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> Equilibrar el tamaño de la definición de informe y el tiempo de procesamiento del informe  
  Un buen diseño de informe para mapas requiere que equilibre las opciones que controlan el rendimiento del informe y el tamaño de su definición. Los elementos de un mapa que se basan en datos espaciales, o mosaicos de Bing Maps, pueden ser estáticos e incrustarse en la definición de informe, o dinámicos y crearse cada vez que se procesa el mismo. Debe evaluar las ventajas comparativas de los datos de mapas estáticos y dinámicos, y encontrar el equilibrio que resulte apropiado en sus circunstancias. Considere la información siguiente para tomar esta decisión:  
   
 -   Los elementos de mapa incrustados pueden aumentar considerablemente el tamaño de la definición de informe, pero reducen el tiempo necesario para ver el mapa en el informe. El servidor de informes podría tener límites de tamaño que haya que mantener.  

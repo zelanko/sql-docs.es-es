@@ -12,10 +12,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265142"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Aplicación de formato a cadenas decimales y valores de moneda (controlador SQLSRV)
@@ -66,7 +66,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example---format-the-output-parameter"></a>Ejemplo: dar formato al parámetro de salida
-Si se devuelve un campo decimal o numérico como [parámetro de salida](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), el valor devuelto se considerará como una cadena varchar normal. Sin embargo, si se especifica SQLSRV_SQLTYPE_DECIMAL o SQLSRV_SQLTYPE_NUMERIC, puede establecer `FormatDecimals` en true para garantizar que no falte ningún cero inicial para el valor de cadena numérico. Para más información, lea [Procedimientos: Recuperación de los parámetros de salida con el controlador SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
+Si se devuelve un campo decimal o numérico como [parámetro de salida](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), el valor devuelto se considerará como una cadena varchar normal. Sin embargo, si se especifica SQLSRV_SQLTYPE_DECIMAL o SQLSRV_SQLTYPE_NUMERIC, puede establecer `FormatDecimals` en true para garantizar que no falte ningún cero inicial para el valor de cadena numérico. Para más información, consulte [Recuperación de los parámetros de salida con el controlador SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
 
 En el siguiente ejemplo se muestra cómo dar formato al parámetro de salida de un procedimiento almacenado que devuelve un valor decimal (8,4).
 

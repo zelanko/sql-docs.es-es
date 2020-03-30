@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 29aaab523b3a754c65b1b7a0312ceb5ea122f2d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68419318"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
@@ -50,7 +50,7 @@ Las suscripciones de notificación duran más que el proceso que las inicializa.
 
 Las notificaciones se envían una sola vez. Para obtener notificaciones continuas de cambios de datos, cree una nueva suscripción ejecutando de nuevo la consulta después de procesar cada notificación.
 
-Las aplicaciones de OLE DB Driver for SQL Server suelen recibir notificaciones mediante el comando [RECEIVE](../../../t-sql/statements/receive-transact-sql.md) de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Usa este comando para leer notificaciones desde la cola asociada al servicio especificado en las opciones de notificación.
+Las aplicaciones de OLE DB Driver for SQL Server suelen recibir notificaciones mediante el comando [!INCLUDE[tsql](../../../includes/tsql-md.md)]RECEIVE[ de ](../../../t-sql/statements/receive-transact-sql.md). Usa este comando para leer notificaciones desde la cola asociada al servicio especificado en las opciones de notificación.
 
 > [!NOTE]
 > Los nombres de tabla deben calificarse en las consultas para las que se requiere notificación. Por ejemplo, `dbo.myTable`. Las tablas deben calificarse con nombres de dos partes. La suscripción no será válida si se usan nombres de tres o cuatro partes.

@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68259365"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de rectángulos y de proyección solar en Reporting Services 
 
 Las visualizaciones de rectángulos y proyección solar de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] resultan excepcionales para representar visualmente datos jerárquicos. En este artículo se describe cómo agregar un gráfico de rectángulos o de proyección solar a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En el artículo también se incluye una consulta de ejemplo de AdventureWorks para ayudarle a empezar.  
   
-##  Gráfico de rectángulos de <a name="bkmk_treemap_chart"></a>  
+##  <a name="treemap-chart"></a>Gráfico de rectángulos de <a name="bkmk_treemap_chart"></a>  
 
 Un gráfico de rectángulos divide el área del gráfico en rectángulos que representan los diferentes niveles y tamaños relativos de la jerarquía de datos. La distribución se asemeja a las ramas de un árbol, que parten de un tronco y se dividen en ramas cada vez más pequeñas. Cada rectángulo se divide en rectángulos más pequeños que representan el siguiente nivel en la jerarquía. Los rectángulos de nivel superior del gráfico se ordenan de forma que el rectángulo más grande quede en la esquina superior izquierda y el más pequeño, en la inferior derecha.  Dentro de cada rectángulo, el siguiente nivel del más alto también se organiza con rectángulos en la misma distribución, de la esquina superior izquierda a la inferior derecha.  
 
@@ -67,7 +67,7 @@ Por ejemplo, en la imagen siguiente del gráfico de rectángulos de ejemplo, el 
   
 7. El número de valores de etiqueta que se muestran viene determinado por el tamaño de la fuente, del área general del gráfico y de los rectángulos específicos. Para ver más etiquetas, cambie la propiedad **Fuente de etiqueta** de **LineTotal** a **10 pt** en lugar del valor predeterminado de **8 pt**.  
 
-##  <a name="bkmk_sunburst_chart"></a> Gráfico de proyección solar  
+##  <a name="sunburst-chart"></a><a name="bkmk_sunburst_chart"></a> Gráfico de proyección solar  
 
 En un gráfico de proyección solar, la jerarquía se representa mediante una serie de círculos. El nivel más alto de la jerarquía se encuentra en el centro y los niveles inferiores de la jerarquía son anillos que se muestran fuera del centro.  El nivel más bajo de la jerarquía es el anillo exterior.  
   
@@ -107,7 +107,7 @@ En un gráfico de proyección solar, la jerarquía se representa mediante una se
 
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
 
-##  <a name="bkmk_sample_data"></a> Datos de ejemplo de AdventureWorks
+##  <a name="sample-adventureworks-data"></a><a name="bkmk_sample_data"></a> Datos de ejemplo de AdventureWorks
 
 En esta sección se incluye una consulta de ejemplo y los pasos básicos para crear un origen y un conjunto de datos en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Si el informe ya contiene un origen y un conjunto de datos, puede omitir esta sección.  
   
@@ -115,7 +115,7 @@ La consulta devuelve los datos detallados de los pedidos de venta de AdventureWo
   
 1. **Obtener los datos**.  
   
-     La consulta de esta sección se basa en la base de datos de AdventureWorks, que puede descargar en GitHub: [Copia de seguridad completa de AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
+     La consulta de esta sección se basa en la base de datos de AdventureWorks, que puede descargar en GitHub: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
 
 2. **Crear un origen de datos**.  
   

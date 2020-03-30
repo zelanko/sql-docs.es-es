@@ -1,6 +1,6 @@
 ---
 title: Notificaciones de consulta en SQL Server
-description: Describe cómo las aplicaciones .NET pueden solicitar notificaciones de SQL Server cuando los datos han cambiado.
+description: Describe cómo las aplicaciones .NET pueden solicitar notificaciones de SQL Server cuando los datos han cambiado.
 ms.date: 08/15/2019
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
 ms.prod: sql
@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 57222c852ac2ba8c1aedf42075b69587a4b3843d
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896575"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notificaciones de consulta en SQL Server

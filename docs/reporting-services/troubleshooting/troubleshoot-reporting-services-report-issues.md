@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573877"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Solución de problemas de informes de Reporting Services
@@ -34,7 +34,7 @@ Al ver un informe publicado en el Administrador de informes, podría ver un mens
   
 Para ver la pila de llamadas, inicie sesión en el servidor de informes con las credenciales de administrador local, haga clic con el botón derecho en la página del Administrador de informes y haga clic en **Ver código fuente**. La pila de llamadas proporciona el contexto detallado del mensaje de error.  
   
-## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>Uso de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] para comprobar las consultas y credenciales  
+## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Uso de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] para comprobar las consultas y credenciales  
 Puede utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] para validar las consultas complejas antes de incluirlas en un informe.   
   
 Para más información, consulte [Editor de consultas del motor de base de datos](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) y [Administrar objetos mediante el Explorador de objetos](~/ssms/object/manage-objects-by-using-object-explorer.md).  

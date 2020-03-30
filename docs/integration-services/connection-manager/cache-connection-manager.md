@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294452"
 ---
 # <a name="cache-connection-manager"></a>Administrador de conexiones de caché
@@ -67,7 +67,7 @@ ms.locfileid: "71294452"
   
  En el cuadro de diálogo **Editor del administrador de conexiones de caché** se incluyen estas pestañas:  
   
-###  <a name="generaltab"></a> Pestaña General  
+###  <a name="general-tab"></a><a name="generaltab"></a> Pestaña General  
  Use la pestaña **General** del cuadro de diálogo **Editor del administrador de conexiones de caché** para indicar si la memoria caché se leerá desde un archivo o se guardará en un archivo.  
   
 #### <a name="options"></a>Opciones  
@@ -98,7 +98,7 @@ ms.locfileid: "71294452"
  **Actualizar los metadatos**  
  Elimine los metadatos de columna del administrador de conexiones de caché y vuelva a llenar el administrador de conexiones de caché con los metadatos de la columna del archivo caché seleccionado.  
   
-###  <a name="columnstab"></a> Pestaña Columnas  
+###  <a name="columns-tab"></a><a name="columnstab"></a> Pestaña Columnas  
  Utilice la pestaña **Columnas** del cuadro de diálogo **Editor del administrador de conexiones de caché** para configurar las propiedades de cada columna en la caché.  
   
 #### <a name="options"></a>Opciones  

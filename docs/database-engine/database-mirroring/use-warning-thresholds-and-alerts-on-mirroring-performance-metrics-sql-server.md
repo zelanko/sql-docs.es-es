@@ -19,10 +19,10 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74820903"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74820903"
  Después de establecer la supervisión de una base de datos reflejada, un administrador del sistema puede configurar los umbrales de advertencia de algunas métricas de rendimiento clave. Además, el administrador puede configurar alertas para estos y otros eventos de la creación de reflejo de la base de datos.  
   
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> Métricas de rendimiento y umbrales de advertencia  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> Métricas de rendimiento y umbrales de advertencia  
  En la siguiente tabla se presenta una lista de las métricas de rendimiento para las que se pueden configurar advertencias, se describe el umbral de advertencia correspondiente y se muestra la etiqueta correspondiente del Monitor de creación de reflejo de la base de datos.  
   
 |Métrica de rendimiento|Umbral de advertencia|Etiqueta del Monitor de creación de reflejo de la base de datos|  
@@ -44,7 +44,7 @@ ms.locfileid: "74820903"
   
  En una base de datos reflejada, un administrador del sistema puede especificar un umbral para cualquier de estas métricas de rendimiento. Para obtener más información, vea [Configurar y administrar umbrales de advertencia](#SetUpManageWarningThresholds)más adelante en este tema.  
   
-##  <a name="SetUpManageWarningThresholds"></a> Configurar y administrar umbrales de advertencia  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> Configurar y administrar umbrales de advertencia  
  Un administrador del sistema puede configurar uno o más umbrales de advertencia para las métricas de rendimiento clave de la creación de reflejo. Se recomienda establecer un umbral para una determinada advertencia en ambos asociados para asegurarse de que la advertencia persista si la base de datos genera un error. El umbral adecuado en cada asociado depende de las capacidades de rendimiento del sistema del asociado.  
   
  Los umbrales de advertencia se pueden configurar y administrar mediante el uso de:  
@@ -80,7 +80,7 @@ ms.locfileid: "74820903"
 >   
 >  tema.  
   
-##  <a name="UseAlerts"></a> Usar alertas para una base de datos reflejada  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a> Usar alertas para una base de datos reflejada  
  Una parte importante de la supervisión de una base de datos reflejada es la configuración de alertas en los eventos significativos de creación de reflejo de la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera los tipos siguientes de eventos de creación de reflejo de la base de datos:  
   
 -   Eventos de umbral de rendimiento  
@@ -101,7 +101,7 @@ ms.locfileid: "74820903"
 > [!IMPORTANT]  
 >  En todas las sesiones de creación de reflejo, se recomienda encarecidamente configurar la base de datos para que envíe una alerta de cualquier evento de cambio de estado. Significará que se ha producido algo que puede poner en riesgo los datos, a menos que un cambio de estado se espere como resultado de un cambio de configuración manual. Identificar y solucionar la causa de un cambio de estado inesperado le ayudará a proteger los datos.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para crear una alerta mediante SQL Server Management Studio**  
   
 -   [Crear una alerta con un número de error](../../ssms/agent/create-an-alert-using-an-error-number.md)  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c7199f12ac00d58f629096aa435c05eb862c4c51
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287182"
 ---
 # <a name="snapshot-replication"></a>Replicación de instantáneas
@@ -50,7 +50,7 @@ ms.locfileid: "76287182"
   
  [Agente de distribución y Agente de mezcla](#DistAgent)  
   
-##  <a name="HowWorks"></a> Cómo funciona la replicación de instantáneas  
+##  <a name="how-snapshot-replication-works"></a><a name="HowWorks"></a> Cómo funciona la replicación de instantáneas  
  De forma predeterminada, los tres tipos de replicación utilizan una instantánea para inicializar suscriptores. El Agente de instantáneas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre genera los archivos de instantáneas, pero el agente que entrega los archivos varía según el tipo de replicación que se utilice. La replicación de instantáneas y la replicación transaccional utilizan el Agente de distribución para entregar los archivos, mientras que la replicación de mezcla utiliza el Agente de mezcla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El Agente de instantáneas se ejecuta en el distribuidor. El Agente de distribución y el Agente de mezcla se ejecutan en el distribuidor para las suscripciones de inserción o en los suscriptores para las suscripciones de extracción.  
   
  Las instantáneas se pueden generar y aplicar inmediatamente tras la creación de la suscripción o de acuerdo con una programación establecida en el momento de crear la publicación. El Agente de instantáneas prepara archivos de instantáneas que contienen el esquema y los datos de las tablas y objetos de base de datos publicados, almacena los archivos en la carpeta de instantáneas del publicador y registra la información de seguimiento en la base de datos de distribución del distribuidor. Al configurar un distribuidor se especifica la carpeta de instantáneas predeterminada, pero puede especificar una ubicación alternativa para una publicación en lugar de, o además de, la predeterminada.  
@@ -61,7 +61,7 @@ ms.locfileid: "76287182"
   
  ![Componentes y flujo de datos de replicación de instantáneas](../../relational-databases/replication/media/snapshot.gif "Componentes y flujo de datos de replicación de instantáneas")  
   
-##  <a name="SnapshotAgent"></a> Agente de instantáneas  
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> Agente de instantáneas  
  Para la replicación de mezcla se genera una instantánea cada vez que se ejecuta el Agente de instantáneas. Para la replicación transaccional, la generación de instantáneas depende de la configuración de la propiedad de publicación **immediate_sync**. Si la propiedad se define como TRUE (la opción predeterminada cuando se utiliza el Asistente para nueva publicación), se genera una instantánea cada vez que se ejecuta el Agente de instantáneas, y puede aplicarse a un suscriptor en cualquier momento. Si la propiedad se define como FALSE (la opción predeterminada cuando se utiliza **sp_addpublication**), la instantánea se genera solo si se ha agregado una nueva suscripción desde la última ejecución del Agente de instantáneas; los suscriptores deberán esperar a que el Agente de instantáneas finalice para poder sincronizarse.  
   
  El Agente de instantáneas ejecuta los pasos siguientes:  
@@ -86,7 +86,7 @@ ms.locfileid: "76287182"
   
  Durante la generación de instantáneas, no es posible realizar cambios en el esquema de las tablas publicadas. Después de generar los archivos de instantáneas, podrá verlos en la carpeta de instantáneas mediante el Explorador de Windows.  
   
-##  <a name="DistAgent"></a> Agente de distribución y Agente de mezcla  
+##  <a name="distribution-agent-and-merge-agent"></a><a name="DistAgent"></a> Agente de distribución y Agente de mezcla  
  En las publicaciones de instantáneas, cada vez que el Agente de distribución se ejecuta para la publicación, mueve una nueva instantánea a cada suscriptor que aún no se ha sincronizado, se ha marcado para volver a inicializarse o incluye nuevos artículos.  
   
  En la replicación de instantáneas y transaccional, el Agente de distribución realiza los siguientes pasos:  

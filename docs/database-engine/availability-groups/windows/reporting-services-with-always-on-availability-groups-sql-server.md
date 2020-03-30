@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243619"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "75243619"
   
  Para obtener información general sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea las [preguntas más frecuentes sobre Always On en SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
 
-##  <a name="bkmk_requirements"></a> Requisitos para usar Reporting Services y Grupos de disponibilidad AlwaysOn  
+##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Requisitos para usar Reporting Services y Grupos de disponibilidad AlwaysOn  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y Power BI Report Server usan .NET Framework 4.0 y admiten las propiedades de cadena de conexión de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para su uso con orígenes de datos.  
   
  Para usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 y anteriores, deberá descargar e instalar una revisión para .NET 3.5 SP1. La revisión agrega compatibilidad con las características de SQL Client para AG y con las propiedades de cadenas de conexión **ApplicationIntent** y **MultiSubnetFailover**. Si la revisión no se instala en cada equipo que hospeda un servidor de informes, los usuarios que intenten obtener la vista previa de los informes verán un mensaje de error similar al siguiente y el mensaje de error se escribirá en el registro de seguimiento del servidor de informes:  
@@ -46,7 +46,7 @@ ms.locfileid: "75243619"
 > [!NOTE]  
 >  Los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] como **RSreportserver.config** no se admiten como parte de la funcionalidad de los [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si tiene que realizar cambios manualmente en un archivo de configuración de uno de los servidores de informes, tendrá que actualizar manualmente las réplicas.  
   
-##  <a name="bkmk_reportdatasources"></a> Orígenes de datos de informes y grupos de disponibilidad  
+##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> Orígenes de datos de informes y grupos de disponibilidad  
  El comportamiento de los orígenes de datos [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] basados en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] puede variar en función del modo en que el administrador haya configurado el entorno AG.  
   
  Para utilizar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para notificar los orígenes de datos, tiene que configurar la cadena de conexión del origen de datos de informe para usar el grupo de disponibilidad *nombre DNS del agente de escucha*. Los orígenes de datos admitidos son los siguientes:  
@@ -91,7 +91,7 @@ ms.locfileid: "75243619"
   
  Cuando se usa una réplica secundaria de solo lectura como origen de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , es importante asegurarse de que la latencia de actualización de datos cumple las necesidades de los usuarios del informe.  
   
-##  <a name="bkmk_reportdesign"></a> Diseñador de informes y grupos de disponibilidad  
+##  <a name="report-design-and-availability-groups"></a><a name="bkmk_reportdesign"></a> Diseñador de informes y grupos de disponibilidad  
  Al diseñar los informes en [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] o un proyecto de informe en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], un usuario puede configurar una cadena de conexión del origen de datos de informe para que contenga las nuevas propiedades de conexión proporcionadas por [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. La compatibilidad con las nuevas propiedades de conexión depende de si un usuario obtiene la vista previa del informe.  
   
 -   **Vista previa local**: [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] y [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usan .NET Framework 4.0 y admiten [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -100,7 +100,7 @@ ms.locfileid: "75243619"
   
 > **Mensaje de error:** "La palabra clave no se admite "applicationintent""  
   
-##  <a name="bkmk_reportserverdatabases"></a> Bases de datos del servidor de informes y grupos de disponibilidad  
+##  <a name="report-server-databases-and-availability-groups"></a><a name="bkmk_reportserverdatabases"></a> Bases de datos del servidor de informes y grupos de disponibilidad  
  Reporting Services y Power BI Report Server ofrece compatibilidad limitada para usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con bases de datos del servidor de informes. Las bases de datos del servidor de informes se pueden configurar en AG para ser parte de una réplica; sin embargo, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no usará automáticamente una réplica diferente para las bases de datos del servidor de informes cuando se produce una conmutación por error. No se admite el uso de MultiSubnetFailover con las bases de datos del servidor de informes.  
   
  Los scripts de automatización personalizada o acciones manuales tienen que usarse para realizar la conmutación por error y la recuperación. Hasta que estas acciones se completen, algunas características del servidor de informes pueden no funcionar de forma correcta tras la conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
@@ -108,7 +108,7 @@ ms.locfileid: "75243619"
 > [!NOTE]  
 >  Al planear la recuperación de desastres y la conmutación por error para las bases de datos del servidor de informes, se aconseja que siempre haga una copia de seguridad de la clave de cifrado del servidor de informes.  
   
-###  <a name="bkmk_differences_in_server_mode"></a> Diferencias entre el modo nativo de SharePoint  
+###  <a name="differences-between-sharepoint-native-mode"></a><a name="bkmk_differences_in_server_mode"></a> Diferencias entre el modo nativo de SharePoint  
  En esta sección se resumen las diferencias entre el modo en que los servidores de informes del nodo nativo y el modo de SharePoint interactúan con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
  Un servidor de informes de SharePoint crea las bases de datos de **3** para cada aplicación de servicios de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que cree. La conexión a las bases de datos del servidor de informes en modo de SharePoint se configura en Administración central de SharePoint al crear una nueva aplicación de servicio. Los nombres predeterminados de las bases de datos incluyen un GUID que está asociado a la aplicación de servicio. Estos son los nombres de base de datos de ejemplo, para un servidor de informes en modo de SharePoint:  
@@ -134,7 +134,7 @@ ms.locfileid: "75243619"
 > -   El proceso de sincronización de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] detectará las diferencias entre la lista de elementos de la base de datos de contenido y las bases de datos del servidor de informes.  
 > -   El proceso de sincronización eliminará o actualizará los elementos de la base de datos de contenido.  
   
-###  <a name="bkmk_prepare_databases"></a> Preparar las bases de datos del servidor de informes para grupos de disponibilidad  
+###  <a name="prepare-report-server-databases-for-availability-groups"></a><a name="bkmk_prepare_databases"></a> Preparar las bases de datos del servidor de informes para grupos de disponibilidad  
  A continuación se indican los pasos básicos para preparar y agregar las bases de datos del servidor de informes a un [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 -   Cree su grupo de disponibilidad y configure un *nombre DNS del agente de escucha*.  
@@ -147,7 +147,7 @@ ms.locfileid: "75243619"
   
 -   Actualice la conexión a la base de datos para utilizar el nombre DNS del cliente de escucha. Para los servidores de informes en modo nativo, cambie el **Nombre de base de datos del servidor de informes** en el administrador de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para el modo de SharePoint, cambie el **nombre del servidor de base de datos** de las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
-###  <a name="bkmk_steps_to_complete_failover"></a> Pasos para completar la recuperación de desastres de bases de datos del servidor de informes  
+###  <a name="steps-to-complete-disaster-recovery-of-report-server-databases"></a><a name="bkmk_steps_to_complete_failover"></a> Pasos para completar la recuperación de desastres de bases de datos del servidor de informes  
  Es necesario completar los pasos siguientes tras una conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] a una réplica secundaria:  
   
 1.  Detenga la instancia del servicio Agente SQL que usaba el motor de base de datos principal que hospeda las bases de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
@@ -164,7 +164,7 @@ ms.locfileid: "75243619"
   
 5.  Compruebe que los informes se puedan ejecutar con la nueva réplica principal.  
   
-###  <a name="bkmk_failover_behavior"></a> Comportamiento del servidor de informes cuando se produce una conmutación por error  
+###  <a name="report-server-behavior-when-a-failover-occurs"></a><a name="bkmk_failover_behavior"></a> Comportamiento del servidor de informes cuando se produce una conmutación por error  
  Cuando las bases de datos del servidor conmutan por error y ha actualizado el entorno del servidor de informes para que use la nueva réplica principal, hay algunos problemas operativos que se derivan del proceso de conmutación por error y recuperación. La repercusión de estos problemas variará según la carga de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en el momento de la conmutación por error, así como lo que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tarda en conmutar por error a una réplica secundaria y el administrador del servidor de informes en actualizar el entorno de informes para usar la nueva réplica principal.  
   
 -   La ejecución del procesamiento en segundo plano puede ocurrir más de una vez debido a la lógica de reintento y a la incapacidad del servidor de informes de marcar el trabajo programado a medida que se completa durante el período de conmutación por error.  

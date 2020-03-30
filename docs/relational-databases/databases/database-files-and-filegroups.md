@@ -33,10 +33,10 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287989"
 ---
 # <a name="database-files-and-filegroups"></a>Archivos y grupos de archivos de base de datos
@@ -59,9 +59,9 @@ ms.locfileid: "79287989"
 ### <a name="logical-and-physical-file-names"></a>Nombres de archivo lógico y físico
 Los archivos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen dos tipos de nombres de archivo: 
 
-**logical_file_name:**  logical_file_name es el nombre que se usa para hacer referencia al archivo físico en todas las instrucciones Transact-SQL. El nombre de archivo lógico tiene que cumplir las reglas de los identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y tiene que ser único entre los nombres de archivos lógicos de la base de datos. El argumento `NAME` lo establece en `ALTER DATABASE`. Para obtener más información, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**logical_file_name**  : logical_file_name es el nombre que se usa para hacer referencia al archivo físico en todas las instrucciones Transact-SQL. El nombre de archivo lógico tiene que cumplir las reglas de los identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y tiene que ser único entre los nombres de archivos lógicos de la base de datos. El argumento `NAME` lo establece en `ALTER DATABASE`. Para obtener más información, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-**os_file_name:** os_file_name es el nombre del archivo físico que incluye la ruta de acceso al directorio. Debe seguir las reglas para nombres de archivos del sistema operativo. El argumento `FILENAME` lo establece en `ALTER DATABASE`. Para obtener más información, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**os_file_name** : os_file_name es el nombre del archivo físico que incluye la ruta de acceso al directorio. Debe seguir las reglas para nombres de archivos del sistema operativo. El argumento `FILENAME` lo establece en `ALTER DATABASE`. Para obtener más información, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!IMPORTANT]
 > Los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden colocar en sistemas de archivos FAT o NTFS. En sistemas Windows, se recomienda usar el sistema de archivos NTFS por las características de seguridad que ofrece. 
@@ -199,7 +199,7 @@ Las siguientes reglas afectan a los archivos y grupos de archivos:
 - Un archivo puede pertenecer únicamente a un grupo de archivos.
 - Los archivos del registro de transacciones nunca pueden formar parte de un grupo de archivos.
 
-## <a name="Recommendations"></a> Recomendaciones
+## <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones
 Éstas son algunas recomendaciones generales referentes a los archivos y a los grupos de archivos: 
 - La mayor parte de las bases de datos funcionarán correctamente con un solo archivo de datos y un solo archivo de registro de transacciones.
 - Si usa varios archivos de datos, cree un segundo grupo de archivos para el archivo adicional y conviértalo en el grupo de archivos predeterminado. De ese modo, el archivo principal solo contendrá objetos y tablas del sistema.

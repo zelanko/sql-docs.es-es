@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287479"
 ---
 # <a name="joins-sql-server"></a>Combinaciones (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "79287479"
 -   Combinaciones hash   
 -   Combinaciones adaptables (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
-## <a name="fundamentals"></a> Aspectos básicos de las combinaciones
+## <a name="join-fundamentals"></a><a name="fundamentals"></a> Aspectos básicos de las combinaciones
 Las combinaciones permiten recuperar datos de dos o más tablas según las relaciones lógicas entre ellas. Las combinaciones indican cómo debe usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los datos de una tabla para seleccionar las filas de otra tabla.    
 
 Una condición de combinación define la forma en la que dos tablas se relacionan en una consulta al:    
@@ -108,7 +108,7 @@ La mayor parte de las consultas que usan una combinación se pueden volver a esc
 > Por ejemplo, `SELECT * FROM t1 JOIN t2 ON SUBSTRING(t1.textcolumn, 1, 20) = SUBSTRING(t2.textcolumn, 1, 20)` realiza una combinación interna de dos tablas en los primeros 20 caracteres de cada columna de texto de las tablas t1 y t2.   
 > Además, otra posibilidad para comparar columnas ntext o text de dos tablas consiste en comparar las longitudes de las columnas con una cláusula `WHERE`, por ejemplo: `WHERE DATALENGTH(p1.pr_info) = DATALENGTH(p2.pr_info)`
 
-## <a name="nested_loops"></a> Descripción de las combinaciones de bucles anidados
+## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> Descripción de las combinaciones de bucles anidados
 Si la entrada de una combinación es pequeña (menor de 10 filas), y la entrada de otra combinación es bastante grande y está indizada en las columnas de combinación, una combinación de bucles anidados de índices es la operación de combinación más rápida, debido a que requieren menos E/S y menos comparaciones. 
 
 La combinación de bucles anidados, también denominada *iteración anidada*, utiliza una entrada de combinación como tabla de entrada externa (mostrada como la entrada superior en el plan de ejecución gráfico) y otra como tabla de entrada interna (inferior). El bucle externo procesa la tabla de entrada externa fila a fila. El bucle interno, que se ejecuta para cada fila externa, busca filas coincidentes en la tabla de entrada interna.   
@@ -119,7 +119,7 @@ Una combinación de bucles anidados resulta particularmente eficaz si la entrada
 
 Cuando el atributo OPTIMIZED de un operador de combinación de bucles anidados está establecido en **True**, significa que un bucle anidado optimizado (u ordenación por lotes) se usa para minimizar la E/S cuando la tabla interna es grande, independientemente de si está paralelizada o no. Es posible que la presencia de esta optimización en un plan determinado no sea demasiado obvia al analizar un plan de ejecución, debido a que la propia ordenación es una operación oculta. Pero si se mira el XML del plan correspondiente al atributo OPTIMIZED, indica que la combinación de bucles anidados podría intentar reordenar las filas de entrada para mejorar el rendimiento de E/S.
 
-## <a name="merge"></a> Comprender las combinaciones de mezcla
+## <a name="understanding-merge-joins"></a><a name="merge"></a> Comprender las combinaciones de mezcla
 Si las dos entradas de la combinación no son pequeñas pero están ordenadas por la columna de combinación (por ejemplo, si se obtuvieron al recorrer índices ordenados), una combinación de mezcla es la operación de combinación más rápida. Si ambas entradas de combinación son grandes y tienen tamaños similares, una combinación de mezcla con una ordenación previa y una combinación hash ofrecen un rendimiento similar. Sin embargo, las operaciones de combinación hash a menudo son más rápidas si los tamaños de las dos entradas difieren significativamente entre sí.       
 
 La combinación de mezcla requiere que ambas entradas estén ordenadas en las columnas de mezcla, que se han definido mediante las cláusulas de igualdad (ON) del predicado de combinación. El optimizador de consultas normalmente recorre un índice, si existe uno en el conjunto de columnas apropiado, o bien coloca un operador de orden bajo la combinación de mezcla. En algunos casos, puede haber varias cláusulas de igualdad, pero las columnas de mezcla se toman solo de algunas de las cláusulas de igualdad disponibles.    
@@ -132,7 +132,7 @@ Si hay un predicado residual, todas las filas que cumplan el predicado de mezcla
 
 La combinación de mezcla es muy rápida, pero puede ser una opción costosa si se requieren operaciones de ordenación. Sin embargo, si el volumen de datos es grande y los datos deseados se pueden obtener con una ordenación previa de los índices existentes de árbol b, la combinación de mezcla es, a menudo, el algoritmo de combinación disponible más rápido.    
 
-## <a name="hash"></a> Descripción de las combinaciones hash
+## <a name="understanding-hash-joins"></a><a name="hash"></a> Descripción de las combinaciones hash
 Las combinaciones hash pueden procesar eficazmente entradas grandes, sin ordenar y no indizadas. Son útiles para obtener resultados intermedios en consultas complejas debido a que:
 -   Los resultados intermedios no están indizados (a menos que se hayan guardado explícitamente en disco y, después, se hayan indizado) y, a menudo, no tienen un orden adecuado para la siguiente operación del plan de consulta.
 -   Los optimizadores de consultas solo calculan los tamaños de resultados intermedios. Dado que las estimaciones pueden ser poco exactas en consultas complejas, los algoritmos utilizados para procesar los resultados intermedios no solo deben ser eficaces, sino que también deben rebajarse si un resultado intermedio es mayor de lo previsto.   
@@ -145,13 +145,13 @@ Las combinaciones hash se utilizan para muchos tipos de operaciones de coinciden
 
 En las secciones siguientes se describen los distintos tipos de combinaciones hash: combinación hash en memoria, combinación hash aplazada y combinación hash recursiva.    
 
-### <a name="inmem_hash"></a> Combinación hash en memoria
+### <a name="in-memory-hash-join"></a><a name="inmem_hash"></a> Combinación hash en memoria
 La combinación hash primero recorre o calcula la entrada de generación completa y, a continuación, genera una tabla hash en memoria. Cada fila se inserta en un cubo hash según el valor hash calculado para la clave hash. Si la entrada de generación completa es menor que la memoria disponible, se pueden insertar todas las filas en la tabla hash. Después de la fase de generación se produce la fase de sondeo. La entrada de sondeo completa se recorre o se calcula fila a fila y, por cada fila de sondeo, se calcula el valor de la clave hash, se recorre el cubo hash correspondiente y se obtienen las coincidencias.    
 
-### <a name="grace_hash"></a> Combinación hash aplazada
+### <a name="grace-hash-join"></a><a name="grace_hash"></a> Combinación hash aplazada
 Si la entrada de generación no cabe en la memoria, la combinación hash se realiza en varios pasos. Esto se denomina combinación hash aplazada. Cada paso contiene una fase de generación y una fase de sondeo. Inicialmente, se procesan todas las entradas de generación y sondeo, y se crean particiones (con una función hash sobre las claves hash) en varios archivos. La utilización de la función hash sobre las claves hash garantiza que todos los pares de registros combinados estén en la misma pareja de archivos. Por tanto, la tarea de combinar dos grandes entradas se ha reducido a varias instancias más pequeñas de las mismas tareas. A continuación se aplica la combinación hash a cada pareja de archivos de la partición.    
 
-### <a name="recursive_hash"></a> Combinación hash recursiva
+### <a name="recursive-hash-join"></a><a name="recursive_hash"></a> Combinación hash recursiva
 Si la entrada de generación es tan grande que las entradas para una mezcla externa estándar requerirían varios niveles de mezcla, son necesarios varios pasos de particiones y varios niveles de particiones. Si solo algunas de las particiones son grandes, los pasos de particiones adicionales solo se utilizan para estas particiones específicas. Para que todos los pasos de las particiones sean lo más rápidos posible, se utilizan grandes operaciones asincrónicas de E/S de forma que un solo subproceso pueda mantener ocupadas varias unidades de disco.    
 
 > [!NOTE]
@@ -164,7 +164,7 @@ Si el optimizador de consultas prevé erróneamente cuál de las dos entradas se
 > [!NOTE]
 > La inversión de roles funciona independientemente de cualquier estructura o sugerencia de consulta. La inversión de roles no se muestra en el plan de consulta; cuando se lleva a cabo, resulta transparente para el usuario.
 
-### <a name="hash_bailout"></a> Salida hash
+### <a name="hash-bailout"></a><a name="hash_bailout"></a> Salida hash
 El término salida hash algunas veces se utiliza para describir combinaciones hash aplazadas o recursivas.    
 
 > [!NOTE]
@@ -172,7 +172,7 @@ El término salida hash algunas veces se utiliza para describir combinaciones ha
 
 Para obtener más información sobre el salida hash, vea [Hash Warning [clase de eventos]](../../relational-databases/event-classes/hash-warning-event-class.md).    
 
-## <a name="adaptive"></a> Descripción de las combinaciones adaptables
+## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> Descripción de las combinaciones adaptables
 Las combinaciones adaptables en [modo por lotes](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) permiten elegir un método [Combinación hash](#hash) o [Combinación de bucles anidados](#nested_loops) que se aplace hasta **después** de que se haya examinado la primera entrada. El operador de combinaciones adaptables define un umbral que se usa para decidir cuándo cambiar a un plan de bucles anidados. Por lo tanto, un plan de consulta puede cambiar dinámicamente a una mejor estrategia de combinación durante la ejecución sin tener que sea necesaria una nueva compilación. 
 
 > [!TIP]
@@ -291,7 +291,7 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 > [!NOTE]
 > Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de ámbito de base de datos o una opción de marca de seguimiento. 
 
-## <a name="nulls_joins"></a> Combinaciones y valores NULL
+## <a name="null-values-and-joins"></a><a name="nulls_joins"></a> Combinaciones y valores NULL
 Cuando hay valores NULL en las columnas de las tablas que se están combinando, los valores NULL no coinciden unos con otros. La presencia de valores NULL en una columna de una de las tablas que se está combinando solo se puede indicar si se usa una combinación externa (a menos que la cláusula `WHERE` excluya los valores NULL).     
 
 A continuación se muestran dos tablas que tienen, cada una, un valor NULL en la columna que participa en la combinación:     

@@ -14,10 +14,10 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235442"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Página Resultado de evaluación de directiva (panel Always On)
@@ -25,14 +25,14 @@ ms.locfileid: "75235442"
 
   Use la página **Resultado de evaluación de directiva** del panel AlwaysOn para ver cualquier problema de directivas actual.  
     
-##  <a name="Options"></a> Opciones del cuadro de diálogo  
+##  <a name="dialog-box-options"></a><a name="Options"></a> Opciones del cuadro de diálogo  
  **Problema detectado**  
  Muestra una fila para cada problema detectado. El icono asociado a un problema proporciona un indicador visual para indicar la gravedad del mismo, del modo siguiente:  
   
 |Icono|severity|  
 |----------|--------------|  
-|![Icono de la IU: error](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icono de la IU: error")|Crítico|  
-|![Icono de la IU: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la IU: advertencia")|Advertencia|  
+|![Icono de la interfaz de usuario: error](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|Crítico|  
+|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|Advertencia|  
   
  **Descripción**  
  Esta cuadrícula muestra una breve descripción del problema seleccionado.  
@@ -40,7 +40,7 @@ ms.locfileid: "75235442"
  **Más información**  
  Haga clic en este vínculo para abrir el tema de Ayuda para el problema seleccionado.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

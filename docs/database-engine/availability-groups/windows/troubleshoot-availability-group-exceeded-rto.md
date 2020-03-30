@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013753"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Solución de problemas: el grupo de disponibilidad superó el RTO
@@ -28,7 +28,7 @@ ms.locfileid: "68013753"
   
 2.  [El subproceso de la fase de puesta al día se retrasa debido a la contención de recursos](#BKMK_CONTENTION)  
   
-##  <a name="BKMK_REDOBLOCK"></a> La carga de trabajo de los informes impide que se ejecute el subproceso de la fase de puesta al día de ejecución  
+##  <a name="reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> La carga de trabajo de los informes impide que se ejecute el subproceso de la fase de puesta al día de ejecución  
  El subproceso de la fase de puesta al día de la réplica secundaria no puede hacer cambios en el lenguaje de definición de datos (DDL) a partir de una consulta de solo lectura de ejecución prolongada.  
   
 ### <a name="explanation"></a>Explicación  
@@ -44,7 +44,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Puede esperar a que la carga de trabajo de los informes finalice, momento en que el subproceso de la fase de puesta al día se desbloqueará, o puede desbloquear inmediatamente el subproceso de la fase de puesta al día mediante la ejecución del comando [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) en el identificador de sesión de bloqueo.  
   
-##  <a name="BKMK_CONTENTION"></a> El subproceso de la fase de puesta al día se retrasa debido a la contención de recursos  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_CONTENTION"></a> El subproceso de la fase de puesta al día se retrasa debido a la contención de recursos  
  Una gran carga de trabajo de informes en la réplica secundaria ha ralentizado el rendimiento de la réplica secundaria y el subproceso de la fase de puesta al día se ha retrasado.  
   
 ### <a name="explanation"></a>Explicación  

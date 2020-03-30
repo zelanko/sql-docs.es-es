@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287633"
 ---
 # <a name="manage-identity-columns"></a>Administrar columnas de identidad
@@ -40,15 +40,15 @@ ms.locfileid: "76287633"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Al publicar una tabla en más de una publicación, debe especificar las mismas opciones de administración de intervalos de identidad para ambas publicaciones. Para obtener más información, vea "Publicar tablas en más de una publicación" en [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 -   Para crear un número que se incremente automáticamente y que se pueda usar en varias tablas, o que se pueda llamar desde las aplicaciones sin hacer referencia a ninguna tabla, vea [Números de secuencia](../../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Especifique una opción de administración de columnas de identidad en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** del Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md). En el Asistente para nueva publicación:  
   
 -   Si selecciona **Publicación de combinación** o **Publicación transaccional con suscripciones actualizables** en la página **Tipo de publicación** , seleccione la administración automática o manual de los intervalos de identidad (se recomienda utilizar la opción predeterminada: la administración automática). Una vez publicada la tabla, la propiedad no se puede modificar, pero otras propiedades relacionadas sí se pueden modificar.  
@@ -92,7 +92,7 @@ ms.locfileid: "76287633"
   
 5.  Haga clic en **Aceptar** en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede usar los procedimientos almacenados de replicación para especificar las opciones de administración de intervalos de identidad cuando se crea un artículo.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Para habilitar la administración automática de intervalos de identidad al definir artículos para una publicación transaccional  

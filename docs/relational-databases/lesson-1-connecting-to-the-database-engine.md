@@ -11,10 +11,10 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73032995"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al motor de base de datos
@@ -27,7 +27,7 @@ Esta lección contiene las siguientes tareas:
 - [Conectarse a Management Studio](#connect)  
 - [Autorizar conexiones adicionales](#additional) 
 
-## <a name="tools">Herramientas de introducción</a> 
+## <a name=""></a><a name="tools">Herramientas de introducción</a> 
 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye varias herramientas. En este tema se describen las primeras herramientas que necesitará y se ofrece ayuda para seleccionar la herramienta adecuada para La tarea. Se puede obtener acceso a todas las herramientas desde el menú **Inicio** . No se instalan las mismas herramientas, como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], de forma predeterminada. Debe seleccionarlas como parte de los componentes de cliente durante la instalación. Para obtener una descripción completa de las herramientas descritas a continuación, búsquelas en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] solo contiene un subconjunto de las herramientas.  
 
 ### <a name="basic-tools"></a>Herramientas básicas
@@ -46,7 +46,7 @@ Las bases de datos de ejemplo y los ejemplos no están incluidos en [!INCLUDE[ss
 - En las versiones actuales de Windows, en la página de **Inicio** , escriba **Administrador de configuración**y luego haga clic en **Administrador de configuración de SQL Server *versión* Administrador de configuración**.   
 - Si usa versiones anteriores de Windows, en el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Herramientas de configuración**y, después, haga clic en **Administrador de configuración de SQL Server**.  
 
-## <a name="connect"></a>Conectarse a Management Studio  
+## <a name="connecting-with-management-studio"></a><a name="connect"></a>Conectarse a Management Studio  
 - Resulta sencillo conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde herramientas que se ejecutan en el mismo equipo si conoce el nombre de la instancia y se conecta como miembro del grupo local Administradores del equipo. Los procedimientos siguientes deben realizarse en el mismo equipo en el que se hospeda [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
@@ -85,7 +85,7 @@ Se ha seleccionado al menos una cuenta de administrador al instalar [!INCLUDE[ss
 > [!NOTE]
 > En este tutorial se supone que es nuevo con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y no tiene problemas especiales para conectarse. Esto debería ser suficiente para la mayoría de las personas y hace que este tutorial sea simple. Para obtener pasos de solución de problemas detallados, consulte [Solucionar problemas de conexión al motor de base de datos de SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
 
-## <a name="additional"></a>Autorizar conexiones adicionales  
+## <a name="authorizing-additional-connections"></a><a name="additional"></a>Autorizar conexiones adicionales  
 Ahora que se ha conectado a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como administrador, una de las primeras tareas que debe realizar es autorizar a otros usuarios a conectarse. Para ello, cree un inicio de sesión y concédale autorización para obtener acceso a una base de datos como usuario. Los inicios de sesión pueden ser inicios de sesión con autenticación de Windows, que utilizan las credenciales de Windows, o bien inicios de sesión con autenticación de SQL Server, que almacenan la información de autenticación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y son independientes de las credenciales de Windows. Utilice la autenticación de Windows siempre que sea posible.
 
 > [!TIP]

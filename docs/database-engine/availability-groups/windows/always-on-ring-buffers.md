@@ -11,10 +11,10 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822113"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>Uso de búferes en anillo para obtener información de estado sobre los grupos de disponibilidad Always On
@@ -62,7 +62,7 @@ ORDER BY record.value('(./Record/@time)[1]','bigint') DESC
 GO  
 ```  
   
-##  <a name="BKMK_RingBufferTypes"></a> Tipos de búfer de anillo en los grupos de disponibilidad  
+##  <a name="availability-groups-ring-buffer-types"></a><a name="BKMK_RingBufferTypes"></a> Tipos de búfer de anillo en los grupos de disponibilidad  
  Hay cuatro búferes de anillo de grupos de disponibilidad en sys.dm_os_ring_buffers. En la siguiente tabla se describen los tipos de búfer de anillo y se ofrece un ejemplo del contenido de la columna Registro de cada tipo de búfer de anillo.  
   
  **RING_BUFFER_HADRDBMGR_API**  

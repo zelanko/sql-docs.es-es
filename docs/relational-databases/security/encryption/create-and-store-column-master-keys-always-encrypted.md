@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287099"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Creación y almacenamiento de claves maestras de columna para Always Encrypted
@@ -206,7 +206,7 @@ Para que un HSM esté disponible para las aplicaciones de un equipo determinado,
 
 Un CSP debe admitir el algoritmo RSA para usarse con Always Encrypted.
 
-Windows incluye los siguientes CSP basados en software (no respaldados por un HSM) que admiten RSA, y pueden usarse con fines de pruebas: Microsoft ha mejorado el proveedor de servicios criptográficos RSA y AES.
+Windows incluye los siguientes CSP basados en software (no están respaldados por un HSM) que admiten RSA y pueden usarse con fines de pruebas: el proveedor de servicios criptográficos RSA y AES mejorado de Microsoft.
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-capicsp"></a>Crear claves maestras de columna en un almacén de claves con CAPI o CSP
 

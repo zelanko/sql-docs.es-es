@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288739"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Información general de administración de claves de Always Encrypted
@@ -46,7 +46,7 @@ El proceso de administración de claves se puede dividir en las siguientes tarea
 - **Rotación de claves** : reemplazo periódico de una clave existente por una clave nueva. Puede que necesite rotar una clave si está en peligro, o bien para cumplir las directivas o los reglamentos de la organización que exigen que se roten las claves criptográficas. 
 
 
-## <a name="KeyManagementRoles"></a> Roles de administración de claves
+## <a name="key-management-roles"></a><a name="KeyManagementRoles"></a> Roles de administración de claves
 
 Hay dos roles de usuarios que administran las claves de Always Encrypted, los administradores de seguridad y los administradores de bases de datos (DBA):
 
@@ -58,7 +58,7 @@ Teniendo en cuenta los roles anteriores, hay dos maneras de realizar tareas de a
 ## <a name="managing-keys-with-role-separation"></a>Administración de claves con separación de roles
 Cuando las claves de Always Encrypted se administran con separación de roles, los roles de administrador de seguridad y DBA están asignados a personas diferentes de una organización. Un proceso de administración de claves con separación de roles garantiza que los DBA no tengan acceso a las claves o a los almacenes de claves que contienen las claves reales y que los administradores de seguridad no tengan acceso a la base de datos que contiene información confidencial. Se recomienda que use la administración de claves con separación de roles si su objetivo es asegurarse de que los DBA de la organización no tengan acceso a información confidencial. 
 
-**Nota:** Los administradores de seguridad generan y usan claves de texto no cifrado, de modo que nunca deben realizar sus tareas en los mismos equipos que hospedan un sistema de base de datos ni en equipos a los que puedan tener acceso los DBA o posibles adversarios. 
+**Nota:** Los administradores de seguridad generan y usan claves de texto no cifrado, de modo que nunca deben realizar sus tareas en equipos que hospeden un sistema de base de datos ni en equipos a los que puedan tener acceso los DBA o posibles adversarios. 
 
 ## <a name="managing-keys-without-role-separation"></a>Administración de claves sin separación de roles
 Cuando las claves de Always Encrypted se administran sin separación de roles, una misma persona puede asumir los roles de administrador de seguridad y DBA, lo que implica que dicha persona debe tener acceso a las claves, los almacenes de claves y los metadatos de clave y debe poder administrarlos. La administración de claves sin separación de roles está recomendada para organizaciones que usen el modelo DevOps, o si la base de datos está hospedada en la nube y el objetivo principal es impedir que los administradores de la nube (pero no los DBA locales) accedan a información confidencial.

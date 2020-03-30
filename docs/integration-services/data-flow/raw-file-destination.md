@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292180"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
@@ -149,13 +149,13 @@ ms.locfileid: "71292180"
   
 -   [Establecer las opciones de la pestaña Columnas](#mapping)  
   
-###  <a name="open"></a> Abra el editor de destino de archivos sin formato  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Abra el editor de destino de archivos sin formato  
   
 1.  Agregue el destino de archivo sin formato a un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Haga clic con el botón derecho en el componente y, después, haga clic en **Editar**.  
   
-###  <a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
  **Modo de acceso**  
  Seleccione cómo se especifica el nombre de archivo. Seleccione **Nombre de archivo** para escribir el nombre de archivo y la ruta de acceso directamente o **Nombre de archivo de la variable** para especificar una variable que contiene el nombre de archivo.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71292180"
   
  Al hacer clic en **Generar archivo sin formato inicial**, aparece un cuadro de mensaje. Haga clic en **Aceptar** para continuar con la creación del archivo. Haga clic en **Cancelar** para seleccionar otra lista de columnas en la página **Columnas:** .  
   
-###  <a name="mapping"></a> Establecer las opciones de la pestaña Columnas  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Establecer las opciones de la pestaña Columnas  
  **Columnas de entrada disponibles**  
  Seleccione una o varias columnas de entrada para escribir en el archivo sin formato.  
   
@@ -191,13 +191,13 @@ ms.locfileid: "71292180"
   
 -   [Establecer las opciones de la pestaña Columnas](#mapping)  
   
-###  <a name="open"></a> Abra el editor de destino de archivos sin formato  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Abra el editor de destino de archivos sin formato  
   
 1.  Agregue el destino de archivo sin formato a un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Haga clic con el botón derecho en el componente y, después, haga clic en **Editar**.  
   
-###  <a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
  **Modo de acceso**  
  Seleccione cómo se especifica el nombre de archivo. Seleccione **Nombre de archivo** para escribir el nombre de archivo y la ruta de acceso directamente o **Nombre de archivo de la variable** para especificar una variable que contiene el nombre de archivo.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71292180"
   
  Al hacer clic en el botón, aparece una lista de columnas. Puede hacer clic en Cancelar y modificar las columnas, o hacer clic en Aceptar y continuar con la creación del archivo.  
   
-###  <a name="mapping"></a> Establecer las opciones de la pestaña Columnas  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Establecer las opciones de la pestaña Columnas  
  **Columnas de entrada disponibles**  
  Seleccione una o varias columnas de entrada para escribir en el archivo sin formato.  
   

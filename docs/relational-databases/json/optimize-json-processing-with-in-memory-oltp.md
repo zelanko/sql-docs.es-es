@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74096079"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimización del procesamiento de OLTP en memoria JSON
@@ -46,7 +46,7 @@ Las características disponibles en SQL Server y Azure SQL Database permiten int
  - [Indexe los valores](#index) de los documentos JSON con índices optimizados para memoria.
  - [Compile de forma nativa las consultas SQL](#compile) que usan valores de documentos JSON o que dan formato a los resultados como texto JSON.
 
-## <a name="validate"></a> Validación de columnas JSON
+## <a name="validate-json-columns"></a><a name="validate"></a> Validación de columnas JSON
 SQL Server y Azure SQL Database permiten agregar restricciones CHECK compiladas de forma nativa que validan el contenido de los documentos JSON almacenados en una columna de cadena. Con las restricciones CHECK de JSON compiladas de forma nativa, puede asegurarse de que el texto JSON almacenado en las tablas optimizadas para memoria tiene el formato correcto.
 
 En el ejemplo siguiente, se crea una tabla `Product` con una columna JSON `Tags`. La columna `Tags` tiene una restricción CHECK que usa la función `ISJSON` para validar el texto JSON en la columna.
@@ -75,7 +75,7 @@ ALTER TABLE xtp.Product
         CHECK (ISJSON(Data)=1)
 ```
 
-## <a name="computedcol"></a> Exposición de valores JSON mediante columnas calculadas
+## <a name="expose-json-values-using-computed-columns"></a><a name="computedcol"></a> Exposición de valores JSON mediante columnas calculadas
 Las columnas calculadas permiten exponer valores del texto JSON y obtener acceso a esos valores sin capturar el valor del texto JSON y sin analizar nuevamente la estructura JSON. Los valores expuestos de esta manera están fuertemente tipados y persisten físicamente en las columnas calculadas. Acceder a los valores JSON mediante columnas calculadas persistentes es más rápido que hacerlo directamente a los valores del documento JSON.
 
 En el ejemplo siguiente se muestra cómo exponer los dos valores siguientes de la columna `Data` JSON:
@@ -100,7 +100,7 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-## <a name="index"></a> Indexación de valores en las columnas JSON
+## <a name="index-values-in-json-columns"></a><a name="index"></a> Indexación de valores en las columnas JSON
 SQL Server y Azure SQL Database permiten indexar valores en columnas JSON mediante índices optimizados para memoria. Los valores JSON que se indexan se deben exponer y tipar fuertemente mediante el uso de columnas calculadas, tal como se describe en el ejemplo anterior.
 
 Los valores de las columnas JSON se pueden indexar con los índices NONCLUSTERED y HASH estándar.
@@ -131,7 +131,7 @@ ALTER TABLE Product
         WITH (BUCKET_COUNT=20000)
 ```
 
-## <a name="compile"></a> Compilación nativa de consultas JSON
+## <a name="native-compilation-of-json-queries"></a><a name="compile"></a> Compilación nativa de consultas JSON
 Si los procedimientos, las funciones y los desencadenadores contienen consultas que usan las funciones JSON integradas, la compilación nativa aumenta el rendimiento de estas consultas y disminuye los ciclos de CPU que se requieren para ejecutarlos.
 
 En el ejemplo siguiente, se muestra un procedimiento compilado de forma nativa que usa varias funciones JSON: **JSON_VALUE**, **OPENJSON** y **JSON_MODIFY**.

@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112273"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexiones de Integration Services (SSIS)
@@ -144,13 +144,13 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   Las dos versiones del proveedor tienen el mismo identificador. Para especificar si el tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa una versión de 64 bits disponible del proveedor, establezca la propiedad Run64BitRuntime del proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si la propiedad Run64BitRuntime se establece en **true**, el tiempo de ejecución busca y usa el proveedor de 64 bits; si Run64BitRuntime se establece en **false**, el tiempo de ejecución busca y usa el proveedor de 32 bits. Para más información sobre las propiedades que se pueden establecer en proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Entornos de Studio e Integration Services (SSIS)](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## <a name="add-a-connection-manager"></a>Agregar un administrador de conexiones
-###  <a name="wizard"></a> Agregar un administrador de conexiones al crear un paquete  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Agregar un administrador de conexiones al crear un paquete  
   
 -   Use el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Además de crear y configurar un administrador de conexiones, el asistente también ayuda a crear y configurar los orígenes y destinos que utilizan el administrador de conexiones. Para obtener más información, vea [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-###  <a name="package"></a> Agregar un administrador de conexiones a un paquete existente  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> Agregar un administrador de conexiones a un paquete existente  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -194,7 +194,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** en el menú **Archivo** .  
   
-###  <a name="project"></a> Agregar un administrador de conexiones en el nivel de proyecto  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> Agregar un administrador de conexiones en el nivel de proyecto  
   
 1.  Abra el proyecto de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -243,14 +243,14 @@ Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para 
  **Add (Agregar)**  
  Especifique las propiedades de conexión mediante el editor para cada tipo de conexión.  
    
-##  <a name="parameter"></a> Crear un parámetro para una propiedad de administrador de conexiones  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> Crear un parámetro para una propiedad de administrador de conexiones  
   
 1.  En el área de **Administradores de conexiones** , haga clic con el botón derecho en el administrador de conexiones para el que quiere crear un parámetro y haga clic en **Parametrizar**.  
   
 2.  Configure los valores de parámetro en el cuadro de diálogo **Parametrizar** . Para más información, consulte [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Eliminar un administrador de conexiones 
-###  <a name="DeletePackageLevel"></a> Eliminar un administrador de conexiones de un paquete  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> Eliminar un administrador de conexiones de un paquete  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -270,7 +270,7 @@ Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para 
   
 5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-###  <a name="DeleteProjectLevel"></a> Eliminar un administrador de conexiones compartido (administrador de conexiones de nivel de proyecto)  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> Eliminar un administrador de conexiones compartido (administrador de conexiones de nivel de proyecto)  
   
 1.  Para eliminar un administrador de conexiones de nivel de proyecto, haga clic con el botón derecho en el administrador de conexiones en el nodo **Administradores de conexiones** de la ventana del **Explorador de soluciones** y haga clic en **Eliminar**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] muestra el siguiente mensaje de advertencia:  
   

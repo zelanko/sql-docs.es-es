@@ -32,10 +32,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75884004"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
@@ -185,12 +185,12 @@ GO
 |Símbolo|Significado|  
 |------------|-------------|  
 |LIKE ‘5[%]’|5 %|  
-|LIKE ‘[\_]n’|_n|  
+|LIKE ‘[_]n’|_n|  
 |LIKE ‘[a-cdf]’|a, b, c, d o f|  
 |LIKE ‘[-acdf]’|-, a, c, d o f|  
 |LIKE ‘[ [ ]’|[|  
 |LIKE ']'|]|  
-|LIKE 'abc[\_]d%'|abc_d y abc_de|  
+|LIKE 'abc[_]d%'|abc_d y abc_de|  
 |LIKE 'abc[def]'|abcd, abce y abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>Operación de búsqueda de coincidencias de patrón con la cláusula ESCAPE  
@@ -293,7 +293,7 @@ GO
 ```  
   
 ### <a name="d-using-the---wildcard-characters"></a>D. Utilizar el carácter comodín [ ]  
- El ejemplo siguiente busca empleados cuyo nombre sea `Cheryl` o `Sheryl` en la tabla `Person`.  
+ El ejemplo siguiente busca empleados cuyo nombre sea `Person` o `Cheryl` en la tabla `Sheryl`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Utilizar LIKE con el carácter comodín %  
- El siguiente ejemplo busca todos los empleados cuyo número de teléfono empieza por `612` en la tabla `DimEmployee`.  
+ El siguiente ejemplo busca todos los empleados cuyo número de teléfono empieza por `DimEmployee` en la tabla `612`.  
   
 ```sql  
 -- Uses AdventureWorks  

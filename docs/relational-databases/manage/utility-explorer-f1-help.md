@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024479"
 ---
 # <a name="utility-explorer-f1-help"></a>Explorador de Utilidad (Ayuda F1)
@@ -177,7 +177,7 @@ ms.locfileid: "68024479"
   
 -   Modelo de recuperación: (simple, completo u optimizado para cargas masivas)  
   
--   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de la CPU muestra gráficos en paralelo de datos históricos para la aplicación de capa de datos y la utilización de la CPU del sistema informático.  
@@ -254,7 +254,7 @@ ms.locfileid: "68024479"
   
 -   Modelo de recuperación: (simple, completo u optimizado para cargas masivas)  
   
--   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Detalles de las instancias administradas (Utilidad de SQL Server)
  La información de la vista Instancias administradas del Explorador de Utilidad proporciona los detalles de utilización para las instancias individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el historial de uso de la CPU, los detalles de utilización del almacenamiento en el nivel de archivo y la capacidad de ver y actualizar los umbrales de la directiva. Los umbrales de la directiva se pueden controlar en el nivel de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para un equipo, para los archivos de base de datos y los archivos de registro, y en el nivel de volúmenes de almacenamiento. También se pueden ver los detalles sobre las propiedades correspondientes a las instancias administradas individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -313,11 +313,11 @@ ms.locfileid: "68024479"
   
 -   Intercalación:  
   
--   Distinguir mayúsculas de minúsculas: (True o False)  
+-   Distinción de mayúsculas y minúsculas: (True o False)  
   
 -   Language:  
   
--   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de CPU muestra gráficos en paralelo de datos históricos para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el uso de la CPU del sistema informático.  
@@ -410,7 +410,7 @@ ms.locfileid: "68024479"
   
 -   Intercalación:  
   
--   Distinguir mayúsculas de minúsculas: (True o False)  
+-   Distinción de mayúsculas y minúsculas: (True o False)  
   
 -   Language:  
 
@@ -490,9 +490,9 @@ Pestaña **Almacenamiento de datos**: muestra los detalles de configuración par
   
 -   Frecuencia de la carga del conjunto de recopilación: cada 15 minutos.  
   
- El directorio de UMDW se puede configurar: \<Unidad del sistema:>:Archivos de programa\Microsoft SQL Server\MSSQL10_50.<Nombre_UCP>\MSSQL\Data\\,donde \<Unidad del sistema> normalmente es la unidad C:\. El archivo de registro, UMDW_\<GUID>_LOG, se encuentra en el mismo directorio.  
+ El directorio de UMDW se puede configurar: \<Unidad del sistema:>:Archivos de programa\Microsoft SQL Server\MSSQL10_50.<Nombre_UCP\MSSQL\Data\\,donde \<Unidad del sistema> normalmente es la unidad C:\. El archivo de registro, UMDW_\<GUID>_LOG, se encuentra en el mismo directorio.  
   
-> **NOTA:** La ubicación del archivo del almacén de administración de datos de utilidad se puede cambiar mediante detach/attach o ALTER DATABASE. Recomendamos el uso de ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **NOTA:** La ubicación del archivo UMDW (sysutility_mdw) se puede cambiar mediante detach/attach o ALTER DATABASE. Recomendamos el uso de ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Restablecer los valores originales  
  Para restablecer los valores de esta pestaña a los valores predeterminados, haga clic en el botón **Restaurar valores predeterminados** y, luego, en **Aplicar**.  

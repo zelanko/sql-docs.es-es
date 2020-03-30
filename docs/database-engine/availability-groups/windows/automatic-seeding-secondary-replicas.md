@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288549"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Uso de la propagación automática para inicializar una réplica secundaria para un grupo de disponibilidad Always On
@@ -46,7 +46,7 @@ La propagación automática es un proceso de un único subproceso que puede asum
 
 La compresión se puede usar en la propagación automática, pero está deshabilitada de forma predeterminada. Si la compresión se activa, se reducirá el ancho de banda de red y, posiblemente, el proceso se acelere, pero a cambio habrá una mayor sobrecarga del procesador. Para usar la compresión durante la propagación automática, habilite la marca de seguimiento 9567; vea [Tune compression for availability group](tune-compression-for-availability-group.md) (Optimizar la compresión para los grupos de disponibilidad).
 
-## <a name = "disklayout"></a> Diseño de disco
+## <a name="disk-layout"></a><a name = "disklayout"></a> Diseño de disco
 
 En SQL Server 2016 y versiones anteriores, la carpeta donde se creará la base de datos mediante la propagación automática ya debe existir y ser la misma que la ruta de acceso de la réplica principal. 
 
@@ -109,7 +109,7 @@ En el caso de una instancia que pasa a ser una réplica secundaria, una vez que 
 
 >La réplica de disponibilidad local para el grupo de disponibilidad "NombreGD" no tiene permiso para crear bases de datos, pero su modo `SEEDING_MODE` se definió como `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` para permitir la creación de bases de datos propagadas por la réplica de disponibilidad principal.
 
-### <a name = "grantCreate"></a> Permitir que un grupo de disponibilidad cree permisos de creación de bases de datos en réplicas secundarias
+### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a> Permitir que un grupo de disponibilidad cree permisos de creación de bases de datos en réplicas secundarias
 
 Después de la unión, conceda permiso al grupo de disponibilidad para crear bases de datos en la instancia de réplica de SQL Server. Para que la propagación automática funcione, el grupo de disponibilidad necesita permiso para crear una base de datos. 
 

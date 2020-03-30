@@ -16,10 +16,10 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ff0280b7a3a071a87feb029e6e906eaeace8a2d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822530"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Realización de una conmutación por error manual forzada de un grupo de disponibilidad Always On (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "74822530"
 >  Para obtener más información sobre los requisitos previos y las recomendaciones para forzar la conmutación por error y consultar un escenario de ejemplo que usa una conmutación por error forzada para recuperarse de un error grave, vea [Caso de ejemplo: usar una conmutación por error forzada para recuperarse de un error catastrófico](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)más adelante en este tema.  
   
   
-##  <a name="Restrictions"></a> Limitaciones y restricciones  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   La única vez que no se puede realizar una conmutación por error forzada es cuando el clúster de Clústeres de conmutación por error de Windows Server (WSFC) no tiene quórum.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "74822530"
     > [!NOTE]  
     >  La compatibilidad con transacciones distribuidas y entre bases de datos varía según la versión de SQL Server y del sistema operativo. Para obtener más información, vea [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   El clúster de WSFC tiene quórum. Si el clúster no tiene cuórum, vea [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 -   Debe poder conectarse a una instancia de servidor que hospeda una replicación cuyo rol esté en el estado SECONDARY o RESOLVING.  
   
-##  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   No fuerce la conmutación por error mientras la réplica principal sigue en ejecución.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "74822530"
   
 -   Si los clientes pueden conectarse a la réplica principal original, una conmutación por error forzada comporta el riesgo de "comportamiento de división de cerebro". Antes de forzar la conmutación por error, se recomienda encarecidamente impedir el acceso de los clientes a la réplica principal original. De lo contrario, una vez forzada la conmutación por error, las bases de datos principales originales y las bases de datos principales actuales pueden actualizarse independientemente.  
   
-##  <a name="WaysToAvoidDataLoss"></a> Formas posibles de evitar la pérdida de datos después de forzar el quórum  
+##  <a name="potential-ways-to-avoid-data-loss-after-quorum-is-forced"></a><a name="WaysToAvoidDataLoss"></a> Formas posibles de evitar la pérdida de datos después de forzar el quórum  
  En determinadas condiciones de error después de que se pierda el quórum, puede evitar evita la pérdida de datos de la manera siguiente:  
   
 -   **Si la réplica principal original pasa a estar en línea**  
@@ -111,10 +111,10 @@ ms.locfileid: "74822530"
     >  Cuando se fuerza la conmutación por error en una réplica secundaria, la cantidad de datos perdidos depende de hasta dónde se retrase el destino de la conmutación por error detrás de la réplica principal. Desgraciadamente, cuando el clúster de WSFC no tiene quórum o se ha forzado el quórum, no puede evaluar la cantidad de pérdida potencial de datos. No obstante, tenga en cuenta que una vez que el clúster de WSFC recupere un quórum en buen estado, puede empezar a hacer un seguimiento de la posible pérdida de datos. Para obtener más información, vea "Seguimiento de la posible pérdida de datos" en [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para forzar la conmutación por error (con posible pérdida de datos)**  
   
 1.  En el Explorador de objetos, conéctese a una instancia de servidor que hospede una réplica cuyo rol esté en el estado SECONDARY o RESOLVING en el grupo de disponibilidad que necesita ser objeto de conmutación por error y expanda el árbol de servidores.  
@@ -127,7 +127,7 @@ ms.locfileid: "74822530"
   
 5.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para obtener más información, vea [Seguimiento: tareas esenciales después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para forzar la conmutación por error (con posible pérdida de datos)**  
   
 1.  Conéctese a una instancia de servidor que hospede una réplica cuyo rol esté en el estado SECONDARY o RESOLVING en el grupo de disponibilidad que necesita ser objeto de conmutación por error.  
@@ -146,7 +146,7 @@ ms.locfileid: "74822530"
   
 3.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para obtener más información, vea [Seguimiento: tareas esenciales después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para forzar la conmutación por error (con posible pérdida de datos)**  
   
 1.  Cambie el directorio (**cd**) a una instancia de servidor que hospede una réplica cuyo rol se encuentre en el estado SECONDARY o RESOLVING en el grupo de disponibilidad para el que se debe realizar la conmutación por error.  
@@ -186,7 +186,7 @@ ms.locfileid: "74822530"
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Seguimiento: tareas esenciales después de una conmutación por error forzada  
+##  <a name="follow-up-essential-tasks-after-a-forced-failover"></a><a name="FollowUp"></a> Seguimiento: tareas esenciales después de una conmutación por error forzada  
   
 1.  Después de una conmutación por error forzada, la réplica secundaria objeto de conmutación por error se convierte en la nueva réplica principal. Sin embargo, para que la réplica de disponibilidad esté accesible a los clientes, puede que necesite volver a configurar el quórum de WSFC o ajustar la configuración de modo de disponibilidad del grupo de disponibilidad del siguiente modo:  
   
@@ -244,7 +244,7 @@ ms.locfileid: "74822530"
   
     -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-##  <a name="ExampleRecoveryFromCatastrophy"></a> Caso de ejemplo: usar una conmutación por error forzada para recuperarse de un error catastrófico  
+##  <a name="example-scenario-using-a-forced-failover-to-recover-from-a-catastrophic-failure"></a><a name="ExampleRecoveryFromCatastrophy"></a> Caso de ejemplo: usar una conmutación por error forzada para recuperarse de un error catastrófico  
  En el ejemplo siguiente se realiza manualmente una conmutación por error en el grupo de disponibilidad a la réplica secundaria local que está sincronizada actualmente con la réplica principal. La idoneidad de forzar una conmutación por error depende de: (1) si espera que la réplica principal esté sin conexión más tiempo de lo que el acuerdo de nivel de servicio (SLA) tolera y 2) si está dispuesto a exponerse a la posible pérdida de datos para conseguir que las bases de datos principales estén disponibles de inmediato. Si decide que un grupo de disponibilidad requiere una conmutación por error forzada, la conmutación por error forzada real no es sino uno de los pasos de un proceso de varios.  
   
  Para ilustrar los pasos necesarios para usar una conmutación por error forzada para recuperarse de un error catastrófico, en este tema se presenta un posible escenario de recuperación de desastres. El escenario de ejemplo considera un grupo de disponibilidad cuya topología original consta de un centro de datos principal que hospeda tres réplicas de disponibilidad de confirmación sincrónica, incluida la réplica principal, y un centro de datos remoto que hospeda dos réplicas secundarias de confirmación asincrónica. En la ilustración siguiente se muestra la topología original de este grupo de disponibilidad de ejemplo. El grupo de disponibilidad está hospedado por un clúster WSFC de múltiples subredes con tres nodos en el centro de datos principal (**Nodo 01**, **Nodo 02**y **Nodo 03**) y dos nodos en un centro de datos remoto (**Nodo 04** y **Nodo 05**).  
@@ -263,7 +263,7 @@ ms.locfileid: "74822530"
   
 -   [Devolver el grupo de disponibilidad a su topología original](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="responding-to-the-catastrophic-failure-of-the-main-data-center"></a><a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  En la ilustración siguiente se muestra la serie de acciones realizadas en el centro de datos remoto en respuesta a un error catastrófico en el centro de datos principal.  
   
  ![Pasos para responder al error del centro de datos principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Pasos para responder al error del centro de datos principal")  
@@ -276,7 +276,7 @@ ms.locfileid: "74822530"
 |**2.**|El DBA se conecta a la instancia del servidor con la menor latencia (en el **Nodo 04**) y realiza una conmutación por error manual forzada. Esta conmutación por error forzada pasa esta réplica secundaria al rol principal y suspende las bases de datos secundarias en el resto de réplicas secundarias (en el **Nodo 05**).|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (Consulte la columna **end_of_log_lsn** . Para obtener más información, vea [Recomendaciones](#Recommendations), anteriormente en este tema).|  
 |**3.**|El DBA reanuda de modo manual cada una de las bases de datos secundarias en la réplica secundaria restante.|[Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)|  
   
-###  <a name="ReturnToOrigTopology"></a> Devolver el grupo de disponibilidad a su topología original  
+###  <a name="returning-the-availability-group-to-its-original-topology"></a><a name="ReturnToOrigTopology"></a> Devolver el grupo de disponibilidad a su topología original  
  En la ilustración siguiente se muestra la serie de acciones que devuelven el grupo de disponibilidad a su topología original una vez que el centro de datos principal se pone en línea y los nodos WSFC restablecen la comunicación con el clúster WSFC.  
   
 > [!IMPORTANT]  
@@ -293,7 +293,7 @@ ms.locfileid: "74822530"
 |**3.**|Una vez que la réplica secundaria de confirmación sincrónica del **Nodo 03** (la réplica principal original) entra en el estado de sincronización HEALTHY, el administrador de base de datos realiza una conmutación por error manual planeada en la réplica, para convertirla de nuevo en la principal. La réplica en el **Nodo 04** vuelve a ser una réplica secundaria.|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /> [Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Realizar una conmutación por error manual planeada de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|El administrador de base de datos se conecta con la nueva réplica principal y:<br /><br /> 1) Cambia la anterior réplica principal (del centro remoto) de nuevo al modo de confirmación asincrónica.<br /><br /> 2) Cambia la réplica secundaria de confirmación asincrónica en el centro de datos principal de nuevo al modo de confirmación sincrónica.|[Cambiar el modo de disponibilidad de una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para ajustar los votos de quórum**  
   
 -   [Ver la configuración de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
@@ -314,7 +314,7 @@ ms.locfileid: "74822530"
   
 -   [Solucionar problemas relativos a una operación de agregar archivos con error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   **Blogs:**  
   

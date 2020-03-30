@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132275"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitar los resultados de la búsqueda con RANK
@@ -36,7 +36,7 @@ ms.locfileid: "68132275"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordena las coincidencias por orden de clasificación y devuelve solo hasta el número especificado de filas. Esta opción puede aumentar significativamente el rendimiento. Por ejemplo, una consulta que por lo general devolvería 100.000 filas de una tabla de 1 millón se procesará de forma más rápida si solo se solicitan las 100 primeras filas.  
   
-##  <a name="examples"></a> Ejemplos del uso de RANK para limitar los resultados de la búsqueda  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> Ejemplos del uso de RANK para limitar los resultados de la búsqueda  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: buscar solo las tres primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver las tres primeras coincidencias.  
@@ -91,7 +91,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> Cómo se clasifican los resultados de la consulta de búsqueda  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> Cómo se clasifican los resultados de la consulta de búsqueda  
  La búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede generar una puntuación (o valor de rango) opcional que indica la relevancia de los datos devueltos por una consulta de texto completo. Este valor de rango se calcula en cada fila y se puede utilizar como criterio de ordenación para ordenar el conjunto de resultados de una consulta determinada por relevancia. Los valores de clasificación solo indican un orden de importancia relativa de las filas en el conjunto de resultados. Los valores reales carecen de relevancia y normalmente difieren cada vez que se ejecuta la consulta. El valor de rango no tiene importancia en las consultas.  
   
 ### <a name="statistics-for-ranking"></a>Estadísticas de clasificación  

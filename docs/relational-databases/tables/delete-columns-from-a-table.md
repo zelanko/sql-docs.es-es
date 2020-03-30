@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0db1834114a8bb2ea21d9fb566f2201dd933803c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68088466"
 ---
 # <a name="delete-columns-from-a-table"></a>Eliminar columnas de una tabla
@@ -46,21 +46,21 @@ En este tema se describe cómo eliminar columnas de tabla en [!INCLUDE[ssCurrent
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Antes de comenzar
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar
 
-### <a name="Restrictions"></a> Limitaciones y restricciones
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones
 
 No puede eliminar una columna que tenga una restricción CHECK. Primero debe eliminar la restricción.
 
 No puede eliminar una columna que tiene restricciones PRIMARY KEY o FOREIGN KEY u otras dependencias excepto si usa el Diseñador de tablas. Al utilizar el Explorador de objetos o [!INCLUDE[tsql](../../includes/tsql-md.md)], primero debe quitar todas las dependencias de la columna.
 
-### <a name="Security"></a> Seguridad
+### <a name="security"></a><a name="Security"></a> Seguridad
 
-#### <a name="Permissions"></a> Permisos
+#### <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 Requiere el permiso ALTER en la tabla.
 
-## <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
 
 ### <a name="to-delete-columns-by-using-object-explorer"></a>Para eliminar columnas mediante el Explorador de objetos
 
@@ -77,7 +77,7 @@ Si la columna contiene restricciones u otras dependencias, aparecerá un mensaje
 2. Haga clic con el botón derecho en la columna que quiera eliminar y elija **Eliminar columna** en el menú contextual.
 3. Si la columna participa en una relación (FOREIGN KEY o PRIMARY KEY), un cuadro de mensaje le pedirá que confirme la eliminación de las columnas seleccionadas y sus relaciones. Elija **Sí**.
 
-## <a name="TsqlProcedure"></a> Usar Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL
 
 ### <a name="to-delete-columns"></a>Para eliminar columnas
 

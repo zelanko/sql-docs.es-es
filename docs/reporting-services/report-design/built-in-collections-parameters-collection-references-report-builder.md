@@ -9,23 +9,23 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e2d6986e4bed1876854c0c78b596746be5dc758
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082190"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Colecciones integradas: referencias a la colección de parámetros (Generador de informes)
   Los parámetros de informe son una de las colecciones integradas a las que se puede hacer referencia desde una expresión. Al incluir parámetros en una expresión, puede personalizar los datos y el aspecto de los informes basándose en las opciones seleccionadas por el usuario. Se pueden usar expresiones para cualquier propiedad de elemento de informe o de cuadro de texto que proporcione la opción (*Fx*) o \<**Expresión**>. Las expresiones también se usan para controlar el contenido y el aspecto de los informes de otras maneras. Para más información, vea [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
- Cuando se comparan los valores de los parámetros en tiempo de ejecución con los valores de los campos del conjunto de datos, los tipos de datos de los dos elementos que se comparan deben coincidir. Los parámetros de informe pueden tener uno de los siguientes tipos: Boolean, DateTime, Integer, Float o Text, que representa el tipo de datos subyacente String. Es posible que tenga que convertir el tipo de datos del valor del parámetro para que coincida con el valor del conjunto de datos. Para obtener más información, vea [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
+ Cuando se comparan los valores de los parámetros en tiempo de ejecución con los valores de los campos del conjunto de datos, los tipos de datos de los dos elementos que se comparan deben coincidir. Los parámetros de informe pueden ser de uno de los tipos siguientes: Boolean, DateTime, Integer, Float, o Text, que representa el tipo de datos subyacente String. Es posible que tenga que convertir el tipo de datos del valor del parámetro para que coincida con el valor del conjunto de datos. Para obtener más información, vea [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
  Para incluir una referencia de parámetro en una expresión, debe entender cómo especificar la sintaxis correcta para la referencia de parámetro, que varía dependiendo de si el parámetro es de un solo valor o de varios valores.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Single"></a> Usar un parámetro de un solo valor en una expresión  
+##  <a name="using-a-single-valued-parameter-in-an-expression"></a><a name="Single"></a> Usar un parámetro de un solo valor en una expresión  
  En la tabla siguiente se muestran ejemplos de la sintaxis que se debe usar cuando se incluye una referencia a un parámetro de un solo valor de cualquier tipo de datos en una expresión.  
   
 |Ejemplo|Descripción|  
@@ -39,7 +39,7 @@ ms.locfileid: "77082190"
   
  Para obtener más información sobre cómo usar parámetros en los filtros, vea [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
-##  <a name="Multi"></a> Usar un parámetro de varios valores en una expresión  
+##  <a name="using-a-multivalue-parameter-in-an-expression"></a><a name="Multi"></a> Usar un parámetro de varios valores en una expresión  
  En la tabla siguiente se muestran ejemplos de la sintaxis que se debe usar cuando se incluye una referencia a un parámetro de varios valores de cualquier tipo de datos en una expresión.  
   
 |Ejemplo|Descripción|  

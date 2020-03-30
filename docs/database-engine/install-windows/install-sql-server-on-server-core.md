@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325467"
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar SQL Server en Server Core
@@ -36,7 +36,7 @@ La opción de instalación Server Core proporciona un entorno mínimo para ejecu
 |Windows PowerShell|Incluido con la instalación Server Core.|  
 |Java Runtime |Para usar PolyBase, es necesario instalar el Java Runtime adecuado. Para más información, vea [Guía de PolyBase](../../relational-databases/polybase/polybase-installation.md).|
   
-##  <a name="BK_SupportedFeatures"></a> Características admitidas  
+##  <a name="supported-features"></a><a name="BK_SupportedFeatures"></a> Características admitidas  
  Use la siguiente tabla para saber qué características se admiten en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] en una instalación Server Core.  
   
 |Característica|Compatible|Información adicional|  
@@ -258,10 +258,10 @@ La opción de instalación Server Core proporciona un entorno mínimo para ejecu
   
          Si el archivo DefaultSetup.ini no existe, puede crearlo y copiarlo a las carpetas \x86 y \x64 en el nivel raíz de la ubicación de origen de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Configurar el acceso remoto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Server Core  
+## <a name="configure-remote-access-of-ssnoversion-on-server-core"></a>Configurar el acceso remoto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Server Core  
  Lleve a cabo las acciones descritas a continuación para configurar el acceso remoto de una instancia de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] que se está ejecutando en Server Core.  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Habilitar las conexiones remotas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-ssnoversion"></a>Habilitar las conexiones remotas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 Para habilitar las conexiones remotas, use SQLCMD.exe localmente y ejecute las instrucciones siguientes en la instancia de Server Core:  
 
@@ -272,7 +272,7 @@ Para habilitar las conexiones remotas, use SQLCMD.exe localmente y ejecute las i
    GO
    ```  
   
-### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a>Habilitar e iniciar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
+### <a name="enable-and-start-the-ssnoversion-browser-service"></a>Habilitar e iniciar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  De forma predeterminada, el servicio Explorer se deshabilita.  Si se deshabilita en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en Server Core, ejecute el siguiente comando desde el símbolo del sistema para habilitarlo:  
   
  `sc config SQLBROWSER start= auto`  
@@ -284,7 +284,7 @@ Para habilitar las conexiones remotas, use SQLCMD.exe localmente y ejecute las i
 ### <a name="create-exceptions-in-windows-firewall"></a>Crear excepciones en Firewall de Windows  
  Para crear excepciones para el acceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Firewall de Windows, siga los pasos especificados en [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Habilitar TCP/IP en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>Habilitar TCP/IP en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  El protocolo TCP/IP puede habilitarse a través de Windows PowerShell para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Server Core. Siga estos pasos:  
   
 1.  En el servidor, inicie el Administrador de tareas.  

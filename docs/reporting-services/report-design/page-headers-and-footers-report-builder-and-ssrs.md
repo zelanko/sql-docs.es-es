@@ -22,10 +22,10 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8a94f7bf5e149431135972e4911463c5f86ffaa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082461"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Encabezados y pies de página (Generador de informes y SSRS)
@@ -55,9 +55,9 @@ ms.locfileid: "77082461"
   
 |Admitido en la expresión|Agregados de ReportItems|Agregados de conjunto de datos (el ámbito debe ser el nombre del conjunto de datos)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Cuadros de texto del cuerpo del informe|Sí|Sin|  
-|&PageNumber|Sí|Sin|  
-|&TotalPages|Sí|Sin|  
+|Cuadros de texto del cuerpo del informe|Sí|No|  
+|&PageNumber|Sí|No|  
+|&TotalPages|Sí|No|  
 |Aggregate, función|Sí. Por ejemplo,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sí. Por ejemplo,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Colección de campos para los elementos de la página|Indirectamente. Por ejemplo,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sí. Por ejemplo,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Imagen enlazada a datos|Indirectamente. Por ejemplo: `=ReportItems!TXT_Photo.Value`|Sí. Por ejemplo,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

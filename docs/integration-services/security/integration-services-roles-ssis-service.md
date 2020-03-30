@@ -21,10 +21,10 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295678"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Roles de Integration Services (servicio SSIS)
@@ -93,7 +93,7 @@ ms.locfileid: "71295678"
   
      Puede asignar un rol de lector y un rol de escritor a cada paquete.  
 
-## <a name="assign"></a> Asignar roles de lector y escritor a un paquete
+## <a name="assign-a-reader-and-writer-role-to-a-package"></a><a name="assign"></a> Asignar roles de lector y escritor a un paquete
   Puede asignar un rol de lector y un rol de escritor a cada paquete.  
   
 ### <a name="assign-a-reader-and-writer-role-to-a-package"></a>Asignar roles de lector y escritor a un paquete  
@@ -108,7 +108,7 @@ ms.locfileid: "71295678"
   
 5.  Haga clic en **OK**.
 
-## <a name="create"></a> Crear un rol definido por el usuario
+## <a name="create-a-user-defined-role"></a><a name="create"></a> Crear un rol definido por el usuario
     
 ### <a name="to-create-a-user-defined-role"></a>Para crear un rol definido por el usuario  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71295678"
   
 11. Haga clic en **OK**.
 
-## <a name="roles_dialog"></a> Referencia de la interfaz de usuario del cuadro de diálogo Roles del paquete
+## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a> Referencia de la interfaz de usuario del cuadro de diálogo Roles del paquete
   Use el cuadro de diálogo **Roles de paquete** , disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para especificar los roles de base de datos que tienen acceso de lectura al paquete y los roles de base de datos que tienen acceso de escritura al paquete. Los roles de base de datos se aplican solo a paquetes almacenados en la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** database.  
   
  Los roles enumerados en el cuadro de diálogo son los roles de base de datos actuales de la base de datos del sistema **msdb** . Si no se seleccionan roles, se aplican los roles de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predeterminados. De manera predeterminada, el rol de lector incluye **db_ssisadmin**, **db_ssisoperator**y el usuario que creó el paquete. Un usuario que sea miembro de uno de estos roles o que haya creado los paquetes puede enumerar, ver, exportar y ejecutar paquetes. De manera predeterminada, el rol de escritor incluye **db_ssisadmin** y el usuario que creó el paquete. Un usuario que sea miembro de este rol y el usuario que creó los paquetes pueden importar, eliminar y cambiar paquetes.  

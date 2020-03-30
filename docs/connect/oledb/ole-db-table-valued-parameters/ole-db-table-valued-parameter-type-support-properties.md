@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d53abd4dc5d4a233e7b517fc9b5fecaa64185e0f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015302"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades)
@@ -36,7 +36,7 @@ ms.locfileid: "68015302"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R (lectura) y W (escritura): Solo lectura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: no se permiten marcadores en los objetos de conjunto de filas de parámetros con valores de tabla.|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|L/E: solo lectura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: no se permiten marcadores en los objetos de conjunto de filas de parámetro con valores de tabla.|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -48,7 +48,7 @@ ms.locfileid: "68015302"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Nota: El objeto de conjunto de filas de parámetros con valores de tabla admite las interfaces IRowsetChange.<br /><br /> Los conjuntos de filas creados utilizando DBPROP_IRowsetChange igual a VARIANT_TRUE exhiben los comportamientos de modo de actualización inmediatos.<br /><br /> Pero, si las columnas BLOB se enlazan como objetos ISequentialStream, se espera que el consumidor las mantenga mientras exista el objeto de conjunto de filas de parámetro con valores de tabla.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Nota: El objeto de conjunto de filas de parámetro con valores de tabla admite las interfaces IRowsetChange.<br /><br /> Los conjuntos de filas creados utilizando DBPROP_IRowsetChange igual a VARIANT_TRUE exhiben los comportamientos de modo de actualización inmediatos.<br /><br /> Pero, si las columnas BLOB se enlazan como objetos ISequentialStream, se espera que el consumidor las mantenga mientras exista el objeto de conjunto de filas de parámetro con valores de tabla.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -82,7 +82,7 @@ ms.locfileid: "68015302"
   
 |Id. de propiedad|Valor de la propiedad|  
 |-----------------|--------------------|  
-|SSPROP_COL_COMPUTED|R (lectura) y W (escritura): Lectura/Escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Escriba:  VT_BOOL<br /><br /> Descripción: cuando se establece en VARIANT_TRUE, indica que la columna es calculada. VARIANT_FALSE indica que no es una columna calculada.|  
+|SSPROP_COL_COMPUTED|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descripción: cuando se establece en VARIANT_TRUE, indica que la columna es calculada. VARIANT_FALSE indica que no es una columna calculada.|  
   
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
  El consumidor lee estas propiedades mientras se detecta la información de tipos de parámetros con valores de tabla en las llamadas a ISSCommandWithParameters::GetParameterPropertiey las establece mientras se configuran propiedades específicas sobre el parámetro con valores de tabla mediante ISSCommandWithParameters::SetParameterProperties.  
@@ -91,11 +91,11 @@ ms.locfileid: "68015302"
   
 |Id. de propiedad|Valor de la propiedad|  
 |-----------------|--------------------|  
-|SSPROP_PARAM_TYPE_TYPENAME|R (lectura) y W (escritura): Lectura/Escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Escriba:  VT_BSTR<br /><br /> Descripción: los consumidores usan esta propiedad para obtener o establecer el nombre del tipo de parámetro con valores de tabla.<br /><br /> Esta propiedad se puede utilizar también con tipos definidos por el usuario CLR.<br /><br /> Esta propiedad se puede especificar opcionalmente para proporcionar un nombre de tipo de tabla para un parámetro con valores de tabla (en caso del comando de sintaxis de llamada ODBC). Esta propiedad es necesaria para las consultas SQL parametrizadas ad hoc.|  
-|SSPROP_PARAM_TYPE_SCHEMANAME|R (lectura) y W (escritura): Lectura/Escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Escriba:  VT_BSTR<br /><br /> Descripción: los consumidores usan esta propiedad para obtener o establecer el nombre de esquema del tipo de parámetro con valores de tabla.<br /><br /> Esta propiedad se puede utilizar también con tipos definidos por el usuario CLR.|  
-|SSPROP_PARAM_TYPE_CATALOGNAME|R (lectura) y W (escritura): Solo lectura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Escriba:  VT_BSTR<br /><br /> Descripción: los consumidores usan esta propiedad para obtener el nombre de catálogo del tipo de parámetro con valores de tabla.<br /><br /> Esta propiedad se puede utilizar también con tipos definidos por el usuario CLR. Es un error establecer esta propiedad; los tipos de tabla definidos por el usuario deben estar en la misma base de datos que los parámetros con valores de tabla que los usan.|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R (lectura) y W (escritura): Lectura/Escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Escriba:  VT_UI2 &#124; VT_ARRAY<br /><br /> Descripción: los consumidores usan esta propiedad para especificar qué conjunto de columnas del conjunto de filas será tratado como valores predeterminados. No se enviará ningún valor para esas columnas. Al capturar datos del objeto de conjunto de filas del consumidor, el proveedor no requiere un enlace para tales columnas.<br /><br /> Todos los elementos de la matriz deben ser ordinales de columnas del objeto de conjunto de filas. Los ordinales no válidos producirán errores durante la ejecución del comando.|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|R (lectura) y W (escritura): Lectura/Escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Escriba:  VT_UI2 &#124; VT_ARRAY<br /><br /> Descripción: el consumidor usa esta propiedad para proporcionar una sugerencia al servidor que indica el orden de clasificación de los datos de columna. El proveedor no realiza ninguna validación y asume que el consumidor se ajusta a la especificación que se proporcionó. El servidor usa esta propiedad para realizar las optimizaciones.<br /><br /> La información de orden de las columnas para cada columna se representa mediante un par de elementos de la matriz. El primer elemento del par es el número de la columna. El segundo elemento del par será 1 para el orden ascendente o 2 para el orden descendente.|  
+|SSPROP_PARAM_TYPE_TYPENAME|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Tipo: VT_BSTR<br /><br /> Descripción: los consumidores utilizan esta propiedad para obtener o establecer el nombre del tipo de parámetro con valores de tabla.<br /><br /> Esta propiedad se puede utilizar también con tipos definidos por el usuario CLR.<br /><br /> Esta propiedad se puede especificar opcionalmente para proporcionar un nombre de tipo de tabla para un parámetro con valores de tabla (en caso del comando de sintaxis de llamada ODBC). Esta propiedad es necesaria para las consultas SQL parametrizadas ad hoc.|  
+|SSPROP_PARAM_TYPE_SCHEMANAME|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Tipo: VT_BSTR<br /><br /> Descripción: los consumidores utilizan esta propiedad para obtener o establecer el nombre de esquema del tipo de parámetro con valores de tabla.<br /><br /> Esta propiedad se puede utilizar también con tipos definidos por el usuario CLR.|  
+|SSPROP_PARAM_TYPE_CATALOGNAME|L/E: de solo lectura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Tipo: VT_BSTR<br /><br /> Descripción: los consumidores utilizan esta propiedad para obtener el nombre de catálogo del tipo de parámetro con valores de tabla.<br /><br /> Esta propiedad se puede utilizar también con tipos definidos por el usuario CLR. Es un error establecer esta propiedad; los tipos de tabla definidos por el usuario deben estar en la misma base de datos que los parámetros con valores de tabla que los usan.|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descripción: los consumidores usan esta propiedad para especificar qué conjunto de columnas del conjunto de filas será tratado como valores predeterminados. No se enviará ningún valor para esas columnas. Al capturar datos del objeto de conjunto de filas del consumidor, el proveedor no requiere un enlace para tales columnas.<br /><br /> Todos los elementos de la matriz deben ser ordinales de columnas del objeto de conjunto de filas. Los ordinales no válidos producirán errores durante la ejecución del comando.|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descripción: el consumidor utiliza esta propiedad para proporcionar una sugerencia al servidor que indica el orden de clasificación de los datos de columna. El proveedor no realiza ninguna validación y asume que el consumidor se ajusta a la especificación que se proporcionó. El servidor usa esta propiedad para realizar las optimizaciones.<br /><br /> La información de orden de las columnas para cada columna se representa mediante un par de elementos de la matriz. El primer elemento del par es el número de la columna. El segundo elemento del par será 1 para el orden ascendente o 2 para el orden descendente.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Compatibilidad con tipos de parámetros con valores de tabla de OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   

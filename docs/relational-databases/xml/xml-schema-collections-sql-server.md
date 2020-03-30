@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68096817"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Colecciones de esquemas XML (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "68096817"
   
  También puede usar la colección de esquemas XML para escribir variables, parámetros y columnas XML.  
   
-##  <a name="ddl"></a> DDL para administrar colecciones de esquemas  
+##  <a name="ddl-for-managing-schema-collections"></a><a name="ddl"></a> DDL para administrar colecciones de esquemas  
  Se pueden crear colecciones de esquemas XML en la base de datos y asociarlas a variables y columnas de tipo **xml** . Para administrar las colecciones de esquemas de la base de datos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona las siguientes instrucciones DDL:  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) Importa los componentes del esquema en una base de datos.  
@@ -61,7 +61,7 @@ ms.locfileid: "68096817"
   
  Para quitar la colección de esquemas, utilice la instrucción DROP XML SCHEMA COLLECTION. Se quitarán todos los esquemas contenidos en la colección, así como el objeto de colección. Tenga en cuenta que, para quitar una colección de esquemas, deben cumplirse las condiciones descritas en [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
-##  <a name="components"></a> Descripción de los componentes de esquema  
+##  <a name="understanding-schema-components"></a><a name="components"></a> Descripción de los componentes de esquema  
  Cuando se utiliza la instrucción CREATE XML SCHEMA COLLECTION, se importan varios componentes de esquema a la base de datos. Los componentes de esquema son los elementos de esquema, los atributos y las definiciones de tipo. Cuando se utiliza la instrucción DROP XML SCHEMA COLLECTION, se quita toda la colección.  
   
  CREATE XML SCHEMA COLLECTION guarda los componentes de esquema en varias tablas del sistema.  
@@ -131,7 +131,7 @@ ms.locfileid: "68096817"
 |**targetNamespace**|La información acerca de los componentes que pertenecen al espacio de nombres de destino se almacena en los metadatos.|  
 | &nbsp; | &nbsp; |
   
-##  <a name="perms"></a> Permisos en una colección de esquemas XML  
+##  <a name="permissions-on-an-xml-schema-collection"></a><a name="perms"></a> Permisos en una colección de esquemas XML  
  Deberá tener los permisos necesarios para realizar las operaciones siguientes:  
   
 -   Crear o cargar la colección de esquemas XML  
@@ -160,7 +160,7 @@ ms.locfileid: "68096817"
   
      Este tema explica cómo negar permisos para crear una colección de esquemas XML y cómo negar los permisos en un objeto de colección de esquemas XML.  
   
-##  <a name="info"></a> Obtener información acerca de los esquemas XML y las colecciones de esquemas  
+##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> Obtener información acerca de los esquemas XML y las colecciones de esquemas  
  Las colecciones de esquemas XML se enumeran en la vista de catálogo sys.xml_schema_collections. La colección de esquemas XML "sys" la define el sistema. Contiene los espacios de nombres predefinidos que se pueden usar en todas las colecciones de esquemas XML definidas por el usuario, sin tener que cargarlos explícitamente. Esta lista contiene los espacios de nombres para xml, xs, xsi, fn y xdt. Otras dos vistas de catálogo son sys.xml_schema_namespaces, que enumera todos los espacios de nombres incluidos en una colección de esquemas XML, y sys.xml_components, que enumera todos los componentes de esquemas XML dentro de cada esquema XML.  
   
  La función integrada **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, genera una instancia de tipo de datos **xml**. Esta instancia contiene fragmentos de esquemas XML correspondientes a esquemas incluidos en una colección de esquemas XML, excepto los esquemas XML predefinidos.  

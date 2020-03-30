@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251074"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procedimientos: Actualización de una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools
 
 Para usar una condición de prueba unitaria creada en una versión anterior a SQL Server Data Tools, debe actualizarla:  
   
@@ -27,7 +27,7 @@ Para usar una condición de prueba unitaria creada en una versión anterior a SQ
   
 -   [Instalar la condición de prueba actualizada](#ApplytheNewRegistrationProcess)  
   
-## <a name="UpdateReferences"></a>Actualizar referencias  
+## <a name="update-references"></a><a name="UpdateReferences"></a>Actualizar referencias  
 Para actualizar las referencias del proyecto:  
   
 1.  Visual Basic solo: en el **Explorador de soluciones**, haga clic en **Mostrar todos los archivos**.  
@@ -81,7 +81,7 @@ Para actualizar las referencias del proyecto:
   
 La condición de prueba emplea ahora referencias de ensamblado de pruebas unitarias de SQL Server.  
   
-## <a name="UpdateClassAttributesandTypeReference"></a>Actualizar atributos de clase y referencias de tipo  
+## <a name="update-class-attributes-and-type-references"></a><a name="UpdateClassAttributesandTypeReference"></a>Actualizar atributos de clase y referencias de tipo  
 Reemplazar los antiguos atributos de clase de pruebas unitarias con un nuevo atributo. La extensibilidad de pruebas unitarias de SQL Server se basa ahora en Managed Extensibility Framework (MEF). También debe actualizar algunas referencias de tipo.  
   
 ### <a name="update-class-attributes"></a>Actualizar atributos de clase  
@@ -128,7 +128,7 @@ Algunos nombres de tipo han cambiado en el marco de pruebas unitarias de SQL Ser
 |-----------------|-----------------|  
 |`ExecutionResult`|`SqlExecutionResult`|  
   
-## <a name="ApplytheNewRegistrationProcess"></a>Instalar la condición de prueba actualizada  
+## <a name="install-the-upgraded-test-condition"></a><a name="ApplytheNewRegistrationProcess"></a>Instalar la condición de prueba actualizada  
 En las versiones anteriores de las pruebas unitarias de base de datos, tenía que instalar la condición de prueba en la caché global de ensamblados o crear un archivo XML que contuviera la información de ensamblado. Con las pruebas unitarias de SQL Server, ya no es necesario este proceso adicional. (Para más información, consulte [Compilar el proyecto e instalar la condición de prueba](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx).  
   
 Después de actualizar las referencias, compruebe que el ensamblado está firmado y compilado.  

@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908017"
 ---
 # <a name="view-statistics-properties"></a>Ver propiedades de estadísticas
@@ -38,14 +38,14 @@ ms.locfileid: "72908017"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para ver el objeto de estadísticas, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor **sysadmin** , del rol fijo de base de datos **db_owner** o del rol fijo de base de datos **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>Para ver las propiedades de estadísticas  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72908017"
      Muestra el nombre del objeto de base de datos donde se almacenan las estadísticas.  
   
      **Estadísticas para INDEXnombre_de_estadísticas**  
-     Este cuadro de texto muestra las propiedades devueltas del objeto de estadísticas. Estas propiedades se dividen en tres secciones: Encabezado de estadísticas, Vector de densidad e Histograma.  
+     Este cuadro de texto muestra las propiedades devueltas del objeto de estadísticas. Estas propiedades se dividen en tres secciones: encabezado de estadísticas, vector de densidad e histograma.  
   
      La siguiente información se describen las columnas devueltas en el conjunto de resultados para el encabezado de estadísticas.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72908017"
      La siguiente información describe las columnas devueltas en el conjunto de resultados del vector de densidad.  
   
      **Toda la densidad**  
-     La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Si se usa el prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Si se usa el prefijo (A, B) los valores de la misma columna tendrán estas listas de valores distintos: (3, 5), (4, 4) y (4, 5).  
+     La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Con el prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6) (4, 4, 6) (4, 5, 6) (4, 5, 7). Con el prefijo (A, B), los mismos valores de columna tienen estas listas de valores distintos: (3, 5), (4, 4) y (4, 5).  
   
      **Promedio de longitud**  
      Promedio de longitud, en bytes, para almacenar una lista de los valores de columna del prefijo de columna. Por ejemplo, si cada valor de la lista (3, 5, 6) necesita 4 bytes, la longitud es 12 bytes.  
@@ -134,7 +134,7 @@ ms.locfileid: "72908017"
   
 7.  Haga clic en **OK**.  
 
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Para ver las propiedades de estadísticas  
   

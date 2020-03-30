@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287089"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "79287089"
   Todas las bases de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tienen un registro de transacciones que graba todas las transacciones y las modificaciones que cada transacción realiza en la base de datos. El registro de transacciones es un componente esencial de la base de datos y, si se produce un error del sistema, podría ser necesario para volver a poner la base de datos en un estado coherente. Esta guía proporciona información acerca de la arquitectura física y lógica del registro de transacciones. Comprender la arquitectura puede mejorar la eficacia en la administración de registros de transacciones.  
 
   
-##  <a name="Logical_Arch"></a> Arquitectura lógica del registro de transacciones  
+##  <a name="transaction-log-logical-architecture"></a><a name="Logical_Arch"></a> Arquitectura lógica del registro de transacciones  
  El registro de transacciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funciona desde el punto de vista lógico como si fuese una cadena de entradas de registro. Cada entrada del registro está identificada por un número de flujo de registro (LSN, Log Sequence Number). Las nuevas entradas del registro se escriben al final lógico del registro con un LSN mayor que el de las entradas anteriores. Las entradas de registro se almacenan en una secuencia de serie a medida que se crean, de manera que si LSN2 es mayor que LSN1, el cambio descrito por la entrada de registro a la que hace referencia LSN2 se produce después del cambio descrito por la entrada de registro LSN1. Cada entrada del registro contiene el Id. de la transacción a la que pertenece. Por cada transacción, las entradas del registro asociadas a dicha transacción se vinculan individualmente en una cadena con punteros hacia atrás, para acelerar así la reversión de la transacción.  
   
  Los registros de modificaciones de datos registran la operación lógica llevada a cabo o las imágenes anterior y posterior de los datos modificados. La imagen anterior es una copia de los datos antes de llevar a cabo la operación; la imagen posterior es una copia de los datos después de haber realizado la operación.  
@@ -69,7 +69,7 @@ En el registro de transacciones se registran muchos tipos de operaciones. Entre 
 
 Las copias de seguridad diferenciales y del registro posponen la base de datos restaurada a un momento posterior, correspondiente a un LSN superior. 
   
-##  <a name="physical_arch"></a> Arquitectura física del registro de transacciones  
+##  <a name="transaction-log-physical-architecture"></a><a name="physical_arch"></a> Arquitectura física del registro de transacciones  
 El registro de transacciones de una base de datos está asignado a uno o varios archivos físicos. Conceptualmente, el archivo de registro es una cadena de entradas de registro. Físicamente, la secuencia de entradas del registro se almacena de forma eficaz en el conjunto de archivos físicos que implementa el registro de transacciones. Cada base de datos debe tener al menos un archivo de registro.  
   
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] segmenta cada archivo de registro físico internamente en una serie de archivos de registro virtuales (VLF). Los archivos de registro virtuales no tienen un tamaño fijo y no hay un número fijo de archivos de registro virtuales para un archivo de registro físico. [!INCLUDE[ssDE](../includes/ssde-md.md)] elige dinámicamente el tamaño de los archivos de registro virtuales al crear o ampliar los archivos de registro. [!INCLUDE[ssDE](../includes/ssde-md.md)] intenta mantener un número reducido de archivos virtuales. El tamaño de los archivos virtuales después de ampliar un archivo de registro equivale a la suma del tamaño del registro existente y el tamaño del nuevo incremento del archivo. El tamaño o número de archivos de registro virtuales no lo pueden configurar ni establecer los administradores.  
@@ -130,14 +130,14 @@ Para obtener más información sobre los argumentos `FILEGROWTH` y `SIZE` de `AL
   
  El truncamiento del registro se puede retrasar por diferentes factores. En caso de un retraso largo en el truncamiento del registro, el registro de transacciones se puede llenar. Para obtener información, vea [Factores que pueden ralentizar el truncamiento del registro](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) y [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
-##  <a name="WAL"></a> Registro de transacciones de escritura anticipada  
+##  <a name="write-ahead-transaction-log"></a><a name="WAL"></a> Registro de transacciones de escritura anticipada  
  En esta sección se describe el rol que desempeña el registro de transacciones de escritura anticipada en la grabación de modificaciones de datos en disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa un algoritmo de registro de escritura previa (WAL), lo cual garantiza que no se escriba ninguna modificación de datos en el disco antes de escribir en él la entrada de registro asociada. Así se mantienen las propiedades ACID para una transacción.  
   
  Para entender cómo funciona el registro de escritura anticipada, es importante saber cómo se escriben los datos modificados en el disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mantiene una caché del búfer que lee las páginas de datos cuando estos deben recuperarse. Cuando se modifica una página en la caché del búfer, no se vuelve a escribir inmediatamente en el disco; en su lugar, la página se marca como *desfasada*. Una página de datos puede tener más de una escritura lógica antes de que se escriba físicamente en el disco. Para cada escritura lógica, se inserta una entrada del registro de transacciones en la caché del registro que registra la modificación. Las entradas del registro se tienen que escribir en el disco antes de que la página desfasada asociada se quite de la caché del búfer y se escriba en el disco. El proceso de punto de comprobación examina periódicamente la caché del búfer en busca de búferes con páginas de una base de datos especificada y escribe todas las páginas desfasadas en el disco. Los puntos de comprobación permiten ahorrar tiempo en una recuperación posterior al crear un punto en el que se garantiza que todas las páginas desfasadas se hayan escrito en el disco.  
   
  A la escritura en el disco de una página de datos modificada desde la caché del búfer se le llama vaciar la página. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una lógica que evita que una página desfasada se vacíe antes de que se escriba la entrada del registro asociada. Las entradas de registro se escriben en el disco cuando se vacían los búferes de registro.  Esto ocurre siempre que se confirma una transacción o se llenan los búferes de registro.  
   
-##  <a name="Backups"></a> Copias de seguridad de registros de transacciones  
+##  <a name="transaction-log-backups"></a><a name="Backups"></a> Copias de seguridad de registros de transacciones  
  En esta sección se presentan conceptos acerca de cómo realizar copias de seguridad y restaurar (aplicar) registros de transacciones. En los modelos de recuperación completa y de recuperación optimizada para cargas masivas de registros, es necesario realizar copias de seguridad periódicas de los registros de transacciones (*copias de seguridad de registros*) para recuperar datos. Puede realizar una copia de seguridad del registro mientras se está ejecutando cualquier copia de seguridad completa. Para obtener más información sobre modelos de recuperación, consulte [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  Antes de crear la primera copia de seguridad de registros, debe crear una copia de seguridad completa, como una copia de seguridad de la base de datos o la primera de un conjunto completo de copias de seguridad de archivos. La restauración de una base de datos utilizando únicamente copias de seguridad de archivos puede llegar a ser un proceso complejo. Por lo tanto, es recomendable que comience con una copia de seguridad de la base de datos completa si es posible. Posteriormente, será necesario realizar copias de seguridad del registro de transacciones con regularidad. De esta forma, no solo se minimiza el riesgo de pérdida de trabajo, sino que también se permite el truncamiento del registro de transacciones. Normalmente, el registro de transacciones se trunca tras cada copia de seguridad de registros convencional.  

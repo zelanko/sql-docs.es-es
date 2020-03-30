@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241697"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Comparar y sincronizar datos de una o más tablas con datos de una base de datos de referencia
@@ -29,7 +29,7 @@ Esta sección contiene los siguientes temas:
   
 -   [Cómo: Comparar y sincronizar los datos de dos bases de datos](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [Cómo: Consultar las diferencias de los datos](../ssdt/how-to-view-data-differences.md)  
+-   [Cómo: Ver diferencias de datos](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>Requisitos  
 Cuando se comparan datos de una tabla o vista, la tabla o vista en la base de datos de origen debe compartir varios atributos con una tabla o vista en la base de datos de destino. Las tablas y vistas que no cumplen los siguientes criterios no se comparan y no aparecen en la segunda página del asistente **Nueva comparación de datos**:  
@@ -49,11 +49,11 @@ Cada objeto tiene una clave o un índice que determina los objetos a los que cor
 ## <a name="common-tasks"></a>Tareas comunes  
 En esta sección, puede encontrar descripciones de las tareas comunes que admiten este escenario.  
   
-**Establezca las opciones para controlar cómo se comparan los datos**: cuando se comparan datos, puede omitir con seguridad columnas de identidad, deshabilitar desencadenadores y deshabilitar claves externas. También puede quitar claves principales, índices y restricciones UNIQUE del script de actualización.  
+**Establezca las opciones para controlar cómo se comparan los datos:** cuando se comparan datos, puede omitir con seguridad columnas de identidad, deshabilitar desencadenadores y deshabilitar claves externas. También puede quitar claves principales, índices y restricciones UNIQUE del script de actualización.  
   
 **Compare los datos de las tablas y actualice opcionalmente el destino para que coincida con el origen:** después de especificar una base de datos de origen y de destino para comparar y ejecutar la comparación, puede ver los resultados en la ventana **Comparación de datos**. Puede ver no solo los detalles de las diferencias sino también del script de actualización que puede utilizar para sincronizar los datos. Después de identificar diferencias entre las dos bases de datos, puede especificar una acción para cada diferencia. A continuación, puede actualizar el destino o exportar el script de actualización al editor de Transact\-SQL o a un archivo. Puede que desee exportar el script para que usted u otra persona pueda revisarlo antes de aplicar los cambios.  
   
-## <a name="UnderstandingDataCompareResults"></a>Reconocimiento de los resultados de la comparación  
+## <a name="understanding-comparison-results"></a><a name="UnderstandingDataCompareResults"></a>Reconocimiento de los resultados de la comparación  
 La tabla siguiente describe las cinco columnas de la ventana **Comparación de datos**.  
   
 |Columna|Notas|  

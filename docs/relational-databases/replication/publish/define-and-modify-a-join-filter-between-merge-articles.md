@@ -17,10 +17,10 @@ ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 03911ae4b3addb7a3626b6c9bd0a2c195b719cef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321572"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definir y modificar un filtro de combinación entre artículos de mezcla
@@ -41,19 +41,19 @@ ms.locfileid: "75321572"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Para crear un filtro de combinación, una publicación debe contener dos tablas relacionadas, como mínimo. Un filtro de combinación amplía un filtro de fila. Por tanto, debe definir un filtro de fila en una tabla para poder extender el filtro con una combinación a otra. Una vez definido un filtro de combinación, puede extenderlo con otro si la publicación contiene más tablas relacionadas.  
   
 -   Si agrega, modifica o elimina un filtro de combinación una vez inicializadas las suscripciones a la publicación, deberá generar una instantánea nueva y reinicializar todas las suscripciones después de realizar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Los filtros de combinación se deben crear manualmente para un conjunto de tablas, o la replicación puede generar los filtros automáticamente en función de las relaciones entre las claves externas y las claves principales definidas en las tablas. Para obtener más información sobre cómo generar un conjunto de filtros de combinación automáticamente, consulte [Generar automáticamente un conjunto de filtros de combinación entre artículos de mezcla &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md).  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Defina, modifique y elimine filtros de combinación en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-join-filter"></a>Para definir un filtro de combinación  
@@ -103,7 +103,7 @@ ms.locfileid: "75321572"
   
 1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>** , seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Eliminar**. Si el filtro de combinación que elimina está a su vez ampliado por otras combinaciones, esas combinaciones también se eliminarán.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Estos procedimientos muestran un filtro con parámetros en un artículo primario con filtros de combinación entre este artículo y los artículos secundarios relacionados. Los filtros de combinación se pueden definir y modificar mediante programación con los procedimientos almacenados de la replicación.  
   
 #### <a name="to-define-a-join-filter-to-extend-an-article-filter-to-related-articles-in-a-merge-publication"></a>Para definir un filtro de combinación para extender un filtro de artículo a los artículos relacionados en una publicación de combinación  
@@ -127,7 +127,7 @@ ms.locfileid: "75321572"
     > [!CAUTION]  
     >  Establezca `@join_unique_key` en **1** solo si tiene una restricción en la columna de combinación de la tabla subyacente del artículo primario que garantice su unicidad. Si `@join_unique_key` se establece en **1** de manera incorrecta, se puede producir una no convergencia de datos.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  En este ejemplo se define un artículo para una publicación de combinación, donde el artículo de tabla `SalesOrderDetail` se filtra respecto a la tabla `SalesOrderHeader` que se filtra a su vez con un filtro de fila estático. Para más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69652305"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo montar S3 para los niveles de HDFS en un clúster de macrodatos
@@ -43,7 +43,7 @@ Abra un símbolo del sistema en un equipo cliente que pueda acceder al clúster 
    > [!TIP]
    > Para obtener más información sobre cómo crear teclas de acceso S3, consulte [Claves de acceso S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
-## <a id="mount"></a> Montaje del almacenamiento de HDFS remoto
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Montaje del almacenamiento de HDFS remoto
 
 Ahora que ha preparado un archivo de credenciales con claves de acceso, puede iniciar el montaje. En los pasos siguientes se monta el almacenamiento de HDFS remoto en S3 en el almacenamiento de HDFS local del clúster de macrodatos.
 
@@ -72,7 +72,7 @@ Ahora que ha preparado un archivo de credenciales con claves de acceso, puede in
 
 Si se ha montado correctamente, debería poder consultar los datos de HDFS y ejecutar trabajos de Spark en ellos. Aparecerán en el HDFS del clúster de macrodatos en la ubicación que especifique `--mount-path`.
 
-## <a id="status"></a> Obtención del estado de los montajes
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> Obtención del estado de los montajes
 
 Para mostrar el estado de todos los montajes en el clúster de macrodatos, use el siguiente comando:
 
@@ -94,7 +94,7 @@ En el siguiente ejemplo se actualiza el montaje.
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Eliminación del montaje
+## <a name="delete-the-mount"></a><a id="delete"></a> Eliminación del montaje
 
 Para eliminar el montaje, use el comando **azdata bdc hdfs mount delete** y especifique la ruta de acceso de montaje en HDFS:
 

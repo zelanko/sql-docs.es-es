@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082610"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Generador de informes y SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "77082610"
 > [!NOTE]  
 >  Puede guardar los mapas de forma independiente de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="Process"></a> Agregar un mapa al informe  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> Agregar un mapa al informe  
  Para agregar un mapa a un informe, a continuación se enumeran los pasos generales que hay que seguir:  
   
 -   Determine qué datos analíticos desea mostrar y qué tipos de datos espaciales necesita. Por ejemplo, para mostrar el almacén anual relativo de ventas en un mapa de burbujas, necesita el nombre y las ventas del almacén para los datos analíticos, y el nombre y la ubicación del almacén con la latitud y la longitud para los datos espaciales.  
@@ -49,7 +49,7 @@ ms.locfileid: "77082610"
   
  Para obtener más información, vea [Planear un informe de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
-##  <a name="AddingData"></a> Agregar datos a un mapa  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> Agregar datos a un mapa  
  Un mapa utiliza dos tipos de datos: espaciales y analíticos. Los datos espaciales definen la apariencia del mapa, mientras que los datos analíticos proporcionan los valores asociados al mapa. Por ejemplo, los datos espaciales definen las ubicaciones de las ciudades de un área mientras que los datos analíticos proporcionan la población de cada ciudad.  
   
  Un mapa debe tener datos espaciales; los datos analíticos son opcionales. Por ejemplo, puede agregar un mapa que muestre simplemente las ubicaciones de los almacenes de una ciudad.  
@@ -136,12 +136,12 @@ ms.locfileid: "77082610"
   
  En este ejemplo, el nombre de la ciudad por sí solo no es suficiente para identificar la población de forma unívoca. Por ejemplo, hay muchas ciudades denominadas Albany en los Estados Unidos. Para denominar una ciudad concreta, debe especificar el área además del nombre de la ciudad.  
   
-##  <a name="Viewport"></a> Descripción de la ventanilla de mapa  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Descripción de la ventanilla de mapa  
  Después de especificar los datos de un mapa para un informe, puede limitar el área de presentación del mapa especificando una *ventanilla*del mapa. De forma predeterminada, la ventanilla es la misma área que todo el mapa. Para recortar el mapa, puede especificar el centro, el nivel de zoom y las coordenadas máxima y mínima que definen el área que desea incluir en el informe. Para mejorar la presentación del mapa en el informe, puede mover las leyendas, escala de distancia y escala de colores fuera de la ventanilla. La figura siguiente muestra una ventanilla:  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
-##  <a name="TileLayer"></a> Agregar una capa de mosaico de Bing Map  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> Agregar una capa de mosaico de Bing Map  
  Puede agregar una capa para los mosaicos de Bing Maps que proporcione un fondo geográfico para la vista del mapa actual tal y como se define en la ventanilla. Para agregar una capa de mosaico, debe especificar el sistema de coordenadas **geográfico** y el tipo de proyección **Mercator**. Los mosaicos que coinciden con el centro de la ventanilla y el nivel de zoom que selecciona se recuperan automáticamente en Servicios web de Bing Maps.  
   
  Puede personalizar la capa mediante las siguientes opciones:  
@@ -162,7 +162,7 @@ ms.locfileid: "77082610"
   
  Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
-##  <a name="MapLayers"></a> Descripción de las capas de mapa y los elementos de mapa  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> Descripción de las capas de mapa y los elementos de mapa  
  Un mapa puede tener varias capas. Hay tres tipos de capas. Cada capa muestra un tipo de datos espaciales:  
   
 -   **Capa de polígono.** Muestra los contornos de áreas o marcadores para el punto central del polígono, que se calcula automáticamente para cada polígono.  
@@ -208,7 +208,7 @@ ms.locfileid: "77082610"
   
  Para más información, vea [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
-##  <a name="Legends"></a> Descripción de las leyendas de mapa, la escala de colores y la escala de distancia  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> Descripción de las leyendas de mapa, la escala de colores y la escala de distancia  
  Puede agregar diversas leyendas a un informe para ayudar a los usuarios a interpretar un mapa. Los mapas pueden incluir los elementos siguientes:  
   
 -   **Leyendas.** Puede crear varias leyendas. Los elementos enumerados en una leyenda se generan automáticamente según las reglas que especifique para los elementos de un mapa en cada capa. Para cada regla, se especifica la leyenda que se utilizará para mostrar sus elementos relacionados. De esta manera, puede asignar elementos de varias capas a la misma leyenda o a leyendas diferentes.  
@@ -219,14 +219,14 @@ ms.locfileid: "77082610"
   
  Puede colocar las leyendas, la escala de color y la escala de distancia en ubicaciones discretas dentro de la ventanilla o fuera de ella. Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Solución de problemas de los mapas  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a> Solución de problemas de los mapas  
  Los informes de mapas utilizan datos espaciales y datos analíticos de diversos orígenes de datos. Cada capa de mapa puede utilizar orígenes diferentes de datos. Las propiedades de presentación de cada capa siguen una prioridad concreta según las propiedades de la capa, reglas y propiedades de los elementos de la capa.  
   
  Si no obtiene el resultado deseado cuando vea un informe de un mapa, las causas pueden derivarse de problemas diversos. Para ayudarle a aislar y entender cada problema, es útil trabajar con una capa cada vez. Utilice el panel Mapa para seleccionar una capa y alternar su visibilidad con facilidad.  
   
  Para más información sobre los problemas de asignación de informes, consulte [Solucionar problemas de informes: informes de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Temas de procedimientos  
  En esta sección se enumeran procedimientos que muestran, paso a paso, cómo trabajar con mapas y asignar capas de mapa a un informe.  
   
 -   [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -235,7 +235,7 @@ ms.locfileid: "77082610"
   
 -   [Agregar ubicaciones personalizadas a un mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="Section"></a> En esta sección  
  [Planear un informe de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

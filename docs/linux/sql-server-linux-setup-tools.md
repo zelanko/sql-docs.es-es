@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288789"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalación de las herramientas de línea de comandos sqlcmd y bcp de SQL Server en Linux
@@ -36,7 +36,7 @@ Instale las herramientas para su plataforma:
 
 En este artículo se explica cómo instalar las herramientas línea de comandos. Si busca ejemplos de cómo usar **sqlcmd** o **bcp**, vea los [vínculos](#next-steps) al final de este tema.
 
-## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Instalación de herramientas en RHEL 7
+## <a name="a-idrhelinstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Instalación de herramientas en RHEL 7
 
 Use los pasos siguientes para instalar **mssql-tools** en Red Hat Enterprise Linux. 
 
@@ -92,7 +92,7 @@ Use los pasos siguientes para instalar **mssql-tools** en Red Hat Enterprise Lin
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Instalación de herramientas en Ubuntu 16.04
+## <a name="install-tools-on-ubuntu-1604"></a><a id="ubuntu"></a>Instalación de herramientas en Ubuntu 16.04
 
 Siga estos pasos para instalar **mssql-tools** en Ubuntu.
 
@@ -140,7 +140,7 @@ Siga estos pasos para instalar **mssql-tools** en Ubuntu.
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>Instalación de herramientas en SLES 12
+## <a name="install-tools-on-sles-12"></a><a id="SLES"></a>Instalación de herramientas en SLES 12
 
 Use los pasos siguientes para instalar **mssql-tools** en SUSE Linux Enterprise Server. 
 
@@ -179,7 +179,7 @@ Use los pasos siguientes para instalar **mssql-tools** en SUSE Linux Enterprise 
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>Instalación de herramientas en macOS
+## <a name="install-tools-on-macos"></a><a id="macos"></a>Instalación de herramientas en macOS
 
 Ahora hay disponible una versión preliminar de **sqlcmd** y **bcp** en MacOS. Para obtener más información, consulte el [anuncio](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
@@ -198,7 +198,7 @@ brew install mssql-tools
 #HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
-## <a id="docker"></a> Docker
+## <a name="docker"></a><a id="docker"></a> Docker
 
 Si [ejecuta SQL Server en un contenedor de Docker](quickstart-install-connect-docker.md), las herramientas de línea de comandos de SQL Server ya están incluidas en la imagen de contenedor de SQL Server para Linux. Si adjunta un contenedor en ejecución con un shell de Bash interactivo, puede ejecutar las herramientas de forma local.
 

@@ -11,10 +11,10 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286519"
 ---
 # <a name="understanding-xa-transactions"></a>Descripción de las transacciones XA
@@ -116,7 +116,7 @@ Hay tres maneras de comprobar la versión de sqljdbc_xa.dll instalada en la inst
   
 3. Configure la funcionalidad de registro tal como se muestra en el ejemplo de código de la sección siguiente. Busque la frase "Server XA DLL version:..." en el archivo de registro de resultados.  
 
-### <a name="BKMK_ServerSide"></a> Configurar el valor de tiempo de espera del servidor para la reversión automática de transacciones no preparadas  
+### <a name="configuring-server-side-timeout-settings-for-automatic-rollback-of-unprepared-transactions"></a><a name="BKMK_ServerSide"></a> Configurar el valor de tiempo de espera del servidor para la reversión automática de transacciones no preparadas  
 
 > [!WARNING]  
 > Esta opción de servidor es nueva en Microsoft JDBC Driver 4.2 (y superior) para SQL Server. Para obtener el comportamiento actualizado, asegúrese de que se ha actualizado sqljdbc_xa.dll en el servidor. Para más información sobre cómo establecer los tiempos de espera del cliente, vea [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  

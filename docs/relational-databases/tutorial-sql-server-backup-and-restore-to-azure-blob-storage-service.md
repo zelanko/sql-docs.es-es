@@ -11,17 +11,17 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165524"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Inicio rápido: Copia de seguridad y restauración de SQL en el servicio Azure Blob Storage
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 Con este inicio rápido, entenderá mejor cómo escribir copias de seguridad en el servicio Azure Blob Storage y cómo restaurar desde este servicio.  En el artículo se explica cómo crear un contenedor de blobs de Azure, escribir una copia de seguridad en el Blob service y, luego, realizar una restauración.
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
 Para completar este inicio rápido, debe estar familiarizado con los conceptos de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y con la sintaxis de T-SQL.  Necesita una cuenta de Azure Storage, SQL Server Management Studio (SSMS) y acceso a un servidor que ejecute SQL Server o a una instancia administrada de Azure SQL Database. Además, la cuenta que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **db_backupoperator** con permisos **Modificar cualquier credencial**. 
 
 - Obtenga una [cuenta de Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratis.
@@ -122,7 +122,7 @@ Use la GUI de SQL Server Management Studio para crear la credencial siguiendo e
 ## <a name="back-up-database"></a>Copia de seguridad de base de datos
 En este paso, cree una copia de seguridad de la base de datos `SQLTestDB` en la cuenta de Azure Blob Storage con la GUI dentro de SQL Server Management Studio o con Transact-SQL (T-SQL). 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Si el Asistente para la **copia de seguridad de base de datos** todavía no está abierto, expanda el nodo **Bases de datos** dentro del **Explorador de objetos** de [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 1. Haga clic con el botón derecho en la base de datos `SQLTestDB` nueva, mantenga el puntero del mouse sobre **Tareas** y seleccione **Copia de seguridad…** para iniciar el Asistente de **copia de seguridad de base de datos**. 
@@ -141,7 +141,7 @@ En este paso, cree una copia de seguridad de la base de datos `SQLTestDB` en la 
    > Puede generar un script de la instancia de Transact-SQL detrás de este comando si selecciona **Script** en la parte superior del Asistente para la **copia de seguridad de base de datos**: ![Comando de script](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Cree una copia de seguridad de la base de datos con Transact-SQL mediante la ejecución del comando siguiente: 
 
@@ -160,12 +160,12 @@ GO
 ## <a name="delete-database"></a>Eliminar base de datos
 En este paso, elimine la base de datos antes de realizar la restauración. Este paso solo es necesario para este tutorial, pero no es probable que se use en procedimientos normales de administración de bases de datos. Puede omitir este paso, pero tendrá que cambiar el nombre de la base de datos durante la restauración en una instancia administrada, o bien ejecutar el comando de restauración `WITH REPLACE` para restaurar correctamente la base de datos en el entorno local. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Expanda el nodo **Bases de datos** en el **Explorador de objetos**, haga clic con el botón derecho en la base de datos `SQLTestDB` y seleccione Eliminar para iniciar el Asistente para **eliminar el objeto**. 
 1. En una instancia administrada, seleccione **Aceptar** para eliminar la base de datos. En el entorno local, active la casilla junto a **Cerrar conexiones existentes** y seleccione **Aceptar** para eliminar la base de datos. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Para eliminar la base de datos, ejecute el comando de Transact-SQL siguiente:
 
@@ -192,7 +192,7 @@ GO
 ## <a name="restore-database"></a>Restaurar base de datos 
 En este paso, restaure la base de datos con la GUI de SQL Server Management Studio o con Transact-SQL. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Haga clic con el botón secundario en el nodo **Bases de datos** en el **Explorador de objetos** dentro de SQL Server Management Studio y seleccione **Restaurar base de datos**. 
 1. Seleccione **Dispositivo** y, luego, los puntos suspensivos (…) para elegir el dispositivo. 
@@ -216,7 +216,7 @@ En este paso, restaure la base de datos con la GUI de SQL Server Management Stu
 1. Seleccione **Aceptar** para cerrar el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad**. 
 1. Seleccione **Aceptar** para restaurar la base de datos. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Para restaurar la base de datos local desde Azure Blob Storage, modifique el comando de Transact-SQL siguiente para usar su propia cuenta de almacenamiento y, luego, ejecútelo dentro de una ventana de consulta nueva. 
 

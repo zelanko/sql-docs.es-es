@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72305074"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes en la escalabilidad horizontal de Integration Services (SSIS)
@@ -32,7 +32,7 @@ Tras implementar los paquetes en el servidor de Integration Services, puede ejec
 
 -   [trabajos del Agente SQL Server](#sql_agent)
 
-## <a name="scale_out_dialog"></a> Ejecutar paquetes con el cuadro de diálogo Ejecutar paquete en escalabilidad horizontal
+## <a name="run-packages-with-the-execute-package-in-scale-out-dialog-box"></a><a name="scale_out_dialog"></a> Ejecutar paquetes con el cuadro de diálogo Ejecutar paquete en escalabilidad horizontal
 
 1. Abra el cuadro de diálogo Ejecutar paquete en escalabilidad horizontal.
 
@@ -61,7 +61,7 @@ Tras implementar los paquetes en el servidor de Integration Services, puede ejec
 
     Haga clic en **Aceptar** para iniciar las ejecuciones de paquetes. Para ver el informe de ejecución de un paquete, haga clic con el botón derecho en el paquete en el Explorador de objetos, haga clic en **Informes**, en **Todas las ejecuciones**y busque la ejecución.
     
-## <a name="stored_proc"></a> Ejecución de paquetes con procedimientos almacenados
+## <a name="run-packages-with-stored-procedures"></a><a name="stored_proc"></a> Ejecución de paquetes con procedimientos almacenados
 
 1.  Cree las ejecuciones.
 
@@ -124,7 +124,7 @@ Una vez que haya establecido este modo de ejecución predeterminado, ya no tendr
 
 Para volver a cambiar el modo de ejecución predeterminado de modo que los paquetes no se ejecuten de forma automática en el modo de escalabilidad horizontal, establezca **Modo de ejecución predeterminado de todo el servidor** en **Servidor**.
 
-## <a name="sql_agent"></a> Ejecución del paquete en el trabajo del Agente SQL Server
+## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a> Ejecución del paquete en el trabajo del Agente SQL Server
 En un trabajo del Agente SQL Server, puede ejecutar un paquete SSIS como paso del trabajo. Para ejecutar el paquete en escalabilidad horizontal, establezca el modo de ejecución en **Escalabilidad horizontal**. Una vez configurado el modo de ejecución predeterminado en **Escalabilidad horizontal**, los trabajos del Agente SQL Server se ejecutarán en dicho modo.
 
 ## <a name="next-steps"></a>Pasos siguientes

@@ -17,10 +17,10 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258881"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "75258881"
   Para conectarse a una sesión de creación de reflejo de la base de datos, un cliente puede usar SQL Native Client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos proveedores de acceso a datos son totalmente compatibles con la creación de reflejo de la base de datos cuando se configuran para una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener información acerca de las consideraciones de programación para el uso de una base de datos reflejada, vea [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Además, la instancia del servidor principal actual debe estar disponible y el inicio de sesión del cliente se debe haber creado en la instancia del servidor. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Las conexiones de cliente a una sesión de creación de reflejo de la base de datos no tienen relación con la instancia del servidor testigo, si existe alguno.  
   
   
-##  <a name="InitialConnection"></a> Establecer la conexión inicial en una sesión de creación de reflejo de la base de datos  
+##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> Establecer la conexión inicial en una sesión de creación de reflejo de la base de datos  
  Para la conexión inicial en una base de datos reflejada, un cliente debe suministrar una cadena de conexión que como mínimo proporcione el nombre de una instancia del servidor. Este nombre de servidor requerido debería identificar la instancia del servidor principal actual y se conoce como el *nombre del asociado inicial*.  
   
  Opcionalmente, la cadena de conexión también puede proporcionar el nombre de otra instancia del servidor, que debería identificar la instancia del servidor reflejado actual, para usarla si el asociado inicial no está disponible durante el primer intento de conexión. Este nombre se conoce como el *nombre del asociado de conmutación por error*.  
@@ -155,7 +155,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> Algoritmo de reintento de conexión (para conexiones TCP/IP)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> Algoritmo de reintento de conexión (para conexiones TCP/IP)  
  Para una conexión TCP/IP, cuando los nombres de ambos asociados están en la memoria caché, el proveedor de acceso a datos se ajusta a un algoritmo de reintento de conexión. Esto se cumple para establecer la conexión inicial a la sesión y para volver a conectarse después de que una conexión establecida se haya perdido. Una vez que se ha abierto una conexión, finalizar los pasos previos de inicio de sesión y el inicio de sesión requiere tiempo adicional.  
   
 > [!NOTE]  
@@ -204,7 +204,7 @@ Server=123.34.45.56,4724;
   
  ![Algoritmo de intervalo entre reintentos](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "Algoritmo de intervalo entre reintentos")  
   
-##  <a name="Reconnecting"></a> Volver a conectar una sesión de creación de reflejo de la base de datos  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> Volver a conectar una sesión de creación de reflejo de la base de datos  
  Si una conexión establecida de una sesión de creación de reflejo de la base de datos genera un error por alguna razón; por ejemplo, debido a una conmutación automática por error, y la aplicación intenta volver a conectarse al servidor inicial, el proveedor de acceso a datos puede tratar de volver a conectarse mediante el nombre de asociado de conmutación por error almacenado en la memoria caché del cliente. No obstante, volver a conectarse no es un proceso automático. La aplicación debe detectar el error. Después, la aplicación necesita cerrar la conexión con error y abrir una nueva utilizando los mismos atributos de la cadena de conexión. En este punto, el proveedor de acceso a datos redirige la conexión al asociado de conmutación por error. Si la instancia de servidor que se identifica con este nombre es actualmente el servidor principal, el intento de conexión suele tener éxito. Si no está claro si una transacción se confirmó o revirtió, la aplicación debe comprobar el estado de la transacción, de la misma forma en que lo hace cuando se vuelve a conectar con una instancia de servidor independiente.  
   
  Volver a conectarse se parece bastante a una conexión inicial donde la cadena de conexión suministra un nombre de asociado de conmutación por error. Si el primer intento no tiene éxito, los intentos de conexión se alternan repetidamente entre el nombre del asociado inicial y el nombre del asociado de conmutación por error, hasta que el cliente se conecta al servidor principal o el proveedor de acceso a datos agota el tiempo de espera.  
@@ -225,7 +225,7 @@ Server=123.34.45.56,4724;
   
 ##  <a name="Benefits"></a>   
   
-##  <a name="StalePartnerName"></a> Impacto de un nombre de asociado de conmutación por error desusado  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> Impacto de un nombre de asociado de conmutación por error desusado  
  El administrador de la base de datos puede cambiar el asociado de conmutación por error en cualquier momento. Por lo tanto, un nombre de asociado de conmutación por error que suministre un cliente podría estar desfasado o *desusado*. Por ejemplo, imagine que tiene un asociado de conmutación por error que se llama Partner_B y que es sustituido por otra instancia de servidor, Partner_C. Si un cliente proporciona Partner_B como nombre del asociado de conmutación por error, ese nombre está desusado. En este caso, el comportamiento del proveedor de acceso a datos es el mismo que cuando el cliente no proporciona un nombre de asociado de conmutación por error.  
   
  Por ejemplo, suponga que un cliente utiliza una cadena de conexión para una serie de cuatro intentos de conexión. En la cadena de conexión, el nombre del asociado inicial es Partner_A y el del asociado de conmutación por error, Partner_B:  

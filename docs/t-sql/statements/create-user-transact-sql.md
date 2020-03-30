@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056813"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -277,7 +277,7 @@ Al crear el usuario en la base de datos de Instancia administrada de SQL Databas
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
-##  <a name="SyntaxSummary"></a> Resumen de la sintaxis  
+##  <a name="syntax-summary"></a><a name="SyntaxSummary"></a> Resumen de la sintaxis  
  **Usuarios basados en inicios de sesión en la base de datos maestra**  
   
  En la siguiente lista se muestra la posible sintaxis de los usuarios basados en inicios de sesión. No se citan las opciones de esquema predeterminadas.  
@@ -388,7 +388,7 @@ CREATE USER JinghaoLiu FOR CERTIFICATE CarnationProduction50;
 GO   
 ```  
   
-###  <a name="withoutLogin"></a> D. Crear y utilizar un usuario sin inicio de sesión  
+###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> D. Crear y utilizar un usuario sin inicio de sesión  
  En el ejemplo siguiente se crea un usuario de base de datos `CustomApp` que no se asigna a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, se concede a un usuario el permiso `adventure-works\tengiz0` para suplantar al usuario de `CustomApp`.  
   
 ```  

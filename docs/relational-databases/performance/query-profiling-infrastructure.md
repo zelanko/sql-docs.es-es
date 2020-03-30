@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77705910"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
@@ -50,7 +50,7 @@ Los siguientes métodos de recopilación de información de planes de ejecución
 
 Cuando se ejecuta una sesión de eventos extendidos que usa el evento *query_post_execution_showplan*, la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) también se rellena, lo que habilita las estadísticas de consulta dinámicas para todas las sesiones mediante [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) o una consulta directa a la DMV. Para obtener más información, consulte [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
 
-## <a name="lwp"></a> Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera
+## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a> Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera
 
 A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se ha incorporado una nueva *infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera*, o **generación de perfiles ligera**. 
 

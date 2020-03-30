@@ -11,10 +11,10 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243007"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determinación de por qué los cambios de la réplica principal no se reflejan en una réplica secundaria de un grupo de disponibilidad Always On
@@ -50,7 +50,7 @@ ms.locfileid: "75243007"
 En las siguientes secciones se describen las causas comunes de los cambios en la réplica principal que no se reflejan en la réplica secundaria para las consultas de solo lectura.  
 
 
-##  <a name="BKMK_OLDTRANS"></a> Transacciones activas de ejecución prolongada  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a> Transacciones activas de ejecución prolongada  
  Una transacción de ejecución prolongada en la réplica principal impide que las actualizaciones se lean en la réplica secundaria.  
   
 ### <a name="explanation"></a>Explicación  
@@ -59,7 +59,7 @@ En las siguientes secciones se describen las causas comunes de los cambios en la
 ### <a name="diagnosis-and-resolution"></a>Diagnóstico y resolución  
  En la réplica principal, use [DBCC OPENTRAN &#40;Transact-SQL&#41; ](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md) para ver las transacciones activas más antiguas y vea si se pueden revertir. Cuando las transacciones activas más antiguas se han revertido y sincronizado en la réplica secundaria, las cargas de trabajo de lectura en la réplica secundaria pueden ver las actualizaciones en la base de datos de disponibilidad hasta el principio de la transacción activa que en aquel momento sea la más antigua.  
   
-##  <a name="BKMK_LATENCY"></a> La alta latencia de red o el bajo rendimiento de red producen una acumulación de registros en la réplica principal  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> La alta latencia de red o el bajo rendimiento de red producen una acumulación de registros en la réplica principal  
  La alta latencia de red o el bajo rendimiento pueden impedir que los registros se envíen a la réplica secundaria lo suficientemente rápido.  
   
 ### <a name="explanation"></a>Explicación  
@@ -92,7 +92,7 @@ En las siguientes secciones se describen las causas comunes de los cambios en la
   
  Para solucionar este problema, intente actualizar el ancho de banda de red o eliminar o reducir el tráfico de red innecesario.  
   
-##  <a name="BKMK_REDOBLOCK"></a> Otra carga de trabajo de los informes impide que se ejecute el subproceso de la fase de puesta al día de ejecución  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> Otra carga de trabajo de los informes impide que se ejecute el subproceso de la fase de puesta al día de ejecución  
  El subproceso de la fase de puesta al día de la réplica secundaria no puede hacer cambios en el lenguaje de definición de datos (DDL) a partir de una consulta de solo lectura de ejecución prolongada. El subproceso de la fase de puesta al día debe desbloquearse para poder poner más actualizaciones a disposición de la carga de trabajo de lectura.  
   
 ### <a name="explanation"></a>Explicación  
@@ -108,7 +108,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Puede esperar a que la carga de trabajo de los informes finalice, momento en que el subproceso de la fase de puesta al día se desbloqueará, o puede desbloquear inmediatamente el subproceso de la fase de puesta al día mediante la ejecución del comando [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) en el identificador de sesión de bloqueo.  
   
-##  <a name="BKMK_REDOBEHIND"></a> El subproceso de la fase de puesta al día se retrasa debido a la contención de recursos  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a> El subproceso de la fase de puesta al día se retrasa debido a la contención de recursos  
  Una gran carga de trabajo de informes en la réplica secundaria ha ralentizado el rendimiento de la réplica secundaria y el subproceso de la fase de puesta al día se ha retrasado.  
   
 ### <a name="explanation"></a>Explicación  

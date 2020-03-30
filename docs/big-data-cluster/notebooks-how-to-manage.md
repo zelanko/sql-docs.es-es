@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 8cf37ff6a4ad5e2b627fa5d968391cc5a7597a4a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244091"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Cómo administrar cuadernos en Azure Data Studio
@@ -23,7 +23,7 @@ ms.locfileid: "75244091"
 
 En este artículo se muestra cómo abrir y guardar archivos de cuaderno en Azure Data Studio con SQL Server. También se muestra cómo cambiar la conexión al clúster de macrodatos de SQL Server.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 En este artículo se supone que ya tiene un cuaderno que quiere usar en Azure Data Studio. Si quiere crear un cuaderno, vea [Uso de los cuadernos en SQL Server](notebooks-guidance.md). Para usar cuadernos en Azure Data Studio, debe cumplir los siguientes requisitos previos:
 

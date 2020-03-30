@@ -29,10 +29,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78280899"
 ---
 # <a name="bcp-utility"></a>bcp (utilidad)
@@ -441,7 +441,7 @@ Realiza la operación de copia masiva con los tipos de datos nativos (de la base
  **-x**<a name="x"></a>  
  Si se usa con las opciones **format** y **-f** *format_file*, genera un archivo de formato basado en XML en lugar del archivo de formato predeterminado que no es XML. **-x** no funciona cuando se importan o exportan datos. Genera un error si se usa sin **format** ni **-f** *format_file*.  
 
-## Comentarios<a name="remarks"></a>
+## <a name="remarks"></a>Comentarios<a name="remarks"></a>
 
 - La utilidad **bcp** 13.0 se instala al instalar las herramientas de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Si hay instaladas herramientas para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y para una versión anterior de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], según el orden de valores de la variable de entorno PATH, es posible que se use el cliente **bcp** anterior en lugar del cliente **bcp** 13.0. Esta variable de entorno define el conjunto de directorios que Windows usa para buscar archivos ejecutables. Para saber qué versión se usa, ejecute el comando **bcp /v** o **bcp -v** en el símbolo del sistema de Windows. Para obtener información sobre cómo establecer la ruta de comandos en la variable de entorno PATH, vea [Variables de entorno](https://docs.microsoft.com/windows/win32/shell/user-environment-variables), o bien busque Variables de entorno en la Ayuda de Windows.
 

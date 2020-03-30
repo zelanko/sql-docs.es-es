@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776387"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
@@ -35,7 +35,7 @@ ms.locfileid: "75776387"
 
   En este tema se describe cómo crear un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o en [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un inicio de sesión es la identidad de la persona o proceso que se está conectando a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-##  <a name="Background"></a> Información previa  
+##  <a name="background"></a><a name="Background"></a> Información previa  
  Un inicio de sesión es una entidad de seguridad o una entidad que puede ser autenticada por un sistema seguro. Los usuarios necesitan iniciar sesión para conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede crear un inicio de sesión basado en una entidad de seguridad de Windows (como un usuario de dominio o un grupo de dominio de Windows) o puede crear un inicio de sesión que no lo esté (como un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
 > **NOTA:** Para usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] debe utilizar la autenticación de modo mixto. Para obtener más información, vea [Elegir un modo de autenticación](../../../relational-databases/security/choose-an-authentication-mode.md).  
@@ -44,13 +44,13 @@ ms.locfileid: "75776387"
   
 > **NOTA:** Cuando un inicio de sesión se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la identidad se valida en la base de datos maestra. Use los usuarios de base de datos independiente para autenticar conexiones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] en el nivel de base de datos. No se necesita un inicio de sesión si se usan usuarios de base de datos independiente. Una base de datos independiente es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (y de la base de datos maestra) que hospeda la base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite usuarios de base de datos independientes para la autenticación de Windows y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Al usar [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], se combinan las reglas de usuarios de la base de datos independiente con las de firewall de nivel de base de datos. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-##  <a name="Security"></a> Seguridad  
+##  <a name="security"></a><a name="Security"></a> Seguridad  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere el permiso **ALTER ANY LOGIN** o **ALTER LOGIN** en el servidor.  
   
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] requiere la pertenencia al rol **loginmanager** .  
   
-##  <a name="SSMSProcedure"></a> Creación de un inicio de sesión utilizando SSMS  
+##  <a name="create-a-login-using-ssms"></a><a name="SSMSProcedure"></a> Creación de un inicio de sesión utilizando SSMS  
   
   
 1.  En el Explorador de objetos, expanda la carpeta de la instancia de servidor en la que desea crear el nuevo inicio de sesión.  
@@ -226,7 +226,7 @@ ms.locfileid: "75776387"
  **Autenticación de SQL Server**  
  La casilla **Inicio de sesión bloqueado** solo está disponible si el inicio de sesión se conecta usando la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y si este se ha bloqueado. Este valor es solo de lectura. Para desbloquear un inicio de sesión fuera el que se bloquea, ejecute ALTER LOGIN con la opción de UNLOCK.  
   
-##  <a name="TsqlProcedure"></a> Creación de un inicio de sesión utilizando la autenticación de Windows mediante T-SQL  
+##  <a name="create-a-login-using-windows-authentication-using-t-sql"></a><a name="TsqlProcedure"></a> Creación de un inicio de sesión utilizando la autenticación de Windows mediante T-SQL  
   
  
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -263,7 +263,7 @@ ms.locfileid: "75776387"
   
  Para obtener más información, vea [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Pasos que se deben realizar después de crear un inicio de sesión  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a> Seguimiento: Pasos que se deben realizar después de crear un inicio de sesión  
  Después de crear un inicio de sesión, este puede conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero no necesariamente tiene permisos suficientes para realizar ningún trabajo útil. En la lista siguiente se proporcionan vínculos a las acciones de inicio de sesión comunes.  
   
 -   Para combinar el inicio de sesión con un rol, vea [Combinar un rol](../../../relational-databases/security/authentication-access/join-a-role.md).  

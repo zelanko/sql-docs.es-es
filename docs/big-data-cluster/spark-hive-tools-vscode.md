@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255918"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Envío de trabajos de Spark en un clúster de macrodatos de SQL Server en Visual Studio Code
@@ -176,7 +176,7 @@ Para enviar consultas de PySpark interactivas, siga este procedimiento:
 
 Se admite la configuración de [Apache Livy](https://livy.incubator.apache.org/), que puede configurarse en el archivo **.VSCode\settings.json** de la carpeta del área de trabajo. En la actualidad, la configuración de Livy solo admite el script de Python. Para obtener más información, vea [Livy README](https://github.com/cloudera/livy/blob/master/README.rst ) (LÉAME de Livy).
 
-### <a id="triggerlivyconf"></a>**Cómo activar la configuración de Livy**
+### <a name="how-to-trigger-livy-configuration"></a><a id="triggerlivyconf"></a>**Cómo activar la configuración de Livy**
 
 #### <a name="method-1"></a>Método 1
 

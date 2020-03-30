@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294194"
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
@@ -137,13 +137,13 @@ ms.locfileid: "71294194"
   
 -   [Establecer las opciones de la página Enlaces de parámetro](#parameter)  
   
-###  <a name="open"></a> Abrir el Editor de la tarea Ejecutar paquete  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> Abrir el Editor de la tarea Ejecutar paquete  
   
 1.  Abra un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] que contenga una tarea Ejecutar paquete.  
   
 2.  Haga clic con el botón derecho en la tarea en el Diseñador SSIS y, después, haga clic en **Editar**.  
   
-###  <a name="general"></a> Establecer las opciones de la página General  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Establecer las opciones de la página General  
  **Nombre**  
  Escriba un nombre único para la tarea Ejecutar paquete. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71294194"
  **Descripción**  
  Escriba una descripción de la tarea Ejecutar paquete.  
   
-###  <a name="package"></a> Establecer las opciones de la página Paquete  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> Establecer las opciones de la página Paquete  
  **ReferenceType**  
  Seleccione **Referencia de proyecto** para los paquetes secundarios que están en el proyecto. Seleccione **Referencia externa** para los paquetes secundarios que se encuentran fuera del paquete  
   
@@ -207,7 +207,7 @@ ms.locfileid: "71294194"
  **PackageNameReadOnly**  
  Muestra el nombre del paquete.  
   
-###  <a name="parameter"></a> Establecer las opciones de la página Enlaces de parámetro  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> Establecer las opciones de la página Enlaces de parámetro  
  Puede pasar valores del paquete primario o del proyecto al paquete secundario. El proyecto debe utilizar el modelo de implementación del proyecto y el paquete secundario debe estar incluido en el mismo proyecto que contiene el paquete primario.  
   
  Para obtener información sobre cómo convertir proyectos al modelo de implementación de proyectos, vea [Implementación de proyectos y paquetes de Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286069"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Procedimientos para implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes
@@ -35,14 +35,14 @@ Antes de implementar un clúster de macrodatos de SQL Server 2019, [instale pr
 - Azure Data Studio
 - [Extensión de virtualización de datos](../azure-data-studio/data-virtualization-extension.md) para Azure Data Studio
 
-## <a id="prereqs"></a> Requisitos previos de Kubernetes
+## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Requisitos previos de Kubernetes
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] requieren como mínimo la versión 1.13 de Kubernetes para el servidor y el cliente (kubectl).
 
 > [!NOTE]
 > Tenga en cuenta que las versiones de Kubernetes del cliente y el servidor deben ser la versión secundaria +1 o -1. Para obtener más información, consulte [Notas de la versión de Kubernetes y directiva de SKU de sesgo de versión](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
-### <a id="kubernetes"></a> Configuración del clúster de Kubernetes
+### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Configuración del clúster de Kubernetes
 
 Si ya tiene un clúster de Kubernetes que cumple los requisitos previos anteriores, puede ir directamente al [paso de implementación](#deploy). En esta sección se da por supuesto que tiene un conocimiento básico de los conceptos de Kubernetes.  Para obtener información detallada sobre Kubernetes, consulte la [documentación de Kubernetes](https://kubernetes.io/docs/home).
 
@@ -75,13 +75,13 @@ La mayoría de las implementaciones de clúster de macrodatos deben tener almace
 
 Si implementa en AKS, no es necesario realizar ninguna configuración de almacenamiento. AKS proporciona clases de almacenamiento integradas con aprovisionamiento dinámico. Puede personalizar la clase de almacenamiento (`default` o `managed-premium`) en el archivo de configuración de implementación. Los perfiles integrados usan una clase de almacenamiento `default`. Si va a realizar la implementación en un clúster de Kubernetes que se ha implementado mediante `kubeadm`, deberá asegurarse de tener suficiente espacio de almacenamiento para un clúster de la escala deseada disponible y configurado para su uso. Si quiere personalizar la forma en que se usa el almacenamiento, debe hacerlo antes de continuar. Vea [Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes](concept-data-persistence.md).
 
-## <a id="deploy"></a> Información general sobre la implementación
+## <a name="deployment-overview"></a><a id="deploy"></a> Información general sobre la implementación
 
 La mayoría de la configuración del clúster de macrodatos se define en un archivo de configuración de implementación JSON. Puede usar un perfil de implementación predeterminado para clústeres de AKS o Kubernetes creados con `kubeadm`, o bien puede personalizar un archivo de configuración de implementación propio para usarlo durante la instalación. Por motivos de seguridad, la configuración de autenticación se pasa mediante variables de entorno.
 
 En las secciones siguientes se proporcionan más detalles sobre cómo configurar las implementaciones del clúster de macrodatos, así como ejemplos de personalizaciones comunes. Además, puede editar en todo momento el archivo de configuración de implementación personalizado con un editor (por ejemplo, VS Code).
 
-## <a id="configfile"></a> Configuraciones predeterminadas
+## <a name="default-configurations"></a><a id="configfile"></a> Configuraciones predeterminadas
 
 Las opciones de implementación del clúster de macrodatos se definen en archivos de configuración JSON. Puede iniciar la personalización de la implementación del clúster desde los perfiles de implementación integrados que están disponibles en `azdata`. 
 
@@ -125,7 +125,7 @@ En este escenario, se le pide la configuración que no forme parte de la configu
 > [!IMPORTANT]
 > El nombre predeterminado del clúster de macrodatos es `mssql-cluster`. Es importante saberlo para ejecutar cualquiera de los comandos de `kubectl` que especifican el espacio de nombres de Kubernetes con el parámetro `-n`.
 
-## <a id="customconfig"></a> Configuraciones personalizadas
+## <a name="custom-configurations"></a><a id="customconfig"></a> Configuraciones personalizadas
 
 También es posible personalizar la implementación para acomodar las cargas de trabajo que planea ejecutar. Tenga en cuenta que no puede cambiar la escala (el número de réplicas) ni la configuración de almacenamiento para los servicios de clúster de macrodatos después de las implementaciones, por lo que debe planear cuidadosamente la configuración de implementación para evitar problemas de capacidad. Para personalizar la implementación, siga estos pasos:
 
@@ -165,7 +165,7 @@ También es posible personalizar la implementación para acomodar las cargas de 
 
 > Para obtener más información sobre la estructura de un archivo de configuración de implementación, vea la [Referencia del archivo de configuración de implementación](reference-deployment-config.md). Para consultar más ejemplos de configuración, vea [Configuración de opciones de implementación para clústeres de macrodatos](deployment-custom-configuration.md).
 
-## <a id="env"></a> Variables de entorno
+## <a name="environment-variables"></a><a id="env"></a> Variables de entorno
 
 Las siguientes variables de entorno se usan para la configuración de seguridad que no se almacena en un archivo de configuración de implementación. Tenga en cuenta que la configuración de Docker, excepto las credenciales, se puede establecer en el archivo de configuración.
 
@@ -208,11 +208,11 @@ Tenga en cuenta las directrices siguientes:
 - Asegúrese de incluir la contraseña entre comillas dobles si contiene algún carácter especial. Puede establecer `AZDATA_PASSWORD` en el valor que quiera, pero asegúrese de que la contraseña sea suficientemente compleja y no use los caracteres `!`, `&` ni `'`. Tenga en cuenta que los delimitadores de comillas dobles solo funcionan en los comandos de Bash.
 - El inicio de sesión de `AZDATA_USERNAME` es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la configuración. Después de crear el contenedor de SQL Server, la variable de entorno `AZDATA_PASSWORD` especificada se reconoce mediante la ejecución de `echo $AZDATA_PASSWORD` en el contenedor. Por motivos de seguridad, cambie la contraseña como procedimiento recomendado.
 
-## <a id="unattended"></a> Instalación desatendida
+## <a name="unattended-install"></a><a id="unattended"></a> Instalación desatendida
 
 En una implementación desatendida, debe establecer todas las variables de entorno necesarias, usar un archivo de configuración y llamar al comando `azdata bdc create` con el parámetro `--accept-eula yes`. En los ejemplos de la sección anterior se muestra la sintaxis de una instalación desatendida.
 
-## <a id="monitor"></a> Supervisión de la implementación
+## <a name="monitor-the-deployment"></a><a id="monitor"></a> Supervisión de la implementación
 
 Durante el arranque del clúster, la ventana de comandos del cliente devuelve el estado de la implementación. Durante el proceso de implementación, debería ver una serie de mensajes en los que está esperando el pod del controlador:
 
@@ -239,7 +239,7 @@ Cluster deployed successfully.
 > [!TIP]
 > El nombre predeterminado del clúster de macrodatos implementado es `mssql-cluster` a menos que una configuración personalizada lo haya modificado.
 
-## <a id="endpoints"></a> Recuperación de puntos de conexión
+## <a name="retrieve-endpoints"></a><a id="endpoints"></a> Recuperación de puntos de conexión
 
 Una vez que el script de implementación se haya completado de forma correcta, puede seguir los pasos siguientes para obtener las direcciones de los puntos de conexión externos del clúster de macrodatos.
 
@@ -293,7 +293,7 @@ También puede obtener todos los puntos de conexión de servicio implementados p
 kubectl get svc -n <your-big-data-cluster-name>
 ```
 
-## <a id="status"></a> Comprobación del estado del clúster
+## <a name="verify-the-cluster-status"></a><a id="status"></a> Comprobación del estado del clúster
 
 Después de la implementación, puede comprobar el estado del clúster con el comando [azdata bdc status show](reference-azdata-bdc-status.md).
 
@@ -423,7 +423,7 @@ Sql: ready                                                                      
 
 Además de usar `azdata`, también puede utilizar Azure Data Studio para buscar información de los puntos de conexión y el estado. Para obtener más información sobre cómo ver el estado del clúster con `azdata` y Azure Data Studio, vea [Procedimientos para ver el estado de un clúster de macrodatos](view-cluster-status.md).
 
-## <a id="connect"></a> Conexión al clúster
+## <a name="connect-to-the-cluster"></a><a id="connect"></a> Conexión al clúster
 
 Para obtener más información sobre cómo conectarse al clúster de macrodatos, consulte [Conexión a un clúster de macrodatos de SQL Server con Azure Data Studio](connect-to-big-data-cluster.md).
 

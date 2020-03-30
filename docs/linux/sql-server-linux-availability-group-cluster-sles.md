@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558450"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clústeres de SLES para grupos de disponibilidad de SQL Server
@@ -48,7 +48,7 @@ El procedimiento para crear un grupo de disponibilidad para alta disponibilidad 
 
 5. [Agregue el grupo de disponibilidad como un recurso en el clúster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Para completar el siguiente escenario integral, necesita tres equipos en los que implementar el clúster de tres nodos. En los pasos siguientes se describe cómo configurar estos servidores.
 

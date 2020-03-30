@@ -11,10 +11,10 @@ ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9724fb48f6ae896d9026bfec63056070e2180a8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992487"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Paso 3: Prueba de concepto de la conexión a SQL mediante Ruby
@@ -52,7 +52,7 @@ En el ejemplo de código, la función [TinyTds::Result](https://github.com/rails
     end  
 ```  
   
-## <a name="step-3--insert-a-row"></a>Paso 3:  Insertar una fila  
+## <a name="step-3--insert-a-row"></a>Paso 3:  Inserción de una fila  
   
 En este ejemplo se muestra cómo ejecutar una instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) de forma segura, pasar parámetros que protejan la aplicación ante el valor [Inyección de código SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   

@@ -12,10 +12,10 @@ ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
 ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258641"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Inicio rápido: Copias de seguridad y restauración de bases de datos de SQL Server en el entorno local
@@ -25,7 +25,7 @@ En este inicio rápido, creará una base de datos, realizará una simple copia d
 
 Para un procedimiento más detallado, vea [Crear una copia de seguridad completa de base de datos (SQL Server)](create-a-full-database-backup-sql-server.md) y [Restore a backup using SSMS](restore-a-database-backup-using-ssms.md) (Restaurar una copia de seguridad con SSMS).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 Para completar este inicio rápido, necesitará lo siguiente: 
 
 - [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)

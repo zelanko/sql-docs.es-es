@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287949"
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
@@ -124,7 +124,7 @@ En la tabla siguiente se indica si un tipo específico de la asignación de memo
 |Memoria de pilas de subprocesos|Sí|Sí|
 |Asignaciones directas de Windows|Sí|Sí|
 
-## <a name="dynamic-memory-management"></a> Administración dinámica de memoria
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> Administración dinámica de memoria
 El comportamiento predeterminado de administración de memoria del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] es adquirir toda la memoria que necesita sin provocar una escasez de memoria en el sistema. El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] lo consigue mediante las API de notificación de memoria de Microsoft Windows.
 
 Cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la memoria de manera dinámica, realiza una consulta periódica en el sistema para determinar la cantidad de memoria libre. El mantenimiento de esta memoria libre evita la paginación en el sistema operativo (SO). Si hay menos memoria libre, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] libera memoria para el sistema operativo. Si hay más memoria libre, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede asignar más memoria. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agrega memoria solo cuando su carga de trabajo así lo requiere; un servidor inactivo no aumenta el tamaño de su espacio de direcciones virtual.  
@@ -203,7 +203,7 @@ La opción *min memory per query* establece la cantidad mínima de memoria (en k
 >    
 > Para obtener recomendaciones sobre el uso de esta configuración, vea [Configurar la opción de configuración del servidor Memoria mínima por consulta](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
-### <a name="memory-grant-considerations"></a>Consideraciones de concesión de memoria
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>Consideraciones de concesión de memoria
 Para la **ejecución del modo de fila**, no se puede superar la concesión de memoria inicial bajo ninguna condición. Si se necesita más memoria que la concesión inicial para ejecutar operaciones de **hash** u **orden**, estas se desbordarán al disco. Una operación de hash que se desborda es compatible con un archivo de trabajo en TempDB, mientras que una operación de orden que se desborda es compatible con una [tabla de trabajo](../relational-databases/query-processing-architecture-guide.md#worktables).   
 
 Un desbordamiento que se produzca durante una operación de orden se conoce como una [advertencia antes de ordenar](../relational-databases/event-classes/sort-warnings-event-class.md). Las advertencias antes de ordenar indican que las operaciones de orden no caben en la memoria. Esto no incluye las operaciones de orden que implican la creación de índices, solo las operaciones de orden dentro de una consulta (como las de una cláusula `ORDER BY` en una instrucción `SELECT`).

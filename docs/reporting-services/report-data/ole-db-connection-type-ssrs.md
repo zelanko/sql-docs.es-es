@@ -9,10 +9,10 @@ ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd597c9a85f381e95de3b04fa22c577e89a26047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081769"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo de conexión OLE DB (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081769"
   
  Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Cadena de conexión  
+##  <a name="connection-string"></a><a name="Connection"></a> Cadena de conexión  
  La cadena de conexión para la extensión de procesamiento de datos de OLE DB depende del proveedor de datos que desee. Una cadena de conexión típica contiene pares de nombre/valor admitidos por el proveedor de datos. Por ejemplo, la siguiente cadena de conexión especifica el proveedor OLE DB para la base de datos de AdventureWorks y Native Client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 ```  
@@ -34,7 +34,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  Para más ejemplos de cadenas de conexión, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Credentials"></a> Credenciales  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenciales  
  Se necesitan credenciales para ejecutar consultas y obtener una vista previa del informe localmente y desde el servidor de informes.  
   
  Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos.  
@@ -48,11 +48,11 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 >  Se recomienda no agregar información de inicio de sesión, como contraseñas, a la cadena de conexión. El cuadro de diálogo **Origen de datos** del Generador de informes incluye una pestaña independiente para especificar las credenciales.  
   
   
-##  <a name="Parameters"></a> Parámetros  
+##  <a name="parameters"></a><a name="Parameters"></a> Parámetros  
  Algunos proveedores OLE DB admiten parámetros sin nombre y no admiten parámetros con nombre. Los parámetros se pasan por posición mediante un marcador de posición en la consulta. La sintaxis admitida por el proveedor de datos determina el carácter del marcador de posición.  
   
   
-##  <a name="Remarks"></a> Comentarios  
+##  <a name="remarks"></a><a name="Remarks"></a> Comentarios  
  OLEDB es una tecnología nativa para crear proveedores de datos para orígenes de datos concretos. OLEDB se basa en interfaces COM (Modelo de objetos componentes). OLEDB es una tecnología posterior a ODBC y anterior que los proveedores de datos ADO.NET. Los proveedores de datos de OLEDB se registran con el sistema operativo como cualquier otro componente de COM. Los proveedores de datos de OLEDB están disponibles de Microsoft y otros proveedores. Microsoft también proporciona MSDASQL, un proveedor de datos de OLEDB que establece la comunicación con los controladores ODBC. Para más información, vea [Tipo de conexión ODBC &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
  Para recuperar correctamente los datos que desea obtener, deberá proporcionar una sintaxis de consulta que admita el proveedor de datos. La compatibilidad con parámetros varía en función del proveedor de datos. Para obtener más información, consulte los temas específicos del proveedor de datos que seleccione. Por ejemplo:  
@@ -66,7 +66,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  Para obtener más información sobre proveedores de datos de OLE DB concretos, consulte [Orígenes de datos admitidos por Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Temas de procedimientos  
  Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
   
  [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -76,7 +76,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> Secciones relacionadas  
+##  <a name="related-sections"></a><a name="Related"></a> Secciones relacionadas  
  Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

@@ -12,10 +12,10 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580839"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pasar un parámetro de informe en una dirección URL
@@ -81,7 +81,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  Si un informe contiene un parámetro de informe con un valor predeterminado y el valor de la propiedad **Prompt** es **false** (es decir, la propiedad Preguntar al usuario no está seleccionada en el Administrador de informes), no puede pasar un valor dentro de una dirección URL para ese parámetro de informe. Esto proporciona a los administradores una opción para evitar que los usuarios finales agreguen o modifiquen los valores de ciertos parámetros de informe.  
   
-##  <a name="bkmk_examples"></a> Otros ejemplos  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> Otros ejemplos  
  En el ejemplo siguiente de dirección URL se incluyen espacios en blanco y varios parámetros  
   
 -   El nombre de carpeta de "Equipo de educación de usuarios de SQL Server" incluye espacios en blanco y, por tanto, el signo "+" reemplaza cada espacio.  

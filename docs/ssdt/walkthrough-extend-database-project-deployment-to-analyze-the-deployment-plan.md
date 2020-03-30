@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242681"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Tutorial: Ampliar la implementación del proyecto de base de datos para analizar el plan de implementación
@@ -41,7 +41,7 @@ Necesitará los componentes siguientes para completar este tutorial:
 > [!NOTE]  
 > Este tutorial está destinado a usuarios que ya están familiarizados con las características de SQL de SSDT. También se espera que esté familiarizado con los conceptos básicos de Visual Studio, como cómo crear una biblioteca de clases y cómo utilizar el editor de código para agregar código a una clase.  
   
-## <a name="CreateDeploymentContributor"></a>Crear un colaborador de implementación  
+## <a name="create-a-deployment-contributor"></a><a name="CreateDeploymentContributor"></a>Crear un colaborador de implementación  
 Para crear un colaborador de implementación, debe realizar las siguientes tareas:  
   
 -   Cree un proyecto de biblioteca de clases y agregue las referencias necesarias.  
@@ -554,7 +554,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
   
 A continuación, debe instalar el ensamblado para que se cargue cuando compile e implemente proyectos de SQL.  
   
-## <a name="InstallDeploymentContributor"></a>Instalar un colaborador de implementación  
+## <a name="install-a-deployment-contributor"></a><a name="InstallDeploymentContributor"></a>Instalar un colaborador de implementación  
 Para instalar un colaborador de implementación, debe copiar el ensamblado y el archivo .pdb asociado en la Carpeta de extensiones.  
   
 #### <a name="to-install-the-mydeploymentcontributor-assembly"></a>Para instalar el ensamblado MyDeploymentContributor  
@@ -563,7 +563,7 @@ Para instalar un colaborador de implementación, debe copiar el ensamblado y el 
   
 -   Copie el archivo de ensamblado **MyDeploymentContributor.dll** del directorio de salida en el directorio %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions. De manera predeterminada, la ruta de acceso del archivo .dll compilado es YourSolutionPath\YourProjectPath\bin\Debug o YourSolutionPath\YourProjectPath\bin\Release.  
   
-## <a name="TestDeploymentContributor"></a>Comprobar su colaborador de implementación  
+## <a name="test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>Comprobar su colaborador de implementación  
 Para comprobar su colaborador de implementación, debe realizar las siguientes tareas:  
   
 -   Agregue propiedades al archivo .sqlproj que quiera implementar.  

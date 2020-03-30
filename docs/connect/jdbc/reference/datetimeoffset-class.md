@@ -11,16 +11,16 @@ ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d697554d246d9bcc1720455137287029880d90a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955168"
 ---
 # <a name="datetimeoffset-class"></a>Clase DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Este tipo representa un objeto de tipo microsoft.sql.DateTimeOffset y es el tipo de Java que se corresponde con el tipo de datos **datetimeoffset** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Este tipo representa un objeto de tipo microsoft.sql.DateTimeOffset y es el tipo de Java que se corresponde con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetimeoffset**de**.  
   
  **Paquete:** microsoft.sql  
   

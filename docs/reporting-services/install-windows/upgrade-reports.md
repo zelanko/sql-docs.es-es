@@ -17,10 +17,10 @@ ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082284"
 ---
 # <a name="upgrade-reports-ssrs"></a>Actualizar informes (SSRS)
@@ -37,7 +37,7 @@ Los archivos de definición de informe (.rdl) se actualizan automáticamente de 
   
  Para obtener más información sobre las características nuevas de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], vea [Novedades de SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
-##  <a name="bkmk_versionsupported"></a> Versiones admitidas por la actualización  
+##  <a name="versions-supported-by-upgrade"></a><a name="bkmk_versionsupported"></a> Versiones admitidas por la actualización  
  Se pueden actualizar los informes que se crearon en cualquier versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se incluyen las versiones siguientes:  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
@@ -48,7 +48,7 @@ Los archivos de definición de informe (.rdl) se actualizan automáticamente de 
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a> Archivos de definición de informe (.rdl) y el Diseñador de informes  
+##  <a name="report-definition-rdl-files-and-report-designer"></a><a name="bkmk_rdlfiles"></a> Archivos de definición de informe (.rdl) y el Diseñador de informes  
  Un archivo de definición de informe incluye una referencia al espacio de nombres RDL que especifica la versión del esquema de definición de informe que se utiliza para validar el archivo .rdl.  
   
  Cuando se abre un archivo .rdl en el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], si el informe se ha creado para un espacio de nombres anterior, el Diseñador de informes crea automáticamente un archivo de copia de seguridad y actualiza el informe con el espacio de nombres actual. Esta es la única manera en que puede actualizar un archivo de definición de informe.  
@@ -59,30 +59,30 @@ Los archivos de definición de informe (.rdl) se actualizan automáticamente de 
   
  Para identificar el esquema RDL actual de un informe, un servidor de informes o del Diseñador de informes, vea [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a> Informes publicados e instantáneas de informe  
+##  <a name="published-reports-and-report-snapshots"></a><a name="bkmk_publishedreports_and_snapshots"></a> Informes publicados e instantáneas de informe  
  Al usarse por primera vez, el servidor de informes intenta actualizar los informes publicados y las instantáneas de informe al nuevo esquema de definición de informe, lo que no requiere ninguna acción concreta del usuario. El intento de actualización tiene lugar cuando el usuario ve un informe o una instantánea de informe, o cuando el servidor de informes procesa una suscripción. La definición de informe no se reemplaza, sino que continúa almacenada en el servidor de informes en su esquema original. Si no se puede actualizar un informe, se ejecuta en modo de compatibilidad con versiones anteriores.  
   
-##  <a name="bkmk_backcompat"></a> Modo de compatibilidad con versiones anteriores  
+##  <a name="backward-compatibility-mode"></a><a name="bkmk_backcompat"></a> Modo de compatibilidad con versiones anteriores  
  El procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] procesa los informes que se actualizan correctamente. Los informes que no se pueden actualizar se procesan en el procesador de informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], en el modo de compatibilidad con versiones anteriores. Ambos procesadores de informes no pueden procesar el mismo informe. Al usarse por primera vez, un informe se actualiza correctamente o se marca como compatible con las versiones anteriores.  
   
  Solo el procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] admite las nuevas características. Si un informe no se puede actualizar, aún puede ver el informe representado pero las nuevas características no están disponibles. Para aprovechar las nuevas características, un informe debe actualizarse correctamente.  
   
-##  <a name="bkmk_subreports"></a> Actualizar un informe con subinformes  
+##  <a name="upgrading-a-report-with-subreports"></a><a name="bkmk_subreports"></a> Actualizar un informe con subinformes  
  Cuando un informe contiene subinformes, durante la actualización se puede dar uno de cuatro estados posibles:  
   
 -   El informe principal y todos los subinformes pueden actualizarse correctamente. El procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] los procesa.  
   
 -   No se pueden actualizar el informe principal ni ninguno de los subinformes. El procesador de informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] los procesa.  
   
--   Se puede actualizar el informe principal, pero no se pueden actualizar uno o varios subinformes. El procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] procesa el informe principal, pero el informe representado muestra el mensaje "Error: no se pudo procesar el subinforme" en la ubicación en la que aparecería el subinforme que podría no actualizarse.  
+-   Se puede actualizar el informe principal, pero no se pueden actualizar uno o varios subinformes. El procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] procesa el informe principal, pero el informe representado muestra un mensaje similar a "Error: no se pudo procesar el subinforme" en la ubicación donde aparecería el subinforme que no se pudo actualizar.  
   
--   El informe principal no se puede actualizar, pero se pueden actualizar uno o varios subinformes. El procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] procesa el informe principal, pero el informe representado muestra el mensaje "Error: no se pudo procesar el subinforme" en la ubicación en la que aparecería el subinforme.  
+-   El informe principal no se puede actualizar, pero se pueden actualizar uno o varios subinformes. El procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] procesa el informe principal, pero el informe representado muestra un mensaje similar a "Error: no se pudo procesar el subinforme" en la ubicación donde aparecería el subinforme.  
   
- Si ve el error "Error: no se pudo procesar el subinforme", debe cambiar la definición del informe principal o del subinforme de modo que la misma versión del procesador de informes pueda procesar los informes.  
+ Si ve un error similar a "Error: no se pudo procesar el subinforme", debe cambiar la definición del informe principal o del subinforme de modo que la misma versión del procesador de informes pueda procesar los informes.  
   
  Los informes detallados no tienen esta limitación porque se procesan como informes independientes.  
   
-##  <a name="bkmk_CRIs"></a> Actualizar un informe con elementos de informe personalizados  
+##  <a name="upgrading-a-report-with-custom-report-items"></a><a name="bkmk_CRIs"></a> Actualizar un informe con elementos de informe personalizados  
  Los informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podrían contener elementos de informe personalizados (CRI) proporcionados por proveedores de software de otros fabricantes que el administrador del sistema podría instalar en el equipo de creación de informes y en el servidor de informes. Los informes que contienen CRI se pueden actualizar de las maneras siguientes:  
   
 -   Un servidor de informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se actualiza a un servidor de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Los informes publicados en el servidor de informes se actualizan automáticamente al usarse por primera vez.  
@@ -108,14 +108,14 @@ Los archivos de definición de informe (.rdl) se actualizan automáticamente de 
 |--------------|----------------------------------|  
 |CRI de otros proveedores|La actualización no se realiza.<br /><br /> El procesamiento lo realiza el procesador de informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] procesa los informes que se actualizan correctamente.|  
   
-###  <a name="OpeningaReport"></a> Abrir un informe con CRI en el Diseñador de informes  
+###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> Abrir un informe con CRI en el Diseñador de informes  
  Al abrir un informe de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el informe se actualizará al nuevo esquema de definición de informe. Según los CRI que contenga el informe, tendrá lugar alguna de las acciones siguientes:  
   
 -   Se detectan CRI de otros proveedores. Si la versión del CRI que está instalada en el equipo de creación de informes no es compatible con el nuevo esquema de RDL, la superficie de diseño muestra un cuadro de texto con una X roja. Debe ponerse en contacto con el administrador del sistema para instalar las versiones nuevas del CRI de los otros proveedores que sean compatibles con el nuevo esquema de RDL.  
   
  Guardar un informe una vez actualizado en el entorno de creación de informes es la única manera de actualizar un informe existente al nuevo esquema de definición de informe.  
   
-###  <a name="bkmk_convertCRIdialog"></a> Cuadro de diálogo Convertir CRI  
+###  <a name="convert-cri-dialog-box"></a><a name="bkmk_convertCRIdialog"></a> Cuadro de diálogo Convertir CRI  
  Este informe contiene elementos de informe personalizados (CRI) con características no admitidas. Los CRI son extensiones del lenguaje RDL (Report Definition Language) que admiten objetos personalizados que muestran datos en un informe. Los CRI incluyen componentes de tiempo de diseño y de tiempo de ejecución proporcionados por otros fabricantes de software.  
   
 > [!NOTE]  

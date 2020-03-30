@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015627"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Ejecutar procedimiento almacenado con ODBC CALL y procesar la salida
@@ -36,7 +36,7 @@ ms.locfileid: "68015627"
   
 2.  Cree un conjunto de enlaces (uno para cada creador de parámetro) mediante una matriz de estructura DBBINDING.  
   
-3.  Cree un descriptor de acceso para los parámetros definidos mediante el uso del método **IAccessor::CreateAccessor**. El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
+3.  Cree un descriptor de acceso para los parámetros definidos mediante el método **IAccessor::CreateAccessor**. El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
   
 4.  Rellene la estructura DBPARAMS.  
   

@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: b4d0f31c8f5fbb282c880abaee62f05dc190bbfc
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896652"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Especificar valores XML como parámetros
@@ -29,7 +29,7 @@ Si una consulta requiere un parámetro cuyo valor es una cadena XML, los desarro
 En la siguiente aplicación de consola se crea una nueva tabla en la base de datos **AdventureWorks**. La nueva tabla incluye una columna denominada **SalesID** y una columna XML de nombre **SalesInfo**.  
   
 > [!NOTE]
->  De forma predeterminada, la base de datos de ejemplo **AdventureWorks** no se instala al instalar SQL Server. Puede instalarlo mediante la ejecución del programa de instalación de SQL Server.  
+>  De forma predeterminada, la base de datos de ejemplo **AdventureWorks** no se instala al instalar SQL Server. Puede instalarlo mediante la ejecución del programa de instalación de SQL Server.  
   
 En el ejemplo se prepara un objeto <xref:Microsoft.Data.SqlClient.SqlCommand> para insertar una fila en la nueva tabla. Un archivo guardado proporciona los datos XML necesarios para la columna **SalesInfo**.  
   

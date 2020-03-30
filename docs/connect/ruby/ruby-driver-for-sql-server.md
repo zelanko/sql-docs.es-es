@@ -11,10 +11,10 @@ ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d35336d1414df78e5d24c3133a176d3d232deadb
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866548"
 ---
 # <a name="ruby-driver-for-sql-server"></a>Controlador Ruby para SQL Server
@@ -24,9 +24,9 @@ ms.locfileid: "78866548"
 Puede conectarse a una instancia de SQL Database mediante Ruby en Windows, Linux o Mac.   
   
 ## <a name="getting-started"></a>Introducción  
-* [Paso 1: Configuración del entorno de desarrollo para el desarrollo Ruby](step-1-configure-development-environment-for-ruby-development.md)  
-* [Paso 2: Creación de una base de datos SQL para el desarrollo Ruby](step-2-create-a-sql-database-for-ruby-development.md)  
-* [Paso 3: Prueba de concepto de la conexión a SQL mediante Ruby](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
+* [Paso 1: Configurar el entorno de desarrollo para el desarrollo Ruby](step-1-configure-development-environment-for-ruby-development.md)  
+* [Paso 2: Crear una base de datos SQL para el desarrollo Ruby](step-2-create-a-sql-database-for-ruby-development.md)  
+* [Paso 3: Prueba de concepto que se conecta a SQL con Ruby](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
   
 ## <a name="documentation"></a>Documentación  
 [Documentación en ruby-lang.org](https://www.ruby-lang.org/en/documentation/)  

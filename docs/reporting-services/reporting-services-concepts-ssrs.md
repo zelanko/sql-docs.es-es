@@ -9,10 +9,10 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078185"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceptos de Reporting Services (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77078185"
   
  **[!INCLUDE[applies](../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
   
-##  <a name="bkmk_ReportServerConcepts"></a> Conceptos del servidor de informes  
+##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> Conceptos del servidor de informes  
  Un servidor de informes es un equipo que tiene instalada una instancia de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Un servidor de informes almacena internamente elementos como informes paginados y móviles, elementos y recursos relacionados con informes, programaciones y suscripciones. Un servidor de informes se puede configurar como un único servidor independiente o como una granja escalada, o se puede integrar con SharePoint Server. Se interactúa con los elementos del servidor de informes mediante el servicio web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , un proveedor WMI, acceso mediante dirección URL o mediante programación a través de scripts. La forma en que interactúa con un servidor de informes depende de la topología de implementación y la configuración.  
   
 ### <a name="native-mode-report-servers"></a>Servidores de informes en modo nativo
@@ -59,7 +59,7 @@ ms.locfileid: "77078185"
  Para obtener la lista de herramientas que hay que usar para interactuar con el servidor de informes, vea [Herramientas de Reporting Services](../reporting-services/tools/reporting-services-tools.md).  
   
   
-##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> Informes y conceptos de elementos relacionados  
+##  <a name="reports-and-related-item-concepts"></a><a name="bkmk_ReportsandRelatedItemConcepts"></a> Informes y conceptos de elementos relacionados  
 ### <a name="reports-and-report-definitions"></a>Informes y definiciones de informe
 
 
@@ -145,7 +145,7 @@ Los informes móviles de Reporting Services (archivos .rsmobile) se crean en el 
  Una alerta de datos es un elemento almacenado internamente en una base de datos de alertas. Una definición de alerta de datos incluye qué datos se van a usar de fuentes de distribución de datos de informe existentes, las condiciones que se tienen que cumplir, una programación y los destinatarios de la alerta. Las alertas de datos solo están disponibles en los informes publicados en un servidor de informes integrado con SharePoint Server. Las alertas de datos no están disponibles en una instalación nativa del servidor de informes. Para obtener más información, vea [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
   
-##  <a name="bkmk_TypesofReports"></a> Tipos de informes paginados de Reporting Services  
+##  <a name="types-of-reporting-services-paginated-reports"></a><a name="bkmk_TypesofReports"></a> Tipos de informes paginados de Reporting Services  
  En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], el término *informe* puede aplicarse a un tipo específico de elemento del servidor de informes, un diseño de informe o un diseño de solución. Un único informe paginado de Reporting Services puede tener características de más de un tipo; por ejemplo, un informe puede ser, al mismo tiempo, un informe independiente, un subinforme al que hace referencia un informe principal, el destino de un informe de obtención de detalles en otro informe principal diferente y un informe vinculado.  
   
 ### <a name="drilldown-reports"></a>Informes de exploración en profundidad 
@@ -183,7 +183,7 @@ Los informes móviles de Reporting Services (archivos .rsmobile) se crean en el 
  Un informe actualizado es una definición de informe publicado que se convierte a un esquema más reciente cuando se actualiza un servidor de informes desde una versión de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a una versión posterior. La definición de informe original se conserva. El informe se actualiza en memoria, se compila y la versión compilada se guarda internamente. Para obtener más información, vea [Actualizar informes](../reporting-services/install-windows/upgrade-reports.md).  
   
   
-##  <a name="bkmk_StagesofReports"></a> Etapas de los informes paginados de Reporting Services  
+##  <a name="stages-of-reporting-services-paginated-reports"></a><a name="bkmk_StagesofReports"></a> Etapas de los informes paginados de Reporting Services  
  Una definición de informe se pueden crear, publicar o guardar, compilar, procesar, almacenar en caché, representar, ver, exportar y guardar como historial. Al ejecutar un informe, el servidor de informes lo procesa en tres pasos: procesamiento del informe, procesamiento de los datos y representación. El procesamiento de los datos y del informe tiene lugar en una definición de informe, y los resultados tienen un formato intermedio interno. Los informes en formato intermedio se representan posteriormente en un formato de visualización específico. En el diagrama siguiente se muestran las etapas y los elementos del procesamiento de informes.  
   
  ![report processing diagram](../reporting-services/media/report-execution.gif "diagrama de procesamiento de informes")  

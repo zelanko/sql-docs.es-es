@@ -9,10 +9,10 @@ ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 890d15b32f26664aca1e9144d42aa480789f2eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080858"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Describir las áreas de la región de datos Tablix (Generador de informes y SSRS)
@@ -26,7 +26,7 @@ En cada área, las celdas tienen una función diferente. Las celdas que se agreg
   
 En la superficie de diseño, las líneas de puntos representan las cuatro áreas de la región de datos Tablix que se encuentra seleccionada. En la ilustración siguiente, se muestran las áreas de una región de datos Tablix que tiene grupos de filas anidados basados en la categoría y la subcategoría, grupos de columnas anidados basados en la geografía y el país o región, y un grupo de columnas adyacente basado en el año.  
   
- ![Áreas de la región de datos Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Áreas de la región de datos Tablix")  
+ ![Descripción de las áreas de la región de datos Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Descripción de las áreas de la región de datos Tablix")  
   
  En la lista siguiente, se describe cada área:  
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68476298"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
@@ -43,7 +43,7 @@ ms.locfileid: "68476298"
   
  [Propiedades del índice (página Filtro)](#Filter)  
   
-##  <a name="General"></a> Propiedades del índice (página General)  
+##  <a name="index-properties-general-page"></a><a name="General"></a> Propiedades del índice (página General)  
  Use la página General para ver o modificar las propiedades del índice para la tabla o vista seleccionada. Las opciones para cada página pueden cambiar según el tipo de índice seleccionado.  
   
  **Nombre de la tabla**  
@@ -55,7 +55,7 @@ ms.locfileid: "68476298"
  Muestra el nombre del índice. Este campo es de solo lectura para un índice existente. Si está creando un nuevo índice, escriba el nombre del índice.  
   
  **Tipo de índice**  
- Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **En clúster**, **No clúster**, **XML primario**, **XML secundario**, **Espacial**, **Almacén de columnas en clúster** o **Almacén de columnas no clúster**.  
+ Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **Clúster**, **No agrupado**, **XML principal**, **XML secundario**, **Espacial**o **Almacén de columnas en clúster**o **Almacén de columnas no clúster**.  
   
  **Nota** : solo se permite un índice clúster por tabla. Solo se permite un índice de almacén de columnas optimizado de memoria one xVelocity por tabla.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68476298"
  **Columnas incluidas**  
  Incluye columnas sin clave en el índice no clúster. Esta opción le permite superar los límites actuales del índice relativos al tamaño total de una clave de índice y el número máximo de columnas que participan en una clave de índice agregando columnas como columnas sin clave en el nivel hoja del índice no clúster. Para obtener más información, vea [Crear índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-##  <a name="Columns"></a> Cuadro de diálogo Seleccionar columnas de (índice)  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> Cuadro de diálogo Seleccionar columnas de (índice)  
  Use esta página para agregar columnas a la página General de **Propiedades del índice** cuando cree o modifique un índice.  
   
  **casilla**  
@@ -134,7 +134,7 @@ ms.locfileid: "68476298"
  **Permitir valores NULL**  
  Muestra **Sí** cuando la definición de la tabla permite valores NULL para la columna. Muestra **No** cuando la definición de la tabla no permite valores NULL para la columna.  
 
-##  <a name="Options"></a> Opciones de la página Opciones
+##  <a name="options-page-options"></a><a name="Options"></a> Opciones de la página Opciones
  Use esta página para ver o modificar las diversas opciones del índice.
 
 ### <a name="general-options"></a>Opciones generales
@@ -203,7 +203,7 @@ No se especifica False ni fillfactor.<br>
 Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dejan espacio suficiente para al menos una fila del tamaño máximo que puede tener el índice, considerando el conjunto de claves incluidas en las páginas de nivel intermedio.
 
 
-##  <a name="Storage"></a> Opciones de la página Almacenamiento  
+##  <a name="storage-page-options"></a><a name="Storage"></a> Opciones de la página Almacenamiento  
  Utilice esta página para ver o modificar las propiedades del grupo de archivos o del esquema de partición para el índice seleccionado. Solo muestra las opciones relacionadas con el tipo de índice.  
   
  **Grupo de archivos**  
@@ -234,7 +234,7 @@ Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dej
 > [!NOTE]  
 >  Si la columna de tabla es una columna calculada, **Tipo de datos de la columna** mostrará "columna calculada".  
   
-##  <a name="Spatial"></a> Opciones de índice de la página Espacial  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a> Opciones de índice de la página Espacial  
  Use la página **Espacial** para ver o especificar los valores de las propiedades espaciales. Para obtener más información, vea [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ### <a name="bounding-box"></a>Cuadro de límite  
@@ -292,7 +292,7 @@ Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dej
  **Nivel 4**  
  La densidad de la cuadrícula del cuarto nivel.  
   
-##  <a name="Filter"></a> Página Filtro  
+##  <a name="filter-page"></a><a name="Filter"></a> Página Filtro  
  Use esta página para especificar el predicado de filtro para un índice filtrado. Para obtener más información, consulte [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **Expresión de filtro**  

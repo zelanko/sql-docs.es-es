@@ -11,10 +11,10 @@ ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67986048"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>Método unwrap (SQLServerXADataSource)
@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  Es posible que las aplicaciones necesiten acceso a las extensiones para la API de JDBC que sean específicas de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. El método unwrap admite la desencapsulación para las clases públicas que extiende este objeto, si las clases tienen extensiones de proveedor.  
   
- La clase [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) extiende la clase [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), la cual se extiende a partir de la clase [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Cuando se llama a este método, el objeto desencapsula las clases siguientes: [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) y [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
+ La clase [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) extiende la clase [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), la cual se extiende a partir de la clase [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Cuando se llama a este método, el objeto desencapsula para las siguientes clases: [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) y [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
  Para más información, consulte [Contenedores e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   

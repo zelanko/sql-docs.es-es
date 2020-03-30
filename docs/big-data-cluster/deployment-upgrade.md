@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256882"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Cómo actualizar los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -162,7 +162,7 @@ No hay ninguna actualización local para los clústeres de macrodatos implementa
    > [!IMPORTANT]
    > La ruta de acceso a la versión `n-1` de `azdata` cambia en cada versión. Aunque se haya instalado anteriormente `azdata`, se debe volver a instalar desde la ruta de acceso más reciente antes de crear el clúster nuevo.
 
-### <a id="azdataversion"></a> Comprobar la versión de azdata
+### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> Comprobar la versión de azdata
 
 Antes de implementar un nuevo clúster de macrodatos, compruebe que se está usando la versión más reciente de `azdata` con el parámetro `--version`:
 

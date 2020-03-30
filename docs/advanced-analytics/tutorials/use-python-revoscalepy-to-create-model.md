@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 5faa8688f3036f80b947ccc5d99c09c4612f26fb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73724450"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Usar Python con revoscalepy para crear un modelo que se ejecute de forma remota en SQL Server
@@ -35,7 +35,7 @@ En este tutorial, aprenderá a:
 > * Usar **revoscalepy** para crear un modelo lineal
 > * Desplazar operaciones desde un contexto de proceso local a uno remoto
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Como datos de ejemplo de este ejercicio, se usa la base de datos [**flightdata**](demo-data-airlinedemo-in-sql.md).
 

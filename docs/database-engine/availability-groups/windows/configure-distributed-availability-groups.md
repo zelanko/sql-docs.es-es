@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77146305"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configuración de un grupo de disponibilidad Always On distribuido  
@@ -24,7 +24,7 @@ Para crear un grupo de disponibilidad distribuido, debe crear dos grupos de disp
 
 Para ver una introducción técnica de los grupos de disponibilidad distribuidos, vea [Distributed availability groups](distributed-availability-groups.md) (Grupos de disponibilidad distribuidos).
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Establecer los agentes de escucha de punto de conexión para que escuchen en todas las direcciones IP
 
@@ -217,14 +217,14 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
-## <a name="failover"></a> Unión a la base de datos de la réplica secundaria del segundo grupo de disponibilidad
+## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> Unión a la base de datos de la réplica secundaria del segundo grupo de disponibilidad
 Una vez que la base de datos de la réplica secundaria del segundo grupo de disponibilidad se encuentre en un estado de restauración, deberá unirla manualmente al grupo de disponibilidad.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```
   
-## <a name="failover"></a> Conmutación por error de un grupo de disponibilidad secundario  
+## <a name="fail-over-to-a-secondary-availability-group"></a><a name="failover"></a> Conmutación por error de un grupo de disponibilidad secundario  
 
 En estos momentos, solo se admite la conmutación por error manual. Para conmutar por error manualmente un grupo de disponibilidad distribuido:
 

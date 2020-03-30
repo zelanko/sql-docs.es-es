@@ -13,10 +13,10 @@ ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190798"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
@@ -34,10 +34,10 @@ Para comprender mejor la mejora de la experiencia de usuario del Asistente para 
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 Esta característica solo está disponible para la versión 17.3 de SQL Server Management Studio (SSMS) u otras posteriores. Asegúrese de utilizar la última versión, que podrá encontrar [aquí](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
  
-## <a id="started"></a>Introducción
+## <a name="getting-started"></a><a id="started"></a>Introducción
 Para acceder al Asistente para importación de archivos planos, siga estos pasos:
 
 1. Abra **SQL Server Management Studio**.

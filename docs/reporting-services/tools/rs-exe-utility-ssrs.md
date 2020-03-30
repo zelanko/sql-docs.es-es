@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081693"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilidad RS.exe (SSRS)
@@ -45,10 +45,10 @@ rs {-?}
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a> Ubicación del archivo  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> Ubicación del archivo  
  **RS.exe** se encuentra en **\Archivos de programa\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
   
-##  <a name="bkmk_arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a> Argumentos  
  **-?**  
  (Opcional) Muestra la sintaxis de los argumentos de **rs** .  
   
@@ -97,10 +97,10 @@ rs {-?}
  **-t**  
  (Opcional) Muestra mensajes de error en el registro de seguimiento. Este argumento no toma ningún valor. Para obtener más información, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-##  <a name="bkmk_permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permisos  
  Para ejecutar la herramienta, debe tener permiso para conectarse a la instancia del servidor de informes en la que se está ejecutando el script. Puede ejecutar scripts para realizar cambios en el equipo local o en un equipo remoto. Para realizar cambios en un servidor de informes instalado en un equipo remoto, especifique el equipo remoto en el argumento **-s** .  
   
-##  <a name="bkmk_examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="bkmk_examples"></a> Ejemplos  
  En el ejemplo siguiente se muestra cómo especificar el archivo de script que contiene el script de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET y los métodos del servicio Web que se desea ejecutar.  
   
 ```  

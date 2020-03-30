@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989133"
 ---
 # <a name="changing-passwords-programmatically"></a>Cambiar las contraseñas mediante programación
@@ -42,15 +42,15 @@ ms.locfileid: "67989133"
   
 |Código de error de SQL Server|Mensaje de error|  
 |---------------------------|-------------------|  
-|15113|Error de inicio de sesión del usuario "%.*ls" Motivo: Error de validación de contraseña. Se ha bloqueado la cuenta.|  
-|18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no se puede utilizar en este momento.|  
-|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
-|18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
-|18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
-|18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
-|18468|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. Error inesperado durante la validación de la contraseña.|  
-|18487|Error de inicio de sesión del usuario '%.*ls'. Motivo: La contraseña de la cuenta expiró.|  
-|18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: Se debe cambiar la contraseña de la cuenta.|  
+|15113|Error de inicio de sesión del usuario '%. * ls'. Motivo: error de validación de contraseña. Se ha bloqueado la cuenta.|  
+|18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no se puede utilizar en este momento.|  
+|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
+|18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
+|18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
+|18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
+|18468|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. Error inesperado durante la validación de la contraseña.|  
+|18487|Error de inicio de sesión del usuario '%.*ls'. Motivo: la contraseña de la cuenta expiró.|  
+|18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: se debe cambiar la contraseña de la cuenta.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Controlador OLE DB para SQL Server  
  OLE DB Driver for SQL Server admite la expiración de contraseñas a través de una interfaz de usuario y mediante programación.  

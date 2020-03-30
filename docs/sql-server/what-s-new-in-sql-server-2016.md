@@ -18,10 +18,10 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79190612"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novedades de SQL Server 2016
@@ -49,7 +49,7 @@ En esta página se proporciona información de resumen y vínculos a informació
     - Admite tablas de hasta 2 TB (a partir de 256 GB). 
     - Presenta mejoras del índice de almacenamiento de columnas para la ordenación, así como compatibilidad para el grupo de disponibilidad AlwaysOn.
 - Nuevas características de seguridad:
-    - **Always Encrypted:** cuando se habilita, solo la aplicación que tiene la clave de cifrado puede acceder a la información confidencial cifrada en la base de datos de SQL Server 2016. La clave nunca se pasa a SQL Server.
+    - **Always Encrypted:** cuando se habilita, solo la aplicación que tiene la clave de cifrado puede acceder a la información confidencial cifrada en la base de datos de SQL Server 2016. La clave nunca se pasa a SQL Server.
     - **Enmascaramiento dinámico de datos:** si se especifica en la definición de tabla, los datos enmascarados están ocultos para la mayoría de los usuarios, por lo que solo aquellos que dispongan del permiso UNMASK pueden ver la información completa.
     - **Seguridad de nivel de fila:** se puede restringir el acceso a los datos a nivel del motor de base de datos, para que los usuarios solo vean lo que sea pertinente para ellos. 
 

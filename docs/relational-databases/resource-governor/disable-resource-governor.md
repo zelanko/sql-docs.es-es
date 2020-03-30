@@ -12,10 +12,10 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b746c7ed116627f8fe57cdb43724c619eeb5dd4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903926"
 ---
 # <a name="disable-resource-governor"></a>Deshabilitar el regulador de recursos
@@ -26,7 +26,7 @@ ms.locfileid: "72903926"
   
 -   **Para deshabilitar Resource Governor con:**  [Explorador de objetos](#RGOffObjEx), [Propiedades de Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Deshabilitar el regulador de recursos tiene como consecuencia lo siguiente:  
   
 -   No se ejecuta la función clasificadora.  
@@ -43,20 +43,20 @@ ms.locfileid: "72903926"
   
 -   Al reiniciar SQL Server, el regulador de recursos no cargará su configuración, sino que tendrá únicamente los grupos de cargas de trabajo y los grupos de recursos de servidor predeterminados e internos.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede utilizar la instrucción **ALTER RESOURCE GOVERNOR** para deshabilitar el regulador de recursos durante una transacción del usuario.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Deshabilitar el regulador de recursos requiere el permiso CONTROL SERVER.  
   
-##  <a name="RGOffObjEx"></a> Deshabilitar el regulador de recursos mediante el Explorador de objetos  
+##  <a name="disable-resource-governor-using-object-explorer"></a><a name="RGOffObjEx"></a> Deshabilitar el regulador de recursos mediante el Explorador de objetos  
  **Para deshabilitar el regulador de recursos utilizando el Explorador de objetos**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
   
 2.  Haga clic con el botón derecho en **Regulador de recursos**y, luego, haga clic en **Deshabilitar**.  
 
-##  <a name="RGOffProp"></a> Deshabilitar el regulador de recursos mediante Propiedades del regulador de recursos  
+##  <a name="disable-resource-governor-using-resource-governor-properties"></a><a name="RGOffProp"></a> Deshabilitar el regulador de recursos mediante Propiedades del regulador de recursos  
  **Para deshabilitar el regulador de recursos mediante la página Propiedades del regulador de recursos**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
@@ -65,7 +65,7 @@ ms.locfileid: "72903926"
   
 3.  Haga clic en la casilla **Habilitar regulador de recursos** , asegúrese de que la casilla no está activada, y, a continuación, haga clic en **Aceptar**.  
   
-##  <a name="RGOffTSQL"></a> Deshabilitar el regulador de recursos mediante Transact-SQL  
+##  <a name="disable-resource-governor-using-transact-sql"></a><a name="RGOffTSQL"></a> Deshabilitar el regulador de recursos mediante Transact-SQL  
  **Para deshabilitar el regulador de recursos mediante Transact-SQL**  
   
 1.  Ejecute la instrucción **ALTER RESOURCE GOVERNOR DISABLE** .  

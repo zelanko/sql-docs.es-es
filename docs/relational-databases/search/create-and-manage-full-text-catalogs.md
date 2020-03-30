@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903861"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Crear y administrar catálogos de texto completo
@@ -26,7 +26,7 @@ Un catálogo de texto completo es un contenedor lógico para un grupo de índice
 
 Un catálogo de texto completo es un objeto virtual y no pertenece a ningún grupo de archivos.
   
-##  <a name="creating"></a> Crear un catálogo de texto completo  
+##  <a name="create-a-full-text-catalog"></a><a name="creating"></a> Crear un catálogo de texto completo  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Crear un catálogo de texto completo con Transact-SQL
 Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Por ejemplo:
@@ -52,7 +52,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="props"></a> Obtener las propiedades de un catálogo de texto completo  
+##  <a name="get-the-properties-of-a-full-text-catalog"></a><a name="props"></a> Obtener las propiedades de un catálogo de texto completo  
 Use la función de [!INCLUDE[tsql](../../includes/tsql-md.md)]**FULLTEXTCATALOGPROPERTY** para obtener el valor de diversas propiedades relacionadas con los catálogos de texto completo. Para obtener más información, consulte [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
 Por ejemplo, ejecute la siguiente consulta para obtener el recuento de índices en el catálogo de texto completo `Catalog1`.
@@ -77,7 +77,7 @@ En la siguiente tabla se muestran las propiedades relacionadas con los catálogo
 |**PopulateStatus**|Estado del rellenado.<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**UniqueKeyCount**|Número de claves únicas en el catálogo de texto completo.| 
 
-##  <a name="rebuildone"></a> Regenerar un catálogo de texto completo  
+##  <a name="rebuild-a-full-text-catalog"></a><a name="rebuildone"></a> Regenerar un catálogo de texto completo  
 
 Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md) o realice las siguientes tareas en SQL Server Management Studio (SSMS).
@@ -92,7 +92,7 @@ Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
   
 5.  En el cuadro de diálogo **Volver a generar el catálogo de texto completo** , haga clic en **Cerrar**.  
    
-##  <a name="rebuildall"></a> Recompilar todos los catálogos de texto completo para una base de datos  
+##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> Recompilar todos los catálogos de texto completo para una base de datos  
 
 1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos que contiene los catálogos de texto completo que quiere volver a generar.  
   
@@ -106,7 +106,7 @@ Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
   
   
   
-##  <a name="removing"></a> Quitar un catálogo de texto completo de una base de datos  
+##  <a name="remove-a-full-text-catalog-from-a-database"></a><a name="removing"></a> Quitar un catálogo de texto completo de una base de datos  
 
 Ejecute la instrucción de Transact-SQL [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) o realice las siguientes acciones en SQL Server Management Studio (SSMS).

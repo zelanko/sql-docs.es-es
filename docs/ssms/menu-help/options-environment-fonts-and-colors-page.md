@@ -11,10 +11,10 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245726"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opciones (Entorno -página Fuentes y colores)
@@ -67,7 +67,7 @@ Muestra los colores disponibles que puede elegir para el primer plano del elemen
 Muestra el cuadro de diálogo **Color** , en el que se establece un color personalizado para el elemento seleccionado en la lista **Mostrar los elementos** .  
   
 > [!NOTE]  
-> La posibilidad de definir colores personalizados puede estar limitada por la configuración del color de la pantalla del equipo. Por ejemplo, si el equipo está configurado para mostrar 256 colores y selecciona un color personalizado en el cuadro de diálogo **Color[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)],**  elegirá como predeterminado el valor disponible de **Colores básicos** que más se aproxime, y mostrará el color negro en el cuadro de diálogo **Color**.  
+> La posibilidad de definir colores personalizados puede estar limitada por la configuración del color de la pantalla del equipo. Por ejemplo, si el equipo está configurado para mostrar 256 colores y selecciona un color personalizado en el cuadro de diálogo **Color**, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] elegirá como predeterminado el valor disponible de **Colores básicos** que más se aproxime, y mostrará el color negro en el cuadro de diálogo **Color**.  
   
 **Fondo del elemento**  
 Proporciona una paleta de colores de la que puede elegir un color de fondo para el elemento seleccionado en **Mostrar los elementos**. Puesto que algunos elementos están relacionados, debe mantenerse una combinación de visualización coherente; por ejemplo, al cambiar el color de fondo del texto también cambiará el color de fondo de elementos como Cadena.  

@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710321"
 ---
 # <a name="create-a-full-database-backup"></a>Crear una copia de seguridad completa de base de datos
@@ -30,32 +30,32 @@ En este tema se explica cómo crear una copia de seguridad completa de la base d
 
 Para obtener información sobre la copia de seguridad de SQL Server en el servicio Azure Blob Storage, vea [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) y [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-## <a name="Restrictions"></a> Limitaciones y restricciones
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones
 
 - La instrucción `BACKUP` no se permite en una transacción explícita o implícita.
 - Las copias de seguridad que se crean en una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se pueden restaurar en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Para obtener información general, pero también especializada, sobre los conceptos y las tareas de copia de seguridad, vea [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) (Información general de copia de seguridad [SQL Server]) antes de continuar.
 
-## <a name="Recommendations"></a> Recomendaciones
+## <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones
 
 - A medida que la base de datos aumenta de tamaño, las copias de seguridad completas requieren más tiempo para finalizar y más espacio de almacenamiento. Para las bases de datos grandes, considere la posibilidad de complementar las copias de seguridad completas con una serie de [copias de seguridad diferenciales](../../relational-databases/backup-restore/differential-backups-sql-server.md).
 - Calcule el tamaño de una copia de seguridad completa de la base de datos mediante el procedimiento almacenado del sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .
 - De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si realiza copias de seguridad con frecuencia, estos mensajes de aprobación se acumularán rápidamente, lo que dará lugar a enormes registros de errores. Esto puede dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro de copia de seguridad con la marca de seguimiento 3226 si ninguno de los scripts depende de ellas. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-## <a name="Security"></a> Seguridad
+## <a name="security"></a><a name="Security"></a> Seguridad
 
 **TRUSTWORTHY** se establece en OFF en una copia de seguridad de base de datos. Para obtener información sobre cómo establecer **TRUSTWORTHY** en ON, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ya no se incluyen las opciones **PASSWORD** y **MEDIAPASSWORD** para crear copias de seguridad. Todavía puede restaurar las copias de seguridad creadas con contraseñas.
 
-## <a name="Permissions"></a> Permisos
+## <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 De forma predeterminada, los permisos `BACKUP DATABASE` y `BACKUP LOG` se corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator**.
 
  Los problemas de propiedad y permisos del archivo físico del dispositivo de copia de seguridad pueden interferir con una operación de copia de seguridad. El servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder leer y escribir en el dispositivo, lo que significa que la cuenta en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de escritura en el dispositivo de copia de seguridad. En cambio, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que agrega una entrada para un dispositivo de copia de seguridad en las tablas del sistema, no comprueba los permisos de acceso a los archivos. Como resultado, es posible que estos problemas con el archivo físico del dispositivo de copia de seguridad no aparezcan hasta que se tenga acceso al recurso físico, al intentar la copia de seguridad o la restauración.
 
-## <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
 
 > [!NOTE]
 > Al especificar una tarea de copia de seguridad mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [BACKUP](../../t-sql/statements/backup-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente si hace clic en el botón **Script** y selecciona un destino de script.
@@ -240,7 +240,7 @@ Si no tiene un contenedor de blobs de Azure en una cuenta de almacenamiento, cre
 
 1. Cuando la copia de seguridad se complete correctamente, haga clic en **Aceptar** para cerrar el cuadro de diálogo SQL Server Management Studio.
 
-## <a name="TsqlProcedure"></a> Usar Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL
 
 Ejecute la instrucción `BACKUP DATABASE` para crear la copia de seguridad de base de datos completa, y especifique lo siguiente:
 
@@ -278,7 +278,7 @@ Opcionalmente, para dar formato a los medios de copia de seguridad, use la opci�
  > [!IMPORTANT]
  > Tenga mucho cuidado al usar la cláusula **FORMAT** de la instrucción `BACKUP`, ya que destruye cualquier copia de seguridad existente en el medio de copia de seguridad.
 
-### <a name="TsqlExample"></a> Ejemplos
+### <a name="examples"></a><a name="TsqlExample"></a> Ejemplos
 
 Para los ejemplos siguientes, cree una base de datos de prueba con el siguiente código Transact-SQL:
 
@@ -361,7 +361,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-## <a name="PowerShellProcedure"></a> Usar PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell
 
 Use el cmdlet **Backup-SqlDatabase** . Para indicar de forma explícita que se trata una copia de seguridad completa de la base de datos, especifique el parámetro **-BackupAction** con su valor predeterminado, **Database**. Este parámetro es opcional para las copias de seguridad de base de datos completas.
 
@@ -402,7 +402,7 @@ $backupFile = $container + '/' + $fileName
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential
 ```
 
-## <a name="RelatedTasks"></a> Related tasks
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks
 
 - [Realizar una copia de seguridad de una base de datos (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [Crear una copia de seguridad diferencial de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)

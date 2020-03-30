@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73637984"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
@@ -35,7 +35,7 @@ Debe tener acceso a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasno
     
 Para obtener más información sobre los requisitos generales, consulte [Requisitos previos para los tutoriales&#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="DMatrixAndDataset"></a>1. Crear un Informe detallado desde el Asistente para tabla o matriz  
+## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. Crear un Informe detallado desde el Asistente para tabla o matriz  
 En el cuadro de diálogo Introducción, cree un informe de matriz usando el **Asistente para tabla o matriz**. Hay dos modos disponibles en el asistente: diseño de informe y diseño de conjunto de datos compartido. En este tutorial, utilizará el modo de diseño de informe.  
   
 #### <a name="to-create-a-new-report"></a>Para crear un informe nuevo  
@@ -50,7 +50,7 @@ En el cuadro de diálogo Introducción, cree un informe de matriz usando el **As
   
 3.  En el panel derecho, compruebe que **Asistente para tabla o matriz** está seleccionado.  
   
-## <a name="DConnection"></a>1a. Especificar una conexión de datos  
+## <a name="1a-specify-a-data-connection"></a><a name="DConnection"></a>1a. Especificar una conexión de datos  
 Una conexión de datos contiene la información necesaria para conectarse a un origen de datos externo, por ejemplo un cubo de Analysis Services o una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para especificar una conexión de datos, puede utilizar un origen de datos compartido del servidor de informes o crear un origen de datos incrustado que solo se utilice en este informe. En este tutorial, utilizará un origen del datos incrustado. Para obtener más información sobre cómo usar orígenes de datos compartidos, vea [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para crear un origen de datos incrustado  
@@ -96,7 +96,7 @@ Una conexión de datos contiene la información necesaria para conectarse a un o
   
 14. Haga clic en **Next**.  
   
-## <a name="DMDXQuery"></a>1b. Crear una consulta MDX  
+## <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. Crear una consulta MDX  
 En un informe puede usar un conjunto de datos compartido que tenga una consulta predefinida o crear un conjunto de datos incrustado para usarlo exclusivamente en ese informe. En este tutorial, creará un conjunto de datos incrustado.  
   
 #### <a name="to-create-query-filters"></a>Crear filtros de consulta  
@@ -149,7 +149,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
     > [!NOTE]  
     > El parámetro contiene los nombres de categorías de producto. Al hacer clic en el informe principal en un nombre de categoría de producto, su nombre se pasa al informe detallado utilizando este parámetro.  
   
-### <a name="DSkip"></a>Crear el conjunto de datos  
+### <a name="to-create-the-dataset"></a><a name="DSkip"></a>Crear el conjunto de datos  
   
 1.  Desde la dimensión Canal, arrastre Nombre de canal hasta el panel de datos.  
   
@@ -165,7 +165,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 7.  Haga clic en **Next**.  
   
-## <a name="DLayout"></a>1c. Organizar los datos en grupos  
+## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. Organizar los datos en grupos  
 Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -191,7 +191,7 @@ Al seleccionar los campos por los que desea agrupar los datos, diseñe una matri
   
 6.  Haga clic en **Next**.  
   
-## <a name="DTotals"></a>1d. Agregar subtotales y totales  
+## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. Agregar subtotales y totales  
 Después de crear grupos, puede agregar filas y darles formato, donde se mostrarán los valores agregados para los campos. Puede decidir también si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para agregar subtotales y totales  
@@ -208,7 +208,7 @@ Después de crear grupos, puede agregar filas y darles formato, donde se mostrar
   
 3.  Haga clic en **Ejecutar (!)** para obtener la vista previa del informe.  
   
-## <a name="DFormat"></a>2. Dar formato a los datos como moneda  
+## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. Dar formato a los datos como moneda  
 Aplique el formato de moneda a los campos de cantidad de ventas en el informe detallado.  
   
 #### <a name="to-format-data-as-currency"></a>Dar formato a los datos como moneda  
@@ -219,7 +219,7 @@ Aplique el formato de moneda a los campos de cantidad de ventas en el informe de
   
 3.  En la pestaña **Inicio** , en el grupo **Número** , haga clic en el botón **Moneda**.  
   
-## <a name="DSparkline"></a>3. Agregar columnas para mostrar valores de ventas en minigráficos  
+## <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. Agregar columnas para mostrar valores de ventas en minigráficos  
 En lugar de mostrar de ventas y retornos de ventas como valores de moneda, el informe muestra los valores en un minigráfico.  
   
 #### <a name="to-add-sparklines-to-columns"></a>Para agregar minigráficos a las columnas  
@@ -252,7 +252,7 @@ En lugar de mostrar de ventas y retornos de ventas como valores de moneda, el in
   
 13. Haga clic en **Ejecutar**para obtener la vista previa del informe.  
   
-## <a name="DReportTitle"></a>4. Agregar el título de informe con el nombre de categoría del producto  
+## <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. Agregar el título de informe con el nombre de categoría del producto  
 Los títulos de informe aparecen en la parte superior. Puede situar el título del informe en un encabezado de informe o, si el informe no lo utiliza, en un cuadro de texto en la parte superior del cuerpo del informe. En este tutorial, deberá utilizar el cuadro de texto que se coloca automáticamente en la parte superior del cuerpo del informe.  
   
 #### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
@@ -279,7 +279,7 @@ Los títulos de informe aparecen en la parte superior. Puede situar el título d
   
 El título del informe incluye el nombre de la primera categoría de producto. Después, tras ejecutar este informe como un informe detallado, el nombre de la categoría de producto cambiará dinámicamente, para reflejar el nombre de la categoría de producto en la que se hizo clic en el informe principal.  
   
-## <a name="DParameter"></a>5. Actualizar las propiedades de parámetro  
+## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. Actualizar las propiedades de parámetro  
 De forma predeterminada los parámetros están visibles, lo que no es adecuado para este informe. Actualizará las propiedades de parámetro para el informe detallado.  
   
 #### <a name="to-hide-a-parameter"></a>Ocultar un parámetro  
@@ -302,7 +302,7 @@ De forma predeterminada los parámetros están visibles, lo que no es adecuado p
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="DSave"></a>6. Guardar el informe en una biblioteca de SharePoint  
+## <a name="6-save-the-report-to-a-sharepoint-library"></a><a name="DSave"></a>6. Guardar el informe en una biblioteca de SharePoint  
 Puede guardar el informe en una biblioteca de SharePoint, en un servidor de informes o en su equipo. Si guarda el informe en su equipo, no estarán disponibles varias características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como elementos de informe y subinformes, no estarán disponibles. En este tutorial guardará el informe en una biblioteca de SharePoint.  
   
 #### <a name="to-save-the-report"></a>Para guardar el informe  
@@ -335,7 +335,7 @@ Puede guardar el informe en una biblioteca de SharePoint, en un servidor de info
   
 7.  Haga clic en **Save**(Guardar).  
   
-## <a name="MMatrixAndDataset"></a>1. Crear el informe principal desde el Asistente para tabla o matriz  
+## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. Crear el informe principal desde el Asistente para tabla o matriz  
 En el cuadro de diálogo **Introducción** , cree un informe de matriz usando el **Asistente para tabla o matriz**.  
   
 #### <a name="to-create-the-main-report"></a>Para crear el informe principal  
@@ -348,7 +348,7 @@ En el cuadro de diálogo **Introducción** , cree un informe de matriz usando el
  
 2.  En el cuadro de diálogo **Introducción** , compruebe que está seleccionado **Nuevo informe** y, después, haga clic en **Asistente para tabla o matriz**.  
   
-## <a name="MConnection"></a>1a. Especificar una conexión de datos  
+## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. Especificar una conexión de datos  
 Agregará un origen de datos incrustados al informe principal.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para crear un origen de datos incrustado  
@@ -387,7 +387,7 @@ Agregará un origen de datos incrustados al informe principal.
   
 14. Haga clic en **Next**.  
   
-## <a name="MMDXQuery"></a>1b. Crear una consulta MDX  
+## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. Crear una consulta MDX  
 Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseñador de consultas para crear filtros, parámetros y miembros calculados, así como el propio conjunto de datos.  
   
 #### <a name="to-create-query-filters"></a>Crear filtros de consulta  
@@ -469,7 +469,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 8.  En el cuadro **Nombre** , escriba  **Ventas netas**y, después, haga clic en **Aceptar**. En el panel Miembros calculados se muestra el miembro calculado **Ventas netas** .  
   
-### <a name="MSkip"></a>Crear el conjunto de datos  
+### <a name="to-create-the-dataset"></a><a name="MSkip"></a>Crear el conjunto de datos  
   
 1.  Desde la dimensión Canal, arrastre Nombre de canal hasta el panel de datos.  
   
@@ -485,7 +485,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 6.  Haga clic en **Next**.  
   
-## <a name="MLayout"></a>1c. Organizar los datos en grupos  
+## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. Organizar los datos en grupos  
 Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -504,7 +504,7 @@ Al seleccionar los campos por los que desea agrupar los datos, diseñe una matri
   
     Los pasos 3 y 4 especifican los datos que deben mostrarse en la matriz.  
   
-## <a name="MTotals"></a>1d. Agregar subtotales y totales  
+## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. Agregar subtotales y totales  
 Puede mostrar subtotales y totales generales en informes. Los datos del informe principal muestran como un indicador; quitará el total general cuando complete el asistente.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Agregar subtotales y totales generales  
@@ -519,7 +519,7 @@ Puede mostrar subtotales y totales generales en informes. Los datos del informe 
   
 3.  Haga clic en **Ejecutar**para obtener la vista previa del informe.  
   
-## <a name="MGrandTotal"></a>2. Quitar la fila Total general  
+## <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. Quitar la fila Total general  
 Los valores de datos se muestran como estados del indictor, incluyendo los totales del grupo de columna. Quite la fila que muestra el total general.  
   
 #### <a name="to-remove-the-grand-total-row"></a>Quitar la fila del total general  
@@ -530,7 +530,7 @@ Los valores de datos se muestran como estados del indictor, incluyendo los total
   
 3.  Haga clic en **Ejecutar**para obtener la vista previa del informe.  
   
-## <a name="MDrillthrough"></a>3. Configurar la acción del cuadro de texto para la obtención de detalles  
+## <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. Configurar la acción del cuadro de texto para la obtención de detalles  
 Para habilitar la obtención de detalles, especifique una acción en un cuadro de texto en el informe principal.  
   
 #### <a name="to-enable-an-action"></a>Habilitar una acción  
@@ -574,7 +574,7 @@ Para habilitar la obtención de detalles, especifique una acción en un cuadro d
   
 Los nombres de la categoría de producto tienen el formato de vínculo común (azul y subrayado).  
   
-## <a name="MIndicators"></a>4. Reemplazar los valores numérico por indicadores  
+## <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. Reemplazar los valores numérico por indicadores  
 Utilice los indicadores para mostrar el estado de cantidades y ventas para los canales En línea y Distribuidor.  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Agregar un indicador para los valores Net QTY  
@@ -605,7 +605,7 @@ Utilice los indicadores para mostrar el estado de cantidades y ventas para los c
   
 6.  Para obtener una vista previa de un informe, haga clic en **Ejecutar**.  
   
-## <a name="MParameter"></a>5. Actualizar las propiedades de parámetro  
+## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. Actualizar las propiedades de parámetro  
 De forma predeterminada, los parámetros están visibles, lo que no es adecuado para este informe. Actualizará las propiedades de parámetro para hacer el parámetro interno.  
   
 #### <a name="to-make-the-parameter-internal"></a>Realizar el parámetro interno  
@@ -620,7 +620,7 @@ De forma predeterminada, los parámetros están visibles, lo que no es adecuado 
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="MTitle"></a>6. Agregar un título de informe  
+## <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. Agregar un título de informe  
 Agregar un título al informe principal.  
   
 #### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
@@ -635,7 +635,7 @@ Agregar un título al informe principal.
   
 5.  Para obtener una vista previa de un informe, haga clic en **Ejecutar**.  
   
-## <a name="MSave"></a>7. Guardar el informe principal en una biblioteca de SharePoint  
+## <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. Guardar el informe principal en una biblioteca de SharePoint  
 Guarde el informe principal en una biblioteca de SharePoint  
   
 #### <a name="to-save-the-report"></a>Para guardar el informe  
@@ -661,7 +661,7 @@ Guarde el informe principal en una biblioteca de SharePoint
   
 7.  Haga clic en **Save**(Guardar).  
   
-## <a name="MRunReports"></a>8. Ejecutar los informes principal y detallado  
+## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. Ejecutar los informes principal y detallado  
 Ejecute el informe principal y, a continuación, haga clic en los valores de la columna de categoría de producto para ejecutar el informe detallado.  
   
 #### <a name="to-run-the-reports"></a>Para ejecutar los informes  

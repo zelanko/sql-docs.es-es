@@ -14,10 +14,10 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9aee0d7233b5f163a5f9c39f9053b9f0842aa7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298942"
 ---
 # <a name="project-properties-dialog-box"></a>Propiedades del proyecto (cuadro de diálogo)
@@ -37,7 +37,7 @@ ms.locfileid: "71298942"
   
 -   [Establecer las opciones de la página Permisos](#permissions)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo de Propiedades del proyecto  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo de Propiedades del proyecto  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71298942"
   
 5.  Haga clic con el botón derecho en el proyecto y, después, haga clic en **Propiedades**.  
   
-##  <a name="general"></a> Establecer las opciones de la página General  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Establecer las opciones de la página General  
  Use la página General para ver las propiedades del proyecto.  
   
  **Nombre**  
@@ -69,7 +69,7 @@ ms.locfileid: "71298942"
  **Fecha de implementación**  
  Muestra la fecha y hora en que el proyecto se implementó por primera vez o se volvió a implementar.  
   
-##  <a name="permissions"></a> Establecer las opciones de la página Permisos  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> Establecer las opciones de la página Permisos  
  Use la página **Permisos** para ver y establecer permisos explícitos para el proyecto.  
   
  Examinar  

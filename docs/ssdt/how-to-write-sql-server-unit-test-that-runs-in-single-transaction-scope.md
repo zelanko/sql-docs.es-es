@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246485"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procedimientos: Escritura de una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción
 
 Puede modificar las pruebas unitarias para ejecutarlas en el ámbito de una única transacción. Si elige este enfoque, puede revertir los cambios activados por la prueba una vez finalizada esta. Los procedimientos siguientes explican cómo:  
   
@@ -156,7 +156,7 @@ En este ejemplo se usa una transacción ambiente cuando se usa el tipo [System.T
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>Para iniciar el servicio Coordinador de transacciones distribuidas  
-En algunos procedimientos de este tema se usan los tipos del ensamblado System.Transactions. Antes de seguir estos procedimientos, debe asegurarse de que el servicio Coordinador de transacciones distribuidas se ejecuta en el equipo donde se ejecutan las pruebas unitarias. En caso contrario, las pruebas dan error y aparece el mensaje de error siguiente: "El método de prueba *ProjectName*.*TestName*.*MethodName* lanzó la excepción: System.Data.SqlClient.SqlException: MSDTC en el servidor *ComputerName* no está disponible".  
+En algunos procedimientos de este tema se usan los tipos del ensamblado System.Transactions. Antes de seguir estos procedimientos, debe asegurarse de que el servicio Coordinador de transacciones distribuidas se ejecuta en el equipo donde se ejecutan las pruebas unitarias. De lo contrario, se producirá un error en las pruebas y se mostrará el siguiente mensaje de error: "El método de prueba *NombreDeProyecto*.*NombreDePrueba*.*NombreDeMétodo* produjo una excepción: System.Data.SqlClient.SqlException: MSDTC en el servidor '*NombreDeEquipo*' no está disponible".  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>Para iniciar el servicio Coordinador de transacciones distribuidas  
   

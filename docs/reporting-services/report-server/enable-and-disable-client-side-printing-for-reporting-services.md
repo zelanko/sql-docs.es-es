@@ -14,10 +14,10 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580351"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar y deshabilitar la impresión del lado cliente para Reporting Services
@@ -26,7 +26,7 @@ ms.locfileid: "65580351"
   
  En las versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se usaba un control ActiveX que requería la descarga en el equipo cliente desde el servidor de informes. Si actualiza el servidor de informes a SQL Server 2016 o una versión posterior, el control de impresión no se quita de los equipos cliente ni del servidor de informes.  
 
-##  <a name="bkmk_clientside_printexpereince"></a> La experiencia de impresión  
+##  <a name="the-print-experience"></a><a name="bkmk_clientside_printexpereince"></a> La experiencia de impresión  
  Cuando se hace clic en el botón de impresión ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") de la barra de herramientas del Visor de informes, la experiencia variará en función de las aplicaciones de visualización de .PDF que haya instaladas en el equipo cliente y del explorador que se use.   Dependiendo del equipo cliente, puede descargar el archivo PDF o configurar las opciones de impresión en un cuadro de diálogo (o ambos).  
   
  ![Barra de herramientas de informe](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barra de herramientas de informe")  
@@ -36,9 +36,9 @@ ms.locfileid: "65580351"
 |El primer cuadro de diálogo es el mismo para todos los exploradores y permite cambiar las propiedades de diseño básicas, como la orientación. Al hacer clic en **Imprimir**, la experiencia será ligeramente diferente dependiendo del explorador que se use.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |En Chrome, se abre un cuadro de diálogo de impresión de explorador detallado.   Puede cambiar la configuración de impresión, imprimir y abrir el cuadro de diálogo de impresión del sistema operativo.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
 |Si tiene instalada una aplicación de lector de PDF, el botón de impresión abrirá una ventana de vista previa del archivo PDF, que puede guardar o imprimir.||  
-|Si no tiene instalada una aplicación de lector de PDF, hay dos experiencias de usuario posibles:<br /><br /> El informe se representa automáticamente y se usará el proceso de descarga del explorador para descargar el archivo PDF.   **Nota:** Cuanto más complejo sea el informe, mayor será el tiempo que transcurra desde que haga clic en **Imprimir** hasta que vea la notificación de descarga del explorador. También puede forzar la descarga de nuevo haciendo clic en **Click here to view the PDF of your report**(Haga clic aquí para ver el PDF del informe).<br /><br /> Fuerce la descarga del PDF haciendo clic en **Click here to view the PDF of your report**(Haga clic aquí para ver el PDF del informe).|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
+|Si no tiene instalada una aplicación de lector de PDF, hay dos experiencias de usuario posibles:<br /><br /> El informe se representa automáticamente y se usará el proceso de descarga del explorador para descargar el archivo PDF.   **Nota:** cuanto más complejo sea el informe, mayor será el tiempo que transcurra desde que haga clic en **Imprimir** hasta que vea la notificación de descarga del explorador. También puede forzar la descarga de nuevo haciendo clic en **Click here to view the PDF of your report**(Haga clic aquí para ver el PDF del informe).<br /><br /> Fuerce la descarga del PDF haciendo clic en **Click here to view the PDF of your report**(Haga clic aquí para ver el PDF del informe).|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
-##  <a name="bkmk_troubleshoot_clientsideprinting"></a> Solucionar problemas de impresión del lado cliente  
+##  <a name="troubleshoot-client-side-printing"></a><a name="bkmk_troubleshoot_clientsideprinting"></a> Solucionar problemas de impresión del lado cliente  
  Si el botón de impresión de la barra de herramientas del Visor de informes está deshabilitado, compruebe lo siguiente:  
   
 -   La impresión del lado cliente está deshabilitada en el servidor de informes en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vea la sección  [Habilitar y deshabilitar la impresión del lado cliente](#bkmk_enable) de este tema.  
@@ -49,7 +49,7 @@ ms.locfileid: "65580351"
   
      ![ssrs_html5_switch2html5](../../reporting-services/report-server/media/ssrs-html5-switch2html5.png "ssrs_html5_switch2html5")  
   
-##  <a name="bkmk_enable"></a> Habilitar y deshabilitar la impresión del lado cliente  
+##  <a name="enable-and-disable-client-side-printing"></a><a name="bkmk_enable"></a> Habilitar y deshabilitar la impresión del lado cliente  
  Los administradores de servidores de informes tienen la opción de deshabilitar la función de impresión remota; solo tienen que establecer la propiedad del sistema del servidor de informes **EnableClientPrinting** en **false**. De este modo se deshabilitará la impresión del lado cliente para todos los informes administrados por ese servidor. La propiedad **EnableClientPrinting** está establecida de manera predeterminada en **true**. Puede deshabilitar la impresión del lado cliente de las siguientes maneras:  
   
 -   Para un **servidor de informes en modo nativo**:  

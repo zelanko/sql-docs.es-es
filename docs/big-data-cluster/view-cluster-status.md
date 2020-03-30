@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531585"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Procedimiento para ver el estado de un clúster de macrodatos 
@@ -22,7 +22,7 @@ ms.locfileid: "73531585"
 
 En este artículo se describe cómo acceder a los puntos de conexión del servicio y ver el estado de los componentes de un clúster de macrodatos de SQL Server. Puede usar tanto Azure Data Studio como **azdata**, y en este artículo se describen las dos técnicas.
 
-## <a id="datastudio"></a> Usar Azure Data Studio
+## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Usar Azure Data Studio
 
 Después de descargar la versión más reciente de la **compilación para los participantes del programa Insider** de [Azure Data Studio](https://aka.ms/getazuredatastudio), podrá ver los puntos de conexión del servicio y el estado de un clúster de macrodatos con el panel del clúster de macrodatos de SQL Server. Algunas de las siguientes características solo estarán disponibles por primera vez en la compilación de los participantes del programa Insider de Azure Data Studio.
 
@@ -55,7 +55,7 @@ En la tabla de puntos de conexión del servicio, también se muestran varios pan
 
 Puede hacer clic directamente de estos vínculos. Se le pedirá que se autentique al acceder a estos paneles. En el caso de los paneles de métricas y registros, indique las credenciales de administrador del controlador que estableció en el momento de la implementación mediante las variables de entorno **AZDATA_USERNAME** y **AZDATA_PASSWORD**. Los paneles de Spark usarán credenciales de puerta de enlace (Knox), ya sea la identidad de AD en un clúster integrado con AD o el usuario **raíz** y **AZDATA_PASSWORD**, si se usa la autenticación básica en el clúster. 
 
-### <a id="notebook"></a> Cuaderno de estado del clúster
+### <a name="cluster-status-notebook"></a><a id="notebook"></a> Cuaderno de estado del clúster
 
 1. También puede ver el estado del clúster de macrodatos si inicia el cuaderno de estado del clúster. Para iniciar el cuaderno, haga clic en la tarea **Estado del clúster**.
 

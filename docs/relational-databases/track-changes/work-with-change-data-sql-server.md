@@ -16,10 +16,10 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f68227bb3f88996ee8a4f5ea60c9cdd88f4f765a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095404"
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabajar con datos modificados (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "74095404"
   
  Se proporcionan varias funciones que ayudan a determinar los valores de LSN adecuados para utilizarse al consultar una función TVF. La función [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) devuelve el LSN más pequeño asociado a un intervalo de validez de la instancia de captura. El intervalo de validez es el intervalo de tiempo durante el cual los datos modificados están actualmente disponibles en sus instancias de captura. La función [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) devuelve el LSN más grande del intervalo de validez. Las funciones [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) y [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) están disponibles para ayudar a ubicar los valores LSN en una escala de tiempo convencional. Dado que la captura de datos modificados utiliza intervalos de consulta cerrados, a veces es necesario generar el valor de LSN siguiente en un flujo para garantizar que los cambios no estén duplicados en ventanas de consulta consecutivas. Las funciones [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) y [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) son útiles cuando es necesario realizar un ajuste incremental en un valor LSN.  
   
-##  <a name="LSN"></a> Validar los límites de LSN  
+##  <a name="validating-lsn-boundaries"></a><a name="LSN"></a> Validar los límites de LSN  
  Se recomienda validar los límites de LSN que se van a utilizar en una consulta de TVF antes de su uso. Los extremos nulos o los que quedan fuera del intervalo de validez para una instancia de captura obligarán a la función TVF de captura de datos modificados a devolver un error.  
   
  Por ejemplo, el error siguiente se devuelve en una consulta de todos los cambios cuando un parámetro que se utiliza para definir el intervalo de la consulta no es válido o está fuera del intervalo, o bien cuando la opción de filtro de filas no es válida.  
@@ -63,7 +63,7 @@ ms.locfileid: "74095404"
 > [!NOTE]  
 >  Para buscar las plantillas de captura de datos modificados en SQL Server Management Studio, en el menú **Ver** , haga clic en **Explorador de plantillas**, expanda **Plantillas de SQL Server** y, luego, la carpeta **Captura de datos modificados** .  
   
-##  <a name="Functions"></a> Funciones de consulta  
+##  <a name="query-functions"></a><a name="Functions"></a> Funciones de consulta  
  Según sean las características de la tabla de origen que se someta a seguimiento y la manera en que se configure su instancia de captura, se generarán una o las dos funciones TVF para la consulta de datos modificados.  
   
 -   La función [cdc.fn_cdc_get_all_changes_<instancia_captura>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) devuelve todos los cambios producidos durante el intervalo especificado. Siempre se genera esta función. Las entradas siempre se devuelven ordenadas, primero por el SLN de confirmación de la transacción del cambio y, a continuación, por un valor que secuencia el cambio dentro de su transacción. Según sea la opción de filtro de filas elegida, se devuelve la fila final de la actualización (opción de filtro de filas "all") o los valores nuevo y antiguo de la actualización (opción de filtro de filas "all update old").  
@@ -77,7 +77,7 @@ ms.locfileid: "74095404"
   
  La máscara de la actualización devuelta por una función de consulta es una representación compacta que identifica todas las columnas que han cambiado en una fila de datos modificados. Normalmente, esta información solo es necesaria para un pequeño subconjunto de las columnas capturadas. Hay funciones que se pueden usar para ayudar a extraer información de la máscara de una forma que sea más fácilmente utilizable por las aplicaciones. La función [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) devuelve la posición ordinal de una columna con nombre de una determinada instancia de captura, mientras que la función [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) devuelve la paridad del bit de la máscara proporcionada en función del ordinal que se pasó en la llamada a la función. La combinación de estas dos funciones permite extraer eficazmente información de la máscara de actualización y devolverla con la solicitud de datos modificados. Vea la plantilla para enumerar cambios netos con 'All With Mask', que contiene una demostración acerca de cómo se utilizan estas funciones.  
   
-##  <a name="Scenarios"></a> Escenarios de funciones de consulta  
+##  <a name="query-function-scenarios"></a><a name="Scenarios"></a> Escenarios de funciones de consulta  
  En las secciones siguientes se describen los escenarios comunes de consulta de los datos modificados de las capturas mediante las funciones de consulta cdc.fn_cdc_get_all_changes_<capture_instance> y cdc.fn_cdc_get_net_changes_<capture_instance>.  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>Consultar todos los cambios del intervalo de validez de la instancia de captura  

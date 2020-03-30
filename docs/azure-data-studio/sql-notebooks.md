@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: Procedimiento para usar cuadernos SQL en Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; maghan; sstein
+ms.reviewer: achatter; alayu; maghan; mikeray
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.openlocfilehash: 0cefd49b539c967a77faaa566fce9958182cc5df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575372"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448442"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Uso de cuadernos en Azure Data Studio
 
@@ -32,14 +32,14 @@ En Azure Data Studio, también puede presionar F1 y hacer clic en **Nueva conexi
 
 Hay varias maneras de iniciar un nuevo cuaderno.
 
-1. Vaya al **menú Archivo** en Azure Data Studio y haga clic en **Nuevo cuaderno**.
+* Vaya al **menú Archivo** en Azure Data Studio y haga clic en **Nuevo cuaderno**.
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-2. Haga clic con el botón derecho en la conexión **SQL Server** e inicie **Nuevo cuaderno**. 
+* Haga clic con el botón derecho en la conexión **SQL Server** e inicie **Nuevo cuaderno**.
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-3. Abra la paleta de comandos (**Ctrl + Mayús + P**) y, luego, escriba **Nuevo cuaderno**. Se abre un nuevo archivo denominado `Notebook-1.ipynb`.
+* Abra la paleta de comandos (**Ctrl + Mayús + P**) y, luego, escriba **Nuevo cuaderno**. Se abre un nuevo archivo denominado `Notebook-1.ipynb`.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Kernels admitidos y asociación al contexto
 

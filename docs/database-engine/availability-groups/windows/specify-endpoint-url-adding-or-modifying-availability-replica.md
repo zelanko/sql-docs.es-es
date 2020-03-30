@@ -16,10 +16,10 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251287"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Especificar la dirección URL del punto de conexión - Agregar o modificar una réplica de disponibilidad
@@ -30,7 +30,7 @@ ms.locfileid: "75251287"
 >  El término “dirección URL del extremo” es sinónimo del término “dirección de red del servidor” que usa la interfaz de usuario y la documentación de creación de reflejo de la base de datos.  
   
   
-##  <a name="SyntaxOfURL"></a> Sintaxis de una dirección URL del extremo  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> Sintaxis de una dirección URL del extremo  
  La sintaxis de una dirección URL del extremo tiene el siguiente formato:  
   
  TCP<strong>://</strong> *\<dirección del sistema>* <strong>:</strong> *\<puerto>*  
@@ -91,7 +91,7 @@ ms.locfileid: "75251287"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a> Buscar el nombre de dominio completo de un sistema  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a> Buscar el nombre de dominio completo de un sistema  
  Para buscar el nombre de dominio completo de un sistema, en el símbolo del sistema de Windows de ese sistema, escriba:  
   
  **IPCONFIG /ALL**  
@@ -113,7 +113,7 @@ ms.locfileid: "75251287"
 > [!NOTE]  
 >  Si necesita más información acerca de un nombre de dominio completo, póngase en contacto con el administrador del sistema.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para configurar un extremo de creación del reflejo de la base de datos**  
   
 -   [Crear un punto de conexión de creación de reflejo de la base de datos para grupos de disponibilidad AlwaysOn &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
@@ -142,7 +142,7 @@ ms.locfileid: "75251287"
   
 -   [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

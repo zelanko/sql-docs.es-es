@@ -21,10 +21,10 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252749"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Seguridad de transporte - Creación de reflejo de la base de datos - Grupos de disponibilidad AlwaysOn
@@ -40,7 +40,7 @@ ms.locfileid: "75252749"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Authentication"></a> Autenticación  
+##  <a name="authentication"></a><a name="Authentication"></a> Autenticación  
  Autenticación es el proceso de comprobar que un usuario es quien dice ser. Las conexiones entre extremos de creación de reflejo de la base de datos requieren autenticación. Las solicitudes de conexión desde un asociado o testigo, según corresponda, deben autenticarse.  
   
  El tipo de autenticación que utiliza una instancia de servidor para la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] es una propiedad del extremo de reflejo de la base de datos. Existen dos tipos de seguridad de transporte para los puntos de conexión de creación de reflejo de la base de datos: autenticación de Windows (la interfaz del proveedor de compatibilidad para seguridad (SSPI)) y la autenticación basada en certificados.  
@@ -64,7 +64,7 @@ ms.locfileid: "75252749"
   
  Una instancia de servidor utiliza la clave privada de su propio certificado para establecer su identidad al establecer una conexión. La instancia de servidor que recibe la solicitud de conexión utiliza la clave pública del certificado del remitente para autenticar la identidad de éste. Por ejemplo, considere dos instancias del servidor, Server_A y Server_B. Server_A utiliza su clave privada para cifrar el encabezado de conexión antes de enviar una solicitud de conexión a Server_B. Server_B utiliza la clave pública del certificado de Server_A para descifrar el encabezado de conexión. Si el encabezado descifrado es correcto, Servidor_B sabe que el encabezado fue cifrado por Servidor_A y la conexión se autentica. Si el encabezado descifrado es incorrecto, Servidor_B sabe que la solicitud de conexión no es auténtica y rechaza la conexión.  
   
-##  <a name="DataEncryption"></a> Cifrado de datos  
+##  <a name="data-encryption"></a><a name="DataEncryption"></a> Cifrado de datos  
  De manera predeterminada, un extremo de creación de reflejo de la base de datos requiere el cifrado de datos enviados en conexiones de creación de reflejo. En este caso, solo se puede conectar el extremo a extremos que también utilicen cifrado. A menos que pueda garantizar que su red es segura, se recomienda requerir cifrado para las conexiones de creación de reflejo de la base de datos. Sin embargo, puede deshabilitar el cifrado o hacerlo compatible, pero no obligatorio. Si se deshabilita el cifrado, los datos no se cifran nunca y el extremo no se puede conectar a otro extremo que requiera cifrado. Si se admite cifrado, los datos solo se cifran si el extremo opuesto admite o requiere cifrado.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ ms.locfileid: "75252749"
   
  Para obtener más información sobre la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar el cifrado, vea [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para configurar la seguridad en el transporte para un extremo de creación de reflejo de la base de datos**  
   
 -   [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

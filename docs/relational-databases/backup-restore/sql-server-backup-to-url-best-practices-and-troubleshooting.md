@@ -11,10 +11,10 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5f744f0bb5d1ced6424fc8882a0a215042fbfc69
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76920344"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "76920344"
   
 -   [Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups-mb1"></a> Administración de copias de seguridad  
+## <a name="managing-backups"></a><a name="managing-backups-mb1"></a> Administración de copias de seguridad  
  La lista siguiente incluye recomendaciones generales para administrar copias de seguridad:  
   
 -   Se recomienda usar un nombre de archivo único para cada copia de seguridad con el fin de evitar que se sobrescriban accidentalmente los blobs.  

@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895886"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Escritura de SQL dinámico seguro en SQL Server
@@ -46,7 +46,7 @@ Estas son algunos consejos útiles:
   
 - En entornos de varios niveles, todos los datos deben validarse antes de que se admitan en la zona de confianza.  
   
-- Las cadenas siguientes no se aceptan en campos desde los que se puedan construir nombres de archivo: AUX, CLOCK$, de COM1 hasta COM8, CON, CONFIG$, de LPT1 hasta LPT8, NUL y PRN.  
+- No acepte las siguientes cadenas en campos a partir de los que puedan construirse nombres de archivo: AUX, CLOCK$, COM1 a COM8, CON, CONFIG$, LPT1 a LPT8, NUL y PRN.  
   
 - Utilice objetos <xref:Microsoft.Data.SqlClient.SqlParameter> con comandos y procedimientos almacenados para proporcionar comprobación de tipos y validación de longitud.  
   

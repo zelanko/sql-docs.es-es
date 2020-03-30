@@ -24,23 +24,23 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286739"
 ---
 # <a name="statistics"></a>Estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   El Optimizador de consultas utiliza estadísticas para crear planes de consulta que mejoren el rendimiento de las consultas. En el caso de la mayoría de las consultas, el Optimizador de consultas genera ya las estadísticas necesarias para un plan de consulta de alta calidad. En algunos casos, para obtener los mejores resultados, es necesario crear estadísticas adicionales o modificar el diseño de la consulta. En este tema se explican los conceptos de estadísticas y se proporcionan directrices para usar las estadística de optimización de consultas de forma eficaz.  
   
-##  <a name="DefinitionQOStatistics"></a> Componentes y conceptos  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> Componentes y conceptos  
 ### <a name="statistics"></a>Estadísticas  
  Las estadísticas para la optimización de consulta son objetos binarios grandes (BLOB) que contienen información estadística sobre la distribución de valores en una o más columnas de una tabla o vista indizada. El Optimizador de consultas utiliza estas estadísticas para estimar la *cardinalidad*, es decir, el número de filas, en el resultado de la consulta. Estas *estimaciones de cardinalidad* permiten al Optimizador de consultas crear un plan de consulta de alta calidad. Por ejemplo, en función de los predicados, el Optimizador de consultas podría usar las estimaciones de cardinalidad para elegir el operador Index Seek en lugar del operador Index Scan, que requiere un uso intensivo de los recursos, si eso mejora el rendimiento de la consulta.  
   
  Cada objeto de estadísticas se crea en una lista de una o más columnas de la tabla e incluye un *histograma* que muestra la distribución de valores en la primera columna. Los objetos de estadísticas en varias columnas también almacenan la información estadística relativa a la correlación de valores entre las columnas. Estas estadísticas de la correlación, o *densidades*, derivan del número de filas distintas de valores de columna. 
 
-#### <a name="histogram"></a> Histograma  
+#### <a name="histogram"></a><a name="histogram"></a> Histograma  
 Un **histograma** mide la frecuencia de aparición de cada valor distinto en un conjunto de datos. El optimizador de consultas calcula un histograma de los valores de la primera columna de clave del objeto de estadísticas; para ello, selecciona los valores de la columna tomando una muestra estadística de las filas o realizando un análisis completo de todas las filas de la tabla o vista. Si el histograma se crea a partir de muestras de un conjunto de filas, los totales almacenados para el número de filas y el número de valores distintos son las estimaciones y no es necesario que sean números enteros.
 
 > [!NOTE]
@@ -51,7 +51,7 @@ Para crear el histograma, el optimizador de consultas ordena los valores de colu
 Más concretamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea el **histograma** del conjunto ordenado de valores de columna en tres pasos:
 
 - **Inicialización del histograma**: en el primer paso, se procesa una secuencia de valores desde el principio del conjunto ordenado y se recopila un máximo de 200 valores de *range_high_key*, *equal_rows*, *range_rows* y *distinct_range_rows* (*range_rows* y *distinct_range_rows* son siempre cero durante este paso). El primer paso finaliza cuando se han agotado todas las entradas o cuando se han encontrado 200 valores. 
-- **Examen con combinación de depósito**: cada valor adicional de la columna inicial de la clave de estadísticas se procesa en el segundo paso, de forma ordenada; cada valor sucesivo se agrega al último rango o se crea un rango al final (esto es posible porque los valores de entrada están ordenados). Si se crea un rango nuevo, un par de rangos existentes colindantes se contrae en un solo rango. Este par de rangos se selecciona para minimizar la pérdida de información. Este método usa un algoritmo de *diferencias máximas* para minimizar el número de pasos del histograma a la vez que maximiza las diferencias entre los valores de límite. El número de pasos después de contraer los rangos permanece en 200 a lo largo de este paso.
+- **Examen con combinación de depósito**: cada valor adicional de la columna inicial de la clave de estadísticas se procesa en el segundo paso, de forma ordenada; cada valor sucesivo se agrega al último rango o se crea un rango nuevo al final (esto es posible porque los valores de entrada están ordenados). Si se crea un rango nuevo, un par de rangos existentes colindantes se contrae en un solo rango. Este par de rangos se selecciona para minimizar la pérdida de información. Este método usa un algoritmo de *diferencias máximas* para minimizar el número de pasos del histograma a la vez que maximiza las diferencias entre los valores de límite. El número de pasos después de contraer los rangos permanece en 200 a lo largo de este paso.
 - **Consolidación del histograma**: en el tercer paso, es posible que se contraigan más rangos si no se pierde una cantidad significativa de información. El número de pasos del histograma puede ser menor que el número de valores distintos, incluso para las columnas con menos de 200 puntos de límite. Por lo tanto, incluso si la columna tiene más de 200 valores únicos, es posible que el histograma tenga menos de 200 pasos. Para una columna formada solamente por valores únicos, el histograma consolidado tendrá un mínimo de tres pasos.
 
 > [!NOTE]
@@ -68,7 +68,7 @@ En cada paso del histograma anterior:
   
 -   Las líneas de puntos representan los valores de las muestras utilizados para estimar el número total de valores distintos que hay en el rango (*distinct_range_rows*) y el número total de valores que hay en el rango (*range_rows*). El optimizador de consultas utiliza *range_rows* y *distinct_range_rows* para calcular *average_range_rows* y no almacena los valores de las muestras.   
   
-#### <a name="density"></a>Vector de densidad  
+#### <a name="density-vector"></a><a name="density"></a>Vector de densidad  
 **Densidad** es la información sobre el número de duplicados en una determinada columna o combinación de columnas, y se calcula como 1/(número de valores distintos). El optimizador de consultas utiliza las densidades para mejorar las estimaciones de cardinalidad de las consultas que devuelven varias columnas de la misma tabla o vista indizada. A medida que disminuye la densidad, aumenta la selectividad de un valor. Por ejemplo, en una tabla que representa automóviles, muchos automóviles tienen el mismo fabricante, pero cada uno dispone de un único número de identificación de vehículo (NIV). Un índice del NIV es más selectivo que un índice del fabricante, porque NIV tiene una densidad inferior a la del fabricante. 
 
 > [!NOTE]
@@ -88,7 +88,7 @@ El vector de densidad contiene una densidad para cada prefijo de columnas del ob
 ### <a name="statistics-options"></a>Opciones de estadísticas  
  Hay tres opciones que puede establecer que afectan al momento y al modo en que se crean y actualizan las estadísticas. Estas opciones se establecen únicamente en el nivel de base de datos.  
   
-#### <a name="AutoUpdateStats"></a>Opción AUTO_CREATE_STATISTICS  
+#### <a name="auto_create_statistics-option"></a><a name="AutoUpdateStats"></a>Opción AUTO_CREATE_STATISTICS  
  Cuando está activada la opción automática de creación de estadísticas, [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics), el optimizador de consultas crea las estadísticas en columnas individuales en el predicado de consulta, según sea necesario, para mejorar las estimaciones de cardinalidad para el plan de consulta. Estas estadísticas de columna única se crean en las columnas que aún no tienen un [histograma](#histogram) en un objeto de estadísticas existente. La opción AUTO_CREATE_STATISTICS no determina si las estadísticas se crean para los índices. Esta opción tampoco genera estadísticas filtradas. Se aplica estrictamente a estadísticas de columna única para la tabla completa.  
   
  Cuando el Optimizador de consultas crea las estadísticas como resultado de usar la opción AUTO_CREATE_STATISTICS, el nombre de las estadísticas comienza con `_WA`. Puede utilizar la consulta siguiente para determinar si el Optimizador de consultas ha creado estadísticas para una columna de predicado de consulta.  
@@ -155,7 +155,7 @@ Para obtener más información sobre el control de AUTO_UPDATE_STATISTICS, consu
   
 **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores. 
   
-## <a name="CreateStatistics"></a> Cuándo crear las estadísticas  
+## <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> Cuándo crear las estadísticas  
  El Optimizador de consultas ya permite crear las estadísticas de las siguientes formas:  
   
 1.  El Optimizador de consultas crea las estadísticas para índices en tablas o vistas cuando se crea el índice. Estas estadísticas se crean en las columnas de clave del índice. Si el índice es un índice filtrado, el Optimizador de consultas crea las estadísticas filtradas en el mismo subconjunto de filas especificado para el índice filtrado. Para obtener más información sobre los índices filtrados, vea [Crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md) y [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
@@ -202,7 +202,7 @@ En este ejemplo, el objeto de estadísticas `LastFirst` tiene densidades para lo
 ### <a name="query-selects-from-a-subset-of-data"></a>La consulta realiza la selección entre un subconjunto de datos  
 Cuando el Optimizador de consultas crea las estadísticas para las columnas únicas e índices, crea las estadísticas para los valores de todas las filas. Cuando las consultas realizan la selección de entre un subconjunto de filas, y ese subconjunto de filas tiene una distribución de datos única, las estadísticas filtradas pueden mejorar los planes de consulta. Puede crear estadísticas filtradas usando la instrucción [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) con la cláusula [WHERE](../../t-sql/queries/where-transact-sql.md) para definir la expresión del predicado de filtro.  
   
-Por ejemplo, con [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada producto de la tabla `Production.Product` pertenece a una de las cuatro categorías de la tabla `Production.ProductCategory`: Bikes, Components, Clothing y Accessories. Cada una de las categorías tiene una distribución de datos diferente en función del peso: el peso de las bicicletas (bikes) va de 13,77 a 30,0, el de los componentes (components) de 2,12 a 1050,00 con algunos valores NULL, todos los pesos de la ropa (clothing) son NULL, lo mismo que los de los accesorios (accessories).  
+Por ejemplo, utilizando [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada producto de la tabla `Production.Product` pertenece a una de las cuatro categorías de la tabla `Production.ProductCategory`: Bikes, Components, Clothing y Accessories. Cada una de las categorías tiene una distribución de datos diferente en función del peso: el peso de las bicicletas (bikes) va de 13,77 a 30,0, el de los componentes (components) de 2,12 a 1050,00 con algunos valores NULL, todos los pesos de la ropa (clothing) son NULL, lo mismo que los de los accesorios (accessories).  
   
 Utilizando las bicicletas (Bikes) como ejemplo, las estadísticas filtradas para todos los pesos de las bicicletas proporcionarán estadísticas más precisas al Optimizador de consultas y podrán mejorar la calidad del plan de consulta en comparación con las estadísticas de tabla completa o las estadísticas no existentes en la columna del peso (Weight). La columna de peso de bicicleta es una buena candidata para las estadísticas filtradas, pero no necesariamente para un índice filtrado si el número de búsquedas de peso es relativamente pequeño. La ganancia de rendimiento para las búsquedas que proporciona un índice filtrado no podría ser mayor que el mantenimiento adicional y el costo de almacenamiento de agregar un índice filtrado a la base de datos.  
   
@@ -242,7 +242,7 @@ Solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede crear y act
   
  Debido a que las estadísticas temporales se almacenan en **tempdb**, el reinicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provoca que desaparezcan todas las estadísticas temporales.  
     
-## <a name="UpdateStatistics"></a> Cuándo actualizar las estadísticas  
+## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> Cuándo actualizar las estadísticas  
  El Optimizador de consultas determina cuándo las estadísticas podrían quedar obsoletas y, a continuación, las actualiza cuando es necesario para un plan de consulta. En algunos casos puede mejorar el plan de consulta y, por consiguiente, mejorar el rendimiento de la consulta, actualizando las estadísticas con más frecuencia que la que se produce cuando está activada [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics). Puede actualizar las estadísticas con la instrucción UPDATE STATISTICS o con el procedimiento almacenado sp_updatestats.  
   
  La actualización de las estadísticas asegura que las consultas se compilan con estadísticas actualizadas. Sin embargo, la actualización de las estadísticas hace que las consultas se vuelvan a compilar. Recomendamos no actualizar las estadísticas con demasiada frecuencia, porque hay que elegir el punto válido entre la mejora de los planes de consulta y el tiempo empleado en volver a compilar las consultas. Las compensaciones específicas dependen de su aplicación.  
@@ -277,7 +277,7 @@ Solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede crear y act
 
 Aproveche soluciones como la [desfragmentación de índice adaptable](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) para administrar automáticamente las actualizaciones de estadísticas y la desfragmentación de índices para una o varias bases de datos. Este procedimiento elige automáticamente si se debe volver a generar o reorganizar un índice según su nivel de fragmentación, entre otros parámetros y actualiza las estadísticas con un umbral lineal.
   
-##  <a name="DesignStatistics"></a> Consultas que usan eficazmente las estadísticas  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> Consultas que usan eficazmente las estadísticas  
  Algunas implementaciones de consulta, como las variables locales y las expresiones complejas en el predicado de consulta, pueden conducir a planes de consulta que no son óptimos. Las siguientes instrucciones de diseño de consulta para el uso eficaz de las estadísticas pueden evitarlo. Para obtener más información sobre los predicados de consulta, vea [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
  Puede mejorar los planes de consulta aplicando instrucciones de diseño de consulta que utilicen las estadísticas con eficacia para mejorar las *estimaciones de cardinalidad* en las expresiones, variables y funciones utilizadas en los predicados de consulta. Cuando el Optimizador de consultas no conoce el valor de una expresión, variable o función, no conoce qué valor ha de buscar en el histograma y, por consiguiente, no puede recuperar del histograma la mejor estimación de cardinalidad. En cambio, el Optimizador de consultas basa la estimación de cardinalidad en el número medio de filas por valor distinto para todas las filas buscadas en el histograma. El resultado son estimaciones de cardinalidad poco óptimas, además de dañar el rendimiento de la consulta. Para más información sobre los histogramas, vea la sección [Histograma](#histogram) en esta página o [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md).

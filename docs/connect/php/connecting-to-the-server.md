@@ -11,10 +11,10 @@ ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 789fec0bd9299f4d436c664306d380bb9a7da153
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015143"
 ---
 # <a name="connecting-to-the-server"></a>Conexión al servidor
@@ -28,12 +28,12 @@ Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pueden conectarse 
 
 |Tema|Descripción|  
 |---------|---------------|  
-|[Cómo: Conexión mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)|Describe cómo establecer una conexión mediante la autenticación de Windows.|  
-|[Cómo: Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Describe cómo establecer una conexión con autenticación de SQL Server.|  
-|[Cómo: Conectar mediante autenticación de Azure Active Directory](../../connect/php/azure-active-directory.md)|Se describe cómo establecer el modo de autenticación y conectarse mediante identidades de Azure Active Directory.|  
-|[Cómo: Conexión a un puerto específico](../../connect/php/how-to-connect-on-a-specified-port.md)|Describe cómo conectarse al servidor en un puerto específico.|  
+|[Conexión mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)|Describe cómo establecer una conexión mediante la autenticación de Windows.|  
+|[Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Describe cómo establecer una conexión con autenticación de SQL Server.|  
+|[Conexión con la autenticación de Azure Active Directory](../../connect/php/azure-active-directory.md)|Se describe cómo establecer el modo de autenticación y conectarse mediante identidades de Azure Active Directory.|  
+|[Conexión a un puerto específico](../../connect/php/how-to-connect-on-a-specified-port.md)|Describe cómo conectarse al servidor en un puerto específico.|  
 |[Agrupación de conexiones](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|Proporciona información acerca de la agrupación de conexiones en el controlador.|  
-|[Cómo: Desactivación de los conjuntos de resultados activos múltiples (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Describe cómo deshabilitar la característica MARS al establecer una conexión.|  
+|[Deshabilitar los conjuntos de resultados activos múltiples (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Describe cómo deshabilitar la característica MARS al establecer una conexión.|  
 |[Opciones de conexión](../../connect/php/connection-options.md)|Enumera las opciones que se permiten en la matriz asociativa que contiene atributos de conexión.|  
 |[Compatibilidad con LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Describe la compatibilidad de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] con la característica LocalDB, que se agregó en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
 |[Compatibilidad con alta disponibilidad y recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Describe cómo se puede configurar una aplicación para aprovechar las características de alta disponibilidad con recuperación ante desastres que se han agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  

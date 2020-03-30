@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094564"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
@@ -84,7 +84,7 @@ ms.locfileid: "74094564"
   
     -   [Página Resultados](#Results)  
   
-###  <a name="Introduction"></a> Página Introducción  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para el Asistente Importar aplicación de capa de datos.  
   
  **Opciones**  
@@ -95,7 +95,7 @@ ms.locfileid: "74094564"
   
 -   **Cancelar**: cancela la operación y cierra el asistente.  
   
-###  <a name="Import_settings"></a> Página Importar configuración  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> Página Importar configuración  
  Use esta página para especificar la ubicación del archivo .bacpac para importar.  
   
 -   **Importar desde el disco local**: haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
@@ -106,7 +106,7 @@ ms.locfileid: "74094564"
   
      Para continuar, especifique el archivo .bacpac para importar y, a continuación, haga clic en **Abrir**.  
   
-###  <a name="Database_settings"></a> Página Configuración de base de datos  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> Página Configuración de base de datos  
  Use esta página para especificar los detalles de la base de datos que se creará.  
   
  **Para una instancia local de SQL Server:**  
@@ -129,15 +129,15 @@ ms.locfileid: "74094564"
   
  Para continuar, haga clic en **Siguiente**.  
   
-###  <a name="Summary"></a> Página Resumen  
+###  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Esta página se utiliza para revisar los valores de origen y de destino especificados de la operación. Para completar la operación de importación mediante los valores especificados, haga clic en **Finalizar**. Para cancelar la operación de importación y salir del asistente, haga clic en **Cancelar**.  
   
-###  <a name="Progress"></a> Página Progreso  
+###  <a name="progress-page"></a><a name="Progress"></a> Página Progreso  
  En esta página se muestra una barra de progreso que indica el estado de la operación. Para ver el estado detallado, haga clic en la opción **Ver detalles** .  
   
  Para continuar, haga clic en **Siguiente**.  
   
-###  <a name="Results"></a> Página Resultados  
+###  <a name="results-page"></a><a name="Results"></a> Página Resultados  
  Esta página notifica el éxito o error de importación y crea las operaciones de la base de datos, mostrando el éxito o error de cada acción. Cualquier acción que encontrara un error tendrá un vínculo en la columna **Resultado** . Haga clic en el vínculo para ver un informe del error para esa acción.  
   
  Haga clic en **Cerrar** para cerrar el asistente.  

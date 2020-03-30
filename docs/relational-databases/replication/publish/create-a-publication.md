@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 5bb28692ee8e4b9cc70554b2589025db57291fc7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286542"
 ---
 # <a name="create-a-publication"></a>Create a Publication
@@ -43,16 +43,16 @@ ms.locfileid: "76286542"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Los nombres de publicaciones y artículos no pueden contener ninguno de los siguientes caracteres: % , \* , [ , ] , | , : , " , ? , ' , \ , / , < , >. Si los objetos de la base de datos incluyen cualquiera de estos caracteres y quiere replicarlos, debe especificar un nombre de artículo diferente del nombre del objeto del cuadro de diálogo **Propiedades del artículo: \<<artículo>** , que está disponible en la página **Artículos**.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Cree publicaciones y defina artículos con el Asistente para nueva publicación. Después de crear una publicación, vea y modifique las propiedades de la publicación en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener información sobre cómo crear una publicación de una base de datos de Oracle, vea [Crear una publicación a partir de una base de datos de Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>Para crear publicaciones y definir artículos  
@@ -97,7 +97,7 @@ ms.locfileid: "76286542"
   
     -   Especificar un nombre para la publicación.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Las publicaciones pueden crearse mediante programación con procedimientos almacenados de replicación. Los procedimientos almacenados que se usen dependerán del tipo de publicación creado.  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>Para crear una publicación transaccional o de instantáneas  
@@ -148,7 +148,7 @@ ms.locfileid: "76286542"
   
 5.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para más información, consulte [Crear y aplicar la instantánea inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  Este ejemplo crea una publicación transaccional. Las variables de scripting se usan para pasar las credenciales de Windows necesarias para crear los trabajos del Agente de instantáneas y del Agente de registro del LOG.  
   
  [!code-sql[HowTo#sp_AddTranPub](../../../relational-databases/replication/codesnippet/tsql/create-a-publication_1.sql)]  
@@ -157,7 +157,7 @@ ms.locfileid: "76286542"
   
  [!code-sql[HowTo#sp_AddMergePub](../../../relational-databases/replication/codesnippet/tsql/create-a-publication_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Puede crear publicaciones mediante programación utilizando Replication Management Objects (RMO). Las clases RMO que usa para crear una publicación dependen del tipo de publicación que crea.  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>Para crear una publicación transaccional o de instantáneas  
@@ -237,7 +237,7 @@ ms.locfileid: "76286542"
   
 6.  Llame al método <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> para crear el trabajo del Agente de instantáneas para la publicación.  
   
-###  <a name="PShellExample"></a> Ejemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Ejemplos (RMO)  
  Este ejemplo habilita la base de datos de AdventureWorks para la publicación transaccional, define un trabajo del Agente de registro del LOG y crea la publicación de AdvWorksProductTran. Se debe definir un artículo para esta publicación. Las credenciales de cuenta de Windows que se necesitan para crear el trabajo del Agente de registro del LOG y el trabajo del Agente de instantáneas se pasan en tiempo de ejecución. Para obtener información sobre cómo usar RMO para definir artículos de instantáneas y de transacciones, vea [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
  [!code-cs[HowTo#rmo_CreateTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpub)]  

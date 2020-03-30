@@ -14,16 +14,16 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503087"
 ---
 # <a name="feature-reference-reporting-services"></a>Referencia de características (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye varias herramientas y aplicaciones que se pueden usar para crear, administrar y ver informes. En esta sección, se proporcionan temas específicos en los que se describen los cuadros de diálogo, las páginas web y los asistentes de estas herramientas y aplicaciones.  
   
- Para obtener acceso a un tema de la interfaz de usuario mientras se ejecuta la herramienta o la aplicación, presione F1 o haga clic en **Ayuda** cuando esté abierto el cuadro de diálogo, la página web o el asistente. Para obtener más información sobre cómo iniciar las herramientas de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Tutorial: Búsqueda e inicio de las herramientas de Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Para obtener acceso a un tema de la interfaz de usuario mientras se ejecuta la herramienta o la aplicación, presione F1 o haga clic en **Ayuda** cuando esté abierto el cuadro de diálogo, la página web o el asistente. Para más información sobre cómo iniciar las herramientas de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Tutorial: Cómo buscar e iniciar herramientas de Reporting Services &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Diseñador de informes (Ayuda F1)](../reporting-services/tools/report-designer-f1-help.md)  

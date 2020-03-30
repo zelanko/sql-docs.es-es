@@ -14,10 +14,10 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258184"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "75258184"
  Si usa RBS, conviene rotar la clave simétrica del almacén de credenciales cada cierto tiempo. Se trata de un procedimiento de seguridad recomendado muy habitual para cumplir las directivas de seguridad de una organización.  Una manera de rotar la clave simétrica del almacén de credenciales de RBS consiste en usar [este script](#Key_rotation) en la base de datos de RBS.  Este script también sirve para migrar a propiedades de intensidad de cifrado más seguras, como la longitud de clave o algoritmo. Haga una copia de seguridad de la base de datos antes de realizar la rotación.  Cuando el script finalice, es necesario realizar algunos pasos de comprobación.  
 Si las directivas de seguridad requieren propiedades de clave (por ejemplo, longitud de clave o algoritmo) diferentes de las provistas, el script se puede usar como plantilla. Modifique las propiedades de clave en dos sitios: (1) en la creación de la clave temporal y (2) en la creación de la clave permanente.  
   
-##  <a name="rbsresources"></a> Recursos de RBS  
+##  <a name="rbs-resources"></a><a name="rbsresources"></a> Recursos de RBS  
   
  **Ejemplos de RBS**  
  Los ejemplos de RBS disponibles en [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) demuestran cómo desarrollar una aplicación de RBS y cómo desarrollar e instalar un proveedor de RBS personalizado.  
@@ -90,7 +90,7 @@ Si las directivas de seguridad requieren propiedades de clave (por ejemplo, long
  **Blog de RBS**  
  En el [blog de RBS](https://go.microsoft.com/fwlink/?LinkId=210315) se proporciona información adicional para ayudarle a entender, implementar y mantener RBS.  
   
-##  <a name="Key_rotation"></a> Script de rotación de clave  
+##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> Script de rotación de clave  
  En este ejemplo se crea un procedimiento almacenado denominado `sp_rotate_rbs_symmetric_credential_key` para reemplazar la clave simétrica de almacén de credenciales de RBS usada actualmente  
 por una de su elección.  Es posible que quiera hacerlo si hay una directiva de seguridad que exige   
 la rotación de claves periódica o si hay requisitos de algoritmo concretos.  

@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078677"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Crear una matriz (Generador de informes y SSRS)
@@ -20,12 +20,12 @@ ms.locfileid: "77078677"
   
  Después del diseño inicial, puede continuar desarrollando la matriz para mejorar la experiencia de visualización del usuario. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Para empezar a trabajar rápidamente con las matrices, consulte el [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
+ Para empezar a trabajar rápidamente con matrices, vea [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
   
 > [!NOTE]  
 >  Puede publicar listas por separado de un informe como elementos de informe. Obtenga más información sobre [Elementos de informe (Generador de informes y SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="AddingMatrix"></a> Agregar una matriz al informe  
+##  <a name="adding-a-matrix-to-your-report"></a><a name="AddingMatrix"></a> Agregar una matriz al informe  
  Agregue una matriz a la superficie de diseño desde la pestaña Insertar en la cinta de opciones. Tiene la opción de agregar una matriz mediante el Asistente para tabla o matriz, que incluye la creación de una conexión a un origen de datos y un conjunto de datos, y la configuración de la matriz o la adición de una matriz basada en la plantilla para matrices.  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.locfileid: "77078677"
  La matriz inicial es una plantilla basada en la región de datos Tablix. Puede continuar desarrollando el diseño de la matriz agregando grupos de filas o de columnas anidados o adyacentes, o incluso filas de detalles. Para más información, vea [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
   
-##  <a name="AddingParentGroupChild"></a> Agregar un grupo primario o un grupo secundario a una matriz  
+##  <a name="adding-a-parent-group-or-child-group-to-a-matrix"></a><a name="AddingParentGroupChild"></a> Agregar un grupo primario o un grupo secundario a una matriz  
  Para agregar un grupo basado en un único campo de conjunto de datos, arrastre el campo desde el panel Datos de informe hasta el área Grupos de filas o Grupos de columnas apropiada del panel Agrupación. Coloque el campo en la jerarquía de grupos para establecer su relación con los grupos existentes. Colóquelo encima de un grupo existente para crear un grupo primario o debajo para crear un grupo secundario.  
   
  Al colocar un campo en el panel **Agrupación** , tienen lugar varios hechos:  
@@ -78,7 +78,7 @@ ms.locfileid: "77078677"
  Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)subyacente.  
   
   
-##  <a name="AddingAdjacentGroup"></a> Agregar un grupo adyacente a una matriz  
+##  <a name="adding-an-adjacent-group-to-a-matrix"></a><a name="AddingAdjacentGroup"></a> Agregar un grupo adyacente a una matriz  
  Para agregar un grupo adyacente basado en un único campo de conjunto de datos, use el menú contextual del panel Agrupación. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). En la siguiente ilustración se muestra un grupo basado en la geografía y un grupo adyacente basado en el año.  
   
  ![Grupos de columnas anexas para Geography y Year](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Grupos de columnas anexas para Geography y Year")  

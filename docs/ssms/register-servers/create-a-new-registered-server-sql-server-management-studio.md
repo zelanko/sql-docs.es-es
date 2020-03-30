@@ -17,10 +17,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246569"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Crear un servidor registrado (SQL Server Management Studio)
@@ -42,7 +42,7 @@ En este tema se describe cómo guardar la información de conexión para los ser
   
      Los Servidores de administración central almacenan los registros de servidor en el Servidor de administración central en lugar de en el sistema de archivos. Los Servidores de administración central y los servidores secundarios registrados únicamente se pueden registrar utilizando la autenticación de Windows. Una vez registrado un Servidor de administración central, sus servidores registrados asociados se mostrarán automáticamente. Para obtener más información sobre los Servidores de administración central, vea [Administrar varios servidores mediante Servidores de administración central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] no se pueden designar como Servidores de administración central.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>Para registrar automáticamente las instancias de servidor locales  
   

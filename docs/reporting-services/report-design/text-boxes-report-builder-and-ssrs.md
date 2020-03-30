@@ -14,10 +14,10 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: db8676a7b00b3cfbf70bca4fecee7539437e1bc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080873"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Cuadros de texto (Generador de informes y SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "77080873"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a> Aumentar y disminuir el tamaño de un cuadro de texto  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> Aumentar y disminuir el tamaño de un cuadro de texto  
  De manera predeterminada, los cuadros de texto tienen un tamaño fijo. Puede permitir que un cuadro de texto se reduzca o se expanda verticalmente según su contenido. Para más información, vea [Permitir que un cuadro de texto aumente o se reduzca &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="rotating-a-text-box"></a>Girar un cuadro de texto  
@@ -51,9 +51,9 @@ ms.locfileid: "77080873"
   
  La orientación se establece en el cuadro de texto y se aplica a todo el texto del cuadro. No puede especificar una orientación diferente para las partes del cuadro de texto.  
   
- Para empezar, vea la sección sobre cómo girar texto en [Tutorial: Dar formato al texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md)y en [Establecer la orientación del cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
+ Para empezar, vea la sección sobre cómo girar texto en el [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md) y vea [Establecer la orientación del cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Temas de procedimientos  
  [Agregar, mover o eliminar un cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  

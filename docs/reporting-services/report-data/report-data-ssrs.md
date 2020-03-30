@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
 ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190728"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Introducción a los datos de informe en SQL Server Reporting Services (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "74190728"
 6.  **Orígenes de datos externos** Se recuperan los datos de las bases de datos relacionales, las bases de datos multidimensionales, las listas de SharePoint o los servicios web.  
 
 
-##  <a name="BkMk_ReportDataTerms"></a> Definición de términos  
+##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> Definición de términos  
   
 - **Conexión de datos.** También conocido como *origen de datos*. Una conexión de datos consta de un nombre y propiedades de conexión, que dependen del tipo de conexión. Por cuestiones de diseño, una conexión de datos no incluye credenciales. Una conexión de datos no especifica qué datos deben recuperarse del origen de datos externo. Para ello, se especifica una consulta cuando se crea un conjunto de datos.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74190728"
   
 - **Credenciales.** Las credenciales son la información de autenticación que se debe proporcionar para poder tener acceso a datos externos.  
   
-##  <a name="BkMk_ReportDataTips"></a> Sugerencias para especificar datos de informe
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> Sugerencias para especificar datos de informe
 
  Use la siguiente información para diseñar una estrategia de datos de informe.  
   

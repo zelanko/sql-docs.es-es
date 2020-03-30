@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.openlocfilehash: 4b2130aad931b55e1644aedb36762ad3b94a1e1c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307823"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
@@ -27,7 +27,7 @@ ms.locfileid: "75307823"
 > [!IMPORTANT]
 > Seguimiento de SQL y [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] están en desuso. El espacio de nombres *Microsoft.SqlServer.Management.Trace* que contiene los objetos Trace y Replay de Microsoft SQL Server también están en desuso. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> Use eventos extendidos en su lugar. Para más información sobre los [eventos extendidos](../../relational-databases/extended-events/extended-events.md), vea [Inicio rápido: Eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) y [Generador de perfiles XEvent de SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> Use eventos extendidos en su lugar. Para obtener más información sobre [Eventos extendidos ](../../relational-databases/extended-events/extended-events.md), vea [Inicio rápido: Eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) y [Uso de XEvent Profiler de SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE]
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para las cargas de trabajo de Analysis Services NO está en desuso y seguirá siendo compatible.

@@ -11,10 +11,10 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e89fb3f197037d757916a60d246c158d43b565b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082050"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importar HTML en un informe (Generador de informes y SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "77082050"
 > [!NOTE]  
 >  Cuando se importa texto que contiene marcado HTML, el cuadro de texto siempre debe analizar los datos en primer lugar. Dado que solo se admite un subconjunto de etiquetas HTML, el HTML que se muestra en el informe representado puede diferir del HTML original.  
   
- Para empezar rápidamente, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Para más información, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 ## <a name="supported-html-tags"></a>Etiquetas HTML compatibles  
  La lista siguiente es una lista completa de las etiquetas que se representarán como HTML cuando se definan como texto de marcador de posición:  
@@ -38,9 +38,9 @@ ms.locfileid: "77082050"
   
 -   Encabezado, estilo y elementos de bloque: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
   
--   Formato de texto: \<B>, \<I>, \<U>, \<S>  
+-   Formato del texto: \<B>, \<I>, \<U>, \<S>  
   
--   Administración de listas: \<OL>, \<UL>, \<LI>  
+-   Control de listas: \<OL>, \<UL>, \<LI>  
   
  Cualquier otra etiqueta de marcado HTML se omitirá durante el procesamiento del informe. Si el HTML representado por la expresión en el texto del marcador de posición no está bien formado, el marcador de posición se representa como texto simple. Todas las etiquetas HTML distinguen entre mayúsculas y minúsculas.  
   

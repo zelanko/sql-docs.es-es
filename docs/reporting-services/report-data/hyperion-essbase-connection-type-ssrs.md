@@ -9,10 +9,10 @@ ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079020"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo de conexión de Hyperion Essbase (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77079020"
   
  Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Cadena de conexión  
+##  <a name="connection-string"></a><a name="Connection"></a> Cadena de conexión  
  En el siguiente ejemplo de cadena de conexión se especifica un origen de datos de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] en un servidor que usa el puerto 13080 y XML para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) en Internet con el protocolo SOAP y una conexión a un catálogo de ejemplo:  
   
 ```  
@@ -30,7 +30,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Para más información sobre ejemplos de cadenas de conexión, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Credentials"></a> Credenciales  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenciales  
  Se necesitan credenciales para ejecutar consultas y obtener una vista previa del informe localmente y desde el servidor de informes.  
   
  Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos.  
@@ -38,7 +38,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Query"></a> Consultas  
+##  <a name="queries"></a><a name="Query"></a> Consultas  
  Puede especificar una consulta de varias maneras:  
   
 -   Generar una consulta interactivamente. Utilice el diseñador gráfico de consultas en modo de diseño o de consulta para examinar los metadatos del origen de datos externo y generar una consulta con la sintaxis de Expresiones multidimensionales (MDX).  
@@ -56,14 +56,14 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  La extensión de procesamiento de datos de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] admite propiedades de campo de conjunto de datos extendidas. Éstos son valores disponibles del origen de datos externo, pero no aparecen en el panel Datos de informe. Para obtener más información, vea [Propiedades de campo extendidas](#Extended) más adelante en este tema.  
   
   
-##  <a name="Parameters"></a> Parámetros de consulta  
+##  <a name="query-parameters"></a><a name="Parameters"></a> Parámetros de consulta  
 
  Para incluir parámetros de consulta, cree un filtro en el área de filtro del diseñador de consultas y marque el filtro como un parámetro. Para cada filtro, se crea automáticamente un conjunto de datos para proporcionar los valores disponibles. De forma predeterminada, estos conjuntos de datos no aparecen en el panel Datos de informe. Para obtener más información, vea [Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).
 
  De forma predeterminada, cada parámetro de informe tiene el tipo de datos **Text**. Una vez creados los parámetros de informe, podría suceder que tenga que cambiar los valores predeterminados. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Extended"></a> Propiedades de campo extendidas  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> Propiedades de campo extendidas  
  La extensión de procesamiento de datos de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades (además de **Value** e **IsMissing** ) que la extensión de procesamiento de datos define para un campo de conjunto de datos. Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes para varios orígenes de datos. Las propiedades personalizadas son únicas para cada origen de datos.  
   
  Las propiedades de campo extendidas no aparecen en el panel Datos de informe como elementos que se puedan arrastrar al diseño del informe. En su lugar, se arrastra al informe el campo primario de la propiedad y, después, se cambia la propiedad predeterminada de **Value** a la propiedad que se desee utilizar.  
@@ -105,13 +105,13 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |**FORMAT_STRING**|**String**|Se define en una medida y es **FormattedValue** , disponible como un tipo String.|  
   
   
-##  <a name="Remarks"></a> Comentarios  
+##  <a name="remarks"></a><a name="Remarks"></a> Comentarios  
  Este proveedor de datos no admite todos los modos de entrega de informes. No se admite la entrega de informes a través de suscripciones controladas por datos para esta extensión de procesamiento de datos. Para más información, vea [Usar un origen de datos externo para obtener información de los suscriptores &#40;suscripción controlada por datos&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md). 
   
  Para obtener más información, vea [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970).  
   
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Temas de procedimientos  
  Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
   
  [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -121,7 +121,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> Secciones relacionadas  
+##  <a name="related-sections"></a><a name="Related"></a> Secciones relacionadas  
  Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

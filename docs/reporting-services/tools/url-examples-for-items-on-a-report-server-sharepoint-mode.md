@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574016"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Ejemplos de direcciones URL para los elementos de un servidor de informes - Modo de SharePoint
@@ -100,7 +100,7 @@ ms.locfileid: "65574016"
 |El informe de ejemplo Company Sales de la carpeta **Documentos/Doc** en una instancia de [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
 |El informe de ejemplo Company Sales de **Centro de informes** en una instancia de [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
-##  <a name="publishingToDocLib"></a> Publicar desde una herramienta de creación a una biblioteca de SharePoint  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Publicar desde una herramienta de creación a una biblioteca de SharePoint  
  Cuando se usa una herramienta de creación de informes para publicar informes y sus archivos relacionados en una biblioteca, los archivos se validan antes de agregarse. Si carga informes y archivos relacionados mediante la acción **Cargar** en una biblioteca de SharePoint, no se efectúa ninguna comprobación de validación. No podrá saber si el archivo es válido hasta que obtenga acceso al informe para administrarlo, editarlo o ejecutarlo.  
   
 > [!NOTE]  

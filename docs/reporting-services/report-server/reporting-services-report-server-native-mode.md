@@ -13,10 +13,10 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826894"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Servidor de informes de Reporting Services (modo nativo)
@@ -36,7 +36,7 @@ ms.locfileid: "66826894"
   
 -   [Hacer referencia a un recurso de imagen desde un informe](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a> Resumen del modo nativo  
+##  <a name="summary-of-native-mode"></a><a name="bkmk_sum"></a> Resumen del modo nativo  
  Una instalación del modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consta de varias características de servidor que es necesario administrar y mantener. Entre estas características figuran las siguientes:  
   
 -   El servicio web del servidor de informes, que se ejecuta dentro del servicio del servidor de informes.  
@@ -53,7 +53,7 @@ ms.locfileid: "66826894"
   
 -   Si va a instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un controlador de dominio, debe ser un administrador de dominio.  
   
-##  <a name="bkmk_managecontent"></a> Administrar contenido  
+##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> Administrar contenido  
  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la administración del contenido hace referencia a la administración de informes, modelos, carpetas, recursos y orígenes de datos compartidos. Es posible administrar todos estos elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido.  
   
 > [!NOTE]  
@@ -79,7 +79,7 @@ ms.locfileid: "66826894"
   
  Las herramientas para administrar contenido del servidor de informes son [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el portal web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite establecer valores predeterminados y habilitar características. El portal web se usa para conceder acceso de usuario a las operaciones y elementos del servidor de informes, ver y usar informes y otros tipos de contenido, y ver y usar todos los elementos compartidos y características de distribución de informes.  
   
-##  <a name="bkmk_manageresources"></a> Proteger y administrar un recurso  
+##  <a name="securing-and-managing-a-resource"></a><a name="bkmk_manageresources"></a> Proteger y administrar un recurso  
  Un recurso es un elemento administrado que se almacena en un servidor de informes pero no se procesa allí. Normalmente, un recurso proporciona contenido externo a los usuarios de los informes. Entre los ejemplos se incluye una imagen en un archivo .jpg o un archivo HTML que describe las reglas de negocios usadas en un informe. El archivo JPG o HTML está almacenado en el servidor de informes, pero el servidor de informes pasa el archivo directamente al explorador en lugar de procesarlo primero.  
   
  Para agregar un recurso a un servidor de informes, se carga o se publica un archivo:  
@@ -95,7 +95,7 @@ ms.locfileid: "66826894"
   
  Los recursos existen junto con informes, orígenes de datos compartidos, programaciones compartidas y carpetas como elementos con nombre en la jerarquía de carpetas del servidor de informes. Puede buscar, ver, proteger y establecer propiedades en los recursos de la misma manera que lo haría con cualquier elemento almacenado en un servidor de informes. Para ver o administrar un recurso, debe tener las tareas Ver recursos o Administrar recursos en su asignación de roles.  
   
-##  <a name="bkmk_referenceimage"></a> Hacer referencia a un recurso de imagen desde un informe  
+##  <a name="referencing-an-image-resource-from-a-report"></a><a name="bkmk_referenceimage"></a> Hacer referencia a un recurso de imagen desde un informe  
  Los recursos pueden contener una imagen a la que hace referencia en un informe. Si entre los requisitos de informe se incluye el uso de imágenes externas, piense en las ventajas siguientes de almacenar la imagen como un recurso:  
   
 -   Almacenamiento centralizado en la base de datos del servidor de informes. Si mueve la base de datos del servidor de informes y su contenido a otro equipo, la imagen externa permanece con el informe. No tiene que realizar un seguimiento de los archivos de imagen almacenados en disco en equipos diferentes.  

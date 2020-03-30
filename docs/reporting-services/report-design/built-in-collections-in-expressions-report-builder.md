@@ -9,21 +9,21 @@ ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73fcabfe163fce811b208861adbde97e4411300b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082202"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Colecciones integradas en expresiones (Generador de informes)
-  En una expresión de un informe, puede incluir referencias a las siguientes colecciones integradas: ReportItems, Parámetros, Campos, DataSets, DataSources, Variables y campos integrados para información global, como el nombre del informe. No todas las colecciones aparecen en el cuadro de diálogo **Expresión** . Las colecciones DataSets y DataSources solo están disponibles en tiempo de ejecución para los informes publicados en un servidor de informes. ReportItems es un conjunto de cuadros de texto situados en una región del informe; por ejemplo, los cuadros de texto de una página o de un encabezado de página.  
+  En una expresión de un informe, puede incluir referencias a las siguientes colecciones integradas: ReportItems, Parameters, Fields, DataSets, DataSources, Variables y a campos integrados para información global, como el nombre del informe. No todas las colecciones aparecen en el cuadro de diálogo **Expresión** . Las colecciones DataSets y DataSources solo están disponibles en tiempo de ejecución para los informes publicados en un servidor de informes. ReportItems es un conjunto de cuadros de texto situados en una región del informe; por ejemplo, los cuadros de texto de una página o de un encabezado de página.  
   
  Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Collections"></a> Descripción de las colecciones integradas  
+##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> Descripción de las colecciones integradas  
  En la tabla siguiente se enumeran las colecciones integradas disponibles cuando se escribe una expresión. Cada fila incluye: el nombre de programación para la colección con distinción de mayúsculas y minúsculas, si se puede usar el cuadro de diálogo Expresión para agregar una referencia a la colección de forma interactiva, un ejemplo y una descripción que incluye el momento en que se inicializan y se ponen a disposición de los usuarios los valores de la colección.  
   
 |Colección integrada|Categoría en el cuadro de diálogo Expresión|Ejemplo|Descripción|  
@@ -37,7 +37,7 @@ ms.locfileid: "77082202"
 |**Variables**|`Variables`|`=Variables!CustomTimeStamp.Value`|Representa la colección de variables de informe y de variables de grupo. Para más información, vea [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).|  
 |**ReportItems**|No se muestra|`=ReportItems("Textbox1").Value`|Representa la colección de cuadros de texto para un elemento de informe. Esta colección se puede usar para resumir los elementos de la página a fin de incluirlos en un encabezado de página o en un pie de página. Para más información, vea [Usar referencias a la colección ReportItems &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md).|  
   
-##  <a name="Syntax"></a> Uso de la sintaxis de colección en una expresión  
+##  <a name="using-collection-syntax-in-an-expression"></a><a name="Syntax"></a> Uso de la sintaxis de colección en una expresión  
  Si desea hacer referencia a una colección desde una expresión, puede usar la sintaxis estándar de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para los elementos de una colección. En la tabla siguiente se muestran ejemplos de sintaxis de colección.  
   
 |Sintaxis|Ejemplo|  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571592"
 ---
 # <a name="data-alert-designer"></a>Diseñador de alertas de datos
@@ -54,7 +54,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
   
  Para abrir el Diseñador de alertas de datos, haga clic en la opción **Nueva alerta de datos** en el menú **Acciones** de la barra de herramientas de informe. Si no ve la opción **Nueva alerta de datos** , el informe no está configurado para usar credenciales almacenadas. Puede actualizar el tipo de credenciales actualizando el origen de datos del informe desde la biblioteca de SharePoint.  
   
-##  <a name="AlertDesigner"></a> Interfaz de usuario del Diseñador de alertas de datos  
+##  <a name="data-alert-designer-user-interface"></a><a name="AlertDesigner"></a> Interfaz de usuario del Diseñador de alertas de datos  
  El Diseñador de alertas de datos se divide en varias áreas. El área donde se selecciona la fuente de distribución de datos de informe, el área donde se crean condiciones sencillas o complejas agregando reglas a las condiciones, etcétera. En la imagen siguiente se muestran las áreas del Diseñador de alertas de datos.  
   
  ![Áreas dentro de la interfaz de usuario del Diseñador de alertas](../reporting-services/media/rs-alertdesigner.gif "Áreas dentro de la interfaz de usuario del Diseñador de alertas")  
@@ -176,7 +176,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
   
  Para obtener más información sobre cómo se genera el correo electrónico, vea [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
-##  <a name="CreateAlert"></a> Crear una definición de alerta de datos  
+##  <a name="create-a-data-alert-definition"></a><a name="CreateAlert"></a> Crear una definición de alerta de datos  
  Si tiene los permisos Ver elemento y Crear alertas de SharePoint, puede crear una definición de alerta de datos para cualquier informe para el que tenga permiso de visualización, siempre y cuando el informe use credenciales almacenadas o no use credenciales. El informe se ejecuta desde una biblioteca de SharePoint. Los datos disponibles para su uso en el Diseñador de alertas de datos proceden del informe. Si el informe tiene parámetros, puede que tenga que ejecutarlo con diferentes valores de parámetros para asegurarse de que los datos que le interesan aparecen en el informe. Después de abrir el informe, puede hacer clic en la opción **Nueva alerta de datos** del menú **Acciones** de la barra de herramientas de informe para abrir el Diseñador de alertas de datos. En la imagen siguiente se muestra cómo se puede abrir el Diseñador de alertas de datos.  
   
  ![Abrir el Diseñador de alertas desde la biblioteca de SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Abrir el Diseñador de alertas desde la biblioteca de SharePoint")  
@@ -184,7 +184,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
  Para obtener más información, vea [Crear una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="SaveAlert"></a> Guardar una definición de alerta de datos  
+##  <a name="save-a-data-alert-definition"></a><a name="SaveAlert"></a> Guardar una definición de alerta de datos  
  El Diseñador de alertas de datos muestra la dirección URL del sitio en que se guardará la definición de alerta de datos. Las definiciones de alertas de datos siempre se guardan en el mismo sitio que los informes.  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
  Antes de guardar la definición de la alerta, se valida. Debe corregir los errores antes de que la definición de la alerta se pueda guardar correctamente. Para obtener más información, vea [Crear una alerta de datos en el Diseñador de alertas de datos](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="EditAlert"></a> Editar una definición de alerta de datos  
+##  <a name="edit-a-data-alert-definition"></a><a name="EditAlert"></a> Editar una definición de alerta de datos  
  Después de guardar la definición de alerta de datos, puede volver a abrirla y modificarla en el Diseñador de alertas de datos. Puede agregar, cambiar o eliminar reglas y cláusulas, y cambiar la configuración de programación y de correo electrónico. Si la fuente de distribución de datos de informe que utiliza la alerta ha cambiado y ya no proporciona los campos a los que hacen referencia las reglas de la alerta o han cambiado los tipos de datos u otros metadatos de los campos, la definición de la alerta ya no es válida y debe corregirla para poder volver a guardarla. Si desea utilizar otra fuente de distribución de datos, debe crear una nueva definición de alerta.  
   
  Para editar una definición de alerta de datos, haga clic con el botón secundario en el Administrador de alertas de datos y haga clic en **Editar**. En la imagen siguiente se muestra el menú contextual de una alerta de datos en el Administrador de alertas de datos.  
@@ -203,7 +203,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
  Para obtener más información, vea [Modificar una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
   
-##  <a name="HowTo"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="HowTo"></a> Tareas relacionadas  
  En esta sección se enumeran los procedimientos que muestran cómo crear y modificar alertas.  
   
 -   [Modificación de una alerta de datos en el Diseñador de alertas](../reporting-services/edit-a-data-alert-in-alert-designer.md)  

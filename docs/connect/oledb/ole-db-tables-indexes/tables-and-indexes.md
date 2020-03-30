@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015242"
 ---
 # <a name="tables-and-indexes"></a>Tablas e índices
@@ -41,7 +41,7 @@ ms.locfileid: "68015242"
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|Escriba:  VT_BSTR<br /><br /> R (lectura) y W (escritura): Escritura<br /><br /> Valor predeterminado: Null<br /><br /> Descripción: esta propiedad solo se usa en **ITableDefinition**. La cadena especificada en esta propiedad se usa al crear una instrucción [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md).<br /><br /> .|  
+|SSPROP_COL_COLLATIONNAME|Tipo: VT_BSTR<br /><br /> L/E: escritura<br /><br /> Valor predeterminado: NULL<br /><br /> Descripción: esta propiedad solo se usa en **ITableDefinition**. La cadena especificada en esta propiedad se usa al crear una instrucción [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md).<br /><br /> .|  
   
 ## <a name="in-this-section"></a>En esta sección  
   

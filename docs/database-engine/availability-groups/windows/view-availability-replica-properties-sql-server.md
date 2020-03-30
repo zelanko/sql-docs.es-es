@@ -13,10 +13,10 @@ ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9bcebebf2f426aec660b77699461bdce110f628c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821759"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Ver las propiedades de una réplica de disponibilidad (SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "74821759"
   En este tema se describe cómo pueden verse las propiedades de una réplica de un grupo disponibilidad AlwaysOn con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
  
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver y cambiar las propiedades de una réplica de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
@@ -41,7 +41,7 @@ ms.locfileid: "74821759"
    >Si el tipo de clúster es none, no se puede cambiar el modo de conmutación por error.
   
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para ver las propiedades y estados de las réplicas de disponibilidad**  
   
  Para ver las propiedades y estados de las réplicas de disponibilidad, utilice las siguientes vistas y la función del sistema:  
@@ -78,7 +78,7 @@ ms.locfileid: "74821759"
 >  Para obtener más información sobre los contadores de rendimiento para réplicas de disponibilidad (el objeto de rendimiento **SQLServer:Availability Replica**  ), vea [SQL Server, réplica de disponibilidad](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para obtener más información acerca de los grupos de disponibilidad**  
   
 -   [Ver las propiedades del grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  

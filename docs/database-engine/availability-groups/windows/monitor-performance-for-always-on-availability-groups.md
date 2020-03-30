@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014681"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Supervisión del rendimiento para grupos de disponibilidad Always On
@@ -436,7 +436,7 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
   
  Puede ver el historial de trabajos para inspeccionar los resultados de la evaluación. Los errores de evaluación también se registran en el registro de aplicaciones de Windows (en el Visor de eventos) con el Id. de evento 34052. También puede configurar el Agente SQL Server para enviar alertas sobre los errores de directiva. Para obtener más información, vea [Configurar alertas para notificar los errores de directiva a los administradores de directivas](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md).  
   
-##  <a name="BKMK_SCENARIOS"></a> Escenarios de solución de problemas de rendimiento  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> Escenarios de solución de problemas de rendimiento  
  En la tabla siguiente se enumeran los escenarios de solución de problemas relacionados con el rendimiento comunes.  
   
 |Escenario|Descripción|  
@@ -445,7 +445,7 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
 |[Solución de problemas: el grupo de disponibilidad superó el RPO](troubleshoot-availability-group-exceeded-rpo.md)|Después de realizar una conmutación por error manual forzada, la pérdida de datos supera la RPO. O bien, al calcular la posible pérdida de datos de una réplica secundaria de confirmación asincrónica, descubre que supera la RPO.|  
 |[Solución de problemas: cambios en la réplica principal que no se reflejan en la réplica secundaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|La aplicación cliente finaliza una actualización en la réplica principal correctamente, pero una consulta a la réplica secundaria muestra que el cambio no se ha reflejado.|  
   
-##  <a name="BKMK_XEVENTS"></a> Eventos extendidos de utilidad  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> Eventos extendidos de utilidad  
  Los siguientes eventos extendidos son útiles al solucionar problemas de réplicas en estado **Sincronizando**.  
   
 |Nombre del evento|Category|Canal|réplica de disponibilidad|  

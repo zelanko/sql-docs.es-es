@@ -16,10 +16,10 @@ ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 179b5431f0531b29b4867f405ee88e4567ddb5d8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054398"
 ---
 # <a name="working-with-policy-based-management-facets"></a>Trabajar con facetas de administración basada en directivas
@@ -30,7 +30,7 @@ ms.locfileid: "68054398"
   
  En este tema se describe cómo copiar el estado de una faceta en un archivo XML.  
   
-##  <a name="BeforeYouBegin"></a> Permisos  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permisos  
  Los procedimientos descritos en este tema requieren la pertenencia al rol PolicyAdministratorRole de la base de datos msdb.  
   
 ## <a name="viewing-and-copying-facet-states"></a>Ver y copiar los estados de la faceta  

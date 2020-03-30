@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c62a2dfb1a6728098c3faeed32ce842dbab4304e
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77146737"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>Aplicaciones de copia de seguridad de SQL Server: Servicio de instantáneas de volumen (VSS) y objeto de escritura de SQL
@@ -150,16 +150,16 @@ En la tabla siguiente se enumeran los tipos de copias de seguridad de instantán
 |:-------------------------------------------- | :---------------------------- | :--------------------- |
 |Copia de seguridad de datos completa </br> (incluido el catálogo de texto completo)| Sí                     | Sí                    |
 |Restauración completa                                  | Sí                           | Sí                    |
-|Restauración completa (sin recuperación)                    | Sí                           | Sin                     |
-|Copia de seguridad diferencial                           | Sí                           | Sin                     |
-|Restauración diferencial                          | Sí                           | Sin                     |
-|Restauración con desplazamiento                             | Sí                           | Sin                     |
-|Cambio de nombre de una base de datos                               | Sí                           | Sin                     |
-|Copia de seguridad de solo copia                              | Sí                           | Sin                     |
-|Instantáneas recuperadas automáticamente                       | Sí                           | Sin                     |
-|Copia de seguridad de registros                                    | Sin                            | Sin                     |
-|Instantáneas de base de datos                            | Sin                            | Sin                     |
-|Bases de datos cerradas automáticamente</br> Bases de datos con apagado | Sí                        | Sin                     |
+|Restauración completa (sin recuperación)                    | Sí                           | No                     |
+|Copia de seguridad diferencial                           | Sí                           | No                     |
+|Restauración diferencial                          | Sí                           | No                     |
+|Restauración con desplazamiento                             | Sí                           | No                     |
+|Cambio de nombre de una base de datos                               | Sí                           | No                     |
+|Copia de seguridad de solo copia                              | Sí                           | No                     |
+|Instantáneas recuperadas automáticamente                       | Sí                           | No                     |
+|Copia de seguridad de registros                                    | No                            | No                     |
+|Instantáneas de base de datos                            | No                            | No                     |
+|Bases de datos cerradas automáticamente</br> Bases de datos con apagado | Sí                        | No                     |
 |Bases de datos de grupo de disponibilidad                  | Sí                           | No en secundarias        | 
 
 
@@ -711,7 +711,7 @@ A continuación se indican los metadatos del escritor de la base de datos:
 - AlternatePath: NULL
 - BackupTypeMask: VSS_FSBT_ALL_BACKUP_REQUIRED | VSS_FSBT_ALL_SNAPSHOT_REQUIRED
 
-**Archivo de grupo de archivos**
+**Archivo de grupo de archivos:**
 
 - LogicalPath: "Server1\Instance1"
 - GroupName: "DB1"

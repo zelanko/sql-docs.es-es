@@ -16,10 +16,10 @@ ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822557"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Página Resumen (asistentes para grupos de disponibilidad AlwaysOn)
@@ -29,7 +29,7 @@ ms.locfileid: "74822557"
   
   En este tema de Ayuda se describen las opciones de la página **Resumen** . Esta tema se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] y [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use la cuadrícula de esta página para revisar las opciones para el nuevo grupo de disponibilidad. Para realizar uno o más cambios, haga clic en **Anterior** para volver a la página o páginas pertinentes. Cuando esté listo, haga clic en **Siguiente** para volver a la página **Resumen** . Cuando esté satisfecho con las opciones seleccionadas, haga clic en **Finalizar**.  
   
-##  <a name="PageOptions"></a> Opciones de página Resumen  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> Opciones de página Resumen  
  **Script**  
  Haga clic para generar un script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] para las acciones enumeradas en la cuadrícula de resumen. Se le pedirá que especifique un destino para el script.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74822557"
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [&#91;Arriba&#93;](#Top)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

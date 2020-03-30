@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75952479"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Anclado de elementos de informe paginados de Reporting Services a paneles de Power BI
@@ -28,7 +28,7 @@ ms.locfileid: "75952479"
 
 Puede anclar un elemento de informe paginado de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] local a un panel del servicio [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], como un nuevo icono.   Para anclarlos, el administrador tendrá que integrar primero el servidor de informes con Azure Active Directory y [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
-##  <a name="bkmk_requirements_to_pin"></a> Requisitos para el anclado  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> Requisitos para el anclado  
   
 -   El servidor de informes está configurado para su integración con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Para más información, vea [Integración del servidor de informes de Power BI &#40;Administrador de configuración&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Si no se ha configurado el servidor de informes, no verá el botón **Anclar al panel de Power BI** en la barra de herramientas del visor de informes.  
   
@@ -44,7 +44,7 @@ Puede anclar un elemento de informe paginado de [!INCLUDE[ssRSnoversion](../incl
  
     Para más información sobre cómo almacenar credenciales, vea la sección "Configurar credenciales almacenadas para un origen de datos específico de informe (modo Nativo)" de [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
-##  <a name="bkmk_supported_items"></a> Elementos que puede anclar  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> Elementos que puede anclar  
  Los siguientes elementos de informe se pueden anclar en un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  No se pueden anclar elementos que estén anidados dentro de una región de datos. Por ejemplo, no se puede anclar un elemento que esté anidado dentro de una tabla o lista de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   Gráficos  
@@ -54,7 +54,7 @@ Puede anclar un elemento de informe paginado de [!INCLUDE[ssRSnoversion](../incl
 -   Los artículos deben estar en el cuerpo del informe.  No se pueden anclar elementos que se encuentren en el encabezado o en el pie de página.  
 -   Puede anclar elementos individuales que estén dentro de un rectángulo de nivel superior, pero no puede anclarlos todos como un único grupo.  
   
-##  <a name="bkmk_to_pin"></a> Para anclar un elemento de informe  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> Para anclar un elemento de informe  
   
 1. Compruebe que haya iniciado sesión en [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. En el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], seleccione el elemento de menú **Mi configuración** e inicie sesión. Para más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](my-settings-for-power-bi-integration-web-portal.md).
 
@@ -78,7 +78,7 @@ Puede anclar un elemento de informe paginado de [!INCLUDE[ssRSnoversion](../incl
   
 6. Haga clic en **Cerrar** para devolver el informe a la vista normal.  
   
-##  <a name="bkmk_in_the_dashboard"></a> En el panel
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> En el panel
 
 Después de anclar el elemento de informe en el panel, el icono parece igual que cualquier otro del panel y no existe ninguna indicación visual de que provenga de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. En la siguiente lista se resume cómo se rellenan las propiedades del icono a partir de elemento de informe.  
   
@@ -94,7 +94,7 @@ En el panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , el elemento 
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> Solucionar problemas  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> Solucionar problemas  
   
 -   **No hay botón de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] en la barra de herramientas del Visor de informes:**  Este mensaje indica que el servidor de informes no se ha integrado con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para más información, vea [Integración del servidor de informes de Power BI &#40;Administrador de configuración&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
@@ -118,7 +118,7 @@ En el panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , el elemento 
 
 -   **Los iconos de las aplicaciones Power BI muestran datos obsoletos:** Si ancla un elemento de informe de Reporting Services a un panel y, a continuación, distribuye ese panel en una aplicación, el elemento de informe anclado de ese panel no se actualizará. 
 
-##  <a name="bkmk_subscription_management"></a> Administración de suscripciones  
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> Administración de suscripciones  
  Además de los problemas relacionados con las suscripciones descritos en la sección de solución de problemas, la información siguiente ayuda a mantener las suscripciones relacionadas con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
 -   **Se ha cambiado el nombre de un elemento:** si se cambia el nombre de un elemento de informe anclado o se elimina, el icono de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] no se volverá a actualizar y verá un mensaje de error similar al siguiente.  Si cambia el nombre del elemento al que tenía originalmente, la suscripción comenzará a funcionar de nuevo y el icono se actualizará de acuerdo con la programación establecida para tal fin.  

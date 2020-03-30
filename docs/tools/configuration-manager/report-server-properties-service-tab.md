@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 902421968723f52949b352318b864d60714a6059
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307903"
 ---
 # <a name="report-server-properties-service-tab"></a>Propiedades de Servidor de informes (pestaña Servicio)
@@ -47,11 +47,11 @@ ms.locfileid: "75307903"
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
   
--   Manual: este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
+-   Manual: el servicio no se inicia automáticamente al iniciar el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: este servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: el servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: no se puede iniciar el servicio.  
+-   Deshabilitado: el servicio no se puede iniciar.  
   
  **State**  
  Indica si el servicio está en ejecución, detenido o deshabilitado.  

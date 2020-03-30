@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981814"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Para más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="change-tracking-no-population"></a> Interacciones del seguimiento de cambios y del parámetro NO POPULATION  
+## <a name="interactions-of-change-tracking-and-no-population-parameter"></a><a name="change-tracking-no-population"></a> Interacciones del seguimiento de cambios y del parámetro NO POPULATION  
  Que se rellene el índice de texto completo depende de si el seguimiento de cambios está habilitado y si se especifica WITH NO POPULATION en la instrucción ALTER FULLTEXT INDEX. En la tabla siguiente se resume el resultado de su interacción.  
   
 |Seguimiento de cambios|WITH NO POPULATION|Resultado|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Para más información sobre rellenar índices de texto completo, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## <a name="change-search-property-rebuild-index"></a> Cambiar la lista de propiedades de búsqueda provoca un rellenado del índice  
+## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a><a name="change-search-property-rebuild-index"></a> Cambiar la lista de propiedades de búsqueda provoca un rellenado del índice  
  La primera vez que el índice de texto completo se asocia con una lista de propiedades de búsqueda, el índice debe volver a llenarse para incluir los términos de búsqueda específicos de la propiedad. Los datos del índice existente no se truncan.  
   
  Sin embargo, si se asocia el índice de texto completo con otra lista de propiedades, se vuelve a generar el índice. Una generación inmediata trunca el índice de texto completo y quita todos los datos existentes, de tal forma que el índice se debe volver a llenar. A medida que avanza el rellenado, las consultas de texto completo de la tabla base buscan únicamente en las filas de la tabla que ya se han indizado al efectuar el rellenado. Los datos del índice rellenado incluirán metadatos de las propiedades registradas en la lista de propiedades agregada recientemente.  

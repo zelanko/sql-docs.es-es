@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298304"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
@@ -272,7 +272,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
   
 -   [Obtener valores de códigos de retorno](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a> Nombres y marcadores de parámetros  
+###  <a name="parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a> Nombres y marcadores de parámetros  
  En función del tipo de conexión que utiliza la tarea Ejecutar SQL, la sintaxis del comando SQL usa marcadores de parámetros diferentes. Por ejemplo, el tipo de administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] necesita que el comando SQL use un marcador de parámetro con el formato **\@varParameter**, mientras que el tipo de conexión OLE DB necesita el signo de interrogación (?) como marcador de parámetro.  
   
  Los nombres que puede utilizar como nombres de parámetros en las asignaciones entre variables y parámetros también varían según el tipo de Administrador de conexiones. Por ejemplo, el tipo de Administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utiliza un nombre definido por el usuario con el prefijo \@, mientras que el tipo de Administrador de conexiones OLE DB requiere que se utilice el valor numérico de un ordinal basado en 0 como nombre de parámetro.  
@@ -307,7 +307,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
   
  Cuando se usa un Administrador de conexiones OLE DB, no se pueden utilizar subconsultas con parámetros, ya que la tarea Ejecutar SQL no puede derivar la información de los parámetros a través del proveedor OLE DB. Sin embargo, puede utilizar una expresión para concatenar los valores de los parámetros en la cadena de consulta y establecer la propiedad SqlStatementSource de la tarea.  
   
-###  <a name="Date_and_time_data_types"></a> Usar parámetros con tipos de datos de fecha y hora  
+###  <a name="use-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a> Usar parámetros con tipos de datos de fecha y hora  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usar parámetros de fecha y hora con administradores de conexiones ADO y ADO.NET  
  Al leer datos de los tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( **time** y **datetimeoffset**), una tarea Ejecutar SQL que usa el Administrador de conexiones ADO o [!INCLUDE[vstecado](../../includes/vstecado-md.md)] tiene los requisitos adicionales siguientes:  
@@ -356,7 +356,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
   
  Si los datos no están almacenados en el parámetro de entrada o de salida adecuado, se produce un error en el paquete.  
   
-###  <a name="WHERE_clauses"></a> Usar parámetros en cláusulas WHERE  
+###  <a name="use-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a> Usar parámetros en cláusulas WHERE  
  Los comandos SELECT, INSERT, UPDATE y DELETE suelen incluir cláusulas WHERE para especificar filtros que definen las condiciones que debe cumplir cada fila de las tablas de origen con el fin de satisfacer los requisitos de un comando SQL. Los parámetros proporcionan los valores de filtro en las cláusulas WHERE.  
   
  Puede utilizar marcadores de parámetros para proporcionar valores de parámetros de forma dinámica. Las reglas para los marcadores y nombres de parámetros que se pueden utilizar en la instrucción SQL dependen del tipo de Administrador de conexiones que utiliza la tarea Ejecutar SQL.  
@@ -377,7 +377,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
   
 -   El tipo de conexión de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utiliza los nombres de parámetros \@parmMinProductID y \@parmMaxProductID.  
   
-###  <a name="Stored_procedures"></a> Usar parámetros con procedimientos almacenados  
+###  <a name="use-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a> Usar parámetros con procedimientos almacenados  
  Los comandos SQL que ejecutan procedimientos almacenados también pueden usar la asignación de parámetros. Las reglas sobre el uso de marcadores y nombres de parámetros dependen del tipo de Administrador de conexiones que utiliza la tarea Ejecutar SQL, del mismo modo que sucede con las consultas con parámetros.  
   
  La tabla siguiente enumera ejemplos del comando EXEC por tipo de Administrador de conexiones. Los ejemplos ejecutan el procedimiento almacenado **uspGetBillOfMaterials** en [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. El procedimiento almacenado usa los parámetros de **entrada** `@StartProductID` y `@CheckDate`.  
@@ -464,7 +464,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
   
 14. Haga clic en **OK**.  
 
-##  <a name="Return_codes"></a> Obtener los valores de códigos de retorno  
+##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a> Obtener los valores de códigos de retorno  
  Un procedimiento almacenado puede devolver un valor entero, denominado código de retorno, para indicar el estado de ejecución de un procedimiento. Para implementar códigos de retorno en la tarea Ejecutar SQL, debe utilizar los parámetros del tipo **ReturnValue** .  
   
  La tabla siguiente enumera, por tipo de conexión, algunos ejemplos de comandos EXEC que implementan códigos de retorno. Todos los ejemplos utilizan un parámetro de **input** . Las reglas del uso de marcadores y nombres de parámetros son las mismas para todos los tipos de parámetros: **Input**, **Output** y **ReturnValue**.  
@@ -493,7 +493,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
   
 -   [Rellenar una variable con un conjunto de resultados](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a> Especificar un tipo de conjunto de resultados  
+###  <a name="specify-a-result-set-type"></a><a name="Result_set_type"></a> Especificar un tipo de conjunto de resultados  
  La tarea Ejecutar SQL admite los siguientes tipos de conjuntos de resultados:  
   
 -   El conjunto de resultados **Ninguno** se usa cuando la consulta no devuelve ningún resultado. Por ejemplo, este conjunto de resultados se utiliza para consultas que agregan, cambian y eliminan registros de una tabla.  
@@ -506,7 +506,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
   
  Si la tarea Ejecutar SQL utiliza el conjunto de resultados **Conjunto de resultados completo** y la consulta devuelve varios conjuntos de filas, la tarea solo devuelve el primero de ellos. Si el primer conjunto de filas genera un error, la tarea lo notifica. Si otros conjuntos de filas generan errores, la tarea no los notifica.  
   
-###  <a name="Populate_variable_with_result_set"></a> Rellenar una variable con un conjunto de resultados  
+###  <a name="populate-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a> Rellenar una variable con un conjunto de resultados  
  Puede enlazar el conjunto de resultados devuelto por una consulta con una variable definida por el usuario si el tipo del conjunto de resultados es una fila individual, un conjunto de filas o XML.  
   
  Si el tipo de conjunto de resultados es **Fila única**, puede enlazar una columna del resultado devuelto a una variable utilizando el nombre de la columna como nombre del conjunto de resultados, o puede utilizar la posición ordinal de la columna en la lista de columnas como dicho nombre. Por ejemplo, el nombre del conjunto de resultados para la consulta `SELECT Color FROM Production.Product WHERE ProductID = ?` puede ser **Color** o **0**. Si la consulta devuelve varias columnas y desea obtener acceso a los valores de todas ellas, debe enlazar cada columna a una variable distinta. Si asigna columnas a variables utilizando números como nombre de los conjuntos de resultados, los números reflejan el orden de aparición de las columnas en la lista de columnas de la consulta. Por ejemplo, en la consulta `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, puede utilizar 0 para la columna **Color** y 1 para la columna **ListPrice** . La capacidad de utilizar un nombre de columna como nombre del conjunto de resultados dependerá del proveedor para el que se haya configurado la tarea. No todos los proveedores ponen los nombres de columna a disposición.  

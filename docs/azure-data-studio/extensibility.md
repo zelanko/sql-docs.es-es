@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76928004"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Introducción a la extensibilidad de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="getting-started-with-name-sos-extensibility"></a>Introducción a la extensibilidad de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] cuenta con varios mecanismos de extensibilidad para personalizar la experiencia del usuario y poner dichas personalizaciones a disposición de toda la comunidad de usuarios. La plataforma [!INCLUDE[name-sos](../includes/name-sos.md)] principal se basa en Visual Studio Code, por lo que la mayoría de las API de extensibilidad de Visual Studio Code están disponibles. Además, hemos facilitado otros puntos de extensibilidad para actividades específicas de la administración de datos.
 

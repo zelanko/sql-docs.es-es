@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d016a1fed3a60df78a02242a2f42e46cf7184553
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245097"
 ---
 # <a name="teradata-destination"></a>Destino de Teradata
@@ -88,7 +88,7 @@ En la tabla siguiente se describen las propiedades personalizadas del destino de
 |BufferSize|Entero|Tamaño del búfer de salida (en KB) que se usa para enviar los paquetes de carga. El valor predeterminado es 1024. Solo se aplica a TPT Load. Esta propiedad está en el **Editor avanzado**.|
 |DataEncryption|Boolean|El valor predeterminado es **false**. Si es **true**, se usa el cifrado de seguridad completo.|
 |DefaultCodePage|Entero|La página de códigos que se usa cuando el origen de datos no tiene información de página de códigos. <br>**Nota**: Esta propiedad está en el **Editor avanzado**.|
-|DetailedTracingLevel|Integer (enumeración)|Seleccione una de las siguientes opciones de seguimiento avanzado: <br> **Off**: sin registro avanzado. <br> **General**: se registra el seguimiento general de las actividades específicas del controlador. <br> **CLI**: se registra el seguimiento de actividades relacionadas con CLIv2. <br> **Notify Method** (Método de notificación): se registra el seguimiento de actividades relacionadas con la característica de notificación. <br> **Common Library** (Biblioteca común): se registra el seguimiento de actividades de la biblioteca opcommon. <br> **Todos**: se registra el seguimiento de todas las actividades anteriores. <br> El archivo de registro de seguimiento avanzado se define en la propiedad **DetailedTracingFile**. <br> La propiedad **DetailedTracingFile** debe establecerse si la opción no está desactivada. <br> Esta propiedad está en el **Editor avanzado**.|
+|DetailedTracingLevel|Integer (enumeración)|Seleccione una de las siguientes opciones de seguimiento avanzado: <br> **Off**: sin registro avanzado. <br> **General**: se registra el seguimiento general de las actividades específicas del controlador. <br> **CLI**: se registra el seguimiento de actividades relacionadas con CLIv2. <br> **Notify Method** (Método de notificación): se registra el seguimiento de actividades relacionadas con la característica de notificación. <br> **Common Library**: se registra el seguimiento de actividades de la biblioteca opcommon. <br> **Todos**: se registra el seguimiento de todas las actividades anteriores. <br> El archivo de registro de seguimiento avanzado se define en la propiedad **DetailedTracingFile**. <br> La propiedad **DetailedTracingFile** debe establecerse si la opción no está desactivada. <br> Esta propiedad está en el **Editor avanzado**.|
 |DetailedTracingFile|String|La ruta de acceso del archivo de registro que se genera automáticamente cuando **DetailedTracingLevel** no es **Off** (Desactivado). Esta propiedad está en el **Editor avanzado**.|
 |DiscardLargeRow|Boolean|El valor predeterminado es **false**. Si es **true**, se descartan las filas grandes (más de 64 K).|
 |ErrorTableName|String|Nombre de la tabla de errores. El valor predeterminado es el nombre de la tabla de destino|

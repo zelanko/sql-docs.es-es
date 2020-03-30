@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09d6eb369d7e4dd1678ea2c344686bb5b672a8c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121640"
 ---
 # <a name="--subtraction-transact-sql"></a>- (Resta) (Transact-SQL)
@@ -90,7 +90,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
  (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-subtraction-in-a-select-statement"></a>C. Usar la resta en una instrucción SELECT  
  En el siguiente ejemplo se calcula la diferencia de tasa base entre el empleado con la tasa base más alta y el que tiene la tasa base más baja en la tabla `dimEmployee`.  

@@ -12,10 +12,10 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65575240"
 ---
 # <a name="upgrade-a-report-server-database"></a>Actualizar una base de datos del servidor de informes
@@ -26,7 +26,7 @@ La base de datos del servidor de informes proporciona almacenamiento para una o 
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
- **Modo SharePoint:** en el modo de SharePoint de SQL Server 2016 Reporting Services, la base de datos del servidor de informes es realmente una colección de bases de datos que se crea para cada instancia de la aplicación de servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ **Modo de SharePoint:** en el modo de SharePoint de SQL Server 2016 Reporting Services, la base de datos del servidor de informes es realmente una colección de bases de datos que se crea para cada instancia de la aplicación de servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 ::: moniker-end
 
@@ -56,7 +56,7 @@ La base de datos del servidor de informes proporciona almacenamiento para una o 
  Además de la base de datos del servidor de informes, un servidor de informes utiliza también una base de datos temporal. La base de datos temporal se actualiza automáticamente al actualizar la base de datos del servidor de informes.  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Permisos necesarios para actualizar una base de datos del servidor de informes  
- Si va a actualizar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que incluye una base de datos del servidor de informes, puede aparecer un mensaje de error si la actualización de la base de datos se realiza sin los permisos adecuados. De manera predeterminada, el programa de instalación utiliza el token de seguridad del usuario que ejecuta el programa de instalación para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota y actualizar el esquema. Si tiene permisos **sysadmin** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor de bases de datos donde se hospedan las bases de datos del servidor de informes, la actualización de la base de datos se realizará correctamente. De manera similar, si ejecuta el programa de instalación desde el símbolo del sistema y se especifican los argumentos RSUPGRADEDATABASEACCOUNT y RSUPGRADEPASSWORD para una cuenta que tiene permiso **sysadmin** para modificar el esquema en el equipo remoto, la base de datos se actualizará correctamente.  
+ Si va a actualizar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que incluye una base de datos del servidor de informes, puede aparecer un mensaje de error si la actualización de la base de datos se realiza sin los permisos adecuados. De manera predeterminada, el programa de instalación utiliza el token de seguridad del usuario que ejecuta el programa de instalación para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota y actualizar el esquema. Si tiene permisos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin**de** en el servidor de bases de datos donde se hospedan las bases de datos del servidor de informes, la actualización de la base de datos se realizará correctamente. De manera similar, si ejecuta el programa de instalación desde el símbolo del sistema y se especifican los argumentos RSUPGRADEDATABASEACCOUNT y RSUPGRADEPASSWORD para una cuenta que tiene permiso **sysadmin** para modificar el esquema en el equipo remoto, la base de datos se actualizará correctamente.  
   
  Sin embargo, si no tiene permiso **sysadmin** para la base de datos del equipo remoto, se rechazará la conexión y aparecerá un error que indica lo siguiente:  
   

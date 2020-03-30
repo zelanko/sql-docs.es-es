@@ -35,10 +35,10 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287569"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar el Asistente para planes de mantenimiento
@@ -46,7 +46,7 @@ ms.locfileid: "79287569"
   En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asistente para planes de mantenimiento crea un plan de mantenimiento que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar periódicamente. Esto permite realizar diversas tareas de administración de bases de datos, incluidas copias de seguridad, comprobaciones de integridad de la base de datos o actualizaciones de las estadísticas de la base de datos a intervalos especificados.  
     
  
-##  <a name="Restrictions"></a> Limitaciones y restricciones  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Para crear un plan de mantenimiento multiservidor, debe configurar un entorno multiservidor con un servidor maestro y uno o varios servidores de destino. Debe crear y mantener planes de mantenimiento multiservidor en el servidor maestro. Puede ver planes en servidores de destino.   
 
@@ -54,14 +54,14 @@ ms.locfileid: "79287569"
 
 Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para usar una cuenta de proxy con privilegios limitados o agregar solo los miembros de **sysadmin** a los roles **db_ssisadmin** y **dc_admin** .  
 
-##  <a name="Prerequisite"></a> Requisitos previos 
+##  <a name="prerequisites"></a><a name="Prerequisite"></a> Requisitos previos 
 Debe habilitar la [opción de configuración del servidor Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md).
   
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para crear o administrar planes de mantenimiento, debe ser miembro del rol fijo de servidor **sysadmin** . El Explorador de objetos solo muestra el nodo **Planes de mantenimiento** para los usuarios que son miembros del rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usar el Asistente para planes de mantenimiento  
+##  <a name="use-the-maintenance-plan-wizard"></a><a name="SSMSProcedure"></a> Usar el Asistente para planes de mantenimiento  
   
 **Iniciar el asistente** 
 

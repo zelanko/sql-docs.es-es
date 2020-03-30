@@ -13,10 +13,10 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 43c964db4c0231d15101f58b7af088bc239fe152
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048088"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configurar la creación de reflejo de la base de datos (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "68048088"
 >  Se recomienda configurar la creación de reflejo de la base de datos durante los periodos de poca actividad, dado que este proceso puede afectar al rendimiento.  
   
   
-##  <a name="PrepareInstances"></a> Preparar una instancia de servidor para hospedar un servidor reflejado  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> Preparar una instancia de servidor para hospedar un servidor reflejado  
  Para cada sesión de creación de reflejo de la base de datos:  
   
 1.  El servidor principal, el servidor reflejado y el testigo, si existen, deben estar hospedados en instancias de servidor independientes que, a su vez, deben estar en sistemas de host diferentes. Cada una de las instancias de servidor requiere un extremo de creación de reflejo de la base de datos. Si necesita crear un extremo de creación de reflejo de la base de datos, asegúrese de que sea accesible a las demás instancias de servidor.  
@@ -48,7 +48,7 @@ ms.locfileid: "68048088"
   
 3.  En la instancia de servidor que hospedará la base de datos reflejada, configure el resto del entorno necesario para la base de datos reflejada. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Información general: establecer una sesión de reflejo de la base de datos  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Información general: establecer una sesión de reflejo de la base de datos  
  Los pasos básicos para establecer una sesión de creación de reflejo son los siguientes:  
   
 1.  Cree la base de datos reflejada restaurando las copias de seguridad siguientes, utilizando RESTORE WITH NORECOVERY en cada operación de restauración:  
@@ -98,7 +98,7 @@ ms.locfileid: "68048088"
 >  Para ver un ejemplo del uso de [!INCLUDE[tsql](../../includes/tsql-md.md)] para configurar la creación de reflejo de la base de datos por medio de la seguridad basada en certificados, vea [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
   
-##  <a name="InThisSection"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> En esta sección  
  [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
  Resume los pasos para crear una base de datos reflejada o preparar una base de datos reflejada antes de reanudar una sesión suspendida. También se proporcionan vínculos a temas de procedimientos.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68048088"
  [Configurar cuentas de inicio de sesión para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Describe cómo crear un inicio de sesión para una instancia del servidor remoto que usa una cuenta diferente a la de la instancia del servidor local.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **SQL Server Management Studio**  
   
 -   [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

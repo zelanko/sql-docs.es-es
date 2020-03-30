@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412770"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
@@ -39,7 +39,7 @@ Este tema describe instrucciones para llamar a procedimientos almacenados compil
 - SqlClient no admite la recuperación de información solo de esquema (detección de metadatos) sobre los conjuntos de resultados devueltos por un procedimiento almacenado compilado de forma nativa (CommandType.SchemaOnly).
   - Use en su lugar [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
-### <a name="includessnoversionincludesssnoversion-mdmd-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
+### <a name="ssnoversion-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
 
 - La versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no permiten recuperar información solo de esquema (detección de metadatos) sobre los conjuntos de resultados devueltos por un procedimiento almacenado compilado de forma nativa.
   - Use en su lugar [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).

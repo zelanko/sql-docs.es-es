@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83bb4fa7861feaccd2ff430ca10f80ef0bc5b10a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76916405"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380806"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Inicio rápido: estructuras de datos, tipos de datos y objetos mediante R en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Algunos de los problemas más comunes son:
 - En ocasiones se requieren operaciones de conversión
 - En R y SQL se usan objetos de datos distintos
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Para este inicio rápido, es necesario tener acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) que tenga instalado el lenguaje de R.
 
@@ -70,7 +70,7 @@ EXECUTE sp_execute_external_script
 
 Normalmente la respuesta se puede encontrar mediante el comando `str()` de R. Agregue la función `str(object_name)` en cualquier lugar del script de R para que el esquema de datos del objeto de R especificado se devuelva como un mensaje informativo. Para ver los mensajes, consulte el panel **Mensajes** de Visual Studio Code o la pestaña **Mensajes** de SSMS.
 
-Para averiguar por qué los resultados son diferentesen Example 1 y Example 2, inserte la línea `str(OutputDataSet)` al final de la definición de la variable _@script_ en cada instrucción, del modo siguiente:
+Para averiguar por qué en los ejemplos 1 y 2 los resultados son tan diferentes, inserte la línea `str(OutputDataSet)` al final de la definición de variable `@script`de cada instrucción, de esta forma:
 
 **Ejemplo 1 con la función str agregada**
 

@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73530930"
 ---
 # <a name="restore-statements-transact-sql"></a>Instrucciones RESTORE (Transact-SQL)
@@ -382,7 +382,7 @@ La instrucción RESTORE también se puede utilizar para realizar restauraciones 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye las tablas del historial de copias de seguridad y restauración que realizan el seguimiento de estas actividades para cada instancia del servidor. Cuando se realiza una restauración, se modifican también las tablas del historial de copias de seguridad. Para más información sobre estas tablas, vea [Historial de copias de seguridad e información de encabezados](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).
 
-## <a name="REPLACEoption"></a> Impacto de la opción REPLACE
+## <a name="replace-option-impact"></a><a name="REPLACEoption"></a> Impacto de la opción REPLACE
 REPLACE no debe usarse a menudo y solo después de haberlo pensado detenidamente. La opción Restore suele impedir que se sobrescriba accidentalmente una base de datos con otra base de datos. Si la base de datos especificada en una instrucción RESTORE ya existe en el servidor actual y el GUID de la familia de base de datos especificado difiere del GUID de la familia de base de datos registrado en el conjunto de copia de seguridad, no se restaura la base de datos. Ésta es una importante medida preventiva.
 
 La opción REPLACE omite varias comprobaciones de seguridad importantes que suele realizar la opción Restore. Las comprobaciones que se omiten son:
@@ -434,7 +434,7 @@ Si la base de datos que se va a restaurar no existe, el usuario debe tener permi
 
 Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos `db_owner` no tienen permisos RESTORE.
 
-## <a name="examples"></a> Ejemplos
+## <a name="examples"></a><a name="examples"></a> Ejemplos
 
 En todos los ejemplos se supone que se ha realizado una copia de seguridad completa de la base de datos.
 
@@ -455,7 +455,7 @@ Entre los ejemplos de RESTORE se incluyen los siguientes:
 > [!NOTE]
 > Para obtener más ejemplos, vea los temas sobre cómo restaurar que aparecen en [Información general sobre restauración y recuperación](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
-### <a name="restoring_full_db"></a> A. Restaurar una base de datos completa
+### <a name="a-restoring-a-full-database"></a><a name="restoring_full_db"></a> A. Restaurar una base de datos completa
 
 En el siguiente ejemplo se restaura una copia de seguridad completa de la base de datos desde un dispositivo lógico de copia de seguridad de `AdventureWorksBackups`. Para obtener un ejemplo de creación de este dispositivo, vea [Dispositivos de copia de seguridad](../../relational-databases/backup-restore/backup-devices-sql-server.md).
 
@@ -469,7 +469,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Inicio del ejemplo&#93;](#examples)
 
-### <a name="restoring_full_n_differential_db_backups"></a> B. Restaurar copias de seguridad de bases de datos completas y diferenciales
+### <a name="b-restoring-full-and-differential-database-backups"></a><a name="restoring_full_n_differential_db_backups"></a> B. Restaurar copias de seguridad de bases de datos completas y diferenciales
 
 En el siguiente ejemplo se restaura una copia de seguridad completa de la base de datos seguida de una copia de seguridad diferencial desde un dispositivo de copia de seguridad de `Z:\SQLServerBackups\AdventureWorks2012.bak`, que contiene las dos copias de seguridad. La copia de seguridad de base de datos completa que se va a restaurar es el sexto conjunto de copia de seguridad del dispositivo (`FILE = 6`), y la copia de seguridad de base de datos diferencial es el noveno conjunto de copia de seguridad en el dispositivo (`FILE = 9`). En cuanto se recupere la copia de seguridad diferencial, se recuperará la base de datos.
 
@@ -486,7 +486,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Inicio del ejemplo&#93;](#examples)
 
-### <a name="restoring_db_using_RESTART"></a> C. Restaurar una base de datos con la sintaxis de RESTART
+### <a name="c-restoring-a-database-using-restart-syntax"></a><a name="restoring_db_using_RESTART"></a> C. Restaurar una base de datos con la sintaxis de RESTART
 
 En el ejemplo siguiente se usa la opción `RESTART` para reiniciar una operación `RESTORE` interrumpida por un error de alimentación del servidor.
 
@@ -501,7 +501,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Inicio del ejemplo&#93;](#examples)
 
-### <a name="restoring_db_n_move_files"></a> D. Restaurar una base de datos y mover archivos
+### <a name="d-restoring-a-database-and-move-files"></a><a name="restoring_db_n_move_files"></a> D. Restaurar una base de datos y mover archivos
 
 En el ejemplo siguiente se restaura una base de datos completa y el registro de transacciones, y se mueve la base de datos restaurada al directorio `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.
 
@@ -520,7 +520,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;Inicio del ejemplo&#93;](#examples)
 
-### <a name="copying_db_using_bnr"></a> E. Copiar una base de datos con BACKUP y RESTORE
+### <a name="e-copying-a-database-using-backup-and-restore"></a><a name="copying_db_using_bnr"></a> E. Copiar una base de datos con BACKUP y RESTORE
 
 En el ejemplo siguiente se usan las instrucciones `BACKUP` y `RESTORE` para realizar una copia de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. La instrucción `MOVE` hace que se restauren los datos y el archivo de registro en las ubicaciones especificadas. La instrucción `RESTORE FILELISTONLY` se usa para determinar el número y los nombres de los archivos de la base de datos que se están restaurando. La nueva copia de la base de datos se denomina `TestDB`. Para obtener más información, vea [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).
 
@@ -540,7 +540,7 @@ GO
 
 [&#91;Inicio del ejemplo&#93;](#examples)
 
-### <a name="restoring_to_pit_using_STOPAT"></a> F. Restaurar a un momento dado con STOPAT
+### <a name="f-restoring-to-a-point-in-time-using-stopat"></a><a name="restoring_to_pit_using_STOPAT"></a> F. Restaurar a un momento dado con STOPAT
 
 En el ejemplo siguiente se restaura una base de datos al estado en que se encontraba a las `12:00 AM` del `April 15, 2020` y se muestra una operación de restauración que implica varias copias de seguridad de registros. En el dispositivo de copia de seguridad, `AdventureWorksBackups`, la copia de seguridad de base de datos completa que se va a restaurar es el tercer conjunto de copia de seguridad en el dispositivo (`FILE = 3`), la primera copia de seguridad de registros es el cuarto conjunto de copia de seguridad (`FILE = 4`) y la segunda copia de seguridad de registros es el quinto conjunto de copia de seguridad (`FILE = 5`).
 
@@ -562,7 +562,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 
 [&#91;Inicio del ejemplo&#93;](#examples)
 
-### <a name="restoring_transaction_log_to_mark"></a> G. Restaurar el registro de transacciones hasta una marca
+### <a name="g-restoring-the-transaction-log-to-a-mark"></a><a name="restoring_transaction_log_to_mark"></a> G. Restaurar el registro de transacciones hasta una marca
 
 En el ejemplo siguiente se restaura el registro de transacciones hasta la marca de la transacción marcada denominada `ListPriceUpdate`.
 
@@ -601,7 +601,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;Inicio del ejemplo&#93;](#examples)
 
-### <a name="restoring_using_TAPE"></a> H. Restaurar con la sintaxis de TAPE
+### <a name="h-restoring-using-tape-syntax"></a><a name="restoring_using_TAPE"></a> H. Restaurar con la sintaxis de TAPE
 
 En el siguiente ejemplo se restaura una copia de seguridad completa de la base de datos desde un dispositivo de copia de seguridad `TAPE`.
 
@@ -612,7 +612,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Inicio del ejemplo&#93;](#examples)
 
-### <a name="restoring_using_FILE_n_FG"></a> I. Restaurar con la sintaxis de FILE y FILEGROUP
+### <a name="i-restoring-using-file-and-filegroup-syntax"></a><a name="restoring_using_FILE_n_FG"></a> I. Restaurar con la sintaxis de FILE y FILEGROUP
 
 En el siguiente ejemplo se restaura una base de datos denominada `MyDatabase` que tiene dos archivos, un grupo de archivos secundario y un registro de transacciones. La base de datos usa el modelo de recuperación completa.
 
@@ -656,7 +656,7 @@ GO
 
 [&#91;Inicio del ejemplo&#93;](#examples)
 
-### <a name="reverting_from_db_snapshot"></a> J. Revertir desde una instantánea de base de datos
+### <a name="j-reverting-from-a-database-snapshot"></a><a name="reverting_from_db_snapshot"></a> J. Revertir desde una instantánea de base de datos
 
 En este ejemplo se revierte una base de datos a una instantánea de base datos. En el ejemplo se supone que solo existe una instantánea en la base de datos. Para obtener un ejemplo de creación de esta instantánea de base de datos, vea [Crear una instantánea de base de datos](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).
 
@@ -673,7 +673,7 @@ Para más información, vea [Revertir una base de datos a una instantánea de ba
 
 [&#91;Inicio del ejemplo&#93;](#examples)
 
-### <a name="Azure_Blob"></a> K. Restaurar desde el servicio Microsoft Azure Blob Storage
+### <a name="k-restoring-from-the-microsoft-azure-blob-storage-service"></a><a name="Azure_Blob"></a> K. Restaurar desde el servicio Microsoft Azure Blob Storage
 
 En los tres ejemplos siguientes se usa el servicio Microsoft Azure Blob Storage. El nombre de la cuenta de almacenamiento es `mystorageaccount`. El contenedor de los archivos de datos se denomina `myfirstcontainer`. El contenedor de los archivos de copia de seguridad se denomina `mysecondcontainer`. Se ha creado una directiva de acceso almacenada con derechos de lectura, escritura, eliminación y lista para cada contenedor. Se han creado credenciales de SQL Server con Firmas de acceso compartido asociadas a las directivas de acceso almacenadas. Para más información específica sobre las operaciones de copia de seguridad y restauración de SQL Server con Microsoft Azure Blob Storage, vea [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -814,11 +814,11 @@ GRANT CREATE ANY DATABASE TO [mylogin];
 
 Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos `db_owner` no tienen permisos RESTORE.
 
-## <a name="examples"></a> Ejemplos
+## <a name="examples"></a><a name="examples"></a> Ejemplos
 
 En los ejemplos siguientes se restaura una copia de seguridad de base de datos de solo copia desde una dirección URL, incluida la creación de una credencial.
 
-### <a name="restore-mi-database"></a> A. Restauración de una base de datos a partir de cuatro dispositivos de copia de seguridad
+### <a name="a-restore-database-from-four-backup-devices"></a><a name="restore-mi-database"></a> A. Restauración de una base de datos a partir de cuatro dispositivos de copia de seguridad
 
 ```sql
 
@@ -842,7 +842,7 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 
-### <a name="restore-mi-database-variables"></a> B. Restauración de la base de datos especificada mediante una variable
+### <a name="b-restore-database-specified-via-variable"></a><a name="restore-mi-database-variables"></a> B. Restauración de la base de datos especificada mediante una variable
 
 ```sql
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
@@ -852,7 +852,7 @@ RESTORE DATABASE @db_name
 FROM URL = @url
 ```
 
-### <a name="restore-mi-database-progress"></a> C. Seguimiento del progreso de la instrucción de restauración
+### <a name="c-track-progress-of-restore-statement"></a><a name="restore-mi-database-progress"></a> C. Seguimiento del progreso de la instrucción de restauración
 
 ```sql
 SELECT query = a.text, start_time, percent_complete,

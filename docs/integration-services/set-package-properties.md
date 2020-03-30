@@ -26,10 +26,10 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281938"
 ---
 # <a name="set-package-properties"></a>Establecer las propiedades de paquetes
@@ -68,7 +68,7 @@ ms.locfileid: "71281938"
 ## <a name="properties-by-category"></a>Propiedades por categoría  
  Las siguientes tablas enumeran las propiedades de paquete por categoría.  
   
-###  <a name="Checkpoints"></a> Puntos de comprobación  
+###  <a name="checkpoints"></a><a name="Checkpoints"></a> Puntos de comprobación  
  Puede usar las propiedades de esta categoría para reiniciar el paquete desde un punto de error en el flujo de control de paquetes, en lugar de volver a ejecutar el paquete desde el principio de su flujo de control. Para obtener más información, vea [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 |Propiedad|Descripción|  
@@ -80,7 +80,7 @@ ms.locfileid: "71281938"
 > [!NOTE]  
 >  La opción **/CheckPointing on** de dtexec equivale a establecer en True el valor de la propiedad **SaveCheckpoints** del paquete y el de la propiedad **CheckpointUsage** en Always. Para obtener más información, consulte [utilidad dtexec](../integration-services/packages/dtexec-utility.md).  
   
-###  <a name="Execution"></a> Ejecución  
+###  <a name="execution"></a><a name="Execution"></a> Ejecución  
  Las propiedades en esta categoría configuran el comportamiento de tiempo de ejecución del objeto de paquete.  
   
 |Propiedad|Descripción|  
@@ -94,7 +94,7 @@ ms.locfileid: "71281938"
 |**MaximumErrorCount**|Cantidad máxima de errores que se pueden producir antes de que un paquete termine de ejecutarse. El valor predeterminado de esta propiedad es **1**.|  
 |**PackagePriorityClass**|Clase de prioridad de subproceso Win32 del subproceso del paquete. Los valores son **Default**, **AboveNormal**, **Normal**, **BelowNormal**y **Idle**. El valor predeterminado de esta propiedad es **Default**. Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DTSPriorityClass>.|  
   
-###  <a name="ForcedExecutionValue"></a> Valor de ejecución forzada  
+###  <a name="forced-execution-value"></a><a name="ForcedExecutionValue"></a> Valor de ejecución forzada  
  Las propiedades de esta categoría configuran un valor de ejecución opcional para el paquete.  
   
 |Propiedad|Descripción|  
@@ -103,7 +103,7 @@ ms.locfileid: "71281938"
 |**ForcedExecutionValueType**|Tipo de datos de ForcedExecutionValue. El valor predeterminado de esta propiedad es **Int32**.|  
 |**ForceExecutionValue**|Valor booleano que especifica si se debería forzar a que el valor de ejecución opcional del contenedor contenga un valor concreto. El valor predeterminado de esta propiedad es **False**.|  
   
-###  <a name="Identification"></a> Identificación  
+###  <a name="identification"></a><a name="Identification"></a> Identificación  
  Las propiedades de esta categoría proporcionan información como el identificador único y el nombre del paquete.  
   
 |Propiedad|Descripción|  
@@ -116,7 +116,7 @@ ms.locfileid: "71281938"
 |**Nombre**|Nombre del paquete.|  
 |**PackageType**|Tipo de paquete. Los valores son **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**y **SQLReplication**. El valor predeterminado de esta propiedad es **Default**. Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
-###  <a name="Misc"></a> Varios  
+###  <a name="misc"></a><a name="Misc"></a> Varios  
  Las propiedades de esta categoría se usan para obtener acceso a las configuraciones y expresiones que usa un paquete y proporcionar información acerca de la configuración regional y modo de registro del paquete. Para más información, vea [Usar expresiones de propiedad en paquetes](../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 |Propiedad|Descripción|  
@@ -130,7 +130,7 @@ ms.locfileid: "71281938"
 |**SuppressConfigurationWarnings**|Indica si se suprimen las advertencias generadas por configuraciones. El valor predeterminado de esta propiedad es **False**.|  
 |**UpdateObjects**|Indica si el paquete se actualiza para usar versiones más recientes de los objetos que contiene, si hay versiones más recientes disponibles. Por ejemplo, si esta propiedad se establece en **True**, un paquete que incluye una tarea Inserción masiva se actualiza para usar una versión más reciente de la tarea Inserción masiva que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El valor predeterminado de esta propiedad es **False**.|  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Las propiedades en esta categoría se usan para configurar el nivel de protección del paquete. Para más información, consulte [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
 |Propiedad|Descripción|  
@@ -138,7 +138,7 @@ ms.locfileid: "71281938"
 |**PackagePassword**|Contraseña de los niveles de protección del paquete (**EncryptSensitiveWithPassword** y **EncryptAllWithPassword**) que requieren contraseñas.|  
 |**ProtectionLevel**|El nivel de protección del paquete. Los valores son **DontSaveSensitive**, **EncryptSensitiveWithUserKey**, **EncryptSensitiveWithPassword**, **EncryptAllWithPassword**y **ServerStorage**. El valor predeterminado de esta propiedad es **EncryptSensitiveWithUserKey**. Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
   
-###  <a name="Transactions"></a> Transactions  
+###  <a name="transactions"></a><a name="Transactions"></a> Transactions  
  Las propiedades en esta categoría configuran el nivel de aislamiento y la opción de transacción del paquete. Para más información, vea [Transacciones de Integration Services](../integration-services/integration-services-transactions.md).  
   
 |Propiedad|Descripción|  
@@ -146,7 +146,7 @@ ms.locfileid: "71281938"
 |**IsolationLevel**|Nivel de aislamiento de la transacción del paquete. Los valores son **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**y **Snapshot**. El valor predeterminado de esta propiedad es **Serializable**.<br /><br /> Nota: El valor **Snapshot** de la propiedad **IsolationLevel** es incompatible con las transacciones de paquete. Por consiguiente, no puede utilizar la propiedad **IsolationLevel** para establecer el nivel de aislamiento de las transacciones de paquete en **Shapshot**. En su lugar, utilice una consulta SQL para establecer las transacciones de paquete en **Snapshot**. Para obtener más información, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).<br /><br /> El sistema aplica la propiedad **IsolationLevel** a las transacciones de paquete solamente cuando el valor de la propiedad **TransactionOption** se establece en **Required**.<br /><br /> El valor de la propiedad **IsolationLevel** solicitado por un contenedor secundario se omite cuando se cumplen las condiciones siguientes:<br />El valor de la propiedad **TransactionOption** del contenedor secundario es **Supported**.<br />El contenedor secundario combina la transacción de un contenedor primario.<br /><br /> El valor de la propiedad **IsolationLevel** solicitado por el contenedor se respeta solamente cuando el contenedor inicia una nueva transacción. Un contenedor inicia una nueva transacción cuando se cumplen las condiciones siguientes:<br />El valor de la propiedad **TransactionOption** del contenedor es **Required**.<br />El contenedor primario aún no ha iniciado una transacción.<br /><br /> <br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |**TransactionOption**|Participación transaccional del paquete. Los valores son **NotSupported**, **Supported**y **Required**. El valor predeterminado de esta propiedad es **Supported**. Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
-###  <a name="Version"></a> Versión  
+###  <a name="version"></a><a name="Version"></a> Versión  
  Las propiedades de esta categoría proporcionan información sobre la versión del objeto de paquete.  
   
 |Propiedad|Descripción|  

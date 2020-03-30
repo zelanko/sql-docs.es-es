@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68063144"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
@@ -42,7 +42,7 @@ Una tabla optimizada para memoria consta de una colección de filas e índices q
 ![Tabla con optimización para memoria.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Tabla optimizada para memoria.")  
 La tabla con optimización para memoria, que consta de índices y filas.  
 
-##  <a name="bkmk_TableSize"></a> Cálculo del tamaño de una tabla
+##  <a name="computing-table-size"></a><a name="bkmk_TableSize"></a> Cálculo del tamaño de una tabla
 El tamaño en memoria de una tabla, en bytes, se calcula de la forma siguiente:  
   
 ```  
@@ -63,7 +63,7 @@ El tamaño de fila se calcula agregando el encabezado y el cuerpo:
 [row size] = [row header size] + [actual row body size]  
 [row header size] = 24 + 8 * [number of indexes]  
 ```  
-##  <a name="bkmk_RowBodySize"></a> Cálculo del tamaño del cuerpo de la fila
+##  <a name="computing-row-body-size"></a><a name="bkmk_RowBodySize"></a> Cálculo del tamaño del cuerpo de la fila
 
 **Estructura de filas** Las filas de una tabla optimizada para memoria tienen los componentes siguientes:  
   
@@ -136,7 +136,7 @@ En la tabla siguiente se describe el cálculo del tamaño del cuerpo de fila, in
 |Columnas de tipo profundo de longitud variable *tamaño calculado*|SUM(*tamaño calculado de columnas de tipo profundo de longitud variable*)<br /><br /> El tamaño calculado de cada columna es el siguiente:<br /><br /> i para varchar(i) y varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Esta fila solo se aplica al *tamaño del texto calculado de la fila*.<br /><br /> Las columnas de tipo profundo de longitud variable son de tipo varchar(i), nvarchar(i) o varbinary(i). El tamaño calculado se determina mediante la longitud máxima (i) de la columna.|  
 |Columnas de tipo profundo de longitud variable *tamaño real*|SUM(*tamaño real de columnas de tipo profundo de longitud variable*)<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al *tamaño del texto real de la fila*.<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|   
   
-##  <a name="bkmk_ExampleComputation"></a> Ejemplo: cálculo del tamaño de fila y tabla  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> Ejemplo: Cálculo del tamaño de fila y tabla  
  Para los índices hash, el número de cubos real se redondea a la potencia más cercana de 2. Por ejemplo, si el valor `bucket_count` especificado es 100 000, el número real de cubos para el índice es 131 072.  
   
 Considere una tabla Orders con la definición siguiente:  
@@ -204,7 +204,7 @@ A continuación, vamos a calcular [tamaño del cuerpo real de la fila]:
   
     -   El relleno total es 24 - 22 = 2 bytes.  
   
--   No hay columnas de tipo profundo de longitud fija (columnas de tipo profundo de longitud fija: 0.).  
+-   No hay columnas de tipo profundo de longitud fija (columnas de tipo profundo de longitud fija: 0).  
   
 -   El tamaño real de la columna de tipo profundo es 2 * 78 = 156. La columna de tipo profundo único `OrderDescription` tiene el tipo `nvarchar`.  
   
@@ -228,7 +228,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
 
-##  <a name="bkmk_OffRowLimitations"></a> Limitaciones de las columnas no consecutivas
+##  <a name="off-row-column-limitations"></a><a name="bkmk_OffRowLimitations"></a> Limitaciones de las columnas no consecutivas
   A continuación se muestran varias limitaciones y advertencias relacionadas con el uso de columnas no consecutivas en una tabla optimizada para memoria:
   
 -   Si hay un índice de almacén de columnas en una tabla optimizada para memoria, todas las columnas deben ajustarse de forma consecutiva. 

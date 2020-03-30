@@ -24,10 +24,10 @@ ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a94825fe0af3820ab7f39ca25a104242e21bda8c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258650"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Errores posibles de medios durante copia de seguridad y restauración (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75258650"
 >  Las copias de seguridad reflejadas proporcionan hasta cuatro copias (reflejos) de un conjunto de medios, ofreciendo copias alternativas para recuperar el sistema de los errores provocados por los medios dañados. Para obtener más información, vea [Conjuntos de medios de copia de seguridad reflejados &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
   
-##  <a name="BckChecksums"></a> Comprobaciones de copia de seguridad  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> Comprobaciones de copia de seguridad  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite tres tipos de sumas de comprobación: una suma de comprobación de páginas, una de bloques de registro y una de copia de seguridad. Al generar una suma de comprobación de copia de seguridad, BACKUP comprueba que los datos que se leen de la base de datos son coherentes con cualquier suma de comprobación o indicación de página rasgada de la base de datos.  
   
  La instrucción BACKUP calcula opcionalmente una suma de comprobación de copia de seguridad en el flujo de copia de seguridad; si hay una suma de comprobación de página o información de página rasgada en determinada página, al hacer la copia de seguridad de la página, BACKUP comprueba también el estado de página rasgada, la suma de comprobación y el Id. de la página. Al crear una suma de comprobación de copia de seguridad, una operación de copia de seguridad no agrega sumas de comprobación a las páginas. Las páginas se copian tal y como están en la base de datos y la copia de seguridad no las modifica.  
@@ -75,7 +75,7 @@ ms.locfileid: "75258650"
   
 4.  Emite un mensaje que indica que la copia de seguridad se generó correctamente, pero contiene errores de página.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para habilitar o deshabilitar sumas de comprobación de copia de seguridad**  
   
 -   [Habilitar o deshabilitar sumas de comprobación de copia de seguridad durante copia de seguridad o restauración &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

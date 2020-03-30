@@ -11,10 +11,10 @@ ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3e3ba3d7da52f10b9bd51934b25f44a38a16be0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971719"
 ---
 # <a name="sqlserverconnection-members"></a>Miembros SQLServerConnection
@@ -61,7 +61,7 @@ ms.locfileid: "67971719"
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|Recupera un objeto [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) que contiene los metadatos sobre la base de datos para la que este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) representa una conexión.|  
 |[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|Devuelve el valor de la propiedad de conexión **serverPreparedStatementDiscardThreshold**.|  
 |[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|Devuelve el número actual de identificadores de instrucción preparada agrupados.|  
-|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|Devuelve el tamaño de la memoria caché de instrucciones preparadas para esta conexión.|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|Devuelve el tamaño de la caché de instrucciones preparadas para esta conexión.|  
 |[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|Recupera el nivel de aislamiento de transacción actual para este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|Recupera el objeto Map que está asociado a este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|Recupera la primera advertencia que notifican las llamadas en este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  

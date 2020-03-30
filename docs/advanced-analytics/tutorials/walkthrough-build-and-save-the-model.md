@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4cb806c0a6286ec8a6608b346d12e666a8e9a09f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73724530"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Compilación de un modelo de R y almacenamiento en SQL Server (tutorial)
@@ -21,7 +21,7 @@ ms.locfileid: "73724530"
 
 En este paso, aprenderá a generar un modelo de Machine Learning y a guardarlo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando un modelo se guarda, se puede llamar directamente a él desde código de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante el procedimiento almacenado del sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), o la [función PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 En este paso se da por supuesto que hay una sesión de R en curso basada en los pasos anteriores de este tutorial. Usaremos las cadenas de conexión y los objetos de origen de datos creados en esos pasos. También emplearemos las siguientes herramientas y paquetes para ejecutar el script.
 

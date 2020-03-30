@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 28923ccb78e3edfa4de7b7e780195a643ec9914e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72381873"
 ---
 # <a name="initialization-and-authorization-properties"></a>Propiedades de inicialización y autorización
@@ -94,6 +94,6 @@ Server=MyServer;UID=MyUserName;
  Para obtener una lista de las palabras disponibles en OLE DB Driver for SQL Server, consulte [Uso de palabras clave de cadena de conexión con OLE DB Driver for SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Objetos de origen de datos (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objetos de origen de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

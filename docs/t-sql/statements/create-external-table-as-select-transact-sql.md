@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68073145"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  La base de datos notificará los errores de Java que se producen en el origen de datos externo durante la exportación de datos.  
   
-##  <a name="GeneralRemarks"></a> Notas generales  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> Notas generales  
  Una vez finalizada la instrucción CREATE EXTERNAL TABLE AS SELECT, se pueden ejecutar consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la tabla externa. Estas operaciones importarán datos a la base de datos el tiempo que dure la consulta, a menos que la importación se realice con la instrucción CREATE TABLE AS SELECT.  
   
  La definición y el nombre de tabla externa se almacenan en los metadatos de la base de datos. Los datos se almacenan en el origen de datos externo.  
@@ -189,7 +189,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="locking"></a>Bloqueo  
  Toma un bloqueo compartido en el objeto SCHEMARESOLUTION.  
   
-##  <a name="Examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="Examples"></a> Ejemplos  
   
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. Crear una tabla de Hadoop con CREATE EXTERNAL TABLE AS SELECT  
  En el siguiente ejemplo se crea una tabla externa denominada `hdfsCustomer`, usando para ello los datos y las definiciones de columna de la tabla de origen `dimCustomer`.  

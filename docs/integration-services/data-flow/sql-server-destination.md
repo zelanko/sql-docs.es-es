@@ -22,10 +22,10 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 481cac0715f00c7d29a92b77101c4a09a28056a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298046"
 ---
 # <a name="sql-server-destination"></a>SQL Server, destino
@@ -39,7 +39,7 @@ ms.locfileid: "71298046"
  Los usuarios que ejecutan paquetes que incluyen el destino de SQL Server deben tener el permiso Crear objetos globales. Para otorgar este permiso a los usuarios, utilice la herramienta Directiva de seguridad local que se abre desde el menú **Herramientas administrativas** . Si recibe un mensaje de error al ejecutar un paquete que utiliza el destino de SQL Server, asegúrese de que la cuenta que ejecuta el paquete tiene el permiso Crear objetos globales.  
   
 ## <a name="bulk-inserts"></a>Inserciones masivas  
- Si se intenta usar el destino de SQL Server para realizar una carga masiva de datos en una base de datos remota de SQL Server, puede recibir un mensaje de error similar al siguiente: "Hay un registro OLE DB disponible". Origen: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Descripción: "No se pudo realizar la carga masiva porque el objeto de asignación de archivos "Global\DTSQLIMPORT" no se pudo abrir. Código de error del sistema operativo 2 (El sistema no encuentra el archivo especificado). Asegúrese de que tiene acceso a un servidor local mediante Seguridad de Windows."".  
+ Si se intenta utilizar el destino de SQL Server para realizar una carga masiva de datos en una base de datos remota de SQL Server, puede recibir un mensaje de error similar al siguiente: "Hay un registro OLE DB disponible. Origen: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Resultado: 0x80040E14 Descripción: "No se pudo realizar la carga masiva porque el objeto de asignación de archivos SSIS "Global\DTSQLIMPORT" no se pudo abrir. Código de error del sistema operativo 2 (El sistema no encuentra el archivo especificado). Asegúrese de que tiene acceso a un servidor local mediante Seguridad de Windows."".  
   
  El destino de SQL Server ofrece la misma inserción de datos de alta velocidad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que proporciona la tarea Inserción masiva. En cambio, al usar el destino de SQL Server, un paquete puede aplicar transformaciones a los datos de las columnas antes de que estos se carguen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

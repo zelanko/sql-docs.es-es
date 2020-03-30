@@ -17,10 +17,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e69d3d2d73a53f6bdd8a3fe7282c1e9ad65b5773
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095293"
 ---
 # <a name="upgrade-full-text-search"></a>Actualizar la búsqueda de texto completo
@@ -28,7 +28,7 @@ ms.locfileid: "68095293"
   La actualización de la búsqueda de texto completo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se realiza durante la instalación y al adjuntar, restaurar o copiar archivos de base de datos y catálogos de texto completo de la versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el Asistente para copiar bases de datos.  
   
   
-##  <a name="Upgrade_Server"></a> Actualizar una instancia de servidor  
+##  <a name="upgrade-a-server-instance"></a><a name="Upgrade_Server"></a> Actualizar una instancia de servidor  
  Si se trata de una actualización en contexto, se instalan en paralelo una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y la versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se migran los datos. Si la versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenía instalada la función de búsqueda de texto completo, automáticamente se instala una nueva versión de dicha función. Para poder realizar la instalación en paralelo, es necesaria la presencia de los componentes siguientes en cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Separadores de palabras, lematizadores y filtros  
@@ -43,7 +43,7 @@ ms.locfileid: "68095293"
  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], cada índice de texto completo reside en un catálogo de texto completo que pertenece a un grupo de archivos, tiene una ruta de acceso física y es tratado como un archivo de base de datos. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, un catálogo de texto completo es un concepto lógico o virtual que contiene un grupo de índices de texto completo. Por consiguiente, no se trata a cada nuevo catálogo de texto completo como un archivo de base de datos con una ruta de acceso física. Sin embargo, durante la actualización de cualquier catálogo de texto completo que contiene archivos de datos, se crea un nuevo grupo de archivos en el mismo disco. Esto conserva el comportamiento de E/S del disco antiguo después de la actualización. Si la ruta de acceso raíz existe, todos los índices de texto completo del catálogo se situarán en el nuevo grupo de archivos. Si la ruta de acceso al catálogo de texto completo anterior no es válida, la actualización mantiene el índice de texto completo en el mismo grupo de archivos que la tabla base o, si se trata de una tabla con particiones, en el grupo de archivos principal.  
   
   
-##  <a name="FT_Upgrade_Options"></a> Opciones de actualización de texto completo  
+##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a> Opciones de actualización de texto completo  
  Durante la actualización de una instancia de servidor a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la interfaz de usuario le permite elegir una de las opciones de actualización de texto completo siguientes.  
   
 **Importar**  
@@ -62,7 +62,7 @@ ms.locfileid: "68095293"
  **Reset**  
  Los catálogos de texto completo se restablecen. Cuando se actualizan desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], los catálogos de texto completo se quitan, pero los metadatos de los catálogos de texto completo y los índices de texto completo se conservan. Después de actualizarse, todos los índices de texto completo quedan deshabilitados para el seguimiento de cambios y los rastreos no se inician de forma automática. El catálogo permanecerá vacío hasta que se emita manualmente un rellenado completo después de que se complete la actualización.  
   
-##  <a name="Choosing_Upgade_Option"></a> Consideraciones sobre la elección de una opción de actualización de texto completo  
+##  <a name="considerations-for-choosing-a-full-text-upgrade-option"></a><a name="Choosing_Upgade_Option"></a> Consideraciones sobre la elección de una opción de actualización de texto completo  
  Cuando elija la opción de actualización, tenga en cuenta lo siguiente:  
   
 -   ¿Necesita coherencia en los resultados de consulta?  
@@ -114,7 +114,7 @@ Cuando una base de datos se actualiza a [!INCLUDE[ssCurrent](../../includes/sscu
   
  Para los catálogos de texto completo importados de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el catálogo de texto completo sigue siendo un archivo de base de datos en su propio grupo de archivos. Se sigue aplicando el proceso de copia de seguridad de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para los catálogos de texto completo, con la salvedad de que el servicio MSFTESQL no existe en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información sobre el proceso de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vea [Backing Up and Restoring Full-Text Catalogs (Copia de seguridad y restauración de catálogos de texto completo)](https://go.microsoft.com/fwlink/?LinkId=209154) en los Libros en pantalla de SQL Server 2005.  
   
-##  <a name="Upgrade_Db"></a> Migrar índices de texto completo al actualizar una base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> Migrar índices de texto completo al actualizar una base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Los archivos de base de datos y los catálogos de texto completo de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden actualizar a una instancia del servidor de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existente mediante operaciones de anexión o restauración, o con el Asistente para copiar bases de datos. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] los índices de texto completo, si los hubiera, se importan, se restablecen o se vuelven a compilar. La propiedad de servidor **upgrade_option** controla cuál de las opciones de actualización de texto completo usa la instancia del servidor durante estas actualizaciones de bases de datos.  
   
  Después de adjuntar, restaurar o copiar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], queda disponible inmediatamente y se actualiza a continuación de forma automática. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en importar y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados.  
@@ -125,7 +125,7 @@ Cuando una base de datos se actualiza a [!INCLUDE[ssCurrent](../../includes/sscu
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use la **opción Actualización de texto completo** del cuadro de diálogo **Propiedades del servidor**. Para obtener más información, vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
-##  <a name="Considerations_for_Restore"></a> Consideraciones sobre la restauración de un catálogo de texto completo de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a> Consideraciones sobre la restauración de un catálogo de texto completo de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Una forma de actualizar los datos de texto completo de una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste en restaurar una copia de seguridad completa de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Al importar un catálogo de texto completo de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , puede hacer una copia de seguridad y restaurar la base de datos y el archivo de catálogo. El comportamiento es el mismo que en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -168,7 +168,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a> Adjuntar una base de datos de SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="attaching-a-sql-server-2005-database-to-sscurrent"></a><a name="Attaching_2005_ft_catalogs"></a> Adjuntar una base de datos de SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, un catálogo de texto completo es un concepto lógico que hace referencia a un grupo de índices de texto completo. Un catálogo de texto completo es un objeto virtual y no pertenece a ningún grupo de archivos. Sin embargo, al adjuntar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que contiene archivos de catálogo de texto completo a una instancia del servidor de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , los archivos de catálogo se adjuntan desde su ubicación anterior junto con los demás archivos de base de datos, igual que en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  El estado de cada catálogo de texto completo adjunto de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] es el mismo que el que tenía la base de datos cuando se separó de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Si, durante la operación de separación, se suspendió cualquier tarea de rellenado de un índice de texto completo, ésta se reanudará en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], por lo que será posible realizar búsquedas de texto completo en dicho índice de texto completo.  

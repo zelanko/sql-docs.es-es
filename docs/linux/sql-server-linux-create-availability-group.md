@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077444"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creación y configuración de un grupo de disponibilidad para SQL Server en Linux
@@ -59,7 +59,7 @@ También puede modificar el archivo `mssql.conf`, que se encuentra en la carpeta
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Reiniciar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-ssnoversion-md"></a>Reiniciar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Después de habilitar los grupos de disponibilidad, como en Windows, debe reiniciar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Lo puede hacer con el siguiente código:
 
 ```bash
@@ -316,7 +316,7 @@ En este ejemplo se crean certificados para una configuración de tres nodos. Los
 
 En esta sección se explica cómo usar [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) o Transact-SQL para crear el grupo de disponibilidad para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-ssmanstudiofull-md"></a>Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo de clúster Externo mediante SSMS con el Asistente para nuevo grupo de disponibilidad.
 
@@ -533,7 +533,7 @@ En este ejemplo se muestra la creación de una configuración de dos réplicas c
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Crear el inicio de sesión de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] y los permisos para Pacemaker
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>Crear el inicio de sesión de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] y los permisos para Pacemaker
 
 Un clúster de alta disponibilidad de Pacemaker subyacente a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux necesita acceso a la instancia de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], así como permisos en el propio grupo de disponibilidad. Estos pasos crean el inicio de sesión y los permisos asociados, junto con un archivo que indica a Pacemaker cómo iniciar sesión en [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 

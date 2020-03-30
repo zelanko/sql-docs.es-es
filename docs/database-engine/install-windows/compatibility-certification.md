@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73632934"
 ---
 # <a name="compatibility-certification"></a>Certificación de compatibilidad
@@ -57,7 +57,7 @@ Siempre y cuando la aplicación no necesite aprovechar las mejoras que solo est�
 
 Para los nuevos trabajos de desarrollo, o en el caso de que una aplicación existente requiera el uso de características nuevas, como el [Procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md), así como algunos [!INCLUDE[tsql](../../includes/tsql-md.md)] nuevos, plantéese actualizar el nivel de compatibilidad de base de datos a la versión más reciente disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y certifique la aplicación para que funcione con ese nivel de compatibilidad. Para obtener más información sobre cómo actualizar el nivel de compatibilidad de base de datos, consulte [Prácticas recomendadas para actualizar el nivel de compatibilidad de base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level).
    
-### <a name="queryplan_shape"></a> ¿Por qué es necesaria la forma del plan de consulta?      
+### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> ¿Por qué es necesaria la forma del plan de consulta?      
 La forma del plan de consulta hace referencia a la representación visual de los distintos operadores que componen un plan de consulta. Esto incluye operadores como búsquedas, exámenes, combinaciones y ordenaciones, así como las conexiones entre ellos que indican el flujo de datos y el orden de las operaciones que se deben ejecutar para conseguir el conjunto de resultados previsto. El optimizador de consultas determina la forma del plan de consulta.
 
 Para que el rendimiento de las consultas sea predecible durante una actualización, uno de los objetivos fundamentales es asegurarse de que se usa la misma forma del plan de consulta. Esto se puede lograr si no se cambia el nivel de compatibilidad de la base de datos inmediatamente después de una actualización, aunque el [!INCLUDE[ssde_md](../../includes/ssde_md.md)] subyacente tenga versiones diferentes. Si no ha cambiado nada en el ecosistema de ejecución de consultas, como cambios significativos en los recursos disponibles o la distribución de datos en los datos subyacentes, el rendimiento de una consulta debe ser inalterable. 

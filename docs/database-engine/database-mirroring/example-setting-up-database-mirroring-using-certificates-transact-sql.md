@@ -17,10 +17,10 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253591"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Ejemplo: configurar la creación de reflejo de la base de datos con certificados (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "75253591"
   
  Cuando copie un certificado en otro sistema, utilice un método de copia seguro. Tenga mucho cuidado de mantener todos sus certificados protegidos.  
   
-##  <a name="ExampleH2"></a> Ejemplo  
+##  <a name="example"></a><a name="ExampleH2"></a> Ejemplo  
  En el ejemplo siguiente se muestra lo que se debe hacer en un asociado que reside en el HOST_A. En este ejemplo, los dos asociados son las instancias de servidor predeterminadas en tres equipos. Las dos instancias de servidor se ejecutan en dominios de Windows que no son de confianza, por lo que se requiere la autenticación basada en certificados.  
   
  HOST_A adopta el rol principal inicial y HOST_B adopta el rol reflejado.  
@@ -62,7 +62,7 @@ ms.locfileid: "75253591"
   
 4.  [Configurar los asociados de creación de reflejo](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> Configurar conexiones salientes  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a> Configurar conexiones salientes  
  **Para configurar Host_A para conexiones salientes**  
   
 1.  En la base de datos maestra, cree la clave maestra de la base de datos si es necesaria.  
@@ -156,7 +156,7 @@ ms.locfileid: "75253591"
   
  [&#91;Inicio del ejemplo&#93;](#ExampleH2)  
   
-###  <a name="ConfigureInboundConnections"></a> Configurar conexiones entrantes  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a> Configurar conexiones entrantes  
  **Para configurar Host_A para conexiones entrantes**  
   
 1.  Cree un inicio de sesión en HOST_A para HOST_B.  
@@ -233,7 +233,7 @@ ms.locfileid: "75253591"
 ### <a name="creating-the-mirror-database"></a>Crear la base de datos reflejada  
  Para obtener más información sobre cómo crear una base de datos reflejada, vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-###  <a name="ConfigureMirroringPartners"></a> Configurar los asociados de creación de reflejo  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a> Configurar los asociados de creación de reflejo  
   
 1.  En la instancia del servidor reflejado en HOST_B, establezca la instancia de servidor en HOST_A como asociado (para convertirla en la instancia inicial del servidor principal): Sustituya una dirección de red válida por `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
@@ -267,7 +267,7 @@ ms.locfileid: "75253591"
   
  [&#91;Inicio del ejemplo&#93;](#ExampleH2)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

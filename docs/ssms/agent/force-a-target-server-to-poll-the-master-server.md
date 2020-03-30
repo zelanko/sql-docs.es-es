@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d9cd601d93666faad86fb8698bbc0b5ae8424454
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242378"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
@@ -41,15 +41,15 @@ Un trabajo es una serie especificada de acciones que realiza el Agente [!INCLUDE
   
 -   **Acción de forzar que un servidor de destino sondee el servidor maestro utilizando lo siguiente:** [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Restrictions"></a>Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitaciones y restricciones  
 El servidor de destino debe ser un servidor registrado en el servidor maestro. Debe ejecutar las instrucciones proporcionadas en este tema desde el servidor maestro.  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
 Para obtener información detallada, vea [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) y [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
-## <a name="SSMS"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Usar SQL Server Management Studio  
 **Para forzar que un servidor de destino sondee el servidor maestro**  
   
 1.  En el **Explorador de objetos**, expanda el servidor maestro.  

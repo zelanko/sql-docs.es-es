@@ -14,10 +14,10 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da0da7ae26d859c8bd7ea4b92ff126819d6bc2ae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025390"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Quitar la creación de reflejo de la base de datos (SQL Server)
@@ -40,14 +40,14 @@ ms.locfileid: "68025390"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-remove-database-mirroring"></a>Para quitar la creación de reflejo de la base de datos  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68025390"
   
 5.  Para quitar la creación de reflejo, haga clic en **Quitar creación de reflejo**. Aparecerá un mensaje de confirmación. Si hace clic en **Sí**, se detendrá la sesión y la creación de reflejo se quitará de la base de datos.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Para quitar la creación de reflejo de la base de datos, use las **Propiedades de la base de datos**. Use la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
   
 #### <a name="to-remove-database-mirroring"></a>Para quitar la creación de reflejo de la base de datos  
@@ -84,7 +84,7 @@ ms.locfileid: "68025390"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Quitar la creación de reflejo de la base de datos  
+##  <a name="follow-up-removing-database-mirroring"></a><a name="FollowUp"></a> Seguimiento: Quitar la creación de reflejo de la base de datos  
   
 > [!NOTE]  
 >  Para obtener más información sobre las repercusiones de quitar la creación de reflejo, vea [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
@@ -104,7 +104,7 @@ ms.locfileid: "68025390"
     > [!IMPORTANT]  
     >  Si recupera esta base de datos, habrá dos bases de datos divergentes en línea con el mismo nombre. Por tanto, debe garantizar que los clientes solo puedan acceder a una de ellas, generalmente la base de datos principal más reciente.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Pausar o reanudar una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  
   

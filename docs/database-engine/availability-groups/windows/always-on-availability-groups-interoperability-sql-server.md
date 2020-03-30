@@ -14,10 +14,10 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1f42630e101a60c9d3265ab96a5b126551eeaff0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991592"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Grupos de disponibilidad Always On: interoperabilidad (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "67991592"
 
 En este tema se documenta la interoperabilidad de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con otras características de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].
 
-## <a name="Interop"></a> Características que interoperan con los grupos de disponibilidad Always On
+## <a name="features-that-interoperate-with-always-on-availability-groups"></a><a name="Interop"></a> Características que interoperan con los grupos de disponibilidad Always On
 
 En la tabla siguiente se enumeran las características de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que interoperan con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Los vínculos de la columna **Más información** indican que existen consideraciones de interoperabilidad sobre una determinada característica.
 
@@ -46,20 +46,20 @@ En la tabla siguiente se enumeran las características de [!INCLUDE[ssNoVersion]
 |Service Broker|[Service Broker con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)|
 |Agente SQL Server|&nbsp;|
 
-## <a name="restrictions"></a> Características que interoperan con los grupos de disponibilidad AlwaysOn con restricciones
+## <a name="features-that-interoperate-with-always-on-availability-groups-with-restrictions"></a><a name="restrictions"></a> Características que interoperan con los grupos de disponibilidad AlwaysOn con restricciones
 
 Las siguientes características interoperan con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con restricciones específicas. Para obtener detalles, consulte los temas vinculados.
 
 - Transacciones entre bases de datos o transacciones distribuidas ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] y Windows Server 2016). Para obtener más información, vea [Transacciones entre bases de datos no compatibles para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 - El [Recopilador de datos del sistema de estadísticas de consulta](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) no se puede ejecutar de forma confiable en un entorno con elementos secundarios no legibles. Para utilizar el recopilador de datos del sistema de estadísticas de consulta, establezca todas las réplicas del grupo de disponibilidad secundaria para permitir el [acceso de lectura](configure-read-only-access-on-an-availability-replica-sql-server.md). 
 
-## <a name="NoInterop"></a> Características que no interoperan con los grupos de disponibilidad AlwaysOn
+## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> Características que no interoperan con los grupos de disponibilidad AlwaysOn
 
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no interopera con las siguientes características:
 
 - Creación de reflejo de base de datos. Para obtener más información, vea [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
-## <a name="RelatedContent"></a> Contenido relacionado
+## <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado
 
 - **Blogs:**
 

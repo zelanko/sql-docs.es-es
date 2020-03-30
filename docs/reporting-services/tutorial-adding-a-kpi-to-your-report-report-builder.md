@@ -9,10 +9,10 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041887"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
@@ -32,7 +32,7 @@ Tiempo estimado para completar este tutorial: 15 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Table"></a>1. Crear un informe de tabla y un conjunto de datos con el asistente para tablas o matrices  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1. Crear un informe de tabla y un conjunto de datos con el asistente para tablas o matrices  
 En esta sección, elija un origen de datos compartido, cree un conjunto de datos incrustado y muestre los datos en una tabla.  
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>Para crear una tabla con un conjunto de datos incrustado  
@@ -99,7 +99,7 @@ En esta sección, elija un origen de datos compartido, cree un conjunto de datos
 
 11. Haga clic en **Next**.  
   
-## <a name="CompleteWizard"></a>2. Organizar datos y elegir el diseño en el asistente  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. Organizar datos y elegir el diseño en el asistente  
 El Asistente para tabla o matriz proporciona un diseño inicial en el que se van a mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar la tabla o el diseño de la matriz.  
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>Para organizar los datos en grupos y elegir un diseño 
@@ -173,7 +173,7 @@ Vamos a hacer las columnas más anchas y establecer el formato de moneda y fecha
  
 ![generador-de-informes-kpi-formato-números](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
-## <a name="BackgroundColors"></a>3. Utilizar los colores de fondo para mostrar un KPI  
+## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. Utilizar los colores de fondo para mostrar un KPI  
 Los colores de fondo se pueden establecer en una expresión que se evalúe al ejecutar el informe.  
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Para mostrar el estado actual de un KPI mediante colores de fondo  
@@ -198,7 +198,7 @@ En la fila de subtotal que muestra las ventas de una subcategoría, el color de 
 
 ![generador-de-informes-kpi-colores](../reporting-services/media/report-builder-kpi-colors.png)
   
-## <a name="Gauge"></a>4. Mostrar un KPI usando un medidor  
+## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. Mostrar un KPI usando un medidor  
 Un medidor muestra un valor único de un conjunto de datos. En este tutorial se usa un medidor lineal horizontal porque su forma y simplicidad hacen que resulte fácil leerlo, incluso cuando tiene un tamaño pequeño y está dentro de la celda de una tabla. Para obtener más información, vea [Medidores &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>Para mostrar el estado actual de un KPI usando un medidor  
@@ -253,7 +253,7 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
   
 ![generador-de-informes-kpi-lineal](../reporting-services/media/report-builder-linear-kpi.png) 
   
-## <a name="Indicator"></a>5. Mostrar un KPI usando un indicador  
+## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. Mostrar un KPI usando un indicador  
 Los indicadores son medidores pequeños y simples que comunican los valores de datos de un vistazo. Debido a su tamaño y simplicidad, los indicadores se utilizan a menudo en tablas y matrices. Para más información, vea [Indicadores &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Para mostrar el estado actual de un KPI usando un indicador  
@@ -288,7 +288,7 @@ Los indicadores son medidores pequeños y simples que comunican los valores de d
 
 ![generador-de-informes-kpi-luz](../reporting-services/media/report-builder-kpi-stoplight.png)
   
-## <a name="Title"></a>6. Agregar un título de informe  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Agregar un título de informe  
 Los títulos de informe aparecen en la parte superior. Puede situar el título del informe en un encabezado de informe o, si el informe no lo utiliza, en un cuadro de texto en la parte superior del cuerpo del informe. En esta sección, usa el cuadro de texto que se coloca automáticamente en la parte superior del cuerpo del informe.  
   
 Puede mejorar aún más el texto aplicando estilos de fuente, tamaños y colores diferentes a las frases y los caracteres individuales de este. Para obtener más información, vea [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -303,7 +303,7 @@ Puede mejorar aún más el texto aplicando estilos de fuente, tamaños y colores
   
 4.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-## <a name="Save"></a>7. Guardar el informe  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Guardar el informe  
 Guarde el informe un servidor de informes o en su equipo. Si no guarda el informe en el servidor de informes, varias características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como los elementos de informe y los subinformes, no estarán disponibles.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  

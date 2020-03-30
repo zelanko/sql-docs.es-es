@@ -13,10 +13,10 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903119"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar topología (replicación punto a punto)
@@ -63,7 +63,7 @@ ms.locfileid: "67903119"
   
 ### <a name="options-for-each-node"></a>Opciones para cada nodo  
  **Agregar una nueva conexión del mismo nivel**  
- Agrega una conexión entre dos nodos. Por ejemplo, si agrega una conexión entre el nodo A y el nodo B, la replicación agrega dos suscripciones: la primera habilita el Nodo A para recibir los cambios de la publicación en el Nodo B y la segunda permite al Nodo B recibir cambios de la publicación en el Nodo A.  
+ Agrega una conexión entre dos nodos. Por ejemplo, si agrega una conexión entre el Nodo A y el Nodo B, la replicación agrega dos suscripciones: la primera habilita el Nodo A para recibir los cambios de la publicación en el Nodo B y la segunda permite al Nodo B recibir cambios de la publicación en el Nodo A.  
   
  **Eliminar nodo del mismo nivel**  
  Quita un nodo de la topología. Por ejemplo, si quita el Nodo C, se quita la publicación en ese nodo. También se quitan las suscripciones entre el Nodo A y el Nodo C, y el Nodo B y el Nodo C. No se elimina la base de datos del Nodo C y no se deshabilitan la publicación y la distribución.  

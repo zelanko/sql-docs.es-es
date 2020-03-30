@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091462"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Usar el formato nativo Unicode para importar o exportar datos (SQL Server)
@@ -36,7 +36,7 @@ El formato nativo Unicode es útil cuando se debe copiar información de una ins
 |[Ejemplos](#examples)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato nativo Unicode para exportar datos](#bcp_widenative_export)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato nativo Unicode para importar datos sin un archivo de formato](#bcp_widenative_import)<br />&emsp;&#9679;&emsp;[Usar bcp y el formato nativo Unicode para importar datos con un archivo de formato no XML](#bcp_widenative_import_fmt)<br />&emsp;&#9679;&emsp;[Usar BULK INSERT y el formato nativo Unicode sin un archivo de formato](#bulk_widenative)<br />&emsp;&#9679;&emsp;[Usar BULK INSERT y el formato nativo Unicode con un archivo de formato no XML](#bulk_widenative_fmt)<br />&emsp;&#9679;&emsp;[Usar OPENROWSET y el formato nativo Unicode con un archivo de formato no XML](#openrowset_widenative_fmt)|
 |[Tareas relacionadas](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
   
-## Opciones de comandos para el formato nativo Unicode<a name="command_options"></a>  
+## <a name="command-options-for-unicode-native-format"></a>Opciones de comandos para el formato nativo Unicode<a name="command_options"></a>  
 Puede importar datos en formato nativo Unicode en una tabla con [bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) o [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md).  Para un comando [bcp](../../tools/bcp-utility.md) o una instrucción [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), puede especificar el formato de datos en la instrucción.  Para una instrucción [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md), debe especificar el formato de datos en un archivo de formato.  
   
 El formato nativo Unicode admite las siguientes opciones de comando:  
@@ -50,10 +50,10 @@ El formato nativo Unicode admite las siguientes opciones de comando:
 > [!NOTE]
 >  Otra posibilidad es especificar el formato por campo en un archivo de formato. Para obtener más información, vea [Archivos de formato para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
   
-## Condiciones de prueba de ejemplo<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Condiciones de prueba de ejemplo<a name="etc"></a>  
 Los ejemplos de este tema se basan en la tabla y en el archivo de formato definidos a continuación.
 
-### **Tabla de ejemplo**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Tabla de ejemplo**<a name="sample_table"></a>
 El siguiente script crea una base de datos de prueba, una tabla denominada `myWidenative` , y la rellena con algunos valores iniciales.  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 CREATE DATABASE TestDatabase;
@@ -79,7 +79,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **Archivo de formato no XML de ejemplo**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**Archivo de formato no XML de ejemplo**<a name="nonxml_format_file"></a>
 SQL Server admite dos tipos de archivos de formato: XML y no XML.  El formato no XML es el formato original compatible con versiones anteriores de SQL Server.  Revise [Archivos de formato no XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para obtener información detallada.  El siguiente comando hará uso de la [utilidad BCP](../../tools/bcp-utility.md) para generar un archivo de formato no XML, `myWidenative.fmt`, basado en el esquema de `myWidenative`.  Si quiere usar un comando [BCP](../../tools/bcp-utility.md) para crear un archivo de formato, especifique el argumento **format** y use **null** en lugar de una ruta de acceso de archivo de datos.  La opción format también requiere la opción **-f** .  Además, en este ejemplo, el calificador **c** se usa para especificar los datos de caracteres, mientras que **T** se usa para especificar una conexión de confianza que usa la seguridad integrada.  En un símbolo del sistema, escriba los comandos siguientes:
 
 ```
@@ -95,10 +95,10 @@ Notepad D:\BCP\myWidenative.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## Ejemplos<a name="examples"></a>
+## <a name="examples"></a>Ejemplos<a name="examples"></a>
 En los siguientes ejemplos se usan la base de datos y los archivos de formato creados anteriormente.
 
-### **Usar bcp y el formato nativo Unicode para exportar datos**<a name="bcp_widenative_export"></a>
+### <a name="using-bcp-and-unicode-native-format-to-export-data"></a>**Usar bcp y el formato nativo Unicode para exportar datos**<a name="bcp_widenative_export"></a>
 Modificador **-N** y comando **OUT** .  Nota: el archivo de datos creado en este ejemplo se usará en todos los ejemplos siguientes.  En un símbolo del sistema, escriba los comandos siguientes:
 ```
 bcp TestDatabase.dbo.myWidenative OUT D:\BCP\myWidenative.bcp -T -N
@@ -107,7 +107,7 @@ REM Review results
 NOTEPAD D:\BCP\myWidenative.bcp
 ```
 
-### **Usar bcp y el formato nativo Unicode para importar datos sin un archivo de formato**<a name="bcp_widenative_import"></a>
+### <a name="using-bcp-and-unicode-native-format-to-import-data-without-a-format-file"></a>**Usar bcp y el formato nativo Unicode para importar datos sin un archivo de formato**<a name="bcp_widenative_import"></a>
 Modificador **-N** y comando **IN** .  En un símbolo del sistema, escriba los comandos siguientes:
 ```
 REM Truncate table (for testing)
@@ -119,7 +119,7 @@ bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -T -N
 REM Review results is SSMS
 ```
 
-### **Usar bcp y el formato nativo Unicode para importar datos con un archivo de formato no XML**<a name="bcp_widenative_import_fmt"></a>
+### <a name="using-bcp-and-unicode-native-format-to-import-data-with-a-non-xml-format-file"></a>**Usar bcp y el formato nativo Unicode para importar datos con un archivo de formato no XML**<a name="bcp_widenative_import_fmt"></a>
 Modificadores **-N** y **-f** switches y **IN** commy.  En un símbolo del sistema, escriba los comandos siguientes:
 ```
 REM Truncate table (for testing)
@@ -131,7 +131,7 @@ bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -f D:\BCP\myWidenat
 REM Review results is SSMS
 ```
 
-### **Usar BULK INSERT y el formato nativo Unicode sin un archivo de formato**<a name="bulk_widenative"></a>
+### <a name="using-bulk-insert-and-unicode-native-format-without-a-format-file"></a>**Usar BULK INSERT y el formato nativo Unicode sin un archivo de formato**<a name="bulk_widenative"></a>
 Argumento**DATAFILETYPE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
@@ -145,7 +145,7 @@ BULK INSERT TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **Usar BULK INSERT y el formato nativo Unicode con un archivo de formato no XML**<a name="bulk_widenative_fmt"></a>
+### <a name="using-bulk-insert-and-unicode-native-format-with-a-non-xml-format-file"></a>**Usar BULK INSERT y el formato nativo Unicode con un archivo de formato no XML**<a name="bulk_widenative_fmt"></a>
 Argumento**FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
@@ -159,7 +159,7 @@ BULK INSERT TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **Usar OPENROWSET y el formato nativo Unicode con un archivo de formato no XML**<a name="openrowset_widenative_fmt"></a>
+### <a name="using-openrowset-and-unicode-native-format-with-a-non-xml-format-file"></a>**Usar OPENROWSET y el formato nativo Unicode con un archivo de formato no XML**<a name="openrowset_widenative_fmt"></a>
 Argumento**FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative;  -- for testing
@@ -174,7 +174,7 @@ INSERT INTO TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-## Tareas relacionadas<a name="RelatedTasks"></a>
+## <a name="related-tasks"></a>Tareas relacionadas<a name="RelatedTasks"></a>
 Para usar formatos de datos para la importación o exportación masivas  
 -   [Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   

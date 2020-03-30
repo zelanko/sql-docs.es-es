@@ -4,18 +4,18 @@ ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
-description: La extensión de representación de Word representa informes paginados en el formato de  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). El formato es Office Open XML.
+description: La extensión de representación de Word representa informes paginados en el formato de Microsoft Word (.docx). El formato es Office Open XML.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 75df880cf51df8670671331ddd6de2738b0bba54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079412"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342878"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
 
@@ -30,14 +30,14 @@ ms.locfileid: "77079412"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItemsWord"></a> Elementos de informe en Word  
+##  <a name="report-items-in-word"></a><a name="ReportItemsWord"></a> Elementos de informe en Word  
  Los informes exportados a Word aparecen como una tabla anidada que representa el cuerpo del informe. Una región de datos Tablix se representa como una tabla anidada que refleja la estructura de la región de datos en el informe. Los cuadros de texto y los rectángulos se representan como una celda de la tabla. El valor del cuadro de texto se muestra dentro de la celda.  
   
  Las imágenes, gráficos, barras de datos, minigráficos, mapas, indicadores y medidores se representan como una imagen estática dentro de una celda de la tabla. Los hipervínculos y los vínculos de obtención de detalles de estos elementos de informe también se representan. No se admiten los mapas interactivos y otras áreas en las que se puede hacer clic dentro de un gráfico.  
   
  Los informes con columnas de estilo boletín no se representan en Word. Las imágenes y los colores de fondo de página y del cuerpo del informe no se representan.  
   
-##  <a name="Pagination"></a> Paginación  
+##  <a name="pagination"></a><a name="Pagination"></a> Paginación  
  Cuando el informe se abre en Word, Word repagina de nuevo el informe completo basándose en el tamaño de página. La repaginación puede hacer que se inserten saltos de página en ubicaciones en las que no se pretendía agregarlos y, en algunos casos, puede hacer que el informe exportado tenga dos saltos de página seguidos en una fila o que se agreguen páginas en blanco. Puede intentar cambiar la paginación de Word ajustando los márgenes de página.  
   
  Este representador admite solamente saltos de página lógicos.  
@@ -50,7 +50,7 @@ ms.locfileid: "77079412"
   
  Cuando se representa, el informe crece a lo ancho tanto como se necesite, hasta 22 pulgadas, para mostrar el contenido. El ancho mínimo del informe se basa en la propiedad RDL Width del panel de propiedades.  
   
-##  <a name="DocumentProperties"></a> Propiedades de documento  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> Propiedades de documento  
  El representador de Word escribe los metadatos siguientes en el archivo DOCX.  
   
 |Propiedades del elemento de informe|Descripción|  
@@ -59,7 +59,7 @@ ms.locfileid: "77079412"
 |Autor del informe|Autor|  
 |Descripción del informe|Comentarios|  
   
-##  <a name="ReportHeadersFooters"></a> Encabezados y pies de página  
+##  <a name="page-headers-and-footers"></a><a name="ReportHeadersFooters"></a> Encabezados y pies de página  
  Los encabezados y pies de página se representan como regiones de encabezado y pie de página en Word. Si en el encabezado o en el pie de página aparece un número de página del informe o una expresión que indica el número total de páginas del informe, se convierten en un campo de Word para que se muestre el número de página correcto en el informe representado. Si se ha establecido el alto del encabezado o del pie de página en el informe, Word no puede admitir este valor. En algunas circunstancias, la propiedad PrintOnFirstPage puede especificar si el texto de un encabezado o un pie de página se imprime o no en la primera página de un informe. Si el informe representado tiene varias páginas y cada una de ellas contiene solo una sección, puede establecer el valor de PrintOnFirstPage en False y el texto se eliminará de la primera página; en caso contrario, el texto se imprimirá, independientemente del valor de la propiedad PrintOnFirstPage.  
   
  El representador de Word intenta analizar todas las expresiones de los encabezados y pies de página cuando los informes se exportan a Word. Muchos tipos de expresiones se analizan correctamente y aparecen los valores esperados en los encabezados y en los pies de página de todas las páginas del informe.  
@@ -78,7 +78,7 @@ ms.locfileid: "77079412"
   
  Para evitar este problema, use varias ejecuciones de texto en vez de una expresión compleja cuando use expresiones en encabezados y pies de página. Las dos siguientes expresiones son equivalentes. La primera es una expresión compleja y la segunda usa ejecuciones de texto. El representador de Word solo analiza correctamente la segunda expresión.  
   
-##  <a name="Interactivity"></a> Interactividad  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactividad  
  En Word se admiten algunos elementos interactivos. A continuación se describen sus comportamientos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar u ocultar  
@@ -96,7 +96,7 @@ ms.locfileid: "77079412"
 ### <a name="bookmarks"></a>Marcadores  
  Los marcadores del informe se representan como marcadores de Word. Los vínculos de marcador se representan como hipervínculos que conectan con las etiquetas de marcador del documento. Las etiquetas de marcador deben tener menos de 40 caracteres. El único carácter especial que se puede utilizar en una etiqueta de marcador es el carácter de subrayado (_). Los caracteres especiales no compatibles se quitan del nombre de la etiqueta de marcador y, si el nombre tiene más de 40 caracteres, se trunca. Si hay nombres de marcador duplicados en el informe, los marcadores no se representan en Word.  
   
-##  <a name="WordStyleRendering"></a> Representación de estilos en Word  
+##  <a name="word-style-rendering"></a><a name="WordStyleRendering"></a> Representación de estilos en Word  
  A continuación se describe brevemente el modo en que se representan los estilos en Word.  
   
 ### <a name="color-palette"></a>Paleta de colores  
@@ -105,7 +105,7 @@ ms.locfileid: "77079412"
 ### <a name="border"></a>Borde  
  Los bordes de los elementos de informe, excepto el borde de página, se representan como bordes de celdas de tabla de Word.  
   
-##  <a name="SquigglyLines"></a> Líneas onduladas en los informes exportados  
+##  <a name="squiggly-lines-in-exported-reports"></a><a name="SquigglyLines"></a> Líneas onduladas en los informes exportados  
  Cuando se exportan y se ven en Word, los datos o las constantes del informe podrían estar subrayados con líneas onduladas rojas o verdes. Las líneas onduladas rojas identifican errores de ortografía. Las líneas onduladas verdes identifican errores gramaticales. Esto ocurre cuando el informe incluye palabras que no cumplen con la revisión (ortográfica y gramatical) del idioma de edición que se especifica en Word. Por ejemplo, los títulos de columna del informe en inglés probablemente aparecerán subrayados con líneas onduladas rojas cuando el informe se represente en una versión en español de Word. Los errores ortográficos percibidos en los informes son más comunes que los gramaticales porque los informes suelen incluir un texto breve, y no frases completas o párrafos.  
   
  La presencia de líneas onduladas en los informes implica que el informe tiene errores, que probablemente no lo sean. Puede quitar las líneas onduladas cambiando el idioma de revisión del informe. Para ello, seleccione el contenido del informe y especifique el idioma apropiado para el contenido. Puede seleccionar todo el contenido o una parte del mismo. En Word, la opción de idioma **Establecer idioma de corrección** está en el área **Idioma** de la pestaña **Revisión** . Cuando actualice el contenido, tendrá que volver a guardar el documento.  
@@ -121,7 +121,7 @@ ms.locfileid: "77079412"
 > [!NOTE]  
 >  Al cambiar el idioma de edición en **Preferencias de idioma de Microsoft Office** o en el cuadro de diálogo **Opciones de Word** en Word, el cambio se aplicará en todos los programas de Office.  
   
-##  <a name="WordLimitations"></a> Limitaciones de Word  
+##  <a name="word-limitations"></a><a name="WordLimitations"></a> Limitaciones de Word  
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)]aplica las limitaciones siguientes:  
   
 -   Las tablas de Word admiten un máximo de 63 columnas. Si se intenta representar un informe que tiene más de 63 columnas, Word divide la tabla. Las columnas adicionales se colocan junto a las 63 columnas que se muestran en el cuerpo del informe. Por consiguiente, es posible que las columnas del informe no se alineen como se esperaba.  
@@ -138,7 +138,7 @@ ms.locfileid: "77079412"
   
 -   Cuando se exporta texto a Word, el texto con decoración en determinadas fuentes puede generar glifos inesperados en el informe representado o la pérdida de glifos en el mismo.  
   
-##  <a name="WordBenefits"></a> Ventajas de usar el representador de Word  
+##  <a name="benefits-of-using-the-word-renderer"></a><a name="WordBenefits"></a> Ventajas de usar el representador de Word  
  Además de permitir que las características nuevas de los archivos .docx de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] estén disponibles en los informes exportados, los archivos *.docx de los informes exportados suelen tener un menor tamaño. Los informes exportados mediante el representador de Word suelen ser mucho menores que los mismos informes exportados mediante el representador de Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilidad con versiones anteriores de los informes exportados  
@@ -146,7 +146,7 @@ ms.locfileid: "77079412"
   
  Si desactiva el modo de compatibilidad y después vuelve a guardar un informe, el diseño del informe puede cambiar de maneras inesperadas.  
   
-##  <a name="AvailabilityWord"></a> Representador de Word 2003  
+##  <a name="the-word-2003-renderer"></a><a name="AvailabilityWord"></a> Representador de Word 2003  
   
 > [!IMPORTANT]  
 >  La extensión de representación de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) está en desuso. Para más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
@@ -186,7 +186,7 @@ ms.locfileid: "77079412"
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Diferencias entre los representadores de Word y Word 2003  
  Los informes representados mediante el representador de Word o Word 2003 no se suelen distinguir visualmente. Sin embargo, puede observar pequeñas diferencias entre los dos formatos de Word o Word 2003.  
   
-##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador si cambia la configuración de la información del dispositivo; por ejemplo, puede omitir los hipervínculos y los vínculos de obtención de detalles o expandir todos los elementos que se pueden alternar, independientemente de su estado original en el momento de generar la representación. Para obtener más información, consulte [Word Device Information Settings](../../reporting-services/word-device-information-settings.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes

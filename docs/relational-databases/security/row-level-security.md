@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288975"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
@@ -43,7 +43,7 @@ Implemente RLS mediante la instrucción [CREATE SECURITY POLICY](../../t-sql/sta
 > [!NOTE]
 > Azure SQL Data Warehouse solo admite los predicados de filtro. En la actualidad, los predicados de bloqueo no se admiten en Azure SQL Data Warehouse.
 
-## <a name="Description"></a> Descripción
+## <a name="description"></a><a name="Description"></a> Descripción
 
 RLS admite dos tipos de predicados de seguridad.  
   
@@ -89,7 +89,7 @@ RLS admite dos tipos de predicados de seguridad.
   
 - No se han realizado cambios en las API masivas, incluida BULK INSERT. Esto significa que los predicados de bloqueo AFTER INSERT se aplicarán a las operaciones de inserción masivas como si fueran operaciones de inserción normales.  
   
-## <a name="UseCases"></a> Casos de uso
+## <a name="use-cases"></a><a name="UseCases"></a> Casos de uso
 
  Estos son ejemplos de diseño de cómo se puede usar RLS:  
   
@@ -103,7 +103,7 @@ RLS admite dos tipos de predicados de seguridad.
   
  En términos más formales, RLS presenta control de acceso basado en predicado. Ofrece una evaluación flexible, centralizada y basada en predicados. El predicado puede basarse en metadatos o en cualquier otro criterio que el administrador determine según corresponda. El predicado se usa como un criterio para determinar si el usuario tiene el acceso adecuado a los datos según los atributos del usuario. El control de acceso basado en etiquetas se puede implementar mediante el control de acceso basado en predicados.  
   
-## <a name="Permissions"></a> Permisos
+## <a name="permissions"></a><a name="Permissions"></a> Permisos
 
  Crear, modificar o quitar directivas de seguridad necesita el permiso **ALTER ANY SECURITY POLICY** . Crear o quitar una directiva de seguridad necesita el permiso **ALTER** en el esquema.  
   
@@ -119,7 +119,7 @@ RLS admite dos tipos de predicados de seguridad.
   
  Si se crea una directiva de seguridad con `SCHEMABINDING = OFF`, los usuarios deben tener el permiso de  **SELECT** o **EXECUTE** en la función de predicado y cualquier función, vista o tabla adicional que se use dentro de la función de predicado para consultar la tabla de destino. Si se crear una directiva de seguridad con `SCHEMABINDING = ON` (el valor predeterminado), entonces estas comprobaciones de permiso se omiten cuando los usuarios consultan la tabla de destino.  
   
-## <a name="Best"></a> Procedimientos recomendados  
+## <a name="best-practices"></a><a name="Best"></a> Procedimientos recomendados  
   
 - Se recomienda crear un esquema independiente para los objetos RLS: función de predicado y directivas de seguridad. Esto ayuda a separar los permisos que son necesarios en estos objetos especiales de las tablas de destino. Puede ser necesario separar adicionalmente las distintas directivas y funciones de predicado en las bases de datos multinquilino, pero no por norma en cada caso.
   
@@ -141,7 +141,7 @@ RLS admite dos tipos de predicados de seguridad.
   
 - Las funciones de predicado no deben comparar cadenas concatenadas con **NULL**, ya que este comportamiento se ve afectado por la opción [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
 
-## <a name="SecNote"></a> Nota de seguridad: Ataques de canal lateral
+## <a name="security-note-side-channel-attacks"></a><a name="SecNote"></a> Nota de seguridad: Ataques de canal lateral
 
 ### <a name="malicious-security-policy-manager"></a>Administrador de directivas de seguridad malintencionado
 
@@ -151,7 +151,7 @@ Es importante observar que un administrador de directivas de seguridad malintenc
 
 Es posible perder información con el uso de consultas cuidadosamente diseñadas. Por ejemplo, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permitiría que un usuario malintencionado sepa que el salario de Juan García es 100.000 $. Aunque hay un predicado de seguridad para impedir que un usuario malintencionado consulte directamente el salario de otras personas, el usuario puede determinar el momento en que la consulta devuelve una excepción de división por cero.  
 
-## <a name="Limitations"></a> Compatibilidad entre características
+## <a name="cross-feature-compatibility"></a><a name="Limitations"></a> Compatibilidad entre características
 
  En general, la seguridad de nivel de fila funcionará como se espera en todas las características. Sin embargo, hay algunas excepciones. En esta sección se describen varias notas y advertencias sobre el uso de la seguridad de nivel de fila con otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -177,9 +177,9 @@ Es posible perder información con el uso de consultas cuidadosamente diseñadas
   
 - **Tablas temporales:** las tablas temporales son compatibles con RLS. Sin embargo, los predicados de seguridad en la tabla actual no se replican automáticamente a la tabla del historial. Para aplicar una directiva de seguridad a las tablas actual y del historial, debe agregar individualmente un predicado de seguridad en cada tabla.  
   
-## <a name="CodeExamples"></a> Ejemplos  
+## <a name="examples"></a><a name="CodeExamples"></a> Ejemplos  
   
-### <a name="Typical"></a> A. Escenario para los usuarios que se autentican en la base de datos
+### <a name="a-scenario-for-users-who-authenticate-to-the-database"></a><a name="Typical"></a> A. Escenario para los usuarios que se autentican en la base de datos
 
  Este ejemplo crea tres usuarios y crea y rellena una tabla con seis filas. Después, crea una función con valores de tabla insertados y una directiva de seguridad para la tabla. En este ejemplo se muestra cómo seleccionar instrucciones filtradas para los distintos usuarios.  
   
@@ -301,7 +301,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> B. Escenarios para el uso de Seguridad de nivel de fila en una tabla externa de Azure SQL Data Warehouse
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Escenarios para el uso de Seguridad de nivel de fila en una tabla externa de Azure SQL Data Warehouse
 
 Este breve ejemplo crea tres usuarios y una tabla externa con seis filas. Después, crea una función con valores de tabla insertados y una directiva de seguridad para la tabla externa. El ejemplo muestra cómo seleccionar instrucciones filtradas para los distintos usuarios.
 
@@ -418,7 +418,7 @@ DROP LOGIN Sales2;
 DROP LOGIN Manager;
 ```
 
-### <a name="MidTier"></a> C. Escenario para los usuarios que se conectan a la base de datos a través de una aplicación de nivel intermedio
+### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. Escenario para los usuarios que se conectan a la base de datos a través de una aplicación de nivel intermedio
 
 > [!NOTE]
 > En este ejemplo, la funcionalidad de predicados de bloque no se admite actualmente para Azure SQL Data Warehouse, por lo que la inserción de filas para el identificador de usuario incorrecto no se bloquea con Azure SQL Data Warehouse.

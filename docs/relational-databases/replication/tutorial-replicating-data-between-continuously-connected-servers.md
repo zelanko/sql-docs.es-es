@@ -16,10 +16,10 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321932"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configuración de la replicación entre dos servidores conectados completamente (transaccional)
@@ -38,7 +38,7 @@ En este tutorial, aprenderá a:
 > * Validar la suscripción y medir la latencia
   
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
 Este tutorial es para usuarios que están familiarizados con las operaciones básicas de las bases de datos, pero tienen poca experiencia con operaciones de replicación. Antes de empezar este tutorial, debe haber completado [Tutorial: Preparación de SQL Server para la replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Para completar este tutorial, necesita tener SQL Server, SQL Server Management Studio (SSMS) y una base de datos de AdventureWorks:  

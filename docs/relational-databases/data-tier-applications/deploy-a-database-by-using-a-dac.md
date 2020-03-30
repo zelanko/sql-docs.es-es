@@ -20,25 +20,25 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134807"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implementar una base de datos mediante una DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Use el asistente para **implementar una base de datos en SQL Azure** para implementar una base de datos entre una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un servidor de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o entre dos servidores de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
-##  <a name="BeforeBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> Antes de comenzar  
  El asistente emplea un archivo de almacenamiento BACPAC de aplicación de capa de datos (DAC) para implementar los datos y las definiciones de los objetos de base de datos. Realiza una operación de exportación de DAC de la base de datos de origen y una importación de DAC al destino.  
   
-###  <a name="DBOptSettings"></a> Opciones y configuración de bases de datos  
+###  <a name="database-options-and-settings"></a><a name="DBOptSettings"></a> Opciones y configuración de bases de datos  
  De forma predeterminada, la base de datos que se crea durante la implementación tendrá la configuración predeterminada de la instrucción CREATE DATABASE. La excepción es que la intercalación de base de datos y el nivel de compatibilidad se establecen en los valores de la base de datos de origen.  
   
  Algunas opciones de base de datos, como TRUSTWORTHY, DB_CHAINING y HONOR_BROKER_PRIORITY, no se pueden ajustar como parte del proceso de implementación. Las propiedades físicas, como el número de grupos de archivos o el número y tamaño de los archivos no se pueden modificar en el proceso de implementación. Una vez se haya completado la implementación, podrá usar la instrucción ALTER DATABASE, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell para personalizar la base de datos.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  El asistente **Implementar la base de datos** admite implementar una base de datos:  
   
 -   Desde una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "68134807"
   
  Para poder usar el asistente, una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe ejecutar [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. Si una base de datos de una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] contiene objetos no admitidos en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], no puede usar el asistente para implementar la base de datos en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Si una base de datos de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] contiene objetos no admitidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no puede usar el asistente para implementar la base de datos en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para mejorar la seguridad, los inicios de sesión de Autenticación de SQL Server están almacenados en un archivo BACPAC de DAC sin contraseña. Cuando se importa el archivo BACPAC, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
   
 #### <a name="permissions"></a>Permisos  
@@ -59,7 +59,7 @@ ms.locfileid: "68134807"
   
  El asistente necesita permisos de importación de DAC en la instancia o el servidor de destino. El inicio de sesión debe ser miembro de los roles fijos de servidor **sysadmin** o **serveradmin** , o del rol fijo de servidor **dbcreator** y disponer de permisos ALTER ANY LOGIN. La cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada denominada **sa** también puede importar una DAC. La importación de una DAC con inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles loginmanager o serveradmin. La importación de una DAC sin inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles dbmanager o serveradmin.  
   
-##  <a name="UsingDeployDACWizard"></a> Usar el Asistente para implementar bases de datos  
+##  <a name="using-the-deploy-database-wizard"></a><a name="UsingDeployDACWizard"></a> Usar el Asistente para implementar bases de datos  
  **Para migrar una base de datos mediante el Asistente para implementar bases de datos**  
   
 1.  Conéctese a la ubicación de la base de datos que desee implementar. Puede especificar una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o un servidor de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] .  
@@ -82,7 +82,7 @@ ms.locfileid: "68134807"
     
     -   [Resultados](#Results)  
   
-##  <a name="Introduction"></a> Página Introducción  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos del asistente **Implementar la base de datos** .  
   
  **Opciones**  
@@ -93,7 +93,7 @@ ms.locfileid: "68134807"
   
 -   **Cancelar**: cancela la operación y cierra el asistente.  
   
-##  <a name="Deployment_settings"></a> Página Configuración de implementación  
+##  <a name="deployment-settings-page"></a><a name="Deployment_settings"></a> Página Configuración de implementación  
  Use esta página para especificar el servidor de destino y proporcionar detalles sobre la nueva base de datos.  
   
  **Host local:**  
@@ -112,13 +112,13 @@ ms.locfileid: "68134807"
   
 -   Especifique un directorio local para el archivo temporal, que es el archivo de almacenamiento BACPAC. Tenga en cuenta que el archivo se creará en la ubicación especificada y permanecerá en ella una vez completada la operación.  
   
-##  <a name="Summary"></a> Página Resumen  
+##  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Esta página se utiliza para revisar los valores de origen y de destino especificados de la operación. Para completar la operación de implementación con los valores especificados, haga clic en **Finalizar**. Para cancelar la operación de implementación y salir del asistente, haga clic en **Cancelar**.  
   
-##  <a name="Progress"></a> Página Progreso  
+##  <a name="progress-page"></a><a name="Progress"></a> Página Progreso  
  En esta página se muestra una barra de progreso que indica el estado de la operación. Para ver el estado detallado, haga clic en la opción **Ver detalles** .  
   
-##  <a name="Results"></a> Página Resultados  
+##  <a name="results-page"></a><a name="Results"></a> Página Resultados  
  En esta página se notifica la corrección o el error de la operación de implementación, mostrando los resultados de cada acción. Cualquier acción que encontrara un error tendrá un vínculo en la columna **Resultado** . Haga clic en el vínculo para ver un informe del error para esa acción.  
   
  Haga clic en **Finalizar** para cerrar el asistente.  

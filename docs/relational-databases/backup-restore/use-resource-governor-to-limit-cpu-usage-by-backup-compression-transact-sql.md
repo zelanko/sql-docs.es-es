@@ -17,10 +17,10 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245409"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "75245409"
 > [!IMPORTANT]  
 >  En un escenario determinado en el que se use el regulador de recursos, la clasificación de la sesión podría basarse en un nombre de usuario, un nombre de aplicación u otra característica que pueda diferenciar una conexión. Para obtener más información, consulte [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) y [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
   
-##  <a name="Top"></a> Este tema contiene el conjunto siguiente de escenarios, que se presentan en secuencia:  
+##  <a name="this-topic-contains-the-following-set-of-scenarios-which-are-presented-in-sequence"></a><a name="Top"></a> Este tema contiene el conjunto siguiente de escenarios, que se presentan en secuencia:  
   
 1.  [Configurar un inicio de sesión y un usuario para operaciones de prioridad baja](#setup_login_and_user)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75245409"
   
 4.  [Comprimir las copias de seguridad utilizando una sesión con CPU limitada](#creating_compressed_backup)  
   
-##  <a name="setup_login_and_user"></a> Configurar un inicio de sesión y un usuario para operaciones de prioridad baja  
+##  <a name="setting-up-a-login-and-user-for-low-priority-operations"></a><a name="setup_login_and_user"></a> Configurar un inicio de sesión y un usuario para operaciones de prioridad baja  
  El escenario de este tema requiere un usuario y un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de prioridad baja. El nombre de usuario se utilizará para clasificar las sesiones que se ejecutan en el inicio de sesión y enrutarlas a un grupo de cargas de trabajo del regulador de recursos que limita el uso de CPU.  
   
  En el procedimiento siguiente se describen los pasos para configurar un inicio de sesión y un usuario con este propósito, además de un ejemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)], "Ejemplo A: Configurar un inicio de sesión y un usuario (Transact-SQL)".  
@@ -102,7 +102,7 @@ GO
   
  [&#91;Principio&#93;](#Top)  
   
-##  <a name="configure_RG"></a> Configurar el regulador de recursos para limitar el uso de CPU  
+##  <a name="configuring-resource-governor-to-limit-cpu-usage"></a><a name="configure_RG"></a> Configurar el regulador de recursos para limitar el uso de CPU  
   
 > [!NOTE]  
 >  Asegúrese de que el regulador de recursos está habilitado. Para obtener más información, vea [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md).  
@@ -240,7 +240,7 @@ GO
   
  [&#91;Principio&#93;](#Top)  
   
-##  <a name="verifying"></a> Comprobar la clasificación de la sesión actual (Transact-SQL)  
+##  <a name="verifying-the-classification-of-the-current-session-transact-sql"></a><a name="verifying"></a> Comprobar la clasificación de la sesión actual (Transact-SQL)  
  Si lo desea, inicie sesión como el usuario que especificó en la función clasificadora y compruebe la clasificación de la sesión emitiendo la instrucción [SELECT](../../t-sql/queries/select-transact-sql.md) siguiente en el Explorador de objetos:  
   
 ```sql  
@@ -260,7 +260,7 @@ GO
   
  [&#91;Principio&#93;](#Top)  
   
-##  <a name="creating_compressed_backup"></a> Comprimir las copias de seguridad utilizando una sesión con CPU limitada  
+##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> Comprimir las copias de seguridad utilizando una sesión con CPU limitada  
  Para crear una copia de seguridad comprimida en una sesión con el uso máximo de CPU limitado, inicie sesión como el usuario especificado en la función clasificadora. En el comando de copia de seguridad, especifique WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) o seleccione **Comprimir copia de seguridad** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Para crear una copia de seguridad comprimida de la base de datos, vea [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Ejemplo C: Crear una copia de seguridad comprimida (Transact-SQL)  

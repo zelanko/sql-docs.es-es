@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288189"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Control del acceso a la información confidencial en paquetes
@@ -86,7 +86,7 @@ ms.locfileid: "79288189"
   
 3.  Una vez implementados los paquetes en el entorno de producción, el equipo de operaciones puede volver a cifrar los paquetes implementados asignando una contraseña segura que solo ellos conozcan. O bien, pueden cifrar los paquetes implementados seleccionando **EncryptSensitiveWithUserKey** o **EncryptAllWithUserKey**, y utilizando las credenciales locales de la cuenta que ejecutará los paquetes.  
 
-## <a name="set_protection"></a> Establecer o cambiar el nivel de protección de los paquetes
+## <a name="set-or-change-the-protection-level-of-packages"></a><a name="set_protection"></a> Establecer o cambiar el nivel de protección de los paquetes
   Para controlar el acceso al contenido de los paquetes y a los valores confidenciales que contienen, como las contraseñas, establezca el valor de la propiedad **ProtectionLevel** . Los paquetes que se incluyen en un proyecto deben disponer del mismo nivel de protección que el proyecto con el fin de compilar el proyecto. Si cambia la configuración de las propiedades de **ProtectionLevel** en el proyecto, debe actualizar manualmente el valor de la propiedad de los paquetes.  
   
  Para obtener información general sobre las características de seguridad de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Información general sobre seguridad &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
@@ -136,7 +136,7 @@ ms.locfileid: "79288189"
   
          Si utiliza un comando similar en un archivo por lotes, escriba el marcador de posición del archivo, "% f", como "%% f" en el archivo por lotes.  
 
-## <a name="protection_dialog"></a> Cuadro de diálogo Package Project Protection Level (Nivel de protección del proyecto de paquetes)
+## <a name="package-project-protection-level-dialog-box"></a><a name="protection_dialog"></a> Cuadro de diálogo Package Project Protection Level (Nivel de protección del proyecto de paquetes)
   Utilice el cuadro de diálogo **Nivel de protección de paquetes** para actualizar el nivel de protección de un paquete. El nivel de protección determina el método de protección, la contraseña o la clave de usuario, así como el ámbito de protección de paquetes. La protección puede incluir todos los datos o solo los datos confidenciales.  
   
  Para entender los requisitos y las opciones de la seguridad de paquetes, puede resultar útil ver el tema [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) (Información general sobre seguridad &#40;Integration Services&#41;).  
@@ -151,7 +151,7 @@ ms.locfileid: "79288189"
  **Volver a escribir la contraseña**  
  Escriba la contraseña nuevamente.  
 
-## <a name="password_dialog"></a>Cuadro de diálogo Contraseña del paquete
+## <a name="package-password-dialog-box"></a><a name="password_dialog"></a>Cuadro de diálogo Contraseña del paquete
   Utilice el cuadro de diálogo **Contraseña del paquete** con el fin de proporcionar la contraseña para un paquete cifrado con una contraseña. Debe proporcionar una contraseña si el paquete utiliza el nivel de protección **Cifrar la información confidencial con una contraseña**o **Cifrar todos los datos con una contraseña** .  
   
 ### <a name="options"></a>Opciones  

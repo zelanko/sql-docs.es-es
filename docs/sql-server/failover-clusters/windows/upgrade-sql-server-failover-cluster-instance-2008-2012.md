@@ -12,17 +12,17 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242854"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
 [!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] y [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impiden que los clústeres de conmutación por error de Windows Server realicen actualizaciones del sistema de operativo locales, por lo que limitan la versión permitida de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para un clúster. Una vez que el clúster se actualice al menos a [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], podrá permanecer actualizado.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 -   Antes de realizar cualquiera de las estrategias de migración, se debe preparar un clúster de conmutación por error de Windows Server paralelo con Windows Server 2016/2012 R2. Todos los nodos que contengan instancias de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deben estar unidas al clúster de Windows con los FCI instalados. Cualquier equipo independiente **no debe** combinarse con el clúster de conmutación por error de Windows Server antes de la migración. Las bases de datos de usuario deberán estar sincronizadas con el nuevo entorno antes de la migración.
 -   Todas las instancias de destino deberán estar ejecutando la misma versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como su instancia paralela en el entorno original, con los mismos nombres de instancia e identificadores. Además, deberán estar instaladas con las mismas características. Las rutas de acceso de instalación y la estructura del directorio deberán ser idénticas en los equipos de destino. Esto no incluye los nombres de red virtual de FCI, que deben ser diferentes antes de la migración. Las funciones habilitadas por la instancia original (como Always On y FILESTREAM) deberán estar habilitadas en la instancia de destino.

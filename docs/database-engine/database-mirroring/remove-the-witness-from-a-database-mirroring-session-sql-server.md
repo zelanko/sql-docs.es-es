@@ -16,10 +16,10 @@ ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822521"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Quitar el testigo de una sesión de creación de reflejo de la base de datos (SQL Server)
@@ -40,14 +40,14 @@ ms.locfileid: "74822521"
   
 -   **Seguimiento:**  [Después de quitar el testigo](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-remove-the-witness"></a>Para quitar el testigo  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74822521"
     > [!NOTE]  
     >  Si pasa del modo de alta seguridad con conmutación automática por error al modo de alto rendimiento, el campo **Testigo** se vacía de forma automática.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-remove-the-witness"></a>Para quitar el testigo  
   
@@ -82,7 +82,7 @@ ms.locfileid: "74822521"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de quitar el testigo  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a> Seguimiento: Después de quitar el testigo  
  Al desactivar el testigo cambia el [modo de funcionamiento](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)de acuerdo con la configuración de la seguridad de las transacciones:  
   
 -   Si la seguridad de las transacciones está configurada en FULL (el valor predeterminado), la sesión utiliza el modo sincrónico de alta seguridad sin conmutación automática por error.  
@@ -92,7 +92,7 @@ ms.locfileid: "74822521"
 > [!TIP]  
 >  La configuración de seguridad de las transacciones de la base de datos está registrada en cada asociado de la vista de catálogo [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) en las columnas **mirroring_safety_level** y **mirroring_safety_level_desc**.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   

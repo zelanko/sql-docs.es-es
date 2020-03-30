@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6f5bb78720f864a5fddcbe957f36290e097984ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76285026"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Crear y aplicar la instantánea inicial
@@ -139,7 +139,7 @@ Las instantáneas iniciales se pueden crear mediante programación o creando y e
     -   **-PublisherPassword**    
     -   **-PublisherSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  Este ejemplo muestra cómo crear una publicación transaccional y agregar un trabajo del Agente de instantáneas para la nueva publicación (utilizando variables de scripting de **sqlcmd** ). En el ejemplo también se inicia el trabajo.  
   
  [!code-sql[HowTo#sp_trangenerate_snapshot](../../relational-databases/replication/codesnippet/tsql/create-and-apply-the-ini_1.sql)]  
@@ -167,7 +167,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 ```  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  El Agente de instantáneas genera instantáneas una vez creada la publicación. Puede generar estas instantáneas mediante programación utilizando Replication Management Objects (RMO) y el acceso de código administrado directo a las funcionalidades del agente de replicación. Los objetos que se usan dependen del tipo de replicación. El Agente de instantáneas se puede iniciar sincrónicamente con el objeto <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> o de forma asincrónica con el trabajo de agente. Una vez generada la instantánea inicial, se transfiere y se aplica al suscriptor cuando se sincroniza la suscripción por primera vez. Deberá volver a ejecutar el agente cada vez que la instantánea existente no contenga datos válidos y actualizados. Para obtener más información, vea [Mantener publicaciones](../../relational-databases/replication/publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
@@ -241,7 +241,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
   
-###  <a name="PShellExample"></a> Ejemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Ejemplos (RMO)  
  Este ejemplo ejecuta sincrónicamente el Agente de instantáneas para generar la instantánea inicial de una publicación transaccional.  
   
  [!code-cs[HowTo#rmo_GenerateSnapshot](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_generatesnapshot)]  

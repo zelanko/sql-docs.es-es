@@ -13,10 +13,10 @@ ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 243798abec1a00d3c5ea3a9426449c3bd42e462b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012742"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>Establecer la opción de configuración del servidor Umbral de cursor
@@ -42,26 +42,26 @@ ms.locfileid: "68012742"
   
 -   **Seguimiento:**  [Después de configurar la opción de umbral de cursor](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no es compatible con la generación asincrónica de cursores de [!INCLUDE[tsql](../../includes/tsql-md.md)] estáticos o controlados por conjuntos de claves. [!INCLUDE[tsql](../../includes/tsql-md.md)] como OPEN o FETCH se procesan por lotes, por lo que la generación asincrónica de cursores de [!INCLUDE[tsql](../../includes/tsql-md.md)] no es necesaria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sigue admitiendo los cursores de servidor de la interfaz de programación de aplicaciones (API) estáticos o controlados por conjuntos de claves asincrónicos en los que OPEN de baja latencia es un problema, debido a los recorridos de ida y vuelta al cliente para cada operación del cursor.  
   
 -   La precisión del optimizador de consultas para determinar una estimación del número de filas de un conjunto de claves depende del grado de actualización de las estadísticas de cada una de las tablas del cursor.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un profesional certificado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Si establece el valor -1 para el **umbral de cursor** , todos los conjuntos de claves se generan de manera sincrónica, lo que beneficia a los conjuntos de cursores pequeños. Si establece el valor 0 para **cursor threshold** , todos los conjuntos de claves del cursor se generan de manera asincrónica. Con otros valores, el optimizador de consultas compara el número de filas esperadas del conjunto de cursores y genera asincrónicamente el conjunto de claves si supera el número establecido en **cursor threshold**. No establezca un valor demasiado bajo para el **umbral de cursor** , ya que los conjuntos de resultados pequeños se generan mejor de manera sincrónica.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-cursor-threshold-option"></a>Para configurar la opción cursor threshold  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68012742"
   
 3.  En **Varios**, cambie la opción **Umbral de cursor** al valor que desee.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-the-cursor-threshold-option"></a>Para configurar la opción cursor threshold  
   
@@ -97,7 +97,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de umbral de cursor  
+##  <a name="follow-up-after-you-configure-the-cursor-threshold-option"></a><a name="FollowUp"></a> Seguimiento: Después de configurar la opción de umbral de cursor  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
 ## <a name="see-also"></a>Consulte también  

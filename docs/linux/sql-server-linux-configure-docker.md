@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: e97f535dedd2b6ee25abfc886d1f08272697c549
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287509"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configuración de imágenes de contenedor de SQL Server en Docker
@@ -54,7 +54,7 @@ En este artículo de configuración se proporcionan escenarios de uso adicionale
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="rhel"></a> Ejecución de imágenes de contenedor basadas en RHEL
+## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> Ejecución de imágenes de contenedor basadas en RHEL
 
 La documentación sobre las imágenes de contenedor de SQL Server en Linux apunta a contenedores basados en Ubuntu. A partir de SQL Server 2019, puede usar contenedores basados en Red Hat Enterprise Linux (RHEL). Cambie el repositorio de contenedores de **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** a **mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8** en todos los comandos de Docker.
 
@@ -73,7 +73,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="production"></a> Ejecución de imágenes de contenedor de producción
+## <a name="run-production-container-images"></a><a id="production"></a> Ejecución de imágenes de contenedor de producción
 
 En la guía de inicio rápido de la sección anterior se ejecuta la edición para desarrolladores gratuita de SQL Server de Docker Hub. La mayor parte de la información sigue siendo aplicable si quiere ejecutar imágenes de contenedor de producción, como las ediciones Enterprise, Standard o Web. Pero hay algunas diferencias que se describen aquí.
 
@@ -210,7 +210,7 @@ sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
 
-## <a id="customcontainer"></a> Creación de un contenedor personalizado
+## <a name="create-a-customized-container"></a><a id="customcontainer"></a> Creación de un contenedor personalizado
 
 Es posible crear su propio [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) para crear un contenedor de SQL Server personalizado. Para obtener más información, vea [una demostración que combina SQL Server y una aplicación de nodo](https://github.com/twright-msft/mssql-node-docker-demo-app). Si crea su propio Dockerfile, tenga en cuenta el proceso en primer plano, ya que este proceso controla la vida del contenedor. Si se cierra, se cerrará el contenedor. Por ejemplo, si desea ejecutar un script e iniciar SQL Server, asegúrese de que el proceso de SQL Server sea el más adecuado. Todos los demás comandos se ejecutan en segundo plano. El comando siguiente ilustra esto dentro de un Dockerfile:
 
@@ -220,7 +220,7 @@ Es posible crear su propio [Dockerfile](https://docs.docker.com/engine/reference
 
 Si invirtió los comandos en el ejemplo anterior, el contenedor se cerrará cuando se complete el script do-my-sql-commands.sh.
 
-## <a id="persist"></a> Conservación de los datos
+## <a name="persist-your-data"></a><a id="persist"></a> Conservación de los datos
 
 Los cambios de configuración de SQL Server y los archivos de base de datos se conservan en el contenedor aunque se reinicie el contenedor con `docker stop` y `docker start`. Pero si quita el contenedor con `docker rm`, se elimina todo el contenedor, incluidos SQL Server y las bases de datos. En la siguiente sección se explica cómo usar **volúmenes de datos** para conservar los archivos de base de datos incluso si se eliminan los contenedores asociados.
 
@@ -368,7 +368,7 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```PowerShell
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
-## <a id="tz"></a> Configuración de la zona horaria
+## <a name="configure-the-timezone"></a><a id="tz"></a> Configuración de la zona horaria
 
 Para ejecutar SQL Server en un contenedor de Linux con una zona horaria específica, configure la variable de entorno `TZ`. Para buscar el valor de zona horaria correcto, ejecute el comando `tzselect` desde un símbolo del sistema de Bash de Linux:
 
@@ -425,7 +425,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 ```
 ::: moniker-end
 
-## <a id="tags"></a> Ejecución de una imagen de contenedor de SQL Server determinada
+## <a name="run-a-specific-sql-server-container-image"></a><a id="tags"></a> Ejecución de una imagen de contenedor de SQL Server determinada
 
 Hay escenarios en los que es posible que no quiera usar la imagen de contenedor de SQL Server más reciente. Para ejecutar una imagen de contenedor de SQL Server determinada, siga estos pasos:
 
@@ -449,7 +449,7 @@ Hay escenarios en los que es posible que no quiera usar la imagen de contenedor 
 
 Estos pasos también se pueden usar para degradar un contenedor existente. Por ejemplo, puede que quiera revertir o degradar un contenedor en ejecución para solucionar problemas o realizar pruebas. Para degradar un contenedor en ejecución, debe usar una técnica de persistencia para la carpeta de datos. Siga los mismos pasos descritos en la [sección de actualización](#upgrade), pero especifique el nombre de etiqueta de la versión anterior al ejecutar el nuevo contenedor.
 
-## <a id="version"></a> Comprobación de la versión de contenedor
+## <a name="check-the-container-version"></a><a id="version"></a> Comprobación de la versión de contenedor
 
 Si quiere conocer la versión de SQL Server en un contenedor de Docker en ejecución, ejecute el siguiente comando para mostrarla: Reemplace `<Container ID or name>` por el identificador o el nombre del contenedor de destino. Reemplace `<YourStrong!Passw0rd>` por la contraseña de SQL Server para el inicio de sesión de SA.
 
@@ -505,7 +505,7 @@ Packages
   sqlagent.sfp                  14.0.3029.16
 ```
 
-## <a id="upgrade"></a> Actualización de SQL Server en contenedores
+## <a name="upgrade-sql-server-in-containers"></a><a id="upgrade"></a> Actualización de SQL Server en contenedores
 
 Para actualizar la imagen de contenedor con Docker, primero identifique la etiqueta de la versión de la actualización. Extraiga esta versión del registro con el comando `docker pull`:
 
@@ -528,7 +528,7 @@ Esto actualiza la imagen de SQL Server para los nuevos contenedores que cree, p
 
 1. Opcionalmente, quite el contenedor anterior con `docker rm`.
 
-## <a id="buildnonrootcontainer"></a> Compilación y ejecución de contenedores no raíz de SQL Server 2017
+## <a name="build-and-run-non-root-sql-server-2017-containers"></a><a id="buildnonrootcontainer"></a> Compilación y ejecución de contenedores no raíz de SQL Server 2017
 
 Siga los pasos siguientes para compilar un contenedor de SQL Server 2017 que se inicie como el usuario `mssql` (no raíz).
 
@@ -566,7 +566,7 @@ Ejecute `whoami`, que devolverá el usuario que se ejecuta en el contenedor.
 whoami
 ```
 
-## <a id="nonrootuser"></a> Ejecución del contenedor como otro usuario no raíz en el host
+## <a name="run-container-as-a-different-non-root-user-on-the-host"></a><a id="nonrootuser"></a> Ejecución del contenedor como otro usuario no raíz en el host
 
 Para ejecutar el contenedor de SQL Server como otro usuario no raíz, agregue la marca -u al comando docker run. El contenedor no raíz tiene la restricción de que se debe ejecutar como parte del grupo raíz a menos que el volumen se monte en "/var/opt/mssql" con acceso para el usuario no raíz. El grupo raíz no concede ningún permiso de raíz adicional al usuario no raíz.
 
@@ -603,7 +603,7 @@ Puede iniciar SQL Server con un grupo y un usuario personalizados. En este ejemp
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-## <a id="storagepermissions"></a> Configuración de permisos de almacenamiento persistentes para contenedores no raíz
+## <a name="configure-persistent-storage-permissions-for-non-root-containers"></a><a id="storagepermissions"></a> Configuración de permisos de almacenamiento persistentes para contenedores no raíz
 
 Para permitir que el usuario no raíz acceda a los archivos de base de datos que se encuentran en volúmenes montados, asegúrese de que el usuario o grupo en el que se ejecuta el contenedor pueda acceder al almacenamiento de archivos persistente.  
 
@@ -632,7 +632,7 @@ Puede ser el usuario no raíz predeterminado o cualquier otro usuario no raíz q
 chown -R 10001:0 <database file dir>
 ```
 
-## <a id="changefilelocation"></a> Cambio de la ubicación predeterminada del archivo
+## <a name="change-the-default-file-location"></a><a id="changefilelocation"></a> Cambio de la ubicación predeterminada del archivo
 
 Agregue la variable `MSSQL_DATA_DIR` para cambiar el directorio de datos en el comando `docker run` y, después, monte un volumen en esa ubicación a la que tenga acceso el usuario del contenedor.
 
@@ -640,7 +640,7 @@ Agregue la variable `MSSQL_DATA_DIR` para cambiar el directorio de datos en el c
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-## <a id="troubleshooting"></a> Solucionar problemas
+## <a name="troubleshooting"></a><a id="troubleshooting"></a> Solucionar problemas
 
 En las secciones siguientes se proporcionan sugerencias para la solución de problemas de ejecución de SQL Server en contenedores.
 
@@ -760,7 +760,7 @@ Si usa Docker con grupos de disponibilidad de SQL Server, hay dos requisitos ad
 
 - Establecer explícitamente el nombre de host del contenedor con el parámetro `-h YOURHOSTNAME` del comando `docker run`. Este nombre de host se usa al configurar el grupo de disponibilidad. Si no lo especifica con `-h`, el valor predeterminado es el identificador del contenedor.
 
-### <a id="errorlogs"></a> Configuración y registros de errores de SQL Server
+### <a name="sql-server-setup-and-error-logs"></a><a id="errorlogs"></a> Configuración y registros de errores de SQL Server
 
 Puede consultar la configuración y los registros de errores de SQL Server en **/var/opt/mssql/log**. Si el contenedor no se está ejecutando, primero inicie el contenedor. Después, use un símbolo del sistema interactivo para inspeccionar los registros.
 

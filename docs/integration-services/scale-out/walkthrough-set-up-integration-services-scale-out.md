@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288749"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Tutorial: Configuración de Escalabilidad horizontal de Integration Services (SSIS)
@@ -43,7 +43,7 @@ Para configurar la escalabilidad horizontal de [!INCLUDE[ssISnoversion_md](../..
 
 * [Habilitar el trabajador de escalado horizontal](#EnableWorker)
 
-## <a name="InstallMaster"></a> Instalar el patrón de escalado horizontal
+## <a name="install-scale-out-master"></a><a name="InstallMaster"></a> Instalar el patrón de escalado horizontal
 
 Para configurar el patrón de escalabilidad horizontal, deberá instalar los servicios de motor de base de datos, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)], y la característica de patrón de escalabilidad horizontal de SSIS al configurar [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. 
 
@@ -91,7 +91,7 @@ Siga las instrucciones descritas en [Instalar SQL Server desde el símbolo del s
     > [!NOTE]
     > Si el patrón de escalabilidad horizontal no está instalado junto con el motor de base de datos y este motor es una instancia con nombre, deberá configurar `SqlServerName` en el archivo de configuración de servicio del patrón de escalabilidad horizontal después de la instalación. Para obtener más información, vea [Patrón de escalabilidad horizontal](integration-services-ssis-scale-out-master.md).
 
-## <a name="InstallWorker"></a> Instalar el trabajador de escalado horizontal
+## <a name="install-scale-out-worker"></a><a name="InstallWorker"></a> Instalar el trabajador de escalado horizontal
  
 Para configurar el trabajador de escalabilidad horizontal, deberá instalar [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] y la característica de trabajador de escalabilidad horizontal en la configuración de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 
@@ -142,20 +142,20 @@ Siga las instrucciones descritas en [Instalar SQL Server desde el símbolo del s
     -   `/ISWORKERSVCMASTER` (opcional)
     -   `/ISWORKERSVCCERT` (opcional)
  
-## <a name="InstallCert"></a> Instalar el certificado de cliente del trabajador de escalado horizontal
+## <a name="install-scale-out-worker-client-certificate"></a><a name="InstallCert"></a> Instalar el certificado de cliente del trabajador de escalado horizontal
 
 Durante la instalación del trabajador de escalabilidad horizontal, se creará e instalará automáticamente un certificado de trabajador en el equipo. También se instalará un certificado de cliente correspondiente, SSISScaleOutWorker.cer, en `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn`. Para que el patrón de escalabilidad horizontal autentique el trabajador de escalabilidad horizontal, deberá agregar este certificado de cliente al almacén raíz del equipo local con el patrón de escalabilidad horizontal.
   
 Para agregar el certificado de cliente al almacén raíz, haga doble clic en el archivo .cer y, luego, haga clic en **Instalar certificado** en el cuadro de diálogo del certificado. Se abrirá el **Asistente para importar certificados**.  
 
-## <a name="Firewall"></a> Abrir el puerto del firewall
+## <a name="open-firewall-port"></a><a name="Firewall"></a> Abrir el puerto del firewall
 
 En el equipo que contiene el patrón de escalabilidad horizontal, abra el puerto especificado durante la instalación del patrón de escalabilidad horizontal y el puerto para SQL Server (1433 de manera predeterminada) en el Firewall de Windows.
 
 > [!Note]
 > Después de abrir el puerto del firewall, también deberá reiniciar el servicio de trabajador de escalabilidad horizontal.
     
-## <a name="Start"></a> Iniciar los servicios de patrón y trabajador de escalado horizontal de SQL Server
+## <a name="start-sql-server-scale-out-master-and-worker-services"></a><a name="Start"></a> Iniciar los servicios de patrón y trabajador de escalado horizontal de SQL Server
 
 Si no ha configurado el tipo de inicio de los servicios como **Automático** durante la instalación, inicie los siguientes servicios:
 
@@ -163,18 +163,18 @@ Si no ha configurado el tipo de inicio de los servicios como **Automático** dur
 
 -   SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140)
 
-## <a name="EnableMaster"></a> Habilitar el patrón de escalado horizontal
+## <a name="enable-scale-out-master"></a><a name="EnableMaster"></a> Habilitar el patrón de escalado horizontal
 
 Al crear el catálogo de SSISDB en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)], seleccione **Habilitar este servidor como servicio principal de Escalabilidad horizontal de SSIS** en el cuadro de diálogo **Crear catálogo**.
 
 Tras crear el catálogo, podrá habilitar el patrón de escalabilidad horizontal con [Scale Out Manager](integration-services-ssis-scale-out-manager.md).
 
-## <a name="EnableAuth"></a> Habilitar el modo de autenticación de SQL Server
+## <a name="enable-sql-server-authentication-mode"></a><a name="EnableAuth"></a> Habilitar el modo de autenticación de SQL Server
 Si no habilitó la autenticación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] durante la instalación del motor de base de datos, habilite el modo de autenticación de SQL Server en la instancia de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] que contiene el catálogo de SSISDB. 
 
 La ejecución de paquetes no se bloquea si la autenticación de SQL Server está deshabilitada, Pero el registro de ejecución no puede escribir en la base de datos de SSISDB.
 
-## <a name="EnableWorker"></a> Habilitar el trabajador de escalado horizontal
+## <a name="enable-scale-out-worker"></a><a name="EnableWorker"></a> Habilitar el trabajador de escalado horizontal
 
 Puede habilitar el trabajador de escalabilidad horizontal con [Scale Out Manager](integration-services-ssis-scale-out-manager.md), que proporciona una interfaz de usuario gráfica, o mediante un procedimiento almacenado.
 

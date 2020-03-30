@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957039"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: usar el editor de Transact-SQL para crear objetos de la base de datos ([!INCLUDE[name-sos](../includes/name-sos-short.md)])
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>Tutorial: usar el editor de Transact-SQL para crear objetos de la base de datos ([!INCLUDE[name-sos](../includes/name-sos-short.md)])
 
 Crea y ejecutar consultas, procedimientos almacenados, scripts, etc., son las tareas principales de los profesionales de bases de datos. En este tutorial, se muestran las características principales del editor de T-SQL para crear objetos de bases de datos.
 
@@ -29,7 +29,7 @@ En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos-sho
 > * Ver detalles de objetos de la base de datos mediante *Ver la definición* e *Ir a la definición*
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 

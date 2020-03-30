@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78257005"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabajar con el seguimiento de cambios (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "78257005"
 
   Las aplicaciones que utilizan el seguimiento de cambios deben poder obtener los cambios que se han sometido a seguimiento, aplicarlos a otro almacén de datos y actualizar la base de datos de origen. En este tema se describe cómo realizar estas tareas y también el rol que desempeña el seguimiento de cambios cuando se produce una conmutación por error y una base de datos se debe restaurar a partir de una copia de seguridad.  
   
-##  <a name="Obtain"></a> Obtener cambios mediante las funciones de seguimiento de cambios  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> Obtener cambios mediante las funciones de seguimiento de cambios  
  Describe cómo utilizar las funciones de seguimiento de cambios para obtener las modificaciones y la información sobre los cambios que se realizaron en una base de datos.  
   
 ### <a name="about-the-change-tracking-functions"></a>Acerca de las funciones de seguimiento de cambios  
@@ -295,7 +295,7 @@ La habilitación del aislamiento de instantáneas y del seguimiento de cambios e
 > [!NOTE]  
 >  La elección del enfoque que va a funcionar para la aplicación cuando se usa el seguimiento de cambios (o cualquier mecanismo de seguimiento personalizado), requiere un análisis significativo. Por consiguiente, es mucho más fácil utilizar el aislamiento de instantánea.  
   
-##  <a name="Handles"></a> Cómo el seguimiento de cambios controla los cambios en una base de datos  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a> Cómo el seguimiento de cambios controla los cambios en una base de datos  
  Algunas aplicaciones que utilizan el seguimiento de cambios realizan una sincronización bidireccional con otro almacén de datos. Es decir, los cambios que se realizan en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualizan en el otro almacén de datos y los que se realizan en este se actualizan en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Cuando una aplicación actualiza la base de datos local con los cambios de otro almacén de datos, debe realizar las operaciones siguientes:  
@@ -414,7 +414,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Existe la posibilidad de que la fila que se está actualizando en la transacción de instantáneas pueda haber sido actualizada en otra transacción una vez iniciada la transacción de instantáneas. En este caso, se producirá un conflicto de actualización del aislamiento de instantánea que provocará que se termine la transacción. Si esto ocurre, vuelva a intentar la actualización. Esto conducirá entonces a la detección de un conflicto del seguimiento de cambios y a que no se realicen cambios en ninguna fila.  
   
-##  <a name="DataRestore"></a> Seguimiento de cambios y restauración de datos  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a> Seguimiento de cambios y restauración de datos  
  Las aplicaciones que requieren sincronización deben considerar el caso en el que una base de datos que tiene el seguimiento de cambios habilitado revierta a una versión anterior de los datos. Esta situación se puede producir al restaurar una base de datos a partir de una copia de seguridad, cuando se produce una conmutación por causa de error a un espejo de la base de datos asincrónico, o cuando se produce un error al utilizar trasvase de registros. El siguiente escenario muestra el problema:  
   
 1.  La tabla T1 está sometida a seguimiento de cambios y la versión válida mínima para la tabla es 50.  

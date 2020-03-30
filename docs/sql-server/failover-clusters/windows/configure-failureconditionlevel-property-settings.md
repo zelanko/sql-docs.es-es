@@ -11,10 +11,10 @@ ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4b14cbe214eee4122a60ba2984bc480dcdf44573
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822010"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Configuración de los valores de la propiedad FailureConditionLevel
@@ -25,17 +25,17 @@ ms.locfileid: "74822010"
   
 -   **Para configurar la propiedad FailureConditionLevel mediante**  [PowerShell](#PowerShellProcedure), [Administrador de clústeres de conmutación por error](#WSFC), [Transact-SQL](#TsqlProcedure).  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Valores de propiedad FailureConditionLevel  
+###  <a name="failureconditionlevel-property-settings"></a><a name="Restrictions"></a> Valores de propiedad FailureConditionLevel  
  Las condiciones de error se establecen en una escala creciente. Para los niveles 1 a 5, cada nivel incluye todas las condiciones de los niveles anteriores además de sus propias condiciones. Esto significa que con cada nivel, hay mayor probabilidad de que se produzca una conmutación por error o un reinicio.  Para obtener más información, vea la sección "Determinar los errores" del tema [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md) .  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Se necesitan los permisos ALTER SETTINGS y VIEW SERVER STATE.  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
   
 ##### <a name="to-configure-failureconditionlevel-settings"></a>Para configurar los valores de FailureConditionLevel  
   
@@ -67,7 +67,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 -   [Comandos de recursos de clúster y cmdlets equivalentes de Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-##  <a name="WSFC"></a> Usar el complemento Administrador de clústeres de conmutación por error  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WSFC"></a> Usar el complemento Administrador de clústeres de conmutación por error  
  **Para configurar los valores de la propiedad FailureConditionLevel:**  
   
 1.  Abra el complemento Administrador de clústeres de conmutación por error.  
@@ -78,12 +78,12 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 4.  Seleccione la pestaña **Propiedades** , escriba el valor deseado para la propiedad **FaliureConditionLevel** y, a continuación, haga clic en **Aceptar** para aplicar el cambio.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para configurar los valores de la propiedad FailureConditionLevel:**  
   
  Con la instrucción [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] puede especificar el valor de la propiedad FailureConditionLevel.  
   
-###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  En el ejemplo siguiente se establece la propiedad FailureConditionLevel en 0, lo que indica que no se desencadenará automáticamente una conmutación por error o un reinicio si se produce algún error.  
   
 ```  

@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243518"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Usar condiciones de prueba en pruebas unitarias de SQL Server
@@ -75,7 +75,7 @@ Se omite cualquier parámetro no especificado. Estos parámetros se pasan a la i
   
 Para obtener un ejemplo de cómo usar excepciones esperadas y una prueba unitaria negativa de SQL Server, consulte [Tutorial: Crear y ejecutar una prueba unitaria de SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
-## <a name="SpecifyDataChecksum"></a>Especificar una suma de comprobación de datos  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>Especificar una suma de comprobación de datos  
 Para mostrar el Diseñador de pruebas unitarias de SQL Server, haga doble clic en el archivo de código fuente de la prueba unitaria en el **Explorador de soluciones**.  
   
 Después de agregar una condición de prueba Suma de comprobación de datos a la prueba unitaria de base de datos, debe configurar la suma de comprobación esperada mediante el siguiente procedimiento:  
@@ -107,7 +107,7 @@ Después de agregar una condición de prueba Suma de comprobación de datos a la
   
     La columna **Valor** de la condición de prueba muestra el valor de la suma de comprobación esperada.  
   
-## <a name="SpecifyExpectedSchema"></a>Especificar un esquema esperado  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>Especificar un esquema esperado  
 Una vez agregada una condición de prueba Esquema esperado a la prueba unitaria de SQL Server, debe configurar el esquema esperado mediante el procedimiento siguiente:  
   
 #### <a name="to-specify-an-expected-schema"></a>Para especificar un esquema esperado  

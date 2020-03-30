@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 4217acf163e8603c5993cfa8ade4207c9a79c6cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054565"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Programar la ejecución de paquetes de SQL Server Integration Services (SSIS) implementados en Azure
@@ -36,13 +36,13 @@ Puede programar la ejecución de los paquetes SSIS implementados en el catálogo
 - [Programar un paquete indirectamente como parte de una canalización de Azure Data Factory](#activity)
 
 
-## <a name="ssms"></a> Programar un paquete con SSMS
+## <a name="schedule-a-package-with-ssms"></a><a name="ssms"></a> Programar un paquete con SSMS
 
 En SQL Server Management Studio (SSMS), puede hacer clic con el botón derecho en un paquete implementado en la base de datos del catálogo de SSIS, SSISDB, y seleccionar **Programación** para abrir el cuadro de diálogo **Nueva programación**. Para obtener más información, vea [Programar paquetes SSIS en Azure con SSMS](ssis-azure-schedule-packages-ssms.md).
 
 Esta característica require SQL Server Management Studio versión 17.7 o superior. Para obtener la versión más reciente de SSMS, vea [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) [Descargar SQL Server Management Studio (SSMS)].
 
-## <a name="elastic"></a> Programar un paquete con trabajos elásticos de SQL Database
+## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Programar un paquete con trabajos elásticos de SQL Database
 
 Para obtener más información acerca de los trabajos elásticos en SQL Database, consulte [Administración de bases de datos escaladas horizontalmente en la nube](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
@@ -88,7 +88,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
     @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
-## <a name="agent"></a> Programar un paquete con el Agente SQL Server local
+## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> Programar un paquete con el Agente SQL Server local
 
 Para obtener más información, sobre el Agente SQL Server, consulte [Trabajos del Agente SQL Server para paquetes](../packages/sql-server-agent-jobs-for-packages.md).
 
@@ -160,7 +160,7 @@ Para programar un paquete con el Agente SQL Server de forma local, cree un traba
 
 6.  Termine de configurar y programar el trabajo.
 
-## <a name="activity"></a> Programar un paquete como parte de una canalización de Azure Data Factory
+## <a name="schedule-a-package-as-part-of-an-azure-data-factory-pipeline"></a><a name="activity"></a> Programar un paquete como parte de una canalización de Azure Data Factory
 
 Puede programar un paquete de manera indirecta mediante un desencadenador para ejecutar una canalización de Azure Data Factory en la que se ejecute un paquete SSIS.
 

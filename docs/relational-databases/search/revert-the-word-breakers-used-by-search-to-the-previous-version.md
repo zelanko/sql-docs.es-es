@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055185"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Reversión a la versión anterior de los separadores de palabras usados por Buscar (Búsqueda de SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "74055185"
   
  Para obtener información general sobre los separadores de palabras y lematizadores, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-##  <a name="overview"></a> Información general sobre la reversión y restauración de los separadores de palabras y los lematizadores  
+##  <a name="overview-of-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="overview"></a> Información general sobre la reversión y restauración de los separadores de palabras y los lematizadores  
  Las instrucciones para revertir y restaurar los separadores de palabras y lematizadores dependen del idioma. En la tabla siguiente se resumen los tres conjuntos de acciones que pueden ser necesarios para revertir los componentes a la versión anterior.  
   
 |Archivo actual|Archivo anterior|Número de idiomas afectados|Acción de archivos|Acción de entradas del Registro|  
@@ -50,7 +50,7 @@ ms.locfileid: "74055185"
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
-##  <a name="nl6nl6"></a> Idiomas para los que el nombre de archivo del separador de palabras actual y anterior es NaturalLanguage6.dll  
+##  <a name="languages-for-which-the-file-name-of-both-the-current-and-previous-word-breaker-is-naturallanguage6dll"></a><a name="nl6nl6"></a> Idiomas para los que el nombre de archivo del separador de palabras actual y anterior es NaturalLanguage6.dll  
  Para los idiomas en la siguiente tabla, el nombre de archivo del separador de palabras actual y anterior es NaturalLanguage6.dll. Para revertir o restaurar estos componentes, tiene que sobrescribir NaturalLanguage6.dll con una versión diferente del mismo archivo. No tendrá que cambiar ninguna entrada del Registro, porque las entradas de Registro no han modificado en esta versión.  
   
 > [!WARNING]  
@@ -97,7 +97,7 @@ ms.locfileid: "74055185"
   
  La tabla anterior está ordenada alfabéticamente según la columna Abreviatura.  
   
-###  <a name="nl6nl6revert"></a> Para revertir a los componentes anteriores  
+###  <a name="to-revert-to-the-previous-components"></a><a name="nl6nl6revert"></a> Para revertir a los componentes anteriores  
   
 1.  Navegue a la carpeta Binn descrita anteriormente.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "74055185"
   
 4.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-###  <a name="nl6nl6restore"></a> Para restaurar los componentes actuales  
+###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> Para restaurar los componentes actuales  
   
 1.  Navegue a la ubicación en la que realizó la copia de seguridad de la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de NaturalLanguage6.dll.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "74055185"
   
 3.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="newnl6"></a> Idiomas para los que el nombre de archivo del separador de palabras anterior solo es NaturalLanguage6.dll  
+##  <a name="languages-for-which-the-file-name-of-the-previous-word-breaker-only-is-naturallanguage6dll"></a><a name="newnl6"></a> Idiomas para los que el nombre de archivo del separador de palabras anterior solo es NaturalLanguage6.dll  
  Para los idiomas de la tabla siguiente, el nombre de archivo del separador de palabras anterior es diferente del nombre de la nueva versión. El nombre de archivo anterior es NaturalLanguage6.dll. Para revertir a la versión anterior, tiene que sobrescribir la versión actual de NaturalLanguage6.dll con una versión anterior del mismo archivo. También tiene que cambiar un conjunto de entradas del Registro para especificar la versión anterior o actual de los componentes.  
   
 > [!WARNING]  
@@ -141,7 +141,7 @@ ms.locfileid: "74055185"
   
  Use las siguientes instrucciones junto con la lista de valores de la sección [Nombres de archivos y de valores de Registro para revertir y restaurar los separadores de palabras y los lematizadores](#newnl6values).  
   
-###  <a name="newnl6revert"></a> Para revertir a los componentes anteriores  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnl6revert"></a> Para revertir a los componentes anteriores  
   
 1.  Navegue a la carpeta Binn descrita anteriormente.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "74055185"
   
 10. Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnl6restore"></a> Para restaurar los componentes actuales  
+###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> Para restaurar los componentes actuales  
   
 1.  Navegue a la ubicación en la que realizó la copia de seguridad de la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de NaturalLanguage6.dll.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "74055185"
   
 8.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnl6values"></a> Nombres de archivos y de valores de Registro para revertir y restaurar los separadores de palabras y los lematizadores  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnl6values"></a> Nombres de archivos y de valores de Registro para revertir y restaurar los separadores de palabras y los lematizadores  
  Utilice la siguiente lista de nombres de archivo y de entradas del Registro junto con las instrucciones en la sección anterior. Utilice los valores anteriores para revertir a la versión anterior, o use los valores actuales para restaurar la versión actual de los componentes.  
   
  La siguiente lista está ordenada alfabéticamente según la abreviatura utilizada para cada idioma.  
@@ -253,7 +253,7 @@ ms.locfileid: "74055185"
 |CLSID actual|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
 |Nombre de archivo actual|MSWB7.dll|MSWB7.dll|  
   
-##  <a name="newnew"></a> Idiomas para los que ni el nombre de archivo anterior ni el actual es NaturalLanguage6.dll  
+##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> Idiomas para los que ni el nombre de archivo anterior ni el actual es NaturalLanguage6.dll  
  Para los idiomas en la tabla siguiente, los nombres de archivo de los separadores de palabras y los lematizadores anteriores son diferentes de los nombres de archivo de las nuevas versiones. Ni el nombre de archivo anterior ni el actual es NaturalLanguage6.dll. No tendrá que reemplazar los archivos, porque la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copia la versión actual y las anteriores de los componentes en la carpeta Binn. Sin embargo, tendrá que cambiar un conjunto de entradas del Registro para especificar la versión anterior o actual de los componentes.  
   
  **Lista de idiomas afectados**  
@@ -271,7 +271,7 @@ ms.locfileid: "74055185"
   
  Use las siguientes instrucciones junto con la lista de valores de la sección [Nombres de archivos y de valores de Registro para revertir y restaurar los separadores de palabras y los lematizadores](#newnewvalues).  
   
-###  <a name="newnewrevert"></a> Para revertir a los componentes anteriores  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnewrevert"></a> Para revertir a los componentes anteriores  
   
 1.  No elimine los archivos de la versión actual de los componentes de la carpeta Binn.  
   
@@ -295,7 +295,7 @@ ms.locfileid: "74055185"
   
 7.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnewrestore"></a> Para restaurar los componentes anteriores  
+###  <a name="to-restore-the-previous-components"></a><a name="newnewrestore"></a> Para restaurar los componentes anteriores  
   
 1.  No elimine los archivos de la versión anterior de los componentes de la carpeta Binn.  
   
@@ -319,7 +319,7 @@ ms.locfileid: "74055185"
   
 7.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnewvalues"></a> Nombres de archivos y de valores de Registro para revertir y restaurar los separadores de palabras y los lematizadores  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnewvalues"></a> Nombres de archivos y de valores de Registro para revertir y restaurar los separadores de palabras y los lematizadores  
  Utilice la siguiente lista de nombres de archivo y de entradas del Registro junto con las instrucciones en la sección anterior. Utilice los valores anteriores para revertir a la versión anterior, o use los valores actuales para restaurar la versión actual de los componentes.  
   
  La siguiente lista está ordenada alfabéticamente según la abreviatura utilizada para cada idioma.  

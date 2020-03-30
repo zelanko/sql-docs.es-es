@@ -13,10 +13,10 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907190"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar un publicador de Oracle
@@ -137,7 +137,7 @@ ms.locfileid: "72907190"
 > [!NOTE]  
 >  Un publicador de Oracle no puede tener el mismo nombre que su distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ni el mismo nombre que ninguno de los publicadores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que utilizan el mismo distribuidor.  
   
- Al identificar la base de datos de Oracle como publicador, se debe elegir una opción de publicación de Oracle: Completa o Puerta de enlace de Oracle. Después de identificar un publicador, esta opción no se puede cambiar sin quitar y volver a configurar el publicador. La opción Completo está diseñada para proporcionar publicaciones de instantáneas y transaccionales con el conjunto completo de características compatibles para la publicación de Oracle. La opción Puerta de enlace proporciona optimizaciones de diseño específicas para mejorar el rendimiento en casos en los que la replicación sirve como puerta de enlace entre sistemas.  
+ Al identificar la base de datos de Oracle como un publicador, se debe elegir una opción de publicación de Oracle: Oracle o Puerta de enlace de Oracle. Después de identificar un publicador, esta opción no se puede cambiar sin quitar y volver a configurar el publicador. La opción Completo está diseñada para proporcionar publicaciones de instantáneas y transaccionales con el conjunto completo de características compatibles para la publicación de Oracle. La opción Puerta de enlace proporciona optimizaciones de diseño específicas para mejorar el rendimiento en casos en los que la replicación sirve como puerta de enlace entre sistemas.  
   
  Después de identificar el publicador de Oracle en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la replicación crea un servidor vinculado con el mismo nombre que el nombre del servicio TNS en la base de datos de Oracle. Este servidor vinculado solo lo puede utilizar la replicación. Si necesita conectarse al publicador de Oracle a través de una conexión con el servidor vinculado, cree otro nombre de servicio TNS y después úselo para llamar a [sp_addlinkedserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   

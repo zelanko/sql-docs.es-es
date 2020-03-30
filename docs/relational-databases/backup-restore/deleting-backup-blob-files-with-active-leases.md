@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908935"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
@@ -42,7 +42,7 @@ En los pasos siguientes se describe cómo realizar la limpieza después de una a
   
 1. **Eliminar el blob**: para eliminar un blob con una concesión activa, debe interrumpir primero la concesión.  
 
-###  <a name="Code_Example"></a> Ejemplo de script de PowerShell  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Ejemplo de script de PowerShell  
   
 > [!IMPORTANT]
 > Si está ejecutando PowerShell 2.0, quizás tenga problemas al cargar el ensamblado de Microsoft WindowsAzure.Storage.dll. Recomendamos que actualice [PowerShell](https://docs.microsoft.com/powershell/) para resolver el problema. También puede usar la solución alternativa siguiente para crear o modificar el archivo powershell.exe.config para cargar los ensamblados de .NET 2.0 y .NET 4.0 en tiempo de ejecución con lo siguiente:  

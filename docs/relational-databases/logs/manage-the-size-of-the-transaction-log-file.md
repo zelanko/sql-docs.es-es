@@ -15,17 +15,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084018"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Administrar el tamaño del archivo de registro de transacciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 En este tema se incluye información sobre cómo supervisar el tamaño de un registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reducir el registro de transacciones, agregar o ampliar un archivo de registro de transacciones, optimizar la tasa de crecimiento del registro de transacciones **tempdb** y controlar el crecimiento de un archivo de registro de transacciones.  
 
-##  <a name="MonitorSpaceUse"></a>Supervisión del uso del espacio del registro  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Supervisión del uso del espacio del registro  
 Supervise el uso del espacio del registro mediante [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md). Este DMV devuelve información sobre la cantidad de espacio del registro actualmente en uso e indica cuándo es necesario el truncamiento del registro de transacciones. 
 
 Para obtener información sobre el tamaño actual del archivo de registro, su tamaño máximo y la opción de crecimiento automático de este archivo, también puede usar las columnas **size**, **max_size** y **growth** de ese archivo de registro en [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
@@ -33,7 +33,7 @@ Para obtener información sobre el tamaño actual del archivo de registro, su ta
 > [!IMPORTANT]
 > Evite la sobrecarga del disco del registro. Asegúrese de que el almacenamiento del registro puede soportar la [IOPS](https://wikipedia.org/wiki/IOPS) y los requisitos de latencia baja para la carga de transacciones. 
   
-##  <a name="ShrinkSize"></a> Reducir el tamaño del archivo de registro  
+##  <a name="shrink-log-file-size"></a><a name="ShrinkSize"></a> Reducir el tamaño del archivo de registro  
  Para reducir el tamaño físico de un archivo de registro físico, debe reducir el archivo de registro. Esto es útil si sabe que un archivo de registro de transacciones contiene espacio que no se ha utilizado. Puede reducir un archivo de registro siempre que la base de datos esté en línea y haya al menos un [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) libre. En algunos casos, no será posible reducir el registro hasta el siguiente truncamiento del registro.  
   
 > [!NOTE]
@@ -60,7 +60,7 @@ Con la reducción de un archivo de registro se quitan uno o varios [VLF](../../r
   
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (Vea las columnas **size**, **max_size** y **growth** de los archivos de registro).  
   
-##  <a name="AddOrEnlarge"></a> Agregar o ampliar un archivo de registro  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a> Agregar o ampliar un archivo de registro  
 Puede obtener espacio al ampliar el archivo de registro existente (si el espacio en disco lo permite) o al agregar un archivo de registro a la base de datos, normalmente en otro disco. Un archivo de registro de transacciones es suficiente, a menos que se esté agotando el espacio del registro y que el espacio en disco también se esté agotando en el volumen que contiene el archivo de registro.   
   
 -   Para agregar un archivo de registro a la base de datos, use la cláusula `ADD LOG FILE` de la instrucción `ALTER DATABASE`. El hecho de agregar un archivo de registro permite que crezca el existente.  
@@ -68,12 +68,12 @@ Puede obtener espacio al ampliar el archivo de registro existente (si el espacio
 
 Para obtener más información, vea [Recomendaciones](#Recommendations) en este tema.
     
-##  <a name="tempdbOptimize"></a> Optimizar el tamaño del registro de transacciones tempdb  
+##  <a name="optimize-tempdb-transaction-log-size"></a><a name="tempdbOptimize"></a> Optimizar el tamaño del registro de transacciones tempdb  
  Al reiniciar una instancia del servidor se devuelve el tamaño del registro de transacciones de la base de datos **tempdb** a su tamaño original, antes del crecimiento automático. Esto puede reducir el rendimiento del registro de transacciones de **tempdb** . 
  
  Para evitar esta sobrecarga, aumente el tamaño del registro de transacciones de **tempdb** después de iniciar o reiniciar la instancia de servidor. Para obtener más información, consulte [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
-##  <a name="ControlGrowth"></a> Controlar el crecimiento de un archivo de registro de transacciones  
+##  <a name="control-transaction-log-file-growth"></a><a name="ControlGrowth"></a> Controlar el crecimiento de un archivo de registro de transacciones  
  Use la instrucción [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) para administrar el crecimiento de un archivo de registro de transacciones. Tenga en cuenta lo siguiente:  
   
 -   Para cambiar el tamaño del archivo actual en unidades de KB, MB, GB y TB, use la opción `SIZE`.  
@@ -82,7 +82,7 @@ Para obtener más información, vea [Recomendaciones](#Recommendations) en este 
 
 Para obtener más información, vea [Recomendaciones](#Recommendations) en este tema.
 
-## <a name="Recommendations"></a> Recomendaciones
+## <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones
 Estas son algunas recomendaciones generales referentes a los archivos de registro de transacciones:
 
 -   El incremento de crecimiento automático del registro de transacciones, según lo establecido por la opción `FILEGROWTH`, debe ser lo suficientemente grande como para anticiparse a las necesidades de las transacciones de la carga de trabajo. El incremento del crecimiento de un archivo de registro debe ser lo suficientemente grande para evitar una expansión frecuente. Un buen punto de referencia para ajustar correctamente el tamaño de un registro de transacciones es supervisar la cantidad de registro ocupada durante:

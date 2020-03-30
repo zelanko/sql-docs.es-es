@@ -9,10 +9,10 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651742"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
@@ -20,7 +20,7 @@ En esta lección de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)
   
 También modificará el conjunto de datos y el informe para usar un parámetro que filtrar el informe en `[Order]` de modo que la suscripción pueda dar como resultado diferentes instancias del informe para pedidos concretos y formatos de representación.  
   
-## <a name="bkmk_modify_datasource"></a>Para modificar el origen de datos de modo que use credenciales almacenadas  
+## <a name="to-modify-the-data-source-to-use-stored-credentials"></a><a name="bkmk_modify_datasource"></a>Para modificar el origen de datos de modo que use credenciales almacenadas  
   
 1.  Vaya al portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con privilegios de administrador, por ejemplo, haga clic con el botón derecho en el icono de Internet Explorer y haga clic en **Ejecutar como administrador**.  
  
@@ -54,7 +54,7 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
   
 11. Visualice el informe para comprobar que se ejecuta con las credenciales que ha especificado. .  
   
-## <a name="bkmk_modify_dataset"></a>Para modificar AdventureWorksDataset  
+## <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>Para modificar AdventureWorksDataset  
  En los pasos siguientes modificará el conjunto de datos para usar un parámetro para filtrar el conjunto de datos según un número de pedido.
 1.  Abra el informe **Sales Orders** en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
@@ -81,7 +81,7 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
   
 4.  Haga clic en **Aceptar**  
  En los pasos siguientes, agregará un parámetro al informe.  El parámetro de informe proporciona el parámetro de conjunto de datos. 
-## <a name="bkmk_add_reportparameter"></a>Para agregar un parámetro de informe y volver a publicarlo  
+## <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>Para agregar un parámetro de informe y volver a publicarlo  
   
 1.  En el panel **Datos del informe** , expanda la carpeta de parámetros y haga doble clic en el parámetro **Ordernumber** .  Se creó automáticamente como parte de los pasos anteriores cuando se agregó el parámetro al conjunto de datos. haga clic en **Nuevo** y, después, en **Parámetro...**  
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
@@ -103,7 +103,7 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
     ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
-## <a name="bkmk_redeploy"></a>Volver a implementar el informe  
+## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>Volver a implementar el informe  
   
 1.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto que se usan en el tutorial de tablas, vea la sección "Para publicar el informe en el servidor de informes (opcional)" de la [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   

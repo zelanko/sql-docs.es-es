@@ -13,10 +13,10 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3c6614425cf8796bd7ec462a62f9410b9ca5857
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936382"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Carga de los controladores de Microsoft para PHP para SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "67936382"
 
 En esta página se proporcionan instrucciones para cargar los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] en el espacio del proceso PHP.  
   
-Puede descargar los controladores pregenerados para su plataforma desde la página del proyecto de Github [Controladores de Microsoft para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases). Cada paquete de instalación contiene los archivos de los controladores SQLSRV y PDO_SQLSRV en las variantes de subprocesos y de no subproceso. En Windows, también están disponibles en variantes de 32 y 64 bits. Consulte [Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) para obtener una lista de los archivos de controlador contenidos en cada paquete. El archivo de controlador debe coincidir con la versión, la arquitectura y los subprocesos de PHP del entorno PHP.
+Puede descargar los controladores pregenerados para su plataforma desde la página del proyecto de Github [Controladores de Microsoft para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases). Cada paquete de instalación contiene los archivos de los controladores SQLSRV y PDO_SQLSRV en las variantes de subprocesos y de no subproceso. En Windows, también están disponibles en variantes de 32 bits y de 64 bits. Consulte [Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) para obtener una lista de los archivos de controlador contenidos en cada paquete. El archivo de controlador debe coincidir con la versión, la arquitectura y los subprocesos de PHP del entorno PHP.
 
 En Linux y macOS, los controladores se pueden instalar alternativamente mediante PECL, tal y como se encuentra en el [tutorial de instalación](../../connect/php/installation-tutorial-linux-mac.md).
 

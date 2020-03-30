@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288579"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "79288579"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionan en todos los sistemas operativos admitidos. Para obtener más información sobre los sistemas operativos admitidos, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Para obtener más información sobre la compatibilidad con las copias de seguridad de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la sección "Soporte de compatibilidad" de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-##  <a name="RestoreScenariosOv"></a> Información general de los escenarios de restauración  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> Información general de los escenarios de restauración  
  Un *escenario de restauración* en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el proceso de restaurar datos de una o más copias de seguridad y, a continuación, recuperar la base de datos. Los escenarios de restauración admitidos dependen del modelo de recuperación de la base de datos y de la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La siguiente tabla presenta los posibles escenarios de restauración compatibles para diferentes modelos de recuperación.  
@@ -85,7 +85,7 @@ Para realizar una restauración de la base de datos, [!INCLUDE[ssde_md](../../in
   
 -   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es posible que la restauración de archivos o páginas permita que otros datos de la base de datos permanezcan en línea durante la operación de restauración.  
 
-## <a name="TlogAndRecovery"></a> Recuperación y el registro de transacciones
+## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> Recuperación y el registro de transacciones
 Para la mayoría de los escenarios de restauración, es necesario aplicar una copia de seguridad del registro de transacciones y permitir que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ejecute el **proceso de recuperación** para que la base de datos esté en línea. La recuperación es el proceso que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que cada base de datos se inicie en un estado de transacción coherente o limpio.
 
 En caso de una conmutación por error u otro apagado no limpio, las bases de datos pueden quedar en un estado en que algunas modificaciones no han llegado a escribirse desde la caché del búfer a los archivos de datos; estos pueden contener modificaciones como resultado de transacciones incompletas. Cuando se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se ejecuta una recuperación de cada base de datos, que consta de tres fases en función del último [punto de control de base de datos](../../relational-databases/logs/database-checkpoints-sql-server.md):
@@ -96,7 +96,7 @@ En caso de una conmutación por error u otro apagado no limpio, las bases de dat
 
 -   **Fase de reversión** revierte las transacciones incompletas encontradas en la ATT para asegurarse de que se conserva la integridad de la base de datos. Después de la reversión, la base de datos pasa a estar en línea y no se pueden aplicar más copias de seguridad del registro de transacciones a la base de datos.
 
-La información sobre el progreso de cada fase de recuperación de base de datos se registra en el [registro de errores](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También se puede realizar el seguimiento del progreso de recuperación de la base de datos mediante eventos extendidos. Para obtener más información, vea la entrada de blog [Nuevos eventos extendidos para el progreso de recuperación de base de datos](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/).
+La información sobre el progreso de cada fase de recuperación de base de datos se registra en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registro de errores[ de ](../../tools/configuration-manager/viewing-the-sql-server-error-log.md). También se puede realizar el seguimiento del progreso de recuperación de la base de datos mediante eventos extendidos. Para obtener más información, vea la entrada de blog [Nuevos eventos extendidos para el progreso de recuperación de base de datos](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/).
 
 > [!NOTE]
 > En un escenario de restauración por etapas, si un grupo de archivos de solo lectura ha sido de solo lectura desde antes de la creación de la copia de seguridad de archivos, no es necesario aplicar las copias de seguridad de registros al grupo de archivos y estas se omiten en la restauración de archivos. 
@@ -105,7 +105,7 @@ La información sobre el progreso de cada fase de recuperación de base de datos
 > [!NOTE]
 > Para maximizar la disponibilidad de las bases de datos en un entorno de Enterprise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition puede poner en línea una base de datos después de la fase de puesta al día mientras la fase de reversión se sigue ejecutando. Esto se conoce como "recuperación rápida".
 
-##  <a name="RMsAndSupportedRestoreOps"></a> Modelos de recuperación y operaciones de restauración admitidas  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a> Modelos de recuperación y operaciones de restauración admitidas  
  Las operaciones de restauración disponibles para una base de datos dependen de su modelo de recuperación. En la tabla siguiente se resumen todos los modelos de recuperación y las diferentes situaciones de restauración en las que funcionarían.  
   
 |Operación de restauración|Modelo de recuperación completa|Modelo de recuperación optimizado para cargas masivas de registros|Modelo de recuperación simple|  
@@ -123,7 +123,7 @@ La información sobre el progreso de cada fase de recuperación de base de datos
 > [!IMPORTANT]  
 > Independientemente del modelo de recuperación de una base de datos, una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede restaurar en una versión de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] anterior a la versión que creó la copia de seguridad.  
   
-## <a name="RMsimpleScenarios"></a> Escenarios de restauración con el modelo de recuperación simple  
+## <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a> Escenarios de restauración con el modelo de recuperación simple  
  El modelo de recuperación simple impone las siguientes restricciones en las operaciones de restauración:  
   
 -   La restauración de archivos y la restauración por etapas están disponibles solo para grupos de archivos secundarios de solo lectura. Para obtener más información sobre estos escenarios de restauración, vea [Restauraciones de archivos &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md) y [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
@@ -137,7 +137,7 @@ La información sobre el progreso de cada fase de recuperación de base de datos
 > [!IMPORTANT]  
 > Independientemente del modelo de recuperación de una base de datos, una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede restaurar en una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a la versión que creó la copia de seguridad.  
   
-##  <a name="RMblogRestore"></a> Restaurar con el modelo de recuperación optimizado para cargas masivas de registros  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> Restaurar con el modelo de recuperación optimizado para cargas masivas de registros  
  En esta sección se tratan las consideraciones de restauración que son exclusivas del modelo de recuperación optimizado para cargas masivas de registros, que está pensado únicamente como un complemento para el modelo de recuperación completa.  
   
 > [!NOTE]  
@@ -164,21 +164,21 @@ La información sobre el progreso de cada fase de recuperación de base de datos
   
  Para obtener más información sobre cómo realizar una restauración con conexión, vea [Restauración con conexión &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
-##  <a name="DRA"></a> Asesor para recuperación de base de datos (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> Asesor para recuperación de base de datos (SQL Server Management Studio)  
 El Asistente para recuperación de base de datos facilita la creación de planes de restauración que implementan secuencias de restauración correctas óptimas. Se ha dado respuesta a muchos problemas conocidos de restauración de base de datos y mejoras solicitados por los clientes. Entre las principales mejoras que ofrece el Asistente para recuperación de base de datos se incluyen las siguientes:  
   
--   **Algoritmo del plan de restauración:**  el algoritmo usado para crear planes de restauración se ha mejorado de forma considerable, especialmente en escenarios de restauraciones complejas. Muchos casos extremos, incluidos los escenarios de bifurcación en restauraciones a un momento dado, se tratan de manera más eficaz que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Algoritmo del plan de restauraciones:**  el algoritmo usado para crear planes de restauraciones se ha mejorado considerablemente, especialmente en escenarios de restauraciones complejas. Muchos casos extremos, incluidos los escenarios de bifurcación en restauraciones a un momento dado, se tratan de manera más eficaz que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Restauraciones a un momento dado:**  el Asistente para recuperación de base de datos simplifica considerablemente la restauración de una base de datos a un momento dado en el tiempo. Una escala de tiempo visual de copia de seguridad mejora significativamente la compatibilidad con restauraciones a un momento dado. Esta escala de tiempo visual permite identificar un punto posible en el tiempo como punto de recuperación de destino para restaurar una base de datos. La escala de tiempo facilita el recorrido de una ruta de recuperación bifurcada (una que abarque varias bifurcaciones de recuperación). Un plan determinado de restauración a un momento dado incluye automáticamente las copias de seguridad que son pertinentes para la restauración a un momento dado de destino (fecha y hora). Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Restauración a un momento dado:**  el Asistente para recuperación de base de datos simplifica considerablemente la restauración de una base de datos a un momento dado en el tiempo. Una escala de tiempo visual de copia de seguridad mejora significativamente la compatibilidad con restauraciones a un momento dado. Esta escala de tiempo visual permite identificar un punto posible en el tiempo como punto de recuperación de destino para restaurar una base de datos. La escala de tiempo facilita el recorrido de una ruta de recuperación bifurcada (una que abarque varias bifurcaciones de recuperación). Un plan determinado de restauración a un momento dado incluye automáticamente las copias de seguridad que son pertinentes para la restauración a un momento dado de destino (fecha y hora). Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 Para obtener más información sobre el Asistente para recuperación de base de datos, vea los siguientes blogs de Facilidad de uso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Asistente para la recuperación: Introducción](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Asistente para recuperación: introducción](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Asistente para la recuperación: uso de SSMS para crear o restaurar copias de seguridad de división](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Asistente para recuperación: usar SSMS para crear o restaurar copias de seguridad de división](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
-## <a name="adr"></a> Recuperación acelerada de bases de datos
-La [recuperación acelerada de bases de datos](/azure/sql-database/sql-database-accelerated-database-recovery/) está disponible en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La recuperación acelerada de bases de datos mejora considerablemente la disponibilidad de la base de datos, especialmente en presencia de transacciones de larga duración, al volver a diseñar el [proceso de recuperación](#TlogAndRecovery) de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una base de datos para la que se ha habilitado la recuperación acelerada de base de datos completa el proceso de recuperación más rápidamente después de una conmutación por error u otro apagado no limpio. Cuando está habilitada, la recuperación acelerada de base de datos también completa la reversión de las transacciones de larga ejecución canceladas significativamente más rápido.
+## <a name="accelerated-database-recovery"></a><a name="adr"></a> Recuperación acelerada de bases de datos
+La [recuperación acelerada de bases de datos](/azure/sql-database/sql-database-accelerated-database-recovery/) está disponible en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La recuperación acelerada de bases de datos mejora considerablemente la disponibilidad de la base de datos, especialmente en presencia de transacciones de larga duración, al volver a diseñar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]proceso de recuperación[ de ](#TlogAndRecovery). Una base de datos para la que se ha habilitado la recuperación acelerada de base de datos completa el proceso de recuperación más rápidamente después de una conmutación por error u otro apagado no limpio. Cuando está habilitada, la recuperación acelerada de base de datos también completa la reversión de las transacciones de larga ejecución canceladas significativamente más rápido.
 
 Se puede habilitar la recuperación acelerada de bases de datos en cada base de datos en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] mediante la sintaxis siguiente:
 
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
 > [!NOTE]
 > La recuperación acelerada de base de datos está habilitada de forma predeterminada en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-## <a name="RelatedContent"></a> Consulte también  
+## <a name="see-also"></a><a name="RelatedContent"></a> Consulte también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)      
  [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     

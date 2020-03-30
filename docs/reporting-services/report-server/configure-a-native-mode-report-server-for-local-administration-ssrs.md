@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080887"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar un servidor de informes en modo nativo para la administración local (SSRS)
@@ -57,19 +57,19 @@ ms.locfileid: "77080887"
   
 -   [Información adicional](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a> Información general de los cambios de configuración  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview"></a> Información general de los cambios de configuración  
  Los cambios de configuración siguientes configuran el servidor de forma que pueda usar los permisos de usuario estándar para administrar el contenido y las operaciones del servidor de informes:  
   
 -   Agrega direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a los sitios de confianza. De forma predeterminada, cuando Internet Explorer se ejecuta en los sistemas operativos enumerados lo hace en **Modo protegido**, una característica que impide que las solicitudes del explorador lleguen a los procesos de alto nivel que se ejecutan en el mismo equipo. Puede deshabilitar el modo protegido para las aplicaciones del servidor de informes agregándolas como sitios de confianza.  
   
 -   Crea asignaciones de roles que le conceden, como administrador del servidor de informes, permiso para administrar el contenido y las operaciones sin tener que utilizar la característica **Ejecutar como administrador** de Internet Explorer. Mediante la creación de asignaciones de roles para su cuenta de usuario de Windows, obtiene acceso a un servidor de informes con los permisos Administrador de contenido y Administrador del sistema a través de las asignaciones de roles explícitas que reemplazan a las asignaciones de roles predefinidas e integradas, que Reporting Services crea.  
   
-##  <a name="bkmk_configure_local_server"></a> Para configurar el servidor de informes local y la administración del portal web  
+##  <a name="to-configure-local-report-server-and-web-portal-administration"></a><a name="bkmk_configure_local_server"></a> Para configurar el servidor de informes local y la administración del portal web  
  Complete los pasos de configuración de esta sección si va a examinar un servidor de informes local y ve errores similares a los siguientes:  
   
 -   El usuario `'Domain\[user name]`' no tiene los permisos requeridos. Compruebe que se han concedido suficientes permisos y que se han tratado las restricciones del control de cuentas de usuario (UAC) de Windows.  
   
-###  <a name="bkmk_site_settings"></a> Configuración de sitios de confianza en el explorador  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a> Configuración de sitios de confianza en el explorador  
   
 1.  Abra una ventana del explorador con los permisos Ejecutar como administrador. En el menú **Inicio**, haga clic con el botón derecho en **Internet Explorer** y seleccione **Ejecutar como administrador**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "77080887"
   
 12. Seleccione **Aceptar**.  
   
-###  <a name="bkmk_configure_folder_settings"></a> Configuración de la carpeta del portal web  
+###  <a name="web-portal-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> Configuración de la carpeta del portal web  
   
 1.  En el portal web, en la página principal, haga clic en **Administrar carpeta**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "77080887"
   
 6.  Seleccione **Aceptar**.  
   
-###  <a name="bkmk_configure_site_settings"></a> Configuración del sitio del portal web  
+###  <a name="web-portal-site-settings"></a><a name="bkmk_configure_site_settings"></a> Configuración del sitio del portal web  
   
 1.  Abra el explorador con privilegios administrativos y vaya al portal web, `https://<server name>/reports`.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "77080887"
   
 8. Vuelva a abrir el portal web en Internet Explorer, sin usar **Ejecutar como administrador**.  
   
-##  <a name="bkmk_configure_ssms"></a> Para configurar SQL Server Management Studio (SSMS) para la administración del servidor de informes local  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a> Para configurar SQL Server Management Studio (SSMS) para la administración del servidor de informes local  
  De forma predeterminada, no puede tener acceso a todas las propiedades del servidor de informes disponibles en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] a menos que inicie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] con privilegios administrativos.  
   
  **Para configurar asignaciones de roles de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** no es necesario iniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] con permisos elevados todas las veces:  
@@ -152,7 +152,7 @@ ms.locfileid: "77080887"
   
  Ahora, cuando abra [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y no seleccione explícitamente **Ejecutar como administrador** tendrá acceso a las propiedades del servidor de informes.  
   
-##  <a name="bkmk_configure_ssdt"></a> Para configurar SQL Server Data Tools (SSDT) para publicar en un servidor de informes local  
+##  <a name="to-configure-sql-server-data-tools-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a> Para configurar SQL Server Data Tools (SSDT) para publicar en un servidor de informes local  
  Si instaló [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] en uno de los sistemas operativos enumerados en la primera sección de este tema y desea que SSDT interactúe con un servidor de informes local en modo nativo, aparecerán errores con los permisos a menos que abra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con permisos elevados o que configure roles de Reporting Services. Por ejemplo, si no tiene los permisos necesarios, encontrará problemas similares a los siguientes:  
   
 -   Cuando intenta implementar elementos de informe en el servidor de informes local, aparece un mensaje de error similar al siguiente en la ventana **Lista de errores** :  
@@ -171,7 +171,7 @@ Ahora debe poder implementar informes y otros elementos en un servidor de inform
   
 -   Consulte las secciones [Configuración de carpetas del portal web](#bkmk_configure_folder_settings) y [Configuración del sitio del portal web](#bkmk_configure_site_settings) en este tema.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a> Información adicional  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a> Información adicional  
  Un paso de configuración frecuente adicional relacionado con la administración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste en abrir el puerto 80 en Firewall de Windows para permitir el acceso al equipo servidor de informes. Para obtener instrucciones, consulte [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Consulte también  

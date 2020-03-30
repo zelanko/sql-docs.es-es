@@ -34,10 +34,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291491"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
@@ -58,7 +58,7 @@ ms.locfileid: "71291491"
   
  Esta transformación tiene una entrada y una salida.  
   
- Para la coincidencia aproximada, solo se pueden usar columnas de entrada con tipos de datos **DT_WSTR** y **DT_STR** . La coincidencia exacta puede usar cualquier tipo de datos DTS, excepto **DT_TEXT**, **DT_NTEXT**y **DT_IMAGE**. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el tipo de datos DTS **DT_WSTR** con una columna con el tipo de datos **nvarchar** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero no se puede combinar una columna con el tipo de datos **DT_WSTR** con otra que tenga el tipo de datos **int**.  
+ Para la coincidencia aproximada, solo se pueden usar columnas de entrada con tipos de datos **DT_WSTR** y **DT_STR** . La coincidencia exacta puede usar cualquier tipo de datos DTS, excepto **DT_TEXT**, **DT_NTEXT**y **DT_IMAGE**. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el tipo de datos DTS **DT_WSTR** con una columna con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nvarchar**de**, pero no se puede combinar una columna con el tipo de datos **DT_WSTR** con otra que tenga el tipo de datos **int**.  
   
  Puede personalizar esta transformación, especificando la cantidad máxima de memoria, el algoritmo de comparación de filas y el almacenamiento en caché de índices y tablas de referencia que utiliza la transformación.  
   

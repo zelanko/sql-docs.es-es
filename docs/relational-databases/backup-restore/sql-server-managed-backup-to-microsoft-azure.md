@@ -11,10 +11,10 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245431"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada en Microsoft Azure para SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "75245431"
   
  También puede cifrar las copias de seguridad para obtener seguridad adicional y configurar una programación personalizada con el fin de controlar cuándo se realizan las copias de seguridad. Para obtener más información sobre las ventajas de usar el servicio de almacenamiento de blobs de Microsoft Azure para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-##  <a name="Prereqs"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prereqs"></a> Requisitos previos  
  Almacenamiento de Microsoft Azure se usa [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para almacenar los archivos de copia de seguridad. Se necesitan los siguientes requisitos previos:  
   
 |Requisito previo|Descripción|  
@@ -112,7 +112,7 @@ ms.locfileid: "75245431"
 > Los servidores proxy no admiten copias de seguridad administradas en SQL Server.
 >
   
-##  <a name="support_limits"></a> Compatibilidad  
+##  <a name="supportability"></a><a name="support_limits"></a> Compatibilidad  
  Las siguientes consideraciones y limitaciones de compatibilidad son específicas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 -   Se admite la copia de seguridad de bases de datos del sistema de tipo **master**, **model**y **msdb** . No se admite la copia de seguridad de **tempdb** . 

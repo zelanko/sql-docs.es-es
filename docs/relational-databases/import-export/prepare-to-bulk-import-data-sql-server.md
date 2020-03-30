@@ -19,10 +19,10 @@ ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68063165"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Prepararse para importar datos de forma masiva (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "68063165"
   
 -   Obtenga los permisos necesarios para la cuenta de usuario.  
   
-     La cuenta de usuario en que use la utilidad **bcp**, la instrucción BULK INSERT o la instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...) debe tener los permisos necesarios sobre la tabla, que son asignados por el propietario de la tabla. Para obtener más información sobre los permisos necesarios en cada método, vea [bcp (utilidad)](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), y [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+     La cuenta de usuario en que use la utilidad **bcp** , la instrucción BULK INSERT o la instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...) debe tener los permisos necesarios sobre la tabla, que son asignados por el propietario de la tabla. Para obtener más información sobre los permisos necesarios en cada método, vea [bcp (utilidad)](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), y [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   Use el modelo de recuperación optimizado para cargas masivas de registros.  
   

@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906072"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Envío de un correo electrónico de prueba con el Correo electrónico de base de datos  
@@ -55,7 +55,7 @@ Debe ser miembro del rol fijo de servidor sysadmin para utilizar el cuadro de di
     ```
 
 
-##  <a name="RelatedContent"></a> Vea también 
+##  <a name="see-also"></a><a name="RelatedContent"></a> Vea también 
   
 -   [Objetos de configuración de Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-configuration-objects.md)
 -   [Objetos de mensajería de Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-messaging-objects.md)

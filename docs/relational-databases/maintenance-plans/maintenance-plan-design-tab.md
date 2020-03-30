@@ -15,10 +15,10 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115739"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de mantenimiento (pestaña Diseño)
@@ -69,7 +69,7 @@ ms.locfileid: "68115739"
   
  Después de que una tarea de mantenimiento se coloque en la superficie de diseño, sus propiedades pueden editarse cuando sea necesario. Por ejemplo, la base de datos específica de la que se va a hacer copia de seguridad en una tarea Copia de seguridad de la base de datos se especifica después de que la tarea se haya agregado al plan. Las tareas de la superficie de diseño que no se han configurado correctamente contienen un icono rojo con una x blanca.  
   
- Para agregar una tarea de mantenimiento a un plan, arrastre el icono de la tarea desde el cuadro de herramientas **Tareas de plan de mantenimiento** hasta la superficie de diseño del plan o haga doble clic en la tarea en el cuadro de herramientas, con lo que se agrega esa tarea a la superficie del diseñador activa en ese momento. Si el cuadro de herramientas **Tareas del plan de mantenimiento** no está visible, seleccione **Cuadro de herramientas** en el menú **Vista** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expanda el nodo **Tareas del plan de mantenimiento** en el panel **Cuadro de herramientas** .  
+ Para agregar una tarea de mantenimiento a un plan, arrastre el icono de la tarea desde el cuadro de herramientas **Tareas de plan de mantenimiento** hasta la superficie de diseño del plan o haga doble clic en la tarea en el cuadro de herramientas, con lo que se agrega esa tarea a la superficie del diseñador activa en ese momento. Si el cuadro de herramientas **Tareas del plan de mantenimiento** no está visible, seleccione **Cuadro de herramientas** en el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Vista**de**. Expanda el nodo **Tareas del plan de mantenimiento** en el panel **Cuadro de herramientas** .  
   
  Para eliminar una tarea de un plan, seleccione la tarea en la superficie del diseñador y pulse la tecla **SUPR** o haga clic con el botón derecho en la tarea y luego haga clic en **Eliminar**.  
   

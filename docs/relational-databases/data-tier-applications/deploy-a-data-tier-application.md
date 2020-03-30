@@ -22,10 +22,10 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190115"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implementar una aplicación de capa de datos
@@ -114,7 +114,7 @@ Más información sobre algunas de las páginas del asistente:
   
  **Ruta de acceso y nombre del archivo de registro:** especifique la ruta de acceso completa y el nombre de archivo del archivo de registro. El cuadro se rellena con la ruta de acceso y nombre de archivo predeterminados. Modifique la cadena en el cuadro para cambiar el valor predeterminado o utilice el botón **Examinar** para navegar hasta la carpeta donde se va a colocar el archivo de registro.  
   
-###  <a name="Summary"></a> Página Resumen  
+###  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Use esta página para comprobar las acciones que el asistente realizará al implementar la DAC.  
   
  **La siguiente configuración se utilizará en la implementación de su DAC.** - Compruebe la información que se muestra para asegurarse de que las acciones emprenda serán las correctas. La ventana muestra el paquete DAC y el nombre que seleccionó para la instancia de DAC implementada. La ventana también muestra los valores de configuración que se utilizarán al crear la base de datos asociada con la DAC.  

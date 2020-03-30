@@ -14,17 +14,17 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558517"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo proteger una base de datos mediante el uso del cifrado de datos transparente (TDE) y, a continuación, mover la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE realiza el cifrado y descifrado de E/S en tiempo real de los archivos de datos y de registro. El cifrado usa una clave de cifrado de base de datos (DEK), que se almacena en el registro de arranque de la base de datos de disponibilidad durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra ( **master** ) del servidor o una clave asimétrica protegida por un módulo EKM.   
    
-##  <a name="Restrictions"></a> Limitaciones y restricciones  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Cuando se mueve una base de datos protegida por TDE, también debe mover el certificado o la clave asimétrica que se usan para abrir DEK. El certificado o la clave asimétrica se deben instalar en la base de datos **maestra** del servidor de destino para que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueda tener acceso a los archivos de la base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75558517"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] almacena de forma predeterminada los archivos creados aquí en **C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** . Los nombres de los archivos y las ubicaciones pueden ser distintos.  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
 -   Requiere el permiso **CONTROL DATABASE** en la base de datos **maestra** para crear la clave maestra de la base de datos.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "75558517"
   
 -   Requiere el permiso **CONTROL DATABASE** para la base de datos cifrada y el permiso **VIEW DEFINITION** para el certificado o la clave asimétrica usados para cifrar la clave de cifrado de la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Para crear una base de datos protegida por el cifrado de datos transparente  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> Para crear una base de datos protegida por el cifrado de datos transparente  
 
 En los siguientes procedimientos se muestra cómo debe crear una base de datos protegida por TDE mediante SQL Server Management Studio y Transact-SQL.
   
-###  <a name="SSMSCreate"></a> Uso de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Uso de SQL Server Management Studio  
   
 1.  Cree una clave maestra y un certificado de base de datos en la base de datos **maestra** . Para obtener más información, vea **Usar Transact-SQL** más adelante.  
   
@@ -76,7 +76,7 @@ En los siguientes procedimientos se muestra cómo debe crear una base de datos p
   
 8.  Cuando termine, haga clic en **Aceptar**.  
 
-###  <a name="TsqlCreate"></a> Usar Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Usar Transact-SQL  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -136,11 +136,11 @@ En los siguientes procedimientos se muestra cómo debe crear una base de datos p
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> Para mover una base de datos protegida por el cifrado de datos transparente 
+##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> Para mover una base de datos protegida por el cifrado de datos transparente 
 
 En los siguientes procedimientos se muestra cómo debe mover una base de datos protegida por TDE mediante SQL Server Management Studio y Transact-SQL.
   
-###  <a name="SSMSMove"></a> Uso de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> Uso de SQL Server Management Studio  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos que cifró anteriormente, seleccione **Tareas** y **Separar...** .  
   
@@ -251,7 +251,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
      **Mensaje**  
      Muestra un mensaje en blanco o un hipervínculo que indica "**Archivo no encontrado**".  
   
-###  <a name="TsqlMove"></a> Usar Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Usar Transact-SQL  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

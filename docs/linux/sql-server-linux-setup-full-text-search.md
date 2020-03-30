@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874766"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalación de Búsqueda de texto completo de SQL Server en Linux
@@ -30,7 +30,7 @@ Instale la búsqueda de texto completo de SQL Server para su plataforma:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Instalación en RHEL</a>
+## <a name=""></a><a name="RHEL">Instalación en RHEL</a>
 
 Use los comandos siguientes para instalar **mssql-server-fts** en Red Hat Enterprise Linux. 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 Si necesita una instalación sin conexión, busque la descarga del paquete Búsqueda de texto completo en las [Notas de la versión](sql-server-linux-release-notes.md). Luego use los mismos pasos de instalación sin conexión descritos en el artículo [Instalar SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Instalación en Ubuntu</a>
+## <a name=""></a><a name="ubuntu">Instalación en Ubuntu</a>
 
 Use los comandos siguientes para instalar **mssql-server-fts** en Ubuntu. 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 Si necesita una instalación sin conexión, busque la descarga del paquete Búsqueda de texto completo en las [Notas de la versión](sql-server-linux-release-notes.md). Luego use los mismos pasos de instalación sin conexión descritos en el artículo [Instalar SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Instalación en SLES</a>
+## <a name=""></a><a name="SLES">Instalación en SLES</a>
 
 Use los comandos siguientes para instalar **mssql-server-fts** en SUSE Linux Enterprise Server. 
 
@@ -142,7 +142,7 @@ La búsqueda de texto completo utiliza [separadores de palabras](../relational-d
 | Urdu | 1056 |
 | Vietnamita | 1066 |
 
-## <a id="filters"></a> Filtros
+## <a name="filters"></a><a id="filters"></a> Filtros
 
 La búsqueda de texto completo también funciona con texto almacenado en archivos binarios. Sin embargo, en este caso se necesita instalar un filtro para procesar el archivo. Para obtener más información sobre los filtros, vea [Configurar y administrar filtros para búsquedas](../relational-databases/search/configure-and-manage-filters-for-search.md).
 

@@ -11,10 +11,10 @@ ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f963d8d7fe186d889856c108de1541110beb16a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165512"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>Contadores de rendimiento de XTP (OLTP en memoria) de SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "74165512"
   
  Para *\<versión*, el valor es similar a 2016.  
   
-##  <a name="SQLServerPOs"></a> Objetos de rendimiento de SQL Server XTP  
+##  <a name="sql-server-xtp-performance-objects"></a><a name="SQLServerPOs"></a> Objetos de rendimiento de SQL Server XTP  
  En la tabla siguiente se describen los objetos de rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Objeto de rendimiento|Descripción|  

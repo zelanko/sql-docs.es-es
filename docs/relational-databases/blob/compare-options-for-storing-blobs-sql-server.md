@@ -11,10 +11,10 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085441"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opciones para almacenar objetos Blob (SQL Server)
@@ -23,7 +23,7 @@ ms.locfileid: "68085441"
 
 Explica y compara las opciones que están disponibles para almacenar archivos y documentos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="Expectations"></a> Almacenamiento de archivos en la base de datos - Ventajas y expectativas
+## <a name="storing-files-in-the-database---benefits-and-expectations"></a><a name="Expectations"></a> Almacenamiento de archivos en la base de datos - Ventajas y expectativas
 
 Un porcentaje alto de los datos empresariales no se estructuran por naturaleza y se suelen almacenar como archivos y documentos en los sistemas de archivos. Las aplicaciones que tienen acceso a los archivos a través de las API de Windows generan, administran y consumen la mayor parte de los datos. Las empresas suelen mantener estos datos en el sistema de archivos, mientras que almacenan los metadatos relacionados de los archivos en una base de datos relacional.
 
@@ -40,15 +40,15 @@ Por lo general, no ha sido muy cómodo almacenar los datos no estructurados en u
 
 Años atrás, SQL Server no ofrecía ninguna forma de almacenar datos no estructurados en una base de datos relacional, pero en la actualidad sí proporciona varios métodos para almacenarlos.
 
-## <a name="Filestream"></a> FILESTREAM
+## <a name="filestream"></a><a name="Filestream"></a> FILESTREAM
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya incluye la característica FILESTREAM, que proporciona almacenamiento, administración y transmisión de datos eficaces de los datos no estructurados almacenados como archivos en el sistema de archivos. Sin embargo, una solución FILESTREAM requiere la programación personalizada y no satisface el requisito de compatibilidad completa de las aplicaciones Windows descrito anteriormente.
 
-## <a name="FileTables"></a> FileTables
+## <a name="filetables"></a><a name="FileTables"></a> FileTables
 
 La característica FileTable se basa en las capacidades de FILESTREAM existentes. La característica FileTable permite a los clientes empresariales almacenar datos de archivos no estructurados y jerarquías de directorios en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta característica aborda los requisitos de acceso no transaccional y compatibilidad de aplicaciones Windows de los datos basados en archivos.
 
-## <a name="CompareFileTable"></a> Comparar FILESTREAM y FileTable
+## <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> Comparar FILESTREAM y FileTable
 
 |Característica|Servidor de archivos y solución de base de datos|Solución de FILESTREAM|Solución de FileTable|
 |:------|:--------------------------------|:------------------|:-----------------|
@@ -60,11 +60,11 @@ La característica FileTable se basa en las capacidades de FILESTREAM existentes
 |**Compatibilidad con aplicaciones Windows**|Sí|No|**Sí**|
 |**Acceso relacional a los atributos de archivo**|No|No|**Sí**|
 
-## <a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)
+## <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)
 
 Otra opción para almacenar datos no estructurados conlleva el uso de un Almacén remoto de blobs (RBS). Para obtener más información, vea [Almacén remoto de blobs (RBS) (SQL Server)](remote-blob-store-rbs-sql-server.md).
 
-## <a name="more"></a> Más información
+## <a name="more-information"></a><a name="more"></a> Más información
 
 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  

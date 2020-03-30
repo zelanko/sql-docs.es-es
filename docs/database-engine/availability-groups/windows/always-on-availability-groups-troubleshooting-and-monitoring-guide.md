@@ -11,10 +11,10 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822046"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Supervisión y solución de problemas de grupos de disponibilidad
@@ -23,7 +23,7 @@ ms.locfileid: "74822046"
  Dado que los grupos de disponibilidad son una tecnología integrada, muchos problemas pueden ser síntomas de otros problemas del sistema de base de datos. Algunos problemas se deben a valores de configuración de un grupo de disponibilidad, como la suspensión de una base de datos de disponibilidad. Otros problemas pueden estar relacionados con otros aspectos de SQL Server, como la configuración, las implementaciones de los archivos de base de datos y los problemas de rendimiento sistémico no relacionados con la disponibilidad de SQL Server. Todavía pueden existir otros problemas fuera de SQL Server, como problemas de la E/S de red, TCP/IP, Active Directory y clústeres de conmutación por error de Windows Server (WSFC). A menudo, los problemas que surgen en un grupo de disponibilidad, una réplica o una base de datos requieren que ejecute la solución de problemas en varias tecnologías para identificar la causa principal.  
   
   
-##  <a name="BKMK_SCENARIOS"></a> Escenarios de solución de problemas  
+##  <a name="troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> Escenarios de solución de problemas  
  En la tabla siguiente puede acceder a vínculos a los escenarios de solución de problemas comunes para los grupos de disponibilidad. Se clasifican por sus tipos de escenario, por ejemplo, configuración, conectividad de cliente, conmutación por error y rendimiento.  
   
 |Escenario|Tipo de escenario|Descripción|  
@@ -37,7 +37,7 @@ ms.locfileid: "74822046"
 |[Solución de problemas: cambios en la réplica principal que no se reflejan en la réplica secundaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Rendimiento|La aplicación cliente finaliza una actualización en la réplica principal correctamente, pero una consulta a la réplica secundaria muestra que el cambio no se ha reflejado.|  
 |[Solución de problemas: tipo de espera HADR_SYNC_COMMIT alto con grupos de disponibilidad Always On](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Rendimiento|Si HADR_SYNC_COMMIT es demasiado largo, hay un problema de rendimiento en el flujo de movimiento de datos o en el refuerzo del registro de réplica secundaria.|  
 
-##  <a name="BKMK_TOOLS"></a> Herramientas útiles para solucionar problemas  
+##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a> Herramientas útiles para solucionar problemas  
  Al configurar o ejecutar grupos de disponibilidad, las diferentes herramientas pueden ayudarle a diagnosticar diferentes tipos de problemas. En la tabla siguiente se proporcionan vínculos a información útil sobre las herramientas.  
   
 |Herramienta|Descripción|  
@@ -53,7 +53,7 @@ ms.locfileid: "74822046"
 |Contadores de rendimiento de Always On|Supervisa la actividad de los grupos de disponibilidad, se reflejan en el monitor de sistema y son útiles para ajustar el rendimiento. Para obtener más información, consulte [SQL Server, réplica de base de datos](~/relational-databases/performance-monitor/sql-server-availability-replica.md) y [SQL Server, réplica de base de datos](~/relational-databases/performance-monitor/sql-server-database-replica.md).|  
 |[Búferes de anillo de Always On](always-on-ring-buffers.md)|Registra las alertas del sistema de SQL Server para ofrecer un diagnóstico interno y se puede utilizar para depurar los problemas relacionados con los grupos de disponibilidad.|  
   
-##  <a name="BKMK_MONITOR"></a> Supervisar grupos de disponibilidad  
+##  <a name="monitoring-availability-groups"></a><a name="BKMK_MONITOR"></a> Supervisar grupos de disponibilidad  
  El momento ideal para solucionar problemas de un grupo de disponibilidad es antes de que un problema necesite una conmutación por error, ya sea automática o manual. Esto puede hacerse supervisando las métricas de rendimiento del grupo de disponibilidad y enviando alertas cuando las réplicas de disponibilidad se realizan fuera de los límites de su contrato de nivel de servicio (SLA). Por ejemplo, si una réplica secundaria sincrónica presenta problemas de rendimiento que hacen aumentar el tiempo estimado de conmutación por error, no le interesa esperar hasta que se produzca una conmutación por error automática y descubra que el tiempo de conmutación por error supera su objetivo de tiempo de recuperación.  
   
  Dado que los grupos de disponibilidad son una solución de alta disponibilidad y recuperación ante desastres, las métricas de rendimiento más importantes para supervisar son el tiempo estimado de conmutación por error, que repercute en su objetivo de tiempo de recuperación (RTO), y la posible pérdida de datos en caso de desastre, que repercute en su objetivo de punto de recuperación (RPO). Puede recopilar estas métricas a partir de los datos que SQL Server expone en un momento dado, por lo que puede recibir alertas de un problema en las capacidades de recuperación de desastres de alta disponibilidad (HADR) del sistema antes de que se produzcan eventos de errores reales. Por lo tanto, es importante familiarizarse con el proceso de sincronización de datos de los grupos de disponibilidad y recopilar las métricas en consecuencia.  

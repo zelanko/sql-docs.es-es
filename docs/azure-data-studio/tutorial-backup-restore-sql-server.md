@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287219"
 ---
 # <a name="backup-and-restore-databases-using-name-sos"></a>Copia de seguridad y restauración de bases de datos con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -27,7 +27,7 @@ En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos](..
 > * Restaurar una base de datos
 > * Ver el estado de la tarea de restauración
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para este tutorial, es necesario usar *TutorialDB* de SQL Server. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 

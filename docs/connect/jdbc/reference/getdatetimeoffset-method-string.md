@@ -11,10 +11,10 @@ ms.assetid: fedb1d75-0c3d-4eb3-ae65-da0e153265cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d831ff519f72fb5b68cec3c7dc359f1d54106c0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983791"
 ---
 # <a name="getdatetimeoffset-method-string"></a>Método getDateTimeOffset (String)
@@ -37,7 +37,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String sCol)
  El nombre de un parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).  
+ Un objeto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

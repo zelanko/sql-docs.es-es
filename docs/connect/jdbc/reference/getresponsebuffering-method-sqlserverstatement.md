@@ -16,10 +16,10 @@ ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980401"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>María getResponseBuffering (SQLServerStatement)
@@ -44,7 +44,7 @@ public final java.lang.String getResponseBuffering()
   
  El valor **adaptive** es el predeterminado en la versión 2.0 y 3.0 del controlador JDBC. El valor **full** era el valor predeterminado antes de la versión 2.0 del controlador JDBC.  
   
- Para más información sobre cómo utilizar el modo de almacenamiento en búfer de respuesta, consulte [Empleo de almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Para más información sobre cómo utilizar el modo de almacenamiento en búfer de respuesta, vea [Empleo de almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Método setResponseBuffering &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

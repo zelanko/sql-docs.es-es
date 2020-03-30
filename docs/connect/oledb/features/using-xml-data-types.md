@@ -31,10 +31,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988791"
 ---
 # <a name="using-xml-data-types"></a>Usar tipos de datos XML
@@ -81,7 +81,7 @@ ms.locfileid: "67988791"
  Si el XML de entrada se enlaza como DBTYPE_WSTR, la aplicación debe asegurarse de que se trata de Unicode codificado para evitar cualquier posibilidad de que se produzcan daños a causa de conversiones de datos no deseadas.  
   
 ### <a name="data-bindings-and-coercions"></a>Enlaces y conversiones de datos  
- En la tabla siguiente, se describen el enlace y la coerción que tienen lugar al usar los tipos de datos enumerados con el tipo de datos **xml** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ En la tabla siguiente, se describen el enlace y la coerción que tienen lugar al usar los tipos de datos enumerados con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]xml**de**.  
   
 |Tipo de datos|A datos XML<br /><br /> **XML**|A datos XML<br /><br /> **Distinto de XML**|Desde datos XML<br /><br /> **XML**|Desde datos XML<br /><br /> **Distinto de XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  

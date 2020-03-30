@@ -13,10 +13,10 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257157"
 ---
 # <a name="object-dependencies"></a>Dependencias del objeto
@@ -31,7 +31,7 @@ Use este cuadro de diálogo para saber qué dependencias existen antes de cambia
 **Objetos que dependen de** _\<objeto seleccionado>_  
 Haga clic en este botón para mostrar una lista de los objetos de cuyas dependencias se realiza un seguimiento y que dependen del objeto seleccionado.  
   
-**Objetos de los que** **depende** _\<objeto seleccionado>_  
+**Objetos de los que** _depende\<_ **objeto seleccionado>**  
 Haga clic en este botón para mostrar una lista de los objetos de cuyas dependencias se realiza un seguimiento y de los que depende el objeto seleccionado.  
   
 **Dependencias**  

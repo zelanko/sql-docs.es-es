@@ -11,10 +11,10 @@ ms.assetid: 8bb00356-4d6e-4625-b924-67646930fdf2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec297d1b01b6d7cf8d292d2f4518aa5b51cd9704
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983842"
 ---
 # <a name="getdatetimeoffset-method-int"></a>Método getDateTimeOffset (int)
@@ -37,7 +37,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
  El ordinal del parámetro que se basa en uno.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).  
+ Un objeto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

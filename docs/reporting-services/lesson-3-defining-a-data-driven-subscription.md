@@ -9,20 +9,20 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826856"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lección 3: Definir una suscripción controlada por datos
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 En esta lección del tutorial [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)], usará las páginas de suscripción controlada por datos de los portales web de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para conectarse a un origen de datos de suscripción, crear una consulta que recupere datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  
   
 > [!NOTE]  
 > Antes de empezar, compruebe que el servicio del **Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** esté en ejecución. Si no es así, no podrá guardar la suscripción.  Un método para comprobarlo es abrir el [Administrador de configuración de SQL Server](../relational-databases/sql-server-configuration-manager.md).
-En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, vea [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, consulte [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
-## <a name="bkmk_startwizard"></a>Iniciar el Asistente para suscripciones controladas por datos  
+## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Iniciar el Asistente para suscripciones controladas por datos  
   
 1.  En el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , haga clic en **Inicio**y vaya hasta la carpeta que contiene el informe **Sales Orders** .  
   

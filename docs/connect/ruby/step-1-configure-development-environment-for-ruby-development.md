@@ -1,5 +1,5 @@
 ---
-title: 'Paso 1: Configuración del entorno de desarrollo para el desarrollo en Ruby | Microsoft Docs'
+title: 'Paso 1: Configurar el entorno de desarrollo para el desarrollo Ruby | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38af92d3cb0354bc4b75131a349f6a1c26e90490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992463"
 ---
-# <a name="step-1-configure-development-environment-for-ruby-development"></a>Paso 1: Configuración del entorno de desarrollo para el desarrollo Ruby
+# <a name="step-1-configure-development-environment-for-ruby-development"></a>Paso 1: Configurar el entorno de desarrollo para el desarrollo Ruby
 Tendrá que configurar el entorno de desarrollo con los requisitos previos para desarrollar una aplicación con el controlador de Ruby para SQL Server.    
   
 Tenga en cuenta que el controlador de Ruby usan el protocolo TDS, que está habilitado de forma predeterminada en SQL Server y Azure SQL Database.  No se requiere ninguna configuración adicional.  

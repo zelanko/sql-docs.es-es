@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831411"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Carga de datos de ejemplo en un clúster de macrodatos de SQL Server
@@ -25,7 +25,7 @@ En este tutorial se explica cómo usar un script para cargar datos de ejemplo en
 > [!TIP]
 > Puede encontrar más ejemplos para el [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] en el repositorio de GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). Se encuentran en la ruta de acceso **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - [Un clúster de macrodatos implementado](deployment-guidance.md)
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
@@ -34,11 +34,11 @@ En este tutorial se explica cómo usar un script para cargar datos de ejemplo en
    - **sqlcmd**
    - **curl**
  
-## <a id="sampledata"></a> Carga de los datos de ejemplo
+## <a name="load-sample-data"></a><a id="sampledata"></a> Carga de los datos de ejemplo
 
 En los pasos siguientes se usa un script de arranque para descargar una copia de seguridad de base de datos de SQL Server y cargar los datos en el clúster de macrodatos. Para facilitar su uso, estos pasos se han dividido en las secciones de [Windows](#windows) y [Linux](#linux). Si desea usar el nombre de usuario y la contraseña básicos como mecanismo de autenticación, establezca las variables de entorno AZDATA_USERNAME y AZDATA_PASSWORD antes de ejecutar el script. De lo contrario, el script usará la autenticación integrada para conectarse a la instancia maestra de SQL Server y a la puerta de enlace Knox. Además, se debe especificar el nombre DNS de los puntos de conexión con el fin de usar la autenticación integrada.
 
-## <a id="windows"></a> Windows
+## <a name="windows"></a><a id="windows"></a> Windows
 
 En los pasos siguientes se describe cómo usar un cliente Windows para cargar los datos de ejemplo en el clúster de macrodatos.
 
@@ -76,7 +76,7 @@ En los pasos siguientes se describe cómo usar un cliente Windows para cargar lo
    .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
-## <a id="linux"></a> Linux
+## <a name="linux"></a><a id="linux"></a> Linux
 
 En los pasos siguientes se describe cómo usar un cliente Linux para cargar los datos de ejemplo en el clúster de macrodatos.
 

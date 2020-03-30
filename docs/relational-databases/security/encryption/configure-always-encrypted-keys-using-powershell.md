@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594460"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>Aprovisionamiento de claves de Always Encrypted mediante PowerShell
@@ -27,7 +27,7 @@ Para obtener información general sobre la administración de claves de Always E
 Para obtener información sobre el uso del módulo SqlServer PowerShell para Always Encrypted, vea [Configure Always Encrypted using PowerShell (Configurar Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 
-## <a name="KeyProvisionWithoutRoles"></a> Aprovisionamiento de claves sin separación de roles
+## <a name="key-provisioning-without-role-separation"></a><a name="KeyProvisionWithoutRoles"></a> Aprovisionamiento de claves sin separación de roles
 
 El método de aprovisionamiento de claves descrito en esta sección no admite la separación de roles entre Administradores de seguridad y DBA. Algunos de los pasos siguientes combinan operaciones en las claves físicas con operaciones en los metadatos de las claves. Por tanto, este método de aprovisionamiento de claves está recomendado para organizaciones que usen el modelo DevOps, o si la base de datos está hospedada en la nube y el objetivo principal es evitar que los administradores de la nube (pero no los DBA locales) accedan a información confidencial. No se recomienda si los posibles adversarios incluyen administradores de base de datos o si estos no deben tener acceso a información confidencial.
 
@@ -164,7 +164,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## <a name="KeyProvisionWithRoles"></a> Aprovisionamiento de claves con separación de roles
+## <a name="key-provisioning-with-role-separation"></a><a name="KeyProvisionWithRoles"></a> Aprovisionamiento de claves con separación de roles
 
 En esta sección se proporcionan los pasos necesarios para configurar el cifrado cuando los administradores de seguridad no tienen acceso a la base de datos y los administradores de base de datos no tienen acceso al almacén de claves ni a las claves de texto no cifrado.
 

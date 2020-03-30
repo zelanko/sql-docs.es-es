@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: ee706d160ac94c80fc826ce6d199fd66bc37d1fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286119"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216494"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Instalación de SQL Server Machine Learning Services (Python y R) en Windows
 
@@ -22,7 +22,7 @@ ms.locfileid: "79286119"
 
 Obtenga información sobre cómo instalar SQL Server Machine Learning Services en Windows. Puede usar Machine Learning Services para ejecutar scripts de Python y R en la base de datos.
 
-## <a name="bkmk_prereqs"> </a> Lista de comprobación previa a la instalación
+## <a name="pre-install-checklist"></a><a name="bkmk_prereqs"> </a> Lista de comprobación previa a la instalación
 
 + Se necesita una instancia del motor de base de datos. No se pueden instalar características solo de Python o de R, aunque se pueden agregar incrementalmente a una instancia existente.
 
@@ -59,7 +59,7 @@ Para más información sobre qué ediciones de SQL Server admiten la integraci�
 Para más información sobre qué ediciones de SQL Server admiten la integración de Python y R con Machine Learning Services, consulte [Ediciones y características admitidas de SQL Server 2019 (15.x)](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15).
 ::: moniker-end
 
-## <a name="run-setup"></a>Ejecución del programa de instalación
+## <a name="run-setup"></a>Ejecución de la configuración
 
 En las instalaciones locales debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura y ejecución para dicho recurso.
 

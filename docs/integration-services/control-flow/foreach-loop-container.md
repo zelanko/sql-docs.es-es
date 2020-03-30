@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298301"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
@@ -433,7 +433,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
  **Temas relacionados:** [Seleccionar enumeración de SMO (cuadro de diálogo)](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
-####  <a name="ForeachHDFSFile"></a> Enumerador = Enumerador de archivos HDFS para Para cada uno  
+####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> Enumerador = Enumerador de archivos HDFS para Para cada uno  
  El **Enumerador de archivos HDFS para Foreach** habilita un paquete SSIS para enumerar los archivos HDFS en la ubicación especificada de HDFS. El nombre de un archivo HDFS se puede almacenar en una variable y usar en tareas en el Contenedor de bucles Foreach.  
   
  **Administrador de conexiones de Hadoop**  
@@ -457,7 +457,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
  En la página **Asignaciones de variables** del editor, seleccione o cree una variable para almacenar el nombre del archivo HDFS enumerado.  
   
-####  <a name="ForeachAzureBlob"></a> Enumerador = Enumerador de blob de Azure para Para cada uno  
+####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> Enumerador = Enumerador de blob de Azure para Para cada uno  
  El  **Enumerador de blob de Azure** habilita un paquete SSIS para enumerar los archivos de blob en la ubicación de blob especificada. Puede almacenar el nombre del archivo de blob enumerado en una variable y usarlo en tareas en el Contenedor de bucles Para cada uno.  
   
  El **Enumerador de blobs de Azure** es un componente de SQL Server Integration Services (SSIS) Feature Pack para Azure para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Descargue el Feature Pack [aquí](https://go.microsoft.com/fwlink/?LinkID=626967).  
@@ -482,7 +482,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Filtro de intervalo de tiempo desde/hasta de blob**  
  Especifique un filtro de intervalo de tiempo. Se enumeran los archivos modificados después de **TimeRangeFrom** y antes de **TimeRangeTo**. 
 
-####  <a name="ForeachAdlsFile"></a> Enumerador = Enumerador de archivos de ADLS para Para cada uno 
+####  <a name="enumerator--foreach-adls-file-enumerator"></a><a name="ForeachAdlsFile"></a> Enumerador = Enumerador de archivos de ADLS para Para cada uno 
 El **Enumerador de archivos de ADLS** permite que un paquete de SSIS enumere los archivos en Azure Data Lake Store. Puede almacenar la ruta de acceso completa del archivo enumerado (prefijado con una barra diagonal: `/`) en una variable y usar la ruta de acceso de archivo en tareas dentro del contenedor de bucles Para cada uno.
   
 **AzureDataLakeConnection**  
@@ -497,7 +497,7 @@ Especifica un filtro de nombre de archivo. Se enumeran solo los archivos cuyo no
 **SearchRecursively**  
 Especifica si se debe buscar de forma recursiva en el directorio especificado.  
 
-####  <a name="ForeachBlobFsFile"></a> Enumerator = Enumerador de archivos de Data Lake Storage Gen2 para Foreach 
+####  <a name="enumerator--foreach-data-lake-storage-gen2-file-enumerator"></a><a name="ForeachBlobFsFile"></a> Enumerator = Enumerador de archivos de Data Lake Storage Gen2 para Foreach 
 El **Enumerador de archivos de Data Lake Storage Gen2 para Foreach** permite que un paquete SSIS enumere archivos en Azure Data Lake Store Gen2.
 
 **AzureStorageConnection**  

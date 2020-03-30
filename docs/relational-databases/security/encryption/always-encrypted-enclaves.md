@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558055"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
@@ -139,7 +139,7 @@ Se aplican las siguientes consideraciones de seguridad a Always Encrypted con en
 - El cifrado de una columna mediante cifrado aleatorio con una CEK habilitada para enclave puede dar lugar a una pérdida del orden de los datos almacenados en la columna, dado que tales columnas admiten comparaciones de intervalos. Por ejemplo, si una columna cifrada, que contiene los salarios de los empleados, tiene un índice, un administrador de base de datos malintencionado podría examinar el índice para buscar el valor cifrado de salario máximo e identificar a una persona con el salario máximo (suponiendo que el nombre de la persona no esté cifrado). 
 - Si usa Always Encrypted para proteger datos confidenciales del acceso no autorizado por los administradores de base de datos, no comparta las claves maestras de columna ni las claves de cifrado de columna con ellos. Un administrador de base de datos puede administrar índices en columnas cifradas sin tener acceso directo a las claves, sino que aprovecha la caché de claves de cifrado de columna dentro del enclave.
 
-## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> Consideraciones sobre grupos de disponibilidad y la migración de bases de datos
+## <a name="considerations-for-availability-groups-and-database-migration"></a><a name="anchorname-1-considerations-availability-groups-db-migration"></a> Consideraciones sobre grupos de disponibilidad y la migración de bases de datos
 
 Al configurar un grupo de disponibilidad Always On que es necesario para admitir consultas que usan enclaves, debe asegurarse de que todas las instancias de SQL Server que hospedan las bases de datos del grupo de disponibilidad admitan Always Encrypted con enclaves seguros y tengan un enclave configurado. Si la base de datos principal admite enclaves, pero no así una réplica secundaria, cualquier intento de usar la funcionalidad de Always Encrypted con enclaves seguros será infructuoso.
 

@@ -10,10 +10,10 @@ ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 69f1ac170d70c10d9a7061b3fc18f6c8a62db704
-ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79319855"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Inicio rápido: Instalación de SQL Server y creación de una base de datos en Ubuntu
@@ -73,7 +73,7 @@ Para conocer otros requisitos del sistema, vea [Requisitos del sistema para SQL 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Instalar SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Instalar SQL Server
 
 Para configurar SQL Server en Ubuntu, ejecute los siguientes comandos en un terminal para instalar el paquete **mssql-server**.
 
@@ -130,7 +130,7 @@ En este momento, SQL Server se está ejecutando en el equipo Ubuntu y está list
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>Instalar SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>Instalar SQL Server
 
 Para configurar SQL Server en Ubuntu, ejecute los siguientes comandos en un terminal para instalar el paquete **mssql-server**.
 
@@ -174,7 +174,7 @@ En este momento, SQL Server 2019 se está ejecutando en el equipo Ubuntu y est�
 
 ::: moniker-end
 
-## <a id="tools"></a>Instalar las herramientas de línea de comandos de SQL Server
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Instalar las herramientas de línea de comandos de SQL Server
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

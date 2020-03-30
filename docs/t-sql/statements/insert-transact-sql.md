@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982223"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -411,7 +411,7 @@ En Almacenamiento de datos paralelos, la cláusula ORDER BY no es válida en VIE
   
  Para ejecutar INSERT con la opción BULK de la función OPENROWSET, debe ser miembro de los roles fijos de servidor **sysadmin** o **bulkadmin**.  
   
-##  <a name="InsertExamples"></a> Ejemplos  
+##  <a name="examples"></a><a name="InsertExamples"></a> Ejemplos  
   
 |Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
@@ -424,7 +424,7 @@ En Almacenamiento de datos paralelos, la cláusula ORDER BY no es válida en VIE
 |[Invalidar el comportamiento predeterminado del optimizador de consultas mediante sugerencias](#TableHints)|Sugerencias de tabla|  
 |[Capturar los resultados de la instrucción INSERT](#CaptureResults)|Cláusula OUTPUT|  
   
-###  <a name="BasicSyntax"></a> Sintaxis básica  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintaxis básica  
  Los ejemplos de esta sección demuestran la funcionalidad básica de la instrucción INSERT usando la sintaxis mínima requerida.  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. Insertar una sola fila de datos  
@@ -453,7 +453,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> Tratar los valores de columna  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> Tratar los valores de columna  
  Los ejemplos de esta sección muestran métodos para insertar valores en columnas que se definen con una propiedad IDENTITY, un valor DEFAULT o se definen con tipos de datos como **uniqueidentifer** o columnas de un tipo definido por el usuario.  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. Insertar datos en una tabla con columnas que tienen valores predeterminados  
@@ -529,7 +529,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> Insertar datos de otras tablas  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> Insertar datos de otras tablas  
  Los ejemplos de esta sección demuestran métodos para insertar filas de una tabla en otra.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. Usar las opciones SELECT y EXECUTE para insertar datos de otras tablas  
@@ -666,7 +666,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> Especificar objetos de destino que no sean tablas estándar  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> Especificar objetos de destino que no sean tablas estándar  
  En los ejemplos de esta sección se muestra cómo insertar filas especificando una variable de tabla o vista.  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. Insertar datos especificando una vista  
@@ -712,7 +712,7 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Insertar filas en una tabla remota  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> Insertar filas en una tabla remota  
  Los ejemplos de esta sección demuestran cómo insertar filas en una tabla de destino remota usando un [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [función de conjunto de filas](../../t-sql/functions/rowset-functions-transact-sql.md) para hacer referencia a la tabla remota.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Insertar datos en una tabla remota mediante un servidor vinculado  
@@ -804,7 +804,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> Cargar datos de forma masiva de tablas o archivos de datos  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> Cargar datos de forma masiva de tablas o archivos de datos  
  Los ejemplos de esta sección muestran dos métodos para cargar datos de forma masiva en una tabla mediante la instrucción INSERT.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Insertar datos en un montón con registro mínimo  
@@ -864,7 +864,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> Invalidar el comportamiento predeterminado del optimizador de consultas mediante sugerencias  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> Invalidar el comportamiento predeterminado del optimizador de consultas mediante sugerencias  
  Los ejemplos de esta sección demuestran cómo usar [sugerencias de tabla](../../t-sql/queries/hints-transact-sql-table.md) para invalidar de forma temporal el comportamiento predeterminado del optimizador de consultas cuando se procesa la instrucción INSERT.  
   
 > [!CAUTION]  
@@ -881,7 +881,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> Capturar los resultados de la instrucción INSERT  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> Capturar los resultados de la instrucción INSERT  
  Los ejemplos de esta sección demuestran cómo usar la [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) para devolver información de cada fila afectada por una instrucción INSERT o de expresiones que se basan en esta instrucción. Estos resultados se pueden devolver a la aplicación de procesamiento para que los utilice en mensajes de confirmación, archivado y otros requisitos similares de una aplicación.  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. Usar OUTPUT con una instrucción INSERT  

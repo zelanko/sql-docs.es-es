@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67948247"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -161,7 +161,7 @@ No puede combinar TOP con OFFSET y FETCH en la misma expresión de consulta (en 
 |[Incluir valores equivalentes](#tie)|WITH TIES|  
 |[Limitar las filas afectadas por DELETE, INSERT o UPDATE](#DML)|DELETE • INSERT • UPDATE|  
   
-###  <a name="BasicSyntax"></a> Sintaxis básica  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintaxis básica  
 En los ejemplos de esta sección se muestra la funcionalidad básica de la cláusula ORDER BY con la sintaxis mínima requerida.  
   
 #### <a name="a-using-top-with-a-constant-value"></a>A. Utilizar TOP con un valor constante  
@@ -206,7 +206,7 @@ ORDER BY HireDate DESC;
 GO    
 ```  
   
-###  <a name="tie"></a> Incluir valores equivalentes  
+###  <a name="including-tie-values"></a><a name="tie"></a> Incluir valores equivalentes  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. Utilizar WITH TIES para incluir las filas que coinciden con los valores de la última fila  
 En el ejemplo siguiente se obtiene el primer `10` por ciento de los empleados que tienen los salarios más altos y se devuelven en orden descendente de acuerdo con su salario. La especificación de `WITH TIES` garantiza que también se incluyan en el conjunto de resultados los empleados con salarios iguales al salario más bajo devuelto (la última fila), aun cuando esto exceda el `10` por ciento de los empleados.  
@@ -225,7 +225,7 @@ ORDER BY Rate DESC;
 GO    
 ```  
   
-###  <a name="DML"></a> Limitar las filas afectadas por DELETE, INSERT o UPDATE  
+###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a> Limitar las filas afectadas por DELETE, INSERT o UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Utilizar TOP para limitar el número de filas eliminadas  
 Cuando usa una cláusula TOP (*n*) con DELETE, la operación de eliminación se realiza en una selección sin definir del número *n* de filas. Es decir, la instrucción DELETE elige cualquier número (*n*) de filas que cumplen los criterios definidos en la cláusula WHERE. En el ejemplo siguiente se eliminan `20` filas de la tabla `PurchaseOrderDetail` cuyas fechas de vencimiento son anteriores al 1 de julio de 2002.  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 En el ejemplo siguiente se devuelven las primeras 31 filas que coinciden con los criterios de búsqueda. La cláusula **ORDER BY** se asegura de que las 31 filas devueltas son las primeras 31 filas según una ordenación alfabética de la columna `LastName`.  
   
 Use **TOP** sin especificar valores equivalentes.  

@@ -11,10 +11,10 @@ ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1dfce515eeadbdbaf1fd96e6dcf1a08cd536ab5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74200458"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Paso 3: Prueba de concepto de la conexión a SQL con pymssql
@@ -48,9 +48,9 @@ La función [cursor.execute](https://pypi.org/project/pymssql/) puede usarse par
         row = cursor.fetchone()  
 ```  
   
-## <a name="step-3--insert-a-row"></a>Paso 3:  Insertar una fila  
+## <a name="step-3--insert-a-row"></a>Paso 3:  Inserción de una fila  
   
-En este ejemplo se muestra cómo ejecutar una instrucción [INSERT](../../../t-sql/statements/insert-transact-sql.md) de forma segura, pasar parámetros que protejan la aplicación ante el valor [Inyección de código SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+En este ejemplo se muestra cómo ejecutar la instrucción [INSERT](../../../t-sql/statements/insert-transact-sql.md) de forma segura y pasar parámetros que protejan la aplicación ante el valor de [inyección de código SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```python
@@ -66,7 +66,7 @@ En este ejemplo se muestra cómo ejecutar una instrucción [INSERT](../../../t-s
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Paso 4:  Revertir una transacción  
+## <a name="step-4--rollback-a-transaction"></a>Paso 4:  Reversión de una transacción  
   
 Este ejemplo de código muestra el uso de transacciones con las que podrá realizar lo siguiente:  
   

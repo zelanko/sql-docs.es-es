@@ -20,16 +20,16 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893426"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deshabilitar o pausar el procesamiento de informes y suscripciones  
 Existen varios enfoques que puede usar para deshabilitar o pausar el procesamiento de informes y suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los enfoques de este artículo comprenden desde deshabilitar una suscripción a interrumpir la conexión del origen de datos. No todos los enfoques son posibles con los dos modos de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En las siguientes tablas se resumen los métodos y modos de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admitidos:  
   
-##  <a name="bkmk_top"></a> En este artículo  
+##  <a name="in-this-article"></a><a name="bkmk_top"></a> En este artículo  
   
 ||Modo de servidor admitido|  
 |-|---------------------------|  
@@ -40,7 +40,7 @@ Existen varios enfoques que puede usar para deshabilitar o pausar el procesamien
 |[Quitar Administrar permisos de suscripción desde un rol (modo nativo)](#bkmk_remove_manage_subscriptions_permission)|en modo nativo|  
 |[Deshabilitar extensiones de entrega](#bkmk_disable_extensions)|Modo nativo y de SharePoint|  
   
-##  <a name="bkmk_disable_subscription"></a>Habilitar y deshabilitar suscripciones  
+##  <a name="enable-and-disable-subscriptions"></a><a name="bkmk_disable_subscription"></a>Habilitar y deshabilitar suscripciones  
   
 >[!TIP]  
 >Nuevo en SQL 2016 Reporting Services, *Habilitar y deshabilitar suscripciones*. Hay opciones nuevas de interfaz de usuario que le permiten habilitar y deshabilitar rápidamente las suscripciones. Las suscripciones deshabilitadas mantienen sus otras propiedades de configuración, como la programación, y pueden volver a habilitarse fácilmente. También puede habilitar y deshabilitar las suscripciones mediante programación o auditar qué suscripciones están deshabilitadas.  
@@ -117,14 +117,14 @@ ForEach ($subscription in $subscriptions)
 }  
 ```  
   
-##  <a name="bkmk_pause_schedule"></a> Pausar una programación compartida  
+##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> Pausar una programación compartida  
  Cuando un informe o una suscripción se ejecutan desde una programación compartida, es posible pausar la programación para evitar el procesamiento. Cualquier proceso de informes o suscripciones controlado por una programación se pospone hasta que se vuelve a reanudar la programación.  
   
 -   **Modo SharePoint:** ![Configuración de SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint") En **Configuración del sitio**, seleccione **Administrar programaciones compartidas**. Seleccione la programación y haga clic en **Pausar programaciones seleccionadas**.  
   
 -   **Modo nativo:** En el portal web, seleccione el botón **Configuración** ![botón Configuración](media/ssrs-portal-settings-gear.png) en la barra de menús de la parte superior de la pantalla del portal web y seleccione **Configuración del sitio** en el menú desplegable. Seleccione la pestaña **Programaciones** para mostrar la página Programaciones. Active las casillas situadas junto a las programaciones que desea habilitar o deshabilitar y, a continuación, seleccione el botón **Habilitar** o **Deshabilitar** respectivamente para realizar la acción deseada. La columna de estado se actualizará a "Deshabilitado" o "Habilitado", en consecuencia.  
   
-##  <a name="bkmk_disable_shared_datasource"></a> Deshabilitar un origen de datos compartido  
+##  <a name="disable-a-shared-data-source"></a><a name="bkmk_disable_shared_datasource"></a> Deshabilitar un origen de datos compartido  
  Una de las ventajas de utilizar orígenes de datos compartidos consiste en la posibilidad de deshabilitarlos para evitar la ejecución de un informe o una suscripción controlada por datos. Al deshabilitar un origen de datos compartido, el informe se desconecta de su origen externo. Mientras está deshabilitado, el origen de datos deja de estar disponible para todos los informes y las suscripciones que lo utilizan.  
   
  Tenga en cuenta que el informe se carga igualmente aunque el origen de datos no esté disponible. El informe no contiene datos, pero los usuarios que dispongan de los permisos adecuados pueden tener acceso a las páginas de propiedades, a la configuración de seguridad, al historial del informe y a la información de suscripción asociada al informe.  
@@ -133,12 +133,12 @@ ForEach ($subscription in $subscriptions)
   
 -   **Modo nativo:** para deshabilitar un origen de datos compartido en un servidor de informes en modo nativo, abra dicho origen de datos desde el portal web y desactive la casilla **Habilitar este origen de datos**.  
   
-##  <a name="bkmk_modify_role_assignment"></a> Modificar asignaciones de roles para impedir el acceso a un informe (modo nativo)  
+##  <a name="modify-role-assignments-to-prevent-access-to-a-report-native-mode"></a><a name="bkmk_modify_role_assignment"></a> Modificar asignaciones de roles para impedir el acceso a un informe (modo nativo)  
 Una manera de hacer que un informe no esté disponible es eliminar temporalmente la asignación de roles que ofrece acceso al informe en cuestión. Este enfoque es válido para todos los informes, independientemente de cómo se efectúe la conexión al origen de datos. Esta opción afecta solo al informe, no al funcionamiento de otros informes o elementos.  
   
  Para eliminar la asignación de roles, abra la página **Seguridad** del informe desde el portal web. Si el informe hereda la seguridad de otro informe primario, puede seleccionar **Personalizar seguridad** y seleccionar **Confirmar** en el cuadro de diálogo **Editar seguridad del elemento** para crear una directiva de seguridad restrictiva que pase por alto las asignaciones de roles que ofrecen un acceso total (por ejemplo, se puede quitar una asignación de roles que conceda acceso a Todos y mantener la asignación que ofrezca acceso a un grupo reducido de usuarios, como los Administradores).  
   
-##  <a name="bkmk_remove_manage_subscriptions_permission"></a> Quitar Administrar permisos de suscripción desde un rol (modo nativo)  
+##  <a name="remove-manage-subscription-permissions-from-role-native-mode"></a><a name="bkmk_remove_manage_subscriptions_permission"></a> Quitar Administrar permisos de suscripción desde un rol (modo nativo)  
  Para evitar que los usuarios puedan crear suscripciones, desactive la tarea **Administrar suscripciones individuales** del rol. Si quita esta tarea, las páginas de Suscripción no estarán disponibles. En el portal web, la página Mis suscripciones aparece vacía (no se puede eliminar), incluso aunque antes contuviese suscripciones. Al quitar tareas relacionadas con una suscripción, se evita que los usuarios creen y modifiquen las suscripciones, pero no se eliminan las suscripciones propiamente dichas. Las suscripciones existentes continúan ejecutándose hasta que las elimine. Para quitar el permiso:  
   
 1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
@@ -156,7 +156,7 @@ Una manera de hacer que un informe no esté disponible es eliminar temporalmente
 7.  Seleccione **Aceptar** para aplicar los cambios.
 
   
-##  <a name="bkmk_disable_extensions"></a> Deshabilitar extensiones de entrega  
+##  <a name="disable-delivery-extensions"></a><a name="bkmk_disable_extensions"></a> Deshabilitar extensiones de entrega  
  Todas las extensiones de entrega instaladas en un servidor de informes están disponibles para cualquier usuario que tenga permiso para crear una suscripción para un informe determinado. Las extensiones de entrega siguientes están disponibles y se configuran automáticamente:  
   
 -   Recurso compartido de archivos de Windows  

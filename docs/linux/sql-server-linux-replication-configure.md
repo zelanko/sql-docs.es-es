@@ -13,10 +13,10 @@ ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0979f05808c59336dec7a6e4a664b2e970029dd6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75952499"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurar Replicación de SQL Server en Linux
@@ -35,7 +35,7 @@ Configure la replicación en Linux con SQL Server Management Studio (SSMS) o pro
   
 * Para obtener un ejemplo con procedimientos almacenados, siga el tutorial [Configurar Replicación de SQL Server en Linux](sql-server-linux-replication-tutorial-tsql.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Antes de configurar los publicadores, distribuidores y suscriptores, necesita completar un par de pasos de configuración para la instancia de SQL Server.
 

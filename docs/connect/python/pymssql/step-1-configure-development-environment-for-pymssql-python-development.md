@@ -11,10 +11,10 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bf2942b79cf7e72efbb36a53019de8208cd3b8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935824"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Paso 1: Configuración del entorno de desarrollo para el desarrollo de Python pymssql
@@ -26,7 +26,7 @@ Tenga en cuenta que los controladores de SQL para Python usan el protocolo TDS, 
   
 1. **Instalar el entorno de ejecución de Python y del administrador de paquetes de PIP**  
 a. Vaya a [python.org](https://www.python.org/downloads/).  
-b. Haga clic en el vínculo msi de Windows Installer adecuado.   
+b. Haga clic en el vínculo del archivo MSI adecuado de Windows Installer.   
 c. Una vez descargado, ejecute el archivo msi para instalar el entorno de ejecución de Python.  
   
 2. **Descargar el del módulo pymssql** desde [aquí](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  

@@ -16,10 +16,10 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295806"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabajos del Agente SQL Server para paquetes
@@ -43,7 +43,7 @@ ms.locfileid: "71295806"
   
 -   [Solucionar problemas de los paquetes programados](#trouble)  
   
-##  <a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un servicio instalado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite automatizar y programar tareas ejecutando trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ejecutarse antes de que los trabajos pueden ejecutarse automáticamente. Para obtener más información, consulte [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent).  
   
  El nodo **Agente SQL Server** aparece en el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] al establecer conexión con una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "71295806"
   
  Puede mejorar el trabajo estableciendo opciones de notificación; por ejemplo, especificando un operador que envíe un mensaje de correo electrónico cuando finalice el trabajo o agregando alertas. Para más información, consulte [Alertas](https://docs.microsoft.com/sql/ssms/agent/alerts).  
   
-##  <a name="packages"></a> Scheduling Integration Services Packages  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  Después de crear un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , debe agregar al menos un paso y definir el tipo de paso en **Paquete SQL Server Integration Services**. Un trabajo puede incluir varios pasos, y cada paso puede ejecutar un paquete diferente.  
   
  Ejecutar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] desde un paso de trabajo es como ejecutar un paquete con las utilidades **dtexec** (dtexec.exe) y **DTExecUI** (dtexecui.exe). En lugar de establecer las opciones de tiempo de ejecución de un paquete con opciones de la línea de comandos o con el cuadro de diálogo **Utilidad de ejecución de paquetes** , establezca las opciones de tiempo de ejecución en el cuadro de diálogo **Nuevo paso de trabajo** . Para obtener más información acerca de las opciones para ejecutar un paquete, vea [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "71295806"
   
  Para ver un vídeo que muestra cómo usar el agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un paquete, vea la página principal del vídeo [ Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) en MSDN Library.  
   
-##  <a name="trouble"></a> Solucionar problemas  
+##  <a name="troubleshooting"></a><a name="trouble"></a> Solucionar problemas  
  Es posible que un paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pueda iniciar un paquete aunque el paquete se ejecute correctamente en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y desde la línea de comandos. Hay algunos motivos frecuentes para este problema y varias soluciones recomendadas. Para obtener más información, vea los recursos siguientes.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, [Un paquete SSIS no se ejecuta al llamarlo desde un paso de trabajo del Agente SQL Server](https://support.microsoft.com/kb/918760)  
@@ -100,7 +100,7 @@ ms.locfileid: "71295806"
   
     Para obtener más información acerca de los informes Información general, Todos los mensajes y Rendimiento de la ejecución, vea [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
 
-## <a name="schedule"></a> Programar un paquete mediante el Agente SQL Server
+## <a name="schedule-a-package-by-using-sql-server-agent"></a><a name="schedule"></a> Programar un paquete mediante el Agente SQL Server
   En el procedimiento siguiente se indican los pasos para automatizar la ejecución de un paquete usando un paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar el paquete.  
   
 ### <a name="to-automate-package-execution-by-using-sql-server-agent"></a>Para automatizar la ejecución de paquetes mediante el Agente SQL Server  

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401584"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Ejemplos de importación y exportación de documentos XML en bloque (SQL Server)
@@ -61,7 +61,7 @@ Para obtener más información, vea los siguientes temas.
   
 -  [E. Exportar en bloque datos XML](#bulk_export_xml_data)  
   
-## <a name="binary_byte_stream"></a>Importar de forma masiva datos XML como un flujo de bytes binario  
+## <a name="bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a>Importar de forma masiva datos XML como un flujo de bytes binario  
  Cuando importa datos XML de forma masiva de un archivo que contiene una declaración de codificación que quiere aplicar, especifique la opción SINGLE_BLOB en la cláusula OPENROWSET(BULK...). La opción SINGLE_BLOB garantiza que el analizador de XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa los datos según el esquema de codificación especificado en la declaración XML.  
   
 #### <a name="sample-table"></a>Tabla de ejemplo  
@@ -108,7 +108,7 @@ SELECT * FROM OPENROWSET(
   
  [&#91;Principio&#93;](#top)  
   
-##  <a name="existing_row"></a> Importar de forma masiva datos XML en una fila existente  
+##  <a name="bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> Importar de forma masiva datos XML en una fila existente  
  Este ejemplo utiliza el el proveedor de conjuntos de filas BULK `OPENROWSET` para agregar una instancia XML a una fila o filas existentes en la tabla de ejemplo `T`.  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ GO
   
  [&#91;Principio&#93;](#top)  
   
-## <a name="file_contains_dtd"></a> Importar de forma masiva datos XML a partir de un archivo que contiene una DTD  
+## <a name="bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> Importar de forma masiva datos XML a partir de un archivo que contiene una DTD  
   
 > [!IMPORTANT]  
 >  Se recomienda no habilitar la compatibilidad con definiciones de tipo de documento (DTD) si no es necesaria en el entorno XML. Si se activa la compatibilidad con DTD, se aumenta el área expuesta susceptible de ataques del servidor, que puede quedar expuesta a un ataque por denegación de servicio. En caso de que sea necesario habilitar la compatibilidad con DTD, este riesgo de seguridad puede reducirse procesando únicamente los documentos XML de confianza.  
@@ -189,7 +189,7 @@ INSERT T1
   
  [&#91;Principio&#93;](#top)  
   
-## <a name="field_terminator_in_format_file"></a> Especificar el terminador de campo explícitamente mediante el uso de un archivo de formato  
+## <a name="specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> Especificar el terminador de campo explícitamente mediante el uso de un archivo de formato  
  El ejemplo siguiente muestra cómo importar de forma masiva el siguiente documento XML, `Xmltable.dat`.  
   
 #### <a name="sample-data-file"></a>Archivo de datos de ejemplo  
@@ -252,7 +252,7 @@ GO
   
  [&#91;Principio&#93;](#top)  
   
-## <a name="bulk_export_xml_data"></a> Exportar de forma masiva datos XML  
+## <a name="bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> Exportar de forma masiva datos XML  
  En el ejemplo siguiente se utiliza [bcp](../../tools/bcp-utility.md) para realizar la exportación masiva de datos XML a partir de la tabla creada en el ejemplo anterior con el mismo archivo de formato XML. En el siguiente comando `bcp` , `<server_name>` y `<instance_name>` representan los marcadores de posición que deben ser reemplazados con los valores adecuados:  
   
 ```cmd

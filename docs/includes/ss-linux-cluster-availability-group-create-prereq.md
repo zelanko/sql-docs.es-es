@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Antes de crear el grupo de disponibilidad, debe:
 

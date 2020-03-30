@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69634550"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Actualización de los componentes de aprendizaje automático (R y Python) en instancias de SQL Server
@@ -106,7 +106,7 @@ En resumen, los pasos para crear el enlace son los siguientes:
 
 En cuanto a la experiencia del usuario, la tecnología y la forma de trabajar con ella no cambian. La única diferencia es la presencia de paquetes de versiones más recientes y, posiblemente, paquetes adicionales que no estaban disponibles al principio mediante SQL Server.
 
-## <a name="bkmk_BindWizard"></a>Enlace a MLS mediante el programa de instalación
+## <a name="bind-to-mls-using-setup"></a><a name="bkmk_BindWizard"></a>Enlace a MLS mediante el programa de instalación
 
 El programa de instalación de Microsoft Machine Learning detecta las características existentes y la versión de SQL Server, e invoca una utilidad llamada SqlBindR.exe para cambiar el enlace. Internamente, SqlBindR está encadenado al programa de instalación y se usa de forma indirecta. Más adelante puede llamar a SqlBindR directamente desde la línea de comandos para ejecutar opciones específicas.
 
@@ -210,7 +210,7 @@ En las siguientes instrucciones se explica cómo colocar los archivos para una i
 
 1. Ejecute ServerSetup.exe y siga las indicaciones en pantalla para completar la instalación.
 
-## <a name="bkmk_BindCmd"></a>Operaciones de la línea de comandos
+## <a name="command-line-operations"></a><a name="bkmk_BindCmd"></a>Operaciones de la línea de comandos
 
 Después de ejecutar Microsoft Machine Learning Server, tendrá a su disposición una utilidad de línea de comandos llamada SqlBindR.exe, que puede usar para efectuar otras operaciones de enlace. Por ejemplo, si decide invertir un enlace, puede volver a ejecutar el programa de instalación o bien usar la utilidad de línea de comandos. Además, puede usar esta herramienta para comprobar la compatibilidad y la disponibilidad de las instancias.
 
@@ -229,7 +229,7 @@ Después de ejecutar Microsoft Machine Learning Server, tendrá a su disposici�
 
 4. Cuando haya finalizado la actualización, reinicie el servicio Launchpad asociado a cualquier instancia que se haya modificado.
 
-## <a name="bkmk_Unbind"></a>Reversión o desenlace de una instancia
+## <a name="revert-or-unbind-an-instance"></a><a name="bkmk_Unbind"></a>Reversión o desenlace de una instancia
 
 Puede restaurar una instancia enlazada a una instalación inicial de los componentes de R y Python, establecida por el programa de instalación de SQL Server. Hay tres partes para revertir el servicio de SQL Server.
 
@@ -243,7 +243,7 @@ Puede restaurar una instancia enlazada a una instalación inicial de los compone
 
 Tiene dos opciones para revertir el enlace: volver a ejecutar el programa de instalación o usar la utilidad de línea de comandos SqlBindR.
 
-#### <a name="bkmk_wizunbind"></a> Desenlace mediante el programa de instalación
+#### <a name="unbind-using-setup"></a><a name="bkmk_wizunbind"></a> Desenlace mediante el programa de instalación
 
 1. Busque el instalador de Machine Learning Server. Si ha quitado el instalador, es posible que tenga que volver a descargarlo o copiarlo desde otro equipo.
 2. Asegúrese de ejecutar el instalador en el equipo que tiene la instancia que quiere desenlazar.
@@ -252,7 +252,7 @@ Tiene dos opciones para revertir el enlace: volver a ejecutar el programa de ins
 4. Acepte el contrato de licencia. Debe indicar que acepta los términos de licencia, también en la instalación.
 5. Haga clic en **Finalizar** El proceso tarda unos minutos.
 
-#### <a name="bkmk_cmdunbind"></a> Desenlace mediante la línea de comandos
+#### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> Desenlace mediante la línea de comandos
 
 1. Abra un símbolo del sistema y vaya a la carpeta que contiene **sqlbindr.exe**, como se describe en la sección anterior.
 

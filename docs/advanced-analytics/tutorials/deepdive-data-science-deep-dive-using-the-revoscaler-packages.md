@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fc1f427659155b5379a681787a633b6037b4bd87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76918826"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Uso de funciones de RevoScaleR de R con datos de SQL Server
@@ -23,7 +23,7 @@ En esta serie de tutoriales de varias partes, conocerá una serie de funciones *
 
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) es un paquete de Microsoft R que proporciona procesamiento paralelo y distribuido para cargas de trabajo de ciencia de datos y aprendizaje automático. Para el desarrollo de R en SQL Server, **RevoScaleR** es uno de los paquetes integrados principales, con funciones para crear objetos de origen de datos, establecer un contexto de proceso, administrar paquetes y, lo que es más importante, trabajar con datos de un extremo a otro, desde la importación hasta la visualización y el análisis. Los algoritmos de aprendizaje automático en SQL Server tienen una dependencia en orígenes de datos de **RevoScaleR**. Dada la importancia de **RevoScaleR**, es fundamental saber cuándo y cómo llamar a sus funciones. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con la función R o [SQL Server R Services (en la base de datos)](../install/sql-r-services-windows-install.md)
   

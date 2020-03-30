@@ -11,10 +11,10 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822182"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solución de problemas: El grupo de disponibilidad superó el RPO
@@ -29,7 +29,7 @@ ms.locfileid: "74822182"
   
 2.  [Un cuello de botella de E/S de disco ralentiza la protección de la réplica secundaria](#BKMK_IO_BOTTLENECK)  
   
-##  <a name="BKMK_LATENCY"></a> La alta latencia de red o el bajo rendimiento de red producen una acumulación de registros en la réplica principal  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> La alta latencia de red o el bajo rendimiento de red producen una acumulación de registros en la réplica principal  
  La causa que provoca con más frecuencia que las bases de datos superen su RPO es que no se pueden enviar lo suficientemente rápido a la réplica secundaria.  
   
 ### <a name="explanation"></a>Explicación  
@@ -63,7 +63,7 @@ ms.locfileid: "74822182"
 Para solucionar este problema, intente actualizar el ancho de banda de red o eliminar o reducir el tráfico de red innecesario.  
 
 
-##  <a name="BKMK_IO_BOTTLENECK"></a> Un cuello de botella de E/S de disco ralentiza la protección de la réplica secundaria  
+##  <a name="disk-io-bottleneck-slows-down-log-hardening-on-the-secondary-replica"></a><a name="BKMK_IO_BOTTLENECK"></a> Un cuello de botella de E/S de disco ralentiza la protección de la réplica secundaria  
  En función de la implementación del archivo de base de datos, la protección del registro puede ralentizarse debido a la contención de E/S con una carga de trabajo de informes.  
   
 ### <a name="explanation"></a>Explicación  

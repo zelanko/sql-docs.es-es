@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908127"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operaciones de índice en paralelo
@@ -48,9 +48,9 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El número de procesadores que utiliza el optimizador de consultas suele proporcionar un rendimiento óptimo. No obstante, las operaciones como la creación, reconstrucción o eliminación de índices de gran tamaño utilizan una gran cantidad de recursos y pueden provocar la falta de recursos para otras aplicaciones y operaciones de base de datos durante la operación de índice. Cuando se produce este problema, se puede configurar manualmente el número máximo de procesadores que se emplean para ejecutar la instrucción de índice limitando el número de procesadores que se usarán para la operación de índice.  
   
@@ -78,10 +78,10 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
   
 -   Los requisitos de memoria de las operaciones de índices con particiones que requieren ordenación pueden ser mayores si el Optimizador de consultas aplica grados de paralelismo a la operación de generación. Cuanto mayores sean los grados de paralelismo, mayor será el requisito de memoria. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
-###  <a name="Security"></a> <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Security"></a> <a name="Permissions"></a> Permisos  
  Debe tener un permiso de `ALTER` sobre la tabla o vista.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>Para establecer el grado máximo de paralelismo en un índice  
   
@@ -101,7 +101,7 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
   
 8.  Haga clic en **OK**.  
 
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Para establecer el grado máximo de paralelismo en un índice existente  
   

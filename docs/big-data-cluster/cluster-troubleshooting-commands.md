@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70153631"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Supervisión y solución de problemas con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>Supervisión y solución de problemas con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -98,7 +98,7 @@ Puede recuperar los registros de los contenedores que se ejecutan en un pod. El 
 kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
-## <a id="services"></a> Obtención del estado de los servicios
+## <a name="get-status-of-services"></a><a id="services"></a> Obtención del estado de los servicios
 
 Ejecute el siguiente comando para obtener los detalles de los servicios del clúster de macrodatos. Estos detalles incluyen su tipo y las IP asociadas a los servicios y puertos correspondientes. Tenga en cuenta que los servicios del clúster de macrodatos de SQL Server se crean en un nuevo espacio de nombres creado cuando se arranca el clúster en función del nombre del clúster especificado en el archivo de configuración de la implementación.
 
@@ -138,7 +138,7 @@ En el ejemplo siguiente se recuperan los detalles del servicio **master-svc-exte
 kubectl describe service master-svc-external -n mssql-cluster
 ```
 
-## <a id="copy"></a> Copia de archivos
+## <a name="copy-files"></a><a id="copy"></a> Copia de archivos
 
 Si necesita copiar archivos del contenedor en el equipo local, use el comando `kubectl cp` con la siguiente sintaxis:
 
@@ -152,7 +152,7 @@ Del mismo modo, puede usar `kubectl cp` para copiar archivos del equipo local en
 kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <container_name>  -n <namespace_name>
 ```
 
-### <a id="copyfrom"></a> Copia de archivos desde un contenedor
+### <a name="copy-files-from-a-container"></a><a id="copyfrom"></a> Copia de archivos desde un contenedor
 
 En el ejemplo siguiente se copian los archivos de registro de SQL Server del contenedor en la ruta de acceso `~/temp/sqlserverlogs` del equipo local (en este ejemplo, el equipo local es un cliente Linux):
 
@@ -160,7 +160,7 @@ En el ejemplo siguiente se copian los archivos de registro de SQL Server del co
 kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sqlserverlogs
 ```
 
-### <a id="copyinto"></a> Copia de archivos en un contenedor
+### <a name="copy-files-into-container"></a><a id="copyinto"></a> Copia de archivos en un contenedor
 
 En el ejemplo siguiente se copia el archivo **AdventureWorks2016CTP3.bak** del equipo local en el contenedor de instancias maestras de SQL Server (`mssql-server`) en el pod `master-0`. El archivo se copia en el directorio `/tmp` del contenedor. 
 
@@ -168,7 +168,7 @@ En el ejemplo siguiente se copia el archivo **AdventureWorks2016CTP3.bak** del e
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
-## <a id="forcedelete"></a> Forzamiento de la eliminación de un pod
+## <a name="force-delete-a-pod"></a><a id="forcedelete"></a> Forzamiento de la eliminación de un pod
  
 No se recomienda forzar la eliminación de un pod. Pero, para probar la disponibilidad, la resistencia o la persistencia de los datos, puede eliminar un pod para simular un error del pod con el comando `kubectl delete pods`.
 
@@ -182,7 +182,7 @@ En el ejemplo siguiente se elimina el pod del bloque de almacenamiento `storage-
 kubectl delete pods storage-0-0 -n mssql-cluster --grace-period=0 --force
 ```
 
-## <a id="getip"></a> Obtención de la IP del pod
+## <a name="get-pod-ip"></a><a id="getip"></a> Obtención de la IP del pod
  
 Para solucionar problemas, es posible que tenga que obtener la IP del nodo en el que se está ejecutando actualmente un pod. Para obtener la dirección IP, use el comando `kubectl get pods` con la siguiente sintaxis:
 

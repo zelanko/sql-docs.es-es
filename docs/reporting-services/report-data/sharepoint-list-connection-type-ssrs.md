@@ -9,10 +9,10 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4822b70912e847a2cc03a951468171d76ae63597
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081390"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
@@ -23,14 +23,14 @@ Para incluir los datos de una lista de Microsoft SharePoint en el informe, debe 
 
 Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 
-##  <a name="Connection"></a> Cadena de conexión  
+##  <a name="connection-string"></a><a name="Connection"></a> Cadena de conexión  
  La cadena de conexión a una lista de SharePoint es la dirección URL al sitio o subsitio de SharePoint; por ejemplo, `https://MySharePointWeb/MySharePointSite` o `https://MySharePointWeb/MySharePointSite/Subsite`.  
   
  El diseñador de consultas muestra automáticamente las listas de SharePoint para las que el usuario tiene los permisos necesarios para obtener acceso.  
   
  Para más ejemplos de cadenas de conexión, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-##  <a name="Credentials"></a> Credenciales  
+##  <a name="credentials"></a><a name="Credentials"></a> Credenciales  
  Se necesitan credenciales para ejecutar consultas y obtener una vista previa del informe localmente y desde el servidor de informes. Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos. Los tipos de credenciales que se pueden utilizar con esta extensión de datos dependen de la configuración de la tecnología de SharePoint para la lista de SharePoint que se esté utilizando como origen de datos.  
   
  En las tablas siguientes se describe el comportamiento de recuperación de credenciales de la extensión de lista de SharePoint cuando se conecta a una lista de SharePoint de una granja local y a una lista remota de SharePoint.  
@@ -42,9 +42,9 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|Sin|  
-|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sin<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|Sin<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|No|  
+|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
   
  *Autenticación de Windows, Autenticación basada en formularios (FBA), tokens de Secure Application Markup Language (SAML), otros proveedores de identidad o una combinación de más de uno de los proveedores de autenticación mencionados anteriormente.  
   
@@ -53,9 +53,9 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sin|Sin|  
-|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sin<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sin|Sin<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|No|No|  
+|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|No|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
   
  *Autenticación de Windows, Autenticación basada en formularios (FBA), tokens de Secure Application Markup Language (SAML), otros proveedores de identidad o una combinación de más de uno de los proveedores de autenticación mencionados anteriormente.  
   
@@ -73,7 +73,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  Para obtener más información, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md) y [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-##  <a name="Query"></a> Consultas  
+##  <a name="queries"></a><a name="Query"></a> Consultas  
  Para diseñar una consulta, cree un nuevo conjunto de datos basado en el origen de datos y, a continuación, abra el diseñador de consultas asociado. Para obtener más información, vea [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  El diseñador gráfico de consultas de lista de SharePoint muestra cuatro paneles:  
@@ -151,10 +151,10 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  Todos los campos de la lista Tareas se devuelven en los resultados de la consulta.  
   
-##  <a name="Parameters"></a> Parámetros  
+##  <a name="parameters"></a><a name="Parameters"></a> Parámetros  
  Esta extensión de datos no admite parámetros.  
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Temas de procedimientos  
  Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
   
  [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -163,7 +163,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> Secciones relacionadas  
+##  <a name="related-sections"></a><a name="Related"></a> Secciones relacionadas  
  Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

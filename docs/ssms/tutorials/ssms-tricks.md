@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245507"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Recomendaciones y trucos para usar SQL Server Management Studio (SSMS)
@@ -37,7 +37,7 @@ En este artículo se brindan algunas recomendaciones y trucos para usar SQL Ser
 > * Acceder al registro de errores de SQL Server
 > * Buscar el nombre de su instancia de SQL Server
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Para probar los pasos proporcionados en este artículo, necesita SQL Server Management Studio, acceso a una instancia de SQL Server y una base de datos de AdventureWorks. 
 
@@ -231,7 +231,7 @@ La ruta de acceso para su registro de errores de SQL Server puede variar según 
 
 6. Abra el archivo errorlog.log en el Bloc de notas. 
 
-## <a name="determine-sql-server-name"></a>Búsqueda del nombre de la instancia de SQL Server.
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Búsqueda del nombre de la instancia de SQL Server.
 
 Tiene a su disposición algunas opciones para buscar el nombre de su instancia de SQL Server antes y después de conectarse a SQL Server.  
 

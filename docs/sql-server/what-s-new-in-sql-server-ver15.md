@@ -10,10 +10,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79218052"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
@@ -194,7 +194,7 @@ Una tarea habitual que todo usuario que implemente [!INCLUDE[ssNoVersion](../inc
 ## <a name="platform-choice"></a>Elección de la plataforma
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en las innovaciones introducidas en [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] para que pueda ejecutar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la plataforma de su elección con más funcionalidad y seguridad que nunca.
 
-### <a id="sql-server-on-linux"></a>Linux
+### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
 | Nueva característica o actualización | Detalles |
 |:-----|:-----|
@@ -227,7 +227,7 @@ La manera más sencilla de empezar a trabajar con [!INCLUDE[ssNoVersion](../incl
 |Advertencia de configuración sobre la clave de producto de la licencia Server/CAL|Si se especifica una clave de producto de licencia Enterprise Server o CAL y el equipo tiene más de 20 núcleos físicos, o 40 núcleos lógicos si la tecnología Hyper-Threading está habilitada, se muestra una advertencia durante la instalación. Los usuarios pueden seguir confirmando la limitación y continuar con la instalación, o bien especificar una clave de licencia que admita el número máximo de procesadores del sistema operativo.|
 | &nbsp; | &nbsp; |
 
-## <a id="ml"></a> Machine Learning Services de SQL Server
+## <a name="sql-server-machine-learning-services"></a><a id="ml"></a> Machine Learning Services de SQL Server
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|

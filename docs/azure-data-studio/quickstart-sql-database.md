@@ -11,17 +11,17 @@ ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
 ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957079"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Inicio rápido: Uso de [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a una base de datos de Azure SQL y consultarla
+# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>Inicio rápido: Uso de [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a una base de datos de Azure SQL y consultarla
 
 En este inicio rápido, se usa [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a un servidor de Azure SQL Database. Luego, se ejecutan instrucciones de Transact-SQL (T-SQL) para crear y consultar la base de datos TutorialDB, que se emplea en otros tutoriales de [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Para realizar este inicio rápido, se necesita [!INCLUDE[name-sos](../includes/name-sos-short.md)] y un servidor de Azure SQL Database.
 

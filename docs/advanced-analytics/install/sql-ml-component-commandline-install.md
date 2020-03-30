@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727590"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Instalación de componentes de R y Python de aprendizaje automático de SQL Server desde la línea de comandos
@@ -89,7 +89,7 @@ Al realizar la instalación a través del símbolo del sistema, [!INCLUDE[ssNoVe
 | /MPYCACHEDIRECTORY | Reservado para uso futuro. Use %TEMP% para almacenar archivos .cab de los componentes de Python para su instalación en equipos que no tienen conexión a Internet. |
 ::: moniker-end
 
-## <a name="indb"></a> Instalaciones de instancias en bases de datos
+## <a name="in-database-instance-installations"></a><a name="indb"></a> Instalaciones de instancias en bases de datos
 
 El análisis en bases de datos está disponible para las instancias del motor de base de datos, y es necesario para agregar la característica **AdvancedAnalytics** a la instalación. Puede instalar una instancia del motor de base de datos con análisis avanzado o [agregarla a una instancia existente](#add-existing). 
 
@@ -138,7 +138,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> Configuración posterior a la instalación (obligatoria)
+## <a name="post-install-configuration-required"></a><a name="post-install"></a> Configuración posterior a la instalación (obligatoria)
 
 Solo se aplica a las instalaciones en la base de datos.
 
@@ -159,7 +159,7 @@ Se necesitan realizar dos pasos más para completar la instalación:
 1. SQL Server R Services: Habilite los scripts externos para poder usar la característica. El siguiente paso es seguir las instrucciones de [Instalación de SQL Server R Services (en bases de datos)](sql-r-services-windows-install.md). 
 ::: moniker-end
 
-## <a name="add-existing"></a> Adición de análisis avanzado a una instancia existente del motor de base de datos
+## <a name="add-advanced-analytics-to-an-existing-database-engine-instance"></a><a name="add-existing"></a> Adición de análisis avanzado a una instancia existente del motor de base de datos
 
 Cuando agregue análisis avanzado en base de datos a una instancia existente del motor de base de datos, proporcione el nombre de la instancia. Por ejemplo, si ha instalado anteriormente un motor de base de datos SQL Server 2017 (o una versión posterior) y Python, podría usar este comando para agregar R.
 
@@ -168,7 +168,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a> Instalación silenciosa
+## <a name="silent-install"></a><a name="silent"></a> Instalación silenciosa
 
 Una instalación silenciosa suprime la comprobación de las ubicaciones de los archivos .cab. Por este motivo, es necesario que especifique la ubicación donde se van a desempaquetar los archivos .cab. En el caso de Python, los archivos .cab deben estar ubicados en %TEMP*. Para R, puede establecer la ruta de acceso de la carpeta con el directorio temporal.
  
@@ -179,7 +179,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a> Instalaciones de servidor independiente
+## <a name="standalone-server-installations"></a><a name="shared-feature"></a> Instalaciones de servidor independiente
 
 Un servidor independiente es una "característica compartida" que no está enlazada a una instancia del motor de base de datos. En los siguientes ejemplos se muestra la sintaxis válida para la instalación del servidor independiente.
 

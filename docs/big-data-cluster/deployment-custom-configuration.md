@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285859"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configuración de opciones de implementación de recursos y servicios de clúster
@@ -179,7 +179,7 @@ Para personalizar los archivos de configuración de implementación de clústere
    azdata bdc config init --source aks-dev-test --target custom-bdc
    ```
 
-## <a id="docker"></a> Cambio de la etiqueta predeterminada de registro, repositorio e imágenes de Docker
+## <a name="change-default-docker-registry-repository-and-images-tag"></a><a id="docker"></a> Cambio de la etiqueta predeterminada de registro, repositorio e imágenes de Docker
 
 Los archivos de configuración integrados (en concreto, control.json) incluyen una sección `docker` donde la etiqueta de registro de contenedor, repositorio e imágenes se rellena previamente. Las imágenes necesarias para clústeres de macrodatos se encuentran de forma predeterminada en Microsoft Container Registry (`mcr.microsoft.com`) en el repositorio `mssql/bdc`:
 
@@ -216,7 +216,7 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 > [!TIP]
 > La implementación de clústeres de macrodatos debe tener acceso a un registro de contenedor y a un repositorio desde el que extraer imágenes de contenedor. Si el entorno carece de acceso a la instancia de Microsoft Container Registry predeterminada, puede llevar a cabo una instalación sin conexión en la que las imágenes necesarias se coloquen en primer lugar en un repositorio de Docker privado. Para más información sobre las instalaciones sin conexión, vea [Realización de una implementación sin conexión de un clúster de macrodatos de SQL Server](deploy-offline.md). Cabe decir que, antes de emitir la implementación, hay que establecer las [variables de entorno](deployment-guidance.md#env) `DOCKER_USERNAME` y `DOCKER_PASSWORD` ya que así se asegurará de que el flujo de trabajo de implementación tiene acceso al repositorio privado del que extraer las imágenes.
 
-## <a id="clustername"></a> Cambio del nombre del clúster
+## <a name="change-cluster-name"></a><a id="clustername"></a> Cambio del nombre del clúster
 
 El nombre del clúster es tanto el nombre del clúster de macrodatos como el espacio de nombres de Kubernetes que se van a crear al implementar. Se especifica en la siguiente parte del archivo de configuración de implementación `bdc.json`:
 
@@ -236,7 +236,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metad
 > [!IMPORTANT]
 > El nombre del clúster de macrodatos debe estar formado solo por caracteres alfanuméricos en minúsculas sin espacios. Todos los artefactos de Kubernetes (contenedores, pods, conjuntos con estado, servicios) para el clúster se crean en un espacio de nombres con el mismo nombre que el nombre de clúster especificado.
 
-## <a id="ports"></a> Actualización de los puertos de puntos de conexión
+## <a name="update-endpoint-ports"></a><a id="ports"></a> Actualización de los puertos de puntos de conexión
 
 Se definen puntos de conexión para el controlador de `control.json` y para la puerta de enlace y la instancia maestra de SQL Server en las correspondientes secciones de `bdc.json`. La siguiente parte del archivo de configuración `control.json` muestra las definiciones de puntos de conexión del controlador:
 
@@ -263,7 +263,7 @@ En el siguiente ejemplo se usa JSON en línea para cambiar el puerto del punto d
 azdata bdc config replace --config-file custom-bdc/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> Configuración de la escala
+## <a name="configure-scale"></a><a id="replicas"></a> Configuración de la escala
 
 Las configuraciones de cada recurso (como, por ejemplo, el grupo de almacenamiento) se definen en el archivo de configuración `bdc.json`. Por ejemplo, la siguiente parte de `bdc.json` muestra una definición de recursos de `storage-0`:
 
@@ -305,7 +305,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 > [!NOTE]
 > El número máximo de instancias validadas para los grupos de proceso y de datos es de `8` cada una. No existe límite que haya que cumplir en el momento de la implementación, pero se desaconseja configurar una escala mayor en las implementaciones de producción.
 
-## <a id="storage"></a> Configuración del almacenamiento
+## <a name="configure-storage"></a><a id="storage"></a> Configuración del almacenamiento
 
 También puede cambiar la clase de almacenamiento y las características que se usan para cada grupo. En el siguiente ejemplo se asigna una clase de almacenamiento personalizada al grupo de almacenamiento y al grupo de datos, y se actualiza el tamaño de la notificación de volumen persistente para almacenar datos de hasta 500 GB para HDFS (grupo de almacenamiento) y de hasta 100 GB para el grupo de datos. 
 
@@ -369,7 +369,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 > [!NOTE]
 > Un archivo de configuración basado en `kubeadm-dev-test` no tiene una definición de almacenamiento para cada grupo, pero puede usar el proceso anterior para agregarla si fuese necesario.
 
-## <a id="sparkstorage"></a> Configuración del bloque de almacenamiento sin Spark
+## <a name="configure-storage-pool-without-spark"></a><a id="sparkstorage"></a> Configuración del bloque de almacenamiento sin Spark
 
 También puede configurar los bloques de almacenamiento para que se ejecuten sin Spark y crear un grupo de Spark independiente. Esta configuración permite escalar la potencia de proceso de Spark independientemente del almacenamiento. Para saber cómo se configura el grupo de Spark, vea la sección [Creación de un grupo de Spark](#sparkpool) de este artículo.
 
@@ -382,7 +382,7 @@ El valor `includeSpark` del recurso del grupo de almacenamiento está establecid
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
 ```
 
-## <a id="sparkpool"></a> Creación de un grupo de Spark
+## <a name="create-a-spark-pool"></a><a id="sparkpool"></a> Creación de un grupo de Spark
 
 Puede crear un grupo de Spark como complemento de o en lugar de las instancias de Spark que se ejecutan en el grupo de almacenamiento. En el siguiente ejemplo se muestra cómo crear un grupo de Spark con dos instancias revisando el archivo de configuración `bdc.json`. 
 
@@ -425,7 +425,7 @@ Luego, ejecute el comando `azdata bdc config patch`:
 azdata bdc config patch -c custom-bdc/bdc.json -p spark-pool-patch.json
 ```
 
-## <a id="podplacement"></a> Configuración de la ubicación de pods mediante etiquetas de Kubernetes
+## <a name="configure-pod-placement-using-kubernetes-labels"></a><a id="podplacement"></a> Configuración de la ubicación de pods mediante etiquetas de Kubernetes
 
 Puede controlar la ubicación de pods en nodos de Kubernetes con recursos específicos para acomodar varios tipos de requisitos de carga de trabajo. Con las etiquetas de Kubernetes, puede personalizar qué nodos del clúster de Kubernetes se van a usar para implementar los recursos del clúster de macrodatos, pero también restringir los nodos que se usan en recursos concretos.
 Por ejemplo, puede que quiera asegurarse de que los pods del recurso de grupo de almacenamiento se colocan en nodos con más almacenamiento, mientras que las instancias maestras de SQL Server se colocan en nodos con más recursos de CPU y memoria. En este caso, primero crea un clúster de Kubernetes heterogéneo con distintos tipos de hardware y luego [asigna etiquetas de nodo](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) en consecuencia. En el momento de implementar el clúster de macrodatos, puede especificar las mismas etiquetas en el nivel de clúster para indicar qué nodos se usan en el clúster de macrodatos, usando para ello el atributo `clusterLabel` en el archivo `control.json`. Después, se usarán etiquetas diferentes para la colocación del nivel de grupo. Estas etiquetas se pueden especificar en los archivos de configuración de implementación del clúster de macrodatos con el atributo `nodeLabel`. Kubernetes asigna los pods en los nodos que coincidan con las etiquetas especificadas. Las claves de etiqueta específicas que se deben agregar a los nodos del clúster de Kubernetes son `mssql-cluster` (para indicar qué nodos se usan con el clúster de macrodatos) y `mssql-resource` (para indicar los nodos específicos en los que se van a colocar los pods de varios recursos). Los valores de estas etiquetas pueden ser cualquier cadena que elija.
@@ -467,7 +467,7 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.n
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
 
-## <a id="jsonpatch"></a> Otras personalizaciones mediante archivos de revisión JSON
+## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> Otras personalizaciones mediante archivos de revisión JSON
 
 Los archivos de revisión JSON configuran varias opciones a la vez. Para obtener más información sobre las revisiones de JSON, vea [Revisiones de JSON en Python](https://github.com/stefankoegl/python-json-patch) y [JSONPath Online Evaluator](https://jsonpath.com/).
 

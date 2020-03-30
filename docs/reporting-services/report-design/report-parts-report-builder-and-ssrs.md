@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081111"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Elementos de informe (Generador de informes y SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "77081111"
   
  El elemento de informe que agrega a un informe mantiene una relación con la instancia del elemento de informe en el sitio o servidor por medio de un identificador único. Después de agregar elementos de informe de un sitio o servidor a un informe, puede modificarlas, de forma independiente del elemento de informe original en el sitio o servidor. Puede aceptar las actualizaciones realizadas por otros usuario al elemento de informe en el sitio o servidor, y puede volver a guardar el elemento de informe modificado en el sitio o servidor, agregando un nuevo elemento de informe o sobrescribiendo el original, si tiene los permisos necesarios.  
   
-##  <a name="ComponentWorkflow"></a> El ciclo de vida de un elemento de informe  
+##  <a name="life-cycle-of-a-report-part"></a><a name="ComponentWorkflow"></a> El ciclo de vida de un elemento de informe  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  La persona A crea un informe con un gráfico que depende de un conjunto de datos incrustado.  
@@ -42,7 +42,7 @@ ms.locfileid: "77081111"
 6.  La persona B acepta el gráfico actualizado del servidor. De esta forma sobrescribe los cambios que la persona B había realizado en el informe de la persona B.  
   
   
-##  <a name="PublishingComponents"></a> Publicar elementos de informe  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> Publicar elementos de informe  
  Al publicar un elemento de informe, el Generador de informes le asigna un identificador único, distinto del nombre del elemento de informe. El Generador de informes conserva ese identificador, independientemente de qué se cambie del elemento de informe. El identificador vincula el elemento de informe original en el informe al elemento de informe. Cuando los autores de otros informes reutilizan el elemento de informe, el identificador también vincula el elemento de su informe al elemento de informe en el servidor de informes.  
   
  Estos son los elementos de informe que puede publicar como elementos de informe:  
@@ -81,7 +81,7 @@ ms.locfileid: "77081111"
  La descripción se puede editar en el panel Propiedades.  
   
   
-##  <a name="ReusingComponents"></a> Reutilizar elementos de informe  
+##  <a name="reusing-report-parts"></a><a name="ReusingComponents"></a> Reutilizar elementos de informe  
  La manera más fácil de crear un informe es agregar un elemento de informe existente, como una tabla o un gráfico, de la galería de elementos de informe a su informe. Después de agregarla a un informe, puede modificarla como convenga o aceptar las actualizaciones del servidor. Los cambios realizados en el elemento del informe no afectan a la instancia del elemento de informe publicada en el sitio o servidor, ni a la relación entre las instancias del informe y del sitio o servidor. Si tiene los permisos necesarios, puede volver a guardar la copia actualizada en el sitio o servidor. Si otro usuario modifica la copia del sitio o servidor, puede decidir mantener su copia como está o actualizarla para que sea como la copia del sitio o servidor.  
   
 ### <a name="searching-for-report-parts"></a>Buscar elementos de informe  
@@ -103,7 +103,7 @@ ms.locfileid: "77081111"
  Si agrega otro elemento de informe que usa un conjunto de datos idéntico a otro que ya está en el informe, el asistente no agrega otra versión de ese conjunto de datos al informe; redirige las referencias del elemento de informe hacia el conjunto de datos existente. Para obtener más información, vea [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
   
   
-##  <a name="UpdatingComponents"></a> Actualizar elementos de informe con cambios del servidor  
+##  <a name="updating-report-parts-with-changes-from-the-server"></a><a name="UpdatingComponents"></a> Actualizar elementos de informe con cambios del servidor  
  Cada vez que abre un informe, el Generador de informes comprueba si las instancias del servidor de elementos de ese informe se han actualizado en el servidor. También comprueba los cambios de los elementos dependientes de elementos de informe, como el conjunto de datos y los parámetros. Si algún elemento de informe publicado o sus dependencias se han actualizado en el servidor, una barra de información del informe muestra el número de elementos actualizados. Puede elegir ver, y aceptar o rechazar las actualizaciones, o bien descartar la barra de información. Si decide ver las actualizaciones, ve una miniatura del elemento de informe, quien realizó la última modificación y cuando tuvo lugar. A continuación, puede aceptar alguno de los elementos actualizados, o todos ellos.  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ ms.locfileid: "77081111"
  Para revertir a la versión en el servidor, no tiene más que eliminar la versión que tiene en su informe y volver a agregarla.  
   
   
-##  <a name="RepublishingComponents"></a> Actualizar elementos de informe en el servidor  
+##  <a name="updating-report-parts-already-on-the-server"></a><a name="RepublishingComponents"></a> Actualizar elementos de informe en el servidor  
  Puede decidir actualizar un elemento de informe existente en el servidor, o publicarlo como un elemento de informe nuevo sin reemplazar el existente. Al actualizar el elemento de informe en el servidor, no se modifican automáticamente las copias del elemento en otros informes. Si otros autores de informes han agregado ese elemento de informe a un informe, se les informa del cambio la próxima vez que abran ese informe. Pueden elegir aceptar sus cambios o no.  
   
  Si decide publicarlo como un nuevo elemento de informe, el Generador de informes le da un nuevo identificador único, que ya no vincula al elemento de informe original.  
@@ -128,10 +128,10 @@ ms.locfileid: "77081111"
  Si el conjunto de datos se incrusta en el elemento de informe, cada vez que publique el elemento de informe, el conjunto de datos se mostrará en el cuadro de diálogo **Publicar elementos de informe** . Los conjuntos de datos compartidos no se muestran en el cuadro de diálogo **Publicar elementos de informe** .  
   
   
-##  <a name="RptPartsRptDesigner"></a> Trabajar con elementos de informe en el Diseñador de informes  
+##  <a name="working-with-report-parts-in-report-designer"></a><a name="RptPartsRptDesigner"></a> Trabajar con elementos de informe en el Diseñador de informes  
  Los elementos de informe funcionan de forma algo diferente en el Diseñador de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En el Diseñador de informes, la publicación es unidireccional: puede publicar un elemento de informe del Diseñador de informes, pero no puede reutilizar un elemento de informe existente en el Diseñador de informes. Para obtener más información, vea [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Temas de procedimientos  
  [Publicar y volver a publicar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
  [Buscar elementos de informe y establecer una carpeta predeterminada &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68254865"
 ---
 # <a name="report-server-service-trace-log"></a>Registro de seguimiento del servicio del servidor de informes
 
 Los registros de seguimiento del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] son un archivo de texto ASCII que contiene información detallada de las operaciones del servicio del servidor de informes.  La información de los archivos incluye las operaciones realizadas por el servicio web del servidor de informes, el portal web y el procesamiento en segundo plano. El archivo de registro de seguimiento incluye información redundante que contienen otros archivos de registro, así como información adicional que no está disponible en ningún otro archivo. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se ha incluido en el registro de eventos o de ejecución. Por ejemplo, cuando existen problemas con las suscripciones.  
 
-## <a name="bkmk_view_log"></a> ¿Dónde están los archivos de registro del servidor de informes?
+## <a name="where-are-the-report-server-log-files"></a><a name="bkmk_view_log"></a> ¿Dónde están los archivos de registro del servidor de informes?
 
 Los archivos de registro de seguimiento son `ReportServerService_<timestamp>.log` y `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log` y se encuentran en la siguiente carpeta:
 
@@ -28,7 +28,7 @@ Los archivos de registro de seguimiento son `ReportServerService_<timestamp>.log
 
 Los registros de seguimiento se crean diariamente, iniciándose con la primera entrada que se produce después de la medianoche (hora local) y siempre que se reinicie el servicio. La marca de tiempo se basa en la hora universal coordinada (UTC). El archivo está en formato EN-US. De forma predeterminada, los registros de seguimiento están limitados a 32 megabytes y se eliminan transcurridos 14 días.  
 
-## <a name="bkmk_trace_configuration_settings"></a> Configuración de seguimiento
+## <a name="trace-configuration-settings"></a><a name="bkmk_trace_configuration_settings"></a> Configuración de seguimiento
 
 El comportamiento del registro de seguimiento se administra en el archivo de configuración **ReportingServicesService.exe.config**. El archivo de configuración se encuentra en la ruta de la carpeta siguiente:  
   
@@ -68,7 +68,7 @@ El comportamiento del registro de seguimiento se administra en el archivo de con
 |**Categoría de componentes**|Especifica los componentes para los cuales se genera la información de registro de seguimiento y el nivel de seguimiento en este formato.<br /><br /> \<categoría de componente>:\<tracelevel><br /><br /> Puede especificar todos los componentes o algunos de ellos (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Si no desea generar información para un componente específico, puede deshabilitar el seguimiento para el mismo (por ejemplo, "SemanticModelGenerator:0"). No deshabilite el seguimiento para **all**.<br /><br /> Puede establecer "SemanticQueryEngine:4" si desea ver las instrucciones Transact-SQL generadas para cada consulta semántica. Las instrucciones Transact-SQL se registran en el registro de seguimiento. El ejemplo siguiente muestra el valor de configuración que agrega las instrucciones Transact-SQL al registro:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|Las categorías de componentes se pueden establecer en:<br /><br /> <br /><br /> **All** se utiliza para realizar un seguimiento de la actividad general del servidor de informes para todos los procesos que no están divididos en las categorías específicas.<br /><br /> **RunningJobs** se usa para realizar un seguimiento de una operación de suscripción o informe en curso.<br /><br /> **SemanticQueryEngine** se usa para realizar un seguimiento de una consulta semántica procesada cuando un usuario realiza una exploración de datos ad hoc en un informe basado en un modelo.<br /><br /> **SemanticModelGenerator** se utiliza para realizar un seguimiento de generación de modelos.<br /><br /> **http** se utiliza para habilitar el archivo de registro HTTP del servidor de informes. Para obtener más información, vea [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
 |Valor de**trace level** de categorías de componentes|\<categoría de componente>:\<tracelevel><br /><br /> <br /><br /> Si no anexa un nivel de seguimiento al componente, se utiliza el valor especificado para **DefaultTraceSwitch** . Por ejemplo, si especifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos los componentes utilizan el nivel de seguimiento predeterminado.|Los valores válidos del nivel de seguimiento son:<br /><br /> <br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado<br /><br /> El valor predeterminado del servidor de informes es "todo:3"|  
   
-## <a name="bkmk_add_custom"></a> Agregar un valor de configuración personalizado para especificar una ubicación del archivo de volcado  
+## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> Agregar un valor de configuración personalizado para especificar una ubicación del archivo de volcado  
 Puede agregar una configuración personalizada para establecer la ubicación que utiliza la herramienta Dr. Watson para Windows para almacenar archivos de volcado. El valor predeterminado es **Directory**. El ejemplo siguiente muestra cómo se especifica esta configuración en la sección **RStrace** :  
 
 ```
@@ -77,7 +77,7 @@ Puede agregar una configuración personalizada para establecer la ubicación que
   
 Para obtener más información, vea el [artículo 913046 de Knowledge Base](https://support.microsoft.com/?kbid=913046) en el sitio web de Microsoft [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-##  <a name="bkmk_log_file_fields"></a> Campos del archivo de registro
+##  <a name="log-file-fields"></a><a name="bkmk_log_file_fields"></a> Campos del archivo de registro
 
 Los registros de seguimiento contienen los siguientes archivos:  
   

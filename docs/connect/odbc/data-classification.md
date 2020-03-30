@@ -14,10 +14,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72041133"
 ---
 # <a name="data-classification"></a>Clasificación de datos
@@ -243,7 +243,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="bkmk-version"></a>Versión admitida
+## <a name="supported-version"></a><a name="bkmk-version"></a>Versión admitida
 Microsoft ODBC Driver 17.2 permite la recuperación de información de clasificación de datos a través de `SQLGetDescField` si `FieldIdentifier` se establece en `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
 
 A partir de Microsoft ODBC Driver 17.4.1.1, es posible recuperar la versión de clasificación de datos compatible con un servidor a través de `SQLGetDescField` mediante el identificador de campo `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238). En 17.4.1.1, la versión de clasificación de datos compatible se establece en "2".

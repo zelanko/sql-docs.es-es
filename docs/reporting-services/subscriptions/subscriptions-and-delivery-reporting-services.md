@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578034"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Suscripciones y entrega (Reporting Services)
@@ -71,7 +71,7 @@ ms.locfileid: "65578034"
   
 -   [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
-##  <a name="bkmk_subscription_scenarios"></a> Escenarios de suscripción y entrega  
+##  <a name="subscription-and-delivery-scenarios"></a><a name="bkmk_subscription_scenarios"></a> Escenarios de suscripción y entrega  
  Para cada suscripción, se pueden configurar las opciones de entrega y las opciones disponibles dependen de la extensión de entrega que seleccione. Una extensión de entrega es un módulo que admite alguna manera de distribución. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye varias extensiones de entrega y, además, la extensión de entrega puede estar disponible con proveedores de terceros.  
   
  Si es un programador, puede crear extensiones de entrega personalizadas para admitir otros escenarios. Para más información, consulte [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
@@ -85,7 +85,7 @@ ms.locfileid: "65578034"
 |Cargar previamente en caché|Si tiene varias instancias de un informe con parámetros o un gran número de usuarios de informes que ven los informes, puede cargar los informes previamente en caché para reducir el tiempo de procesamiento necesario para mostrar el informe.|  
 |Informes controlados por datos|Use las suscripciones controladas por datos para personalizar la salida de informes, las opciones de entrega y la configuración de los parámetros del informe en tiempo de ejecución. La suscripción usa una consulta para obtener los valores de entrada de un origen de datos en tiempo de ejecución. Puede usar suscripciones controladas por datos para realizar una operación de combinación de correspondencia que envíe un informe a una lista de suscriptores que se determina en el momento de la suscripción.|  
   
-##  <a name="bkmk_standard_and_datadriven"></a> Suscripciones estándar y controladas por datos  
+##  <a name="standard-and-data-driven-subscriptions"></a><a name="bkmk_standard_and_datadriven"></a> Suscripciones estándar y controladas por datos  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite dos tipos de suscripciones: **estándar** y **controladas por datos**. Las suscripciones estándar se crean y se administran por usuarios individuales. La suscripción estándar consta de valores estáticos que no pueden modificarse durante su procesamiento. Para cada suscripción estándar existe un único conjunto de opciones de presentación del informe, opciones de entrega y parámetros de informe.  
   
  Las suscripciones controladas por datos obtienen información de suscripción en tiempo de ejecución consultando un origen de datos externo que proporciona los valores usados para especificar un destinatario, parámetros de informe o un formato de aplicación. Las suscripciones controladas por datos están indicadas para listas de destinatarios extensas o para ocasiones en las que se desea cambiar el resultado del informe para cada destinatario. Este tipo de suscripciones requieren conocimientos sobre la creación de consultas y el uso de los parámetros. Las personas que crean y administran estas suscripciones suelen ser los administradores del servidor de informes. Para obtener más información, vea lo siguiente:  
@@ -94,7 +94,7 @@ ms.locfileid: "65578034"
   
 -   [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
   
-##  <a name="bkmk_subscription_requirements"></a> Requisitos de suscripción  
+##  <a name="subscription-requirements"></a><a name="bkmk_subscription_requirements"></a> Requisitos de suscripción  
  Para poder crear una suscripción a un informe, se deben cumplir los siguiente requisitos previos:  
   
 |Requisito|Descripción|  
@@ -105,7 +105,7 @@ ms.locfileid: "65578034"
 |Sin seguridad de elemento de modelo|No es posible suscribirse a un informe del Generador de informes que utilice como origen de datos un modelo si éste contiene una configuración de seguridad de elementos de modelo. Esta restricción solo se aplica a los informes que utilizan seguridad de elementos de modelo.|  
 |Valores de parámetros|Si el informe utiliza parámetros, se debe especificar un valor de parámetro con el propio informe o en la suscripción que defina. Si se han definido valores predeterminados en el informe, puede establecer el valor del parámetro para que utilice la opción predeterminada.|  
   
-##  <a name="bkmk_delivery_extensions"></a> Extensiones de entrega  
+##  <a name="delivery-extensions"></a><a name="bkmk_delivery_extensions"></a> Extensiones de entrega  
  Las suscripciones se procesan en el servidor de informes y se distribuyen mediante las extensiones de entrega implementadas en el servidor. De forma predeterminada, puede crear suscripciones que envían informes a una biblioteca compartida o a una dirección de correo electrónico. Si el servidor de informes está configurado para el modo integrado con SharePoint, también puede enviar un informe a una biblioteca de SharePoint.  
   
  Cuando un usuario crea una suscripción, puede elegir una de las extensiones de entrega disponibles para determinar cómo se entrega el informe. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye las siguientes extensiones de entrega.  
@@ -120,7 +120,7 @@ ms.locfileid: "65578034"
 > [!NOTE]  
 >  La entrega de informes es una parte extensible de la arquitectura de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Otros fabricantes pueden crear extensiones de entrega personalizadas para enrutar informes a distintas ubicaciones o dispositivos. Para obtener más información acerca de las extensiones de entrega personalizadas, vea [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
-##  <a name="bkmk_parts_of_subscription"></a> Partes de una suscripción  
+##  <a name="parts-of-a-subscription"></a><a name="bkmk_parts_of_subscription"></a> Partes de una suscripción  
  Una definición de suscripción se compone de las siguientes partes:  
   
 -   Un puntero a un informe que se puede ejecutar en modo desatendido (es decir, un informe que usa credenciales almacenadas o que no usa ninguna credencial).  
@@ -139,7 +139,7 @@ ms.locfileid: "65578034"
   
  La información de suscripción se almacena con informes individuales en la base de datos del servidor de informes. No puede administrar suscripciones independientemente del informe al que estén asociadas. Tenga en cuenta que las suscripciones no se pueden ampliar para incluir descripciones, otro texto personalizado u otros elementos. Las suscripciones solo pueden contener los elementos mencionados anteriormente.  
   
-##  <a name="bkmk_subscription_processing"></a> Cómo se procesan las suscripciones  
+##  <a name="how-subscriptions-are-processed"></a><a name="bkmk_subscription_processing"></a> Cómo se procesan las suscripciones  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye el procesador de entrega y programación, que proporciona funcionalidad para programar informes y entregarlos a los usuarios. El servidor de informes responde a eventos que supervisa constantemente. Cuando se produce un evento que coincide con las condiciones definidas para una suscripción, el servidor de informes la lee para determinar cómo procesar y entregar el informe. El servidor de informes solicita la extensión de entrega que se especifica en la suscripción. Con la extensión de entrega en funcionamiento, el servidor de informes extrae la información de entrega de la suscripción y la envía a la extensión de entrega para su procesamiento.  
   
  La extensión de entrega representa el informe en el formato definido en la suscripción y después entrega el informe o la notificación al destino especificado. Si no se puede entregar un informe, se incluye una entrada en el archivo de registro del servidor de informes. Si desea permitir los reintentos, puede configurar el servidor de informes para que vuelva a intentar la entrega si el primer intento no tiene éxito.  
@@ -167,7 +167,7 @@ ms.locfileid: "65578034"
   
  Un evento de actualización de instantánea utiliza la actualización programada de una instantánea de informe para desencadenar una suscripción. Puede definir una suscripción que se desencadene siempre que se actualice un informe con datos nuevos, basándose en propiedades de ejecución del informe establecidas en éste.  
   
-##  <a name="bkmk_code"></a> Control programático de suscripciones  
+##  <a name="programmatic-control-of-subscriptions"></a><a name="bkmk_code"></a> Control programático de suscripciones  
  El modelo de objetos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le permite auditar y controlar las suscripciones y el procesamiento de las suscripciones mediante programación.  Consulte lo siguiente para obtener ejemplos y una introducción:  
   
 -   [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  

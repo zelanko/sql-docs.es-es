@@ -18,10 +18,10 @@ ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251275"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender una base de datos de disponibilidad (SQL Server)
@@ -60,25 +60,25 @@ ms.locfileid: "75251275"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Un comando SUSPEND realiza la devolución en cuanto haya sido aceptado por la réplica que hospeda la base de datos de destino, pero la suspensión real de la base de datos se produce de forma asincrónica.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Debe estar conectado a la instancia de servidor que hospeda la base de datos que desea suspender. Para suspender una base de datos principal y las bases de datos secundarias correspondientes, conéctese a la instancia del servidor que hospeda la réplica principal. Para suspender una base de datos secundaria dejando disponible la base de datos principal, conéctese a la réplica secundaria.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
  Durante los cuellos de botella, la suspensión breve de una o varias bases de datos secundarias puede ser útil para mejorar temporalmente el rendimiento de la réplica principal. Mientras una base de datos secundaria permanece suspendida, el registro de transacciones de la base de datos principal correspondiente no puede truncarse. Esto hace que las entradas de registro se acumulen en la base de datos principal. Por tanto, se recomienda reanudar o quitar rápidamente una base de datos secundaria suspendida. Para más información, vea [Seguimiento: Evitar un registro de transacciones lleno](#FollowUp) más adelante en este tema.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para suspender una base de datos**  
   
 1.  En el Explorador de objetos, conéctese a la instancia de servidor que hospeda la réplica de disponibilidad en la que desea suspender una base de datos y expanda el árbol. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
@@ -96,7 +96,7 @@ ms.locfileid: "75251275"
 > [!NOTE]  
 >  Para suspender bases de datos adicionales en esta ubicación de réplica, repita los pasos 4 y 5 para cada base de datos.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para suspender una base de datos**  
   
 1.  Conéctese a la instancia del servidor que hospeda la réplica cuya base de datos desea suspender. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
@@ -105,7 +105,7 @@ ms.locfileid: "75251275"
   
      ALTER DATABASE *nombre_base_de_datos* SET HADR SUSPEND;
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para suspender una base de datos**  
   
 1.  Cambie el directorio (**cd**) a la instancia del servidor que hospeda la réplica cuya base de datos quiere suspender. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
@@ -126,7 +126,7 @@ ms.locfileid: "75251275"
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Seguimiento: Evitar un registro de transacciones lleno  
+##  <a name="follow-up-avoiding-a-full-transaction-log"></a><a name="FollowUp"></a> Seguimiento: Evitar un registro de transacciones lleno  
  Normalmente, cuando se lleva a cabo un punto de comprobación automático en una base de datos, su registro de transacciones se trunca en dicho punto de comprobación después de la siguiente copia de seguridad del registro. Sin embargo, mientras una base de datos secundaria está suspendida, todas las entradas de registro actuales permanecen activas en la base de datos principal. Si el registro de transacciones se llena (bien porque alcanza su tamaño máximo o porque la instancia del servidor se queda sin espacio), la base de datos no puede realizar más actualizaciones.  
   
  Para evitar este problema, debe realizar una de las siguientes acciones:  
@@ -141,7 +141,7 @@ ms.locfileid: "75251275"
   
 -   [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   

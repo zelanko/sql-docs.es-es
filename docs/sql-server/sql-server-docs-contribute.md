@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286329"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Cómo colaborar en la documentación de SQL Server
@@ -30,7 +30,7 @@ Hay dos flujos de trabajo principales que se pueden aplicar para colaborar:
 
 El equipo de contenido de SQL valida todas las contribuciones públicas para mejorar la precisión técnica y la coherencia. 
 
-## <a id="githubui"></a> Edición en el navegador
+## <a name="edit-in-your-browser"></a><a id="githubui"></a> Edición en el navegador
 
 Puede realizar modificaciones sencillas en el contenido de SQL Server en el explorador y, después, enviarlas a Microsoft. Para más información, puede ver la [Guía para colaboradores de Microsoft Docs: información general](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
 
@@ -51,7 +51,7 @@ En el GIF siguiente se muestra el proceso completo para enviar los cambios en el
 
 ![Cómo colaborar en la documentación de SQL Server](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a id="tools"></a> Edición local con herramientas
+## <a name="edit-locally-with-tools"></a><a id="tools"></a> Edición local con herramientas
 
 Otra opción de edición consiste en bifurcar el repositorio **sql-docs** o **azure-docs** y clonarlo localmente en el equipo. Después puede usar un editor de Markdown y un cliente de Git para enviar los cambios. Este flujo de trabajo es útil para las ediciones que son más complejas o que afectan a varios archivos. También es práctico para los colaboradores frecuentes de docs.microsoft.com.
 

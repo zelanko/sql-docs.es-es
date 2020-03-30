@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288669"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)
@@ -121,7 +121,7 @@ Para ver el flujo de trabajo recomendado para actualizar el nivel de compatibili
 ## <a name="compatibility-levels-and-stored-procedures"></a>Niveles de compatibilidad y procedimientos almacenados
 Cuando se ejecuta un procedimiento almacenado, se utiliza el nivel de compatibilidad actual de la base de datos en la que se define. Cuando se cambia el nivel de compatibilidad de una base de datos, todos sus procedimientos almacenados se vuelven a compilar de forma automática según sea necesario.
 
-## <a name="backwardCompat"></a> Uso del nivel de compatibilidad para la compatibilidad con versiones anteriores
+## <a name="using-compatibility-level-for-backward-compatibility"></a><a name="backwardCompat"></a> Uso del nivel de compatibilidad para la compatibilidad con versiones anteriores
 La configuración del [nivel de compatibilidad de la base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) proporciona compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en lo que se refiere a [!INCLUDE[tsql](../../includes/tsql-md.md)] y los comportamientos de optimización de consulta solo para la base de datos especificada, no para todo el servidor.  
 
 A partir del modo de compatibilidad 130, todo plan de consulta que afecte a las correcciones y a las características se ha agregado únicamente al nuevo nivel de compatibilidad de forma intencionada. La finalidad de esto ha sido reducir el riesgo durante las actualizaciones que surgen de la degradación del rendimiento debido a los cambios en el plan de consulta potencialmente introducidos por los nuevos comportamientos de optimización de consulta.      

@@ -11,10 +11,10 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74833581"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Archivos de datos de SQL Server en Microsoft Azure
@@ -109,7 +109,7 @@ Para obtener más información, consulte [Manage anonymous read access to contai
 - SQL Server en una máquina virtual de Azure: si va a instalar [SQL Server en una máquina virtual de Azure](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), instale SQL Server 2016 o actualice la instancia existente. Del mismo modo, también puede crear una nueva máquina virtual de Azure mediante una imagen de plataforma de SQL Server 2016.
 
   
-###  <a name="bkmk_Limitations"></a> Limitaciones  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> Limitaciones  
   
 - En la versión actual de esta característica, no se admite almacenar datos **FileStream** en Azure Storage. Puede almacenar datos de **FileStream** en una base de datos que también contenga archivos de datos almacenados en Azure Storage, pero todos los archivos de datos de FileStream se deben almacenar en el almacenamiento local.  Puesto que los datos de FileStream deben residir en el almacenamiento local, no se pueden mover entre máquinas con Azure Storage; por lo tanto, se recomienda usar las [técnicas tradicionales](../../relational-databases/blob/move-a-filestream-enabled-database.md) para mover los datos asociados con FileStream entre las distintas máquinas.  
   
@@ -154,7 +154,7 @@ Para obtener más información, consulte [Manage anonymous read access to contai
 
 - Una nueva columna **int** , **credential_id**, en la vista del sistema **sys.master_files** . La columna **credential_id** se usa para permitir la referencia cruzada de los archivos de datos de Azure Storage en `sys.credentials` para las credenciales creadas para ellos. Puede usarla para solucionar problemas, como que una credencial no se puede eliminar cuando un archivo de base de datos la está usando.  
   
-##  <a name="bkmk_Troubleshooting"></a> Solución de problemas de Archivos de datos de SQL Server en Microsoft Azure  
+##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> Solución de problemas de Archivos de datos de SQL Server en Microsoft Azure  
  Para evitar errores por funciones no admitidas o limitaciones, primero consulte [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations).  
   
  La lista de errores que puede obtener cuando se usa la característica Archivos de datos de SQL Server en Azure Storage es la siguiente:  

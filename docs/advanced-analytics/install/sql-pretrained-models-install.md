@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727561"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalación de modelos de aprendizaje automático entrenados previamente en SQL Server
@@ -30,7 +30,7 @@ Para usar los modelos previamente entrenados, llame a las funciones que se enume
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Genera una puntuación de opinión positiva-negativa sobre las entradas de texto. |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Extrae información de texto de entradas de archivo de imagen. |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Los algoritmos de aprendizaje automático son de cálculo intensivo. Se recomienda 16 GB de RAM para cargas de trabajo de baja a moderada, incluida la finalización de tutoriales con todos los datos de ejemplo.
 

@@ -23,10 +23,10 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253474"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
@@ -45,7 +45,7 @@ Para obtener acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssn
 -   [Configurar Firewall de Windows para permitir el acceso a Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [Configurar un firewall para el acceso del Servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
-##  <a name="BKMK_basic"></a> Información básica del firewall  
+##  <a name="basic-firewall-information"></a><a name="BKMK_basic"></a> Información básica del firewall  
  Los firewalls funcionan inspeccionando los paquetes entrantes y comparándolos con un conjunto de reglas. Si el paquete cumple los estándares impuestos por las reglas, el firewall pasa el paquete al protocolo TCP/IP para su procesamiento adicional. Si el paquete no cumple los estándares especificados por las reglas, el firewall descarta el paquete y, si está habilitado el registro, crea una entrada en el archivo de registro del firewall.  
   
  La lista de tráfico permitido se rellena de una de las maneras siguientes:  
@@ -60,13 +60,13 @@ Para obtener acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssn
  [Firewall de Windows Defender con seguridad avanzada](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)    
  [Introducción al aislamiento de servidor y dominio](/windows/security/threat-protection/windows-firewall/domain-isolation-policy-design)  
   
-##  <a name="BKMK_default"></a> Configuración predeterminada del firewall  
+##  <a name="default-firewall-settings"></a><a name="BKMK_default"></a> Configuración predeterminada del firewall  
  El primer paso para planear la configuración del firewall es determinar el estado actual del firewall para el sistema operativo. Si el sistema operativo se actualizó desde una versión anterior, se puede haber conservado la configuración de firewall anterior. Además, otro administrador o una Directiva de grupo podría haber cambiado la configuración del firewall en el dominio.  
   
 > [!NOTE]  
 >  La activación del firewall afectará a otros programas que tengan acceso a este equipo, tales como el uso compartido de impresoras y archivos, y las conexiones remotas al escritorio. Los administradores deben considerar todas las aplicaciones que se están ejecutando en el equipo antes de ajustar la configuración de firewall.  
   
-##  <a name="BKMK_programs"></a> Programas para configurar el firewall  
+##  <a name="programs-to-configure-the-firewall"></a><a name="BKMK_programs"></a> Programas para configurar el firewall  
 Configure el Firewall de Windows con **Microsoft Management Console** o **netsh**.  
 
 -  **Microsoft Management Console (MMC)**  
@@ -95,10 +95,10 @@ Configure el Firewall de Windows con **Microsoft Management Console** o **netsh*
     
 - **Para Linux**: en Linux, también debe abrir los puertos asociados con los servicios a los que necesita acceso. Las distintas distribuciones de Linux y los distintos firewalls tienen sus propios procedimientos. Para ver dos ejemplos, consulte [SQL Server en Red Hat](../../linux/quickstart-install-connect-red-hat.md) y [SQL Server en SUSE](../../linux/quickstart-install-connect-suse.md). 
   
-## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Puertos utilizados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="ports-used-by-ssnoversion"></a>Puertos utilizados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Las tablas siguientes pueden ayudarle a identificar los puertos que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
+###  <a name="ports-used-by-the-database-engine"></a><a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  
 
 De forma predeterminada, los puertos que SQL Server suele utilizar y los servicios de motor de la base de datos asociados son los siguientes: TCP **1433**, **4022**, **135**, **1434**, UDP **1434**. En la tabla siguiente se detallan dichos puertos con mayor profundidad. Una instancia con nombre utiliza [puertos dinámicos](#BKMK_dynamic_ports).
@@ -121,7 +121,7 @@ De forma predeterminada, los puertos que SQL Server suele utilizar y los servici
   
  Para obtener instrucciones detalladas sobre cómo configurar Firewall de Windows para el [!INCLUDE[ssDE](../../includes/ssde-md.md)], vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-####  <a name="BKMK_dynamic_ports"></a> Puertos dinámicos  
+####  <a name="dynamic-ports"></a><a name="BKMK_dynamic_ports"></a> Puertos dinámicos  
  De forma predeterminada, las instancias con nombre (incluido [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) utilizan puertos dinámicos. Eso significa que cada vez que se inicia [!INCLUDE[ssDE](../../includes/ssde-md.md)] , identifica un puerto disponible y utiliza ese número de puerto. Si la instancia con nombre es la única instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalada, probablemente utilizará el puerto TCP 1433. Si se instalan otras instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , probablemente utilizará un puerto TCP diferente. Dado que el puerto seleccionado puede cambiar cada vez que se inicia [!INCLUDE[ssDE](../../includes/ssde-md.md)] , es difícil configurar el firewall para permitir el acceso al número de puerto correcto. Por consiguiente, si se usa un firewall, recomendamos reconfigurar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que utilice siempre el mismo número de puerto. Esto se denomina un puerto fijo o un puerto estático. Para obtener más información, vea [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
  Una alternativa a configurar una instancia con nombre para escuchar en un puerto fijo es crear una excepción en el firewall para un programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como **sqlservr.exe** (para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Esto puede ser cómodo, pero el número de puerto no aparecerá en la columna **Puerto local** de la página **Reglas de entrada** cuando esté usando el complemento MMC de Firewall de Windows con seguridad avanzada. Esto puede hacer más difícil la tarea de auditar qué puertos están abiertos. Otra consideración es que un Service Pack o una actualización acumulativa puede cambiar la ruta de acceso a la aplicación ejecutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , lo que invalidará la regla de firewall.  
@@ -144,7 +144,7 @@ De forma predeterminada, los puertos que SQL Server suele utilizar y los servici
 
 Para obtener más información sobre los puntos de conexión, vea [Configurar el motor de base de datos para escuchar en varios puertos TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) y [Vistas de catálogo de puntos de conexión &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
   
-###  <a name="BKMK_ssas"></a> Puertos utilizados por Analysis Services  
+###  <a name="ports-used-by-analysis-services"></a><a name="BKMK_ssas"></a> Puertos utilizados por Analysis Services  
  
 De forma predeterminada, los puertos que SQL Server Analysis Services suele utilizar y los servicios asociados son los siguientes: TCP **2382**, **2383**, **80**, **443**. En la tabla siguiente se detallan dichos puertos con mayor profundidad.  
  
@@ -161,7 +161,7 @@ De forma predeterminada, los puertos que SQL Server Analysis Services suele util
   
  Para obtener instrucciones detalladas sobre cómo configurar Firewall de Windows para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access).  
   
-###  <a name="BKMK_ssrs"></a> Puertos utilizados por Reporting Services  
+###  <a name="ports-used-by-reporting-services"></a><a name="BKMK_ssrs"></a> Puertos utilizados por Reporting Services  
 
 De forma predeterminada, los puertos que SQL Server Reporting Services suele utilizar y los servicios asociados son los siguientes: TCP **80**, **443**. En la tabla siguiente se detallan dichos puertos con mayor profundidad. 
 
@@ -175,7 +175,7 @@ La tabla siguiente muestra los puertos de uso frecuente por parte de [!INCLUDE[s
   
 Cuando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se conecta a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], también debe abrir los puertos adecuados para esos servicios. Para obtener instrucciones detalladas sobre cómo configurar Firewall de Windows para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Configurar un firewall para el acceso al servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-###  <a name="BKMK_ssis"></a> Puertos utilizados por Integration Services  
+###  <a name="ports-used-by-integration-services"></a><a name="BKMK_ssis"></a> Puertos utilizados por Integration Services  
  La tabla siguiente muestra los puertos de uso frecuente por parte del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 |Característica|Port|Comentarios|  
@@ -184,7 +184,7 @@ Cuando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se conecta 
   
 Para ver instrucciones paso a paso para configurar el Firewall de Windows para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014) (Servicio de Integration Services &#40;Servicio SSIS&#41;).  
   
-###  <a name="BKMK_additional_ports"></a> Puertos y servicios adicionales  
+###  <a name="additional-ports-and-services"></a><a name="BKMK_additional_ports"></a> Puertos y servicios adicionales  
 La tabla siguiente muestra los puertos y servicios de los que puede depender [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Escenario|Port|Comentarios|  
@@ -197,7 +197,7 @@ La tabla siguiente muestra los puertos y servicios de los que puede depender [!I
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Agrupación en clústeres de Windows|La agrupación en clústeres requiere puertos adicionales que no se relacionan directamente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Para obtener más información, vea [Habilitar una red para el uso de clústeres](https://go.microsoft.com/fwlink/?LinkId=118372).|  
 |Espacios de nombres URL reservados en la API del Servidor HTTP (HTTP.SYS)|Probablemente el puerto TCP 80, pero se puede configurar en otros puertos. Para obtener información general, vea [Configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373).|Para obtener información específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre cómo reservar un punto de conexión HTTP.SYS con HttpCfg.exe, vea [Acerca de las reservas y el registro de reservas de URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
   
-##  <a name="BKMK_port_135"></a> Consideraciones especiales para el puerto 135  
+##  <a name="special-considerations-for-port-135"></a><a name="BKMK_port_135"></a> Consideraciones especiales para el puerto 135  
  Cuando utilice RPC con TCP/IP o con UDP/IP como transporte, los puertos entrantes suelen asignarse dinámicamente a los servicios del sistema cuando es necesario; se utilizan los puertos TCP/IP y UDP/IP mayores que el puerto 1024. Se suelen conocer informalmente como "puertos RPC aleatorios". En estos casos, los clientes RPC se apoyan en el mapeador de extremos RPC para indicar qué puertos dinámicos se asignaron al servidor. Para algunos servicios basados en RPC, puede configurar un puerto concreto en lugar de permitir que RPC asigne dinámicamente uno. También puede restringir el intervalo de puertos que RPC asigna dinámicamente a un intervalo pequeño, con independencia del servicio. Dado que el puerto 135 se utiliza para muchos servicios, los usuarios malintencionados lo atacan con frecuencia. Al abrir el puerto 135, considere restringir el ámbito de la regla de firewall.  
   
  Para obtener más información sobre el puerto 135, vea las siguientes referencias:  
@@ -207,12 +207,12 @@ La tabla siguiente muestra los puertos y servicios de los que puede depender [!I
 -   [Llamada a procedimiento remoto (RPC)](https://go.microsoft.com/fwlink/?LinkId=118375)    
 -   [Configurar la asignación dinámica de puertos RPC para trabajar con firewalls](https://support.microsoft.com/kb/154596/)  
   
-##  <a name="BKMK_other_rules"></a> Interacción con otras reglas de firewall  
+##  <a name="interaction-with-other-firewall-rules"></a><a name="BKMK_other_rules"></a> Interacción con otras reglas de firewall  
  El Firewall de Windows utiliza reglas y grupos de reglas para establecer su configuración. Cada regla o grupo de reglas suele estar asociado con un programa o servicio determinado, y ese programa o servicio podría modificar o eliminar esa regla sin su conocimiento. Por ejemplo, los grupos de reglas **World Wide Web Services (HTTP)** y **World Wide Web Services (HTTPS)** están asociados a IIS. Al habilitar esas reglas, se abrirán los puertos 80 y 443, y las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dependen de los puertos 80 y 443 funcionarán si esas reglas están habilitadas. Sin embargo, los administradores que configuran IIS podrían modificar o deshabilitar esas reglas. Por consiguiente, si está utilizando el puerto 80 o el puerto 443 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe crear su propia regla o su propio grupo de reglas que mantenga la configuración de puerto que desee independientemente de las demás reglas IIS.  
   
  El complemento MMC del Firewall de Windows con seguridad avanzada permite cualquier tráfico que coincida con cualquier regla de permiso aplicable. Por lo tanto, si hay dos reglas que se apliquen al puerto 80 (con parámetros diferentes), se permitirá el tráfico que coincida con cualquiera de ellas. Así si una regla permite el tráfico sobre el puerto 80 de la subred local y otra permite el tráfico procedente de cualquier dirección, el efecto de la red será que se permita todo el tráfico dirigido al puerto 80, sin tener en cuenta su origen. Para administrar eficazmente el acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los administradores deben revisar periódicamente las reglas de firewall habilitadas en el servidor.  
   
-##  <a name="BKMK_profiles"></a> Introducción a los perfiles de firewall  
+##  <a name="overview-of-firewall-profiles"></a><a name="BKMK_profiles"></a> Introducción a los perfiles de firewall  
  Los sistemas operativos utilizan los perfiles de firewall para identificar y recordar cada una de las redes a las que se conectan a efectos de conectividad, conexiones y categoría.  
   
  Hay tres tipos de ubicación de red en Firewall de Windows con seguridad avanzada:  
@@ -229,7 +229,7 @@ La tabla siguiente muestra los puertos y servicios de los que puede depender [!I
   
  Utilice el complemento MMD de Firewall de Windows con seguridad avanzada para ver y configurar todos los perfiles del firewall. El elemento **Firewall de Windows** del Panel de control solo configura el perfil actual.  
   
-##  <a name="BKMK_additional_settings"></a> Configuración adicional de Firewall de Windows con el elemento Firewall de Windows del Panel de control  
+##  <a name="additional-firewall-settings-using-the-windows-firewall-item-in-control-panel"></a><a name="BKMK_additional_settings"></a> Configuración adicional de Firewall de Windows con el elemento Firewall de Windows del Panel de control  
  Las excepciones que agregue al firewall pueden restringir la apertura del puerto a las conexiones entrantes de equipos concretos o de la subred local. Esta restricción del ámbito de la apertura del puerto puede reducir la exposición del equipo a usuarios malintencionados, y está recomendada.  
   
 > [!NOTE]  
@@ -249,7 +249,7 @@ La tabla siguiente muestra los puertos y servicios de los que puede depender [!I
   
     -   **Lista personalizada**: Solo los equipos cuyas direcciones IP estén en la lista se pueden conectar. Esta configuración puede ser más segura que **Sólo mi red (subred)** , pero los equipos cliente que usen DHCP pueden cambiar ocasionalmente su dirección IP. Entonces, el equipo deseado no podrá conectarse. Otro equipo, que no deseara autorizar, podría aceptar la dirección IP de la lista y, en consecuencia, podría conectarse La opción **Lista personalizada** puede ser adecuada para hacer una lista de otros servidores configurados para utilizar una dirección IP fija; no obstante, un intruso podría suplantar las direcciones IP. Las reglas restrictivas de firewall son tan fuertes como sea la infraestructura de red.  
   
-##  <a name="BKMK_WF_msc"></a> Utilizar el complemento Firewall de Windows con seguridad avanzada  
+##  <a name="using-the-windows-firewall-with-advanced-security-snap-in"></a><a name="BKMK_WF_msc"></a> Utilizar el complemento Firewall de Windows con seguridad avanzada  
  Se pueden configurar opciones de firewall avanzadas adicionales utilizando el complemento MMC del Firewall de Windows con seguridad avanzada. El complemento incluye un asistente de reglas y expone más valores de configuración que no están disponibles en el elemento **Firewall de Windows** en el Panel de control. Entre los ajustes se incluyen los siguientes:  
   
 -   Configuración de cifrado  
@@ -267,7 +267,7 @@ La tabla siguiente muestra los puertos y servicios de los que puede depender [!I
 2.  En **Firewall de Windows con seguridad avanzada**, en el panel izquierdo, haga clic con el botón derecho en **Reglas de entrada** y seleccione **Nueva regla**.   
 3.  Complete el **Asistente para nueva regla de entrada** usando la configuración que desee.  
   
-##  <a name="BKMK_troubleshooting"></a> Solucionar problemas de configuración del firewall  
+##  <a name="troubleshooting-firewall-settings"></a><a name="BKMK_troubleshooting"></a> Solucionar problemas de configuración del firewall  
  Las herramientas y técnicas siguientes pueden ser útiles para solucionar problemas del firewall:  
   
 -   El estado efectivo del puerto es la unión de todas las reglas relacionadas con el puerto. Cuando intente bloquear el acceso a través de un puerto, puede que resulte útil revisar todas las reglas que citan el número de puerto. Para ello, utilice el complemento MMC del Firewall de Windows con seguridad avanzada y ordene las reglas entrantes y salientes por número de puerto.  

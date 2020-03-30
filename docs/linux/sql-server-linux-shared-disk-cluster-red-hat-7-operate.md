@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558530"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Funcionamiento de la instancia de clúster de conmutación por error (FCI) de RHEL para SQL Server
@@ -39,7 +39,7 @@ En el siguiente diagrama se ilustran los componentes de un clúster de Linux con
 
 Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y la administración, vaya a la [documentación de referencia de RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-## <a name = "failManual"></a>Conmutación por error manual del clúster
+## <a name="failover-cluster-manually"></a><a name = "failManual"></a>Conmutación por error manual del clúster
 
 El comando `resource move` crea una restricción que obliga al recurso a iniciarse en el nodo de destino.  Después de ejecutar el comando `move`, al ejecutar el recurso `clear` se quitará la restricción, por lo que es posible volver a colocar el recurso o hacer que este conmute por error automáticamente. 
 

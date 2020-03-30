@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244745"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lección 2: Configuración de permisos en objetos de base de datos
@@ -26,7 +26,7 @@ La concesión de acceso de usuario a una base de datos implica tres pasos. Prime
   >[!NOTE]
   > En esta sección se utilizan los objetos creados en [Lección 1: Creación de objetos de base de datos](lesson-1-creating-database-objects.md). Complete la primera lección antes de continuar con la segunda. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, así como acceso a una instancia de SQL Server. 
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

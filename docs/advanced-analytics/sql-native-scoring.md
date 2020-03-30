@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727287"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Puntuación nativa mediante la función PREDICT de T-SQL
@@ -34,7 +34,7 @@ Para usar la puntuación nativa, llame a la función PREDICT de T-SQL y pase las
 
 La función devuelve predicciones de los datos de entrada, además de las columnas de datos de origen de paso a través.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 PREDICT está disponible en todas las ediciones del motor de base de datos de SQL Server 2017 y está habilitada de forma predeterminada, incluidos SQL Server Machine Learning Services en Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) o Azure SQL Database. No es necesario instalar R o Python, ni habilitar otras características.
 

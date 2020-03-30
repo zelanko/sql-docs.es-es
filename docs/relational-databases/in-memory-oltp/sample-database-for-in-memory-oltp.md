@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258785"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Base de datos de ejemplo para OLTP en memoria
@@ -43,13 +43,13 @@ ms.locfileid: "75258785"
   
 -   [Uso de memoria y de espacio en disco del ejemplo](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 -   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para SQL Server. Para obtener instrucciones generales de hardware para OLTP en memoria, vea la entrada de blog siguiente: [Consideraciones de hardware para OLTP en memoria en SQL Server 2014](blog-hardware-in-memory-oltp.md)
 
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalar el ejemplo de In-Memory OLTP basado en AdventureWorks  
+##  <a name="installing-the-in-memory-oltp-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalar el ejemplo de In-Memory OLTP basado en AdventureWorks  
  Siga estos pasos para instalar el ejemplo:  
   
 1.  Descargue AdventureWorks2016CTP3.bak y SQLServer2016CTP3Samples.zip desde [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) en una carpeta local (por ejemplo, 'c:\temp').  
@@ -80,7 +80,7 @@ ms.locfileid: "75258785"
   
 3.  Para ver la carga de trabajo y scripts de ejemplo, descomprima el archivo SQLServer2016CTP3Samples.zip en una carpeta local. Para obtener instrucciones sobre cómo ejecutar la carga de trabajo, consulte el archivo In-Memory OLTP\readme.txt.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Descripción de las tablas y los procedimientos de ejemplo:  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> Descripción de las tablas y los procedimientos de ejemplo:  
  El ejemplo crea nuevas tablas para productos y pedidos de venta basadas en tablas existentes en AdventureWorks. El esquema de las nuevas tablas es similar a las tablas existentes, con algunas diferencias, como se explica a continuación.  
   
  Las nuevas tablas optimizadas para memoria llevan el sufijo "_inmem". El ejemplo también incluye las tablas correspondientes que llevan el sufijo "_ondisk"; estas tablas se pueden usar para realizar una comparación uno a uno entre el rendimiento de las tablas optimizadas para memoria y las tablas basadas en disco del sistema.  
@@ -309,7 +309,7 @@ Los libros en pantalla proporcionan más información sobre los temas siguientes
   
     -   Usa los procedimientos del asistente dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck y dbo.GenerateUQCheck para generar el código T-SQL necesario para realizar las comprobaciones de integridad.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de rendimiento con la carga de trabajo de demostración  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de rendimiento con la carga de trabajo de demostración  
  Ostress es una herramienta de línea de comandos desarrollada por el equipo de soporte técnico de Microsoft CSS SQL Server. Esta herramienta se puede usar para ejecutar consultas o ejecutar procedimientos almacenados en paralelo. Puede configurar el número de subprocesos para ejecutar una instrucción T-SQL proporcionada en paralelo y puede especificar cuántas veces se debe ejecutar la instrucción en este subproceso; ostress recorrerá los subprocesos y ejecutará la instrucción en todos ellos en paralelo. Una vez que concluya la ejecución en todos los subprocesos, ostress notificará el tiempo empleado en finalizar la ejecución en todos los subprocesos.  
   
 ### <a name="installing-ostress"></a>Instalar ostress  
@@ -434,7 +434,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  Se recomienda restablecer la demostración tras cada ejecución. Como esta carga de trabajo solo realiza inserciones, cada ejecución consume más memoria, por lo que es necesario un restablecimiento para no quedarse sin memoria. La cantidad de memoria consumida después de una ejecución se explica en la sección [Utilización de memoria después de ejecutar la carga de trabajo](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Solucionar problemas de pruebas de ejecución lenta  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Solucionar problemas de pruebas de ejecución lenta  
  Los resultados de prueba variarán normalmente según el hardware, y también el nivel de simultaneidad empleado en la serie de pruebas. He aquí varios aspectos que hay que examinar si los resultados no son los esperados:  
   
 -   Número de transacciones simultáneas: cuando se ejecuta la carga de trabajo en un solo subproceso, el aumento del rendimiento con OLTP en memoria probablemente será menor del doble. La contención de bloqueos temporales solo supone un gran problema si hay un nivel elevado de simultaneidad.  
@@ -447,10 +447,10 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
     -   Síntoma: si la utilización de la CPU no está cercana al 100 % o tiene muchos picos cuando se ejecuta la carga de trabajo en tablas optimizadas para memoria, es posible que haya un cuello de botella de la E/S de registro. Esto se puede confirmar abriendo el Monitor de recursos y examinando la longitud de la cola de la unidad de registro.  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Uso de memoria y de espacio en disco del ejemplo  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> Uso de memoria y de espacio en disco del ejemplo  
  A continuación se describe qué cabe esperar en cuando a uso de la memoria y del espacio en disco para la base de datos de ejemplo. También se muestran los resultados obtenidos en un servidor de prueba con 16 núcleos lógicos.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Uso de memoria para las tablas optimizadas para memoria  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Uso de memoria para las tablas optimizadas para memoria  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilización global de la base de datos  
  Se puede usar la consulta siguiente para obtener la utilización de memoria total para OLTP en memoria en el sistema.  
@@ -505,7 +505,7 @@ WHERE t.type='U'
   
  Lo sorprendente aquí es el tamaño de la memoria asignada para los índices, en comparación con el tamaño de los datos de tabla. Esto se debe a que los índices hash del ejemplo tienen establecido previamente un tamaño de datos mayor. Observe que los índices hash tienen un tamaño fijo y por tanto su tamaño no crece junto con el tamaño de los datos de la tabla.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Utilización de memoria después de ejecutar la carga de trabajo  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> Utilización de memoria después de ejecutar la carga de trabajo  
  Después de insertar 10 millones de pedidos de venta, la utilización total de memoria es similar a lo siguiente:  
   
 ```sql

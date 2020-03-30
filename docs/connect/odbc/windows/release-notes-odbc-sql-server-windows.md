@@ -11,16 +11,14 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 95d3002ff9dd32bc4070cfb541ebd54edbc70b7c
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.openlocfilehash: e9210592e4c4e347662dc0ec534d511be4fa2e95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79090514"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80345429"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Notas de la versión de Microsoft ODBC Driver for SQL Server en Windows
-
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 En este artículo sobre notas de la versión se describen las novedades de Microsoft ODBC Driver para SQL Server en Windows.
 
@@ -222,7 +220,7 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 | Se eliminó el ayudante para el inicio de sesión de Microsoft Online Services | Se ha eliminado la dependencia. |
 | &nbsp; | &nbsp; |
 
-### <a name="diffs-managed-instance-17"></a> Diferencias cuando se usa Instancia administrada (versión 17 de ODBC)
+### <a name="differences-when-using-managed-instance-odbc-version-17"></a><a name="diffs-managed-instance-17"></a> Diferencias cuando se usa Instancia administrada (versión 17 de ODBC)
 
 Esta versión de ODBC es compatible con Instancia administrada de Azure SQL. Vea la siguiente lista de diferencias cuando se usa Instancia administrada.
 

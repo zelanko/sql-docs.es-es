@@ -11,10 +11,10 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a8a8481653f7161b39cc752878f4544f98751261
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241763"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutorial: Creación de una extensión de Azure Data Studio
@@ -30,7 +30,7 @@ Durante este tutorial aprenderá a realizar lo siguiente:
 > * Empaquetado de la extensión
 > * Publicación de la extensión en Marketplace
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Azure Data Studio se basa en el mismo marco que Visual Studio Code, por lo que las extensiones para Azure Data Studio se crean con Visual Studio Code. Para comenzar, necesitará los siguientes componentes:
 

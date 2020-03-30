@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f8661101fa5b0f859723a168e149ae9747b3da4
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/29/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78200996"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>Crear un grupo de recursos para SQL Server Machine Learning Services
@@ -41,7 +41,7 @@ El proceso incluye varios pasos:
 
     **Ejemplo de resultados**
 
-    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |{1}pool_id{2}|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|default|0|100|0|100|100|0|0|
 

@@ -18,10 +18,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c0cb77bff5246e8a9b0852663f500e8c85ccd9b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257831"
 ---
 # <a name="view-a-job"></a>View a Job
@@ -33,12 +33,12 @@ ms.locfileid: "75257831"
 
 En este tema se describe cómo ver trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
 Puede ver únicamente los trabajos de su propiedad, a menos que sea miembro del rol fijo de servidor **sysadmin** . Los miembros de este rol pueden ver todos los trabajos. Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-view-a-job"></a>Para ver un trabajo  
   
@@ -48,7 +48,7 @@ Puede ver únicamente los trabajos de su propiedad, a menos que sea miembro del 
   
 3.  Haga clic con el botón derecho en un trabajo y, a continuación, haga clic en **Propiedades**.  
   
-## <a name="TSQL"></a>Usar Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Usar Transact-SQL  
   
 #### <a name="to-view-a-job"></a>Para ver un trabajo  
   
@@ -69,7 +69,7 @@ Puede ver únicamente los trabajos de su propiedad, a menos que sea miembro del 
     GO  
     ```  
   
-## <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usar Objetos de administración de SQL Server  
 **Para ver un trabajo**  
   
 Use la clase **Job** mediante el lenguaje de programación de su elección, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

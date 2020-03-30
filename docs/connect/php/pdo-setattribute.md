@@ -11,10 +11,10 @@ ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80a3f907e4606201255d0442d136f77c9b31dd40
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76940468"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
@@ -31,7 +31,7 @@ bool PDO::setAttribute ( $attribute, $value );
 #### <a name="parameters"></a>Parámetros  
 *$attribute*: el atributo que se establecerá. Consulte la sección Comentarios para obtener la lista de atributos admitidos.  
   
-*$value*: el valor (tipo mixto).  
+*$value*: valor (tipo mixto).  
   
 ## <a name="return-value"></a>Valor devuelto  
 Se devuelve True si la operación se realiza correctamente; de lo contrario, False.  
@@ -51,7 +51,7 @@ Se devuelve True si la operación se realiza correctamente; de lo contrario, Fal
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Un entero comprendido entre 0 y 4, ambos incluidos|Especifica el número de lugares decimales al dar formato a los valores de moneda obtenidos.<br /><br />Se omitirá cualquier entero negativo o un valor mayor que 4.<br /><br />Esta opción solo funciona si PDO::SQLSRV_ATTR_FORMAT_DECIMALS es true.<br /><br />Esta opción también se puede establecer en el nivel de instrucción. Si es así, entonces, la opción a nivel de instrucción anula esta.<br /><br />Para más información, vea [Aplicación de formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true o false|Especifica la ejecución de la consulta directa o preparada. Para obtener más información, vea [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (Ejecución de la instrucción preparada o directa en el controlador PDO_SQLSRV)](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Establece el juego de caracteres que utiliza el controlador para comunicarse con el servidor.<br /><br />No se admite PDO::SQLSRV_ENCODING_BINARY.<br /><br />El valor predeterminado es PDO::SQLSRV_ENCODING_UTF8.|  
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true o false|Especifica si debe recuperar tipos de fecha y hora como objetos [PHP DateTime](http://php.net/manual/en/class.datetime.php). Si el valor se deja como false, el comportamiento predeterminado es devolverlos como cadenas.<br /><br />Esta opción también se puede establecer en el nivel de instrucción. Si es así, entonces, la opción a nivel de instrucción anula esta.<br /><br />Para más información, vea: [Cómo: Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true o false|Especifica si debe recuperar tipos de fecha y hora como objetos [PHP DateTime](http://php.net/manual/en/class.datetime.php). Si el valor se deja como false, el comportamiento predeterminado es devolverlos como cadenas.<br /><br />Esta opción también se puede establecer en el nivel de instrucción. Si es así, entonces, la opción a nivel de instrucción anula esta.<br /><br />Para más información, vea [Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true o false|Controla los resultados numéricos de las columnas con los tipos SQL numéricos (bit, integer, smallint, tinyint, float o real).<br /><br />Cuando la marca de la opción de conexión ATTR_STRINGIFY_FETCHES está activada, el valor devuelto es una cadena incluso cuando SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está activado.<br /><br />Cuando el tipo devuelto de PDO en la columna de enlace es PDO_PARAM_INT, el valor devuelto de una columna de enteros es un valor int aunque SQLSRV_ATTR_FETCHES_NUMERIC_TYPE esté desactivado.|  
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true o false|Especifica si se agregan ceros iniciales a las cadenas decimales cuando proceda. Si se establece, esta opción habilita la opción de PDO::SQLSRV_ATTR_DECIMAL_PLACES para aplicar formato a los tipos de divisa. Si el valor se deja como false, se usa el comportamiento predeterminado de devolver la precisión exacta y omitir los ceros iniciales de los valores menores que 1.<br /><br />Esta opción también se puede establecer en el nivel de instrucción. Si es así, entonces, la opción a nivel de instrucción anula esta.<br /><br />Para más información, vea [Aplicación de formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Establece el tiempo de espera de consulta en segundos.<br /><br />El valor predeterminado es 0, lo que significa que el controlador esperará indefinidamente para obtener los resultados.<br /><br />No se permiten números negativos.|  

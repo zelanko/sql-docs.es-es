@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729931"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -292,10 +292,10 @@ Crea el índice especificado en el grupo de archivos predeterminado.
   
 El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"** default **"** u ON **[** default **]** . Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="GenRemarks"></a> Notas generales  
+##  <a name="general-remarks"></a><a name="GenRemarks"></a> Notas generales  
 Se puede crear un índice de almacén de columnas en una tabla temporal. Cuando se quita la tabla o finaliza la sesión, también se quita el índice.  
 
 Se puede crear un índice de almacén de columnas agrupado y ordenado en columnas de cualquier tipo de datos que se admita en Azure SQL Data Warehouse, excepto en las columnas de cadena.  
@@ -331,7 +331,7 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
   
  Para obtener más información sobre los índices filtrados, vea [Crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md). 
   
-##  <a name="LimitRest"></a> Limitaciones y restricciones  
+##  <a name="limitations-and-restrictions"></a><a name="LimitRest"></a> Limitaciones y restricciones  
 
 **Cada columna de un índice de almacén de columnas debe ser de uno de los tipos de datos empresariales comunes siguientes:** 
 -   datetimeoffset [ ( *n* ) ]  
@@ -406,7 +406,7 @@ Estas limitaciones solo se aplican a [!INCLUDE[ssSQL14](../../includes/sssql14-m
   
  Para obtener más información sobre las ventajas de rendimiento y las limitaciones de los índices de almacén de columnas, vea [Introducción a los índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
-##  <a name="Metadata"></a> Metadatos  
+##  <a name="metadata"></a><a name="Metadata"></a> Metadatos  
  Todas las columnas de un índice de almacén de columnas se almacenan en los metadatos como columnas incluidas. El índice de almacén de columnas no tiene columnas de clave. Estas vistas del sistema proporcionan información sobre los índices de almacén de columnas.  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
@@ -416,7 +416,7 @@ Estas limitaciones solo se aplican a [!INCLUDE[ssSQL14](../../includes/sssql14-m
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a> Ejemplos para convertir una tabla de almacén de filas en almacén de columnas  
+##  <a name="examples-for-converting-a-rowstore-table-to-columnstore"></a><a name="convert"></a> Ejemplos para convertir una tabla de almacén de filas en almacén de columnas  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Convertir un montón en un índice clúster de almacén de columnas  
  En este ejemplo se crea una tabla como un montón y después se convierte en un índice clúster de almacén de columnas denominado cci_Simple. Esto cambia el almacenamiento de la tabla de un almacén de filas a un almacén de columnas.  
@@ -601,7 +601,7 @@ REBUILD PARTITION = ALL
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-##  <a name="nonclustered"></a> Ejemplos de índices no clúster de almacén de columnas  
+##  <a name="examples-for-nonclustered-columnstore-indexes"></a><a name="nonclustered"></a> Ejemplos de índices no clúster de almacén de columnas  
   
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Crear un índice de almacén de columnas en un índice secundario de una tabla de almacén de filas  
  En este ejemplo se crea un índice no clúster de almacén de columnas en una tabla de almacén de filas. En esta situación solo se puede crear un índice de almacén de columnas. El índice de almacén de columnas necesita almacenamiento adicional, ya que contiene una copia de los datos de la tabla de almacén de filas. En el ejemplo se crean una tabla simple y un índice clúster y luego se muestra la sintaxis para crear un índice no clúster de almacén de columnas.  
@@ -651,7 +651,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
     WHERE EndDate IS NOT NULL;  
 ```  
   
-###  <a name="ncDML"></a> D. Modificar los datos de un índice no clúster de almacén de columnas  
+###  <a name="d-change-the-data-in-a-nonclustered-columnstore-index"></a><a name="ncDML"></a> D. Modificar los datos de un índice no clúster de almacén de columnas  
    Se aplica a: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
   
  Una vez creado un índice no clúster de almacén de columnas en una tabla, no puede modificar directamente los datos de esa tabla. Una consulta con INSERT, UPDATE, DELETE o MERGE genera un error y devuelve un mensaje de error. Para agregar o modificar los datos de la tabla, puede hacer lo siguiente:  
@@ -668,7 +668,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Cambiar una partición de la tabla con el índice de almacén de columnas a una tabla de ensayo vacía. Si hay un índice de almacén de columnas en la tabla de ensayo, deshabilítelo. Realice las actualizaciones que desee. Genere (o regenere) el índice de almacén de columnas. Vuelva a cambiar la tabla de ensayo a la partición (ahora vacía) de la tabla principal.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. Convertir un índice clúster en un índice clúster de almacén de columnas  
  Mediante la instrucción CREATE CLUSTERED COLUMNSTORE INDEX con DROP_EXISTING = ON, puede:  

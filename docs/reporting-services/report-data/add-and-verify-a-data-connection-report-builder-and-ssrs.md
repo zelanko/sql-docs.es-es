@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
 ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082261"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Agregar y comprobar una conexión de datos o un origen de datos (Generador de informes y SSRS)
@@ -54,7 +54,7 @@ El origen de datos aparece en el panel Datos de informe.
 
 3. Si la conexión es correcta, aparece el mensaje siguiente: "Conexión creada correctamente". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. Si la conexión no es correcta, aparece el mensaje siguiente: "No se puede conectar con el origen de datos".  
+4. Si la conexión no es correcta, aparece un mensaje similar al siguiente: "No se puede establecer conexión con el origen de datos".  
 
 5. Haga clic en **Detalles**y utilice la información para corregir el problema.
 

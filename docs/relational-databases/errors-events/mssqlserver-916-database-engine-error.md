@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73eb6581-99fe-49a5-9b42-e239d7ffe27f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f93fb181547e10ef2bca3154e44515e3959683b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8dc9f9575f9e385d177d7b37f3753facfb905d23
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68037567"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80271471"
 ---
 # <a name="mssqlserver_916"></a>MSSQLSERVER_916
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,27 @@ Error al recuperar datos para esta solicitud. (Microsoft.SqlServer.Management.Sd
 Puede conectarse a la base de datos mediante uno de los siguientes procedimientos:  
   
 -   Otorgue el acceso de inicio de sesión específico a la base de datos denominada. En el siguiente ejemplo se concede el inicio de sesión para el acceso de `Adventure-Works\Larry` a la base de datos `msdb`.  
-  
-    USE msdb ;  
-  
-    GO  
-  
-    GRANT CONNECT TO [Adventure-Works\Larry] ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO [Adventure-Works\Larry] ;
+    ```
   
 -   Otorgue el permiso CONNECT a la base de datos denominada en el mensaje de error del usuario guest. En el siguiente ejemplo se concede el permiso `CONNECT` para la base de datos `msdb` al usuario `guest`.  
-  
-    USE msdb ;  
-  
-    GO  
-  
-    GRANT CONNECT TO guest ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO guest ;
+    ```
   
 -   Habilite la propiedad TRUSTWORTHY en la base de datos que ha autenticado al usuario.  
-  
-    `ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;`  
-  
+
+    ```sql
+    ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;
+    ```

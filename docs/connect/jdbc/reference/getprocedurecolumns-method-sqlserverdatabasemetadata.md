@@ -16,10 +16,10 @@ ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980751"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>Método getProcedureColumns (SQLServerDatabaseMetaData)
@@ -94,7 +94,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|Nombre de una colección de esquemas XML. Si no se puede encontrar el nombre, esta cadena estará vacía.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|Nombre del catálogo que contiene el tipo definido por el usuario (UDT).|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|Nombre del esquema que contiene el tipo definido por el usuario (UDT).|  
-|SS_DATA_TYPE|**tinyint**|Tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que utilizan los procedimientos almacenados extendidos.<br /><br /> <br /><br /> **Nota:** Para más información sobre los tipos de datos que ha devuelto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte "Tipos de datos (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|SS_DATA_TYPE|**tinyint**|Tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que utilizan los procedimientos almacenados extendidos.<br /><br /> <br /><br /> **Nota:** Para más información sobre los tipos de datos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devuelve, vea "Tipos de datos (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 > [!NOTE]  
 >  Para más información sobre los datos que devuelve el método getProcedureColumns, vea "sp_sproc_columns (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

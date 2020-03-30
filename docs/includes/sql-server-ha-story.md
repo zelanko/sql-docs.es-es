@@ -157,7 +157,7 @@ FCI puede usarse para la recuperación ante desastres. Al igual que con un grupo
 ### <a name="log-shipping"></a>Trasvase de registros
 El trasvase de registros es uno de los métodos más antiguo de proporcionar recuperación ante desastres para bases de datos de SQL Server. El trasvase de registros se suele usarse junto con los grupos de disponibilidad y FCI para proporcionar una funcionalidad de recuperación ante desastres más sencilla y rentable en comparación con otras opciones que pueden resultar complejas debido al entorno, las exigencias de tipo administrativo o el presupuesto. De forma similar al caso de alta disponibilidad para el trasvase de registros, muchos entornos retrasarán la carga de un registro de transacciones para tener en cuenta los errores humanos.
 
-## <a name = "Migrations"></a> Migraciones y actualizaciones
+## <a name="migrations-and-upgrades"></a><a name = "Migrations"></a> Migraciones y actualizaciones
 
 Al implementar nuevas instancias o actualizar las antiguas, una empresa no puede asumir una interrupción prolongada. En esta sección se analizará cómo se pueden utilizar las características de disponibilidad de SQL Server para minimizar el tiempo de inactividad en un cambio de arquitectura planeado, el paso de un servidor a otro o el cambio de plataforma (por ejemplo, de Windows Server a Linux o viceversa), o durante la aplicación de revisiones.
 
@@ -224,7 +224,7 @@ Si se configura un grupo de disponibilidad con un clúster de tipo Ninguno, este
 
 Dado que el trasvase de registros se basa simplemente en la copia de seguridad y restauración, no existen diferencias en las bases de datos, las estructuras de archivos, etc., para SQL Server en Windows Server en comparación con SQL Server en Linux. Esto significa que se puede configurar el trasvase de registros entre una instalación de SQL Server basada en Windows Server y otra de Linux, así como entre distintas distribuciones de Linux. Todo lo demás permanece igual. La única advertencia es que el trasvase de registros, al igual que un grupo de disponibilidad, no puede funcionar cuando el origen se encuentra en una versión principal de SQL Server posterior en relación con un destino que está en una versión anterior de SQL Server. 
 
-## <a name = "ReadScaleOut"></a> Escalado de lectura
+## <a name="read-scale"></a><a name = "ReadScaleOut"></a> Escalado de lectura
 
 Desde su introducción en SQL Server 2012, las réplicas secundarias han podido utilizarse para consultas de solo lectura. Hay dos maneras de hacerlo con un grupo de disponibilidad: permitiendo el acceso directo a la secundaria, así como [configurando el enrutamiento de solo lectura](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), lo que requiere el uso del agente de escucha.  SQL Server 2016 introdujo la posibilidad de equilibrar la carga de las conexiones de solo lectura a través del agente de escucha mediante un algoritmo round-robin, lo que permite a las solicitudes de solo lectura su expansión por todas las réplicas legibles. 
 

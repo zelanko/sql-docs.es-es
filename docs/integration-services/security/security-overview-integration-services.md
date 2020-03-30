@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287649"
 ---
 # <a name="security-overview-integration-services"></a>Información general sobre seguridad (Integration Services)
@@ -106,7 +106,7 @@ ms.locfileid: "79287649"
   
  Para más información, vea [Acceso al servicio Integration Services](#service).  
 
-## <a name="files"></a> Acceso a los archivos usados por los paquetes
+## <a name="access-to-files-used-by-packages"></a><a name="files"></a> Acceso a los archivos usados por los paquetes
   El nivel de protección de paquetes no protege los archivos almacenados fuera del paquete. Entre los archivos figuran los siguientes:  
   
 -   Archivos de configuración  
@@ -128,7 +128,7 @@ ms.locfileid: "79287649"
 ### <a name="log-files"></a>Archivos de registro  
  También es necesario proteger las entradas del registro escritas en el sistema de archivos mediante una lista de control de acceso (ACL). Las entradas del registro pueden almacenarse también en tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y protegerse con la seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las entradas del registro pueden incluir información confidencial. Por ejemplo, si el paquete contiene una tarea Ejecutar SQL que crea una instrucción SQL que hace referencia a un número de teléfono, la entrada del registro de la instrucción SQL incluye el número de teléfono. La instrucción SQL puede revelar información privada acerca de los nombres de tablas y columnas de las bases de datos. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
 
-## <a name="service"></a> Acceso al servicio Integration Services
+## <a name="access-to-the-integration-services-service"></a><a name="service"></a> Acceso al servicio Integration Services
   Los niveles de protección de paquetes pueden limitar quién puede editar y ejecutar un paquete. Es necesaria protección adicional para limitar quién puede ver la lista de paquetes actualmente en ejecución en un servidor y quién puede detener dicha ejecución en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utiliza el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para mostrar los paquetes que se están ejecutando. Los miembros del grupo Administradores de Windows pueden ver y detener todos los paquetes en ejecución. Los usuarios que no sean miembros del grupo Administradores solo pueden ver y detener los paquetes que han iniciado ellos mismos.  

@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
 ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079611"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
@@ -103,7 +103,7 @@ Lea más en el [blog de Reporting Services](https://blogs.msdn.microsoft.com/sql
 
 ### <a name="reporting-services-ssrswebportal-non-markdown"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
 
-Un nuevo [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está disponible. El portal web actualizado incluye
+Un nuevo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] está disponible. El portal web actualizado incluye
 - KPI
 - Mobile Reports (Informes móviles)
 - Paginated Reports (Informes paginados)
@@ -175,17 +175,17 @@ Para más información, consulte:
 
 ### <a name="report-improvements"></a>Mejoras del informe
 
-**Motor de representación HTML 5:** un nuevo motor de representación HTML5 destinado al modo moderno de estándares web "completos" y a los exploradores modernos.  El nuevo motor de representación ya no cuenta con el modo de interpretación usado por algunos exploradores antiguos.
+**Motor de representación HTML 5:** un nuevo motor de representación HTML5 destinado al modo de estándares modernos web "completos" y a los exploradores modernos.  El nuevo motor de representación ya no cuenta con el modo de interpretación usado por algunos exploradores antiguos.
 
 Para más información sobre la compatibilidad de exploradores, vea [Compatibilidad del explorador de Reporting Services y Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
-**Informes paginados modernos:** diseñe informes paginados modernos y muy atractivos con nuevos estilos modernos para gráficos, medidores, mapas y otras visualizaciones de datos.
+**Informes paginados modernos**: diseñe informes paginados modernos y muy atractivos con nuevos estilos modernos para gráficos, medidores, mapas y otras visualizaciones de datos.
 
-**Gráficos de rectángulos y de proyección solar:** mejore sus informes con gráficos de rectángulos ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") y proyección solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), formas estupendas para mostrar datos jerárquicos. Para obtener más información, consulte [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Gráficos de rectángulos y proyección solar:** mejore sus informes con gráficos de rectángulos ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") y proyección solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), formas estupendas para mostrar datos jerárquicos. Para obtener más información, consulte [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Inserción de informes:** ahora puede insertar informes paginados o móviles en otras páginas web y aplicaciones; para ello, puede usar un iframe junto con parámetros de dirección URL.  
+**Inserción de informes:** ahora puede insertar informes paginados o móviles en otras páginas web y aplicaciones; para ello, puede usar un iframe junto con los parámetros de dirección URL.  
 
-**Anclar elementos de informe a un panel de Power BI:** mientras ve un informe en el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], puede seleccionar elementos del informe y anclarlos a un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].   Puede anclar elementos como gráficos, paneles de medidores, mapas e imágenes. Puede:
+**Anclar elementos de informe a un panel de Power BI:** mientras se visualiza un informe en el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], puede seleccionar elementos de informe y anclarlos a un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Puede anclar elementos como gráficos, paneles de medidores, mapas e imágenes. Puede:
 
 1. Seleccione el grupo que contiene el panel al que desea anclar.
 2. Seleccione el panel al que quiere anclar el elemento.
@@ -197,7 +197,7 @@ Para más información sobre la compatibilidad de exploradores, vea [Compatibili
 
 Para más información, vea [Integración de Power BI Report Server &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) y [Anclado de elementos de Reporting Services en paneles de Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
-**Representación y exportación de PowerPoint:** el formato de Microsoft PowerPoint (PPTX) es una extensión de representación de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] nueva. Puede exportar informes en formato PPTX desde las aplicaciones habituales, como el Generador de informes, el Diseñador de informes (en SSDT) y el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. A modo de ejemplo, en la imagen siguiente se muestra el menú Exportar en [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+**Representación y exportación de PowerPoint:** el formato PPTX (Microsoft PowerPoint) es una nueva extensión de representación de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . Puede exportar informes en formato PPTX desde las aplicaciones habituales, como el Generador de informes, el Diseñador de informes (en SSDT) y el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. A modo de ejemplo, en la imagen siguiente se muestra el menú Exportar en [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -209,7 +209,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 Para obtener más información, consulte [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF reemplaza a ActiveX para la impresión remota:** La barra de herramientas del visor de informes se imprime ahora a través de PDF en lugar de los controles ActiveX. El nuevo visor de informes es compatible con los exploradores más modernos, incluido Microsoft Edge. No necesita descargar más controles de ActiveX. Según el explorador que use y las aplicaciones y servicios de visualización de PDF que haya instalado, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abre un diálogo de impresión para imprimir el informe o le pedirá que descargue un archivo .PDF. Como administrador, puede deshabilitar la impresión del lado cliente desde [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+**PDF reemplaza a ActiveX para la impresión remota:** la barra de herramientas del visor de informes ahora imprime a través de PDF en lugar de controles ActiveX. El nuevo visor de informes es compatible con los exploradores más modernos, incluido Microsoft Edge. No necesita descargar más controles de ActiveX. Según el explorador que use y las aplicaciones y servicios de visualización de PDF que haya instalado, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abre un diálogo de impresión para imprimir el informe o le pedirá que descargue un archivo .PDF. Como administrador, puede deshabilitar la impresión del lado cliente desde [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 
 Para más información, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
@@ -226,11 +226,11 @@ Para más información, vea [Habilitar y deshabilitar la impresión del lado cli
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
-La nueva versión de SSDT incluye plantillas de proyecto para [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Asistente de proyectos de servidor de informes y Proyecto de servidor de informes. Para obtener más información acerca de la descarga de SSDT, consulte [SQL Server Data Tools para Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
+En la nueva versión de SSDT se incluyen plantillas de proyecto para [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Asistente de proyectos de servidor de informes y Proyecto de servidor de informes. Para obtener más información acerca de la descarga de SSDT, consulte [SQL Server Data Tools para Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### <a name="report-builder-improvements"></a>Mejoras del generador de informes
 
-**Nueva interfaz de usuario del Generador de informes:** la interfaz de usuario principal de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] ahora tiene un aspecto moderno, con elementos de interfaz de usuario mejorados.  
+**Nueva interfaz de usuario del Generador de informes:** la interfaz de usuario principal de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] ahora tiene una apariencia moderna, con elementos de interfaz de usuario simplificados.  
 
 |||  
 |-|-|  

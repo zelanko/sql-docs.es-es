@@ -16,10 +16,10 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79375562"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Servicio SQL Server Browser (motor de base de datos y SSAS)
@@ -126,7 +126,7 @@ ms.locfileid: "79375562"
  Las instancias ocultas son instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que solo admiten las conexiones de memoria compartida. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], establezca la marca `HideInstance` para señalar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser no debería responder con información acerca de esta instancia del servidor.  
   
 ### <a name="using-a-firewall"></a>Utilizar un firewall  
- Para comunicarse con el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser en un servidor protegido por un firewall, abra el puerto UDP 1434 y el puerto TCP utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (p. ej., 1433). Para obtener información sobre cómo trabajar con un firewall, vea "Cómo: Configurar un firewall para el acceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para comunicarse con el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser en un servidor protegido por un firewall, abra el puerto UDP 1434 y el puerto TCP utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (p. ej., 1433). Para obtener información sobre cómo trabajar con un firewall, consulte "Cómo configurar un firewall para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte también  
  [Protocolos de red y bibliotecas de red](../../sql-server/install/network-protocols-and-network-libraries.md)  

@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056685"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configuración de una directiva de conmutación automática por error flexible para un grupo de disponibilidad Always On
@@ -34,7 +34,7 @@ ms.locfileid: "74056685"
   > La directiva flexible de conmutación por error de un grupo de disponibilidad no se puede configurar utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  
-## <a name="Limitations"></a> Limitaciones de la conmutación automática por error  
+## <a name="limitations-on-automatic-failovers"></a><a name="Limitations"></a> Limitaciones de la conmutación automática por error  
   
 -   Para que se produzca la conmutación automática por error, la réplica principal actual y una réplica secundaria deben estar configuradas para el modo de confirmación sincrónica con conmutación automática por error, y la réplica secundaria debe estar sincronizada con la réplica principal.  
   
@@ -42,24 +42,24 @@ ms.locfileid: "74056685"
   
 -   Si un grupo de disponibilidad supera su umbral de error de WSFC, el clúster de WSFC no intentará una conmutación automática por error para dicho grupo. Además, el grupo de recursos de WSFC del grupo de disponibilidad permanece en un estado de error hasta que el administrador del clúster conecta manualmente el grupo de recursos con error o el administrador de la base de datos realiza una conmutación por error manual del grupo de disponibilidad. El *umbral de error de WSFC* se define como el número máximo de errores admitidos para el grupo de disponibilidad en un período de tiempo determinado. El período predeterminado es de seis horas, y el valor predeterminado del número máximo de errores durante este período es *n*-1, donde *n* es el número de nodos de WSFC. Para cambiar los valores del umbral de error de un grupo de disponibilidad determinado, use la consola del administrador de conmutación por error de WSFC.  
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
    
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
 |Tarea|Permisos|  
 |----------|-----------------|  
 |Para configurar la directiva flexible de conmutación por error para un nuevo grupo de disponibilidad|Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
 |Para modificar la directiva de un grupo de disponibilidad|Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
 
-##  <a name="HCtimeout"></a> Umbral de tiempo de espera de comprobación de estado  
+##  <a name="health-check-timeout-threshold"></a><a name="HCtimeout"></a> Umbral de tiempo de espera de comprobación de estado  
  La DLL de recursos del clúster WSFC del grupo de disponibilidad realiza una *comprobación de estado* de la réplica principal, llamando al procedimiento almacenado [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) en la instancia de SQL Server que hospeda la réplica principal. **sp_server_diagnostics** devuelve resultados en un intervalo que iguala 1/3 del umbral de tiempo de espera de comprobación de estado del grupo de disponibilidad. El umbral de tiempo de espera de comprobación de estado predeterminado es 30 segundos, lo que hace que **sp_server_diagnostics** devuelva en un intervalo de 10 segundos. Si **sp_server_diagnostics** es lento o no devuelve información, la DLL de recursos esperará al intervalo completo del umbral de tiempo de espera de comprobación de estado antes de determinar que la réplica primaria no responde. Si la réplica primaria no responde, se inicia una conmutación automática por error, si se admite actualmente.  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** no realiza comprobaciones de estado en el nivel de base de datos.  
   
-##  <a name="FClevel"></a> Nivel de condición de error  
+##  <a name="failure-condition-level"></a><a name="FClevel"></a> Nivel de condición de error  
  Si **sp_server_diagnostics** devuelve los datos de diagnóstico y la información de estado, se garantiza que una conmutación automática por error dependa del nivel de condición de error del grupo de disponibilidad. El *nivel de condición de error* especifica qué condiciones de error desencadenan una conmutación automática por error. Hay cinco niveles de condición de error que abarcan desde el nivel menos restrictivo (nivel uno) al más restrictivo (nivel cinco). Un nivel dado abarca los niveles menos restrictivos. Así pues, el nivel de condición más estricto, cinco, incluye las condiciones menos restrictivas, y así sucesivamente.  
   
 > [!IMPORTANT]  
@@ -78,7 +78,7 @@ ms.locfileid: "74056685"
 > [!NOTE]  
 >  La falta de respuesta de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a solicitudes del cliente no es pertinente a los grupos de disponibilidad.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para configurar la directiva flexible de conmutación por error**  
   
 1.  Conéctese a la instancia del servidor que hospeda la réplica principal.  
@@ -115,7 +115,7 @@ ms.locfileid: "74056685"
         ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT = 60000);  
         ```  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para configurar la directiva flexible de conmutación por error**  
   
 1.  Establezca el valor predeterminado (**cd**) en la instancia del servidor que hospeda la réplica principal.  
@@ -161,7 +161,7 @@ ms.locfileid: "74056685"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
 
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para configurar la conmutación automática por error**  
   
 -   [Cambiar el modo de disponibilidad de una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md) (la conmutación automática por error necesita el modo de disponibilidad de confirmación sincrónica)  
@@ -170,7 +170,7 @@ ms.locfileid: "74056685"
   
 -   [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   [Cómo funciona: tiempo de espera de concesión de AlwaysOn de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
   

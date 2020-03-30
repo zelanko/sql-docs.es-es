@@ -11,10 +11,10 @@ ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c25e68d0e03442cc8cb493aea91c9ae09b175def
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916381"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
@@ -30,7 +30,7 @@ mixed PDO::getAttribute ( $attribute )
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-*$attribute*: : uno de los atributos admitidos. Consulte la sección Comentarios para obtener la lista de atributos admitidos.  
+*$attribute*: uno de los atributos admitidos. Consulte la sección Comentarios para obtener la lista de atributos admitidos.  
   
 ## <a name="return-value"></a>Valor devuelto  
 Si se ejecuta correctamente, devuelve el valor de una opción de conexión, el atributo PDO predefinido o el atributo de controlador personalizado. En caso de error, se devuelve el valor Null.  
@@ -41,7 +41,7 @@ En la tabla siguiente se incluye la lista de atributos admitidos.
 |Atributo|Procesado mediante|Valores admitidos|Descripción|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Especifica el uso de mayúsculas y minúsculas en los nombres de columna. PDO::CASE_LOWER obliga a que los nombres de columna usen minúsculas, PDO::CASE_NATURAL deja el nombre de columna que devuelve la base de datos y PDO::CASE_UPPER fuerza que los nombres de columna estén en mayúsculas.<br /><br />El valor predeterminado es PDO::CASE_NATURAL.<br /><br />Este atributo también puede establecerse utilizando PDO::setAttribute.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matriz de cadenas|Describe las versiones del controlador y las bibliotecas relacionadas. Devuelve una matriz con los elementos siguientes: la versión de ODBC (*MajorVer*.*MinorVer*), el nombre y la versión de la DLL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y la versión de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*).|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matriz de cadenas|Describe las versiones del controlador y las bibliotecas relacionadas. Devuelve una matriz con los siguientes elementos: la versión de ODBC (*MajorVer*.*MinorVer*), el nombre y la versión de la DLL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y la versión de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*).|  
 |PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|Si no se establece en PDO::PARAM_STR_CHAR, se devuelve PDO::PARAM_STR_NATL.|
 |PDO::ATTR_DRIVER_NAME|PDO|String|Siempre devuelve "sqlsrv".|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|Indica la versión de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*).|  

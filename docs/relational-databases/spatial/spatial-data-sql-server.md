@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72278142"
 ---
 # <a name="spatial-data-sql-server"></a>Datos espaciales (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "72278142"
   
  Ambos tipos de datos se implementan como tipos de datos .NET Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="reltasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tareas relacionadas  
  [Creación, construcción y consulta de instancias de Geometry](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  Describe métodos que puede usar con instancias del tipo de datos geometry.  
   

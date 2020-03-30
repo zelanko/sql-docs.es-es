@@ -13,10 +13,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291836"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Establecer las propiedades de un componente de flujo de datos
@@ -122,7 +122,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 -   [Columnas de salida](#outputcolumns)  
   
  
-###  <a name="components"></a> Component properties  
+###  <a name="component-properties"></a><a name="components"></a> Component properties  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
  La tabla siguiente describe las propiedades de los componentes en un flujo de datos. Algunas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -142,7 +142,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ValidateExternalMetadata|Boolean|Indica si se validan los metadatos de columnas externas. El valor predeterminado de esta propiedad es **True**.|  
 |Versión|Entero|Versión de un componente.|  
   
-###  <a name="inputs"></a> Propiedades de entradas  
+###  <a name="input-properties"></a><a name="inputs"></a> Propiedades de entradas  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , las transformaciones y los destinos tienen entradas. Una entrada de un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  La tabla siguiente describe las propiedades de las entradas de componentes en un flujo de datos. Algunas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -162,7 +162,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
   
  Los destinos y algunas transformaciones no admiten la salida de errores y, además, las propiedades ErrorRowDisposition y TruncationRowDisposition de estos componentes son de solo lectura.  
   
-###  <a name="inputcolumns"></a> Propiedades de las columnas de entrada  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a> Propiedades de las columnas de entrada  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , una entrada contiene una colección de columnas de entrada. Una columna de entrada de un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  La tabla siguiente describe las propiedades de las columnas de entrada de los componentes en un flujo de datos. Algunas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -186,7 +186,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
   
  Las columnas de entrada también tienen las propiedades de tipo de datos descritas en "Propiedades del tipo de datos”.  
   
-###  <a name="outputs"></a> Propiedades de salidas  
+###  <a name="output-properties"></a><a name="outputs"></a> Propiedades de salidas  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , las transformaciones y los orígenes tienen salidas. Una salida de un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  La tabla siguiente describe las propiedades de las salidas de componentes en un flujo de datos. Algunas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -207,7 +207,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |SynchronousInputID|Entero|El Id. de una entrada que es sincrónica con la salida.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
   
-###  <a name="outputcolumns"></a> Propiedades de las columnas de salida  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a> Propiedades de las columnas de salida  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , una salida contiene una colección de columnas de resultados. Una columna de resultados de un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  La tabla siguiente describe las propiedades de las columnas de resultados de los componentes en un flujo de datos. Algunas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  

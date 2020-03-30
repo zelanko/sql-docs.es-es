@@ -13,10 +13,10 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866338"
 ---
 # <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>Creación de una base de datos del servidor de informes de modo nativo (Administrador de configuración de SSRS)
@@ -32,7 +32,7 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
  Si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la configuración predeterminada para el modo nativo, la base de datos del servidor de informes se ha creado y configurado automáticamente al instalar la instancia del servidor de informes. Puede utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para ver o modificar los valores que el programa de configuración estableció automáticamente.  
   
-##  <a name="rsdbrequirements"></a> Antes de empezar  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> Antes de empezar  
  La creación o configuración de una base de datos del servidor de informes son procesos que constan de varios pasos. Antes de crear la base de datos del servidor de informes, considere cómo desea especificar los elementos siguientes:  
   
  **Seleccionar un servidor de base de datos**  

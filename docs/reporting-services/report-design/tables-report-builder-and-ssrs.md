@@ -9,10 +9,10 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574737"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tablas (Generador de informes y SSRS)
@@ -20,13 +20,13 @@ ms.locfileid: "65574737"
    
  Puede agrupar los datos por un solo campo, por varios campos o escribiendo su propia expresión. Puede crear grupos anidados o grupos adyacentes independientes. Para mostrar los valores agregados para los datos agrupados, agregue totales a los grupos. Dé formato a las filas y columnas para resaltar los datos a los que desea dar énfasis. Puede ocultar inicialmente los datos detallados o agrupados, e incluir controles de alternancia de obtención de detalles para permitir a los usuarios elegir interactivamente cuántos datos se van a mostrar.  
   
- Para empezar a trabajar rápidamente con las tablas, consulte el [Tutorial: Creación de un informe de tabla básico &#40;Generador de informes&#41; ](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) o [Creación de un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+ Para empezar a usar tablas rápidamente, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) o [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 > [!NOTE]  
 >  Puede publicar tablas por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="AddingTable"></a> Agregar una tabla para mostrar datos detallados  
+##  <a name="adding-a-table-to-display-detail-data"></a><a name="AddingTable"></a> Agregar una tabla para mostrar datos detallados  
  Agregue una tabla a la superficie de diseño desde la pestaña Insertar de la cinta de opciones. Puede agregar una tabla mediante el Asistente para tabla o matriz, para lo que se crea una conexión a un origen de datos y un conjunto de datos y se configura la tabla, o una tabla basada en la plantilla de tabla, que se configura manualmente.  
   
 > [!NOTE]  
@@ -42,7 +42,7 @@ ms.locfileid: "65574737"
   
  ![Plantilla de tabla en la superficie de diseño, seleccionada](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Plantilla de tabla en la superficie de diseño, seleccionada")  
   
- El identificador de fila para la fila Datos muestra el símbolo de detalles (![Identificador de fila con tres líneas paralelas para la fila de detalles](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de fila con tres líneas paralelas para la fila de detalles")). Para mostrar datos en estas filas, arrastre los campos desde el panel Datos de informe hasta las celdas de la tabla en la fila de encabezado o la fila de detalles. Ambas filas se rellenan simultáneamente. Para agregar columnas adicionales, arrastre el campo hacia la tabla hasta que vea un punto de inserción. Después de agregar campos de conjunto de datos a la tabla, puede cambiar el formato predeterminado de las fechas y la moneda para controlar su visualización en el informe. En el siguiente diagrama se muestra una región de datos de tabla con estos campos: Date, Order, Product, Qty y Line Total.  
+ El identificador de fila para la fila Datos muestra el símbolo de detalles (![Identificador de fila con tres líneas paralelas para la fila de detalles](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de fila con tres líneas paralelas para la fila de detalles")). Para mostrar datos en estas filas, arrastre los campos desde el panel Datos de informe hasta las celdas de la tabla en la fila de encabezado o la fila de detalles. Ambas filas se rellenan simultáneamente. Para agregar columnas adicionales, arrastre el campo hacia la tabla hasta que vea un punto de inserción. Después de agregar campos de conjunto de datos a la tabla, puede cambiar el formato predeterminado de las fechas y la moneda para controlar su visualización en el informe. El diagrama siguiente muestra una región de datos de tabla con estos campos: Date, Order, Product, Qty, y Line Total.  
   
  ![Diseño, Tabla con encabezados de columna en negrita](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "Diseño, Tabla con encabezados de columna en negrita")  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65574737"
   
  Para obtener más información, vea [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="AddingRowGroups"></a> Agregar grupos de filas a una tabla  
+##  <a name="adding-row-groups-to-a-table"></a><a name="AddingRowGroups"></a> Agregar grupos de filas a una tabla  
  De la misma forma que puede arrastrar un campo desde el panel Datos de informe hasta una celda para mostrar los datos detallados, puede arrastrar un campo hasta el panel Agrupación para agregar un grupo. Para una tabla, arrastre el campo hasta el panel Grupos de filas. Después de agregar un grupo, la tabla agrega automáticamente celdas en nuevas columnas del área de grupo de filas en la que se van a mostrar los valores de grupo. Para más información sobre las áreas, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  En la ilustración siguiente se muestra una tabla con dos grupos de filas anidados en la vista Diseño. Los grupos de filas se crearon arrastrando el campo Order y el campo Date al panel Grupos de filas, e insertando cada grupo como un grupo primario de los grupos existentes. En la ilustración se muestra un grupo primario basado en la fecha y un grupo secundario basado en el número de pedido, así como el grupo de detalles que se definió de forma predeterminada.  
@@ -87,7 +87,7 @@ ms.locfileid: "65574737"
   
  Para obtener más información, vea [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="RemovingHidingRows"></a> Quitar u ocultar filas de detalles  
+##  <a name="removing-or-hiding-detail-rows"></a><a name="RemovingHidingRows"></a> Quitar u ocultar filas de detalles  
  Después de obtener una vista previa de una tabla en un informe, puede decidir quitar las filas de detalles existentes. O bien, podría decidir ocultarlas de forma predeterminada y permitir a los usuarios alternar entre visualizar más o menos detalles, como en un informe de obtención de detalles.  
   
  Para quitar las filas de detalles de una tabla, use el panel Agrupación. Seleccione el grupo de detalles y use el menú contextual para eliminar el grupo y las filas que muestran los datos detallados. En la ilustración siguiente se muestra la vista de diseño para una tabla agrupada por fecha y número de pedido, pero sin filas de detalles. No se ha agregado ninguna fila de totales a esta tabla.  

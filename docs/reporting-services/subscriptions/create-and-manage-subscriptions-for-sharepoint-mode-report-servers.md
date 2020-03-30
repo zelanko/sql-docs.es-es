@@ -13,10 +13,10 @@ ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578348"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo de SharePoint
@@ -48,7 +48,7 @@ ms.locfileid: "65578348"
   
 -   [Para eliminar una suscripción](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> Requisitos generales de las suscripciones  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> Requisitos generales de las suscripciones  
  Para crear una suscripción, el informe debe usar credenciales almacenadas y se debe contar con permiso para ver el informe y crear alertas.  
   
  Al crear una suscripción, puede seleccionar un formato de archivo de salida. No todos los informes funcionan bien en todos los formatos. Antes de seleccionar un formato en una suscripción, abra el informe y expórtelo a otros formatos para asegurarse de que aparece de la manera esperada.  
@@ -64,7 +64,7 @@ ms.locfileid: "65578348"
   
  Los formatos de salida que se seleccionan para una suscripción se basan en las extensiones de representación instaladas en el servidor de informes. Solo pueden seleccionarse formatos de salida compatibles con las extensiones de representación del servidor de informes.  
   
-###  <a name="bkmk_tosharepoint_library"></a> Para crear una suscripción para entregar un informe a una biblioteca de SharePoint  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> Para crear una suscripción para entregar un informe a una biblioteca de SharePoint  
   
 1.  Vaya a una biblioteca de SharePoint que contenga el informe.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65578348"
   
 10. En **Parámetros**, si está creando una suscripción a un informe con parámetros, especifique los valores que desee usar con el informe cuando se procese la suscripción. La sección de parámetros no está visible en esta página si el informe que selecciona no contiene parámetros. Para obtener más información sobre los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> Para crear una suscripción para la entrega en una carpeta compartida  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> Para crear una suscripción para la entrega en una carpeta compartida  
   
 1.  Vaya a una biblioteca de SharePoint que contenga el informe.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65578348"
   
 12. En **Parámetros**, si está creando una suscripción a un informe con parámetros, especifique los valores que desee usar con el informe cuando se procese la suscripción. Para obtener más información sobre los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_email"></a> Para crear una suscripción para la entrega de correo electrónico del servidor de informes  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> Para crear una suscripción para la entrega de correo electrónico del servidor de informes  
   
 1.  Vaya a una biblioteca de SharePoint que contenga el informe.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "65578348"
   
 10. En **Parámetros**, si está creando una suscripción a un informe con parámetros, especifique los valores que desee usar con el informe cuando se procese la suscripción. Para obtener más información sobre los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_to_modify_subscription"></a> Para ver o modificar una suscripción  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> Para ver o modificar una suscripción  
   
 1.  Vaya a una biblioteca de SharePoint que contenga el informe.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "65578348"
   
 3.  Cada suscripción se identifica mediante el tipo de entrega. Haga clic en el tipo de suscripción para ver y cambiar las propiedades existentes.  
   
-###  <a name="bkmk_to_delete_subscription"></a> Para eliminar una suscripción  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> Para eliminar una suscripción  
   
 1.  Vaya a una biblioteca de SharePoint que contenga el informe.  
   

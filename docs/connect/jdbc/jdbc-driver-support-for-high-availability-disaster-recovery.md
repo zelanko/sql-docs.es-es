@@ -11,10 +11,10 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027951"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Compatibilidad del controlador JDBC con alta disponibilidad y recuperación ante desastres
@@ -22,7 +22,7 @@ ms.locfileid: "69027951"
 
   En este tema se describe la compatibilidad de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] para la alta disponibilidad y la recuperación ante desastres: [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. Para obtener más información acerca de [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vea los Libros en pantalla de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
- A partir de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], puede especificar la escucha de un grupo de disponibilidad (alta disponibilidad, recuperación ante desastres) en la propiedad de conexión. Si una aplicación [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] está conectada a una base de datos Always On que conmuta por error, se interrumpirá la conexión original y la aplicación deberá abrir una nueva para seguir trabajando tras la conmutación por error. En [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] se han agregado las siguientes [propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md):  
+ A partir de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], puede especificar la escucha de un grupo de disponibilidad (alta disponibilidad, recuperación ante desastres) en la propiedad de conexión. Si una aplicación [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] está conectada a una base de datos Always On que conmuta por error, se interrumpirá la conexión original y la aplicación deberá abrir una nueva para seguir trabajando tras la conmutación por error. En [ se han agregado las siguientes ](../../connect/jdbc/setting-the-connection-properties.md)propiedades de conexión[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:  
   
 -   **multiSubnetFailover**  
   
@@ -69,7 +69,7 @@ Tenga en cuenta lo siguiente:
   
 -   La conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada con más de 64 direcciones IP producirá un error en la conexión.  
   
--   El comportamiento de una aplicación que use la propiedad de conexión **multiSubnetFailover** no se ve afectado por el tipo de autenticación: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticación , autenticación de Kerberos o autenticación de Windows.  
+-   El comportamiento de una aplicación que usa la propiedad de conexión **multiSubnetFailover** no se ve afectado por el tipo de autenticación: autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], autenticación Kerberos o autenticación de Windows.  
   
 -   Aumente el valor de **loginTimeout** para tener en cuenta el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.  
   

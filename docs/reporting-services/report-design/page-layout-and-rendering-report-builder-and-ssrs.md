@@ -9,10 +9,10 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082450"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
@@ -24,7 +24,7 @@ Obtenga información sobre las extensiones de representación de [!INCLUDE[ssRSn
   
  Para conseguir los mejores resultados con los informes exportados suele ser necesario un proceso reiterativo; se crea un informe en el Generador de informes o en el Diseñador de informes y se obtiene una vista previa del mismo, se exporta al formato preferido, se revisa el informe exportado y, a continuación, se realizan cambios en él.  
     
-##  <a name="PageLayout"></a> Elementos de informe  
+##  <a name="report-items"></a><a name="PageLayout"></a> Elementos de informe  
  Los elementos de informe son elementos de diseño que están asociados a distintos tipos de datos de informe. 
  
 * Tabla, matriz, lista, gráfico y medidor son elementos de informe de la región de datos, cada uno de los cuales establece un vínculo a un conjunto de datos de informe. Cuando se procesa el informe, la región de datos se expande a lo ancho y hacia abajo por la página del informe para mostrar datos. 
@@ -44,14 +44,14 @@ Un informe también puede contener subinformes.
   
  Un informe puede abarcar varias páginas, e incluir un encabezado y un pie de página que se repiten en cada página. También puede contener elementos gráficos como imágenes y líneas, y puede contener fuentes, colores y estilos diversos, que pueden estar basados en expresiones.  
   
-##  <a name="ReportSections"></a> Secciones del informe  
+##  <a name="report-sections"></a><a name="ReportSections"></a> Secciones del informe  
  Un informe consta de tres secciones principales: un encabezado de *página* opcional, un pie de *página* opcional y un cuerpo del informe. El encabezado y el pie de página del *informe* no son secciones independientes del informe, sino que se componen de los elementos de informe que se colocan en la parte superior y en la parte inferior del cuerpo del informe. El encabezado y el pie de página repiten el mismo contenido en la parte superior e inferior de cada página del informe. Puede situar imágenes, cuadros de texto y líneas en los encabezados y pies de página. Puede colocar cualquier tipo de elemento de informe en el cuerpo del informe.  
   
  Se pueden establecer las propiedades de los elementos de informe para que los oculten o los muestren inicialmente en la página. Puede establecer las propiedades de visibilidad de filas, columnas o grupos para las regiones de datos y proporcionar botones de alternancia para permitir al usuario mostrar u ocultar interactivamente datos del informe. Puede establecer la visibilidad o la visibilidad inicial usando expresiones, incluso expresiones basadas en parámetros de informe.  
   
  Cuando se procesa un informe, los datos del informe se combinan con los elementos de diseño del informe y los datos combinados se envían a un representador de informes. El representador sigue las reglas predefinidas para la expansión de los elementos de informe y determina la cantidad de datos que caben en cada página. Para diseñar un informe que resulte fácil de leer y que esté optimizado para el representador que va a usar, debe comprender las reglas que se usan para controlar la paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingExtensions"></a> Representadores  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a> Representadores  
  Reporting Services incluye un conjunto de representadores, denominados también extensiones de representación, que puede utilizar para exportar los informes a diferentes formatos. Hay tres tipos de representadores:  
   
 -   **Representadores de datos** : los representadores de datos quitan todo el formato e información de diseño del informe y muestran solo los datos. El archivo resultante se puede usar para importar los datos del informe sin formato en otro tipo de archivo, como Excel; en otra base de datos; en un mensaje de datos XML o en una aplicación personalizada. Los datos disponibles se representan como CSV y XML.  
@@ -65,7 +65,7 @@ Un informe también puede contener subinformes.
   
  Cuando se obtiene una vista previa de un informe en el Generador de informes o el Diseñador de informes o se ejecuta un informe en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , siempre se representa primero en HTML. Después de ejecutar el informe, puede exportarlo a otros formatos de archivo. Para más información, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingBehaviors"></a> Comportamiento de la representación  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a> Comportamiento de la representación  
  En función del representador que seleccione, se aplican ciertas reglas al representar el informe. La forma en la que los elementos de informe se ajustan en una página viene determinada por la combinación de estos factores:  
   
 -   Reglas de representación.  
@@ -78,7 +78,7 @@ Un informe también puede contener subinformes.
   
  Para más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
    
-##  <a name="Pagination"></a> Paginación  
+##  <a name="pagination"></a><a name="Pagination"></a> Paginación  
  La paginación hace referencia al número de páginas de un informe y al modo en que los elementos de informe se organizan en dichas páginas. La paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varía en función de la extensión de representación usada para ver y entregar el informe, y de las opciones para mantener juntos los elementos del informe y de salto de página que configure para usar en él.  
   
  Para diseñar correctamente un informe que resulte fácil de leer y que esté optimizado para el representador que va a usar para su entrega, es preciso que comprenda las reglas que se usan para controlar la paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Los informes que se exportan al usar las extensiones de representación de **páginas automáticas** y **datos** normalmente no se ven afectados por la paginación. Al utilizar una extensión de representación de datos, el informe se representa como un conjunto de filas tabular en formato XML o CSV. Para asegurarse de que los datos del informe exportado son utilizables, debería conocer las reglas que se aplican a la representación de un conjunto de filas tabulares planas de un informe.  
@@ -87,7 +87,7 @@ Un informe también puede contener subinformes.
   
  Los procesadores de saltos de**página manuales** son los que más afectan al diseño del informe y al tamaño físico de página. Para más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Temas de procedimientos  
  En esta sección se enumeran procedimientos que muestran, paso a paso, cómo trabajar con la paginación en los informes.  
   
 -   [Agregar un salto de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)  
@@ -102,7 +102,7 @@ Un informe también puede contener subinformes.
   
 -   [Ocultar un encabezado o un pie de página en la primera o en la última página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> En esta sección  
  En los temas siguientes se proporciona información adicional sobre el diseño y la representación de páginas.  
   
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

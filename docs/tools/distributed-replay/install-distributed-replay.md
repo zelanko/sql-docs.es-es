@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74992182"
 ---
 # <a name="install-distributed-replay"></a>Instalar Distributed Replay
@@ -29,7 +29,7 @@ Puede instalar Distributed Replay en una de estas tres maneras:
   
 -   [Instalar Distributed Replay utilizando un archivo de configuración](#bkmk_configuration_file)  
   
-##  <a name="bkmk_wizard"></a> Instalar Distributed Replay desde el Asistente para instalación  
+##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> Instalar Distributed Replay desde el Asistente para instalación  
  Instalar las características de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay con el Asistente para instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Cuando planee dónde desea instalar las características, tenga en cuenta lo siguiente:  
   
 -   Puede instalar la herramienta de administración en el mismo equipo que el controlador de Distributed Replay, o en equipos diferentes.  
@@ -136,7 +136,7 @@ Puede instalar Distributed Replay en una de estas tres maneras:
 ### <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Debe disponer de permisos administrativos para instalar cualquiera de las características de Distributed Replay. Solo un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con permisos sysadmin puede agregar las cuentas del servicio de cliente al rol de servidor sysadmin del servidor de prueba. Para obtener más información sobre las consideraciones de seguridad de Distributed Replay, vea [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-##  <a name="bkmk_command_prompt"></a> Instalar Distributed Replay desde el símbolo del sistema  
+##  <a name="install-distributed-replay-from-the-command-prompt"></a><a name="bkmk_command_prompt"></a> Instalar Distributed Replay desde el símbolo del sistema  
  La instalación de una instancia nueva de Distributed Replay en el símbolo del sistema permite especificar las características que se instalarán y cómo se deben configurar. La instalación en el símbolo del sistema admite la instalación, la reparación, la actualización y la desinstalación de los componentes de Distributed Replay. Al realizar la instalación a través del símbolo del sistema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el modo totalmente silencioso mediante el uso del parámetro /Q.  
   
 > [!NOTE]  
@@ -182,7 +182,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CTLR /IAcceptSQLServerLicenseTerms /C
 setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CLTSVCACCOUNT="domain\svcuser" /CLTSVCPASSWORD="password" /CLTSTARTUPTYPE=Automatic /CLTCTLRNAME=ControllerMachineName /CLTWORKINGDIR="C:\WorkingDir" /CLTRESULTDIR="C:\ResultDir  
 ```  
   
-##  <a name="bkmk_configuration_file"></a> Instalar Distributed Replay utilizando un archivo de configuración  
+##  <a name="install-distributed-replay-using-a-configuration-file"></a><a name="bkmk_configuration_file"></a> Instalar Distributed Replay utilizando un archivo de configuración  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite generar un archivo de configuración basado en la entrada de usuario y en la configuración predeterminada del sistema. Si especifica que desea que se instalen las herramientas de administración, puede utilizar el archivo de configuración para implementar los tres componentes de Distributed Replay (herramienta de administración, controlador de Distributed Replay y cliente Distributed Replay). Admite la instalación, reparación y desinstalación de los componentes de Distributed Replay.  
   
  El programa de instalación admite el uso del archivo de configuración solamente a través de la línea de comandos. A continuación se indica el orden de procesamiento de los parámetros cuando se usa el archivo de configuración:  

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095427"
 ---
 # <a name="track-data-changes-sql-server"></a>Seguimiento de cambios de datos (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "74095427"
 |Si la columna cambió|Sí|Sí|  
 |Tipo de DML|Sí|Sí|  
   
-##  <a name="Capture"></a> Captura de datos modificados  
+##  <a name="change-data-capture"></a><a name="Capture"></a> Captura de datos modificados  
  La captura de datos modificados proporciona información de los cambios históricos para una tabla de usuario captando tanto el hecho de que se realizaran cambios de DML como los datos reales que se cambiaron. Los cambios se capturan mediante un proceso asincrónico que lee el registro de transacciones y tiene poca repercusión en el sistema.  
   
  Como se muestra en la ilustración siguiente, los cambios que se realizaron en las tablas de usuario se capturan en las tablas de cambios correspondientes. Estas tablas de cambios proporcionan una vista histórica de los cambios a lo largo del tiempo. Las funciones de [captura de datos modificados](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona permiten utilizar los datos modificados con facilidad y de forma sistemática.  
@@ -137,7 +137,7 @@ ms.locfileid: "74095427"
   
  Puede usar [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) para quitar la captura de datos modificados desde una base de datos restaurada o asociada.  
   
-##  <a name="Tracking"></a> Seguimiento de los cambios  
+##  <a name="change-tracking"></a><a name="Tracking"></a> Seguimiento de los cambios  
  El seguimiento de cambios captura el hecho de que las filas de una tabla cambiaran, pero no los datos que se modificaron. Esto permite a las aplicaciones determinar las filas que han cambiado con los datos de las filas más recientes obtenidos directamente de las tablas de usuario. Por consiguiente, el seguimiento de cambios está más limitado en las cuestiones históricas que puede responder en comparación con la captura de datos modificados. Sin embargo, para las aplicaciones que no requieren información histórica, hay mucha menos sobrecarga de almacenamiento debido a que los datos modificados no se están capturando. Se utiliza un mecanismo de seguimiento sincrónico para realizar el seguimiento de los cambios. Se ha diseñado de modo que suponga una sobrecarga mínima para las operaciones DML.  
   
  La ilustración siguiente muestra un escenario de sincronización que se beneficiaría del uso del seguimiento de cambios. En este escenario, una aplicación requiere la información siguiente: todas las filas de la tabla que se cambiaron desde la última vez que la tabla se sincronizó, y solo los datos de las filas actuales. Dado que para realizar el seguimiento de los cambios se utiliza un mecanismo sincrónico, una aplicación puede realizar una sincronización bidireccional y detectar de forma confiable cualquier conflicto que pudiera haberse producido.  

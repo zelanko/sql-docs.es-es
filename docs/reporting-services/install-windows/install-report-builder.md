@@ -9,10 +9,10 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971383"
 ---
 # <a name="install-report-builder"></a>instalar el Generador de informes
@@ -52,7 +52,7 @@ ms.locfileid: "76971383"
   
  Consulte la sección **System Requirements** (Requisitos del sistema) en la [página de descarga del Generador de informes](https://go.microsoft.com/fwlink/?LinkID=734968) en el Centro de descarga de Microsoft.
   
-##  <a name="download"></a> Para instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] desde el sitio de descarga  
+##  <a name="to-install-ssrbnoversion-from-the-download-site"></a><a name="download"></a> Para instalar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] desde el sitio de descarga  
   
 1.  En la [página del Generador de informes del Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkID=734968) , haga clic en **Download**(Descargar).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "76971383"
   
 ## <a name="to-install-ssrbnoversion-from-the-command-line"></a>Para instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] desde la línea de comandos 
 
- También puede realizar una instalación de línea de comandos del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y proporcionar argumentos para personalizar la instalación. Además de los parámetros estándar intrínsecos de MSI, puede usar los parámetros personalizados que proporciona [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR y REPORTSERVERURL. RBINSTALLDIR especifica la carpeta de instalación raíz para el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL especifica el servidor de informes predeterminado que usa el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] para guardar los informes en el servidor.  
+ También puede realizar una instalación de línea de comandos del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y proporcionar argumentos para personalizar la instalación. Además de los parámetros estándar intrínsecos de MSI, puede usar los parámetros personalizados que proporciona el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR y REPORTSERVERURL. RBINSTALLDIR especifica la carpeta de instalación raíz para el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL especifica el servidor de informes predeterminado que usa el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] para guardar los informes en el servidor.  
   
  Si quiere realizar una instalación completamente silenciosa, sin ninguna interacción con la interfaz de usuario, especifique la opción **/quiet** . Por diseño, la marca de la opción quiet suprime los errores de instalación. Por lo tanto, es recomendable que, cuando use la opción quiet, incluya la opción **/l** que especifica el registro.   
   
@@ -99,7 +99,7 @@ ms.locfileid: "76971383"
   
      `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
   
-     Las dos opciones específicas a la instalación de [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] son: RBINSTALLDIR y REPORTSERVERURL. No hace falta que incluya estos argumentos en la línea de comandos. El siguiente es el comando de línea base:  
+     Las dos opciones específicas para la instalación del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] son: RBINSTALLDIR y REPORTSERVERURL. No hace falta que incluya estos argumentos en la línea de comandos. El siguiente es el comando de línea base:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

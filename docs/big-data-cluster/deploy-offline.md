@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531982"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realización de una implementación sin conexión de un clúster de macrodatos de SQL Server
@@ -55,7 +55,7 @@ En los pasos siguientes se explica cómo extraer las imágenes de contenedor de 
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a> Imágenes de contenedor de clúster de macrodatos
+### <a name="big-data-cluster-container-images"></a><a id="images"></a> Imágenes de contenedor de clúster de macrodatos
 
 Las siguientes imágenes de contenedor de clúster de macrodatos son necesarias para una instalación sin conexión:
 - **mssql-app-service-proxy**
@@ -85,7 +85,7 @@ Las siguientes imágenes de contenedor de clúster de macrodatos son necesarias 
 - **mssql-ssis-app-runtime**
 
 
-## <a id="automated"></a> Script automatizado
+## <a name="automated-script"></a><a id="automated"></a> Script automatizado
 
 Puede usar un script de Python automatizado que extraiga automáticamente todas las imágenes de contenedor necesarias y las inserte en un repositorio privado.
 
@@ -120,7 +120,7 @@ Puede usar un script de Python automatizado que extraiga automáticamente todas 
 
 Las implementaciones de clústeres de macrodatos requieren varias herramientas, como **Python**, `azdata` y **kubectl**. Siga estos pasos para instalar estas herramientas en un servidor sin conexión.
 
-### <a id="python"></a> Instalación de Python sin conexión
+### <a name="install-python-offline"></a><a id="python"></a> Instalación de Python sin conexión
 
 1. En un equipo con acceso a Internet, descargue uno de los siguientes archivos comprimidos que contienen Python:
 
@@ -138,7 +138,7 @@ Las implementaciones de clústeres de macrodatos requieren varias herramientas, 
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="azdata"></a> Instalación de azdata sin conexión
+### <a name="install-azdata-offline"></a><a id="azdata"></a> Instalación de azdata sin conexión
 
 1. En una máquina con acceso a Internet y [Python](https://wiki.python.org/moin/BeginnersGuide/Download), ejecute el comando siguiente para descargar todos los paquetes `azdata` en la carpeta actual.
 
@@ -154,7 +154,7 @@ Las implementaciones de clústeres de macrodatos requieren varias herramientas, 
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a> Instalación de kubectl sin conexión
+### <a name="install-kubectl-offline"></a><a id="kubectl"></a> Instalación de kubectl sin conexión
 
 Para instalar **kubectl** en un equipo sin conexión, siga estos pasos.
 

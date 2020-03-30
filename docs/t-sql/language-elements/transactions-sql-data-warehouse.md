@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121585"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transacciones (SQL Data Warehouse)
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>Comportamiento del bloqueo  
  En [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se usa el bloqueo para garantizar la integridad de las transacciones y mantener la coherencia de las bases de datos cuando varios usuarios obtienen acceso a los datos al mismo tiempo. El bloqueo se usa tanto en transacciones implícitas como explícitas. Cada transacción solicita diferentes tipos de bloqueo en los recursos, como por ejemplo, las tablas o bases de datos de las que depende la transacción. Todos los bloqueos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] son en el nivel de tabla o superior. Estos bloqueos impiden que otras transacciones puedan modificar los recursos de forma que esto provoque problemas para la transacción que solicita el bloqueo. Cada transacción libera sus bloqueos cuando ya no tiene una dependencia en los recursos bloqueados; las transacciones explícitas mantienen los bloqueos hasta que la transacción finaliza cuando se confirma o revierte.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. Usar una transacción explícita  
   

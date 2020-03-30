@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123747"
 ---
 # <a name="create-foreign-key-relationships"></a>Crear relaciones de clave externa
@@ -26,7 +26,7 @@ ms.locfileid: "68123747"
 
 En este artículo se describe cómo crear relaciones de clave externa en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando se asocian filas de una tabla con filas de otra tabla, se crea una relación entre las dos tablas.
 
-## <a name="BeforeYouBegin"></a> Antes de comenzar Límites y restricciones
+## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> Antes de comenzar Límites y restricciones
 
 - No es necesario que una restricción de clave externa esté vinculada únicamente a una restricción de clave principal de otra tabla; también puede definirse para que haga referencia a las columnas de una restricción UNIQUE de otra tabla.
 - Si se especifica un valor distinto de NULL en la columna de una restricción FOREIGN KEY, el valor debe existir en la columna a que se hace referencia; de lo contrario, se devolverá un error de infracción de clave externa. Para asegurarse de que todos los valores de la restricción de clave externa compuesta se comprueben, especifique NOT NULL en todas las columnas que participan.

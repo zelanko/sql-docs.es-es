@@ -30,16 +30,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68344598"
 ---
 # <a name="principals-database-engine"></a>Entidades de seguridad (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de la definición de la entidad de seguridad: Windows, servidor, base de datos; y si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID). Este tema se aplica a todas las versiones de SQL Server, pero hay algunas restricciones en las entidades de seguridad de nivel de servidor de SQL Database o SQL Data Warehouse. 
+  Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de su definición: Windows, servidor o base de datos; y de si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID). Este tema se aplica a todas las versiones de SQL Server, pero hay algunas restricciones en las entidades de seguridad de nivel de servidor de SQL Database o SQL Data Warehouse. 
   
 ## <a name="sql-server-level-principals"></a>Entidades de seguridad de nivel de SQL Server  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68344598"
 - Rol de aplicación
   
 ## <a name="sa-login"></a>Inicio de sesión sa  
- El inicio de sesión `sa` de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una entidad de seguridad a nivel de servidor. Se crea de forma predeterminada cuando se instala una instancia. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la base de datos predeterminada de sa es master. Es un cambio de comportamiento con respecto a versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El inicio de sesión `sa` es miembro del rol fijo de nivel de servidor`sysadmin`. Este inicio de sesión `sa` tiene todos los permisos en el servidor y no puede limitarse. Además, `sa` no se puede quitar, pero puede deshabilitarse para que nadie lo emplee.
+ El inicio de sesión [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de `sa` es una entidad de seguridad a nivel de servidor. Se crea de forma predeterminada cuando se instala una instancia. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la base de datos predeterminada de sa es master. Es un cambio de comportamiento con respecto a versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El inicio de sesión `sa` es miembro del rol fijo de nivel de servidor`sysadmin`. Este inicio de sesión `sa` tiene todos los permisos en el servidor y no puede limitarse. Además, `sa` no se puede quitar, pero puede deshabilitarse para que nadie lo emplee.
 
 ## <a name="dbo-user-and-dbo-schema"></a>Usuario y esquema dbo
 

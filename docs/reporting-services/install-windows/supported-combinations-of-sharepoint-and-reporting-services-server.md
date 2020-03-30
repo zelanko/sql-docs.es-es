@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866068"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinaciones admitidas de SharePoint y servidor de Reporting Services
@@ -57,7 +57,7 @@ Un servidor de informes de SQL Server Reporting Services instalado en modo de Sh
 |15|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
 |16|SQL Server 2008 SP2|SQL Server 2008 y SQL Server 2008 SP2|SharePoint 2007|
 
- *Excepción: No se admite la integración de Power View.
+ *Excepción: no se admite la integración de Power View.
 
  Para obtener vínculos a las páginas de descarga del complemento, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 
@@ -73,7 +73,7 @@ Un servidor de informes de SQL Server Reporting Services instalado en modo de Sh
 
 - Los servidores de informes de SQL Server 2012 (o posterior) no admiten el complemento de SQL Server 2008 R2. El instalador de requisitos previos de SharePoint 2010 instala automáticamente el complemento de SQL Server 2008 R2. Debe desinstalarse antes de instalar las versiones más recientes del complemento. No se admite la actualización en contexto del complemento.
 
-- **Actualización:** SharePoint 2010 con el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado no se puede actualizar en contexto a SharePoint 2013. SharePoint 2013 requiere la versión SQL Server 2012 SP1 o posterior del complemento y el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obtener más información acerca de la actualización, vea [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
+- **Actualización:** SharePoint 2010 con el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado no se puede actualizar en contexto a SharePoint 2013. SharePoint 2013 requiere la versión SQL Server 2012 SP1 o posterior del complemento y el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obtener más información acerca de la actualización, vea [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

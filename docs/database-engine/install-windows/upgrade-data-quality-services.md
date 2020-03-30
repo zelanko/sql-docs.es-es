@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934857"
 ---
 # <a name="upgrade-data-quality-services"></a>Actualizar Data Quality Services
@@ -28,13 +28,13 @@ En este artículo encontrará información sobre cómo actualizar la instalació
 > -   Puede conectarse a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server a través de la versión actual o una versión anterior de Data Quality Client o la [transformación Limpieza de DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) de Integration Services para realizar tareas de calidad de datos.  
 > -   Después de actualizar Data Quality Services y Master Data Services, ya no funcionará ninguna versión anterior del complemento Master Data Services para Excel. Puede descargar la versión [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] del complemento Master Data Services para Excel [aquí](https://go.microsoft.com/fwlink/?LinkID=506665).  
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe haber iniciado sesión como miembro del grupo Administradores en el equipo con [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
 -   La cuenta de usuario de Windows debe ser miembro del rol fijo de servidor sysadmin en la instancia de SQL Server donde está instalado [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
-##  <a name="Upgrade"></a> Actualizar DQS  
+##  <a name="upgrading-dqs"></a><a name="Upgrade"></a> Actualizar DQS  
  Para actualizar DQS:  
   
 1.  Haga una copia de seguridad de las bases de datos de DQS antes de iniciar el proceso de actualización. Para obtener información sobre la copia de seguridad de bases de datos de DQS, vea [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
@@ -77,7 +77,7 @@ En este artículo encontrará información sobre cómo actualizar la instalació
   
     5.  Se muestra un mensaje para indicar que la actualización del esquema de las bases de datos DQS se realizó.  
   
-##  <a name="Verify"></a> Comprobar la actualización del esquema de bases de datos de DQS  
+##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> Comprobar la actualización del esquema de bases de datos de DQS  
  Para comprobar que el esquema de bases de datos de DQS se ha actualizado correctamente, puede comprobar la versión actual de las bases de datos DQS_MAIN y DQS_PROJECTS consultando la tabla A_DB_VERSION en cada base de datos. Para ello:  
   
 1.  Inicie SQL Server Management Studio y conéctese a la instancia de SQL Server que contiene el esquema de bases de datos de DQS actualizado.  

@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 790d756479f4111d6c3b40d05643ec788527473c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054782"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Instalar SQL Server mediante un archivo de configuración
@@ -67,18 +67,18 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  La infraestructura de instalación escribe todos los parámetros correspondientes a las acciones que se ejecutaron, con la excepción de la información confidencial, como las contraseñas. El parámetro /IAcceptSQLServerLicenseTerms tampoco se escribe en el archivo de configuración, y para incluirlo es necesario modificar dicho archivo o proporcionar un valor en el símbolo del sistema. Para más información, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Además se incluye un valor para los parámetros booleanos, ya que normalmente no se proporciona a través del símbolo del sistema. 
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>Usar el archivo de configuración para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Usar el archivo de configuración para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 El archivo de configuración solamente se usa en instalaciones de línea de comandos. 
   
 > [!NOTE]  
 > Si necesita realizar cambios en el archivo de configuración, se recomienda hacer una copia y trabajar con ella. 
   
-### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>Cómo usar un archivo de configuración para instalar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente  
+### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>Cómo usar un archivo de configuración para instalar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente  
   
 -   Realice la instalación a través del símbolo del sistema y proporcione el archivo ConfigurationFile.ini mediante el parámetro *ConfigurationFile* . 
   
-### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>Utilizar un archivo de configuración para preparar y completar una imagen de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente (SysPrep)  
+### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>Utilizar un archivo de configuración para preparar y completar una imagen de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente (SysPrep)  
   
 1. Para preparar una o más instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y configurarlas en el mismo equipo. 
   
@@ -96,7 +96,7 @@ El archivo de configuración solamente se usa en instalaciones de línea de coma
   
     -   El archivo de configuración de imagen completo se puede almacenar con la imagen de Windows para automatizar la configuración de las instancias preparadas. 
   
-### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Cómo instalar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el archivo de configuración  
+### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Cómo instalar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el archivo de configuración  
   
 1. Opción de instalación integrada (crear un clúster de conmutación por error de nodo único en un nodo y ejecutar AddNode en los demás nodos):  
   
@@ -118,11 +118,11 @@ El archivo de configuración solamente se usa en instalaciones de línea de coma
   
     -   A continuación, puede proporcionar este archivo ConfigurationFile.ini para completar el clúster de conmutación por error. 
   
-### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Cómo agregar o quitar un nodo en un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el archivo de configuración  
+### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Cómo agregar o quitar un nodo en un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el archivo de configuración  
   
 -   Si tiene un archivo de configuración que ya se usó previamente para agregar o quitar un nodo en un clúster de conmutación por error, puede volver a usar ese mismo archivo para agregar o quitar nodos adicionales. 
   
-### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Cómo actualizar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el archivo de configuración  
+### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Cómo actualizar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el archivo de configuración  
   
 1. Ejecute la actualización en el nodo pasivo y capture el archivo ConfigurationFile.ini. Para ello, puede realizar la actualización real o salir al final sin llegar a realizarla. 
   

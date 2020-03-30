@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708737"
 ---
 # <a name="back-up-a-transaction-log"></a>Copia de seguridad de un registro de transacciones
@@ -26,17 +26,17 @@ ms.locfileid: "71708737"
   En este tema se describe cómo realizar una copia de seguridad de un registro de transacciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
 
 ## <a name="before-you-begin"></a>Antes de empezar
-### <a name="Restrictions"></a> Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 La instrucción `BACKUP` no se permite en una transacción explícita o [implícita](../../t-sql/statements/set-implicit-transactions-transact-sql.md). Una transacción explícita es aquella en que se define explícitamente el inicio y el final de la transacción.
 
-### <a name="Recommendations"></a> Recomendaciones  
+### <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 - Si una base de datos usa el [modelo de recuperación](recovery-models-sql-server.md) optimizado para cargas masivas de registros o completo, debe hacer una copia de seguridad del registro de transacciones con suficiente regularidad para proteger los datos e impedir que el [registro de transacciones se llene](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md). De este modo se trunca el registro y se admite la restauración de la base de datos a un momento concreto. 
   
 - De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si se hace una copia de seguridad del registro con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, lo que da lugar a registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro usando la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
-### <a name="Permissions"></a> Permisos
+### <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 De forma predeterminada, los permisos `BACKUP DATABASE` y `BACKUP LOG` necesarios se conceden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator**. Compruebe los permisos correctos antes de empezar.
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell
 
 Configure y use el [Proveedor de SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Use el cmdlet **Backup-SqlDatabase** y especifique **Log** como valor del parámetro **-BackupAction** .  
   
@@ -160,7 +160,7 @@ En el ejemplo siguiente se crea una copia de seguridad de registro de la base de
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 - [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

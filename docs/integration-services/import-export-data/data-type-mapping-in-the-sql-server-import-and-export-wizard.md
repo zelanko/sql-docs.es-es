@@ -10,10 +10,10 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1610f98d77ba4a762a63f3ccf5a445393537d36b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296340"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server
@@ -23,7 +23,7 @@ ms.locfileid: "71296340"
 
  En el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede establecer el nombre, el tipo de datos y las propiedades de tipo de datos de las columnas de las tablas y archivos de destino nuevos, pero no puede especificar conversiones personalizadas para los valores de columna. Como resultado, la asignación integrada de tipos de datos del origen al destino es muy importante.  
   
-##  <a name="wizardMapping"></a> ¿Cómo asigna el asistente tipos de datos entre el origen y el destino?
+##  <a name="how-does-the-wizard-map-data-types-between-source-and-destination"></a><a name="wizardMapping"></a> ¿Cómo asigna el asistente tipos de datos entre el origen y el destino?
 El asistente usa archivos de asignación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala para asignar tipos de datos de un sistema o versión de base de datos a otro. Por ejemplo, puede asignar de tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tipos de datos de Oracle. De forma predeterminada, los archivos de asignación en formato XML se instalan en las siguientes carpetas.
 -   **C:\Archivos de programa\Microsoft SQL Server\130\DTSMappingFiles\\** (para versiones de 64 bits)
 -   **C:\Archivos de programa (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (para versiones de 32 bits).  

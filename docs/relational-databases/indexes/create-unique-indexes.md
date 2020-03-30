@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67898596"
 ---
 # <a name="create-unique-indexes"></a>Crear índices únicos
@@ -53,9 +53,9 @@ ms.locfileid: "67898596"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Benefits"></a> Ventajas de un índice único  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Ventajas de un índice único  
   
 -   Los índices únicos para varias columnas garantizan que cada combinación de valores de la clave de índice sea única. Por ejemplo, si se crea un índice único en una combinación de columnas **LastName**, **FirstName**y **MiddleName** , dos filas de la tabla no podrán tener la misma combinación de valores para estas columnas.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67898596"
   
 -   Los índices únicos proporcionan información adicional útil al optimizador de consultas, que puede generar planes más eficaces de ejecución.  
   
-###  <a name="Implementations"></a> Implementaciones típicas  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Implementaciones típicas  
  Los índices únicos se implementan de las formas siguientes:  
   
 -   **Restricción PRIMARY KEY o UNIQUE**  
@@ -86,18 +86,18 @@ ms.locfileid: "67898596"
   
      Para crear una vista indizada, se define un índice clúster único en una o varias columnas de la vista. La vista se ejecuta y el conjunto de resultados se almacena en el nivel hoja del índice, del mismo modo en que los datos de tabla se almacenan en un índice clúster. Para obtener más información, vea [Crear vistas indexadas](../../relational-databases/views/create-indexed-views.md).  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Un índice único, una restricción UNIQUE o una restricción PRIMARY KEY no se pueden crear si existen valores de clave duplicados en los datos.  
   
 -   Un índice no clúster único puede incluir columnas sin clave. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Para crear un índice único mediante el Diseñador de tablas  
   
@@ -151,7 +151,7 @@ ms.locfileid: "67898596"
   
 10. En el cuadro de diálogo **Nuevo índice** , haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Para crear un índice único en una tabla  
   

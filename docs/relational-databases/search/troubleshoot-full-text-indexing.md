@@ -15,16 +15,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d8dd1cd471328859dd8bfa595fc341bda5f51f04
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095301"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Solucionar problemas de indización de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
-##  <a name="failure"></a> Solucionar errores de indización de texto completo  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> Solucionar errores de indización de texto completo  
  Al rellenar o mantener un índice de texto completo, es posible que el indizador de texto completo no pueda indizar una o varias filas por las razones que se explican a continuación. Estos errores de nivel de fila no impiden que se realice el llenado. El indizador omite estas filas, lo que significa que no se pueden realizar consultas del contenido de estas filas.  
   
  Pueden producirse errores de indización cuando:  
@@ -54,7 +54,7 @@ ms.locfileid: "68095301"
 >  Si se omite la comprobación de firmas, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es menos segura. Se recomienda que firme todo componente que implemente o que se asegure de que todo componente que adquiera esté firmado. Para obtener más información sobre cómo firmar componentes, vea [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
   
-##  <a name="state"></a> Índice de texto completo en estado incoherente después de la restauración del registro de transacciones  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> Índice de texto completo en estado incoherente después de la restauración del registro de transacciones  
  Al restaurar el registro de transacciones de una base de datos, es posible que aparezca una advertencia que indica que el índice de texto completo no es coherente. El motivo es que se ha modificado el índice de texto completo en una tabla después de realizar la copia de seguridad de la base de datos. Si esto ocurre, deberá ejecutar un rellenado completo (rastreo) en la tabla para devolver la coherencia al índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
   

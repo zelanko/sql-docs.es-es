@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8640da8c6363b25342b210043763433a74835691
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68056141"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Eliminar o deshabilitar desencadenadores DML
@@ -42,9 +42,9 @@ ms.locfileid: "68056141"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Cuando el desencadenador se elimina, se quita de la base de datos actual. Ni la tabla ni los datos en los que se basa se ven afectados. Si se elimina una tabla, se eliminarán automáticamente todos los desencadenadores que contenga.  
   
@@ -52,14 +52,14 @@ ms.locfileid: "68056141"
   
 -   Al deshabilitar un desencadenador no se quita. Sigue siendo un objeto de la base de datos actual. Sin embargo, el desencadenador no se activará cuando se ejecute la instrucción INSERT, UPDATE o DELETE en la que se programó. Los desencadenadores deshabilitados se pueden volver a habilitar. Si se habilita un desencadenador, éste no se vuelve a crear. El desencadenador se activa de la misma forma que cuando se creó originalmente.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para eliminar un desencadenador DML se necesita el permiso ALTER en la tabla o vista en la que está definido el desencadenador.  
   
  Para deshabilitar o habilitar un desencadenador DML, el usuario debe contar como mínimo con el permiso ALTER en la tabla o vista en la que se creó el desencadenador.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-delete-a-dml-trigger"></a>Para eliminar un desencadenador DML  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68056141"
   
 4.  Para habilitar el desencadenador, haga clic en **Habilitar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-delete-a-dml-trigger"></a>Para eliminar un desencadenador DML  
   

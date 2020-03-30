@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298344"
 ---
 # <a name="data-flow-task"></a>tarea Flujo de datos
@@ -90,7 +90,7 @@ ms.locfileid: "71298344"
   
  Muchos eventos de registro escriben varias entradas, y los mensajes de un gran número de entradas del registro contienen datos complejos. Para facilitar la comprensión y comunicar el contenido de mensajes complejos, puede analizar el texto del mensaje. En función de la ubicación de los registros, puede usar instrucciones Transact-SQL o un componente de script para separar el texto complejo en columnas u otros formatos que considere más útiles.  
   
- Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185: Salida de origen de OLE DB: 1180: Ordenar: 1181: Entrada de ordenación: 76", analizado en columnas. El evento **OnPipelineRowsSent** escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
+ Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185 : Salida de origen de OLE DB : 1180 : Ordenar : 1181 : Entrada de ordenación : 76", analizado en columnas. El evento **OnPipelineRowsSent** escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
   
 |Columna|Descripción|Value|  
 |------------|-----------------|-----------|  

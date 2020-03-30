@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990929"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Instalar SQL Server con el almacenamiento de recursos compartidos de archivos SMB
@@ -80,7 +80,7 @@ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de dato
   
      Para obtener más información sobre el uso de varias opciones de parámetros de línea de comandos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Consideraciones sobre el sistema operativo (protocolo SMB frente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>Consideraciones sobre el sistema operativo (protocolo SMB frente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Los distintos sistemas operativos Windows tienen diferentes versiones del protocolo SMB y la versión del protocolo SMB es transparente para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación se muestran las ventajas de las distintas versiones del protocolo SMB con respecto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Sistema operativo|Versión del protocolo SMB2|Ventajas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  

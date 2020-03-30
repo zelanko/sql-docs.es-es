@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74909027"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
@@ -159,7 +159,7 @@ El uso de AS en esta instrucción no implica la capacidad de suplantar a otro us
   
  Los receptores del permiso CONTROL SERVER, como los miembros del rol fijo de servidor sysadmin, pueden revocar los permisos en cualquier elemento protegible en el servidor. Los receptores del permiso CONTROL en una base de datos, como los miembros del rol fijo de base de datos db_owner, pueden revocar los permisos en cualquier elemento protegible en la base de datos. Los receptores del permiso CONTROL en un esquema pueden revocar los permisos en cualquier objeto del esquema.  
   
-##  <a name="securable"></a> Sintaxis específica de los elementos protegibles  
+##  <a name="securable-specific-syntax"></a><a name="securable"></a> Sintaxis específica de los elementos protegibles  
  En esta tabla se enumeran los elementos protegibles y los temas donde se describe la sintaxis específica de los mismos.  
   
 |Elemento protegible|Tema|  

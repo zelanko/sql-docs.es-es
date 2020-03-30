@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287309"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
@@ -62,7 +62,7 @@ Es un identificador válido de la expresión de tabla común. *expression_name* 
  *CTE_query_definition*  
  Especifica una instrucción SELECT cuyo conjunto de resultados llena la expresión de tabla común. La instrucción SELECT de *CTE_query_definition* debe cumplir los mismos requisitos que en la creación de una vista, excepto que una expresión CTE no puede definir otra expresión CTE. Para más información, vea la sección Comentarios y [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Si se define más de una *definición_de_consulta_de_CTE*, es preciso unir las definiciones de consulta mediante uno de estos operadores de conjuntos: UNION ALL, UNION, EXCEPT o INTERSECT.  
+ Si se definen varios parámetros *CTE_query_definition*, las definiciones de consulta deben combinarse mediante uno de estos operadores de conjunto: UNION ALL, UNION, EXCEPT o INTERSECT.  
   
 ## <a name="remarks"></a>Observaciones  
   
@@ -497,7 +497,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. Utilizar funciones analíticas en una CTE recursiva  
+###  <a name="i-using-analytical-functions-in-a-recursive-cte"></a><a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. Utilizar funciones analíticas en una CTE recursiva  
  En el siguiente ejemplo se muestra un error que puede producirse al utilizar una función analítica o de agregado en la parte recursiva de una CTE.  
   
 ```sql  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68035817"
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68035817"
  Por lo general, los archivos de formato XML y no XML son intercambiables. Sin embargo, es recomendable utilizar la sintaxis XML para los nuevos archivos de formato porque proporciona varias ventajas con relación a los archivos de formato no XML.  
   
 > [!NOTE]  
->  La versión de la utilidad **bcp** (Bcp.exe) que se emplee para leer un archivo de formato debe ser la misma versión, o una versión posterior, a la que se use para crear el archivo de formato. Por ejemplo, **bcp** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] puede leer un archivo de formato de la versión 10.0 generado por **bcp** de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], pero **bcp** de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] no puede leer un archivo de formato de la versión 11.0 generado por **bcp** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+>  La versión de la utilidad **bcp** (Bcp.exe) que se emplee para leer un archivo de formato debe ser la misma versión, o una versión posterior, a la que se use para crear el archivo de formato. Por ejemplo, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**de** puede leer un archivo de formato de la versión 10.0 generado por [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**de**, pero [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**de** no puede leer un archivo de formato de la versión 11.0 generado por [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**de**.  
   
  En este tema se describe cómo utilizar la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato para una tabla determinada. El archivo de formato se basa en la opción de tipo de datos especificada ( **-n**, **-c**, **-w**o **-N**) y en los delimitadores de la vista o de la tabla.  
   
@@ -195,7 +195,7 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|Especifica el archivo de formato XML.|  
 |**-c**|Especifica los datos de caracteres.|  
-|**-t** `,`|Especifica una coma ( **,** ) como terminador de campo.<br /><br /> Nota: Si el archivo de datos usa el terminador de campo predeterminado (`\t`), no es necesario el modificador **-t**.|  
+|**-t** `,`|Especifica una coma ( **,** ) como terminador de campo.<br /><br /> Nota: Si el archivo de datos usa el terminador de campo predeterminado (`\t`), no es necesario el modificador **-t** .|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
   
  En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  

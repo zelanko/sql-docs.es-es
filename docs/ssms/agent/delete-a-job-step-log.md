@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77ba028a1ee140985a35b513c5c338981f2837e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246327"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
@@ -46,17 +46,17 @@ En este tema se describe cómo eliminar un registro de pasos de trabajo del Agen
   
     [objetos de administración de SQL Server](#SMO)  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Restrictions"></a>Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitaciones y restricciones  
 Cuando se eliminan pasos de trabajo, sus registros de salida respectivos también se eliminan de forma automática.  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permisos  
+#### <a name="permissions"></a><a name="Permissions"></a>Permisos  
 A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modificar los trabajos de su propiedad.  
   
-## <a name="SSMS"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Para eliminar un registro de paso de trabajo del Agente SQL Server  
   
@@ -66,7 +66,7 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 3.  En el cuadro de diálogo **Propiedades del trabajo** , elimine el paso de trabajo seleccionado.  
   
-## <a name="TSQL"></a>Usar Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Usar Transact-SQL  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Para eliminar un registro de paso de trabajo del Agente SQL Server  
   
@@ -89,7 +89,7 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 Para más información, consulte [sp_delete_jobsteplog (Transact-SQL)](https://msdn.microsoft.com/e9ef4c99-abde-4038-b6a3-a25dcbaf0958).  
   
-## <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usar Objetos de administración de SQL Server  
 Use los métodos **DeleteJobStepLogs** de la clase **Job** mediante el lenguaje de programación de su elección, como Visual Basic, Visual C# o PowerShell. Para más información, consulte[Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
 ```  

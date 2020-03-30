@@ -22,16 +22,16 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902103"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Es un predicado que se usa en la [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] de una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar una búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las columnas indexadas de texto completo que contienen tipos de datos basados en caracteres. Este predicado busca valores que coincidan con el significado y no solo con la redacción exacta de las palabras en la condición de búsqueda. Cuando se usa FREETEXT, el motor de consultas de texto completo realiza internamente las siguientes acciones en *cadena_freetext*, asigna a cada uno de los términos una ponderación y busca las coincidencias:  
+  Es un predicado que se usa en la [!INCLUDE[tsql](../../includes/tsql-md.md)]cláusula WHERE[ de ](../../t-sql/queries/where-transact-sql.md) de una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar una búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las columnas indexadas de texto completo que contienen tipos de datos basados en caracteres. Este predicado busca valores que coincidan con el significado y no solo con la redacción exacta de las palabras en la condición de búsqueda. Cuando se usa FREETEXT, el motor de consultas de texto completo realiza internamente las siguientes acciones en *cadena_freetext*, asigna a cada uno de los términos una ponderación y busca las coincidencias:  
   
 -   Separa la cadena en palabras individuales basándose en límites de palabras (separación de palabras).  
   

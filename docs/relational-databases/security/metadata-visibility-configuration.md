@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68661213"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuración de visibilidad de los metadatos
@@ -45,7 +45,7 @@ GO
   
 |||  
 |-|-|  
-|Vistas de catálogo|Procedimientos almacenados **sp_help** de [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
+|Vistas de catálogo|Procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**de**|  
 |Funciones integradas que exponen metadatos|Vistas de esquema de información|  
 |Vistas de compatibilidad|Propiedades extendidas|  
   
@@ -65,7 +65,7 @@ GO
   
 -   Las funciones integradas que emiten metadatos, como OBJECTPROPERTYEX, pueden devolver NULL.  
   
--   Los procedimientos almacenados **sp_help** de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueden devolver únicamente un subconjunto de filas, o NULL.  
+-   Los procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**de** pueden devolver únicamente un subconjunto de filas, o NULL.  
   
  Los módulos SQL, como procedimientos almacenados y desencadenadores, se ejecutan en el contexto de seguridad del autor de la llamada y, por tanto, tienen un acceso limitado a los metadatos. Por ejemplo, en el siguiente código, cuando el procedimiento almacenado intenta obtener acceso a los metadatos de la tabla `myTable` sobre la que el autor de la llamada no tienen ningún derecho, se devuelve un conjunto de resultados vacío. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se devuelve una fila.  
   

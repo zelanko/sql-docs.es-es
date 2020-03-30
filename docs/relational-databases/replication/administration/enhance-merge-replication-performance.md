@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939200"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
@@ -141,7 +141,7 @@ ms.locfileid: "67939200"
   
 -   De vez en cuando, vuelva a crear los índices de tablas del sistema de la replicación de mezcla.  
   
-     Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory** y **MSmerge_tombstone**, **MSmerge_current_partition_mappings** y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+     Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Supervise el rendimiento de la sincronización utilizando la pestaña **Historial de sincronizaciones** del Monitor de replicación.  
   

@@ -14,10 +14,10 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d891c38cecd1132fc5b3779c082a69c72e407b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991142"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>Conectar con réplicas secundarias existentes: grupos de disponibilidad Always On
@@ -40,7 +40,7 @@ ms.locfileid: "67991142"
  **Cancelar**  
  Haga clic en esta opción para finalizar el asistente. En la página **Conectar a la réplica secundaria existente** , al cancelar el asistente se sale sin realizar ninguna acción.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el Asistente para agregar una réplica al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   

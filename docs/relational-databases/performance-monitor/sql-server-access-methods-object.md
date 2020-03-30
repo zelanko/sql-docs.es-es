@@ -14,10 +14,10 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987365"
 ---
 # <a name="sql-server-access-methods-object"></a>Access Methods (objeto de SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "67987365"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- En esta tabla se describen los contadores de **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access Methods**de**.  
   
 |Contadores de Access Methods de SQL Server|Descripción|  
 |----------------------------------------|-----------------|  

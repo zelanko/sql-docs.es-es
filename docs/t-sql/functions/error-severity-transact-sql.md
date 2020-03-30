@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a5df90640dc9ebdd2d59593c4b2a82a0f7daa00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68094653"
 ---
 # <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
@@ -57,7 +57,7 @@ Cuando se llama en un bloque CATCH donde se produce un error, `ERROR_SEVERITY` d
   
 `ERROR_SEVERITY` normalmente funciona en un bloque `CATCH` anidado. `ERROR_SEVERITY` devuelve el valor de gravedad del error específico del ámbito del bloque `CATCH` al que hace referencia ese bloque `CATCH`. Por ejemplo, el bloque `CATCH` de una construcción TRY...CATCH externa podría tener una construcción `TRY...CATCH` interna. Dentro de ese bloque interno `CATCH`, `ERROR_SEVERITY` devuelve el valor de gravedad del error que invocó el bloque `CATCH` interno. Si `ERROR_SEVERITY` se ejecuta en el bloque `CATCH` externo, devuelve el valor de gravedad del error que invocó ese bloque `CATCH` externo.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-error_severity-in-a-catch-block"></a>A. Utilizar ERROR_SEVERITY en un bloque CATCH  
 En este ejemplo se muestra un procedimiento almacenado que genera un error de división por cero. `ERROR_SEVERITY` devuelve el valor de gravedad de ese error.  

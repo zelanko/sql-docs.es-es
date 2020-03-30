@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095775"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar el Agente SQL Server para que use el Correo electrónico de base de datos
@@ -34,12 +34,12 @@ ms.locfileid: "74095775"
   
 -   [Tareas de seguimiento](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
   > [!NOTE]
   > El Agente SQL de Instancia administrada siempre se configura para usar Correo electrónico de base de datos, por lo que este contenido no es aplicable en Instancia administrada. En Instancia administrada necesita tener un perfil que se debe llamar **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** para enlazar el Agente SQL con Correo electrónico de base de datos. 
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   [Habilitar Correo electrónico de base de datos](../../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74095775"
   
 -   Establecer el perfil como perfil predeterminado de la base de datos **msdb** .  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  El usuario que crea cuentas de perfil y ejecuta procedimientos almacenados debe ser miembro del rol fijo de servidor sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para configurar el Agente SQL Server de modo que use el Correo electrónico de base de datos**  
   
 -   En el Explorador de objetos, expanda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -71,7 +71,7 @@ ms.locfileid: "74095775"
   
 -   Reinicie el Agente SQL Server.  
   
-##  <a name="Follow_Up"></a> Tareas de seguimiento  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> Tareas de seguimiento  
  Las siguientes tareas son necesarias para completar la configuración del agente con el fin de que envíe alertas y notificaciones.  
   
 -   [Alertas](../../ssms/agent/alerts.md)  

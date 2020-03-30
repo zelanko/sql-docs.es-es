@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909690"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices en columnas calculadas
@@ -115,7 +115,7 @@ La propiedad **IsPrecise** de la función COLUMNPROPERTY informa de si una expre
 > [!NOTE]
 > Al establecer ANSI_WARNINGS en ON, ARITHABORT se establece de forma implícita en ON cuando el nivel de compatibilidad de base de datos está establecido en 90 o un valor superior.  
   
-## <a name="BKMK_persisted"></a> Crear índices en columnas calculadas persistentes  
+## <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Crear índices en columnas calculadas persistentes  
 
 A veces, puede crear una columna calculada que se define con una expresión que es determinista pero imprecisa. Puede hacerlo cuando la columna está marcada con PERSISTED en la instrucción CREATE TABLE o ALTER TABLE.
 

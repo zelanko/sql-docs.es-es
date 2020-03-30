@@ -14,10 +14,10 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 73cd348f9cb1f22eca30c28cee97ce8e81a20b16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014507"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>Requisitos previos para convertir el trasvase de registros en grupos de disponibilidad Always On
@@ -29,7 +29,7 @@ ms.locfileid: "68014507"
 >  Puede configurar cualquier base de datos principal o secundaria (posiblemente legible) de un grupo de disponibilidad como una base de datos principal de trasvase de registros.  
   
   
-##  <a name="AGPrereqsRealAddress"></a> Requisitos previos de los grupos de disponibilidad  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a> Requisitos previos de los grupos de disponibilidad  
  Para permitir que los trabajos de copia de seguridad se ejecuten en la réplica principal del grupo de disponibilidad, use las siguientes opciones de copia de seguridad de los grupos de disponibilidad AlwaysOn:  
   
 |Propiedad|Configuración|  
@@ -43,7 +43,7 @@ ms.locfileid: "68014507"
   
  [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a> Requisitos previos del trasvase de registros  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a> Requisitos previos del trasvase de registros  
   
 -   La base de datos principal del trasvase de registros debe residir en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal actual o inicial del grupo de disponibilidad.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68014507"
   
  [Conversión de una configuración de trasvase de registros en un grupo de disponibilidad](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (blog de SQL Server)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Trasvase de registros**  
   
 -   [Actualización del trasvase de registros a SQL Server 2016 &#40;Transact-SQL&#41;](../../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014507"
   
 -   [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   **Blogs:**  
   

@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093379"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Elegir un idioma al crear un índice de texto completo
@@ -35,7 +35,7 @@ ms.locfileid: "68093379"
 > [!NOTE]  
 >  Para especificar un idioma de columna para una columna de índice de texto completo, use la cláusula LANGUAGE *language_term* al especificar la columna. Para obtener más información, vea [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md) y [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
-##  <a name="langsupp"></a> Compatibilidad con idiomas en la búsqueda de texto completo  
+##  <a name="language-support-in-full-text-search"></a><a name="langsupp"></a> Compatibilidad con idiomas en la búsqueda de texto completo  
  Esta sección proporciona una introducción a los separadores de palabras y lematizadores, y explica cómo usa la búsqueda de texto completo el LCID del idioma de columna.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Introducción a los separadores de palabras y lematizadores  
@@ -74,7 +74,7 @@ ms.locfileid: "68093379"
 >  El LCID se usa con todos los tipos de datos aptos para la indexación de texto completo (como **char** o **nchar**). Aunque el criterio de ordenación de una columna de tipo **char**, **varchar**o **text** esté establecido en una configuración de idioma distinta del identificado por el LCID, el LCID se usa de todos modos durante la indexación de texto completo y en las consultas de esas columnas.  
   
   
-##  <a name="breaking"></a> Separación de palabras  
+##  <a name="word-breaking"></a><a name="breaking"></a> Separación de palabras  
  Un separador de palabras acorta el texto que se va a indizar en límites de palabras, que son específicas del idioma. Por consiguiente, el comportamiento de separación de palabras difiere entre los diferentes idiomas. Si usa un idioma, x, para indizar varios idiomas {x, y, z}, parte del comportamiento podría producir resultados inesperados. Por ejemplo un guión (-) o una coma (,) podrían ser elementos separadores de palabras que no se tienen en cuenta en un idioma, pero sí en otro. También, en raras ocasiones, se podría producir un comportamiento de lematización inesperado debido a que una palabra determinada podría derivarse de manera diferente en idiomas distintos. Por ejemplo, en inglés estos límites de palabras suelen ser espacios en blanco o alguna forma de puntuación. En otros idiomas, como el alemán, las palabras o caracteres se pueden combinar. Por consiguiente, el idioma de columna que elija debería representar el idioma que espera que se almacene en las filas de esa columna.  
   
 ### <a name="western-languages"></a>Idiomas occidentales  
@@ -99,11 +99,11 @@ ms.locfileid: "68093379"
      Cuando el contenido sea texto simple, puede convertirlo al tipo de datos **xml** y agregar etiquetas de idioma que indiquen el idioma que corresponde a cada documento concreto o sección del documento. Para que esto funcione, sin embargo, tiene que conocer el idioma antes de la indización de texto completo.  
   
   
-##  <a name="stemming"></a> Lematización  
+##  <a name="stemming"></a><a name="stemming"></a> Lematización  
  Una consideración adicional al elegir el idioma de columna es la lematización. En las consultas de texto completo, la*lematización* es un proceso de búsqueda de todas las formas con inflexión de una palabra en un idioma determinado. Al utilizar un separador de palabras genérico para procesar varios idiomas, el proceso de lematización solo funciona para el idioma especificado de la columna, no para otros idiomas de la misma. Por ejemplo, los lematizadores de alemán no funcionan para inglés o español (etc.). Esto podría afectar a su recuperación, según el idioma que elija en el momento de la consulta.  
   
   
-##  <a name="type"></a> Efecto del tipo de columna en la búsqueda de texto completo  
+##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Efecto del tipo de columna en la búsqueda de texto completo  
  Otra consideración en la elección del idioma se refiere al modo en que se representan los datos. En los datos que no se almacenan en la columna **varbinary(max)** , no se realiza ningún proceso de filtro especial. sino que el texto suele pasarse por el componente separador de palabras tal y como es.  
   
  Además, los separadores de palabras se han diseñado principalmente para procesar el texto escrito. Por ello, si el texto contiene algún tipo de marcado (por ejemplo, HTML), es posible que los procesos de indización y búsqueda no se realicen con gran precisión lingüística. En ese caso, tiene dos opciones: el método preferido es almacenar simplemente los datos de texto en la columna **varbinary(max)** , o bien indicar su tipo de documento para poder filtrarlo. o utilizar el separador de palabras neutral y, si es posible, agregar datos de marcado (como 'br' en HTML) a las listas de palabras irrelevantes.  
@@ -112,7 +112,7 @@ ms.locfileid: "68093379"
 >  La lematización basada en el idioma no interviene cuando se especifica el idioma neutral.  
   
   
-##  <a name="nondef"></a> Especificar un idioma de columna no predeterminado en una consulta de texto completo  
+##  <a name="specifying-a-non-default-column-level-language-in-a-full-text-query"></a><a name="nondef"></a> Especificar un idioma de columna no predeterminado en una consulta de texto completo  
  De forma predeterminada, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la búsqueda de texto completo analizará los términos de consulta mediante el idioma especificado para cada columna que se incluya en la cláusula de texto completo. Para invalidar este comportamiento, especifique un idioma no predeterminado en el momento de la consulta. Para los idiomas admitidos cuyos recursos estén instalados, se puede usar la cláusula LANGUAGE *language_term* de una consulta [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) para especificar el idioma que se usa para la separación de palabras, la lematización, el diccionario de sinónimos y el procesamiento de las palabras irrelevantes de los términos de las consultas.  
   
   

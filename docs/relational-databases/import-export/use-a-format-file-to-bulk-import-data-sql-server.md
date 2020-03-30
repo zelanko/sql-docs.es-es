@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056366"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Uso de un archivo de formato para la importación en bloque de datos (SQL Server)
@@ -30,7 +30,7 @@ En este tema se describe cómo usar un archivo de formato en operaciones de impo
 |---|
 |[Antes de comenzar](#begin)<br />[Condiciones de prueba de ejemplo](#etc)<br />&emsp;&#9679;&emsp;[Tabla de ejemplo](#sample_table)<br />&emsp;&#9679;&emsp;[Archivo de datos de ejemplo](#sample_data_file)<br />[Creación de los archivos de formato](#create_format_file)<br />&emsp;&#9679;&emsp;[Creación de un archivo de formato no XML](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Creación de un archivo de formato XML](#xml_format_file)<br />[Usar un archivo de formato para importar datos de forma masiva](#import_data)<br />&emsp;&#9679;&emsp;[Uso de bcp y un archivo de formato no XML](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Uso de bcp y un archivo de formato XML](#bcp_xml)<br />&emsp;&#9679;&emsp;[Uso de BULK INSERT y un archivo de formato no XML](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Uso de BULK INSERT y un archivo de formato XML](#bulk_xml)<br />&emsp;&#9679;&emsp;[Uso de OPENROWSET(BULK...) y archivo de formato no XML](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Uso de OPENROWSET(BULK...) y archivo de formato XML](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
-## Antes de comenzar<a name="begin"></a>
+## <a name="before-you-begin"></a>Antes de comenzar<a name="begin"></a>
 * Para que un archivo de formato trabaje con un archivo de datos de caracteres Unicode, todos los campos de entrada deben ser cadenas de texto Unicode (es decir, de tamaño fijo o cadenas Unicode terminadas en caracteres).
 * Para importar o exportar de forma masiva datos [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) , use uno de los tipos de datos siguientes en el archivo de formato:
   * SQLCHAR o SQLVARYCHAR (los datos se envían a la página de códigos del cliente o a la página de códigos implícita por la intercalación).
@@ -41,10 +41,10 @@ En este tema se describe cómo usar un archivo de formato en operaciones de impo
   * [Carga de datos de SQL Server en Azure SQL Data Warehouse (archivos planos)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [Migración de los datos](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
 
-## Condiciones de prueba de ejemplo<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Condiciones de prueba de ejemplo<a name="etc"></a>  
 Los ejemplos de archivos de formato de este tema se basan en la tabla y archivo de datos definidos a continuación.
 
-### **Tabla de ejemplo**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Tabla de ejemplo**<a name="sample_table"></a>
 El script siguiente crea una base de datos de prueba y una tabla llamada `myFirstImport`.  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 CREATE DATABASE TestDatabase;
@@ -59,7 +59,7 @@ CREATE TABLE dbo.MyFirstImport (
    );
 ```
 
-### **Archivo de datos de ejemplo**<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>**Archivo de datos de ejemplo**<a name="sample_data_file"></a>
 Mediante el Bloc de notas, cree un archivo vacío `D:\BCP\myFirstImport.bcp` e inserte los datos siguientes:
 ```
 1,Anthony,Grosse,1980-02-23
@@ -95,10 +95,10 @@ Get-Content -Path $bcpFile;
 Notepad.exe $bcpfile;
 ```
 
-## Creación de los archivos de formato<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>Creación de los archivos de formato<a name="create_format_file"></a>
 SQL Server admite dos tipos de archivos de formato: XML y no XML.  El formato no XML es el formato original compatible con versiones anteriores de SQL Server.
 
-### **Creación de un archivo de formato no XML**<a name="nonxml_format_file"></a>
+### <a name="creating-a-non-xml-format-file"></a>**Creación de un archivo de formato no XML**<a name="nonxml_format_file"></a>
 Revise [Archivos de formato no XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para obtener información detallada.  El siguiente comando hará uso de la [utilidad BCP](../../tools/bcp-utility.md) para generar un archivo de formato no XML, `myFirstImport.fmt`, basado en el esquema de `myFirstImport`.  Si quiere usar un comando BCP para crear un archivo de formato, especifique el argumento **format** y use **null** en lugar de una ruta de acceso de archivo de datos.  La opción format también requiere la opción **-f** .  Además, en este ejemplo, el calificador **c** se usa para especificar los datos de caracteres, **t,** se usa para especificar una coma como [terminador de campo](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)y **T** se usa para especificar una conexión de confianza que usa seguridad integrada.  En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
@@ -124,7 +124,7 @@ El archivo de formato no XML, `D:\BCP\myFirstImport.fmt` debe tener el aspecto s
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-### **Creación de un archivo de formato XML**<a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>**Creación de un archivo de formato XML**<a name="xml_format_file"></a>  
 Revise [Archivos de formato XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) para información detallada.  El siguiente comando hará uso de la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato xml, `myFirstImport.xml`, basado en el esquema de `myFirstImport`. Si quiere usar un comando BCP para crear un archivo de formato, especifique el argumento **format** y use **null** en lugar de una ruta de acceso de archivo de datos.  La opción format siempre requiere la opción **-f** y, para crear un archivo de formato XML, también debe especificar la opción **-x** .  Además, en este ejemplo, el calificador **c** se usa para especificar los datos de caracteres, **t,** se usa para especificar una coma como [terminador de campo](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)y **T** se usa para especificar una conexión de confianza que usa seguridad integrada.  En el símbolo del sistema, escriba el siguiente comando:
 ```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -x -f D:\BCP\myFirstImport.xml -t, -T
@@ -152,10 +152,10 @@ El archivo de formato XML, `D:\BCP\myFirstImport.xml` debe tener el aspecto sigu
 </BCPFORMAT>
 ```
 
-## Usar un archivo de formato para importar datos de forma masiva<a name="import_data"></a>
+## <a name="using-a-format-file-to-bulk-import-data"></a>Usar un archivo de formato para importar datos de forma masiva<a name="import_data"></a>
 Los ejemplos siguientes usan la base de datos, el archivo de datos y los archivos de formato que se han creado anteriormente.
 
-### **Uso de [bcp](../../tools/bcp-utility.md) y un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_nonxml"></a>
+### <a name="using-bcp-and-non-xml-format-file"></a>**Uso de [bcp](../../tools/bcp-utility.md) y un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_nonxml"></a>
 En el símbolo del sistema, escriba el siguiente comando:
 ```cmd
 REM Truncate table (for testing)
@@ -169,7 +169,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport"
 ```
 
 
-### **Uso de [bcp](../../tools/bcp-utility.md) y un [archivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bcp_xml"></a>
+### <a name="using-bcp-and-xml-format-file"></a>**Uso de [bcp](../../tools/bcp-utility.md) y un [archivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bcp_xml"></a>
 En el símbolo del sistema, escriba el siguiente comando:
 ```cmd
 REM Truncate table (for testing)
@@ -183,7 +183,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 ```
 
 
-### **Uso de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_nonxml"></a>
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>**Uso de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_nonxml"></a>
 Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;  
@@ -199,7 +199,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **Uso de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y un [archivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bulk_xml"></a>
+### <a name="using-bulk-insert-and-xml-format-file"></a>**Uso de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y un [archivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bulk_xml"></a>
 Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;  
@@ -215,7 +215,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **Uso de [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_nonxml"></a>    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>**Uso de [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_nonxml"></a>    
 Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;
@@ -234,7 +234,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **Uso de [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y [archivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="openrowset_xml"></a>
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>**Uso de [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y [archivo de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="openrowset_xml"></a>
 Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;  

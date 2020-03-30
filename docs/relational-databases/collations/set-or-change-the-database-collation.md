@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866114"
 ---
 # <a name="set-or-change-the-database-collation"></a>Establecer o cambiar la intercalación de base de datos
@@ -46,9 +46,9 @@ ms.locfileid: "78866114"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Las intercalaciones exclusivas de Unicode de Windows solo se pueden usar con la cláusula COLLATE para aplicar intercalaciones a los tipos de datos **nchar**, **nvarchar**y **ntext** de nivel de columna y de nivel de datos de expresión. No se pueden utilizar con la cláusula COLLATE para cambiar la intercalación de una instancia de la base de datos o del servidor.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "78866114"
 
 -   La intercalación no se puede modificar con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] una vez que se creó la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Solo se puede modificar a través de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 Puede buscar los nombres de intercalación admitidos en [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) y [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md), o puede usar la función del sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
@@ -70,14 +70,14 @@ Al modificar la intercalación de la base de datos también se cambian los sigui
   
 Para cambiar la intercalación de cualquier objeto nuevo creado en una base de datos de usuario, utilice la cláusula `COLLATE` de la instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Esta instrucción **no modifica** la intercalación de las columnas de ninguna de las tablas definidas por el usuario existentes. Para modificarlas, use la cláusula `COLLATE` de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para crear una base de datos, requiere el permiso `CREATE DATABASE` en la base de datos **maestra**, o bien requiere `CREATE ANY DATABASE` o el permiso `ALTER ANY DATABASE`.  
   
  Para cambiar la intercalación de una base de datos existente, requiere el permiso `ALTER` en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>Para establecer o cambiar la intercalación de base de datos  
   
@@ -89,7 +89,7 @@ Para cambiar la intercalación de cualquier objeto nuevo creado en una base de d
   
 3.  Cuando haya terminado, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>Para establecer la intercalación de base de datos  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Uso del servicio Azure Blob Storage con SQL Server 2016'
+title: 'Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016'
 ms.custom: seo-dt-2019
 ms.date: 01/10/2019
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286979"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Uso del servicio Azure Blob Storage con SQL Server 2016
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Bienvenido al tutorial del servicio Trabajar con SQL Server 2016 en Microsoft Azure Blob Storage. Este tutorial le ayudará a saber cómo usar el servicio Microsoft Azure Blob Storage para archivos de datos de SQL Server y copias de seguridad de SQL Server.  
@@ -30,7 +30,7 @@ La compatibilidad de integración de SQL Server para el servicio Microsoft Azure
 
 En este tutorial se incluyen varias secciones en las que aprenderá a trabajar con archivos de datos de SQL Server en el servicio Microsoft Azure Blob Storage. Cada sección se centra en una tarea específica, y se deben completar por orden. En primer lugar, aprenderá a crear un nuevo contenedor en Blob Storage con una directiva de acceso almacenada y una firma de acceso compartido. Después, aprenderá a crear una credencial de SQL Server para integrar SQL Server con Azure Blob Storage. Luego, realizará una copia de seguridad de una base de datos en Blob Storage y la restaurará en una máquina virtual de Azure. Después usará la copia de seguridad del registro de transacciones de instantáneas de archivos de SQL Server 2016 para restaurar a un momento dado y a una nueva base de datos. Por último, en el tutorial se muestra el uso de funciones y procedimientos almacenados del sistema de metadatos para ayudarle a comprender y trabajar con copias de seguridad de instantáneas de archivos.
   
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para completar este tutorial, debe estar familiarizado con los conceptos de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y con la sintaxis de T-SQL. Para usar este tutorial, necesita una cuenta de Azure Storage, SQL Server Management Studio (SSMS), acceso a una instancia de SQL Server local, acceso a una máquina virtual de Azure (VM) que ejecute SQL Server 2016 y una base de datos AdventureWorks2016. Además, la cuenta que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **db_backupoperator** con permisos **Modificar cualquier credencial**. 
 

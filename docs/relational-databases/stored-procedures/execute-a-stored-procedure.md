@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f088c526666dcd81d269bc68479914202969a2e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 55acdb31113dde48aeda980e3823f194f66d15c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67934046"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80243425"
 ---
 # <a name="execute-a-stored-procedure"></a>Ejecutar un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,9 +49,9 @@ En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   La intercalación de base de datos de llamada se usa al comparar los nombres de los procedimientos del sistema. Por tanto, en las llamadas a procedimientos use siempre el modelo exacto de mayúsculas y minúsculas de los nombres de procedimientos del sistema. Por ejemplo, este código generará un error si se ejecuta en el contexto de una base de datos que tenga una intercalación que distinga mayúsculas de minúsculas:  
   
@@ -63,7 +63,7 @@ En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE
   
 -   Si un procedimiento definido por el usuario tiene el mismo nombre que un procedimiento del sistema, puede que el procedimiento definido por el usuario no se ejecute nunca.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Ejecutar procedimientos almacenados del sistema  
   
@@ -121,13 +121,13 @@ En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE
   
     2.  Detener la ejecución de un procedimiento al iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para obtener más información, vea [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) y [EXECUTE AS &#40;Cláusula de Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para obtener más información, vea la sección "Permisos" de [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>Para ejecutar un procedimiento almacenado  
   
@@ -156,7 +156,7 @@ En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE
   
 5.  Para ejecutar el procedimiento almacenado, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>Para ejecutar un procedimiento almacenado  
   
@@ -185,7 +185,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';  
 ```  
   
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
   
 ## <a name="see-also"></a>Consulte también  
  [Especificar parámetros](../../relational-databases/stored-procedures/specify-parameters.md)   

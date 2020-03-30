@@ -13,10 +13,10 @@ ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3e8c86c1ba590ab574e7afe351b3e29c2c918b7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194061"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Implementar una extensión de procesamiento de datos
@@ -39,8 +39,8 @@ ms.locfileid: "63194061"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Cómo: Implementar una extensión de procesamiento de datos en un servidor de informes](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|Describe cómo implementar la extensión de procesamiento de datos para un servidor de informes.|  
-|[Cómo: Implementar una extensión de procesamiento de datos en el Diseñador de informes](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|Describe cómo implementar la extensión de procesamiento de datos para el Diseñador de informes.|  
+|[Cómo implementar una extensión de procesamiento de datos en un servidor de informes](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|Describe cómo implementar la extensión de procesamiento de datos para un servidor de informes.|  
+|[Cómo implementar una extensión de procesamiento de datos en el Diseñador de informes](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|Describe cómo implementar la extensión de procesamiento de datos para el Diseñador de informes.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

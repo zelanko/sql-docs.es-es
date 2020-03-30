@@ -30,10 +30,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287867"
 ---
 # <a name="programmatically-monitor-replication"></a>Supervisar la replicación mediante programación
@@ -56,7 +56,7 @@ ms.locfileid: "76287867"
   
  [Replication Management Objects (RMO)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Para supervisar publicadores, publicaciones y suscripciones desde el distribuidor  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76287867"
   
     -   Un valor de **1** en **\@mode** para habilitar la métrica del umbral de supervisión o un valor de **2** para deshabilitarla.  
   
-##  <a name="RMO"></a> Replication Management Objects (RMO)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> Replication Management Objects (RMO)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>Para supervisar una suscripción a una publicación de combinación en el suscriptor  
   

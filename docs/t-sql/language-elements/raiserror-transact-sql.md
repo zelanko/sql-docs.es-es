@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72252038"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -147,7 +147,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  ```  
   
  *state*  
- Entero entre 0 y 255. Los valores negativos son 1 de forma predeterminada. No deben usarsevalores mayores que 255. 
+ Entero entre 0 y 255. Los valores negativos son 1 de forma predeterminada. No deben usarse{1}{2}valores mayores que 255. 
   
  Si se genera el mismo error definido por el usuario en varias ubicaciones, el uso de un único número de estado para cada ubicación puede ayudar a averiguar qué sección del código está generando los errores.  
   
@@ -159,7 +159,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|REGISTRO|Guarda el error en el registro de errores y en el registro de aplicación de la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los errores guardados en el registro de errores tienen un límite máximo de 440 bytes. Solo los miembros del rol fijo de servidor sysadmin o los usuarios con permisos ALTER TRACE pueden especificar WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|REGISTRO|Guarda el error en el registro de errores y en el registro de aplicación de la instancia del [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los errores guardados en el registro de errores tienen un límite máximo de 440 bytes. Solo los miembros del rol fijo de servidor sysadmin o los usuarios con permisos ALTER TRACE pueden especificar WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Envía inmediatamente los mensajes al cliente.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|Establece los valores de @@ERROR y ERROR_NUMBER en *msg_id* o 50000, independientemente del nivel de gravedad.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   

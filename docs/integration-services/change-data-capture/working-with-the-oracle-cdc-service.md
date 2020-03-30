@@ -11,10 +11,10 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288239"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabajar con el servicio CDC de Oracle
@@ -36,7 +36,7 @@ ms.locfileid: "79288239"
   
      En esta sección se describen los comandos de la línea de comandos que se pueden usar para configurar el servicio CDC de Oracle.  
   
-##  <a name="BKMK_MSXDBCDC"></a> La base de datos MSXDBCDC  
+##  <a name="the-msxdbcdc-database"></a><a name="BKMK_MSXDBCDC"></a> La base de datos MSXDBCDC  
  MSXDBCDC (Microsoft External-Database CDC) es una base de datos especial que se necesita cuando se usa el servicio CDC para Oracle con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  El nombre de esta base de datos no se puede cambiar. Si existe una base de datos denominada MSXDBCDC en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del host y contiene tablas distintas de las definidas por el servicio CDC para Oracle, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del host no se puede usar.  
@@ -67,7 +67,7 @@ ms.locfileid: "79288239"
   
 -   [dbo.xdbcdc_services](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_dboxdbcdc_services)  
   
-###  <a name="BKMK_dboxdbcdc_trace"></a> dbo.xdbcdc_trace  
+###  <a name="dboxdbcdc_trace"></a><a name="BKMK_dboxdbcdc_trace"></a> dbo.xdbcdc_trace  
  Esta tabla almacena información de seguimiento del servicio CDC de Oracle. La información almacenada en esta tabla incluye cambios importantes de estado y registros de seguimiento.  
   
  El servicio CDC de Oracle escribe los registros de errores y algunos registros de información tanto en el registro de eventos de Windows como en la tabla de seguimiento. En algunos casos la tabla de seguimiento quizás no sea accesible, en cuyo caso la información de error será accesible desde el registro de eventos.  
@@ -88,7 +88,7 @@ ms.locfileid: "79288239"
   
  La instancia CDC de Oracle eliminará las filas antiguas de la tabla de seguimiento según la directiva de retención de las tablas de cambios.  
   
-###  <a name="BKMK_dboxdbcdc_databases"></a> dbo.xdbcdc_databases  
+###  <a name="dboxdbcdc_databases"></a><a name="BKMK_dboxdbcdc_databases"></a> dbo.xdbcdc_databases  
  Esta tabla contiene los nombres de las bases de datos CDC del servicio CDC para Oracle en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada base de datos corresponde a una instancia CDC de Oracle. El servicio CDC de Oracle usa esta tabla para determinar qué instancias se deben iniciar o detener y para qué instancias hay que cambiar la configuración.  
   
  En la tabla siguiente se describen los elementos incluidos en la tabla **dbo.xdbcdc_databases** .  
@@ -100,7 +100,7 @@ ms.locfileid: "79288239"
 |cdc_service_name|Este elemento determina qué servicio CDC de Oracle controla la base de datos de Oracle seleccionada.|  
 |enabled|Indica si la instancia CDC de Oracle está activa (1) o deshabilitada (0). Cuando el servicio CDC de Oracle se inicia, solo se inician las instancias marcadas como habilitadas (1).<br /><br /> **Nota**: Una instancia CDC de Oracle puede deshabilitarse debido a un error que no se puede reintentar. En este caso, la instancia se debe reiniciar manualmente después de que se resuelva el error.|  
   
-###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
+###  <a name="dboxdbcdc_services"></a><a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  Esta tabla enumera los servicios CDC asociados a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del host. La Consola del diseñador CDC emplea esta tabla para determinar la lista de servicios CDC configurados para la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También la usa el servicio CDC para asegurarse de que solo un servicio de Windows en ejecución administra un nombre dado de servicio CDC de Oracle.  
   
  A continuación se describen los elementos de estado de captura que se incluyen en la tabla **dbo.xdbcdc_databases** .  
@@ -128,7 +128,7 @@ ms.locfileid: "79288239"
   
 -   [dbo.xdbcdc_stop(dbname)](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_dboxdbcdc_stop)  
   
-###  <a name="BKMK_dboxcbcdc_reset_db"></a> dbo.xcbcdc_reset_db(Database Name)  
+###  <a name="dboxcbcdc_reset_dbdatabase-name"></a><a name="BKMK_dboxcbcdc_reset_db"></a> dbo.xcbcdc_reset_db(Database Name)  
  Este procedimiento borra los datos de una instancia CDC de Oracle. Se usa:  
   
 -   Para reiniciar la captura de datos omitiendo datos anteriores, por ejemplo después de la recuperación de la base de datos de origen o después de un período de inactividad en el que no están disponibles algunos registros de transacciones de Oracle.  
@@ -149,7 +149,7 @@ ms.locfileid: "79288239"
   
  Para más información sobre las tablas CDC, vea *Las bases de datos CDC* en el sistema de Ayuda de la Consola del diseñador CDC.  
   
-###  <a name="BKMK_dboxdbcdc_disable_db"></a> dbo.xdbcdc_disable_db(dbname)  
+###  <a name="dboxdbcdc_disable_dbdbname"></a><a name="BKMK_dboxdbcdc_disable_db"></a> dbo.xdbcdc_disable_db(dbname)  
  El procedimiento **dbo.xcbcdc_disable_db** realiza la tarea siguiente:  
   
 -   Quita la entrada para la base de datos CDC seleccionada de la tabla MSXDBCDC.xdbcdc_databases.  
@@ -158,29 +158,29 @@ ms.locfileid: "79288239"
   
  Para obtener más información acerca de las tablas CDC, vea Las bases de datos CDC en el sistema de Ayuda de la Consola del diseñador CDC.  
   
-###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
+###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  El procedimiento **dbo.xcbcdc_add_service** agrega una entrada a la tabla **MSXDBCDC.xdbcdc_services** y agrega un incremento de uno a la columna ref_count para el nombre del servicio en la tabla **MSXDBCDC.xdbcdc_services** . Cuando **ref_count** es 0, se elimina la fila.  
   
  Para poder usar el procedimiento **dbo.xcbcdc_add_service\<service name, username>** , el usuario debe ser miembro del rol de base de datos **db_owner** para la base de datos de la instancia CDC indicada, o debe ser miembro del rol fijo de servidor **sysadmin** o **serveradmin**.  
   
-###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
+###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  El procedimiento **dbo.xdbcdc_start** envía una solicitud de inicio al servicio CDC que controla la instancia CDC seleccionada para que inicie el procesamiento de cambios.  
   
  Para poder usar el procedimiento **dbo.xcdcdc_start** , el usuario debe ser miembro del rol de base de datos **db_owner** para la base de datos CDC, o debe ser miembro de los roles **sysadmin** o **serveradmin** para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="BKMK_dboxdbcdc_stop"></a> dbo.xdbcdc_stop(dbname)  
+###  <a name="dboxdbcdc_stopdbname"></a><a name="BKMK_dboxdbcdc_stop"></a> dbo.xdbcdc_stop(dbname)  
  El procedimiento **dbo.xdbcdc_stop** envía una solicitud de detención al servicio CDC que controla la instancia CDC seleccionada para que detenga el procesamiento de cambios.  
   
  Para poder usar el procedimiento **dbo.xcdcdc_stop** , el usuario debe ser miembro del rol de base de datos **db_owner** para la base de datos CDC, o debe ser miembro de los roles **sysadmin** o **serveradmin** para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="BKMK_CDCdatabase"></a> Las bases de datos CDC  
+##  <a name="the-cdc-databases"></a><a name="BKMK_CDCdatabase"></a> Las bases de datos CDC  
  Cada instancia CDC de Oracle empleada en un servicio CDC está asociada a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] específica denominada la base de datos CDC. Esta base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se hospeda en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociada al servicio CDC de Oracle.  
   
  La base de datos CDC contiene un esquema cdc especial. El servicio CDC de Oracle usa este esquema con nombres de tabla con el prefijo **xdbcdc_** . Este esquema se emplea por seguridad y coherencia.  
   
  Tanto la instancia CDC de Oracle como las bases de datos CDC se crean mediante la Consola del diseñador CDC de Oracle. Para obtener más información acerca de las bases de datos CDC, vea la documentación incluida con la instalación de la Consola del diseñador CDC de Oracle.  
   
-##  <a name="BKMK_CommandConfigCDC"></a> Usar la línea de comandos para configurar el servicio CDC  
+##  <a name="using-the-command-line-to-configure-the-cdc-service"></a><a name="BKMK_CommandConfigCDC"></a> Usar la línea de comandos para configurar el servicio CDC  
  Puede usar el programa de servicio CDC de Oracle (xdbcdcsvc.exe) desde la línea de comandos. El programa de servicio CDC es un archivo ejecutable de 32 bits y 64 bits nativo de Windows.  
   
  **Consulte también**  
@@ -196,7 +196,7 @@ ms.locfileid: "79288239"
   
 -   [Eliminar](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_delete)  
   
-###  <a name="BKMK_config"></a> Config  
+###  <a name="config"></a><a name="BKMK_config"></a> Config  
  Use `Config` para actualizar una configuración del servicio CDC de Oracle desde un script. El comando se puede usar para actualizar únicamente determinadas partes de la configuración del servicio CDC (por ejemplo, solo la cadena de conexión sin conocer la contraseña de la clave asimétrica). El comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Config` .  
   
 ```  
@@ -223,7 +223,7 @@ ms.locfileid: "79288239"
   
  **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"** ).  
   
-###  <a name="BKMK_create"></a> Crear  
+###  <a name="create"></a><a name="BKMK_create"></a> Crear  
  Use `Create` para crear un servicio CDC de Oracle desde un script. El comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Create` :  
   
 ```  
@@ -249,7 +249,7 @@ ms.locfileid: "79288239"
   
  **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"** ).  
   
-###  <a name="BKMK_delete"></a> Delete  
+###  <a name="delete"></a><a name="BKMK_delete"></a> Delete  
  Use `Delete` para eliminar correctamente el servicio CDC de Oracle desde un script. Este comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Delete` .  
   
 ```  

@@ -28,10 +28,10 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67912615"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
@@ -89,7 +89,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 -   Permiso CONTROL SERVER o ALTER ANY DATABASE en el servidor de la base de datos en la que se está creando la función de partición.  
   
-##  <a name="BKMK_examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="BKMK_examples"></a> Ejemplos  
   
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. Crear una función de partición RANGE LEFT en una columna int  
  La siguiente función de partición realizará cuatro particiones en una tabla o un índice.  

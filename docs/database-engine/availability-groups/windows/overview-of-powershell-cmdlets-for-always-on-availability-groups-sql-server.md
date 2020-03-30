@@ -15,10 +15,10 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8aac669c8e7b2f43666a43c26a8040c3658c560c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75236087"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Información general de los cmdlets de PowerShell para grupos de disponibilidad AlwaysOn
@@ -32,7 +32,7 @@ ms.locfileid: "75236087"
 > [!NOTE]  
 >  Para obtener una lista de los temas de los Libros en pantalla de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] en los que se describe cómo usar cmdlets para realizar tareas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vea la sección "Tareas relacionadas” de [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="ConfiguringServerInstance"></a> Configurar AlwaysOn una instancia del servidor para grupos de disponibilidad  
+##  <a name="configuring-a-server-instance-for-always-on-availability-groups"></a><a name="ConfiguringServerInstance"></a> Configurar AlwaysOn una instancia del servidor para grupos de disponibilidad  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|
@@ -42,7 +42,7 @@ ms.locfileid: "75236087"
 |[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|Cambia las propiedades de un extremo de creación de reflejo de la base de datos existente, como el nombre, el estado o las propiedades de autenticación.|Una instancia de servidor que admite [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y no tiene un extremo de creación de reflejo de la base de datos|  
 
   
-##  <a name="BnRcmdlets"></a> Copia de seguridad y restauración de bases de datos y registros de transacciones  
+##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a> Copia de seguridad y restauración de bases de datos y registros de transacciones  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "75236087"
   
  Para obtener más información sobre cómo usar estos cmdlets para preparar una base de datos secundaria, vea [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-##  <a name="DeployManageAGs"></a> Crear y administrar un grupo de disponibilidad  
+##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a> Crear y administrar un grupo de disponibilidad  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "75236087"
 |[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|Establece las propiedades de un grupo de disponibilidad; poner en línea o sin conexión un grupo de disponibilidad|Instancia del servidor que hospeda la réplica principal|  
 |[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|Inicia una de las siguientes formas de conmutación por error<br /><br /> Una conmutación por error forzada de un grupo de disponibilidad (con posible pérdida de datos).<br /><br /> Una conmutación por error manual de un grupo de disponibilidad.|Instancia del servidor que hospeda la réplica secundaria de destino|  
   
-##  <a name="AGlisteners"></a> Crear y administrar un agente de escucha del grupo de disponibilidad  
+##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a> Crear y administrar un agente de escucha del grupo de disponibilidad  
   
 |Cmdlet|Descripción|Se admite en|  
 |------------|-----------------|------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "75236087"
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|Modifica la configuración del puerto en un agente de escucha del grupo de disponibilidad existente.|Instancia del servidor que hospeda la réplica principal|  
 |[**Add-SqlAvailabilityGroupListenerStaticIp**](/powershell/module/sqlserver/add-sqlavailabilitygrouplistenerstaticip)|Agrega una dirección IP estática a una configuración de agente de escucha del grupo de disponibilidad existente. La dirección IP estática puede ser una dirección IPv4 con subred o una dirección IPv6.|Instancia del servidor que hospeda la réplica principal|  
   
-##  <a name="DeployManageARs"></a> Crear y administrar una réplica de disponibilidad  
+##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a> Crear y administrar una réplica de disponibilidad  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "75236087"
 |[**Remove-SqlAvailabilityReplica**](/powershell/module/sqlserver/remove-sqlavailabilityreplica)|Elimina una réplica de disponibilidad.|Instancia del servidor que hospeda la réplica principal|  
 |[**Set-SqlAvailabilityReplica**](/powershell/module/sqlserver/set-sqlavailabilityreplica)|Establece las propiedades de una réplica de disponibilidad.|Instancia del servidor que hospeda la réplica principal|  
   
-##  <a name="DeployManageDbs"></a> Agregar y administrar una base de datos de disponibilidad  
+##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a> Agregar y administrar una base de datos de disponibilidad  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
@@ -89,7 +89,7 @@ ms.locfileid: "75236087"
 |[**Resume-SqlAvailabilityDatabase**](/powershell/module/sqlserver/resume-sqlavailabilitydatabase)|Reanuda el movimiento de datos en una base de datos de disponibilidad suspendida.|La instancia de servidor en la que se ha suspendido la base de datos.|  
 |[**Suspend-SqlAvailabilityDatabase**](/powershell/module/sqlserver/suspend-sqlavailabilitydatabase)|Suspende el movimiento de datos en una base de datos de disponibilidad.|Cualquier instancia de servidor que hospeda una réplica de disponibilidad.|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="monitoring-availability-group-health"></a><a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
  Los cmdlets siguientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permiten supervisar el estado de un grupo de disponibilidad y sus réplicas y bases de datos.  
   
 > [!IMPORTANT]  

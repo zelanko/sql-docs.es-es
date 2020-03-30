@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112860"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
@@ -90,7 +90,7 @@ ALTER SERVICE MASTER KEY
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usa el algoritmo de cifrado AES para proteger la clave maestra de servicio (SMK) y la clave maestra de la base de datos (DMK). AES es un algoritmo de cifrado más reciente que el algoritmo 3DES empleado en versiones anteriores. Después de actualizar una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , se deben volver a generar las claves SMK y DMK para actualizar las claves maestras al algoritmo AES. Para obtener más información sobre cómo volver a generar la DMK, vea [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
-##  <a name="_changing"></a> Cambiar la cuenta de servicio de SQL Server  
+##  <a name="changing-the-sql-server-service-account"></a><a name="_changing"></a> Cambiar la cuenta de servicio de SQL Server  
  Para cambiar la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para administrar un cambio de la cuenta de servicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena una copia redundante de la clave maestra de servicio protegida por la cuenta de equipo que tenga los permisos necesarios concedidos al grupo de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se vuelve a generar el equipo, el mismo usuario de dominio que la cuenta de servicio utilizaba previamente puede recuperar la clave maestra de servicio. Esto no es válido con cuentas locales o con las cuentas Local System, Local Service o Network Service. Cuando vaya a mover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otro equipo, migre la clave maestra de servicio utilizando copias de seguridad y restauración.  
   
  La frase REGENERATE vuelve a generar la clave maestra de servicio. Si se vuelve a generar la clave maestra de servicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descifra todas las claves cifradas con ella y, a continuación, vuelve a cifrarlas con la nueva clave maestra de servicio. Es una operación que requiere un uso intensivo de los recursos. Por ello, debe programarse durante un período de poco uso, a menos que la clave se encuentre en peligro. Si se producen errores durante alguno de los descifrados, se producirán errores en toda la instrucción.  

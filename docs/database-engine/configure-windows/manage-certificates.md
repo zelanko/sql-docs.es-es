@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68212741"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Administración de certificados (Administrador de configuración de SQL Server)
@@ -41,7 +41,7 @@ Los certificados SSL/TLS son de uso generalizado para proteger el acceso a SQL S
 > [!NOTE]
 > Puede usar la administración de certificados de Administrador de configuración de SQL Server con versiones anteriores de SQL Server, a partir de SQL Server 2008.
 
-##  <a name="provision-single-server-cert"></a> Para instalar un certificado para una única instancia de SQL Server  
+##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> Para instalar un certificado para una única instancia de SQL Server  
   
 1. En el panel de la consola de Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server**.  
   
@@ -54,7 +54,7 @@ Los certificados SSL/TLS son de uso generalizado para proteger el acceso a SQL S
 5. Seleccione **Siguiente** para validar el certificado. Si no hay ningún error, seleccione **Siguiente** para importar el certificado a la instancia local.  
   
  
-##  <a name="provision-failover-cluster-cert"></a> Para instalar un certificado en una configuración de clúster de conmutación por error  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> Para instalar un certificado en una configuración de clúster de conmutación por error  
   
 1. En el panel de la consola de Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server**.
   
@@ -77,7 +77,7 @@ Los certificados SSL/TLS son de uso generalizado para proteger el acceso a SQL S
 > [!NOTE]
 > Siga estos pasos en el nodo activo de la instancia de clúster de conmutación por error de SQL Server. El usuario debe tener permisos de administrador en todos los nodos de clúster.
 
-##  <a name="provision-availability-group-cert"></a>Para instalar un certificado en una configuración de grupo de disponibilidad  
+##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Para instalar un certificado en una configuración de grupo de disponibilidad  
   
 1. En el panel de la consola de Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server**.
   

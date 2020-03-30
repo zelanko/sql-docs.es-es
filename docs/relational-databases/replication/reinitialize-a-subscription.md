@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70846506"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar una suscripción
@@ -30,7 +30,7 @@ ms.locfileid: "70846506"
 
 
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Reinicializar una suscripción es un proceso con dos partes:  
   
 1.  Una o todas las suscripciones a una publicación se *marcan* para reinicializarse. Las suscripciones se marcan para reinicialización en el cuadro de diálogo **Reinicializar suscripciones**, disponible en la carpeta **Publicaciones locales** y en la carpeta **Suscripciones locales** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. También puede marcar suscripciones desde la pestaña **Todas las suscripciones** y el nodo de publicaciones del Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md). Al marcar una suscripción para reinicialización, tiene las siguientes opciones:  
@@ -98,7 +98,7 @@ ms.locfileid: "70846506"
   
 3.  En el cuadro de diálogo **Reinicializar suscripciones** , seleccione las opciones y, a continuación, haga clic en **Marcar para reinicializar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Las suscripciones pueden reinicializarse mediante programación con procedimientos almacenados de replicación. El procedimiento almacenado que se usa depende del tipo de suscripción (inserción o extracción) y el tipo de publicación a la que pertenece la suscripción.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar una suscripción de extracción a una publicación transaccional  
@@ -157,7 +157,7 @@ ms.locfileid: "70846506"
   
      Para más información, consulte [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Las suscripciones individuales se pueden marcar para reinicialización de manera que, durante la siguiente sincronización, se aplique una nueva instantánea. Las suscripciones se pueden reinicializar mediante programación usando Replication Management Objects (RMO). Las clases RMO que usa dependen del tipo de publicación a la que pertenece la suscripción y del tipo de suscripción (es decir, una suscripción de inserción o de extracción).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar una suscripción de extracción a una publicación transaccional  
@@ -226,7 +226,7 @@ ms.locfileid: "70846506"
   
 5.  Sincronice la suscripción de inserción. Para obtener más información, consulte [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-###  <a name="PShellExample"></a> Ejemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Ejemplos (RMO)  
  En este ejemplo reinicializa una suscripción de extracción para una publicación transaccional.  
   
  [!code-cs[HowTo#rmo_ReinitTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinittranpullsub)]  

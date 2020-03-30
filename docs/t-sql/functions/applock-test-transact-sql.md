@@ -22,10 +22,10 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f71a288994afb76d1237f303edfc926116f5962e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68040333"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
@@ -49,7 +49,7 @@ Es el usuario, el rol o el rol de aplicación al que se pueden conceder permisos
 Es un nombre de recurso de bloqueo especificado por la aplicación cliente. La aplicación debe asegurar que el nombre del recurso sea exclusivo. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  *resource_name* es **nvarchar(255)** y no tiene ningún valor predeterminado. *resource_name* se compara con un binario y distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.
   
 **'** *lock_mode* **'**  
-El modo de bloqueo que se debe obtener para un recurso concreto. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. *lock_mode* puede tener uno de estos valores: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
+El modo de bloqueo que se debe obtener para un recurso concreto. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. *lock_mode* puede tener cualquiera de estos valores: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
 **'** *lock_owner* **'**  
 El propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)** y el valor puede ser **Transaction** (predeterminado) o **Session**. Si se especifica el valor predeterminado o **Transaction** explícitamente, debe ejecutarse APPLOCK_TEST desde una transacción.

@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242690"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliar la compilación del proyecto de base de datos para generar estadísticas de modelo
 
 Puede crear un colaborador de compilación para realizar acciones personalizadas al compilar un proyecto de base de datos. En este tutorial, se crea un colaborador de compilación llamado ModelStatistics que genera estadísticas del modelo de base de datos SQL al compilar un proyecto de base de datos. Dado que este colaborador de compilación acepta parámetros cuando se compila, son necesarios algunos pasos adicionales.  
   
@@ -70,7 +70,7 @@ Durante el proceso de compilación, los colaboradores personalizados se cargan d
   
 En este caso el primer parámetro del atributo debe ser un identificador único que se utilizará para identificar su colaborador en archivos de proyecto. Una práctica recomendada es combinar el espacio de nombres de la biblioteca (en este tutorial, “ExampleContributors”) con el nombre de clase (en este tutorial, “ModelStatistics”) para generar el identificador. Verá cómo este espacio de nombres se utiliza para especificar que su colaborador se debe ejecutar posteriormente en el tutorial.  
   
-## <a name="CreateBuildContributor"></a>Crear un colaborador de compilación  
+## <a name="create-a-build-contributor"></a><a name="CreateBuildContributor"></a>Crear un colaborador de compilación  
 Para crear un colaborador de compilación, debe realizar las siguientes tareas:  
   
 -   Cree un proyecto de biblioteca de clases y agregue las referencias necesarias.  
@@ -452,7 +452,7 @@ Para crear un colaborador de compilación, debe realizar las siguientes tareas:
   
     A continuación, debe instalar el ensamblado para que se cargue cuando compile proyectos de SQL.  
   
-## <a name="InstallBuildContributor"></a>Instalar un colaborador de compilación  
+## <a name="install-a-build-contributor"></a><a name="InstallBuildContributor"></a>Instalar un colaborador de compilación  
 Para instalar un colaborador de compilación, debe copiar el ensamblado y el archivo .pdb asociado en la Carpeta de extensiones.  
   
 #### <a name="to-install-the-mybuildcontributor-assembly"></a>Para instalar el ensamblado MyBuildContributor  
@@ -464,7 +464,7 @@ Para instalar un colaborador de compilación, debe copiar el ensamblado y el arc
     > [!NOTE]  
     > De manera predeterminada, la ruta de acceso del archivo .dll compilado es YourSolutionPath\YourProjectPath\bin\Debug o YourSolutionPath\YourProjectPath\bin\Release.  
   
-## <a name="TestBuildContributor"></a>Ejecutar o comprobar su colaborador de compilación  
+## <a name="run-or-test-your-build-contributor"></a><a name="TestBuildContributor"></a>Ejecutar o comprobar su colaborador de compilación  
 Para ejecutar o comprobar su colaborador de compilación, debe realizar las siguientes tareas:  
   
 -   Agregue propiedades al archivo .sqlproj que quiera compilar.  
@@ -593,5 +593,5 @@ Puede crear herramientas adicionales para realizar el procesamiento del archivo 
   
 ## <a name="see-also"></a>Consulte también  
 [Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Tutorial: Ampliación de la implementación del proyecto de base de datos para analizar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Tutorial: Ampliar la implementación del proyecto de base de datos para analizar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

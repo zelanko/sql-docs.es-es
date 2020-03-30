@@ -17,10 +17,10 @@ ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 45bfedfe24493221570ccc1bc07202f0b4ed8b1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75247465"
 ---
 # <a name="backuprestoresystemdatabases-sql-server"></a>Copia de seguridad y restauración: bases de datos del sistema (SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "75247465"
   
 -   En algunas circunstancias, los problemas para recuperar la base de datos modelo pueden requerir la recompilación de las bases de datos del sistema o el reemplazo de los archivos mdf y ldf para la base de datos modelo. Para obtener más información, vea [Volver a generar bases de datos del sistema](../../relational-databases/databases/rebuild-system-databases.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

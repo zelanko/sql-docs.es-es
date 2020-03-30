@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957059"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Administración de servidores y bases de datos con widgets de información en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>Administración de servidores y bases de datos con widgets de información en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Los widgets de información toman las consultas de Transact-SQL (T-SQL) que se usan para supervisar los servidores y las bases de datos y las convierten en visualizaciones llenas de información.
 

@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902833"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -53,7 +53,7 @@ ms.locfileid: "67902833"
   
      En esta parte, defina la carga que admite el extremo. La carga puede ser uno de los tipos admitidos: [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker y creación de reflejo de la base de datos. En esta parte, también puede incluir información específica del lenguaje.  
   
-> **NOTA:** Los servicios web XML nativos (puntos de conexión HTTP/SOAP) se quitaron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **NOTA:** Los servicios web XML nativos (puntos de conexión HTTP/SOAP) se quitaron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

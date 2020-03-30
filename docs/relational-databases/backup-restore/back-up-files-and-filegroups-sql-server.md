@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708683"
 ---
 # <a name="back-up-files-and-filegroups"></a>Realizar copias de seguridad de archivos y grupos de archivos
@@ -29,9 +29,9 @@ ms.locfileid: "71708683"
   
 Para obtener más información sobre las copias de seguridad de archivos, vea [Copias de seguridad de archivos completas &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) y [Copias de seguridad diferenciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
 
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 - La instrucción BACKUP no se permite en una transacción explícita o implícita.  
   
@@ -39,11 +39,11 @@ Para obtener más información sobre las copias de seguridad de archivos, vea [C
   
 Para obtener más información sobre las limitaciones y restricciones, vea [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recomendaciones
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones
   
 De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si se hace una copia de seguridad del registro de transacciones con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, con lo que se crean registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro con la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
-###  <a name="Permissions"></a> Permisos
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 De forma predeterminada, los permisos `BACKUP DATABASE` y `BACKUP LOG` se corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator**.  
   
@@ -154,7 +154,7 @@ Con el modelo de recuperación completa, también debe realizar copias de seguri
 
 Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
   
-###  <a name="TsqlExample"></a> Ejemplos
+###  <a name="examples"></a><a name="TsqlExample"></a> Ejemplos
 Los siguientes ejemplos realizan copias de seguridad de uno o más archivos de los grupos de archivos secundarios de la base de datos `Sales` . Esta base de datos utiliza el modelo de recuperación completa y contiene los siguientes grupos de archivos secundarios:  
   
 - Un grupo de archivos denominado `SalesGroup1` , con los archivos `SGrp1Fi1` y `SGrp1Fi2`.  
@@ -199,7 +199,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> Usar PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell
 
 Configure y use el [Proveedor de SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
   

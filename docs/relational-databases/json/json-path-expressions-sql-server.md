@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095732"
 ---
 # <a name="json-path-expressions-sql-server"></a>Expresiones de ruta de acceso JSON (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74095732"
   
 2.  La [ruta de acceso](#PATH) en sí.  
 
-##  <a name="PATHMODE"></a> Path mode  
+##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
  Al principio de la expresión de ruta de acceso, puede optar por declarar el modo de la ruta de acceso con las palabras clave **lax** o **strict**. El valor predeterminado es **lax**.  
   
 -   En el modo **lax**, las funciones devuelven valores vacíos si la expresión de ruta de acceso contiene un error. Por ejemplo, si se solicita el valor **$.name** y el texto JSON no contiene una clave **name**, la función devuelve NULL, pero no genera ningún error.  
@@ -58,7 +58,7 @@ SET @json=N'{ ... }'
 SELECT * FROM OPENJSON(@json, N'lax $.info')
 ```  
   
-##  <a name="PATH"></a> Path  
+##  <a name="path"></a><a name="PATH"></a> Path  
  Después de declarar (opcionalmente) el modo de ruta de acceso, se especifica la ruta de acceso.  
   
 -   El signo de dólar (`$`) representa el elemento de contexto.  

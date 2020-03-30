@@ -12,10 +12,10 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113171"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Optimización de la base de datos mediante carga de trabajo del Almacén de consultas
@@ -35,7 +35,7 @@ En la interfaz gráfica de usuario del DTA, seleccione el botón de radio **Alma
 Desde la línea de comandos (dta.exe), elija la opción **-iq** para seleccionar la carga de trabajo del Almacén de consultas. 
 
 Hay dos opciones adicionales disponibles a través de la línea de comandos que ayudan a optimizar el comportamiento del DTA al seleccionar la carga de trabajo en el Almacén de consultas. Estas opciones no están disponibles a través de la interfaz gráfica de usuario:
-  1. **Número de eventos de carga de trabajo para optimizar**: esta opción, que se especifica mediante el argumento de línea de comandos **-n**, permite al usuario controlar el número de eventos del Almacén de consultas que se optimizan. De forma predeterminada, DTA usa un valor de 1000 para esta opción. Tenga en cuenta que DTA siempre elige los eventos más costosos por duración total. 
+  1. **Número de eventos de carga de trabajo para optimizar**: esta opción, especificada mediante el argumento de línea de comandos **-n**, permite al usuario controlar el número de eventos del Almacén de consultas que se optimizan. De forma predeterminada, DTA usa un valor de 1000 para esta opción. Tenga en cuenta que DTA siempre elige los eventos más costosos por duración total. 
   
   2. **Ventanas de tiempo de los eventos que se van a optimizar**: como el almacén de consultas puede contener consultas que se han ejecutado hace mucho tiempo, esta opción permite al usuario especificar una ventana de tiempo pasada (en horas) en la que es necesario que se ejecute una consulta para que DTA la considere para la optimización. Esta opción se especifica con el argumento de línea de comandos **-I**. 
 

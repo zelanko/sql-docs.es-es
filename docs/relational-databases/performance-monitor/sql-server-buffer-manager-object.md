@@ -14,10 +14,10 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67986934"
 ---
 # <a name="sql-server-buffer-manager-object"></a>Buffer Manager (objeto de SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "67986934"
 -   La frecuencia con que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita leer los datos del disco. En comparación con otras operaciones, como el acceso a memoria, la E/S física consume mucho tiempo. La reducción de la E/S física puede mejorar el rendimiento de las consultas.  
   
 ## <a name="buffer-manager-performance-objects"></a>Objetos de rendimiento del administrador de búfer  
- En esta tabla se describen los objetos de rendimiento del **administrador de búfer** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En esta tabla se describen los objetos de rendimiento del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]administrador de búfer**de**.  
   
 |Contadores de SQLServer:Buffer Manager|Descripción|  
 |----------------------------------------|-----------------|  

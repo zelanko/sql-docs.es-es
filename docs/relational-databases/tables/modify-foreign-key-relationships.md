@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68139600"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relaciones de claves externas.
@@ -43,9 +43,9 @@ ms.locfileid: "68139600"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  La nueva columna de clave externa debe tener el mismo tipo de datos y el mismo tamaño que la columna de clave principal con la que está relacionada, con las siguientes excepciones:  
   
 -   Se puede asociar una columna de tipo **char** o **sysname** a una columna de tipo **varchar** .  
@@ -54,12 +54,12 @@ ms.locfileid: "68139600"
   
 -   Se puede asociar un tipo de datos de alias a su tipo básico.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>Para modificar una clave externa  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68139600"
   
 4.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para modificar una clave externa**  
   
  Para modificar una restricción FOREIGN KEY mediante Transact-SQL, primero debe eliminar la restricción FOREIGN KEY existente y, a continuación, vuelva a crearla con la nueva definición. Para obtener más información, consulte [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) y [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  

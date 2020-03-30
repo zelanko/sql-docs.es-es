@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287135"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar programaciones de sincronización
@@ -39,7 +39,7 @@ ms.locfileid: "76287135"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Especifique programaciones de sincronización en la página **Programación de sincronización** del Asistente para nuevas suscripciones. Para obtener más información sobre cómo utilizar este asistente, vea [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) y [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
  Modifique las programaciones de sincronización en el cuadro de diálogo **Propiedades de programación del trabajo** , al que se obtiene acceso desde la carpeta **Trabajos** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y desde las ventanas de detalles del agente en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -140,7 +140,7 @@ ms.locfileid: "76287135"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede definir programaciones de sincronización mediante programación usando los procedimientos almacenados de replicación. Los procedimientos almacenados que usa dependen del tipo de replicación y del tipo de suscripción (extracción o inserción).  
   
  Los parámetros de programación siguientes definen una programación, los comportamientos de los que se heredan de [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md):  
@@ -189,7 +189,7 @@ ms.locfileid: "76287135"
   
 2.  En el suscriptor, ejecute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Especifique **\@subscriber**, **\@subscriber_db**, **\@publication** y las credenciales de Windows con las que se ejecuta el Agente de mezcla en el suscriptor para **\@job_name** y **\@password**. Especifique los parámetros de sincronización, detallados anteriormente, que definen la programación para el trabajo del Agente de distribución que sincroniza la suscripción.  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  La replicación usa el Agente SQL Server para programar los trabajos de las actividades que se producen periódicamente, como la generación de instantáneas y la sincronización de suscripción. Puede usar Replication Management Objects (RMO) mediante programación para especificar las programaciones de los trabajos de agente de replicación.  
   
 > [!NOTE]  
@@ -319,7 +319,7 @@ ms.locfileid: "76287135"
   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> para crear la suscripción.  
   
-###  <a name="PShellExample"></a> Ejemplo (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Ejemplo (RMO)  
  Este ejemplo crea una suscripción de inserción a una publicación de combinación y especifica la programación en la que se sincroniza la suscripción.  
   
  [!code-cs[HowTo#rmo_CreateMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  

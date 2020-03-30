@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903909"
 ---
 # <a name="view-resource-governor-properties"></a>Ver las propiedades del regulador de recursos
@@ -25,7 +25,7 @@ ms.locfileid: "72903909"
 
   Puede crear o configurar entidades del regulador de recursos, por ejemplo grupos de recursos de servidor y grupos de cargas de trabajo, utilizando la página Propiedades del regulador de recursos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- ##  <a name="BeforeYouBegin"></a> Temas relacionados 
+ ##  <a name="related-topics"></a><a name="BeforeYouBegin"></a> Temas relacionados 
  Además de ver las propiedades de las entidades del regulador de recursos, puede realizar varias tareas de configuración mediante la página **Propiedades del regulador de recursos** . Para más información, consulte los temas siguientes:  
   
 -   [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md)  
@@ -48,10 +48,10 @@ ms.locfileid: "72903909"
   
  Es posible determinar si existe una configuración pendiente consultando la vista de administración dinámica [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) para obtener el estado actual de is_configuration_pending.  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para ver las propiedades del regulador de recursos se requiere el permiso VIEW SERVER STATER. Las tareas de configuración del regulador de recursos requieren el permiso CONTROL SERVER.  
   
-##  <a name="ViewRGProp"></a> Página Propiedades del regulador de recursos  
+##  <a name="resource-governor-properties-page"></a><a name="ViewRGProp"></a> Página Propiedades del regulador de recursos  
  **Para ver las propiedades del regulador de recursos con la página Propiedades del regulador de recursos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
@@ -62,7 +62,7 @@ ms.locfileid: "72903909"
   
 4.  Para guardar los cambios, haga clic en **Aceptar**.  
 
-##  <a name="RGProp"></a> Resource Governor properties  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **Nombre de la función de clasificador**  
  Especifique la función clasificadora seleccionándola en la lista.  
   

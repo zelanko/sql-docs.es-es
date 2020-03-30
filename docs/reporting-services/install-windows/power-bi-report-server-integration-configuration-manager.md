@@ -7,10 +7,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265641"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integración del servidor de informes de Power BI (Administrador de configuración)
@@ -19,7 +19,7 @@ ms.locfileid: "68265641"
 
 La página  **Integración de Power BI** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se usa para registrar el servidor de informes con el inquilino administrado de Azure Active Directory (AD) deseado para permitir que los usuarios del servidor de informes anclen elementos de informe admitidos en paneles de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Para obtener una lista de los elementos admitidos que se pueden anclar, vea [Pin Reporting Services items to Power BI Dashboards (Anclar elementos de Reporting Services en paneles de Power BI)](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
-## <a name="bkmk_requirements"></a> Requisitos para la integración de Power BI
+## <a name="requirements-for-power-bi-integration"></a><a name="bkmk_requirements"></a> Requisitos para la integración de Power BI
 
 Además de una conexión activa a Internet para que pueda examinar el servicio [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , se requiere lo siguiente para completar la integración de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
@@ -33,17 +33,17 @@ Además de una conexión activa a Internet para que pueda examinar el servicio [
 
 - Los informes desde los que quiera anclar elementos deben usar credenciales almacenadas. Esto no es un requisito de la integración de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] propiamente dicha, sino del proceso de actualización de los elementos anclados.  Al anclar un elemento de informe se crea una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para administrar la programación de actualización de los iconos de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requieren credenciales almacenadas. Si un informe no usa credenciales almacenadas, los usuarios seguirán pudiendo anclar elementos de informe, pero cuando la suscripción asociada intente actualizar los datos a [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], verán un mensaje de error similar al siguiente en la página **My Subscriptions** (Mis suscripciones).
 
-    Error de entrega de PowerBI: panel: objeto visual, IT Spend Analysis Sample: Chart2, error: No se puede completar la acción actual. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. O bien la credencial del origen de datos del usuario.
+    PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: (Error de entrega de PowerBI: panel: ejemplo de análisis de gasto en TI, objeto visual: gráfico 2, error:) La acción actual no se puede completar. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. O bien la credencial del origen de datos del usuario.
 
 Para más información sobre cómo almacenar credenciales, vea la sección "Configurar credenciales almacenadas para un origen de datos específico de informe (modo Nativo)" de [Almacenar credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Un administrador puede revisar los archivos de registro de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para obtener más información.  Verá mensajes similares a los siguientes. Una excelente manera de revisar y supervisar los archivos de registro de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query en los archivos.  Para obtener más información y ver un breve vídeo, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error de entrega de PowerBI: panel: objeto visual, IT Spend Analysis Sample: Chart2, error: No se puede completar la acción actual. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario no estén almacenadas en la base de datos del servidor de informes, o bien que el origen de datos del usuario esté configurado para no requerir credenciales pero no se haya configurado la cuenta de ejecución desatendida.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. (subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: error de entrega de PowerBI: panel: ejemplo de análisis de gasto en TI, visual: Chart2, error: La acción actual no se puede completar). Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario no estén almacenadas en la base de datos del servidor de informes, o bien que el origen de datos del usuario esté configurado para no requerir credenciales pero no se haya configurado la cuenta de ejecución desatendida.
 
-- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error al procesar la suscripción fcdb8581-d763-4b3b-ba3e-8572360df4f9: Error de entrega de PowerBI: panel: objeto visual, IT Spend Analysis Sample: Chart2, error: No se puede completar la acción actual. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario no estén almacenadas en la base de datos del servidor de informes, o bien que el origen de datos del usuario esté configurado para no requerir credenciales pero no se haya configurado la cuenta de ejecución desatendida.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. (notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error al procesar la suscripción fcdb8581-d763-4b3b-ba3e-8572360df4f9: Error de entrega de PowerBI: panel: ejemplo de análisis de gasto en TI, objeto visual: gráfico 2, error: La acción actual no se puede completar). Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario no estén almacenadas en la base de datos del servidor de informes, o bien que el origen de datos del usuario esté configurado para no requerir credenciales pero no se haya configurado la cuenta de ejecución desatendida.
 
-## <a name="bkmk_steps2integrate"></a> Para integrar y registrar el servidor de informes
+## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> Para integrar y registrar el servidor de informes
 
 Complete los pasos siguientes desde el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
@@ -60,9 +60,9 @@ Complete los pasos siguientes desde el Administrador de configuración de [!INCL
 
 5. Seleccione el botón **Copiar** de la ventana **Resultados** para copiar los detalles de registro en el Portapapeles de Windows. De este modo, podrá guardarlos para consultarlos en el futuro.
 
-## <a name="bkmk_unregister"></a> Anular el registro con Power BI
+## <a name="unregister-with-power-bi"></a><a name="bkmk_unregister"></a> Anular el registro con Power BI
 
-**Anular el registro:** la anulación del registro del servidor de informes de Azure Active Directory tendrá como resultado lo siguiente:
+**Anular el registro** : la anulación del registro del servidor de informes de Azure Active Directory tendrá como resultado lo siguiente:
 
 - El vínculo **My Settings** (Mi configuración) ya no estará visible en la barra de menús del portal web.
 
@@ -74,7 +74,7 @@ Complete los pasos siguientes desde el Administrador de configuración de [!INCL
 
 En la página **Power BI** del Administrador de configuración, seleccione el botón **Anular el registro con Power BI** .
 
-##  <a name="bkmk_updateregistration"></a> Actualizar el registro
+##  <a name="update-registration"></a><a name="bkmk_updateregistration"></a> Actualizar el registro
 
 Use la opción **Update Registration** (Actualizar el registro) si ha cambiado la configuración del servidor de informes. Por ejemplo, si quiere agregar o quitar las direcciones URL que los usuarios usan para ir al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
@@ -90,7 +90,7 @@ Use la opción **Update Registration** (Actualizar el registro) si ha cambiado l
 
      Se le pedirá que inicie sesión en Azure AD. La página se actualizará y verá la nueva dirección URL en la lista **Redirect URLs**(Direcciones URL de redireccionamiento).
 
-##  <a name="bkmk_integration_process"></a> Resumen del proceso de integración y anclaje de Power BI
+##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Resumen del proceso de integración y anclaje de Power BI
 
 En esta sección se resumen los pasos básicos y las tecnologías implicadas en la integración del servidor de informes con [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] y el anclaje de un elemento de informe a un panel.
 

@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981709"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT: Cláusula ORDER BY (Transact-SQL)
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
 |[Limitar el número de filas devueltas](#Offset)|OFFSET • FETCH|  
 |[Usar ORDER BY con UNION, EXCEPT e INTERSECT](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a> Sintaxis básica  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintaxis básica  
  En los ejemplos de esta sección se muestra la funcionalidad básica de la cláusula ORDER BY con la sintaxis mínima requerida.  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Especificar una sola columna definida en la lista de selección  
@@ -260,7 +260,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a> Especificar un criterio de ordenación ascendente y descendente  
+###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a> Especificar un criterio de ordenación ascendente y descendente  
   
 #### <a name="a-specifying-a-descending-order"></a>A. Especificar un orden descendente  
  En el siguiente ejemplo se ordena el conjunto de resultados en sentido descendente según la columna numérica `ProductID`.  
@@ -298,7 +298,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a> Especificar una intercalación  
+###  <a name="specifying-a-collation"></a><a name="Collation"></a> Especificar una intercalación  
  En el siguiente ejemplo se muestra cómo especificar una intercalación en la cláusula ORDER BY puede cambiar el orden en que se devuelven los resultados de la consulta. Se crea una tabla que contiene una columna definida mediante una intercalación que no distingue entre mayúsculas y minúsculas, ni las tildes. Los valores se insertan con diversas diferencias de uso de mayúsculas, minúsculas y tildes. Dado que no se especifica ninguna intercalación en la cláusula ORDER BY, la primera consulta utiliza la intercalación de la columna al ordenar los valores. En la segunda consulta, se especifica una intercalación que distingue entre mayúsculas y minúsculas y las tildes; en consecuencia, cambia el orden en el que se devuelven las filas.  
   
 ```sql
@@ -319,7 +319,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a> Especificar un orden condicional  
+###  <a name="specifying-a-conditional-order"></a><a name="Case"></a> Especificar un orden condicional  
  En los ejemplos siguientes se usa la expresión CASE en una cláusula ORDER BY para determinar de manera condicional el criterio de ordenación de las filas según el valor de una columna dada. En el primer ejemplo se evalúe el valor de la columna `SalariedFlag` de la tabla `HumanResources.Employee`. Los empleados que tienen la columna `SalariedFlag` establecida en 1 se devuelven en orden descendente según el `BusinessEntityID`. Los empleados que tienen la columna `SalariedFlag` establecida en 0 se devuelven en orden ascendente según el `BusinessEntityID`. En el segundo ejemplo, el conjunto de resultados se ordena según la columna `TerritoryName` cuando la columna `CountryRegionName` es igual a 'Estados Unidos' y según la columna `CountryRegionName` en las demás filas.  
   
 ```sql
@@ -340,7 +340,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a> Usar ORDER BY en una función de categoría  
+###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a> Usar ORDER BY en una función de categoría  
  En el siguiente ejemplo se utiliza la cláusula ORDER BY en las funciones de categoría ROW_NUMBER, RANK, DENSE_RANK y NTILE.  
   
 ```sql
@@ -361,7 +361,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a> Limitar el número de filas devueltas  
+###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a> Limitar el número de filas devueltas  
  En los siguientes ejemplos se utiliza OFFSET y FETCH para limitar el número de filas devueltas por una consulta.  
   
 **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
@@ -489,7 +489,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-###  <a name="Union"></a> Usar ORDER BY con UNION, EXCEPT e INTERSECT  
+###  <a name="using-order-by-with-union-except-and-intersect"></a><a name="Union"></a> Usar ORDER BY con UNION, EXCEPT e INTERSECT  
  Cuando una consulta utiliza los operadores UNION, EXCEPT o INTERSECT, la cláusula ORDER BY se debe especificar al final de la instrucción y se ordenan los resultados de las consultas combinadas. En el siguiente ejemplo se devuelven todos los productos que son rojos o amarillos y la lista combinada se ordena según la columna `ListPrice`.  
   
 ```sql
@@ -506,7 +506,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el ejemplo siguiente se muestra la ordenación de un conjunto de resultados en sentido ascendente según la columna numérica `EmployeeKey`.  
   
 ```sql

@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251233"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transacciones - Grupos de disponibilidad y creación de reflejo de la base de datos
@@ -51,7 +51,7 @@ En SQL Server 2016 SP1 y versiones anteriores, las transacciones entre bases de 
   
 Las transacciones entre bases de datos tampoco se admiten para la creación de reflejo de la base de datos.  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 y versiones anteriores: compatibilidad con transacciones distribuidas  
+##  <a name="sql-server-2016-sp1-and-before-support-for-distributed-transactions"></a><a name="dtcsupport"></a> SQL Server 2016 SP1 y versiones anteriores: compatibilidad con transacciones distribuidas  
 Las transacciones distribuidas son compatibles con los grupos de disponibilidad si las bases de datos se hospedan en instancias diferentes de SQL Server. También se aplica a las transacciones distribuidas entre las instancias de SQL Server y otro servidor compatible con DTC.  
  
 Coordinador de transacciones distribuidas de Microsoft (MSDTC o DTC) es un servicio de Windows que proporciona infraestructura de transacciones para sistemas distribuidos. MSDTC permite que las aplicaciones cliente incluyan varios orígenes de datos en una transacción, que luego se confirma en todos los servidores incluidos en la transacción. Por ejemplo, puede usar MSDTC para coordinar transacciones que abarcan varias bases de datos en servidores diferentes.

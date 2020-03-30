@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908110"
 ---
 # <a name="create-filtered-indexes"></a>Crear índices filtrados
@@ -59,15 +59,15 @@ ms.locfileid: "72908110"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Design"></a> Consideraciones de diseño  
+###  <a name="design-considerations"></a><a name="Design"></a> Consideraciones de diseño  
   
 -   Cuando una columna solamente tiene un número pequeño de valores pertinentes para las consultas, puede crear un índice filtrado en el subconjunto de valores. Por ejemplo, cuando los valores en una columna son principalmente NULL y la consulta solamente selecciona entre valores distintos de NULL, puede crear un índice filtrado para las filas de datos distintos de NULL. El índice resultante será menor y tendrá costos de mantenimiento más reducidos que los de un índice no clúster de tabla completa definido en las mismas columnas de clave.  
   
 -   Cuando una tabla tiene filas de datos heterogéneos, se puede crear un índice filtrado para una o varias categorías de datos. Esto puede mejorar el rendimiento de las consultas de estas filas de datos estrechando el foco de una consulta a un área concreta de la tabla. También en este caso, el índice resultante será menor y tendrá costos de mantenimiento más reducidos que los de un índice no clúster de tabla completa.  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   No se puede crear un índice filtrado en una vista. Sin embargo, el optimizador de consultas puede aprovechar un índice filtrado definido en una tabla a la que se hace referencia en una vista. El optimizador de consultas tiene en cuenta un índice filtrado para una consulta que selecciona en una vista si los resultados de la consulta serán correctos.
 
@@ -97,12 +97,12 @@ ms.locfileid: "72908110"
 
 - Revise las opciones SET necesarias para la creación del índice filtrado en la sintaxis [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** . Para modificar la expresión de índice filtrado, utilice CREATE INDEX WITH DROP_EXISTING.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>Para crear un índice filtrado  
   
@@ -126,7 +126,7 @@ ms.locfileid: "72908110"
   
 10. Haga clic en **OK**.  
 
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Para crear un índice filtrado  
   

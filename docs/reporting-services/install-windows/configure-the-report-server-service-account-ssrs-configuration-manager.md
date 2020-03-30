@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 12/04/2019
 ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866028"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS)
@@ -78,7 +78,7 @@ ms.locfileid: "74866028"
 |**Servicio local**|**Servicio local** es una cuenta integrada similar a una cuenta de usuario de Windows local autenticada. Los servicios que se ejecutan como cuenta **Servicio local** tienen acceso a los recursos de red como una sesión nula sin credenciales. Esta cuenta no es adecuada para los escenarios de implementación con intranets en los que el servidor de informes deba conectarse a una base de datos del servidor de informes remota o a un controlador de dominio de la red para autenticar a un usuario antes de abrir un informe o procesar una suscripción.|  
 |**Sistema local**|**Sistema local** es una cuenta con muchos privilegios que no es necesaria para ejecutar un servidor de informes. No utilice esta cuenta para instalaciones de servidor de informes. En su lugar, elija una cuenta de dominio o **Servicio de red** .|  
   
-## <a name="localaccounts"></a> Consideraciones para usar cuentas locales
+## <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a> Consideraciones para usar cuentas locales
 
  La consideración principal para utilizar cuentas locales es si el servidor de informes requiere acceso a controladores de dominio, servidores de correo y servidores de bases de datos remotos. Si configura el servidor de informes para ejecutarse en una cuenta de usuario de Windows local, Servicio local o Sistema local, introduce consideraciones que deben tenerse en cuenta para establecer otra configuración, y en la creación y entrega de las suscripciones:  
   

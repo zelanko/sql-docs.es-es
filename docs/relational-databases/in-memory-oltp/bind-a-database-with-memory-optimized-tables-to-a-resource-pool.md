@@ -11,10 +11,10 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412762"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
@@ -50,10 +50,10 @@ ms.locfileid: "74412762"
   
 -   [Porcentaje de memoria disponible para tablas e índices optimizados para memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)  
   
-##  <a name="bkmk_CreatePool"></a> Crear la base de datos y el grupo de recursos de servidor  
+##  <a name="create-the-database-and-resource-pool"></a><a name="bkmk_CreatePool"></a> Crear la base de datos y el grupo de recursos de servidor  
  Puede crear la base de datos y el grupo de recursos de servidor en cualquier orden. Lo que importa es que ambos existan antes de enlazar la base de datos al grupo de recursos de servidor.  
   
-###  <a name="bkmk_CreateDatabase"></a> Crear la base de datos  
+###  <a name="create-the-database"></a><a name="bkmk_CreateDatabase"></a> Crear la base de datos  
  El código [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente crea una base de datos denominada IMOLTP_DB que contendrá una o varias tablas optimizadas para memoria. La ruta de acceso \<driveAndPath> debe haberse creado antes de ejecutar este comando.  
   
 ```sql  
@@ -64,7 +64,7 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-###  <a name="bkmk_DeterminePercent"></a> Determinar el valor mínimo de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT  
+###  <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a><a name="bkmk_DeterminePercent"></a> Determinar el valor mínimo de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT  
  Una vez que determine las necesidades de memoria para las tablas optimizadas para memoria, debe determinar qué porcentaje de memoria disponible se necesita y establecer los porcentajes de memoria en ese valor o uno superior.  
   
  **Ejemplo:**    
@@ -83,7 +83,7 @@ En este ejemplo supondremos que en sus cálculos ha determinado que las tablas y
   
  Necesita al menos el 62,5 % de la memoria disponible para satisfacer el requisito de 16 GB de las tablas y los índices optimizados para memoria.  Puesto que los valores de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT deben ser enteros, los estableceremos como mínimo en el 63 %.  
   
-###  <a name="bkmk_CreateResourcePool"></a> Crear un grupo de recursos de servidor y configurar la memoria  
+###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> Crear un grupo de recursos de servidor y configurar la memoria  
  A la hora de configurar memoria para las tablas optimizadas para memoria, el planeamiento de capacidad debe realizarse en función de MIN_MEMORY_PERCENT, no de MAX_MEMORY_PERCENT.  Vea [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) para obtener más información sobre MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Esto proporciona una disponibilidad de memoria más predecible en las tablas optimizadas para memoria, ya que MIN_MEMORY_PERCENT produce presión de memoria en otros grupos de recursos de servidor para asegurarse de que se respeta. Para asegurarse de que hay memoria disponible e impedir condiciones de memoria insuficiente, los valores de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT deben ser iguales. Vea la tabla [Porcentaje de memoria disponible para tablas e índices optimizados para memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) de abajo para conocer el porcentaje de memoria disponible para las tablas optimizadas para memoria según la cantidad de memoria asignada.  
   
  Vea [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) para obtener más información sobre cómo trabajar en un entorno de máquinas virtuales.  
@@ -102,7 +102,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-##  <a name="bkmk_DefineBinding"></a> Enlazar la base de datos al grupo  
+##  <a name="bind-the-database-to-the-pool"></a><a name="bkmk_DefineBinding"></a> Enlazar la base de datos al grupo  
  Use la función del sistema `sp_xtp_bind_db_resource_pool` para enlazar la base de datos al grupo de recursos de servidor. La función utiliza dos parámetros: el nombre de la base de datos y el nombre del grupo de recursos de servidor.  
   
  El siguiente código [!INCLUDE[tsql](../../includes/tsql-md.md)] define un enlace de la base de datos IMOLTP_DB con el grupo de recursos de servidor Pool_IMOLTP. El enlace no surte efecto hasta que la base de datos pase a estar en línea.  
@@ -114,7 +114,7 @@ GO
   
  La función del sistema sp_xtp_bind_db_resource_pool usa dos parámetros de cadena: database_name y pool_name.  
   
-##  <a name="bkmk_ConfirmBinding"></a> Confirmar el enlace  
+##  <a name="confirm-the-binding"></a><a name="bkmk_ConfirmBinding"></a> Confirmar el enlace  
  Confirme el enlace, teniendo en cuenta el identificador del grupo de recursos de servidor para IMOLTP_DB. No puede ser NULL.  
   
 ```sql  
@@ -123,7 +123,7 @@ FROM sys.databases d
 GO  
 ```  
   
-##  <a name="bkmk_MakeBindingEffective"></a> Activar el enlace  
+##  <a name="make-the-binding-effective"></a><a name="bkmk_MakeBindingEffective"></a> Activar el enlace  
  Debe poner la base de datos sin conexión y volver a ponerla en línea después de enlazarla al grupo de recursos de servidor para que el enlace surta efecto. Si la base de datos se enlazó a otro grupo diferente, esto quita la memoria asignada del grupo de recursos de servidor anterior y las asignaciones de memoria para la tabla y los índices optimizados para memoria provendrán ahora del grupo de recursos de servidor recién enlazado a la base de datos.  
   
 ```sql  
@@ -141,7 +141,7 @@ GO
   
  Ahora, la base de datos está enlazada al grupo de recursos de servidor.  
   
-##  <a name="bkmk_ChangeAllocation"></a> Cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente  
+##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> Cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente  
  Si agrega memoria adicional al servidor o si cambia la cantidad de memoria necesaria para las tablas optimizadas para memoria, puede ser necesario modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Los pasos siguientes muestran cómo modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo de recursos de servidor. Vea la próxima sección para obtener información sobre qué valores se deben usar para MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  Vea el tema [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) para obtener más información.  
   
 1.  Utilice `ALTER RESOURCE POOL` para cambiar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  
@@ -162,7 +162,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE
 GO  
 ```  
   
-##  <a name="bkmk_PercentAvailable"></a> Porcentaje de memoria disponible para tablas e índices optimizados para memoria  
+##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> Porcentaje de memoria disponible para tablas e índices optimizados para memoria  
  Si asigna una base de datos con tablas optimizadas para memoria y una carga de trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al mismo grupo de recursos de servidor, el regulador de recursos establece un umbral interno para uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] de modo que los usuarios del grupo no experimenten conflictos al usar el grupo. En general, el umbral para el uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] es aproximadamente el 80 % del valor del grupo. En la tabla siguiente se muestran los umbrales reales para diversos tamaños de memoria.  
   
  Al crear un grupo de recursos de servidor dedicado para la base de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , debe evaluar cuánta memoria física necesita para las tablas en memoria después de tener en cuenta las versiones de filas y el aumento de datos. Una vez calculada la memoria necesaria, puede crear un grupo de recursos de servidor con un porcentaje de memoria de destino de confirmación para la instancia de SQL como se refleja en la columna "committed_target_kb" en la DMV `sys.dm_os_sys_info` (vea [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Por ejemplo, puede crear un grupo de recursos de servidor P1 con el 40 % de la memoria total disponible para la instancia. Fuera de este 40 %, el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] obtiene un porcentaje inferior para almacenar los datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Esto se hace para asegurarse de que [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no usa toda la memoria de este grupo.  Este valor del porcentaje menor depende de la memoria confirmada de destino. En la siguiente tabla se describe la memoria disponible para la base de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en un grupo de recursos de servidor (designado o predeterminado) antes de que se genere un error de OOM.  

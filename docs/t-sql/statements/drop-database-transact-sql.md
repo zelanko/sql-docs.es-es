@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982191"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
@@ -146,7 +146,7 @@ DROP DATABASE Sales;
 
 ### <a name="b-dropping-multiple-databases"></a>B. Quitar varias bases de datos
 
-**Válido para **: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
 
 En el ejemplo siguiente se quita cada una de las bases de datos enumeradas.
 
@@ -156,7 +156,7 @@ DROP DATABASE Sales, NewSales;
 
 ### <a name="c-dropping-a-database-snapshot"></a>C. Quitar una instantánea de la base de datos
 
-**Válido para **: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
 
 En el ejemplo siguiente se quita una instantánea de base de datos, denominada `sales_snapshot0600`, sin que la base de datos de origen se vea afectada.
 

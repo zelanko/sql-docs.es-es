@@ -17,10 +17,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68133265"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -150,11 +150,11 @@ ms.locfileid: "68133265"
 ### <a name="data-type-mapping-considerations"></a>Consideraciones acerca de la asignación de tipos de datos  
  Tenga en cuenta los siguientes problemas de asignación de tipos de datos al replicar en suscriptores de DB2:  
   
--   Al asignar **char**, **varchar**, **binary** y **varbinary** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a CHAR, VARCHAR, CHAR FOR BIT DATA y VARCHAR FOR BIT DATA de DB2, respectivamente, la replicación establece la longitud del tipo de datos de DB2 de forma que sea igual a la del tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Al asignar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]char **,** varchar **,** binary**y**varbinary**de** a CHAR, VARCHAR, CHAR FOR BIT DATA y VARCHAR FOR BIT DATA de DB2, respectivamente, la replicación establece la longitud del tipo de datos de DB2 de forma que sea igual a la del tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
      Esto permite crear correctamente la tabla generada en el suscriptor, siempre que la restricción del tamaño de página de DB2 sea suficientemente grande como para admitir el tamaño máximo de la fila. Asegúrese de que el nombre de inicio de sesión que utiliza para obtener acceso a la base de datos de DB2 tiene permisos de acceso a espacios de tabla de tamaño suficiente para las tablas que se van a replicar en DB2.  
   
--   DB2 admite columnas VARCHAR de hasta 32 kilobytes (KB); por lo tanto, es posible que algunas columnas de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se puedan asignar correctamente a columnas VARCHAR de DB2. Sin embargo, el proveedor OLE DB que utiliza la replicación para DB2 no admite la asignación de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a objetos grandes de DB2. Por este motivo, las columnas de tipo **text**, **varchar(max)** , **ntext** y **nvarchar(max)** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se asignan a VARCHAR(0) en los scripts de creación generados. El valor de longitud 0 debe cambiarse a un valor apropiado antes de aplicar el script al suscriptor. Si no se cambia la longitud del tipo de datos, DB2 mostrará el error 604 cuando se intente crear la tabla en el suscriptor de DB2 (el error 604 indica que la precisión o el atributo de longitud de un tipo de datos no son válidos).  
+-   DB2 admite columnas VARCHAR de hasta 32 kilobytes (KB); por lo tanto, es posible que algunas columnas de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se puedan asignar correctamente a columnas VARCHAR de DB2. Sin embargo, el proveedor OLE DB que utiliza la replicación para DB2 no admite la asignación de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a objetos grandes de DB2. Por este motivo, las columnas de tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]text **,** varchar(max) **,** ntext**y**nvarchar(max)**de** se asignan a VARCHAR(0) en los scripts de creación generados. El valor de longitud 0 debe cambiarse a un valor apropiado antes de aplicar el script al suscriptor. Si no se cambia la longitud del tipo de datos, DB2 mostrará el error 604 cuando se intente crear la tabla en el suscriptor de DB2 (el error 604 indica que la precisión o el atributo de longitud de un tipo de datos no son válidos).  
   
      Basándose en sus conocimientos de la tabla de origen que desea replicar, determine si es apropiado asignar un objeto grande de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un elemento de longitud variable de DB2 y especifique una longitud máxima apropiada en un script de creación personalizado. Para obtener información acerca de cómo especificar un script de creación personalizado, vea el paso 5 de la sección "Configuración de un suscriptor de IBM DB2", en este tema.  
   
@@ -163,9 +163,9 @@ ms.locfileid: "68133265"
   
      Si no hay ninguna asignación apropiada para una columna de objetos grandes, puede utilizar el filtrado de columna en el artículo para que no se replique. Para obtener más información, vea [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md).  
   
--   Al replicar los tipos **nchar** y **nvarchar** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en CHAR y VARCHAR de DB2, la replicación usa el mismo especificador de longitud para el tipo de DB2 que para el de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Sin embargo, es posible que la longitud del tipo de datos sea demasiado reducida para la tabla DB2 generada.  
+-   Al replicar los tipos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nchar**y**nvarchar**de** en CHAR y VARCHAR de DB2, la replicación usa el mismo especificador de longitud para el tipo de DB2 que para el de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Sin embargo, es posible que la longitud del tipo de datos sea demasiado reducida para la tabla DB2 generada.  
   
-     En algunos entornos de DB2, un elemento de datos **char** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se limita a caracteres de un solo byte; esto debe tenerse en cuenta para la longitud de un elemento CHAR o VARCHAR. También debe tener en cuenta los caracteres de *desplazamiento hacia dentro* y *desplazamiento hacia fuera* si se necesitan. Si desea replicar tablas con columnas **nchar** y **nvarchar** , es posible que necesite especificar una longitud máxima mayor para el tipo de datos en un script de creación personalizado. Para obtener información acerca de cómo especificar un script de creación personalizado, vea el paso 5 de la sección "Configuración de un suscriptor de IBM DB2", en este tema.  
+     En algunos entornos de DB2, un elemento de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]char**de** no se limita a caracteres de un solo byte; esto debe tenerse en cuenta para la longitud de un elemento CHAR o VARCHAR. También debe tener en cuenta los caracteres de *desplazamiento hacia dentro* y *desplazamiento hacia fuera* si se necesitan. Si desea replicar tablas con columnas **nchar** y **nvarchar** , es posible que necesite especificar una longitud máxima mayor para el tipo de datos en un script de creación personalizado. Para obtener información acerca de cómo especificar un script de creación personalizado, vea el paso 5 de la sección "Configuración de un suscriptor de IBM DB2", en este tema.  
   
 ## <a name="see-also"></a>Consulte también  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   

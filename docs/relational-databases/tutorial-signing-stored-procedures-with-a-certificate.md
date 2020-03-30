@@ -13,10 +13,10 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6d95dc22b557b24cb2ab3a5b4515a0adfa8c605
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095665"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutorial: Firmar procedimientos almacenados con un certificado
@@ -188,7 +188,7 @@ GO
   
 Para obtener más información sobre la instrucción REVERT, consulte [REVERT &#40;Transact-SQL&#41;](../t-sql/statements/revert-transact-sql.md).  
   
-## <a name="CompleteExample"></a>Ejemplo completo  
+## <a name="complete-example"></a><a name="CompleteExample"></a>Ejemplo completo  
 En esta sección se muestra el código de ejemplo completo.  
   
 ```sql  

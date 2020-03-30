@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055949"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Establecer la cuenta del servicio para el selector del demonio de filtro completo
@@ -31,7 +31,7 @@ La búsqueda de texto completo usa el servicio Selector de demonio de filtro de 
   
 El servicio Selector del demonio de filtro de texto completo de SQL Server es un servicio que reconoce instancias y que está asociado a una instancia específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El servicio Selector de demonio de filtro de texto completo de SQL propaga la información de la cuenta de servicio a cada proceso de host de demonio de filtro que inicia.  
 
-##  <a name="setting"></a> Establecer la cuenta de servicio  
+##  <a name="set-the-service-account"></a><a name="setting"></a> Establecer la cuenta de servicio  
   
 1.  En el menú **Inicio**, seleccione **Todos los programas**, expanda [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] y, luego, haga clic en **Administrador de configuración de SQL Server 2016**.  
   
@@ -43,7 +43,7 @@ El servicio Selector del demonio de filtro de texto completo de SQL Server es un
   
 ![Propiedades del proceso del Selector de demonio de filtro de texto completo de SQL](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a> Solucionar problemas del servicio del Selector de demonio de filtro de texto completo de SQL si no se inicia  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a> Solucionar problemas del servicio del Selector de demonio de filtro de texto completo de SQL si no se inicia  
  Si el servicio del Selector de demonio de filtro de texto completo de SQL no se inicia, revise las siguientes causas posibles:  
   
 ### <a name="permissions-issues"></a>Incidencias de permisos

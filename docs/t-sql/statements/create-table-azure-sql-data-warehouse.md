@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729866"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
@@ -106,7 +106,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  *column_name*  
  El nombre de una columna de la tabla.
 
-### <a name="ColumnOptions"></a> Opciones de columna
+### <a name="column-options"></a><a name="ColumnOptions"></a> Opciones de columna
 
  `COLLATE` *Windows_collation_name*  
  Especifica la intercalación para la expresión. La intercalación debe ser una de las intercalaciones de Windows que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite. Para obtener una lista de las intercalaciones de Windows que admite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Nombre de intercalación de Windows (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
@@ -122,7 +122,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  | *constraint_name* | El nombre opcional para la restricción. El nombre de la restricción es único dentro de la base de datos. El nombre se puede volver a usar en otras bases de datos. |
  | *constant_expression* | El valor predeterminado de la columna. La expresión debe ser un valor literal o una constante. Por ejemplo, se permiten estas expresiones constantes: `'CA'`, `4`. Estas expresiones constantes no se permiten: `2+3`, `CURRENT_TIMESTAMP`. |
   
-### <a name="TableOptions"></a> Opciones de estructura de tabla
+### <a name="table-structure-options"></a><a name="TableOptions"></a> Opciones de estructura de tabla
 
 Para obtener instrucciones sobre cómo elegir el tipo de tabla, vea [Indexación de tablas en SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
   
@@ -137,7 +137,7 @@ Almacena la tabla como un índice de almacén de columnas en clúster. El índic
  
  `LOCATION = USER_DB` Esta opción está en desuso. Se acepta sintácticamente, pero ya no es necesaria y no afecta al comportamiento.   
   
-### <a name="TableDistributionOptions"></a> Opciones de distribución de tabla
+### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> Opciones de distribución de tabla
 
 Para entender cómo elegir el mejor método de distribución y usar tablas distribuidas, vea [Instrucciones de diseño para las tablas distribuidas - Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
@@ -147,7 +147,7 @@ Para entender cómo elegir el mejor método de distribución y usar tablas distr
 
 `DISTRIBUTION = REPLICATE` Almacena una copia de la tabla en cada nodo de ejecución. Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], la tabla se almacena en una base de datos de distribución en cada nodo de ejecución. Para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], la tabla se almacena en un grupo de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que abarca el nodo de ejecución. Este es el comportamiento predeterminado para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-### <a name="TablePartitionOptions"></a> Opciones de partición de tabla
+### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> Opciones de partición de tabla
 Para obtener instrucciones sobre cómo usar las particiones de tabla, vea [Creación de particiones de tablas en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
@@ -172,7 +172,7 @@ Los usuarios pueden consultar la columna **column_store_order_ordinal** en **sys
 
 Consulte [Optimización del rendimiento con el índice de almacén de columnas agrupado ordenado](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci) para obtener más información.   
 
-### <a name="DataTypes"></a> Tipo de datos
+### <a name="data-type"></a><a name="DataTypes"></a> Tipo de datos
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] admite los tipos de datos más usados habitualmente. A continuación se muestra una lista de los tipos de datos admitidos junto con sus detalles y los bytes de almacenamiento. Para entender mejor los tipos de datos y cómo usarlos, vea [Guía de tipos de datos - Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
@@ -220,7 +220,7 @@ Igual que `datetime`, salvo que puede se especificar el número de fracciones de
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] trata *n* como uno de dos valores posibles. Si `1`<= *n* <= `24`, *n* se trata como `24`. Si `25` <= *n* <= `53`, *n* se trata como `53`.  
   
- El tipo de datos `float` de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] cumple con el estándar ISO para todos los valores de *n* desde `1` hasta `53`. El sinónimo para doble precisión es `float(53)`.  
+ El tipo de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de `float` cumple con el estándar ISO para todos los valores de *n* desde `1` hasta `53`. El sinónimo para doble precisión es `float(53)`.  
   
  `real` [ ( *n* ) ]  
  La definición de real es la misma que la de float. El sinónimo de `real` en ISO es `float(24)`.  
@@ -356,7 +356,7 @@ CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION 
 <a name="ExamplesColumn"></a>   
 ## <a name="examples-for-columns"></a>Ejemplos para columnas
 
-### <a name="ColumnCollation"></a> A. Especificar una intercalación 
+### <a name="a-specify-a-column-collation"></a><a name="ColumnCollation"></a> A. Especificar una intercalación 
  En el ejemplo siguiente, se crea la tabla `MyTable` con dos intercalaciones de columna diferentes. De forma predeterminada, la columna `mycolumn1` tiene la intercalación predeterminada Latin1_General_100_CI_AS_KS_WS. La columna `mycolumn2` tiene la intercalación Frisian_100_CS_AS.  
   
 ```sql
@@ -368,7 +368,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```  
   
-### <a name="DefaultConstraint"></a> B. Especificación de una restricción DEFAULT para una columna
+### <a name="b-specify-a-default-constraint-for-a-column"></a><a name="DefaultConstraint"></a> B. Especificación de una restricción DEFAULT para una columna
 
  En el ejemplo siguiente se muestra la sintaxis para especificar un valor predeterminado para una columna. La columna colA tiene una restricción predeterminada denominada constraint_colA y un valor predeterminado de 0.  
   
@@ -385,7 +385,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>Ejemplos de tablas temporales
 
-### <a name="TemporaryTable"></a> C. Creación de una tabla temporal local  
+### <a name="c-create-a-local-temporary-table"></a><a name="TemporaryTable"></a> C. Creación de una tabla temporal local  
  En el ejemplo siguiente se crea una tabla temporal local denominada #myTable. La tabla se especifica con un nombre de tres partes, que comienza con #.
   
 ```sql
@@ -406,7 +406,7 @@ WITH
 <a name="ExTableStructure"></a>  
 ## <a name="examples-for-table-structure"></a>Ejemplos de estructura de tabla
 
-### <a name="ClusteredColumnstoreIndex"></a> D. Creación de una tabla con un índice de almacén de columnas en clúster  
+### <a name="d-create-a-table-with-a-clustered-columnstore-index"></a><a name="ClusteredColumnstoreIndex"></a> D. Creación de una tabla con un índice de almacén de columnas en clúster  
  En el ejemplo siguiente se crea una tabla distribuida con un índice de almacén de columnas en clúster. Cada distribución se almacenará como un almacén de columnas.  
   
  El índice de almacén de columnas en clúster no afecta a cómo se distribuyen los datos; los datos siempre se distribuyen por fila. El índice de almacén de columnas en clúster afecta a cómo se almacenan los datos dentro de cada distribución.  
@@ -425,7 +425,7 @@ WITH
 ;  
 ```  
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> E. Creación de un índice ordenado de almacén de columnas agrupado
+### <a name="e-create-an-ordered-clustered-columnstore-index"></a><a name="OrderedClusteredColumnstoreIndex"></a> E. Creación de un índice ordenado de almacén de columnas agrupado
 
 En el ejemplo siguiente muestra cómo crear un índice de almacén de columnas agrupado ordenado. El índice está ordenado por el valor SHIPDATE.
 
@@ -439,7 +439,7 @@ SELECT * FROM ext_Lineitem
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>Ejemplos de distribución de la tabla
 
-### <a name="RoundRobin"></a> F. Creación de una tabla ROUND_ROBIN  
+### <a name="f-create-a-round_robin-table"></a><a name="RoundRobin"></a> F. Creación de una tabla ROUND_ROBIN  
  En el ejemplo siguiente se crea una tabla ROUND_ROBIN con tres columnas y sin particiones. Los datos se reparten entre todas las distribuciones. La tabla se crea con un CLUSTERED COLUMNSTORE INDEX, lo que proporciona mejor rendimiento y compresión de datos que un montón o un índice de almacén de filas en clúster.  
   
 ```sql
@@ -452,7 +452,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. Creación de una tabla distribuida de hash
+### <a name="g-create-a-hash-distributed-table"></a><a name="HashDistributed"></a> G. Creación de una tabla distribuida de hash
 
  En el ejemplo siguiente se crea la misma tabla que el ejemplo anterior. Pero para esta tabla, las filas se distribuyen (en la columna `id`) en lugar de propagarse de forma aleatoria como una tabla ROUND_ROBIN. La tabla se crea con un CLUSTERED COLUMNSTORE INDEX, lo que proporciona mejor rendimiento y compresión de datos que un montón o un índice de almacén de filas en clúster.  
   
@@ -470,7 +470,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> H. Creación de una carpeta replicada  
+### <a name="h-create-a-replicated-table"></a><a name="Replicated"></a> H. Creación de una carpeta replicada  
  En el ejemplo siguiente se crea una tabla replicada similar a los ejemplos anteriores. Las tablas replicadas se copian por completo en cada nodo de ejecución. Con esta copia en cada nodo de ejecución, se reduce el movimiento de datos para las consultas. Este ejemplo se crea con un ÍNDICE AGRUPADO, lo que proporciona una mejor compresión de datos que un montón. Un montón no puede contener filas suficientes para lograr una buena compresión del ÍNDICE DE ALMACÉN DE COLUMNAS AGRUPADO.  
   
 ```sql
@@ -490,7 +490,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Ejemplos de particiones de tabla
 
-###  <a name="PartitionedTable"></a> I. Creación de una tabla con particiones
+###  <a name="i-create-a-partitioned-table"></a><a name="PartitionedTable"></a> I. Creación de una tabla con particiones
 
  En el ejemplo siguiente se crea la misma tabla que en el ejemplo A, con la adición de la partición RANGE LEFT en la columna `id`. Especifica cuatro valores de límite de partición, lo que da como resultado cinco particiones.  
   
@@ -525,7 +525,7 @@ WITH
 - Partición 4: 30 <= col < 40
 - Partición 5: 40 <= col  
   
-### <a name="OnePartition"></a> J. Creación de una tabla con particiones con una partición
+### <a name="j-create-a-partitioned-table-with-one-partition"></a><a name="OnePartition"></a> J. Creación de una tabla con particiones con una partición
 
  En el ejemplo siguiente se crea una tabla con particiones con una partición. No especifica ningún valor de límite, lo que da como resultado una partición.  
   
@@ -542,7 +542,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> K. Creación de una tabla con particiones de fecha
+### <a name="k-create-a-table-with-date-partitioning"></a><a name="DatePartition"></a> K. Creación de una tabla con particiones de fecha
 
  En el ejemplo siguiente se crea una tabla denominada `myTable`, con la partición en una columna `date`. Al usar RANGE RIGHT y fechas para los valores de límite, en cada partición se coloca un mes de datos.  
   

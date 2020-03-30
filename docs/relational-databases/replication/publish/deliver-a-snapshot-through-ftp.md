@@ -15,10 +15,10 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710990"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Entregar una instantánea mediante FTP
@@ -39,14 +39,14 @@ De manera predeterminada, las instantáneas se almacenan en carpetas definidas c
   
 -   Para transferir archivos de instantáneas con el Protocolo de transferencia de archivos (FTP), primero debe configurar un servidor de FTP. Para obtener más información, vea la documentación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para contribuir a mejorar la seguridad, se recomienda implementar una red privada virtual (VPN) al utilizar la entrega de instantáneas a través de FTP por Internet. Para más información, vea [Publicar datos a través de Internet mediante VPN](../../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md).  
   
  Por seguridad, se recomienda no permitir el inicio de sesión anónimo en el servidor de FTP. El Agente de instantáneas debe tener permisos de escritura para el directorio especificado y el Agente de distribución o de mezcla debe tener permisos de lectura. Si usa suscripciones de extracción, debe especificar un directorio compartido como una ruta de acceso UNC (Convención de nomenclatura universal), por ejemplo, \\\servidorFTP\inicio\instantáneas. Para obtener más información, vea [Proteger la carpeta de instantáneas](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
  Cuando sea posible, pida a los usuarios que proporcionen sus credenciales en tiempo de ejecución. Si almacena las credenciales en un archivo de script, debe proteger el archivo.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Una vez configurado el servidor de FTP, especifique el directorio y la información de seguridad para este servidor en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-ftp-information"></a>Para especificar la información de FTP  
@@ -71,7 +71,7 @@ Para más información sobre cómo modificar las propiedades de ubicación de la
 
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Se puede establecer la opción para que los archivos de instantáneas estén disponibles en un servidor FTP y se puede modificar esta configuración mediante programación empleando los procedimientos almacenados de replicación. El procedimiento usado depende del tipo de publicación. La entrega de instantáneas a través de FTP solamente se usa con suscripciones de extracción.  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Para habilitar la entrega de instantáneas a través de FTP para una publicación transaccional o de instantáneas  
@@ -158,7 +158,7 @@ Para más información sobre cómo modificar las propiedades de ubicación de la
   
 3.  (Opcional) Para deshabilitar la entrega de instantáneas a través de FTP, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de `enabled_for_internet` para `@property` y un valor de `false` para `@value`.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  El ejemplo siguiente crea una publicación de combinación que permite a los Suscriptores tener acceso a los datos de instantánea usando FTP. El suscriptor debe usar una conexión VPN segura al obtener acceso al recurso compartido de FTP. Las variables de scripting de**sqlcmd** se usan para proporcionar valores de inicio de sesión y de contraseña. Para obtener más información, vea [Usar sqlcmd con variables de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
  [!code-sql[HowTo#sp_createmergepub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_1.sql)]  

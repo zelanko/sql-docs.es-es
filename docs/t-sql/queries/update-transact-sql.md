@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78176695"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
@@ -329,7 +329,7 @@ GO
 > [!IMPORTANT]
 >  Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)y [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) en su lugar.  
   
-### <a name="updating-lobs"></a> Actualización de tipos de datos de valores grandes  
+### <a name="updating-large-value-data-types"></a><a name="updating-lobs"></a> Actualización de tipos de datos de valores grandes  
  Use la cláusula **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** para realizar una actualización parcial o completa de los tipo de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** . 
  
  Por ejemplo, la actualización parcial de una columna **varchar(max)** podría eliminar o modificar solo los 200 primeros bytes de la columna (200 caracteres si se usan los caracteres ASCII), mientras que una actualización completa eliminaría o modificaría todos los datos de la columna. Las actualizaciones **.WRITE** que insertan o anexan datos nuevos se registran mínimamente si se ha establecido para la base de datos el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación simple. El registro mínimo no se utiliza cuando se actualizan los datos existentes. Para más información, consulte [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
@@ -470,7 +470,7 @@ ID     Value
   
  Los permisos UPDATE se adjudican de forma predeterminada a los miembros del rol fijo de servidor `sysadmin`, a los roles fijos de base de datos `db_owner` y `db_datawriter`, y al propietario de la tabla. Los miembros de los roles `sysadmin`, `db_owner` y `db_securityadmin`, y el propietario de la tabla pueden transferir permisos a otros usuarios.  
   
-##  <a name="UpdateExamples"></a> Ejemplos  
+##  <a name="examples"></a><a name="UpdateExamples"></a> Ejemplos  
   
 |Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
@@ -486,7 +486,7 @@ ID     Value
 |[Capturar los resultados de la instrucción UPDATE](#CaptureResults)|Cláusula OUTPUT|  
 |[Usar UPDATE en otras instrucciones](#Other)|Procedimientos almacenados • TRY…CATCH|  
   
-###  <a name="BasicSyntax"></a> Sintaxis básica  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintaxis básica  
  Los ejemplos de esta sección demuestran la funcionalidad básica de la instrucción UPDATE con la sintaxis mínima requerida.  
   
 #### <a name="a-using-a-simple-update-statement"></a>A. Usar una instrucción UPDATE simple  
@@ -510,7 +510,7 @@ SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;
 GO  
 ```  
   
-###  <a name="LimitingValues"></a> Limitar las filas que se actualizan  
+###  <a name="limiting-the-rows-that-are-updated"></a><a name="LimitingValues"></a> Limitar las filas que se actualizan  
  En los ejemplos de esta sección se muestran varias formas de limitar el número de filas afectadas por la instrucción UPDATE.  
   
 #### <a name="c-using-the-where-clause"></a>C. Usar la cláusula WHERE  
@@ -598,7 +598,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-###  <a name="ColumnValues"></a> Establecer valores de columna  
+###  <a name="setting-column-values"></a><a name="ColumnValues"></a> Establecer valores de columna  
  En los ejemplos de esta sección se muestra la actualización de columnas mediante valores calculados, subconsultas y valores DEFAULT.  
   
 #### <a name="g-specifying-a-computed-value"></a>G. Especificar un valor calculado  
@@ -664,7 +664,7 @@ SET CostRate = DEFAULT
 WHERE CostRate > 20.00;  
 ```  
   
-###  <a name="TargetObjects"></a> Especificar objetos de destino que no sean tablas estándar  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> Especificar objetos de destino que no sean tablas estándar  
  En los ejemplos de esta sección se muestra cómo actualizar filas especificando una vista, un alias de tabla o una variable de tabla.  
   
 #### <a name="k-specifying-a-view-as-the-target-object"></a>K. Especificar una vista como el objeto de destino  
@@ -721,7 +721,7 @@ ORDER BY EmpID;
 GO  
 ```  
   
-###  <a name="OtherTables"></a> Actualizar los datos basados en datos de otras tablas  
+###  <a name="updating-data-based-on-data-from-other-tables"></a><a name="OtherTables"></a> Actualizar los datos basados en datos de otras tablas  
  En los ejemplos de esta sección se muestran métodos para actualizar las filas de una tabla basada en la información de otra.  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>Hora Usar la instrucción UPDATE con información de otra tabla  
@@ -760,7 +760,7 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Actualización de las filas de una tabla remota  
+###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> Actualización de las filas de una tabla remota  
  En los ejemplos de esta sección se muestra cómo actualizar las filas de una tabla de destino remota mediante un [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [función de conjunto de filas](../../t-sql/functions/rowset-functions-transact-sql.md) para hacer referencia a la tabla remota.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. Actualizar datos en una tabla remota con un servidor vinculado  
@@ -804,7 +804,7 @@ UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=
 SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
 ```
 
-###  <a name="LOBValues"></a> Actualización de tipos de datos de objetos grandes  
+###  <a name="updating-large-object-data-types"></a><a name="LOBValues"></a> Actualización de tipos de datos de objetos grandes  
  En los ejemplos de esta sección se muestran los métodos de actualización de los valores de columnas definidos con tipos de datos de objetos grandes (LOB).  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. Usar UPDATE con .WRITE para modificar los datos de una columna de tipo nvarchar(max)  
@@ -907,7 +907,7 @@ SET [Chart] = CAST('Xray 1' as varbinary(max))
 WHERE [SerialNumber] = 2;  
 ```  
   
-###  <a name="UDTs"></a> Actualizar tipos definidos por el usuario  
+###  <a name="updating-user-defined-types"></a><a name="UDTs"></a> Actualizar tipos definidos por el usuario  
  En los siguientes ejemplos se modifican valores de columnas de tipo definido por el usuario (UDT) CLR. Se muestran tres métodos. Para más información sobre las columnas definidas por el usuario, vea [Tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 #### <a name="v-using-a-system-data-type"></a>V. Usar un tipo de datos del sistema  
@@ -937,7 +937,7 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  <a name="TableHints"></a> Invalidar el comportamiento predeterminado del optimizador de consultas mediante sugerencias  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> Invalidar el comportamiento predeterminado del optimizador de consultas mediante sugerencias  
  En los ejemplos de esta sección se muestra cómo usar sugerencias de tabla y de consulta para invalidar de forma temporal el comportamiento predeterminado del optimizador de consultas cuando se procesa la instrucción UPDATE.  
   
 > [!CAUTION]  
@@ -975,7 +975,7 @@ GO
 EXEC Production.uspProductUpdate 'BK-%';  
 ```  
   
-###  <a name="CaptureResults"></a> Captura de los resultados de la instrucción UPDATE  
+###  <a name="capturing-the-results-of-the-update-statement"></a><a name="CaptureResults"></a> Captura de los resultados de la instrucción UPDATE  
  En los ejemplos de esta sección se muestra cómo usar la [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) para devolver información de cada fila afectada por una instrucción UPDATE o de expresiones que se basan en esta instrucción. Estos resultados se pueden devolver a la aplicación de procesamiento para que los utilice en mensajes de confirmación, archivado y otros requisitos similares de una aplicación.  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. Usar UPDATE con la cláusula OUTPUT  
@@ -1009,7 +1009,7 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-###  <a name="Other"></a> Usar UPDATE en otras instrucciones  
+###  <a name="using-update-in-other-statements"></a><a name="Other"></a> Usar UPDATE en otras instrucciones  
  En los ejemplos de esta sección se muestra cómo usar UPDATE en otras instrucciones.  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. Usar UPDATE en un procedimiento almacenado  

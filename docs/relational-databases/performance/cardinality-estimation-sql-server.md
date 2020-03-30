@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946993"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
@@ -59,19 +59,19 @@ Existen diversas técnicas para detectar una consulta que se ralentiza a raíz d
 
 En 1998, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 incorporó una actualización importante de la estimación de cardinalidad, para la que el nivel de compatibilidad fue 70. Esta versión del modelo de estimación de cardinalidad se establece sobre cuatro suposiciones básicas:
 
--  **Independencia:** se supone que las distribuciones de datos en otras columnas de métodos son independientes entre sí, a menos que la información de correlación esté disponible y se pueda usar.
+-  **Independencia:** se supone que las distribuciones de datos en diferentes columnas de métodos son independiente entre sí, a menos que la información de correlación esté disponible y se pueda usar.
 -  **Uniformidad:** los distintos valores tienen un espaciado uniforme y todos tienen la misma frecuencia. Concretamente, dentro de cada paso del [histograma](../../relational-databases/statistics/statistics.md#histogram), los distintos valores se distribuyen uniformemente y cada valor tiene la misma frecuencia. 
 -  **Contención (simple):** los usuarios consultan datos que existen. Por ejemplo, para una combinación de igualdad entre dos tablas, tenga en cuenta la selectividad de predicados <sup>1</sup> en cada histograma de entrada antes de unir histogramas para estimar la selectividad de combinación. 
--  **Inclusión:** para los predicados de filtro donde `Column = Constant`, se supone que la constante existe realmente para la columna asociada. Si un paso del histograma correspondiente no está vacío, se supone que uno de los valores distintos de los pasos coincide con el valor del predicado.
+-  **Inclusión:** para predicados de filtro donde `Column = Constant`, se supone que la constante existe realmente para la columna asociada. Si un paso del histograma correspondiente no está vacío, se supone que uno de los valores distintos de los pasos coincide con el valor del predicado.
 
   Recuento de <sup>1</sup> filas que cumple el predicado.
 
 Las actualizaciones posteriores empezaron por [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], que se tradujo en los niveles de compatibilidad 120 y posteriores. Las actualizaciones de estimación de cardinalidad correspondientes a los niveles 120 y posteriores incorporan suposiciones y algoritmos actualizados que funcionan bien en el almacenamiento de datos modernos y en las cargas de trabajo OLTP. Desde las suposiciones de estimación de cardinalidad de nivel 70, se cambiaron las siguientes suposiciones del modelo a partir de la estimación de cardinalidad de nivel 120:
 
--  La **independencia** se convierte en **correlación:** la combinación de los distintos valores de columna no son necesariamente independientes. Esto puede parecerse más a las consultas de datos reales.
--  La **contención simple** se convierte en **contención de base:** es posible que los usuarios consulten datos que no existen. Por ejemplo, para una combinación de igualdad entre dos tablas, usamos los histogramas de tablas base para calcular la selectividad de combinación y, después, el factor en la selectividad de predicados.
+-  La **independencia** se convierte en **correlación**: la combinación de los distintos valores de columna no son necesariamente independientes. Esto puede parecerse más a las consultas de datos reales.
+-  La **contención simple** se convierte en **contención de base**: los usuarios puede que consulten datos que no existen. Por ejemplo, para una combinación de igualdad entre dos tablas, usamos los histogramas de tablas base para calcular la selectividad de combinación y, después, el factor en la selectividad de predicados.
   
-**Nivel de compatibilidad:** para asegurarse de que la base de datos esté en un nivel determinado, use el siguiente código de [!INCLUDE[tsql](../../includes/tsql-md.md)] para [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Nivel de compatibilidad:** para procurar que la base de datos esté en un nivel determinado, use el siguiente código de [!INCLUDE[tsql](../../includes/tsql-md.md)] para [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -89,7 +89,7 @@ GO
   
 En el caso de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un nivel de compatibilidad 120 o superior, la activación de la [marca de seguimiento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) obliga al sistema a usar la versión 70 de la estimación de cardinalidad.  
   
-**Estimación de cardinalidad heredada:** en el caso de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el nivel de compatibilidad 120 y superior, la versión 70 de la estimación de cardinalidad se puede activar con la instrucción [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**Estimación de cardinalidad heredada**: en el caso de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el nivel de compatibilidad 120 y superior, la versión 70 de la estimación de cardinalidad se puede activar con la instrucción [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 
@@ -111,7 +111,7 @@ WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**Almacén de consultas:** a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el almacén de consultas es una herramienta muy útil para examinar el rendimiento de las consultas. En [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], en el **Explorador de objetos**, debajo del nodo de la base de datos, se muestra un nodo del **Almacén de consultas**, si este está habilitado.  
+**Almacén de consultas**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el almacén de consultas resulta una herramienta muy útil para examinar el rendimiento de las consultas. En [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], en el **Explorador de objetos**, debajo del nodo de la base de datos, se muestra un nodo del **Almacén de consultas**, si este está habilitado.  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  

@@ -19,10 +19,10 @@ author: briancarrig
 ms.author: brcarrig
 manager: amitban
 ms.openlocfilehash: df8bb9e603d5455a2e42393df4c40956000cb037
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831596"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>Tecnologías y sistemas de base de datos en memoria
@@ -57,7 +57,7 @@ Una memoria caché volátil rápida que se enfrenta a un medio considerablemente
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] describe cómo configurar la memoria persistente (PMEM) con la [memoria persistente](../linux/sql-server-linux-configure-pmem.md) de la utilidad `ndctl`.
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] describe cómo configurar la memoria persistente (PMEM) con la `ndctl`memoria persistente[ de la utilidad ](../linux/sql-server-linux-configure-pmem.md).
 
 ## <a name="persisted-log-buffer"></a>Búfer de registro persistente
 

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3581d9247979702a7c1e9af409b43121c4158334
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111889"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Archivos de formato no XML [SQL Server]
@@ -36,7 +36,7 @@ ms.locfileid: "68111889"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Ventajas de los archivos de formato no XML  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> Ventajas de los archivos de formato no XML  
   
 -   Puede crear automáticamente un archivo de formato no XML si especifica la opción **format** en un comando **bcp** .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68111889"
 > [!NOTE]  
 >  Los archivos de formato XML ofrecen varias ventajas sobre los archivos con otro formato. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
-##  <a name="Structure"></a> Estructura de los archivos de formato no XML  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> Estructura de los archivos de formato no XML  
  Un archivo de formato no XML es un archivo de texto que tiene una estructura específica. El archivo de formato no XML contiene información sobre el tipo de almacenamiento de archivo, la longitud de prefijo, la longitud de campo y el terminador de campo de cada columna de tabla.  
   
  En la ilustración siguiente se muestran los campos de archivo de formato de un archivo de formato no XML de ejemplo.  
@@ -79,7 +79,7 @@ ms.locfileid: "68111889"
 > [!NOTE]  
 >  Puede modificar un archivo de formato de forma que le permita realizar una importación masiva desde un archivo de datos en el que el número o el orden de los campos difieran del número o el orden de las columnas de la tabla. Para obtener más información, vea la lista [Tareas relacionadas](#RelatedTasks) , más adelante en este tema.  
   
-##  <a name="Examples"></a> Ejemplo de archivo de formato no XML  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> Ejemplo de archivo de formato no XML  
  En el ejemplo siguiente se muestra un archivo de formato no XML creado anteriormente (`myDepartmentIdentical-f-c.fmt`). Este archivo describe un campo de datos de caracteres para cada columna en la tabla `HumanResources.Department` de la base de datos de ejemplo `AdventureWorks2012` .  
   
  El archivo de formato generado, `myDepartmentIdentical-f-c.fmt`, contiene la siguiente información:  
@@ -96,7 +96,7 @@ ms.locfileid: "68111889"
 > [!NOTE]  
 >  Para ver una ilustración en la que se muestran los campos del archivo de formato en relación con este archivo de formato no XML de ejemplo, vea [Estructura de los archivos de formato no XML](#Structure)anteriormente en este tema.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear un archivo de formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   

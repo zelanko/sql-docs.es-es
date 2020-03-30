@@ -15,15 +15,15 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f5f8840e0204847d447ea794e94312221ec1cc72
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66106949"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380796"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxis de consulta XML para los datos de informe XML (SSRS)
-  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML `Query` o una ruta de acceso de elemento. Un XML `Query` se inicia con una ** \<consulta>** etiqueta e incluye espacios de nombres y elementos XML que varían en función del origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](report-data-ssrs.md).  
+  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML `Query` o una ruta de acceso de elemento. Un `Query` XML comienza con una ** \<** etiqueta Query>e incluye espacios de nombres y elementos XML que varían en función del origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](report-data-ssrs.md).  
   
  Se pueden crear orígenes de datos XML para los siguientes tipos de datos XML:  
   
@@ -87,8 +87,8 @@ ms.locfileid: "66106949"
   
 |Elemento de consulta XML|Campos resultantes en el conjunto de datos|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Valor A: https://schemas.microsoft.com/...<br /><br /> Valor B: https://schemas.microsoft.com/...<br /><br /> Valor C: https://schemas.microsoft.com/...|  
-|\<xmldp: query xmlns: xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns: NS = "https://schemas.microsoft.com/..". ><br /><br /> \<xmldp: ElementPath>raíz {}/NS: Elemento2/node\</xmldp: ElementPath><br /><br /> \</xmldp: consulta>|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
+|\<Query/>|Valor A: `https://schemas.microsoft.com/..`.<br /><br /> Valor B: `https://schemas.microsoft.com/..`.<br /><br /> Valor C: `https://schemas.microsoft.com/.`..|  
+|\<xmldp:Query xmlns:xmldp-"https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns""https://schemas.microsoft.com/..." ><br /><br /> \<xmldp:ElementPath>{}raíz /ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Consulta>|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  
  Puede copiar este documento XML y guardarlo en una dirección URL disponible para el Diseñador de informes con objeto de poder usarlo como origen de datos XML, por ejemplo, http://localhost/DPNamespace.xml.  
@@ -108,7 +108,7 @@ ms.locfileid: "66106949"
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Tipo de conexión XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
  [Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   

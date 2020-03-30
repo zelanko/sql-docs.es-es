@@ -19,10 +19,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 936c40de1bebd463ad0213ebdfc99171a0fd91a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242391"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Dar de alta un servidor de destino en un servidor maestro
@@ -37,7 +37,7 @@ Para información sobre cómo la cuenta de Windows usada para el servicio del Ag
   
 El cifrado SSL (Capa de sockets seguros) y la validación de certificados completos se habilita para las conexiones entre los servidores maestros y los servidores de destino de forma predeterminada. Para más información, [Establecer opciones de cifrado en servidores de destino](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   
-## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-enlist-a-target-server"></a>Para dar de alta un servidor de destino  
   
@@ -47,7 +47,7 @@ El cifrado SSL (Capa de sockets seguros) y la validación de certificados comple
   
 3.  Complete el Asistente para establecer servidor de destino, que le guía a través del proceso.  
   
-## <a name="TsqlProcedure"></a>Usar Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Usar Transact-SQL  
   
 #### <a name="to-enlist-a-target-server"></a>Para dar de alta un servidor de destino  
   

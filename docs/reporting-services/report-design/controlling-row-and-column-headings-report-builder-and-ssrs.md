@@ -10,10 +10,10 @@ ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245362"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>Control de los encabezados de fila y de columna (Generador de informes y SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "75245362"
   
  En las regiones de datos Tablix con áreas de grupos de filas o columnas, para controlar cómo se asocian las filas y las columnas es necesario establecer propiedades en dichas regiones. En todos los demás casos, para controlar las filas y columnas se establecen las propiedades en el panel Propiedades correspondiente al miembro Tablix seleccionado. Para obtener instrucciones paso a paso, vea [Mostrar encabezados de fila y de columna en varias páginas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md) y [Mantener visibles los encabezados al desplazarse a través de un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Top"></a> Ejemplos  
+##  <a name="examples"></a><a name="Top"></a> Ejemplos  
  Los ejemplos más comunes de regiones de datos Tablix son una matriz, una tabla sin grupos y una tabla con un grupo de filas y un encabezado de grupo de filas, y una tabla con un grupo de filas pero que carece de encabezado de grupo de filas. Para controlar cómo repetir o inmovilizar los encabezados, debe determinar si las filas o columnas que desea controlar están asociadas a un encabezado de grupo en el área de los grupos de filas o de los grupos de columnas.  
   
  En las secciones siguientes se proporcionan ejemplos de diseños comunes para una región de datos Tablix:  
@@ -58,7 +58,7 @@ ms.locfileid: "75245362"
   
 -   [Tabla con grupos de filas, pero sin área de grupos de filas](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> Matriz  
+###  <a name="matrix"></a><a name="Matrix"></a> Matriz  
  De forma predeterminada, una matriz simple tiene un grupo de filas y un grupo de columnas. En la ilustración siguiente se muestra una matriz con un grupo de filas que se basa en la categoría y un grupo de columnas que se basa en la geografía:  
   
  ![Grupo de columnas Geography y fila Categoría, Matriz](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Grupo de columnas Geography y fila Categoría, Matriz")  
@@ -73,7 +73,7 @@ ms.locfileid: "75245362"
   
  [Volver al principio](#Top)  
   
-###  <a name="TableNoGroups"></a> Tabla sin grupos de filas  
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a> Tabla sin grupos de filas  
  De forma predeterminada, una tabla simple sin grupos incluye el grupo de detalles. En la ilustración siguiente se muestra una tabla que presenta los datos de la categoría, número de pedido y ventas:  
   
  ![Diseño, tabla con una fila dinámica y otra estática](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Diseño, tabla con una fila dinámica y otra estática")  
@@ -94,7 +94,7 @@ ms.locfileid: "75245362"
   
  [Volver al principio](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> Tabla con grupos de filas y un área de grupos de filas  
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a> Tabla con grupos de filas y un área de grupos de filas  
  Si agrega un grupo de filas a una tabla sencilla, se agrega un área de grupo de filas a la tabla en el área de diseño. En la ilustración siguiente se muestra una tabla con un grupo de filas que se basa en la categoría.  
   
  ![Diseño, tabla con un grupo de fila y detalles](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Diseño, tabla con un grupo de fila y detalles")  
@@ -111,11 +111,11 @@ ms.locfileid: "75245362"
   
  ![Grupos de filas, modo avanzado con miembros estáticos](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Grupos de filas, modo avanzado con miembros estáticos")  
   
- Se muestran cuatro miembros Tablix: **Static**, (**Static**), Category y (**Details**). Un miembro Tablix que incluya paréntesis () indica que no hay un encabezado de grupo correspondiente. Si desea repetir o inmovilizar los encabezados de columna, seleccione el miembro Tablix Estático y establezca propiedades en el panel de propiedades.  
+ Se muestran cuatro miembros Tablix: **Estático**, (**Estático**), Categoría y (**Detalles**). Un miembro Tablix que incluya paréntesis () indica que no hay un encabezado de grupo correspondiente. Si desea repetir o inmovilizar los encabezados de columna, seleccione el miembro Tablix Estático y establezca propiedades en el panel de propiedades.  
   
  [Volver al principio](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> Tabla con grupos de filas y sin área de grupos de filas  
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a> Tabla con grupos de filas y sin área de grupos de filas  
  Una tabla puede tener grupos de filas pero carecer de área de grupos de filas de varias formas. Por ejemplo, dos formas de que ocurra esto serían:  
   
 -   Comenzar con una tabla con grupos de filas y un área de grupo de filas, y eliminar las columnas del área de grupo de filas. Elimine las columnas únicamente y no los grupos. Por ejemplo, puede que desee controlar el formato de tabla para que sea una cuadrícula simple.  
@@ -138,7 +138,7 @@ ms.locfileid: "75245362"
   
  ![Grupos de filas, avanzados, sin encabezado de grupo.](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Grupos de filas, avanzados, sin encabezado de grupo.")  
   
- En el panel Grupos de filas, se enumeran los siguientes miembros Tablix: (**Static**), (Category), (**Static**) y (**Details**). Si quiere repetir o inmovilizar los encabezados de columna, seleccione el miembro Tablix (**Estático**) superior y establezca propiedades en el panel de propiedades.  
+ En el panel Grupos de filas, se enumeran los siguientes miembros Tablix: (**Estático**), (Categoría), (**Estático**) y (**Detalles**). Si quiere repetir o inmovilizar los encabezados de columna, seleccione el miembro Tablix (**Estático**) superior y establezca propiedades en el panel de propiedades.  
   
  [Volver al principio](#Top)  
   

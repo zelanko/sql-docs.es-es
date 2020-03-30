@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041338"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico circular a un informe (Generador de informes)
@@ -34,7 +34,7 @@ Tiempo estimado para completar este tutorial: 10 minutos
 ## <a name="requirements"></a>Requisitos  
 Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Crear un gráfico circular a partir del Asistente para gráficos  
+## <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. Crear un gráfico circular a partir del Asistente para gráficos  
 En esta sección, usará el Asistente para gráficos con el fin de crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico circular.  
 
   
@@ -77,7 +77,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
   
 9. Haga clic en **Next**.  
   
-## <a name="ChartType"></a>2. Elegir el tipo de gráfico  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Elegir el tipo de gráfico  
 Podrá elegir entre varios tipos de gráfico predefinidos.  
 
   
@@ -103,7 +103,7 @@ El informe muestra el gráfico circular con ocho segmentos, uno para cada produc
 
 ![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
-## <a name="Percentages"></a>3. Mostrar porcentajes en cada sector  
+## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Mostrar porcentajes en cada sector  
 En cada sector del gráfico circular, puede mostrar un porcentaje de este sector respecto al círculo entero.  
 
   
@@ -130,7 +130,7 @@ El informe muestra el porcentaje de la totalidad para cada sector del gráfico c
 
 ![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
-## <a name="CombineSlices"></a>4. Unir los sectores pequeños en un solo sector  
+## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Unir los sectores pequeños en un solo sector  
 Tres de los sectores del gráfico son bastante pequeños. Puede combinar varios segmentos pequeños en un segmento mayor "Otros" que represente los tres.  
 
 1.  Cambie a la vista de diseño del informe.  
@@ -155,7 +155,7 @@ En la leyenda, ahora ve la categoría "Otros". El nuevo sector del gráfico circ
 
 ![generador-informes-gráfico-circular-inicia-en-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
-## <a name="DrawingEffect"></a>5. Iniciar los valores del gráfico circular desde la parte superior 
+## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Iniciar los valores del gráfico circular desde la parte superior 
 
 De forma predeterminada en los gráficos circulares, el primer valor del conjunto de datos se inicia en 90 grados desde la parte superior del círculo. Lo verá en el gráfico circular en las secciones anteriores.
 
@@ -173,7 +173,7 @@ Ahora, los segmentos del gráfico circular están en orden alfabético, empezand
 
 ![generador-informes-gráfico-circular-inicia-parte-superior](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
-## <a name="Title"></a>6. Agregar un título de informe  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Agregar un título de informe  
   
 Dado que el gráfico circular es la única visualización del informe, el gráfico no necesita su propio título. Con el título del informe llega.
   
@@ -197,7 +197,7 @@ Dado que el gráfico circular es la única visualización del informe, el gráfi
   
 6.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-## <a name="Save"></a>7. Guardar el informe  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Guardar el informe  
   
 ### <a name="to-save-the-report"></a>Para guardar el informe  
   

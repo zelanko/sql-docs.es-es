@@ -21,10 +21,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8b7f2b056e4fa634f338d3165391af8a3d958c3a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242491"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
@@ -35,17 +35,17 @@ ms.locfileid: "75242491"
 
 En este tema se describe cómo quitar un operador para que deje de recibir notificaciones de alerta del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Restrictions"></a>Limitaciones y restricciones 
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitaciones y restricciones 
 Cuando se quita un operador, se quitan también todas las notificaciones asociadas con él.  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permisos  
+#### <a name="permissions"></a><a name="Permissions"></a>Permisos  
 Los miembros del rol fijo de servidor **sysadmin** pueden eliminar operadores.  
   
-## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-delete-an-operator"></a>Para eliminar un operador  
   
@@ -59,7 +59,7 @@ Los miembros del rol fijo de servidor **sysadmin** pueden eliminar operadores.
   
 5.  En el cuadro de diálogo **Eliminar objeto** , asegúrese de que está seleccionado el operador correcto y haga clic en **Aceptar**. Para que otro operador reciba las alertas y trabajos enviados al operador eliminado, active **Volver a asignar a** y seleccione un operador de la lista.  
   
-## <a name="TsqlProcedure"></a>Usar Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Usar Transact-SQL  
   
 #### <a name="to-delete-an-operator"></a>Para eliminar un operador  
   

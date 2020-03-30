@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: f51e5326d29d7edd6a518c02f7042cc9ed104b4f
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895956"
 ---
 # <a name="table-valued-parameters"></a>Parámetros con valores de tabla
@@ -118,8 +118,8 @@ SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories
 tvpParam.SqlDbType = SqlDbType.Structured;  
 ```  
   
-## <a name="passing"></a> Paso de un parámetro con valores de tabla a un procedimiento almacenado  
-En este ejemplo se muestra cómo pasar datos de parámetros con valores de tabla a un procedimiento almacenado. El código extrae las filas agregadas a un nuevo objeto <xref:System.Data.DataTable> mediante el método <xref:System.Data.DataTable.GetChanges%2A>. A continuación, el código define <xref:Microsoft.Data.SqlClient.SqlCommand>, estableciendo la propiedad <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> en <xref:System.Data.CommandType.StoredProcedure>. El valor <xref:Microsoft.Data.SqlClient.SqlParameter> se rellena con el método <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> y el valor <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> se establece en `Structured`. A continuación, se ejecuta <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> utilizando el método <xref:Microsoft.Data.SqlClient.SqlCommand>.  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> Paso de un parámetro con valores de tabla a un procedimiento almacenado  
+En este ejemplo se muestra cómo pasar datos de parámetros con valores de tabla a un procedimiento almacenado. El código extrae las filas agregadas a un nuevo objeto <xref:System.Data.DataTable> mediante el método <xref:System.Data.DataTable.GetChanges%2A>. A continuación, el código define <xref:Microsoft.Data.SqlClient.SqlCommand>, estableciendo la propiedad <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> en <xref:System.Data.CommandType.StoredProcedure>. El valor <xref:Microsoft.Data.SqlClient.SqlParameter> se rellena con el método <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> y el valor <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> se establece en `Structured`. A continuación, se ejecuta <xref:Microsoft.Data.SqlClient.SqlCommand> utilizando el método <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  

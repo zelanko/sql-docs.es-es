@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: df23131fdceaf09cc3a6a10c08354994def2114b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242435"
 ---
 # <a name="designate-an-events-forwarding-server"></a>Designación de un servidor de reenvío de eventos
@@ -31,14 +31,14 @@ ms.locfileid: "75242435"
 
 En este tema se describe cómo designar un servidor al que [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reenvía eventos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Observe que el reenvío de eventos se aplica a los eventos reenviados entre servidores, no a los eventos reenviados entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospedadas en un único equipo. Tenga en cuenta también que para recibir eventos reenviados, el servidor de administración de alertas debe ser una instancia predeterminada de SQL Server.  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permisos  
+#### <a name="permissions"></a><a name="Permissions"></a>Permisos  
 Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
-## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-designate-an-events-forwarding-server"></a>Para designar un servidor de reenvío de eventos  
   

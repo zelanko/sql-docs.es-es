@@ -9,10 +9,10 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fb4fe31bfddb1c2312ae7e99e8a53609b5e5d70c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79112354"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexión de PowerPivot (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "79112354"
   
  Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Prerequisites  
  El origen de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se debe publicar en una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un sitio de SharePoint.  
   
  Para admitir conexiones del Generador de informes con un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , debe tener SQL Server 2008 R2 ADOMD.NET en el equipo de la estación de trabajo. Esta biblioteca cliente se instala con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, pero si está usando un equipo que no tiene esta aplicación, debe descargar e instalar ADOMD.NET de la página [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  

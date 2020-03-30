@@ -15,13 +15,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75226832"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procedimientos: Uso el Diseñador de tablas para administrar tablas y relaciones
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Cómo: Usar el Diseñador de tablas para administrar tablas y relaciones
 
 El Diseñador de tablas proporciona una experiencia visual junto con el Editor de Transact\-SQL para crear y editar estructuras de tablas, incluidos objetos de programación específicos de tablas, para bases de datos de SQL Server.  Se inicia al crear una nueva tabla para una base de datos conectada o un proyecto, o al hacer doble clic para editar una tabla en el Explorador de objetos de SQL Server o en el Explorador de soluciones.  
   

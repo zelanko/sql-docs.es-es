@@ -11,15 +11,15 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286599"
 ---
-# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Tutorial: Uso de una condición de prueba personalizada para comprobar el resultado de un procedimiento almacenado
+# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Tutorial: Usar una condición de prueba personalizada para comprobar el resultado de un procedimiento almacenado
 
-En el tutorial de esta extensión de característica, creará una condición de prueba y comprobará su funcionalidad creando una prueba unitaria de SQL Server. El proceso incluye la creación de un proyecto de biblioteca de clases para la condición de prueba, así como su firma y su instalación. Si ya tiene una condición de prueba que desea actualizar, vea [Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
+En el tutorial de esta extensión de característica, creará una condición de prueba y comprobará su funcionalidad creando una prueba unitaria de SQL Server. El proceso incluye la creación de un proyecto de biblioteca de clases para la condición de prueba, así como su firma y su instalación. Si ya tiene una condición de prueba que desea actualizar, consulte [Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 En este tutorial se muestran las tareas siguientes:  
   
@@ -121,7 +121,7 @@ Ahora, cambiará el nombre de **Class1** a **ResultSetColumnCountCondition** y l
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  Agregue [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). Consulte [Cómo: Crear condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) para más información sobre UnitTesting.Conditions.ExportTestConditionAttribute.  
+5.  Agregue [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). Consulte [Cómo: Crear condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) para más información sobre UnitTesting.Conditions.ExportTestConditionAttribute.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -344,7 +344,7 @@ namespace ColumnCountCondition
   
 Después, compilaremos el proyecto.  
   
-## <a name="xxx"></a>Compilar el proyecto e instalar la condición de prueba  
+## <a name="compiling-the-project-and-installing-your-test-condition"></a><a name="xxx"></a>Compilar el proyecto e instalar la condición de prueba  
 En el menú **Compilar**, haga clic en **Compilar solución**.  
   
 Después, copiará la información del ensamblado en el directorio Extensions. Cuando Visual Studio se inicie, identificará cualquier extensión del directorio %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions y sus subdirectorios, y hará que estén disponibles para su uso:  
@@ -381,7 +381,7 @@ Después, necesitamos crear una prueba unitaria. Para crear una prueba unitaria 
   
 6.  Haga clic en **Cancelar** para crear la prueba unitaria sin configurar proyecto de prueba para que use una conexión de base de datos. Aparecerá la prueba en blanco en el Diseñador de pruebas unitarias de SQL Server. Se agregará un archivo de código fuente de Visual C\# al proyecto de prueba.  
   
-    Para obtener más información acerca de cómo crear y configurar pruebas unitarias de base de datos con conexiones de base de datos, vea [Cómo: Crear una prueba unitaria de SQL Server vacía](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
+    Para más información sobre cómo crear y configurar pruebas unitarias de base de datos con conexiones de base de datos, consulte [Cómo: Crear una prueba unitaria de SQL Server vacía](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
   
 7.  Haga clic en **Haga clic aquí para crear** para terminar de crear la prueba unitaria. Verá que la nueva condición de prueba aparece en el proyecto de SQL Server.  
   
@@ -400,7 +400,7 @@ Para ver la nueva condición de prueba:
   
 5.  En la ventana **Propiedades**, configure las propiedades Count, Enabled y ResultSet.  
   
-    Para más información, vea: [Cómo: Incorporar condiciones de prueba a pruebas unitarias de SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+    Para más información, consulte [Cómo: Agregar condiciones de prueba a pruebas unitarias de SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
 ## <a name="see-also"></a>Consulte también  
 [Condiciones de prueba personalizadas para pruebas unitarias de SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

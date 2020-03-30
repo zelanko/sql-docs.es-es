@@ -8,10 +8,10 @@ ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
 ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244402"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
@@ -40,7 +40,7 @@ ms.locfileid: "75244402"
 |6|Configure **Hostname** y **UrlRoot** para que usen la dirección IP del servidor virtual del clúster NLB.|[Cómo configurar Hostname y UrlRoot](#SpecifyingVirtualServerName) en este tema.|  
 |7|Compruebe que los servidores son accesibles a través del nombre de host que especificó.|[Comprobar el acceso del servidor de informes](#Verify) en este tema.|  
   
-## <a name="ViewState"></a> Cómo configurar la validación del estado de la vista
+## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> Cómo configurar la validación del estado de la vista
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Para ejecutar una implementación escalada en un clúster NLB, debe configurar la validación del estado de la vista para que los usuarios puedan ver los informes HTML interactivos.  Debe hacer esto para el servicio web del servidor de informes.
@@ -92,7 +92,7 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
 
 ::: moniker-end
 
-## <a name="SpecifyingVirtualServerName"></a> Cómo configurar Hostname y UrlRoot
+## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> Cómo configurar Hostname y UrlRoot
 
  Para configurar una implementación escalada del servidor de informes en un clúster NLB, debe definir un nombre único del servidor virtual que proporcione un solo punto de acceso al clúster de servidores. A continuación, registre este nombre de servidor virtual con el Servidor de nombres de dominio (DNS) del entorno.  
   
@@ -122,7 +122,7 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
   
 6. Repita estos pasos en cada archivo RSReportServer.config de cada servidor de informes de la implementación escalada.  
   
-## <a name="Verify"></a> Comprobar el acceso del servidor de informes
+## <a name="verify-report-server-access"></a><a name="Verify"></a> Comprobar el acceso del servidor de informes
 
  Compruebe que puede acceder a la implementación escalada a través del nombre de servidor virtual (por ejemplo, `https://MyVirtualServerName/reportserver` y `https://MyVirtualServerName/reports`).  
   

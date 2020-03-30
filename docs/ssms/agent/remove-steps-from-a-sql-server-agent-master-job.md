@@ -13,10 +13,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 80ad67f6a180aaab688f38c7504c1f9338f5f4b2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246319"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
@@ -27,17 +27,17 @@ ms.locfileid: "75246319"
 
 En este tema se describe cómo quitar los pasos de un trabajo maestro del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Restrictions"></a>Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitaciones y restricciones  
 No se puede destinar un trabajo principal del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a servidores locales y remotos.  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permisos  
+#### <a name="permissions"></a><a name="Permissions"></a>Permisos  
 A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modificar los trabajos de su propiedad. Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-remove-steps-from-a-sql-server-agent-master-job"></a>Para quitar los pasos de un trabajo maestro del Agente SQL Server  
   
@@ -55,7 +55,7 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   
-## <a name="TsqlProcedure"></a>Usar Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Usar Transact-SQL  
   
 #### <a name="to-remove-steps-from-a-sql-server-agent-master-job"></a>Para quitar los pasos de un trabajo maestro del Agente SQL Server  
   

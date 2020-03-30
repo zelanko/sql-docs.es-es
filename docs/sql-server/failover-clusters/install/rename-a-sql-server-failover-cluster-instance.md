@@ -15,10 +15,10 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230717"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server
@@ -63,7 +63,7 @@ ms.locfileid: "75230717"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Consideraciones adicionales después de la operación de cambio de nombre  
  Después de cambiar el nombre de red en clúster del clúster de conmutación por error, hay que comprobar y seguir las siguientes instrucciones para conseguir que todos los escenarios del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funcionen.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servicio del Agente:** compruebe y realice las acciones adicionales siguientes para el Servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :** compruebe y realice las acciones adicionales siguientes para el Servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   Corrija la configuración del Registro si el Agente SQL se configura para el reenvío de eventos. Para obtener más información, vea [Designar un servidor de reenvío de eventos &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   

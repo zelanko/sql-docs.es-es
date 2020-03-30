@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6c05f4e2739b2683ecb74a1aa65e98de85e36bb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246341"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
@@ -31,9 +31,9 @@ ms.locfileid: "75246341"
 
 En este tema se describe cómo eliminar una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Restrictions"></a>Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitaciones y restricciones  
   
 -   Cuando elimine una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , asegúrese de que el proxy no haga referencia a ningún paso de trabajo activo. Para comprobar si existen pasos de trabajo que hacen referencia al proxy, haga clic con el botón derecho en el proxy, seleccione **Propiedades** y, en el cuadro de diálogo _Propiedades de cuenta de proxy\__ nombre**proxy**, seleccione la página **Referencias**. Si elimina un proxy, en el cuadro de diálogo **Eliminar objeto** se le ofrece la posibilidad de volver a asignar todos los pasos de trabajo que utilizan ese proxy.  
   
@@ -43,12 +43,12 @@ En este tema se describe cómo eliminar una cuenta de proxy del Agente [!INCLUDE
   
 -   Si el inicio de sesión del usuario tiene acceso al proxy o si el usuario pertenece a un rol con acceso al proxy, puede usarlo en un paso de trabajo.  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permisos  
+#### <a name="permissions"></a><a name="Permissions"></a>Permisos  
 Solo los miembros del rol fijo de servidor **sysadmin** pueden crear, modificar o eliminar cuentas de proxy.  
   
-## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>Para eliminar una cuenta de proxy del Agente SQL Server  
   
@@ -66,7 +66,7 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden crear, modificar 
   
 7.  Haga clic en **OK**.  
   
-## <a name="TsqlProcedure"></a>Usar Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Usar Transact-SQL  
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>Para eliminar una cuenta de proxy del Agente SQL Server  
   

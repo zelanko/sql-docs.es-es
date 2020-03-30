@@ -11,10 +11,10 @@ ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee38cc22ec2834060396b696acb900eb8c7f8831
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866525"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Controladores de Microsoft para PHP para SQL Server
@@ -24,10 +24,10 @@ ms.locfileid: "78866525"
 Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP. Los controladores son extensiones de PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para acceder a datos en instancias de Azure SQL Database y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). Los controladores hacen uso de las características de PHP, incluidas las secuencias de PHP, para leer y escribir objetos grandes.  
   
 ## <a name="getting-started"></a>Introducción  
-* [Paso 1: Configuración del entorno de desarrollo para el desarrollo de PHP](step-1-configure-development-environment-for-php-development.md)  
+* [Paso 1: configurar el entorno de desarrollo para el desarrollo de PHP](step-1-configure-development-environment-for-php-development.md)  
 * [Paso 2: Creación de una base de datos para el desarrollo de PHP](step-2-create-a-sql-database-for-php-development.md)  
-* [Paso 3: Prueba de concepto de la conexión a SQL mediante PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [Paso 4: Conexión resistente a SQL con PHP](step-4-connect-resiliently-to-sql-with-php.md)  
+* [Paso 3: prueba de concepto de la conexión a SQL con PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [Paso 4: conectarse con resistencia a SQL con PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>Documentación  
 * [Introducción](getting-started-with-the-php-sql-driver.md)

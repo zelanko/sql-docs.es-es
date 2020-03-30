@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1c56acaa84b26192d766097294a5ab2bfd31ab8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242450"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar un operador para notificaciones de error
@@ -32,9 +32,9 @@ ms.locfileid: "75242450"
 
 Un operador para notificaciones de error es un usuario que recibe la alerta si ésta no llega al operador designado. En este tema se describe cómo establecer un operador para notificaciones de error para recibir notificaciones de alerta del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el uso de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="BeforeYouBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Restrictions"></a>Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitaciones y restricciones  
   
 -   Las opciones Buscapersonas y **net send** se quitarán del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una versión futura de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
   
@@ -42,12 +42,12 @@ Un operador para notificaciones de error es un usuario que recibe la alerta si �
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
-### <a name="Security"></a>Seguridad  
+### <a name="security"></a><a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permisos  
+#### <a name="permissions"></a><a name="Permissions"></a>Permisos  
 Solo los miembros del rol fijo de servidor **sysadmin** pueden designar operadores para notificaciones de error.  
   
-## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-designate-a-fail-safe-operator"></a>Para designar un operador para notificaciones de error  
   
@@ -61,7 +61,7 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden designar operador
   
 5.  En la lista **Operador** , seleccione el operador que desee que sea el operador para notificaciones de error.  
   
-6.  Seleccione alguna o la totalidad de las siguientes casillas para especificar cómo se notificará al operador: **Correo electrónico**, **Buscapersonas** o **Net Send**.  
+6.  Active alguna o la totalidad de las siguientes casillas para especificar cómo se notificará al operador: **Correo electrónico**, **Buscapersonas**o **Net send**.  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   

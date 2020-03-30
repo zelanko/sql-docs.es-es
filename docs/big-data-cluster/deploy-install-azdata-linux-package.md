@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728586"
 ---
 # <a name="install-azdata-with-apt"></a>Instalación de `azdata` con apt
@@ -24,11 +24,11 @@ En este artículo se explica cómo instalar `azdata` para clústeres de macrodat
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
-## <a id="linux"></a>Instalar `azdata` para Linux
+## <a name="install-azdata-for-linux"></a><a id="linux"></a>Instalar `azdata` para Linux
 
 El paquete de instalación `azdata` está disponible para Ubuntu con `apt`.
 
-### <a id="azdata-apt"></a>Instalar `azdata` con apt (Ubuntu)
+### <a name="install-azdata-with-apt-ubuntu"></a><a id="azdata-apt"></a>Instalar `azdata` con apt (Ubuntu)
 
 >[!NOTE]
 >El paquete `azdata` no usa el sistema Python, sino que instala su propio intérprete de Python.

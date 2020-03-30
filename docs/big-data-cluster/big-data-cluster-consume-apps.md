@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75721410"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Consumo de una aplicación implementada en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con un servicio web RESTful
@@ -135,4 +135,4 @@ Ahora ha llamado correctamente a la aplicación a través del servicio web. Pued
 
 También puede ver otros ejemplos en [Ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy).
 
-Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
+Vea [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]¿Qué son los [?[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para obtener más información sobre los ](big-data-cluster-overview.md).

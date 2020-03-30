@@ -1,5 +1,5 @@
 ---
-title: Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias (SSRS Configuration Manager) | Microsoft Docs
+title: Reservas de direcciones URL para implementaciones de servidor de informes de varias instancias (Administrador de configuración de SSRS) Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f49a13fa50254e4c485a228d506b49e14d190959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66108620"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380696"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias (Administrador de configuración de SSRS)
   Si instala varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el mismo equipo, debe tener en cuenta cómo va a definir las reservas de direcciones URL para cada instancia. En cada instancia, el servicio web del servidor de informes y el Administrador de informes deben tener al menos una reserva de direcciones URL cada uno. El conjunto completo de reservas debe ser único en HTTP.SYS.  
@@ -42,13 +42,13 @@ ms.locfileid: "66108620"
 |Instancia predeterminada del servidor de informes (MSSQLSERVER)|ReportServer_MyNamedInstance|Unicidad|  
 |----------------------------------------------------|-----------------------------------|----------------|  
 |http://+:80/reportserver|http://+:8888/reportserver|Cada instancia escucha en un puerto diferente.|  
-|http://www.contoso.com/reportserver|http://SRVR-46/reportserver|Cada instancia responde a nombres de servidor diferentes (nombre de dominio completo y nombre de equipo).|  
+|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Cada instancia responde a nombres de servidor diferentes (nombre de dominio completo y nombre de equipo).|  
   
 ## <a name="uniqueness-requirements"></a>Requisitos de unicidad  
  Las tecnologías subyacentes utilizadas por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] imponen los requisitos relativos a nombres únicos. HTTP.SYS requiere que todas las direcciones URL de su repositorio sean únicas. Puede cambiar el puerto, el nombre de host o el nombre de directorio virtual para crear una dirección URL única. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requiere que las identidades de aplicaciones sean únicas en el mismo proceso. Este requisito afecta a los nombres de directorio virtuales. Especifica que no se puede duplicar un nombre de directorio virtual en la misma instancia del servidor de informes.  
   
-## <a name="see-also"></a>Consulte también  
- [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Vea también  
+ [Configurar las direcciones URL del servidor de informes &#40;administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

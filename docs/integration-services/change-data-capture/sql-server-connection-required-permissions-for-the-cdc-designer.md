@@ -11,10 +11,10 @@ ms.assetid: 80334de2-17c1-43c9-951e-21a9f864e9cb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dee01068864d087548d0f6def2179787bf66fc55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294546"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-designer"></a>Permisos necesarios de conexión con SQL Server para el Diseñador CDC

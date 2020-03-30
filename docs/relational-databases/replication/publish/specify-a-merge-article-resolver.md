@@ -15,10 +15,10 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c1267e08bfdb1361223f3a93ec465b3da83d8ce
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70846570"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Especificar un solucionador de artículos de mezcla
@@ -44,7 +44,7 @@ ms.locfileid: "70846570"
   
     -   El servidor con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS), para una suscripción de extracción que utilice la sincronización web.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Una vez registrado el solucionador, especifique que un artículo debe utilizar el solucionador en la pestaña **Resolución** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , que está disponible en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>Para especificar un solucionador  
@@ -63,7 +63,7 @@ ms.locfileid: "70846570"
   
 7.  Repita este proceso para cada artículo que necesite un solucionador.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>Para registrar un solucionador de conflictos personalizado  
   
@@ -122,7 +122,7 @@ ms.locfileid: "70846570"
   
 2.  Ejecute [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md) en el distribuidor. Especifique el nombre completo del solucionador personalizado del paso 1 para **\@article_resolver**.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  En este ejemplo se crea un nuevo artículo y se especifica que se utilice el Solucionador de conflictos de cálculo de media de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para calcular la media de la columna **UnitPrice** cuando se produzcan conflictos.  
   
  [!code-sql[HowTo#sp_addmerge_resolver](../../../relational-databases/replication/codesnippet/tsql/specify-a-merge-article-_1.sql)]  

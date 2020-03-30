@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296186"
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
@@ -90,8 +90,8 @@ ms.locfileid: "71296186"
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
-|**PackageStart**|Indica que se inició la ejecución del paquete.<br /><br /> Nota: Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
-|**PackageEnd**|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
+|**PackageStart**|Indica que se inició la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
+|**PackageEnd**|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
 |**Diagnostic**|Proporciona información sobre la configuración del sistema que afecta a la ejecución de paquetes, como el número de ejecutables que se pueden ejecutar simultáneamente.|  
   
 ## <a name="set-the-properties-of-a-package"></a>Establecimiento de las propiedades de un paquete  

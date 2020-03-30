@@ -11,10 +11,10 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288079"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      Puede especificar el ámbito o el nivel (ejecución o proyecto) y el número de claves que va a eliminar. El tamaño predeterminado del lote para la eliminación es 1000. Cuando el nivel se establece en 2, solo se eliminan las claves y certificados si se han eliminado los proyectos asociados.  
   
- Para más información, consulte el siguiente artículo de Knowledge Base. [FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](https://support.microsoft.com/kb/2972285) (REVISIÓN: Problemas de rendimiento cuando se usa SSISDB como almacén de implementación en SQL Server 2012)  
+ Para obtener más información, consulte el artículo de Knowledge Base siguiente: [FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012 (Corrección: problemas de rendimiento al usar SSISDB como almacén de implementación en SQL Server 2012)](https://support.microsoft.com/kb/2972285).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se llama al procedimiento almacenado cleanup_server_log.  

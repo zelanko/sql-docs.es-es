@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982405"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -76,7 +76,7 @@ Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.
 |**Espacio de registro utilizado (%)**|Porcentaje del archivo de registro que se usa actualmente para almacenar la información del registro de transacciones.|  
 |**Estado**|Estado del archivo de registro. Siempre es 0.|  
   
-## <a name="Remarks"></a> Comentarios  
+## <a name="remarks"></a><a name="Remarks"></a> Comentarios  
 A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], use la DMV [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) en lugar de `DBCC SQLPERF(LOGSPACE)` para devolver información de uso de espacio del registro de transacciones por cada base de datos.    
  
 Las entradas del registro de transacciones que realizó cada transacción en una base de datos. Para obtener más información, vea [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) y [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).

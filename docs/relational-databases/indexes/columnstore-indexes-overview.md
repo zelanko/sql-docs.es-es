@@ -1,5 +1,5 @@
 ---
-title: 'Índices de almacén de columnas: Introducción | Microsoft Docs'
+title: Introducción a los índices de almacén de columnas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70009405"
 ---
-# <a name="columnstore-indexes-overview"></a>Índices de almacén de columnas: Información general
+# <a name="columnstore-indexes-overview"></a>Introducción a los índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Los índices de almacén de columnas son el estándar para almacenar y consultar las tablas de hechos de almacenamiento de datos de gran tamaño. Este índice usa el almacenamiento de datos basado en columnas y el procesamiento de consultas para lograr ganancias de hasta **10 veces el rendimiento de las consultas** en el almacenamiento de datos sobre el almacenamiento tradicional orientado a filas. También puede conseguir ganancias de hasta **10 veces la compresión de datos** sobre el tamaño de los datos sin comprimir. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los índices de almacén de columnas permiten los análisis operativos, es decir, ejecutar análisis de rendimiento en tiempo real en una carga de trabajo transaccional.  
@@ -90,7 +90,7 @@ Un índice de almacén de columnas no agrupado permite análisis operativos en t
 #### <a name="batch-mode-execution"></a>Ejecución del modo por lotes
 La ejecución del modo por lotes es un método de procesamiento de consultas que se usa para procesar varias filas a la vez. La ejecución del modo por lotes está estrechamente integrada con el formato de almacenamiento de almacén de columnas y optimizada alrededor del mismo. La ejecución en modo por lotes se conoce en ocasiones como ejecución *basada en vectores* o *vectorizada*. Las consultas de los índices de almacén de columnas usan la ejecución en modo por lotes, ya que suele duplicar o hasta cuadruplicar el rendimiento de las consultas. Para más información, consulte la [Guía de arquitectura de procesamiento de consulta](../query-processing-architecture-guide.md#execution-modes). 
   
-##  <a name="benefits"></a> ¿Por qué debo usar un índice de almacén de columnas?  
+##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> ¿Por qué debo usar un índice de almacén de columnas?  
 Un índice de almacén de columnas puede proporcionar un nivel muy alto de compresión de datos, normalmente hasta 10 veces superior, para reducir considerablemente el costo de almacenamiento del almacén de datos. Para el análisis, un índice de almacén ofrece un mejor rendimiento de orden de magnitud que un índice de árbol b. Los índices de almacén de columnas son el formato de almacenamiento de datos preferido para cargas de trabajo de análisis y almacenamiento de datos. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede usar índices de almacén de columnas para llevar a cabo análisis operativos en tiempo real en la carga de trabajo operativa.  
   
 Motivos por los que los índices de almacén de columnas son tan rápidos:  

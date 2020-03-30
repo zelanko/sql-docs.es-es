@@ -21,10 +21,10 @@ ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 588883a254b465cfe1fa9b9b1ea9567e421fb8d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287563"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Provocar y definir eventos en un componente de flujo de datos
@@ -49,7 +49,7 @@ ms.locfileid: "71287563"
  El parámetro *allowEventHandlers* del método <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> especifica si el componente permite crear objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> para el evento. Observe que los objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> son sincrónicos. Por tanto, el componente no reanuda la ejecución hasta que ha terminado de ejecutarse un objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> adjuntado al evento personalizado. Si el parámetro *allowEventHandlers* es **true**, cada parámetro del evento pasa a estar disponible automáticamente para cualquier objeto <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> a través de variables que el tiempo de ejecución de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] crea y rellena de forma automática.  
   
 ### <a name="raising-a-custom-event"></a>Provocar un evento personalizado  
- Los componentes provocan eventos personalizados mediante una llamada al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> y proporcionando el nombre, texto y parámetros del evento. Si el parámetro *allowEventHandlers* es **true**, el entorno de ejecución de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ejecuta los elementos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> creados para el evento personalizado.  
+ Los componentes provocan eventos personalizados mediante una llamada al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> y proporcionando el nombre, texto y parámetros del evento. Si el parámetro *allowEventHandlers* es **true**, el entorno de ejecución de <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> ejecuta los elementos [!INCLUDE[ssIS](../../../includes/ssis-md.md)] creados para el evento personalizado.  
   
 ### <a name="custom-event-sample"></a>Ejemplo de evento personalizado  
  En el ejemplo de código siguiente se muestra un componente que define un evento personalizado durante el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> y, a continuación, provoca el evento en tiempo de ejecución mediante una llamada al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>.  

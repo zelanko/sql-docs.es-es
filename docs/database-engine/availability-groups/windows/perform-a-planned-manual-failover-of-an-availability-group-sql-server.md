@@ -16,10 +16,10 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287209"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Realización de una conmutación por error manual planeada de un grupo de disponibilidad Always On (SQL Server)
@@ -31,12 +31,12 @@ Una conmutación por error manual planeada solo se admite cuando la réplica pri
 > [!NOTE]  
 >  Si las replicas principal y secundaria están ambas configuradas para el modo de conmutación automática por error, una vez que la réplica secundaria se sincroniza, también puede servir como destino de una conmutación automática por error. Para más información, consulte [Modos de disponibilidad &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
    
-##  <a name="BeforeYouBegin"></a> Antes de empezar 
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de empezar 
 
 >[!IMPORTANT]
 >Existen procedimientos específicos para la conmutación por error de un grupo de disponibilidad de escalado de lectura sin administrador de clústeres. Cuando un grupo de disponibilidad tiene CLUSTER_TYPE = NONE, siga los procedimientos que se describen en [Conmutación por error de la réplica principal en un grupo de disponibilidad de escalado de lectura](#fail-over-the-primary-replica-on-a-read-scale-availability-group).
 
-###  <a name="Restrictions"></a> Limitaciones y restricciones 
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones 
   
 - Un comando de conmutación por error realiza la devolución en cuanto la réplica secundaria de destino haya aceptado el comando. Sin embargo, la recuperación de la base de datos se produce de forma asincrónica cuando el grupo de disponibilidad ha terminado la conmutación por error. 
 - Puede que la coherencia entre las distintas bases de datos del grupo de disponibilidad no se mantenga en la conmutación por error. 
@@ -44,7 +44,7 @@ Una conmutación por error manual planeada solo se admite cuando la réplica pri
     > [!NOTE] 
     >  La compatibilidad con transacciones distribuidas y entre bases de datos varía según la versión de SQL Server y del sistema operativo. Para más información, consulte [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
   
-###  <a name="Prerequisites"></a> Requisitos previos y restricciones 
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Requisitos previos y restricciones 
   
 -   La réplica secundaria de destino y la réplica principal deben ejecutarse en modo de disponibilidad de confirmación sincrónica. 
 -   Actualmente, la réplica secundaria de destino debe estar sincronizada con la réplica principal. Todas las bases de datos secundarias de esta réplica secundaria deben estar unidas al grupo de disponibilidad. También deben estar sincronizadas con sus bases de datos principales correspondientes (es decir, las bases de datos secundarias locales deben estar SINCRONIZADAS). 
@@ -53,12 +53,12 @@ Una conmutación por error manual planeada solo se admite cuando la réplica pri
     >  Para determinar la preparación para la conmutación por error de una réplica secundaria, consulte la columna **is_failover_ready** en la vista e administración dinámica [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). O bien, puede examinar la columna **Preparación de la conmutación por error**del [panel de grupos AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   Esta tarea solo se admite en la réplica secundaria de destino. Debe estar conectado a la instancia del servidor que hospeda la réplica secundaria de destino. 
   
-###  <a name="Security"></a> Seguridad 
+###  <a name="security"></a><a name="Security"></a> Seguridad 
   
-####  <a name="Permissions"></a> Permisos 
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos 
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad. También se requieren los permisos CONTROL AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP o CONTROL SERVER. 
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio 
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usar SQL Server Management Studio 
  Para realizar la conmutación por error manual de un grupo de disponibilidad: 
   
 1. En el Explorador de objetos, conéctese a una instancia de servidor que hospede una réplica secundaria del grupo de disponibilidad que es necesario conmutar por error. Expanda el árbol de servidores. 
@@ -69,7 +69,7 @@ Una conmutación por error manual planeada solo se admite cuando la réplica pri
   
 4. Se inicia el asistente para la conmutación por error de grupos de disponibilidad. Para más información, consulte [Usar el Asistente para conmutación por error del grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). 
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL 
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL 
  Para realizar la conmutación por error manual de un grupo de disponibilidad: 
   
 1. Conéctese a la instancia del servidor que hospeda la réplica secundaria de destino. 
@@ -86,7 +86,7 @@ Una conmutación por error manual planeada solo se admite cuando la réplica pri
     ALTER AVAILABILITY GROUP MyAg FAILOVER;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Usar de PowerShell 
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a> Usar de PowerShell 
  Para realizar la conmutación por error manual de un grupo de disponibilidad: 
   
 1. Cambie el directorio (**cd**) a la instancia del servidor que hospeda la réplica secundaria de destino. 
@@ -107,7 +107,7 @@ Una conmutación por error manual planeada solo se admite cuando la réplica pri
     -   [Proveedor de PowerShell de SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [Obtener ayuda de SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> Seguimiento: después de realizar la conmutación por error manual de un grupo de disponibilidad 
+##  <a name="follow-up-after-you-manually-fail-over-an-availability-group"></a><a name="FollowUp"></a> Seguimiento: después de conmutar por error manualmente un grupo de disponibilidad 
  Si la conmutación por error se produjo fuera del grupo de disponibilidad de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)], ajuste los votos de cuórum de los nodos de clúster de Windows Server para reflejar la nueva configuración del grupo de disponibilidad. Para más información, consulte [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
 
 <a name = "ReadScaleOutOnly"><a/>

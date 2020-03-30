@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 72e85b49f70a93a633ad8ef2eeeecd526e59e97a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306736"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Selector del demonio de filtro de texto completo de SQL (pestaña Servicio)
@@ -49,11 +49,11 @@ ms.locfileid: "75306736"
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
   
--   Manual: Este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
+-   Manual: el servicio no se inicia automáticamente al iniciar el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: El servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: el servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: No se puede iniciar el servicio.  
+-   Deshabilitado: el servicio no se puede iniciar.  
   
  **State**  
  Indica si el servicio está en ejecución, detenido o deshabilitado. " **…** " indica que hay un cambio de estado pendiente.  

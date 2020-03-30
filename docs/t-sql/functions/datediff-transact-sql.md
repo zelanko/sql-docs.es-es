@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68731128"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -322,7 +322,7 @@ SELECT @result
 118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 En estos ejemplos se usan otros tipos de expresiones como argumentos para los parámetros *startdate* y *enddate*.
   
 ### <a name="j-specifying-columns-for-startdate-and-enddate"></a>J. Especificar las columnas para startdate y enddate  

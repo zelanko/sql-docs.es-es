@@ -31,10 +31,10 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982187"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos de SQL Server
@@ -68,7 +68,7 @@ ms.locfileid: "73982187"
   
 -   [Permisos necesarios](#RequiredPermissions)  
   
-##  <a name="SQLServerAgentPOs"></a> Objetos de rendimiento del Agente SQL Server  
+##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a> Objetos de rendimiento del Agente SQL Server  
  En la tabla siguiente se enumeran los objetos de rendimiento proporcionados para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Objeto de rendimiento|Descripción|  
@@ -78,7 +78,7 @@ ms.locfileid: "73982187"
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|Proporciona información acerca de los pasos de trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLAgent:Statistics](../../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|Proporciona información acerca del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-##  <a name="ServiceBrokerPOs"></a> Objetos de rendimiento de Service Broker  
+##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a> Objetos de rendimiento de Service Broker  
  En la tabla siguiente se enumeran los objetos de rendimiento proporcionados para [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
 |Objeto de rendimiento|Descripción|  
@@ -87,7 +87,7 @@ ms.locfileid: "73982187"
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|Proporciona información general sobre [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
 |[SQLServer:Broker Transport](../../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md)|Proporciona información acerca de la conexión a red de [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
   
-##  <a name="SQLServerPOs"></a> Objetos de rendimiento de SQL Server  
+##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a> Objetos de rendimiento de SQL Server  
  En la tabla siguiente se describen los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Objeto de rendimiento|Descripción|  
@@ -127,17 +127,17 @@ ms.locfileid: "73982187"
 |[SQLServer:Wait Statistics](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Proporciona información acerca de las esperas.|  
 |[SQLServer: Estadísticas de grupo de cargas de trabajo](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|Proporciona información sobre las estadísticas de grupo de cargas de trabajo del regulador de recursos.|  
   
-##  <a name="SQLServerReplicationPOs"></a> Objetos de rendimiento de replicación de SQL Server  
+##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> Objetos de rendimiento de replicación de SQL Server  
  En la tabla siguiente se enumeran los objetos de rendimiento proporcionados para la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Objeto de rendimiento|Descripción|  
 |------------------------|-----------------|  
 |**SQLServer:Agentes de replicación**<br /><br /> **SQLServer:Instantánea de replicación**<br /><br /> **SQLServer:Lector del registro de replicación**<br /><br /> **SQLServer:Distribuidor de replicación**<br /><br /> **SQLServer:Mezcla de replicación**<br /><br /> Para más información, consulte [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).|Proporciona información acerca de la actividad del agente de replicación.|  
   
-##  <a name="SsisPipelineCounters"></a> Contadores de canalización SSIS  
+##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a> Contadores de canalización SSIS  
  Para el contador **Canalización SSIS** , vea [Contadores de rendimiento](../../integration-services/performance/performance-counters.md).  
   
-##  <a name="RequiredPermissions"></a> Permisos necesarios  
+##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> Permisos necesarios  
  La posibilidad de utilizar los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de los permisos de Windows, salvo **SQLAgent:Alertas**. Los usuarios deben ser miembros del rol fijo de servidor **sysadmin** para poder utilizar **SQLAgent:Alerts**.  
   
 ## <a name="see-also"></a>Consulte también  

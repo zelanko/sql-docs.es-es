@@ -11,10 +11,10 @@ ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2a8830fbf4b9418f80cf07c7586e71689001d455
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68109616"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para utilizar las tablas con optimización para memoria
@@ -43,7 +43,7 @@ ms.locfileid: "68109616"
   
      Para instalar la generación de informes ([Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (para administrar OLTP en memoria mediante el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]), [Descarga de SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).   
   
-## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>Información importante sobre el uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-hek_2"></a>Información importante sobre el uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
 -   A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no hay límite para el tamaño de las tablas optimizadas para memoria más que la memoria disponible. 
 

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: e577144d9c259d097e28b435b0d0eedc4252e82a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286942"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Ver y modificar las propiedades del distribuidor y del publicador
@@ -44,16 +44,16 @@ ms.locfileid: "76286942"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Para los publicadores que ejecutan versiones anteriores a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], un usuario del rol fijo de servidor **sysadmin** puede registrar suscriptores en la página **Suscriptores**. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], ya no es necesario registrar explícitamente los suscriptores para la replicación.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Para ver y modificar las propiedades del distribuidor  
   
@@ -85,7 +85,7 @@ ms.locfileid: "76286942"
   
 4.  Modifique las propiedades si es necesario y, a continuación, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Las propiedades del publicador y del distributor se pueden ver mediante programación usando procedimientos almacenados de replicación.  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>Para ver las propiedades de la base de datos de distribución  
@@ -107,7 +107,7 @@ ms.locfileid: "76286942"
   
 4.  En el distribuidor, ejecute [sp_changedistpublisher](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) para cambiar las propiedades de un Publicador usando el Distribuidor.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  El siguiente script de [!INCLUDE[tsql](../../includes/tsql-md.md)] de ejemplo devuelve información acerca del Distribuidor y la base de datos de distribución.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_1.sql)]  
@@ -125,7 +125,7 @@ ms.locfileid: "76286942"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_5.sql)]  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Para ver y modificar las propiedades del distribuidor  
   
@@ -190,7 +190,7 @@ ms.locfileid: "76286942"
   
     5.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Pase el nuevo valor de contraseña del paso 5 para el parámetro *password* .  
   
-###  <a name="PShellExample"></a> Ejemplo (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Ejemplo (RMO)  
  Este ejemplo muestra cómo cambiar las propiedades de Distribución y de la base de datos de distribución.  
   
 > [!IMPORTANT]  

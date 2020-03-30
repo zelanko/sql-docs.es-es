@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287849"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitor de ejecución de paquetes y otras operaciones
@@ -55,12 +55,12 @@ ms.locfileid: "79287849"
   
  Se usan nueve tipos de estado diferentes para indicar el estado de una operación. Para obtener una lista completa de los tipos de estado, vea la vista [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
 
-## <a name="active_ops"></a>Cuadro de diálogo Operaciones activas
+## <a name="active-operations-dialog-box"></a><a name="active_ops"></a>Cuadro de diálogo Operaciones activas
   Utilice el cuadro de diálogo **Operaciones activas** para ver el estado de las operaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se están ejecutando actualmente en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , como implementación, validación, y ejecución del paquete. Estos datos se almacenan en el catálogo de SSISDB.  
   
  Para obtener más información sobre las vistas de [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas, vea [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) y [catalog.executions &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md).  
   
-###  <a name="open_dialog"></a> Abrir el cuadro de diálogo Operaciones activas  
+###  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Operaciones activas  
   
 1.  Abra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -127,7 +127,7 @@ ms.locfileid: "79287849"
  Acceso mediante programación a través de la API administrada  
  Vea el espacio de nombres <xref:Microsoft.SqlServer.Management.IntegrationServices> y sus clases.  
 
-## <a name="reports"></a> Reports for the Integration Services Server
+## <a name="reports-for-the-integration-services-server"></a><a name="reports"></a> Reports for the Integration Services Server
   En la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]existen dos informes estándar en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar los proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Estos informes le ayudan a ver el estado y historial de los paquetes y, si es necesario, identificar la causa de los errores de ejecución de paquetes.  
   
  En la parte superior de cada página de informe, el icono Atrás le lleva a la página que vio anteriormente, el icono Actualizar actualiza la información que se muestra en la página y el icono Imprimir le permite imprimir la página actual.  

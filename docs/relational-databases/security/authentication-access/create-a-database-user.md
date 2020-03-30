@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981938"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
@@ -38,7 +38,7 @@ ms.locfileid: "73981938"
   
  Puede crear un usuario de base de datos mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="Understanding"></a> Descripción de los tipos de usuarios  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> Descripción de los tipos de usuarios  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ofrece 6 opciones a la hora de crear un usuario de base de datos. En el gráfico siguiente se muestran las 6 opciones en el recuadro verde y se indica lo que representan.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -56,17 +56,17 @@ ms.locfileid: "73981938"
   
 > **SUGERENCIA** Para las personas de dentro de su organización, la autenticación de Windows es una opción más acertada. De este modo, no tienen que recordar otra contraseña y, además, la autenticación de Windows ofrece características de seguridad adicionales, como Kerberos.  
   
-##  <a name="Restrictions"></a> Información previa  
+##  <a name="background"></a><a name="Restrictions"></a> Información previa  
  Un usuario es una entidad de seguridad de la base de datos. Los inicios de sesión deben estar asignados a un usuario de base de datos para poder conectarse a una base de datos. Un inicio de sesión se puede asignar a bases de datos diferentes como usuarios diferentes pero solo se puede asignar como un usuario en cada base de datos. En una base de datos parcialmente independiente, puede crearse un usuario que no tenga un inicio de sesión. Para obtener más información sobre los usuarios de la base de datos independiente, vea [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Si el usuario invitado de una base de datos está habilitado, un inicio de sesión que no esté asignado a un usuario de la base de datos puede entrar en la base de datos como el usuario invitado.  
   
 > **IMPORTANTE:** El usuario invitado suele estar deshabilitado. No habilite al usuario invitado a menos que sea necesario.  
   
  Como entidad de seguridad, se pueden conceder permisos a los usuarios. El ámbito de un usuario es la base de datos. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión.  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe tener el permiso **ALTER ANY USER** para la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Crear un usuario con SSMS  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> Crear un usuario con SSMS  
   
  
 1.  En el Explorador de objetos, expanda la carpeta **Bases de datos** .  
@@ -140,7 +140,7 @@ ms.locfileid: "73981938"
      **Eliminar**  
      Elimina la propiedad extendida que se ha seleccionado.  
   
-##  <a name="TsqlProcedure"></a> Crear un usuario con T-SQL  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> Crear un usuario con T-SQL  
     
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

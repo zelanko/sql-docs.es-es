@@ -14,10 +14,10 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908598"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Crear una publicación a partir de una base de datos de Oracle
@@ -36,13 +36,13 @@ ms.locfileid: "72908598"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Antes de crear una publicación, debe instalar el software de Oracle en el distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y configurar la base de datos de Oracle. Para obtener más información, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Cree una publicación de instantáneas o transaccional a partir de una base de datos de Oracle con el Asistente para nueva publicación.  
   
  La primera vez que cree una publicación a partir de una base de datos de Oracle, deberá identificar el publicador de Oracle en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (esto no es necesario para las publicaciones posteriores de la misma base de datos). Puede identificar el publicador de Oracle desde el Asistente para nueva publicación o el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** . En este tema se muestra el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** .  
@@ -106,7 +106,7 @@ ms.locfileid: "72908598"
   
 11. En la página **Finalización del asistente** , especifique el nombre de la publicación.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Una vez configurada la base de datos de Oracle como publicador, puede crear una publicación transaccional o de instantáneas del mismo modo en que lo haría desde un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mediante procedimientos almacenados del sistema.  
   
 #### <a name="to-create-an-oracle-publication"></a>Para crear una publicación Oracle  

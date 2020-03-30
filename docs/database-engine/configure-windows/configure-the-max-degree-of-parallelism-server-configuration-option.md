@@ -17,10 +17,10 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 94f8c87e0b996be0b9485cbe5a43038e33420fe0
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288729"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Establecer la opción de configuración del servidor Grado máximo de paralelismo
@@ -31,15 +31,15 @@ ms.locfileid: "79288729"
 > [!NOTE]
 > [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] presenta recomendaciones automáticas para establecer la opción de configuración de servidor MAXDOP durante el proceso de instalación. La interfaz de usuario del programa de instalación permite aceptar la configuración recomendada o introducir su propio valor. Para obtener más información, vea la [página Configuración del Motor de base de datos: MaxDOP](../../sql-server/install/instance-configuration.md#maxdop).
 
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Si el valor de la opción affinity mask no es el predeterminado, es posible que se limite el número de procesadores disponibles para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en sistemas de multiproceso simétrico (SMP).  
 
 -   El límite del **grado máximo de paralelismo (MAXDOP)** se establece por [tarea](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). No es un límite por [solicitud](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) ni por consulta. Esto significa que durante una ejecución de consultas en paralelo, una sola solicitud puede generar varias tareas que se asignan a un programador. Para más información, consulte la [guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md). 
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un profesional certificado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -52,11 +52,11 @@ ms.locfileid: "79288729"
 -   Además de las operaciones de consultas e índices, esta opción también controla el paralelismo de DBCC CHECKTABLE, DBCC CHECKDB y DBCC CHECKFILEGROUP. Puede deshabilitar los planes de ejecución en paralelo de estas instrucciones mediante el uso de la marca de seguimiento 2528. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Para llevar a cabo esta acción en el nivel de consulta, use la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.     
-> Para llevar a cabo esta acción en el nivel de base de datos, use la [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) **MAXDOP**.      
-> Para llevar a cabo esta acción en el nivel de carga de trabajo, use la [opción de configuración del grupo de cargas de trabajo de Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.      
+> Para llevar a cabo esta acción en el nivel de consulta, use la **sugerencia de consulta** [MAXDOP](../../t-sql/queries/hints-transact-sql-query.md).     
+> Para llevar a cabo esta acción en el nivel de base de datos, use la **configuración con ámbito de base de datos** [MAXDOP](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).      
+> Para llevar a cabo esta acción en el nivel de carga de trabajo, use la **opción de configuración del grupo de cargas de trabajo de Resource Governor** [MAX_DOP](../../t-sql/statements/create-workload-group-transact-sql.md).      
 
-###  <a name="Guidelines"></a> Instrucciones  
+###  <a name="guidelines"></a><a name="Guidelines"></a> Instrucciones  
 A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], durante el inicio del servicio, si [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta más de ocho núcleos físicos por nodo NUMA o socket en el inicio, se crean nodos soft-NUMA de forma automática y predeterminada. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] coloca los procesadores lógicos del mismo núcleo físico en nodos soft-NUMA diferentes. Las recomendaciones de la tabla siguiente están pensadas para mantener todos los subprocesos de trabajo de una consulta en paralelo en el mismo nodo soft-NUMA. Esto mejorará el rendimiento de las consultas y la distribución de los subprocesos de trabajo entre los nodos NUMA para la carga de trabajo. Para obtener más información, vea [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
 
 A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use las siguientes directrices al configurar el valor de configuración del servidor de **grado máximo de paralelismo**:
@@ -81,12 +81,12 @@ De [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] a [!INCLUDE[ssSQL14](../.
 |Servidor con varios nodos NUMA|8 procesadores lógicos como mínimo por nodo NUMA|Mantener MAXDOP en ese número de procesadores lógicos por nodo NUMA o por debajo de este|
 |Servidor con varios nodos NUMA|Más de 8 procesadores lógicos por nodo NUMA|Mantener MAXDOP en 8|
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>Para configurar la opción de grado máximo de paralelismo  
   
@@ -96,7 +96,7 @@ De [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] a [!INCLUDE[ssSQL14](../.
   
 3.  En el cuadro **Grado máximo de paralelismo** , seleccione el número máximo de procesadores que se usarán en la ejecución de planes paralelos.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>Para configurar la opción de grado máximo de paralelismo  
   
@@ -121,7 +121,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de grado máximo de paralelismo  
+##  <a name="follow-up-after-you-configure-the-max-degree-of-parallelism-option"></a><a name="FollowUp"></a> Seguimiento: Después de configurar la opción de grado máximo de paralelismo  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
 ## <a name="see-also"></a>Consulte también  

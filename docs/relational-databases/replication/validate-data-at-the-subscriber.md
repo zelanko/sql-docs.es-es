@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710763"
 ---
 # <a name="validate-replicated-data"></a>Validar datos replicados
@@ -259,7 +259,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
   
      Para obtener más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) o [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  La replicación permite usar Replication Management Objects (RMO) para validar mediante programación si los datos del suscriptor coinciden con los datos del publicador. Los objetos que se usan dependen del tipo de topología de replicación. La replicación transaccional requiere la validación de todas las suscripciones a una publicación.  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
   
 5.  Ejecute el Agente de mezcla en la suscripción para iniciar la validación o espere hasta la siguiente ejecución programada del agente. Para obtener más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) y [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). El resultado de la operación de la validación se escribe en el historial del agente, que se puede consultar con el Monitor de replicación. Para más información, consulte [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
-###  <a name="RMOExample"></a> Ejemplo (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> Ejemplo (RMO)  
  Este ejemplo marca todas las suscripciones a una publicación transaccional para la validación del recuento de filas.  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

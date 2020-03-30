@@ -11,10 +11,10 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91524408998df8be0df4ee5d4ede0b641dbaa2a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287226"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Admitir múltiples versiones de los componentes personalizados
@@ -97,7 +97,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 ### <a name="invalidcastexception"></a>InvalidCastException
 
-**Mensaje de error.** No se puede convertir el objeto COM del tipo "System.__ComObject" al tipo de interfaz "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100". No se pudo realizar esta operación porque la llamada QueryInterface en el componente COM para la interfaz con IID "{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}" generó el siguiente error: No se admite dicha interfaz (excepción de HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
+**Mensaje de error.** No se puede convertir el objeto COM del tipo "System.__ComObject" al tipo de interfaz "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100". Se produjo un error en esta operación debido a que la llamada QueryInterface en el componente COM para la interfaz con IID "{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}" generó el siguiente error: No se admite dicha interfaz (Excepción de HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
 **Solución.** Si la extensión personalizada hace referencia a ensamblados de interoperabilidad de SSIS, como Microsoft.SqlServer.DTSPipelineWrap o Microsoft.SqlServer.DTSRuntimeWrap, establezca el valor de la propiedad **Insertar tipos de interoperabilidad** en **False**.
 

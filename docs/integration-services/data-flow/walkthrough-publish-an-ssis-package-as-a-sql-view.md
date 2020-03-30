@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Publicación de un paquete SSIS como una vista SQL | Microsoft Docs'
+title: 'Tutorial: Publicar un paquete SSIS como una vista SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71297736"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216904"
 ---
-# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicación de un paquete SSIS como una vista SQL
+# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicar un paquete SSIS como una vista SQL
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "71297736"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Paso 1: Compilación e implementación del proyecto SSIS en el catálogo de SSIS  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Paso 1: Compilar e implementar un proyecto de SSIS en el catálogo de SSIS  
  En este paso, creará un paquete SSIS que extrae datos de un origen de datos compatible con SSIS (en este ejemplo, usaremos una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) y genera datos de salida con un componente de Destino de streaming de datos. Luego, compilará e implementará el proyecto de SSIS en el catálogo de SSIS.  
   
 1.  Inicie **SQL Server Data Tools**. En el menú **Inicio** , elija **Todos los programas**, **Microsoft SQL Server**y, a continuación, haga clic en **SQL Server Data Tools**.  
@@ -58,7 +58,7 @@ ms.locfileid: "71297736"
   
 5.  Arrastre un **componente de origen** desde el cuadro de herramientas al **diseñador de flujos de datos** y configúrelo para que extraiga datos de un origen de datos.  
   
-    1.  Para los fines de este tutorial, cree una base de datos de prueba: **TestDB** con una tabla: **Employee**. Cree la tabla con tres columnas: **ID**, **FirstName** y **LastName**.  
+    1.  En este tutorial crearemos una base de datos de prueba, **TestDB** , con una tabla, **Employee**. Cree la tabla con tres columnas: **ID**, **FirstName** y **LastName**.  
   
     2.  Establezca **ID** como clave principal.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71297736"
   
     2.  Siga las instrucciones del asistente para implementar el proyecto en el catálogo de SSIS en el servidor de base de datos local. En el siguiente ejemplo, se usa **Power BI** como nombre de carpeta y **SSISPackagePublishing** como nombre del proyecto en el catálogo de SSIS.  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Paso 2: Uso del Asistente para la publicación de fuentes de distribución de datos de SSIS para publicar el paquete SSIS como una vista SQL  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Paso 2: Usar el asistente para la publicación de fuentes de distribución de datos de SSIS para publicar el paquete SSIS como una vista SQL  
  En este paso, usará el asistente para la publicación de fuentes de distribución de datos de SQL Server Integration Services (SSIS ) para publicar el paquete SSIS como una vista en la base de datos de SQL Server. Los datos de salida del paquete se podrán usar realizando una consulta en esta vista.  
   
  El asistente para la publicación de fuentes de distribución de datos de SSIS crea un servidor vinculado mediante el proveedor OLE DB para SSIS (SSISOLEDB) y, tras ello, crea una vista SQL que consta de una consulta en el servidor vinculado. Esta consulta incluye el nombre de la carpeta, el nombre del proyecto y el nombre del paquete en el catálogo de SSIS.  
@@ -104,7 +104,7 @@ ms.locfileid: "71297736"
   
          ![Asistente para publicar fuentes de distribución de datos: página Configuración del paquete](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Asistente para publicar fuentes de distribución de datos: página Configuración del paquete")  
   
-    2.  Haga clic en **Examinar** junto al campo de ruta de acceso, vaya al catálogo de SSIS, seleccione el paquete SSIS que quiere publicar (por ejemplo: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**) y haga clic en **Aceptar**.  
+    2.  Haga clic en **Examinar** en el campo Ruta de acceso, vaya al catálogo de SSIS, seleccione el paquete SSIS que quiera publicar (por ejemplo, **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**) y haga clic en **Aceptar**.  
   
          ![Asistente para publicar fuentes de distribución de datos: Buscar paquete](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Asistente para publicar fuentes de distribución de datos: Buscar paquete")  
   
@@ -150,7 +150,7 @@ ms.locfileid: "71297736"
   
      ![Asistente para publicar fuentes de distribución de datos: página Resumen](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Asistente para publicar fuentes de distribución de datos: página Resumen")  
   
-     Ahora los datos de salida del paquete se pueden consultar mediante la ejecución de la siguiente instrucción SQL en la base de datos TestDB: SELECT * FROM [SSISPackageView].  
+     Ahora los datos de salida del paquete se pueden consultar ejecutando la siguiente instrucción SQL en la base de datos TestDB: SELECT * FROM [SSISPackageView].  
   
 9. Haga clic en **Guardar informe**para guardar el informe como un archivo XML.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "71297736"
     > [!NOTE]  
     >  No se admiten los siguientes tipos de datos: text, ntext, image, nvarchar(max), varchar(max) ni varbinary(max).  
   
-## <a name="step-3-test-the-sql-view"></a>Paso 3: Prueba de la vista de SQL  
+## <a name="step-3-test-the-sql-view"></a>Paso 3: Probar la vista SQL  
  Aquí ejecutará la vista SQL creada en el asistente para la publicación anterior.  
   
 1.  Inicie SQL Server Management Studio.  
@@ -170,7 +170,7 @@ ms.locfileid: "71297736"
   
 4.  Confirme que ve los resultados del paquete SSIS.  
   
-## <a name="step-4-verify-the-ssis-package-execution"></a>Paso 4: Comprobación de la ejecución del paquete SSIS  
+## <a name="step-4-verify-the-ssis-package-execution"></a>Paso 4: Comprobar la ejecución del paquete SSIS  
  En este paso comprobará que el paquete SSIS se ha ejecutado.  
   
 1.  En SQL Server Management Studio, expanda **Catálogos de Integration Services**, **SSISDB**y la **carpeta** en la que está el proyecto de SSIS. Después, expanda **Proyectos**, luego el nodo del proyecto y, por último, **Paquetes**.  
@@ -266,8 +266,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
 -   Corchetes de apertura y cierre ([ y ]): estos caracteres sirven para indicar espacios iniciales o finales. Por ejemplo, “[ algunos espacios ]” representa la cadena “ algunos espacios ” con un espacio inicial y un espacio final. Si estos caracteres se usan en la cláusula de consulta, deben ir acompañados de un carácter de escape. Por ejemplo, \\[ y \\].  
   
 -   Barra diagonal (\\): cada \ usada en la cláusula de consulta tiene que ir acompañada de un carácter de escape. Por ejemplo, \\\ se evalúa como \ en la cláusula de consulta.  
-  
- Barra diagonal (\\): cada \ usada en la cláusula de consulta tiene que ir acompañada de un carácter de escape. Por ejemplo, \\\ se evalúa como \ en la cláusula de consulta.  
   
 ## <a name="see-also"></a>Consulte también  
  [Destino de streaming de datos](../../integration-services/data-flow/data-streaming-destination.md)   

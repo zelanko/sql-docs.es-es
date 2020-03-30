@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 588531a01a12dcec1a4832241e29dab38841f944
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906321"
 ---
 # <a name="delete-statistics"></a>Eliminar estadísticas
@@ -38,20 +38,20 @@ ms.locfileid: "72906321"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Tenga cuidado al quitar estadísticas, ya que puede verse afectado el plan de ejecución elegido por el optimizador de consultas.  
   
 -   Las estadísticas de índices no se pueden quitar mediante DROP STATISTICS. Las estadísticas permanecen mientras exista el índice.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-drop-statistics-from-a-table-or-view"></a>Para quitar las estadísticas de una tabla o una vista  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72906321"
   
 6.  En el cuadro de diálogo **Eliminar objeto** , asegúrese de que está seleccionada la estadística correcta y haga clic en **Aceptar**.  
 
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-drop-statistics-from-a-table-or-view"></a>Para quitar las estadísticas de una tabla o una vista  
   

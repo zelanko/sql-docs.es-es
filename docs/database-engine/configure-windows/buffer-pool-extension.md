@@ -11,10 +11,10 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76918353"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
@@ -26,7 +26,7 @@ ms.locfileid: "76918353"
   
  Las páginas de datos y de índice se leen desde el disco en el grupo de búferes y las páginas modificadas (también conocidas como páginas desfasadas) se escriben en el disco. La presión de memoria en los puntos de comprobación de la base de datos y el servidor hace que las páginas desfasadas (activas) de la memoria caché del búfer se expulsen de la memoria caché y se escriban en discos mecánicos y después se lean de nuevo en la memoria caché. Estas operaciones de E/S suelen ser pequeñas lecturas y escrituras aleatorias del orden de 4 a 16 kB de datos. Los patrones aleatorios de E/S pequeños incurren en búsquedas frecuentes, compitiendo por el brazo del disco mecánico, lo que aumenta la latencia de E/S y reduce el rendimiento de E/S global del sistema.  
   
- El enfoque típico para solucionar estos cuellos de botella de E/S consiste en agregar más DRAM o, como alternativa, agregar ejes SAS de alto rendimiento. Aunque estas opciones son útiles, presentan unas desventajas importantes: la DRAM es más cara que las unidades de almacenamiento de datos y agregar ejes aumenta el gasto de la inversión para la adquisición de hardware y los costes operativos debido al mayor consumo energético y a la mayor probabilidad de que se produzca un error en un componente.  
+ El enfoque típico para solucionar estos cuellos de botella de E/S consiste en agregar más DRAM o, como alternativa, agregar ejes SAS de alto rendimiento. Aunque estas opciones son útiles, presentan unas desventajas importantes: la DRAM es más cara que las unidades de almacenamiento de datos y agregar ejes aumenta el gasto de la inversión para la adquisición de hardware y los costos operativos debido al mayor consumo energético y a la mayor probabilidad de que se produzca un error en un componente.  
   
  La característica de extensión del grupo de búferes extiende la memoria caché del grupo de búferes con almacenamiento no volátil (generalmente SSD). Debido a esta extensión, el grupo de búferes puede contener un espacio de trabajo de la base de datos mayor, lo que fuerza la paginación de operaciones de E/S entre la RAM y las SSD. Esto descarga de forma efectiva las pequeñas operaciones de E/S aleatorias de los discos mecánicos a las SSD. Debido a la menor latencia y al mejor rendimiento de E/S aleatoria de las SSD, la extensión del grupo de búferes mejora considerablemente el rendimiento de las operaciones de E/S.  
   

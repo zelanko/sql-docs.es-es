@@ -20,10 +20,10 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908927"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restauraciones de archivos (modelo de recuperación completa)
@@ -55,7 +55,7 @@ ms.locfileid: "72908927"
     >  Si quiere que la base de datos esté sin conexión durante una restauración de archivos, deje sin conexión la base de datos de que empiece a restaurar la secuencia realizando la acción siguiente [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) : ALTER DATABASE *nombre_base_de_datos* SET OFFLINE.  
   
   
-##  <a name="Overview"></a> Restaurar archivos dañados a partir de copias de seguridad de archivo  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> Restaurar archivos dañados a partir de copias de seguridad de archivo  
   
 1.  Antes de restaurar uno o varios archivos dañados, intente crear una [copia del final del registro](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
@@ -121,7 +121,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Ejemplo: restauración sin conexión del grupo de archivo principal y de otro grupo de archivos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para restaurar archivos y grupos de archivos**  
   
 -   [Restaurar archivos en una nueva ubicación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  

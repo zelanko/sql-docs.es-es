@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412688"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
@@ -52,7 +52,7 @@ Cuando existe una carga de trabajo activa, se necesita tener en cuenta la memori
   
 - [Memoria para el crecimiento](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable"></a> tabla optimizada para memoria de ejemplo  
+###  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> tabla optimizada para memoria de ejemplo  
 
 Considere el esquema de tabla optimizada para memoria siguiente:
   
@@ -83,7 +83,7 @@ GO
 
 Con este esquema determinaremos la memoria mínima necesaria para esta tabla optimizada para memoria.  
   
-###  <a name="bkmk_MemoryForTable"></a> Memoria para la tabla  
+###  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> Memoria para la tabla  
 
 Una fila de una tabla optimizada para memoria consta de tres partes:
   
@@ -102,7 +102,7 @@ A continuación se muestra un cálculo de tamaño para 5.000.000 filas (5 millon
   
 Según se desprende de los cálculos anteriores, el tamaño de cada fila de la tabla optimizada para memoria es 24 + 32 + 200, o 256 bytes.  Como tenemos 5 millones de filas, la tabla usará 5 000 000 * 256 bytes, o 1 280 000 000 bytes, aproximadamente 1,28 GB.  
   
-###  <a name="bkmk_IndexMeemory"></a> Memoria para índices  
+###  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> Memoria para índices  
 
 #### <a name="memory-for-each-hash-index"></a>Memoria para cada índice hash  
   
@@ -165,7 +165,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="bkmk_MemoryForRowVersions"></a> Memoria para versiones de fila
+###  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> Memoria para versiones de fila
 
 Para evitar bloqueos, OLTP en memoria emplea simultaneidad optimista al actualizar o eliminar filas. Esto significa que cuando se actualiza una fila, se crea una versión adicional de la fila. Además, las eliminaciones se realizan de manera lógica: la fila existente se marca como eliminada, pero no se quita de inmediato. El sistema conserva versiones de filas anteriores (incluidas las filas eliminadas) disponibles hasta que finaliza la ejecución de todas las transacciones que podrían usar la versión. 
   
@@ -181,13 +181,13 @@ Las necesidades de memoria para las filas obsoletas se calculan después multipl
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="bkmk_TableVariables"></a> Memoria para variables de tabla
+###  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> Memoria para variables de tabla
   
 La memoria usada para una variable de tabla solo se libera cuando la variable de tabla sale del ámbito. Las filas eliminadas, incluidas las filas eliminadas como parte de una actualización, de una variable de tabla no están sujetas a recolección de elementos no utilizados. No se libera memoria hasta que la variable de tabla no sale del ámbito.  
   
 Las variables de tabla definidas en un lote de SQL de gran tamaño, en comparación con un ámbito de procedimiento, que se usan en muchas transacciones, pueden consumir mucha memoria. Como no se eliminan mediante el recolector de elementos no utilizados, las filas eliminadas de una variable de tabla pueden usar mucha memoria y disminuir el rendimiento porque las operaciones de lectura deben examinar más allá de las filas eliminadas.  
   
-###  <a name="bkmk_MemoryForGrowth"></a> Memoria para el crecimiento
+###  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> Memoria para el crecimiento
 
 Los cálculos anteriores estiman sus necesidades de memoria para la tabla tal y como es actualmente. Además de esta memoria, debe calcular el crecimiento de la tabla y proporcionar la memoria adecuada para permitir ese crecimiento.  Por ejemplo, si prevé un crecimiento del 10 %, necesita multiplicar los resultados anteriores por 1,1 para obtener la memoria total necesaria para la tabla.  
   

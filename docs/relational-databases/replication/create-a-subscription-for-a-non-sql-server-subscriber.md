@@ -16,10 +16,10 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322027"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Crear una suscripción para un suscriptor que no sea de SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "75322027"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Para crear una suscripción para un suscriptor que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 1.  Instale y configure el software de cliente y el proveedor o proveedores OLE DB adecuados en el distribuidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) y [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
@@ -143,7 +143,7 @@ ms.locfileid: "75322027"
   
  Cuando el Agente de instantáneas termina de generar la instantánea, aparece un mensaje del tipo "[100%] Se ha generado una instantánea de 17 artículos".  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede crear suscripciones de inserción para suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante programación con procedimientos almacenados de replicación.  
   
 > [!IMPORTANT]  

@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101902"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -121,21 +121,21 @@ Se aplica a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUD
 Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - Requiere pertenencia al rol fijo de servidor DB_OWNER.  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Notas generales sobre [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="general-remarks-for-sssdw-and-sspdw"></a>Notas generales sobre [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Se pueden ejecutar varios comandos DBCC FREEPROCCACHE a la vez.
 En [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], borrar la memoria caché de plan puede hacer que el rendimiento de las consultas disminuya temporalmente debido a que las consultas compilan un nuevo plan, en lugar de volver a usar alguno de los planes previamente almacenados en caché. 
 
 DBCC FREEPROCCACHE (COMPUTE) solo hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelva a compilar las consultas cuando se ejecuten en los nodos de ejecución. No hace que [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vuelvan a compilar el plan de consulta paralelo que se genera en el nodo de control.
 DBCC FREEPROCCACHE se puede cancelar durante su ejecución.
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitaciones y restricciones de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Limitaciones y restricciones de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC FREEPROCCACHE no se puede ejecutar dentro de una transacción.
 DBCC FREEPROCCACHE no se admite en una instrucción EXPLAIN.
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Metadatos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="metadata-for-sssdw-and-sspdw"></a>Metadatos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Cuando DBCC FREEPROCCACHE se ejecuta, se agrega una fila nueva a la vista del sistema sys.pdw_exec_requests.
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Ejemplos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="examples-ssnoversion"></a>Ejemplos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. Borrar un plan de consulta de la memoria caché del plan  
 En el ejemplo siguiente se especifica el identificador de plan de consulta para borrar el plan de consulta de la caché del plan. Para asegurarse de que la consulta del ejemplo está en la caché del plan, la consulta se ejecuta primero. Se consultan las vistas de administración dinámicas `sys.dm_exec_cached_plans` y `sys.dm_exec_sql_text` para obtener el identificador de plan de la consulta. 
@@ -187,7 +187,7 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. Ejemplos de sintaxis básica de DBCC FREEPROCCACHE  
 En el siguiente ejemplo se quitan todas las memorias caché de plan de consulta existentes de los nodos de ejecución. Aunque el contexto está establecido en UserDbSales, se quitarán las memorias caché de plan de consulta de nodo de ejecución de todas las bases de datos. La cláusula WITH NO_INFOMSGS impide que se muestren mensajes informativos en los resultados.  

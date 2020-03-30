@@ -11,10 +11,10 @@ ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0e71c9a5c8dcb45346c3111a924770321c1008cb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298724"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>Cómo crear la instancia de base de datos de cambios de SQL Server

@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78946732"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Inicio, detención, pausa, reanudación o reinicio de servicios de SQL Server
@@ -121,7 +121,7 @@ Como el Administrador de configuración de SQL Server es un complemento del pro
 |SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|
 
-#### <a name="configmande"></a> Para iniciar, detener, pausar, reanudar o reiniciar una instancia del Motor de base de datos de SQL Server
+#### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="configmande"></a> Para iniciar, detener, pausar, reanudar o reiniciar una instancia del Motor de base de datos de SQL Server
 
 1. Inicie el Administrador de configuración de SQL Server con las instrucciones anteriores.
 
@@ -153,7 +153,7 @@ Como el Administrador de configuración de SQL Server es un complemento del pro
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-### <a name="ssmsde"></a> Para iniciar, detener, pausar, reanudar o reiniciar una instancia del Motor de base de datos de SQL Server
+### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="ssmsde"></a> Para iniciar, detener, pausar, reanudar o reiniciar una instancia del Motor de base de datos de SQL Server
 
 1. En el Explorador de objetos, conéctese a la instancia del Motor de base de datos, haga clic con el botón derecho en la instancia del Motor de base de datos que quiere iniciar y, luego, haga clic en **Iniciar**, **Detener**, **Pausar**, **Reanudar** o **Reiniciar**.
 
@@ -171,11 +171,11 @@ Como el Administrador de configuración de SQL Server es un complemento del pro
 
 3. Cuando se le pregunte si quiere actuar, haga clic en **Sí**.
 
-## <a name="CommandPrompt"></a> Ventana del símbolo del sistema con comandos de net
+## <a name="command-prompt-window-using-net-commands"></a><a name="CommandPrompt"></a> Ventana del símbolo del sistema con comandos de net
 
 Los servicios de Microsoft SQL Server se pueden iniciar, detener o pausar mediante comandos **net** de Microsoft Windows.
 
-### <a name="dbDefault"></a> Para iniciar la instancia predeterminada del Motor de base de datos
+### <a name="to-start-the-default-instance-of-the-database-engine"></a><a name="dbDefault"></a> Para iniciar la instancia predeterminada del Motor de base de datos
 
 - En el símbolo del sistema, escriba uno de los siguientes comandos:  
   
@@ -185,7 +185,7 @@ Los servicios de Microsoft SQL Server se pueden iniciar, detener o pausar media
 
     **net start MSSQLSERVER**
 
-### <a name="dbNamed"></a> Para iniciar una instancia con nombre del Motor de base de datos
+### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> Para iniciar una instancia con nombre del Motor de base de datos
 
 - En el símbolo del sistema, escriba uno de los siguientes comandos. Sustituya *\<instancename>* por el nombre de la instancia que quiera administrar.  
   
@@ -195,7 +195,7 @@ Los servicios de Microsoft SQL Server se pueden iniciar, detener o pausar media
   
     **net start MSSQL$** *instancename*  
   
-### <a name="dbStartup"></a> Para iniciar el Motor de base de datos con opciones de inicio  
+### <a name="to-start-the-database-engine-with-startup-options"></a><a name="dbStartup"></a> Para iniciar el Motor de base de datos con opciones de inicio  
 
 - Agregue las opciones de inicio al final de la instrucción **net start "SQL Server (MSSQLSERVER)"** , separadas por un espacio. Cuando se inicia mediante **net start**, las opciones de inicio usan una barra (/) en lugar de un guión (-).  
   
@@ -208,7 +208,7 @@ Los servicios de Microsoft SQL Server se pueden iniciar, detener o pausar media
   > [!NOTE]
   >  Para obtener más información sobre las opciones de inicio del servicio, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-###  <a name="agDefault"></a> Para iniciar Agente SQL Server en la instancia predeterminada de SQL Server
+###  <a name="to-start-the-sql-server-agent-on-the-default-instance-of-sql-server"></a><a name="agDefault"></a> Para iniciar Agente SQL Server en la instancia predeterminada de SQL Server
   
 - En el símbolo del sistema, escriba uno de los siguientes comandos:  
   
@@ -218,7 +218,7 @@ Los servicios de Microsoft SQL Server se pueden iniciar, detener o pausar media
   
     **net start SQLSERVERAGENT**
   
-###  <a name="agNamed"></a> Para iniciar Agente SQL Server en una instancia con nombre de SQL Server  
+###  <a name="to-start-the-sql-server-agent-on-a-named-instance-of-sql-server"></a><a name="agNamed"></a> Para iniciar Agente SQL Server en una instancia con nombre de SQL Server  
   
 - En el símbolo del sistema, escriba uno de los siguientes comandos. Sustituya *instancename* por el nombre de la instancia que quiere administrar.  
   
@@ -230,7 +230,7 @@ Los servicios de Microsoft SQL Server se pueden iniciar, detener o pausar media
   
  Para obtener información sobre cómo ejecutar Agente SQL Server en modo detallado para la solución de problemas, vea [sqlagent90 (aplicación)](../../tools/sqlagent90-application.md).  
 
-### <a name="Browser"></a> Para iniciar SQL Server Browser  
+### <a name="to-start-the-sql-server-browser"></a><a name="Browser"></a> Para iniciar SQL Server Browser  
 
 - En el símbolo del sistema, escriba uno de los siguientes comandos:  
   
@@ -240,7 +240,7 @@ Los servicios de Microsoft SQL Server se pueden iniciar, detener o pausar media
   
     **net start SQLBrowser**
   
-### <a name="pauseStop"></a> Para pausar o detener los servicios desde la ventana del símbolo del sistema  
+### <a name="to-pause-or-stop-services-from-the-command-prompt-window"></a><a name="pauseStop"></a> Para pausar o detener los servicios desde la ventana del símbolo del sistema  
 
 - Para pausar o detener servicios, modifique los comandos como se indica a continuación.  
 
@@ -248,7 +248,7 @@ Los servicios de Microsoft SQL Server se pueden iniciar, detener o pausar media
 
 - Para detener un servicio, reemplace **net start** por **net stop**.  
 
-## <a name="TsqlProcedure"></a> Transact-SQL
+## <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL
 
 El Motor de base de datos se puede detener mediante la instrucción **SHUTDOWN**.  
 
@@ -268,7 +268,7 @@ El Motor de base de datos se puede detener mediante la instrucción **SHUTDOWN**
 
 Para obtener más información sobre la instrucción **SHUTDOWN**, vea [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md).  
 
-## <a name="PowerShellProcedure"></a> PowerShell
+## <a name="powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
 ### <a name="to-start-and-stop-database-engine-services"></a>Para iniciar y detener servicios de Motor de base de datos
 

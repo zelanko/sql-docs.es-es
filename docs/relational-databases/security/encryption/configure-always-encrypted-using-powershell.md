@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594414"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
@@ -35,7 +35,7 @@ Puede usar PowerShell para administrar claves de Always Encrypted con y sin sepa
 Instale el [módulo SqlServer](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) en un equipo seguro distinto del equipo que hospeda la instancia de SQL Server. El módulo se puede instalar directamente desde la Galería de PowerShell.  Vea las instrucciones de [descarga](../../../ssms/download-sql-server-ps-module.md) para obtener más información.
 
 
-## <a name="importsqlservermodule"></a> Importar el módulo SqlServer 
+## <a name="importing-the-sqlserver-module"></a><a name="importsqlservermodule"></a> Importar el módulo SqlServer 
 
 Para cargar el módulo SqlServer:
 
@@ -49,7 +49,7 @@ En este ejemplo se carga el módulo SqlServer.
 Import-Module "SqlServer" 
 ```
 
-## <a name="connectingtodatabase"></a> Conectar a una base de datos
+## <a name="connecting-to-a-database"></a><a name="connectingtodatabase"></a> Conectar a una base de datos
 
 Algunos de los cmdlets de Always Encrypted funcionan con datos o metadatos de la base de datos y requieren que se conecte primero a la base de datos. Hay dos métodos recomendados para conectarse a una base de datos al configurar Always Encrypted con el módulo SqlServer: 
 1. Conéctese con el cmdlet **Get-SqlDatabase**.
@@ -117,7 +117,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 - [Cifrado, recifrado o descifrado de columnas con Always Encrypted mediante PowerShell](configure-column-encryption-using-powershell.md)
 
 
-##  <a name="aecmdletreference"></a> Referencia de cmdlets de Always Encrypted
+##  <a name="always-encrypted-cmdlet-reference"></a><a name="aecmdletreference"></a> Referencia de cmdlets de Always Encrypted
 
 Los siguientes cmdlets de PowerShell están disponibles para Always Encrypted:
 

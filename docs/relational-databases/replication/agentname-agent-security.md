@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 039ec0c4401bc9748e1fa04fe89bcb69f055270c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288173"
 ---
 # <a name="ltagentnamegt-agent-security"></a>Seguridad del agente &lt;NombreAgente&gt;
@@ -35,23 +35,23 @@ ms.locfileid: "76288173"
  **Conexión al distribuidor**  
  Se muestra para la replicación transaccional y de instantáneas. Contexto en el que se realiza la conexión al distribuidor. Las conexiones locales se realizan siempre utilizando el contexto de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con la que se ejecuta el agente:  
   
--   Para las suscripciones de inserción, la conexión local es la conexión al distribuidor, por lo que en este campo siempre se mostrará: **Suplantar "\<Dominio>\\<Inicio de sesión\>"** o **Suplantar "\<Equipo>\\<Inicio de sesión\>"** para las suscripciones de inserción.  
+-   Para suscripciones de inserción, la conexión local es la conexión con el distribuidor, por lo que este campo muestra siempre: **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<Equipo>\\<inicioDeSesión\>'** para suscripciones de inserción.  
   
--   En las suscripciones de extracción, la conexión se puede realizar también en el contexto de un inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el campo se muestra uno de los siguientes: **Usar inicio de sesión "\<Inicio de sesión>"** , **Suplantar "\<Dominio>\\<Inicio de sesión\>"** o **Suplantar "\<Equipo>\\<Inicio de sesión\>"** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
+-   En las suscripciones de extracción, la conexión se puede realizar también en el contexto de un inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el campo se muestra una de las siguientes opciones: **Usar inicio de sesión '\<inicioDeSesión>'** , **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<equipo>\\<inicioDeSesión>\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
   
  **Conexión con el publicador y distribuidor**  
  Se muestra para la replicación de mezcla. Contexto en el que se realizan las conexiones al publicador y al distribuidor. Las conexiones locales se realizan siempre utilizando el contexto de la cuenta de Windows con la que se ejecuta el agente:  
   
--   Para las suscripciones de inserción, la conexión local es la conexión al publicador y al distribuidor, por lo que en este campo siempre se mostrará: **Suplantar "\<Dominio>\\<Inicio de sesión\>"** o **Suplantar "\<Equipo>\\<Inicio de sesión\>"** para las suscripciones de inserción.  
+-   Para suscripciones de inserción, la conexión local es la conexión con el publicador y el distribuidor, por lo que este campo muestra siempre: **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<Equipo>\\<inicioDeSesión\>'** para suscripciones de inserción.  
   
--   Para las suscripciones de extracción, la conexión se puede realizar también bajo el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el campo se muestra uno de los siguientes: **Usar inicio de sesión "\<Inicio de sesión>"** , **Suplantar "\<Dominio>\\<Inicio de sesión\>"** o **Suplantar "\<Equipo>\\<Inicio de sesión\>"** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
+-   Para las suscripciones de extracción, la conexión se puede realizar también bajo el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el campo se muestra una de las siguientes opciones: **Usar inicio de sesión '\<inicioDeSesión>'** , **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<equipo>\\<inicioDeSesión>\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
   
  **Conexión al suscriptor**  
  Contexto en el que se realiza la conexión al suscriptor. Las conexiones locales se realizan siempre utilizando el contexto de la cuenta de Windows con la que se ejecuta el agente:  
   
--   Para las suscripciones de extracción, la conexión local es la conexión al suscriptor, por lo que en este campo siempre se mostrará: **Suplantar "\<Dominio>\\<Inicio de sesión\>"** o **Suplantar "\<Equipo>\\<Inicio de sesión\>"** para las suscripciones de inserción.  
+-   Para suscripciones de extracción, la conexión local es la conexión con el suscriptor, por lo que este campo muestra siempre: **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<Equipo>\\<inicioDeSesión\>'** para suscripciones de inserción.  
   
--   Para las suscripciones de inserción, la conexión se puede realizar también bajo el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el campo se muestra uno de los siguientes: **Usar inicio de sesión "\<Inicio de sesión>"** , **Suplantar "\<Dominio>\\<Inicio de sesión\>"** o **Suplantar "\<Equipo>\\<Inicio de sesión\>"** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
+-   Para las suscripciones de inserción, la conexión se puede realizar también bajo el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el campo se muestra una de las siguientes opciones: **Usar inicio de sesión '\<inicioDeSesión>'** , **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<equipo>\\<inicioDeSesión>\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
   
 ## <a name="see-also"></a>Consulte también  
  [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  (Ver y modificar las propiedades de una suscripción de extracción)  

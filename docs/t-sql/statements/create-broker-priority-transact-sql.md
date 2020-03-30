@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73064680"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -57,7 +57,7 @@ FOR CONVERSATION
   
 ## <a name="arguments"></a>Argumentos  
  *ConversationPriorityName*  
- Especifica el nombre para esta prioridad de conversación. El nombre debe ser único en la base de datos actual y debe cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md) de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Especifica el nombre para esta prioridad de conversación. El nombre debe ser único en la base de datos actual y debe cumplir las reglas de los [!INCLUDE[ssDE](../../includes/ssde-md.md)]identificadores[ de ](../../relational-databases/databases/database-identifiers.md).  
   
  SET  
  Especifica los criterios para determinar si la prioridad de conversación se aplica a una conversación. Si se especifica, SET debe contener al menos un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL. Si no se especifica SET, se establecen los valores predeterminados para los tres criterios.  

@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099032"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funciones de texto e imagen - TEXTPTR (Transact-SQL)
@@ -73,7 +73,7 @@ TEXTPTR ( column )
 >  Para ejecutar estos ejemplos, es necesario instalar la base de datos **pubs**.  
   
 ### <a name="a-using-textptr"></a>A. Usar TEXTPTR  
- En el ejemplo siguiente se utiliza la función `TEXTPTR` para encontrar la columna `logo` de **image** asociada a `New Moon Books` en la tabla `pub_info` de la base de datos `pubs`. El puntero de texto se coloca en la variable local `@ptrval.`  
+ En el ejemplo siguiente se utiliza la función `TEXTPTR` para encontrar la columna **de**image`logo` asociada a `New Moon Books` en la tabla `pub_info` de la base de datos `pubs`. El puntero de texto se coloca en la variable local `@ptrval.`  
   
 ```  
 USE pubs;  

@@ -16,10 +16,10 @@ ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ac82c951c3e65c1d26891f802d19b8522f22a6e9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321229"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Establecer el nivel de compatibilidad para publicaciones de mezcla
@@ -34,7 +34,7 @@ ms.locfileid: "75321229"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Establezca el nivel de compatibilidad en la página **Tipos de suscriptor** del Asistente para nueva publicación. Para obtener más información acerca de cómo obtener acceso a este asistente, vea [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md). Después de crear una publicación de instantáneas, el nivel de compatibilidad se puede aumentar pero no se puede reducir. Aumente el nivel de compatibilidad en la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Si aumenta el nivel de compatibilidad, las suscripciones existentes en los servidores que se ejecuten con versiones anteriores al nivel de compatibilidad no se podrán sincronizar.  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "75321229"
   
 -   En la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione el valor deseado para **Nivel de compatibilidad**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  El nivel de compatibilidad para una publicación de combinación se puede establecer mediante programación cuando una publicación se crea o bien, se puede modificar mediante programación en un momento posterior. Puede usar procedimientos almacenados de replicación para establecer o cambiar esta propiedad de publicación.  
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Para establecer el nivel de compatibilidad de la publicación para una publicación de combinación  
@@ -65,7 +65,7 @@ ms.locfileid: "75321229"
   
 2.  Busque el nivel de compatibilidad de la publicación en la columna **de backward_comp_level** en el conjunto de resultados.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  Este ejemplo crea una publicación de combinación y establece el nivel de compatibilidad de la publicación.  
   
 ```sql  

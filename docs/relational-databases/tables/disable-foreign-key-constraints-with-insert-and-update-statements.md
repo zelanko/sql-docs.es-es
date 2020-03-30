@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 641d53338ebe0c425f16c3ead6872d3f31927d99
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73659520"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>Deshabilitar restricciones FOREIGN KEY con instrucciones INSERT y UPDATE
@@ -43,17 +43,17 @@ ms.locfileid: "73659520"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Después de deshabilitar estas restricciones, las posteriores inserciones o actualizaciones de la columna no se validan con las condiciones de la restricción.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Para deshabilitar una restricción FOREIGN KEY de instrucciones INSERT y UPDATE  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73659520"
   
 4.  Haga clic en **Cerrar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Para deshabilitar una restricción FOREIGN KEY de instrucciones INSERT y UPDATE  
   

@@ -15,10 +15,10 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287589"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
@@ -107,7 +107,7 @@ ms.locfileid: "79287589"
   
 -   **IMPORT**: el usuario puede importar el esquema y los datos a una base de datos nueva en el servidor de host.  
   
- Las dos funciones son compatibles con las herramientas de administración de base de datos: SQL Server Management Studio, Azure Portal y la API DACFx.  
+ Ambas funciones son compatibles con las herramientas de administración de bases de datos: SQL Server Management Studio, el Portal de Azure y la API de DACFx.  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario ser miembro del rol **dbmanager** o tener asignados permisos **CREATE DATABASE** para crear una base de datos, incluida la creación de una base de datos para implementar un paquete DAC. Es necesario ser miembro del rol **dbmanager** o tener asignados permisos **DROP DATABASE** para quitar una base de datos.  

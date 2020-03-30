@@ -30,10 +30,10 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287889"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
@@ -156,7 +156,7 @@ ms.locfileid: "79287889"
   
 1.  Habilite el paquete y sus tareas para el registro. El registro se puede producir en el nivel de paquete, de contenedor y de tarea. Puede especificar diferentes registros para paquetes, contenedores y tareas.  
   
-2.  Seleccione un proveedor de registro y agregue un registro para el paquete. Solo se pueden crear registros en el nivel de paquete y una tarea o un contenedor deben utilizar uno de los registros creados para el paquete. Cada registro está asociado con uno de los proveedores de registros siguientes: Archivo de texto, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], registro de eventos de Windows o archivo XML. Para más información, vea [Habilitar el registro de paquetes en SQL Server Data Tools](#ssdt).  
+2.  Seleccione un proveedor de registro y agregue un registro para el paquete. Solo se pueden crear registros en el nivel de paquete y una tarea o un contenedor deben utilizar uno de los registros creados para el paquete. Cada registro está asociado a uno de los proveedores de registro siguientes: archivo de texto, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Registro de eventos de Windows o archivo XML. Para más información, vea [Habilitar el registro de paquetes en SQL Server Data Tools](#ssdt).  
   
 3.  Seleccione los eventos y la información del esquema de registro de cada evento que desee capturar en el registro. Para más información, vea [Configurar el registro usando un archivo de configuración guardado](#saved_config).  
   
@@ -214,7 +214,7 @@ ms.locfileid: "79287889"
   
 -   La transformación Agregado denominada “Sum Quantity and LineItemTotalCost” ha usado un tiempo combinado de 220 ms (141 ms en PrimeOutput y 79 ms en ProcessInput) en las operaciones de realizar cálculos y pasar los datos a la transformación siguiente.  
 
-## <a name="ssdt"></a> Habilitar el registro de paquetes en SQL Server Data Tools
+## <a name="enable-package-logging-in-sql-server-data-tools"></a><a name="ssdt"></a> Habilitar el registro de paquetes en SQL Server Data Tools
   Este procedimiento describe cómo agregar registros a un paquete, configurar el registro en el nivel de paquete y guardar la configuración de registro en un archivo XML. Solo puede agregar registros en el nivel de paquete, pero el paquete no tiene que realizar registros para habilitar el registro en los contenedores que incluye.  
   
 > [!IMPORTANT]  
@@ -262,7 +262,7 @@ ms.locfileid: "79287889"
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
-## <a name="configure_logs"></a> Configurar el cuadro de diálogo Registros de SSIS
+## <a name="configure-ssis-logs-dialog-box"></a><a name="configure_logs"></a> Configurar el cuadro de diálogo Registros de SSIS
   Use el cuadro de diálogo **Configurar registros de SSIS** para definir las opciones de registro de un paquete.  
   
  **¿Qué desea hacer?**  
@@ -275,12 +275,12 @@ ms.locfileid: "79287889"
   
 4.  [Configurar las opciones en la pestaña Detalles](#detail)  
   
-###  <a name="open_dialog"></a> Abrir el cuadro de diálogo Configurar registros de SSIS  
+###  <a name="open-the-configure-ssis-logs-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Configurar registros de SSIS  
  **Para abrir el cuadro de diálogo Configurar registros de SSIS**  
   
 -   En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en **Registro** en el menú **SSIS** .  
   
-###  <a name="container"></a> Configurar las opciones en el panel Contenedores  
+###  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a> Configurar las opciones en el panel Contenedores  
  Utilice el panel **Contenedores** del cuadro de diálogo **Configurar registros de SSIS** para habilitar el paquete y sus contenedores para registro.  
   
 #### <a name="options"></a>Opciones  
@@ -295,7 +295,7 @@ ms.locfileid: "79287889"
   
  Si un contenedor aparece atenuado y desea establecer opciones de registro en el contenedor, haga clic dos veces en la casilla. El primer clic desactiva la casilla y el segundo la activa para permitirle que elija los proveedores de registro que desea utilizar y para seleccionar la información que desea registrar.  
   
-###  <a name="provider"></a> Configurar las opciones en la pestaña Proveedores y registros  
+###  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a> Configurar las opciones en la pestaña Proveedores y registros  
  Use la pestaña **Proveedores y registros** del cuadro de diálogo **Configurar registros de SSIS** con el fin de crear y configurar registros para la captura de eventos en tiempo de ejecución.  
   
 #### <a name="options"></a>Opciones  
@@ -314,12 +314,12 @@ ms.locfileid: "79287889"
  **Configuración**  
  Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones nuevo. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no requiere conexión.  
   
- Temas relacionados: [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md)  
+ Temas relacionados: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) , [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **Eliminar**  
  Seleccione un proveedor de registro y haga clic en **Eliminar**.  
   
-###  <a name="detail"></a> Configurar las opciones en la pestaña Detalles  
+###  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a> Configurar las opciones en la pestaña Detalles  
  Utilice la pestaña **Detalles** del cuadro de diálogo **Configurar registros de SSIS** para especificar los eventos que se van a habilitar para el registro y los detalles de información que se van a registrar. La información que selecciona se aplica a todos los proveedores de registro del paquete. Por ejemplo, no puede escribir cierta información en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e información diferente en un archivo de texto.  
   
 #### <a name="options"></a>Opciones  
@@ -351,7 +351,7 @@ ms.locfileid: "79287889"
  **Guardar**  
  Guarde los detalles de configuración como una plantilla para un archivo XML.  
 
-## <a name="saved_config"></a> Configurar el registro usando un archivo de configuración guardado
+## <a name="configure-logging-by-using-a-saved-configuration-file"></a><a name="saved_config"></a> Configurar el registro usando un archivo de configuración guardado
   Este procedimiento describe cómo configurar el registro para los contenedores nuevos de un paquete, cargando un archivo de configuración de registro previamente guardado.  
   
  De manera predeterminada, todos los contenedores de un paquete utilizan la misma configuración de registro que el contenedor principal. Por ejemplo, las tareas de un bucle ForEach utilizan la misma configuración de registro que el bucle ForEach.  
@@ -382,7 +382,7 @@ ms.locfileid: "79287889"
   
 9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
-## <a name="server_logging"></a> Habilitar el registro de ejecución del paquete en el servidor SSIS
+## <a name="enable-logging-for-package-execution-on-the-ssis-server"></a><a name="server_logging"></a> Habilitar el registro de ejecución del paquete en el servidor SSIS
   En este tema se describe cómo establecer o cambiar el nivel de registro para un paquete cuando se ejecuta un paquete implementado en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. El nivel de registro que se establece al ejecutar el paquete invalida el registro de paquete configurado en tiempo de diseño en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vea [Habilitar el registro de paquetes en SQL Server Data Tools](#ssdt) para obtener más información.  
   
  En **Propiedades del servidor**de SQL Server, en la propiedad **Server logging level** (Nivel de registro de servidor), puede seleccionar un nivel de registro predeterminado de todo el servidor. Puede elegir entre uno de los niveles de registro integrados que se describen en este tema o puede elegir un nivel de registro personalizado existente. El nivel de registro seleccionado se aplica de manera predeterminada a todos los paquetes que se implementen en el catálogo de SSIS. También se aplica de forma predeterminada a un paso de trabajo del Agente SQL que ejecuta un paquete SSIS.  
@@ -438,7 +438,7 @@ ms.locfileid: "79287889"
   
 -   Solo los usuarios del rol ssis_admin o sysadmin pueden crear, actualizar o eliminar niveles de registro personalizados.  
 
-## <a name="custom_messages"></a> Custom Messages for Logging
+## <a name="custom-messages-for-logging"></a><a name="custom_messages"></a> Custom Messages for Logging
 SQL Server Integration Services proporciona un amplio conjunto de eventos personalizados para escribir entradas del registro para paquetes y muchas tareas. Puede utilizar estas entradas para guardar información detallada sobre el progreso, resultados y problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. Por ejemplo, puede registrar cuando se inicia y finaliza la inserción masiva para identificar los problemas de rendimiento en la ejecución del paquete.  
   
  Las entradas del registro personalizadas pertenecen a un conjunto de entradas diferente de los eventos estándar de registro que están disponibles para los paquetes y todos los contenedores y tareas. Las entradas del registro personalizadas se han adaptado para capturar información de utilidad sobre una tarea específica de un paquete. Por ejemplo, una de las entradas de registro personalizadas para la tarea Ejecutar SQL registra la instrucción SQL que ejecuta la tarea en el registro.  
@@ -491,7 +491,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
   
 ### <a name="log-entries"></a>Entradas del registro  
   
-####  <a name="Package"></a> Paquete  
+####  <a name="package"></a><a name="Package"></a> Paquete  
  La siguiente tabla contiene las entradas del registro personalizadas para paquetes.  
   
 |Entrada del registro|Descripción|  
@@ -500,7 +500,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**PackageEnd**|Indica que finalizó la ejecución del paquete. Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
 |**Diagnostic**|Proporciona información sobre la configuración del sistema que afecta a la ejecución de paquetes, como el número de ejecutables que se pueden ejecutar simultáneamente.<br /><br /> La entrada del registro **Diagnostic** también incluye entradas por delante y por detrás relativas a las llamadas a proveedores de datos externos.|  
   
-####  <a name="BulkInsert"></a> Tarea Inserción masiva  
+####  <a name="bulk-insert-task"></a><a name="BulkInsert"></a> Tarea Inserción masiva  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Inserción masiva.  
   
 |Entrada del registro|Descripción|  
@@ -509,7 +509,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**DTSBulkInsertTaskEnd**|Indica que finalizó la inserción masiva.|  
 |**DTSBulkInsertTaskInfos**|Proporciona información descriptiva sobre la tarea.|  
   
-####  <a name="DataFlow"></a> Data Flow Task  
+####  <a name="data-flow-task"></a><a name="DataFlow"></a> Data Flow Task  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Flujo de datos.  
   
 |Entrada del registro|Descripción|  
@@ -525,7 +525,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**PipelineExecutionTrees**|Informa sobre los árboles de ejecución del diseño del flujo de datos. El programador del motor de flujo de datos utiliza los árboles para generar el plan de ejecución del flujo de datos.|  
 |**PipelineInitialization**|Proporciona información de inicialización sobre la tarea. Esta información incluye los directorios que se utilizan para el almacenamiento temporal de datos BLOB, el tamaño predeterminado del búfer y la cantidad de filas de un búfer. En función de la configuración de la tarea Flujo de datos, es posible que se escriban varias entradas.|  
   
-####  <a name="ExecuteDTS200"></a> Tarea Ejecutar DTS 2000  
+####  <a name="execute-dts-2000-task"></a><a name="ExecuteDTS200"></a> Tarea Ejecutar DTS 2000  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Ejecutar DTS 2000.  
   
 |Entrada del registro|Descripción|  
@@ -535,7 +535,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**ExecuteDTS80PackageTaskTaskInfo**|Proporciona información descriptiva sobre la tarea.|  
 |**ExecuteDTS80PackageTaskTaskResult**|Informa del resultado de la ejecución del paquete DTS 2000 que ejecutó la tarea.|  
   
-####  <a name="ExecuteProcess"></a> Tarea Ejecutar proceso  
+####  <a name="execute-process-task"></a><a name="ExecuteProcess"></a> Tarea Ejecutar proceso  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Ejecutar proceso.  
   
 |Entrada del registro|Descripción|  
@@ -543,21 +543,21 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**ExecuteProcessExecutingProcess**|Proporciona información sobre el proceso de ejecución del ejecutable que se configuró para que ejecute la tarea.<br /><br /> Se escriben dos entradas del registro. Una entrada contiene información sobre el nombre y la ubicación del ejecutable que ejecuta la tarea y la otra entrada registra la salida del ejecutable.|  
 |**ExecuteProcessVariableRouting**|Proporciona información acerca de las variables que se enrutan a la entrada y las salidas del ejecutable. Se escriben entradas del registro para stdin (la entrada), stdout (la salida) y stderr (la salida de errores).|  
   
-####  <a name="ExecuteSQL"></a> Tarea Ejecutar SQL  
+####  <a name="execute-sql-task"></a><a name="ExecuteSQL"></a> Tarea Ejecutar SQL  
  La siguiente tabla contiene la entrada del registro personalizada para la tarea Ejecutar SQL.  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Proporciona información sobre las fases de ejecución de la instrucción SQL. Las entradas de registro se escriben cuando la tarea adquiere una conexión con la base de datos, cuando la tarea comienza a preparar la instrucción SQL y una vez que se completa la ejecución de la instrucción SQL. La entrada del registro para la fase de preparación incluye la instrucción SQL que utiliza la tarea.|  
   
-####  <a name="FileSystem"></a> Tarea Sistema de archivos  
+####  <a name="file-system-task"></a><a name="FileSystem"></a> Tarea Sistema de archivos  
  La siguiente tabla contiene las entradas de registro personalizadas para la tarea Sistema de archivos.  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Informa sobre la operación que realiza la tarea. La entrada del registro se escribe cuando se inicia la operación del sistema de archivos e incluye información sobre el origen y el destino.|  
   
-####  <a name="FTP"></a> Tarea FTP  
+####  <a name="ftp-task"></a><a name="FTP"></a> Tarea FTP  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea FTP.  
   
 |Entrada del registro|Descripción|  
@@ -565,7 +565,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**FTPConnectingToServer**|Indica que la tarea inició una conexión con el servidor FTP.|  
 |**FTPOperation**|Informa del comienzo y del tipo de operación de FTP que realiza la tarea.|  
   
-####  <a name="MessageQueue"></a> Tarea Cola de mensajes  
+####  <a name="message-queue-task"></a><a name="MessageQueue"></a> Tarea Cola de mensajes  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Cola de mensajes.  
   
 |Entrada del registro|Descripción|  
@@ -579,14 +579,14 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**MSMQTaskInfo**|Proporciona información descriptiva sobre la tarea.|  
 |**MSMQTaskTimeOut**|Indica que se superó el tiempo de espera de la tarea.|  
   
-####  <a name="Script"></a> Tarea Script  
+####  <a name="script-task"></a><a name="Script"></a> Tarea Script  
  La siguiente tabla contiene la entrada personalizada de registro para la tarea Script.  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|Informa sobre los resultados de la implementación del registro en el script. Se escribe una entrada de registro para cada llamada al método **Log** del objeto **Dts** . La entrada se escribe cuando se ejecuta el código. Para más información, consulte [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
-####  <a name="SendMail"></a> Tarea Enviar correo  
+####  <a name="send-mail-task"></a><a name="SendMail"></a> Tarea Enviar correo  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Enviar correo.  
   
 |Entrada del registro|Descripción|  
@@ -595,7 +595,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**SendMailTaskEnd**|Indica que la tarea finalizó el envío de un mensaje de correo electrónico.|  
 |**SendMailTaskInfo**|Proporciona información descriptiva sobre la tarea.|  
   
-####  <a name="TransferDatabase"></a> Tarea Transferir bases de datos  
+####  <a name="transfer-database-task"></a><a name="TransferDatabase"></a> Tarea Transferir bases de datos  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Transferir bases de datos.  
   
 |Entrada del registro|Descripción|  
@@ -603,7 +603,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**SourceDB**|Especifica la base de datos que copió la tarea.|  
 |**SourceSQLServer**|Especifica el equipo desde el que se copió la base de datos.|  
   
-####  <a name="TransferErrorMessages"></a> Tarea Transferir mensajes de error  
+####  <a name="transfer-error-messages-task"></a><a name="TransferErrorMessages"></a> Tarea Transferir mensajes de error  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Transferir mensajes de error.  
   
 |Entrada del registro|Descripción|  
@@ -611,7 +611,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|Indica que la tarea finalizó la transferencia de los mensajes de error.|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|Indica que la tarea inició la transferencia de los mensajes de error.|  
   
-####  <a name="TransferJobs"></a> Tarea Transferir trabajos  
+####  <a name="transfer-jobs-task"></a><a name="TransferJobs"></a> Tarea Transferir trabajos  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Transferir trabajos.  
   
 |Entrada del registro|Descripción|  
@@ -619,7 +619,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**TransferJobsTaskFinishedTransferringObjects**|Indica que la tarea finalizó la transferencia de los trabajos del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**TransferJobsTaskStartTransferringObjects**|Indica que la tarea inició la transferencia de los trabajos del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-####  <a name="TransferLogins"></a> Tarea Transferir inicios de sesión  
+####  <a name="transfer-logins-task"></a><a name="TransferLogins"></a> Tarea Transferir inicios de sesión  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Transferir inicios de sesión.  
   
 |Entrada del registro|Descripción|  
@@ -627,7 +627,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**TransferLoginsTaskFinishedTransferringObjects**|Indica que la tarea finalizó la transferencia de inicios de sesión.|  
 |**TransferLoginsTaskStartTransferringObjects**|Indica que la tarea inició la transferencia de los inicios de sesión.|  
   
-####  <a name="TransferMasterStoredProcedures"></a> Tarea Transferir procedimientos almacenados principales  
+####  <a name="transfer-master-stored-procedures-task"></a><a name="TransferMasterStoredProcedures"></a> Tarea Transferir procedimientos almacenados principales  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Transferir procedimientos almacenados principales.  
   
 |Entrada del registro|Descripción|  
@@ -635,7 +635,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|Indica que la tarea finalizó la transferencia de los procedimientos almacenados definidos por el usuario que están almacenados en la base de datos **maestra** .|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|Indica que la tarea inició la transferencia de los procedimientos almacenados definidos por el usuario que están almacenados en la base de datos **maestra** .|  
   
-####  <a name="TransferSQLServerObjects"></a> Tarea Transferir objetos de SQL Server  
+####  <a name="transfer-sql-server-objects-task"></a><a name="TransferSQLServerObjects"></a> Tarea Transferir objetos de SQL Server  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Transferir objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Entrada del registro|Descripción|  
@@ -643,7 +643,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**TransferSqlServerObjectsTaskFinishedTransferringObjects**|Indica que la tarea finalizó la transferencia de los objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**TransferSqlServerObjectsTaskStartTransferringObjects**|Indica que la tarea inició la transferencia de los objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-####  <a name="WebServices"></a> Tarea Servicios web  
+####  <a name="web-services-task"></a><a name="WebServices"></a> Tarea Servicios web  
  La siguiente tabla contiene las entradas del registro personalizadas que puede habilitar para la tarea Servicios web.  
   
 |Entrada del registro|Descripción|  
@@ -652,7 +652,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**WSTaskEnd**|La tarea completó un método de servicio web.|  
 |**WSTaskInfo**|Información descriptiva acerca de la tarea.|  
   
-####  <a name="WMIDataReader"></a> Tarea Lector de datos WMI  
+####  <a name="wmi-data-reader-task"></a><a name="WMIDataReader"></a> Tarea Lector de datos WMI  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Lector de datos WMI.  
   
 |Entrada del registro|Descripción|  
@@ -660,7 +660,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**WMIDataReaderGettingWMIData**|Indica que la tarea inició la lectura de datos WMI.|  
 |**WMIDataReaderOperation**|Informa de la consulta WQL que ejecutó la tarea.|  
   
-####  <a name="WMIEventWatcher"></a> Tarea Monitor de eventos WMI  
+####  <a name="wmi-event-watcher-task"></a><a name="WMIEventWatcher"></a> Tarea Monitor de eventos WMI  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Monitor de eventos WMI.  
   
 |Entrada del registro|Descripción|  
@@ -669,7 +669,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |**WMIEventWatcherTimedout**|Indica que se superó el tiempo de espera de la tarea.|  
 |**WMIEventWatcherWatchingForWMIEvents**|Indica que la tarea inició la ejecución de la consulta WQL. La entrada incluye la consulta.|  
   
-####  <a name="XML"></a> Tarea XML  
+####  <a name="xml-task"></a><a name="XML"></a> Tarea XML  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea XML.  
   
 |Entrada del registro|Descripción|  

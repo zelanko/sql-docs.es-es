@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 024f76fd4f87f353908fc634ec486f579f2e7e79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286932"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Ver y modificar las propiedades de una suscripción de extracción
@@ -40,7 +40,7 @@ ms.locfileid: "76286932"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Vea las propiedades de las suscripciones de extracción del publicador o el suscriptor en el cuadro de diálogo **Propiedades de suscripción: \<Publicador>: \<baseDeDatosDePublicación>** , disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el suscriptor se pueden ver más propiedades y éstas se pueden modificar. También se pueden ver propiedades del publicador en la pestaña **Todas las suscripciones** , que está disponible en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Para ver las propiedades de las suscripciones de extracción en el publicador en Management Studio  
@@ -73,7 +73,7 @@ ms.locfileid: "76286932"
   
 4.  Vea las propiedades y, a continuación, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Se pueden modificar las suscripciones de extracción y tener acceso a sus propiedades mediante programación usando procedimientos almacenados de replicación. Los procedimientos almacenados que se usen dependerán del tipo de publicación a la que corresponda la suscripción.  
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para ver las propiedades de una suscripción de extracción a una publicación transaccional o de instantáneas  
@@ -121,7 +121,7 @@ ms.locfileid: "76286932"
   
 1.  En el suscriptor, ejecute [sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md). Especifique `@publication`, `@publisher`, `@publisher_db`, la propiedad de suscripción que se va a cambiar como `@property` y el nuevo valor como `@value`.  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Las clases RMO que usa para ver o modificar las propiedades de suscripción de extracción dependen del tipo de publicación a la que se suscribe la suscripción de extracción.  
   
 #### <a name="to-view-or-modify-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para ver o modificar propiedades de una suscripción de extracción a una publicación transaccional o de instantáneas  

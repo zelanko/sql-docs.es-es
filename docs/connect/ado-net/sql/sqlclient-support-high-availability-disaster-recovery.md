@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad de SqlClient para la alta disponibilidad con recuperación de desastres
-description: Describe la compatibilidad de SqlClient con conexiones de recuperación ante desastres de alta disponibilidad a grupos de disponibilidad Always On.
+description: Describe la compatibilidad de SqlClient con grupos de disponibilidad de alta disponibilidad y recuperación ante desastres (Always On).
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896287"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para la alta disponibilidad con recuperación de desastres
@@ -59,7 +59,7 @@ Use las siguientes instrucciones para conectarse a un servidor de un grupo de di
   
 - La conexión a una instancia de SQL Server configurada con más de 64 direcciones IP produce un error en la conexión.  
   
-- El comportamiento de una aplicación que use la propiedad de conexión `MultiSubnetFailover` no se ve afectado por el tipo de autenticación: Autenticación de SQL Server, autenticación Kerberos o autenticación de Windows.  
+- El comportamiento de una aplicación que usa la propiedad de conexión `MultiSubnetFailover` no se ve afectado por el tipo de autenticación: de SQL Server, Kerberos o Windows.  
   
 - Incremente el valor de `Connect Timeout` para dar tiempo a la conmutación por error y reducir los reintentos de conexión de la aplicación.  
   

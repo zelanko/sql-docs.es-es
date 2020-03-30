@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056200"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
@@ -29,7 +29,7 @@ La comprobación de coincidencia con el diccionario de sinónimos tiene lugar pa
   
 Un diccionario de sinónimos de búsqueda de texto completo es un archivo de texto XML.
   
-##  <a name="tasks"></a> ¿Qué es un diccionario de sinónimos?  
+##  <a name="whats-in-a-thesaurus"></a><a name="tasks"></a> ¿Qué es un diccionario de sinónimos?  
  Para que las consultas de búsqueda de texto completo puedan buscar sinónimos en un idioma determinado, debe definir las asignaciones del diccionario de sinónimos (es decir, los sinónimos) de ese idioma. Cada diccionario de sinónimos se debe configurar manualmente para definir lo siguiente:  
   
 -   Conjunto de expansión  
@@ -46,10 +46,10 @@ Un diccionario de sinónimos de búsqueda de texto completo es un archivo de tex
   
      En un diccionario de sinónimos determinado, todos los patrones de búsqueda distinguen o no las marcas diacríticas como la tilde ( **~** ), la marca de acento agudo ( **&acute;** ) o la diéresis ( **&uml;** ) (es decir, *distinguen acentos* o *no distinguen acentos*). Por ejemplo, imagine que especifica el patrón "caf&eacute;" para que sea reemplazado por otros patrones en una consulta de búsqueda de texto completo. Si el archivo de sinónimos no distingue acentos, la búsqueda de texto completo reemplaza los patrones "caf&eacute;" y "cafe". Si el archivo de sinónimos distingue acentos, la búsqueda de texto completo solo reemplaza el patrón "caf&eacute;". De forma predeterminada, un diccionario de sinónimos no distingue acentos.  
   
-##  <a name="initial_thesaurus_files"></a> Archivos de sinónimos predeterminados
+##  <a name="default-thesaurus-files"></a><a name="initial_thesaurus_files"></a> Archivos de sinónimos predeterminados
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de archivos de sinónimos XML, uno para cada idioma admitido. Estos archivos están esencialmente vacíos. Contienen solo la estructura XML de nivel superior que es común a todos los diccionarios de sinónimos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un diccionario de sinónimos de ejemplo como comentario.  
   
-##  <a name="location"></a> Ubicación de los archivos de sinónimos  
+##  <a name="location-of-thesaurus-files"></a><a name="location"></a> Ubicación de los archivos de sinónimos  
  La ubicación predeterminada de los archivos de sinónimos es la siguiente:  
   
      <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
@@ -79,12 +79,12 @@ Puede cambiar la ubicación y los nombres de un archivo de sinónimos cambiando 
   
  El archivo de sinónimos global corresponde al idioma neutro con el LCID 0. Solo los administradores pueden cambiar este valor.  
 
-##  <a name="how_queries_use_tf"></a> Cómo las consultas de texto completo utilizan el diccionario de sinónimos  
+##  <a name="how-full-text-queries-use-the-thesaurus"></a><a name="how_queries_use_tf"></a> Cómo las consultas de texto completo utilizan el diccionario de sinónimos  
 Una consulta del diccionario de sinónimos utiliza un diccionario de sinónimos específico del idioma y el diccionario de sinónimos global.
 1.  Primero, la consulta busca el archivo específico del idioma y lo carga para su procesamiento (a menos que ya esté cargado). La consulta se expande para incluir los sinónimos específicos del idioma especificados por las reglas de conjuntos de expansión y conjuntos de reemplazo en el archivo de diccionario de sinónimos. 
 2.  Estos pasos se repiten después para el diccionario de sinónimos global. Sin embargo, si un término ya forma parte de una coincidencia en el archivo de diccionario de sinónimos específico del idioma, el término es ilegible para coincidencias en el diccionario de sinónimos global.  
 
-##  <a name="structure"></a> Estructura de un archivo de sinónimos  
+##  <a name="structure-of-a-thesaurus-file"></a><a name="structure"></a> Estructura de un archivo de sinónimos  
  Cada archivo de sinónimos define un contenedor XML cuyo identificador es `Microsoft Search Thesaurus` y un comentario, `<!--` ... `-->`, que contiene un diccionario de sinónimos de ejemplo. El diccionario de sinónimos se define en un elemento `<thesaurus>` que contiene ejemplos de los elementos secundarios que definen la configuración de los signos diacríticos, los conjuntos de expansión y los conjuntos de reemplazo.
 
 Un archivo de sinónimos vacío típico contiene el texto XML siguiente:  
@@ -115,7 +115,7 @@ Un archivo de sinónimos vacío típico contiene el texto XML siguiente:
 </XML>  
 ```
 
-### <a name="expansion"></a> XML structure of an expansion set  
+### <a name="xml-structure-of-an-expansion-set"></a><a name="expansion"></a> XML structure of an expansion set  
   
  Cada conjunto de expansión está delimitado por un elemento `<expansion>`. Dentro de este elemento, se especifican una o varias sustituciones en un elemento `<sub>`. En el conjunto de expansión, puede especificar un grupo de sustituciones que sean sinónimas.  
   
@@ -131,7 +131,7 @@ Esta es la apariencia que tendrá la sección del conjunto de expansión en el c
 </expansion>  
 ```  
   
-### <a name="replacement"></a> XML structure of a replacement set  
+### <a name="xml-structure-of-a-replacement-set"></a><a name="replacement"></a> XML structure of a replacement set  
   
 Cada conjunto de reemplazo está delimitado por un elemento `<replacement>`. Dentro de este elemento, se pueden especificar uno o varios modelos en un elemento `<pat>` y cero o más sustituciones en elementos `<sub>`, una por cada sinónimo. Puede especificar un patrón para que sea reemplazado por un conjunto de sustitución. Los patrones y las sustituciones pueden contener una palabra o una secuencia de palabras. Si no se especifica ninguna sustitución para un modelo, se quita el modelo de la consulta del usuario.  
   
@@ -178,7 +178,7 @@ La configuración de signos diacríticos de un diccionario de sinónimos se espe
 > [!NOTE]  
 >  Esta configuración solo se puede aplicar una vez en el archivo, y se aplica a todos los patrones de búsqueda del mismo. Esta configuración no se puede especificar para patrones individuales.  
 
-##  <a name="editing"></a> Editar un archivo de sinónimos  
+##  <a name="edit-a-thesaurus-file"></a><a name="editing"></a> Editar un archivo de sinónimos  
 Puede configurar el diccionario de sinónimos de un idioma determinado editando su archivo de diccionario de sinónimos (un archivo XML). Durante la instalación, se instalan archivos de diccionarios de sinónimos vacíos que solo contienen el contenedor `<xml>` y un elemento `<thesaurus`> de ejemplo comentado. Para que las consultas de búsqueda de texto completo que buscan sinónimos funcionen correctamente, tiene que crear un elemento `<thesaurus`> real que defina un conjunto de sinónimos. Puede definir dos formatos de sinónimos: conjuntos de expansión y conjuntos de reemplazo.  
 
 ### <a name="edit-a-thesaurus-file"></a>Editar un archivo de sinónimos  

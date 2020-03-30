@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7d48edb0024261bee87071cbd3ac77e3c49aabfd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284854"
 ---
 # <a name="disable-publishing-and-distribution"></a>Deshabilitar la publicación y la distribución
@@ -52,13 +52,13 @@ ms.locfileid: "76284854"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Para deshabilitar la publicación y la distribución, todas las bases de datos de distribución y de publicaciones deben estar en línea. Si existe alguna *instantánea de base de datos* para las bases de datos de distribución o de publicaciones, deben quitarse antes de deshabilitar la publicación y distribución. Una instantánea de base de datos es una copia de solo lectura sin conexión de una base de datos y no está relacionada con una instantánea de replicación. Para más información, vea [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Deshabilite la publicación y la distribución con el Asistente para deshabilitar la publicación y distribución.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Para deshabilitar la publicación y la distribución  
@@ -69,7 +69,7 @@ ms.locfileid: "76284854"
   
 3.  Siga todos los pasos del Asistente para deshabilitar la publicación y distribución.  
 
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede deshabilitarse la publicación y la distribución mediante programación con los procedimientos almacenados de la replicación.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Para deshabilitar la publicación y la distribución  
@@ -91,7 +91,7 @@ ms.locfileid: "76284854"
     > [!NOTE]  
     > Si no se quitan todos los objetos de distribución y publicación de replicación antes de ejecutar [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) y [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md), estos procedimientos devolverán un error. Para quitar todos los objetos relacionados con la replicación cuando se quita un publicador o un distribuidor, el parámetro `@no_checks` debe estar establecido en **1**. Si un publicador o un distribuidor no tienen conexión o son inaccesibles, el parámetro `@ignore_distributor` puede estar establecido en **1** para que se puedan quitar; pero todos los objetos de publicación y distribución omitidos se deben quitar de forma manual.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  Este script de ejemplo quita los objetos de replicación de la base de datos de suscripciones.  
   
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_1.sql)]  
@@ -100,7 +100,7 @@ ms.locfileid: "76284854"
   
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Para deshabilitar la publicación y la distribución  
   
@@ -120,7 +120,7 @@ ms.locfileid: "76284854"
   
 8.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Pase un valor de **true** para que *force* quite todos los objetos de replicación en el Distribuidor sin comprobar primero que todas las bases de datos de publicación locales se han deshabilitado y se han desinstalado las bases de datos de distribución.  
   
-###  <a name="PShellExample"></a> Ejemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Ejemplos (RMO)  
  Este ejemplo quita el registro del Publicador en el Distribuidor, coloca la base de datos de distribución y desinstala el Distribuidor.  
   
  [!code-cs[HowTo#rmo_DropDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropdistpub)]  

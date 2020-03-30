@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 391c4f3013754e4b641241bacb025c63a68cb68e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906678"
 ---
 # <a name="modify-user-defined-functions"></a>Modificar funciones definidas por el usuario
@@ -36,9 +36,9 @@ ms.locfileid: "72906678"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  ALTER FUNCTION no se puede utilizar para realizar ninguna de estas acciones:  
   
 -   Cambiar una función escalar a una función con valores de tabla, o viceversa.  
@@ -47,12 +47,12 @@ ms.locfileid: "72906678"
   
 -   Cambiar una función de Transact-SQL en una función CLR, o viceversa.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER para la función o para el esquema. Si la función especifica un tipo definido por el usuario, requiere el permiso EXECUTE para ese tipo.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-a-user-defined-function"></a>Para modificar una función definida por el usuario  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72906678"
   
 6.  En el menú **Archivo** , haga clic en **Guardar**_nombre_de_función_.  
 
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>Para modificar una función definida por el usuario  
   

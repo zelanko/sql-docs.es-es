@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941116"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidad distribuidos
@@ -140,7 +140,7 @@ Dicho de otro modo, una réplica principal puede participar en dos grupos de dis
 
 ![Escalar lecturas horizontalmente con grupos de disponibilidad distribuidos](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-En la ilustración siguiente se muestra AG 1 como la réplica principal para dos grupos de disponibilidad distribuidos diferentes: Grupo de disponibilidad distribuido 1 (compuesto por Grupo de disponibilidad 1 y Grupo de disponibilidad 2) y Grupo de disponibilidad distribuido 2 (compuesto por Grupo de disponibilidad 1 y Grupo de disponibilidad 3).
+En la siguiente imagen, AG 1 es la réplica principal de dos grupos de disponibilidad distribuidos diferentes: Distributed AG 1 (compuesto por AG 1 y AG 2) y Distributed AG 2 (compuesto por AG 1 y AG 3).
 
 
 ![Otro ejemplo de escalado horizontal de lecturas con grupos de disponibilidad distribuidos]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)

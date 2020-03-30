@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287843"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
@@ -109,7 +109,7 @@ Cuando se utiliza fuera de un módulo, la instrucción no tiene ninguna acción.
   
 Puede crear una pila de contextos de ejecución si llama a la instrucción EXECUTE AS varias veces en diversas entidades de seguridad. Cuando se llama, la instrucción REVERT cambia el contexto al inicio de sesión o el usuario del siguiente nivel en la pila de contextos. Para ver una demostración de este comportamiento, vea el [ejemplo A](#_exampleA).  
   
-##  <a name="_user"></a> Especificar un nombre de inicio de sesión o usuario  
+##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Especificar un nombre de inicio de sesión o usuario  
  El nombre de inicio de sesión o usuario especificado en EXECUTE AS \<context_specification> debe existir como una entidad de seguridad en **sys.database_principals** o **sys.server_principals** respectivamente, o la instrucción EXECUTE AS generará errores. Además, se deben conceder permisos IMPERSONATE en la entidad de seguridad. A menos que el autor de la llamada sea el propietario de la base de datos o sea un miembro del rol fijo de servidor **sysadmin**, la entidad de seguridad debe existir aun cuando el usuario tenga acceso a la base de datos o instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la pertenencia a un grupo de Windows. Por ejemplo, supongamos las siguientes condiciones: 
   
 -   El grupo **CompanyDomain\SQLUsers** tiene acceso a la base de datos **Sales**.  
@@ -141,7 +141,7 @@ Si el usuario está huérfano (el inicio de sesión asociado ya no existe) y no 
   
 ## <a name="examples"></a>Ejemplos  
   
-###  <a name="_exampleA"></a> A. Usar EXECUTE AS y REVERT para cambiar el contexto  
+###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Usar EXECUTE AS y REVERT para cambiar el contexto  
  En el siguiente ejemplo se crea una pila de contextos de ejecución que utilizan varias entidades de seguridad. La instrucción `REVERT` se utiliza a continuación para restablecer el contexto de ejecución al anterior autor de la llamada. La instrucción `REVERT` se ejecuta varias veces subiendo la pila hasta que el contexto de ejecución se establezca en el autor de la llamada original.  
   
 ```  

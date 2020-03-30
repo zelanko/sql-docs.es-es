@@ -15,10 +15,10 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822236"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Administración de inicios de sesión para los trabajos mediante las bases de datos en un grupo de disponibilidad Always On
@@ -46,7 +46,7 @@ ms.locfileid: "74822236"
   
      Los inicios de sesión y los trabajos no son la única información que es necesario volver a crear en cada instancia de servidor que hospeda una réplica secundaria para un grupo de disponibilidad determinado. Por ejemplo, quizás necesite volver a crear la configuración del servidor, las credenciales, los datos cifrados, los permisos, la configuración de replicación, las aplicaciones de Service Broker, los desencadenadores (en el nivel de servidor), etc. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="SSauthentication"></a> Inicios de sesión de aplicaciones que usan la autenticación de SQL Server o un inicio de sesión local de Windows  
+##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Inicios de sesión de aplicaciones que usan la autenticación de SQL Server o un inicio de sesión local de Windows  
  Si una aplicación usa la Autenticación de SQL Server o un inicio de sesión local de Windows, los SID que no coinciden pueden impedir que el inicio de sesión de la aplicación se resuelva en una instancia remota de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los SID que no coincidan harán que el inicio de sesión sea un usuario huérfano en la instancia del servidor remoto. Este problema puede producirse cuando una aplicación se conecta con una base de datos reflejada o de trasvase de registros después de una conmutación por error o con una base de datos Suscriptor de replicación que se inicializó desde una copia de seguridad.  
   
  Para evitar que se produzca este problema, se recomienda tomar medidas preventivas al configurar una aplicación de este tipo para que utilice una base de datos hospedada por una instancia remota de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La prevención implica la transferencia de los inicios de sesión y las contraseñas de la instancia local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la instancia remota de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo evitar que se produzca este problema, vea el artículo de KB 918992:[Cómo transferir inicios de sesión y contraseñas entre instancias de SQL Server](https://support.microsoft.com/kb/918992/).  
@@ -56,7 +56,7 @@ ms.locfileid: "74822236"
   
  Para obtener más información, vea [Usuarios huérfanos con creación de reflejo de la base de datos y trasvase de registros](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (un blog del motor de base de datos).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear un inicio de sesión](../../../relational-databases/security/authentication-access/create-a-login.md)  
   

@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909889"
 ---
 # <a name="get-information-about-a-view"></a>Obtener información acerca de una vista
@@ -48,14 +48,14 @@ ms.locfileid: "72909889"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  La utilización de `sp_helptext` para devolver la definición de una vista requiere la pertenencia al rol **público** . La utilización de `sys.sql_expression_dependencies` para buscar todas las dependencias de una vista requiere el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en `sys.sql_expression_dependencies` para la base de datos. Las definiciones de objeto del sistema, como las que se devuelven en SELECT OBJECT_DEFINITION, son visibles de forma pública.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Obtener las propiedades de la vista mediante el Explorador de objetos  
   
@@ -177,7 +177,7 @@ ms.locfileid: "72909889"
   
 4.  Seleccione **Objetos de los que depende [nombre de vista]** para mostrar los objetos a los que hace referencia la vista.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Para obtener la definición y propiedades de una vista  
   

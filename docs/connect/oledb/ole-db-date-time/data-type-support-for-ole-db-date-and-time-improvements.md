@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995120"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Compatibilidad con tipos de datos para mejoras de fecha y hora de OLE DB
@@ -39,7 +39,7 @@ ms.locfileid: "67995120"
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>Formatos de datos: cadenas y literales  
+## <a name="data-formats-strings-and-literals"></a>Formatos de datos: Cadenas y literales  
   
 |Tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Tipo de datos de OLE DB|Formato de cadena para conversiones de cliente|  
 |-----------------------------------------|----------------------|------------------------------------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "67995120"
   
  Una cadena vacía no es un literal válido de fecha y hora y no representa un valor NULL. Un intento para convertir una cadena vacía en un valor de fecha y hora producirá errores con SQLState 22018 y el mensaje "Valor de carácter no válido para especificación cast".  
   
-## <a name="data-formats-data-structures"></a>Formatos de datos: estructuras de datos  
+## <a name="data-formats-data-structures"></a>Formatos de datos: Estructuras de datos  
  En las estructuras específicas de OLE DB descritas a continuación, OLE DB cumple las restricciones siguientes. Se toman del calendario Gregoriano:  
   
 -   El intervalo de meses va de 1 a 12.  

@@ -1,5 +1,5 @@
 ---
-title: 'Paso 1:  Configuración del entorno de desarrollo para el desarrollo de Node.js | Microsoft Docs'
+title: 'Paso 1: Configurar el entorno de desarrollo para el desarrollo de Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68003762"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Paso 1:  Configuración del entorno de desarrollo para el desarrollo de Node.js
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Paso 1: configurar el entorno de desarrollo para el desarrollo de Node.js
 Tendrá que configurar el entorno de desarrollo con los requisitos previos para desarrollar una aplicación mediante el controlador de Node.js para SQL Server.  El método más común es usar el administrador de paquetes de Node (npm) para instalar el módulo tedioso, pero puede descargarlo directamente en [GitHub](https://github.com/pekim/tedious) si lo prefiere.  
   
 Tenga en cuenta que el controlador de Node.js usa el protocolo TDS, que está habilitado de forma predeterminada en SQL Server y Azure SQL Database.  No se requiere ninguna configuración adicional.  
@@ -29,7 +29,7 @@ a. Vaya a [Node.js](https://nodejs.org/en/download/).
 b. Haga clic en el vínculo del archivo MSI adecuado de Windows Installer.   
 c. Una vez descargado, ejecútelo para instalar Node.js.  
   
-2. **Abrir cmd.exe**  
+2. **Abra cmd.exe**.  
   
 3. **Cree un directorio de proyecto** y vaya a él.    
 ```  
@@ -48,7 +48,7 @@ c. Una vez descargado, ejecútelo para instalar Node.js.
   
 ## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
-1.  **Abrir el terminal**  
+1.  **Abra el terminal**.  
   
 2. **Instalar el entorno de ejecución de Node.js**  
 ```  
@@ -81,7 +81,7 @@ a. Vaya a [Node.js](https://nodejs.org/en/download/).
 b. Haga clic en el vínculo del instalador de Mac OS adecuado.  
 c. Una vez descargado, ejecute el archivo DMG para instalar Node.js.  
   
-2. **Abrir el terminal**  
+2. **Abra el terminal**.  
   
 3. **Cree un directorio de proyecto** y vaya a él.    
 ```  

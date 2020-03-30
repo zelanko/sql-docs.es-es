@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68890066"
 ---
 # <a name="full-database-backups-sql-server"></a>Copias de seguridad completas de bases de datos (SQL Server)
@@ -46,12 +46,12 @@ ms.locfileid: "68890066"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="DbBuRMs"></a> Copias de seguridad de la base de datos en el modelo de recuperación simple  
+##  <a name="database-backups-under-the-simple-recovery-model"></a><a name="DbBuRMs"></a> Copias de seguridad de la base de datos en el modelo de recuperación simple  
  Con el modelo de recuperación simple, después de cada copia de seguridad, la base de datos queda expuesta a la pérdida potencial del trabajo en caso de desastre. El riesgo de pérdida del trabajo se incrementa con cada actualización hasta la siguiente copia de seguridad, cuando el riesgo de pérdida vuelve a cero y empieza un nuevo ciclo de riesgo. El riesgo de pérdida de trabajo aumenta con el tiempo entre una copia de seguridad y otra. La siguiente ilustración muestra el riesgo de pérdida del trabajo en una estrategia de copia de seguridad que solo usa copias de seguridad completas de la base de datos.  
   
  ![Muestra el riesgo de pérdida de trabajo entre copias de seguridad de base de datos](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Muestra el riesgo de pérdida de trabajo entre copias de seguridad de base de datos")  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>Ejemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--tsql"></a>Ejemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  El siguiente ejemplo muestra cómo crear una copia de seguridad completa de la base de datos mediante WITH FORMAT para sobrescribir cualquier copia de seguridad existente y crear un nuevo conjunto de medios.  
   
 ```  
@@ -62,14 +62,14 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="DbBuRMf"></a> Copias de seguridad de la base de datos en el modelo de recuperación completa  
+##  <a name="database-backups-under-the-full-recovery-model"></a><a name="DbBuRMf"></a> Copias de seguridad de la base de datos en el modelo de recuperación completa  
  En las bases de datos que usan la recuperación completa y optimizada para cargas masivas de registros, las copias de seguridad de base de datos son necesarias pero no suficientes. También se requieren copias de seguridad de registros de transacciones. La siguiente ilustración muestra la estrategia de copia de seguridad menos compleja en un modelo de recuperación completa.  
   
  ![Series de copias de seguridad completas de bases de datos y de registros](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Series de copias de seguridad completas de bases de datos y de registros")  
   
  Para obtener información sobre cómo crear copias de seguridad de registros, vea [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>Ejemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--tsql"></a>Ejemplo ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  El siguiente ejemplo muestra cómo crear una copia de seguridad completa de la base de datos mediante WITH FORMAT para sobrescribir cualquier copia de seguridad existente y crear un nuevo conjunto de medios. A continuación, en el ejemplo se realiza una copia de seguridad del registro de transacciones. En una situación real, deberá realizar una serie de copias de seguridad de registros periódicas. Para este ejemplo, la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] se configura para usar el modelo de recuperación completa.  
   
 ```  
@@ -86,12 +86,12 @@ BACKUP LOG AdventureWorks2012 TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012F
 GO  
 ```  
   
-##  <a name="RestoreDbBu"></a> Usar una copia de seguridad completa de la base de datos para restaurar la base de datos  
+##  <a name="use-a-full-database-backup-to-restore-the-database"></a><a name="RestoreDbBu"></a> Usar una copia de seguridad completa de la base de datos para restaurar la base de datos  
  Es posible volver a crear toda la base de datos en un único paso; para ello, restaure la base de datos a partir de una copia de seguridad completa. En la copia de seguridad se incluye suficiente información del registro de transacciones como para permitir la recuperación de la base de datos en el punto en que se completó la copia de seguridad. El estado de la base de datos restaurada será el mismo que el de la base de datos original en el momento en que terminó la copia de seguridad de base de datos, menos algunas transacciones no confirmadas. Con el modelo de recuperación completa, debe restaurar todas las copias de seguridad de registros de transacciones siguientes. Una vez recuperada la base de datos, las transacciones no confirmadas se revierten.  
   
  Para obtener más información, vea [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) o [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para crear una copia de seguridad completa de la base de datos**  
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

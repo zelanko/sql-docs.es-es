@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713267"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configuración de transacciones distribuidas para un grupo de disponibilidad Always On
@@ -41,7 +41,7 @@ En una transacción distribuida, las aplicaciones cliente funcionan con Microsof
 
 DTC no interviene en el procesamiento de grupos de disponibilidad a menos que una base de datos también sea miembro de un clúster de conmutación por error. Dentro de un grupo de disponibilidad, la coherencia entre las réplicas se mantiene mediante la lógica del grupo de disponibilidad: La principal no completará la confirmación ni reconocerá la confirmación en el autor de la llamada hasta que la secundaria haya reconocido que ha conservado las entradas de registro en el almacenamiento duradero. Solo entonces la principal declarará que la transacción se ha completado. En el modo asincrónico, no se espera el reconocimiento por parte de la réplica secundaria, y hay una posibilidad explícita de que se pierda una pequeña cantidad de datos.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Antes de configurar un grupo de disponibilidad que admita transacciones distribuidas, debe cumplir los siguientes requisitos previos:
 
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Transacciones distribuidas: conceptos técnicos
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>Transacciones distribuidas: conceptos técnicos
 
 Una transacción distribuida abarca dos o más bases de datos. Como administrador de transacciones, DTC coordina la transacción entre las instancias de SQL Server y otros orígenes de datos. Cada instancia del motor de base de datos de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] puede funcionar como un administrador de recursos. Cuando un grupo de disponibilidad se configura con `DTC_SUPPORT = PER_DB`, las bases de datos pueden actuar como administradores de recursos. Para obtener más información, consulte la documentación de MS DTC.
 

@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165223"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creación de una tabla temporal con control de versiones del sistema
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - Siempre se supone que las columnas **PERIOD** no aceptan valores NULL, aunque no se especifique la nulabilidad. Si se define explícitamente que las columnas **PERIOD** aceptan valores NULL, la instrucción **CREATE TABLE** generará un error.
 - La tabla de historial siempre debe tener el mismo esquema que la tabla temporal o actual, en lo concerniente a número y nombres de columnas, orden, y tipos de datos.
 - Se crea automáticamente una tabla de historial anónima en el mismo esquema que la tabla temporal o actual.
-- El nombre de la tabla de historial anónima tiene el formato siguiente: *MSSQL_TemporalHistoryFor_<id._objeto_tabla_temporal_actual>_[sufijo]* . El sufijo es opcional y se agregará únicamente si la primera parte del nombre de la tabla no es único.
+- El nombre de la tabla de historial anónima tiene el formato siguiente: *MSSQL_TemporalHistoryFor_<id_de_objeto_de_tabla_temporal_actual>_[sufijo]* . El sufijo es opcional y se agregará únicamente si la primera parte del nombre de la tabla no es único.
 - La tabla de historial se crea como una tabla de almacén de filas. Si es posible, se aplicará la compresión de página; en caso lo contrario, la tabla de historial estará descomprimida. Por ejemplo, algunas configuraciones de tabla, como las columnas dispersas, no permiten la compresión.
 - Se crea un índice agrupado predeterminado para la tabla de historial con un nombre generado automáticamente en formato *IX_<nombre_de_tabla_de_historial>* . El índice agrupado contiene las columnas **PERIOD** (finalización, inicio).
 - Para crear la tabla actual como una tabla optimizada para memoria, vea [Tablas temporales con control de versiones del sistema con tablas optimizadas para memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).

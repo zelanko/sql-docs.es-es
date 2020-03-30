@@ -9,10 +9,10 @@ ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081087"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Sugerencias para el diseño de informes (Generador de informes y SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081087"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningReports"></a> Diseñar informes  
+##  <a name="designing-reports"></a><a name="DesigningReports"></a> Diseñar informes  
   
 -   Un informe bien diseñado transmite información que lleva a emprender acciones. Identifique las preguntas que el informe ayuda a responder. Téngalas en cuenta al diseñar el informe.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77081087"
   
  Para obtener más información sobre los aspectos que se deben considerar a la hora de diseñar el informe, vea [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
   
-##  <a name="NamingConventions"></a> Convenciones de nomenclatura para informes, orígenes de datos y conjuntos de datos  
+##  <a name="naming-conventions-for-reports-data-sources-and-datasets"></a><a name="NamingConventions"></a> Convenciones de nomenclatura para informes, orígenes de datos y conjuntos de datos  
   
 -   Utilice convenciones de nomenclatura para los orígenes de datos y conjuntos de datos que documenten el origen de datos.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "77081087"
   
 -   Utilice el carácter de subrayado en lugar de espacios en los nombres de informe. Si descarga un informe de un portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , los espacios se sustituyen por caracteres de subrayado. Si utiliza la característica de descarga para guardar informes localmente y, a continuación, los incluye en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el uso de caracteres de subrayado le ayudará a conservar la precisión de las dependencias de informe para los subinformes y los vínculos de obtención de detalles.  
   
-##  <a name="Data"></a> Trabajar con datos  
+##  <a name="working-with-data"></a><a name="Data"></a> Trabajar con datos  
   
 -   Como primer paso, haga que aparezcan en el panel Datos de informe todos los datos con los que desea trabajar. Cuando ajuste las preguntas que el informe va a responder, piense cómo limitar los datos de los conjuntos de datos del informe a solo los necesarios.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "77081087"
   
 -   Dependiendo de los requisitos, puede mostrar en el informe nombres y ubicaciones de orígenes de datos de informe, texto de comandos de consulta del conjunto de datos y valores de parámetro. La primera pregunta que muchos nuevos usuarios se plantean es acerca del lugar de procedencia de los datos. Para que el informe esté más despejado, puede ocultar condicionalmente los cuadros de texto con este tipo de información y permitir que los usuarios elijan la posibilidad de verlos. Intente agregar esta información en la última página del informe. Establezca la visibilidad de los cuadros de texto en función de un parámetro que el usuario pueda cambiar.  
   
-##  <a name="DesignSurface"></a> Interactuar con la superficie de diseño de informes  
+##  <a name="interacting-with-the-report-design-surface"></a><a name="DesignSurface"></a> Interactuar con la superficie de diseño de informes  
  La superficie de diseño de informes no es WYSIWIG. Al colocar los elementos de informe en la superficie de diseño, su ubicación relativa afecta a cómo aparecen los elementos en la página del informe representado. Se conserva el espacio en blanco.  
   
 -   Utilice líneas de ajuste y botones de diseño para alinear y organizar los elementos en la superficie de diseño del informe. Por ejemplo, puede alinear las partes superiores o los bordes de los elementos seleccionados, expandir un elemento para que su tamaño sea igual que el de otro elemento o ajustar el espaciado entre los elementos.  
@@ -88,7 +88,7 @@ ms.locfileid: "77081087"
   
 -   Para arrastrar campos del panel Datos de informe al panel de agrupación, no lo haga por otros elementos de informe de la superficie de diseño, porque así se seleccionan los otros elementos y se anula la selección la región de datos Tablix. Arrastre el campo hacia abajo el panel Datos de informe y, a continuación, al panel de agrupación.  
   
-###  <a name="Selecting"></a> Seleccionar elementos  
+###  <a name="selecting-items"></a><a name="Selecting"></a> Seleccionar elementos  
  Para seleccionar el objeto deseado en la superficie de diseño del informe, utilice la tecla ESC, el menú contextual del botón secundario, el panel Propiedades y el panel Agrupación.  
   
 -   -   Presione ESC para recorrer la pila de elementos de informe que ocupan el mismo espacio en la superficie de diseño.  
@@ -101,31 +101,31 @@ ms.locfileid: "77081087"
   
  En el Diseñador de informes de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], puede realizar selecciones en la lista desplegable de objetos en la barra de herramientas del panel Propiedades o en la vista jerárquica de elementos de informe en la ventana Esquema de documento. Puede seleccionar los elementos en este panel y ver qué elemento está seleccionado en la superficie de diseño. Para abrir la ventana Esquema de documento, en el menú **Ver** , seleccione **Otras ventanas**y, a continuación, haga clic en **Esquema de documento**.  
   
-##  <a name="ReportItems"></a> Trabajar con tipos concretos de elementos Informe  
+##  <a name="working-with-specific-types-of-report-items"></a><a name="ReportItems"></a> Trabajar con tipos concretos de elementos Informe  
   
-###  <a name="Parameters"></a> Trabajar con parámetros  
+###  <a name="working-with-parameters"></a><a name="Parameters"></a> Trabajar con parámetros  
   
 -   El propósito principal de los parámetros de informe consiste en filtrar los datos en el origen de datos y recuperar solo los necesarios para el propósito del informe.  
   
 -   En el caso de los parámetros de informe, busque un equilibrio entre permitir la interactividad y ayudar a un usuario a obtener los resultados que desea. Por ejemplo, puede establecer los valores predeterminado de un parámetro en valores que sabe que son habituales.  
   
-###  <a name="Text"></a> Trabajar con Texto  
+###  <a name="working-with-text"></a><a name="Text"></a> Trabajar con Texto  
   
 -   Si pega varias líneas en un cuadro de texto, el texto se agrega como una unidad de texto. Las unidades de texto solo pueden recibir formato como una unidad. Para dar formato independientemente a cada línea, inserte una nueva línea presionando RETORNO en la unidad de texto según sea necesario. A continuación, puede aplicar formato y estilos a cada línea de texto independiente del cuadro de texto.  
   
 -   Puede establecer propiedades de y acciones de formato en un cuadro de texto o en texto de marcador de posición del cuadro de texto. Si solo hay una línea de texto, es más fácil establecer propiedades en el cuadro de texto y no en el texto.  
   
-###  <a name="Expressions"></a> Trabajar con expresiones  
+###  <a name="working-with-expressions"></a><a name="Expressions"></a> Trabajar con expresiones  
   
 -   Descripción de los formatos de expresiones simples y complejas. Puede escribir directamente el formato de expresión simple en los cuadros de texto, las propiedades en el panel de propiedades, o en los lugares de los cuadros de diálogo que acepten una expresión. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 -   Al crear una expresión, ayuda a crear cada parte de forma independiente y a comprobar su valor. A continuación, puede combinar todas las partes en una expresión final. Una técnica útil es agregar un cuadro de texto en una celda de la matriz, mostrar cada parte de la expresión y establecer la visibilidad condicional en el cuadro de texto. Para controlar el estilo de borde y el color cuando se oculta el cuadro de texto, coloque primero el cuadro de texto en un rectángulo y, a continuación, establezca el estilo de borde y el color del rectángulo de modo que coincidan con la matriz.  
   
-###  <a name="Indicators"></a> Trabajar con indicadores  
+###  <a name="working-with-indicators"></a><a name="Indicators"></a> Trabajar con indicadores  
   
 -   De forma predeterminada, un indicador muestra tres estados por lo menos. Después de agregar un indicador a un informe, puede configurarlo agregando o quitando estados. Para facilitar la visualización por parte de los usuarios, elija un indicador que varíe el color y la forma.  
   
-##  <a name="Rendering"></a> Controlar la representación de elementos de informe en la página del informe  
+##  <a name="controlling-the-rendering-of-report-items-on-the-report-page"></a><a name="Rendering"></a> Controlar la representación de elementos de informe en la página del informe  
   
 -   En la superficie de diseño de informe, los elementos de informe aumentan de tamaño para alojar el contenido del conjunto de datos, expresión, subinforme o texto asociados.  
   

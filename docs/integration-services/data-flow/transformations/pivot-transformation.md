@@ -19,10 +19,10 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291221"
 ---
 # <a name="pivot-transformation"></a>Dinámica, transformación
@@ -49,7 +49,7 @@ ms.locfileid: "71291221"
   
  Los datos de entrada pueden contener filas duplicadas, que darán lugar a que no funcione la transformación Dinamización. "Filas duplicadas" significa filas que tienen los mismos valores en las columnas de clave fija y las columnas dinámicas. Para evitar este error, puede configurar la transformación para que redirija las filas que causan el error hacia una salida de error, o bien agregar previamente valores para garantizar que no haya filas duplicadas.  
   
-##  <a name="options"></a> Opciones del cuadro de diálogo Dinamización  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> Opciones del cuadro de diálogo Dinamización  
  Configure la operación de dinamizar, para lo cual se configuran las opciones en el cuadro de diálogo **Dinamización** . Para abrir el cuadro de diálogo **Dinamización** , agregue la transformación dinámica al paquete en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], haga clic con el botón derecho en el componente y, después, haga clic en **Editar**.  
   
  En la lista siguiente, se describen las opciones en el cuadro de diálogo **Dinamización** .  

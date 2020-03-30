@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981955"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -361,7 +361,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="context-switching"></a>Cambio de contexto  
  Puede utilizar la cláusula `AS { LOGIN | USER } = ' name '` para cambiar el contexto de ejecución de una instrucción dinámica. Cuando el cambio de contexto se especifica como `EXECUTE ('string') AS <context_specification>`, la duración del cambio de contexto se limita al ámbito de la consulta que se está ejecutando.  
   
-###  <a name="_user"></a> Especificar un nombre de inicio de sesión o usuario  
+###  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Especificar un nombre de inicio de sesión o usuario  
  El nombre de inicio de sesión o usuario especificado en `AS { LOGIN | USER } = ' name '` debe existir como una entidad de seguridad en sys.database_principals o sys.server_principals respectivamente, o se producirá un error en la instrucción. Además, se deben conceder permisos IMPERSONATE en la entidad de seguridad. A menos que el autor de la llamada sea el propietario de la base de datos o un miembro del rol fijo de servidor sysadmin, la entidad de seguridad debe existir aun cuando el usuario tenga acceso a la base de datos o una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la pertenencia a un grupo de Windows. Por ejemplo, supongamos las siguientes condiciones:  
   
 -   El grupo CompanyDomain\SQLUsers tiene acceso a la base de datos Sales.  
@@ -658,7 +658,7 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="example-o-basic-procedure-execution"></a>Ejemplo O: ejecución de procedimiento básico  
  Ejecutar un procedimiento almacenado:  

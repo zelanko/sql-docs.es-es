@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68995855"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
@@ -40,7 +40,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Para obtener consejos acerca de cómo planificar un sistema de permisos, consulte [Introducción a los permisos de los motores de bases de datos](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="_conventions"></a> Convenciones de nomenclatura de permisos  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a> Convenciones de nomenclatura de permisos  
  A continuación se describen las convenciones generales que se siguen en la nomenclatura de permisos:  
   
 -   CONTROL  
@@ -96,7 +96,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de los permisos de SQL Server  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
-##  <a name="_securables"></a> Permisos aplicables a elementos protegibles específicos  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Permisos aplicables a elementos protegibles específicos  
  En la siguiente tabla se enumeran los principales tipos de permisos y los tipos de elementos protegibles a los que se pueden aplicar.  
   
 |Permiso|Se aplica a|  
@@ -118,7 +118,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 > [!CAUTION]  
 >  Los permisos predeterminados que se conceden a objetos del sistema en el momento de la instalación se evalúan detenidamente frente a posibles amenazas y no necesitan modificarse como parte de la protección de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los cambios a los permisos de los objetos del sistema podrían limitar o interrumpir la funcionalidad y dejar potencialmente a su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un estado no admitido.  
   
-##  <a name="_permissions"></a> Permisos de SQL Server  
+##  <a name="sql-server-permissions"></a><a name="_permissions"></a> Permisos de SQL Server  
  La tabla siguiente contiene una lista completa de los permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los permisos de[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] solo están disponibles para elementos protegibles de base que se admiten. No se pueden conceder permisos de nivel de servidor en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]; sin embargo, en algunos casos los permisos de base de datos están disponibles en su lugar.  
   
 |Elemento protegible base|Permisos granulares del elemento protegible base|Código del tipo de permiso|Elemento protegible que contiene un elemento protegible base|Permiso para el elemento protegible contenedor que implica permiso granular para el elemento protegible base|  
@@ -361,7 +361,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Resumen del algoritmo de comprobación de permiso  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Resumen del algoritmo de comprobación de permiso  
  Comprobar los permisos puede ser complejo. El algoritmo de comprobación de permiso incluye la superposición de la pertenencia a grupos y el encadenamiento de propiedad, tanto el permiso explícito como el implícito, y puede ser afectado por los permisos en las clases protegibles y que contienen la entidad protegible. El proceso general del algoritmo es reunir todos los permisos pertinentes. Si no se encuentra ningún bloqueo DENY, el algoritmo busca un permiso GRANT que proporcione el acceso suficiente. El algoritmo contiene tres elementos esenciales, el **contexto de seguridad**, el **espacio del permiso**y el **permiso necesario**.  
   
 > [!NOTE]  
@@ -423,7 +423,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Un permiso DENY en la tabla se reemplaza por un permiso GRANT en una columna. Pero un permiso DENY subsiguiente en la tabla quitará la columna GRANT. 
   
-##  <a name="_examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="_examples"></a> Ejemplos  
  En los ejemplos de esta sección se muestra cómo se recupera la información sobre permisos.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Devolver la lista completa de los permisos que pueden concederse.  

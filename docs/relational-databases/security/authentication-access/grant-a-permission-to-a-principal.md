@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e7dc2bff70e98420161d823207222c6c9205940
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68043259"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder un permiso a una entidad de seguridad
@@ -38,21 +38,21 @@ ms.locfileid: "68043259"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Tenga en cuenta las siguientes prácticas recomendadas que pueden facilitar la administración de permisos.  
   
 -   Conceda permiso a los roles, en lugar de a inicios de sesión o usuarios. Cuando un individuo es reemplazado por otro, quite del rol al individuo que se va y agregue al nuevo. Los permisos que puedan estar asociados al rol estarán disponibles automáticamente para el nuevo individuo. Si varias personas de una organización requieren los mismos permisos, al agregar cada uno de ellos al rol les concederá los mismos permisos.  
   
 -   Configure elementos protegibles similares (tablas, vistas y procedimientos) para que sean propiedad de un esquema y, a continuación, conceda permisos al esquema. Por ejemplo, el esquema de nóminas puede poseer varias tablas, vistas y procedimientos almacenados. Al conceder acceso al esquema, todos los permisos necesarios para realizar la función de nómina se pueden conceder al mismo tiempo. Para obtener más información acerca de a qué elementos protegibles pueden concederse permisos, vea [Securables](../../../relational-databases/security/securables.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  El otorgante de permisos (o la entidad de seguridad especificada con la opción AS) debe tener asignado el mismo permiso con GRANT OPTION o un permiso superior que implique el permiso que se va a conceder. Los miembros del rol fijo de servidor **sysadmin** pueden conceder cualquier permiso.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-grant-permission-to-a-principal"></a>Para conceder un permiso a una entidad de seguridad  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68043259"
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-grant-permission-to-a-principal"></a>Para conceder un permiso a una entidad de seguridad  
   

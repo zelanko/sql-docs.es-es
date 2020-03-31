@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140215"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -52,7 +52,7 @@ Se eliminan las programaciones específicas de informes y suscripciones al elimi
 
 Las programaciones específicas del informe que han expirado permanecen adjuntas al informe. Es posible determinar si una programación ha expirado con solo revisar la fecha final. Las programaciones compartidas expiradas se conservan en la lista Programaciones compartidas. El campo Estado indica si la programación ha expirado. Puede volver a aplicar la programación ampliando la fecha de finalización o eliminar la referencia a la programación si ya no la necesita.
 
-## <a name="bkmk_native"></a> Crear, eliminar o modificar una programación compartida (portal web)
+## <a name="create-delete-or-modify-a-shared-schedule-web-portal"></a><a name="bkmk_native"></a> Crear, eliminar o modificar una programación compartida (portal web)
  La creación y modificación de una programación consiste en establecer las opciones de frecuencia que determinan el momento en que debe ejecutarse la programación.
 
  Las programaciones pueden crearse o modificarse en cualquier momento. Sin embargo, si se empieza a ejecutar una programación antes de haber completado las modificaciones, se usará la versión anterior de la misma. La programación revisada no surtirá efecto hasta que se guarde.
@@ -114,7 +114,7 @@ Haga clic en **Cancelar**.
 
  Si elimina una programación compartida usada por varios informes y suscripciones, el servidor de informes creará calendarios individuales para cada informe y suscripción que haya usado anteriormente la programación compartida. Cada nueva programación individual contendrá la fecha, la hora y el patrón de periodicidad que se especificó en la programación compartida.
 
-##  <a name="bkmk_sharepoint"></a> Crear y administrar programaciones compartidas (modo de SharePoint)
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Crear y administrar programaciones compartidas (modo de SharePoint)
  Para poder crear, modificar o eliminar programaciones compartidas, debe ser administrador del sitio de SharePoint.
 
  Puede identificar una programación específica mediante su nombre descriptivo. Si no se especifica un nombre, se crea un nombre predeterminado en función de las características de la programación, como su patrón de periodicidad o las fechas y horas de ejecución.

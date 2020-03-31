@@ -15,10 +15,10 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822561"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Asistente para nuevo grupo de disponibilidad: Asistente para agregar réplica)
@@ -32,7 +32,7 @@ ms.locfileid: "74822561"
 |[Preferencias de copia de seguridad](#BackupPreferencesTab)|Utilice esta pestaña para especificar sus preferencias de copias de seguridad para el grupo de disponibilidad en conjunto y las prioridades de copias de seguridad para las réplicas de disponibilidad individuales.|  
 |[Agente de escucha](#Listener)|Utilice esta pestaña, si está disponible, para crear un agente de escucha del grupo de disponibilidad. De forma predeterminada, no se crea un agente de escucha.<br /><br /> Esta pestaña está disponible solo si se ejecuta [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].<br/><br/>DHCP está deshabilitado si el tipo de clúster es EXTERNAL o NONE. |  
   
-##  <a name="ReplicasTab"></a> Pestaña réplicas  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> Pestaña réplicas  
  **Instancia del servidor**  
  Muestra el nombre de la instancia del servidor que hospedará la réplica de disponibilidad.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74822561"
  **Quitar réplica**  
  Haga clic para quitar la réplica secundaria seleccionada del grupo de disponibilidad.  
   
-##  <a name="EndpointsTab"></a> Pestaña extremos  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> Pestaña extremos  
  Para cada instancia del servidor que hospedará una réplica de disponibilidad, la pestaña **Extremos** muestra los valores reales del extremo de creación de reflejo de la base de datos existente, en su caso, o los valores sugeridos para un nuevo extremo posible que utilizaría la Autenticación de Windows. Tanto para los extremos existentes como para los posibles, la cuadrícula Valores de extremo muestra la información siguiente:  
   
  **Nombre de servidor**  
@@ -107,7 +107,7 @@ ms.locfileid: "74822561"
   
      Si deja la página **Especificar réplicas de disponibilidad** abierta mientras configura los extremos, vuelva a la pestaña **Extremos** y haga clic en **Actualizar** para actualizar la cuadrícula **Valores de extremo** .  
   
-##  <a name="BackupPreferencesTab"></a> Pestaña Preferencias de copia de seguridad  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> Pestaña Preferencias de copia de seguridad  
  Para especificar dónde deben producirse las copias de seguridad, elija una de las opciones siguientes:  
   
  **Preferir secundaria**  
@@ -137,7 +137,7 @@ ms.locfileid: "74822561"
  **Excluir réplica**  
  Para evitar que esta réplica de disponibilidad se elija nunca para realizar copias de seguridad. Esto es útil, por ejemplo, para una réplica de disponibilidad remota en la que no desee nunca realizar la conmutación por error para las copias de seguridad.  
   
-##  <a name="Listener"></a> Pestaña Agente de escucha  
+##  <a name="listener-tab"></a><a name="Listener"></a> Pestaña Agente de escucha  
  Especifique sus preferencias para una[escucha de grupo de disponibilidad](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)que proporcionará un punto de conexión de cliente; puede ser:  
   
  **No cree ahora un agente de escucha del grupo de disponibilidad.**  
@@ -195,7 +195,7 @@ ms.locfileid: "74822561"
 >  -   Pida al administrador de red que reserve la dirección IP del agente de escucha para su uso exclusivo. Proporcione el nombre del host DNS del agente de escucha a los desarrolladores de aplicaciones para que lo usen en las cadenas de conexión cuando soliciten conexiones cliente a este grupo de disponibilidad.  
 > -   Proporcione el nombre del host DNS del agente de escucha a los desarrolladores de aplicaciones para que lo usen en las cadenas de conexión cuando soliciten conexiones cliente a este grupo de disponibilidad.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el Asistente para grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   

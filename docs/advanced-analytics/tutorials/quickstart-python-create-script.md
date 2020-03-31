@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8c1347d58f0b8a4014a51a220b6ecded5a343082
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831916"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Inicio rápido: Ejecución de scripts de Python sencillos con SQL Server Machine Learning Services
@@ -22,7 +22,7 @@ ms.locfileid: "76831916"
 
 En este inicio rápido, ejecutará un conjunto de scripts de Python sencillos mediante [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md). Aprenderá a usar el procedimiento almacenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para ejecutar el script en una instancia de SQL Server.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Para este inicio rápido, es necesario tener acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) que tenga instalado el lenguaje de Python.
 

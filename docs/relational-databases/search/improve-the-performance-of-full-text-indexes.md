@@ -18,17 +18,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021217"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 En este tema se describen algunas de las causas comunes de un rendimiento deficiente de las consultas y los índices de texto completo. También se proporcionan algunas sugerencias para mitigar estos problemas y mejorar el rendimiento.
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>Problemas de los recursos de hardware
 El rendimiento de la indización y las búsquedas de texto completo se ve afectado por los recursos de hardware; por ejemplo, la memoria, la velocidad de disco y de CPU, y la arquitectura del equipo.  
 
@@ -57,7 +57,7 @@ La causa principal de un rendimiento reducido de la indización de texto complet
   
     La combinación maestra de una cantidad grande de datos puede crear una transacción de larga duración, con lo que se retrasa el truncamiento del registro de transacciones durante el punto de comprobación. En este caso, bajo el modelo de recuperación completa, el registro de transacciones podría crecer significativamente. Como práctica recomendada, antes de reorganizar un índice de texto completo grande en una base de datos que use el modelo de recuperación completa, asegúrese de que el registro de transacciones contenga el espacio suficiente para una transacción de larga duración. Para obtener más información, vea [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="tuning"></a> Optimizar el rendimiento de los índices de texto completo  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a> Optimizar el rendimiento de los índices de texto completo  
 Para obtener el máximo rendimiento de los índices de texto completo, implemente las prácticas recomendadas siguientes:  
   
 -   Para obtener el máximo rendimiento de todos los procesadores o núcleos de la CPU, establezca [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) “**max full-text crawl ranges**” en el número de CPU del sistema. Para obtener más información sobre esta opción de configuración, vea [max full-text crawl range (opción de configuración del servidor)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
@@ -70,7 +70,7 @@ Para obtener el máximo rendimiento de los índices de texto completo, implement
 
 -   Si usa rellenado incremental basado en una columna de marca de tiempo, cree un índice secundario en una columna **timestamp** si desea mejorar el rendimiento del rellenado incremental.  
   
-##  <a name="full"></a> Solucionar problemas de rendimiento de los rellenados completos  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> Solucionar problemas de rendimiento de los rellenados completos  
 ### <a name="review-the-full-text-crawl-logs"></a>Revisar los registros de rastreo de texto completo
  Para ayudar a diagnosticar problemas de rendimiento, examine los registros de rastreo de texto completo.
  
@@ -195,7 +195,7 @@ El rendimiento de los rellenados completos no es el óptimo cuando el consumo de
   
          Para reducir la fragmentación, puede reorganizar o volver a generar el índice clúster. Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
-##  <a name="filters"></a> Solucionar problemas de indización de documentos lenta
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a> Solucionar problemas de indización de documentos lenta
 
 > [!NOTE]
 > En esta sección se describe un problema que solo afecta a los clientes que indizan documentos (como documentos de Microsoft Word) en los que están insertados otros tipos de documento.

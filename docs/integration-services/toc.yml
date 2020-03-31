@@ -446,7 +446,7 @@
         - name: Destino de streaming de datos
           href: ../integration-services/data-flow/data-streaming-destination.md
           items:
-            - name: 'Tutorial: Publicar un paquete SSIS como una vista SQL'
+            - name: 'Tutorial: Publicación de un paquete SSIS como una vista SQL'
               href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
         - name: 'DataReader, destino'
           href: ../integration-services/data-flow/datareader-destination.md
@@ -933,7 +933,7 @@
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: Introducción a la Escalabilidad horizontal de SSIS en un único equipo
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 'Tutorial: configuración del escalado horizontal de Integration Services'
+    - name: 'Tutorial: Configuración de la escalabilidad horizontal de Integration Services'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: Ejecutar paquetes en el escalado horizontal
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -1762,7 +1762,7 @@
               href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
             - name: 'Lección 2-4: Probar el paquete del tutorial de la lección 2'
               href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
-        - name: 'Lección 3: Agregar un registro'
+        - name: 'Lección 3: Agregar registros'
           href: ../integration-services/lesson-3-add-logging-with-ssis.md
           items:
             - name: 'Lección 3-1: Copiar el paquete de la lección 2'
@@ -1795,7 +1795,7 @@
               href: ../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md
             - name: 'Lección 5-4: Probar el paquete del tutorial de la lección 5'
               href: ../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md
-        - name: 'Lección 6: usar parámetros con el modelo de implementación de proyectos'
+        - name: 'Lección 6: Uso de parámetros con el modelo de implementación de proyectos'
           href: ../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
           items:
             - name: 'Lección 6-1: Copiar el paquete de la lección 5'
@@ -1829,7 +1829,7 @@
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: 'Lección 2-2: Comprobar el conjunto de implementación'
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: 'Lección 3: Instalar paquetes'
+        - name: 'Lección 3: Instalación de paquetes'
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: 'Lección 3-1: Copiar el conjunto de implementación'

@@ -267,11 +267,11 @@
       href: job-properties-new-job-targets-page.md
     - name: Propiedades de las categorías de trabajo y Nueva categoría de trabajo
       href: job-categories-properties-new-job-category.md
-    - name: 'Categorías de trabajo: Administrar categorías de trabajo'
+    - name: 'Categorías de trabajos: Administrar categorías de trabajos'
       href: job-categories-manage-job-categories.md
     - name: 'Propiedades de paso de trabajo: Nuevo paso de trabajo (página General)'
       href: job-step-properties-new-job-step-general-page.md
-    - name: 'Propiedades de paso de trabajo: Nuevo paso de trabajo (página Opciones avanzadas)'
+    - name: 'Propiedades de paso de trabajo: Nuevo paso de trabajo (página Avanzado)'
       href: job-step-properties-new-job-step-advanced-page.md
     - name: Elegir programación para trabajo
       href: pick-schedule-for-job.md
@@ -289,7 +289,7 @@
       href: alert-properties-new-alert-general-page.md
     - name: Propiedades de alerta/Nueva alerta (página Respuesta)
       href: alert-properties-new-alert-response-page.md
-    - name: 'Propiedades de alerta: Nueva alerta (página Opciones)'
+    - name: 'Propiedades de la alerta: Nueva alerta (página Opciones)'
       href: alert-properties-new-alert-options-page.md
     - name: Propiedades de alerta (página Historial)
       href: alert-properties-history-page.md

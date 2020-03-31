@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288459"
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
@@ -110,7 +110,7 @@ El plan posterior a la creación del índice (con el número 15, abajo) tiene ah
   
 Según el análisis, probablemente lo más conveniente sea mantener el índice, ya que el rendimiento de la consulta ha mejorado.  
   
-## <a name="CEUpgrade"></a> Mantener la estabilidad del rendimiento al actualizar a una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="keep-performance-stability-during-the-upgrade-to-newer-ssnoversion"></a><a name="CEUpgrade"></a> Mantener la estabilidad del rendimiento al actualizar a una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 Antes de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], los usuarios corrían el riesgo de sufrir una regresión del rendimiento al actualizar a la versión más reciente de la plataforma. Esto se debía a que la versión más reciente del optimizador de consultas se activaba inmediatamente después de que se instalaran los nuevos bits.  
   
 A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], todos los cambios del optimizador de consultas están vinculados al [nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) más reciente, por lo que los planes no se cambian en el momento de la actualización, sino cuando un usuario cambia `COMPATIBILITY_LEVEL` a la versión más reciente. Esta función, junto con el Almacén de consultas, confiere al usuario un enorme control sobre el rendimiento de las consultas en el proceso de actualización. En la siguiente imagen se muestra el flujo de trabajo de actualización recomendado:  

@@ -9,12 +9,11 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-feedback_product_url: https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/
-ms.openlocfilehash: 69281b0708b2603f232481a5661da111d1b0aae9
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77903782"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
@@ -78,7 +77,7 @@ Puede usar [Azure Data Studio](../azure-data-studio/what-is.md) para realizar d
 - Capacidad para crear, abrir y ejecutar cuadernos compatibles con Jupyter.
 - Asistente para la virtualización de datos para simplificar la creación de orígenes de datos externos (habilitado por la **Extensión de virtualización de datos**).
 
-## <a id="architecture"></a> Arquitectura
+## <a name="architecture"></a><a id="architecture"></a> Arquitectura
 
 Un clúster de macrodatos SQL Server es un clúster de contenedores de Linux organizados por [Kubernetes](https://kubernetes.io/docs/concepts/).
 
@@ -101,15 +100,15 @@ En el diagrama siguiente se muestran los componentes de un clúster de macrodato
 
 ![Información general sobre la arquitectura](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> Controlador
+### <a name="controller"></a><a id="controlplane"></a> Controlador
 
 El controlador proporciona seguridad y administración para el clúster. Contiene el servicio de control, el almacén de configuración y otros servicios en el nivel de clúster, como Kibana, Grafana y búsqueda elástica.
 
-### <a id="computeplane"></a> Grupo de proceso
+### <a name="compute-pool"></a><a id="computeplane"></a> Grupo de proceso
 
 El grupo de proceso proporciona recursos de cálculo al clúster. Contiene nodos que ejecutan SQL Server en pods de Linux. Los pods del grupo de proceso se dividen en *instancias de proceso de SQL* para tareas de procesamiento específicas. 
 
-### <a id="dataplane"></a> Grupo de datos
+### <a name="data-pool"></a><a id="dataplane"></a> Grupo de datos
 
 El grupo de datos se usa para el almacenamiento en caché y la persistencia de datos. El grupo de datos consta de uno o varios pods que ejecutan SQL Server en Linux. Se usa para ingerir datos de consultas SQL o trabajos de Spark. Los data marts del clúster de macrodatos de SQL Server se guardan en el grupo de datos. 
 

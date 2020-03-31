@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127115"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar el Asistente para copiar bases de datos
@@ -49,7 +49,7 @@ El Asistente para copiar bases de datos permite mover o copiar bases de datos y 
 -   Programar cuándo mover o copiar las bases de datos.  
   
 
-##  <a name="Restrictions"></a> Limitaciones y restricciones  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El Asistente para copiar bases de datos no está disponible en la edición Express.  
   
@@ -81,7 +81,7 @@ El Asistente para copiar bases de datos permite mover o copiar bases de datos y 
 > **IMPORTANTE:** El método de **separar y adjuntar** hará que la propiedad de base de datos de origen y de destino llegue a establecerse en el inicio de sesión que ejecuta el **Asistente para copiar bases de datos**.  Vea [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) para cambiar la propiedad de una base de datos.
   
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
 -   Asegúrese de que el Agente SQL Server se inició en el servidor de destino.  
 
 -   Asegúrese de que se pueda acceder a los directorios de archivo de registro y datos en el servidor de origen desde el servidor de destino.
@@ -90,7 +90,7 @@ El Asistente para copiar bases de datos permite mover o copiar bases de datos y 
 
 > **IMPORTANTE:** En el método de **separar y adjuntar** , el proceso de copiar o mover producirá un error si no se usa una cuenta de proxy de Integration Services.  En determinadas situaciones, la base de datos de origen no se volverá a adjuntar al servidor de origen y todos los permisos de seguridad NTFS se quitarán de los archivos de registro y datos.  Si esto sucede, vaya a sus archivos, vuelva a aplicar los permisos relevantes y, después, vuelva a adjuntar la base de datos a su instancia de SQL Server.
   
-##  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Para asegurarse del rendimiento óptimo de una base de datos actualizada, ejecute [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (actualizar estadísticas) en la base de datos actualizada.  
   
@@ -98,10 +98,10 @@ El Asistente para copiar bases de datos permite mover o copiar bases de datos y 
   
 
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe ser miembro del rol fijo de servidor **sysadmin** tanto en el servidor de origen como en el servidor de destino.  
   
-##  <a name="Overview"></a> Las páginas del Asistente para copiar bases de datos 
+##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> Las páginas del Asistente para copiar bases de datos 
 Inicie el **Asistente para copiar bases de datos** en SQL Server Management Studio desde el **Explorador de objetos** y expanda **Bases de datos**.  Después, haga clic con el botón derecho en una base de datos, seleccione **Tareas**y, luego, haga clic en **Copiar base de datos**.  Si aparece la página inicial **Asistente para copiar bases de datos** , haga clic en **Siguiente**.
 
 
@@ -295,7 +295,7 @@ Muestra un resumen de las opciones seleccionadas.  Haga clic en **Atrás** para 
 -    **Mensaje**  
 Proporciona los mensajes devueltos en cada paso.
 
-##  <a name="Examples"></a> Ejemplos
+##  <a name="examples"></a><a name="Examples"></a> Ejemplos
 ### <a name="common-steps"></a>**Pasos comunes** 
 Independientemente de si elige **Mover** o **Copiar**, **Separar y adjuntar** o **SMO**, los cinco pasos que se enumeran a continuación serán los mismos.  Por motivos de brevedad, los pasos se enumeran aquí una vez y todos los ejemplos se iniciarán en el **paso 6**.
 
@@ -384,12 +384,12 @@ En este ejemplo, la base de datos `Sales` se copiará y creará como `SalesCopy`
 14. Iniciar manualmente el trabajo del Agente SQL Server `SalesCopy weekly refresh`recién creado.  Revise el historial de trabajos y asegúrese de que `SalesCopy` ahora existe en la instancia.
 
   
-##  <a name="FollowUp"></a> Seguimiento: después de actualizar una base de datos  
+##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> Seguimiento: después de actualizar una base de datos  
  Después de usar el Asistente para actualizar una base de datos de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos está disponible inmediatamente y se actualiza de forma automática. Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Si el nivel de compatibilidad de una base de datos de usuario era 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad era 90 en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
  
- ## <a name="Post"></a> Consideraciones posteriores a la copia o el movimiento
+ ## <a name="post-copy-or-move-considerations"></a><a name="Post"></a> Consideraciones posteriores a la copia o el movimiento
  Considere la posibilidad de realizar los siguientes pasos después de una operación de **Copiar** o **Mover**:
 -    Cambiar la propiedad de las bases de datos cuando se use el método de separar y adjuntar.
 -    Quitar los objetos de servidor en el servidor de origen después de una operación de **Mover**.

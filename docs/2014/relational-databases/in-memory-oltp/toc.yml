@@ -7,7 +7,7 @@
 - name: Ejemplos de código de OLTP en memoria
   href: in-memory-oltp-code-samples.md
   items:
-    - name: 'Demostración: mejora de rendimiento de OLTP en memoria'
+    - name: 'Demostración: Mejora de rendimiento de OLTP en memoria'
       href: demonstration-performance-improvement-of-in-memory-oltp.md
     - name: Extensiones de AdventureWorks para mostrar OLTP en memoria
       href: ../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md

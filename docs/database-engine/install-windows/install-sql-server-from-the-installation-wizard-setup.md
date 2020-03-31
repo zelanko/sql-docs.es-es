@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76934191"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar SQL Server desde el Asistente para la instalación (programa de instalación)
@@ -41,7 +41,7 @@ Para conocer otras formas de instalar [!INCLUDE[ssNoVersion](../../includes/ssno
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], revise [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
@@ -50,7 +50,7 @@ Antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rev
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-###  <a name="bkmk_ga_instalpatch"></a> Requisito de instalación de revisión
+###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> Requisito de instalación de revisión
 
 Microsoft ha identificado un problema con los archivos binarios de entorno de ejecución de Microsoft Visual C++ 2013 que se instalan como requisito previo con SQL Server 2016 y 2017. Hay disponible una actualización para corregir este problema. Si esta actualización a los archivos binarios de tiempo de ejecución de Visual C++ no se instala, puede que SQL Server experimente problemas de estabilidad en determinados escenarios. Antes de instalar SQL Server, siga las instrucciones que se indican en [Notas de la versión de SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) para ver si el equipo necesita una revisión para los archivos binarios de tiempo de ejecución de Visual C++. 
 

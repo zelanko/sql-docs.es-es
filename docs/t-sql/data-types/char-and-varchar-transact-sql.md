@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc2d749f3963f0828a70bc1506581f5bd2a35a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75246227"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char y varchar (Transact-SQL)
@@ -74,7 +74,7 @@ Si SET ANSI_PADDING es OFF cuando se ejecuta CREATE TABLE o ALTER TABLE, una col
 > Cada columna varchar(max) o nvarchar(max) cuyo valor no sea NULL requiere 24 bytes de asignación fija adicional que se descuentan del límite de 8060 bytes de las filas durante una operación de ordenación. Esto puede crear un límite implícito del número de columnas varchar(max) o varchar(max) cuyo valor no sea NULL que es posible crear en una tabla.
 No se produce ningún error especial cuando se crea la tabla (más allá de la advertencia habitual de que el tamaño máximo de la fila supera el máximo permitido de 8060 bytes) ni en el momento de la inserción de los datos. Este tamaño grande de fila puede provocar errores (como el error 512) durante algunas operaciones normales, como la actualización de claves de un índice agrupado o las ordenaciones del conjunto completo de columnas, que solo se pueden producir cuando se realiza una operación.
 
-## <a name="_character"></a> Convertir datos de caracteres
+## <a name="converting-character-data"></a><a name="_character"></a> Convertir datos de caracteres
 
 Cuando se convierten expresiones de caracteres a un tipo de datos de caracteres de un tamaño distinto, se truncan los valores que son demasiado grandes para el nuevo tipo de datos. El tipo **uniqueidentifier** se considera un tipo de carácter para la conversión de una expresión de caracteres y, por tanto, está sujeto a las reglas de truncamiento de la conversión a un tipo de carácter. Vea la sección Ejemplos que aparece más adelante.
 

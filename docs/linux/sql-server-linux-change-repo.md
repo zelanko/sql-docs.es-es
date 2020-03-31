@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198432"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configuración de repositorios para instalar y actualizar SQL Server en Linux
@@ -34,7 +34,7 @@ En este artículo se explica cómo configurar el repositorio correcto para las i
 > [!TIP]
 > SQL Server 2019 ya está disponible. Para probarlo, use este artículo para configurar el nuevo repositorio **mssql-server-2019**. Luego instale con las instrucciones de la [guía de instalación](sql-server-linux-setup.md).
 
-## <a id="repositories"></a> Repositorios
+## <a name="repositories"></a><a id="repositories"></a> Repositorios
 
 Al instalar SQL Server en Linux, debe configurar un repositorio de Microsoft. Este repositorio se usa para adquirir el paquete del motor de base de datos, **mssql-server**, y los paquetes de SQL Server relacionados. Actualmente hay cinco repositorios principales:
 
@@ -46,7 +46,7 @@ Al instalar SQL Server en Linux, debe configurar un repositorio de Microsoft. Es
 | **2017** | **mssql-server-2017** | Repositorio SQL Server 2017 Actualización acumulativa (CU). |
 | **2017 GDR** | **mssql-server-2017-gdr** | Repositorio SQL Server 2017 GDR solo para actualizaciones críticas. |
 
-## <a id="cuversusgdr"></a> Actualización acumulativa frente a GDR
+## <a name="cumulative-update-versus-gdr"></a><a id="cuversusgdr"></a> Actualización acumulativa frente a GDR
 
 Es importante tener en cuenta que hay dos tipos principales de repositorios para cada distribución:
 

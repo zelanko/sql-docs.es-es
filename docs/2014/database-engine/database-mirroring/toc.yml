@@ -93,7 +93,7 @@
       items:
         - name: Supervisar la creación de reflejo de la base de datos
           href: monitoring-database-mirroring-sql-server.md
-        - name: 'Quórum: cómo un testigo afecta a la disponibilidad de la base de datos'
+        - name: 'Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos'
           href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
         - name: Conmutación de roles durante una sesión de creación de reflejo de la base de datos
           href: role-switching-during-a-database-mirroring-session-sql-server.md

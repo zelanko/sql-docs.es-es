@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287389"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Ejecutar paquetes de Integration Services (SSIS)
@@ -111,7 +111,7 @@ ms.locfileid: "79287389"
   
      Utilice procedimientos almacenados para ejecutar el paquete. Haga clic en **Script** para generar la instrucción Transact-SQL que crea una instancia de la ejecución y la inicia. La instrucción incluye una llamada a los procedimientos almacenados catalog.create_execution, catalog.set_execution_parameter_value y catalog.start_execution. Para obtener más información sobre estos procedimientos almacenados, vea [catalog.create_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) y [catalog.start_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
 
-## <a name="execute_package_dialog"></a> Execute Package Dialog Box
+## <a name="execute-package-dialog-box"></a><a name="execute_package_dialog"></a> Execute Package Dialog Box
   Use el cuadro de diálogo **Ejecutar paquete** para ejecutar un paquete que está almacenado en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede contener parámetros que hagan referencia a valores almacenados en variables de entorno. Antes de ejecutar este tipo de paquete, debe especificar qué referencia del entorno se utilizará para proporcionar los valores de la variable de entorno. Un proyecto puede contener varios entornos, pero se puede utilizar solo un entorno para enlazar los valores de variable de entorno en el momento de la ejecución. Si no se usan variables de entorno en el paquete, no se requiere un entorno.  
@@ -130,7 +130,7 @@ ms.locfileid: "79287389"
   
 -   [Scripting de las opciones del cuadro de diálogo Ejecutar paquete](#script)  
   
-###  <a name="open_dialog"></a> Abrir el cuadro de diálogo Ejecutar paquete  
+###  <a name="open-the-execute-package-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Ejecutar paquete  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -144,16 +144,16 @@ ms.locfileid: "79287389"
   
 5.  Haga clic con el botón derecho en el paquete y, después, haga clic en **Ejecutar**.  
   
-###  <a name="general"></a> Establecer las opciones de la página General  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Establecer las opciones de la página General  
  Seleccione **Entorno** para especificar el entorno que se aplica cuando se ejecuta el paquete.  
   
-###  <a name="parameters"></a> Establecer las opciones de la pestaña Parámetros  
+###  <a name="set-the-options-on-the-parameters-tab"></a><a name="parameters"></a> Establecer las opciones de la pestaña Parámetros  
  Utilice la pestaña **Parámetros** para modificar los valores de parámetro que se utilizan cuando se ejecuta el paquete.  
   
-###  <a name="connection"></a> Establecer las opciones de la pestaña Administradores de conexiones  
+###  <a name="set-the-options-on-the-connection-managers-tab"></a><a name="connection"></a> Establecer las opciones de la pestaña Administradores de conexiones  
  Utilice la pestaña Administradores de conexiones para establecer las propiedades de los administradores de conexiones del paquete.  
   
-###  <a name="advanced"></a> Establecer las opciones de la pestaña Avanzadas  
+###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> Establecer las opciones de la pestaña Avanzadas  
  Utilice la pestaña Avanzadas para administrar propiedades y otra configuración del paquete.  
   
  **Agregar**, **Editar**, **Quitar**  
@@ -168,7 +168,7 @@ ms.locfileid: "79287389"
  **Tiempo de ejecución de 32 bits**  
  Especifique que el paquete se ejecutará en un sistema de 32 bits.  
   
-###  <a name="script"></a> Scripting de las opciones del cuadro de diálogo Ejecutar paquete  
+###  <a name="scripting-the-options-in-the-execute-package-dialog-box"></a><a name="script"></a> Scripting de las opciones del cuadro de diálogo Ejecutar paquete  
  Mientras está en el cuadro de diálogo **Ejecutar paquete** , también puede utilizar el botón **Script** de la barra de herramientas para escribir código de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El script generado realiza una llamada a los procedimientos almacenados [catalog.start_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) con las mismas opciones que ha seleccionado en el cuadro de diálogo **Ejecutar paquete**. El script aparece en una nueva ventana de script en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
 
 ## <a name="see-also"></a>Consulte también  

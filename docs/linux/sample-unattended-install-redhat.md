@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: dc37a110b82113f2a96bd46be914c06a43c1a0ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558651"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Sample: Script de instalación desatendida de SQL Server para Red Hat Enterprise Linux
@@ -25,7 +25,7 @@ Este script de Bash de ejemplo instala SQL Server 2017 en Red Hat Enterprise Li
 > [!TIP]
 > Si no necesita un script de instalación desatendida, la manera más rápida de instalar SQL Server es seguir la [guía de inicio rápido para Red Hat.](quickstart-install-connect-red-hat.md) Para obtener más información sobre la instalación, vea la [guía de instalación de SQL Server en Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Necesita al menos 2 GB de memoria para ejecutar SQL Server en Linux.
 - El sistema de archivos debe ser **XFS** o **EXT4**. No se admiten otros sistemas de archivos, como **BTRFS**.

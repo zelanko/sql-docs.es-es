@@ -9,7 +9,7 @@
       href: creating-a-custom-report-item-run-time-component.md
     - name: Crear un componente de tiempo de diseño de elemento de informe personalizado
       href: creating-a-custom-report-item-design-time-component.md
-    - name: Cómo implementar un elemento de informe personalizado
+    - name: 'Procedimientos: Implementación de un elemento de informe personalizado'
       href: how-to-deploy-a-custom-report-item.md
     - name: Bibliotecas de clases de elemento de informe personalizado
       href: custom-report-item-class-libraries.md

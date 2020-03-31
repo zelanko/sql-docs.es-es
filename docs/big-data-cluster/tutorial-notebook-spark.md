@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4acb5c2306064da29d3537fc881dbfc3d312ad2f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844239"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutorial: ejecutar un cuaderno de ejemplo en un clúster de macrodatos de SQL Server
@@ -25,7 +25,7 @@ En este tutorial, se muestra cómo cargar y ejecutar un cuaderno en Azure Data S
 > [!TIP]
 > Si lo prefiere, puede descargar y ejecutar un script con los comandos de este tutorial. Para obtener instrucciones, vea los [ejemplos de Spark](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) en GitHub.
 
-## <a id="prereqs"></a> Requisitos previos
+## <a name="prerequisites"></a><a id="prereqs"></a> Requisitos previos
 
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
    - **kubectl**

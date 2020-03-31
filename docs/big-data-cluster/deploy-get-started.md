@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190392"
 ---
 # <a name="get-started-with-big-data-clusters-2019"></a>Introducción a los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -38,7 +38,7 @@ Vea este vídeo de 9 minutos para obtener información general sobre cómo imple
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
 
 
-## <a id="tools"></a> Herramientas de cliente
+## <a name="client-tools"></a><a id="tools"></a> Herramientas de cliente
 
 Los clústeres de macrodatos requieren un conjunto específico de herramientas de cliente. Antes de implementar un clúster de macrodatos en Kubernetes, debe instalar las herramientas siguientes:
 
@@ -70,7 +70,7 @@ Después de configurar Kubernetes, implemente un clúster de macrodatos con el c
 - En el caso de una instalación completamente desatendida, puede pasar todas las demás configuraciones en variables de entorno. Para obtener más información, consulte [implementaciones desatendidas](deployment-guidance.md#unattended).
 
 
-## <a id="scripts"></a> Scripts de implementación
+## <a name="deployment-scripts"></a><a id="scripts"></a> Scripts de implementación
 
 Los scripts de implementación pueden ayudar a implementar clústeres de Kubernetes y de macrodatos en un solo paso. También suelen proporcionar valores predeterminados para la configuración del clúster de macrodatos. Puede personalizar cualquier script de implementación creando una versión que configure de forma diferente la implementación del clúster de macrodatos.
 

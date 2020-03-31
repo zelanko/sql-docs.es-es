@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288389"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510206"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ Los pasos básicos que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ut
 4. El motor relacional comienza a ejecutar el plan de ejecución. A medida que se procesan los pasos que necesitan datos de las tablas base, el motor relacional solicita al motor de almacenamiento que pase los datos de los conjuntos de filas solicitados desde el motor relacional.
 5. El motor relacional procesa los datos que devuelve el motor de almacenamiento en el formato definido para el conjunto de resultados y devuelve el conjunto de resultados al cliente.
 
-### <a name="ConstantFolding"></a> Doblado de constantes y evaluación de expresiones 
+### <a name="constant-folding-and-expression-evaluation"></a><a name="ConstantFolding"></a> Doblado de constantes y evaluación de expresiones 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] evalúa algunas expresiones constantes con antelación para mejorar el rendimiento de las consultas. Es lo que se conoce como doblado de constantes. Una constante es un literal [!INCLUDE[tsql](../includes/tsql-md.md)], como `3`, `'ABC'`, `'2005-12-31'`, `1.0e3` o `0x12345678`.
 
 #### <a name="foldable-expressions"></a>Expresiones que pueden doblarse
@@ -181,7 +181,7 @@ Si la opción de base de datos `PARAMETERIZATION` no se establece en `FORCED` pa
 
 Por otra parte, si la función `dbo.f` es una función escalar definida por el usuario, la expresión `dbo.f(100)` no se dobla, puesto que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no dobla las expresiones que impliquen a funciones definidas por el usuario, incluso si son deterministas. Para obtener más información sobre la parametrización, consulte [Parametrización forzada](#ForcedParam) más adelante en este artículo.
 
-#### <a name="ExpressionEval"></a>Evaluación de expresiones 
+#### <a name="expression-evaluation"></a><a name="ExpressionEval"></a>Evaluación de expresiones 
 Además, durante la optimización el estimador (de cardinalidad) del tamaño del conjunto de resultados que forma parte del optimizador evalúa algunas expresiones cuyas constantes no se doblan pero cuyos argumentos se conocen en tiempo de compilación, tanto si se trata de parámetros como de constantes.
 
 Se evalúan las funciones integradas siguientes y los operadores especiales en tiempo de compilación específicamente, si se conocen todas sus entradas: `UPPER`, `LOWER`, `RTRIM`, `DATEPART( YY only )`, `GETDATE`, `CAST` y `CONVERT`. Los siguientes operadores también se evalúan en tiempo de compilación si se conocen todas sus entradas:
@@ -550,9 +550,9 @@ GO
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -573,9 +573,9 @@ GO
 Vuelva a comprobar lo que se puede encontrar en la caché de planes. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -599,10 +599,10 @@ GO
 Vuelva a comprobar lo que se puede encontrar en la caché de planes. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -690,7 +690,7 @@ La columna `recompile_cause` del xEvent `sql_statement_recompile` contiene un c�
 > [!NOTE]
 > Si la opción de base de datos `AUTO_UPDATE_STATISTICS` se establece en `ON`, las consultas se vuelven a compilar cuando su destino son tablas o vistas indexadas cuyas estadísticas se han actualizado o cuyas cardinalidades han cambiado mucho desde la última ejecución. Este comportamiento se aplica a tablas estándar definidas por el usuario, a tablas temporales y a tablas insertadas y eliminadas creadas por desencadenadores DML. Si el rendimiento de la consulta se ve afectado por un número excesivo de recompilaciones, considere la posibilidad de cambiar esta opción a `OFF`. Cuando la opción de base de datos `AUTO_UPDATE_STATISTICS` está establecida en `OFF`, no se producen recompilaciones basadas en estadísticas o cambios en la cardinalidad, a excepción de las tablas insertadas y eliminadas que se crean mediante los desencadenadores DML `INSTEAD OF`. Como estas tablas se crean en tempdb, la recompilación de las consultas a las que tienen acceso depende de la configuración de `AUTO_UPDATE_STATISTICS` en tempdb. Tenga en cuenta que en las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anteriores a la 2005, las consultas se siguen recompilando en función de los cambios de cardinalidad de las tablas insertadas y eliminadas del desencadenador DML, incluso aunque esta opción esté establecida en `OFF`.
 
-### <a name="PlanReuse"></a> Parámetros y reutilización de un plan de ejecución
+### <a name="parameters-and-execution-plan-reuse"></a><a name="PlanReuse"></a> Parámetros y reutilización de un plan de ejecución
 El uso de parámetros, incluidos los marcadores de parámetros de las aplicaciones ADO, OLE DB y ODBC, puede incrementar las posibilidades de volver a utilizar los planes de ejecución. 
 
 > [!WARNING] 
@@ -758,7 +758,7 @@ WHERE AddressID = 1 + 2;
 
 Sin embargo, se puede parametrizar según las reglas de parametrización simple. Cuando la parametrización forzada se intenta pero falla, después se sigue intentando la parametrización simple.
 
-### <a name="SimpleParam"></a> Parametrización simple
+### <a name="simple-parameterization"></a><a name="SimpleParam"></a> Parametrización simple
 En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el uso de parámetros o marcadores de parámetros en instrucciones Transact-SQL aumenta la posibilidad de que el motor relacional encuentre planes de ejecución existentes y compilados previamente que coincidan con nuevas instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)].
 
 > [!WARNING] 
@@ -793,7 +793,7 @@ En el comportamiento predeterminado de parametrización simple, [!INCLUDE[ssNoVe
 
 O bien, puede especificar que una sola consulta, y cualquier otra que sea sintácticamente equivalente pero solo se diferencie en los valores de parámetros, no incluya parámetros. 
 
-### <a name="ForcedParam"></a> Parametrización forzada
+### <a name="forced-parameterization"></a><a name="ForcedParam"></a> Parametrización forzada
 Puede reemplazar el comportamiento predeterminado de parametrización simple de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si especifica que, con algunas limitaciones, todas las instrucciones `SELECT`, `INSERT`, `UPDATE` y `DELETE` de una base de datos incluyan parámetros. La parametrización forzada se habilita al establecer la opción `PARAMETERIZATION` en `FORCED` en la instrucción `ALTER DATABASE` . Puede que la parametrización forzada mejore el rendimiento de determinadas bases de datos al reducir la frecuencia de las compilaciones y recompilaciones de consultas. Las bases de datos que pueden beneficiarse de la parametrización forzada suelen ser las que experimentan grandes volúmenes de consultas simultáneas de orígenes como las aplicaciones de punto de venta.
 
 Cuando la opción `PARAMETERIZATION` está establecida en `FORCED`, cualquier valor literal que aparezca en una instrucción `SELECT`, `INSERT`, `UPDATE`o `DELETE` , enviado de cualquier forma, se convierte en un parámetro durante la compilación de consultas. Las excepciones son los literales que aparecen en las siguientes construcciones de consulta: 
@@ -842,7 +842,7 @@ Cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametriza litera
 * Los literales de tipo binario se parametrizan a varbinary(8000) si el literal se ajusta a 8000 bytes. Si tiene más de 8000 bytes, se convierte a varbinary(max).
 * Los literales de tipo money se parametrizan a money.
 
-#### <a name="ForcedParamGuide"></a> Directrices para utilizar la parametrización forzada
+#### <a name="guidelines-for-using-forced-parameterization"></a><a name="ForcedParamGuide"></a> Directrices para utilizar la parametrización forzada
 Tenga en cuenta lo siguiente al establecer la opción `PARAMETERIZATION` en FORCED:
 
 * La parametrización forzada, en efecto, cambia las constantes literales de una consulta a parámetros al compilar una consulta. Por tanto, puede que el optimizador de consultas elija planes menos adecuados para las consultas. En concreto, es menos probable que el optimizador de consultas haga coincidir la consulta con una vista indizada o un índice de una columna calculada. Puede que también elija planes menos adecuados para consultas formuladas en tablas con particiones y vistas con particiones distribuidas. No se debe utilizar la parametrización forzada en entornos que se basan en su mayor parte en vistas indizadas e índices en columnas calculadas. Por lo general, solo los administradores de bases de datos con experiencia deben utilizar la opción `PARAMETERIZATION FORCED` después de determinar que con ello no se afecta negativamente al rendimiento.
@@ -894,7 +894,7 @@ En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el modelo de preparac
 * La aplicación puede controlar cuándo se crea el plan de ejecución y cuándo se vuelve a utilizar.
 * El modelo de preparación y ejecución se puede transportar a otras bases de datos, incluidas las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="ParamSniffing"></a> Examen de parámetros
+### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> Examen de parámetros
 Con la expresión "examen de parámetros" se hace referencia a un proceso mediante el cual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "examina" los valores de parámetros actuales durante la compilación o la recompilación y los pasa al Optimizador de consultas para que se puedan usar para generar planes de ejecución de consultas potencialmente más eficaces.
 
 Los valores de parámetros se examinan durante la compilación o la recompilación de los siguientes tipos de lotes:
@@ -903,7 +903,7 @@ Los valores de parámetros se examinan durante la compilación o la recompilaci�
 -  Consultas enviadas mediante sp_executesql 
 -  Consultas preparadas
 
-Para obtener más información sobre cómo solucionar problemas de exámenes de parámetros incorrectos, vea [Troubleshoot queries with parameter-sensitive query execution plan issues](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems) (Solución de problemas de consultas con un plan de ejecución de consultas sensible a parámetros).
+Para obtener más información sobre cómo solucionar problemas de exámenes de parámetros incorrectos, vea [Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/sql-database/sql-database-monitor-tune-overview) (Solución de problemas de consultas con un plan de ejecución de consultas sensible a parámetros).
 
 > [!NOTE]
 > En el caso de las consultas que usan la sugerencia `RECOMPILE`, se examinan tanto los valores de parámetro como los valores actuales de las variables locales. Los valores examinados (de los parámetros y las variables locales) son los que existen en el lote justo antes de la instrucción con la sugerencia `RECOMPILE`. En concreto, en el caso de los parámetros, no se examinan los valores que aparecieron con la llamada de invocación del lote.
@@ -945,7 +945,7 @@ El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 * El plan de ejecución en serie se considera más rápido que cualquier otro plan de ejecución en paralelo de una consulta determinada.
 * La consulta contiene operadores escalares o relacionales que no se pueden ejecutar en paralelo. Es posible que algunos operadores hagan que una sección del plan de consulta se ejecute en modo de serie, o que todo el plan se ejecute en modo de serie.
 
-### <a name="DOP"></a> Grado de paralelismo
+### <a name="degree-of-parallelism"></a><a name="DOP"></a> Grado de paralelismo
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta de forma automática el mejor grado de paralelismo para cada instancia de una ejecución de consulta en paralelo o de una operación de índice del lenguaje de definición de datos (DDL). Para ello utiliza los siguientes criterios: 
 
 1. Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se **ejecuta en un equipo que disponga de más de un microprocesador o CPU**, por ejemplo, un equipo de multiproceso simétrico (SMP). Solo los equipos con más de una CPU pueden utilizar consultas en paralelo. 
@@ -1285,12 +1285,12 @@ Aunque los ejemplos anteriores sugieren una manera sencilla de asignar subproces
 
 He aquí otro ejemplo: supongamos que la tabla tiene cuatro particiones en la columna A con puntos de límite (10, 20, 30), un índice en la columna B y la consulta tiene una cláusula de predicado `WHERE B IN (50, 100, 150)`. Dado que las particiones de tabla se basan en los valores de A, los valores de B pueden producirse en cualquiera de las particiones de tabla. Por lo tanto, el procesador de consultas buscará cada uno de los tres valores de B (50, 100, 150) en cada una de las cuatro particiones de tabla. El procesador de consultas asignará subprocesos de trabajo proporcionalmente para poder ejecutar cada uno de estos 12 exámenes de consulta en paralelo.
 
-|Particiones de tabla basadas en la columna A |Busca la columna B en cada partición de tabla |
+|Particiones de tabla basadas en la columna A    |Busca la columna B en cada partición de tabla |
 |----|----|
-|Partición de tabla 1: A < 10   |B=50, B=100, B=150 |
-|Partición de tabla 2: A >= 10 Y A < 20   |B=50, B=100, B=150 |
-|Partición de tabla 3: A >= 20 Y A < 30   |B=50, B=100, B=150 |
-|Partición de tabla 4: A >= 30  |B=50, B=100, B=150 |
+|Partición de tabla 1: A < 10     |B=50, B=100, B=150 |
+|Partición de tabla 2: A >= 10 Y A < 20     |B=50, B=100, B=150 |
+|Partición de tabla 3: A >= 20 Y A < 30     |B=50, B=100, B=150 |
+|Partición de tabla 4: A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Prácticas recomendadas
 
@@ -1374,7 +1374,7 @@ SET STATISTICS XML OFF;
 GO
 ```
 
-##  <a name="Additional_Reading"></a> Lecturas adicionales  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Lecturas adicionales  
  [Referencia de operadores lógicos y físicos del plan de presentación](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [Eventos extendidos](../relational-databases/extended-events/extended-events.md)  
  [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  

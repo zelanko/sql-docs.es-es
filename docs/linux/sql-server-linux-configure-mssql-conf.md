@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286919"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configuración de SQL Server en Linux con la herramienta mssql-conf
@@ -90,7 +90,7 @@ ms.locfileid: "79286919"
 
 * En estos ejemplos se ejecuta mssql-conf al especificar la ruta de acceso completa: **/opt/mssql/bin/mssql-conf**. Si opta por ir a esa ruta de acceso en su lugar, ejecute mssql-conf en el contexto del directorio actual: **./mssql-conf**.
 
-## <a id="agent"></a> Habilitación del Agente SQL Server
+## <a name="enable-sql-server-agent"></a><a id="agent"></a> Habilitación del Agente SQL Server
 
 La configuración **sqlagent.enabled** habilita el [Agente SQL Server](sql-server-linux-run-sql-server-agent-job.md). De forma predeterminada, el Agente SQL Server está deshabilitado. Si **sqlagent.enabled** no está en el archivo de configuración mssql.conf, SQL Server asume de forma interna que el Agente SQL Server está deshabilitado.
 
@@ -108,7 +108,7 @@ Para cambiar esta configuración, siga estos pasos:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="collation"></a> Cambio de la intercalación de SQL Server
+## <a name="change-the-sql-server-collation"></a><a id="collation"></a> Cambio de la intercalación de SQL Server
 
 La opción **set-collation** cambia el valor de intercalación por cualquiera de las intercalaciones admitidas.
 
@@ -128,7 +128,7 @@ La opción **set-collation** cambia el valor de intercalación por cualquiera de
 
 Para obtener una lista de las intercalaciones admitidas, ejecute la función [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md): `SELECT Name from sys.fn_helpcollations()`.
 
-## <a id="customerfeedback"></a> Configuración de comentarios del cliente
+## <a name="configure-customer-feedback"></a><a id="customerfeedback"></a> Configuración de comentarios del cliente
 
 La configuración **telemetry.customerfeedback** cambia si SQL Server envía comentarios a Microsoft o no. De forma predeterminada, este valor se establece en **true** en todas las ediciones. Para cambiar el valor, ejecute los siguientes comandos:
 
@@ -149,7 +149,7 @@ La configuración **telemetry.customerfeedback** cambia si SQL Server envía co
 
 Para obtener más información, vea [Comentarios del cliente para SQL Server en Linux](sql-server-linux-customer-feedback.md) y la [Declaración de privacidad de SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 
-## <a id="datadir"></a> Cambio de la ubicación predeterminada del directorio de registro o los datos
+## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> Cambio de la ubicación predeterminada del directorio de registro o los datos
 
 Las configuraciones **filelocation.defaultdatadir** y **filelocation.defaultlogdir** cambian la ubicación en la que se crean los archivos de registro y de base de datos. De forma predeterminada, esta ubicación es /var/opt/mssql/data. Para cambiar estas configuraciones, siga estos pasos:
 
@@ -187,7 +187,7 @@ Las configuraciones **filelocation.defaultdatadir** y **filelocation.defaultlogd
 1. Este comando también supone que hay un directorio /tmp/log y que está en el usuario y grupo **mssql**.
 
 
-## <a id="masterdatabasedir"></a> Cambio de la ubicación del directorio de archivos de base de datos maestra predeterminado
+## <a name="change-the-default-master-database-file-directory-location"></a><a id="masterdatabasedir"></a> Cambio de la ubicación del directorio de archivos de base de datos maestra predeterminado
 
 Las configuraciones **filelocation.masterdatafile** y **filelocation.masterlogfile** cambian la ubicación en la que el motor de SQL Server busca los archivos de base de datos maestra. De forma predeterminada, esta ubicación es /var/opt/mssql/data.
 
@@ -238,7 +238,7 @@ Para cambiar estas configuraciones, siga estos pasos:
    > [!NOTE]
    > Si SQL Server no encuentra los archivos master.mdf y mastlog.ldf en el directorio especificado, se creará automáticamente una copia con plantilla de las bases de datos del sistema en el directorio especificado y SQL Server se iniciará correctamente. En cambio, los metadatos como las bases de datos de usuario, los inicios de sesión del servidor, los certificados del servidor, las claves de cifrado, los trabajos del Agente SQL o la contraseña de inicio de sesión de SA antigua no se actualizarán en la nueva base de datos maestra. Tendrá que detener SQL Server y mover los antiguos archivos master.mdf y mastlog.ldf a la nueva ubicación especificada e iniciar SQL Server para seguir usando los metadatos existentes.
  
-## <a id="masterdatabasename"></a> Cambio del nombre de los archivos de base de datos maestra
+## <a name="change-the-name-of-master-database-files"></a><a id="masterdatabasename"></a> Cambio del nombre de los archivos de base de datos maestra
 
 Las configuraciones **filelocation.masterdatafile** y **filelocation.masterlogfile** cambian la ubicación en la que el motor de SQL Server busca los archivos de base de datos maestra. También puede usarlas para cambiar el nombre de los archivos de registro y de base de datos maestra. 
 
@@ -273,7 +273,7 @@ Para cambiar estas configuraciones, siga estos pasos:
    sudo systemctl start mssql-server
    ```
 
-## <a id="dumpdir"></a> Cambio de la ubicación predeterminada del directorio de volcado
+## <a name="change-the-default-dump-directory-location"></a><a id="dumpdir"></a> Cambio de la ubicación predeterminada del directorio de volcado
 
 La configuración **filelocation.defaultdumpdir** cambia la ubicación predeterminada en la que se generan los volcados de memoria y SQL cuando se produce un bloqueo. De forma predeterminada, estos archivos se generan en /var/opt/mssql/log.
 
@@ -304,7 +304,7 @@ Para configurar esta nueva ubicación, use los comandos siguientes:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="errorlogdir"></a> Cambio de la ubicación predeterminada del directorio de los archivos de registro de errores
+## <a name="change-the-default-error-log-file-directory-location"></a><a id="errorlogdir"></a> Cambio de la ubicación predeterminada del directorio de los archivos de registro de errores
 
 La configuración **filelocation.errorlogfile** cambia la ubicación en la que se crean los archivos de registro de errores, seguimiento del generador de perfiles predeterminado, XE de sesión de mantenimiento del sistema y XE de sesión de Hekaton. De forma predeterminada, esta ubicación es /var/opt/mssql/log. El directorio en el que se establece el archivo de registro de errores de SQL se convierte en el directorio de registro predeterminado para otros registros.
 
@@ -336,7 +336,7 @@ Para cambiar esta configuración:
    ```
 
 
-## <a id="backupdir"></a> Cambio de la ubicación predeterminada del directorio de copia de seguridad
+## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> Cambio de la ubicación predeterminada del directorio de copia de seguridad
 
 La configuración **filelocation.defaultbackupdir** cambia la ubicación predeterminada en la que se generan los archivos de copia de seguridad. De forma predeterminada, estos archivos se generan en /var/opt/mssql/data.
 
@@ -367,7 +367,7 @@ Para configurar esta nueva ubicación, use los comandos siguientes:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a> Especificación de la configuración de volcado principal
+## <a name="specify-core-dump-settings"></a><a id="coredump"></a> Especificación de la configuración de volcado principal
 
 Si se produce una excepción en uno de los procesos de SQL Server, este crea un volcado de memoria.
 
@@ -400,14 +400,14 @@ La primera captura de fase se controla mediante la configuración **coredump.cor
     | **filtered** | Filtered usa un diseño basado en la resta en el que se incluye toda la memoria del proceso a menos que se excluya específicamente. El diseño comprende los aspectos internos de SQLPAL y el entorno de host, y excluye determinadas regiones del volcado.
     | **full** | Full es un volcado de proceso completo que incluye todas las regiones que están en **/proc/$pid/maps**. No se controla mediante la configuración **coredump.captureminiandfull**. |
 
-## <a id="dbmail"></a> Establecimiento del perfil de correo electrónico de base de datos predeterminado para SQL Server en Linux
+## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> Establecimiento del perfil de correo electrónico de base de datos predeterminado para SQL Server en Linux
 
 **sqlpagent.databasemailprofile** le permite establecer el perfil de correo electrónico de base de datos predeterminado de las alertas por correo electrónico.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a> Alta disponibilidad
+## <a name="high-availability"></a><a id="hadr"></a> Alta disponibilidad
 
 La opción **hadr.hadrenabled** habilita los grupos de disponibilidad en la instancia de SQL Server. El siguiente comando habilita los grupos de disponibilidad al establecer **hadr.hadrenabled** en 1. Debe reiniciar SQL Server para que la configuración surta efecto.
 
@@ -422,7 +422,7 @@ Para obtener información sobre cómo se usa esto con los grupos de disponibilid
 - [Configurar el grupo de disponibilidad de escalado de lectura para SQL Server en Linux](sql-server-linux-availability-group-configure-rs.md)
 
 
-## <a id="localaudit"></a> Establecimiento del directorio de auditoría local
+## <a name="set-local-audit-directory"></a><a id="localaudit"></a> Establecimiento del directorio de auditoría local
 
 La configuración **telemetry.userrequestedlocalauditdirectory** habilita la auditoría local y le permite establecer el directorio en el que se crean los registros de auditoría local.
 
@@ -453,7 +453,7 @@ La configuración **telemetry.userrequestedlocalauditdirectory** habilita la aud
 
 Para obtener más información, vea [Comentarios del cliente para SQL Server en Linux](sql-server-linux-customer-feedback.md).
 
-## <a id="lcid"></a> Cambio de la configuración regional de SQL Server
+## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> Cambio de la configuración regional de SQL Server
 
 La configuración **language.lcid** cambia la configuración regional de SQL Server por cualquier identificador de lenguaje (LCID) admitido. 
 
@@ -469,7 +469,7 @@ La configuración **language.lcid** cambia la configuración regional de SQL Se
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a> Establecimiento del límite de memoria
+## <a name="set-the-memory-limit"></a><a id="memorylimit"></a> Establecimiento del límite de memoria
 
 La configuración **memory.memorylimitmb** controla la cantidad de memoria física (en MB) disponible para SQL Server. El valor predeterminado es el 80 % de la memoria física.
 
@@ -487,7 +487,7 @@ La configuración **memory.memorylimitmb** controla la cantidad de memoria físi
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="msdtc"></a> Configuración de MSDTC
+## <a name="configure-msdtc"></a><a id="msdtc"></a> Configuración de MSDTC
 
 Las configuraciones **network.rpcport** y **distributedtransaction.servertcpport** se usan para configurar Microsoft DTC (Coordinador de transacciones distribuidas). Para cambiar estas configuraciones, ejecute los siguientes comandos:
 
@@ -530,7 +530,7 @@ Hay algunas otras configuraciones de mssql-conf que puede usar para supervisar y
 ::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-eula"></a> Aceptación de los CLUF de MLServices
+## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> Aceptación de los CLUF de MLServices
 
 Al agregar [paquetes de R o Python de aprendizaje automático](sql-server-linux-setup-machine-learning.md) al motor de base de datos, tiene que aceptar los términos de licencia de las distribuciones de código abierto de R y Python. En la tabla siguiente se enumeran todos los comandos disponibles o las opciones relacionadas con los CLUF de mlservices. Se usa el mismo parámetro de CLUF para R y Python, en función de lo que haya instalado.
 
@@ -560,7 +560,7 @@ accepteulaml = Y
 :::moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-outbound-access"></a> Habilitación del acceso de red saliente
+## <a name="enable-outbound-network-access"></a><a id="mlservices-outbound-access"></a> Habilitación del acceso de red saliente
 
 El acceso de red saliente para las extensiones de R, Python y Java en la característica [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) está deshabilitado de forma predeterminada. Para habilitar las solicitudes salientes, establezca la propiedad booleana "outboundnetworkaccess" con mssql-conf.
 
@@ -587,7 +587,7 @@ outboundnetworkaccess = 1
 ```
 :::moniker-end
 
-## <a id="tcpport"></a> Cambio del puerto TCP
+## <a name="change-the-tcp-port"></a><a id="tcpport"></a> Cambio del puerto TCP
 
 La configuración **network.tcpport** cambia el puerto TCP en el que SQL Server escucha las conexiones. De forma predeterminada, este puerto se establece en el 1433. Para cambiar el puerto, ejecute los siguientes comandos:
 
@@ -609,7 +609,7 @@ La configuración **network.tcpport** cambia el puerto TCP en el que SQL Server
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a> Especificación de la configuración de TLS
+## <a name="specify-tls-settings"></a><a id="tls"></a> Especificación de la configuración de TLS
 
 Las opciones siguientes configuran TLS para una instancia de SQL Server que se ejecuta en Linux.
 
@@ -624,7 +624,7 @@ Las opciones siguientes configuran TLS para una instancia de SQL Server que se 
 
 Para obtener un ejemplo del uso de la configuración de TLS, consulte [Cifrar conexiones a SQL Server en Linux](sql-server-linux-encrypted-connections.md).
 
-## <a id="traceflags"></a> Habilitación o deshabilitación de las marcas de seguimiento
+## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> Habilitación o deshabilitación de las marcas de seguimiento
 
 La opción **traceflag** habilita o deshabilita las marcas de seguimiento del inicio del servicio SQL Server. Para habilitar o deshabilitar una marca de seguimiento, use los siguientes comandos:
 
@@ -679,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Tenga en cuenta que cualquier configuración que no se muestre en este archivo usa sus valores predeterminados. En la sección siguiente se proporciona un archivo **mssql.conf** de ejemplo.
 
 
-## <a id="mssql-conf-format"></a> Formato de mssql.conf
+## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> Formato de mssql.conf
 
 En el siguiente archivo **/var/opt/mssql/mssql.conf** se proporciona un ejemplo de cada configuración. Puede usar este formato para realizar cambios manualmente en el archivo **mssql.conf** según sea necesario. Si cambia el archivo manualmente, debe reiniciar SQL Server antes de que se apliquen los cambios. Para usar el archivo **mssql.conf** con Docker, debe hacer que Docker [conserve sus datos](sql-server-linux-configure-docker.md). En primer lugar, agregue un archivo **mssql.conf** completo al directorio de host y después ejecute el contenedor. Hay un ejemplo de este procedimiento en [Comentarios del cliente](sql-server-linux-customer-feedback.md).
 

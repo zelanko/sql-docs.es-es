@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866383"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solución de problemas de conexión al Motor de base de datos de SQL Server
@@ -78,7 +78,7 @@ Para comprobar que la instancia se está ejecutando, en Configuration Manager mi
 
 Si la instancia se detiene, haga clic en ella con el botón derecho y luego haga clic en **Iniciar**. Se inicia la instancia del servidor y el indicador se convierte en una flecha verde.
 
-## <a name = "startbrowser"></a> Comprobación: ejecución del servicio SQL Server Browser
+## <a name="verify---sql-server-browser-service-is-running"></a><a name = "startbrowser"></a> Comprobación: ejecución del servicio SQL Server Browser
 
 Para conectarse a una instancia con nombre, el servicio SQL Server Browser debe estar ejecutándose. En Configuration Manager, busque el servicio **SQL Server Browser** y compruebe que se está ejecutando. Si no se está ejecutando, inícielo. No es necesario el servicio SQL Server Browser para las instancias predeterminadas.
 
@@ -129,7 +129,7 @@ Obtenga la dirección IP del equipo que hospeda la instancia de SQL Server.
 
   >SQL Server puede conectarse mediante el protocolo IP versión 4 o el protocolo IP versión 6. La red podría permitir uno o ambos. La mayoría de los usuarios comienza por solucionar los problemas de la dirección **IPv4** . Es más corta y más fácil de escribir.
 
-## <a name = "getTCP"></a>Obtención del puerto TCP de la instancia de SQL Server
+## <a name="get-the-sql-server-instance-tcp-port"></a><a name = "getTCP"></a>Obtención del puerto TCP de la instancia de SQL Server
 
 En la mayoría de los casos, se conecta al Motor de base de datos desde otro equipo mediante el protocolo TCP.
 
@@ -142,7 +142,7 @@ Este mensaje indica que esta instancia de SQL Server está escuchando en todas l
   > [!NOTE]
   > Probablemente aparezca `IP address 127.0.0.1`. Se denomina la dirección del adaptador de bucle invertido. Solo se pueden usar los procesos en el mismo equipo para conectarse. Puede ser útil para solucionar problemas, pero no se puede usar para conectarse desde otro equipo.
 
-## <a name = "enableprotocols"></a>Habilitación de protocolos
+## <a name="enable-protocols"></a><a name = "enableprotocols"></a>Habilitación de protocolos
 
 En algunas instalaciones de SQL Server, no se puede conectar al motor de base de datos desde otro equipo a menos que un administrador use el Administrador de configuración para permitirlo. Para habilitar conexiones desde otro equipo:
 
@@ -150,7 +150,7 @@ En algunas instalaciones de SQL Server, no se puede conectar al motor de base de
 1. En el panel izquierdo del Administrador de configuración, expanda **Configuración de red de SQL Server**y luego seleccione la instancia de SQL Server a la que quiere conectarse. El panel derecho muestra los protocolos de conexión disponibles. Normalmente la memoria compartida está habilitada. Solo se puede usar desde el mismo equipo, por lo que en la mayoría de las instalaciones se deja habilitada. Para conectarse a SQL Server desde otro equipo, normalmente se usa TCP/IP. Si TCP/IP no está habilitado, haga clic con el botón derecho en **TCP/IP**y luego haga clic en **Habilitar**.
 1. Si modificó la configuración habilitada de cualquier protocolo, reinicie el Motor de base de datos. En el panel izquierdo, seleccione **Servicios de SQL Server**. En el panel derecho, haga clic con el botón derecho en la instancia del motor de base de datos y luego haga clic en **Reiniciar**.
 
-## <a name="testTCPIP"></a>Prueba de la conectividad TCP/IP
+## <a name="testing-tcpip-connectivity"></a><a name="testTCPIP"></a>Prueba de la conectividad TCP/IP
 
 La conexión a SQL Server mediante TCP/IP exige que Windows pueda establecerla. Use la herramienta `ping` para probar TCP.
 

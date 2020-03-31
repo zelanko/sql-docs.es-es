@@ -28,32 +28,28 @@ ms.locfileid: "78172454"
 
  
 
-##  <a name="VisualElement"></a>SQL Server clúster de conmutación por error de múltiples subredes (dos nodos, dos subredes)
+##  <a name="sql-server-multi-subnet-failover-cluster-two-nodes-two-subnets"></a><a name="VisualElement"></a>Clúster de conmutación por error de varias subredes de SQL Server (dos nodos, dos subredes)
  La ilustración siguiente representa una instancia de clúster de conmutación por error (FCI) con dos nodos y dos subredes en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].
 
  ![Arquitectura de múltiples subredes con MultiSubnetFailover](../../../database-engine/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Arquitectura de múltiples subredes con MultiSubnetFailover")
 
 
 
-##  <a name="Configurations"></a>Configuraciones de instancias de clúster de conmutación por error de múltiples subredes
+##  <a name="multi-subnet-failover-cluster-instance-configurations"></a><a name="Configurations"></a>Configuraciones de instancias de clúster de conmutación por error de varias subredes
  Los siguientes son algunos ejemplos de configuraciones de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que usan múltiples subredes:
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 incluye Nodo1 y Nodo2. Nodo1 se conecta a Subred1. Nodo2 se conecta a Subred2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]El programa de instalación ve esta configuración como un clúster de múltiples subredes y establece la dependencia de recursos de dirección IP en **or**.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 incluye Nodo1 y Nodo2. Nodo1 se conecta a Subred1. Nodo2 se conecta a Subred2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]El programa de instalación ve esta configuración como un clúster de varias subredes y establece la dependencia de recursos de dirección IP en **OR**.
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 incluye Nodo1, Nodo2 y Node3. Nodo1 y Nodo2 se conectan a Subred1. Nodo 3 se conecta a Subred2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]El programa de instalación ve esta configuración como un clúster de múltiples subredes y establece la dependencia de recursos de dirección IP en **or**. Dado que Nodo1 y Nodo2 están en la misma subred, esta configuración proporciona alta disponibilidad local adicional.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 incluye Nodo1, Nodo2 y Node3. Nodo1 y Nodo2 se conectan a Subred1. Nodo 3 se conecta a Subred2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]El programa de instalación ve esta configuración como un clúster de varias subredes y establece la dependencia de recursos de dirección IP en **OR**. Dado que Nodo1 y Nodo2 están en la misma subred, esta configuración proporciona alta disponibilidad local adicional.
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 incluye Nodo1 y Nodo2. Nodo1 están en Subred1. Nodo2 está conectado a Subred1 y Subred2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]El programa de instalación ve esta configuración como un clúster de múltiples subredes y establece la dependencia de recursos de dirección IP en **or**.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 incluye Nodo1 y Nodo2. Nodo1 están en Subred1. Nodo2 está conectado a Subred1 y Subred2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]El programa de instalación ve esta configuración como un clúster de varias subredes y establece la dependencia de recursos de dirección IP en **OR**.
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 incluye Nodo1 y Nodo2. Nodo1 está conectado a Subred1 y Subred2. Nodo2 también está conectado a Subred1 y Subred2. La dependencia de recurso de dirección IP la establece en **AND** el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 incluye Nodo1 y Nodo2. Nodo1 está conectado a Subred1 y Subred2. Nodo2 también está conectado a Subred1 y Subred2. La dependencia de recurso de dirección IP la establece en **AND** el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
     > [!NOTE]
     >  Esta configuración no se considera una configuración de clúster de conmutación por error de múltiples subredes porque los nodos clúster están en el mismo conjunto de subredes.
 
-##  <a name="ComponentsAndConcepts"></a>Consideraciones sobre los recursos de direcciones IP
+##  <a name="ip-address-resource-considerations"></a><a name="ComponentsAndConcepts"></a>Consideraciones sobre los recursos de direcciones IP
  En una configuración de clúster de conmutación por error de múltiples subredes, no todos los nodos clúster de conmutación por error poseen las direcciones IP y puede que no todos estén con conexión durante el inicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se puede establecer la dependencia de recurso de dirección IP en **OR**. Esto permite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté con conexión cuando hay al menos una dirección IP válida a la que se puede enlazar.
 
 > [!NOTE]
@@ -70,8 +66,8 @@ ms.locfileid: "78172454"
 
  Al instalar una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en paralelo con una instancia independiente de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], tenga cuidado para evitar conflictos de número de puerto TCP en las direcciones IP. Los conflictos suelen suceder cuando se configuran dos instancias de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para usar el puerto TCP (1433). Para evitar conflictos, configure una instancia para que utilice un puerto fijo predeterminado. La configuración de un puerto fijo es normalmente lo más sencillo en el caso de la instancia independiente. La configuración del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para usar puertos diferentes evitará un conflicto inesperado entre el puerto TCP y la dirección IP que bloquea la instancia cuando una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] produce un error en el nodo en espera.
 
-##  <a name="DNS"></a>Latencia de recuperación de cliente durante la conmutación por error
- Una instancia de clúster de conmutación por error de múltiples subredes habilita de forma predeterminada el recurso de clúster RegisterAllProvidersIP para el nombre de red. En una configuración de múltiples subredes, las direcciones IP en línea y sin conexión del nombre red se registra en el servidor DNS. La aplicación cliente recupera a continuación todas las direcciones IP registradas del servidor DNS e intenta la conexión con las direcciones en orden o en paralelo. Esto significa que el tiempo de recuperación de cliente en clústeres de conmutación por error de múltiples subredes deja de depender de las latencias de actualización de DNS. De forma predeterminada, el cliente intenta las direcciones IP en orden. Cuando el cliente utiliza el nuevo parámetro opcional `MultiSubnetFailover=True` en la cadena de conexión, intentará en su lugar las direcciones IP simultáneamente y las conexiones al primer servidor que responda. Esto puede ayudar a reducir al mínimo la latencia de recuperación de cliente cuando se produzcan conmutaciones por error. Para obtener más información, vea [conectividad de cliente de AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) y [crear o configurar un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
+##  <a name="client-recovery-latency-during-failover"></a><a name="DNS"></a> Latencia de recuperación de cliente durante conmutaciones por error
+ Una instancia de clúster de conmutación por error de múltiples subredes habilita de forma predeterminada el recurso de clúster RegisterAllProvidersIP para el nombre de red. En una configuración de múltiples subredes, las direcciones IP en línea y sin conexión del nombre red se registra en el servidor DNS. La aplicación cliente recupera a continuación todas las direcciones IP registradas del servidor DNS e intenta la conexión con las direcciones en orden o en paralelo. Esto significa que el tiempo de recuperación de cliente en clústeres de conmutación por error de múltiples subredes deja de depender de las latencias de actualización de DNS. De forma predeterminada, el cliente intenta las direcciones IP en orden. Cuando el cliente utiliza el nuevo parámetro opcional `MultiSubnetFailover=True` en la cadena de conexión, intentará en su lugar las direcciones IP simultáneamente y las conexiones al primer servidor que responda. Esto puede ayudar a reducir al mínimo la latencia de recuperación de cliente cuando se produzcan conmutaciones por error. Para obtener más información, vea [Conectividad de cliente AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) y Crear o configurar un agente de escucha de grupo de [disponibilidad &#40;SQL ServerSQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
  Con las bibliotecas de cliente heredadas o con proveedores de datos de terceros, no puede utilizar el parámetro `MultiSubnetFailover` en la cadena de conexión. Para asegurarse de que la aplicación cliente funcione de manera óptima con instancias de conmutación por error de múltiples subredes en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], intente ajustar el tiempo de espera de conexión en la cadena de conexión de cliente en 21 segundos para cada dirección IP adicional. Esto garantiza que el intento de reconexión del cliente no supere el tiempo de espera antes de poder recorrer todas las direcciones IP en la instancia de conmutación por error de múltiples subredes.
 
@@ -79,14 +75,14 @@ ms.locfileid: "78172454"
 
  
 
-##  <a name="RelatedContent"></a> Contenido relacionado
+##  <a name="related-content"></a><a name="RelatedContent"></a>Contenido relacionado
 
 |Descripción del contenido|Tema|
 |-------------------------|-----------|
-|Instalar un clúster de conmutación por error de SQL Server|[Cree una nueva configuración de clúster de conmutación por error de SQL Server &#40;&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|
-|Actualización en contexto del clúster de conmutación por error existente de SQL Server|[Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;la instalación&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|
-|Mantener el clúster de conmutación por error existente de SQL Server|[Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;la instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|
-|Clústeres de conmutación por error de Windows|[Prácticas recomendadas de clúster de conmutación por error de varios sitios de Microsoft Windows](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|
+|Instalar un clúster de conmutación por error de SQL Server|[Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|
+|Actualización en contexto del clúster de conmutación por error existente de SQL Server|[Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|
+|Mantener el clúster de conmutación por error existente de SQL Server|[Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|
+|Clústeres de conmutación por error de Windows|[Prácticas recomendadas del clúster de conmutación por error de varios sitios de Microsoft Windows](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|
 |Usar el complemento Administración del clúster de conmutación por error para ver eventos y registros de WSFC|[View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|
 |Usar Windows PowerShell para crear un archivo de registro para todos los nodos (o un determinado nodo) en un clúster de conmutación por error de WSFC|[Cmdlet de clúster de conmutación por error Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)|
 

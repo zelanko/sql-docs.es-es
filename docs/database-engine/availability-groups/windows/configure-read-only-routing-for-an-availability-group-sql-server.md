@@ -18,10 +18,10 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a79b8399a6b435d4ed8b391b040e4800f1f50405
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286689"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configuración del enrutamiento de solo lectura para un grupo de disponibilidad Always On
@@ -34,7 +34,7 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
 >  Para obtener información sobre cómo configurar una réplica secundaria legible, vea [Configurar el acceso de solo lectura en una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
 
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   El grupo de disponibilidad debe poseer un agente de escucha de grupo de disponibilidad. Para obtener más información, vea [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
@@ -44,7 +44,7 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
 
 -   Si usa un inicio de sesión de SQL, asegúrese de que la cuenta esté configurada correctamente. Para más información, consulte [Administración de inicios de sesión y de trabajos para las bases de datos de un grupo de disponibilidad (SQL Server)](logins-and-jobs-for-availability-group-databases.md).
   
-##  <a name="RORReplicaProperties"></a> ¿Qué propiedades de réplica debe configurar para admitir el enrutamiento de solo lectura?  
+##  <a name="what-replica-properties-do-you-need-to-configure-to-support-read-only-routing"></a><a name="RORReplicaProperties"></a> ¿Qué propiedades de réplica debe configurar para admitir el enrutamiento de solo lectura?  
   
 -   Para cada réplica secundaria legible que vaya a admitir el enrutamiento de solo lectura, debe especificar una *dirección URL de enrutamiento de solo lectura*. Esta dirección URL tiene efecto cuando la réplica local se ejecuta en el rol secundario. La dirección URL de enrutamiento de solo lectura debe especificarse réplica a réplica, según sea necesario. Cada dirección URL de solo lectura se usa para enrutar las solicitudes de conexión de intento de lectura a una réplica secundaria legible específica. Normalmente, cada réplica secundaria legible se asigna a una dirección URL de enrutamiento de solo lectura.  
   
@@ -58,14 +58,14 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
 > [!NOTE]  
 >  Para obtener información sobre los agentes de escucha de grupo de disponibilidad y obtener más información sobre el enrutamiento de solo lectura, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
 |Tarea|Permisos|  
 |----------|-----------------|  
 |Para configurar réplicas al crear un grupo de disponibilidad|Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
 |Para modificar una réplica de disponibilidad|Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 ### <a name="configure-a-read-only-routing-list"></a>Configuración de una lista de enrutamiento de solo lectura  
  Realice los pasos siguientes para configurar el enrutamiento de solo lectura mediante Transact-SQL. Para obtener un ejemplo de código, vea [Ejemplo (Transact-SQL)](#TsqlExample), más adelante en esta sección.  
@@ -103,7 +103,7 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
         > [!NOTE]  
         >  Debe establecer la dirección URL de enrutamiento de solo lectura antes de configurar la lista de enrutamiento de solo lectura.  
   
-###  <a name="loadbalancing"></a> Configuración del equilibrio de carga entre réplicas de solo lectura  
+###  <a name="configure-load-balancing-across-read-only-replicas"></a><a name="loadbalancing"></a> Configuración del equilibrio de carga entre réplicas de solo lectura  
  A partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], puede configurar el equilibrio de carga entre un conjunto de réplicas de solo lectura. Anteriormente, el enrutamiento de solo lectura siempre dirigía el tráfico a la primera réplica disponible de la lista de enrutamiento. Para aprovechar esta característica, use un nivel de paréntesis anidados alrededor de las instancias de servidor **READ_ONLY_ROUTING_LIST** en los comandos **CREATE AVAILABILITY GROUP** o **ALTER AVAILABILITY GROUP** .  
   
  Por ejemplo, la siguiente carga de la lista de enrutamiento equilibra la solicitud de conexión con intención de lectura entre dos réplicas de solo lectura, `Server1` y `Server2`. Los paréntesis anidados que rodean estos servidores identifican el conjunto con equilibrio de carga. Si ninguna réplica está disponible en dicho conjunto, tratará de conectarse de forma secuencial a las demás réplicas, `Server3` y `Server4`, en la lista de enrutamiento de solo lectura.  
@@ -120,7 +120,7 @@ READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5
   
  Se admite solo un nivel de paréntesis anidados.  
   
-###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  En el ejemplo siguiente se modifica la disponibilidad de las dos réplicas de un grupo de disponibilidad existente, `AG1` para admitir el enrutamiento de solo lectura, si una de las réplicas posee actualmente el rol principal. Para identificar las instancias de servidor que hospedan la réplica de disponibilidad, este ejemplo especifica los nombres de instancia `COMPUTER01` y `COMPUTER02`.  
   
 ```  
@@ -155,7 +155,7 @@ GO
   
 ```  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
   
 ### <a name="configure-a-read-only-routing-list"></a>Configuración de una lista de enrutamiento de solo lectura  
  Realice los pasos siguientes para configurar el enrutamiento de solo lectura mediante PowerShell. Para obtener un ejemplo de código, vea [Ejemplo (PowerShell)](#PSExample), más adelante en esta sección.  
@@ -184,7 +184,7 @@ GO
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-###  <a name="PSExample"></a> Ejemplo (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> Ejemplo (PowerShell)  
  En el ejemplo siguiente se configura la réplica principal y una réplica secundaria en un grupo de disponibilidad para el enrutamiento de solo lectura. Primero, en el el ejemplo se asigna una dirección URL de solo lectura de enrutamiento a cada réplica. Después, establece la lista de enrutamiento de solo lectura en la réplica principal. Las conexiones con la propiedad "ReadOnly" establecida en la cadena de conexión se redirigirán a la réplica secundaria. Si esta réplica secundaria no es legible (según determina la opción **ConnectionModeInSecondaryRole** ), la conexión se dirigirá a la réplica principal.  
   
 ```  
@@ -197,13 +197,13 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingConnectionUrl "TCP://SecondaryServer.
 Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer" -InputObject $primaryReplica  
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de configurar el enrutamiento de solo lectura  
+##  <a name="follow-up-after-configuring-read-only-routing"></a><a name="FollowUp"></a> Seguimiento: después de configurar el enrutamiento de solo lectura  
  Una vez que la réplica principal actual y las réplicas secundarias legibles están configuradas para admitir el enrutamiento de solo lectura en ambos roles, las réplicas secundarias legibles pueden recibir solicitudes de intentos de conexión de lectura de los clientes que se conectan mediante el agente de escucha de grupo de disponibilidad.  
   
 > [!TIP]  
 >  Cuando se usa la [utilidad bcp](../../../tools/bcp-utility.md) o la [utilidad sqlcmd](../../../tools/sqlcmd-utility.md), se puede especificar el acceso de solo lectura a cualquier réplica secundaria que esté habilitada para el acceso de solo lectura mediante el modificador **-K ReadOnly** .  
   
-###  <a name="ConnStringReqsRecs"></a> Requisitos y recomendaciones para las cadenas de conexión de cliente  
+###  <a name="requirements-and-recommendations-for-client-connection-strings"></a><a name="ConnStringReqsRecs"></a> Requisitos y recomendaciones para las cadenas de conexión de cliente  
  Para que una aplicación cliente use el enrutamiento de solo lectura, la cadena de conexión debe cumplir los requisitos siguientes:  
   
 -   Usar el protocolo TCP.  
@@ -227,7 +227,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 ### <a name="if-read-only-routing-is-not-working-correctly"></a>Si el enrutamiento de solo lectura no funciona correctamente  
  Para obtener información sobre la solución de problemas de una configuración de enrutamiento de solo lectura, vea [El enrutamiento de solo lectura no funciona correctamente](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md#ROR).  
   
-##  <a name="RelatedTasks"></a> Pasos siguientes 
+##  <a name="next-steps"></a><a name="RelatedTasks"></a> Pasos siguientes 
 **Para ver las configuraciones del enrutamiento de solo lectura**  
   
 -   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  

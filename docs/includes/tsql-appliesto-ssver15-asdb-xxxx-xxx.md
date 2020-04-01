@@ -4,12 +4,12 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: 562f5be7d96cfdff219b3ca32a9c4f81aceec51e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 76e064a37c0906388479a69ed7fca2ec47be605b
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76038071"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80502430"
 ---
-<Token>**Se aplica a:** ![sí](media/yes.png)SQL Server 2019 y ![versiones](media/yes.png)posteriores ![.](media/no.png)sí Azure SQL Database no Azure Synapse Analytics (SQL ![DW](media/no.png)) no almacenamiento de datos paralelos</Token>
+<Token>**APLICA A:** ![](media/yes-icon.png)Sí SQL Server 2019](media/yes-icon.png)y ![versiones posteriores ![Sí Azure SQL ![](media/no-icon.png)Database No](media/no-icon.png)Azure Synapse Analytics (SQL DW) No Parallel Data Warehouse (SQL DW) No Parallel Data Warehouse</Token>
 

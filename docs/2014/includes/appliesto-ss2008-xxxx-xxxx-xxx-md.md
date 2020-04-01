@@ -1,1 +1,1 @@
-<Token>**Este tema se aplica a:**![sí](media/yes.png)SQL Server (a partir de![2008](media/no.png))![no](media/no.png)Azure SQL Database ![no](media/no.png)Azure SQL Data Warehouse ningún almacenamiento de datos paralelos</Token>
+<Token>**ESTE TEMA SE APLICA A:**![sí](media/yes-icon.png)SQL Server![(a partir de 2008)](media/no-icon.png)no Azure SQL Database![no](media/no-icon.png)Azure SQL Data Warehouse ![no](media/no-icon.png)Parallel Data Warehouse</Token>

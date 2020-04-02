@@ -1,2 +1,2 @@
-<Token>**SE APLICA A:** ![sí](media/yes.png)SQL Server ![no](media/no.png)Azure SQL Database ![sí](media/yes.png)Azure Synapse Analytics (SQL DW) ![sí](media/yes.png)Almacenamiento de datos paralelos </Token>
+<Token>**SE APLICA A:** ![Sí](media/yes-icon.png)SQL Server ![No](media/no-icon.png)Azure SQL Database ![Sí](media/yes-icon.png)Azure Synapse Analytics (SQL DW) ![Sí](media/yes-icon.png)Almacenamiento de datos paralelos </Token>
 

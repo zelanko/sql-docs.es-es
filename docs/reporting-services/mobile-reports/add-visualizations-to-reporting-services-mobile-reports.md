@@ -1,5 +1,6 @@
 ---
 title: Agregar visualizaciones a informes móviles de Reporting Services | Microsoft Docs
+description: 'Obtenga información sobre los tres tipos de gráficos básicos que puede usar en informes para dispositivos móviles de Reporting Services: hora, categoría y totales, y sus correspondientes gráficos de comparación.'
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316595"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447982"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Agregar visualizaciones a informes móviles de Reporting Services
 Los gráficos son una parte esencial de la visualización de datos. Obtenga más información sobre los gráficos que puede utilizar en los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para cubrir una variedad de escenarios. 
@@ -143,7 +144,7 @@ Los gráficos de rectángulos muestran métricas al aplicar sus valores en el ta
 
      * En **El tamaño representa** , seleccione un campo numérico del tamaño de los iconos.
      * En **El color representa** , seleccione un campo numérico para el color de los iconos. 
-     * [opcional] **Valor de centro personalizado**: solo puede usar **Valor de centro personalizado** cuando el tipo de visualización es HeatMapWithCustomCenterValue.
+     * (opcional) **Valor de centro personalizado** solo puede usar **Valor de centro personalizado** cuando el tipo de visualización es HeatMapWithCustomCenterValue.
      
          El valor central decide el color de un cuadro. Cuánto mejor es la métrica en comparación con el valor central, más verde es. Cuánto peor es la métrica, más rojo es.
      

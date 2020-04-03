@@ -12,18 +12,22 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 975ea7d96e50dbdb375580919a5cac5503e831c2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6d81ddb24d11e9357819b43338341b818fb35583
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79198276"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434102"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Actualizaciones más recientes de Microsoft SQL Server
 
 Busque y administre las actualizaciones de los productos de SQL Server en un solo lugar. Siga el [blog sobre las versiones de SQL Server](https://aka.ms/sqlreleases) para recibir información sobre las actualizaciones y descargarlas.
 
-Esta página realiza un seguimiento de las actualizaciones más recientes de todas las versiones compatibles de SQL Server. Para más información sobre los productos compatibles, consulte la [página del ciclo de vida de los productos de Microsoft](https://support.microsoft.com/lifecycle/).
+Esta página realiza un seguimiento de las actualizaciones más recientes de todas las versiones compatibles de SQL Server. 
+
+Para obtener información sobre actualizaciones anteriores, vea el [blog de compilaciones de SQL Server](https://sqlserverbuilds.blogspot.com/). 
+
+Para más información sobre los productos compatibles, consulte la [página del ciclo de vida de los productos de Microsoft](https://support.microsoft.com/lifecycle/). 
 
 ## <a name="latest-updates"></a>Actualizaciones más recientes
 
@@ -51,7 +55,7 @@ Cada uno de estos vínculos proporciona información sobre todos los productos y
 |SQL Server 2005 |SP4 [(KB 2463332)](https://support.microsoft.com/kb/2463332)|N/D|N/D|N/D|[Instalación de SQL Server 2005](https://msdn.microsoft.com/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|SP4 [(KB 290211)](https://support.microsoft.com/kb/290211)|N/D|N/D|N/D|[Instalación de SQL Server 2000](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
-**Aprenda a probar las actualizaciones:**  [Prueba y desarrollo de hojas de ruta de compatibilidad para las aplicaciones de ISV (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
+**Aprenda a probar las actualizaciones:** [Prueba y desarrollo de hojas de ruta de compatibilidad para las aplicaciones de ISV (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ### <a name="knowledge-base"></a>Base de conocimiento
 
@@ -66,3 +70,5 @@ Cada uno de estos vínculos proporciona información sobre todos los productos y
   - [Centro para desarrolladores de SQL Server](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [SQL Server TechCenter](https://technet.microsoft.com/sqlserver/default.aspx)
   - [Centro de información de productos de SQL Server](https://www.microsoft.com/sqlserver/default.aspx)
+  - [Blog de compilaciones de SQL Server](https://sqlserverbuilds.blogspot.com/)
+  - [Blog de versiones de SQL Server](https://aka.ms/sqlreleases)

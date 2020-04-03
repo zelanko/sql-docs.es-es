@@ -1,8 +1,8 @@
 ---
-title: Inserción de UDF escalares en bases de datos de Microsoft SQL | Microsoft Docs
-description: Característica Inserción de UDF escalar para mejorar el rendimiento de las consultas que llaman a UDF escalares en SQL Server (a partir de SQL Server 2019) y Azure SQL Database.
+title: Inserción de UDF escalares en Microsoft SQL Server | Microsoft Docs
+description: Característica Inserción de UDF escalares para mejorar el rendimiento de las consultas que llaman a UDF escalares en SQL Server (a partir de SQL Server 2019).
 ms.custom: ''
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287409"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486548"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se presenta Inserción de UDF escalar, una característica del conjunto de características de [procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md). Esta característica mejora el rendimiento de las consultas que llaman a UDF escalares en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+En este artículo se presenta Inserción de UDF escalar, una característica del conjunto de características de [procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md). Esta característica mejora el rendimiento de las consultas que llaman a UDF escalares en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funciones escalares definidas por el usuario de T-SQL
 Las funciones definidas por el usuario (UDF) que se implementan en [!INCLUDE[tsql](../../includes/tsql-md.md)] y que devuelven un único valor de datos se conocen como Funciones escalares definidas por el usuario de T-SQL. Las UDF de T-SQL son una forma elegante de lograr la reutilización y modularidad del código en todas las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Algunos cálculos (como las reglas de negocios complejas) son más fáciles de expresar en forma de UDF imperativa. Las UDF ayudan a crear una lógica compleja, sin necesidad de tener experiencia en escribir consultas de SQL complejas.

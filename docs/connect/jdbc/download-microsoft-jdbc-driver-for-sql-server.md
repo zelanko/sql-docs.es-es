@@ -1,7 +1,7 @@
 ---
 title: Descarga de Microsoft JDBC Driver para SQL Server
 description: Descargue Microsoft JDBC Driver para SQL Server para desarrollar aplicaciones Java que se conecten a SQL Server.
-ms.date: 02/26/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,33 +10,49 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6576ed155e57fbd69757065c440382efa4adba5e
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: 680ef7db59a1ed62e73e12b5a343b6cdfe4272ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903502"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271401"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Descarga de Microsoft JDBC Driver para SQL Server
 
-En este artículo se proporcionan vínculos de descarga a Microsoft JDBC Driver para SQL Server. Este controlador le permite desarrollar aplicaciones Java que se conecten a SQL Server.  
+Microsoft JDBC Driver para SQL Server es un controlador JDBC de tipo 4 que proporciona conectividad con bases de datos a través de las interfaces de programación de aplicaciones (API) estándar de JDBC disponibles en la plataforma Java. Las descargas del controlador están disponibles para todos los usuarios sin cargo adicional. Proporcionan acceso a SQL Server desde cualquier aplicación Java, servidor de aplicaciones o applet habilitado para Java.
 
-## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Descargas disponibles del controlador JDBC Driver para SQL Server
+## <a name="download"></a>Descargar
 
-Use los vínculos de la siguiente tabla para descargar la versión más reciente de Microsoft JDBC Driver para SQL Server que coincida con su entorno Java Runtime Environment (JRE):
+La versión 8.2 es la versión de disponibilidad general (GA) más reciente. Admite Java 8, 11 y 13. Si tiene que ejecutar en un runtime de Java anterior, vea la [matriz de compatibilidad de la especificación Java y JDBC](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) para comprobar si existe una versión de controlador compatible que puede usar. Estamos trabajando continuamente para mejorar la compatibilidad con la conectividad de Java. Por tanto, se recomienda encarecidamente trabajar con la versión más reciente de Microsoft JDBC Driver.
 
-| Versión | Fecha de la versión | Versiones de Java |
-|---|---|---|
-| [Microsoft JDBC Driver 8.2](https://go.microsoft.com/fwlink/?linkid=2116870) | 26/02/2020 | JRE 8, 11, 13 |
-| [Microsoft JDBC Driver 7.4](https://go.microsoft.com/fwlink/?linkid=2099962) | 1/8/2019 | JRE 8, 11, 12 |
-| [Microsoft JDBC Driver 7.2](https://go.microsoft.com/fwlink/?linkid=2063159) | 17/4/2019 | JRE 8, 11 |
-| [Microsoft JDBC Driver 7.0](https://go.microsoft.com/fwlink/?linkid=2005972) | 31/7/2018 | JRE 8, 10 |
-| [Microsoft JDBC Driver 6.4](https://go.microsoft.com/fwlink/?linkid=868290)  | 26/3/2018 | JRE 7, 8, 9 |
-| [Microsoft JDBC Driver 6.2](https://go.microsoft.com/fwlink/?linkid=852460) | 12/2/2018 | JRE 7, 8 |
-| [Microsoft JDBC Driver 6.0](https://go.microsoft.com/fwlink/?LinkId=245496) | 27/2/2018 | JRE 7, 8 |
-| [Microsoft JDBC Driver 4.2](https://go.microsoft.com/fwlink/?linkid=841534) | 26/2/2018 | JRE 7, 8 |
+**[![Descargar](../../ssms/media/download-icon.png) Descarga de Microsoft JDBC Driver 8.2 para SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2122433)**  
+**[![Descargar](../../ssms/media/download-icon.png) Descarga de Microsoft JDBC Driver 8.2 para SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2122536)**  
 
-Al descargar el controlador, hay varios archivos JAR. El nombre del archivo JAR indica la versión de Java que admite. Para obtener más información sobre cada versión, consulte las [notas de la versión](release-notes-for-the-jdbc-driver.md) y los [requisitos del sistema](system-requirements-for-the-jdbc-driver.md).
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 8.2.2
+- Fecha de publicación: 24 de marzo de 2020
+
+Al descargar el controlador, hay varios archivos JAR. El nombre del archivo JAR indica la versión de Java que admite.
+
+> [!Note]
+> Si accede a esta página desde una versión de idioma que no es el inglés y quiere ver el contenido más actualizado, visite la [versión en inglés de EE. UU. del sitio](https://aka.ms/downloadmssqljdbcenglish). Puede descargar distintos idiomas en el sitio de la versión en inglés de EE. UU. si selecciona [idiomas disponibles](#available-languages).
+
+## <a name="available-languages"></a>Idiomas disponibles
+
+Esta versión de Microsoft JDBC Driver para SQL Server está disponible en los idiomas siguientes:
+
+Microsoft JDBC Driver 8.2.2 para SQL Server (zip): [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40a)
+
+Microsoft JDBC Driver 8.2.2 para SQL Server (tar.gz): [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40a)
+
+### <a name="release-notes"></a>Notas de la versión
+
+Para obtener más detalles sobre esta versión, vea las [notas de la versión](release-notes-for-the-jdbc-driver.md) y los [requisitos del sistema](system-requirements-for-the-jdbc-driver.md).
+
+### <a name="previous-releases"></a>Versiones anteriores
+
+Para descargar versiones anteriores, vea las [versiones anteriores de Microsoft JDBC Driver para SQL Server](release-notes-for-the-jdbc-driver.md#previous-releases).
 
 ## <a name="using-the-jdbc-driver-with-maven-central"></a>Uso del controlador JDBC con Maven Central
 
@@ -46,7 +62,7 @@ El controlador JDBC se puede agregar a un proyecto de Maven si se incorpora como
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.1.jre11</version>
+    <version>8.2.2.jre11</version>
 </dependency>
 ```  
 

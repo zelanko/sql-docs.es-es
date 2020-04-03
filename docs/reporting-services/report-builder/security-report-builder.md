@@ -1,5 +1,6 @@
 ---
 title: Seguridad (Generador de informes) | Microsoft Docs
+description: Las características de seguridad del Generador de informes se relacionan con ubicaciones de publicación, informes publicados, orígenes de datos externos y los modelos basados en ellos, y características interactivas.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1d2c4c195b0d21d2090e13eff578cc533871da4d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190095"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290839"
 ---
 # <a name="security-report-builder"></a>Seguridad (Generador de informes)
   El Generador de informes es una aplicación cliente de creación de informes diseñada para que funcione con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El servidor de informes se puede configurar para funcione en modo nativo como un servidor independiente o en modo integrado de SharePoint, para que admita los informes de un sitio de SharePoint.  
@@ -34,7 +35,7 @@ ms.locfileid: "74190095"
   
  Revise la información de este tema para saber cómo utilizar las características de seguridad para administrar y proteger mejor los informes y los elementos relacionados con los informes.  
   
-##  <a name="ReportServers"></a> Descripción de la seguridad de los servidores de informes  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> Descripción de la seguridad de los servidores de informes  
  La publicación y visualización de informes son operaciones que requieren permisos. El administrador de un servidor de informes concede permisos para asegurarse de que solo los usuarios autorizados pueden publicar y ver los informes de uno de los siguientes tipos de servidores de informes:  
   
 -   Servidor de informes configurado en modo nativo  
@@ -54,7 +55,7 @@ ms.locfileid: "74190095"
      Si no puede conectarse a un sitio o subsitio de SharePoint, o no puede examinarlo, póngase en contacto con el administrador del sitio de SharePoint.  
   
   
-##  <a name="Reports"></a> Descripción de la seguridad de los informes publicados y los elementos relacionados con los informes  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> Descripción de la seguridad de los informes publicados y los elementos relacionados con los informes  
  El administrador del servidor de informes administra la seguridad de los informes y los elementos relacionados con los informes. Son elementos relacionados con los informes los orígenes de datos incrustados y compartidos como credenciales, conjuntos de datos compartidos, parámetros, elementos de informe y modelos.  
   
  En un servidor de informes o sitio de SharePoint, los informes y elementos y operaciones relacionados con los informes se pueden proteger por separado. Los permisos para obtener acceso a los elementos y a las operaciones se conceden a través de directivas de seguridad que asignan una cuenta de usuario o grupo a un nivel de permiso relativo a un elemento. Para reducir la complejidad y la sobrecarga de mantener un gran número de directivas, los elementos de un contenedor, como una carpeta, heredan los permisos del contenedor. Por ejemplo, si un usuario tiene el permiso concreto Ver informes en una carpeta, tiene dicho permiso para los elementos de la carpeta.  
@@ -81,7 +82,7 @@ ms.locfileid: "74190095"
  Para más información, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="Data"></a> Descripción de la seguridad de los datos de informe y los orígenes de datos externos  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> Descripción de la seguridad de los datos de informe y los orígenes de datos externos  
  Para tener acceso a los datos de cada origen de datos externo de un informe, debe crear origen de datos incrustado o agregar una referencia a un origen de datos compartido o conjunto de datos compartido en el informe.  
   
  Para cada origen de datos externo, debe proporcionar credenciales suficientes para tener acceso al origen y los datos subyacentes. El propietario del origen de datos especifica el tipo de credenciales que proporciona este acceso.  
@@ -96,13 +97,13 @@ ms.locfileid: "74190095"
  Para más información sobre orígenes de datos, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Models"></a> Descripción de los modelos y los filtros de seguridad  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> Descripción de los modelos y los filtros de seguridad  
  Cuando se recuperan datos de un modelo de informe basado en datos externos, puede aplicar filtros de seguridad en el modelo. De esta manera se protegen los datos de forma que cada usuario que ejecuta un informe pueda ver solo los datos para los que tiene permiso.  
   
  Los parámetros de informe no se utilizan para la seguridad en el nivel de fila; no evitan que los usuarios o grupos de usuarios vean filas de datos específicas. Para aplicar seguridad a los datos que se muestran en un informe, es necesario utilizar filtros de seguridad o seguridad de elemento de modelo.  
   
   
-##  <a name="Interactive"></a> Descripción de la seguridad de las características interactivas en la creación de informes  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> Descripción de la seguridad de las características interactivas en la creación de informes  
  A menudo, los informes utilizan parámetros para que un usuario pueda personalizar interactivamente la vista de un informe. A continuación se ofrecen algunas sugerencias para diseñar informes correctamente:  
   
 -   No utilice parámetros basados en parámetros de consulta y que son de tipo **Texto** , a menos que proporcione valores válidos. Una lista de valores disponibles ayuda al usuario a elegir solo valores válidos. Sin una lista de valores disponibles, no se pueden restringir los valores que puede especificar un usuario.  

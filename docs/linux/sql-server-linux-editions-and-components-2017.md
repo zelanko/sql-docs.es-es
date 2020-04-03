@@ -1,5 +1,6 @@
 ---
 title: Ediciones y características admitidas de SQL Server 2017 en Linux
+description: En este artículo se describen las características admitidas en las distintas ediciones de SQL Server 2017 en Linux. Le ayuda a elegir entre las ediciones y los componentes disponibles.
 ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
@@ -24,12 +25,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: c7394bf48f6bc32664e7d0a96af96ac0f3d1116f
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288449"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402669"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y características admitidas de SQL Server 2017 en Linux
 
@@ -77,7 +78,7 @@ Para conocer las características admitidas en las ediciones Developer, Enterpri
 
 La edición Developer sigue siendo compatible con solo un cliente de [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
-##  <a name="Cross-BoxScaleLimits"></a> Límites de escala  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> Límites de escala  
   
 |Característica|Enterprise|Estándar|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +91,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 <sup>1</sup> La licencia basada en Enterprise Edition con licencia de servidor y acceso de cliente (CAL) (no disponible para nuevos contratos) está limitada a un máximo de 20 núcleos por instancia de SQL Server. No hay ningún límite en el modelo de licencias de servidor basado en núcleos. Para obtener más información, vea [Límites de la capacidad de cálculo de cada edición de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> Alta disponibilidad de RDBMS  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> Alta disponibilidad de RDBMS  
   
 |Característica|Enterprise|Estándar|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +119,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 <sup>3</sup> Standard Edition admite grupos de disponibilidad básica. Un grupo de disponibilidad básica admite dos réplicas, con una base de datos. Para más información sobre los grupos de disponibilidad básica, vea [Grupos de disponibilidad básica](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
-##  <a name="RDBMSSP"></a> Escalabilidad y rendimiento de RDBMS  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> Escalabilidad y rendimiento de RDBMS  
   
 |Característica|Enterprise|Estándar|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +144,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 <sup>1</sup> El tamaño de los datos de OLTP en memoria y la memoria caché del segmento del almacén de columnas se limitan a la cantidad de memoria especificada por edición en la sección Límites de escala. Los grados de paralelismo máximos están limitados. El grado paralelismo (DOP) de la compilación de un índice se limita a 2 DOP para Standard Edition y 1 DOP para las ediciones Web y Express. Se refiere a los índices de almacén de columnas que se crean en tablas basadas en disco y en tablas optimizadas para memoria.
 
-##  <a name="RDBMSS"></a> Seguridad de RDBMS  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> Seguridad de RDBMS  
   
 |Característica|Enterprise|Estándar|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -157,7 +158,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Bases de datos independientes|Sí|Sí|Sí|Sí| 
 |Cifrado para copias de seguridad|Sí|Sí|No|No|  
 
-##  <a name="RDBMSM"></a> Capacidad de administración de RDBMS  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> Capacidad de administración de RDBMS  
   
 |Característica|Enterprise|Estándar|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +177,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Comprobación de coherencia en paralelo|Sí|No|No|No| 
 |Punto de control de la utilidad de SQL Server|Sí|No|No|No|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Característica|Enterprise|Estándar|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -197,11 +198,11 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 <sup>1</sup> El escalado horizontal con varios nodos de cálculo exige un nodo principal.
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 Para obtener información sobre las características de Integration Services (SSIS) compatibles con las ediciones de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], vea [Características de Integration Services compatibles con las ediciones de SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-##  <a name="SLS"></a> Servicios espaciales y de ubicación  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> Servicios espaciales y de ubicación  
   
 |Nombre de la característica|Enterprise|Estándar|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -209,7 +210,7 @@ Para obtener información sobre las características de Integration Services (SS
 |Tipos de datos planares y geodésicos|Sí|Sí|Sí|Sí| 
 |Bibliotecas espaciales avanzadas|Sí|Sí|Sí|Sí|   
 |Importación y exportación de formatos de datos espaciales estándar del sector|Sí|Sí|Sí|Sí|   
-## <a name="Unsupported"></a> Características y servicios no admitidos
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Características y servicios no admitidos
 
 Las siguientes características y servicios no están disponibles para SQL Server 2017 en Linux. La compatibilidad de estas características se incrementará con el tiempo.
 
@@ -228,6 +229,7 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | &nbsp; | Alertas |
 | &nbsp; | Agente de registro del LOG |
 | &nbsp; | Copia de seguridad administrada |
+| &nbsp; | Administración de varios servidores con MSX/TSX |
 | **Alta disponibilidad** | Creación de reflejo de la base de datos  |
 | **Seguridad** | Administración extensible de claves |
 | &nbsp; | Autenticación de AD para servidores vinculados | 

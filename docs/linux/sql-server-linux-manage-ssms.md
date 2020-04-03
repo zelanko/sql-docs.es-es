@@ -1,6 +1,6 @@
 ---
 title: Empleo de SSMS para administrar SQL Server en Linux
-description: ''
+description: En este artículo se presenta SQL Server Management Studio, un entorno integrado que permite acceder a componentes de SQL Server, configurarlos, administrarlos y desarrollarlos.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/21/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3ddc3ffa91b62956fdfef91ff3c19a784fc2fe2b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68000094"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216664"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Empleo de SQL Server Management Studio en Windows para administrar SQL Server en Linux
 
@@ -63,7 +63,7 @@ Siga los pasos básicos siguientes para conectarse:
    | **Inicio de sesión** | Escriba el nombre de un usuario con acceso a una base de datos en el servidor (por ejemplo, la cuenta de **SA** predeterminada creada durante la instalación). |
    | **Contraseña** | Escriba la contraseña del usuario especificado (para la cuenta de **SA** creada durante la instalación). |
 
-    ![SQL Server Management Studio: conexión a un servidor de SQL Database](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio: Conexión con el servidor de SQL Database](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. Haga clic en **Conectar**.
 
@@ -91,7 +91,7 @@ Después de conectarse al servidor, puede conectarse a una base de datos y ejecu
 
 1. Haga clic en el botón **Ejecutar** para ejecutar la consulta y ver los resultados.
 
-   ![Correcto. Conexión a servidor de SQL Database: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![Correcto. Conexión al servidor de SQL Database: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Aunque con las consultas de Transact-SQL es posible realizar prácticamente cualquier tarea de administración, SSMS es una herramienta gráfica que facilita la administración de SQL Server. En las secciones siguientes se proporcionan algunos ejemplos del uso de la interfaz gráfica de usuario.
 

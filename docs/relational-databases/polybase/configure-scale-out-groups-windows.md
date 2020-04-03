@@ -1,5 +1,6 @@
 ---
 title: Configuración de los grupos de escalado horizontal de PolyBase en Windows | Microsoft Docs
+description: Configure un grupo de escalado horizontal de PolyBase para crear un clúster de instancias de SQL Server. Esto mejora el rendimiento de las consultas de grandes conjuntos de datos de orígenes externos.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256758"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216084"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configuración de los grupos de escalado horizontal de PolyBase en Windows
 

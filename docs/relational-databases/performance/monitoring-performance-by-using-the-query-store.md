@@ -1,7 +1,7 @@
 ---
 title: Supervisión del rendimiento mediante el Almacén de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02658b617400f33b5a648dab43953a041f5c2936
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288469"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448177"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 
-[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 La característica del Almacén de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece datos detallados sobre el rendimiento y la elección del plan de consultas. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente las diferencias de rendimiento provocadas por cambios en los planes de consulta. El Almacén de consultas captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución y las conserva para su revisión. Además, separa los datos por ventanas de tiempo, lo que permite ver patrones de uso de la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. El almacén de consultas se puede configurar con la opción [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) .
 
@@ -32,7 +32,7 @@ Para más información sobre el funcionamiento del Almacén de consultas de Azur
 > [!IMPORTANT]
 > Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible.
 
-## <a name="Enabling"></a> Habilitar el Almacén de consultas
+## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Habilitar el Almacén de consultas
 
  El Almacén de consultas no está activo para nuevas bases de datos de manera predeterminada.
 
@@ -63,7 +63,7 @@ Para obtener más opciones de sintaxis relacionadas con el Almacén de consultas
 > [!IMPORTANT]
 > Para obtener información sobre cómo habilitar el Almacén de consultas y hacer que siga ajustándose a su carga de trabajo, consulte [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
 
-## <a name="About"></a> Información del Almacén de consultas
+## <a name="information-in-the-query-store"></a><a name="About"></a> Información del Almacén de consultas
 
 Los planes de ejecución para cualquier consulta específica en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suelen evolucionar con el tiempo debido a una serie de motivos diferentes, como cambios en las estadísticas, cambios de esquema, creación o eliminación de los índices, etc. La caché de procedimientos (donde se almacenan los planes de consulta almacenados en caché) solo almacena el plan de ejecución más reciente. Los planes también se eliminan de la caché de planes debido a la presión de memoria. Como resultado, es posible que las regresiones de rendimiento de consultas provocadas por los cambios de planes de ejecución no sean triviales y que su resolución lleve mucho tiempo.
 
@@ -109,7 +109,7 @@ INNER JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;
 ```
 
-## <a name="Regressed"></a> Uso de la característica Consultas devueltas
+## <a name="use-the-regressed-queries-feature"></a><a name="Regressed"></a> Uso de la característica Consultas devueltas
 
 Después de habilitar el Almacén de consultas, actualice la parte de la base de datos del panel del Explorador de objetos para agregar la sección **Almacén de consultas**.
 
@@ -123,7 +123,7 @@ Seleccione un plan para ver el plan de consulta gráfica. Los botones están dis
 
 Para aplicar un plan, seleccione una consulta y el plan y luego haga clic en **Force Plan**(Forzar plan). Solo puede forzar planes que se guardaron mediante la característica del plan de consulta y que todavía se conservan en la caché del plan de consulta.
 
-## <a name="Waiting"></a> Buscar consultas en espera
+## <a name="finding-waiting-queries"></a><a name="Waiting"></a> Buscar consultas en espera
 
 A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las estadísticas de espera por consulta a lo largo del tiempo están disponibles en el Almacén de consultas.
 
@@ -151,7 +151,7 @@ Estos son algunos ejemplos de cómo se puede obtener más información sobre la 
 |Altas esperas PAGEIOLATCH_SH por base de datos|Altas esperas de E/S del búfer en el Almacén de consultas para consultas concretas|Encuentre las consultas con un gran número de lecturas físicas en el Almacén de consultas. Si coinciden con las consultas con altas esperas de E/S, considere la posibilidad de introducir un índice en la entidad subyacente para llevar a cabo búsquedas en lugar de análisis y así minimizar la sobrecarga de E/S de las consultas.|
 |Altas esperas SOS_SCHEDULER_YIELD por base de datos|Altas esperas de CPU en el Almacén de consultas para consultas concretas|Busque las consultas del Almacén de consultas que consumen más CPU. Entre ellas, identifique las consultas cuya alta tendencia de CPU se correlaciona con altas esperas de CPU para las consultas afectadas. Céntrese en la optimización de las consultas: podría ser una regresión de plan o posiblemente un índice que falta.|
 
-## <a name="Options"></a> Opciones de configuración
+## <a name="configuration-options"></a><a name="Options"></a> Opciones de configuración
 
 Tiene disponibles las siguientes opciones para configurar los parámetros del Almacén de consultas.
 
@@ -177,7 +177,7 @@ Consulte la vista **sys.database_query_store_options** para determinar las opcio
 
 Para obtener más información sobre el establecimiento de opciones mediante instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , vea [Administración de opciones](#OptionMgmt).
 
-## <a name="Related"></a> Vistas, funciones y procedimientos relacionados
+## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Vistas, funciones y procedimientos relacionados
 
 Vea y administre El Almacén de consultas mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o por medio de las siguientes vistas y procedimientos.
 
@@ -211,9 +211,9 @@ Los procedimientos almacenados configuran el Almacén de consultas.
 |[sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|
 |sp_query_store_consistency_check &#40;Transct-SQL&#41;||
 
-## <a name="Scenarios"></a> Escenarios de uso clave
+## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Escenarios de uso clave
 
-### <a name="OptionMgmt"></a> Administración de opciones
+### <a name="option-management"></a><a name="OptionMgmt"></a> Administración de opciones
 
 En esta sección se ofrecen algunas directrices sobre la administración de la propia característica Almacén de consultas.
 
@@ -303,35 +303,44 @@ Como alternativa, puede que quiera borrar solo datos de consultas ad hoc, porque
 
 **Eliminar consultas ad hoc**
 
-Se eliminan las consultas que solo se ejecutaron una vez y que tienen más de 24 horas de antigüedad.
+Esto purga las consultas ad hoc e internas del almacén de consultas cada tres minutos para que no se quede sin espacio y se quiten las consultas de las que realmente es necesario realizar el seguimiento.
 
 ```sql
+SET NOCOUNT ON
+-- This purges adhoc and internal queries from the query store every 3 minutes so that the
+-- query store does not run out of space and remove queries we really need to track
+DECLARE @command varchar(1000)
+
+SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
+EXEC(''
 DECLARE @id int
 DECLARE adhoc_queries_cursor CURSOR
 FOR
 SELECT q.query_id
 FROM sys.query_store_query_text AS qt
 JOIN sys.query_store_query AS q
-    ON q.query_text_id = qt.query_text_id
+ON q.query_text_id = qt.query_text_id
 JOIN sys.query_store_plan AS p
-    ON p.query_id = q.query_id
+ON p.query_id = q.query_id
 JOIN sys.query_store_runtime_stats AS rs
-    ON rs.plan_id = p.plan_id
-GROUP BY q.query_id
-HAVING SUM(rs.count_executions) < 2
-AND MAX(rs.last_execution_time) < DATEADD (hour, -24, GETUTCDATE())
-ORDER BY q.query_id ;
+ON rs.plan_id = p.plan_id
+WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
 
+' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
+' GROUP BY q.query_id
+HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
+' ORDER BY q.query_id ;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
-    BEGIN
-        PRINT @id
-        EXEC sp_query_store_remove_query @id
-        FETCH NEXT FROM adhoc_queries_cursor INTO @id
-    END
+BEGIN
+EXEC sp_query_store_remove_query @id
+FETCH NEXT FROM adhoc_queries_cursor INTO @id
+END
 CLOSE adhoc_queries_cursor ;
 DEALLOCATE adhoc_queries_cursor;
+'') END' ;
+EXEC sp_MSforeachdb @command
 ```
 
 Puede definir su propio procedimiento con una lógica diferente para borrar los datos que ya no necesite.
@@ -341,7 +350,7 @@ En el ejemplo anterior se usa el procedimiento almacenado extendido **sp_query_s
 - **sp_query_store_reset_exec_stats** para borrar las estadísticas de tiempo de ejecución de un plan determinado.
 - **sp_query_store_remove_plan** para quitar un único plan.
 
-### <a name="Peformance"></a> Auditoría del rendimiento y solución de problemas
+### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Auditoría del rendimiento y solución de problemas
 
 El Almacén de consultas mantiene un historial de las métricas de compilación y tiempo de ejecución en todas las ejecuciones de consulta, lo que le permite realizar preguntas sobre la carga de trabajo.
 
@@ -580,7 +589,7 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);
 ```
 
-### <a name="Stability"></a> Mantener la estabilidad del rendimiento de consultas
+### <a name="maintaining-query-performance-stability"></a><a name="Stability"></a> Mantener la estabilidad del rendimiento de consultas
 
 En las consultas ejecutadas varias veces, puede observar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa otros planes, lo que genera una duración y un uso diferentes de los recursos. Con el Almacén de consultas puede detectar cuándo se ha devuelto el rendimiento de las consultas y determinar el plan óptimo en un período de interés. Luego puede forzar ese plan óptimo para futuras ejecuciones de consultas.
 
@@ -596,7 +605,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 Al usar **sp_query_store_force_plan** solo puede forzar los planes que se grabaron por el almacén de consultas como un plan para esa consulta. Es decir, los únicos planes disponibles para una consulta son aquellos que ya se han usado para ejecutar la consulta mientras el Almacén de consultas estaba activo.
 
-#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Plan para forzar la compatibilidad con cursores estáticos y de avance rápido
+#### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Plan para forzar la compatibilidad con cursores estáticos y de avance rápido
 
 A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y Azure SQL Database (todos lo modelos de implementación), el Almacén de consultas admite la capacidad de forzar planes de ejecución de consulta para los cursores de API y [!INCLUDE[tsql](../../includes/tsql-md.md)] estáticos y de avance rápido. Se admite el forzado mediante `sp_query_store_force_plan` o a través de los informes del Almacén de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 

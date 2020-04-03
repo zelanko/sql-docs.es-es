@@ -1,5 +1,6 @@
 ---
 title: Destinos para eventos extendidos en SQL Server
+description: En este artículo se explican los destinos package0 para eventos extendidos en SQL Server. Obtenga información sobre las funciones de destino en la recopilación y generación de informes de datos y parámetros de destino.
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba516e2e58a19ffdd5d225f3bc0a8c495c0432bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75501989"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487523"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos para eventos extendidos en SQL Server
 
@@ -34,10 +35,10 @@ En este artículo se explica cuándo y cómo usar los destinos package0 para eve
 En la [sección ring_buffer](#h2_target_ring_buffer) se incluye un ejemplo de cómo usar [XQuery en Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) para copiar una cadena de XML en un conjunto de filas relacional.
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerrequisitos
 
 
-- Estar familiarizado en general con los aspectos básicos de los eventos extendidos, como se describe en [Quick Start: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)(Inicio rápido: Eventos extendidos en SQL Server).
+- Es necesario estar familiarizado de forma general con los aspectos básicos de los eventos extendidos, como se describe en [Inicio rápido: eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 
 - Tener instalada una versión reciente de la utilidad SQL Server Management Studio (SSMS.exe) actualizada con frecuencia. Para obtener detalles, vea:

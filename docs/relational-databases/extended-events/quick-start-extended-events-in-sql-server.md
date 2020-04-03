@@ -1,5 +1,6 @@
 ---
 title: 'Inicio rápido: Eventos extendidos en SQL Server'
+description: Este inicio rápido le ayuda a usar Eventos extendidos, un sistema ligero de supervisión de rendimiento, a fin de recopilar datos para supervisar y solucionar problemas en SQL Server.
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f38c8c3097009a755355e5a7b50e55b55faba3cb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242923"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487653"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Inicio rápido: Eventos extendidos en SQL Server
 
@@ -555,7 +556,7 @@ Las vistas del sistema para eventos extendidos incluyen:
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="appendix1"></a> Apéndice: Instrucciones SELECT para averiguar el propietario del permiso por anticipado
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a><a name="appendix1"></a> Apéndice: Instrucciones SELECT para averiguar el propietario del permiso por anticipado
 
 Los permisos que se mencionan en este artículo son:
 

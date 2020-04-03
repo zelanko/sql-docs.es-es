@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173568"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215752"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes
 
@@ -33,6 +33,8 @@ Estos son algunos aspectos importantes que se deben tener en cuenta al planear l
 - Si el aprovisionador de almacenamiento de la clase de almacenamiento que está proporcionando en la configuración no admite el aprovisionamiento dinámico, habrá que crear los volúmenes persistentes previamente. Por ejemplo, el aprovisionador `local-storage` no permite el aprovisionamiento dinámico. Vea este [script de ejemplo](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) para obtener instrucciones cómo llevar esto a cabo en un clúster de Kubernetes implementado con `kubeadm`.
 
 - Al implementar un clúster de macrodatos, puede configurar la misma clase de almacenamiento para que la usen todos los componentes del clúster, pero como procedimiento recomendado en una implementación de producción, varios componentes requerirán distintas configuraciones de almacenamiento para acomodar diversas cargas de trabajo en términos de tamaño o rendimiento. Puede sobrescribir la configuración de almacenamiento predeterminada especificada en el controlador para cada uno de los grupos de almacenamiento, conjuntos de datos e instancias maestras de SQL Server. En este artículo se facilitan ejemplos de cómo hacerlo.
+
+- Al calcular los requisitos de tamaño del bloque de almacenamiento, debe tener en cuenta el factor de replicación con el que se configura HDFS.  El factor de replicación se puede configurar en el momento de la implementación en el archivo de configuración de implementación del clúster. El valor predeterminado para los perfiles de desarrollo y pruebas (es decir, `aks-dev-test` o `kubeadm-dev-test`) es 2, y para los perfiles que se recomiendan para las implementaciones de producción (es decir, `kubeadm-prod`) el valor predeterminado es 3. Como procedimiento recomendado, configure la implementación de producción de un clúster de macrodatos con un factor de replicación de al menos 3 para HDFS. El valor del factor de replicación afectará al número de instancias del bloque de almacenamiento: como mínimo, debe implementar tantas instancias del bloque de almacenamiento como el valor del factor de replicación. Además, debe ajustar el tamaño del almacenamiento en consecuencia, y la cuenta de los datos que se replican en HDFS tantas veces como el valor del factor de replicación. Puede encontrar más información sobre la replicación de datos en HDFS [aquí](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication). 
 
 - A partir de la versión SQL Server 2019 CU1, la configuración de almacenamiento no se puede modificar después de la implementación. Esta limitación le impide no solo modificar el tamaño de la demanda de volumen persistente de cada instancia, sino también realizar operaciones de escalado posteriores a la implementación. Por lo tanto, es muy importante que planee el diseño del almacenamiento antes de implementar un clúster de macrodatos.
 
@@ -101,7 +103,7 @@ azdata bdc config init --source aks-dev-test --target custom
 Este proceso crea dos archivos, `bdc.json` y `control.json`, que puede personalizar manualmente o mediante el comando `azdata bdc config`. Puede usar una combinación de las bibliotecas jsonpath y jsonpatch para proporcionar formas de editar los archivos de configuración.
 
 
-### <a id="config-samples"></a> Configurar el nombre de la clase de almacenamiento o el tamaño de las reclamaciones
+### <a name="configure-storage-class-name-andor-claims-size"></a><a id="config-samples"></a> Configurar el nombre de la clase de almacenamiento o el tamaño de las reclamaciones
 
 De forma predeterminada, el tamaño de las reclamaciones de volúmenes persistentes aprovisionadas para cada pod en el clúster es de 10 GB. Puede actualizar este valor para adaptarse a las cargas de trabajo que ejecute en un archivo de configuración personalizado antes de la implementación del clúster.
 

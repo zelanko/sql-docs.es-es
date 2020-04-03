@@ -1,5 +1,6 @@
 ---
 title: 'Acceso a datos externos: Hadoop: PolyBase'
+description: En el artículo se usa PolyBase en una instancia de SQL Server con Hardoop. PolyBase es adecuado para consultas ad hoc de tablas externas y de importación y exportación de datos.
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 27fa4b36df7248ceee2a484d57ab77d28ca50247
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286909"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215878"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
 
@@ -66,7 +67,7 @@ En primer lugar, configure SQL Server PolyBase para usar el proveedor específic
   
    ![detener e iniciar servicios de PolyBase en services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "detener e iniciar servicios de PolyBase en services.msc")  
   
-## <a id="pushdown"></a> Habilitar el cálculo de la aplicación  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Habilitar el cálculo de la aplicación  
 
 Para mejorar el rendimiento de las consultas, habilite el cálculo de la aplicación para el clúster de Hadoop:  
   

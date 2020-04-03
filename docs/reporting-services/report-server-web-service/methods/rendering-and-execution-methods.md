@@ -1,5 +1,6 @@
 ---
 title: Métodos de representación y ejecución | Microsoft Docs
+description: En Reporting Services, puede usar estos métodos para administrar la ejecución de elementos, el almacenamiento en caché y la representación de informes.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 244541348f583ab5384a0ebfe7321509a421fe1b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9ba766cf528de14e93ba9af1943a29c045b34563
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284538"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509796"
 ---
 # <a name="rendering-and-execution-methods"></a>Métodos de representación y ejecución
   Puede utilizar estos métodos para administrar la ejecución de elementos, el almacenamiento en memoria caché y la representación de informes.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2024af63b1a033b2dcb5afbde461cff02b9462b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4cd11ea250637c172a9d8343af934c326089add
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082216"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380776"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>Direcciones URL en archivos de configuración (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena la configuración de las aplicaciones en un archivo RSReportServer.config. Dentro de este archivo, hay valores de configuración tanto de direcciones URL como de reservas de direcciones URL. Estos valores de configuración tienen propósitos muy diferentes y reglas de modificación. Si está acostumbrado a modificar los archivos de configuración para mejorar una implementación, este tema puede ayudarle a entender cómo se utiliza cada valor de las direcciones URL.  
@@ -36,7 +36,7 @@ ms.locfileid: "77082216"
   
  **UrlRoot** se especifica en el archivo RSReportServer.config automáticamente al configurar direcciones URL para el acceso de las aplicaciones. Si modifica este valor en el archivo de configuración, debe especificar una dirección URL válida para un servicio web del servidor de informes que esté conectado a una base de datos del servidor de informes que contenga los informes que desea entregar. Solo puede especificar una **UrlRoot** para una única instancia del servidor de informes; solo puede existir una entrada **UrlRoot** en el archivo RSReportServer.config para una instancia del servidor de informes determinada. Si tiene varias direcciones URL reservadas para el servicio web del servidor de informes, debe elegir uno de los valores disponibles de **UrlRoot**.  
   
- En la mayor parte de los casos, no necesita modificar **UrlRoot**. Pero si se va a acceder al servidor de informes a través de una dirección URL completa, y no configuró ninguna dirección URL que use un encabezado de host para el nombre del sitio completo, debe modificar manualmente el archivo RSReportServer.config para establecer **UrlRoot** en la dirección URL completa del servidor de informes que se usará para representar el informe (por ejemplo, https://www.adventure-works.com/mywebapp/reportserver).  
+ En la mayor parte de los casos, no necesita modificar **UrlRoot**. Pero si se va a acceder al servidor de informes a través de una dirección URL completa, y no ha configurado ninguna dirección URL que use un encabezado de host para el nombre del sitio completo, debe modificar manualmente el archivo RSReportServer.config para establecer **UrlRoot** en la dirección URL completa del servidor de informes que se usará para representar el informe (por ejemplo, `https://www.adventure-works.com/mywebapp/reportserver`).  
   
 #### <a name="urls-connecting-the-ssrswebportal-and-web-parts-to-the-report-server-web-service"></a>Direcciones URL que conectan el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] y los elementos web al servicio web del servidor de informes  
  el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] y los elementos web de SharePoint 2.0 para Reporting Services son los componentes web front-end que conectan con un servidor de informes. Entre las direcciones URL que se usan para conectar con un servidor de informes back-end se incluyen las siguientes:  

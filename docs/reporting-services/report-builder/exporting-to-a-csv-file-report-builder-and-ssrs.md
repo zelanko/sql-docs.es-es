@@ -1,5 +1,6 @@
 ---
 title: Exportación a un archivo CSV (Generador de informes) | Microsoft Docs
+description: En el Generador de informes, la extensión de representación de CSV representa los informes paginados en un formato de texto sin formato que es legible y compatible con muchas aplicaciones.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078369"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342887"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportar a un archivo CSV (Generador de informes y SSRS)
   La extensión de representación de valores separados por comas (CSV) representa los informes paginados como una representación sin estructura jerárquica de los datos a partir de un informe estándar de texto sin formato para que resulten fáciles de leer e intercambiar con muchas aplicaciones.  
@@ -27,7 +28,7 @@ ms.locfileid: "77078369"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> Representación en CSV  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> Representación en CSV  
  Los informes CSV representados con la configuración predeterminada presentan las siguientes características:  
   
 -   La cadena delimitadora de campos predeterminada es una coma (,).  
@@ -95,7 +96,7 @@ ms.locfileid: "77078369"
  Para más información, vea [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
-##  <a name="RenderingModes"></a> Modos de representador  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Modos de representador  
  La extensión de representación CSV puede funcionar en dos modos: uno está optimizado para Excel; el otro está optimizado para aplicaciones de terceros que requieren un cumplimiento estricto de CSV con la especificación para CSV de RFC 4180. Dependiendo del modo que use, las regiones de datos del mismo nivel se administran de manera diferente.  
   
 ### <a name="default-mode"></a>Modo predeterminado  
@@ -119,7 +120,7 @@ ms.locfileid: "77078369"
 #### <a name="formatting"></a>Aplicación de formato  
  Se quita el formato a los valores.  
   
-##  <a name="Interactivity"></a> Interactividad  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactividad  
  Ningún formato CSV generado por este representador admite la interactividad. No se representan los elementos interactivos siguientes:  
   
 -   Hipervínculos  
@@ -137,7 +138,7 @@ ms.locfileid: "77078369"
 -   Marcadores  
   
   
-##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Mediante la modificación de la configuración de la información del dispositivo, puede cambiar algunos valores de configuración predeterminados para este representador, incluidos el modo de representación, los caracteres que se usarán como delimitadores y los caracteres que se usarán como cadena predeterminada para el calificador de texto. Para obtener más información, consulte [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
   

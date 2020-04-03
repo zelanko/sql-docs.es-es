@@ -1,5 +1,6 @@
 ---
 title: Vista de diseño de conjunto de datos compartido (Generador de informes) | Microsoft Docs
+description: En el Generador de informes, use la ventana Diseño de conjunto de datos compartido para crear conjuntos de datos para compartir. Publique los conjuntos de datos compartidos en un servidor de informes para usarlos en varios informes.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be5689ab2d098fab41bc8e73acb6e945991c4e6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ece66b7fbe027f8119bb8703df58ca94098ed515
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190032"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290785"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Vista de diseño de conjunto de datos compartidos (Generador de informes)
   En un informe, un conjunto de datos representa los datos del informe que se devuelven como resultado de ejecutar una consulta en un origen de datos externo. Los conjuntos de datos compartidos se publican en un servidor de informes y se pueden usar en varios informes. Puede crear conjuntos de datos para compartirlos con otros usuarios. En la ventana de diseño de conjunto de datos compartido, puede seleccionar un origen de datos compartido, especificar las propiedades del conjunto de datos compartido y crear una consulta en el diseñador de consultas.  
@@ -22,7 +23,7 @@ ms.locfileid: "74190032"
   
  Para obtener más información sobre el trabajo con datos en un informe, vea [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
-##  <a name="Ribbon"></a> Cinta de opciones  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a> Cinta de opciones  
  La cinta de opciones le ayuda a buscar rápidamente los comandos que necesita para completar una tarea. Los comandos se organizan en los siguientes grupos lógicos: conexión, conjunto de datos y diseñador de consultas.  
   
 ### <a name="connection"></a>Conexión  
@@ -58,7 +59,7 @@ ms.locfileid: "74190032"
  Para obtener más información, vea el tema que corresponde al tipo de origen de datos en [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
   
-##  <a name="DesignSurface"></a> Superficie del Diseñador de consultas  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a> Superficie del Diseñador de consultas  
  Un diseñador de consultas le ayuda a crear una consulta con la sintaxis que requiera el origen de datos externo.  
   
  Algunos tipos de origen de datos proporcionan un diseñador gráfico de consultas que puede utilizar para explorar los metadatos en un origen de datos externo. Puede arrastrar interactivamente los nombres del panel de metadatos hasta la superficie de diseño de la consulta o seleccionar de forma interactiva los nombres que desea utilizar.  
@@ -68,7 +69,7 @@ ms.locfileid: "74190032"
  Cada tipo de origen de datos tiene requisitos concretos para la consulta que funcionarán con el origen de datos externo. Para obtener más información, vea el tema que corresponde al tipo de origen de datos en [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) y [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="Results"></a> Ver los resultados de la consulta  
+##  <a name="viewing-query-results"></a><a name="Results"></a> Ver los resultados de la consulta  
  En la vista de diseño del conjunto de datos compartido, se crean consultas que recuperarán datos de la conexión de datos cuando se procesen los informes.  
   
  Ejecute la consulta para ver los datos del ejemplo de la conexión de datos a fin de comprobar que la consulta devuelve el tipo de datos que espera. Las columnas del conjunto de resultados proceden de los metadatos de los esquemas de datos de la conexión de datos. Los nombres de columna se convierten en la colección de campos de conjunto de datos. Los valores de los datos que ve en el conjunto de resultados de la consulta son los datos del tiempo de diseño. Cuando se guarda el conjunto de datos como una definición de conjunto de datos compartido en el servidor de informes, solo se guarda el texto de consulta. Los datos del conjunto de resultados de la consulta no se guardan.  
@@ -85,7 +86,7 @@ ms.locfileid: "74190032"
  Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="Save"></a> Guardar el conjunto de datos compartido  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> Guardar el conjunto de datos compartido  
  Para guardar la consulta creada, en el botón **Generador de informes** , haga clic en **Guardar** o en **Guardar como**. Navegue hasta la carpeta que corresponda del servidor de informes y guarde la definición del conjunto de datos compartido. El conjunto de datos compartido no estará disponible para otros usuarios hasta que no se guarde en el servidor de informes.  
   
   

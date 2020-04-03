@@ -1,5 +1,6 @@
 ---
 title: Trabajar con datos simulados en los informes móviles de Reporting Services | Microsoft Docs
+description: Cuando se coloca un elemento de galería en la superficie de diseño, el Publicador de informes móviles genera datos simulados para ese elemento. Diseñe los prototipos con los datos simulados.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39640b3ce6e8d3c8760e3c1a1153949426eba80c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62474874"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448365"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Trabajar con datos simulados en los informes móviles de Reporting Services
 Cuando se coloca un elemento de galería en la superficie de diseño, el [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera de inmediato datos simulados para ese elemento. Estos datos sirven para una serie de propósitos útiles al crear informes móviles.   

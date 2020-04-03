@@ -1,5 +1,6 @@
 ---
 title: Herramientas de eventos extendidos
+description: Estas herramientas crean y administran sesiones de eventos extendidos de SQL Server. Además de las sesiones que cree, existe una sesión de estado del sistema predeterminada en el servidor.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 811542608a33777a5e44183f65e44d8321a65c63
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8359dfc1874f55542e02ca7f05e3ca6cfead1c07
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234631"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433692"
 ---
 # <a name="extended-events-tools"></a>Herramientas de eventos extendidos
 

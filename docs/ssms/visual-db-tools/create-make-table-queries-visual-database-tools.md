@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8b4503c55545867639a3a437371d6265a85706af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75254329"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271481"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Crear consultas de creación de tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +73,18 @@ Para utilizar una consulta de creación de tabla correctamente:
   
 5.  Si desea copiar las filas en un orden determinado, especifique un criterio de ordenación. Para detalles, consulte **Ordenar y agrupar los resultados de una consulta**.  
   
-6.  Indique las filas que desea copiar especificando condiciones de búsqueda. Para obtener más información, vea [Especificar criterios de búsqueda(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+6.  Indique las filas que desea copiar especificando condiciones de búsqueda. Para obtener detalles, vea [Especificar criterios de búsqueda](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
     Si no especifica ninguna condición de búsqueda, se copiarán todas las filas de la tabla de origen en la tabla de destino.  
   
     > [!NOTE]  
     > Cuando se agrega una columna que se desea buscar al panel Criterios, el Diseñador de consultas y vistas la agrega también a la lista de columnas que se van a copiar. Si desea utilizar una columna para realizar una búsqueda, pero sin copiarla, desactive la casilla situada junto al nombre de columna en el rectángulo que representa la tabla o el objeto con estructura de tabla.  
   
-7.  Si desea copiar información de resumen, especifique opciones Agrupar por. Para obtener más información, vea [Resumir los resultados de la consulta(../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
+7.  Si desea copiar información de resumen, especifique opciones Agrupar por. Para obtener detalles, vea [Resumen de los resultados de una consulta](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
   
 Cuando se ejecuta una consulta de creación de tabla, los resultados no se incluyen en el [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica cuántas filas se han copiado.  
   
 ## <a name="see-also"></a>Consulte también  
-[Temas de procedimientos de diseño de consultas y vistas(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Tipos de consultas(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

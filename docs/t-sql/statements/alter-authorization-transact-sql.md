@@ -26,12 +26,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 01fc7ed0e32df7c5c3465f85b5358c2c359fc767
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982881"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215916"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -191,7 +191,7 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE o ASYMMETRIC KEY|No se puede transferir la propiedad de estas entidades a un rol o un grupo.|    
 |ENDPOINT|La entidad de seguridad debe ser un inicio de sesión.|    
   
-## <a name="AlterDB"></a> ALTER AUTHORIZATION para bases de datos  
+## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> ALTER AUTHORIZATION para bases de datos  
 **SE APLICA A**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>En SQL Server:  
 **Requisitos del nuevo propietario:**    
@@ -270,7 +270,7 @@ En lugar de utilizar a los usuarios de Azure AD como propietarios individuales d
   ```    
   
 Ahora, los miembros `mydbogroup` pueden administrar centralmente la base de datos como miembros del rol **db_owner**.  
-- Cuando los miembros de este grupo se quitan del grupo de Azure AD, pierden automáticamente los permisos de propietarios para esta base de datos.  
+- Cuando los miembros de este grupo se quitan del grupo de Azure AD, pierden automáticamente los permisos de propietarios para esta base de datos.  
 - Asimismo, si se agregan nuevos miembros al grupo de Azure AD `mydbogroup`, estos obtienen automáticamente acceso de propietarios para esta base de datos.  
   
 Para comprobar si un usuario específico tiene el permiso de propietario de base de datos en vigor, pídale que ejecute la instrucción siguiente:  

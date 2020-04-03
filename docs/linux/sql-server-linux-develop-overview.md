@@ -1,6 +1,6 @@
 ---
 title: Desarrollo de aplicaciones para SQL Server en Linux
-description: ''
+description: Puede crear aplicaciones que se conecten a SQL Server en Linux desde diversos lenguajes de programación y marcos de trabajo web conocidos.
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/17/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ad0b4de881afe1cf30f865540ddff692d1415d9c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68077410"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216785"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Procedimiento para empezar a desarrollar aplicaciones para SQL Server en Linux
 

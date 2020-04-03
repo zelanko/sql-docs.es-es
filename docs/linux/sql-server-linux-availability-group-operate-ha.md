@@ -1,6 +1,6 @@
 ---
 title: Manejo de grupos de disponibilidad de SQL Server en Linux
-description: ''
+description: En este artículo se describe cómo realizar una actualización gradual con instancias de SQL Server en Linux con grupos de disponibilidad. Antes de actualizar, revise los procedimientos recomendados.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59e2f6c4321b1ccd90a66dd8e7466a3e0ccb490e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67916040"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216824"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Manejo de grupos de disponibilidad Always On en Linux
 

@@ -1,5 +1,6 @@
 ---
 title: Agregar medidores a informes para dispositivos móviles | Reporting Services | Microsoft Docs
+description: Puede agregar medidores a un informe para dispositivos móviles de Reporting Services. Los medidores muestran un valor único de un conjunto de datos de forma individual o comparado con un objetivo.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280562"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448286"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Agregar medidores a informes para dispositivos móviles | Reporting Services
 Los medidores son los elementos visuales más básicos y más ampliamente usados en los informes para dispositivos móviles. Muestran un valor único de un conjunto de datos: solo el valor, o bien el valor comparado con un objetivo.
@@ -42,7 +43,7 @@ Los valores de medidor se pueden filtrar conectándolos a navegadores en el info
 
 4. [Opcional] Para cambiar la agregación, seleccione **Opciones** y, luego, seleccione otra agregación.
    
-   >**Nota:** si cambia la agregación del valor principal, probablemente también quiera hacer lo propio con el valor de comparación, aunque en algunos casos se pueden combinar diferentes métodos de agregación.  
+   >**Nota**: Si cambia la agregación del valor principal, probablemente también quiera hacer lo propio con el valor de comparación, aunque en algunos casos se pueden combinar diferentes métodos de agregación.  
 
 ## <a name="filter-a-gauge"></a>Filtrar un medidor
   
@@ -58,7 +59,7 @@ Si el informe para dispositivos móviles tiene navegadores, puede enlazar un med
   
 Además de las propiedades de datos que conectan elementos de medidor a campos de datos, hay también un número de propiedades funcionales y visuales que se pueden personalizar. 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>Establecer la dirección del valor: valores altos o bajos como mejor opción
+### <a name="set-value-direction-high-or-low-is-better"></a>Establezca la dirección del valor: es mejor alta o baja
 * Seleccione un medidor y, en la pestaña **Diseño** , en el panel **Propiedades de los elementos visuales** , establezca **Dirección del valor** en **Los valores altos son mejores** o **Los valores bajos son mejores**. 
 
 La opción**Los valores altos son mejores** pone los valores positivos de color verde, lo que indica un cambio positivo deseable, o los valores bajos de color rojo, lo que indica un cambio negativo no deseable. 

@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Creación de un informe de gráfico rápido sin conexión (Generador de informes) | Microsoft Docs'
+description: En este tutorial, creará un gráfico circular en un informe paginado de Reporting Services en Generador de informes. Después, agregará porcentajes y modificará el gráfico circular.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037964"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290741"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Creación de un informe de gráfico rápido sin conexión (Generador de informes)
 
@@ -27,10 +28,10 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
  ![Gráfico circular rápido de Report Builder](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Gráfico circular rápido de Report Builder")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Si usa datos XML o una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)], necesita tener acceso al Generador de informes. Puede iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] desde un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, o bien puede descargar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] desde Centro de descarga de Microsoft. Para obtener más información, consulte [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
-##  <a name="TwoWays"></a> Dos maneras de hacer este tutorial  
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a> Dos maneras de hacer este tutorial  
   
 -   [Crear el gráfico circular con datos XML](#CreatePieChartXML)  
   
@@ -50,7 +51,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
  [Crear el gráfico circular con una consulta Transact-SQL que contenga datos](#CreatePieQueryData)  
   
-##  <a name="CreatePieChartXML"></a> Crear el gráfico circular con datos XML  
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a> Crear el gráfico circular con datos XML  
   
 1.  [Inicie el Generador de informes](../../reporting-services/report-builder/start-report-builder.md) desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o el servidor de informes en modo integrado de SharePoint o bien desde su equipo.  
   
@@ -137,7 +138,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
 18. Para seguir modificando el gráfico circular, vaya a la sección [Después de ejecutar el asistente](#AfterWizard) de este artículo.  
   
-##  <a name="CreatePieQueryData"></a> Crear el gráfico circular con una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> Crear el gráfico circular con una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 1.  [Inicie el Generador de informes](../../reporting-services/report-builder/start-report-builder.md) desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o el servidor de informes en modo integrado de SharePoint o bien desde su equipo.  
   
@@ -187,7 +188,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
 15. Para ver el gráfico circular real, haga clic en **Ejecutar** en la pestaña **Inicio** de la cinta de opciones.  
  
-##  <a name="AfterWizard"></a> Después de ejecutar el asistente  
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> Después de ejecutar el asistente  
  Ahora que tiene el informe del gráfico circular, puede trabajar con él. En la pestaña **Ejecutar** de la cinta de opciones, haga clic en **Diseño**, de modo que pueda seguir modificándolo.  
   
 ## <a name="make-the-chart-bigger"></a>Agrandar el gráfico  
@@ -219,7 +220,7 @@ Observe que la superficie de diseño aumenta a medida que realiza la acción de 
   
  Para obtener más información acerca de cómo personalizar las etiquetas del gráfico y las leyendas, consulte [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) y [Cambiar el texto de un elemento de leyenda&#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
-##  <a name="WhatsNext"></a> ¿Qué debe hacer a continuación?  
+##  <a name="whats-next"></a><a name="WhatsNext"></a> ¿Qué debe hacer a continuación?  
  Ahora que ha creado su primer informe en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], está listo para leer los demás tutoriales y empezar a crear informes a partir de sus propios datos. Para ejecutar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], necesitará permiso de acceso a los orígenes de datos, como las bases de datos, con una *cadena de conexión*, que le conecta al origen de datos. El administrador del sistema tiene esta información y puede facilitársela.  
   
  Para trabajar con otros tutoriales, necesita el nombre de una instancia de SQL Server y credenciales suficientes para el acceso de solo lectura a cualquier base de datos. El administrador del sistema puede facilitárselo también.  

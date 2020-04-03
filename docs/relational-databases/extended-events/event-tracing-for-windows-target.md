@@ -1,5 +1,6 @@
 ---
 title: seguimiento de eventos para Windows de destino
+description: Obtenga información sobre cómo usar el seguimiento de eventos para Windows (ETW) como destino. Use Seguimiento de eventos para Windows (ETW) junto a Eventos extendidos o como un consumidor de eventos extendidos.
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cdff5b987e6ff86a148cdb8d8ad317e9c14a543f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234661"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433972"
 ---
 # <a name="event-tracing-for-windows-target"></a>seguimiento de eventos para Windows de destino
 

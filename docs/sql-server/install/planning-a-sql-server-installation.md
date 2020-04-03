@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94cdaba9319ed683dafcf3e8e29903b1d1957100
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 56adbb10af74ef8e0e71012378b4aa13a2d818d2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68019827"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79428186"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planear una instalación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68019827"
   
  Con independencia del método de instalación, es necesario confirmar la aceptación de los términos de la licencia de software como usuario individual o en nombre de una entidad, a menos que el uso del software en su caso se rija por un acuerdo independiente, como un acuerdo de licencia por volumen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un acuerdo suscrito con un ISV u OEM.  
   
- Los términos de la licencia se muestran para revisarlos y aceptarlos en la interfaz de usuario del programa de instalación. Las instalaciones desatendidas (las que usen los parámetros `/Q` o `/QS`) deben incluir el parámetro `/IAcceptSQLServerLicenseTerms`. Descargue y revise los términos de licencia por separado en [Información y términos de licencia de Microsoft SQL Server](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Para los términos de las licencias por volumen, consulte [Términos y documentación de licencias](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Para versiones anteriores de SQL Server, consulte [Términos de licencia del software de Microsoft](https://go.microsoft.com/fwlink/?LinkID=148209).  
+ Los términos de la licencia se muestran para revisarlos y aceptarlos en la interfaz de usuario del programa de instalación. Las instalaciones desatendidas (las que usen los parámetros `/Q` o `/QS`) deben incluir el parámetro `/IAcceptSQLServerLicenseTerms`. Descargue y revise los términos de licencia por separado en [Información y términos de licencia de Microsoft SQL Server](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Para obtener los términos de las licencias por volumen, vea [Términos y documentación de licencias](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Para versiones anteriores de SQL Server, consulte [Términos de licencia del software de Microsoft](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  En función de cómo haya recibido el software (por ejemplo, a través de un contrato de licencias por volumen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), su uso del software puede estar sujeto a términos y condiciones adicionales.  
@@ -40,8 +40,7 @@ ms.locfileid: "68019827"
  [Novedades de la instalación de SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  En este artículo se describe los detalles sobre las características nuevas o mejoradas de la instalación de esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- En este artículo se enumeran los requisitos mínimos de hardware y software para instalar y ejecutar una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Requisitos de hardware y software para instalar [SQL Server 2016 y 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) o [SQL Server en Linux](../../linux/sql-server-linux-setup.md) En este artículo se enumeran los requisitos mínimos de hardware y software para instalar y ejecutar una instancia de SQL Server. .  
   
  [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  En este artículo se describen algunas prácticas recomendadas de seguridad que deben tenerse en cuenta antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y después de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

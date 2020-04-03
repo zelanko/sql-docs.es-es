@@ -1,5 +1,6 @@
 ---
 title: Generación de fuentes de distribución de datos a partir de informes (Generador de informes) | Microsoft Docs
+description: La extensión de representación de Atom de Reporting Services genera un documento de servicio de las fuentes de distribución de datos en un informe paginado y las fuentes de las regiones de datos que contiene.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35f1f5f80d47aa5a59b77de9c4ebcab168394498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 93eecfd3ffb66be1a1758f3265bf91a5842a4abc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079166"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342805"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generar fuentes de distribución de datos a partir de informes (Generador de informes y SSRS)
 
@@ -31,7 +32,7 @@ ms.locfileid: "77079166"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a> Informes como fuentes de distribución de datos  
+##  <a name="reports-as-data-feeds"></a><a name="ReportDataAsDataFeeds"></a> Informes como fuentes de distribución de datos  
  Puede exportar un informe de producción como una fuente de distribución de datos o puede crear un informe cuyo propósito principal sea proporcionar datos, en forma de fuentes de distribución de datos, a las aplicaciones. Utilizar los informes como una fuente de distribución de datos ofrece una manera adicional de proporcionar datos a las aplicaciones cuando estos no son fáciles de usar a través de los proveedores de datos del cliente, o cuando se prefiera ocultar la complejidad del origen de datos y facilitar la utilización de los datos. Otra ventaja de usar los datos de informe como una fuente de distribución de datos es que se pueden usar características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (como la seguridad, la programación y las instantáneas de informe) para administrar los informes que proporcionan fuentes de distribución de datos.  
   
  Para sacar el máximo partido de la extensión de representación de Atom, debe saber cómo se representa el informe en las fuentes de distribución de datos. Si usa los informes existentes, poder predecir qué fuentes de distribución de datos generarán los informes resulta útil; si va a crear el informe específicamente para usarlo como fuente de distribución de datos, ser capaz de incluir los datos y ajustar el diseño del informe para sacar el máximo provecho de las fuentes de distribución de datos es también de gran valor.  
@@ -39,7 +40,7 @@ ms.locfileid: "77079166"
  Para más información, vea [Generar fuentes de distribución de datos a partir de un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
   
-##  <a name="AtomServiceDocument"></a> Documento de servicio de Atom (archivo .atomsvc)  
+##  <a name="atom-service-document-atomsvc-file"></a><a name="AtomServiceDocument"></a> Documento de servicio de Atom (archivo .atomsvc)  
  En un documento de servicio de Atom se especifica una conexión a una o varias fuentes de distribución de datos. Como mínimo, la conexión es una dirección URL simple al servicio de datos que genera la fuente.  
   
  Al representar los datos del informe utilizando la extensión de representación de Atom, el documento de servicio de Atom enumera las fuentes de distribución de datos disponibles para un informe. El documento enumera al menos una fuente de distribución de datos para cada región de datos del informe. Las tablas y medidores generan solo una fuente de distribución de datos cada uno, pero las matrices, listas y gráficos podían generar varias en función de los datos que muestren.  
@@ -59,7 +60,7 @@ ms.locfileid: "77079166"
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
   
-##  <a name="DataFeeds"></a> Fuentes de distribución de datos  
+##  <a name="data-feeds"></a><a name="DataFeeds"></a> Fuentes de distribución de datos  
  La fuente de distribución de datos es un archivo XML que tiene un formato tabular coherente que no cambia con el tiempo y datos variables que pueden ser diferentes cada vez que se ejecuta el informe. Las fuentes de distribución de datos que genera [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] están en el mismo formato que las generadas por ADO.NET Data Services.  
   
  Una fuente de distribución de datos contiene dos secciones: encabezado y datos. La especificación de Atom define los elementos en cada sección. El encabezado incluye información como el esquema de codificación de caracteres para utilizar con las fuentes de distribución de datos.  
@@ -122,7 +123,7 @@ ms.locfileid: "77079166"
  Una fuente de distribución de datos se guarda con la extensión de nombre de archivo .atom. Puede utilizar un editor XML o de texto, como el Bloc de notas, o el Editor XML para ver la estructura de archivos y el contenido.  
   
   
-##  <a name="FlatteningReportData"></a> Quitar información de estructura jerárquica a los datos del informe  
+##  <a name="flattening-report-data"></a><a name="FlatteningReportData"></a> Quitar información de estructura jerárquica a los datos del informe  
  El representador de Atom proporciona los datos del informe en forma de conjuntos de filas planas en un formato XML. Las reglas para quitar información de estructura jerárquica de las tablas de datos son las mismas que las del procesador de CSV con pocas excepciones:  
   
 -   La información de estructura jerárquica de los elementos del ámbito se quitan hasta el nivel de detalle. A diferencia del representador de CSV, los cuadros de texto en el nivel superior aparecen en cada entrada escrita en la fuente de distribución de datos.  
@@ -144,7 +145,7 @@ ms.locfileid: "77079166"
  Para más información, vea [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
-##  <a name="AtomRendering"></a> Reglas de representación de Atom  
+##  <a name="atom-rendering-rules"></a><a name="AtomRendering"></a> Reglas de representación de Atom  
  La extensión de representación de Atom omite la información siguiente al representar una fuente de distribución de datos:  
   
 -   Formato y diseño  
@@ -181,7 +182,7 @@ ms.locfileid: "77079166"
 |Map|Genera una fuente de distribución de datos para cada región de datos del mapa. Si varias capas de mapa utilizan la misma región de datos, las fuentes de distribución de datos los incluyen a todos. Las fuentes de distribución de datos incluyen un registro con las etiquetas y valores para cada miembro de mapa de la capa de mapa.|  
   
   
-##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador, incluido el esquema de codificación que se desea utilizar. Para obtener más información, consulte [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes

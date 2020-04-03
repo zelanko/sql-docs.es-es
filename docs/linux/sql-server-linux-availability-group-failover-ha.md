@@ -1,6 +1,6 @@
 ---
 title: 'Administrar la conmutación por error del grupo de disponibilidad: SQL Server en Linux'
-description: ''
+description: 'En este artículo se describen los tipos de conmutación por error: automática, conmutación por error manual planeada y conmutación por error manual forzada. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280879"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216854"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Conmutación por error del grupo de disponibilidad Always On en Linux
 
@@ -24,7 +24,7 @@ Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol sec
 
 Para obtener información general sobre la conmutación por error, vea [Conmutación por error y modos de conmutación por error](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
 
-## <a name="failover"></a>Conmutación por error manual
+## <a name="manual-failover"></a><a name="failover"></a>Conmutación por error manual
 
 Use las herramientas de administración de clústeres para conmutar por error un grupo de disponibilidad administrado por un administrador de clústeres externo. Por ejemplo, si una solución usa Pacemaker para administrar un clúster de Linux, use `pcs` para realizar las conmutaciones por error manuales en RHEL o Ubuntu. En SLES, use `crm`. 
 
@@ -43,7 +43,7 @@ Conmute por error de forma manual en dos pasos.
 
    En segundo lugar, [quite la restricción de ubicación](#removeLocConstraint).
 
-#### <a name="manualMove"></a> Paso 1. Conmutar por error de forma manual al mover el recurso de un grupo de disponibilidad
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> Paso 1. Conmutar por error de forma manual al mover el recurso de un grupo de disponibilidad
 
 Para conmutar por error de forma manual el recurso de un grupo de disponibilidad denominado *ag_cluster* a un nodo de clúster denominado *nodeName2*, ejecute el comando adecuado para su distribución:
 
@@ -62,7 +62,7 @@ Para conmutar por error de forma manual el recurso de un grupo de disponibilidad
 >[!IMPORTANT]
 >Después de conmutar por error de forma manual un recurso, necesita quitar una restricción de ubicación que se agregará automáticamente.
 
-#### <a name="removeLocConstraint"> </a> Paso 2. Quitar la restricción de ubicación
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> Paso 2. Quitar la restricción de ubicación
 
 Durante una conmutación por error manual, el comando `move` de `pcs` o el comando `migrate` de `crm` agregan una restricción de ubicación para el recurso que se aplicará en el nuevo nodo de destino. Para ver la nueva restricción, ejecute el comando siguiente después de mover manualmente el recurso:
 
@@ -107,7 +107,7 @@ Para obtener más información:
 - [Pacemaker - Move Resources Manually (Pacemaker: mover recursos de forma manual)](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES Administration Guide - Resources (Guía de administración de SLES: recursos)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> Forzar la conmutación por error 
+## <a name="force-failover"></a><a name="forceFailover"></a> Forzar la conmutación por error 
 
 La conmutación por error forzada se usa estrictamente para la recuperación ante desastres. En este caso, no se puede conmutar por error con las herramientas de administración de clústeres porque el centro de datos principal está inactivo. Si se fuerza la conmutación por error a una réplica secundaria no sincronizada, es posible que se pierdan datos. Solo ejecute una conmutación por error forzada si necesita restaurar el servicio al grupo de disponibilidad de inmediato y está dispuesto a asumir el riesgo de que se pierdan datos.
 

@@ -1,5 +1,6 @@
 ---
 title: Vista de diseño de informe (Generador de informes) | Microsoft Docs
+description: En este artículo se describen los controles de la ventana Generador de informes que se usan para agregar, seleccionar y organizar los recursos de informe y para cambiar las propiedades de los elementos de informe.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ca82e7fa0a302c4156c56c2e5ff66ad0cc49da99
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190041"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290864"
 ---
 # <a name="report-design-view-report-builder"></a>Vista de diseño de informe (Generador de informes)
   La ventana del Generador de informes está diseñada para ayudarle a organizar con facilidad sus recursos de informes y a generar rápidamente los informes paginados que necesita. La superficie de diseño se encuentra en el centro de la ventana, con la cinta de opciones y los paneles a su alrededor. La superficie de diseño es donde agrega y organiza sus elementos de informe. En este artículo se describen los paneles que se usan para agregar, seleccionar y organizar los recursos de informe y para cambiar las propiedades de los elementos de informe.  
@@ -47,13 +48,13 @@ ms.locfileid: "74190041"
   
 8.  Barra de estado del informe actual  
   
-##  <a name="Ribbon"></a> Panel de parámetros  
+##  <a name="parameters-pane"></a><a name="Ribbon"></a> Panel de parámetros  
  Con los parámetros de informe, puede controlar datos de informe, conectar informes relacionados y cambiar la presentación de los informes. El panel de parámetros proporciona un diseño flexible para los parámetros de informe.  
   
  Obtenga más información en [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="RptDesignSurface"></a> Superficie de diseño del informe  
+##  <a name="the-report-design-surface"></a><a name="RptDesignSurface"></a> Superficie de diseño del informe  
  La superficie de diseño de informe del Generador de informes es el área de trabajo principal para diseñar informes. Para colocar en su informe los elementos de informe, como regiones de datos, subinformes, cuadros de texto, imágenes, rectángulos y líneas, agréguelos desde la cinta de opciones o la galería de elementos de informe a la superficie de diseño. Ahí puede agregar grupos, expresiones, parámetros, filtros, acciones, visibilidad y formato a sus elementos de informe.  
   
  También puede cambiar lo siguiente:  
@@ -75,7 +76,7 @@ ms.locfileid: "74190041"
 >  Para mostrar la regla, en la pestaña **Ver** active la casilla **Regla**.  
   
   
-##  <a name="ReptDataPane"></a> The Report Data Pane  
+##  <a name="the-report-data-pane"></a><a name="ReptDataPane"></a> The Report Data Pane  
  En el panel Datos de informe, puede definir los recursos y los datos de informe que necesita para un informe antes de diseñarlo. Por ejemplo, puede agregar orígenes de datos, conjuntos de datos, campos calculados, parámetros de informe e imágenes al panel Datos de informe.  
   
  Cuando agregue elementos al panel Datos de informe, arrástrelos hasta la superficie de diseño para controlar dónde aparecerán en el informe.  
@@ -105,7 +106,7 @@ ms.locfileid: "74190041"
 -   [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a> Galería de elementos de informe  
+##  <a name="the-report-part-gallery"></a><a name="ReptPartGallery"></a> Galería de elementos de informe  
  La manera más fácil de crear un informe es encontrar un elemento de informe existente, como una tabla o un gráfico, en el servidor de informes o en un servidor de informes integrado en un sitio de SharePoint.  
   
  Haga clic en **Elementos de informe** en la pestaña Insertar para abrir la Galería de elementos de informe. Ahí puede buscar elementos de informe para agregarlos a un informe. Puede filtrar los elementos de informe por el nombre completo o solo parte de él, quién lo ha creado, quién lo ha modificado por última vez, cuándo se modificó por última vez, dónde está almacenado, o bien el tipo de elemento de informe. Por ejemplo, podría buscar todos los gráficos creados la semana pasada por uno de sus colaboradores.  
@@ -116,7 +117,7 @@ ms.locfileid: "74190041"
  Puede ver los resultados de la búsqueda como miniaturas o como lista, y ordenar los resultados de la búsqueda por nombre, fechas de creación y modificación, y autor. Para obtener más información, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="PropertiesPane"></a> Panel Propiedades (Generador de informes)  
+##  <a name="the-properties-pane-report-builder"></a><a name="PropertiesPane"></a> Panel Propiedades (Generador de informes)  
  Todos los elementos de un informe, como las regiones de datos, las imágenes, los cuadros de texto y el cuerpo mismo del informe, tienen propiedades asociadas. Por ejemplo, la propiedad BorderColor de un cuadro de texto muestra el valor de color del borde del cuadro de texto y la propiedad PageSize del informe muestra el tamaño de página del informe.  
   
  Estas propiedades se muestran en el panel de propiedades. Las propiedades del panel cambian en función del elemento de informe que seleccione.  
@@ -142,7 +143,7 @@ ms.locfileid: "74190041"
  El panel de propiedades tiene tres botones en la parte superior: Categoría, Alfabetización y Páginas de propiedades. Haga clic en los botones de categoría y alfabetización para cambiar entre las diferentes vistas del panel de propiedades. Haga clic en el botón de **páginas de propiedades** para abrir el cuadro de diálogo de propiedades de un elemento de informe seleccionado.  
   
   
-##  <a name="GroupPane"></a> Panel Agrupación (Generador de informes)  
+##  <a name="the-grouping-pane-report-builder"></a><a name="GroupPane"></a> Panel Agrupación (Generador de informes)  
  Los grupos se utilizan para organizar los datos del informe en una jerarquía visual y calcular los totales. Puede ver los grupos de filas y columnas dentro de una región de datos en la superficie de diseño y también en el Panel de agrupación. El panel Agrupación tiene dos paneles: Grupos de filas y Grupos de columnas. Al seleccionar una región de datos, el panel Agrupación muestra todos los grupos dentro de dicha región de datos como una lista jerárquica: los grupos secundarios aparecen con sangría aplicada bajo los grupos principales.  
   
  ![Grupos de filas del Generador de informes](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Grupos de filas del Generador de informes")  
@@ -154,7 +155,7 @@ ms.locfileid: "74190041"
  Para obtener más información, vea [Panel de agrupación &#40;Generador de informes&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md) y [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
   
-##  <a name="RunMode"></a> Vista previa del informe en modo de ejecución  
+##  <a name="previewing-your-report-in-run-mode"></a><a name="RunMode"></a> Vista previa del informe en modo de ejecución  
  En la vista de diseño del informe, no se trabaja con los datos reales, sino con una representación de los datos que viene indicada por el nombre de campo o de expresión. Cuando quiera ver los datos reales mostrados en el contexto del informe que diseñó, puede ejecutar el informe para obtener una vista previa de los datos desde la base de datos subyacente mostrada en el diseño del informe. Cambiar entre el diseño y la ejecución del informe le permite ajustar su diseño y ver los resultados de forma inmediata. Para obtener una vista previa de su informe, haga clic en **Ejecutar** en el grupo **Vistas** group on the ribbon.  
   
  Al hacer clic en **Ejecutar**, el Generador de informes se conecta con los orígenes de datos del informe, almacena en memoria caché los datos del equipo, combina los datos y el diseño y, a continuación, representa el informe en el Visor HTML. Puede ejecutar el informe con la frecuencia que desee mientras continúa diseñándolo. Cuando esté satisfecho con el informe, puede guardarlo en el servidor de informes, donde podrán verlo otros usuarios que tengan los permisos adecuados.  

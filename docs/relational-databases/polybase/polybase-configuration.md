@@ -1,5 +1,6 @@
 ---
 title: Configuración y seguridad de PolyBase para Hadoop | Microsoft Docs
+description: Use esta configuración para la conectividad de PolyBase con Hadoop, incluidos Hadoop.RPC.Protection, archivos XML de ejemplo para un clúster CDH 5.X y configuración de Kerberos.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ef4222b866be7979410f6a3f97dce8a4fc24ecd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59d268e0af326a92693cb09cb8e786364cd1f874
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909430"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215904"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configuración y seguridad de PolyBase para Hadoop
 
@@ -21,7 +22,7 @@ ms.locfileid: "72909430"
 
 En este artículo se proporciona una referencia para distintos valores de configuración que afectan a la conectividad de PolyBase con Hadoop. Para ver un tutorial sobre cómo usar PolyBase con Hadoop, eche un vistazo a [Configure PolyBase to access external data in Hadoop](polybase-configure-hadoop.md) (Configuración de PolyBase para acceder a datos externos en Hadoop).
 
-## <a id="rpcprotection"></a> Configuración de Hadoop.RPC.Protection
+## <a name="hadooprpcprotection-setting"></a><a id="rpcprotection"></a> Configuración de Hadoop.RPC.Protection
 
 Una forma habitual de proteger la comunicación en un clúster de Hadoop consiste en cambiar la configuración de hadoop.rpc.protection a "Privacy" (Privacidad) o "Integrity" (Integridad). De forma predeterminada, PolyBase da por hecho que la configuración está establecida en "Autenticar". Para reemplazar esta configuración predeterminada, agregue la siguiente propiedad al archivo core-site.xml. Si cambia esta configuración, permitirá que se efectúe una transferencia de datos segura entre los nodos de Hadoop y que se establezca una conexión SSL con SQL Server.
 

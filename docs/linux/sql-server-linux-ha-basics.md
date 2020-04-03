@@ -1,6 +1,6 @@
 ---
 title: Alta disponibilidad de SQL Server en implementaciones de Linux
-description: Obtenga información sobre las diferentes opciones de alta disponibilidad que existen para SQL Server en Linux, como los grupos de disponibilidad AlwaysOn, las instancias de clúster de conmutación por error (FCI) y el trasvase de registros.
+description: Obtenga información sobre las opciones de alta disponibilidad para SQL Server en Linux, como los grupos de disponibilidad Always On, las instancias de clúster de conmutación por error (FCI) y el trasvase de registros.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75656615"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216694"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos sobre disponibilidad de SQL Server en implementaciones de Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "75656615"
 
 A partir de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] se admite en Linux y en Windows. Al igual que las implementaciones basadas en Windows de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], las bases de datos y las instancias de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deben tener una alta disponibilidad en Linux. En este artículo se abordan los aspectos técnicos de la planeación e implementación de bases de datos e instancias de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basadas en Linux de alta disponibilidad, así como algunas de las diferencias con respecto a las instalaciones basadas en Windows. Como [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] puede ser una novedad para los profesionales de Linux, así como Linux para los profesionales de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], el artículo a veces reflejará conceptos que pueden ser familiares para algunos y desconocidos para otros.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>Opciones de disponibilidad de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en implementaciones de Linux
+## <a name="ssnoversion-md-availability-options-for-linux-deployments"></a>Opciones de disponibilidad de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en implementaciones de Linux
 Aparte de las copias de seguridad y la restauración, las mismas tres características de disponibilidad están presentes en las implementaciones basadas tanto en Linux como en Windows:
 -   Grupos de disponibilidad AlwaysOn
 -   Instancias de clúster de conmutación por error de AlwaysOn
@@ -51,7 +51,7 @@ Estos son algunos comandos comunes; todos ellos tienen varios modificadores y op
 -   `systemctl`: sirve para iniciar, detener o habilitar servicios.
 -   Comandos del editor de texto. En Linux hay varias opciones del editor de texto, como vi y emacs.
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Tareas comunes para configurar la disponibilidad de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux
+## <a name="common-tasks-for-availability-configurations-of-ssnoversion-md-on-linux"></a>Tareas comunes para configurar la disponibilidad de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux
 En esta sección se describen las tareas comunes a todas las implementaciones de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basadas en Linux.
 
 ### <a name="ensure-that-files-can-be-copied"></a>Garantizar que los archivos se pueden copiar
@@ -120,7 +120,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalación de paquetes de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para disponibilidad
+### <a name="install-ssnoversion-md-packages-for-availability"></a>Instalación de paquetes de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para disponibilidad
 En una instalación de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basada en Windows, algunos componentes se instalan incluso cuando se trata de una instalación de motor básica, mientras que otros no. En Linux, solo se instala el motor de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] como parte del proceso de instalación. Todo lo demás es opcional. En el caso de las instancias de alta disponibilidad de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux, se deben instalar dos paquetes con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: el Agente [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] (*mssql-server-agent*) y el paquete de alta disponibilidad (*mssql-server-ha*). Aunque el Agente [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] es opcional desde un punto de vista técnico, es el programador de trabajos de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] y, como tal, es necesario para el trasvase de registros, por lo que se recomienda instalarlo. En las instalaciones basadas en Windows, el Agente [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no es opcional.
 
 >[!NOTE]
@@ -204,10 +204,10 @@ Las ubicaciones de registro de los clústeres de Pacemaker difieren en función 
 
 Para cambiar la ubicación de registro predeterminada, modifique `corosync.conf`.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Planeación de clústeres de Pacemaker para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-ssnoversion-md"></a>Planeación de clústeres de Pacemaker para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 En esta sección se describen los aspectos de planeación importantes relativos a un clúster de Pacemaker.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Virtualización de clústeres de Pacemaker basados en Linux para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>Virtualización de clústeres de Pacemaker basados en Linux para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 El uso de máquinas virtuales para poner en marcha implementaciones de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basadas en Linux de grupos de disponibilidad e instancias de clúster de conmutación por error se rige por las mismas reglas que para sus homólogos basados en Windows. Existe un conjunto básico de reglas para la compatibilidad de implementaciones de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] virtualizadas que Microsoft facilita en el [artículo 956893 de la KB de Soporte técnico de Microsoft](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Cada hipervisor, como Hyper-V de Microsoft o ESXi de VMware, puede tener distintas variaciones aparte de lo anterior, debido a las diferencias en las propias plataformas.
 
 En lo que respecta a los grupos de disponibilidad y las instancias de clúster de conmutación por error virtualizados, asegúrese de que la antiafinidad de los nodos de un clúster de Pacemaker determinado está establecida. Cuando se configuran para alta disponibilidad en una configuración de grupo de disponibilidad o de instancia de clúster de conmutación por error, las máquinas virtuales que hospedan [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nunca deben ejecutarse en el mismo host de hipervisor. Por ejemplo, si se implementa una instancia de clúster de conmutación por error de dos nodos, debe haber *como mínimo* tres hosts de hipervisor para que haya algún sitio al que las máquinas virtuales que hospedan un nodo puedan ir en caso de que se produzca un error en el host, sobre todo cuando se usan características como Migración en vivo o vMotion.

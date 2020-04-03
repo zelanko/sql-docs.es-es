@@ -8,12 +8,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 427aff5fe9911fde59f3f37077fc9c2306d2bd42
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67910483"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487603"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Sample: script de instalación desatendida de SQL Server para Ubuntu
 
@@ -24,13 +24,16 @@ Este script de Bash de ejemplo instala SQL Server 2017 en Ubuntu 16.04 sin la in
 > [!TIP]
 > Si no necesita un script de instalación desatendida, la forma más rápida de instalar SQL Server es seguir la [guía de inicio rápido para Ubuntu](quickstart-install-connect-ubuntu.md). Para obtener más información sobre la instalación, vea la [guía de instalación de SQL Server en Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Necesita al menos 2 GB de memoria para ejecutar SQL Server en Linux.
 - El sistema de archivos debe ser **XFS** o **EXT4**. No se admiten otros sistemas de archivos, como **BTRFS**.
 - Para conocer otros requisitos del sistema, vea [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
 
 ## <a name="sample-script"></a>Script de ejemplo
+
+> [!NOTE]
+> Se puede producir un error en el script si SQL Server tarda en iniciarse. Esto se debe a que el script se cerrará con un estado distinto de cero. La eliminación del modificador `-e` en la primera línea puede resolver este problema.
 
 ```bash
 #!/bin/bash -e

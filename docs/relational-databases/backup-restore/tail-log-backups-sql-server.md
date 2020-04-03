@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 22fda4d5e11b562ea3162ed14766ed085977200e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68041341"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510046"
 ---
 # <a name="tail-log-backups-sql-server"></a>Copias del final del registro (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68041341"
   
 > **NOTA:** No todos los escenarios de restauración requieren una copia del final del registro. No necesita una copia del final del registro si el punto de recuperación está incluido en una copia de seguridad de registros anterior. Además, no es necesaria una copia del final del registro si va a mover o reemplazar (sobrescribir) la base de datos y no necesita restaurarla a un momento posterior de la copia de seguridad más reciente.  
   
-   ##  <a name="TailLogScenarios"></a> Escenarios que requieren una copia del final del registro  
+   ##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> Escenarios que requieren una copia del final del registro  
  Recomendamos realizar una copia del final del registro en los siguientes escenarios:  
   
 -   Si la base de datos está en línea y planea realizar una operación de restauración en la base de datos, comience con una copia del final del registro. Para evitar un error para una base de datos en línea, debe usar la opción ... Opción WITH NORECOVERY de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md).  
@@ -47,10 +47,10 @@ ms.locfileid: "68041341"
   
 |Opción BACKUP LOG|Comentarios|  
 |-----------------------|--------------|  
-|NORECOVERY|Use NORECOVERY cada vez que desee continuar con una operación de restauración en la base de datos. NORECOVERY pone la base de datos en el estado de restauración. Esto garantiza que la base de datos no cambie después de realizar la copia del final del registro. El registro se truncará a menos que también se especifique la opción NO_TRUNCATE o COPY_ONLY.<br /><br /> **Importante:** Evite usar NO_TRUNCATE, salvo cuando la base de datos esté dañada.|  
+|NORECOVERY|Use NORECOVERY cada vez que desee continuar con una operación de restauración en la base de datos. NORECOVERY pone la base de datos en el estado de restauración. Esto garantiza que la base de datos no cambie después de realizar la copia del final del registro. El registro se truncará a menos que también se especifique la opción NO_TRUNCATE o COPY_ONLY.<br /><br /> **Importante:** Evite usar NO_TRUNCATE, salvo cuando la base de datos esté dañada. Es posible que tenga que poner la base de datos en [modo de usuario único](../../relational-databases/databases/set-a-database-to-single-user-mode.md) para obtener acceso exclusivo antes de realizar la restauración con NORECOVERY. Después de la restauración, vuelva a establecer la base de datos en el modo multiusuario. |  
 |CONTINUE_AFTER_ERROR|Utilice CONTINUE_AFTER_ERROR solo si va a crear una copia del final de una base de datos dañada.<br /><br /> Al realizar una copia de seguridad del final del registro de una base de datos dañada, es posible que parte de los metadatos que comúnmente se capturan en las copias de seguridad de registros no estén disponibles. Para más información, consulte [Copias del final del registro con metadatos de copia de seguridad incompletos](#IncompleteMetadata)que aparece en este tema.|  
   
-##  <a name="IncompleteMetadata"></a> Copias del final del registro con metadatos de copia de seguridad incompletos  
+##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a> Copias del final del registro con metadatos de copia de seguridad incompletos  
  Las copias de seguridad de registros después del error capturan el final del registro aunque falten archivos en la base de datos, o la base de datos esté sin conexión o dañada. Sin embargo, esto puede provocar que se obtengan metadatos incompletos de los comandos de información de restauración y **msdb**. Sin embargo, solo los metadatos están incompletos. El registro capturado está completo y en condiciones de uso.  
   
  Si una copia del final del registro tiene metadatos incompletos, en la tabla [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) se establece **has_incomplete_metadata** en **1**. Asimismo, en la salida de [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), **HasIncompleteMetadata** se establece en **1**.  
@@ -63,7 +63,7 @@ ms.locfileid: "68041341"
 -   **type_desc**  
 -   **is_readonly**  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  Para crear una copia del final del registro, vea [Realizar una copia de seguridad del registro de transacciones cuando la base de datos está dañada &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
   
  Para restaurar una copia de seguridad del registro de transacciones, vea [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  

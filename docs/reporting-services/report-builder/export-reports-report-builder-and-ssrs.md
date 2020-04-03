@@ -1,5 +1,6 @@
 ---
 title: Exportación de informes (Generador de informes) | Microsoft Docs
+description: Puede exportar un informe de Reporting Services a otro formato de archivo, como PowerPoint o PDF, mediante Generador de informes, Diseñador de informes o el servidor de informes.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a213d0decf0b2765dca07faec69135ddd3e44d99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078491"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342927"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportación de informes (Generador de informes y SSRS)
 
@@ -37,7 +38,7 @@ ms.locfileid: "77078491"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a name="bkmk_export_from_rb"></a> Para exportar un informe del Generador de informes
+## <a name="to-export-a-report-from-report-builder"></a><a name="bkmk_export_from_rb"></a> Para exportar un informe del Generador de informes
 
 1.  Ejecute el informe u obtenga una vista previa.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "77078491"
   
      Se abre el cuadro de diálogo **Guardar como** . De forma predeterminada, aparece el nombre de archivo del informe que exportó. Si lo desea, puede cambiar el nombre de archivo.  
   
-##  <a name="bkmk_export_from_rm"></a> Para exportar un informe desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+##  <a name="to-export-a-report-from-the-ssrsnoversion-web-portal"></a><a name="bkmk_export_from_rm"></a> Para exportar un informe desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 1.  En la página [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Inicio **del portal web de** , vaya al informe que quiere exportar.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "77078491"
   
      El informe se muestra o se guarda mediante la aplicación asociada al formato elegido. Si hace clic en **Guardar**, se le solicitará una ubicación para guardar el informe.  
   
-##  <a name="bkmk_export_from_sharepoint"></a> Para exportar un informe desde una biblioteca de SharePoint  
+##  <a name="to-export-a-report-from-a-sharepoint-library"></a><a name="bkmk_export_from_sharepoint"></a> Para exportar un informe desde una biblioteca de SharePoint  
   
 1.  Obtenga una vista previa del informe.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "77078491"
   
      **Nota** : si el programa no puede abrir el informe en el formato que ha elegido porque no tiene un programa asociado a este tipo de archivo, se le pedirá que guarde el informe exportado o que busque un programa en línea para abrir el informe.  
   
-##  <a name="RendererTypes"></a> Tipos de extensión de presentación  
+##  <a name="rendering-extension-types"></a><a name="RendererTypes"></a> Tipos de extensión de presentación  
  Hay tres tipos de extensiones de presentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   **Extensiones de presentador de datos:** las extensiones de presentación de datos quitan del informe toda la información de formato y muestran solo los datos. El archivo resultante se puede usar para importar los datos del informe sin formato en otro tipo de archivo, como Excel, en otra base de datos, en un mensaje de datos XML o en una aplicación personalizada. Los presentadores de datos no admiten los saltos de página.  
@@ -106,7 +107,7 @@ ms.locfileid: "77078491"
   
      Las extensiones de presentación de saltos de página forzados admitidas son las siguientes: TIFF y PDF.  
   
-##  <a name="ExportFormats"></a> Formatos que puede exportar durante la visualización de informes  
+##  <a name="formats-you-can-export-while-viewing-reports"></a><a name="ExportFormats"></a> Formatos que puede exportar durante la visualización de informes  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona extensiones de presentación que presentan los informes en formatos diferentes. Debería optimizar el diseño de informe para el formato de archivo elegido.  En la tabla siguiente se enumeran los formatos que puede exportar desde la interfaz de usuario.  Existen formatos adicionales que puede utilizar con suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o si va a exportar desde el acceso de la dirección URL.  Vea la sección [Otras maneras de exportar Informes](#OtherWaysExportingReports)de este tema.  
   
 |Formato|Tipo de extensión de presentación|Descripción|  
@@ -121,12 +122,12 @@ ms.locfileid: "77078491"
 |WORDOPENXML|Salto de página automático|Se muestra como "Word" en el menú de exportación al visualizar informes. La extensión de representación de Word representa un informe como un documento de Word (.docx) compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Para más información, vea [Exportar a Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
 |XML|data|La extensión de presentación en XML devuelve un informe en formato XML. El esquema XML del informe es específico de éste y solamente contiene datos. La extensión de representación en XML no representa la información de diseño ni mantiene la paginación. El XML que genera esta extensión se puede importar a una base de datos, se puede usar como mensaje de datos XML o se puede enviar a una aplicación personalizada.<br/><br/> Para más información, vea [Exportar a XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
   
-##  <a name="GeneratingDataFeedsFromReport"></a> Generar fuentes de distribución de datos desde un informe  
+##  <a name="generating-data-feeds-from-a-report"></a><a name="GeneratingDataFeedsFromReport"></a> Generar fuentes de distribución de datos desde un informe  
  Para generar las fuentes de distribución de datos desde un informe, ejecute el informe en el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y, después, haga clic en el icono **Generar fuente de distribución de datos** en la barra de herramientas del portal web. Se le solicita que decida si guardar o abrir el archivo. Si elige **Abrir**, el documento de servicio de Atom se abre en la aplicación que está asociada a la extensión de archivo .atomsvc. Si elige **Guardar**, el documento se guarda como un archivo .atomsvc. De forma predeterminada, el nombre del archivo es el nombre del informe. Puede cambiar el nombre a uno que sea más significativo.  
   
  Guarde el documento de servicio de Atom en su equipo. Después puede cargarlo a un servidor de informes o a otro servidor para que esté disponible para que otros lo utilicen. Para más información, vea [Generar fuentes de distribución de datos a partir de informes](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) y [Generar fuentes de distribución de datos a partir de un informe](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Solucionar problemas de informes exportados  
+##  <a name="troubleshooting-exported-reports"></a><a name="Troubleshooting"></a> Solucionar problemas de informes exportados  
  A veces, los informes parecen diferentes o no funcionan como desea tras exportarlos a un formato diferente. Esto se debe a que podrían aplicarse ciertas reglas y limitaciones al representador. Puede solucionar muchas limitaciones teniéndolas en cuenta al crear el informe. Podría necesitar usar un diseño ligeramente diferente en el informe, alinear cuidadosamente los elementos dentro del mismo, restringir los pies de página del informe a una sola línea de texto, etc.  
   
  Si un informe contiene texto Unicode y números arábigos, o contiene fechas arábigas, las fechas y los números no se representan correctamente cuando el informe se imprime o cuando se exporta cualquiera de los formatos siguientes.  
@@ -163,7 +164,7 @@ ms.locfileid: "77078491"
   
  Además, puede usar la función RenderFormat integrada para aplicar condicionalmente diseños de informe diferentes para representadores distintos. Para más información, vea [Referencias a campos globales y de usuario integrados](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).
 
-##  <a name="OtherWaysExportingReports"></a> Otras maneras de exportar Informes  
+##  <a name="other-ways-of-exporting-reports"></a><a name="OtherWaysExportingReports"></a> Otras maneras de exportar Informes  
  La exportación de un informe es una tarea a petición que se realiza cuando el informe está abierto en el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o el Generador de informes. Si desea automatizar una operación de exportación (por ejemplo, exportar periódicamente un informe a una carpeta compartida como un tipo de archivo específico), cree una suscripción que entregue el informe a una carpeta compartida. Para obtener más información, vea [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
  De forma predeterminada, los informes cuya vista previa se obtiene en las herramientas de elaboración de informes o que se abren en una aplicación de explorador, como el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , siempre se presentan primero en HTML. No es posible especificar una extensión de representación diferente como opción predeterminada para la vista. Sin embargo, puede crear una suscripción que genere un informe en el formato de representación que desee para que se envíe posteriormente a una bandeja de entrada de correo electrónico o una carpeta compartida. Para obtener más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) y [Crear, modificar y eliminar una suscripción controlada por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  

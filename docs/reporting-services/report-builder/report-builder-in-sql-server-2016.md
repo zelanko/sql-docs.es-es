@@ -1,5 +1,6 @@
 ---
 title: Generador de informes en SQL Server | Microsoft Docs
+description: Generador de informes es una herramienta para la creación de informes paginados. Para crear un informe, especifique los datos que quiere recuperar, de dónde obtenerlos y cómo mostrarlos.
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67688510"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290893"
 ---
 # <a name="report-builder-in-sql-server"></a>Generador de informes en SQL Server
 
@@ -30,7 +31,7 @@ También puede publicar un informe paginado en el servicio Power BI. Obtenga má
   
  En este informe paginado se muestra una matriz con grupos de filas y columnas, minigráficos, indicadores y un gráfico circular de resumen en la celda de la esquina, acompañada de un mapa con dos conjuntos de datos geográficos representados por color y tamaño del círculo.  
   
-##  <a name="JumpStartReptCreation"></a> Iniciar la creación del informe  
+##  <a name="jump-start-report-creation"></a><a name="JumpStartReptCreation"></a> Iniciar la creación del informe  
   
 -   **Comience con un conjunto de datos compartido**. Los conjuntos de datos compartidos son consultas basadas en un origen de datos compartido almacenadas en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint.  
   
@@ -40,7 +41,7 @@ También puede publicar un informe paginado en el servicio Power BI. Obtenga má
   
 -   **Inicie el informe con elementos de informe**. Los elementos de informe son elementos publicados aparte en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint. Estos elementos se pueden volver a usar en otros informes. Los elementos de informe, como las tablas, las matrices, los gráficos y las imágenes, se pueden publicar como elementos de informe.  
   
-##  <a name="DesignRept"></a> Diseñar el informe  
+##  <a name="design-your-report"></a><a name="DesignRept"></a> Diseñar el informe  
   
 -   **Cree informes paginados con diseños de tabla, matriz, gráfico y formato libre.** Cree informes de tabla para datos basados en columnas, informes de matrices (como informes para referencias cruzadas de tabla o para PivotTable) para datos resumidos, informes de gráficos para datos gráficos e informes de formato libre para todo los demás. Los informes pueden incrustar otros informes y gráficos, junto con listas, gráficos y controles para las aplicaciones dinámicas basadas en web.  
   
@@ -55,7 +56,7 @@ También puede publicar un informe paginado en el servicio Power BI. Obtenga má
   
 -   **Incruste o haga referencia a imágenes** y a otros recursos, incluidos los contenidos externos.  
   
-##  <a name="ManageRpt"></a> Administrar el informe  
+##  <a name="manage-your-report"></a><a name="ManageRpt"></a> Administrar el informe  
   
 -   **Guarde la definición del informe** en el equipo o en el servidor de informes, donde podrá administrarlo y compartirlo con otros usuarios.  
   

@@ -1,5 +1,6 @@
 ---
 title: Exportación a XML (Generador de informes) | Microsoft Docs
+description: En el Generador de informes, la extensión de representación de XML representa un informe paginado en formato XML. Importe XML en una base de datos, úselo como mensaje o envíelo a las aplicaciones.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71e3b5102fa1ff37e7cea22562919b202889ecc3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079308"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342832"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportar a XML (Generador de informes y SSRS)
   La extensión de representación en XML devuelve un informe paginado en formato XML. El esquema XML del informe es específico de éste y solamente contiene datos. La extensión de representación en XML no representa la información de diseño ni mantiene la paginación. El XML que genera esta extensión se puede importar a una base de datos, se puede usar como mensaje de datos XML o se puede enviar a una aplicación personalizada.  
@@ -21,7 +22,7 @@ ms.locfileid: "77079308"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Elementos de informe  
+##  <a name="report-items"></a><a name="ReportItems"></a> Elementos de informe  
  En la tabla siguiente se describe cómo se representan los elementos de informe.  
   
 |Elemento|Comportamiento de la representación|  
@@ -52,7 +53,7 @@ ms.locfileid: "77079308"
 -   Se omiten**Images, lines, and custom report items** .  
   
   
-##  <a name="DataTypes"></a> Tipos de datos  
+##  <a name="data-types"></a><a name="DataTypes"></a> Tipos de datos  
  Al elemento o atributo del cuadro de texto se le asigna un tipo de datos XSD según los valores que muestra el cuadro de texto.  
   
 |Si todos los valores del cuadro de texto son|El tipo de datos asignado es|  
@@ -68,7 +69,7 @@ ms.locfileid: "77079308"
 |Otros|**xsd:cadena**|  
   
   
-##  <a name="XMLSpecificRenderingRules"></a> Reglas de representación específicas de XML  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> Reglas de representación específicas de XML  
  En las secciones siguientes se describe cómo interpreta los elementos del informe la extensión de representación en XML.  
   
 ### <a name="report-body"></a>Cuerpo del informe  
@@ -150,15 +151,15 @@ ms.locfileid: "77079308"
  Si el valor de la propiedad DataElementOutput es igual al de la salida, el encabezado de un elemento repetitivo se representa como un elemento secundario del elemento de detalle.  
   
   
-##  <a name="CustomFormatsXSLTransformations"></a> Formatos personalizados y transformaciones XSL  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> Formatos personalizados y transformaciones XSL  
  Los archivos XML generados por la extensión de representación en XML se pueden transformar prácticamente a cualquier formato mediante las transformaciones XSL (XSLT). Esta funcionalidad se puede usar para generar datos en formatos todavía no admitidos por las extensiones de representación existentes. Se recomienda utilizar la extensión de representación en XML y XSLT antes de intentar crear una extensión de representación propia.  
   
   
-##  <a name="DuplicateName"></a> Nombres duplicados  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> Nombres duplicados  
  Si hay nombres de elementos de datos duplicados dentro del mismo ámbito, el representador muestra un mensaje de error.  
   
   
-##  <a name="XSLTTransformations"></a> Transformaciones XSLT  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a> Transformaciones XSLT  
  El representador de XML puede aplicar una transformación XSLT en el servidor a los datos XML originales. Cuando se aplica una XSLT, el representador genera el contenido transformado en lugar de los datos XML originales. La transformación se produce en el servidor, no en el cliente.  
   
  La transformación XSLT que se debe aplicar a la salida se define en el archivo de definición de informe con la propiedad DataTransform del informe o con el parámetro *DeviceInfo* de XSLT. Si se establece cualquiera de estos valores, la transformación se produce cada vez que se usa el representador de XML. Cuando se usan suscripciones, la transformación XSLT se debe definir en la propiedad RDL DataTransform.  
@@ -166,7 +167,7 @@ ms.locfileid: "77079308"
  Si se especifica un archivo XSLT, tanto con la propiedad de definición DataTransform como con la configuración de la información del dispositivo, primero se produce la transformación XSLT especificada en DataTransform y después la establecida mediante la configuración de la información del dispositivo.  
   
   
-###  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador cambiando valores de configuración de la información del dispositivo como los siguientes:  
   
 -   La transformación (XSLT) que se aplicará al XML.  

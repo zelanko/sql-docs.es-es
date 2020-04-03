@@ -1,7 +1,7 @@
 ---
 title: Unión de SQL Server en Linux a Active Directory
 titleSuffix: SQL Server
-description: ''
+description: En este artículo se proporcionan instrucciones para unir un equipo host Linux con SQL Server a un dominio de AD. Puede usar un paquete SSSD integrado, o bien proveedores de AD de terceros.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761879"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216207"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Unión de SQL Server en un host de Linux a un dominio de Active Directory
 
@@ -22,7 +22,7 @@ ms.locfileid: "76761879"
 
 En este artículo se proporcionan instrucciones generales para unir un equipo host de Linux de SQL Server a un dominio de Active Directory (AD). Hay dos métodos: usar un paquete SSSD integrado o emplear proveedores ajenos de Active Directory. Ejemplos de productos de unión a dominio ajenos son [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) y [Centrify](https://www.centrify.com/). En esta guía se incluyen los pasos necesarios para comprobar la configuración de Active Directory, aunque no está concebida para proporcionar instrucciones sobre cómo unir un equipo a un dominio cuando se usan utilidades de terceros.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Antes de configurar la autenticación de Active Directory, debe configurar un controlador de dominio de Active Directory, Windows, en la red. Luego, una el host de SQL Server en Linux a un dominio de Active Directory.
 
@@ -129,7 +129,7 @@ Una vez comprobada la configuración básica y la conectividad con el controlado
 - [Opción 1: usar un paquete SSSD](#option1)
 - [Opción 2: usar utilidades de proveedor de openldap de terceros](#option2)
 
-### <a id="option1"></a> Opción 1: usar un paquete SSSD para unir a dominio de AD
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> Opción 1: usar un paquete SSSD para unir a dominio de AD
 
 Este método une el host de SQL Server a un dominio de AD mediante paquetes **realmd** y **sssd**.
 
@@ -203,7 +203,7 @@ Siga los pasos siguientes para unir un host de SQL Server a un dominio de Active
 
 Para obtener más información, vea la documentación de Red Hat para [detectar y unir dominios de identidad](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 
-### <a id="option2"></a> Opción 2: usar utilidades de proveedor de openldap de terceros
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> Opción 2: usar utilidades de proveedor de openldap de terceros
 
 Puede usar utilidades de terceros como [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) o [Centrify](https://www.centrify.com/). En este artículo no se consignan los pasos para cada utilidad individual. Antes de continuar, debe usar una de estas utilidades para unir el host de Linux para SQL Server al dominio.  
 

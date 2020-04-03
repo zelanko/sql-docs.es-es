@@ -1,5 +1,6 @@
 ---
 title: Instalación de PolyBase en Windows | Microsoft Docs
+description: Aprenda a instalar PolyBase como un solo nodo o grupo de escalado horizontal de PolyBase. Puede usar un asistente para la instalación o un símbolo del sistema. Por último, habilite PolyBase.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288479"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80217138"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
 
@@ -95,7 +96,7 @@ Después de instalar PolyBase de forma independiente o en un grupo de escalado h
    > Después de la instalación, debe [habilitar la característica PolyBase](#enable).
 
 
-##  <a name="installing"></a> Usar un símbolo del sistema
+##  <a name="use-a-command-prompt"></a><a name="installing"></a> Usar un símbolo del sistema
 
 Use los valores de esta tabla para crear scripts de instalación. Los servicios Motor de SQL Server PolyBase y Movimiento de datos de SQL Server PolyBase deben ejecutarse en la misma cuenta. En un grupo de escalado horizontal de PolyBase, se deben ejecutar con la misma cuenta de dominio los servicios de PolyBase en todos los nodos.  
    
@@ -151,7 +152,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-## <a id="enable"></a> Habilitar PolyBase
+## <a name="enable-polybase"></a><a id="enable"></a> Habilitar PolyBase
 
 Tras la instalación, se debe habilitar PolyBase para acceder a sus características. Use el siguiente comando de Transact-SQL. Las instancias de SQL 2019 implementadas durante la instalación del Clúster de macrodatos tienen esta opción habilitada de forma predeterminada.
 
@@ -166,7 +167,7 @@ RECONFIGURE;
 
 PolyBase instala tres bases de datos de usuario: DWConfiguration, DWDiagnostics y DWQueue. Estas bases de datos son para uso de PolyBase. No las modifique ni las elimine.  
    
-### <a id="confirminstall"></a> Cómo confirmar la instalación  
+### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> Cómo confirmar la instalación  
 
 Ejecute el siguiente comando: Si PolyBase está instalado, el valor devuelto es 1. De lo contrario, es 0.  
 

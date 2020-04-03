@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e90aea4fc05a01f67527e33cac4ba90913405c7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287669"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380676"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -69,7 +69,7 @@ Crea una nueva tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 ```
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -374,16 +374,16 @@ En función de las expresiones utilizadas, la nulabilidad de las columnas calcul
 
 PERSISTED Especifica que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] almacena físicamente los valores calculados en la tabla y actualiza los valores cuando se actualizan las columnas de las que depende la columna calculada. El hecho de marcar la columna calculada como `PERSISTED` le permite crear un índice en una columna calculada que es determinista, pero no precisa. Para obtener más información, vea [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Las columnas calculadas que se utilizan como columnas de partición en una tabla con particiones deben establecerse explícitamente en `PERSISTED`. *computed_column_expression* debe ser determinista cuando se especifique `PERSISTED`.
 
-ON { *partition_scheme* | *filegroup* |  **"default"** } Especifica el esquema de partición o el grupo de archivos en que se almacena la tabla. Si se especifica *partition_scheme*, la tabla será una tabla con particiones cuyas particiones se almacenan en un conjunto de uno o más grupos de archivos especificados en *partition_scheme*. Si se especifica *filegroup*, la tabla se almacena en el grupo de archivos con nombre. El grupo de archivos debe existir en la base de datos. Si se especifica **"default"** o si ON no se especifica en ninguna parte, la tabla se almacena en el grupo de archivos predeterminado. El mecanismo de almacenamiento de una tabla según se especifica en CREATE TABLE no se puede modificar posteriormente.
+ON { *partition_scheme* | *filegroup* | **"default"** } Especifica el esquema de partición o el grupo de archivos en que se almacena la tabla. Si se especifica *partition_scheme*, la tabla será una tabla con particiones cuyas particiones se almacenan en un conjunto de uno o más grupos de archivos especificados en *partition_scheme*. Si se especifica *filegroup*, la tabla se almacena en el grupo de archivos con nombre. El grupo de archivos debe existir en la base de datos. Si se especifica **"default"** o si ON no se especifica en ninguna parte, la tabla se almacena en el grupo de archivos predeterminado. El mecanismo de almacenamiento de una tabla según se especifica en CREATE TABLE no se puede modificar posteriormente.
 
-ON {*partition_scheme* | *filegroup* |  **"default"** } se puede especificar también en una restricción PRIMARY KEY o UNIQUE. Estas restricciones crean índices. Si se especifica *filegroup*, el índice se almacena en el grupo de archivos con nombre. Si se especifica **"default"** o si ON no se especifica en ninguna parte, el índice se almacena en el mismo grupo de archivos que la tabla. Si la restricción `PRIMARY KEY` o `UNIQUE` crea un índice clúster, las páginas de datos de la tabla se almacenan en el mismo grupo de archivos que el índice. Si se especifica `CLUSTERED` o la restricción crea un índice clúster, y se especifica un elemento *partition_scheme* distinto del *partition_scheme* o *filegroup* de la definición de tabla, o viceversa, únicamente se respeta la definición de restricción y se omite el resto.
+ON {*partition_scheme* | *filegroup* | **"default"**} se puede especificar también en una restricción PRIMARY KEY o UNIQUE. Estas restricciones crean índices. Si se especifica *filegroup*, el índice se almacena en el grupo de archivos con nombre. Si se especifica **"default"** o si ON no se especifica en ninguna parte, el índice se almacena en el mismo grupo de archivos que la tabla. Si la restricción `PRIMARY KEY` o `UNIQUE` crea un índice clúster, las páginas de datos de la tabla se almacenan en el mismo grupo de archivos que el índice. Si se especifica `CLUSTERED` o la restricción crea un índice clúster, y se especifica un elemento *partition_scheme* distinto del *partition_scheme* o *filegroup* de la definición de tabla, o viceversa, únicamente se respeta la definición de restricción y se omite el resto.
 
 > [!NOTE]
-> En este contexto, *default* no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"default"** o en ON **[** default **]** . Si se especifica **"default"** , la opción `QUOTED_IDENTIFIER` debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para más información, consulte [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+> En este contexto, *default* no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"default"** o en ON **[** default **]**. Si se especifica **"default"**, la opción `QUOTED_IDENTIFIER` debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para más información, consulte [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 >
 > Después de crear una tabla con particiones, considere la posibilidad de establecer la opción `LOCK_ESCALATION` para la tabla en `AUTO`. Esto puede mejorar la simultaneidad al permitir que los bloqueos se extiendan al nivel de partición (HoBT) en lugar de la tabla. Para más información, vea [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).
 
-TEXTIMAGE_ON { *filegroup*|  **"default"** } Indica **text**, **ntext**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** y de tipo definido por el usuario CLR (incluidos los tipos geometry y geography) se almacenan en el grupo de archivos especificado.
+TEXTIMAGE_ON { *filegroup*| **"default"** } Indica **text**, **ntext**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y de tipo definido por el usuario CLR (incluidos los tipos geometry y geography) se almacenan en el grupo de archivos especificado.
 
 No se permite `TEXTIMAGE_ON` si no hay columnas de valores grandes en la tabla. No se puede especificar `TEXTIMAGE_ON` si se especifica *partition_scheme*. Si se especifica **"default"** o si `TEXTIMAGE_ON` no se especifica en ninguna parte, las columnas de valores grandes se almacenan en el grupo de archivos predeterminado. El almacenamiento de los datos de columna de valores grandes especificados en `CREATE TABLE` no se puede modificar posteriormente.
 
@@ -392,7 +392,7 @@ No se permite `TEXTIMAGE_ON` si no hay columnas de valores grandes en la tabla. 
 >
 > `TEXTIMAGE_ON` solo cambia la ubicación del "espacio de almacenamiento de LOB", pero no tiene ningún efecto si los datos se almacenan de forma consecutiva. Use la opción de sp_tableoption de almacenar tipos de valores grandes de manera no consecutiva para almacenar todos valores de LOB de manera no consecutiva.
 >
-> En este contexto, el valor predeterminado no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en `TEXTIMAGE_ON "default"` o en `TEXTIMAGE_ON [default]`. Si se especifica **"default"** , la opción `QUOTED_IDENTIFIER` debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para más información, consulte [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+> En este contexto, el valor predeterminado no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en `TEXTIMAGE_ON "default"` o en `TEXTIMAGE_ON [default]`. Si se especifica **"default"**, la opción `QUOTED_IDENTIFIER` debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para más información, consulte [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] y versiones posteriores). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no admite `FILESTREAM`.
 
@@ -407,13 +407,13 @@ Si la tabla no tiene particiones y no se especifica la cláusula `FILESTREAM_ON`
 Al igual que con ON y `TEXTIMAGE_ON`, el valor establecido utilizando `CREATE TABLE` para `FILESTREAM_ON` no se puede cambiar, excepto en los casos siguientes:
 
 - Una instrucción [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) convierte un montón en un índice agrupado. En este caso, se puede especificar un grupo de archivos FILESTREAM diferente, un esquema de partición o NULL.
-- Una instrucción [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) convierte un índice agrupado en un montón. En este caso, se puede especificar otro grupo de archivos FILESTREAM, otro esquema de partición o **"default"** .
+- Una instrucción [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) convierte un índice agrupado en un montón. En este caso, se puede especificar otro grupo de archivos FILESTREAM, otro esquema de partición o **"default"**.
 
 El grupo de archivos en la cláusula `FILESTREAM_ON <filegroup>`, o cada grupo de archivos FILESTREAM que se mencione en el esquema de partición, debe tener un archivo definido para el grupo de archivos. Este archivo se debe definir mediante una instrucción [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); en caso contrario, se produce un error.
 
 Si quiere consultar temas sobre FILESTREAM relacionados, vea [Datos de objeto binario grande (Blob) (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
 
-[ _type\_schema\_name_ **.** ] *type_name* Especifica el tipo de datos de la columna y el esquema al que pertenece. Para las tablas basadas en disco, el tipo de datos puede ser uno de los siguientes:
+[ _type\_schema\_name_**.** ] *type_name* Especifica el tipo de datos de la columna y el esquema al que pertenece. Para las tablas basadas en disco, el tipo de datos puede ser uno de los siguientes:
 
 - Un tipo de datos del sistema
 - Un tipo de alias basado en un tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los tipos de datos de alias se crean con la instrucción `CREATE TYPE` antes de que puedan utilizarse en una definición de tabla. La asignación NULL o NOT NULL de un tipo de datos de alias puede invalidarse durante la instrucción `CREATE TABLE`. No obstante, la especificación de longitud no se puede cambiar; la longitud del tipo de datos de alias no se puede especificar en una instrucción `CREATE TABLE`.
@@ -445,7 +445,7 @@ DEFAULT Especifica el valor suministrado para la columna cuando no se ha especif
 
 *memory_optimized_constant_expression* Es una constante, NULL o una función del sistema que se admite como valor predeterminado de una columna. Debe admitirse en los procedimientos almacenados compilados de forma nativa. Para más información sobre las funciones integradas en procedimientos almacenados compilados de forma nativa, vea [Características admitidas en los módulos T-SQL compilados de forma nativa](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).
 
-IDENTITY Indica que la nueva columna es una columna de identidad. Cuando se agrega una fila nueva a la tabla, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente con las restricciones PRIMARY KEY como identificadores de fila únicos de la tabla. La propiedad `IDENTITY` se puede asignar a columnas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)** . Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. En este caso, deben especificarse el valor de inicialización y el incremento, o ninguno de esto valores. Si no se especifica ninguno, el valor predeterminado es (1,1).
+IDENTITY Indica que la nueva columna es una columna de identidad. Cuando se agrega una fila nueva a la tabla, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente con las restricciones PRIMARY KEY como identificadores de fila únicos de la tabla. La propiedad `IDENTITY` se puede asignar a columnas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)**. Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. En este caso, deben especificarse el valor de inicialización y el incremento, o ninguno de esto valores. Si no se especifica ninguno, el valor predeterminado es (1,1).
 
 *seed* Es el valor que se utiliza para la primera fila cargada en la tabla.
 
@@ -457,7 +457,7 @@ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **Se aplica a**:
 
 Especifica que el sistema usará una determinada columna `datetime2` para registrar la hora de inicio o de finalización para las que un registro es válido. La columna debe definirse como `NOT NULL`. Si intenta especificarlas como `NULL`, el sistema producirá un error. Si no especifica explícitamente NOT NULL para una columna de período, el sistema definirá la columna como `NOT NULL` de forma predeterminada. Utilice este argumento junto con los argumentos `PERIOD FOR SYSTEM_TIME` y `WITH SYSTEM_VERSIONING = ON` para habilitar el control de versiones del sistema en una tabla. Para obtener más información, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-Los usuarios pueden marcar una o ambas columnas de período con la marca **HIDDEN** para ocultarlas implícitamente, de modo que **SELECT \* FROM** _`<table>`_ no devuelva ningún valor para esas columnas. De forma predeterminada, no se ocultan las columnas de período. Para poder usar las columnas ocultas, deben incluirse explícitamente en todas las consultas que hacen referencia directa a la tabla temporal. Para cambiar el atributo **HIDDEN** para una columna de período existente, debe quitarse **PERIOD** y volver a crearlo con una etiqueta oculta distinta.
+Los usuarios pueden marcar una o ambas columnas de período con la marca **HIDDEN** para ocultarlas implícitamente, de modo que **SELECT \* FROM**_`<table>`_ no devuelva ningún valor para esas columnas. De forma predeterminada, no se ocultan las columnas de período. Para poder usar las columnas ocultas, deben incluirse explícitamente en todas las consultas que hacen referencia directa a la tabla temporal. Para cambiar el atributo **HIDDEN** para una columna de período existente, debe quitarse **PERIOD** y volver a crearlo con una etiqueta oculta distinta.
 
 INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] ) **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -473,7 +473,7 @@ Especifica que se creará un índice de almacén de columnas no en clúster en l
 
 El índice de almacén de columnas no en clúster se almacena y administra como un índice de almacén de columnas agrupado. Se denomina índice de almacén de columnas no en clúster porque las columnas pueden ser limitadas y está presente como un índice secundario en una tabla.
 
-ON _partition\_scheme\_name_ **(** _column\_name_ **)** Especifica el esquema de partición que define los grupos de archivos a los que se asignarán las particiones de un índice con particiones. El esquema de partición debe existir dentro de la base de datos mediante la ejecución de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica la columna en la que se van a crear las particiones de un índice con particiones. Esta columna debe coincidir con el tipo de datos, la longitud y la precisión del argumento de la función de partición que *partition_scheme_name* emplea. *column_name* no está limitado a las columnas de la definición de índice. Se puede especificar cualquier columna de la tabla base, excepto en el caso de partición de un índice UNIQUE, en el que se debe elegir *column_name* entre las columnas usadas como clave única. Esta restricción permite que [!INCLUDE[ssDE](../../includes/ssde-md.md)] compruebe la unicidad de los valores de clave en una única partición solamente.
+ON _partition\_scheme\_name_**(**_column\_name_**)** Especifica el esquema de partición que define los grupos de archivos a los que se asignarán las particiones de un índice con particiones. El esquema de partición debe existir dentro de la base de datos mediante la ejecución de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica la columna en la que se van a crear las particiones de un índice con particiones. Esta columna debe coincidir con el tipo de datos, la longitud y la precisión del argumento de la función de partición que *partition_scheme_name* emplea. *column_name* no está limitado a las columnas de la definición de índice. Se puede especificar cualquier columna de la tabla base, excepto en el caso de partición de un índice UNIQUE, en el que se debe elegir *column_name* entre las columnas usadas como clave única. Esta restricción permite que [!INCLUDE[ssDE](../../includes/ssde-md.md)] compruebe la unicidad de los valores de clave en una única partición solamente.
 
 > [!NOTE]
 > Cuando se crean particiones en un índice clúster no único, [!INCLUDE[ssDE](../../includes/ssde-md.md)] agrega de forma predeterminada la columna de partición a la lista de claves del índice clúster, en caso de que aún no se hubiera especificado. Cuando se crean particiones en un índice no clúster que tampoco es único, [!INCLUDE[ssDE](../../includes/ssde-md.md)] agrega la columna de partición como una columna sin clave (incluida) del índice, si aún no se especificó.
@@ -489,7 +489,7 @@ ON *filegroup_name* Crea el índice especificado en el grupo de archivos especif
 
 ON **"default"** Crea el índice especificado en el grupo de archivos predeterminado.
 
-El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"default"** o en ON **[default]** . Si se especifica "default", la opción `QUOTED_IDENTIFIER` debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para más información, consulte [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"default"** o en ON **[default]**. Si se especifica "default", la opción `QUOTED_IDENTIFIER` debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para más información, consulte [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ] **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] y versiones posteriores).
 
@@ -525,7 +525,7 @@ Las columnas deben ser de un tipo de datos aplicable.
 
 ALGORITHM **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores).
 
-Debe ser **'AEAD_AES_256_CBC_HMAC_SHA_256'** .
+Debe ser **'AEAD_AES_256_CBC_HMAC_SHA_256'**.
 
 Para más información, incluidas restricciones de características, vea [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
@@ -544,7 +544,7 @@ Para conocer más parámetros de función, vea [Enmascaramiento de datos dinámi
 
 FILESTREAM **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] y versiones posteriores)
 
-Válido únicamente para columnas **varbinary (max)** . Especifica el almacenamiento FILESTREAM para los datos de BLOB **varbinary(max)** .
+Válido únicamente para columnas **varbinary (max)**. Especifica el almacenamiento FILESTREAM para los datos de BLOB **varbinary(max)**.
 
 La tabla también debe tener una columna del tipo de datos **uniqueidentifier** que tenga el atributo ROWGUIDCOL. Esta columna no debe permitir valores nulos y debe tener una restricción de columna única UNIQUE o PRIMARY KEY. El valor de GUID de la columna lo debe proporcionar una aplicación cuando se inserten datos o una restricción DEFAULT que use la función NEWID ().
 
@@ -574,9 +574,9 @@ En una instrucción `CREATE TABLE`, se puede especificar CLUSTERED tan solo para
 
 FOREIGN KEY REFERENCES Es una restricción que proporciona integridad referencial para los datos de la columna o columnas. Las restricciones FOREIGN KEY requieren que cada valor de la columna exista en la columna o columnas de referencia correspondientes de la tabla a la que se hace referencia. Las restricciones FOREIGN KEY pueden hacer referencia solo a columnas que sean restricciones PRIMARY KEY o UNIQUE en la tabla de referencia o a columnas a las que se haga referencia en UNIQUE INDEX en la tabla de referencia. Las claves externas en las columnas calculadas deben marcarse también como PERSISTED.
 
-[ _schema\_name_ **.** ] *referenced_table_name*] Es el nombre de la tabla a la que hace referencia la restricción FOREIGN KEY y el esquema al que pertenece.
+[ _schema\_name_**.**] *referenced_table_name*] Es el nombre de la tabla a la que hace referencia la restricción FOREIGN KEY y el esquema al que pertenece.
 
-**(** *ref_column* [ **,** ... *n* ] **)** Es una columna o lista de columnas de la tabla a la que hace referencia la restricción FOREIGN KEY.
+**(** *ref_column* [ **,**... *n* ] **)** Es una columna o lista de columnas de la tabla a la que hace referencia la restricción FOREIGN KEY.
 
 ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } Especifica la acción que tiene lugar en las filas de la tabla creada si dichas filas tienen una relación referencial y la fila a la que se hace referencia se elimina de la tabla primaria. El valor predeterminado es NO ACTION.
 
@@ -628,12 +628,12 @@ CHECK Es una restricción que exige la integridad del dominio al limitar los val
 
 *partition_scheme_name*Es el nombre del esquema de partición que define los grupos de archivos a los que se van a asignar las particiones de una tabla con particiones. El esquema de partición debe existir en la base de datos.
 
-[ _partition\_column\_name_ **.** ] Especifica la columna en la que se van a crear las particiones de la tabla con particiones. La columna debe coincidir con la especificada en la función de partición que *partition_scheme_name* está usando en términos de tipo de datos, longitud y precisión. Una columna calculada que participa en una función de partición se debe marcar como PERSISTED de forma explícita.
+[ _partition\_column\_name_**.** ] Especifica la columna en la que se van a crear las particiones de la tabla con particiones. La columna debe coincidir con la especificada en la función de partición que *partition_scheme_name* está usando en términos de tipo de datos, longitud y precisión. Una columna calculada que participa en una función de partición se debe marcar como PERSISTED de forma explícita.
 
 > [!IMPORTANT]
 > Se recomienda especificar NOT NULL en la columna de partición de las tablas con particiones y también de las tablas sin particiones que sean orígenes o destinos de operaciones ALTER TABLE...SWITCH. De esta forma se garantiza que las restricciones CHECK en columnas de partición no tengan que comprobar si hay valores NULL.
 
-WITH FILLFACTOR **=** _fillfactor_ Especifica en qué medida [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe llenar cada página de índice que se va a utilizar para almacenar los datos de índice. Los valores de *fillfactor* especificados por el usuario pueden estar comprendidos entre 1 y 100. Si no se especifica un valor, el valor predeterminado es 0. Los valores de fill factor 0 y 100 son idénticos.
+WITH FILLFACTOR **=**_fillfactor_ Especifica en qué medida [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe llenar cada página de índice que se va a utilizar para almacenar los datos de índice. Los valores de *fillfactor* especificados por el usuario pueden estar comprendidos entre 1 y 100. Si no se especifica un valor, el valor predeterminado es 0. Los valores de fill factor 0 y 100 son idénticos.
 
 > [!IMPORTANT]
 > La documentación de WITH FILLFACTOR = *fillfactor* como la única opción de índice que se aplica a las restricciones PRIMARY KEY o UNIQUE se mantiene por compatibilidad con versiones anteriores, pero no se documentará de esta forma en futuras versiones.
@@ -676,7 +676,7 @@ Solo se aplica a los índices de almacén de columnas, incluidos los clúster y 
 
 Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ...*n* ] **)** Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si la tabla no se particiona, el argumento `ON PARTITIONS` generará un error. Si no se proporciona la cláusula `ON PARTITIONS`, la opción `DATA_COMPRESSION` se aplicará a todas las particiones de una tabla con particiones.
+ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)** Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si la tabla no se particiona, el argumento `ON PARTITIONS` generará un error. Si no se proporciona la cláusula `ON PARTITIONS`, la opción `DATA_COMPRESSION` se aplicará a todas las particiones de una tabla con particiones.
 
 *partition_number_expression* se puede especificar de estas maneras:
 
@@ -701,7 +701,7 @@ WITH
 
 PAD_INDEX = { ON | **OFF** } Cuando es ON, el porcentaje de espacio disponible especificado por FILLFACTOR se aplica a las páginas de nivel intermedio del índice. Cuando es OFF o no se especifica ningún valor de FILLFACTOR, las páginas de nivel intermedio se rellenan casi al máximo de su capacidad dejando espacio suficiente para al menos una fila del tamaño máximo que el índice puede contener teniendo en cuenta el conjunto de claves de las páginas intermedias. El valor predeterminado es OFF.
 
-FILLFACTOR **=** _fillfactor_ Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o modificación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. El valor predeterminado es 0. Los valores de fill factor 0 y 100 son idénticos.
+FILLFACTOR **=**_fillfactor_ Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o modificación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. El valor predeterminado es 0. Los valores de fill factor 0 y 100 son idénticos.
 
 IGNORE_DUP_KEY = { ON | **OFF** } Especifica la respuesta de error cuando una operación de inserción intenta insertar valores de clave duplicados en un índice único. La opción IGNORE_DUP_KEY se aplica solamente a operaciones de inserción realizadas tras crear o volver a generar el índice. La opción no tiene efecto cuando se ejecutan [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md). El valor predeterminado es OFF.
 
@@ -956,7 +956,7 @@ Antes de crear una tabla con particiones mediante CREATE TABLE, debe crear una f
 - Las restricciones FOREIGN KEY solo pueden hacer referencia a las tablas de la misma base de datos en el mismo servidor. La integridad referencial entre bases de datos debe implementarse a través de desencadenadores. Para obtener más información, vea [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md).
 - Las restricciones FOREIGN KEY pueden hacer referencia a otras columnas de la misma tabla. Esto recibe el nombre de autorreferencia.
 - La cláusula REFERENCES de una restricción FOREIGN KEY de nivel de columna solo puede incluir una columna de referencia. Esta columna debe tener el mismo tipo de datos que la columna en la que se define la restricción.
-- La cláusula REFERENCES de una restricción FOREIGN KEY de nivel de tabla debe tener el mismo número de columnas de referencia que la lista de columnas de la restricción. El tipo de datos de cada columna de referencia debe ser también el mismo que el de la columna correspondiente de la lista de columnas.
+- La cláusula REFERENCES de una restricción FOREIGN KEY de nivel de tabla debe tener el mismo número de columnas de referencia que la lista de columnas de la restricción. El tipo de datos de cada columna de referencia debe ser también el mismo que el de la columna correspondiente de la lista de columnas. Las columnas de referencia se deben especificar en el mismo orden que se ha usado al especificar las columnas de la restricción de clave principal o única en la tabla a la que se hace referencia.
 - No se puede especificar CASCADE, SET NULL o SET DEFAULT si una columna de tipo **timestamp** forma parte de la clave externa o de la clave con referencia.
 - CASCADE, SET NULL, SET DEFAULT y NO ACTION se pueden combinar en las tablas con relaciones referenciales entre sí. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta NO ACTION, detiene y revierte las acciones CASCADE, SET NULL y SET DEFAULT relacionadas. Cuando una instrucción DELETE hace que se combinen las acciones CASCADE, SET NULL, SET DEFAULT y NO ACTION, todas las acciones CASCADE, SET NULL y SET DEFAULT se aplican antes de que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] compruebe la existencia de NO ACTION.
 - El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene un límite predefinido para el número de restricciones FOREIGN KEY que una tabla que hace referencia a otras tablas puede contener, o para el número de restricciones FOREIGN KEY pertenecientes a otras tablas que hacen referencia a una tabla específica.
@@ -1232,7 +1232,7 @@ CREATE TABLE dbo.mytable
 
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>K. Crear una columna calculada en función de una columna de tipo definido por el usuario
 
-En el siguiente ejemplo se crea una tabla con una columna de tipo definido por el usuario `utf8string` dando por supuesto que el ensamblado del tipo y el propio tipo ya se han creado en la base de datos actual. Se define una segunda columna en función de `utf8string` y se usa el método `ToString()` de **type(class)** `utf8string` para calcular el valor de la columna.
+En el siguiente ejemplo se crea una tabla con una columna de tipo definido por el usuario `utf8string` dando por supuesto que el ensamblado del tipo y el propio tipo ya se han creado en la base de datos actual. Se define una segunda columna en función de `utf8string` y se usa el método `ToString()` de **type(class)**`utf8string` para calcular el valor de la columna.
 
 ```sql
 CREATE TABLE UDTypeTable

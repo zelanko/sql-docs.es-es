@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0018d38beb1c576ea80b39d525388118d7b8063c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558310"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434112"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Instalación de paquetes de Python con sqlmlutils
 
@@ -75,9 +75,21 @@ En el ejemplo siguiente, agregará el paquete [text-tools](https://pypi.org/proj
 
 Si el equipo cliente que usa para conectarse a SQL Server tiene acceso a Internet, puede usar **sqlmlutils** para buscar el paquete **text-tools** y las dependencias a través de Internet y, después, instalar el paquete en una instancia de SQL Server de forma remota.
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+1. En el equipo cliente, abra **Python** o un entorno de Python.
+
+1. Use los comandos siguientes para instalar el paquete **text-tools**. Sustituya la información propia de conexión de base de datos de SQL Server (si usa la autenticación de Windows, no necesita los parámetros `uid` y `pwd`).
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 1. En el equipo cliente, abra **Python** o un entorno de Python.
 
 1. Use los comandos siguientes para instalar el paquete **text-tools**. Sustituya la información de conexión de base de datos de SQL Server propia.
+
+::: moniker-end
 
    ```python
    import sqlmlutils
@@ -105,12 +117,22 @@ Use **sqlmlutils** para instalar cada paquete (archivo .whl) que encuentre en la
 
 En este ejemplo, **text-tools** no tiene dependencias, por lo que solo se va a instalar un archivo de la carpeta `text-tools`. Por el contrario, un paquete como **scikit-plot** tiene 11 dependencias, por lo que encontrará 12 archivos en la carpeta (el paquete **scikit-plot** y los 11 paquetes dependientes) y debe instalar cada uno de ellos.
 
-Ejecute el siguiente script de Python. Sustituya la ruta de acceso de archivo y el nombre reales del paquete, así como su propia información de conexión de base de datos de SQL Server (si no usa la autenticación de Windows, agregue los parámetros `uid` y `pwd`). Repita la instrucción `sqlmlutils.SQLPackageManager` para cada archivo de paquete de la carpeta.
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+Ejecute el siguiente script de Python. Sustituya la ruta de acceso de archivo y el nombre reales del paquete, así como la información propia de conexión de base de datos de SQL Server (si usa la autenticación de Windows, no necesita los parámetros `uid` y `pwd`). Repita la instrucción `sqlmlutils.SQLPackageManager` para cada archivo de paquete de la carpeta.
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+Ejecute el siguiente script de Python. Sustituya la ruta de acceso de archivo y el nombre reales del paquete, así como la información propia de conexión de base de datos de SQL Server. Repita la instrucción `sqlmlutils.SQLPackageManager` para cada archivo de paquete de la carpeta.
+
+::: moniker-end
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
-sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="username", pwd="password"))
+sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
 ## <a name="use-the-package-in-sql-server"></a>Uso del paquete en SQL Server

@@ -1,5 +1,6 @@
 ---
 title: Abrir un informe móvil con determinados parámetros de cadena de consulta | Microsoft Docs
+description: Para un informe para dispositivos móviles de Reporting Services con parámetros y un origen de datos, puede usar parámetros de consulta en la dirección URL del informe para abrirlo con los valores especificados.
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7204574d10b674c7cea4e08fb570c3550fe33e03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62500019"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448395"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Abrir un informe móvil con determinados parámetros de cadena de consulta | Reporting Services
 Si tiene un informe móvil de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con parámetros y un origen de datos de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)], puede incluir parámetros de cadena de consulta en la dirección URL del informe para que se abra automáticamente con los valores especificados. 
@@ -27,7 +28,7 @@ Si tiene un informe móvil de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnov
     
 2.  La sintaxis de la dirección URL depende de su origen de datos. 
 
-     **Para un origen de datos de SQL Server Analysis Services**: cree una dirección URL con un parámetro de cadena de consulta en este formato:
+     **Para un origen de datos de SQL Server Analysis Services**: Cree una dirección URL con un parámetro de cadena de consulta con este formato:
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.<field-name>=<parameter-value>`
 

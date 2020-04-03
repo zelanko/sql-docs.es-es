@@ -1,25 +1,40 @@
 ---
 title: Notas de la versión
-titleSuffix: Azure Data Studio
 description: Notas de la versión de Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: alayu; sstein
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 02/19/2020
-ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.date: 03/18/2020
+ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408859"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215484"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](download.md)** .
+
+## <a name="march-2020"></a>Marzo de 2020
+
+18 de marzo de 2020 &nbsp; / &nbsp; versión: 1.16.0 
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Se ha agregado compatibilidad con gráficos en cuadernos de SQL | Cuando se ejecuta una consulta SQL en una celda de código, ahora los usuarios pueden crear y guardar gráficos. |
+| Se ha agregado experiencia de creación de libros de Jupyter | Ahora los usuarios pueden crear sus propios libros de Jupyter con un cuaderno. |
+| Se ha agregado compatibilidad con AAD para la extensión Postgres | |
+| Se han corregido muchos errores de accesibilidad | [Lista de errores de accesibilidad](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| Fusión de VS Code en 1.42 | En esta versión se incluyen actualizaciones para VS Code de las tres versiones anteriores de VS Code. [Lea las notas de la versión](https://code.visualstudio.com/updates/v1_42) para obtener más información. |
+| Problemas y errores resueltos | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="february-hotfix"></a>Febrero (revisión)
 
@@ -49,6 +64,7 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>Problema conocido
+
 - Los usuarios de macOS Catalina tendrán que hacer clic con el botón derecho en Azure Data Studio y, después, hacer clic en Abrir.
 
 ## <a name="december-2019-hotfix"></a>Diciembre de 2019 (revisión)
@@ -144,6 +160,7 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conocidos
+
 - Cuaderno
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso excepcional de serialización incorrecta de Notebook
 
@@ -163,6 +180,7 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conocidos
+
 - Cuaderno
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso excepcional de serialización incorrecta de Notebook
 
@@ -201,10 +219,9 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 | Problemas y errores resueltos | En las versiones anteriores de Azure Data Studio, si se seleccionaba una base de datos de usuario al conectarse desde el cuadro de diálogo de conexión, la entrada resultante del Explorador de objetos estaba enfocada por completo a esa única base de datos. A partir de esta versión, ese comportamiento se está cambiando para que las propiedades de nivel de servidor también se muestren en el Explorador de objetos. <br/> Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2019"></a>Junio de 2019
 
-6 de junio de 2019 &nbsp; / &nbsp; versión: 1.8.0 
+6 de junio de 2019 &nbsp; / &nbsp; versión: 1.8.0
 
 &nbsp;
 
@@ -220,6 +237,7 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conocidos
+
 - Extensiones de la herramienta de administración de bases de datos para Windows
     - No se pueden iniciar propiedades desde un nodo de servidor desconectado.
     - No se pueden iniciar las propiedades de los servidores de Azure.
@@ -300,7 +318,7 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): la extracción de dacpac bloquea SqlToolsService si se usa una versión no válida. <br/>
 **Solución alternativa:** reinicie Azure Data Studio y asegúrese de que se usa la versión correcta.
 - Se pierden los iconos de Nuevo cuaderno y Abrir cuaderno. <br/>
-**Solución alternativa:** el tipo de conexión heredado está en desuso. Se recomienda conectarse al punto de conexión de SQL Server para obtener todas las acciones previstas (nuevo cuaderno, trabajo de Spark). 
+**Solución alternativa:** el tipo de conexión heredado está en desuso. Se recomienda conectarse al punto de conexión de SQL Server para obtener todas las acciones previstas (Nuevo cuaderno, Trabajo de Spark). 
 
 ## <a name="february-2019"></a>Febrero de 2019
 
@@ -361,8 +379,8 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 | Introducción de la extensión Paste the Plan (Pegado del plan). | &nbsp; |
 | Introducción de la extensión de consultas High color (Color alto), incluido el tema del editor de SSMS. | &nbsp; |
 | Correcciones en las extensiones Agente SQL Server, Profiler e Importación. | &nbsp; |
-| Corrección del problema de .Net Core Socket KeepAlive que produce conexiones inactivas en macOS. | &nbsp; |
-| Actualización de SQL Tools Service a .Net Core 2.2, versión preliminar 3 (para compatibilidad eventual con AAD). | &nbsp; |
+| Corrección del problema de .NET Core Socket KeepAlive que produce conexiones inactivas en macOS. | &nbsp; |
+| Actualización de SQL Tools Service a .NET Core 2.2, versión preliminar 3 (para compatibilidad eventual con AAD). | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-november-2018"></a>Correcciones de errores, noviembre de 2018

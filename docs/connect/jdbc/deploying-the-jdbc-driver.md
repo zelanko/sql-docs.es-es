@@ -1,7 +1,7 @@
 ---
-title: Implementación del controlador JDBC | Microsoft Docs
+title: Implementación del controlador JDBC
 ms.custom: ''
-ms.date: 01/20/2020
+ms.date: 03/13/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,40 +10,43 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: d7e66360e08646a623aec5ed6f0b0f92d6ac62bf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004676"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79433802"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Implementación del controlador JDBC
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Al implementar una aplicación que depende del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], debe redistribuir el controlador JDBC junto con la aplicación. A diferencia de Windows Data Access Components (Windows DAC), que es un componente del sistema operativo Windows, el controlador JDBC se considera un componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Al implementar una aplicación que depende del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], debe redistribuir el controlador JDBC junto con la aplicación. A diferencia de Windows Data Access Components (Windows DAC), que es un componente del sistema operativo Windows, el controlador JDBC se considera un componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Existen dos métodos para implementar el controlador JDBC con la aplicación. Uno de estos métodos consiste en incluir los archivos del controlador JDBC como parte de su propio paquete de instalación personalizado. El segundo método implica el uso del paquete de instalación de JDBC suministrado por Microsoft, que puede descargar desde el [Centro para desarrolladores del controlador Microsoft JDBC para SQL Server](https://go.microsoft.com/fwlink/?LinkId=70166).  
+Existen dos métodos para implementar el controlador JDBC con la aplicación. Uno de estos métodos consiste en incluir los archivos del controlador JDBC como parte de su propio paquete de instalación personalizado. El segundo método implica el uso del paquete de instalación de JDBC suministrado por Microsoft, que puede descargar desde la [página de descarga de Microsoft JDBC Driver para SQL Server](download-microsoft-jdbc-driver-for-sql-server.md).  
   
- En las siguientes secciones se describe cómo usar el paquete de instalación de JDBC en los sistemas operativos Windows y UNIX.  
+En las siguientes secciones se describe cómo usar el paquete de instalación de JDBC en los sistemas operativos Windows y UNIX.  
   
 > [!NOTE]  
->  Para obtener información sobre cómo implementar aplicaciones Java en general, vea el sitio web de Java.  
+> Para obtener información sobre cómo implementar aplicaciones Java en general, vea el sitio web de Java.  
   
-## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Implementar el controlador JDBC en sistemas Windows  
- Al implementar el controlador JDBC en sistemas operativos Windows, debe descomprimir el paquete de instalación comprimido, que se suele denominar `sqljdbc_<version>_<language>.zip`.
+## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Implementar el controlador JDBC en sistemas Windows
 
-## <a name="deploying-the-driver-on-unix-systems"></a>Implementar el controlador en sistemas UNIX 
- Al implementar el controlador JDBC en los sistemas operativos UNIX, debe usar la versión del archivo gzip del paquete de instalación, que se suele llamar `sqljdbc_<version>_<language>.tar.gz`.  
+Al implementar el controlador JDBC en sistemas operativos Windows, debe descomprimir el paquete de instalación comprimido, que se suele denominar `sqljdbc_<version>_<language>.zip`.
+
+## <a name="deploying-the-driver-on-unix-systems"></a>Implementar el controlador en sistemas UNIX
+
+Al implementar el controlador JDBC en los sistemas operativos UNIX, debe usar la versión del archivo gzip del paquete de instalación, que se suele llamar `sqljdbc_<version>_<language>.tar.gz`.  
   
- Para poder instalar el controlador JDBC, asegúrese de que las utilidades gzip y tar están instaladas en el sistema del usuario y de que las carpetas que contienen los ejecutables para ambas utilidades se han agregado a la variable de entorno PATH.  
+Para poder instalar el controlador JDBC, asegúrese de que las utilidades gzip y tar están instaladas en el sistema del usuario y de que las carpetas que contienen los ejecutables para ambas utilidades se han agregado a la variable de entorno PATH.  
   
- Para desempaquetar el archivo tar comprimido, navegue hasta el directorio donde desea ubicar el controlador desempaquetado y escriba el siguiente comando:  
+Para desempaquetar el archivo tar comprimido, navegue hasta el directorio donde desea ubicar el controlador desempaquetado y escriba el siguiente comando:  
   
- `gzip -d sqljdbc_<version>_<language>.tar.gz`  
+`gzip -d sqljdbc_<version>_<language>.tar.gz`  
   
- Para desempaquetar el archivo tar, muévalo hasta el directorio donde desea ubicar el controlador instalado y escriba el siguiente comando:  
+Para desempaquetar el archivo tar, muévalo hasta el directorio donde desea ubicar el controlador instalado y escriba el siguiente comando:  
   
- `tar -xf sqljdbc_<version>_<language>.tar`  
+`tar -xf sqljdbc_<version>_<language>.tar`  
 
 ## <a name="legalities-of-driver-redistribution"></a>Legalidad de la redistribución del controlador
 
@@ -51,7 +54,6 @@ Las versiones 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 y 8.2 del controlador JDBC son redist
 
 Las versiones 4.x del controlador JDBC son antiguas y están obsoletas. La compatibilidad con 4.x expiró antes de 2018.
 
-## <a name="see-also"></a>Consulte también  
- [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>Consulte también
+
+[Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

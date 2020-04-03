@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75241219"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80386194"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas de la versión de SqlPackage.exe
 
@@ -46,9 +46,15 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Correcciones
 | Fix | Detalles |
 | :-- | :------ |
-| ScriptDom |  Se presentó una regresión de análisis de ScriptDom en 18.3.1 donde "RENAME" se trata incorrectamente como un token de nivel superior, lo que provoca un error en el análisis.
+| ScriptDom |  Se introdujo una regresión de análisis de ScriptDom en 18.3.1 donde "RENAME" se trata incorrectamente como un token de nivel superior, lo que provoca un error en el análisis.
 | &nbsp; | &nbsp; |
 
+### <a name="known-issues"></a>Problemas conocidos 
+
+| Característica | Detalles |
+| :------ | :------ |
+| Implementación |  En la versión 18.4.1 se ha presentado una regresión que provoca que haya una "referencia a objeto no establecida en una instancia de un objeto". Error al implementar dacpac o al importar bacpac con un usuario con inicio de sesión externo. La solución alternativa consiste en usar sqlpackage 18.4 y se corregirá en la siguiente versión de sqlpackage. | 
+| &nbsp; | &nbsp; |
 
 ## <a name="184-sqlpackage"></a>18.4 sqlpackage
 

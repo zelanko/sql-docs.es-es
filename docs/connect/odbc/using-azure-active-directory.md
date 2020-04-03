@@ -1,7 +1,7 @@
 ---
 title: Uso de Azure Active Directory con el controlador ODBC | Microsoft Docs para SQL Server
 ms.custom: ''
-ms.date: 11/08/2018
+ms.date: 03/18/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e32889ceafa78d6c6eac716fca213f17badc5cea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: af611e9c59e34030d594ecf6bcd8031fb5b253cb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286429"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79526820"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Uso de Azure Active Directory con el controlador ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>Propósito
 
-Microsoft ODBC Driver for SQL Server con la versión 13.1 o superior permite que las aplicaciones ODBC se conecten a una instancia de SQL Azure mediante una identidad federada en Azure Active Directory con un nombre de usuario y contraseña, un token de acceso de Azure Active Directory, una identidad de servicio administrada de Azure Active Directory o autenticación integrada de Windows (_solo controlador de Windows_). Para la versión 13.1 del controlador ODBC, la autenticación de token de acceso de Azure Active Directory es _solo Windows_. La versión 17 del controlador ODBC y versiones posteriores admiten esta autenticación en todas las plataformas (Windows, Linux y Mac). En la versión 17.1 del controlador ODBC para Windows se incluye una nueva autenticación interactiva de Azure Active Directory con el identificador de inicio de sesión. Se agregó un nuevo método de autenticación de identidad de servicio administrada de Azure Active Directory en la versión 17.3.1.1 del controlador ODBC para las identidades asignadas por el sistema y por el usuario. Todo esto se logra mediante el uso de nuevas palabras clave de cadena de conexión y DSN con atributos de conexión.
+Microsoft ODBC Driver for SQL Server con la versión 13.1 o superior permite que las aplicaciones ODBC se conecten a una instancia de SQL Azure mediante una identidad federada en Azure Active Directory con un nombre de usuario y contraseña, un token de acceso de Azure Active Directory, una identidad de servicio administrada de Azure Active Directory o autenticación integrada de Windows (_solo controlador de Windows_). Para la versión 13.1 del controlador ODBC, la autenticación de token de acceso de Azure Active Directory es _solo Windows_. La versión 17 del controlador ODBC y versiones posteriores admiten esta autenticación en todas las plataformas (Windows, Linux y macOS). En la versión 17.1 del controlador ODBC para Windows se incluye una nueva autenticación interactiva de Azure Active Directory con el identificador de inicio de sesión. Se agregó un nuevo método de autenticación de identidad de servicio administrada de Azure Active Directory en la versión 17.3.1.1 del controlador ODBC para las identidades asignadas por el sistema y por el usuario. Todo esto se logra mediante el uso de nuevas palabras clave de cadena de conexión y DSN con atributos de conexión.
 
 > [!NOTE]
 > El controlador ODBC en Linux y macOS solo admite la autenticación de Azure Active Directory directamente en Azure Active Directory. Si va a usar la autenticación de nombre de usuario y contraseña de Azure Active Directory desde un cliente Linux o macOS, y la configuración de Active Directory requiere que el cliente se autentique sobre un punto de conexión de Servicios de federación de Active Directory, se puede producir un error en la autenticación.
@@ -45,7 +45,7 @@ Se han incorporado o modificado los siguientes atributos de conexión anteriores
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_RESET`|(sin establecer)|Consulte la descripción de la palabra clave `Authentication` anteriormente. `SQL_AU_NONE` se proporciona para reemplazar explícitamente un valor `Authentication` establecido en el DSN o la cadena de conexión, mientras `SQL_AU_RESET` desactiva el atributo si se estableció, lo que permite que el valor de la cadena de conexión o DSN tenga prioridad.|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|Puntero a `ACCESSTOKEN` o NULL|NULL|Si no es NULL, especifica el token de acceso de AzureAD que se va a usar. Es un error especificar un token de acceso y también las palabras clave de cadena de conexión `UID`, `PWD`, `Trusted_Connection` o `Authentication` o sus atributos equivalentes. <br> **NOTA:** La versión 13.1 del controlador ODBC solo lo admite en _Windows_.|
 |`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(consulte la descripción)|Controla el cifrado de una conexión. `SQL_EN_OFF` y `SQL_EN_ON` deshabilitan y habilitan el cifrado, respectivamente. Si el valor de atributo anterior del valor `Authentication` no es _ninguno_ o `SQL_COPT_SS_ACCESS_TOKEN` está establecido y `Encrypt` no se ha especificado en el DSN o en la cadena de conexión, el valor predeterminado es `SQL_EN_ON`. De lo contrario, el valor predeterminado es `SQL_EN_OFF`. Si el atributo de conexión `SQL_COPT_SS_AUTHENTICATION` se establece en no _ninguno_, establezca explícitamente `SQL_COPT_SS_ENCRYPT` en el valor deseado si no se ha especificado `Encrypt` en el DSN o la cadena de conexión. El valor efectivo de este atributo controla [si se utilizará el cifrado para la conexión.](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
-|`SQL_COPT_SS_OLDPWD`|\-|\-|\-|No se admite con Azure Active Directory, ya que los cambios de contraseña en las entidades de seguridad de AAD no se pueden realizar a través de una conexión ODBC. <br><br>La expiración de contraseñas para la autenticación de SQL Server se incorporó en SQL Server 2005. Se ha agregado el atributo `SQL_COPT_SS_OLDPWD` para permitir que el cliente especifique la contraseña antigua y la nueva contraseña para la conexión. Cuando se establezca esta propiedad, el proveedor no usará el grupo de conexiones para la primera conexión o para conexiones posteriores, puesto que la cadena de conexión contendrá la "contraseña antigua" que ahora ha cambiado.|
+|`SQL_COPT_SS_OLDPWD`|\-|\-|\-|No se admite con Azure Active Directory, ya que los cambios de contraseña en las entidades de seguridad de AAD no se pueden realizar a través de una conexión ODBC. <br><br>La expiración de contraseñas para la autenticación de SQL Server se incorporó en SQL Server 2005. Se ha agregado el atributo `SQL_COPT_SS_OLDPWD` para permitir que el cliente especifique la contraseña antigua y la nueva contraseña para la conexión. Cuando se establezca esta propiedad, el proveedor no usará el grupo de conexiones para la primera conexión o para conexiones posteriores, ya que la cadena de conexión contendrá la "contraseña antigua", que ahora ha cambiado.|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|_En desuso_; en su lugar, use `SQL_COPT_SS_AUTHENTICATION` establecido en `SQL_AU_AD_INTEGRATED`. <br><br>Fuerza el uso de la autenticación de Windows (Kerberos en Linux y macOS) para la validación de acceso en el inicio de sesión del servidor. Cuando se usa la autenticación de Windows, el controlador omite el identificador de usuario y los valores de contraseña proporcionados como parte del procesamiento de `SQLConnect`, `SQLDriverConnect` o `SQLBrowseConnect`.|
 
 ## <a name="ui-additions-for-azure-active-directory-windows-driver-only"></a>Adiciones de interfaz de usuario para Azure Active Directory (solo controlador de Windows)
@@ -110,8 +110,8 @@ Para la identidad asignada por el sistema,<br>
 Para la identidad asignada por el usuario cuyo identificador de objeto es igual a myObjectId,<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
 
-> [!NOTE] 
->- Al usar las nuevas opciones de Active Directory con el controlador ODBC de Windows, asegúrese de que se ha instalado la [Biblioteca de autenticación de Active Directory para SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072). Al usar los controladores de Linux y macOS, asegúrese de que se ha instalado `libcurl`. En el caso de la versión de controlador 17.2 y versiones posteriores, esta no es una dependencia explícita, ya que no es necesaria para los otros métodos de autenticación u operaciones de ODBC.
+> [!NOTE]
+>- Al usar las nuevas opciones de Active Directory con el controlador ODBC de Windows ***anterior*** a la versión 17.4.2, asegúrese de que se ha instalado la [Biblioteca de autenticación de Active Directory para SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072). Al usar los controladores de Linux y macOS, asegúrese de que se ha instalado `libcurl`. En el caso de la versión de controlador 17.2 y versiones posteriores, esta no es una dependencia explícita, ya que no es necesaria para los otros métodos de autenticación u operaciones de ODBC.
 >- Para conectarse con un nombre de usuario y una contraseña de la cuenta de SQL Server, ahora puede usar la nueva opción `SqlPassword`, que se recomienda especialmente para SQL Azure ya que esta opción habilita los valores predeterminados de conexión más seguros.
 >- Para conectarse con un nombre de usuario y una contraseña de la cuenta de Azure Active Directory, especifique `Authentication=ActiveDirectoryPassword` en la cadena de conexión y las palabras clave `UID` y `PWD` con el nombre de usuario y la contraseña, respectivamente.
 >- Para conectarse con autenticación integrada de Windows o de Active Directory (solo controlador de Windows), especifique `Authentication=ActiveDirectoryIntegrated` en la cadena de conexión. El controlador elegirá automáticamente el modo de autenticación correcto. No se debe especificar `UID` y `PWD`.
@@ -141,7 +141,7 @@ En el ejemplo siguiente se muestra el código necesario para conectarse a SQL S
     ...
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);    
     ...
 ~~~
 En el ejemplo siguiente se muestra el código necesario para conectarse a SQL Server mediante Azure Active Directory con autenticación de token de acceso. En este caso, es necesario modificar el código de aplicación para procesar el token de acceso y establecer el atributo de conexión asociado.
@@ -159,7 +159,7 @@ En el ejemplo siguiente se muestra el código necesario para conectarse a SQL S
     }
     ...
     SQLSetConnectAttr(hDbc, SQL_COPT_SS_ACCESS_TOKEN, (SQLPOINTER)pAccToken, SQL_IS_POINTER);
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);      
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);        
     ...
     free(pAccToken);
 ~~~

@@ -1,5 +1,6 @@
 ---
 title: Asignación de tipos con PolyBase | Microsoft Docs
+description: Consulte estas tablas para obtener la asignación entre los orígenes de datos externos de PolyBase y SQL Server. Defina las tablas externas con CREATE EXTERNAL TABLE de Transact-SQL.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710465"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215754"
 ---
 # <a name="type-mapping-with-polybase"></a>Asignación de tipos con PolyBase
 

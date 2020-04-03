@@ -1,5 +1,6 @@
 ---
 title: Supervisión y solución de problemas de PolyBase | Microsoft Docs
+description: Para solucionar problemas de PolyBase, use estas vistas y DMV. Vea el plan de consulta de PolyBase, supervise los nodos de un grupo de PolyBase y configure la alta disponibilidad de los nodos de nombre de Hadoop.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -14,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 171527b02674a5a02420f5cb002fddd7e7f31ac6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909635"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216058"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Supervisión y solución de problemas de PolyBase
 

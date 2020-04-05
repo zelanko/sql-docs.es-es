@@ -1,5 +1,5 @@
 ---
-title: Sys. resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
+title: sys.resource_governor_external_resource_pools (Transact-SQL) Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 79c81cafe588fd827ece6184cab5470df8ec4c42
-ms.sourcegitcommit: eef5ab1966062e190dc1cd49409bc0429ba6d1e4
+ms.openlocfilehash: 4751cb9164d5ca11cfdaca4365fa7156c2c2425e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80290840"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662997"
 ---
-# <a name="sysresource_governor_external_resource_pools-transact-sql"></a>Sys. resource_governor_external_resource_pools (Transact-SQL)
+# <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys.resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] y [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Devuelve la configuración del grupo de recursos externos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]almacenado en. Cada fila de la vista determina la configuración de un grupo.
+Devuelve la configuración del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]grupo de recursos externos almacenado en . Cada fila de la vista determina la configuración de un grupo.
   
 |Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|
@@ -44,18 +44,18 @@ Devuelve la configuración del grupo de recursos externos [!INCLUDE[ssNoVersion]
 
 Requiere el permiso VIEW SERVER STATE.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Regulación de recursos para machine learning en SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
+[Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md) (Gobernanza de recursos para aprendizaje automático en SQL Server)
 
-[Resource Governor vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+[Vistas de catálogo del regulador de recursos &#40;&#41;de Transact-SQLTransact-SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
 
-[Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
+[sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
 
-[Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)
+[regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)
 
-[Sys. dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQLTransact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
-[Opción de configuración de servidor Scripts externos habilitados](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
+[Opción de configuración del servidor external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 
 [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)

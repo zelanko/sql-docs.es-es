@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs
+title: sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -19,39 +19,39 @@ helpviewer_keywords:
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02ec95d318825c1759067455b62f3dae6a86c184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 77d0d322139be1f1c6086622855600a7c24fc4c9
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053329"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664321"
 ---
-# <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>Sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
+# <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] y [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] y [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Devuelve información de afinidad de CPU acerca de la configuración actual del grupo de recursos externos.
+Devuelve información de afinidad de CPU sobre la configuración actual del grupo de recursos externos.
   
 |Nombre de la columna|Tipo de datos|Descripción|
 |----------------|---------------|-----------------|
-|pool_id|**int**|IDENTIFICADOR del grupo de recursos externos. No admite valores NULL.|
-|processor_group|**smallint**|Identificador del grupo de procesadores lógicos de Windows. No admite valores NULL.|
-|cpu_mask|**BIGINT**|Máscara binaria que representa las CPU asociadas a este grupo. No admite valores NULL.|
+|pool_id|**int**|El identificador del grupo de recursos externos. No admite valores NULL.|
+|processor_group|**Smallint**|Identificador del grupo de procesadores lógicos de Windows. No admite valores NULL.|
+|cpu_mask|**bigint**|La máscara binaria que representa las CPU asociadas a este grupo. No admite valores NULL.|
   
 ## <a name="remarks"></a>Observaciones
 
-Los grupos creados con una afinidad de `AUTO` no aparecen en esta vista porque no tienen afinidad. Para obtener más información, vea [crear un grupo de recursos externos &#40;Transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) y [modificar el grupo de recursos externos &#40;instrucciones de transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) .
+Los grupos creados con `AUTO` una afinidad de no aparecen en esta vista porque no tienen ninguna afinidad. Para obtener más información, vea [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQLTransact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) y ALTER EXTERNAL RESOURCE POOL &#40;instrucciones de [Transact-SQLTransact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) .
 
 ## <a name="permissions"></a>Permisos
 
 Requiere el permiso `VIEW SERVER STATE`.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Regulación de recursos para machine learning en SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
+[Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md) (Gobernanza de recursos para aprendizaje automático en SQL Server)
 
-[Sys. dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQLTransact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
-[Opción de configuración de servidor Scripts externos habilitados](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
+[Opción de configuración del servidor external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 
 [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)

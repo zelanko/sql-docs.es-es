@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893081"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665393"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriales de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68893081"
 |[Tutoriales de Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a crear e implementar soluciones [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Tutoriales de replicación](../relational-databases/replication/replication-tutorials.md)|Aprenda a configurar y ejecutar topologías de replicación con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprenda a crear informes básicos y suscripciones.|  
-|[Tutoriales sobre aprendizaje automático de SQL Server](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Aprenda a trabajar con datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante R o Python. Ejecute scripts de R o Python desde [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Tutoriales sobre aprendizaje automático de SQL Server](../machine-learning/tutorials/sql-server-r-tutorials.md)|Aprenda a trabajar con datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante R o Python. Ejecute scripts de R o Python desde [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## <a name="previously-published-tutorials"></a>Tutoriales publicados anteriormente 
   

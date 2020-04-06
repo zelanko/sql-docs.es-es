@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256882"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607836"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Cómo actualizar los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -66,10 +66,10 @@ En esta sección se explica cómo actualizar un clúster de macrodatos de SQL S
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   Por ejemplo, el script siguiente usa la etiqueta de imagen `2019-CU1-ubuntu-16.04`:
+   Por ejemplo, el script siguiente usa la etiqueta de imagen `2019-CU4-ubuntu-16.04`:
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -96,7 +96,7 @@ Se puede producir un tiempo de espera si no se actualizan determinados component
 Para aumentar los tiempos de expiración de una actualización, use los parámetros **--controller-timeout** y **--component-timeout** para especificar valores más altos al emitir la actualización. Esta opción solo está disponible a partir de la versión SQL Server 2019 CU2. Por ejemplo:
 
    ```bash
-   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** designa el número de minutos que se esperará a que finalice la actualización del controlador o de la base de datos del controlador.
 **--component-timeout** designa la cantidad de tiempo en que se debe completar cada fase posterior de la actualización.

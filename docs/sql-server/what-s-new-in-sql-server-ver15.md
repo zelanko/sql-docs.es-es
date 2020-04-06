@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79218052"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665361"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -231,7 +231,7 @@ La manera más sencilla de empezar a trabajar con [!INCLUDE[ssNoVersion](../incl
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
-|Modelos basados en particiones | Puede procesar scripts externos por partición de datos mediante los nuevos parámetros agregados a `sp_execute_external_script`. Esta funcionalidad admite el aprendizaje de muchos modelos pequeños (un modelo por cada partición de datos) en lugar de uno grande. Vea [Creación de modelos basados en particiones](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).|
+|Modelos basados en particiones | Puede procesar scripts externos por partición de datos mediante los nuevos parámetros agregados a `sp_execute_external_script`. Esta funcionalidad admite el aprendizaje de muchos modelos pequeños (un modelo por cada partición de datos) en lugar de uno grande. Vea [Creación de modelos basados en particiones](../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).|
 |Clúster de conmutación por error de Windows Server| Puede configurar la alta disponibilidad de Machine Learning Services en un clúster de conmutación por error de Windows Server.|
 | &nbsp; | &nbsp; |
 

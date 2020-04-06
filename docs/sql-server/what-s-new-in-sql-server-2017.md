@@ -11,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55ed24599e3bed15a0478ce12ac316edb623f0cf
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79190620"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662884"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ Ahora, los desarrolladores de SQL Server tienen acceso a las bibliotecas ampliad
 - **Mejoras de rendimiento**: el procedimiento almacenado `sp_execute_external_script` se ha optimizado para admitir la ejecución en modo por lotes en los datos de almacén de columnas.
 
 
-Para más información, consulte [Novedades de SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+Para más información, consulte [Novedades de SQL Server Machine Learning Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 - Consulte las [notas de la versión de SQL Server 2017](sql-server-2017-release-notes.md).

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf5f8534b19e93d956531df3c43a04776afe1c5
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79190612"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665374"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novedades de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -55,7 +55,7 @@ En esta página se proporciona información de resumen y vínculos a informació
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services ofrece mejores prestaciones de rendimiento, creación, administración de base de datos, filtrado, procesamiento y de otras muchas características para bases de datos de modelo tabular en función del **nivel de compatibilidad 1200**.
-- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integra el lenguaje de programación R, que se usa para análisis estadísticos, en SQL Server. 
+- **[SQL Server R Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)** integra el lenguaje de programación R, que se usa para análisis estadísticos, en SQL Server. 
 - El nuevo **comprobador de coherencia de la base de datos (DBCC)** se ejecuta internamente para detectar posibles problemas de datos dañados.
 - **DirectQuery**, que consulta los datos externos de forma dinámica en lugar de importarlos antes, ahora admite más orígenes de datos, como SQL Azure, Oracle y Teradata. 
 - Hay numerosas **funciones de DAX (expresiones de acceso a datos)** nuevas.
